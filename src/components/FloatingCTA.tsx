@@ -1,9 +1,30 @@
+=======
+import { Button } from "@/components/ui/button",
+
+
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+
+
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import { X } from 'lucide-react'
 
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
   // TODO: Add dependencies if needed
+import { Button } from '@/components / ui / button';
+import Link from 'next / link';
+import { useState, useEffect } from 'react';
+import { X } from 'lucide-react';
+  const [is_visible, setIsVisible] = useState (false);
+  useEffect (() => {
+  // TODO: Add dependencies if needed;
   return () => {
     // Cleanup function;
 };
@@ -39,8 +60,51 @@ export function FloatingCTA() {
 
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true)
+}, []); []);
+    // Show CTA after 5 seconds;
+      setIsVisible (true) }, 5000);
+    return () => clear_timeout (timer) }, []) }
+  ];
+  const quick_services = [";
+    { name: "AI Solutions", icon: Brain, link: "/ai - services" }, ";
+    { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" }, ";
+    { name: "Cloud Services", icon: Cloud, link: "/cloud - solutions" }, ";
+    { name: "Digital Transformation", icon: Zap, link: "/digital - transformation" }
+  ];
+  // Check condition
+if (return null) {
+  $2
+}
+                    to="/services";
+                    className="flex items - center gap - 3 p - 3 rounded - lg hover:bg - slate - 700 transition - colors duration - 200 text - white";
+                    on_click={() => setIsExpanded (false)}
+                  >";
+                    <span className="text - xl">🚀</span>;
+                    <div>";
+                      <div className="font - semibold">Our Services</div>";
+                      <div className="text - sm text - gray - 400">Explore solutions</div>;
+                    </div>;
+                  </Link>;
+import { Button  } from '@/components / ui / button';
+import Link from './next / link';
+import { useState, useEffect  } from './react';
+export /**
+ * FloatingCTA - Function description
+ */
+function FloatingCTA() {
+  const [ is_visible, setIsVisible ] = useState (false),
+  const [ is_closed, setIsClosed ] = useState (false),
+  useEffect ((, ) => {
+    const handle_scroll = () =>: any {
+      const scroll_position = window.scroll_y;
+      const threshold = 600; // Show CTA after scrolling 600px;
+      // Check condition
+if ( {) {
+  $2
+}
+        setIsVisible (true);
       } else {
-        setIsVisible(false)
+        setIsVisible (false);
       }
 
   return (
@@ -66,3 +130,4 @@ export function FloatingCTA() {
       </div>
     </div>
   )
+<<<<<<< HEAD

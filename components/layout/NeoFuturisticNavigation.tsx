@@ -2,6 +2,36 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+      {/* Scroll Progress Bar */}
+      <div className='absolute top-0 left-0 h-1 w-full bg-transparent'>;
+        <div
+          className='h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600'
+          style={{
+
+            width: `${typeof window !== 'undefined' && document && document.body.scrollHeight> 0 ? Math && Math.min(100, (window && window.scrollY / (document && document.body.scrollHeight - window && window.innerHeight)) * 100) : 0}%`,;
+
+          }}
+        />;
+      </div>;
+      <div className='max-w-7xl mx-auto px-4'>;
+        <div className='flex items-center justify-between h-20'>;
+          {/* Logo */}
+          <Link href='/' className='flex items-center space-x-3 group'>;
+            <div className='relative'>;
+              <div className='w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
+                <Sparkles className='w-6 h-6 text-white' />;
+              </div>;
+              <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300'></div>;
+            </div>;
+            <div className='hidden sm:block'>;
+              <div className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>;
+                Zion Tech Group;
+              </div>;
+              <div className='text-xs text-gray-400'>;
+=======
+import Link from 'next / link';
+import { use_router } from 'next / router';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {
   Menu,
   X,
@@ -663,6 +693,38 @@ export default function NeoFuturisticNavigation() {
           <button
             className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors'
             onClick={() => setIsOpen(!isOpen)}
+=======
+          >;
+            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+
+          </button>;
+        </div>;
+      </div>;
+
+
+      {/* Mobile Menu */}
+      {isOpen && (;
+        <div className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-gray-700/50'>;
+          <div className='max-w-7xl mx-auto px-4 py-6'>;
+            <div className='space-y-6'>;
+              {/* Services Section */}
+              <div>;
+                <button
+                  className='flex items-center justify-between w-full text-left text-white font-semibold mb-4'
+                  onClick={() => toggleDropdown('mobile-services')}
+                >;
+                  <span>Services</span>;
+                  <ChevronRight
+                    className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                {activeDropdown === 'mobile-services' && (
+                  <div className='ml-4 space-y-3'>
+                    {serviceCategories.map((category, index) => (
 
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
@@ -776,6 +838,94 @@ export default function NeoFuturisticNavigation() {
                   </div>
                 </div>
                 <div className='mt-6 space-y-3'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              {/* Company Section */}
+              <div>;
+                <button
+                  className='flex items-center justify-between w-full text-left text-white font-semibold mb-4'
+                  onClick={() => toggleDropdown('mobile-company')}
+                >;
+                  <span>Company</span>;
+                  <ChevronRight
+                    className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-company' ? 'rotate-90' : ''}`}
+
+                  />;
+                </button>;
+                {activeDropdown === 'mobile-company' && (;
+                  <div className='ml-4 space-y-3'>;
+                    {companyInfo && companyInfo.map((item, index) => (;
+
+                      <Link
+                        key={index}
+                        href={item && item.link}
+                        className='block text-gray-300 hover:text-white transition-colors'
+                        onClick={closeMobileMenu}>;
+                        {item && item.name}
+                      </Link>;
+                    ))}
+                  </div>;
+                )}
+
+              </div>;
+
+
+              {/* Resources Section */}
+              <div>;
+                <button
+                  className='flex items-center justify-between w-full text-left text-white font-semibold mb-4'
+                  onClick={() => toggleDropdown('mobile-resources')}
+                >;
+                  <span>Resources</span>;
+                  <ChevronRight
+                    className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-resources' ? 'rotate-90' : ''}`}
+
+                  />;
+                </button>;
+                {activeDropdown === 'mobile-resources' && (;
+                  <div className='ml-4 space-y-3'>;
+                    {resources && resources.map((item, index) => (;
+
+                      <Link
+                        key={index}
+                        href={item && item.link}
+                        className='block text-gray-300 hover:text-white transition-colors'
+                        onClick={closeMobileMenu}>;
+                        {item && item.name}
+                      </Link>;
+                    ))}
+                  </div>;
+                )}
+
+              </div>;
+
+              {/* Contact Info */}
+              <div className='pt-6 border-t border-gray-700/50'>;
+                <div className='text-white font-semibold mb-4'>;
+                  Contact Information;
+                </div>;
+                <div className='space-y-3'>;
+                  <div className='flex items-center space-x-3'>;
+                    <Phone className='w-5 h-5 text-cyan-400' />;
+                    <span className='text-gray-300'>{contactInfo && contactInfo.mobile}</span>;
+                  </div>;
+                  <div className='flex items-center space-x-3'>;
+                    <Mail className='w-5 h-5 text-purple-400' />;
+                    <span className='text-gray-300'>{contactInfo && contactInfo.email}</span>;
+                  </div>;
+                  <div className='flex items-center space-x-3'>;
+                    <MapPin className='w-5 h-5 text-green-400' />;
+                    <span className='text-gray-300 text-sm'>;
+                      {contactInfo && contactInfo.address}
+                    </span>;
+                  </div>;
+                  <div className='flex items-center space-x-3'>;
+                    <Globe className='w-5 h-5 text-blue-400' />;
+                    <span className='text-gray-300'>{contactInfo && contactInfo.website}</span>;
+                  </div>;
+                </div>;
+
+                <div className='mt-6 space-y-3'>;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                   <Button
                     href='/services'
@@ -841,3 +991,4 @@ export default function NeoFuturisticNavigation() {
 				</div>
 			)}
 		</nav>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

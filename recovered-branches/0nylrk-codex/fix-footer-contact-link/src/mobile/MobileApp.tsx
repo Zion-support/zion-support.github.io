@@ -33,3 +33,24 @@ import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",
 
 }
 ;
+        />;
+        <Route path="/browse" element={<MobileBrowse />} />;
+        <Route path="/projects" element={<MobileProjects />} />;
+        <Route path="/inbox" element={<MobileMessages />} />;
+        <Route path="/resume" element={<MobileResumeBuilder />} />;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        <Route path="/post - job" element={<MobileJobPost />} />;
+        <Route path="/profile" element={<div > Profile page</div>} />;
+        <Route path="*" element={<Navigate to="/" replace />} />;
+      </Routes>;
+    </MobileThemeProvider>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

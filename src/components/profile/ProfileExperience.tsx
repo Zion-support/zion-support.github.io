@@ -24,9 +24,16 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
               </div>
             </div>
 
+=======
+
+            
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <div>
               <h4 className="text-white font-medium">{exp.role}</h4>
               <div className="text-zion-cyan mb-1">{exp.company}</div>
               <div className="text-sm text-zion-slate-light mb-2">
                 {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
               </div>
+<<<<<<< HEAD

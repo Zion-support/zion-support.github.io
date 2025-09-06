@@ -1,6 +1,5 @@
 
 
-import { cn } from "@/lib/utils"
 
 const ResizablePanelGroup = ({
   className
@@ -9,6 +8,12 @@ const ResizablePanelGroup = ({
   <ResizablePrimitive.PanelGroup
     className={cn(
 
+=======
+
+      "flex h-full w-full data-[panel-group-direction=vertical]:flex-col",
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       className
     )}
     {...props}
@@ -36,3 +41,4 @@ const ResizableHandle = ({
     )}
   </ResizablePrimitive.PanelResizeHandle>;
 );
+<<<<<<< HEAD

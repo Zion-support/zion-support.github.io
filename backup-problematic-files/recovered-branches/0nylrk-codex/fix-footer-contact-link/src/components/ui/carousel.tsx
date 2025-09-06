@@ -13,7 +13,8 @@
           {...props}
         >;          {children}
         </div>;
-      </CarouselContext.Provider>);
+      </CarouselContext.Provider>;
+    );
   }
 );
 
@@ -23,7 +24,7 @@
       size={size}
 
       disabled={!canScrollPrev}
-      on_click={scroll_prev}
+      onClick={scrollPrev}
       {...props}
 
     <Button;
@@ -32,6 +33,6 @@
       size={size}
 
       disabled={!canScrollNext}
-      on_click={scroll_next}
+      onClick={scrollNext}
       {...props}
 

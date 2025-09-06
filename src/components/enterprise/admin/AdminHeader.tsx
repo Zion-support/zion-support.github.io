@@ -12,13 +12,20 @@ import { Download, Settings } from 'lucide-react'
           <p className="text-muted-foreground mt-1">
             Manage your company's account, team members, and subscription
           </p>
+
         </div>
         <div className="flex items-center gap-2">
+
           <Button variant="outline" size="sm" className="gap-2">
             <Settings className="h-4 w-4" />
             Settings
           </Button>
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <Button variant="outline" size="sm" className="gap-2">
             <Download className="h-4 w-4" />
             Export Data
@@ -37,6 +44,7 @@ import { Download, Settings } from 'lucide-react'
           </div>
           <div>
 
+<<<<<<< HEAD
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}

@@ -31,37 +31,84 @@ function ReviewsModerationContent() {
       setIsLoading(false)
     }
 
+  const fetchReviews = async () => {
+=======
+  const fetchReviews = async () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    setIsLoading(true);
+    try {;
+      // In a real application, you would fetch reviews from an API;
+      // For now, let's simulate a delay and return empty data;
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setReviews([]);
+
+      setIsLoading(false);
+    } catch (error) {;
+      console && console.error("Error fetching reviews:", error);
+      toast({;
+        title: "Error",;
+        description: "Failed to load reviews. Please try again later.",;
+        variant: "destructive"}),;
+      setIsLoading(false);
+    }
+  };
+=======
+
+  },
+
+
+  useEffect(() => {;
+    fetchReviews();
+  }, [activeTab]);
+
+  const handleRefresh = () => {;
+    fetchReviews();
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
+  const handleRefresh = () => {
+    fetchReviews()
+  },
+  
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
-    <>
+    <>;
       <SEO
         title="Review Moderation | Zion AI Marketplace"
         description="Moderate and manage reviews in the Zion AI Marketplace"
-      />
-      <AppHeader />
-      <main className="container mx-auto px-4 py-8">
-        <div className="flex justify-between items-center mb-8">
-          <div>
-            <h1 className="text-3xl font-bold">Review Moderation</h1>
-            <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>
-          </div>
-        </div>
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Star className="h-5 w-5" />
-              Review Management
-            </CardTitle>
-            <CardDescription>
-              Review and moderate user-submitted reviews before they go live
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
-              <TabsList className="mb-6">
-                <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
-                <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
-              </TabsList>
-              <TabsContent value="pending" className="mt-0">
+
+      />;
+      <AppHeader />;
+      <main className="container mx-auto px-4 py-8">;
+        <div className="flex justify-between items-center mb-8">;
+          <div>;
+            <h1 className="text-3xl font-bold">Review Moderation</h1>;
+            <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>;
+          </div>;
+        </div>;
+
+        <Card>;
+          <CardHeader>;
+            <CardTitle className="flex items-center gap-2">;
+              <Star className="h-5 w-5" />;
+              Review Management;
+            </CardTitle>;
+            <CardDescription>;
+              Review and moderate user-submitted reviews before they go live;
+            </CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>;
+              <TabsList className="mb-6">;
+                <TabsTrigger value="pending">Pending Reviews</TabsTrigger>;
+                <TabsTrigger value="reported">Reported Reviews</TabsTrigger>;
+              </TabsList>;
+
+              <TabsContent value="pending" className="mt-0">;
+
                 <ReviewsModerationTable
                   reviews={reviews}
                   isLoading={isLoading}
@@ -84,3 +131,4 @@ function ReviewsModerationContent() {
       <Footer />
     </>
   )
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -18,6 +18,7 @@ if ( {) {
       temperature: 0.4;
       max_tokens: 400});
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       messages: [;
         { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },;
         { role: 'user', content: prompt }];
@@ -26,6 +27,7 @@ if ( {) {
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
     res.status(200).json({ suggestion });
 
+<<<<<<< HEAD
   } catch (error) {
     const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
@@ -56,3 +58,4 @@ if ( {) {
 
   }
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

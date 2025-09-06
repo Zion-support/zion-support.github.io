@@ -1,0 +1,31 @@
+import Link from 'next/link';
+
+export default function HomePage() {
+  return (
+    <div className="space-y-6">
+      <h1 className="text-3xl font-bold">Zion Global</h1>
+      <p>Welcome. Explore the Zion Global Expo to discover multiverse innovation, protocol updates, and partner breakthroughs.</p>
+      <div className="flex gap-4">
+        <Link href="/expo"><a className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Enter Expo</a></Link>
+        <Link href="/events/global"><a className="px-4 py-2 rounded border">Global Event</a></Link>
+      `}</style>
+    </div>
+  );
+}
+
+function FeatureCard({ title, desc, tag, color }: { title: string; desc: string; tag: string; color: string }) {
+  return (
+    <div className={`relative rounded-2xl border border-white/10 p-5 glass hover:border-white/20 transition`}> 
+      <div className={`absolute -inset-px rounded-2xl bg-gradient-to-br ${color} opacity-0 blur-xl transition group-hover:opacity-40`} />
+      <div className="relative">
+        <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-[10px] uppercase tracking-wider text-white/70">{tag}</div>
+        <h3 className="text-lg font-semibold">{title}</h3>
+        <p className="mt-1 text-sm text-white/70">{desc}</p>
+>>>>>>> origin/cursor/build-zion-ipo-readiness-portal-e565
+      </div>
+    </div>
+  );
+}
+<<<<<<< HEAD
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

@@ -3,6 +3,11 @@ import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -48,61 +53,74 @@ const services = [
     ];
   },
   {}
-    title: 'Virtual Classrooms,',
-    description: 'Advanced virtual learning environments with interactive features.,',
-    icon: Video,
-    features: [;
-      'Live video streaming,',
-      'Interactive whiteboards',',
-      'Breakout rooms',',
+
+    title: 'Virtual Classrooms,',;
+    description: 'Advanced virtual learning environments with interactive features.,',;
+    icon: Video,;
+    features: [,;
+      'Live video streaming,',;
+      'Interactive whiteboards',',;
+      'Breakout rooms',',;
+
       'Recording capabilities'';
     ];
   },
   {}
-    title: 'Educational AI Tutors,',
-    description: 'AI-powered tutoring systems for personalized learning experiences.,',
-    icon: Brain,
-    features: [;
-      'Adaptive learning paths,',
-      'Intelligent tutoring',',
-      'Progress monitoring',',
+
+    title: 'Educational AI Tutors,',;
+    description: 'AI-powered tutoring systems for personalized learning experiences.,',;
+    icon: Brain,;
+    features: [,;
+      'Adaptive learning paths,',;
+      'Intelligent tutoring',',;
+      'Progress monitoring',',;
+
       'Personalized feedback'';
     ];
   },
   {}
-    title: 'Student Analytics,',
-    description: 'Data-driven insights into student performance and engagement.,',
-    icon: BarChart3,
-    features: [;
-      'Performance tracking,',
-      'Engagement metrics',',
-      'Predictive analytics',',
+
+    title: 'Student Analytics,',;
+    description: 'Data-driven insights into student performance and engagement.,',;
+    icon: BarChart3,;
+    features: [,;
+      'Performance tracking,',;
+      'Engagement metrics',',;
+      'Predictive analytics',',;
+
       'Intervention recommendations'';
     ];
   },
   {}
-    title: 'Online Assessment Tools,',
-    description: 'Secure and comprehensive online testing and evaluation systems.,',
-    icon: FileText,
-    features: [;
-      'Automated grading,',
-      'Plagiarism detection',',
-      'Secure testing',',
+
+    title: 'Online Assessment Tools,',;
+    description: 'Secure and comprehensive online testing and evaluation systems.,',;
+    icon: FileText,;
+    features: [,;
+      'Automated grading,',;
+      'Plagiarism detection',',;
+      'Secure testing',',;
+
       'Performance reports'';
     ];
   },
   {}
-    title: 'Content Management Systems,',
-    description: 'Digital content creation and management platforms for educators.,',
-    icon: Database,
-    features: [;
-      'Content creation tools,',
-      'Resource libraries',',
-      'Version control',',
+
+    title: 'Content Management Systems,',;
+    description: 'Digital content creation and management platforms for educators.,',;
+    icon: Database,;
+    features: [,;
+      'Content creation tools,',;
+      'Resource libraries',',;
+      'Version control',',;
+
       'Collaboration features'';
     ];
   }
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;];
 const benefits = [;
   {}
@@ -110,6 +128,7 @@ const benefits = [;
     description: 'Personalized learning experiences lead to better student performance.,',
     icon: GraduationCap;
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ];
 const benefits = [
   {
@@ -118,21 +137,26 @@ const benefits = [
     icon: GraduationCap
   },
   {}
-    title: 'Enhanced Engagement,',
-    description: 'Interactive tools and gamification increase student participation.,',
-    icon: Users;
-  },
+
+    title: 'Enhanced Engagement,',;
+    description: 'Interactive tools and gamification increase student participation.,',;
+    icon: Users,;
+  },;
   {}
-    title: 'Better Accessibility,',
-    description: 'Online platforms make education accessible to more students.,',
-    icon: Globe;
-  },
+    title: 'Better Accessibility,',;
+    description: 'Online platforms make education accessible to more students.,',;
+    icon: Globe,;
+  },;
   {}
-    title: 'Data-Driven Insights,',
-    description: 'Analytics help educators make informed decisions about teaching methods.,',
-    icon: BarChart3;
+    title: 'Data-Driven Insights,',;
+    description: 'Analytics help educators make informed decisions about teaching methods.,',;
+    icon: BarChart3,;
+
   }
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;];
 export default function EducationPage() {
   return (;
@@ -158,8 +182,9 @@ export default function EducationPage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <BookOpen className="w-12 h-12 text-orange-400 mr-4" />";
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Education;
+
+                <h1 className="text-5xl md: text-6xl font-bold">", Education,;
+
                   <span className="block bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -169,12 +194,12 @@ export default function EducationPage() {
                 Revolutionize education with cutting-edge learning management systems, virtual classrooms,
                 AI tutors, and student analytics that enhance learning outcomes.,
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
                   Get Education Consultation;
                 </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">";
-                  View Education Case Studies;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-orange-600 transition-all duration-300 font-semibold">", View Education Case Studies,;
+
                 </Link>;
               </div>;
             </motion.div>;
@@ -264,6 +289,9 @@ export default function EducationPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">";
@@ -276,6 +304,7 @@ export default function EducationPage() {
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">
@@ -294,6 +323,14 @@ export default function EducationPage() {
                 </motion.div>;
               ))}
 
+=======
+
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
           </div>
         </section>
@@ -346,6 +383,14 @@ export default function EducationPage() {
                 </motion.div>;
               ))}
 
+=======
+
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
           </div>
         </section>
@@ -365,12 +410,12 @@ export default function EducationPage() {
                 Let our education technology experts help you implement solutions that improve;
                 learning outcomes and student engagement.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
                   Start Your Education Project;
                 </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">";
-                  Learn About Our Expertise;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-orange-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,;
+
                 </Link>;
               </div>;
             </motion.div>;
@@ -379,6 +424,12 @@ export default function EducationPage() {
       </div>;
     </Layout>;
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Education?

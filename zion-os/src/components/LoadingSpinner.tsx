@@ -1,4 +1,21 @@
 
+=======
+"use client",;
+interface LoadingSpinnerProps {;
+  size?: "small" | "medium" | "large",;
+  className?: string;
+}
+;
+export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinnerProps) {;
+  const sizeClasses = {;
+    small: "w-4 h-4",;
+    medium: "w-8 h-8",;
+    large: "w-12 h-12";
+  };
+
+  return (;
+    <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 export /**
  * LoadingSpinner - Function description

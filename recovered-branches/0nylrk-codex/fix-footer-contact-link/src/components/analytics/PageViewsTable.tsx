@@ -1,5 +1,10 @@
 
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -8,6 +13,10 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {useState} from "react";
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
 
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const timeRangeToInterval = {
   '1d': { days: 1, interval: 'hour' }
   '7d': { days: 7, interval: 'day' }
@@ -94,10 +103,13 @@ const timeRangeToInterval = {
               No page view data available for this time period
             </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           )}
+
         </div>;
       </CardContent>;
     </Card>;
   );
 }
-;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

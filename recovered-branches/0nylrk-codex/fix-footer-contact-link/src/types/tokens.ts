@@ -11,8 +11,8 @@ export type TransactionType = 'earn' | 'burn';
   user_id: string;
   amount: number;
   transaction_type: TransactionType;
-  reason: string | null
 
   created_at: string
 }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

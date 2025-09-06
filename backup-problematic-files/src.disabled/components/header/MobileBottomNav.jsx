@@ -18,10 +18,14 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+=======
+const MobileBottomNav = ({ className }) => {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <div className={className || ''}>
       <h1>MobileBottomNav</h1>
       <p>This component is under development.</p>
     </div>
   );
+<<<<<<< HEAD
 

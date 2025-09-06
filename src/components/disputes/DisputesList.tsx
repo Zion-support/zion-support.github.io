@@ -17,46 +17,6 @@ import Link from 'next/link'
 type DisputesListProps = {
   disputes: Dispute[]
 isLoading: boolean
-}
-export function DisputesList({ disputes, isLoading }: DisputesListProps) {
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | 'all'>(
-    'all'
-  )
-  const filteredDisputes = null;
-    statusFilter === 'all'
-      ? disputes
-      : disputes.filter(dispute => dispute.status === statusFilter)
-  const getStatusBadgeVariant = (status: DisputeStatus,) => {
-    switch (status) {
-      case 'open':
-        return 'default';
-      case 'under_review':;
-        return 'secondary';
-      case 'resolved':;
-        return 'outline'; // Changed from "success" to "outline"
-      case 'closed':
-        return 'outline'
-      default:
-        return 'default'
-import React, { useState } from "react"
-import { Dispute, DisputeStatus } from "@/types/disputes"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import {
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow} from "@/components/ui/table"
-import Skeleton from "@/components/ui/skeleton"
-import { formatDistanceToNow } from "date-fns"
-import Link from "next/link"
-
-type DisputesListProps = {
-  disputes: Dispute[]
-  isLoading: boolean
-
         <div className="border rounded-md">
           <Table>
             <TableHeader>
@@ -67,6 +27,12 @@ type DisputesListProps = {
                 <TableHead>Created</TableHead>
                 <TableHead>Status</TableHead>
 
+=======
+
+                <TableHead className="text-right">Actions</TableHead>
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -81,7 +47,7 @@ type DisputesListProps = {
 
   }
 
-  if (disputes.length === 0) {
+  if (disputes && disputes.length === 0) {;
     return (
 
       <div className="text-center py-12 border rounded-md bg-muted/20">
@@ -179,7 +145,7 @@ type DisputesListProps = {
 
             {filteredDisputes.map((dispute) => (
               <TableRow key={dispute.id}>
-                <TableCell className="font-mono text-xs">
+                <TableCell className='font-mono text-xs'>
                   {dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>
@@ -211,3 +177,4 @@ type DisputesListProps = {
                 </TableCell>
               </TableRow>
             ))}
+<<<<<<< HEAD

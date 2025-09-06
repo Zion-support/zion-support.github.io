@@ -1,10 +1,22 @@
 
+=======
+import React from "react",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",;
+import { Link } from "react-router-dom",;
+;
+export function ClientDashboard() {;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-6 px-4 pb-24">;
       <section className="mt-4">;
         <Button className="w-full py-6" size="lg">;
           <Plus className="mr-2 h-5 w-5" /> Post a New Job;
         </Button>;
       </section>;
+<<<<<<< HEAD
 
       <section>;
         <div className="flex items-center justify-between mb-4">;
@@ -41,15 +53,6 @@
                   </div>;
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">;
                     <UserCheck className="h-4 w-4" />;
-
-                  </div>;
-                </div>;
-                <Button size="sm" variant="outline">View Details</Button>;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      </section>;
 
                 <Button size="sm">View Profile</Button>;
                 <Button size="sm" variant="outline">Message</Button>;

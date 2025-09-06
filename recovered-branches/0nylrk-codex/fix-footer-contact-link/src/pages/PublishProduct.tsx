@@ -8,17 +8,21 @@ import { useAuth } from "@/hooks/useAuth",
 
   // Show loading while checking authentication
   if (isLoading) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
-      <div className="flex justify-center items-center min-h-screen bg-zion-blue">
-        <div className="animate-pulse text-zion-purple text-lg">
-          Loading...
-        </div>
-      </div>
-    )
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
+        <div className="animate-pulse text-zion-purple text-lg">;
+          Loading...;
+        </div>;
+      </div>;
+    );
   }
-  // Redirect to login if not authenticated
-  if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/publish' }} replace />
+
+
+  // Redirect to login if not authenticated;
+  if (!isAuthenticated) {;
+    return <Navigate to="/login" state={{ from: '/publish' }} replace />;
+
   }
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
@@ -45,3 +49,20 @@ import { useAuth } from "@/hooks/useAuth",
 
 }
 ;
+            <ProductSubmissionForm />;
+          </div>;
+        </div>;
+      </main>;
+      <Footer />;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

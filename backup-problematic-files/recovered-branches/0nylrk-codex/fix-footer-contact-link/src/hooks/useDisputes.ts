@@ -1,4 +1,135 @@
 
+=======
+import { useState, useEffect } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes",;
+import { toast } from "sonner",;
+;
+export function useDisputes() {;
+  const { user } = useAuth(),;
+  const [disputes, setDisputes] = useState<Dispute[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+;
+  const fetchDisputes = async () => {;
+    if (!user) {;
+      setIsLoading(false),;
+      return,;
+    }
+;
+    try {;
+      setIsLoading(true),;
+      ;
+      const { data, error:fetchError } = await supabase;
+        .from("disputes");
+        .select(`;
+          *,;
+          project:projects(;
+            scope_summary,;
+            job_id,;
+            client_id,;
+            talent_id,;
+            job:jobs(title);
+          ),;
+          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),;
+          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url));
+        `);
+        .order("created_at", { ascending:false }),;
+      ;
+      if (fetchError) throw fetchError,;
+      ;
+      // Transform data if needed;
+      const transformedData = data.map((dispute:any) => ({;
+        ...dispute,;
+        client_profile:dispute.client_profile?.client_profile,;
+        talent_profile:dispute.talent_profile?.talent_profile,;
+        project:{;
+          ...dispute.project,;
+          title:dispute.project?.job?.title || 'Untitled Project';
+        }
+      })),;
+      ;
+      setDisputes(transformedData as Dispute[]),;
+      setError(null),;
+    } catch (err:any) {;
+      console.error("Error fetching disputes:", err),;
+      setError("Failed to fetch disputes:" + err.message),;
+      toast.error("Failed to fetch disputes");
+    } finally {;
+      setIsLoading(false),;
+    }
+  },;
+;
+  const getDisputeById = async (disputeId:string):Promise<Dispute | null> => {;
+    try {;
+      const { data, error } = await supabase;
+        .from("disputes");
+        .select(`;
+          *,;
+          project:projects(;
+            scope_summary,;
+            job_id,;
+            client_id,;
+            talent_id,;
+            job:jobs(title);
+          ),;
+          client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),;
+          talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url));
+        `);
+        .eq("id", disputeId);
+        .single(),;
+      ;
+      if (error) throw error,;
+      ;
+      return {;
+        ...data,;
+        client_profile:data.client_profile?.client_profile,;
+        talent_profile:data.talent_profile?.talent_profile,;
+        project:{;
+          ...data.project,;
+          title:data.project?.job?.title || 'Untitled Project';
+        }
+      } as Dispute,;
+    } catch (err:any) {;
+      console.error("Error fetching dispute:", err),;
+      toast.error("Failed to fetch dispute details"),;
+      return null,;
+    }
+  },;
+;
+  const createDispute = async (disputeData:{ ;
+    project_id:string,;
+    milestone_id?:string,;
+    reason_code:string,;
+    description:string;
+  }):Promise<Dispute | null> => {;
+    if (!user) {;
+      toast.error("You must be logged in to create a dispute"),;
+      return null,;
+    }
+;
+    try {;
+      const { data, error } = await supabase;
+        .from("disputes");
+        .insert({;
+          ...disputeData,;
+          raised_by:user.id;
+        });
+        .select();
+        .single(),;
+;
+      if (error) throw error,;
+      ;
+      toast.success("Dispute submitted successfully"),;
+      fetchDisputes(), // Refresh the list;
+      ;
+      return data as Dispute,;
+    } catch (err:any) {;
+      console.error("Error creating dispute:", err),;
+      toast.error("Failed to submit dispute"),;
+      return null,;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   },;
 ;
@@ -25,5 +156,6 @@
       toast.error("Failed to update dispute status"),;
       return false,;
     }
+<<<<<<< HEAD
 
 }

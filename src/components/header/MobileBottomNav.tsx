@@ -35,6 +35,12 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   const navItems = [
     {
 
+=======
+      name: "Home",
+      href: "/",
+      icon: Home,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     {
       name: "Browse",
       href: "/talent",
@@ -86,7 +92,10 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
               )}
-            </div>
-            <span className="hidden sm:block text-xs font-medium">{item.name}</span>
-          </Link>
+            </div>;
+            <span className='hidden sm:block text-xs font-medium'>;
+              {item && item.name}
+            </span>;
+          </Link>;
         ))}
+<<<<<<< HEAD

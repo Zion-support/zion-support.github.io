@@ -5,6 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download } from "lucide-react",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface ExportPanelProps {
 
   platform: AppPlatform
@@ -30,17 +31,33 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata.version,
           metadata.platform
 
+=======
+        ],
+        
+        content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(),
+        
+        // Add keywords as additional rows
+        content += '\n\nKeywords:\n' + metadata.keywords.join(),
+        
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       // Create download link
 
       toast.success(`Exported ${format.toUpperCase()} file successfully`)
     } catch (error) {
+
       console.error("Export failed:", error),
       toast.error(`Failed to export ${format.toUpperCase()} file`)
 
+=======
+    }
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const trackAnalytics = () => {
-    // // // console.log("Tracking app installation analytics..."),
+    console.log("Tracking app installation analytics...");
     toast.success("Analytics tracking enabled")
 
   return (
@@ -81,3 +98,28 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
   )
 
 };
+                CSV;
+              </Button>;
+            </div>;
+          </div>;
+
+          <div className="border - t border - zion - purple / 20 pt - 4">;
+            <h4 className="font - medium mb - 2">Installation Analytics</h4>;
+            <p className="text - sm text - gray - 400 mb - 3">;
+              Track how many users click "Install" from web;
+            </p>;
+            <Button on_click={track_analytics} className="w - full">;
+
+              Enable Analytics;
+            </Button>;
+          </div>;
+        </div>;
+      </CardContent>;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

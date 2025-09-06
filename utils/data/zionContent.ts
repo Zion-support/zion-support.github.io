@@ -1,10 +1,20 @@
 
+=======
+
+export type Infobox = {;
+  founder: string,;
+  launchYear: string,;
+  token: string,;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   protocolType: string;
 }
 export type WikiSection = {id: string;
   title: string;
   paragraphs: string[];
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   intro: string;
   infobox: Infobox;
   sections: WikiSection[];
@@ -16,6 +26,7 @@ export type WikiSection = {id: string;
   team: WikiSection,;
   publicRoadmap: WikiSection;
 
+<<<<<<< HEAD
 };
 export const operatorPrompt = `Write a Wikipedia-style article about Zion OS — the world’s first decentralized AI protocol for trust, work, and talent. Include use cases, launch history, modules, and governance model.`,;
 export function generateZionWiki(): WikiContent {;
@@ -24,12 +35,6 @@ export function generateZionWiki(): WikiContent {;
   const infobox: Infobox = {;
     founder: 'Zion Holdings';
     launchYear: '2025';
-
-    token: 'ZION$',;
-    protocolType: 'Decentralized AI marketplace & governance protocol'},;
-  const sections: WikiSection[] = [;
-    {;
-
       title: 'History and Launch',;
       paragraphs: [;
         'Zion OS originated from the need to coordinate AI work, attribution, and payments across a multi-agent economy. Early prototypes focused on agent task routing and provable contribution tracking.The mainnet-ready architecture was announced in 2025 alongside the ZION$ token model for incentive alignment, with a progressive decentralization path through the Zion DAO.']},;
@@ -219,11 +224,7 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-;
-export function slugify(input: string): string {;
-  return input;
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     .toLowerCase();
     .replace(/[^a-z0-9\s-]/g, '');
     .trim();
@@ -231,3 +232,6 @@ export function slugify(input: string): string {;
     .replace(/-+/g, '-');
 
 }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,0 +1,18 @@
+{
+  "summary": {
+<<<<<<< HEAD
+=======
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "totalFiles": 0,
+    "filesWithIssues": 0,
+    "totalIssues": 0,
+    "totalWarnings": 0,
+    "buildBreakingFiles": 0,
+    "canBuild": true
+  },
+  "results": [],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-19T23:56:17.090Z"
+}

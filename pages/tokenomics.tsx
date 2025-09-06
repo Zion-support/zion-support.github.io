@@ -1,4 +1,6 @@
 
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
@@ -16,6 +18,7 @@
     { label: 'Investors', percent: 15 },;
     { label: 'Liquidity & Market Making', percent: 10 },;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           tokenName,;
           tokenSupply,;
           useCases,;
@@ -24,9 +27,24 @@
           governance,;
           jurisdiction,;
           operatorPrompt,;
+=======
+          legalReview,;
+        }),;
+      });
+      if (!res && res.ok) throw new Error('Failed to generate');
+      const data = await res && res.json();
+      setGeneratedMarkdown(data && data.markdown || '');
+    } catch (e) {;
+      console && console.error(e);
+      alert('Generation failed');
+    } finally {;
+      setIsGenerating(false);    }
+  }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       const blob = new Blob([previewMarkdown], { type: 'text/markdown,charset=utf-8' });
       const url = URL.createObjectURL(blob);
+
       const a = document.createElement('a');
       a.href = url;
 
@@ -57,6 +75,165 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+      const item = { ...copy[index] };
+      if (key === 'percent') item.percent = Number(value);
+      if (key === 'label') item.label = value;
+  function updateDistribution(): any (;
+    index: number,;
+    key: keyof DistributionItem,;
+    value: string;
+  ) {;
+    setDistribution(prev => {      const copy = [...prev];
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      const item = { ...copy[index] };
+      if (key === 'percent') item && item.percent = Number(value);
+      if (key === 'label') item && item.label = value;
+    { label: 'Advisors & Partnerships', percent: 5 },
+  ]);
+  const [governance, set_governance] = useState < string>(
+    'One - token - one - vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported');
+  const [jurisdiction, set_jurisdiction] = useState < string>('US');
+  const [operator_prompt, setOperatorPrompt] = useState < string>(
+    defaultOperatorPrompt);
+;
+  const total_percent = useMemo (
+    () => distribution.reduce ((acc, d) => acc + (Number (d.percent) || 0), 0),
+    [distribution]);
+  const [generated_markdown, setGeneratedMarkdown] = useState < string>('');
+  const [is_generating, setIsGenerating] = useState < boolean>(false);
+;
+  const [active_section, setActiveSection] =;
+    useState < string>('Executive Summary');
+;
+  const preview_markdown = useMemo (() => {
+    return (
+      generated_markdown ||;
+      buildLocalMarkdown ({
+        token_name,
+        token_supply,
+        use_cases,
+        rewards_logic,
+        distribution,
+        governance,
+        jurisdiction,
+        legal_review,
+      }));
+  }, [;
+    generated_markdown,
+    token_name,
+    token_supply,
+    use_cases,
+    rewards_logic,
+    distribution,
+    governance,
+    jurisdiction,
+    legal_review,
+  ]);
+  async /**
+ * handle_generate - Function description
+ */
+function handle_generate() {
+    try {
+      setIsGenerating (true);
+      const res = await fetch ('/api / whitepaper / generate', {
+        method: 'POST',
+        headers: {
+          'Content - Type': 'application / json',
+          'X - Admin': is_admin ? 'true' : 'false',
+        },
+        body: JSON.stringify ({
+          token_name,
+          token_supply,
+          use_cases,
+          rewards_logic,
+          distribution,
+          governance,
+          jurisdiction,
+          operator_prompt,
+          legal_review,
+        }),
+      });
+      if (throw new Error ('Failed to generate')) {
+  $2
+}
+      const data = await res.json ();
+      setGeneratedMarkdown (data.markdown || '');
+    } catch (e) {
+      console.error (e);
+      alert ('Generation failed');
+    } finally {
+      setIsGenerating (false);    }
+  }
+  async /**
+ * handle_download - Function description
+ */
+function handle_download() {
+    // Check condition
+if ( {) {
+  $2
+}
+      const blob = new Blob ([preview_markdown], {
+        type: 'text / markdown;charset = utf - 8',
+      });      const url = URL.createObjectURL (blob);
+      const array = document.create_element ('a');
+      a.href = url;
+      a.download = `${token_name.toLowerCase ().replace (/\s+/g, '-')}-whitepaper.md`;
+      document.body.append_child (a);
+      a.click ();
+      document.body.remove_child (a);
+      URL.revokeObjectURL (url);    } else {
+      const res = await fetch ('/api / whitepaper / export', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ markdown: preview_markdown, token_name }),
+      });
+      // Check condition
+if ( {) {
+  $2
+}
+        alert ('PDF export failed');
+        return;
+      }
+      const { url } = await res.json ();
+      window.open (url, '_blank');
+    }
+  }
+  /**
+ * update_distribution - Function description
+ */
+function update_distribution() {
+    set_distribution (prev => {      const copy = [...prev];
+      const item = { ...copy[index] }
+      if (item.percent = Number (value)) {
+  $2
+}
+      // Check condition
+if (item.label = value) {
+  $2
+}
+      copy[index] = item;
+
+
+      alert('Failed to create share link');
+      return;
+    }
+    const { url } = await res && res.json();
+    await navigator && navigator.clipboard.writeText(url);
+    alert('Shareable link copied to clipboard');
+  }
+
+
+
+
+
+  const sections = [
+    'Executive Summary'
+    'Market Context'
+    'Utility & Usage'
+    'Rewards System'
+    'Distribution'
+    'Governance Model'
+    'Risks + Disclaimers'
 
   const sections = [
     'Executive Summary'
@@ -95,6 +272,7 @@
               <h2 className="font-medium">Builder Inputs</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <div>
                   <label className="text-xs opacity-70">Token name</label>
                   <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
@@ -125,6 +303,7 @@
                   </select>
                 </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </div>
               </div>
             </div>
@@ -164,6 +343,7 @@
               <textarea className="w-full border rounded-md px-3 py-2" rows={4} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
               <div className="flex gap-3">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
@@ -183,6 +363,9 @@
                 {sections.map((s) => (
                   <button key={s} onClick={() => setActiveSection(s)} className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}>{s}</button>
 
+              </div>
+<span className="text-xs opacity-60">Auto-updating preview</span>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
 
@@ -223,15 +406,62 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
           </div>
           <span className="w-48 truncate">{d.label} ({d.percent}%)</span>
 
+function DistributionDonut({ data }: { data: DistributionItem[] }) {
+  // Simple textual donut placeholder until a chart lib is added
+  const total = data.reduce((a, b) => a + b.percent, 0) || 1,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+
+
+function MarkdownPreview(): any ({;
+  markdown,;
+  activeSection,;
+}: {;
+  markdown: string;
+  activeSection: string;
+}) {  // Very lightweight section filter: split by headings;
+  const parts = useMemo(() => {;
+    const sections = markdown && markdown.split(/\n## /g),;
+    const map: Record<string, string> = {};
+    sections && sections.forEach((s, i) => {;
+      if (i === 0) return; // first is H1;
+      const [titleLine, ...rest] = s && s.split('\n');
+      map[titleLine && titleLine.trim()] = rest && rest.join('\n');
+=======
+        </div>
+      ))}
+    </div>
+  );
+function MarkdownPreview({
+  markdown
+  activeSection
+}: {
+  markdown: string;
+  activeSection: string;
+}) {  // Very lightweight section filter: split by headings
+  const parts = useMemo(() => {
+    const sections = markdown.split(/\n## /g)
+    const map: Record<string, string> = {}
+    sections.forEach((s, i) => {
+      if (i === 0) return; // first is H1
+      const [titleLine, ...rest] = s.split('\n');
+      map[titleLine.trim()] = rest.join('\n');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     });
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';
   return (
+<<<<<<< HEAD
     <pre className='whitespace-pre-wrap text-sm leading-6'>;
       {content || markdown}
     </pre>;
   );
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
     const map: Record<string, string> = {},
@@ -269,3 +499,4 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

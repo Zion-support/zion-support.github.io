@@ -3,42 +3,8 @@ import { ImageIcon } from 'lucide-react'
 interface SafeImageProps {;
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
-  src: string
-  alt: string
-interface SafeImageProps {
 
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  fallbackSrc?: string
-  priority?: boolean
-  sizes?: string
-  quality?: number
-export function SafeImage({
-  src
-  alt
-  width
-  height
-  className = ''
-  fallbackSrc
-  priority = false
-  sizes
-  quality = 75
-}: SafeImageProps) {
-  const [hasError, setHasError] = useState(false)
-  const [currentSrc, setCurrentSrc] = useState(src)
-  const handleError = () => {
-    if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
-      setCurrentSrc(fallbackSrc)
-      setHasError(true)
-      // Try serving the image directly through our custom API route
-      const fallbackUrl = `/api/image${src}`
-      setCurrentSrc(fallbackUrl)
-      setHasError(true)
-    } else if (!hasError) {
-      setHasError(true)
+
     }
   }
 
@@ -63,8 +29,33 @@ export function SafeImage({
     )
   }
 
+=======
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     />
   ); return (
+        aria-label = {alt,}>;
+        <ImageIcon className='w-6 h-6' />      </div>;
+    );
+  }
+
+
+    />;
+  );        aria-label={alt}
+      >;
+        <ImageIcon className="w-6 h-6" />;
+      </div>;
+    );
+  }
+
+
+    />;
+  );  return (
+
+
     <Image
       src = {currentSrc,}
       alt = {alt,}
@@ -75,6 +66,7 @@ export function SafeImage({
       priority = {priority,}
       // Add unoptimized as fallback for problematic images
       unoptimized = {hasError,}
+<<<<<<< HEAD
     />
   )
 

@@ -1,5 +1,9 @@
 
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import fs from 'fs')
 import path from 'path')
 
@@ -8,17 +12,67 @@ class SecurityScanner { constructor() { this.projectRoot = process.cwd(); this.l
 class SecurityScanner {}
   constructor() {}
 
+=======
+    this && this.projectRoot = process && process.cwd();,
+    this && this.logFile = path && path.join(this && this.projectRoot, 'automation/logs/security-scanner && scanner.log');',
+    this && this.securityReportFile = path && path.join(this && this.projectRoot, 'automation/logs/security-report && report.json');',
+    this && this.lastScan = null;,
+    this && this.scanInterval = 3600000; // 1 hour;
+    this && this.isRunning = false;
+    this && this.setupLogging();
+    this && this.log('Security Scanner started')}',
+  setupLogging() {}
+    const logDir = path && path.dirname(this && this.logFile);,
+    if (!fs && fs.existsSync(logDir)) {}
+      fs && fs.mkdirSync(logDir, { "recursive": true })}",
       await this.saveSecurityReport();
       await this.handleSecurityIssues(vulnerabilities)}
+
   }
   parseVulnerabilities(output) {}
     const vulnerabilities = {}
 
+      };,
+      this && this.log(`Security audit completed successfully in ${scanTime}ms`);,
+      await this && this.saveSecurityReport();,
+    } catch (error) {}
+      this && this.log(`Security audit "failed": ${error && error.message}`);",
+      this && this.lastScan = {
+        "timestamp": new Date().toISOString()"}
+        success: false;,
+        error: error && error.message;,
+        output: output;,
+        vulnerabilities: vulnerabilities;,
+      };,
+      await this && this.saveSecurityReport();
+      await this && this.handleSecurityIssues(vulnerabilities)}
+  }
+  parseVulnerabilities(output) {}
+    const vulnerabilities = {}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   }
   async autoFixSecurityIssues() {}
     try {}
 
+=======
+      this && this.log('Attempting to auto-fix security issues...');',
+      // Run npm audit fix;
+      const fixOutput = execSync('npm audit fix', { ',
+;      this && this.log(`Failed to auto-fix security "issues": ${fixError && fixError.message}`);",
+      await this && this.reportSecurityFailure(fixError);,
+
+=======
+
+      this.log('Attempting to auto-fix security issues...');',
+      // Run npm audit fix;
+      const fixOutput = execSync('npm audit fix', { ',
+;      this.log(`Failed to auto-fix security "issues": ${fixError.message}`);",
+      await this.reportSecurityFailure(fixError);,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   }
   async reportSecurityIssues (vulnerabilities) {}
@@ -26,6 +80,18 @@ class SecurityScanner {}
 
     this.log('Security issues reported');';
 
+=======
+
+      "timestamp": new Date().toISOString()";
+;      vulnerabilities: vulnerabilities;,}
+      projectRoot: this.projectRoot;,
+      recommendation: this.getSecurityRecommendation(vulnerabilities);,
+    const reportFile = path.join(this.projectRoot, 'automation/logs/security-issues-report.json');',
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));,
+
+    this.log('Security issues reported');';
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
   getSecurityRecommendation (vulnerabilities) {
   }
@@ -35,6 +101,7 @@ class SecurityScanner {}
   async checkDependencyUpdates() {}
     try {}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     } catch (error) {}
       // Check condition
 if ( {) {
@@ -43,11 +110,26 @@ if ( {) {
     {
         // npm outdated returns 1 when there are outdated packages}
 
+=======
+        this && this.log('Outdated dependencies found');',
+        await this && this.updateDependencies()} else {}
+        this && this.log(`Dependency check "failed": ${error && error.message}`)}",
+
+=======
+
+        this.log('Outdated dependencies found');',
+        await this.updateDependencies()} else {}
+        this.log(`Dependency check "failed": ${error.message}`)}",
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   }
   async update_dependencies () {}
     try {}
 
+=======
+      this && this.log('Updating dependencies...');',
       // Update non-breaking dependencies;
       execSync('npm update', { ',
         "cwd": this && this.projectRoot;"}),
@@ -58,6 +140,12 @@ if ( {) {
   }
   async start() {}
 
+=======
+    this.isRunning = true;,
+    this.log('Security Scanner started');';,
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Initial security scan;
     await this && this.runSecurityAudit();
     // Check for dependency updates;
@@ -81,6 +169,10 @@ scanner.start().catch(error => {}),
 
 ;
 
+;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node;
 /**
  * Security Scanner - PM2 Automation Script;
@@ -109,12 +201,8 @@ class SecurityScanner {
     const logMessage = `[${timestamp}] ${message}\n`;
     fs.appendFileSync(this.logFile, logMessage);
   }
-  log(message) {
-    const timestamp = new Date().toISOString(;
-  });
-    const logMessage = `[${timestamp}] ${message}\;n;`;
-    );
-    fs.appendFileSync(this.logFile, logMessage)}
+
+
 ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   async runSecurityAudit() {
     try {
@@ -152,9 +240,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       await this.saveSecurityReport();
     } catch (error) {
       this.log(`Security audit "failed": ${error.message}`);
-      // Parse audit output for vulnerability counts;
-      const output = error.stdout || error.stderr || ;';';
-      const vulnerabilities = this.parseVulnerabilities(output;);
+
+
 // Parse audit output for vulnerability counts
       const output = error.stdout || error.stderr || '';
       const vulnerabilities = this.parseVulnerabilities(output);ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -170,52 +257,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   }
   parseVulnerabilities(output) {
     const vulnerabilities = {
-      critical: 0,
-      high: 0,
-      moderate: 0,
-      low: 0
-   ; ;};
-      "critical": 0;
-      high: 0;
-      moderate: 0;
-      low: 0;
-   };
-    try {
-      // Parse npm audit output for vulnerability counts;
-      const criticalMatch = output.match(/(\d+) critical;/;);
-      const highMatch = output.match(/(\d+) high;/;);
-      const moderateMatch = output.match(/(\d+) moderate;/;);
-      const lowMatch = output.match(/(\d+) low;/;);
-      if (vulnerabilities.critical = parseInt(criticalMatch[1])) {
-    vulnerabilities.critical = parseInt(criticalMatch[1]);
-  }
-      if (vulnerabilities.high = parseInt(highMatch[1])) {
-    vulnerabilities.high = parseInt(highMatch[1]);
-  }
-      if (vulnerabilities.moderate = parseInt(moderateMatch[1])) {
-    vulnerabilities.moderate = parseInt(moderateMatch[1]);
-  }
-      if (vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {
-      this.log(`Failed to parse "vulnerabilities": ${error.message}`)}
-    return vulnerabilities) {
-    vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {
-      this.log(`Failed to parse "vulnerabilities": ${error.message}`)}
-    return vulnerabilities;
-  }}
-  async handleSecurityIssues(vulnerabilities) {
-    const totalIssues = vulnerabilities.critical + vulnerabilities.high + vulnerabilities.moderate + vulnerabilities.low;
-    if ( {
-      this.log(`Found ${totalIssues} security vulnerabilities`)) {
-     {
-      this.log(`Found ${totalIssues} security vulnerabilities`);
-  }
-      // Auto-fix if possible;
-      if ( {
-        this.log('Critical or high severity vulnerabilities found, attempting auto-fix...')) {
-     {
-        this.log('Critical or high severity vulnerabilities found, attempting auto-fix...');
-  }
-        await this.autoFixSecurityIssues()} else {
+
+
 "critical": 0,
       "high": 0,
       "moderate": 0,
@@ -294,32 +337,16 @@ if (totalIssues > 0) {
       vulnerabilities: vulnerabilities;
       projectRoot: this.projectRoot;
       recommendation: this.getSecurityRecommendation(vulnerabilities)
-   ; ;};
-   };
+
+
 };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     const reportFile = path.join(this.projectRoot, 'automation/logs/security-issues-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log('Security issues reported');
   }
   getSecurityRecommendation(vulnerabilities) {
-    if ( {
-      return '"CRITICAL": Immediate action required. Update dependencies or apply patches.') {
-     {
-      return 'CRITICAL: Immediate action required. Update dependencies or apply patches.';
-  }} else if ( {
-      return 'HIGH: Update dependencies as soon as possible.') {
-     {
-      return 'HIGH: Update dependencies as soon as possible.';
-  }} else if ( {
-      return 'MODERATE: Consider updating dependencies in next maintenance window.') {
-     {
-      return 'MODERATE: Consider updating dependencies in next maintenance window.';
-  }} else if ( {
-      return 'LOW: Monitor and update when convenient.') {
-     {
-      return 'LOW: Monitor and update when convenient.';
-  }} else {
-      return 'No security issues found.';}
+
+
       return 'CRITICAL: Immediate action required. Update dependencies or apply patches.'}} else if ( {
       return '"HIGH": Update dependencies as soon as possible.') {
      {
@@ -345,16 +372,8 @@ if (vulnerabilities.critical > 0) {
   }
   async saveSecurityReport() {
     const report = {
-      lastScan: this.lastScan,
-      projectRoot: this.projectRoot,
-      nodeVersion: process.version,
-      platform: process.platform
-   ; ;};
-      "lastScan": this.lastScan;
-      projectRoot: this.projectRoot;
-      nodeVersion: process.version;
-      platform: process.platform;
-   };
+
+
 "lastScan": this.lastScan,
       "projectRoot": this.projectRoot,
       "nodeVersion": process.version,
@@ -364,16 +383,8 @@ if (vulnerabilities.critical > 0) {
   }
   async reportSecurityFailure(error) {
     const failureReport = {
-      timestamp: new Date().toISOString(),
-      error: error.message,
-      stack: error.stack,
-      projectRoot: this.projectRoot
-   ; ;};
-      "timestamp": new Date().toISOString()
-      error: error.message;
-      stack: error.stack;
-      projectRoot: this.projectRoot;
-   };
+
+
 "timestamp": new Date().toISOString(),
       "error": error.message,
       "stack": error.stack,
@@ -439,6 +450,7 @@ if (vulnerabilities.critical > 0) {
       this.log (`Failed to update "dependencies": ${error.message}`)}",
   }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }};
 ; log(message, level = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile, logMessage)};
 ; async runSecurityAudit() {; try {; this.log("Running security audit..."); const output = execSync("npm audit --json", { stdio: 'pipe' }); const auditResult = JSON.parse(output.toString());
@@ -462,6 +474,7 @@ if (vulnerabilities.critical > 0) {
 ; this.log(" = " * 50); this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`); this.vulnerabilities.forEach(vuln = > this.log(` ⚠️ ${vuln}`));
 } catch (error) {; this.log(`❌ Security Scanner failed: ${error.message}`, "ERROR")}}};
 ;
+
       if ( {}),
         await this && this.runSecurityAudit()) {
      {}
@@ -483,6 +496,11 @@ const scanner = new SecurityScanner;(;);
 scanner && scanner.start().catch(error => {}),
   _console && _console.error('Failed to start security "scanner": ', error);',
   process && process.exit(1)});,
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Main execution;
 if (import && import.meta.url = = = `file: //${process ; const scanner = new SecurityScanner(); scanner && scanner.run().catch(console && console.error)};
 export default SecurityScanner;
@@ -615,28 +633,25 @@ if (import.meta.url === `file: //${process.argv[1]}`) {;
 };
 ;
 export default SecurityScanner;
-
-    };
-  };
-,
-  log(message, level = "INFO") {,
-    const timestamp = new Date().toISOString(),
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`,
-    console.log(`[${level}] ${message}`),
-    fs.appendFileSync(this.logFile, logMessage),
-  };
-,
-  async runSecurityAudit() {,
-    try {,
-      this.log("Running security audit..."),
-      const output = execSync("npm audit --json", { stdio: 'pipe' }),
-
       const auditResult = JSON.parse(output.toString()),
 ,
       if (auditResult.vulnerabilities) {,
         const vulnCount = Object.keys(auditResult.vulnerabilities).length,
         this.vulnerabilities.push(`${vulnCount} vulnerabilities found`),
 
+=======
+
+        this.log(`Found ${vulnCount} vulnerabilities`, "WARN")
+      } else {,
+        this.log("✓ No vulnerabilities found")
+      }
+    } catch (error) {,;
+      this.log(`Security audit: failed: ${error.message}`, "ERROR");
+    }
+  },
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ,
   async checkSecrets() {,
     try {,
@@ -717,9 +732,52 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
 ,
 export default SecurityScanner,
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 scanner.start().catch(error => {})
   _console.error('Failed to start security "scanner": ', error);'
   process.exit(1)});
 // Main execution;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const scanner = new SecurityScanner(); scanner.run().catch(console.error)}
 export default SecurityScanner;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    set_interval (async () => {}
+      // Check condition
+if (, ) {
+  $2
+}
+        await this.runSecurityAudit ()) {
+    {}
+        await this.runSecurityAudit ()}
+        await this.checkDependencyUpdates ()}
+    }, this.scan_interval);,
+    // Handle graceful shutdown;
+    process.on ('SIGTERM', () => {'}
+      this.log ('Received SIGTERM, shutting down gracefully');',
+      this.is_running = false;,
+      process.exit (0)});,
+    process.on ('SIGINT', () => {'}
+      this.log ('Received SIGINT, shutting down gracefully');',
+      this.is_running = false;,
+      process.exit (0)})}
+}
+// Start the security scanner;
+const scanner = new SecurityScanner;();
+scanner.start ().catch (error => {}),
+  _console.error ('Failed to start security "scanner": ', error);',
+  process.exit (1)});,
+;
+// Main execution;
+// Check condition
+if ( {) {
+  $2
+} const scanner = new SecurityScanner (); scanner.run ().catch (console.error)}
+;
+export default SecurityScanner;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

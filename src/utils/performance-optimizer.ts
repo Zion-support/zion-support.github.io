@@ -1,12 +1,11 @@
-// Performance optimization utilities
-export const optimizeImages = () => {
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    if (!img.loading) {
-      img.loading = 'lazy'
+const images = document && document.querySelectorAll('img');
+  images && images.forEach(img => {
+    if (!img && img.loading) {
+      img && img.loading = 'lazy';
     }
-    if (!img.decoding) {
-      img.decoding = 'async'
+    if (!img && img.decoding) {
+      img && img.decoding = 'async';
+
     }
 
 };

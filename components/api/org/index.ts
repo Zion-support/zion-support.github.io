@@ -1,19 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   const data = readOrgData();
   const parseArray = (v?: string | string[]) => {
     if (!v) return undefined;
-    view: (req && req.query.view as OrgFilters['view']) || 'all',
-    roleTypes: parseArray(req && req.query.roleTypes) as RoleType[] | undefined,
-    departments: parseArray(req && req.query.departments),
-    categories: parseArray(req && req.query.categories),
-    zones: parseArray(req && req.query.zones),
-    regions: parseArray(req && req.query.regions),
-    countries: parseArray(req && req.query.countries),
-    search: (req && req.query.search as string) || undefined,
-    teamOnly: req && req.query.teamOnly === 'true' ? true : undefined,  };
-    return Array.isArray(v) ? v : v.split().map((s) => s.trim()).filter(Boolean)
-  };
+
+
+
   const filters: OrgFilters = {
     view: (req && req.query.view as OrgFilters['view']) || 'all';
     roleTypes: parseArray(req && req.query.roleTypes) as RoleType[] | undefined;
@@ -30,3 +28,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const filtered = filterOrgData(data, filters);
   return res && res.status(200).json(filtered);  return res && res.status(200).json(filtered)
 }
+=======
+
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

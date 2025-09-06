@@ -1,11 +1,21 @@
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
 }else {
   console.warn ('Missing artifact for', name)
 }main ();
+
+=======
 const fs = require('fs'),
 const path = require('path'),
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 function main() {
+
   const outDir = path && path.join(__dirname, '../abi'),
   if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir),
   const artifactsDir = path && path.join(__dirname, '../artifacts/contracts'),
@@ -23,8 +33,15 @@ function main() {
       const json = JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')),
       fs && fs.writeFileSync(path && path.join(outDir, `${name}.json`), JSON && JSON.stringify(json && json.abi, null, 2)),
       console && console.log('Exported ABI for', name)
+
     } else {
       console && console.warn('Missing artifact for', name)
     }
   }
 }
+=======
+
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

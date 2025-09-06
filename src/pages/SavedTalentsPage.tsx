@@ -65,6 +65,34 @@ import { TalentProfile } from "@/types/talent",
         return;
       }
 
+=======
+
+;
+      if (isCurrentlySaved) {;
+
+        // Remove from saved talents;
+        const { error } = await supabase;
+          .from ('saved_talents');
+          .delete ();
+          .eq ('user_id', user.id);
+          .eq ('talent_id', talent_id);
+        // Check condition
+if ( {) {
+  $2
+}
+          throw error;
+        }
+
+  
+        setSavedTalents(prevTalents =>
+          prevTalents.filter(talent => talent.id !== talentId)
+        ),
+        toast({
+          title: "Talent Removed",
+          description: "Talent removed from saved list."})
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       } else {
         // Add to saved talents
         const { error } = await supabase
@@ -126,3 +154,4 @@ import { TalentProfile } from "@/types/talent",
             ))}
           </div>
         )}
+<<<<<<< HEAD

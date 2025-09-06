@@ -13,6 +13,13 @@ import { useReviews } from "@/hooks/useReviews",
             averageRating={averageRating}
             totalReviews={ratingCount}
 
+=======
+
+            ratingDistribution={ratingDistribution}
+          />
+        </div>
+        
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
@@ -49,3 +56,4 @@ import { useReviews } from "@/hooks/useReviews",
                 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
+<<<<<<< HEAD

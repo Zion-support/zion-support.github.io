@@ -4,6 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const { region, stakeUsd } = req.body |{}
   const stake = Number(stakeUsd |0);
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
   // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum
@@ -41,3 +42,5 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   }
   const ranked = candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k] }));
   res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

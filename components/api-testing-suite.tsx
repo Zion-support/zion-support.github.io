@@ -1,4 +1,34 @@
 
+=======
+  const testTypes = [
+    {
+      name: 'Functional Testing',
+      description: 'Verify that your API endpoints work correctly and return expected responses.',
+      tests: ['Request/response validationStatus code verificationData format checkingError handling']
+};
+    {
+      name: 'Performance Testing',
+      description: 'Ensure your APIs can handle expected load and perform under pressure.',
+      tests: ['Load testingStress testingResponse time analysisThroughput measurement']
+};
+    {
+      name: 'Security Testing',
+      description: 'Identify security vulnerabilities and ensure proper authentication and authorization.',
+      tests: ['Authentication testingAuthorization checksInput validationSQL injection testing']
+};
+    {
+      name: 'Integration Testing',
+      description: 'Test how your APIs integrate with other systems and services.',
+      tests: ['End-to-end workflowsThird-party integrationsData flow validationError propagation']
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Code,
   Zap,
   Shield,
@@ -8,6 +38,13 @@
   Play,
   AlertTriangle,
 
+=======
+=======
+  Clock,;
+  Database,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [isTesting, setIsTesting] = useState(false);
   const [testResults, setTestResults] = useState(null);
   const [apiEndpoint, setApiEndpoint] = useState('');
@@ -15,6 +52,7 @@
 
   ];
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const pricing = [
     {
       name: 'Starter'
@@ -22,6 +60,8 @@
       period: '/month'
       description: 'Perfect for developers and small teams'
       features: [
+
+
   const features = [;
     {;
       icon: <Code className='w-8 h-8 text-white' />,;
@@ -157,7 +197,7 @@ function APITestingSuitePage() {
       price: '$49',
       period: '/month',
       description: 'Perfect for developers and small teams',
-features: [;
+      features: [;
         '100 API tests / month',
         'Basic test scenarios',
         'Email notifications',
@@ -170,11 +210,13 @@ features: [;
       ];
       popular: false;
     }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       name: 'Professional',
       price: '$99',
       period: '/month',
       description: 'Ideal for growing businesses and development teams',
-features: [;
+
+      features: [;
         '500 API tests / month',
         'Advanced test scenarios',
         'SMS & email alerts',
@@ -189,11 +231,13 @@ features: [;
       ];
       popular: true;
     }
+
       name: 'Enterprise',
       price: '$299',
       period: '/month',
       description: 'For large organizations with complex API requirements',
-features: [;
+
+      features: [;
         'Unlimited API tests',
         'Custom test scenarios',
         'Custom alerting rules',
@@ -210,9 +254,18 @@ features: [;
     if () return) {
   $2
 }        'Unlimited API tests_custom test scenarios_custom alerting rules24 / 7 dedicated support_unlimited endpoints_advanced security testing_white - label options_custom integrations';
+
       ];
       popular: false;
     }
+
+
+      ];
+      popular: false;
+    }
+
+    
+
     setIsTesting(true);
     // Simulate API testing
     setTimeout(() => {
@@ -222,6 +275,7 @@ features: [;
         responseTime: '245ms'
         statusCode: 200
         tests: [
+
   const handleTestAPI = async () => {
     if () return) {
   $2
@@ -235,12 +289,16 @@ features: [;
         response_time: '245ms',
         status_code: 200,
         tests: [;
+
           {
             name: 'Response Time'
             status: 'pass'
             value: '245ms'
             threshold: '<500ms'
           }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   const handleTestAPI = async () => {;
     if (!apiEndpoint && apiEndpoint.trim()) return;
     setIsTesting(true);
@@ -278,6 +336,8 @@ features: [;
           }
           {
 
+=======
+
             name: 'Rate Limiting',
             status: 'pass',
             value: 'Within limits',
@@ -285,22 +345,36 @@ features: [;
           },
         ],
 
+
+
         recommendations: [
+
+            name: 'Rate Limiting',
+            status: 'pass',
+            value: 'Within limits',
+            threshold: 'No throttling',
+          },
+        ],
+=======
+        recommendations: [;
+
+          'Consider implementing response caching for better performance',
+          'Monitor response times during peak usage',
+          'Implement rate limiting headers for better API documentation',
+        ],
+
+
+
+        recommendations: [
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           'Consider implementing response caching for better performanceMonitor response times during peak usageImplement rate limiting headers for better API documentation'
         ]
       })
       setIsTesting(false)
     }, 3000)
-      });
-      setIsTesting (false);
-    }, 3000);  }        recommendations: [;
-          'Consider implementing response caching for better performance_monitor response times during peak usage_implement rate limiting headers for better API documentation';
-        ];
-      });
-      setIsTesting (false);
-    }, 3000);
-  }
-;
+
+
   return (
     <>;
       <Head>;
@@ -308,11 +382,15 @@ features: [;
           API Testing Suite - Zion Tech Group | Comprehensive API Testing &;
           Monitoring Tool;
         </title>;
+
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
+
       {/* Hero Section */}
 
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </p>
           {/* API Testing Form */}
           <div className='max-w-3xl mx-auto mb-8'>;
@@ -333,6 +411,7 @@ features: [;
             <Button
               onClick={handleTestAPI}
               size='lg'
+
               className='w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white shadow-2xl hover-glow'              disabled={isTesting || !apiEndpoint && apiEndpoint.trim()}>;
               {isTesting ? (;
                 <>;
@@ -344,6 +423,7 @@ features: [;
                 className="px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent";
               />;
             </div>;
+
             <Button
               onClick={handleTestAPI}
               size='lg'
@@ -432,6 +512,7 @@ features: [;
             </Button>;
             <Button
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Features Section */}
       <section className='section - padding bg - gradient - cursor - accent'>;
         <div className='container - cursor'>;
@@ -440,15 +521,18 @@ features: [;
               Powerful Testing Features;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+
               Our API testing suite provides everything you need to ensure your;
               APIs are reliable, performant, and secure.;
             </p>;
           </div>;
+
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Powerful Testing Features
+
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Our API testing suite provides everything you need to ensure your APIs are reliable, performant, and secure.
@@ -500,6 +584,72 @@ features: [;
                   <div className='flex - 1'>;
                     <h3 className='text - 2xl font - bold mb - 4 text - white'>;
                       {feature.title}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Test Types Section */}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              Comprehensive Testing Coverage
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              We cover all aspects of API testing to ensure your APIs meet the
+              highest standards of quality and reliability.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            {testTypes.map((type, index) => (
+=======
+          </div>;
+        </div>;
+      </section>;
+      {/* Test Types Section */}
+      <section className='section-padding bg-gradient-cursor'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+              Comprehensive Testing Coverage;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+                    </p>;
+                  </div>;
+                </div>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Test Types Section */}
+      <section className='section - padding bg - gradient - cursor'>;
+        <div className='container - cursor'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+              Comprehensive Testing Coverage;
+            </h2>;
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+              We cover all aspects of API testing to ensure your APIs meet the;
+              highest standards of quality and reliability.;
+            </p>;
+          </div>;
+
+      <section className="section-padding bg-gradient-cursor">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+=======
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {feature.description}
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                     </p>
                   </div>
@@ -517,6 +667,7 @@ features: [;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
               Comprehensive Testing Coverage
+
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               We cover all aspects of API testing to ensure your APIs meet the highest standards of quality and reliability.
@@ -536,14 +687,8 @@ features: [;
               <Card
                 key={index}
                 className="card-hover border-gradient-indigo"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <h3 className="text-xl font-bold mb-4 text-white">{type.name}</h3>
-                <p className="text-gray-400 mb-6">{type.description}</p>
-                <ul className="space-y-2">
-                  {type.tests.map((test, testIndex) => (
-                    <li key={testIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-indigo-400 mr-3 flex-shrink-0" />
+
+
                       {test}
                     </li>;
                   ))}
@@ -586,6 +731,16 @@ features: [;
                     <span className='text-green-400 font-bold'>
                       {testResults.statusCode}
                     </span>                  </div>                API Test Results
+      {/* Demo Test Results */}
+      {testResults && (
+
+        <section className="section-padding bg-gradient-cursor-accent">
+          <div className="container-cursor">
+            <div className="text-center mb-12">
+              <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+                API Test Results
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </h2>
 
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -674,6 +829,8 @@ features: [;
                 </div>;
               </Card>;
               {/* Test Results */}
+
+=======
               <Card className="border-gradient-indigo">
                 <h3 className="text-2xl font-bold mb-6 text-white">Test Results</h3>
                 <div className="space-y-3">
@@ -690,7 +847,10 @@ features: [;
 
                       </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
               {/* Performance Metrics */}
@@ -705,6 +865,14 @@ features: [;
                       {testResults.responseTime}
                     </span>
 
+              {/* Performance Metrics */}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Throughput</span>
@@ -734,6 +902,12 @@ features: [;
               </Card>
             </div>
 
+=======
+                </div>;
+              </Card>;
+            {/* Recommendations */}
+            <Card className="border-gradient-indigo">
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {testResults.recommendations.map((rec, index) => (
@@ -741,6 +915,7 @@ features: [;
                     <CheckCircle className="w-5 h-5 text-indigo-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 ))}
               </div>
             </Card>
@@ -753,23 +928,6 @@ features: [;
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-              Simple Pricing
-            </h2>
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              Choose the API testing plan that best fits your development and
-              testing needs.
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
-            </h2>
-
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Choose the API testing plan that best fits your development and testing needs.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -987,6 +1145,7 @@ features: [;
               testing needs.;
             </p>;
           </div>;
+
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            {pricing.map ((plan, index) => (              Simple Pricing;
             </h2>;
             <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
@@ -1011,21 +1170,26 @@ features: [;
                   </div>)}
                 <div className='text - center mb - 8'>;
                   <h3 className='text - 2xl font - bold text - white mb - 4'>;
+
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'>;
                     <span className='text - 4xl font - bold text - white'>;
                       {plan.price}
-                className={`card-hover border-gradient-indigo ${plan.popular ? 'ring-2 ring-indigo-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
+
+                  ))}
+
+                </ul>;
+
+
+                <Button
+                  href='/contact'
+                  size='lg'
+
+=======
+                      {feature}
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                       {feature}
 
@@ -1045,26 +1209,41 @@ features: [;
         </div>
       </section>
 
+              </Card>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </h2>
           <p className='text-responsive-md text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers and businesses using our API testing
             suite to ensure their APIs are reliable and performant.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
               size='lg'
-              className='bg-white text-indigo-600 hover:bg-gray-100 shadow-2xl'
-            >
-              Start Free Trial
-              <ArrowRight className='w-5 h-5 ml-2' />
-            </Button>
+              className='bg-white text-indigo-600 hover:bg-gray-100 shadow-2xl'>;
+              Start Free Trial;
+              <ArrowRight className='w-5 h-5 ml-2' />;
+            </Button>;
             <Button
               href='/contact'
               variant='outline'
@@ -1082,3 +1261,19 @@ features: [;
     </>
 
 }
+              Schedule Demo;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+    </>);
+=======
+);
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

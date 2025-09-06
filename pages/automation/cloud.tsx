@@ -1,16 +1,29 @@
 
 
+=======
+import { useEffect, useState } from 'react';
+export default function CloudAutomationHub() {
+  const [logs, setLogs] = useState<any[]>([])
+  useEffect(() => {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([]),
 export default function CloudAutomationHub() {_const [logs, _setLogs] = useState<any[]>([]);
 
   useEffect__(() => {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     fetch('/api/automation/cloud-logs')
       .then((r) => r.json())
       .then((d) => setLogs(d.logs |[]))
       .catch(() => setLogs([]))
 
+=======
+
+  }, []),
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <div className="space-y-6">
       <div>
@@ -22,6 +35,7 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
           <h3 className="font-semibold">Roadmap (Autonomous)</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Docs/ROADMAP.md</p>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       </div>
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
         <h2 className="font-semibold mb-3">Recent Automation Logs</h2>
@@ -33,6 +47,9 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
 
               <span className="text-gray-600">{log.insights?.theme}</span>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <span className="text-gray-600">{log.insights?.theme}</span>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </li>
           ))  } catch (error) {
     console.error("Error:", error);
@@ -49,3 +66,5 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
     </div>
 
   )
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

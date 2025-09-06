@@ -1,26 +1,50 @@
+=======
+import { mutate } from 'swr';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import { RefreshCcw, AlertCircle } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed
 
-function MarketplaceErrorFallback({
-  error
-  resetErrorBoundary
-}: MarketplaceErrorFallbackProps) {  const handleRetry = async () => {
+
+import {ErrorBoundary, FallbackProps} from 'react - error - boundary';
+import * as Sentry from '@sentry / nextjs';
+import { mutate } from 'swr';
+import { Button } from '@/components / ui / button';
+import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';
+import { RefreshCcw, AlertCircle } from 'lucide-react';
+import { logErrorToProduction } from '@/utils / production_logger';
+interface MarketplaceErrorFallbackProps extends FallbackProps {
+  // Additional props if needed;
+/**
+ * MarketplaceErrorFallback - Function description
+ */
+function MarketplaceErrorFallback() {  const handle_retry = async () => {
+
     try {
-      // Re-call SWR mutate('*') to refresh all cached data
-      await mutate(() => true, undefined, { revalidate: true })
-      resetErrorBoundary()
-    } catch (retryError) {
-      logErrorToProduction('Error during retry:', { data: retryError })
-      Sentry.captureException(retryError) }
+      // Re - call SWR mutate ('*') to refresh all cached data;
+      await mutate (() => true, undefined, { revalidate: true });
+      resetErrorBoundary ();
+    } catch (retry_error) {
+      logErrorToProduction ('Error during retry:', { data: retry_error });
+      Sentry.capture_exception (retry_error) }
   }
-  return (function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {
+  return (/**
+ * MarketplaceErrorFallback - Function description
+ */
+function MarketplaceErrorFallback() {
+  const handle_retry = async () => {
+    try {
+
+function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {
   const handleRetry = async () => {
     try {
       // Re-call SWR mutate('*') to refresh all cached data
-      await mutate((,) => true, undefined, { revalidate: true })
+      await mutate(() => true, undefined, { revalidate: true });
+
       resetErrorBoundary()
     } catch (retryError) {
       logErrorToProduction('Error during retry:', { data: retryError })
@@ -66,16 +90,21 @@ function MarketplaceErrorFallback({
             className="text-primary hover:underline"
 
             contact support
-          </Link>
+          </a>
         </div>
       </div>
     </div>
   )
+    </ErrorBoundary>;
+  );
+}   return (
+    <ErrorBoundary
 
       FallbackComponent={MarketplaceErrorFallback}
-      onError={handleError}
-    >
+      onError={handleError}>;
       {children}
+
     </ErrorBoundary>;
   );
 } ;
+<<<<<<< HEAD

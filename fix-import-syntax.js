@@ -21,6 +21,8 @@
     );
     if (content !== fs && fs.readFileSync(filePath, "utf8")) {
       fs && fs.writeFileSync(filePath, content, "utf8");
+
+=======
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -73,6 +75,7 @@ function fixImportSyntax() {
     }
     return modified;
   } catch (error) {
+
     const items = fs && fs.readdirSync(currentDir);
     for (const item of items) {
       const fullPath = path && path.join(currentDir, item);
@@ -91,6 +94,7 @@ function fixImportSyntax() {
             "apps && apps.backup",
             "backup-merge-conflicts",
             "apps",
+
           ].includes(item)
         ) {
           continue;
@@ -144,14 +148,22 @@ if (
       }
     }
   }
+
+
 console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
+
+
 for (const file of files) {
   if (fixImportSyntax(file)) {
     fixedCount++;
     console && console.log(`Fixed syntax in: ${file}`);
   }
 }
+
+
 console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);
+
+=======
   traverse (dir);
   return files;
 }

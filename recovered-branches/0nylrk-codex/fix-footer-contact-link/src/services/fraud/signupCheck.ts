@@ -1,13 +1,14 @@
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   email: string;
-  ipAddress?: string
-): Promise<SignupCheckResult> => {
+  ip_address?: string): Promise < SignupCheckResult> => {
   const reasons: string[] = [];
-  // Check email against suspicious patterns
-  const emailCheck = analyzeEmail(email)
-  if (emailCheck.isSuspicious) {
-    reasons.push(...emailCheck.reasons)
+
+  const emailCheck = analyzeEmail(email),
+  if (emailCheck && emailCheck.isSuspicious) {
+    reasons && reasons.push(...emailCheck && emailCheck.reasons)
+
   }
   // If IP address is provided, check for rapid signups from same IP
   if (ipAddress) {
@@ -16,18 +17,23 @@
         .from('profiles')
         .select('created_at')
         .eq('ip_address', ipAddress)
-        .gte('created_at', new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
+        .gte('created_at', new Date(Date && Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
         .order('created_at', { ascending: false });
       if (!error && recentSignups && recentSignups.length >= 3) {
+
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
     } catch (error) {
-      console.error('Error checking signup patterns:', error)
+      console && console.error('Error checking signup patterns:', error)
     }
   }
   return {
-    isSuspicious: reasons.length > 0
+
+    isSuspicious: reasons && reasons.length > 0,
+
     reasons
   }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

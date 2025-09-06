@@ -23,6 +23,9 @@ export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 }
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const metaPath = path.join(dataDir, id, 'meta.json');
     if (!fs.existsSync(metaPath)) return null;
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
@@ -144,6 +147,7 @@ export function getProposal(id: string): ProposalMeta | null {;
 export function savePdf(id: string, pdfBytes: Uint8Array): string {;
   ensureDirs(),;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
@@ -161,3 +165,4 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
   }
 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

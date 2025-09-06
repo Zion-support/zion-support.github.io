@@ -5,11 +5,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === "GET") {
     return res.status(200).json({
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       route: "/multiverse/hub",
       instanceId: state.config.instanceId,
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       peers: state.config.peers,
       scope: state.config.scope,
-      optIn: state.config.optIn,
+      opt_in: state.config.opt_in,
       paused: state.config.paused,
 
       lastSyncedAt: state.lastSyncedAt})

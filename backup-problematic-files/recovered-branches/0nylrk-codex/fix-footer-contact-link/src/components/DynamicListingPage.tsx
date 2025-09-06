@@ -7,6 +7,129 @@
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
 
+=======
+  useEffect_(() => {
+    const listingsWithPrice = allListings.filter(l => l.price !== null);
+    if (listingsWithPrice.length > 0) {
+      const min = Math.min(...listingsWithPrice.map(l => l.price || 0));
+      const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
+      setPriceRange({ min, max})
+    }
+  }, [allListings]),
+
+  const [currentPriceFilter, setCurrentPriceFilter] = useState<[number, number]>([
+    initialPrice.min,
+    initialPrice.max
+  ]),
+
+  const handleSliderChange = (values: number[]) => {
+    setCurrentPriceFilter([values[0], values[1]])
+  },
+  const filteredListings = allListings.filter(listing => {const matchesSearch = !searchQuery || 
+      listing.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()))),
+    
+    const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory,      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())));
+    
+    const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;
+    
+    const matchesPrice = listing.price === null || (
+      listing.price >= currentPriceFilter[0] && 
+      listing.price <= currentPriceFilter[1]
+    ),
+    
+    const matchesRating = 
+      selectedRating === null || 
+      (listing.rating !== undefined && listing.rating >= selectedRating),
+    
+    return matchesSearch && matchesCategory && matchesPrice && matchesRating
+  }),
+
+  const handleRequestQuote = (listingId: string) => {
+    setIsLoading(true),
+    
+    const listing = allListings.find(item => item.id === listingId),
+    
+    setTimeout(() => {
+      setIsLoading(false),
+      if (listing) {
+        toast({
+          title: &quot;Quote Requested&quot;,
+          description: `Your quote request for ${listing.title} has been sent.`
+        }),
+        
+        navigate(&quot;/request-quote", {
+          state: { 
+            serviceType: categorySlug,
+            specificItem: {
+              id: listing.id,
+              title: listing.title,
+              category: listing.category,
+              image: listing.images?.[0]
+            }          }
+        })
+      }
+    }, 500)
+  },
+
+  return (_<div className="min-h-screen bg-zion-blue py-12 px-4">
+      <div className="container mx-auto">
+        <div className="text-center mb-12">
+          <GradientHeading>{title}</GradientHeading>
+          <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+            {description}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          <div className="lg:col-span-1">
+            <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">
+              <h3 className="text-lg font-medium text-white mb-4 flex items-center">
+                <Filter className="mr-2 h-5 w-5" /> Filters
+              </h3>
+              
+              <div className="mb-6">
+                <label className="text-sm font-medium text-zion-slate-light block mb-2&quot;>
+                  Category
+                </label>
+                <Select,
+value={selectedCategory} 
+                  onValueChange={(value: string) => {
+                    // // // console.log("Category selected:", value),
+                    setSelectedCategory(value)                  }}
+                  value={selectedCategory} 
+                  onValueChange={_(value: string) => {
+                    
+                    setSelectedCategory(value)}}
+                >
+                  <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white&quot;>
+                    <SelectValue placeholder=&quot;Select Category" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-zion-blue-dark border border-zion-blue-light&quot;>
+                    <SelectItem value=&quot;all" className="text-white">All Categories</SelectItem>
+                    {categoryFilters.map((filter) => (
+                      <SelectItem key={filter.value} value={filter.value} className="text-white">
+                        {filter.label}                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              
+              <div className="mb-6">
+                <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                  Price Range
+                </label>
+                <div className="mt-6 px-2">
+                  <Slider,
+defaultValue={_[priceRange.min, priceRange.max]}
+                    min={priceRange.min}
+                    max={priceRange.max}
+                    step={_(priceRange.max - priceRange.min) / 100}
+                    value={currentPriceFilter}
+                    onValueChange={handleSliderChange}
+                    className="mb-4";
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   />;
                   <div className="flex justify-between text-sm text-zion-slate-light">;
                     <span>${currentPriceFilter[0].toLocaleString()}</span>;
@@ -14,6 +137,7 @@
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 
               <div className="mb-6">;
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">;

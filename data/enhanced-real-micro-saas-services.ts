@@ -8,10 +8,10 @@ features: string[];
 popular: boolean;
 icon: string;
 category: string;
-}export const microSaasServices: MicroSaasService[] = [ {;
-  id: 'ai-content-generator';
+}export const microSaasServices: MicroSaasService[] = [ {
+  id: 'ai - content - generator';
 name: 'AI Content Generator';
-tagline: 'Generate high-quality content with AI';
+tagline: 'Generate high - quality content with AI';
 price: '$29';
 period: '/month';
 popular: true;
@@ -474,3 +474,5 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
   if (categoryName === 'All' || categoryName === 'all') {
     return enhancedRealMicroSaasServices
   }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,9 +1,21 @@
 
+=======
+import React from 'react';
+import SEO from '../components / SEO';
+import Layout from '../components / layout / Layout';
+
+import { motion } from 'framer-motion';
+
+import {
+
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Star,
   Brain,
   Atom,
@@ -79,6 +91,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
     <Layout>
       <SEO
         title='2025 Innovative Services Showcase | Zion Tech Group'
+
         description='Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.'    { name: 'AI & Marketing', icon: Brain, color: 'from-purple-500 to-pink-500' }
     { name: 'Quantum & Finance', icon: Atom, color: 'from-cyan-500 to-blue-500' }
     { name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500' }
@@ -100,6 +113,30 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   return (
     <Layout>
 
+  return (
+
+        <div className='absolute inset-0 pointer-events-none'>;
+          <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg animate-pulse'></div>;
+          <div className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000'></div>;
+          <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>;
+          <div className='absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-500'></div>;
+          <div className='absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500'></div>;
+        </div>;
+
+        <div className='text-center max-w-6xl mx-auto relative z-10'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            className='space-y-6'>        ;
+        <div className="text-center max-w-6xl mx-auto relative z-10">;
+          <motion&& motion.div
+
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            className='space-y-6'            className="space-y-6">;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -124,6 +161,128 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             </p>;
               transition={{ duration: 0.6, delay: 0.2 }}
 
+            {/* Enhanced Company Badge */}
+            <motion&& motion.div
+              initial={{ opacity: 0, scale: 0 && 0.8 }}
+      name: 'AI & Marketing',
+      icon: Brain,
+      color: 'from - purple - 500 to - pink - 500',
+    },
+    {
+      name: 'Quantum & Finance',
+      icon: Atom,
+      color: 'from - cyan - 500 to - blue - 500',
+    },
+    {
+      name: 'Space Technology',
+      icon: Rocket,
+      color: 'from - indigo - 500 to - purple - 500',
+    },
+    {
+      name: 'Metaverse & AI',
+      icon: Globe,
+      color: 'from - green - 500 to - teal - 500',
+    },
+    {
+      name: 'Cybersecurity',
+      icon: Shield,
+      color: 'from - red - 500 to - orange - 500',
+    },
+    {
+      name: 'Supply Chain & AI',
+      icon: Factory,
+      color: 'from - yellow - 500 to - orange - 500',
+    },
+    {
+      name: 'Quantum & Healthcare',
+      icon: Cpu,
+      color: 'from - violet - 500 to - purple - 500',
+    },
+    {
+      name: 'AI & Creativity',
+      icon: Palette,
+      color: 'from - pink - 500 to - rose - 500',
+    },
+    {
+      name: 'AI & Robotics',
+      icon: Database,
+      color: 'from - emerald - 500 to - green - 500',
+    },  ];
+;
+  const getCategoryIcon = (category: string) =>: any {
+    const cat = categories.find (c => c.name === category);
+    return cat ? cat.icon : Star;  }
+;
+  const getCategoryColor = (category: string) =>: any {
+    const cat = categories.find (c => c.name === category);
+    return cat ? cat.color : 'from - gray - 500 to - gray - 600';  }
+;
+  return (
+    <Layout>;
+      <SEO;
+        title='2025 Innovative Services Showcase | Zion Tech Group';
+        description='Discover our cutting - edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.'    { name: 'AI & Marketing', icon: Brain, color: 'from - purple - 500 to - pink - 500' },
+    { name: 'Quantum & Finance', icon: Atom, color: 'from - cyan - 500 to - blue - 500' },
+    { name: 'Space Technology', icon: Rocket, color: 'from - indigo - 500 to - purple - 500' },
+    { name: 'Metaverse & AI', icon: Globe, color: 'from - green - 500 to - teal - 500' },
+    { name: 'Cybersecurity', icon: Shield, color: 'from - red - 500 to - orange - 500' },
+    { name: 'Supply Chain & AI', icon: Factory, color: 'from - yellow - 500 to - orange - 500' },
+    { name: 'Quantum & Healthcare', icon: Cpu, color: 'from - violet - 500 to - purple - 500' },
+    { name: 'AI & Creativity', icon: Palette, color: 'from - pink - 500 to - rose - 500' },
+    { name: 'AI & Robotics', icon: Database, color: 'from - emerald - 500 to - green - 500' }
+  const getCategoryIcon = (category: string) =>: any {
+    const cat = categories.find (c => c.name === category);
+    return cat ? cat.icon : Star;    return cat ? cat.icon : Star;
+  }
+;
+  const getCategoryColor = (category: string) =>: any {
+    const cat = categories.find (c => c.name === category);
+    return cat ? cat.color : 'from - gray - 500 to - gray - 600';    return cat ? cat.color : 'from - gray - 500 to - gray - 600';
+  }
+;
+  return (
+    <Layout>;
+      <SEO;
+        title='2025 Innovative Services Showcase | Zion Tech Group';
+        description='Discover our cutting - edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.';
+        keywords={[;
+          'innovative services 2025',
+          'micro SAAS',
+          'quantum computing',
+          'space technology',
+          'AI platforms',
+          'autonomous systems',
+        ]}
+      />;
+      {/* Hero Section */}
+      <section className='min - h-screen flex items - center justify - center px - 4 relative overflow - hidden'>;
+        {/* Enhanced Background Elements */}
+        <div className='absolute inset - 0 pointer - events - none'>;
+          <div className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 20 rounded - lg animate - pulse'></div>;
+          <div className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full animate - pulse delay - 1000'></div>;
+          <div className='absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45 animate - pulse delay - 2000'></div>;
+          <div className='absolute top - 1/2 left - 1/4 w - 16 h - 16 border border - blue - 400 / 20 rounded - full animate - pulse delay - 500'></div>;
+          <div className='absolute top - 1/3 right - 1/4 w - 20 h - 20 border border - green - 400 / 20 transform rotate - 12 animate - pulse delay - 1500'></div>;
+        </div>;
+        <div className='text - center max - w-6xl mx - auto relative z - 10'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='space - y-6'          >;
+        <div className="text - center max - w-6xl mx - auto relative z - 10">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='space - y-6'            className="space - y-6";
+          >;
+            {/* Enhanced Company Badge */}
+            <motion.div;
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             >
               <Star className='w-5 h-5' />
               <span>Innovation Leader 2025</span>
@@ -135,8 +294,16 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               quantum computing solutions, and autonomous AI platforms
             </p>
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {/* Enhanced Stats */}
-            <motion.div
+            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -192,17 +359,81 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         </div>
       </section>
 
+=======
+
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+              className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>;
+              <div className='p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20'>;
+                <div className='text-3xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors'>;
+                  50+;
+                </div>;
+                <div className='text-gray-300 text-sm'>Innovative Services</div>;
+              </div>;
+              <div className='p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-blue-400/20'>;
+                <div className='text-3xl font-bold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors'>;
+                  100+;
+                </div>;
+                <div className='text-gray-300 text-sm'>Quantum Solutions</div>;
+              </div>;
+              <div className='p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-purple-400/20'>;
+                <div className='text-3xl font-bold text-purple-400 mb-2 group-hover:text-purple-300 transition-colors'>;
+                  24/7;
+                </div>;
+                <div className='text-gray-300 text-sm'>;
+                  Autonomous Operations;
+                </div>;
+              </div>;
+              <div className='p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-green-400/20'>;
+                <div className='text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors'>;
+                  ∞;
+                </div>;
+                <div className='text-gray-300 text-sm'>;
+                  Future Possibilities;
+                </div>              </div>            >;
+              <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20">;
+                <div className="text-3xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">50+</div>;
+                <div className="text-gray-300 text-sm">Innovative Services</div>;
+              </div>;
+              <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-blue-400/20">;
+                <div className="text-3xl font-bold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors">100+</div>;
+                <div className="text-gray-300 text-sm">Quantum Solutions</div>;
+              </div>;
+              <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-purple-400/20">;
+                <div className="text-3xl font-bold text-purple-400 mb-2 group-hover:text-purple-300 transition-colors">24/7</div>;
+                <div className="text-gray-300 text-sm">Autonomous Operations</div>;
+              </div>;
+              <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-green-400/20">;
+                <div className="text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors">∞</div>;
+                <div className="text-gray-300 text-sm">Future Possibilities</div>;
+              </div>;
+            </motion && motion.div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+      {/* Services Categories */}
+      <section className='py-20 px-4 bg-black/30 relative'>;
+        <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>;
+        <div className='max-w-7xl mx-auto relative z-10'>          <motion && motion.div      <section className="py-20 px-4 bg-black/30 relative">;
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>;
+        <div className="max-w-7xl mx-auto relative z-10">;
+          <motion&& motion.div
+
       {/* Services Categories */}
       <section className="py-20 px-4 bg-black/30 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
               Service Categories
@@ -215,6 +446,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {categories.map((category, index) => {
               const IconComponent = category.icon;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                >
 
                 >
 
@@ -234,8 +467,10 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                             service => service && service.category === category && category.name;
                           ).length;
                         }{' '}
+
             className="text-center mb-16"
           >
+
             <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Service Categories
             </h2>
@@ -350,9 +585,37 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                   </div>
                 </motion.div>
 
+              return (
+
+
+              );
+            })}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Featured Services */}
-      <section className='py-20 px-4'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
+      <section className='py-20 px-4'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      {/* Featured Services */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -442,6 +705,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             className='text-center mb-16'>;
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;
               Featured Services;
@@ -464,6 +728,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                           Popular;
                         </div>;
                       )}
+
                 <motion.div;
                   key={category.name}
                   initial={{ opacity: 0, coordinate_y: 20 }}
@@ -495,6 +760,208 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+=======
+            className='text - center mb - 16';
+          >;
+            <h2 className='text - 5xl md:text - 6xl font - bold mb - 8 bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent'>;
+              Featured Services;
+            </h2>;
+            <p className='text - xl text - gray - 300 max - w-4xl mx - auto'>;
+              Our most popular and innovative services that are transforming;
+              industries;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
+            {innovative2025MicroSaasBatch;
+              .filter (service => service.popular);
+              .map ((service, index) => {
+                const IconComponent = getCategoryIcon (service.category);
+;
+                  >;
+                    <div className='p - 8 rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 border border - white / 10 hover:border - white / 20 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm'>;
+                      {/* Popular Badge */}
+                      {service.popular && (
+                        <div className='absolute -top - 3 left - 6 px - 4 py - 1 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - sm font - bold rounded - full'>;
+                          Popular;
+                        </div>)}
+                      <div className='text - center mb - 6'>;
+                        <div;
+                          className={`w - 20 h - 20 mx - auto mb - 4 rounded - full bg - gradient - to - br ${getCategoryColor (service.category)} bg - opacity - 20 flex items - center justify - center border border - white / 20 text - 4xl`}
+                        >;
+
+                          {service.icon}
+                        </div>;
+                        <h3 className='text - 2xl font - bold text - white mb - 2'>;
+                          {service.name}
+                        </h3>;
+                        <p className='text - gray - 300 text - sm mb - 4'>;
+                          {service.tagline}
+                        </p>;
+                        <div className='text - 3xl font - bold text - cyan - 400 mb - 2'>;
+                          {service.price}
+                          <span className='text - lg text - gray - 400'>;
+                            /{service.period}
+
+
+                      <div className='text-center mb-6'>;
+                        <div
+                          className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br ${getCategoryColor(service && service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-4xl`}>;
+                          {service && service.icon}
+                        </div>;
+                        <h3 className='text-2xl font-bold text-white mb-2'>;
+                          {service && service.name}
+                        </h3>;
+                        <p className='text-gray-300 text-sm mb-4'>;
+                          {service && service.tagline}
+                        </p>;
+                        <div className='text-3xl font-bold text-cyan-400 mb-2'>;
+                          {service && service.price}
+                          <span className='text-lg text-gray-400'>;
+                            /{service && service.period}
+                          </span>;
+                        </div>;
+                      </div>;
+                      <div className='space-y-3 mb-6'>;
+                        {service && service.features.slice(0, 4).map((feature, idx) => (;
+
+                          <div
+                            key={idx}
+                            className='flex items-center space-x-3 text-sm text-gray-300'>;
+                            <div className='w-2 h-2 bg-cyan-400 rounded-full'></div>;
+                            <span>{feature}</span>;
+                          </div>;
+                        ))}
+
+                      </div>;
+
+
+                      {/* Market Info */}
+                      <div className='border-t border-white/10 pt-4 space-y-2'>;
+                        <div className='text-xs text-gray-400'>;
+                          Market Price:{' '}
+                          <span className='text-green-400'>;
+                            {service && service.marketPrice}
+                          </span>;
+                        </div>;
+                        <div className='text-xs text-gray-400'>;
+                          Category:{' '}
+                          <span className='text-cyan-400'>;
+                            {service && service.category}
+                          </span>;
+                        </div>;
+                      </div>;
+                      <div className='space - y-3 mb - 6'>;
+                        {service.features.slice (0, 4).map ((feature, idx) => (
+                          <div;
+                            key={idx}
+                            className='flex items - center space - x-3 text - sm text - gray - 300';
+                          >;
+                            <div className='w - 2 h - 2 bg - cyan - 400 rounded - full'></div>;
+                            <span>{feature}</span>;
+                          </div>))}
+                      </div>;
+                      {/* Market Info */}
+                      <div className='border - t border - white / 10 pt - 4 space - y-2'>;
+                        <div className='text - xs text - gray - 400'>;
+                          Market Price:{' '}
+                          <span className='text - green - 400'>;
+                            {service.market_price}
+                          </span>;
+                        </div>;
+                        <div className='text - xs text - gray - 400'>;
+                          Category:{' '}
+                          <span className='text - cyan - 400'>;
+                            {service.category}
+                          </span>;
+                        </div>;
+                      </div>;
+                    </div>;
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* All Services Grid */}
+      <section className='py-20 px-4 bg-black/30 relative'>;
+        <div className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5'></div>;
+        <div className='max-w-7xl mx-auto relative z-10'>      <section className="py-20 px-4">;
+        <div className="max-w-7xl mx-auto">;
+          <motion&& motion.div
+          <motion.div
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+
+
+
+          >
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>
+              Complete Service Portfolio
+            </h2>
+            <p className='text-xl text-gray-300 max-w-4xl mx-auto'>
+              Explore our entire collection of innovative services designed for
+              the future
+            </p>
+          </motion.div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {innovative2025MicroSaasBatch.map((service, index) => {
+              const IconComponent = getCategoryIcon(service.category);
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                >
+                  <div className='p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm'>
+                    <div className='flex items-start space-x-4'>
+=======
+            <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>;
+              Complete Service Portfolio;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-4xl mx-auto'>;
+              Explore our entire collection of innovative services designed for;
+              the future;
+            </p>;
+          </motion && motion.div>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+            {innovative2025MicroSaasBatch && innovative2025MicroSaasBatch.map((service, index) => {;
+              const IconComponent = getCategoryIcon(service && service.category);
+                >;
+                  <div className='p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm'>;
+                    <div className='flex items-start space-x-4'>;
+                      <div
+                        className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(service && service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-2xl flex-shrink-0`}>;
+                        {service && service.icon}
+                      </div>;
+                      <div className='flex-1 min-w-0'>;
+                        <h3 className='text-lg font-bold text-white mb-1 truncate'>;
+                          {service && service.name}
+                        </h3>;
+                        <p className='text-gray-400 text-sm mb-2 line-clamp-2'>;
+                          {service && service.tagline}
+                        </p>;
+                        <div className='text-cyan-400 font-semibold text-sm'>;
+                          {service && service.price}
+                          <span className='text-gray-400'>;
+                            /{service && service.period}
+                          </span>;
+                        </div>;
+                        <div className='text-xs text-gray-500 mt-2'>;
+                          {service && service.category}
+                        </div>                      </div>                      ))}
+
+
+                    {/* Market Info */}
+
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>
               Complete Service Portfolio
@@ -546,21 +1013,53 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                   </div>
                 </motion.div>
 
+              );
+            })}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Contact CTA */}
       <section className='py-20 px-4'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion && motion.div      {/* All Services Grid */}
       <section className="py-20 px-4 bg-black/30 relative">;
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>;
         <div className="max-w-7xl mx-auto relative z-10">;
+
+=======
+
       {/* All Services Grid */}
       <section className="py-20 px-4 bg-black/30 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+=======
+
+
+          >
+            <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
+              Ready to Transform Your Business?
+            </h2>
+            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
+              Get in touch with our team to discuss how our innovative services
+              can drive your success
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 
           >
             <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
@@ -579,8 +1078,10 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                 <span>Call Now: +1 302 464 0950</span>;
               </a>;
               <a
+
             className="text-center mb-16"
           >
+
             <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">
               Complete Service Portfolio
             </h2>
@@ -592,6 +1093,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             {innovative2025MicroSaasBatch.map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               return (
                 <motion&& motion.div
                   key={service && service.id}
@@ -611,3 +1113,4 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   )
 };
 export default Comprehensive2025InnovativeServicesShowcase;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

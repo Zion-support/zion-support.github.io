@@ -8,24 +8,26 @@ import { Button } from "@/components/ui/button",
   return (
     <>
       <SEO
-        title="API & Integrations"
-        description="Extend Zion by embedding widgets or using our REST API for custom workflows."
-        keywords="Zion API, Slack integration, embed widget"
-        canonical="https://app.ziontechgroup.com/features/integrations"
-      />
+        title='API & Integrations'
+        description='Extend Zion by embedding widgets or using our REST API for custom workflows.'
+        keywords='Zion API, Slack integration, embed widget'
+        canonical='https://app && app.ziontechgroup.com/features/integrations'
+      />;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      ></script>
-      <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
-          <GradientHeading className="mb-4 text-center">API & Integrations</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Automate your workflows by connecting Zion with the tools you already use.
-          </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(schema) }}></script>;
+      <Header />;
+      <main className='bg-background text-white py-12'>;
+        <div className='container mx-auto px-4 md:px-6'>;
+          <GradientHeading className='mb-4 text-center'>;
+            API & Integrations;
+          </GradientHeading>;
+          <p className='text-center text-zion-slate-light max-w-3xl mx-auto mb-8'>;
+            Automate your workflows by connecting Zion with the tools you;
+            already use.;
+          </p>;
+          <div className='relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden'>;
             <img
 
             <li>Trigger Slack notifications for new orders or messages.</li>

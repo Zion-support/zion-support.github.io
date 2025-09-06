@@ -1,13 +1,22 @@
 
+>>>>>>> main
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 const apiServices = [
   {
     title: 'RESTful API',
 
+>>>>>>> main
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     icon: Globe,
     features: ['RESTful Design', 'JSON Responses', 'HTTP Status Codes', 'Error Handling']
   },
   {
+=======
+import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
+import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     description: 'Flexible GraphQL API for efficient data fetching and real-time updates.',
     icon: Code,
@@ -92,6 +101,8 @@ import { motion } from 'framer-motion';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 :pages/api.tsx
 
+>>>>>>> main
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function APIPage() {
   const apiFeatures = [
     {
@@ -154,30 +165,12 @@ export default function APIPage() {
                   Get API Key
                 </a>
 
+>>>>>>> main
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
             </motion.div>
           </div>
         </section>
-
-                const IconComponent = feature.icon;
-                return (;
-                  <motion.div);
-                    key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  </motion.div>
-                );
-              })}
-            </div>,
-          </div>;
-        </section>;
-
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
 
         {/* Features Section */}
         <section className="py-16 px-4">
@@ -205,6 +198,8 @@ export default function APIPage() {
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-blue-600" />
 
+>>>>>>> main
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
@@ -213,13 +208,6 @@ export default function APIPage() {
                       <li key={itemIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {item}
-
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
 
     title: 'GraphQL API',
     description: 'Flexible GraphQL API for complex queries',
@@ -239,6 +227,89 @@ export default function APIPage() {
     features: ['JavaScript/TypeScript', 'Python', 'Java', 'C#/.NET']
   }
 ];
+=======
+
+export default function APIPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>API - Zion Tech Group | Developer Resources</title>
+        <meta name="description" content="Access Zion Tech Group's powerful APIs for AI, IT, and micro SaaS solutions. Comprehensive developer resources and documentation." />
+        <meta name="keywords" content="API, developer resources, REST API, GraphQL, WebSocket, SDK" />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Powerful APIs
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
+              Integrate with our comprehensive APIs to build powerful applications 
+              using our AI, IT, and micro SaaS services.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* API Features Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">API Features</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose from our comprehensive suite of APIs designed for modern applications.
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {apiFeatures.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <motion.div
+                  key={index}
+                  className="bg-white rounded-xl shadow-lg p-8 border border-gray-100"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                      <IconComponent className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
+                    </div>
+                  </div>
+
+                  <p className="text-gray-600 mb-4">{feature.description}</p>
+
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Features:</h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {feature.features.map((item, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 export default function APIPage() {
   const apiEndpoints = [
@@ -482,6 +553,9 @@ export default function APIPage() {
       </section>
     </div>
 
+=======
+>>>>>>> main
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -533,6 +607,8 @@ export default function APIPage() {
       </div>
     </Layout>
 
+>>>>>>> main
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </a>
               </div>
             </motion.div>
@@ -540,5 +616,12 @@ export default function APIPage() {
         </section>
       </div>
 
+>>>>>>> main
+=======
+    </MainLayout>
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de:pages/api.tsx.backup
+>>>>>>> main
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
 }

@@ -16,6 +16,11 @@ export function CountrySelector({;
   // Set top/popular countries
   useEffect(() => {
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const popular = [
       'United States'
       'United Kingdom'
@@ -47,3 +52,4 @@ export function CountrySelector({;
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
+<<<<<<< HEAD

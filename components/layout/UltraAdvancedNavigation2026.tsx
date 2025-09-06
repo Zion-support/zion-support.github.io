@@ -1,4 +1,10 @@
 
+=======
+
+import React, { useState, useEffect } from 'react';
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -263,17 +269,21 @@ const companyLinks = [
   { name: 'Careers', href: '/careers', icon: Users }
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const UltraAdvancedNavigation2026 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {
     const handleScroll = () => {
+
       setIsScrolled(window.scrollY > 20)
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
+
+
   const navigationItems = [
     {
       name: 'AI Services'
@@ -282,6 +292,9 @@ const UltraAdvancedNavigation2026 = () => {
       color: 'from-blue-500 to-cyan-500'
       description: 'Autonomous AI systems and consciousness interfaces'
       subItems: [
+
+
+
 const companyLinks = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'About Us', href: '/about', icon: Users },;
@@ -467,13 +480,30 @@ const UltraAdvancedNavigation2026 = () => {;
     },  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' },;
         { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' },;
         { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },;
+
+
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ];
     }
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const contactInfo = {
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
+  }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   const contactInfo = {;
     phone: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
+
+=======
         { name: 'AI Autonomous Agents', href: '/services?category=ai-autonomous', description: 'Fully autonomous AI systems' },
         { name: 'AI Consciousness', href: '/services?category=ai-consciousness', description: 'Consciousness simulation and interfaces' },
         { name: 'AI Healthcare', href: '/services?category=ai-healthcare', description: 'Medical AI and diagnostics' },
@@ -578,11 +608,13 @@ const UltraAdvancedNavigation2026 = () =>: any {
         { name: 'AI Creative', href: '/services?category = ai - creative', description: 'Creative AI and content generation' }
       ];
     }
+
       name: 'Quantum Tech',
       href: '/services?category = quantum',
       icon: Atom,
       color: 'from - purple - 500 to - indigo - 500',
       description: 'Quantum computing and space technology',
+
       sub_items: [;
         {
           name: 'Quantum Space Tech',
@@ -611,11 +643,13 @@ const UltraAdvancedNavigation2026 = () =>: any {
         { name: 'Quantum Security', href: '/services?category = quantum - security', description: 'Quantum encryption and security' }
       ];
     }
+
       name: 'Metaverse',
       href: '/services?category = metaverse',
       icon: Globe,
       color: 'from - pink - 500 to - rose - 500',
       description: 'Virtual worlds and digital reality',
+
       sub_items: [;
         {
           name: 'Metaverse Platforms',
@@ -644,11 +678,16 @@ const UltraAdvancedNavigation2026 = () =>: any {
         { name: 'Consciousness Interface', href: '/services?category = consciousness - interface', description: 'Brain - computer interfaces' }
       ];
     }
+
       name: 'Enterprise IT',
       href: '/services?category = enterprise',
       icon: Zap,
       color: 'from - green - 500 to - emerald - 500',
       description: 'Enterprise solutions and infrastructure',
+
+
+            {/* Logo */}
+
       sub_items: [;
         {
           name: 'Cloud Solutions',
@@ -709,10 +748,12 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   Revolutionary Technology Solutions;
                 </div>              </div>;
             </Link>;
+
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items - center space - x-8'>;
               {navigation_items.map (item => (
                 <div key={item.name} className='relative group'>            {/* Logo */}
+
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl'
@@ -721,6 +762,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
+
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -877,10 +919,27 @@ const UltraAdvancedNavigation2026 = () =>: any {
                                 </div>
                                 <div className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200">
 
+                  {/* Dropdown Menu */}
+                  <AnimatePresence>;
+                    {activeDropdown === item && item.name && (;
+                      <motion&& motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+
+
+                              <Link
+                                key={subItem && subItem.name}
+                                href={subItem && subItem.href}
+                                className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
+                                onClick={() => setActiveDropdown(null)}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                                   {subItem.description}
                                 </div>
                               </Link>
                             ))}
+
                           </div>;
                           <Link
                             href={item.href}
@@ -916,6 +975,38 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
                 >                  Contact                  All Services
 
+                          <Link
+                            href={item && item.href}
+                            className="block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200">;
+                            View All {item && item.name}
+                          </Link>;
+                        </div>;
+                      </motion && motion.div>;
+                    )}
+                  </AnimatePresence>;
+                </div>;
+              ))}
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              {/* Quick Links */}
+
+
+                <Link
+                  href='/pricing'
+                  className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'>;
+                  Pricing;
+                </Link>;
+                <Link
+                  href='/contact'
+
+              <div className="flex items-center space-x-6">
+                <Link href="/services" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
+                  All Services
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </Link>
                 <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
                   Pricing
@@ -1012,6 +1103,8 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 </Link>;
               </div>;
             </div>;
+
+=======
             <div className="hidden lg:flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
                 <Phone className="w-4 h-4" />
@@ -1021,6 +1114,8 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 href="/contact"
                 className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
               >
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Get Started
 
             {/* Mobile Menu Button */}
@@ -1085,6 +1180,80 @@ const UltraAdvancedNavigation2026 = () =>: any {
               </div>
               {/* Mobile Navigation Items */}
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+
+
+            </button>;
+          </div>;
+        </div>;
+      </nav>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Mobile Navigation Overlay */}
+      <AnimatePresence>;
+        {isOpen && (;
+          <motion&& motion.div
+=======
+      {/* Mobile Navigation Overlay */}
+      <AnimatePresence>;
+        {is_open && (
+          <motion.div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+
+
+            onClick={() => setIsOpen(false)}
+          >;
+            <motion&& motion.div
+=======
+
+            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
+
+            onClick={() => setIsOpen(false)}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <motion.div
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              {/* Mobile Menu Header */}
+              <div className="flex items-center justify-between mb-8">;
+                <div className="flex items-center space-x-3">;
+                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">;
+                    <Rocket className="w-5 h-5 text-white" />;
+                  </div>;
+                  <span className="text-white font-bold text-lg">Menu</span>;
+                </div>;
+                <button
+                  onClick={() => setIsOpen(false)}
+
+
+              {/* Mobile Navigation Items */}
+
+                        className={`w-8 h-8 bg-gradient-to-br ${item && item.color} rounded-lg flex items-center justify-center`}>;
+                        <item && item.icon className='w-4 h-4 text-white' />;
+                      </div>;
+                      <span className='font-medium'>{item && item.name}</span>;
+                    </Link>;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         >
                           {subItem.name}
                         </Link>
@@ -1109,14 +1278,17 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   <Link
                     href="/pricing"
                     className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     onClick={() => setIsOpen(false)}
                   >;
                     Pricing;
                   </Link>;
                   <Link
-                    href="/contact"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+
+
                     onClick={() => setIsOpen(false)}
+
                   >;
                     Contact;
                   </Link>;
@@ -1135,15 +1307,19 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     <MapPin className='w-4 h-4' />;
                     <span className='text-sm'>{contactInfo && contactInfo.address}</span>                  </div>;
                 </div>;
+
+
                 {/* Get Started Button - Mobile */}
                 <div className='pt-4'>;
                   <Link
                     href='/contact'
+
                 <div className="pt-6 border-t border-gray-700/50 space-y-3">
                   <div className="flex items-center space-x-3 text-gray-300">
                     <Phone className="w-4 h-4" />
                     <span className="text-sm">{contactInfo.phone}</span>
                   </div>
+
                   <div className="flex items-center space-x-3 text-gray-300">
                     <Mail className="w-4 h-4" />
                     <span className="text-sm">{contactInfo.email}</span>
@@ -1164,6 +1340,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   </div>;
                 </div>;
                 {/* Get Started Button - Mobile */}
+
             className='fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 40 lg:hidden'            on_click={() => setIsOpen (false)}            className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 40 lg:hidden";
             on_click={() => setIsOpen (false)}
           >;
@@ -1301,32 +1478,41 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     href="/contact";
                     className="block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white text - center font - medium rounded - xl hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 200";
                   >;
+
                     Get Started Today;
                   </Link>;
                 </div>;
               </div>;
-      </AnimatePresence>;
-      {/* Spacer for fixed navigation */}
-      <div className='h-20'></div>;
-    </>;
-  );
-};
-export default UltraAdvancedNavigation2026;    </>;
-                <div className="pt-4">
-                  <Link
-                    href="/contact"
-                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Get Started Today
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
+
+        )}
+
         )}
       </AnimatePresence>
 
+  );
+}
+export default UltraAdvancedNavigation2026;
+
+
+=======
+            </motion.div>;
+          </motion.div>)}
+      </AnimatePresence>;
+      {/* Spacer for fixed navigation */}
+      <div className='h - 20'></div>;
+    </>);
+}
+;
+export default UltraAdvancedNavigation2026;    </>);
+}
+export default UltraAdvancedNavigation2026;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
@@ -1336,3 +1522,5 @@ export default UltraAdvancedNavigation2026;    </>
   );
 }
 export default UltraAdvancedNavigation2026;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

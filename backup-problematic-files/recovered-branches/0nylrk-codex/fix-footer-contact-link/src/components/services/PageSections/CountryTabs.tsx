@@ -1,8 +1,29 @@
 
+=======
+import { useState } from "react",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { CountryServiceCard } from "@/components/services/CountryServiceCard",;
+import { CountryPricing } from "@/data/onsiteServicePricing",;
+;
+interface CountryTabsProps {;
+  popularCountries:string[],;
+  filteredCountries:CountryPricing[],;
+  handleCountrySelect:(country:CountryPricing) => void,;
+  searchQuery:string,;
+  setSearchQuery:(query:string) => void;
+}
+;
+export function CountryTabs({ ;
+  popularCountries,;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   filteredCountries, ;
   handleCountrySelect, ;
   searchQuery, ;
   setSearchQuery ;
+<<<<<<< HEAD
 
     <Tabs defaultValue="featured" className="w-full">;
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">;

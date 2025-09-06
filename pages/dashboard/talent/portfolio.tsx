@@ -1,4 +1,15 @@
 
+};
+
+import PdfExportButton from '../../../components / ui / PdfExportButton';
+=======
+<<<<<<< HEAD
+
+import {GetServerSideProps} from 'next';
+import React, { useRef, useState } from 'react';
+import PdfExportButton from '../../../components/ui/PdfExportButton';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import ResumePreview, {
   ResumeData,
 } from '../../../components / ui / ResumePreview';
@@ -73,3 +84,12 @@ function TalentPortfolio() {
           <option value="dark">Dark</option>
         </select>
       </div>
+<<<<<<< HEAD
+    return { redirect: { destination: '/auth', permanent: false } } as any;
+  }
+return { props: {} }
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

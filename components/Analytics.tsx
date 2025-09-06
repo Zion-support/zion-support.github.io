@@ -1,10 +1,34 @@
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useEffect } from 'react';
+
 import Head from 'next / head';
 ;
+
 interface AnalyticsProps {
   tracking_id?: string;
 }
+
+
 interface AnalyticsProps {;
   trackingId?: string;
 }
@@ -21,9 +45,11 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       window && window.dataLayer = window && window.dataLayer || [];
       function gtag(): any (...args: unknown[]) {;
         window && window.dataLayer.push(args),;
+
       }
       window && window.gtag = gtag;
       gtag('js', new Date());
+
       gtag('config', trackingId, {;
         page_title: document && document.title,;
         page_location: window && window.location.href,;
@@ -80,6 +106,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   };
   // Expose tracking functions globally for use in other components;
   if (typeof window !== 'undefined') {;
+
     (window as any).trackEvent = trackEvent;
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
   useEffect (() => {
@@ -183,9 +210,12 @@ if ( {) {
   }
   return (
     <Head>;
+
       <script;
         dangerouslySetInnerHTML={{
 
+                      });
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       });
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
                     if (window && window.gtag) {
@@ -201,3 +231,5 @@ if ( {) {
         }}
 
 export default Analytics;
+export default Analytics;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

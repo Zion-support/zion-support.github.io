@@ -1,30 +1,56 @@
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string;
   title: string;
   description: string;
   category: string;
   price?: number;
 
-  skills?: string[]
+  skills?: string[],
+  image?: string;
 
-  image?: string
 }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   item: MatchResultItem;
   score: number;
 
-  matchedSkills: string[]
-
-  reason: string
+  matched_skills: string[],
+  reason: string;
 }
-// Sample data for testing when API is not available
-const sampleData: MatchResultItem[] = [
+// Sample data for testing when API is not available;
+const sample_data: MatchResultItem[] = [;
+
   {
-    id: "talent-1";
+    id: "talent - 1";
     title: "Senior AI Engineer";
     description: "Experienced AI engineer with expertise in machine learning and computer vision";
     category: "Talent - Engineering";
+
+=======
+    price: 120,
+    skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
+
+  }
+  {
+    id: "service - 1";
+    title: "AI Model Training";
+    description: "Custom AI model training service with data preparation and deployment";
+    category: "Services - AI Development";
+
+    price: 5000,
+    skills: ["Machine Learning", "Model Training", "AI Deployment"];
+
+  }
+  {
+    id: "equipment - 1";
+    title: "NVIDIA A100 GPU Server";
+    description: "High - performance GPU server for AI model training and inference";
+    category: "Equipment - Hardware";
+
+
+
 
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
@@ -58,6 +84,8 @@ const sampleData: MatchResultItem[] = [
 
   type: string = "",
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   limit: number = 5
 ): Promise<MatchResult[]> {
   try {
@@ -65,11 +93,20 @@ const sampleData: MatchResultItem[] = [
     // For now, we'll simulate a response with sample data
     // Simulate API call delay
 
+=======
+
+    await new Promise(resolve => setTimeout(resolve, 1000)),
+    
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Filter by type if provided
-    let filteredItems = sampleData,
+    let filteredItems = sampleData;
     if (type && type !== "all") {
-      filteredItems = sampleData.filter(item =>
-        item.category.toLowerCase().includes(type.toLowerCase())
+
+      filteredItems = sampleData && sampleData.filter(item => 
+        item && item.category.toLowerCase().includes(type && type.toLowerCase())
+
       )
     }
     // Sort by simulated relevance (random for now)
@@ -138,5 +175,20 @@ export async function findMatches(;
     return [];
 
   }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+      filtered_items = sample_data.filter (item =>;
+        item.category.toLowerCase ().includes (type.toLowerCase ()));
+    }
+    // Sort by simulated relevance (random for now);
+    const matches: MatchResult[] = filtered_items.map (item => ({
+      item,
+      score: Math.floor (Math.random () * 40) + 60, // Random score between 60 and 99;
+      matched_skills: item.skills?.slice (0, 2) || [];
+      reason: `This ${item.category.split (' - ')[0].toLowerCase ()} matches your needs based on the provided description.`;
+    }));
 ;
+<<<<<<< HEAD
+  }
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

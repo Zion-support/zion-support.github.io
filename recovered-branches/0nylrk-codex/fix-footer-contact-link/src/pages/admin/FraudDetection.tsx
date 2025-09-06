@@ -19,6 +19,7 @@ import {
   const [severityFilter, setSeverityFilter] = useState<string | null>(null),
   const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [stats, setStats] = useState<FraudStats>({
 
     total_flags: 0
@@ -29,7 +30,7 @@ import {
     actioned_count: 0})
   // Fetch fraud flags
   const fetchFraudFlags = async () => {
-    setIsLoading(true),
+    setIsLoading(true);
     try {
       const { data, error } = await supabase
         .from("fraud_flags")
@@ -45,7 +46,7 @@ import {
         actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length |0}
       setStats(newStats)
     } catch (error) {
-      console.error("Error fetching fraud flags:", error),
+      console.error("Error fetching fraud flags:", error);
       toast({
         title: "Error"
         description: "Failed to load fraud detection data"
@@ -53,6 +54,88 @@ import {
     } finally {
       setIsLoading(false)
 
+=======
+
+import React, { useState, useEffect } from "react",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { SEO } from "@/components/SEO",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Button } from "@/components/ui/button",;
+import { toast } from "@/hooks/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
+import { FraudFlag, FraudStats } from "@/types/fraud",;
+// Import refactored components;
+import {;
+  FraudStatsCards,;
+  FraudFilters,;
+  FraudFlagsTable,;
+  FraudTabContent;
+} from "@/components/admin/fraud-detection",;
+export default function FraudDetection() {;
+  const [flags, setFlags] = useState<FraudFlag[]>([]),;
+  const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [searchQuery, setSearchQuery] = useState(""),;
+  const [statusFilter, setStatusFilter] = useState<string | null>(null),;
+  const [severityFilter, setSeverityFilter] = useState<string | null>(null),;
+  const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),;
+  const [stats, setStats] = useState<FraudStats>({;
+    total_flags: 0,;
+    pending_flags: 0,;
+    suspicious_count: 0,;
+    dangerous_count: 0,;
+    false_positives: 0,;
+    actioned_count: 0}),;
+  // Fetch fraud flags;
+  const fetchFraudFlags = async () => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase;
+        .from("fraud_flags");
+        .select("*");
+        .order("timestamp", { ascending: false }),;
+      if (error) throw error,;
+      setFlags(data || []),;
+      setFilteredFlags(data || []),;
+      // Calculate stats;
+      const newStats: FraudStats = {;
+        total_flags: data?.length || 0,;
+        pending_flags: data?.filter(flag => flag.status === 'pending').length || 0,;
+        suspicious_count: data?.filter(flag => flag.severity === 'suspicious').length || 0,;
+        dangerous_count: data?.filter(flag => flag.severity === 'dangerous').length || 0,;
+        false_positives: data?.filter(flag => flag.is_false_positive).length || 0,;
+        actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0},;
+      setStats(newStats);
+    } catch (error) {;
+      console.error("Error fetching fraud flags:", error),;
+      toast({;
+        title: "Error",;
+        description: "Failed to load fraud detection data",;
+        variant: "destructive"});
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  useEffect(() => {;
+    fetchFraudFlags();
+  }, []),;
+  // Apply filters;
+  useEffect(() => {;
+    let result = [...flags],;
+    // Apply search filter;
+    if (searchQuery) {;
+      const query = searchQuery.toLowerCase(),;
+      result = result.filter(;
+        (flag) =>;
+          flag.user_email?.toLowerCase().includes(query) ||;
+          flag.content_excerpt.toLowerCase().includes(query) ||;
+          flag.reason.toLowerCase().includes(query);
+      );
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
     // Apply status filter
     if (statusFilter) {
@@ -73,7 +156,7 @@ import {
       // Refresh the data
       fetchFraudFlags()
     } catch (error) {
-      console.error("Error updating fraud flag:", error),
+      console.error("Error updating fraud flag:", error);
       toast({
         title: "Error"
         description: "Failed to update flag"
@@ -81,9 +164,9 @@ import {
     }
 
   const resetFilters = () => {
-    setSearchQuery(""),
-    setStatusFilter(null),
-    setSeverityFilter(null),
+    setSearchQuery("");
+    setStatusFilter(null);
+    setSeverityFilter(null);
     setContentTypeFilter(null)
 
   return (
@@ -179,22 +262,34 @@ import {
             <TabsTrigger value="actioned">Actioned</TabsTrigger>
           </TabsList>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <TabsContent value="all" className="mt-6">
+          <TabsList>;
+            <TabsTrigger value="all">All Flags</TabsTrigger>;
+            <TabsTrigger value="pending">Pending Review</TabsTrigger>;
+            <TabsTrigger value="dangerous">Dangerous</TabsTrigger>;
+            <TabsTrigger value="actioned">Actioned</TabsTrigger>;
+          </TabsList>;
+
+          <TabsContent value="all" className="mt - 6">;
+
             {/* Search and Filters */}
-            <FraudFilters
-              searchQuery={searchQuery}
+            <FraudFilters;
+              search_query={search_query}
               setSearchQuery={setSearchQuery}
-              statusFilter={statusFilter}
+              status_filter={status_filter}
               setStatusFilter={setStatusFilter}
-              severityFilter={severityFilter}
+              severity_filter={severity_filter}
               setSeverityFilter={setSeverityFilter}
               contentTypeFilter={contentTypeFilter}
               setContentTypeFilter={setContentTypeFilter}
-              resetFilters={resetFilters}
-            />
+
+            />;
+
+
             {/* Flags Table */}
-            <Card>
-              <CardContent className="p-0">
+            <Card>;
+              <CardContent className="p-0">;
                 <FraudFlagsTable
                   flags={filteredFlags}
                   isLoading={isLoading}
@@ -218,3 +313,4 @@ import {
       </div>
     </AppLayout>
   )
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

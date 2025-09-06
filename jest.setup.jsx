@@ -13,3 +13,11 @@ export default function Jest.setup({ }: Jest.setupProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+=======
+}}}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+}}}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

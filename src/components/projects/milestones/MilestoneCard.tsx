@@ -1,61 +1,5 @@
 
 
-import { Check, ArrowDown, X } from 'lucide-react'
-import { useDisputeCheck  } from '@/hooks/useDisputeCheck';
-import { DisputeStatusBadge  } from '@/components/disputes/DisputeStatusBadge';
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
-interface MilestoneCardProps {
-
-  id: string
-  projectId: string
-  title: string
-  description?: string
-  amount: number
-  status: string
-  dueDate?: string;
-  onApprove?: (id: string) => Promise<void>;
-  onReject?: (id: string) => Promise<void>; import React from 'react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-interface MilestoneCardProps {
-  id: string
-  projectId: string
-  title: string
-  description?: string
-  amount: number
-  status: string
-  dueDate?: string
-  onApprove?: (id: string,) => Promise<void>
-  onReject?: (id: string,) => Promise<void>
-}
-export function MilestoneCard({
-  id
-  projectId
-  title
-  description
-  amount
-  status
-  dueDate
-  onApprove
-
-  onReject
-}: MilestoneCardProps) {
-  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
-  function getStatusBadgeColor() {
-    switch (status) {
-      case 'completed':
-        return 'bg-green-500';
-      case 'in_progress':
-        return 'bg-blue-500';
-      case 'pending':
-        return 'bg-yellow-500';
-      case 'rejected':
-        return 'bg-red-500';
-      default: return 'bg-gray-500'
-    }
-  }
-
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -64,17 +8,18 @@ export function MilestoneCard({
             <CardTitle className="text-xl">{title}</CardTitle>
             {dueDate && (
 
-              <p className="text-sm text-muted-foreground">
-                Due: {format(new Date(dueDate), 'MMM d, yyyy')}
-              </p>
-            )}
-          </div>
-
           <div className="flex gap-2">
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
               {status.replace('_ ')}
             </Badge>
 
+=======
+            
+            {isUnderDispute && disputeStatus && (
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <DisputeStatusBadge status={disputeStatus} />
             )}
           </div>
@@ -93,6 +38,7 @@ export function MilestoneCard({
           )}
         </div>
 
+<<<<<<< HEAD
           )}
           {status === 'pending' && onApprove && !isUnderDispute && (
 

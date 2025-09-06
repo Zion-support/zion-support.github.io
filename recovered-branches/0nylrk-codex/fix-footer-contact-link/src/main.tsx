@@ -1,4 +1,12 @@
 
+=======
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.tsx';
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import './index.css';
 import { HelmetProvider  } from 'react-helmet-async';
 import { BrowserRouter as Router  } from 'react-router-dom';
@@ -32,4 +40,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>
       </WhitelabelProvider>
     </HelmetProvider>
 
+<<<<<<< HEAD
   </React.StrictMode>);
+  </React.StrictMode>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

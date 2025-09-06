@@ -1,10 +1,19 @@
+=======
+import { useRouter } from 'next/router';
+import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import ProductCard from '@/components/ProductCard';
 
+import { use_router } from 'next / router';
+import { useApiErrorHandling } from '@/hooks / useApiErrorHandling';
+import ProductCard from '@/components / ProductCard';
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AuthModal } from '@/components/auth/AuthModal';
+
+import { AuthModal } from '@/components / auth / AuthModal';
+
 import {
 
 } from 'lucide-react';
@@ -127,93 +136,6 @@ const FilterControls: React.FC<{
   showRecommended,
   setShowRecommended,
 
-  loading
-}) => (
-  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
-    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
-    <div className="flex items-center gap-2">
-      <Filter className="h-4 w-4 text-muted-foreground" />
-      <select
-        value={filterCategory}
-        onChange={(e) => setFilterCategory(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
-      >
-        <option value="">All Categories</option>
-        {categories.map(category => (
-          <option key={category} value={category}>{category}</option>
-        ))}
-      </select>;
-    </div>;
-    <div className="flex items-center gap-2">;
-      <SortAsc className="h-4 w-4 text-muted-foreground" />;
-      <select;
-        value={sortBy}
-        onChange={(e) => setSortBy(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
-      >
-        <option value="newest">Newest First</option>
-        <option value="price-low">Price: Low to High</option>
-        <option value="price-high">Price: High to Low</option>
-        <option value="rating">Highest Rated</option>
-        <option value="popular">Most Popular</option>
-        <option value="ai-score">AI Score</option>
-      </select>
-    </div>
-
-    <div className="flex items-center gap-2">
-      <span className="text-sm">$</span>
-      <input
-        type="number"
-        value={priceRange[0]}
-        min={MIN_PRICE}
-        max={priceRange[1]}
-        onChange={(e) => setPriceRange([Number(e.target.value), priceRange[1]])}
-        className="w-20 bg-background border border-border px-2 py-1 rounded"
-      />
-      <span>-</span>
-      <input
-        type="number"
-        value={priceRange[1]}
-        min={priceRange[0]}
-        max={MAX_PRICE}
-        onChange={(e) => setPriceRange([priceRange[0], Number(e.target.value)])}
-        className="w-20 bg-background border border-border px-2 py-1 rounded"
-      />
-    </div>
-
-    <div className="flex items-center gap-2">
-      <span className="text-sm">AI ≥</span>
-      <input
-        type="number"
-        value={minAiScore}
-        min={0}
-        max={100}
-        onChange={(e) => setMinAiScore(Number(e.target.value))}
-        className="w-16 bg-background border border-border px-2 py-1 rounded";
-      />;
-    </div>;
-    <div className="flex items-center gap-2">;
-      <span className="text-sm">Rating ≥</span>;
-      <select;
-        value={minRating}
-        onChange={(e) => setMinRating(Number(e.target.value))}
-        className="bg-background border border-border px-2 py-1 rounded";
-      >;
-        <option value={0}>Any</option>;
-        <option value={5}>5</option>;
-        <option value={4}>4</option>;
-        <option value={3}>3</option>;
-        <option value={2}>2</option>;
-        <option value={1}>1</option>;
-      </select>;
-    </div>;
-    <div className="flex items-center gap-2">;
-      <select;
-        value={filterAvailability}
-        onChange={(e) => setFilterAvailability(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
-      >
-        <option value="">Any Availability</option>
 
         {availabilityOptions.map(opt => (
           <option key={opt} value={opt as string}>{opt}</option>
@@ -588,11 +510,6 @@ const FilterControls: React.FC<{
               {product.aiScore && product.aiScore > 90 && (;
                 <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black">;
                   <Sparkles className="h-3 w-3 mr-1" />;
-
-                  AI {product.aiScore}
-                </Badge>
-              )}
-
               {/* Featured Badge */}
               {product.featured && (
                 <Badge className='absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10'>
@@ -601,15 +518,22 @@ const FilterControls: React.FC<{
                 </Badge>
 
               )}
-            </motion.div>
+            </motion && motion.div>;
           ))}
         </AnimatePresence>
       </motion.div>
       {/* Loading More Indicator */}
 
         <motion.div
+        </AnimatePresence>;
+      </motion && motion.div>;
+
+      {/* Loading More Indicator */}
+      {(isFetching || loading) && (;
+        <motion&& motion.div
           className='mt-8'
           initial={{ opacity: 0 }}
+
           animate={{ opacity: 1 }}
         >
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
@@ -621,6 +545,7 @@ const FilterControls: React.FC<{
       )}
       {/* End of Results */}
 
+<<<<<<< HEAD
       )}
       {/* Scroll to Top Button */}
 

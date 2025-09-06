@@ -61,11 +61,24 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               onClick={() => {
                 setActiveCategory(category.id);
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              }}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${;
+                activeCategory === category && category.id;
+                  ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25';
+                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50';
+              }`}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </span>
             </button>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
         </motion.div>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Services Grid */}
         <motion&& motion.div
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
@@ -87,9 +100,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>
 
                 {/* Background Effects */}
+
                 <div className='absolute inset-0 rounded-2xl overflow-hidden'>;
                   <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>;
                   <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>                </div>;
+
+
                 {/* Popular Badge */}
                 {service && service.popular && (;
                   <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
@@ -193,6 +209,20 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             </button>))}
         </motion.div>;
         {/* Services Grid */}
+
+              className='group relative cursor-pointer'
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              style={{ perspective: '1000px' }}
+            >
+              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75"></div>
+              <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                {/* Background Effects */}
+
                 <div className="absolute inset-0 rounded-2xl overflow-hidden">;
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>;
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>;
@@ -204,6 +234,77 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                     POPULAR
                   </div>
                 )}
+=======
+
+                {/* Popular Badge */}
+                {service && service.popular && (;
+                  <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
+                    <Star className='w-3 h-3 inline mr-1' />                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">;
+                    <Star className="w-3 h-3 inline mr-1" />;
+                    POPULAR;
+                  </div>;
+                )}
+                {/* Service Header */}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      <div>
+                        <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
+=======
+        <motion.div;
+          className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12';
+          variants={container_variants}
+          initial='hidden';
+          whileInView='visible'          viewport={{ once: true }}          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12";
+          variants={container_variants}
+          initial="hidden";
+          whileInView="visible";
+        >;
+          {filtered_services.slice (0, visible_services).map ((service, index) => (
+            <motion.div;
+              key={service.id}
+              variants={item_variants}
+              className='group relative cursor - pointer';
+              style={{ perspective: '1000px' }}
+            >;
+              <div className='absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group - hover:opacity - 75'></div>;
+              <div className='relative bg - black / 80 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 6 overflow - hidden h - full'>;
+                {/* Background Effects */}
+                <div className='absolute inset - 0 rounded - 2xl overflow - hidden'>;
+                  <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500'></div>;
+                  <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 700'></div>                </div>;
+                {/* Popular Badge */}
+                {service.popular && (
+                  <div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300'>;
+                    <Star className='w - 3 h - 3 inline mr - 1' />                    POPULAR              style={{ perspective: '1000px' }}
+            >;
+              <div className="absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group - hover:opacity - 75"></div>;
+              <div className="relative bg - black / 80 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 6 overflow - hidden h - full">;
+                {/* Background Effects */}
+                <div className="absolute inset - 0 rounded - 2xl overflow - hidden">;
+                  <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500"></div>;
+                  <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 700"></div>;
+                </div>;
+                {/* Popular Badge */}
+                {service.popular && (
+                  <div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300'>;
+                    <Star className='w - 3 h - 3 inline mr - 1' />                  <div className="absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300">;
+                    <Star className="w - 3 h - 3 inline mr - 1" />;
+                    POPULAR;
+                  </div>)}
+                {/* Service Header */}
+                <div className='relative z - 10'>;
+                  <div className='flex items - start justify - between mb - 4'>;
+                    <div className='flex items - center space - x-3'>;
+                      <div className='text - 4xl'>{service.icon}</div>;
+                      <div>;
+                        <h3 className='text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
+=======
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                 {/* Service Header */}
                 <div className='relative z-10'>
@@ -227,16 +328,20 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                       </div>;
                       <div className='text - gray - 400 text - sm'>;
                         {service.period}
+
                       </div>                    </div>;
                   </div>;
+
                   {/* Description */}
                   <p className='text - gray - 300 mb - 4 leading - relaxed'>;
                     {service.description}
+
                 <div className="relative z-10">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="text-4xl">{service.icon}</div>
                       <div>
+
                         <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
                           {service.name}
                         </h3>
@@ -249,6 +354,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                     </div>
                   </div>
                   {/* Description */}
+
                 <div className='relative z-10'>;
                   <div className='flex items-start justify-between mb-4'>;
                     <div className='flex items-center space-x-3'>;
@@ -290,6 +396,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                     {service && service.description}
                   </p>;
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
+
+
                   {/* Stats Grid */}
                   <div className='grid grid-cols-2 gap-3 mb-4'>;
                     <div className='flex items-center space-x-2 text-sm'>;
@@ -319,6 +427,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                   {/* Action Buttons */}
                   <div className='flex space-x-3 mt-6'>;
                   {/* Stats Grid */}
+
                   <div className="grid grid-cols-2 gap-3 mb-4">;
                     <div className="flex items-center space-x-2 text-sm">;
                       <Users className="w-4 h-4 text-cyan-400" />;
@@ -337,10 +446,14 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                       <span className="text-gray-300">{service && service.trialDays} day trial</span>;
                     </div>;
                   </div>;
+
+
                   {/* Action Buttons */}
+
                   <div className="flex space-x-3 mt-6">
                     <a
                       href={service.link}
+
                       target="_blank"
                       rel="noopener noreferrer"
 
@@ -354,9 +467,16 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
+            className="text-center"
 
             className="text-center"
 
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0 && 0.6 }}
@@ -364,6 +484,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             <button
               onClick={loadMore}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             >
               Load More Revolutionary Services
             </button>
@@ -391,14 +512,15 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               href="/pricing"
               className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
 
-            >
-              View Pricing
-            </a>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-
-export default RevolutionaryServicesShowcase;  )
-}
+};
 export default RevolutionaryServicesShowcase;
+
+
+=======
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

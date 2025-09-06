@@ -1,7 +1,11 @@
+
+
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+
+
 
 const cloudServices = [
   {
@@ -41,7 +45,9 @@ const cloudServices = [
   }
 ];
 
+
 export default function CloudServicesPage() {
+
   return (
     <Layout
       title="Cloud Solutions - Zion Tech Group"
@@ -54,6 +60,7 @@ export default function CloudServicesPage() {
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0.8 }}
               className="text-center"
             >
@@ -67,6 +74,7 @@ export default function CloudServicesPage() {
             </motion.div>
           </div>
         </section>
+
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -106,6 +114,8 @@ export default function CloudServicesPage() {
             </div>
           </div>
         </section>
+
+
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"

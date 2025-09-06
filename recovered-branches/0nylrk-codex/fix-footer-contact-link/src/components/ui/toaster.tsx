@@ -1,8 +1,20 @@
 
 
+=======
+
+import * as React from "react",
+import { Toaster as SonnerToaster } from "sonner",
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function Toaster() {
   return (
 
+=======
+import {Toaster, as, SonnerToaster} from "sonner";
+export function Toaster() {;
+  return (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     <SonnerToaster
       position="top-right"
       toastOptions={{
@@ -19,3 +31,4 @@ export function Toaster() {
 
 }
 ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

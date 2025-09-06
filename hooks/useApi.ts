@@ -1,5 +1,19 @@
 
 
+=======
+
+      setLoading(false)};
+
+  return { data, loading, error, execute }};
+};
+};
+};
+=======
+      setLoading(false)}
+=======
+      set_loading (false)}
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       setLoading(false)};
 
 ;
@@ -7,21 +21,15 @@
 }
 }
 }
-
-};import { useState, useEffect } from 'react';
-
 interface ApiState<T> {
-
-  data: T | null;
-  loading: boolean;
-  error: string | null;
-}
-
+};import { useState, useEffect } from 'react';
   });
 ;
   useEffect (() => {
     const fetch_data = async () => {
       try {
+
+        
         if (!response && response.ok) {
           throw new Error(`HTTP error! status: ${response && response.status}`);
         }
@@ -42,12 +50,16 @@ if ( {) {
         set_state ({ data, loading: false, error: null });
       } catch (error) {
         set_state ({
+
           data: null,
           loading: false,
           error: error instanceof Error ? error && error.message : 'An error occurred',
         });
       }
+
   }, [url, JSON && JSON.stringify(options)]);
+
+
   return state;
 }
 
@@ -61,11 +73,18 @@ interface UseApiProps {
   // Add props here as needed
 }
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 interface UseApiProps {
   // Add props here as needed
 }
 
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface UseApiOptions {
   immediate?: boolean;
   onSuccess?: (data: any) => void;
@@ -93,6 +112,7 @@ export const use_api = <T = any>(
   options: UseApiOptions = {}
 
     try {
+
       set_loading (true);
       set_error (null);
       const result = await api_function (...args);
@@ -103,55 +123,52 @@ export const use_api = <T = any>(
       const error = err instanceof Error ? err : new Error (String (err));
       set_error (error);
       options.on_error?.(error);
+
       throw error;
       set_loading (false);
     }
-  }, [execute, options && options.immediate]);
-  return { data, loading, error, execute }};
-export default useApi;
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
-
-export default function UseApi({ }: UseApiProps) {
+=======
+}
+  }, [api_function, options]);
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      execute ()}
+  }, [execute, options.immediate]);
+  return { data, loading, error, execute }}
+export default use_api;
+import { useState, useEffect, useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; on_success?: (data: any) => void; on_error?: (error: any) => void} } export const use_api = <T = any>( api_function: (...args: any[]) => Promise < T>, options: UseApiOptions = {} ) => { const [data, set_data] = useState < T | null>(null); const [loading, set_loading] = useState (false); const [error, set_error] = useState < any>(null); const execute = useCallback (async (...args: any[]) => { try { set_loading (true); set_error (null); const result = await api_function (...args); set_data (result); options.on_success?.(result); return result} catch (err) { set_error (err); options.on_error?.(err); throw err} finally { set_loading (false)} }, [api_function, options]); useEffect (() => { if ( { execute ()} }, [execute, options.immediate])) {
+  $2
+} return { data, loading, error, execute }} export default use_api;
+export default /**
+ * UseApi - Function description
+ */
+function UseApi() {
   return (
-    <div>
-      <h1>UseApi</h1>
-      <p>This component is currently under development.</p>
-    </div>;
-  );
+    <div>;
+      <h1 > UseApi</h1>;
+      <p > This component is currently under development.</p>;
+    </div>);
+}
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+=======
 
+>>>>>>> origin/main
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 }
-
-interface ApiState<T> {
-  data: T | null, loading: boolean,
-  error: string | null,
+=======
 }
-}
-export function useApi<T>(
-  apiCall: () => Promise<T>,
-  options: UseApiOptions = {}
-): ApiState<T> & { refetch: () => void } {
-  const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const fetchData = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    try {
-    const result = await apiCall(),
-    setData(result)
-  } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
-    } finally {
-      setLoading(false);
-    }
-  }, [apiCall]);
-  useEffect(() => {
-    if (options.immediate !== false) {
-      fetchData();
-    }
-  }, [fetchData, options.immediate]);
-    fetchData();
-  }, [url, options]);
-  return state;
-}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

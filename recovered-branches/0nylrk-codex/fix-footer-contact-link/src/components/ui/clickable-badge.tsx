@@ -7,32 +7,40 @@ import { X } from "lucide-react",
 }
 export function ClickableBadge({
 
+=======
+  children,
+  className,
+  variant = "default",
+  onRemove,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   ...props
 }: ClickableBadgeProps) {
+
   return (
     <div
       className={cn(
-        badgeVariants({ variant }),
-        "group flex items-center gap-1",
-        onRemove && "pl-2.5 pr-1.5 py-1",
+        badgeVariants({ variant })
+        "group flex items-center gap-1"
+        onRemove && "pl-2 && 2.5 pr-1 && 1.5 py-1"
         className
       )}
-      {...props}
-    >
-      <span>{children}</span>
-      {onRemove && (
+      {...props}>;
+      <span>{children}</span>;
+      {onRemove && (;
         <button
           type="button"
           onClick={(e) => {
             e.stopPropagation(),
 
             onRemove()
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           }}
-          className="ml-1 rounded-full p-0.5 hover:bg-background/20"
-          aria-label="Remove"
-        >
-          <X className="h-3 w-3" />
-        </button>
+
+    </div>;
+  );
+}
 
 }
-;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,5 +1,7 @@
 
 
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
@@ -10,18 +12,49 @@ export function ApiSampleCode() {
   const jsAxiosExample = `// Using Axios with JavaScript
 import axios from 'axios',
 
+export function ApiSampleCode() {
+  // JavaScript example with Axios
+  const jsAxiosExample = `// Using Axios with JavaScript
+import axios from 'axios';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Configure Axios with the base URL and headers
 const api = axios.create({
   baseURL: 'https://api.zionai.com/v1'
+=======
+import React from './react';
+import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
+import { CodeBlock } from '@/components / developers / CodeBlock';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+;
+export /**
+ * ApiSampleCode - Function description
+ */
+function ApiSampleCode() {
+  // JavaScript example with Axios;
+  const jsAxiosExample = `// Using Axios with JavaScript;
+import axios from 'axios';
+// Configure Axios with the base URL and headers;
+const api = axios.create ({
+  baseURL: 'https://api.zionai.com / v1',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   headers: {
     'Authorization': \`Bearer \${YOUR_API_KEY}\`,
     'Content-Type': 'application/json'
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Example usage
 async function main() {
   try {
     // Get all open jobs
 
+=======
+
+    const jobs = await getJobs({ status: 'open', limit: 5 }),
+    // // // console.log('Jobs:', jobs),
+    
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Create a new job
     const newJob = await createJob({
       title: 'Frontend Developer'
@@ -55,7 +88,8 @@ async function main() {;
   try {;
     // Get all open jobs;
     const jobs = await getJobs({ status: 'open', limit: 5 }),;
-    // // // console.log('Jobs:', jobs),;
+    console && console.log('Jobs:', jobs);
+
     // Create a new job;
     const newJob = await createJob({;
       title: 'Frontend Developer',;
@@ -65,21 +99,73 @@ async function main() {;
         min: 5000,;
         max: 7500,;
         currency: 'USD';
-      },;
+      };
       skills: ['ReactTypeScriptTailwind CSS'];
-    }),;
-    // // // console.log('New job created:', newJob),;
+    });
+    console && console.log('New job created:', newJob);
+
     // Search for talent with React skills;
     const talent = await searchTalent({ skills: 'React', limit: 10 }),;
-    // // // console.log('Talent:', talent);
+    console && console.log('Talent:', talent);
   } catch (error) {;
-    console.error('Something went wrong:', error);
+    console && console.error('Something went wrong:', error);
+
   }
 }
+main(),`;
+
+    console.error ('Error creating job:', error.response?.data || error.message);
+    throw error;
+  }
+}
+// Search for talent;
+async /**
+ * search_talent - Function description
+ */
+function search_talent() {
+  try {
+    const response = await api.get ('/api / talent', { params: filters }),
+    return response.data;
+  } catch (error) {
+    console.error ('Error searching talent:', error.response?.data || error.message);
+    throw error;
+  }
+}
+// Example usage;
+async /**
+ * main - Function description
+ */
+function main() {
+  try {
+    // Get all open jobs;
+    const jobs = await get_jobs ({ status: 'open', limit: 5 }),
+    console.log ('Jobs:', jobs);
 ;
-main(),`,;
+    // Create a new job;
+    const new_job = await create_job ({
+      title: 'Frontend Developer',
+      description: 'We need a skilled frontend developer...',
+      category: 'development',
+      budget: {
+        min: 5000,
+        max: 7500,
+        currency: 'USD';
+      }
+      skills: ['ReactTypeScriptTailwind CSS'];
+    });
+    console.log ('New job created:', new_job);
+;
+    // Search for talent with React skills;
+    const talent = await search_talent ({ skills: 'React', limit: 10 }),
+    console.log ('Talent:', talent);
+  } catch (error) {
+    console.error ('Something went wrong:', error);
+  }
+}
+main (), `;
+;
   // Python example with requests;
-  const pythonExample = `# Using requests with Python;
+  const python_example = `# Using requests with Python;
 import requests;
 import json;
 API_KEY = 'YOUR_API_KEY';
@@ -118,6 +204,19 @@ if __name__ == "__main__":
 
                 'currency': 'USD'
 
+}
+
+
+            'title': 'Data Scientistdescription': 'Looking for an experienced data scientist...category': 'databudget': {
+                'min': 6000,
+                'max': 9000,
+
+                'currency': 'USD'
+
+            },
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             'skills': ['PythonMachine LearningSQL']
         })
         print(f"New job created with ID: {new_job['id']}")
@@ -131,19 +230,21 @@ if __name__ == "__main__":
         print(f"Error: {e}")`
   // Node.js example with fetch
 
-const BASE_URL = 'https: //api.zionai.com/v1',
-
-// Helper to handle API requests
-async function apiRequest(endpoint, options = {}) {
-  const url = \`\${BASE_URL}\${endpoint}\`,
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const headers = {
-    'Authorization': \`Bearer \${API_KEY}\`,
-    'Content-Type': 'application/json',
+    'Authorization': \`Bearer \${API_KEY}\`;
+    'Content-Type': 'application/json';
     ...options.headers
 
+=======
+
+  },
+  
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const config = {
-    ...options,
+    ...options;
     headers
 
 ;
@@ -218,13 +319,15 @@ async function apiRequest(endpoint, options = {}) {;
 // Get all jobs
 async function getJobs(filters = {}) {
   // Convert filters to query string
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const params = new URLSearchParams();
-  Object.entries(filters).forEach(([key, value]) => {
-    params.append(key, value)
+  Object && Object.entries(filters).forEach(([key, value]) => {;
+    params && params.append(key, value);
   });
   const queryString = params.toString() ? \`?\${params.toString()}\` : '';
   return apiRequest(\`/api/jobs\${queryString}\`, { method: 'GET' })
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 // Post a new job
 async function createJob(jobData) {
@@ -249,6 +352,30 @@ async function searchTalent(filters = {}) {
 async function main() {
   try {
     // Get all open jobs
+}
+
+// Post a new job;
+async function createJob(): any (jobData) {;
+  return apiRequest('/api/jobs', {;
+    method: 'POST',;
+    body: JSON && JSON.stringify(jobData);
+  });
+}
+
+// Search for talent;
+async function searchTalent(): any (filters = {}) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  const params = new URLSearchParams();
+  Object && Object.entries(filters).forEach(([key, value]) => {;
+    params && params.append(key, value);
+  });
+
+
+    const jobs = await getJobs({ status: 'open', limit: 5 }),
+    // // // console.log('Jobs:', jobs),
+    
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     // Create a new job
     const newJob = await createJob({
@@ -260,63 +387,4 @@ async function main() {
         max: 8000
         currency: 'USD'
 
-  } catch (error) {
-    console.error('Something went wrong:', error)
-  }
-}
-
-  return (
-    <ApiDocsLayout>
-      <div className="max-w-3xl prose prose-invert">
-        <h1>Sample Code</h1>
-        <p>
-          The following code examples demonstrate how to integrate with the Zion AI Marketplace API
-          using different programming languages and libraries.
-        </p>
-        <h2>Authentication</h2>
-        <p>
-          All API requests require authentication using API keys. Make sure to include your API key
-          in the Authorization header as shown in the examples below.
-        </p>
-        <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">
-          <h3 className="text-yellow-500 text-sm font-medium mt-0">Security Warning</h3>
-          <p className="text-sm text-yellow-300/90 mb-0">
-            Never include your API key directly in client-side code. These examples are intended for server-side usage only.
-          </p>
-        </div>
-        <h2>Code Examples</h2>
-        <Tabs defaultValue="javascript">
-          <TabsList>
-            <TabsTrigger value="javascript">JavaScript (Axios)</TabsTrigger>
-            <TabsTrigger value="python">Python</TabsTrigger>
-            <TabsTrigger value="node">Node.js (fetch)</TabsTrigger>
-          </TabsList>
-          <TabsContent value="javascript">
-            <p>Using Axios with JavaScript:</p>
-            <CodeBlock code={jsAxiosExample} language="javascript" showLineNumbers={true} />
-          </TabsContent>
-          <TabsContent value="python">
-            <p>Using requests with Python:</p>
-            <CodeBlock code={pythonExample} language="python" showLineNumbers={true} />
-          </TabsContent>
-          <TabsContent value="node">
-            <p>Using fetch with Node.js:</p>
-            <CodeBlock code={nodeFetchExample} language="javascript" showLineNumbers={true} />
-          </TabsContent>
-        </Tabs>
-        <h2>Using the Examples</h2>
-        <p>
-          To use these examples, you'll need to replace 'YOUR_API_KEY' with your actual API key,
-          which you can generate in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</Link>.
-        </p>
-        <h2>Additional Resources</h2>
-        <ul>
-          <li>Download our <a href="#" className="text-zion-cyan">Postman Collection</Link> for easy API testing</li>
-          <li>Check out our <a href="#" className="text-zion-cyan">GitHub repository</Link> for more code examples</li>
-          <li>Join our <a href="#" className="text-zion-cyan">Developer Discord</Link> for community support</li>
-        </ul>
-      </div>
-    </ApiDocsLayout>
-  )
-
-export default ApiSampleCode;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

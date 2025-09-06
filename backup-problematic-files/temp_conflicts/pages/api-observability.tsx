@@ -1,4 +1,8 @@
 
+=======
+import React from 'react';
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Head from 'next/head';
 import { Shield, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -29,3 +33,4 @@ export default function ApiObservabilityPage() {
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0.5" /><span>{feat}</span></li>
                 ))}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

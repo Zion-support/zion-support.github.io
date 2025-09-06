@@ -16,6 +16,7 @@ const __dirname = path.dirname(__filename),"}),"})
 // // // console.log(,"}),"})
   '🔗 Starting continuous link checker automation...'),"}),"})
 
+=======
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes,"}),"})
 async function checkLinks() {,"}),"})
   try {,"}),"})
@@ -80,11 +81,16 @@ async function checkLinks() {,"}),"})
     let hasIssues = false,"}),"})
     const brokenReferences = [],"}),"})
 
+=======
+    ),"})
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       try {,"}),"})
         const content = fs.readFileSync(htmlFile,,"}),"})
   'utf8'),"}),"})
         const references = findReferences(content),"}),"})
 
+<<<<<<< HEAD
           if (!isValidReference(ref, distPath)) {,"}),"})
             brokenReferences.push({,"}),"})
               "file": path.relative(process.cwd(), htmlFile),,"}),"})
@@ -272,3 +278,4 @@ async function checkLinks() {
       '⚠️  index.html not found in build output');
       return;
       // // // console.log(
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

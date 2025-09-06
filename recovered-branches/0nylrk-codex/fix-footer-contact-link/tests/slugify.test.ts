@@ -31,3 +31,4 @@ it('converts slug back to title', () => {;
 it('handles custom separator when unslugifying', () => {;
   expect(unslugify('multi_word_title_')).toBe('Multi Word Title');
 });
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

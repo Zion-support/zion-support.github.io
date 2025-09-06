@@ -1,4 +1,19 @@
 
+=======
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { SEO } from "@/components/SEO",;
+import { GradientHeading } from "@/components/GradientHeading",;
+;
+export default function About() {;
+  return (;
+    <>;
+      <SEO ;
+        title="About Zion - The Future of AI & Tech Marketplace" ;
+        description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." ;
+        keywords="about Zion, AI marketplace, tech platform, mission, vision, team";
+        canonical="https://app.ziontechgroup.com/about";
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       />;
       <Header />;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
@@ -9,6 +24,7 @@
               The world's first free marketplace dedicated to high-tech and artificial intelligence;
             </p>;
           </div>;
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">;
             <div>;
@@ -74,13 +90,4 @@
                 </div>;
                 <h3 className="text-xl font-bold text-white mb-3">Trust</h3>;
                 <p className="text-zion-slate-light">;
-
-                  We maintain the highest standards of integrity, transparency, and ethical practices in everything we do.;
-                </p>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </main>;
-      <Footer />;
 

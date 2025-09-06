@@ -1,8 +1,40 @@
 
+=======
+import { useState, useEffect } from 'react',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { FilePlus, Loader2 } from 'lucide-react',;
+import { ProjectCard } from './ProjectCard',;
+import { ProjectForm } from './ProjectForm',;
+import { PortfolioProject } from '@/types/resume',;
+import { usePortfolio } from '@/hooks/usePortfolio',;
+;
+export function PortfolioBuilder() {;
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),;
+  const [showAddProject, setShowAddProject] = useState(false),;
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),;
+  ;
+  useEffect(() => {;
+    fetchProjects(),;
+  }, [fetchProjects]),;
+  ;
+  const handleAddSuccess = () => {;
+    setShowAddProject(false),;
+    fetchProjects(),;
+  },;
+  ;
+  const handleEditSuccess = () => {;
+    setEditingProject(null),;
+    fetchProjects(),;
+  },;
+  ;
+  const handleDeleteProject = async (projectId:string) => {;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const success = await deleteProject(projectId),;
     if (success) {;
       fetchProjects();
     }
+<<<<<<< HEAD
 
     <div className="space-y-6">;
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">;

@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 
 interface Talent {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string;
   name: string;
   title: string;
@@ -33,6 +34,16 @@ const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
 const TalentDirectory: NextPage = () => {
 
   return (
+}));
+const TalentDirectory: NextPage = () => {;
+
+  const [page, setPage] = useState(1);
+  const pageSize = 10;
+
+        page={page}
+        page_size={page_size}
+        total={total}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     <div className="space-y-6 pb-16">
       <Head>
@@ -45,7 +56,47 @@ const TalentDirectory: NextPage = () => {
               <h3 className="font-semibold">{t.name}</h3>
               <div className="flex gap-1">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
             </div>
             <div className="text-sm opacity-80">{t.title}</div>
             {t.testimonial && (
+=======
+
+      <Pagination page={page} pageSize={pageSize} total={total} onChange={setPage} />
+    </div>
+  )
+
+};
+export default TalentDirectory;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+export default TalentDirectory;
+
+}
+
+=======
+              <MicroTestimonial quote={t.testimonial.quote} author={t.testimonial.author} />
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </article>;
+        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      </div>;
+      <Pagination page={page} pageSize={pageSize} total={total} onChange={setPage} />;
+    </div>;
+  );
+},;
+export default TalentDirectory;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

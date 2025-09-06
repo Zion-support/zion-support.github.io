@@ -1,24 +1,43 @@
 
+=======
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useEffect, useState } from 'react';
 export default function AdminLearn() {
-  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' })
-  const [message, setMessage] = useState('')
+
+  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
+  const [message, setMessage] = useState('');
+
+
   async function saveCourse() {
     setMessage('')
     const resp = await fetch('/api/admin/learn/course', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
+
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
       body: JSON.stringify(form)
 
   }
 }
 
+    const data = await resp.json()
+    if (data.ok) setMessage('Saved')
+    else setMessage('Error: ' + (data.error |'unknown'))
+
+  }
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Learning Admin</h1>
       <div className="grid gap-3 sm:grid-cols-2">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <input className="border rounded px-3 py-2" placeholder="Title" value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} />
         <select className="border rounded px-3 py-2" value={form.category} onChange={(e) => setForm({ ...form, category: e.target.value })}>
           <option>AI Development</option>
@@ -39,3 +58,29 @@ export default function AdminLearn() {
 
     </div>
   )
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+    </div>
+  );
+};
+
+=======
+      {message && <div className="text-sm">{message}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    </div>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

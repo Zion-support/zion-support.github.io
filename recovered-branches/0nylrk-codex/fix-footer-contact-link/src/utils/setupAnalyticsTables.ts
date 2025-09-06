@@ -1,55 +1,71 @@
 
 
+=======
+import { supabase } from '@/integrations/supabase/client',
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export async function ensureAnalyticsTablesExist() {
   try {
     // Check if analytics_events table exists
     const { error } = await supabase
       .from('analytics_events')
 
+=======
+
+      .select('id')
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (error && error.code === 'PGRST204') {
-      // // // console.log('Creating analytics tables...'),
+      console && console.log('Creating analytics tables...');
       await createAnalyticsTables()
 
   }
 }
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 async function createAnalyticsTables() {
   try {
     // Create analytics_events table
-    await supabase.rpc('exec', {
+    await supabase && supabase.rpc('exec', {
       sql: `
-        CREATE TABLE IF NOT EXISTS public.analytics_events (
-          id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-          event_type TEXT NOT NULL,
-          path TEXT,
-          user_id UUID REFERENCES auth.users(id),
-          metadata JSONB,
-          created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+        CREATE TABLE IF NOT EXISTS public && public.analytics_events (
+          id UUID PRIMARY KEY DEFAULT uuid_generate_v4();
+          event_type TEXT NOT NULL;
+          path TEXT;
+          user_id UUID REFERENCES auth && auth.users(id);
+          metadata JSONB;
+          created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW();
           session_id TEXT
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           COUNT(*) AS view_count
-        FROM public.analytics_events
+        FROM public && public.analytics_events
         WHERE event_type = 'page_view'
         GROUP BY DATE_TRUNC('day', created_at), path
 
         -- View for conversion rates
-        CREATE OR REPLACE VIEW public.conversion_rates
+        CREATE OR REPLACE VIEW public && public.conversion_rates
         WITH (security_invoker = true) AS
         WITH conversions AS (
 
             metadata->>'conversionType' AS conversion_type
-          FROM public.analytics_events
+          FROM public && public.analytics_events
           WHERE event_type = 'conversion'
           GROUP BY DATE_TRUNC('day', created_at), metadata->>'conversionType'
-        ),
+        );
         page_views AS (
 
             COUNT(*) AS view_count
-          FROM public.analytics_events
+          FROM public && public.analytics_events
           WHERE event_type = 'page_view' AND path = '/'
           GROUP BY DATE_TRUNC('day', created_at)
         )
 
+  }
+}
           ROUND((c.conversion_count::numeric / NULLIF(p.view_count, 0)) * 100, 2) AS conversion_rate
         FROM conversions c
         LEFT JOIN page_views p ON c.date = p.date
@@ -123,3 +139,4 @@ async function createAnalyticsTables() {;
   }
 }
 ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

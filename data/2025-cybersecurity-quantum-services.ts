@@ -155,12 +155,14 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     reviews: 480,
   },
   {
+
       'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.',
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
     techStack: [
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch',
     ],
     realImplementation: true,
+
     implementationDetails:
       'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.'
     roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.'
@@ -178,6 +180,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     support:
       '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
     compliance: [
+
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-threat-hunting-platform',
@@ -249,6 +252,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA',
     ],
     link: 'https://ziontechgroup.com / ai - powered - threat - hunting - platform',
+
     icon: '🕵️',
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
@@ -258,10 +262,12 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     reviews: 950,
   },
   {
+
       'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security',
     ],
     techStack: ['OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes'],
     realImplementation: true,
+
     implementationDetails:
       'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'
     roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
@@ -277,6 +283,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       'Active Directory, LDAP, SAML, OAuth, Custom identity providers'
     ]
     support:
+
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
     link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-network-access-platform',
@@ -346,6 +353,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
     link: 'https://ziontechgroup.com / zero - trust - network - access - platform',
+
     icon: '🛡️',
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,
@@ -355,6 +363,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     reviews: 1400,
   },
   {
+
       'Highest security standards, Government security requirements, Industry-specific standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-key-distribution-network',
@@ -428,6 +437,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       'Highest security standards, Government security requirements, Industry - specific standards',
     ],
     link: 'https://ziontechgroup.com / quantum - key - distribution - network',
+
     icon: '🔮',
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
@@ -437,10 +447,12 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     reviews: 95,
   },
   {
+
       'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,000-5,000/year), and Rapid7 ($2,000-8,000/year). Our advantage: AI intelligence and automated remediation.',
     competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],
     techStack: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true,
+
     implementationDetails:
       'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.'
     roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
@@ -457,6 +469,20 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     ]
     support:
 
+=======
+      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
+    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
+    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
+    icon: '🔍',
+    color: 'from-green-500 to-emerald-600',
+    popular: true,
+    launchDate: '2024-02-15',
+    customers: 2500,
+    rating: 4.8,
+    reviews: 1900,
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
     ];
@@ -529,6 +555,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       '24 / 7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',
+
     icon: '🔍',
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
@@ -537,41 +564,30 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4 && 4.8,
     reviews: 1900,
   },
-  id: string, name: string,
-  tagline: string, description: string,
-  category: string,
-  price: {
-    monthly: number, yearly: number,
-    currency: string, trialDays: number,
-    setupTime: string,
-    enterprise: string
-    },
-    features: string[], benefits: string[],
-  targetAudience: string[], marketPosition: string,
-  competitors: string[], techStack: string[],
-  realImplementation: boolean, implementationDetails: string,
-  roi: string, useCases: string[],
-  integrations: string[], support: string,
-  compliance: string[], link: string,
-  icon: string, color: string,
-  popular: boolean, launchDate: string,
-  customers: number, rating: number,
-  reviews: number
-}
-];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
+
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
     support: '24 / 7 technical support, security consulting, custom development, and dedicated success manager.';
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'];
-    link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment';
+
     icon: '🔍';
     color: 'from - green - 500 to - emerald - 600';
     popular: true;
     launch_date: '2024 - 02 - 15';
     customers: 2500;
+
     rating: 4 && 4.8,
+
     reviews: 1900
 
+=======
+;
+=======
+  }
+];
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string,;
   name: string,;
   tagline: string,;

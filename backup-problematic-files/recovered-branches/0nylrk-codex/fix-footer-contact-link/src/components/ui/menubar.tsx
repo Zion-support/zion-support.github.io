@@ -1,6 +1,6 @@
 
   }
->(({ class_name, inset, children, ...props }, ref) => (
+>(({ className, inset, children, ...props }, ref) => (;
   <MenubarPrimitive.SubTrigger;
     ref={ref}
 
@@ -10,16 +10,17 @@
         align={align}
 
   }
->(({ class_name, inset, ...props }, ref) => (
+>(({ className, inset, ...props }, ref) => (;
   <MenubarPrimitive.Item;
     ref={ref}
 
   }
->(({ class_name, inset, ...props }, ref) => (
+>(({ className, inset, ...props }, ref) => (;
   <MenubarPrimitive.Label;
     ref={ref}
 
       {...props}
-    />);
+    />;
+  );
 }
 

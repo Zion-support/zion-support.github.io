@@ -17,6 +17,7 @@ const statuses: GrantStatus[] = [
   'Under Review'
   'Approved'
   'Rejected'
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ];
 
 export default function GrantsPage() {;
@@ -50,3 +51,33 @@ export default function GrantsPage() {;
   return (
 
     <EnhancedLayout>
+                )}
+                {g.status === 'Approved' && (
+                  <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>
+                    Grant Winner
+                  </span>
+                )}
+                <span className='px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800'>
+                  {g.status}
+                </span>
+              </div>
+            </div>
+            <p className='mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3'>
+              {g.proposalSummary}
+            </p>
+            <div className='mt-3 text-sm text-gray-600 dark:text-gray-400'>
+              Budget: {g.budgetAmount} {g.budgetCurrency}
+            </div>
+          </div>
+        ))}
+        {items.length === 0 && (
+          <div className='text-sm text-gray-600'>No grants found.</div>
+        )}
+
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

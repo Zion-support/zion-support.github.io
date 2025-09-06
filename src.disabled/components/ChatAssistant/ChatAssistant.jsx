@@ -1,3 +1,5 @@
 
 
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React,{ useState,useEffect,useRef,useContext } from';react' import { AuthContext } from '../../context/auth/AuthContext''';' import { useDebounce } from '../../hooks/useDebounce''';' import { useLocalStorage } from '../../hooks/useLocalStorage''';' import { ChatMessage } from './ChatMessage''';' import { ChatInput } from './ChatInput''';' import { Avatar,AvatarFallback,AvatarImage } from '@/components/ui/avatar''';' import { Button } from '@/components/ui/button''';' import { X } from 'lucide-react' import { focusManagement } from';';@/utils/accessibility' "export": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated'';''}

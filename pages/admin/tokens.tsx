@@ -14,6 +14,38 @@ export default function AdminTokens() {
     setTransactions(txRes.transactions |[])
 
     setConfig(cfgRes)
+  async function load() {
+    const [txRes, cfgRes] = await Promise.all([
+      fetch("/api/admin/tokens").then((r) => r.json())
+      fetch("/api/admin/tokens/config").then((r) => r.json())])
+    setTransactions(txRes.transactions |[])
+
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import React, { useEffect, useState } from "react";
+import EnhancedLayout from "../../components/layout/EnhancedLayout";
+export default function AdminTokens() {
+  const [transactions, setTransactions] = useState<any[]>([]);
+  const [userId, setUserId] = useState("");
+  const [amount, setAmount] = useState(100);
+  const [reason, setReason] = useState("admin_action");
+  const [config, setConfig] = useState<any>(null);
+  async function load() {
+    const [txRes, cfgRes] = await Promise.all([
+      fetch("/api/admin/tokens").then((r) => r.json());
+      fetch("/api/admin/tokens/config").then((r) => r.json())]);
+    setTransactions(txRes.transactions || []);
+    setConfig(cfgRes)
+
+
+
+=======
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   }
 }
@@ -22,6 +54,7 @@ export default function AdminTokens() {
   }, []),
   async function issue() {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const res = await fetch("/api/admin/tokens/issue", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -29,9 +62,6 @@ export default function AdminTokens() {
     const data = await res.json()
     if (data.error) alert(data.error)
     await load()
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 
   async function saveConfig() {
@@ -45,6 +75,12 @@ export default function AdminTokens() {
           <div className="grid sm:grid-cols-4 gap-2 text-sm">
             <input placeholder="userId" className="border rounded px-2 py-1" value={userId} onChange={(e) => setUserId(e.target.value)} />
 
+=======
+
+            <input type="number" placeholder="amount" className="border rounded px-2 py-1" value={amount} onChange={(e) => setAmount(parseInt(e.target.value || "0"))} />
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <input placeholder="reason" className="border rounded px-2 py-1" value={reason} onChange={(e) => setReason(e.target.value)} />
             <div className="flex gap-2">
               <button className="px-3 py-1 rounded border" onClick={issue}>Issue</button>
@@ -52,6 +88,8 @@ export default function AdminTokens() {
             </div>
           </div>
         </div>
+
+
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Conversion & Rules</h2>
           {config && (
@@ -70,6 +108,7 @@ export default function AdminTokens() {
 }
         </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <h2 className="font-medium mb-3">Transactions</h2>
           <div className="space-y-2 text-sm max-h-96 overflow-auto">
             {transactions.map((t) => (
@@ -159,3 +198,5 @@ export default function AdminTokens() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

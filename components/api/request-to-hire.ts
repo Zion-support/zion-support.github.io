@@ -38,3 +38,16 @@ import path from 'path';
     // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)
     return res.status(200).json({ ok: true });
   } catch (err) {
+=======
+
+}
+
+=======
+    console.error('Request-to-hire failed', err);
+    return res.status(500).json({ error: 'Internal error' });
+  }
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

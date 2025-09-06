@@ -6,6 +6,7 @@ import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/comp
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface PricingSuggestionBoxProps {
 
   suggestion: PricingSuggestion | null
@@ -39,6 +40,57 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
     return null
   }
 
+    return (
+      <Card className="border border-dashed border-muted">;
+        <CardContent className="flex items-center justify-center p-6">;
+          <div className="text-center">;
+            <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />;
+            <p className="text-sm text-muted-foreground">;
+=======
+import React from './react';
+import { Button } from '@/components / ui / button';
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from '@/components / ui / tooltip';
+import { Card, CardContent } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Loader2, Info, ThumbsUp } from './lucide-react';
+import { PricingSuggestion } from '@/services / pricingSuggestionService';
+interface PricingSuggestionBoxProps {
+  suggestion: PricingSuggestion | null,
+  is_loading: boolean,
+  onApplySuggestion: () => void,
+  rate_type: "hourly" | "fixed";
+}
+export const PricingSuggestionBox: React.FC < PricingSuggestionBoxProps> = ({
+  suggestion;
+  is_loading;
+  onApplySuggestion,
+  rate_type}) => {
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <Card className="border border - dashed border - muted">;
+        <CardContent className="flex items - center justify - center p - 6">;
+          <div className="text - center">;
+            <Loader2 className="h - 10 w - 10 animate - spin text - muted - foreground mx - auto mb - 4" />;
+            <p className="text - sm text - muted - foreground">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              Generating optimal pricing suggestion...;
+            </p>;
+          </div>;
+        </CardContent>;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const confidenceColor = {
     High: "bg-green-100 text-green-800"
     Medium: "bg-yellow-100 text-yellow-800"
@@ -88,3 +140,31 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
       </CardContent>
     </Card>
   )
+=======
+
+
+  if (!suggestion) {;
+    return null;
+  }
+
+              </TooltipContent>;
+            </Tooltip>;
+          </TooltipProvider>;
+        </div>;
+
+        <p className="text - xs text - center text - muted - foreground pt - 2">;
+          Based on market data & trends. You can adjust as needed.;
+        </p>;
+      </CardContent>;
+    </Card>);
+}
+;
+
+=======
+
+export default PricingSuggestionBox;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

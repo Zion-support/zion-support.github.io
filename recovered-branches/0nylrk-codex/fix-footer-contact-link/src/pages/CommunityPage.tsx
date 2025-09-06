@@ -45,58 +45,72 @@ const featuredPosts: ForumPost[] = [
     replyCount: 8,
     isPinned: true,
     isFeatured: true
-  }
-],
 
-// Mock data for recent posts
-const recentPosts: ForumPost[] = [
-  {
-    id: "3",
-    title: "Looking for feedback on my automated testing approach",
-    content: "I've set up a CI/CD pipeline with the following testing strategy...",
-    authorId: "user3",
-    authorName: "Michael Wong",
-    categoryId: "project-help",
-    tags: ["testing", "automation", "ci-cd"],
-    createdAt: "2025-04-10T14:30:00Z",
-    updatedAt: "2025-04-10T14:30:00Z",
-    upvotes: 5,
-    downvotes: 0,
-    replyCount: 2
-  },
-  {
-    id: "4",
-    title: "Feature request: Team collaboration tools",
-    content: "It would be really helpful if we could have built-in tools for team collaboration...",
-    authorId: "user4",
-    authorName: "Emma Davis",
-    categoryId: "feedback",
-    tags: ["feature-request", "teams", "collaboration"],
-    createdAt: "2025-04-09T18:45:00Z",
-    updatedAt: "2025-04-09T18:45:00Z",
-    upvotes: 12,
-    downvotes: 1,
-    replyCount: 3
-  },
-  {
-    id: "5",
-    title: "How to handle client scope creep?",
-    content: "I'm working on a project where the client keeps adding requirements...",
-    authorId: "user5",
-    authorName: "David Lin",
-    categoryId: "project-help",
-    tags: ["client-management", "scope", "projects"],
-    createdAt: "2025-04-08T10:20:00Z",
-    updatedAt: "2025-04-08T10:20:00Z",
-    upvotes: 24,
-    downvotes: 0,
-    replyCount: 7,
-    isAnswered: true
   }
-],
+];
 
+// Mock data for recent posts;
+const recentPosts: ForumPost[] = [;
+  {;
+    id: "3",;
+    title: "Looking for feedback on my automated testing approach",;
+    content: "I've set up a CI/CD pipeline with the following testing strategy...",;
+    authorId: "user3",;
+    authorName: "Michael Wong",;
+    categoryId: "project-help",;
+    tags: ["testing", "automation", "ci-cd"];
+    createdAt: "2025-04-10T14:30:00Z",;
+    updatedAt: "2025-04-10T14:30:00Z",;
+    upvotes: 5,;
+    downvotes: 0,;
+    replyCount: 2;
+  };
+  {;
+    id: "4",;
+    title: "Feature request: Team collaboration tools",;
+    content: "It would be really helpful if we could have built-in tools for team collaboration...",;
+    authorId: "user4",;
+    authorName: "Emma Davis",;
+    categoryId: "feedback",;
+    tags: ["feature-request", "teams", "collaboration"];
+    createdAt: "2025-04-09T18:45:00Z",;
+    updatedAt: "2025-04-09T18:45:00Z",;
+    upvotes: 12,;
+    downvotes: 1,;
+    replyCount: 3;
+  };
+  {;
+    id: "5",;
+    title: "How to handle client scope creep?",;
+    content: "I'm working on a project where the client keeps adding requirements...",;
+    authorId: "user5",;
+    authorName: "David Lin",;
+    categoryId: "project-help",;
+    tags: ["client-management", "scope", "projects"];
+    createdAt: "2025-04-08T10:20:00Z",;
+    updatedAt: "2025-04-08T10:20:00Z",;
+    upvotes: 24,;
+    downvotes: 0,;
+    replyCount: 7,;
+    isAnswered: true;
+  }
+];
+
+
+
+=======
+export default function CommunityPage() {
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState("categories"),
+
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
-    <AppLayout>
+
+    <AppLayout>;
+
       <SEO
         title="Community Forum | Zion AI Marketplace"
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
@@ -139,3 +153,42 @@ const recentPosts: ForumPost[] = [
 
 }
 ;
+              Create New Post;
+            </Link>;
+          </Button>;
+        </div>;
+
+        <Tabs default_value="categories" value={active_tab} onValueChange={setActiveTab} className="mb - 8">;
+          <TabsList className="mb - 6">;
+
+            <TabsTrigger value="categories">Categories</TabsTrigger>;
+            <TabsTrigger value="featured">Featured</TabsTrigger>;
+            <TabsTrigger value="recent">Recent</TabsTrigger>;
+          </TabsList>;
+
+          <TabsContent value="categories">;
+            <ForumCategories />;
+          </TabsContent>;
+          <TabsContent value="featured">;
+            <div className="space - y-4">;
+              {featured_posts.map ((post) => (
+                <PostCard key={post.id} post={post} />))}
+            </div>;
+          </TabsContent>;
+          <TabsContent value="recent">;
+            <div className="space - y-4">;
+              {recent_posts.map ((post) => (
+                <PostCard key={post.id} post={post} />))}
+
+            </div>;
+          </TabsContent>;
+        </Tabs>;
+      </div>;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -19,11 +19,6 @@
           >;
             <Plus className="h-4 w-4 mr-2" />;
 
-            Save as new version;
-          </DropdownMenuItem>;
-        </DropdownMenuContent>;
-      </DropdownMenu>;
-
               placeholder="Enter resume title (e.g. DevOps Resume)";
             />;
           </div>;

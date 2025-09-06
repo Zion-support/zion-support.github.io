@@ -1,8 +1,22 @@
 
+=======
+import React, { useState, useEffect } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { ;
+  Table,;
+  TableBody, ;
+  TableCell, ;
+  TableHead, ;
+  TableHeader, ;
+  TableRow ;
+} from '@/components/ui/table',;
+import { Button } from '@/components/ui/button',;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
+<<<<<<< HEAD
 
     <div className="space-y-4">;
       <div className="flex justify-between items-center">;
@@ -52,11 +66,6 @@ import {;
                           <Button variant="ghost" size="sm">;
                             <MoreHorizontal className="h-4 w-4" />;
                             <span className="sr-only">Actions</span>;
-
-                          </Button>;
-                        </DropdownMenuTrigger>;
-                        <DropdownMenuContent align="end">;
-                          <DropdownMenuItem>;
 
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;

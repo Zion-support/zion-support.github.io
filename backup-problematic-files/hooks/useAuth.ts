@@ -1,10 +1,23 @@
+
 import { useState, useEffect  } from './react';
 ;
+
 interface User {
   id: string;
   email: string;
   name: string;
 }
+=======
+
+
+export const useAuth = () => {;
+
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    // Simulate auth check
+    setLoading(false);
+  }, []);
 
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
@@ -18,6 +31,7 @@ interface User {
     user
     loading
     login: (email: string, password: string) => {
+
       // Simulate login;
       set_user ({ id: "1", email, name: "User" });
     },
@@ -27,3 +41,4 @@ interface User {
   }
 }
 ;
+

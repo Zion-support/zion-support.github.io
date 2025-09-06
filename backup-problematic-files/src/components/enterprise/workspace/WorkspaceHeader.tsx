@@ -1,8 +1,22 @@
 
+=======
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { type Company } from "./CompanyDashboard",;
+import { Bell, Users, Settings } from 'lucide-react';
+;
+interface WorkspaceHeaderProps {;
+  company:Company;
+}
+;
+export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <div className="flex items-center gap-4">;
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
+<<<<<<< HEAD
 
           <Button variant="outline" size="icon" aria-label="Team members">;
             <Users className="h-4 w-4" />;

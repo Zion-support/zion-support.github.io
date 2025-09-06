@@ -1,9 +1,14 @@
 
+=======
+import React from "react",;
+import { Quote } from "lucide-react",;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {;
   Carousel,;
   CarouselContent,;
   CarouselItem,;
   CarouselNext,;
+<<<<<<< HEAD
 
     <section className="py-20 px-4 md:px-6">;
       <div className="container mx-auto max-w-6xl">;

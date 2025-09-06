@@ -1,4 +1,7 @@
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const LandingPageGenerator: NextPage = () => {
   return (
     <div>
@@ -14,3 +17,10 @@ const LandingPageGenerator: NextPage = () => {
       </main>
     </div>
   )
+=======
+
+},
+export default LandingPageGenerator,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

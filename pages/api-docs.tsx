@@ -4,8 +4,21 @@ import { motion } from 'framer-motion';
 
 import Head from 'next/head';
 
+
+
 import Link from 'next/link';
 
+=======
+
+import { 
+  ArrowRight,
+  Server,
+  Lock,
+  Brain,
+  Cloud;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from 'lucide-react';
 const apiEndpoints = [
   {
@@ -47,7 +60,9 @@ export default function APIDocsPage() {
         <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />
       </Head>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Hero Section */}
+
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
         <div className="absolute inset-0">;
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -69,6 +84,8 @@ export default function APIDocsPage() {
           </motion && motion.div>;
         </div>;
       </section>;
+
+
       {/* API Endpoints Section */}
       <section className="py-20 bg-white">;
         <div className="container mx-auto px-4">;
@@ -76,6 +93,7 @@ export default function APIDocsPage() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+
 import Head from 'next / head';
 import Link from 'next / link';
 import {
@@ -161,6 +179,7 @@ function APIDocsPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               const IconComponent = endpoint.icon;
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
@@ -173,6 +192,7 @@ function APIDocsPage() {
             {apiEndpoints && apiEndpoints.map((endpoint, index) => {;
               const IconComponent = endpoint && endpoint.icon;
               return (
+
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}>;
                   <div className="flex items-center mb-4">;
@@ -190,11 +210,15 @@ function APIDocsPage() {
                     <div className="flex flex-wrap gap-2">;
                       {endpoint && endpoint.methods.map((method, idx) => (;
                         <span key={idx} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">;
+
                           {method}
                         </span>;
                       ))}
+
                     </div>;
                   </div>;
+
+
                   <Link
                     href={`/api-docs/${endpoint && endpoint.endpoint.replace('/api/', '')}`}
                     className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors">;
@@ -204,9 +228,12 @@ function APIDocsPage() {
                 </motion && motion.div>;
               );
             })}
+
           </div>;
         </div>;
       </section>;
+
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">;
         <div className="container mx-auto px-4 text-center">;
@@ -214,6 +241,10 @@ function APIDocsPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
         <p className='text-gray-300'>
@@ -226,11 +257,19 @@ function APIDocsPage() {
       </div>
     </Layout>
 
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
 }
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function ApiDocsPage() {
   return (
 
@@ -254,6 +293,54 @@ export default function ApiDocsPage() {
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
       </div>
+    </>
+  )
+
+}
+
+=======
 
     </>
   )
+import React from 'react';
+import Head from 'next/head';
+export default function ApiDocsPage(req, res) {
+  try {
+  return (;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    <>;
+      <Head>;
+        <title>API Docs | Zion Tech Group</title>;
+        <meta name='description' content='API reference and guides.' />;
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/api-docs' />;
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+    </>
+  )
+=======
+import React from 'react';
+import Head from 'next/head';
+export default function ApiDocsPage(req, res) {
+  try {
+  return (;
+    <>;
+      <Head>;
+        <title>API Docs | Zion Tech Group</title>;
+        <meta name="description" content="API reference and guides." />;
+        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      </Head>;
+      <div className="container mx-auto px-4 py-16 text-gray-200">;
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>;
+        <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>;
+      </div>;
+    </Layout>;
+  );
+    </>;
+  );
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

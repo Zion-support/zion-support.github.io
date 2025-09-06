@@ -4,6 +4,9 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 			implementationWeeks="3-7 days"
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
@@ -39,3 +42,4 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

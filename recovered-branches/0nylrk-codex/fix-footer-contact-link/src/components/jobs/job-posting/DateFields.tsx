@@ -1,5 +1,6 @@
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 
@@ -15,6 +16,10 @@ import { Calendar } from "@/components/ui/calendar",
 import { FormControl } from "@/components/ui/form",
 import { cn } from "@/lib/utils",
 
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface DateFieldsProps {
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
@@ -24,6 +29,7 @@ interface DateFieldsProps {
 
 export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -36,21 +42,23 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
                 variant={"outline"}
                 className={cn(
 
-                  !startDate && "text-muted-foreground"
                 )}
-              >
-                {startDate ? (
-                  format(startDate, "PPP")
-                ) : (
-                  <span>Pick a date</span>
-                )}
-              </Button>
-            </FormControl>
-          </PopoverTrigger>
-          <PopoverContent className="w-auto p-0" align="start">
+              </Button>;
+            </FormControl>;
+          </PopoverTrigger>;
+          <PopoverContent className="w-auto p-0" align="start">;
             <Calendar
               mode="single"
+              selected={startDate}
+              onSelect={setStartDate}
 
+              disabled={(date) =>;
+                date > new Date();
+              }
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               initialFocus
             />
           </PopoverContent>
@@ -84,5 +92,6 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
 
     </div>;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
 }

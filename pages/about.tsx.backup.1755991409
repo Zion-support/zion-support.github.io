@@ -1,0 +1,21 @@
+import React from 'react';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/cursor/content-updates-and-link-fixes
+
+const Component = () => {
+  return (
+<<<<<<< HEAD
+    <div>
+      <h1>Page Content</h1>
+      <p>This page is under construction.</p>
+    </div>
+  );
+};
+
+export default Component;
+=======
+export default function About() {
+  return <div>About Zion</div>;
+}

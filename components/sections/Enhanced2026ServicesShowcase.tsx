@@ -1,4 +1,37 @@
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+import { motion } from 'framer-motion';
+
+
+import Link from 'next/link';
+const Enhanced2026ServicesShowcase = () => {
+  const featuredServices = [
+    {
+
+      id: 'ai-business-intelligence-elite-2026',
+      name: 'AI Business Intelligence Elite 2026',
+      description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Brain,
   Zap,
   Shield,
@@ -9,6 +42,8 @@
   Globe,
   Cpu,
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
 import Link from 'next/link';
@@ -171,63 +206,60 @@ const Enhanced2026ServicesShowcase = () => {;
     },;
   ];
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
       {/* Background Effects */}
+
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'></div>;
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Section Header */}  ];
+
   const categories = [;
     { name: 'AI Services', count: '150+', icon: Brain, color: 'from-purple-500 to-pink-500' },;
     { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from-blue-500 to-cyan-500' },;
     { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from-green-500 to-emerald-500' },;
+
     { name: 'IT Solutions', count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500' }
   ];
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
       {/* Background Effects */}
 
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Section Header */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+
+
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
               2026 Revolutionary Services
             </span>
           </h2>
-          <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
-            Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business
-          </p>
-        </motion.div>
-          className='text-center mb-16'>;
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-              2026 Revolutionary Services;
-            </span>;
-          </h2>;
-          <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed'>;
-            Experience the future with our cutting-edge AI, quantum, and;
-            emerging technology services designed to transform your business          </p>        >;
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
-              2026 Revolutionary Services;
-            </span>;
-          </h2>;
-          <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">;
-            Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business;
-          </p>;
-        </motion && motion.div>;
+          <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed'>
+            Experience the future with our cutting-edge AI, quantum, and
+            emerging technology services designed to transform your business          </p>        >
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Category Overview */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+
+
         >
           {categories.map((category, index) => (
             <motion.div
@@ -354,6 +386,59 @@ const Enhanced2026ServicesShowcase = () => {;
 
         {/* Featured Services Grid */}
 
+              <div
+                className={`w-16 h-16 bg-gradient-to-br ${category && category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>;
+                <category && category.icon className='w-8 h-8 text-white' />;
+              </div>;
+              <h3 className='text-lg font-bold text-white mb-2'>;
+                {category && category.name}
+              </h3>;
+              <p className='text-2xl font-bold text-cyan-400'>;
+                {category && category.count}
+              </p>            </motion && motion.div>            >;
+              <div className={`w-16 h-16 bg-gradient-to-br ${category && category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>;
+                <category && category.icon className="w-8 h-8 text-white" />;
+              </div>;
+              <h3 className="text-lg font-bold text-white mb-2">{category && category.name}</h3>;
+              <p className="text-2xl font-bold text-cyan-400">{category && category.count}</p>;
+            </motion && motion.div>;
+
+=======
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="group text-center"
+            >
+              <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
+                <category.icon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
+              <p className="text-2xl font-bold text-cyan-400">{category.count}</p>
+            </motion.div>
+
+          ))}
+
+        </motion && motion.div>;
+
+
+        {/* Featured Services Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices && featuredServices.map((service, index) => (        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
+          {featuredServices && featuredServices.map((service, index) => (;
+            <motion&& motion.div
+              key={service && service.id}
+              initial={{ opacity: 0, scale: 0 && 0.8, y: 20 }}
+
+=======
+=======
+
+
+
+        {/* Featured Services Grid */}
+
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices.map((service, index) => (
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -364,6 +449,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               whileHover={{ scale: 1.02, y: -5 }}
 
             >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div
                 className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}
               ></div>
@@ -400,6 +486,10 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 </div>
                 {/* Description */}
 
+=======
+                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   {service.description}
                 </p>
                     className={`w-12 h-12 bg-gradient-to-br ${service && service.color} rounded-xl flex items-center justify-center`}>;
@@ -432,17 +522,19 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   {service && service.description}
                 </p>;
                 {/* Features */}
-                <div className="mb-4">
-                  <ul className="space-y-1">
-                    {service.features.slice(0, 2).map((feature, i) => (
-                      <li key={i} className="flex items-center text-gray-400 text-xs">
-                        <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       </li>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
                   </ul>
                 </div>
 
+                {/* Price and CTA */}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <div>
                     <span className='text-2xl font-bold text-cyan-400'>
                       {service.price}
@@ -451,6 +543,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                       {service.period}
                     </span>
                   </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link
                     href={`/${service.id}`}
                     className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200'
@@ -475,6 +568,10 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
         {/* Call to Action */}
         <motion.div
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Call to Action */}
+        <motion&& motion.div
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
@@ -534,3 +631,12 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 export default Enhanced2026ServicesShowcase;  )
 }
 export default Enhanced2026ServicesShowcase;
+=======
+  );
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

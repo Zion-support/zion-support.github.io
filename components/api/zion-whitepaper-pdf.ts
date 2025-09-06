@@ -15,15 +15,27 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
       : 'full';
+=======
+
+    align: 'left'})
+}
+
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   const editionParam = (req.query.edition as string) |'full';
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
   res.setHeader('Content-Typeapplication/pdf');
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
+
+
+
   const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';
@@ -36,3 +48,4 @@ export default async function handler(
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
   const sections = getWhitepaperSections(edition as any);
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

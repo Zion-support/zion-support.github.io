@@ -19,6 +19,7 @@ const updatePasswordSchema = z
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
     resolver: zodResolver(updatePasswordSchema)
@@ -36,11 +37,51 @@ const updatePasswordSchema = z
     // Clean up auth state to prevent issues
     cleanupAuthState()
 
+    } else {
+      set_error ("No access token found. Please request a new password reset link.");
+    }
+
+
+  }, [location]),
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
       setError("No access token found. Please request a new password reset link.")
       return
+
+
+  // Initialize react-hook-form;
+  const form = useForm<UpdatePasswordFormValues>({;
+    resolver: zodResolver(updatePasswordSchema),;
+    defaultValues: {;
+      password: "",;
+      confirmPassword: ""}}),;
+
+  useEffect(() => {;
+    // Extract access token from URL hash;
+    const hashParams = new URLSearchParams(location && location.hash.substring(1));
+    const token = hashParams && hashParams.get("access_token");
+
+    if (token) {;
+      setAccessToken(token);
+    } else {;
+      setError("No access token found. Please request a new password reset link.");
+    }
+
+    // Clean up auth state to prevent issues;
+    cleanupAuthState();
+  }, [location]);
+
+  // Form submission handler;
+  const onSubmit = async (data: UpdatePasswordFormValues) => {;
+    if (!accessToken) {;
+      setError("No access token found. Please request a new password reset link."),;
+      return;
+
     }
 
     try {
@@ -54,20 +95,29 @@ const updatePasswordSchema = z
       if (error) {
         toast({
 
+=======
+
+          title: "Password update failed",
+          description: error.message,
+          variant: "destructive"}),
+        setError(error.message),
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         return
       }
       // Show success message and clean up auth state
-      setSuccess(true),
+      setSuccess(true);
       toast({
         title: "Password updated successfully"
         description: "You can now log in with your new password."})
       // Clean auth state and redirect after a delay
-      cleanupAuthState(),
+      cleanupAuthState();
       setTimeout(() => {
         navigate("/login")
       }, 3000)
     } catch (error: any) {
-      console.error("Password update error:", error),
+      console.error("Password update error:", error);
       toast({
         title: "Password update failed"
         description: error.message |"An unexpected error occurred"
@@ -164,43 +214,49 @@ export default function UpdatePassword() {;
     setIsLoading(true),;
     try {;
       // Set the session with the access token;
-      await supabase.auth.setSession({;
+      await supabase && supabase.auth.setSession({;
         access_token: accessToken,;
         refresh_token: ''}),;
+
       // Update the password;
-      const { error } = await supabase.auth.updateUser({;
-        password: data.password}),;
+      const { error } = await supabase && supabase.auth.updateUser({;
+        password: data && data.password}),;
+
       if (error) {;
         toast({;
           title: "Password update failed",;
-          description: error.message,;
+          description: error && error.message,;
           variant: "destructive"}),;
-        setError(error.message),;
+        setError(error && error.message);
         return;
       }
-;
+
       // Show success message and clean up auth state;
-      setSuccess(true),;
+      setSuccess(true);
       toast({;
         title: "Password updated successfully",;
         description: "You can now log in with your new password."}),;
+
       // Clean auth state and redirect after a delay;
-      cleanupAuthState(),;
+      cleanupAuthState();
       setTimeout(() => {;
         navigate("/login");
       }, 3000);
     } catch (error: any) {;
-      console.error("Password update error:", error),;
+      console && console.error("Password update error:", error);
       toast({;
         title: "Password update failed",;
-        description: error.message || "An unexpected error occurred",;
-        variant: "destructive"});
-      setError(error.message || "An unexpected error occurred");
+        description: error && error.message || "An unexpected error occurred",;
+        variant: "destructive"}),;
+      setError(error && error.message || "An unexpected error occurred");
     } finally {;
       setIsLoading(false);
+
     }
-  };
-  return (;
+  }
+
+  return (
+
     <>;
       <Header />;
       <div className="flex min-h-screen bg-zion-blue">;
@@ -214,6 +270,7 @@ export default function UpdatePassword() {;
                 Enter your new password below.;
               </p>;
             </div>;
+
             <div className="bg-zion-blue-dark rounded-lg p-6">;
               {error && (;
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
@@ -229,6 +286,18 @@ export default function UpdatePassword() {;
                 </div>
               )}
 
+                    onClick={() => navigate('/forgot-password')}
+                  >;
+                    Request new reset link;
+                  </Button>;
+                </div>;
+              )}
+
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {success ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
@@ -245,56 +314,104 @@ export default function UpdatePassword() {;
               ) : (
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+=======
+
+              {success ? (;
+                <div className="text-center py-8">;
+                  <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">;
+                    <LockKeyhole className="h-6 w-6 text-zion-purple" />;
+                  </div>;
+                  <h3 className="text-lg font-medium text-white">Password updated</h3>;
+                  <p className="mt-2 text-sm text-zion-slate-light">;
+                    Your password has been successfully updated.;
+                  </p>;
+                  <p className="mt-2 text-sm text-zion-slate-light">;
+                    Redirecting you to login...;
+                  </p>;
+                </div>;
+              ) : (;
+                <Form {...form}>;
+                  <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <FormField
-                      control={form.control}
+                      control={form && form.control}
                       name="password"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-zion-slate-light">New Password</FormLabel>
-                          <FormControl>
+                      render={({ field }) => (;
+                        <FormItem>;
+                          <FormLabel className="text-zion-slate-light">New Password</FormLabel>;
+                          <FormControl>;
                             <Input
                               type="password"
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                               placeholder="••••••••"
                               disabled={isLoading}
                               {...field}
-                            />
-                          </FormControl>
-                          <FormMessage className="text-red-400" />
-                        </FormItem>
+                            />;
+                          </FormControl>;
+                          <FormMessage className="text-red-400" />;
+                        </FormItem>;
                       )}
-                    />
+
+                    />;
+
+
                     <FormField
-                      control={form.control}
+                      control={form && form.control}
                       name="confirmPassword"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
-                          <FormControl>
+                      render={({ field }) => (;
+                        <FormItem>;
+                          <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>;
+                          <FormControl>;
                             <Input
                               type="password"
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                               placeholder="••••••••"
                               disabled={isLoading}
                               {...field}
-                            />
-                          </FormControl>
-                          <FormMessage className="text-red-400" />
-                        </FormItem>
+                            />;
+                          </FormControl>;
+                          <FormMessage className="text-red-400" />;
+                        </FormItem>;
                       )}
-                    />
+
+                    />;
+
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                      disabled={isLoading |!accessToken}
-                    >
+                      disabled={isLoading || !accessToken}>;
                       {isLoading ? "Updating..." : "Update Password"}
-                    </Button>
-                    <div className="text-center">
+                    </Button>;
+
+                    <div className="text-center">;
+
                       <Button
                         variant="link"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0"
                         onClick={() => navigate("/login")}
+=======
+                        type="button";
+                      >;
+                        Back to login;
+                      </Button>;
+                    </div>;
+                  </form>;
+
+=======
+
+
+=======
+                      name="confirmPassword";
+                      render={({ field }) => (;
+                        <FormItem>;
+                          <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>;
+                          <FormControl>;
+                            <Input;
+                              type="password";
+                              className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
+                              placeholder="••••••••";
+                        onClick={() => navigate("/login")}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         type="button"
                       >
                         Back to login
@@ -325,3 +442,23 @@ export default function UpdatePassword() {;
 
 }
 ;
+                  Set a strong password to secure your account and continue your journey in the Zion marketplace.;
+                </p>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

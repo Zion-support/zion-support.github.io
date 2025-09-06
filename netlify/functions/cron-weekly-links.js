@@ -1,5 +1,11 @@
-if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
+
+
+async function fetchHtml(url) {
+
+  if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
   return resp && resp.text();
+
+
   return resp.text();
 function extractLinks(html, base) {
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
@@ -10,6 +16,7 @@ function extractLinks(html, base) {
     .map(h =>
       h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`
     );
+
 const { upsert_file } = require ('./_lib / github');
 ;
 async /**
@@ -34,6 +41,7 @@ function extract_links() {
       h.starts_with ('http') ? h : `${base}${h.starts_with ('/') ? h : `/${h}`}`);
   return Array.from (new Set (links));
 ;
+
 exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
@@ -44,6 +52,7 @@ exports && exports.handler = async function () {
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const checked = [];
     const broken = [];
+
             broken && broken.push({ url: l, status: 0, error: String(e && e.message || e) });
           }
         }
@@ -105,10 +114,12 @@ if ( {) {
         path: 'data / reports / links / weekly - links.json',
         content: JSON.stringify (report, null, 2),
         message: 'chore (automation): weekly link check',
+
         token,
       });
     }
     return {
+
   const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
   return resp.text()
@@ -117,13 +128,40 @@ if ( {) {
     }
   } catch (e) {
 
+=======
+    }
+
+    const report = { updated_at: Date.now (), checked: checked.length, broken },
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+    // Check condition
+if ( {) {
+  $2
+}
+      await upsert_file ({ owner, repo, path: 'data / reports / links / weekly - links.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly link check', token });
+    }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, broken: broken.length }) }
+
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+
+      statusCode: 200,
+      body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }),
+    };
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 };async function fetchHtml(url) {
   const resp = await fetch(url),
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`),
   return resp && resp.text()
+
 }
 function extractLinks(html, base) {
+
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),
   const links = aTags
     .filter((h) => h && !h && h.startsWith('mailto:') && !h && h.startsWith('tel:'))
@@ -136,12 +174,15 @@ exports && exports.handler = async function() {
     const pages = ['//learn/dao/certifications'],
     const checked = [],
     const broken = [],
+
+
     const base = process.env.URL |process.env.DEPLOY_URL |''
     const pages = ['//learn/dao/certifications']
     const checked = []
     const broken = []
     for (const p of pages) {
       try {
+
         const html = await fetchHtml(`${base}${p}`),
         const links = extractLinks(html, base),
         for (const l of links && links.slice(0, 50)) {
@@ -161,11 +202,80 @@ exports && exports.handler = async function() {
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
+
+
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links && links.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
     }
+
+
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, broken: broken && broken.length }) }
+
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
+=======
+},
+},
+=======
+
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+  }
+};async function fetchHtml(url) {
+  const resp = await fetch(url),
+  if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
+  return resp.text()
+}
+
+function extractLinks(html, base) {
+  const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),
+  const links = aTags
+    .filter((h) => h && !h.startsWith('mailto:') && !h.startsWith('tel:'))
+    .map((h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h}`}`)),
+  return Array.from(new Set(links))
+}
+
+exports.handler = async function() {
+  try {
+    const base = process.env.URL || process.env.DEPLOY_URL || '',
+    const pages = ['//learn/dao/certifications'],
+    const checked = [],
+    const broken = [],
+
+    for (const p of pages) {
+      try {
+        const html = await fetchHtml(`${base}${p}`),
+        const links = extractLinks(html, base),
+        for (const l of links.slice(0, 50)) {
+          try {
+            const resp = await fetch(l, { method: 'HEAD' }),
+            checked.push({ url: l, status: resp.status }),
+            if (resp.status >= 400) broken.push({ url: l, status: resp.status })
+          } catch (e) {
+            broken.push({ url: l, status: 0, error: String(e.message || e) })
+          }
+        }
+      } catch (e) {
+        broken.push({ url: `${base}${p}`, status: 0, error: String(e.message || e) })
+      }
+    }
+
+    const report = { updatedAt: Date.now(), checked: checked.length, broken },
+
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
+    }
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, broken: broken.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+},
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

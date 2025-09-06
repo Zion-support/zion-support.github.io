@@ -1,4 +1,28 @@
 
+=======
+
+"use client",;
+import { useAuth } from "@/contexts/AuthContext",;
+import { useRouter } from "next/navigation",;
+import { useEffect } from "react",;
+import Link from "next/link",;
+export default function DashboardPage() {;
+  const { user, isAuthenticated, isLoading } = useAuth(),;
+  const router = useRouter();
+  useEffect(() => {;
+    if (!isLoading && !isAuthenticated) {;
+      router.push("/auth/signin");
+    }
+  }, [isAuthenticated, isLoading, router]);
+  if (isLoading) {;
+    return (;
+
+
+      <div className="min-h-screen flex items-center justify-center">;
+        <div className="text-center">;
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
+          <p className="text-zinc-400">Loading...</p>;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="min-h-screen flex items-center justify-center">;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
@@ -8,12 +32,23 @@
       </div>);
   }
 
+=======
+
+;
+  if (!isAuthenticated) {;
+    return null;
+  }
+;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (;
     <div className="space-y-8">;
       {/* Welcome Header */}
       <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/20">;
         <h1 className="text-3xl font-bold text-white mb-2">;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         </h1>;
         <p className="text - zinc - 300 text - lg">;
           Ready to continue building your digital economy? Here's what you can do next.;

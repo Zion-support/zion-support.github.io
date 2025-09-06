@@ -1,3 +1,20 @@
+=======
+
+
+}</tbody> </table> </div> </div>) import fs from 'fs';
+import fs from 'fs';
+import path from 'path';
+
+
+    routes = json.routes || [];
+    generatedAt = json.generatedAt || ''
+  } catch {}
+  return { props: { routes, generatedAt } }
+}
+
+
+
+export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
 
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
@@ -55,3 +72,4 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
 
 );
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,4 +1,52 @@
 
+=======
+import React, { useEffect, useState } from "react",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { useInterviews } from "@/hooks/useInterviews",;
+import { Interview } from "@/types/interview",;
+import { format, isPast, parseISO } from "date-fns",;
+import { Link } from "react-router-dom",;
+import { Calendar, Clock, Video } from "lucide-react",;
+import { Avatar } from "@/components/ui/avatar",;
+;
+export function UpcomingInterviewsCard() {;
+  const { fetchInterviews } = useInterviews(),;
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+;
+  useEffect(() => {;
+    const loadInterviews = async () => {;
+      setIsLoading(true),;
+      try {;
+        const interviews = await fetchInterviews(),;
+        const now = new Date(),;
+        ;
+        // Filter for confirmed interviews in the future;
+        const upcoming = interviews;
+          .filter(interview => ;
+            interview.status === 'confirmed' && ;
+            !isPast(parseISO(interview.scheduled_date));
+          );
+          .sort((a, b) => ;
+            parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime();
+          );
+          .slice(0, 3), // Take only the next 3 interviews;
+        ;
+        setUpcomingInterviews(upcoming),;
+      } catch (error) {;
+        console.error("Error loading upcoming interviews:", error),;
+      } finally {;
+        setIsLoading(false),;
+      }
+    },;
+;
+    loadInterviews(),;
+  }, []),;
+;
+  if (isLoading) {;
+    return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
@@ -20,6 +68,7 @@
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
 
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;

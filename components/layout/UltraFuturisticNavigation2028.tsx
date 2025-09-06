@@ -1,9 +1,16 @@
 
+=======
+
+import React, { useState, useEffect } from 'react';
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Menu,
   X,
   ChevronDown,
@@ -107,12 +114,62 @@ const resourceLinks = [
 
 export default function UltraFuturisticNavigation2028() {
 
+  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
+  { name: '🎯 About Us', href: '/about', icon: Users },
+  { name: '📞 Contact', href: '/contact', icon: MessageCircle },
+  { name: '🔒 Support', href: '/support', icon: ShieldCheck }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+];
+
+
+
+const companyLinks = [;
+  { name: '🏠 Home', href: '/', icon: Home },;
+  { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket },;
+  {;
+    name: '⭐ Ultimate 2028',;
+    href: '/ultimate-2028-services-showcase',;
+    icon: Star,;
+  },;
+  {;
+    name: '💰 2028 Pricing',;
+    href: '/revolutionary-2028-pricing',;
+    icon: DollarSign,;
+  },  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },;
+  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },;
+  { name: '🎯 About Us', href: '/about', icon: Users },;
+  { name: '📞 Contact', href: '/contact', icon: MessageCircle },;
+  { name: '🔒 Support', href: '/support', icon: ShieldCheck },];  { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star },;
+  { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign },;
+  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },;
+  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },;
+  { name: '🎯 About Us', href: '/about', icon: Users },;
+  { name: '📞 Contact', href: '/contact', icon: MessageCircle },;
+  { name: '🔒 Support', href: '/support', icon: ShieldCheck },  { name: '🔒 Support', href: '/support', icon: ShieldCheck }
+  { name: '📖 Documentation', href: '/docs', icon: BookOpen },
+  { name: '🎥 Video Tutorials', href: '/tutorials', icon: Video },
+  { name: '💡 API Reference', href: '/api', icon: Code },
+  { name: '🛠️ Developer Tools', href: '/dev - tools', icon: Wrench },
+  { name: '📱 Mobile Apps', href: '/mobile', icon: Smartphone },
+  { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud },
+  { name: '🔐 Security Center', href: '/security', icon: Shield },
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-  const handleCategoryHover = (categoryTitle: string) => {
+
+
+  const handleCategoryHover = (categoryTitle: string) => {;
     setActiveCategory(categoryTitle);
   }
   const handleCategoryLeave = () => {
@@ -127,6 +184,10 @@ export default function UltraFuturisticNavigation2028() {
   );
   return (
 
+=======
+
+    <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleCategoryLeave = () => {
     setActiveCategory(null)
   }
@@ -137,10 +198,14 @@ export default function UltraFuturisticNavigation2028() {
 
     )
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
+
   return (
+
     <nav className="relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30">
       {/* Top Contact Bar */}
+
       <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-10 text-xs text-purple-200">
@@ -183,7 +248,25 @@ export default function UltraFuturisticNavigation2028() {
                 <p className='text-xs text-purple-300'>
                   2028 Future Technology
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {/* Logo */}
+          <div className='flex items-center'>;
+            <Link href='/' className='flex items-center space-x-3 group'>;
+              <div className='relative'>;
+                <div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>;
+                  <Rocket className='w-6 h-6 text-white' />;
+                </div>;
+                <div className='absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300 -z-10'></div>;
+              </div>;
+              <div className='hidden md:block'>;
+                <h1 className='text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
+                  Zion Tech Group;
+                </h1>;
+                <p className='text-xs text-purple-300'>;
+                  2028 Future Technology;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </p>              </div>          {/* Logo */}
+
           <div className="flex items-center">;
             <Link href="/" className="flex items-center space-x-3 group">;
               <div className="relative">;
@@ -200,13 +283,18 @@ export default function UltraFuturisticNavigation2028() {
               </div>;
             </Link>;
           </div>;
+
+
           {/* Desktop Navigation */}
+
             <div className='relative group'>;
               <button className='flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2'>;
                 <Sparkles className='w-5 h-5' />;
                 <span>Services</span>;
                 <ChevronDown className='w-4 h-4' />;
               </button>;
+
+
               {/* Mega Menu */}
               <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>;
                 <div className='p-6'>;
@@ -229,20 +317,6 @@ export default function UltraFuturisticNavigation2028() {
                             <Link
 
                                 </span>                              </div>            {/* Service Categories */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {/* Service Categories */}
-            <div className="relative group">
-              <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">
-                <Sparkles className="w-5 h-5" />
-                <span>Services</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-            <div className="relative group">;
-              <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">;
-                <Sparkles className="w-5 h-5" />;
-                <span>Services</span>;
-                <ChevronDown className="w-4 h-4" />;
-              </button>;
               {/* Mega Menu */}
 
                             <Link
@@ -314,6 +388,8 @@ export default function UltraFuturisticNavigation2028() {
                               href={service.href}
 
                             </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           ))}
                         </div>
                       </div>
@@ -335,6 +411,50 @@ export default function UltraFuturisticNavigation2028() {
                         className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
                       >
                         View All Services
+            {/* Company Links */}
+            {companyLinks && companyLinks.slice(1, 5).map(link => (;
+              <Link
+                key={link && link.name}
+                href={link && link.href}
+                className='text-purple-200 hover:text-white transition-colors py-2 flex items-center space-x-2'>;
+                <link && link.icon className='w-4 h-4' />;
+                <span>;
+                  {link && link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}
+                </span>              </Link>              <Link
+                key={link && link.name}
+                href={link && link.href}
+                className="text-purple-200 hover:text-white transition-colors py-2 flex items-center space-x-2">;
+                <link && link.icon className="w-4 h-4" />;
+                <span>{link && link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>;
+              </Link>;
+            ))}
+
+          </div>;
+
+
+          {/* Search and Actions */}
+          <div className='hidden lg:flex items-center space-x-4'>;
+            {/* Search */}
+            <div className='relative'>;
+              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400' />;
+              <input
+                type='text'
+                placeholder='Search services...'
+                value={searchQuery}
+                onChange={e => setSearchQuery(e && e.target.value)}
+                className='w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />            {/* Search */}
+            <div className="relative">;
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
+
+=======
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
             {/* Company Links */}
             {companyLinks.slice(1, 5).map((link) => (
@@ -350,76 +470,23 @@ export default function UltraFuturisticNavigation2028() {
             {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery}
-              href="/contact"
-              className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25"
-            >
-              Get Started
-            </Link>
-          </div>
-                onChange={(e) => setSearchQuery(e && e.target.value)}
-                className="w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent";
-              />;
-            </div>;
-            {/* CTA Button */}
-            <Link
-              href='/contact'
-              className='px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25'>              href="/contact";
-              className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25";
-            {/* Company Links */}
-            {company_links.slice (1, 5).map (link => (
-              <Link;
-                key={link.name}
-                href={link.href}
-                className='text - purple - 200 hover:text - white transition - colors py - 2 flex items - center space - x-2';
-              >;
-                <link.icon className='w - 4 h - 4' />;
-                <span>;
-                  {link.name.replace (/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim ()}
-                </span>              </Link>              <Link;
-                key={link.name}
-                href={link.href}
-                className="text - purple - 200 hover:text - white transition - colors py - 2 flex items - center space - x-2";
-              >;
-                <link.icon className="w - 4 h - 4" />;
-                <span>{link.name.replace (/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim ()}</span>;
-              </Link>))}
-          </div>;
-          {/* Search and Actions */}
-          <div className='hidden lg:flex items - center space - x-4'>;
-            {/* Search */}
-            <div className='relative'>;
-              <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - purple - 400' />;
-              <input;
-                type='text';
-                placeholder='Search services...';
-                value={search_query}
-                on_change={e => setSearchQuery (e.target.value)}
-                className='w - 64 pl - 10 pr - 4 py - 2 bg - purple - 900 / 30 border border - purple - 500 / 30 rounded - lg text - white placeholder - purple - 300 focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent'              />            {/* Search */}
-            <div className="relative">;
-              <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - purple - 400" />;
-              <input;
-                type="text";
-                placeholder="Search services...";
-                value={search_query}
-                on_change={(e) => setSearchQuery (e.target.value)}
-                className="w - 64 pl - 10 pr - 4 py - 2 bg - purple - 900 / 30 border border - purple - 500 / 30 rounded - lg text - white placeholder - purple - 300 focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent";
-              />;
-            </div>;
-            {/* CTA Button */}
-            <Link;
-              href='/contact';
-              className='px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg hover:shadow - purple - 500 / 25'            >              href="/contact";
-              className="px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg hover:shadow - purple - 500 / 25";
+
+
             >;
               Get Started;
             </Link>;
           </div>;
+
+
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
+
             <button
               onClick={toggleMenu}
               className='text-purple-200 hover:text-white transition-colors p-2'>;
@@ -445,8 +512,43 @@ export default function UltraFuturisticNavigation2028() {
             exit={{ opacity: 0, height: 0 }}
             className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Mobile Menu */}
+      <AnimatePresence>;
+        {isOpen && (;
+          <motion&& motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+
+
+          >
+            <div className='px-4 py-6 space-y-6'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              {/* Mobile Search */}
+              <div className='relative'>;
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400' />;
+                <input
+                  type='text'
+                  placeholder='Search services...'
+                  value={searchQuery}
+
+                  onChange={e => setSearchQuery(e && e.target.value)}
+                  className='w-full pl-10 pr-4 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'                />;
+              </div>;
+
+
+              {/* Mobile Service Categories */}
+              <div className='space-y-4'>;
+                <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>          >;
+            <div className="px-4 py-6 space-y-6">;
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
             <div className="px-4 py-6 space-y-6">
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Mobile Search */}
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
@@ -454,11 +556,11 @@ export default function UltraFuturisticNavigation2028() {
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e && e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent";
-                />;
-              </div>;
+
+
               {/* Mobile Service Categories */}
+
+=======
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white border-b border-purple-500/30 pb-2">
                   Services
@@ -471,6 +573,8 @@ export default function UltraFuturisticNavigation2028() {
                     </div>
                     <div className="ml-8 space-y-2">
                       {category.services.map((service) => (
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         <Link
                           key={service && service.name}
                           href={service && service.href}
@@ -481,6 +585,8 @@ export default function UltraFuturisticNavigation2028() {
                           <p className="text-xs text-purple-300">{service.description}</p>
                           <span className="text-xs text-purple-400 font-medium">{service.price}</span>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       ))}
                     </div>;
                   </div>;
@@ -511,10 +617,30 @@ export default function UltraFuturisticNavigation2028() {
                       <link.icon className="w-5 h-5 text-purple-400" />
                       <span className="text-purple-200">{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
                     </Link>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              {/* Mobile Company Links */}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   ))}
+
                 </div>;
               </div>;
+
+
               {/* Mobile CTA */}
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                <Link
+                  href='/contact'
+                  onClick={closeMenu}
+                  className='block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300'>                <Link
+                  href="/contact"
+                  onClick={closeMenu}
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">;
 
                 <Link
                   href="/contact"
@@ -526,6 +652,8 @@ export default function UltraFuturisticNavigation2028() {
               </div>
             </div>
           </motion.div>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
 
       {/* Search Results Dropdown */}
@@ -551,15 +679,73 @@ export default function UltraFuturisticNavigation2028() {
                     <span className='text-xs text-purple-400 font-medium'>
                       {service.price}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
             </div>;
           </div>;
         </div>;
       )}
+
+
+  );
+
+}
+=======
+
+}
+=======
     </nav>;
   );
 }
     </nav>
 
 }
+<<<<<<< HEAD
+=======
+          </motion.div>)}
+      </AnimatePresence>;
+      {/* Search Results Dropdown */}
+      {search_query && filtered_services.length > 0 && (
+        <div className='absolute top - full left - 0 right - 0 bg - black / 95 backdrop - blur - xl border border - purple - 500 / 30 rounded - 2xl shadow - 2xl z - 50'>;
+          <div className='p - 4'>;
+            <div className='space - y-2'>;
+              {filtered_services.slice (0, 8).map (service => (
+                <Link;
+                  key={service.name}
+                  href={service.href}
+                  className='block p - 3 rounded - lg bg - purple - 900 / 20 hover:bg - purple - 900 / 40 transition - colors';
+                >;
+                  <div className='flex items - center justify - between'>;
+                    <div>;
+                      <h4 className='text - sm font - medium text - white'>;
+                        {service.name}
+                      </h4>;
+                      <p className='text - xs text - purple - 300'>;
+                        {service.description}
+                      </p>;
+                    </div>;
+                    <span className='text - xs text - purple - 400 font - medium'>;
+                      {service.price}
+                    </span>                  </div>                <Link;
+                  key={service.name}
+                  href={service.href}
+                  className="block p - 3 rounded - lg bg - purple - 900 / 20 hover:bg - purple - 900 / 40 transition - colors";
+                >;
+                  <div className="flex items - center justify - between">;
+                    <div>;
+                      <h4 className="text - sm font - medium text - white">{service.name}</h4>;
+                      <p className="text - xs text - purple - 300">{service.description}</p>;
+                    </div>;
+                    <span className="text - xs text - purple - 400 font - medium">{service.price}</span>;
+                  </div>;
+                </Link>))}
+            </div>;
+          </div>;
+        </div>)}
+    </nav>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

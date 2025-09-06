@@ -1,14 +1,20 @@
 
 
-import { Calendar, Clock, Check } from 'lucide-react'
-import { Calendar } from 'lucide-react'
-interface ProfileAvailabilityProps {
-  availability: Availability
-
 export function ProfileAvailability({
   availability
 }: ProfileAvailabilityProps) {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
+import { Availability } from '@/types / profile';
+import { Badge } from '@/components / ui / badge';
+import { Calendar, Clock, Check } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+interface ProfileAvailabilityProps {
+  availability: Availability;
+export /**
+ * ProfileAvailability - Function description
+ */
+function ProfileAvailability() {
+  const getStatusColor = (status: 'available' | 'limited' | 'unavailable') =>: any {
     switch (status) {
       case 'available':
         return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
@@ -67,6 +73,12 @@ export function ProfileAvailability({
         <p className='text-zion-slate mb-4'>{availability.message}</p>
       )}
 
+=======
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {availability.availableHours &&
         availability.availableHours.length > 0 && (
           <div className='mt-4'>
@@ -105,3 +117,4 @@ export function ProfileAvailability({
   );
 };
 }
+<<<<<<< HEAD

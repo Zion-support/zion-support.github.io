@@ -14,6 +14,20 @@ import { Navigate } from "react-router-dom",
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
+    quotes;
+    is_loading;
+    error;
+    status_filter;
+    setStatusFilter;
+    archive_filter;
+    setArchiveFilter;
+    search_query;
+    setSearchQuery;
+    date_range;
+    setDateRange;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   const {
     quotes,
@@ -44,13 +58,39 @@ import { Navigate } from "react-router-dom",
     setShowDetails(true)
 
   const handleResetFilters = () => {
-    setStatusFilter('all'),
-    setArchiveFilter('all'),
-    setSearchQuery(''),
+    setStatusFilter('all');
+    setArchiveFilter('all');
+    setSearchQuery('');
     setDateRange({ from: undefined, to: undefined })
 
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />
+=======
+
+  // Count quotes by status;
+  const statusCounts = {;
+    new: quotes && quotes.filter(q => q && q.status === 'new').length,;
+    in_review: quotes && quotes.filter(q => q && q.status === 'in_review').length,;
+    accepted: quotes && quotes.filter(q => q && q.status === 'accepted').length,;
+    responded: quotes && quotes.filter(q => q && q.status === 'responded').length,;
+    closed: quotes && quotes.filter(q => q && q.status === 'closed').length;
+  };
+
+  const handleViewDetails = (quote: QuoteRequest) => {;
+    setSelectedQuote(quote),;
+    setShowDetails(true);
+  };
+
+  const handleResetFilters = () => {;
+    setStatusFilter('all');
+    setArchiveFilter('all');
+    setSearchQuery('');
+    setDateRange({ from: undefined, to: undefined });
+  };
+
+  if (!isAdmin) {;
+    return <Navigate to="/unauthorized" replace />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
     <ProtectedRoute adminOnly>
@@ -66,8 +106,11 @@ import { Navigate } from "react-router-dom",
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
             </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {/* Status Summary Cards */}
-            <QuoteStatusCards statusCounts={statusCounts} />
+            <QuoteStatusCards statusCounts={statusCounts} />;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Filters */}
             <QuotesFilter
               searchQuery={searchQuery}
@@ -79,37 +122,64 @@ import { Navigate } from "react-router-dom",
               dateRange={dateRange}
               setDateRange={setDateRange}
               onReset={handleResetFilters}
-            />
+
+            />;
+
             {/* Tabs for Active/Archived */}
-            <Tabs defaultValue="active" className="mb-6">
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
-                <TabsTrigger value="active">Active Quotes</TabsTrigger>
-                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>
-              </TabsList>
-              <TabsContent value="active">
+            <Tabs defaultValue="active" className="mb-6">;
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
+                <TabsTrigger value="active">Active Quotes</TabsTrigger>;
+                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>;
+              </TabsList>;
+
+              <TabsContent value="active">;
+
                 {/* Quotes Table */}
-                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
                   <QuotesTable
-                    quotes={quotes.filter(quote => !quote.is_archived)}
+                    quotes={quotes && quotes.filter(quote => !quote && quote.is_archived)}
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
                     onViewDetails={handleViewDetails}
-                  />
-                </Card>
-              </TabsContent>
-              <TabsContent value="archived">
-                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
+
+                  />;
+                </Card>;
+              </TabsContent>;
+
+              <TabsContent value="archived">;
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+
                   <QuotesTable
-                    quotes={quotes.filter(quote => quote.is_archived)}
+                    quotes={quotes && quotes.filter(quote => quote && quote.is_archived)}
                     isArchived={true}
 
+=======
+                  />;
+                </Card>;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+        </div>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
 
+=======
+
+          onClose={() => {;
+            setShowDetails(false);
+            setSelectedQuote(null);
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           }}
         />
         <Footer />
@@ -117,3 +187,112 @@ import { Navigate } from "react-router-dom",
     </ProtectedRoute>
   )
 }
+=======
+    update_status;
+    toggle_archive;
+    delete_quote;
+  } = useAdminQuotes ();
+;
+  // Count quotes by status;
+  const status_counts = {
+    new: quotes.filter (q => q.status === 'new').length,
+    in_review: quotes.filter (q => q.status === 'in_review').length,
+    accepted: quotes.filter (q => q.status === 'accepted').length,
+    responded: quotes.filter (q => q.status === 'responded').length,
+    closed: quotes.filter (q => q.status === 'closed').length;
+  }
+;
+  const handleViewDetails = (quote: QuoteRequest) =>: any {
+    setSelectedQuote (quote),
+    setShowDetails (true);
+  }
+;
+  const handleResetFilters = () =>: any {
+    setStatusFilter ('all');
+    setArchiveFilter ('all');
+    setSearchQuery ('');
+    setDateRange ({ from: undefined, to: undefined });
+  }
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return <Navigate to="/unauthorized" replace />;
+  }
+  return (
+    <ProtectedRoute admin_only>;
+      <div>;
+        <Header />;
+        <div className="min - h-screen bg - zion - blue px - 4 py - 8">;
+          <div className="container mx - auto">;
+            <div className="flex flex - col md:flex - row justify - between items - start md:items - center mb - 8">;
+              <div>;
+                <h1 className="text - 3xl font - bold text - white mb - 2">Quote Request Manager</h1>;
+                <p className="text - zion - slate - light">Manage and respond to all talent hire requests</p>;
+              </div>;
+              <ExportToCSV quotes={quotes} filename="zion - quote - requests" />;
+            </div>;
+            {/* Status Summary Cards */}
+            <QuoteStatusCards status_counts={status_counts} />;
+            {/* Filters */}
+            <QuotesFilter;
+              search_query={search_query}
+              setSearchQuery={setSearchQuery}
+              status_filter={status_filter}
+              setStatusFilter={setStatusFilter}
+              archive_filter={archive_filter}
+              setArchiveFilter={setArchiveFilter}
+              date_range={date_range}
+              setDateRange={setDateRange}
+              on_reset={handleResetFilters}
+            />;
+            {/* Tabs for Active / Archived */}
+            <Tabs default_value="active" className="mb - 6">;
+              <TabsList className="bg - zion - blue - dark border border - zion - blue - light">;
+                <TabsTrigger value="active">Active Quotes</TabsTrigger>;
+                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>;
+              </TabsList>;
+              <TabsContent value="active">;
+                {/* Quotes Table */}
+                <Card className="bg - zion - blue - dark border border - zion - blue - light overflow - hidden">;
+                  <QuotesTable;
+                    quotes={quotes.filter (quote => !quote.is_archived)}
+                    is_loading={is_loading}
+                    update_status={update_status}
+                    toggle_archive={toggle_archive}
+                    delete_quote={delete_quote}
+                    onViewDetails={handleViewDetails}
+                  />;
+                </Card>;
+              </TabsContent>;
+              <TabsContent value="archived">;
+                <Card className="bg - zion - blue - dark border border - zion - blue - light overflow - hidden">;
+                  <QuotesTable;
+                    quotes={quotes.filter (quote => quote.is_archived)}
+                    is_archived={true}
+                    is_loading={is_loading}
+                    update_status={update_status}
+                    toggle_archive={toggle_archive}
+                    delete_quote={delete_quote}
+                    onViewDetails={handleViewDetails}
+                  />;
+                </Card>;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+        </div>;
+        {/* Quote Details Modal */}
+        <QuoteDetails;
+          quote={selected_quote}
+          is_open={show_details}
+          on_close={() => {
+            setShowDetails (false);
+            setSelectedQuote (null);
+          }}
+        />;
+        <Footer />;
+      </div>;
+    </ProtectedRoute>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

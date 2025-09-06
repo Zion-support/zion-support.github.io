@@ -2718,6 +2718,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
   },];
 // Helper functions
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
     description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
@@ -2731,18 +2732,23 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     tech_stack: ['TypeScriptPostgreSQLdbt'];
     real_implementation: true,
     implementation_details: 'Contracts as code, PR checks, lineage view.';
+
     roi: 'Reduce data breakage incidents by 50–70%.';
     use_cases: ['Warehouse governance_analytics contracts'];
     integrations: ['dbtGitHubBigQuery'];
     support: 'Email support';
     compliance: ['GDPR'];
+
     link: 'https://ziontechgroup.com / services / data - contracts - hub';
+
     icon: '📜';
     color: 'from - lime - 600 to - green - 700';
     popular: false;
     launch_date: '2025 - 02 - 08';
     customers: 19;
+
     rating: 4 && 4.6,
+
     reviews: 6
   }
 ];
@@ -2771,15 +2777,19 @@ use_cases: ['NPSBeta feedback_lead qual'];
 integrations: ['HubSpotSegmentZapier'];
 support: 'Email support, templates library';
 compliance: ['GDPRCCPA'];
+
 link: 'https://ziontechgroup.com / mobile - surveys';
+
 icon: '📱';
 color: 'from - emerald - 600 to - teal - 700';
 popular: false;
 launch_date: '2024 - 12 - 10';
 customers: 95;
+
 rating: 4 && 4.6;
 reviews: 22
 };
+
 marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';
 competitors: ['AsanaClickUpNotion'];
 techStack: ['Next && Next.jsPrismaPostgreSQL'];
@@ -2797,17 +2807,23 @@ use_cases: ['Client delivery_editorial calendar_sprints'];
 integrations: ['Google CalendarSlackLinear'];
 support: 'Email support';
 compliance: ['GDPR'];
+
 link: 'https://ziontechgroup.com / productivity - planner';
+
 icon: '🗓️';
 color: 'from - purple - 600 to - pink - 600';
 popular: false;
 launch_date: '2025 - 01 - 20';
 customers: 60;
+
 rating: 4 && 4.5;
 reviews: 14
 };
+
+
 export const serviceCategories = [
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   return realMicroSaasServices.filter(service => service.category === category)
 };
@@ -2822,6 +2838,8 @@ export const getPopularServices = () => {
 };
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
 reviews: 14;
 }
@@ -2858,6 +2876,9 @@ export const service_categories = [;
   'Enterprise IT';
 ];
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string,;
   name: string,;
   tagline: string,;
@@ -3706,3 +3727,4 @@ export const serviceCategories = [;
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology',;
   'Enterprise IT';
 ];
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

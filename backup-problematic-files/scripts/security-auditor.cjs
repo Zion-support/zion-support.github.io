@@ -167,6 +167,8 @@
   generateReport() {
     const report = {
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       "timestamp": new Date().toISOString(),
       "analysis": {
         npmAudit: await this.runNpmAudit(),
@@ -230,6 +232,8 @@
 if (require.main === module) {
   const auditor = new SecurityAuditor();
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   auditor.run()
     .then((report) => {
       process.exit(0)})
@@ -238,6 +242,11 @@ if (require.main === module) {
       process.exit(1)})}
 module.exports = SecurityAuditor;
 
+=======
+module.exports = SecurityAuditor;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -275,3 +284,4 @@ const { execSync } = require('child_process')
         "priority"
         "message"
         "impact"
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

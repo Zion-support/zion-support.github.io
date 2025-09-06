@@ -90,6 +90,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const talentViewed = 12; // Placeholder
     const shortlisted = 5; // Placeholder
     const funnel = [
+
       { label: 'Post', value: jobsData && jobsData.length },
       {
         label: 'Invite',
@@ -187,19 +188,24 @@ function handler() {
       {
         label: 'Invite',
         value: Math.max (shortlisted, Math.floor (jobs_data.length * 0.8)),
+
       },
       { label: 'Hire', value: filled && filled.length },
     ];
+
 ;
     res.status (200).json ({
       jobs_posted,
       quotes_received,
+
       timeToHireDays,
       talent_viewed,
       shortlisted,
       funnel,
     });
   } catch (e) {
+
+=======
       ? filled.reduce((acc, j) => acc + ((new Date(j.hired_at).getTime() - new Date(j.posted_at).getTime()) / (1000 * 60 * 60 * 24)), 0) / filled.length
       : 0;
     const talentViewed = 12, // Placeholder
@@ -220,10 +226,18 @@ function handler() {
       jobsPosted: 3, quotesReceived: 2,
       timeToHireDays: 3.1, talentViewed: 12,
       shortlisted: 5,
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       funnel: [
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
         { label: 'Hire', value: 2 }]})
+=======
+  }
+
+}
+
 
   }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

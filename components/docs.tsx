@@ -75,6 +75,17 @@ function DocsPage() {
     }
     {
 
+=======
+
+      title: 'Community Forum',
+      description: 'Connect with other developers and users',
+      icon: <ExternalLink className='w-6 h-6' />,
+      href: '/community',
+      color: 'text-yellow-400',
+    },
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   ];
   const filteredDocs = documentationItems.filter(doc => {
     const matchesSearch =
@@ -88,6 +99,8 @@ function DocsPage() {
                          doc.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' |doc.category === selectedCategory;
     return matchesSearch && matchesCategory
+
+
 export default function DocsPage() {;
   const contact = {;
     mobile: '+1 302 464 0950',;
@@ -116,7 +129,22 @@ export default function DocsPage() {;
     })
   }
 
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+
+      year: 'numeric',
+      month: 'short',
+
+      day: 'numeric'
+    });  };      day: 'numeric'
+    })
+
+      case 'Advanced': return 'bg-red-500/20 text-red-400',;
+      default: return 'bg-gray-500/20 text-gray-400';
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
+
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/docs' />;
       </Head>;
@@ -132,6 +160,7 @@ export default function DocsPage() {;
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
             {sections && sections.map(s => (;
+
               <Card
                 key={s && s.title}
                 className='p-6 bg-black/40 border border-gray-700/50'>;
@@ -321,6 +350,23 @@ icon: <ExternalLink className='w - 6 h - 6' />,
               {external.map(e => (
                 <li key={e.name}>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  ))}
+                </ul>;
+              </Card>;
+            ))}
+
+          </div>;
+
+          <Card className='p-6 bg-black/40 border border-gray-700/50'>;
+            <h2 className='text-xl font-semibold mb-4 text-white'>;
+              External References;
+            </h2>;
+            <ul className='grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300'>;
+              {external && external.map(e => (;
+                <li key={e && e.name}>;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <a
                     href={e && e.url}
                     target='_blank'
@@ -329,12 +375,31 @@ icon: <ExternalLink className='w - 6 h - 6' />,
                     {e && e.name}
                   </a>;
                 </li>              ))}
+
+
           <Card className="p-6 bg-black/40 border border-gray-700/50">
             <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
               {external.map((e) => (
                 <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
 
+=======
+            </ul>;
+          </Card>;
+          <Card className="p-6 bg-black/40 border border-gray-700/50">;
+            <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>;
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">;
+              {external && external.map((e) => (;
+                <li key={e && e.name}><a href={e && e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e && e.name}</a></li>;
+            </ul>;
+          </Card>;
+          <Card className='p-6 bg-black/40 border border-gray-700/50'>;
+            <h2 className='text-xl font-semibold mb-4 text-white'>;
+              Need help?;
+            </h2>;
+            <div className='flex flex-col sm:flex-row gap-3'>;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <Button
                 href='/contact'
                 className='bg-gradient-to-r from-cyan-600 to-blue-600 text-white'>;
@@ -364,6 +429,7 @@ icon: <ExternalLink className='w - 6 h - 6' />,
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
+
   );
 }
               ))}
@@ -381,3 +447,18 @@ icon: <ExternalLink className='w - 6 h - 6' />,
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+=======
+
+;
+}
+
+=======
+
+              ))}
+            </ul>
+          </Card>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

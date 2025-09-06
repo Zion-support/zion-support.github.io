@@ -133,9 +133,37 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
         {!suggestion && !isLoading ? (
           <Button
 
+=======
+            type="button"
+            variant="outline"
+            onClick={generateSuggestion}
+            disabled={!jobTitle || !category}
+            className="w-full"
+          >
+            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </Button>
         ) : (
+            disabled={!jobTitle || !category}
+            className='w-full'>;
+            <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation;
+          </Button>;
+        ) : (;
           <PricingSuggestionBox
+    <div className='space - y-4'>;
+      <div>;
+        {!suggestion && !is_loading ? (
+          <Button;
+            type='button';
+            variant='outline';
+            on_click={generate_suggestion}
+            disabled={!job_title || !category}
+            className='w - full'          >;
+            <Sparkles className='h - 4 w - 4 mr - 2' /> Get Budget Recommendation;
+          </Button>) : (
+          <PricingSuggestionBox;
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
+<<<<<<< HEAD

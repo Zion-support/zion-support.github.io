@@ -4,6 +4,15 @@ import Button from '../components/ui/Button';
 
 import {
 
+=======
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Brain,
   Monitor,
   Search,
@@ -19,6 +28,10 @@ import {
   Lock,
   BarChart3,
 
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Brain;
   Monitor,
   Search,
@@ -34,25 +47,19 @@ import {
   Lock;
   BarChart3;
   Calendar;
-  Target
-} from 'lucide-react';
+
+
+
+
       id: 'ai-content-generator',
       name: 'AI Content Generator',
       description: 'Generate high-quality, SEO-optimized content for blogs, social media, emails, and landing pages using advanced AI technology.',
     icon: <Brain className="w-8 h-8 text-white" />,
-
-export default function MicroSaasServicesPage() {_const _microSaasServices = [
-    {
-      id: 'ai-content-generator',
-      name: 'AI Content Generator',
-      description: 'Generate high-quality, SEO-optimized content for blogs, social media, emails, and landing pages using advanced AI technology.',
-      icon: <Brain className=&quot;w-8 h-8 text-white&quot; />,
-
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       gradient: 'from-purple-400 to-pink-500',
       features: [
         'AI-powered content generationMultiple content types (blog, social, email)SEO optimization suggestionsContent templates libraryPlagiarism-free contentMulti-language support'
-];
+      ];
       useCases: [
         'Blog content creationSocial media postsEmail marketing campaignsProduct descriptionsLanding page copyNewsletter content'
       ];
@@ -68,6 +75,8 @@ function MicroSaasServicesPage() {
   const microSaasServices = [;
     {
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       pricing: {
         starter: {
           price: 29,
@@ -327,19 +336,16 @@ function MicroSaasServicesPage() {
         },
         enterprise: {
 
-            'Unlimited accounts',
-            'Enterprise scheduling',
-            'Advanced calendar',
-            'Enterprise analytics',
-            'Dedicated support',
-
     },  ];      demo: 'https://demo.social.ziontech.ai'
 
     }
   ];
+
 ;
   const market_insights = [;
+
     {
+
 export default function MicroSaasServicesPage() {;
   const microSaasServices = [;
     {;
@@ -793,12 +799,14 @@ export default function MicroSaasServicesPage() {;
   ];
 
   return (
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <Head>;
         <title>;
           Micro SaaS Services | Zion Tech Group - Professional Business;
           Solutions;
         </title>;
+
     <>
       <Head>
         <title>Micro SaaS Services | Zion Tech Group - Professional Business Solutions</title>
@@ -807,6 +815,8 @@ export default function MicroSaasServicesPage() {;
         <meta property="og:description" content="Professional micro SaaS services for modern businesses. AI-powered solutions with competitive pricing and enterprise-grade features." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+
+
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
@@ -823,10 +833,13 @@ export default function MicroSaasServicesPage() {;
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
             Discover our comprehensive suite of micro SaaS services designed for modern businesses.
             From AI-powered content generation to enterprise-grade performance monitoring, we deliver professional solutions with competitive pricing and exceptional value.
+
+
           </p>
         </div>
       </section>
       {/* Market Overview */}
+
         <meta;
           name='description';
           content='Discover our comprehensive suite of micro SaaS services including AI content generation, performance monitoring, SEO analytics, API management, email marketing, and social media scheduling.';
@@ -893,6 +906,7 @@ export default function MicroSaasServicesPage() {;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
             {market_insights.map ((insight, index) => (
               <Card;
+
                 key={index}
                 className='card - hover border - gradient - blue text - center';
                 style={{ animation_delay: `${index * 0.1}s` }}
@@ -1008,7 +1022,25 @@ export default function MicroSaasServicesPage() {;
                 </div>
 
               </Card>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
+      {/* Services Grid */}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              Our Micro SaaS Services
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Each service is designed to solve specific business challenges
+              with professional-grade features and competitive pricing.
+            </p>
+          </div>
+          <div className='space-y-16'>
+            {microSaasServices.map((service, index) => (
 
       {/* Services Grid */}
       <section className='section-padding bg-gradient-cursor'>
@@ -1034,6 +1066,7 @@ export default function MicroSaasServicesPage() {;
                   <div className='lg:col-span-2'>;
                     <div className='flex items-center space-x-4 mb-6'>;
                       <div
+
                     </div>;
                   </div>;
                   <p className='text - gray - 400 text - sm'>{insight.description}</p>                </div>              Market Overview & Competitive Analysis;
@@ -1086,16 +1119,19 @@ export default function MicroSaasServicesPage() {;
                       <div;
                         className={`w - 16 h - 16 rounded - 2xl flex items - center justify - center ${service.color} shadow - xl`}
                       >;
+
                         {service.icon}
                       </div>;
                       <div>;
                         <h3 className='text - 2xl font - bold text - white'>;
                           {service.name}
+
       <section className="section-padding bg-gradient-cursor">
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Our Micro SaaS Services
+
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each service is designed to solve specific business challenges with professional-grade features and competitive pricing.
@@ -1133,10 +1169,23 @@ export default function MicroSaasServicesPage() {;
                 <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8">;
                   {/* Service Info */}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                               {feature}
                             </li>;
                           ))}
 
+=======
+                        </ul>;
+                      </div>;
+                      <div>;
+                        <h4 className='text-lg font-semibold text-white mb-3 flex items-center'>;
+                          <Target className='w-5 h-5 mr-2 text-cursor-blue' />;
+                          Use Cases;
+                        </h4>;
+                        <ul className='space-y-2'>;
+                          {service && service.useCases.map((useCase, useCaseIndex) => (;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                             <li
                               key={useCaseIndex}
                               className='flex items-center text-gray-300 text-sm'>;
@@ -1146,18 +1195,18 @@ export default function MicroSaasServicesPage() {;
                           {service && service.useCases.map((useCase, useCaseIndex) => (;
                             <li key={useCaseIndex} className="flex items-center text-gray-300 text-sm">;
                               <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />;
-                        <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                          <Target className="w-5 h-5 mr-2 text-cursor-blue" />
-                          Use Cases
-                        </h4>
-                        <ul className="space-y-2">
-                          {service.useCases.map((useCase, useCaseIndex) => (
-                            <li key={useCaseIndex} className="flex items-center text-gray-300 text-sm">
-                              <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />
+
                               {useCase}
                             </li>;
                           ))}
 
+=======
+                        </ul>;
+                      </div>;
+                    </div>;
+                    <div className='flex flex-wrap gap-4'>;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         size='sm'
                         className='bg-cursor-blue hover:bg-blue-600'>                    <div className="flex flex-wrap gap-4">;
                       <Button
@@ -1204,33 +1253,35 @@ export default function MicroSaasServicesPage() {;
                             ))}
                           </div>
                         </div>
+                        </div>;
+                      </div>;
+                    </div>;
+                  </div>;
+                </div>;
 
-                                <span
-                                  key={compIndex}
-                                  className='px-2 py-1 bg-gray-700 rounded text-xs text-gray-300'>;
-                                  {competitor}
-                                </span>;
-                              );
-                            )}                          </div>                          <p className="text-sm text-gray-400 mb-1">Key Competitors</p>;
-                          <div className="flex flex-wrap gap-2">;
-                            {service && service.competitors.map((competitor, compIndex) => (;
-                              <span key={compIndex} className="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">;
-                          <p className="text-sm text-gray-400 mb-1">Key Competitors</p>
-                          <div className="flex flex-wrap gap-2">
-                            {service.competitors.map((competitor, compIndex) => (
-                              <span key={compIndex} className="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">
-                                {competitor}
-                              </span>;
-                            ))}
-
+=======
+                          </div>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
+=======
+      <section className="section-padding bg-gradient-cursor-accent">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+              Why Choose Zion Tech Group Micro SaaS Services?
+
+            </h2>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               We combine professional-grade features with competitive pricing to deliver exceptional value for your business.
             </p>
@@ -1271,12 +1322,15 @@ export default function MicroSaasServicesPage() {;
                 <h3 className="text-xl font-bold text-white mb-3">Global Infrastructure</h3>
                 <p className="text-gray-400 text-sm">Worldwide availability with enterprise-grade reliability</p>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
             </Card>
           </div>
         </div>
       </section>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Choose the micro SaaS service that fits your business needs and start transforming your operations today.
           </p>
@@ -1289,3 +1343,5 @@ export default function MicroSaasServicesPage() {;
             >
               Get Started
             </Button>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

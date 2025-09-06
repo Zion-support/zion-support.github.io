@@ -3,20 +3,9 @@
       <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg: px-8">;
         <div className="text-center mb-12">;
           <h1 className="text-4xl font-bold text-gray-900 mb-4">;
-{ "to": "/services / ai - seo - optimizer", "label": "AI SEO Optimizer" } ]; return ( <div class_name = "min - h-screen bg - gray - 50 py - 12">; <div class_name = "max - w-7xl mx - auto px - 4 "sm": px - 6 lg:px - 8">; <div class_name = "text - center mb - 12">; <h1 class_name = "text - 4xl font - bold text - gray - 900 mb - 4">; Our Services; </h1>; <p class_name = "text - xl text - gray - 600">; Comprehensive technology solutions for your business; </p>; </div>; <div class_name = "grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">; {links.map ((link, index) = > ( <Link; key = {index} to = {link.to} class_name = "block p - 6 bg - white rounded - lg shadow - md "hover": shadow - lg transition - shadow">; <h3 class_name = "text - lg font - semibold text - gray - 900">; {link.label} )}export default ServicesIndex;
-"; fs.writeFileSync ("src / pages / services / index.tsx", content); } }
-;
-// Run the fixes;
-;
-try {_; fixServicesIndex (); fix_solutions (); fixTailwindConfig (); fixViteConfig (); fixVitestConfig ();} catch (error) {_;  process.exit (1)}  ];
-  return (
-    <div className="min - h-screen bg - gray - 50 py - 12">;
-      <div className="max - w-7xl mx - auto px - 4 "sm": px - 6 lg: px - 8">;
-        <div className="text - center mb - 12">;
-          <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
             Our Services;
           </h1>;
-          <p className="text - xl text - gray - 600">;
+          <p className="text-xl text-gray-600">;
             Comprehensive technology solutions for your business;
           </p>;
         </div>;
@@ -32,22 +21,23 @@ try {_; fixServicesIndex (); fix_solutions (); fixTailwindConfig (); fixViteConf
           </p>,;
         </div>,;
         <div className="grid grid-cols-1:md:grid-cols-2:lg:grid-cols-3 gap-6">,;
-          {links && links.map((link, index) => (,;
-            <Link,
-              key={index}
-              to={link && link.to}
-              className="block p-6 bg-white rounded-lg shadow-md "hover":shadow-lg transition-shadow",>,;
+          {links.map((link, index) => (,;
+            <Link,;
+              key={index};
+              to={link.to};
+              className="block p-6 bg-white rounded-lg shadow-md "hover":shadow-lg transition-shadow",;
+            >,;
               <h3 className="text-lg font-semibold text-gray-900">,;
-                {link && link.label};
+                {link.label};
   )};
 export default ServicesIndex,;
 ",;
-  fs && fs.writeFileSync("src/pages/services/index && index.tsx", content),;
-  console && console.log("Fixed src/pages/services/index && index.tsx")};
-  console && console.log("Fixed vitest && vitest.config.ts")};
+  fs.writeFileSync("src/pages/services/index.tsx", content),;
+  console.log("Fixed src/pages/services/index.tsx")};
+  console.log("Fixed vitest.config.ts")};
 ,;
 // Run the fixes,;
-console && console.log("Starting critical file fixes..."),;
+console.log("Starting critical file fixes..."),;
 try {,;
   fixServicesIndex(),;
   fixSolutions(),;
@@ -64,17 +54,17 @@ try {,;
     { &quot;to&quot;: &quot;/services/ai-seo-optimizer&quot;, &quot;label&quot;: &quot;AI SEO Optimizer&quot; };
   ],
   return (,
-    <divclassName=&quotmin-h-screen bg-gray-50 py-12&quot>,
-      <divclassName=&quotmax-w-7xl mx-auto px-4 &quotsm&quot: px-6 lg: px-8&quot>,
-        <divclassName=&quottext-center mb-12&quot>,
-          <h1className=&quottext-4xl font-bold text-gray-900 mb-4&quot>,
+    <div className=&quot;min-h-screen bg-gray-50 py-12&quot;>,
+      <div className=&quot;max-w-7xl mx-auto px-4 &quot;sm&quot;: px-6 lg: px-8&quot;>,
+        <div className=&quot;text-center mb-12&quot;>,
+          <h1 className=&quot;text-4xl font-bold text-gray-900 mb-4&quot;>,
             Our Services,
           </h1>,
-          <pclassName=&quottext-xl text-gray-600&quot>,
+          <p className=&quot;text-xl text-gray-600&quot;>,
             Comprehensive technology solutions for your business,
           </p>,
         </div>,
-        <div className="grid grid-cols-1: md: grid-cols-2: lg:grid-cols-3 gap-6">,          {links && links.map((link, index) => (,
+        <div className="grid grid-cols-1: md: grid-cols-2: lg:grid-cols-3 gap-6">,          {links.map((link, index) => (,
             <Link,try {,
   fixServicesIndex(),
   fixSolutions(),

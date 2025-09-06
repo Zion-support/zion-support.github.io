@@ -31,3 +31,23 @@ const AutoIndex: NextPage = () => {
   )
 
 export default AutoIndex;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default AutoIndex;
+
+
+=======
+import Head from 'next / head';
+import Link from 'next / link';
+          </li>;
+        </ul>;
+      </main>;
+    </div>),
+}
+;
+export default AutoIndex;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

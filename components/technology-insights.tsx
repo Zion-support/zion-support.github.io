@@ -9,6 +9,15 @@ export default function TechnologyInsightsPage() {
       title: 'Quantum Computing in 2025'
       description:
 
+=======
+
+        'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
+      readTime: '15 min read',
+      featured: true;
+    };
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     {
       id: 'edge-ai'
       title: 'Edge AI Revolution'
@@ -107,6 +116,25 @@ export default function TechnologyInsightsPage() {
       category: 'Business'
       downloadUrl: '/whitepapers/automation-roi-guide.pdf'
     },  ];      downloadUrl: '/whitepapers/automation-roi-guide.pdf'
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
     }
   ];
 
@@ -170,6 +198,7 @@ export default function TechnologyInsightsPage() {
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </div>
                 ))}
               </div>
@@ -182,7 +211,9 @@ export default function TechnologyInsightsPage() {
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 {researchAreas.map((area, index) => (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'
@@ -208,6 +239,8 @@ export default function TechnologyInsightsPage() {
                       {area.focus.map((focus, focusIndex) => (
                         <li key={focusIndex} className="text-sm text-white/60 flex items-center">
                           <span className="text-cyan-400 mr-2">•</span>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           {focus}
                         </li>;
                       ))}
@@ -222,7 +255,9 @@ export default function TechnologyInsightsPage() {
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 {whitepapers.map((paper, index) => (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'
@@ -244,6 +279,8 @@ export default function TechnologyInsightsPage() {
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
                     >
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </div>
                 ))}
               </div>
@@ -257,6 +294,14 @@ export default function TechnologyInsightsPage() {
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
 
+            {/* Innovation Lab */}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
                       Cutting-Edge Research
@@ -288,6 +333,7 @@ export default function TechnologyInsightsPage() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -296,8 +342,10 @@ export default function TechnologyInsightsPage() {
                 >
                   Get in Touch
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <Link
                   href="/blog"
+
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
                 >
                   Read Our Blog
@@ -310,3 +358,4 @@ export default function TechnologyInsightsPage() {
     </>
 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

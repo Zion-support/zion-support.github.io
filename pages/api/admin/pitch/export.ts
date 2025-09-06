@@ -8,7 +8,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' })
   if (format === 'gslides') {
     // TODO: integrate Google Slides API and return created deck URL
-    const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version || 'draft'))}`;
+
+
     return res.status(200).json({ url })
   }
   // Fallback: return a minimal PDF-like blob by sending HTML and letting client download, here we return a simple HTML as octet-stream.
@@ -18,9 +19,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('Content-Typeapplication/octet-stream')
   res.setHeader('Content-Disposition', `attachment, filename="pitch-deck-${version |'draft'}.html"`)
   res.status(200).send(html)
+
 }
 function escapeHtml(str: string) {
   return String(str)
+
 .replace(/&/g, '&amp,')
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
@@ -51,3 +54,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

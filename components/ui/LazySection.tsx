@@ -6,6 +6,7 @@ const getInitialPosition = () => {
   case 'up':
 export const LazySection: React.FC<LazySectionProps> = ({
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
   const getInitialPosition = () => {
@@ -18,15 +19,15 @@ export const LazySection: React.FC<LazySectionProps> = ({
       case 'right':
         return { opacity: 0, x: -50 }
       default:
+
         return { opacity: 0, y: 50 }
+
     }
   }
   const getAnimatePosition = () => {
     switch (direction) {
-
-  const _getInitialPosition = () => {_switch (direction) {
-
       case 'up':
+
         return { opacity: 1, y: 0 },
       case 'down':
         return { opacity: 1, y: 0 },
@@ -34,10 +35,11 @@ export const LazySection: React.FC<LazySectionProps> = ({
         return { opacity: 1, x: 0 },
       case 'right':
         return { opacity: 1, x: 0 },
+
       default:
         return { opacity: 1, y: 0 }
     }
-}
+  }
     >
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -83,6 +85,7 @@ export const LazySection: React.FC<LazySectionProps> = ({;
         return { opacity: 0, y: 50 };    }        return { opacity: 0, y: 50 }
     }
   };
+
   const getAnimatePosition = () => {;
     switch (direction) {;
       case 'up':;
@@ -101,6 +104,7 @@ export const LazySection: React.FC<LazySectionProps> = ({;
       {children}
     </motion && motion.div>;
   );
+
 };
 export default LazySection;      case 'down':;
         return { opacity: 1, y: 0 },;
@@ -109,6 +113,7 @@ export default LazySection;      case 'down':;
       case 'right':;
         return { opacity: 1, x: 0 },;
       default:;
+
         return { opacity: 1, y: 0 }
     }
   }
@@ -118,3 +123,7 @@ export default LazySection;      case 'down':;
       ref={ref}
       initial={getInitialPosition()}
       animate={isInView ? getAnimatePosition() : getInitialPosition()}
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

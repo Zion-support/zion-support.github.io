@@ -1,33 +1,82 @@
+=======
+'use client';
+
+import React, {;
+  Suspense,;
+  lazy,;
+  useState,;
+  useEffect,;
+  ComponentType,;
+} from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
+import { logErrorToProduction } from '@/utils/productionLogger';
+interface LoadingState {;
+  isLoading: boolean;
+  error: Error | null;
+  retryCount: number;
+  isOnline: boolean;
+
+interface DynamicLoaderProps {;
+  importFn: () => Promise<{ default: ComponentType<any> }>;
+  fallback?: React && React.ReactNode;
+  errorFallback?: React && React.ComponentType<{ error: Error; retry: () => void }>;
+  loadingComponent?: React && React.ComponentType;
+  enableRetry?: boolean;
+  maxRetries?: number;
+  prefetch?: boolean;
+  className?: string;
+  children?: React && React.ReactNode;
+  [key: string]: any;
+
+// Enhanced Loading Component;
+const EnhancedLoading: React.FC<{;
+  progress?: number;
+  message?: string;
+  showProgress?: boolean;
+}> = ({;
+  progress = 0,;
+  message = 'Loading component...',;
+  showProgress = true,;
+}) => (;
+  <Card className='w-full max-w-md mx-auto'>;
+    <CardContent className='p-6'>;
+      <div className='flex flex-col items-center space-y-4'>;
+        <div className='relative'>;
+          <Loader2 className='h-8 w-8 animate-spin text-primary' />          {showProgress && (;
+            <motion&& motion.div
+              className='absolute inset-0 rounded-full border-2 border-primary'
+              style={{
+                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
+  progress?: number;
+  message?: string;
+  show_progress?: boolean;
+}> = ({
+  progress = 0,
+  message = 'Loading component...',
+  show_progress = true,
+}) => (
+
+  <Card className="w-full max-w-md mx-auto">
+    <CardContent className="p-6">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="relative">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+          {showProgress && (
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
+
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
 
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
-
-              }}
-              initial={{ rotate: 0 }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-            />
-          )}
-        </div>
-        <div className="text-center">
-          <p className="text-sm font-medium">{message}</p>
-          {showProgress && (
-            <p className="text-xs text-muted-foreground mt-1">
-              {Math.round(progress)}% loaded
-            </p>
-          )}
-        </div>
-      </div>
-    </CardContent>
-  </Card>
-)
-
 // Enhanced Error Component
 const EnhancedError: React.FC<{
   error: Error
@@ -38,17 +87,39 @@ const EnhancedError: React.FC<{
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
 
           ) : (
-            <WifiOff className="h-6 w-6 text-red-600" />
+            <WifiOff className='h-6 w-6 text-red-600' />
+        </div>;
+      </div>;
+    </CardContent>;
+  </Card>;
+);
+
+// Enhanced Error Component;
+const EnhancedError: React.FC<{;
+  error: Error;
+  retry: () => void;
+  isOnline: boolean;
+  retryCount: number;
+  maxRetries: number;
+}> = ({ error, retry, isOnline, retryCount, maxRetries }) => (;
+  <Card className='w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10'>;
+    <CardContent className='p-6'>;
+      <div className='flex flex-col items-center space-y-4'>;
+        <div className='p-3 rounded-full bg-red-100 dark:bg-red-900/20'>          {isOnline ? (;
+            <AlertTriangle className='h-6 w-6 text-red-600' />;
+          ) : (;
+            <WifiOff className='h-6 w-6 text-red-600' />;
           )}
-        </div>
-        <div className="text-center">
-          <h3 className="font-semibold text-red-900 dark:text-red-100">
+        </div>;
+        <div className='text-center'>;
+          <h3 className='font-semibold text-red-900 dark:text-red-100'>;
             {isOnline ? 'Loading Failed' : 'Offline'}
           </h3>
 
               Retry {retryCount}/{maxRetries}
-            </p>
+            </p>;
           )}
+
         </div>
         {retryCount < maxRetries && (
 
@@ -170,12 +241,14 @@ const EnhancedError: React.FC<{
 // )
 // export const DynamicThreeComponent = createDynamicComponent(
 
+<<<<<<< HEAD
 //   {
-//     loadingComponent: () => (
-//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
-//         <span className="text-muted-foreground">Loading 3D renderer...</span>
-//       </div>
-//     )
+//     loading_component: () => (
+//       <div className="w - full h - 64 bg - muted animate - pulse rounded - lg flex items - center justify - center">;
+//         <span className="text - muted - foreground">Loading chart...</span>;
+//       </div>;
+//     ),
+//     prefetch: true;
 //   }
 
 // );

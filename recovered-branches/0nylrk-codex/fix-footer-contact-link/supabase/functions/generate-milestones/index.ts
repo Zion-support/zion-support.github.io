@@ -1,15 +1,21 @@
 
 
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
+  if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
 
+=======
+    const { scope, startDate, endDate, projectType } = await req && req.json();
     }
 
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req.json(),
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Create prompt for OpenAI
     const prompt = `
     You are an expert project manager who specializes in breaking down projects into clear milestones.
@@ -34,7 +40,14 @@ serve(async (req) => {
       headers: {
 
       body: JSON.stringify({
-        model: 'gpt-4o-mini',
+=======
+    const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
+      body: JSON && JSON.stringify({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        model: 'gpt-4o-mini';
         messages: [
           {
 
@@ -58,7 +71,46 @@ serve(async (req) => {
       {;
         status: 500,;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });
+=======
+
+
+;
+    const data = await response.json ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error (data.error?.message || 'Failed to generate milestones');
+    }
+    // Parse the AI - generated content to ensure it's valid JSON;
+    try {
+      const content = data.choices[0].message.content.trim ();
+      // Try to parse the response as JSON;
+      const milestones = JSON.parse (content);
+;
+      return new Response (JSON.stringify ({ milestones }), {
+        headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+    } catch (parse_error) {
+      // If parsing fails, try to extract JSON from the text;
+      console.error ('Failed to parse AI response as JSON:', parse_error);
+      throw new Error ('Failed to parse AI response');
+    }
+  } catch (error) {
+    console.error ('Error generating milestones:', error);
+    return new Response (
+      JSON.stringify ({ error: error.message || 'Failed to generate milestones' });
+      {
+        status: 500,
+        headers: { ...cors_headers, 'Content - Type': 'application / json' }}
+    );
+  }
+});
+;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

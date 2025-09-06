@@ -10,19 +10,34 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
   actionText = null
 }: {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   actionText?: string | null
 }) {
-  void actionUrl,
-  void actionText,
+  void actionUrl;
+  void actionText;
   try {
     // Call the create_notification database function
+
     const { data, error } = await supabase.rpc('create_notification', {
 
+=======
+      _user_id: userId,
+      _title: title,
+      _message: message,
+      _type: type,
+      _related_id: relatedId
+    }),
+    
+    if (error) throw error,
+    
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         body: { user_id: userId, notification_id: notificationId }
       })
     }
@@ -142,18 +157,27 @@ export async function createHireRequestNotifications({;
       talentNotification,;
       adminNotification;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   }
   return {
-    success: talentNotification.success
+
+    success: talentNotification && talentNotification.success,
+
     talentNotification
   }
 }
 
+=======
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 /**
  * Creates an onboarding notification for a user
  */
-export async function createOnboardingNotification({;
+export async function createOnboardingNotification({
   userId;
   missingMilestone;
   userRole
@@ -171,94 +195,105 @@ export async function createOnboardingNotification({;
       case 'profile_completed':
         title = 'Complete your profile';
         message = 'Complete your profile to get discovered by clients';
-        actionUrl = '/profile';
-        actionText = 'Complete Profile';
+        action_url = '/profile';
+        action_text = 'Complete Profile';
         break;
-      case 'skills_added':
+      case 'skills_added':;
         title = 'Add your skills';
         message = 'Add your skills to get better job matches';
-        actionUrl = '/profile/skills';
-        actionText = 'Add Skills';
+        action_url = '/profile / skills';
+        action_text = 'Add Skills';
         break;
-      case 'availability_set':
+      case 'availability_set':;
         title = 'Set your availability';
         message = 'Set your availability to help clients know when you can work';
-        actionUrl = '/profile/settings';
-        actionText = 'Set Availability';
-        break
+        action_url = '/profile / settings';
+        action_text = 'Set Availability';
+        break;
     }
   } else {
-    switch (missingMilestone) {
-      case 'job_posted':
+    switch (missing_milestone) {
+      case 'job_posted':;
         title = 'Post your first job';
         message = 'Post your first job to start finding talent';
-        actionUrl = '/post-job';
-        actionText = 'Post Job';
+        action_url = '/post - job';
+        action_text = 'Post Job';
         break;
-      case 'match_viewed':
+      case 'match_viewed':;
         title = 'View your AI matches';
-        message = 'Check out your AI-matched talent suggestions';
-        actionUrl = '/client-dashboard';
-        actionText = 'View Matches';
+        message = 'Check out your AI - matched talent suggestions';
+        action_url = '/client - dashboard';
+        action_text = 'View Matches';
         break;
-      case 'talent_invited':
+      case 'talent_invited':;
         title = 'Invite talent';
         message = 'Invite talent to speed up your hiring process';
-        actionUrl = '/talent';
-        actionText = 'Find Talent';
-        break
+        action_url = '/talent';
+        action_text = 'Find Talent';
+        break;
     }
   }
-  return createNotification({
-    userId;
+
+  return create_notification ({
+    user_id;
     title;
     message;
     type: 'onboarding';
-    sendEmail: false;
-    actionUrl
-    actionText
-  })
+    send_email: false;
+    action_url,
+    action_text;
+  });
 }
-/**
- * Creates a system notification for a user
+/**;
+* Creates a system notification for a user;
+*/;
+export async /**
+ * createSystemNotification - Function description
  */
-export async function createSystemNotification({;
-  userId;
-  title;
-  message;
-  actionUrl = null;
-  actionText = null;
-  sendEmail = false
-}: {
-  userId: string;
-  title: string;
-  message: string;
-  actionUrl?: string | null;
-  actionText?: string | null
-  sendEmail?: boolean
-}) {
-  return createNotification({
-    userId;
+function createSystemNotification() {
+  return create_notification ({
+    user_id;
     title;
     message;
     type: 'system';
-    sendEmail;
-    actionUrl
-    actionText
-  })
+    send_email;
+    action_url,
+    action_text;
+  });
 }
-/**
- * Demo function to create test notifications for the current user
+/**;
+* Demo function to create test notifications for the current user;
+*/;
+export async /**
+ * createTestNotification - Function description
+
  */
-export async function createTestNotification(userId: string) {;
+function createTestNotification() {
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
-  const randomType = types[Math.floor(Math.random() * types.length)]
+
+  const randomType = types[Math && Math.floor(Math && Math.random() * types && types.length)],
+  
+
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
   }
   const messages = {
-    'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!'
+
+    'message': 'You have received a new message from a potential client && client.quote_request': 'A client has submitted a quote request for your services && services.booking_confirmation': 'Your booking has been confirmed and scheduled && scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details && details.onboarding': 'Complete your profile to get more visibility and job matches && matches.system': 'Our platform has been updated with new features. Check them out!'
+  };
+  
+
+=======
+  const random_type = types[Math.floor (Math.random () * types.length)],
+  const titles = {
+    'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update';
   }
+;
+  const messages = {
+    'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!';
+  }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const actions = {
     'message': { url: '/messages', text: 'View Messages' }
     'quote_request': { url: '/quotes', text: 'View Quote' }
@@ -267,16 +302,11 @@ export async function createTestNotification(userId: string) {;
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
   }
-  return createNotification({
-    userId;
-    title: titles[randomType];
-    message: messages[randomType];
-    type: randomType;
-    sendEmail: true;
-    actionUrl: actions[randomType].url
 
     actionText: actions[randomType].text
   })
 
 }
 ;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

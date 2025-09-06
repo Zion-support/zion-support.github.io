@@ -24,63 +24,6 @@ import { useToast } from '@/hooks/use-toast'
 import { EmptyState } from '@/components/ui/empty-state'
 import Link from 'next/link'
 
-// Lazy load heavy components to prevent router abort
-const CommunityDiscussion = dynamic(
-  () =>
-    import('@/components/CommunityDiscussion').then(mod => ({
-      default: mod.CommunityDiscussion
-    }))
-  {
-    loading: () => (
-      <div className='h-32 bg-zion-blue-light rounded animate-pulse' />
-    )
-    ssr: false
-  }
-)
-const PointsBadge = dynamic(
-  () =>
-    import('@/components/loyalty/PointsBadge').then(mod => ({
-      default: mod.PointsBadge
-    }))
-  {
-    loading: () => (
-      <span className='text-zion-cyan font-medium'>Loading...</span>
-    )
-    ssr: false
-  }
-)
-const ApiKeysManager = dynamic(
-  () =>
-    import('@/components/developers/ApiKeysManager').then(mod => ({
-      default: mod.ApiKeysManager
-    }))
-  {
-    loading: () => (
-      <div className='h-24 bg-zion-blue-light rounded animate-pulse' />
-    )
-    ssr: false
-  }
-)
-const NotificationBell = dynamic(
-  () =>
-    import('@/components/NotificationBell').then(mod => ({
-      default: mod.NotificationBell
-    }))
-  {
-    loading: () => <Bell size={16} className='text-zion-cyan' />
-    ssr: false
-  }
-)
-const GuidedTour = dynamic(
-  () =>
-    import('@/components/onboarding/GuidedTour').then(mod => ({
-      default: mod.GuidedTour
-    }))
-  {
-    ssr: false
-  }
-)
-// Lazy load notification functions
 
   const { user, loading } = useRequireAuth(); // This will handle authentication and redirects
   const { toast } = useToast()
@@ -109,18 +52,54 @@ export default function Dashboard() {
   const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent',
   const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent',
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (loading) {
+);
+// Lazy load notification functions;
+const loadNotificationFunctions = () =>: any import ('@/utils / notifications');
+export default /**
+ * Dashboard - Function description
+ */
+function Dashboard() {
+  const { logout } = use_auth ();
+  const { user, loading } = useRequireAuth (); // This will handle authentication and redirects;
+  const { toast } = use_toast ();
+  // Add safe checks for user ID to prevent premature API calls;
+  const user_id = user?.id;
+  const { data: orders = [], is_loading: orders_loading } =;
+    useGetOrdersQuery (user_id);
+  const { favorites } = use_favorites ();
+  // Type assertion to work around Supabase User type limitations;
+  const userWithExtendedProps = user as any;
+  const user_type =;
+    userWithExtendedProps?.user_type ||;
+    user?.user_metadata?.user_type ||;
+    'talent';
+  const roleForTour =;
+    user_type === 'client' || user_type === 'admin' ? 'client' : 'talent';
+  // Check condition
+if ( {) {
+  $2
+}
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading dashboard...</p>
-        </div>
-      </div>
-    )
+      <div className='min - h-screen flex items - center justify - center'>;
+        <div className='text - center'>;
+          <div className='animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600 mx - auto mb - 4'></div>;
+          <p className='text - gray - 600'>Loading dashboard...</p>;
+        </div>;
+      </div>);
   }
-  // useRequireAuth will handle redirect if user is not authenticated
-  if (!user) {
+
+  // useRequireAuth will handle redirect if user is not authenticated;
+  // Check condition
+if ( {) {
+  $2
+}
+
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -232,6 +211,7 @@ export default function Dashboard() {
                       </ul>
                     )}
 
+<<<<<<< HEAD
                         ))}
                       </ul>
                     )}

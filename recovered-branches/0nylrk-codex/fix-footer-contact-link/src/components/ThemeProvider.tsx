@@ -5,6 +5,13 @@ type ThemeProviderProps = {
   defaultTheme?: Theme
 }
 
+=======
+
+;
+type ThemeProviderState = {;
+  theme: Theme;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   setTheme: (theme: Theme) => void;
 }
 const initialState: ThemeProviderState = {
@@ -12,13 +19,6 @@ const initialState: ThemeProviderState = {
   setTheme: () => null}
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 export function ThemeProvider({
-
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem("theme") as Theme) || defaultTheme
-
-  )
-  useEffect(() => {
-    const root = window.document.documentElement
 
       root.classList.add(systemTheme)
       return
@@ -28,15 +28,31 @@ export function ThemeProvider({
   const value = {
     theme
     setTheme: (theme: Theme) => {
-      localStorage.setItem("theme", theme)
+      localStorage.setItem(&quot;theme&quot;, theme)
       setTheme(theme)
     }}
 
+=======
+
+;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (;
     <ThemeProviderContext.Provider value={value}>;
       {children}
-    </ThemeProviderContext.Provider>;
-  );
+    </ThemeProviderContext.Provider>);
+}
+
+export const use_theme = () =>: any {
+  const context = useContext (ThemeProviderContext);
+  // Check condition
+if (
+    throw new Error (&quot) {
+  $2
+}use_theme must be used within a ThemeProvider & quot);
+  return context;
+
 }
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext)
@@ -46,3 +62,4 @@ export const useTheme = () => {
   return context
 }
 ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

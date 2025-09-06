@@ -1,13 +1,17 @@
 
 
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {useState} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations / supabase / client';
+import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 
   const deleteMilestone = async (milestoneId: string) => {
     if (!user) return false,
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     try {
       setIsSubmitting(true)
       const { error } = await supabase
@@ -46,3 +50,34 @@ export const useDeleteMilestone = () => {;
 
   }
 };
+    } finally {
+      setIsSubmitting (false);
+    }
+
+=======
+
+        .eq('id', milestoneId),
+      
+      if (error) throw error,
+      
+      toast.success("Milestone deleted successfully"),
+      
+      return true
+    } catch (err: any) {
+      console.error("Error deleting milestone:", err),
+      toast.error("Failed to delete milestone: " + err.message),
+      return false
+    } finally {
+      setIsSubmitting(false)
+
+
+  }
+;
+  return {
+    delete_milestone;
+    is_submitting;
+  }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

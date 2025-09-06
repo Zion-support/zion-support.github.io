@@ -12,6 +12,24 @@ export function PaymentMethods() {
   const paymentMethods = [
     {
 
+=======
+
+      id: 'pm-1',
+      type: 'credit_card',
+      brand: 'Visa',
+      last4: '4242',
+
+
+      id: "pm-1",
+      type: "credit_card",
+      brand: "Visa",
+      last4: "4242",
+      expMonth: 12,
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       expYear: 2025,
       isDefault: true},
     {
@@ -31,7 +49,8 @@ export function PaymentMethods() {
         <CardTitle>Payment Methods</CardTitle>
 
             className={`flex items-center justify-between p-4 rounded-lg border ${
-              method.isDefault ? "bg-muted border-primary" : "border-border"
+
+              method.isDefault ? "bg-muted border-primary" : "border-border";
             }`}
           >
             <div className="flex items-center space-x-4">
@@ -61,6 +80,7 @@ export function PaymentMethods() {
             </div>
           </div>
         ))}
+<<<<<<< HEAD
       </CardContent>
       <CardFooter>
 
@@ -144,7 +164,8 @@ export function PaymentMethods() {;
         ))}
       </CardContent>;
       <CardFooter>;
-        <Button className="gap-1">;
+        <Button className='gap-1'>;
+          <Plus className='h-4 w-4' />          Add Payment Method        <Button className="gap-1">;
           <Plus className="h-4 w-4" />;
           Add Payment Method;
         </Button>;

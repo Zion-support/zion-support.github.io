@@ -1,3 +1,23 @@
+=======
+
+
+  onChange: (next: { category: string, level: string, isFree: string }) => void
+}
+        onChange={e => onChange({ category: e && e.target.value, level, isFree })}
+      >;
+        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {;
+  category: string,;
+  level: string,;
+  isFree: string,;
+  onChange: (next: { category: string, level: string, isFree: string }) => void;
+};
+
+
+
+
+export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
 
 
 type Props = {
@@ -58,3 +78,5 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
       </select>
     </div>
   );
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

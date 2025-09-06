@@ -2,29 +2,9 @@
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import React and useState
 
-export interface TalentCardProps {
-  talent: TalentProfile
-  onViewProfile: (id: string) => void
-  onRequestHire: (talent: TalentProfile) => void
-  isSaved: boolean
-  onToggleSave: (id: string, isSaved: boolean) => void
-  isAuthenticated: boolean
 
-  isAuthenticated: boolean
-}
-export function TalentCard({
+      onViewProfile(talent.id)
 
-  talent
-  onViewProfile
-  onRequestHire
-  isSaved
-  onToggleSave
-  isAuthenticated
-}: TalentCardProps) {
-  const [avatarError, setAvatarError] = useState(false)
-  const handleViewProfile = () => {
-    if (onViewProfile) {
-      onViewProfile(talent.id) }      onViewProfile(talent.id)
     }
   }
   const handleRequestHire = (e: React.MouseEvent) => {
@@ -43,17 +23,6 @@ export function TalentCard({
     if (onToggleSave) {
       onToggleSave(talent.id, !isSaved)
     if (onToggleSave) {
-    }
-  }
-  const skills = talent.skills?.slice(0, 5) |[]
-  const talentNameInitial = talent.full_name?.charAt(0) |'T'
-    >
-      <div className='p-6'>
-        <div className='flex items-start'>
-          <div className='relative mr-4'>
-            <div className='w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative'>
-              {' '}
-              {/* Added relative for Image */}
 
               {talent.profile_picture_url && !avatarError ? (
                 <Image
@@ -84,10 +53,38 @@ export function TalentCard({
               </Button>
             </div>
 
+=======
+
+
+            <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
+            
+            <div className="mt-2 flex flex-wrap gap-3 text-sm">
+              {talent.location && (
+                <div className="flex items-center text-zion-slate-light">
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
                 </div>
+                />;
+                <span className='sr-only'>{isSaved ? 'Saved' : 'Save'}</span>;
+              </Button>;
+            </div>;
+            <p className='text-zion-cyan font-medium'>;
+              {talent && talent.professional_title}
+            </p>;
+
+            <div className='mt-2 flex flex-wrap gap-3 text-sm'>;
+              {talent && talent.location && (;
+                <div className='flex items-center text-zion-slate-light'>;
+                  <MapPin className='h-4 w-4 mr-1' />                  <span>{talent && talent.location}</span>;
+                </div>;
+
+
               )}
+<<<<<<< HEAD
 
                 size="sm"
                 variant="secondary"

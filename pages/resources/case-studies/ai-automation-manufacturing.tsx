@@ -1,22 +1,39 @@
+=======
+
+    id: 'ai-automation-manufacturing',
+    title: 'AI-Powered Manufacturing Automation',
+    company: 'Global Manufacturing Corp',
+    industry: 'Manufacturing',
+    results: '40% increase in production efficiency, 60% reduction in downtime',
+    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
+  };
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <>
       <Head>
         <title>{caseStudy.title} - Resource | Zion Tech Group</title>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <meta name="keywords" content="AI automation, manufacturing, resource, case study, predictive maintenance" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <nav className="mb-8">
+
               <Link href="/resources" className="text-cyan-400 hover: text-cyan-300 transition-colors">
+
                 ← Back to Resources
               </Link>
             </nav>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
@@ -24,6 +41,7 @@
               <p className="text-white/80 text-lg max-w-3xl mx-auto">{caseStudy.description}</p>
             </header>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Key Results</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
@@ -31,6 +49,7 @@
               </div>
             </section>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Detailed Analysis</h2>
               <div className="space-y-6">
@@ -38,6 +57,8 @@
                   <h3 className="text-xl font-semibold text-blue-400 mb-3">Implementation Strategy</h3>
                   <p className="text-white/90">
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     sharing data for comprehensive insights.
                   </p>
                 </div>
@@ -63,6 +84,12 @@
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link
 
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   href="/case-studies/ai-automation-manufacturing"
                   className="bg-fuchsia-500/10 rounded-lg p-6 border border-fuchsia-500/20 hover:border-fuchsia-400/50 transition-all duration-300"
                 >
@@ -79,6 +106,7 @@
               </div>
             </section>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Implement Similar Solutions?</h2>
@@ -112,6 +140,7 @@
 
   )
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     quality control, and production optimization. Each system was designed to work independently while;
                     sharing data for comprehensive insights.;
                   </p>;
@@ -146,3 +175,5 @@
           </div>;
         </main>;
       </div>;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

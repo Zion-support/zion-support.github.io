@@ -1,5 +1,10 @@
 
 
+=======
+export interface ThemeColors {;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   primaryColor: string;
   backgroundColor: string;
   textColor: string;
@@ -54,6 +59,14 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 }
 // Apply theme colors to document CSS variables
 export function applyThemeColors(colors: ThemeColors) {
+  switch (preset) {
+    case 'dark':;
+      return {
+
+
+  const root = document.documentElement,;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
@@ -68,3 +81,10 @@ export function applyThemeColors(colors: ThemeColors) {
 
 }
 ;
+;
+  // Set background and text colors on body;
+  document.body.style.background_color = colors.background_color;
+  document.body.style.color = colors.text_color;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

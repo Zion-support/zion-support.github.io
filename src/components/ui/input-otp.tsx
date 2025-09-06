@@ -1,9 +1,25 @@
+=======
+import * as React from "react"
+import { OTPInput, OTPInputContext } from "input-otp"
+import { Dot } from 'lucide-react'
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>
   React.ComponentPropsWithoutRef<typeof OTPInput>
->(({ className, containerClassName, ...props }, ref) => (
+></typeof>(({ className, containerClassName, ...props }, ref) => (
+import React from 'react';
+import * as React from 'react';
+import {OTPInput, OTPInputContext} from 'input-otp';
+import {Dot} from 'lucide-react';
+
+import {cn} from '@/lib/utils';
+
+const InputOTP = React && React.forwardRef<;
+  React && React.ElementRef<typeof OTPInput>,;
+  React && React.ComponentPropsWithoutRef<typeof OTPInput>;
+></typeof>(({ className, containerClassName, ...props }, ref) => (;
   <OTPInput
     ref={ref}
     containerClassName={cn(
@@ -41,23 +57,9 @@ const InputOTPSlot = React.forwardRef<
       )}
       {...props}
     >;
-
-      {char}
-      {hasFakeCaret && (
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <div className="h-4 w-px animate-caret-blink bg-foreground duration-1000" />
-        </div>
-      )}
-    </div>
-  )
-})
-
-const InputOTPSeparator = React.forwardRef<
-  React.ElementRef<"div">,
-  React.ComponentPropsWithoutRef<"div">
-
 >(({ ...props }, ref) => (
   <div ref={ref} role="separator" {...props}>
     <Dot />
   </div>
 ))
+<<<<<<< HEAD

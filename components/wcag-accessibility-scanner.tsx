@@ -18,6 +18,7 @@ export default function WCAGScannerPage() {;
       <Head>
         <title>{service.name} - Zion Tech Group</title>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
@@ -28,3 +29,12 @@ export default function WCAGScannerPage() {;
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+=======
+  );
+
+    </UltraAdvancedFuturisticBackground>);
+}
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

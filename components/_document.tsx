@@ -65,7 +65,26 @@ function Document() {
         <Main />;
         <NextScript />;
       </body>;
+
+  );
+}
+=======
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+=======
+
+
+import Document, {
+
+  Html,
+  Head,
+  Main,
+  NextScript,;
+  DocumentContext,;
+
+} from 'next/document';
+
+
+
 export default function Document() {
   return (
     <Html lang="en">
@@ -82,3 +101,11 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  );
+
+    </Html>);
+}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

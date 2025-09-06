@@ -1,3 +1,7 @@
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
@@ -13,26 +17,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     for (const lng of targets) {
       const langName = (
 
-        lng.startsWith('pt') ? 'Portuguese' :
-        lng.startsWith('es') ? 'Spanish' :
-        lng.startsWith('ar') ? 'Arabic' :
-        'English'
-
-      const completion = await openai.chat.completions.create({
-        model: 'gpt-4o-mini'
-        messages: [
-          { role: 'system', content: system },
-          { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }
-        ],
-        temperature: 0.2
-      });
-      const translated = completion.choices?.[0]?.message?.content?.trim() || '';
-      results[lng] = translated
-    }
-    return res.status(200).json(results)
-  } catch (err: any) {
-    console.error('Translation error', err)
-    return res.status(500).json({ error: 'Translation failed' })
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ translation: 'Translated content' });
@@ -120,3 +104,4 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

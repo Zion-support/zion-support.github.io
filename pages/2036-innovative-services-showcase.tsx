@@ -27,6 +27,31 @@ const categories = [
 ],
 const categoryIcons: { [key: string]: React.ReactNode } = {
 
+=======
+  'AI & Data': <Brain className="w-5 h-5" />,
+  'Quantum Technology': <Atom className="w-5 h-5" />,
+  'Space Technology': <Rocket className="w-5 h-5" />,
+  'IT Infrastructure': <Cpu className="w-5 h-5" />,
+  'Cybersecurity': <Shield className="w-5 h-5" />,
+  'Edge Computing': <Zap className="w-5 h-5" />,
+  'Blockchain': <Globe className="w-5 h-5" />,
+  'Manufacturing': <Building className="w-5 h-5" />,
+  'Healthcare AI': <Eye className="w-5 h-5" />,
+  'Emerging Technology': <Lightbulb className="w-5 h-5" />,
+  'Biotechnology': <Target className="w-5 h-5" />,
+  'Human-Computer Interaction': <Users className="w-5 h-5" />,
+  'Metaverse': <Globe className="w-5 h-5" />,
+  'Autonomous Systems': <Rocket className="w-5 h-5" />,
+  'Climate Technology': <Globe className="w-5 h-5" />
+},
+export default function InnovativeServicesShowcase2036() {
+  const [selectedCategory, setSelectedCategory] = useState('All Services'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'marketSize'>('name'),
+  const allServices = [...real2036InnovativeServices, ...real2036SpecializedServices],
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'All Services' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -112,20 +137,84 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
           </motion.h1>
 
           >
+            2036 Innovative Services
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+          >
             Experience the future of technology with our cutting-edge micro SAAS services,
             AI platforms, and quantum solutions. Transform your business with next-generation innovation.
           </motion.p>
+            animate={{ opacity: 1, y: 0 }}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
               Explore Services
             </button>
             <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
               Contact Us
+
             </button>
           </motion.div>
         </div>
       </section>
 
+      {/* Contact Information */}
+      <section className='py-12 px-4 bg-gradient-to-r from-gray-900 to-gray-800'>;
+        <div className='max-w-6xl mx-auto'>;
+          <motion&& motion.div
+            className='grid grid-cols-1 md:grid-cols-3 gap-8'            initial={{ opacity: 0, y: 20 }}
+
+          >
+
+
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}>;
+            <div className='text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300'>;
+              <Phone className='w-8 h-8 mx-auto mb-4 text-cyan-400' />;
+              <h3 className='text-lg font-semibold mb-2'>Phone</h3>;
+              <p className='text-gray-300'>{contactInfo && contactInfo.mobile}</p>;
+            </div>;
+            <div className='text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300'>;
+              <Mail className='w-8 h-8 mx-auto mb-4 text-cyan-400' />;
+              <h3 className='text-lg font-semibold mb-2'>Email</h3>;
+              <p className='text-gray-300'>{contactInfo && contactInfo.email}</p>;
+            </div>;
+            <div className='text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300'>;
+              <MapPin className='w-8 h-8 mx-auto mb-4 text-cyan-400' />;
+              <h3 className='text-lg font-semibold mb-2'>Address</h3>;
+              <p className='text-gray-300'>{contactInfo && contactInfo.address}</p>            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      {/* Services Section */}
+      <section className='py-20 px-4'>;
+        <div className='max-w-7xl mx-auto'>;
+          {/* Section Header */}
+          <motion&& motion.div
+            className='text-center mb-16'            initial={{ opacity: 0, y: 20 }}
+
+=======
+      {/* Contact Information */}
+      <section className='py-12 px-4 bg-gradient-to-r from-gray-900 to-gray-800'>
+        <div className='max-w-6xl mx-auto'>
+          <motion.div
+            className='grid grid-cols-1 md:grid-cols-3 gap-8'            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
 
             <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
@@ -147,6 +236,27 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
         </div>
       </section>
 
+=======
+
+          >
+
+
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
+              Revolutionary Services;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Discover our comprehensive portfolio of innovative micro SAAS;
+              services, AI platforms, and cutting-edge technology solutions;
+              designed for the future.            </p>;
+          </motion && motion.div>;
+
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Revolutionary Services
@@ -154,6 +264,13 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
 
           {/* Filters and Controls */}
 
+=======
+          <motion.div 
+            className="mb-12 space-y-6"
+            initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}>;
@@ -263,6 +380,7 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
           >;
             {/* Search and View Controls */}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {/* Filters and Controls */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -337,6 +455,14 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
                   <option value="marketSize">Sort by Market Size</option>
                 </select>
 
+                  >
+                    <Grid className="w-5 h-5" />
+                  </button>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <button
                     onClick={() => setViewMode('grid')  } catch (error) {
     console.error("Error:", error);
@@ -373,15 +499,33 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
+          {/* Services Grid */}
+          <motion&& motion.div
+            variants={containerVariants}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 variants={itemVariants}
                 className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
                   viewMode === 'list' ? 'flex gap-6' : ''
 
+=======
+                }`}>;
+                {viewMode === 'list' && (;
+                  <div className='flex-shrink-0'>;
+                    <div className='w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-2xl'>;
+                      {categoryIcons[service && service.category] || (;
+                        <Star className='w-8 h-8' />;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       )}
                     </div>;
                   </div>;
                 )}
+
+
                 <div className='flex-1'>;
+
                   {/* Service Header */}
                   <div className='mb-4'>;
                     <div className='flex items-start justify-between mb-2'>;
@@ -397,6 +541,7 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
                             {service && service.period}
                           </span>;
                         )}
+
                   <option value='market_size'>Sort by Market Size</option>;
                 </select>;
                 <div className='flex bg - gray - 800 / 50 border border - gray - 700 rounded - lg p - 1'>                  <button;
@@ -471,10 +616,12 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
                       </div>;
                     </div>;
                     <p className='text - cyan - 400 font - medium mb - 2'>;
+
                       {service.tagline}
                     </p>;
                     <p className='text - gray - 300 text - sm leading - relaxed'>;
                       {service.description}
+
                       </div>;
                     </div>;
                     <p className='text-cyan-400 font-medium mb-2'>;
@@ -484,12 +631,7 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
                       {service && service.description}
                     </p>;
                   </div>;
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-2xl">
-                      {categoryIcons[service.category] || <Star className="w-8 h-8" />}
-                    </div>
-                  </div>
-                )}
+
                 <div className="flex-1">
                   {/* Service Header */}
 
@@ -530,6 +672,16 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
 
                     {/* Features */}
 
+                    {service && service.marketSize && (;
+                      <div className='text-sm text-gray-400'>;
+                        Market Size:{' '}
+                        <span className='text-green-400 font-medium'>;
+                          {service && service.marketSize}
+                        </span>                      </div>;
+                    )}
+                    {/* Features */}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     <div>
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                       <div className="grid grid-cols-1 gap-1">
@@ -551,6 +703,31 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
                       </div>
                     )}
                     {/* Competitive Advantage */}
+                        {service.features.length > 4 && (
+                          <div className="text-xs text-gray-500 mt-1">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                            +{service.features.length - 4} more features
+                          </div>
+
+=======
+
+                        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                      </div>;
+                    </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                    {/* Target Audience */}
+
+
+                    )}
+                    {/* Competitive Advantage */}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     {service.competitiveAdvantage && (
                       <div>
                         <h4 className="text-sm font-semibold text-gray-300 mb-2">Competitive Advantage:</h4>
@@ -576,11 +753,51 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
                 </div>
               </motion.div>
 
+            whileInView={{ opacity: 1 }}
+
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}>;
+            Showing {sortedServices && sortedServices.length} of {allServices && allServices.length} services;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+
+      {/* Call to Action */}
+      <section className='py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800'>;
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
+              Ready to Transform Your Business?;
+            </h2>;
+            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
+              Join the future of technology with our innovative services.;
+              Contact us today to discuss how we can help you achieve your;
+              goals.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <a
+                href={`mailto:${contactInfo && contactInfo.email}`}
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25'>;
+                Get Started Today;
+              </a>;
+              <a
+
+
+      {/* Call to Action */}
+      <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
@@ -603,6 +820,63 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
         </div>
       </section>
     </Layout>
+=======
+
+
+),
+
+};
+
+
+const itemVariants = {
+  hidden: {
+  y: 20, opacity: 0
+}
+visible: {
+  y: 0, opacity: 1, transition: {
+  duration: 0.5
+}
+}%`;
+top: `$ {
+  Math.random () * 100
+}%`
+}animate= {
+  {
+  y: [0, -100, 0], opacity: [0.3, 1, 0.3]
+}transition= {
+  {
+  duration: 3 + Math.random () * 2, repeat: Infinity, delay: Math.random () * 2
+}/>) )
+}</div> <div className="relative z-10 text-center max-w-6xl mx-auto" > <motion.h1 > 2036 Innovative Services </motion.h1> <motion.p > Experience the future of technology with our cutting-edge micro SAAS services;
+AI platforms, and quantum solutions. Transform your business with next-generation innovation. </motion.p> <motion.div > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25" > Explore Services </button> <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Contact Us </button> </motion.div> </div> </section> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of innovative micro SAAS services
+AI platforms, and cutting-edge technology solutions designed for the future. </p> </motion.div> {
+  /* Filters and Controls */
+}<motion.div /> </div> <div className="flex gap-4 items-center" > <select > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="rating" >Sort by Rating</option> <option value="marketSize" >Sort by Market Size</option> </select> <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1" > <button onClick= {
+  () => setViewMode ('grid')
+}className= {
+  `p-2 rounded $ {
+  viewMode === 'grid'? 'bg-cyan-500 text-black': 'text-gray-400 hover:text-white'
+}`
+}> <Grid className="w-5 h-5" /> </button> <button onClick= {
+  () => setViewMode ('list')
+}className= {
+  `p-2 rounded $ {
+  viewMode === 'list'? 'bg-cyan-500 text-black': 'text-gray-400 hover:text-white'
+}`
+}> <List className="w-5 h-5" /> </button> </div> </div> </div> key= {
+  category
+}onClick= {
+  () => setSelectedCategory (category)
+}className= {
+  `px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 $ {
+  selectedCategory === category ? 'bg-cyan-500 text-black border-cyan-500': 'bg-gray-800/50 text-gray-300 border-gray-700 hover:border-cyan-400 hover:text-cyan-400'
+}`
+}> </button>) )
+}</div> </motion.div> {
+  /* Services Grid */
+}<motion.div > {
+  sortedServices.map ( (service, index) => (<motion.div key= {
+  service.id
 
 const itemVariants = {
   hidden: {
@@ -658,6 +932,7 @@ AI platforms, and cutting-edge technology solutions designed for the future. </p
   itemVariants
 }className= {
   `bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 $ {
+
           >;
             Showing {sorted_services.length} of {all_services.length} services;
           </motion.div>;
@@ -814,3 +1089,10 @@ AI platforms, and cutting - edge technology solutions designed for the future. <
   duration: 0 && 0.6
 }viewport= {
   {
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

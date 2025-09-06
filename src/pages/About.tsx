@@ -1,109 +1,206 @@
 import React from 'react';
-import Card from '../components/Card';
+import { Header } from '../components/Header';
+import Footer from '../components/Footer';
+import { GradientHeading } from '../components/GradientHeading';
+import { Card, CardContent } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
+import { Button } from '../components/ui/button';
+import { 
+  Users, 
+  Target, 
+  Award, 
+  Globe, 
+  Lightbulb, 
+  Shield,
+  CheckCircle,
+  ArrowRight
+} from 'lucide-react';
 
 const About: React.FC = () => {
+  const teamMembers = [
+    {
+      name: 'John Smith',
+      role: 'CEO & Founder',
+      image: '/team/john-smith.jpg',
+      bio: 'Visionary leader with 15+ years in tech innovation.',
+    },
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      image: '/team/sarah-johnson.jpg',
+      bio: 'Technical architect specializing in scalable solutions.',
+    },
+    {
+      name: 'Mike Chen',
+      role: 'Lead Developer',
+      image: '/team/mike-chen.jpg',
+      bio: 'Full-stack developer passionate about clean code.',
+    },
+  ];
+
+  const values = [
+    {
+      icon: <Target className="h-8 w-8 text-blue-500" />,
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of what\'s possible in technology.',
+    },
+    {
+      icon: <Shield className="h-8 w-8 text-green-500" />,
+      title: 'Security',
+      description: 'Your data and privacy are our top priorities in everything we build.',
+    },
+    {
+      icon: <Users className="h-8 w-8 text-purple-500" />,
+      title: 'Collaboration',
+      description: 'We believe in the power of teamwork and open communication.',
+    },
+    {
+      icon: <Award className="h-8 w-8 text-yellow-500" />,
+      title: 'Excellence',
+      description: 'We strive for the highest quality in every project we deliver.',
+    },
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '5+', label: 'Years Experience' },
+    { number: '24/7', label: 'Support Available' },
+  ];
+
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
-            About Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
-            We are a leading technology company specializing in AI, cybersecurity, 
-            and cloud infrastructure solutions that transform businesses and drive innovation.
-          </p>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <Header onMenuClick={() => {}} />
+      
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto text-center">
+            <GradientHeading text="About Zion Tech Group" />
+            <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+              We are a leading technology company dedicated to delivering innovative 
+              solutions that transform businesses and drive growth in the digital age.
+            </p>
+          </div>
+        </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              To empower businesses with cutting-edge technology solutions that drive growth, 
-              enhance security, and unlock new possibilities in the digital age.
-            </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              We believe in the transformative power of technology and are committed to 
-              delivering solutions that not only meet today's needs but anticipate tomorrow's challenges.
-            </p>
+        {/* Stats Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-4xl font-bold text-blue-600 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-600">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              To be the world's most trusted technology partner, known for innovation, 
-              reliability, and exceptional service delivery.
-            </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              We envision a future where technology seamlessly integrates with business 
-              operations to create unprecedented value and opportunities.
-            </p>
-          </div>
-        </div>
+        </section>
 
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-8">Why Choose Us?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card 
-              title="Expert Team" 
-              description="Our team consists of industry-leading experts with decades of combined experience in cutting-edge technologies." 
-            />
-            <Card 
-              title="Proven Track Record" 
-              description="We have successfully delivered hundreds of projects for clients across various industries and sectors." 
-            />
-            <Card 
-              title="24/7 Support" 
-              description="Our dedicated support team is available around the clock to ensure your systems run smoothly." 
-            />
-            <Card 
-              title="Innovation Focus" 
-              description="We stay at the forefront of technology trends to deliver the most advanced solutions." 
-            />
-            <Card 
-              title="Security First" 
-              description="Security is embedded in everything we do, ensuring your data and systems are always protected." 
-            />
-            <Card 
-              title="Scalable Solutions" 
-              description="Our solutions are designed to grow with your business, adapting to your changing needs." 
-            />
-          </div>
-        </div>
+        {/* Mission & Vision */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="grid md:grid-cols-2 gap-12">
+              <Card className="p-8">
+                <div className="flex items-center mb-6">
+                  <Target className="h-8 w-8 text-blue-500 mr-3" />
+                  <h3 className="text-2xl font-bold">Our Mission</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed">
+                  To empower businesses with cutting-edge technology solutions that 
+                  drive innovation, efficiency, and growth. We believe technology 
+                  should be accessible, reliable, and transformative.
+                </p>
+              </Card>
 
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-8">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎯</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Excellence</h3>
-              <p className="text-gray-300">We strive for excellence in everything we do</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🤝</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Collaboration</h3>
-              <p className="text-gray-300">We work closely with our clients as partners</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">💡</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Innovation</h3>
-              <p className="text-gray-300">We embrace new ideas and technologies</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🛡️</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Integrity</h3>
-              <p className="text-gray-300">We maintain the highest ethical standards</p>
+              <Card className="p-8">
+                <div className="flex items-center mb-6">
+                  <Globe className="h-8 w-8 text-green-500 mr-3" />
+                  <h3 className="text-2xl font-bold">Our Vision</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed">
+                  To be the global leader in technology solutions, creating a world 
+                  where every business can leverage the power of technology to achieve 
+                  their goals and make a positive impact.
+                </p>
+              </Card>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+
+        {/* Values Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
+              <p className="text-xl text-gray-600">
+                The principles that guide everything we do
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
+                  <div className="flex justify-center mb-4">
+                    {value.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
+                  <p className="text-gray-600">{value.description}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+              <p className="text-xl text-gray-600">
+                The talented individuals behind our success
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {teamMembers.map((member, index) => (
+                <Card key={index} className="p-6 text-center">
+                  <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Users className="h-12 w-12 text-gray-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+                  <Badge variant="secondary" className="mb-3">{member.role}</Badge>
+                  <p className="text-gray-600">{member.bio}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
+            <p className="text-xl mb-8 opacity-90">
+              Let's discuss how we can help transform your business with technology.
+            </p>
+            <div className="space-x-4">
+              <Button size="lg" variant="secondary">
+                Get Started
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600">
+                Learn More
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 };

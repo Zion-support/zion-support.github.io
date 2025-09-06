@@ -1,5 +1,7 @@
 
 
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -10,9 +12,13 @@ import {AppTestimonials} from "@/components/mobile-app/AppTestimonials";
 import {AppStoreBanner} from "@/components/mobile-app/AppStoreBanner";
 import {DownloadSection} from "@/components/mobile-app/DownloadSection";
 
+=======
 const MobileAppPage: React.FC = () => {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-    <AppLayout>
+
+    <AppLayout>;
+
       <SEO
         title="Zion AI Marketplace App"
         description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now."
@@ -56,3 +62,7 @@ const MobileAppPage: React.FC = () => {;
 },;
 
 export default MobileAppPage;
+export default MobileAppPage;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

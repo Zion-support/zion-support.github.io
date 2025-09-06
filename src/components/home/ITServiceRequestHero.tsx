@@ -13,22 +13,31 @@ import { logErrorToProduction } from '@/utils/productionLogger'; export function
   hidden: { opacity: 0
   y: 20
 }
+      setIsSubmitting (true);
+      // Simulate API call;
+      set_timeout (: unknown {
+        setIsSubmitting (false);
+        router (`/it - onsite - services?location = ${encodeURIComponent (location)}`)}, 1000)}}}}}}}}}}
+  const container_variants = {
+  hidden: { opacity: 0,
+  coordinate_y: 20;
+},
     visible: {
-      opacity: 1
-      y: 0
+      opacity: 1,
+      coordinate_y: 0,
       transition: {
-        duration: 0.6
-        staggerChildren: 0.2
+        duration: 0.6,
+        stagger_children: 0.2;
 }
 }
 }
-  const itemVariants = {
-  hidden: { opacity: 0
-  y: 20
-}
+  const item_variants = {
+  hidden: { opacity: 0,
+  coordinate_y: 20;
+},
     visible: {
-      opacity: 1
-      y: 0
+      opacity: 1,
+      coordinate_y: 0,
       transition: { duration: 0.5 }
 }
 }
@@ -69,7 +78,7 @@ export function ITServiceRequestHero() {
     setIsSubmitting(true)
 
     try {
-      const res = await axios.post("/api/onsite-request", {
+      const res = await axios.post ('/api / onsite - request', {
         name,
         email,
         phone,
@@ -94,9 +103,16 @@ export function ITServiceRequestHero() {
       logErrorToProduction(err)
       toast({
 
+=======
+        title: 'Submission Failed',
+        description: 'There was an error submitting your request.',
+        variant: 'destructive',
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       })
+
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting (false);
     }
   }
 
@@ -122,6 +138,21 @@ export function ITServiceRequestHero() {
                 {t(
                   'onsite_form.name_helper'
                   'Enter the main contact for this request.'
+
+                onChange={e => setName(e && e.target.value)}
+                className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required;
+              />;
+              <p className='text-xs text-zion-slate-light'>;
+                {t(;
+                  'onsite_form && onsite_form.name_helper',;
+                  'Enter the main contact for this request.';
+
+                )}
+              </p>;
+              <Input
+                type='email'
+                value={email}
+
                 )}
               </p>
               <Input
@@ -136,8 +167,15 @@ export function ITServiceRequestHero() {
                 {t(
                   'onsite_form.email_helper'
                   "We'll confirm your request here."
+                onChange={e => setEmail(e && e.target.value)}
+                className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required;
+              />;
+              <p className='text-xs text-zion-slate-light'>;
+                {t(;
+                  'onsite_form && onsite_form.email_helper',;
+                  "We'll confirm your request here.";
                 )}
-              </p>
+              </p>;
               <Input
                 value={phone}
 
@@ -148,14 +186,14 @@ export function ITServiceRequestHero() {
                   'onsite_form.phone_helper'
                   'Include a direct line for urgent updates.'
                 )}
-              </p>
+              </p>;
               <Input
                 value={company}
-                onChange={e => setCompany(e.target.value)}
-                className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'              />
-              <p className='text-xs text-zion-slate-light'>
-                {t('onsite_form.company_helper', 'Who do you represent?')}
-              </p>
+                onChange={e => setCompany(e && e.target.value)}
+                className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'              />;
+              <p className='text-xs text-zion-slate-light'>;
+                {t('onsite_form && onsite_form.company_helper', 'Who do you represent?')}
+              </p>;
               <Input
                 value={location}
                 onChange={e => setLocation(e.target.value)}
@@ -191,15 +229,6 @@ export function ITServiceRequestHero() {
                 disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105"
               >
-
-                {isSubmitting && (
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                )}
-                Request Service
-              </Button>
-            </form>
-          </div>
-
           </p>
         </div>
       </div>
@@ -235,5 +264,7 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
   isSubmitting && (<Loader2 className="mr-2 h-4 w-4 animate-spin" />
 }Request Service </Button> </form> </div>
 }'"
+
 }
 }
+<<<<<<< HEAD

@@ -7,8 +7,10 @@ interface SkeletonProps {
 
 }) => {
   return (
+
     <motion.div;
       className={`bg - white / 10 animate - pulse ${height} ${width} ${rounded} ${class_name}`}
+
       animate={{
         opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
       transition={{
@@ -54,6 +56,7 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
     </div>;
   );
   )
+
 };
 interface HeroSkeletonProps {;
   className?: string;
@@ -98,3 +101,20 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
 export default Skeleton;  );
 };
 export default Skeleton;
+=======
+
+
+
+=======
+
+=======
+
+interface SkeletonProps {
+  className?: string;
+  height?: string;
+  width?: string;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

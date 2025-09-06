@@ -2,6 +2,7 @@ import type { NextPage } from \'next\'; import Head from \'next/head\'; import L
 import React from 'react';
 interface IndexProps {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function Index({ }: IndexProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -29,3 +30,4 @@ interface IndexProps {;
 export default function Index(): any ({ }: IndexProps) {;
   return (
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

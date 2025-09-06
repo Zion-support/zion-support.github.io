@@ -18,6 +18,10 @@ import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
 
+=======
+    s.link.endsWith("/quantum-internet-security-platform"),;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
   if (!service) return null;
 
@@ -109,5 +113,9 @@ export default function QuantumInternetSecurityPage() {
     </UltraAdvancedFuturisticBackground>
   );
 
+<<<<<<< HEAD
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 ;

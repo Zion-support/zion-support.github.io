@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "totalFiles": 1,
+    "filesWithIssues": 1,
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+          "severity": "warning"
+        }
+      ]
+    }
+  ],
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  "buildBreakingFiles": [
+    "pages/services-enhanced.tsx"
+  ],
+  "generatedAt": "2025-08-21T00:58:31.338Z"  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-19T18:31:39.368Z"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}

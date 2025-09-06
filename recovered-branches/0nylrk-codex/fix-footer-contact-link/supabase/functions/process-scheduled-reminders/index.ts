@@ -8,22 +8,39 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
 
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers":
+
+
+    "authorization, x-client-info, apikey, content-type"},
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 serve(async (req: Request) => {
   // Handle CORS
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, {
       status: 204
       headers: corsHeaders})
   }
   try {
     const supabase = createClient(
-      supabaseUrl,
+      supabaseUrl;
       supabaseServiceKey
 
+=======
+    const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
+    
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (error) {
-      console.error("Failed to create scheduled reminders:", error),
+      console && console.error("Failed to create scheduled reminders:", error);
       return new Response(
-        JSON.stringify({ error: "Failed to create scheduled reminders", details: error }),
+        JSON && JSON.stringify({ error: "Failed to create scheduled reminders", details: error });
         {
           status: 500
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -36,10 +53,17 @@ serve(async (req: Request) => {
       .eq("job_type", "onboarding_reminder")
       .eq("status", "pending")
 
+=======
+
+      .lt("scheduled_for", new Date().toISOString()),
+    
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (jobsError) {
-      console.error("Failed to fetch pending jobs:", jobsError),
+      console && console.error("Failed to fetch pending jobs:", jobsError);
       return new Response(
-        JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError }),
+        JSON && JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError });
         {
           status: 500
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -50,46 +74,39 @@ serve(async (req: Request) => {
       for (const job of pendingJobs) {
         // Call the send-onboarding-reminder function for each job
         const reminderResponse = await fetch(
-          `${supabaseUrl}/functions/v1/send-onboarding-reminder`,
+          `${supabaseUrl}/functions/v1/send-onboarding-reminder`;
           {
-            method: "POST",
+            method: "POST";
             headers: {
 
-        if (reminderResponse.ok) {
-          // Update job status to completed
-          const { error: updateError } = await supabase
-            .from("scheduled_jobs")
-            .update({
-              status: "completed"
-              completed_at: new Date().toISOString()})
-
           if (updateError) {
-            console.error("Failed to update job status:", updateError)
+            console && console.error("Failed to update job status:", updateError)
           } else {
-            processedJobs.push(job.id)
+            processedJobs && processedJobs.push(job && job.id)
           }
         } else {
-          console.error("Failed to send reminder for job:", job.id),
+          console && console.error("Failed to send reminder for job:", job && job.id);
           // Update job status to failed
           await supabase
             .from("scheduled_jobs")
             .update({
               status: "failed"})
-            .eq("id", job.id)
+            .eq("id", job && job.id)
         }
       }
     }
     return new Response(
       JSON.stringify({
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
   } catch (error) {
-    console.error(error),
+    console && console.error(error);
     return new Response(
-      JSON.stringify({ error: "Internal server error", details: error.message }),
+      JSON && JSON.stringify({ error: "Internal server error", details: error && error.message });
       {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -97,3 +114,8 @@ serve(async (req: Request) => {
 
   }
 });
+  }
+});
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,4 +1,17 @@
 
+=======
+import React from "react",;
+import { BadgeDollarSign } from "lucide-react",;
+import { useWallet } from "@/hooks/useWallet",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Skeleton } from "@/components/ui/skeleton",;
+;
+export function TokenDisplay() {;
+  const { wallet, loading } = useWallet(),;
+;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card>;
       <CardHeader className="flex flex-row items-center justify-between pb-2">;
         <div>;
@@ -10,6 +23,7 @@
       <CardContent>;
         {loading ? (;
           <Skeleton className="h-12 w-28" />;
+<<<<<<< HEAD
 
           <div className="flex flex-col gap-2">;
             <div className="flex items-end">;
@@ -20,9 +34,4 @@
               Use your tokens to boost visibility, access premium features, or convert to credits.;
             </p>;
             <div className="mt-2">;
-
-              <Button variant="outline" size="sm">;
-                View Wallet;
-              </Button>;
-            </div>;
 

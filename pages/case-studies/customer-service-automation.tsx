@@ -29,12 +29,93 @@
             </p>
           </header>
 
+          <header className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30 mb-6">
+              Financial Services Industry
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Intelligent Customer Service Automation
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              How a Financial Services Provider achieved 80% reduction in response time with AI-powered chatbots and automated ticket routing
+            </p>
+          </header>
+
+=======
+import React from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+export default /**
+ * CaseStudyPage - Function description
+ */
+function CaseStudyPage() {
+  return (
+    <>;
+      <Head>;
+        <title > Intelligent Customer Service Automation - Case Study | Zion Tech Group</title>;
+        <meta name="description" content="Discover how a Financial Services Provider achieved 80% reduction in response time with AI - powered chatbots and automated ticket routing. Read our detailed case study." />;
+        <meta name="keywords" content="customer service automation, chatbots, AI automation, ticket routing, sentiment analysis" />;
+      </Head>;
+      <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - gray - 900">;
+        <main className="container mx - auto px - 6 py - 12">;
+          {/* Breadcrumb */}
+          <nav className="mb - 8">;
+            <Link href="/" className="text - white / 60 hover:text - white transition - colors">;
+              Home;
+            </Link>;
+            <span className="text - white / 60 mx - 2">→</span>;
+            <Link href="/case - studies" className="text - white / 60 hover:text - white transition - colors">;
+              Case Studies;
+            </Link>;
+            <span className="text - white / 60 mx - 2">→</span>;
+            <span className="text - white">Intelligent Customer Service Automation</span>;
+          </nav>;
+          {/* Header */}
+          <header className="text - center mb - 16">;
+            <div className="inline - block px - 4 py - 2 bg - green - 400 / 20 text - green - 400 text - sm rounded - full border border - green - 400 / 30 mb - 6">;
+              Financial Services Industry;
+            </div>;
+            <h1 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
+              Intelligent Customer Service Automation;
+            </h1>;
+            <p className="text - xl text - white / 80 max - w-3xl mx - auto">;
+              How a Financial Services Provider achieved 80% reduction in response time with AI - powered chatbots and automated ticket routing;
+            </p>;
+          </header>;
+
+          {/* Case Study Content */}
+          <div className="max - w-4xl mx - auto">;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            {/* Company Overview */}
+
+
+          {/* Case Study Content */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="max-w-4xl mx-auto">
+            {/* Company Overview */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">Financial Services Provider</h3>
                 <p className="text-white/90 text-lg mb-4">
 
+=======
+
+                  A leading financial services company serving millions of customers with banking,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   investment, and insurance products. The company faced challenges with high customer service costs and long response times.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
@@ -50,11 +131,7 @@
                     <div className="text-3xl font-bold text-green-400">$100M+</div>
                     <div className="text-white/70">Annual Revenue</div>
 
-                  </div>
-                </div>
-              </div>
-            </section>
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -75,12 +152,7 @@
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
 
-                    <span>Limited 24/7 support coverage</span>
-                  </li>
-                </ul>
-              </div>
-            </section>
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -105,6 +177,12 @@
                     <h4 className="text-xl font-semibold text-green-400 mb-3">Automated Ticket Routing</h4>
                     <p className="text-white/80">
 
+=======
+
+                      Smart routing algorithms automatically assign tickets to the most
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       qualified agents based on expertise and workload.
                     </p>
                   </div>
@@ -126,6 +204,17 @@
               </div>
             </section>
 
+=======
+
+            {/* Results */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -176,6 +265,7 @@
               </div>
             </section>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -186,6 +276,7 @@
 
                     </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -222,6 +313,7 @@
               </div>
             </section>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <section className="text-center">
               <div className="bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-2xl p-8 border border-green-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Customer Service?</h2>
@@ -268,3 +360,12 @@
           </div>;
         </main>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </>);
+}
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

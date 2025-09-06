@@ -1,3 +1,10 @@
+=======
+Card,
+  CardContent,
+  CardDescription,
+  CardHeader,;
+  CardTitle;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -20,7 +27,8 @@ export default function Partners() {;
   const { user, isAuthenticated } = useAuth();
   const router = useRouter();
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
-  useEffect(() => {
+
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -36,6 +44,7 @@ import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
 import { PartnerResources } from "@/components/partners/PartnerResources",
 
+<<<<<<< HEAD
   useEffect(() => {
     async function checkHealth() {
       try {

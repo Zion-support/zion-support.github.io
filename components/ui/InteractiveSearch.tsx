@@ -1,10 +1,36 @@
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
   placeholder?: string;
 }) {;
 export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...' }: { placeholder?: string }) {
   const [value, setValue] = useState('');
+
+
     >;
+
       <input
         value={value}
         onChange={e => setValue(e && e.target.value)}
@@ -14,6 +40,7 @@ export default function InteractiveSearch({ placeholder = 'Search talent, skills
 import React from "react";
 interface InteractiveSearchProps {;
   placeholder?: string;
+
   onSearch?: (query: string) => void,;
   className?: string}
 export default function InteractiveSearch() {;
@@ -22,6 +49,7 @@ export default function InteractiveSearch() {;
     e && e.preventDefault(),;
     const formData = new FormData(e && e.target as HTMLFormElement),";
     const query = formData && formData.get("search") as string,;
+
     onSearch?.(query)}
 ;
 export default /**
@@ -82,9 +110,13 @@ function InteractiveSearch() {
         <inputtype="text
           name="search
           placeholder="{placeholder}
+
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">",;
+
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"  />;
           </svg>;
         </button>;
       </div>;
     </form>;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

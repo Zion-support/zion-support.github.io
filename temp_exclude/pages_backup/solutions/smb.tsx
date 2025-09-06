@@ -1,6 +1,8 @@
+
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -37,7 +39,9 @@ const smbServices = [
   }
 ];
 
+
 export default function SMBSolutionsPage() {
+
   return (
     <Layout
       title="SMB Solutions - Zion Tech Group"
@@ -50,6 +54,7 @@ export default function SMBSolutionsPage() {
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0.8 }}
               className="text-center"
             >
@@ -63,6 +68,7 @@ export default function SMBSolutionsPage() {
             </motion.div>
           </div>
         </section>
+
 
         {/* Services Section */}
         <section className="py-16 px-4">
@@ -97,6 +103,8 @@ export default function SMBSolutionsPage() {
             </div>
           </div>
         </section>
+
+
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"

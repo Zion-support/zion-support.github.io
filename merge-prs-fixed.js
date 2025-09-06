@@ -40,13 +40,20 @@ try {;
             for (const file of files) {;
                 if (file.trim()) {;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     }
-                    execSync(`git add "${file}"`);
+                    exec_sync (`git add "${file}"`);
                 }
             }
 
+=======
+
+;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             // Commit the merge;
-            execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
+            exec_sync ('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
         }
     }
 

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+Crawl-delay: 1
+# Crawl delayCrawl-delay: 1
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -8,6 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(405).json({ error: 'Method not allowed' })
     return
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export const config = {;
   api: {;
     bodyParser: {;
@@ -48,3 +49,8 @@ export default async function handler(req, res) {
   } catch (e: any) {
 
   }
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

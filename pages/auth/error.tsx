@@ -1,3 +1,14 @@
+=======
+import { use_router } from 'next / router';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { AlertTriangle } from 'lucide-react';
+
+
+const errorMessages: Record<string string> = {;
+  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+  default: 'There was an issue with your authentication request.';
+
 
 
 }
@@ -26,6 +37,24 @@ export default function AuthErrorPage() {
               </Button>
               <Button asChild variant="outline" className="w-full">
                 <Link href="/">Go to Homepage</Link>
+      </Head>
+      <div className=&quot;min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4&quot;>
+        <Card className=&quot;w-full max-w-md&quot;>
+          <CardHeader className=&quot;space-y-1 text-center&quot;>
+            <div className=&quot;mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20&quot;>
+              <AlertTriangle className=&quot;h-6 w-6 text-red-600 dark:text-red-400&quot; />
+            </div>
+            <CardTitle className=&quot;text-2xl font-bold&quot;>Authentication Error</CardTitle>
+            <p className=&quot;text-sm text-muted-foreground&quot;>{message}</p>
+          </CardHeader>
+          <CardContent className=&quot;space-y-4&quot;>
+            <div className=&quot;text-center space-y-2&quot;>
+              <Button asChild className=&quot;w-full&quot;>
+                <Link href=&quot;/auth/login&quot;>Try Again</Link>
+              </Button>
+              <Button asChild variant=&quot;outline&quot; className=&quot;w-full&quot;>
+                <Link href=&quot;/&quot;>Go to Homepage</Link>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </Button>
             </div>
           </CardContent>
@@ -33,3 +62,48 @@ export default function AuthErrorPage() {
       </div>
     </>
   )
+=======
+
+import Link from 'next / link';
+import Head from 'next / head';
+const error_messages: Record < string string> = {
+  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+  default: 'There was an issue with your authentication request.';
+}
+export default /**
+ * AuthErrorPage - Function description
+ */
+function AuthErrorPage() {
+  const { query } = use_router ();
+  const message = error_messages[query.error as string] || error_messages.default;
+  return (
+    <>;
+      <Head>;
+        <title > Authentication Error - Zion Tech Marketplace</title>;
+        <meta name=&quot;description & quot; content=&quot;Authentication error page & quot; />;
+      </Head>;
+      <div className=&quot;min - h-screen flex items - center justify - center bg - gradient - to - br from - red - 50 to - orange - 100 dark:from - gray - 900 dark:to - gray - 800 p - 4&quot;>;
+        <Card className=&quot;w - full max - w-md & quot;>;
+          <CardHeader className=&quot;space - y-1 text - center & quot;>;
+            <div className=&quot;mx - auto mb - 4 flex h - 12 w - 12 items - center justify - center rounded - full bg - red - 100 dark:bg - red - 900 / 20 & quot;>;
+              <AlertTriangle className=&quot;h - 6 w - 6 text - red - 600 dark:text - red - 400 & quot; />;
+            </div>;
+            <CardTitle className=&quot;text - 2xl font - bold & quot;>Authentication Error</CardTitle>;
+            <p className=&quot;text - sm text - muted - foreground & quot;>{message}</p>;
+          </CardHeader>;
+          <CardContent className=&quot;space - y-4 & quot;>;
+            <div className=&quot;text - center space - y-2 & quot;>;
+              <Button as_child className=&quot;w - full & quot;>;
+                <Link href=&quot;/auth / login & quot;>Try Again</Link>;
+              </Button>;
+              <Button as_child variant=&quot;outline & quot; className=&quot;w - full & quot;>;
+                <Link href=&quot;/&quot;>Go to Homepage</Link>;
+              </Button>;
+            </div>;
+          </CardContent>;
+        </Card>;
+      </div>;
+    </>);
+
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

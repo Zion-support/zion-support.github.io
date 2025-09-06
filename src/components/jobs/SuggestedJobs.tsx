@@ -5,42 +5,82 @@ import { useJobSuggestions } from "@/hooks/useJobSuggestions"
 import { JobMatchesCard } from "./JobMatchesCard"
 import { NoJobsCard } from "./NoJobsCard"
 
-interface SuggestedJobsProps {
-  talentId?: string
-}
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 
-  const {
-    isLoading,
-    updateJobMatchStatus,
-    categorizedMatches: {
-
-      newMatches,
-      viewedMatches,
-      appliedMatches
-    }
-  } = useJobSuggestions(currentTalentId),
-
-  const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied'),
-    // In a real app, this might redirect to application form or open a modal
-  },
 
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined')
   },
 
   if (isLoading) {
+  // Check condition
+if ( {) {
+  $2
+}
     return (
+
+
+    updateJobMatchStatus, ;
+import { useAuth } from "@/hooks/useAuth";
+import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge";
+import { useJobSuggestions } from "@/hooks/useJobSuggestions";
+import { JobMatchesCard } from "./JobMatchesCard";
+import { NoJobsCard } from "./NoJobsCard";
       <div className="flex items-center justify-center p-6">
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
     )
 
+=======
+
+import { useAuth } from "@/hooks/useAuth",;
+import { Loader2 } from 'lucide-react';
+import { Badge } from "@/components/ui/badge",;
+import { useJobSuggestions } from "@/hooks/useJobSuggestions",;
+import { JobMatchesCard } from "./JobMatchesCard",;
+import { NoJobsCard } from "./NoJobsCard",;
+interface SuggestedJobsProps {;
+  talentId?: string;
+}
+
+export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
+  const { user } = useAuth();
+  const currentTalentId = talentId || user?.id;
+  const { ;
+    isLoading,;
+    updateJobMatchStatus, ;
+    categorizedMatches: { ;
+      newMatches,;
+      viewedMatches,;
+      appliedMatches ;
+    } ;
+  } = useJobSuggestions(currentTalentId);
+
+  const handleApply = (matchId: string, jobId: string) => {;
+    updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal;
+  };
+
+  const handleDecline = (matchId: string) => {;
+    updateJobMatchStatus(matchId, 'declined');
+  };
+  if (isLoading) {;
+    return (
+      <div className="flex items-center justify-center p-6">;
+        <Loader2 className="w-6 h-6 animate-spin text-primary" />;
+      </div>;
+    );
+  }
+
+  if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
+    return <NoJobsCard />;
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6">;
       {/* New Matches Section */}
       {newMatches.length > 0 && (
         <div className="space-y-4">
@@ -61,8 +101,8 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 
               />
             ))}
-          </div>
-        </div>
+          </div>;
+        </div>;
       )}
 
       {/* Previously Viewed Section */}
@@ -82,8 +122,8 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 
               />
             ))}
-          </div>
-        </div>
+          </div>;
+        </div>;
       )}
 
       {/* Applied Jobs Section */}
@@ -94,6 +134,18 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           </div>
 
                 key = {match.id,}
+
+      {/* Applied Jobs Section */}
+      {appliedMatches && appliedMatches.length > 0 && (;
+        <div className="space-y-4">;
+          <div className="flex items-center justify-between">;
+            <h3 className="text-lg font-medium">Applied Jobs</h3>;
+          </div>;
+
+          <div className="grid gap-4 md:grid-cols-2">;
+            {appliedMatches && appliedMatches.map(match => (;
+              <JobMatchesCard
+                key = {match && match.id,}
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
@@ -101,6 +153,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
               />
 
             ))}
-          </div>
-        </div>
+          </div>;
+        </div>;
       )}
+<<<<<<< HEAD

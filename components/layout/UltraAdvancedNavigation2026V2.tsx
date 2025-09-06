@@ -11,6 +11,38 @@ export default function UltraAdvancedNavigation2026V2() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {
     const handleScroll = () => {
+
+
+      name: 'Showcase',
+      href: '/enhanced-services-showcase-2026-v2',
+      icon: <Rocket className='w-4 h-4' />,
+    },
+    {
+      name: 'Pricing',
+      href: '/pricing-enhanced-2026',
+      icon: <Database className='w-4 h-4' />,
+    },
+    {
+      name: 'About',
+      href: '/about',
+      icon: <Globe className='w-4 h-4' />,
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: <Mail className='w-4 h-4' />,
+    },  ];
+
+
+
+  ];
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
+  }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Menu,;
   X,;
@@ -168,6 +200,8 @@ export default function UltraAdvancedNavigation2026V2() {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
+
+=======
       setIsScrolled(window.scrollY > 20)
     };
     window.addEventListener('scroll', handleScroll);
@@ -298,6 +332,7 @@ function UltraAdvancedNavigation2026V2() {
               </div>
             </div>
             <div className='flex items-center space-x-4'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href='/enhanced-services-showcase-2026-v2'
                 className='text-purple-400 hover:text-purple-300 transition-colors'
@@ -335,6 +370,24 @@ function UltraAdvancedNavigation2026V2() {
                 <div className="text-xs text-gray-400">Innovation 2026</div>
               </div>
             </Link>
+                🚀 New 2026 Services;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+
+            {/* Desktop Navigation */}
+            <div className='hidden lg:flex items-center space-x-8'>;
+              {navigationItems && navigationItems.map(item => (;
+                <div key={item && item.name} className='relative group'>                  {item && item.dropdown ? (;
+                    <button
+                      onMouseEnter={() => setActiveDropdown(item && item.name)}
+                      onMouseLeave={() => setActiveDropdown(null)}            {/* Logo */}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <Link href="/" className="flex items-center space-x-3 group">;
               <div className="relative">;
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300">;
@@ -348,10 +401,12 @@ function UltraAdvancedNavigation2026V2() {
               </div>;
             </Link>;
             {/* Desktop Navigation */}
+
             <div className="hidden lg:flex items-center space-x-8">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   {item.dropdown ? (
+
                     <button
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
@@ -359,8 +414,7 @@ function UltraAdvancedNavigation2026V2() {
                     >
                       {item.icon}
                       <span>{item.name}</span>
-
-                    </Link>
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   )}
                   {/* Dropdown Menu */}
                   {item && item.dropdown && activeDropdown === item && item.name && (;
@@ -387,19 +441,24 @@ function UltraAdvancedNavigation2026V2() {
                             <span className="text-gray-300 group-hover:text-white transition-colors">
                               {dropdownItem.name}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                             </span>
                           </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
                       </div>;
                     </div>;
                   )}
                 </div>;
               ))}
+
             </div>
 
               <Link href="/contact">
                 <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   Get Started
                 </button>
               </Link>
@@ -422,6 +481,136 @@ function UltraAdvancedNavigation2026V2() {
           </div>
         </div>
       </nav>
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+
+
+            </button>;
+          </div>;
+        </div>;
+      </nav>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Mobile Navigation */}
+      <AnimatePresence>;
+        {isOpen && (;
+          <motion&& motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+
+
+                <button
+                  onClick={() => setIsOpen(false)}
+
+                  className='p-2 text-gray-300 hover:text-white transition-colors';
+                >;
+                  <X className='w-6 h-6' />;
+                </button>;
+              </div>;
+              <div className='space-y-6'>;
+                {navigationItems && navigationItems.map(item => (;
+                  <div key={item && item.name}>;
+                    {item && item.dropdown ? (;
+                      <div>;
+
+                        <button
+                          onClick={() =>;
+                            setActiveDropdown(;
+                              activeDropdown === item && item.name ? null : item && item.name;
+                            );
+                          }
+                          className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3';
+                        >;
+                          <div className='flex items-center space-x-3'>;
+                            {item && item.icon}
+                            <span>{item && item.name}</span>;
+                          </div>;
+                          <ChevronDown
+                            className={`w-4 h-4 transition-transform duration-200 ${
+                              activeDropdown === item && item.name ? 'rotate-180' : ''
+                            }`}
+                          />;
+                        </button>;
+                        {activeDropdown === item && item.name && (;
+                          <div className='ml-6 mt-2 space-y-2'>;
+                            {item && item.dropdown.map(dropdownItem => (;
+                              <Link
+                                key={dropdownItem && dropdownItem.name}
+                                href={dropdownItem && dropdownItem.href}
+                                onClick={() => setIsOpen(false)}
+                                className='flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white';
+                              >;
+                                {dropdownItem && dropdownItem.icon}
+                                <span>{dropdownItem && dropdownItem.name}</span>;
+                              </Link>;
+                            ))}
+                          </div>;
+                        )}
+
+=======
+            transition={{ duration: 0.3 }}
+            className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden"
+          >
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-8">
+                <div className="text-xl font-bold text-white">Menu</div>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="p-2 text-gray-300 hover:text-white transition-colors"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              <div className="space-y-6">
+                {navigationItems.map((item) => (
+                  <div key={item.name}>
+                    {item.dropdown ? (
+                      <div>
+                            <button
+                              onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
+                            >
+                              <div className="flex items-center space-x-3">
+                                {item.icon}
+                                <span>{item.name}</span>
+                              </div>
+                              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                                activeDropdown === item.name ? 'rotate-180' : ''
+                              }`} />
+                            </button>
+                            {activeDropdown === item.name && (
+                              <div className="ml-6 mt-2 space-y-2">
+                                {item.dropdown.map((dropdownItem) => (
+                                  <Link
+                                    key={dropdownItem.name}
+                                    href={dropdownItem.href}
+                                    onClick={() => setIsOpen(false)}
+className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white"
+                                  >
+                                    {dropdownItem.icon}
+                                    <span>{dropdownItem.name}</span>
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                    ) : (
+
+                      <Link
+href={item && item.href}
+                        onClick={() => setIsOpen(false)}
+                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
+=======
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       {/* Mobile Navigation */}
       <AnimatePresence>
@@ -490,10 +679,13 @@ function UltraAdvancedNavigation2026V2() {
                         href={item.href}
                         onClick={() => setIsOpen(false)}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       >
                         {item.icon}
                         <span>{item.name}</span>
                       </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     )}
                   </div>;
                 ))}
@@ -508,27 +700,9 @@ function UltraAdvancedNavigation2026V2() {
                     </button>
                   </Link>
                 </div>
-                {/* Mobile Contact Info */}
-                <div className="pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400">
-                  <div className="flex items-center space-x-2">
-                    <Phone className="w-4 h-4 text-purple-400" />
-                    <span>{contactInfo.mobile}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Mail className="w-4 h-4 text-blue-400" />
-                    <span>{contactInfo.email}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="w-4 h-4 text-green-400" />
-                    <span className="text-xs">{contactInfo.address}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Overlay */}
       {isOpen && (;
         <motion&& motion.div
@@ -542,9 +716,41 @@ function UltraAdvancedNavigation2026V2() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
 
+  );
+
+}
+
+=======
+          className='fixed inset - 0 bg - black / 50 z - 40 lg:hidden'          on_click={() => setIsOpen (false)}          className="fixed inset - 0 bg - black / 50 z - 40 lg:hidden";
+          on_click={() => setIsOpen (false)}
+        />)}
+      {/* Spacer for fixed navigation */}
+      <div className='h - 32'></div>;
+    </>);      <div className="h - 32"></div>;
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+=======
+          className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}
+
+          onClick={() => setIsOpen(false)}
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         />
       )}
 
       {/* Spacer for fixed navigation */}
       <div className='h-32'></div>
     </>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

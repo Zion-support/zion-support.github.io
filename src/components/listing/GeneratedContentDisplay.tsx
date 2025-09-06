@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/card'
 interface GeneratedContent {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   description: string,
   tags: string[],
   suggestedPrice: {
@@ -39,6 +40,10 @@ interface GeneratedContentDisplayProps {;
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
 
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -62,3 +67,4 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
+<<<<<<< HEAD

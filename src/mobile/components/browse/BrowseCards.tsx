@@ -1,5 +1,6 @@
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -42,6 +43,12 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
       {items.map((item) => (
         <Card key={item.id} className="overflow-hidden">
 
+=======
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <CardContent className="p-0">
             <div className="p-4">
               <div className="flex justify-between">
@@ -147,21 +154,13 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                   )}
 
                     {badge}
-                  </Badge>;
+                  </Badge>
                 ))}
               </div>
 
               <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
 
               <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
-
-                {item.location && (
-                  <div className="flex items-center gap-1">
-                    <MapPin className="h-3 w-3" />
-                    <span>{item.location}</span>
-                  </div>
-                )}
-
                 {item.price && (
                   <div className="flex items-center gap-1">
                     <DollarSign className="h-3 w-3" />
@@ -216,3 +215,4 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
   );
 };
 }
+<<<<<<< HEAD

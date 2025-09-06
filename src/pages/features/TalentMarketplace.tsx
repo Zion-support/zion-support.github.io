@@ -12,6 +12,7 @@ import { GradientHeading } from "@/components/GradientHeading",
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
+
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -46,6 +47,10 @@ import { GradientHeading } from "@/components/GradientHeading",
             </div>
           </div>
 
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/talent">Browse Talent</Link>
@@ -55,3 +60,4 @@ import { GradientHeading } from "@/components/GradientHeading",
       </main>
     </>
   )
+<<<<<<< HEAD

@@ -4,6 +4,19 @@
 			description="An AI agent that continuously tracks competitors, markets, regulations, and technologies. It synthesizes findings, drafts briefs, and recommends actions—so your team stays ahead."
 			subtitle="Always-on competitive and market intelligence at analyst-level quality."
 
+=======
+
+
+=======
+			pricePerMonthUSD={1299  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 			implementationWeeks="Implementation: 1–2 weeks"
 			roiNote="Average ROI 3–6x within 60 days"
 			features={[
@@ -36,3 +49,4 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -5,14 +5,22 @@
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
   const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
+
+
+
   const [generating, setGenerating] = useState(false);
   const [episode, setEpisode] = useState<any>(null);
   const [synthesizing, setSynthesizing] = useState(false);
   const [publishing, setPublishing] = useState(false);
+=======
+
 
       alert('Failed to generate episode')
     } finally {
@@ -190,6 +198,7 @@
             </div>
             <div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               <div>
                 <h4 className="font-semibold">YouTube Description</h4>
@@ -370,6 +379,10 @@
             </div>;
             {episode.audio && (
 
+=======
+}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 {episode.audio.mp3Url && (
                   <a;
                     href={episode.audio.mp3Url}
@@ -387,3 +400,20 @@
                 {episode.audio.mp4Url && (
                   <a;
                     href={episode.audio.mp4Url}
+=======
+<<<<<<< HEAD
+                    className='text - blue - 600 underline';
+                  >;
+                    Download MP4;
+                  </a>)}              </div>              <div className="flex gap - 3">;
+                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text - blue - 600 underline">Download MP3</a>}
+                {episode.audio.wav_url && <a href={episode.audio.wav_url} className="text - blue - 600 underline">Download WAV</a>}
+                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text - blue - 600 underline">Download MP4</a>}
+            )}
+          </div>;
+        </section>)}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,4 +1,15 @@
 
+=======
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { TransactionHistory } from "@/components/transactions/TransactionHistory",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+;
+export default function Payments() {;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -11,6 +22,7 @@
               Track your payment history, manage transactions in escrow, and view your financial activities.;
             </p>;
           </div>;
+<<<<<<< HEAD
 
           <Tabs defaultValue="history" className="w-full">;
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">;

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface OnboardingStatus {
 
   profileCompleted: boolean
@@ -28,6 +29,12 @@ export function useOnboardingStatus() {
 
     responseReceived: false
 
+=======
+
+  }),
+  
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {
 
     const fetchOnboardingStatus = async () => {
@@ -40,9 +47,10 @@ export function useOnboardingStatus() {
           .eq('user_id', user.id)
 
         if (error) {
-          console.error("Error fetching onboarding status:", error),
+          console.error("Error fetching onboarding status:", error);
           return
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         }
         if (data) {
           setStatus({
@@ -54,6 +62,4 @@ export function useOnboardingStatus() {
             inviteSent: data.talent_invited |false
             responseReceived: data.quote_received |false
           })
-        }
-      } catch (err) {
-        console.error("Error in onboarding status hook:", err)
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

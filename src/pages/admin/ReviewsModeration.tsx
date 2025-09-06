@@ -1,5 +1,6 @@
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         description: "Failed to load reviews. Please try again later.",
         variant: "destructive"}),
       setIsLoading(false)
@@ -24,20 +25,6 @@
           </div>
         </div>
 
-              <Star className="h-5 w-5" />
-              Review Management
-            </CardTitle>
-            <CardDescription>
-              Review and moderate user-submitted reviews before they go live
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
-              <TabsList className="mb-6">
-                <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
-                <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
-              </TabsList>
-
               <TabsContent value="reported" className="mt-0">
                 <div className="text-center py-12 border rounded-lg">
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />
@@ -45,6 +32,12 @@
                   <p className="text-muted-foreground">
                     This section will show reviews that have been reported by users.
 
+=======
+                  </p>
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </div>
               </TabsContent>
             </Tabs>
@@ -52,4 +45,5 @@
         </Card>
       </main>
     </>
+<<<<<<< HEAD
   )

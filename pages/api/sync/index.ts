@@ -12,6 +12,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       counts: {
         totalEvents: scopedEvents.length,
 
+    const scope = state.config.scope,
+    const scopedEvents = filterEventsByScope(state.events, scope),
+    return res.status(200).json({
+      status: "ok",
+      instance_id: state.config.instance_id,
+      config: state.config,
+      lastSyncedAt: state.lastSyncedAt,
+      counts: {
+
+        totalEvents: scopedEvents.length,
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length,
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length,
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,

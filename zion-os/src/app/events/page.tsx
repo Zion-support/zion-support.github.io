@@ -1,4 +1,17 @@
 
+=======
+
+import Link from "next/link",;
+export const metadata = {;
+  title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",;
+  description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.",;
+  keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"},;
+export default function EventsPage() {;
+  return (;
+
+
+    <div className="min-h-screen">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="min-h-screen">;
 
       {/* Hero Section */}
@@ -29,6 +42,11 @@
                   Zion Tech Summit 2025;
                 </h2>;
 
+=======
+                <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
+                  Our flagship annual conference bringing together technology leaders, innovators,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   and visionaries to explore the future of AI, quantum computing, and enterprise;
                   technology solutions.;
                 </p>;
@@ -97,6 +115,12 @@
                 </svg>;
               </div>;
 
+=======
+              <h3 className="text - xl font - semibold mb - 3">Conferences</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                Large - scale industry events featuring keynote speakers, panel discussions,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 and networking opportunities;
               </p>;
               <Link href="/events / category / conferences" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
@@ -110,6 +134,12 @@
                 </svg>;
               </div>;
 
+=======
+              <h3 className="text - xl font - semibold mb - 3">Webinars</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                Online educational sessions covering specific topics, technologies,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 and industry trends;
               </p>;
               <Link href="/events / category / webinars" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
@@ -193,6 +223,11 @@
                 Quantum Computing Fundamentals;
               </h3>;
 
+=======
+              <p className="text - gray - 400 mb - 4 leading - relaxed">;
+                Hands - on workshop covering the basics of quantum computing, qubits,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 and quantum algorithms for beginners and intermediate developers.;
               </p>;
               <div className="flex items - center text - sm text - gray - 400 mb - 4">;

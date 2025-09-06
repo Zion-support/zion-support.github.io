@@ -1,15 +1,24 @@
 
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 console.log('🔧 Smart Code Fixer');
 console.log('=====');
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 console.log('🔧 Smart Code Fixer');
 console.log('=====');
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Function to fix unescaped entities only in JSX content
 function fixUnescapedEntities(content) {
   // Only replace single quotes that are not in import statements or string literals
@@ -43,6 +52,9 @@ function fixSpecificIssues(content, filePath) {
     modified = true;
   }
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Fix console.log statements in production files
   if (filePath.includes('pages/') || filePath.includes('components/')) {
     content = content.replace(/console\.log\([^)]*\);?/g, '');
@@ -51,6 +63,9 @@ function fixSpecificIssues(content, filePath) {
     }
   }
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Fix missing semicolons
   content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
   if (content !== content.replace(/([^;}])\n\s*}/g, '$1;\n}')) {
@@ -130,6 +145,8 @@ function main() {
   const targetDir = process.cwd();
   console.log(`🔍 Scanning directory: ${targetDir}`);
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const files = findFiles(targetDir);
   console.log(`📁 Found ${files.length} files to process`);
   let fixedCount = 0;
@@ -157,3 +174,8 @@ function main() {
 if (require.main === module) {
   main();
 }
+=======
+<<<<<<< HEAD
+module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

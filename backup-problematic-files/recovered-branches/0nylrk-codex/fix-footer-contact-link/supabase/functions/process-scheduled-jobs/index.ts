@@ -187,7 +187,7 @@ async function processContentGeneration(supabase, contentType) {;
         ),
 
         // Create notification for admin
-        await supabase && supabase.from('notifications').insert({
+        await supabase.from('notifications').insert({
           user_id: null, // System notification visible to admins
 
           read: false

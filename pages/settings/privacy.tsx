@@ -16,6 +16,24 @@ export default function PrivacySettingsPage() {
     else setMessage(json.error |'Failed to load')
     setLoading(false)
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const load = async () => {
+
+    if (!userId) return;
+    setLoading(true);
+    setMessage('');
+    const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`);
+    const json = await res.json();
+    if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
+    else setMessage(json.error || 'Failed to load');
+    setLoading(false)
+  };
+=======
+import React, { useEffect, useState } from 'react';
+export default function PrivacySettingsPage() {
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const save = async () => {
     if (!userId) return
     setLoading(true)
@@ -31,6 +49,7 @@ export default function PrivacySettingsPage() {
 
     load()
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <div className="p-6 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>
@@ -64,3 +83,5 @@ export default function PrivacySettingsPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

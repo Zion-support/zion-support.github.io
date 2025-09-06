@@ -1,4 +1,12 @@
 
+=======
+import NextAuth from './next - auth';,
+import CredentialsProvider from './next - auth / providers / credentials';,
+import { PrismaAdapter  } from '@auth / prisma - adapter';,
+import { prisma  } from '@/lib / prisma';,
+import bcrypt from './bcryptjs';,
+const handler = NextAuth ({
+  adapter: PrismaAdapter (prisma),
   providers: [;
     CredentialsProvider ({
       name: "credentials",
@@ -62,3 +70,14 @@ if ( {) {
         session.user.role = token.role;
       }
       return session;
+<<<<<<< HEAD
+=======
+
+    }},;
+  pages: {;
+    signIn: "/auth/signin",;
+    signUp: "/auth/signup"}}),;
+export { handler as GET, handler as POST };
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,0 +1,24 @@
+import type { AppProps } from 'next/app';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import '../styles/globals.css';
+import '../styles/enhanced-design-system.css';
+import '../styles/modern-design-system.css';
+import '../styles/globals.css';
+
+export default function MyApp({ Component, pageProps }: AppProps) {
+import type { AppProps } from 'next/app';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import '../styles/enhanced-design-system.css';
+import '../styles/modern-design-system.css';
+
+export default function MyApp({ Component, pageProps }: AppProps) {
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+  return (
+    <EnhancedLayout>
+      <Component {...pageProps} />
+    </EnhancedLayout>
+  );
+=======
+  );
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+}

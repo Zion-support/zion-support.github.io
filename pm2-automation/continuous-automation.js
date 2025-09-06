@@ -91,6 +91,9 @@ class ContinuousAutomation {
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     this.log(`Report generated: ${this.reportFile}`);
     return report;
   }
@@ -118,3 +121,7 @@ class ContinuousAutomation {
   }
 }
 
+<<<<<<< HEAD
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

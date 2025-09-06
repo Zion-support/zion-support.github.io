@@ -2,4 +2,7 @@ const securityHeaders = [{ key: "X-DNS-Prefetch-Control",value: "on" },{ key: "S
 const securityHeaders = [{ "key": 'X-DNS-Prefetch-Control',"value": 'on' },{ "key": 'Strict-Transport-Security',"value": 'max-age=630720;0;0; includeSubDomains; preload' },{ "key": 'X-XSS-Protection',"value": '1; mode=block' },{ "key": 'X-Frame-Options',"value": 'SAMEORIGIN' },{ "key": 'X-Content-Type-Options',"value": 'nosniff' },{ "key": 'Referrer-Policy',"value": 'origin-when-cross-origin' }]; module.exports = { securityHeaders };''
 const securityHeaders = [{ key: "X-DNS-Prefetch-Control",value: "on" },{ key: "Strict-Transport-Security",value: "max-age=630720;0;0; includeSubDomains; preload" },{ key: "X-XSS-Protection",value: "1; mode=block" },{ key: "X-Frame-Options",value: "SAMEORIGIN" },{ key: "X-Content-Type-Options",value: "nosniff" },{ key: "Referrer-Policy",value: "origin-when-cross-origin" }]; module.exports = { securityHeaders };'"'"
 const securityHeaders = [{ "key": 'X-DNS-Prefetch-Control',"value": 'on' },{ "key": 'Strict-Transport-Security',"value": 'max-age=630720;0;0; includeSubDomains; preload' },{ "key": 'X-XSS-Protection',"value": '1; mode=block' },{ "key": 'X-Frame-Options',"value": 'SAMEORIGIN' },{ "key": 'X-Content-Type-Options',"value": 'nosniff' },{ "key": 'Referrer-Policy',"value": 'origin-when-cross-origin' }]; module.exports = { securityHeaders };''
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

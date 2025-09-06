@@ -85,19 +85,30 @@ export function ApplicationActions({;
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-            onClick={() => onStatusChange(application.id, "rejected")}
-            className="text-red-600";
+            on_click={() => onStatusChange (application.id, 'rejected')}
+            className='text - red - 600'          >            on_click={() => onStatusChange (application.id, "hired")}
+          >;
+            Hire;
+          </DropdownMenuItem>;
+          <DropdownMenuItem;
+            on_click={() => onStatusChange (application.id, "rejected")}
+            className="text - red - 600";
+
           >;
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
+
+
+  );
+}
+      <Button variant='default' size='sm' as_child>        <Link href={`/messages?talent_id=${application.talent_id}`}>;
       <Button;
         variant="default";
         size="sm";
-        asChild;
+        as_child;
       >;
-        <Link href={`/messages?talentId=${application.talent_id}`}>;
           Contact;
         </Link>;
       </Button>;

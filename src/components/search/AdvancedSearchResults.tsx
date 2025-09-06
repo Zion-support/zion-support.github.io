@@ -2,37 +2,36 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/router'
 import {
-  Search
-  Filter
-  X
-  SortAsc
-  SortDesc
-  GridIcon
-  List
-  Loader2
-} from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Badge } from '@/components/ui/badge'
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'
-import { Checkbox } from '@/components/ui/checkbox'
-import { Slider } from '@/components/ui/slider'
-import { Separator } from '@/components/ui/separator'
-  Sheet
-  SheetContent
-  SheetHeader
-  SheetTitle
-  SheetTrigger
-} from '@/components/ui/sheet'
-import { EnhancedSearchInput } from './EnhancedSearchInput'
-import { generateSearchSuggestions } from '@/data/marketplaceData'
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
-
+  Search,
+  Filter,
+  X,
+  SortAsc,
+  SortDesc,
+  GridIcon,
+  List,
+  Loader2,
+} from 'lucide-react';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Badge } from '@/components / ui / badge';
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components / ui / select';
+import { Checkbox } from '@/components / ui / checkbox';
+import { Slider } from '@/components / ui / slider';
+import { Separator } from '@/components / ui / separator';
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components / ui / sheet';
+import { EnhancedSearchInput } from './EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data / marketplace_data';
+import { logErrorToProduction, log_info } from '@/utils / production_logger';
 interface SearchResult {
   id: string;
   title: string;
@@ -45,22 +44,26 @@ interface SearchResult {
   currency?: string;
   rating?: number;
   tags?: string[];
-  date?: string
-interface SearchFilters {
+
+  date?: string;
+
+interface SearchFilters {;
+
   types: string[];
   category: string;
   minPrice: number;
   maxPrice: number;
   minRating: number;
-  sort: string
-interface SearchResponse {
+
+  sort: string;
+
+interface SearchResponse {;
+
   results: SearchResult[];
   totalCount: number;
   page: number;
   limit: number;
   query: string;
-  hasMore: boolean
-// Highlight search terms in text
 
 const HighlightText: React.FC<{
   text: string
@@ -91,14 +94,65 @@ const HighlightText: React.FC<{
         <div className="flex items-start justify-between mb-2">
 
           <div>
-            <h3 className="font-semibold text-lg mb-1">
+            <h3 className='font-semibold text-lg mb-1'>
               <HighlightText text={result.title} searchTerm={searchTerm} />
             </h3>
-            <Badge variant="secondary" className="text-xs">
+            <Badge variant='secondary' className='text-xs'>
+  const card_class =;
+    view_mode === 'grid';
+      ? 'bg - card border rounded - lg p - 4 hover:shadow - lg transition - shadow cursor - pointer';
+      : 'bg - card border rounded - lg p - 4 hover:shadow - lg transition - shadow cursor - pointer flex gap - 4';
+  return (
+    <div on_click={handle_click} className={card_class}>;
+      {result.image && (
+        <div className={view_mode === 'grid' ? 'mb - 3' : 'flex - shrink - 0'}>;
+          <img;
+            src={result.image}
+            alt={result.title}
+            className={
+              view_mode === 'grid';
+                ? 'w - full h - 48 object - cover rounded';
+                : 'w - 20 h - 20 object - cover rounded';
+            }          />;
+        </div>)}
+      <div className='flex - 1'>;
+        <div className='flex items - start justify - between mb - 2'>;
+          <div>;
+            <h3 className='font - semibold text - lg mb - 1'>;
+              <HighlightText text={result.title} search_term={search_term} />;
+            </h3>;
+            <Badge variant='secondary' className='text - xs'>;
               {result.type}
-            </Badge>
-          </div>
+            </Badge>;
+          </div>;
           {result.price && (
+
+
+      <div className='flex-1'>;
+        <div className='flex items-start justify-between mb-2'>;
+          <div>;
+            <h3 className='font-semibold text-lg mb-1'>;
+              <HighlightText text={result && result.title} searchTerm={searchTerm} />;
+            </h3>;
+            <Badge variant='secondary' className='text-xs'>;
+              {result && result.type}
+            </Badge>;
+          </div>;
+          {result && result.price && (;
+            <div className='text-right'>;
+              <span className='font-bold text-primary'>;
+                {result && result.currency === 'USD' ? '$' : ''}
+                {result && result.price}
+              </span>;
+              {result && result.type === 'talent' && (;
+                <span className='text-sm text-muted-foreground'>/hr</span>;
+
+              )}
+            </div>;
+          )}
+
+                <span className='text - sm text - muted - foreground'>/hr</span>)}
+            </div>)}
             <div className="text-right">
               <span className="font-bold text-primary">
                 {result.currency === 'USD' ? '$' : ''}{result.price}
@@ -111,8 +165,66 @@ const HighlightText: React.FC<{
                 {result.category}
               </Badge>
             )}
+
+              </Badge>)}
+            {result.tags?.slice (0, 3).map ((tag, index) => (
+              <Badge key={index} variant='outline' className='text - xs'>                <HighlightText text={tag} search_term={search_term} />;
+              </Badge>))}
+          </div>;
+
+          {result.rating && (
+            <div className='flex items - center gap - 1'>;
+              <span className='text - yellow - 500'>★</span>;
+              <span className='text - sm'>{result.rating.to_fixed (1)}</span>;
+            </div>)}
+        </div>;
+      </div>;
+    </div>);
+}
+// Filter Sidebar Component;
+const FilterSidebar: React.FC<{
+
+  filters: SearchFilters;
+  onFiltersChange: (filters: SearchFilters) => void;
+  available_categories: string[];
+}> = ({ filters, onFiltersChange, available_categories }) => {  const type_options = [;
+    { id: 'product', label: 'Products' },
+    { id: 'talent', label: 'Talent' },
+    { id: 'service', label: 'Services' },
+    { id: 'blog', label: 'Blog Posts' },
+  ];
+  const handleTypeChange = (type_id: string, checked: boolean) =>: any {
+    const new_types = checked      ? [...filters.types, type_id];
+      : filters.types.filter (t => t !== type_id);
+    onFiltersChange ({ ...filters, types: new_types });
+  }
+  const handlePriceChange = (values: number[]) =>: any {
+    onFiltersChange ({
+      ...filters,
+      min_price: values[0] ?? 0,
+      max_price: values[1] ?? 10000,
+    });
+
+  }
+          </div>;
+
+          {result && result.rating && (;
+            <div className='flex items-center gap-1'>;
+              <span className='text-yellow-500'>★</span>;
+              <span className='text-sm'>{result && result.rating.toFixed(1)}</span>;
+            </div>;
+          )}
             {result.tags?.slice(0, 3).map((tag, index) => (
 
+=======
+              <Badge key={index} variant="outline" className="text-xs">
+                <HighlightText text={tag} searchTerm={searchTerm} />
+              </Badge>
+            ))}
+          </div>
+          
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {result.rating && (
             <div className="flex items-center gap-1">
               <span className="text-yellow-500">★</span>
@@ -121,13 +233,7 @@ const HighlightText: React.FC<{
           )}
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h3 className="font-semibold mb-3">Content Type</h3>
-        <div className="space-y-2">
-          {typeOptions.map(option => (
-            <div key={option.id} className="flex items-center space-x-2">
-              <Checkbox
+
                 id={option.id}
                 checked={filters.types.includes(option.id)}
 
@@ -148,15 +254,32 @@ const HighlightText: React.FC<{
                 {category}
               </SelectItem>
             ))}
-          </SelectContent>
-        </Select>
-      </div>
-      <Separator />
-      <div>
-        <h3 className="font-semibold mb-3">Price Range</h3>
-        <div className="px-2">
+
+          </SelectContent>;
+        </Select>;
+      </div>;
+
+      <Separator />;
+
+      <div>;
+        <h3 className='font-semibold mb-3'>Price Range</h3>;
+        <div className='px-2'>;
+
           <Slider
-            value={[filters.minPrice, filters.maxPrice]}
+            value={[filters && filters.minPrice, filters && filters.maxPrice]}
+            {available_categories.map (category => (
+              <SelectItem key={category} value={category}>;
+                {category}
+              </SelectItem>))}
+          </SelectContent>;
+        </Select>;
+      </div>;
+      <Separator />;
+      <div>;
+        <h3 className='font - semibold mb - 3'>Price Range</h3>;
+        <div className='px - 2'>;
+          <Slider;
+            value={[filters.min_price, filters.max_price]}
             onValueChange={handlePriceChange}
             min={0}
             max={10000}
@@ -196,7 +319,7 @@ const HighlightText: React.FC<{
       </div>
 
                 {suggestion}
-              </Button>
+              </Button>;
             ))}
           </div>
         </div>
@@ -220,18 +343,6 @@ const HighlightText: React.FC<{
 
     sort: 'relevance'
   }),
-
-  const suggestions = generateSearchSuggestions(),
-
-  // Extract available categories from results for filter
-  const availableCategories = useMemo(() => {
-    const categories = new Set<string>(),
-    results.forEach(result => {
-      if (result.category) categories.add(result.category)
-    }),
-    return Array.from(categories).sort()
-  }, [results]),
-
   // Sync search term with URL
   useEffect(() => {
     if (router.isReady && router.query.q) {
@@ -279,7 +390,49 @@ const HighlightText: React.FC<{
 
                 </Button>
               </div>
+                  onClick={() => setViewMode('list')}                >;
+                  <List className='h-4 w-4' />;
+                </Button>;
+              </div>;
+
               {/* Mobile Filter Toggle */}
+
+              {/* View Mode Toggle */}
+              <div className='flex border rounded - md'>;
+                <Button;
+                  variant={view_mode === 'grid' ? 'default' : 'ghost'}
+                  size='sm';
+                  on_click={() => setViewMode ('grid')}                >;
+                  <GridIcon className='h - 4 w - 4' />;
+                </Button>;
+                <Button;
+                  variant={view_mode === 'list' ? 'default' : 'ghost'}
+                  size='sm';
+                  on_click={() => setViewMode ('list')}                >;
+                  <List className='h - 4 w - 4' />;
+                </Button>;
+              </div>;
+              {/* Mobile Filter Toggle */}
+              <Sheet open={show_filters} onOpenChange={setShowFilters}>;
+                <SheetTrigger as_child>;
+                  <Button variant='outline' className='lg:hidden'>;
+                    <Filter className='h - 4 w - 4 mr - 2' />;
+
+                    Filters{' '}
+                    {activeFiltersCount > 0 && `(${activeFiltersCount})`}
+                  </Button>;
+                </SheetTrigger>;
+
+                <SheetContent side='left' className='w - 80'>;
+                  <SheetHeader>;
+                    <SheetTitle > Search Filters</SheetTitle>;
+                  </SheetHeader>;
+                  <div className='mt - 6'>;
+                    <FilterSidebar;
+                      filters = {filters, }
+                      onFiltersChange = {handleFiltersChange, }
+                      available_categories = {available_categories, }
+
               <Sheet open={showFilters} onOpenChange={setShowFilters}>
                 <SheetTrigger asChild>
                   <Button variant="outline" className="lg:hidden">
@@ -295,9 +448,12 @@ const HighlightText: React.FC<{
                     <FilterSidebar
 
         )}
-      </div>
-      {searchTerm && (
-        <div className="flex gap-6">
+
+      </div>;
+
+      {searchTerm && (;
+        <div className='flex gap-6'>;
+
           {/* Desktop Filters Sidebar */}
           <div className="hidden lg:block w-64 flex-shrink-0">
             <div className="bg-card border rounded-lg p-4 sticky top-4">
@@ -384,3 +540,4 @@ const HighlightText: React.FC<{
 }
 export default AdvancedSearchResults
 '"
+<<<<<<< HEAD

@@ -24,23 +24,12 @@
                 <div>;
                   <strong>Create Application:</strong>;
 
-                  <br />;
-                  Create a "Regular Web Application" named "Zion AI Marketplace";
-                </div>;
-              </li>;
-
               <li className="flex items-start gap-3">;
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">4</span>;
                 <div>;
                   <strong>Restart Application:</strong>;
                   <br />;
                   Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes;
-
-                </div>;
-              </li>;
-            </ol>;
-          </div>;
-        </div>;
 
               <p className="text-sm text-green-600 mb-3">;
                 Run the setup script to configure Auth0 interactively:;

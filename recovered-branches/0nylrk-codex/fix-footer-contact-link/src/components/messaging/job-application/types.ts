@@ -1,4 +1,10 @@
 
+=======
+
+export interface Job {;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string;
   title: string;
   description: string;
@@ -7,7 +13,9 @@
   client_id: string
 }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   onClose: () => void;
 
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

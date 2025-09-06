@@ -1,4 +1,31 @@
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+
+} from 'react-icons/si';
+
+interface Service {;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   FaRocket,
   FaBrain,
   FaCloud,
@@ -34,12 +61,9 @@ interface Service {
   }
   technologies: string[];
   benefits: string[];
+=======
 
-interface ServiceCategory {
-  id: string;
-  name: string;
-  description: string;
-
+;
   color: string;  id: string,
   name: string,
   description: string,
@@ -150,11 +174,229 @@ const services: Service[] = [
     icon: <FaRobot className='w-6 h-6' />
     features: [
 
+  {
+    id: 'ai - ml',
+    name: 'AI & Machine Learning',
+
+    description:;
+      'Cutting - edge artificial intelligence and machine learning solutions',
+    icon: <FaBrain className='w - 8 h - 8' />,
+    color: 'from - purple - 500 to - pink - 500',
+  },  {
+    id: 'cloud',
+    name: 'Cloud & DevOps',
+    description: 'Scalable cloud infrastructure and development operations',
+    icon: <FaCloud className='w - 8 h - 8' />,
+    color: 'from - blue - 500 to - cyan - 500',
+  },  {
+    id: 'security',
+    name: 'Cybersecurity',
+    description: 'Advanced security solutions for modern threats',
+    icon: <FaShieldAlt className='w - 8 h - 8' />,
+    color: 'from - red - 500 to - orange - 500',
+  },  {
+    id: 'data',
+    name: 'Data & Analytics',
+    description: 'Comprehensive data management and analytics platforms',
+    icon: <FaDatabase className='w - 8 h - 8' />,
+    color: 'from - green - 500 to - emerald - 500',
+  },  {
+    id: 'iot',
+    name: 'IoT & Edge Computing',
+    description: 'Internet of Things and edge computing solutions',
+    icon: <FaNetworkWired className='w - 8 h - 8' />,
+    color: 'from - indigo - 500 to - purple - 500',
+  },  {
+    id: 'automation',
+    name: 'Process Automation',
+    description: 'Intelligent automation for business processes',
+    icon: <FaRobot className='w - 8 h - 8' />,
+    color: 'from - yellow - 500 to - orange - 500',
+  }, ];    description: 'Cutting - edge artificial intelligence and machine learning solutions',
+    icon: <FaBrain className="w - 8 h - 8" />,
+    color: 'from - purple - 500 to - pink - 500';
+  }
+    id: 'cloud',
+    name: 'Cloud & DevOps',
+    description: 'Scalable cloud infrastructure and development operations',
+    icon: <FaCloud className='w - 8 h - 8' />,
+    color: 'from - blue - 500 to - cyan - 500',
+  },    icon: <FaCloud className="w - 8 h - 8" />,
+    color: 'from - blue - 500 to - cyan - 500';
+  }
+
+  {
+    id: 'security',
+    name: 'Cybersecurity',
+    description: 'Advanced security solutions for modern threats',
+
+    icon: <FaShieldAlt className='w - 8 h - 8' />,
+    color: 'from - red - 500 to - orange - 500',
+  },    icon: <FaShieldAlt className="w - 8 h - 8" />,
+    color: 'from - red - 500 to - orange - 500';
+  }
+
+  {
+    id: 'data',
+    name: 'Data & Analytics',
+    description: 'Comprehensive data management and analytics platforms',
+
+    icon: <FaDatabase className='w - 8 h - 8' />,
+    color: 'from - green - 500 to - emerald - 500',
+  },    icon: <FaDatabase className="w - 8 h - 8" />,
+    color: 'from - green - 500 to - emerald - 500';
+  }
+
+  {
+    id: 'iot',
+    name: 'IoT & Edge Computing',
+    description: 'Internet of Things and edge computing solutions',
+
+    icon: <FaNetworkWired className='w - 8 h - 8' />,
+    color: 'from - indigo - 500 to - purple - 500',
+  },    icon: <FaNetworkWired className="w - 8 h - 8" />,
+    color: 'from - indigo - 500 to - purple - 500';
+  }
+
+  {
+    id: 'automation',
+    name: 'Process Automation',
+    description: 'Intelligent automation for business processes',
+
+  icon: React && React.ReactNode;
+  color: string;  id: string,;
+  name: string,;
+  description: string,;
+  icon: React && React.ReactNode,;
+  color: string;
+}
+const serviceCategories: ServiceCategory[] = [;
+  {;
+    id: 'ai-ml',;
+    name: 'AI & Machine Learning',;
+    description:;
+      'Cutting-edge artificial intelligence and machine learning solutions',;
+    icon: <FaBrain className='w-8 h-8' />,;
+    color: 'from-purple-500 to-pink-500',;
+  },  {;
+    id: 'cloud',;
+    name: 'Cloud & DevOps',;
+    description: 'Scalable cloud infrastructure and development operations',;
+    icon: <FaCloud className='w-8 h-8' />,;
+    color: 'from-blue-500 to-cyan-500',;
+  },  {;
+    id: 'security',;
+    name: 'Cybersecurity',;
+    description: 'Advanced security solutions for modern threats',;
+    icon: <FaShieldAlt className='w-8 h-8' />,;
+    color: 'from-red-500 to-orange-500',;
+  },  {;
+    id: 'data',;
+    name: 'Data & Analytics',;
+    description: 'Comprehensive data management and analytics platforms',;
+    icon: <FaDatabase className='w-8 h-8' />,;
+    color: 'from-green-500 to-emerald-500',;
+  },  {;
+    id: 'iot',;
+    name: 'IoT & Edge Computing',;
+    description: 'Internet of Things and edge computing solutions',;
+    icon: <FaNetworkWired className='w-8 h-8' />,;
+    color: 'from-indigo-500 to-purple-500',;
+  },  {;
+    id: 'automation',;
+    name: 'Process Automation',;
+    description: 'Intelligent automation for business processes',;
+    icon: <FaRobot className='w-8 h-8' />,;
+    color: 'from-yellow-500 to-orange-500',;
+  },];    description: 'Cutting-edge artificial intelligence and machine learning solutions',;
+    icon: <FaBrain className="w-8 h-8" />,;
+    color: 'from-purple-500 to-pink-500';
+  };
+    id: 'cloud',;
+    name: 'Cloud & DevOps',;
+    description: 'Scalable cloud infrastructure and development operations',;
+    icon: <FaCloud className='w-8 h-8' />,;
+    color: 'from-blue-500 to-cyan-500',;
+  },    icon: <FaCloud className="w-8 h-8" />,;
+    color: 'from-blue-500 to-cyan-500';
+  };
+  {;
+    id: 'security',;
+    name: 'Cybersecurity',;
+    description: 'Advanced security solutions for modern threats',;
+    icon: <FaShieldAlt className='w-8 h-8' />,;
+    color: 'from-red-500 to-orange-500',;
+  },    icon: <FaShieldAlt className="w-8 h-8" />,;
+    color: 'from-red-500 to-orange-500';
+  };
+  {;
+    id: 'data',;
+    name: 'Data & Analytics',;
+    description: 'Comprehensive data management and analytics platforms',;
+    icon: <FaDatabase className='w-8 h-8' />,;
+    color: 'from-green-500 to-emerald-500',;
+  },    icon: <FaDatabase className="w-8 h-8" />,;
+    color: 'from-green-500 to-emerald-500';
+  };
+  {;
+    id: 'iot',;
+    name: 'IoT & Edge Computing',;
+    description: 'Internet of Things and edge computing solutions',;
+    icon: <FaNetworkWired className='w-8 h-8' />,;
+    color: 'from-indigo-500 to-purple-500',;
+  },    icon: <FaNetworkWired className="w-8 h-8" />,;
+    color: 'from-indigo-500 to-purple-500';
+  };
+  {;
+    id: 'automation',;
+    name: 'Process Automation',;
+    description: 'Intelligent automation for business processes',;
+    icon: <FaRobot className='w-8 h-8' />,;
+    color: 'from-yellow-500 to-orange-500',;
+  },    icon: <FaRobot className="w-8 h-8" />,;
+    color: 'from-yellow-500 to-orange-500';
+  }
+=======
+    id: 'ai-automation-suite',
+    title: 'AI-Powered Automation Suite',
+    description: 'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
+    icon: <FaRobot className="w-6 h-6" />,
+    category: 'automation',
+    features: [
+      'Intelligent workflow automationNatural language processingPredictive analyticsReal-time decision makingCustom AI model trainingMulti-platform integration'
+    ];
+=======
+    icon: <FaRobot className='w - 8 h - 8' />,
+    color: 'from - yellow - 500 to - orange - 500',
+  },    icon: <FaRobot className="w - 8 h - 8" />,
+    color: 'from - yellow - 500 to - orange - 500';
+  }
+];
+;
+const services: Service[] = [;
+  {
+    id: 'ai - automation - suite',
+    title: 'AI - Powered Automation Suite',
+    description:;
+      'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
+    icon: <FaRobot className='w - 6 h - 6' />,
+    features: [;
+=======
+
+
+      'Intelligent workflow automation',
+      'Natural language processing',
+      'Predictive analytics',
+      'Real-time decision making',
+      'Custom AI model training',
+      'Multi - platform integration',
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     ],
     pricing: {
       starter: 299,
       professional: 799,
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       'TensorFlow',
       'PyTorch',
       'OpenAI',
@@ -166,23 +408,29 @@ const services: Service[] = [
       'Scalable AI infrastructure',
     ],
   },
+
   {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       'Quantum machine learning',
       'Cryptographic solutions',
       'Quantum simulation tools',
       'API access to quantum hardware',
     ],
+
     pricing: {
       starter: 999,
       professional: 2499,
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       'Research and development support',
     ],
   },
+
   {
 
     ],
+
     pricing: {
       starter: 199,
       professional: 599,
@@ -200,21 +448,28 @@ const services: Service[] = [
       'Scalable edge deployment',
     ],
   },
+
   {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     ],
+
     pricing: {
       starter: 399,
       professional: 999,
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       'Comprehensive compliance',
       'Advanced threat protection',
     ],
   },
+
   {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       'Data lineage tracking',
     ],
+
     pricing: {
       starter: 299,
       professional: 799,
@@ -259,6 +514,254 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       filtered = filtered.filter(service => service.category === selectedCategory)
     }
 
+];
+const services: Service[] = [;
+  {;
+    id: 'ai-automation-suite',;
+    title: 'AI-Powered Automation Suite',;
+    description:;
+      'Comprehensive automation platform leveraging artificial intelligence for business process optimization',;
+    icon: <FaRobot className='w-6 h-6' />,;
+    features: [;
+      'Intelligent workflow automation',;
+      'Natural language processing',;
+      'Predictive analytics',;
+      'Real-time decision making',;
+      'Custom AI model training',;
+      'Multi-platform integration',;
+    ],;
+    pricing: {;
+      starter: 299,;
+      professional: 799,;
+      enterprise: 1999,;
+    },;
+    technologies: [;
+      'TensorFlow',;
+      'PyTorch',;
+      'OpenAI',;
+      'LangChain',;
+      'React',;
+      'Node && Node.js',;
+    ],;
+    benefits: [;
+      'Reduce manual tasks by 80%',;
+      'Improve accuracy by 95%',;
+      '24/7 automated operations',;
+      'Scalable AI infrastructure',;
+    ],;
+  },;
+  {;
+    id: 'quantum-computing-platform',;
+    title: 'Quantum Computing Platform',;
+    description:;
+      'Next-generation quantum computing solutions for complex problem solving',;
+    icon: <FaBrain className='w-6 h-6' />,;
+    category: 'ai-ml',;
+    features: [;
+      'Quantum algorithm optimization',;
+      'Hybrid classical-quantum computing',;
+      'Quantum machine learning',;
+      'Cryptographic solutions',;
+      'Quantum simulation tools',;
+      'API access to quantum hardware',;
+    ],;
+    pricing: {;
+      starter: 999,;
+      professional: 2499,;
+      enterprise: 4999,;
+    },;
+    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],;
+    benefits: [;
+      'Solve previously impossible problems',;
+      'Exponential speed improvements',;
+      'Future-proof technology',;
+      'Research and development support',;
+    ],;
+  },;
+  {;
+    id: 'edge-ai-platform',;
+    title: 'Edge AI Computing Platform',;
+    description:;
+      'Distributed artificial intelligence at the edge for real-time processing',;
+    icon: <FaNetworkWired className='w-6 h-6' />,;
+    category: 'iot',;
+    features: [;
+      'Edge device optimization',;
+      'Real-time AI inference',;
+      'Distributed learning',;
+      'Low-latency processing',;
+      'Offline AI capabilities',;
+      'Edge-to-cloud synchronization',;
+    ],;
+    pricing: {;
+      starter: 199,;
+      professional: 599,;
+      enterprise: 1499,;
+    },;
+    technologies: [;
+      'TensorFlow Lite',;
+      'ONNX Runtime',;
+      'Edge TPU',;
+      'Raspberry Pi',;
+      'Arduino',;
+    ],;
+    benefits: [;
+      'Reduced latency by 90%',;
+      'Lower bandwidth costs',;
+      'Enhanced privacy',;
+      'Scalable edge deployment',;
+    ],;
+  },;
+  {;
+    id: 'quantum-cybersecurity',;
+    title: 'Quantum Cybersecurity Suite',;
+    description:;
+      'Advanced security solutions leveraging quantum-resistant cryptography',;
+    icon: <FaShieldAlt className='w-6 h-6' />,;
+    category: 'security',;
+    features: [;
+      'Post-quantum cryptography',;
+      'Quantum key distribution',;
+      'Advanced threat detection',;
+      'Zero-trust architecture',;
+      'Compliance frameworks',;
+      'Real-time monitoring',;
+    ],;
+    pricing: {;
+      starter: 399,;
+      professional: 999,;
+      enterprise: 2499,;
+    },;
+    technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],;
+    benefits: [;
+      'Future-proof security',;
+      'Quantum-resistant encryption',;
+      'Comprehensive compliance',;
+      'Advanced threat protection',;
+    ],;
+  },;
+  {;
+    id: 'data-fabric-platform',;
+    title: 'Intelligent Data Fabric Platform',;
+    description:;
+      'Unified data management and analytics across all sources and formats',;
+    icon: <FaDatabase className='w-6 h-6' />,;
+    category: 'data',;
+    features: [;
+      'Unified data access',;
+      'Real-time analytics',;
+      'Data governance',;
+      'AI-powered insights',;
+      'Multi-cloud support',;
+      'Data lineage tracking',;
+    ],;
+    pricing: {;
+      starter: 299,;
+      professional: 799,;
+      enterprise: 1999,;
+    },;
+    technologies: [;
+      'Apache Kafka',;
+      'Apache Spark',;
+      'Snowflake',;
+      'Databricks',;
+      'Airflow',;
+    ],;
+    benefits: [;
+      'Unified data view',;
+      'Real-time insights',;
+      'Improved data quality',;
+      'Reduced integration costs',;
+    ],;
+  },  {;
+    id: 'cloud-native-platform',;
+    title: 'Cloud-Native Development Platform',;
+    description: 'Modern cloud-native development and deployment platform',;
+    icon: <FaCloud className='w-6 h-6' />,      'Unified data viewReal-time insightsImproved data qualityReduced integration costs';
+    ];
+  };
+  {;
+    id: 'cloud-native-platform',;
+    title: 'Cloud-Native Development Platform',;
+    description: 'Modern cloud-native development and deployment platform',;
+    icon: <FaCloud className='w-6 h-6' />,;
+    features: [;
+      'Kubernetes orchestration',;
+      'Microservices architecture',;
+      'CI/CD pipelines',;
+      'Auto-scaling',;
+      'Multi-cloud deployment',;
+      'DevOps automation',;
+    ],;
+    pricing: {;
+      starter: 199,;
+      professional: 599,;
+      enterprise: 1499,;
+    },;
+    technologies: [;
+      'Kubernetes',;
+      'Docker',;
+      'Helm',;
+      'ArgoCD',;
+      'Prometheus',;
+      'Grafana',;
+    ],;
+    benefits: [;
+      'Faster deployment',;
+      'Improved scalability',;
+      'Better resource utilization',;
+      'Enhanced reliability',;
+    ],;
+  },];      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability';
+    ];
+  }
+];
+
+
+  const filteredServices = useMemo(() => {;
+    let filtered = services;
+
+    if (selectedCategory !== 'all') {;
+      filtered = filtered && filtered.filter(;
+        service => service && service.category === selectedCategory;
+      );
+    }
+
+    if (searchTerm) {;
+      filtered = filtered && filtered.filter(;
+        service =>;
+          service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+          service && service.description;
+            .toLowerCase();
+            .includes(searchTerm && searchTerm.toLowerCase()) ||;
+          service && service.technologies.some(tech =>;
+            tech && tech.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+          );
+
+      );
+    }    if (selectedCategory !== 'all') {;
+      filtered = filtered && filtered.filter(service => service && service.category === selectedCategory);
+=======
+    
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => service.category === selectedCategory)
+    }
+
+    
+
+=======
+
+    
+    if (searchTerm) {
+      filtered = filtered.filter(service => 
+        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
+      )
+    }
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
@@ -415,11 +918,332 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               <div className='flex items-center justify-between'>
                 <div className='text-2xl font-bold text-blue-400'>                  <span className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Search and Filters */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+
+
+        >
+          <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
+            <div className='relative flex-1 max-w-md'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <input
+                type='text'
+                placeholder='Search services, technologies, or features...'
+                value={searchTerm}
+
+                onChange={e => setSearchTerm(e && e.target.value)}
+                className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent';
+              />;
+              <FaSearch className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400' />;
+            </div>;
+
+
+            <select
+              value={sortBy}
+              onChange={e =>;
+                setSortBy(e && e.target.value as 'name' | 'price' | 'category');
+              }
+
+          className='text - center mb - 16';
+        >;
+          <h1 className='text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
+            2025 Services Showcase;
+          </h1>;
+          <p className='text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed'>;
+            Discover our cutting - edge technology solutions designed for the;
+            future. From AI - powered automation to quantum computing, we're;
+            building tomorrow's innovations today.          </p>        >;
+          <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
+            2025 Services Showcase;
+          </h1>;
+          <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed">;
+            Discover our cutting - edge technology solutions designed for the future.;
+            From AI - powered automation to quantum computing, we're building tomorrow's innovations today.;
+          </p>;
+        </motion.div>;
+        {/* Search and Filters */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 20 }}
+          animate={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className='mb - 12';
+        >;
+          <div className='flex flex - col md:flex - row gap - 4 items - center justify - center'>;
+            <div className='relative flex - 1 max - w-md'>;
+              <input;
+                type='text';
+                placeholder='Search services, technologies, or features...';
+                value={search_term}
+                on_change={e => setSearchTerm (e.target.value)}
+                className='w - full px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent';
+              />;
+              <FaSearch className='absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400' />;
+            </div>;
+            <select;
+              value={sort_by}
+              on_change={e =>;
+                setSortBy (e.target.value as 'name' | 'price' | 'category');
+              }
+              className='px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - blue - 500';
+
+            >;
+              <option value='name'>Sort by Name</option>;
+              <option value='price'>Sort by Price</option>;
+              <option value='category'>Sort by Category</option>            </select>        >;
+
+=======
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-12"
+        >
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+            <div className="relative flex-1 max-w-md">
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              <input
+                type="text"
+                placeholder="Search services, technologies, or features..."
+                value={searchTerm}
+
+              onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
+              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="name">Sort by Name</option>
+              <option value="price">Sort by Price</option>
+              <option value="category">Sort by Category</option>
+            </select>
+          </div>
+        </motion.div>
+=======
+                onChange={(e) => setSearchTerm(e && e.target.value)}
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+              />;
+              <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />;
+            </div>;
+
+
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e && e.target.value as 'name' | 'price' | 'category')}
+              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500";
+          <div className="flex flex - col md:flex - row gap - 4 items - center justify - center">;
+            <div className="relative flex - 1 max - w-md">;
+              <input;
+                type="text";
+                placeholder="Search services, technologies, or features...";
+                value={search_term}
+                on_change={(e) => setSearchTerm (e.target.value)}
+                className="w - full px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+              />;
+              <FaSearch className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400" />;
+            </div>;
+            <select;
+              value={sort_by}
+              on_change={(e) => setSortBy (e.target.value as 'name' | 'price' | 'category')}
+              className="px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - blue - 500";
+            >;
+              <option value="name">Sort by Name</option>;
+              <option value="price">Sort by Price</option>;
+              <option value="category">Sort by Category</option>;
+            </select>;
+          </div>;
+
+              className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500'
+            >
+              <option value='name'>Sort by Name</option>
+              <option value='price'>Sort by Price</option>
+
+              <option value='category'>Sort by Category</option>            </select>
+
+            </select>
+
+          </div>
+        </motion.div>
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Category Tabs */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+
+
+            <button
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              onClick={() => setSelectedCategory('all')}
+              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
+                selectedCategory === 'all';
+                  ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg';
+                  : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
+              }`}
+
+
+              <button
+
+
+
+
+
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
+                  selectedCategory === category.id
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20'
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                }`}
+              >;
+                {category && category.icon}
+                {category && category.name}
+              </button>;
+            ))}
+
+          </div>;
+        </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Services Grid */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+
+
+        >
+          {filteredServices.map((service, index) => (
+            <motion.div
+              key={service.id}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+              whileHover={{ y: -5, scale: 1 && 1.02 }}
+              className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300'
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              onClick={() => handleServiceSelect(service)}
+            >;
+              <div className='flex items-center gap-3 mb-4'>;
+                <div className='p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg'>;
+                  {service && service.icon}
+                </div>;
+                <div>;
+                  <h3 className='text-xl font-bold text-white'>;
+                    {service && service.title}
+                  </h3>;
+                  <p className='text-sm text-gray-400'>;
+                    {;
+                      serviceCategories && serviceCategories.find(c => c && c.id === service && service.category);
+                        ?.name;
+                    }
+
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {filteredServices.map((service, index) => (
+            <motion.div
+        </motion.div>;
+        {/* Category Tabs */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 20 }}
+          animate={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className='mb - 12';
+        >;
+          <div className='flex flex - wrap justify - center gap - 4'>            <button          className="mb - 12";
+        >;
+          <div className="flex flex - wrap justify - center gap - 4">;
+            <button;
+              on_click={() => setSelectedCategory ('all')}
+              className={`px - 6 py - 3 rounded - lg font - medium transition - all duration - 300 ${
+                selected_category === 'all';
+                  ? 'bg - gradient - to - r from - blue - 500 to - purple - 500 text - white shadow - lg';
+                  : 'bg - white / 10 backdrop - blur - sm border border - white / 20 text - gray - 300 hover:bg - white / 20';
+              }`}
+            >;
+              All Services;
+            </button>;
+            {service_categories.map (category => (              <button            {service_categories.map ((category) => (
+              <button;
+                key={category.id}
+                on_click={() => setSelectedCategory (category.id)}
+                className={`px - 6 py - 3 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
+                  selected_category === category.id;
+                    ? `bg - gradient - to - r ${category.color} text - white shadow - lg`;
+                    : 'bg - white / 10 backdrop - blur - sm border border - white / 20 text - gray - 300 hover:bg - white / 20';
+                }`}
+              >;
+                {category.icon}
+                {category.name}
+              </button>))}
+          </div>;
+        </motion.div>;
+        {/* Services Grid */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 20 }}
+          animate={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'        >          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
+        >;
+          {filtered_services.map ((service, index) => (
+            <motion.div;
+
+              key={service.id}
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+
+                  </p>;
+                </div>;
+              </div>;
+
+              <p className='text-gray-300 mb-4 line-clamp-3'>;
+                {service && service.description}
+              </p>;
+
+              <div className='flex flex-wrap gap-2 mb-4'>;
+                {service && service.technologies.slice(0, 3).map(tech => (;
+                  <span
+                    key={tech}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    {tech}
+                  </span>
+                ))}
+
+                {service.technologies.length > 3 && (
+                  <span className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     +{service.technologies.length - 3} more
                   </span>
                 )}
               </div>
 
+=======
+              
+              <div className="flex items-center justify-between">
+                <div className="text-2xl font-bold text-blue-400">
+                  ${service.pricing.starter}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <span className="text-sm text-gray-400 font-normal">/month</span>
                 </div>
                 <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
@@ -430,6 +1254,8 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           ))}
         </motion.div>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
@@ -450,10 +1276,26 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+        )}
+
+      </div>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Service Detail Modal */}
+      <AnimatePresence>;
+        {selectedService && (;
+          <motion&& motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
 
@@ -472,6 +1314,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                         serviceCategories.find(
                           c => c.id === selectedService.category
                         )?.name
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       }
                     </p>                  </div>
                 </div>
@@ -505,15 +1348,13 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               <p className="text-gray-300 text-lg mb-8">{selectedService && selectedService.description}</p>;
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
                 {/* Features */}
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
-                  <ul className="space-y-2">
-                    {selectedService.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-2 text-gray-300">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+
+
                         {feature}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       </li>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </ul>
                 </div>
@@ -536,8 +1377,38 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                     <span
                       key={tech}
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                {/* Benefits */}
+
+
+                    ))}
+
+                  </ul>;
+                </div>;
+              </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              {/* Technologies */}
+
+
+=======
+
+                      className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >
+
+                    >
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       {tech}
-                    </span>
+                    </span>;
                   ))}
                 </div>
               </div>
@@ -575,6 +1446,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                     </div>
                   ))}
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              {/* Pricing */}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
             </motion.div>
           </motion.div>
@@ -583,3 +1459,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 export default EnhancedServicesShowcase2025;  )
 }
 export default EnhancedServicesShowcase2025;
+=======
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

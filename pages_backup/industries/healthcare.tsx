@@ -3,6 +3,11 @@ import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -54,61 +59,74 @@ const services = [
     ];
   },
   {}
-    title: 'Telemedicine Platforms,',
-    description: 'Comprehensive virtual healthcare delivery systems for remote patient care.,',
-    icon: Phone,
-    features: [;
-      'Video consultation systems,',
-      'Remote patient monitoring',',
-      'Digital prescription management',',
+
+    title: 'Telemedicine Platforms,',;
+    description: 'Comprehensive virtual healthcare delivery systems for remote patient care.,',;
+    icon: Phone,;
+    features: [,;
+      'Video consultation systems,',;
+      'Remote patient monitoring',',;
+      'Digital prescription management',',;
+
       'Integrated health records'';
     ];
   },
   {}
-    title: 'Electronic Health Records (EHR),',
-    description: 'Secure, interoperable health information management systems.',',
-    icon: Database,
-    features: [;
-      'Patient data management,',
-      'Interoperability standards',',
-      'Clinical decision support',',
+
+    title: 'Electronic Health Records (EHR),',;
+    description: 'Secure, interoperable health information management systems.',',;
+    icon: Database,;
+    features: [,;
+      'Patient data management,',;
+      'Interoperability standards',',;
+      'Clinical decision support',',;
+
       'Privacy compliance tools'';
     ];
   },
   {}
-    title: 'Medical Imaging AI,',
-    description: 'AI-enhanced medical imaging for improved diagnostic accuracy.,',
-    icon: Camera,
-    features: [;
-      'Radiology image analysis,',
-      'Pathology image processing',',
-      '3D imaging reconstruction',',
+
+    title: 'Medical Imaging AI,',;
+    description: 'AI-enhanced medical imaging for improved diagnostic accuracy.,',;
+    icon: Camera,;
+    features: [,;
+      'Radiology image analysis,',;
+      'Pathology image processing',',;
+      '3D imaging reconstruction',',;
+
       'Automated report generation'';
     ];
   },
   {}
-    title: 'Healthcare Analytics,',
-    description: 'Data-driven insights for improved patient outcomes and operational efficiency.,',
-    icon: BarChart3,
-    features: [;
-      'Population health analytics,',
-      'Predictive modeling',',
-      'Cost optimization analysis',',
+
+    title: 'Healthcare Analytics,',;
+    description: 'Data-driven insights for improved patient outcomes and operational efficiency.,',;
+    icon: BarChart3,;
+    features: [,;
+      'Population health analytics,',;
+      'Predictive modeling',',;
+      'Cost optimization analysis',',;
+
       'Quality metrics tracking'';
     ];
   },
   {}
-    title: 'Patient Management Systems,',
-    description: 'Comprehensive patient care coordination and management platforms.,',
-    icon: Users,
-    features: [;
-      'Appointment scheduling,',
-      'Care plan management',',
-      'Patient communication tools',',
+
+    title: 'Patient Management Systems,',;
+    description: 'Comprehensive patient care coordination and management platforms.,',;
+    icon: Users,;
+    features: [,;
+      'Appointment scheduling,',;
+      'Care plan management',',;
+      'Patient communication tools',',;
+
       'Outcome tracking systems'';
     ];
   }
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;];
 const benefits = [;
   {}
@@ -116,6 +134,7 @@ const benefits = [;
     description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.,',
     icon: Heart;
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ];
 const benefits = [
   {
@@ -124,19 +143,21 @@ const benefits = [
     icon: Heart
   },
   {}
-    title: 'Enhanced Efficiency,',
-    description: 'Streamlined workflows and automated processes reduce administrative burden.,',
-    icon: Activity;
-  },
+
+    title: 'Enhanced Efficiency,',;
+    description: 'Streamlined workflows and automated processes reduce administrative burden.,',;
+    icon: Activity,;
+  },;
   {}
-    title: 'Cost Reduction,',
-    description: 'Optimized resource allocation and preventive care reduce overall healthcare costs.,',
-    icon: BarChart3;
-  },
+    title: 'Cost Reduction,',;
+    description: 'Optimized resource allocation and preventive care reduce overall healthcare costs.,',;
+    icon: BarChart3,;
+  },;
   {}
-    title: 'Regulatory Compliance,',
-    description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.,',
-    icon: Shield;
+    title: 'Regulatory Compliance,',;
+    description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.,',;
+    icon: Shield,;
+
   }
 
 ;];
@@ -146,6 +167,7 @@ const caseStudies = [;
     description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.,',
     results: ['60% faster diagnosis, '25% accuracy improvement', '40% cost reduction']',
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ];
 const caseStudies = [
   {
@@ -164,6 +186,9 @@ const caseStudies = [
     results: ['15 facilities connected, '80% workflow improvement', '100% data accuracy']',
   }
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;];
 export default function HealthcarePage() {
   return (;
@@ -189,8 +214,9 @@ export default function HealthcarePage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <Heart className="w-12 h-12 text-red-400 mr-4" />";
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Healthcare;
+
+                <h1 className="text-5xl md: text-6xl font-bold">", Healthcare,;
+
                   <span className="block bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -200,12 +226,12 @@ export default function HealthcarePage() {
                 Revolutionizing healthcare delivery with cutting-edge AI, telemedicine, and digital health solutions.
                 Improve patient outcomes, enhance efficiency, and ensure regulatory compliance.,
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
                   Get Healthcare Consultation;
                 </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300 font-semibold">";
-                  View Healthcare Case Studies;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-red-600 transition-all duration-300 font-semibold">", View Healthcare Case Studies,;
+
                 </Link>;
               </div>;
             </motion.div>;
@@ -295,6 +321,9 @@ export default function HealthcarePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">";
@@ -307,6 +336,7 @@ export default function HealthcarePage() {
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
@@ -325,6 +355,14 @@ export default function HealthcarePage() {
                 </motion.div>;
               ))}
 
+=======
+
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
           </div>
         </section>
@@ -377,6 +415,14 @@ export default function HealthcarePage() {
                 </motion.div>;
               ))}
 
+=======
+
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
           </div>
         </section>
@@ -420,6 +466,9 @@ export default function HealthcarePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300""
                 >;
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>"
@@ -429,6 +478,7 @@ export default function HealthcarePage() {
                       <div key={resultIndex} className="flex items-center text-sm text-green-600">"
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />";
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
                 >
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>
@@ -444,6 +494,14 @@ export default function HealthcarePage() {
                 </motion.div>;
               ))}
 
+=======
+
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
           </div>
         </section>
@@ -463,12 +521,12 @@ export default function HealthcarePage() {
                 Let our healthcare technology experts help you implement solutions that improve;
                 patient care and operational efficiency.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
                   Start Your Healthcare Project;
                 </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300 font-semibold">";
-                  Learn About Our Expertise;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-red-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,;
+
                 </Link>;
               </div>;
             </motion.div>;
@@ -477,6 +535,12 @@ export default function HealthcarePage() {
       </div>;
     </Layout>;
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Healthcare?

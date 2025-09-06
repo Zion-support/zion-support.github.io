@@ -1,5 +1,15 @@
 
 
+=======
+
+          headline: values.headline,
+          subtitle: values.subtitle,
+          cta: values.cta};
+      };
+      
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -171,3 +181,282 @@
     </Card>
   )
 
+    }
+
+  },
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  return (
+    <Card className="w-full max-w-2xl">;
+      <CardHeader>;
+        <CardTitle>Create White-Label Instance</CardTitle>;
+        <CardDescription>;
+          Create a customized version of the platform for your client or partner.;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+
+          <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
+            <div className="space - y-4">;
+              <FormField;
+                control={form.control}
+                name="brand_name";
+                render={({ field }) => (
+                  <FormItem>;
+                    <FormLabel > Brand Name</FormLabel>;
+
+                    <FormControl>;
+                      <Input placeholder="Acme AI Solutions" {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
+
+              />;
+
+
+              <FormField
+                control={form && form.control}
+                name="subdomain"
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Subdomain</FormLabel>;
+                    <FormControl>;
+                      <div className="flex items-center">;
+                        <Input placeholder="acme" {...field} />;
+                        <span className="ml-2 text-muted-foreground">.ziontechmarketplace && ziontechmarketplace.com</span>;
+                      </div>;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>;
+                )}
+
+              />;
+
+
+              <FormField
+                control={form && form.control}
+                name="custom_domain"
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Custom Domain (Optional)</FormLabel>;
+                    <FormControl>;
+                      <Input placeholder="marketplace && marketplace.acme.com" {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>;
+                )}
+
+              />;
+
+
+              <FormField
+                control={form && form.control}
+                name="primary_color"
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Primary Brand Color</FormLabel>;
+                    <FormControl>;
+                      <div className="flex items-center gap-2">;
+                        <Input type="color" {...field} className="w-12 h-9 p-1" />;
+                        <Input {...field} placeholder="#9b87f5" className="flex-1" />;
+                      </div>;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>;
+                )}
+
+              />;
+
+
+              <FormField
+                control={form && form.control}
+                name="theme_preset"
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Theme Preset</FormLabel>;
+                    <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
+=======
+                  </FormItem>)}
+              />;
+              <FormField;
+                control={form.control}
+                name="subdomain";
+                render={({ field }) => (
+                  <FormItem>;
+                    <FormLabel > Subdomain</FormLabel>;
+                    <FormControl>;
+                      <div className="flex items - center">;
+                        <Input placeholder="acme" {...field} />;
+                        <span className="ml - 2 text - muted - foreground">.ziontechmarketplace.com</span>;
+                      </div>;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>)}
+              />;
+              <FormField;
+                control={form.control}
+                name="custom_domain";
+                render={({ field }) => (
+                  <FormItem>;
+                    <FormLabel > Custom Domain (Optional)</FormLabel>;
+                    <FormControl>;
+                      <Input placeholder="marketplace.acme.com" {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>)}
+              />;
+              <FormField;
+                control={form.control}
+                name="primary_color";
+                render={({ field }) => (
+                  <FormItem>;
+                    <FormLabel > Primary Brand Color</FormLabel>;
+                    <FormControl>;
+                      <div className="flex items - center gap - 2">;
+                        <Input type="color" {...field} className="w - 12 h - 9 p - 1" />;
+                        <Input {...field} placeholder="#9b87f5" className="flex - 1" />;
+                      </div>;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>)}
+              />;
+              <FormField;
+                control={form.control}
+                name="theme_preset";
+                render={({ field }) => (
+                  <FormItem>;
+                    <FormLabel > Theme Preset</FormLabel>;
+                    <Select onValueChange={field.on_change} default_value={field.value}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                      <FormControl>;
+                        <SelectTrigger>;
+                          <SelectValue placeholder="Select a theme" />;
+                        </SelectTrigger>;
+                      </FormControl>;
+                      <SelectContent>;
+                        <SelectItem value="light">Light</SelectItem>;
+                        <SelectItem value="dark">Dark</SelectItem>;
+                        <SelectItem value="neon">Neon</SelectItem>;
+                        <SelectItem value="corporate">Corporate</SelectItem>;
+                        <SelectItem value="startup">Startup</SelectItem>;
+                      </SelectContent>;
+                    </Select>;
+                    <FormMessage />;
+
+              />;
+
+              <div className="border rounded-md p-4 space-y-4">;
+                <h3 className="text-sm font-medium">Landing Page Copy</h3>;
+
+
+                <FormField
+                  control={form && form.control}
+                  name="headline"
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel>Headline</FormLabel>;
+=======
+                  </FormItem>)}
+              />;
+              <div className="border rounded - md p - 4 space - y-4">;
+                <h3 className="text - sm font - medium">Landing Page Copy</h3>;
+                <FormField;
+                  control={form.control}
+                  name="headline";
+                  render={({ field }) => (
+                    <FormItem>;
+                      <FormLabel > Headline</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                      <FormControl>;
+                        <Input placeholder="AI Marketplace" {...field} />;
+                      </FormControl>;
+                      <FormMessage />;
+
+                />;
+
+
+                <FormField
+                  control={form && form.control}
+                  name="subtitle"
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel>Subtitle</FormLabel>;
+=======
+                    </FormItem>)}
+                />;
+                <FormField;
+                  control={form.control}
+                  name="subtitle";
+                  render={({ field }) => (
+                    <FormItem>;
+                      <FormLabel > Subtitle</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                      <FormControl>;
+                        <Input placeholder="Find the best AI talent" {...field} />;
+                      </FormControl>;
+                      <FormMessage />;
+
+                />;
+
+
+                <FormField
+                  control={form && form.control}
+                  name="cta"
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel>CTA Button Text</FormLabel>;
+=======
+                    </FormItem>)}
+                />;
+                <FormField;
+                  control={form.control}
+                  name="cta";
+                  render={({ field }) => (
+                    <FormItem>;
+                      <FormLabel > CTA Button Text</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                      <FormControl>;
+                        <Input placeholder="Get Started" {...field} />;
+                      </FormControl>;
+                      <FormMessage />;
+
+                />;
+              </div>;
+            </div>;
+
+            <Button type="submit" className="w-full" size="lg">;
+              Create White-Label Instance;
+=======
+                    </FormItem>)}
+                />;
+              </div>;
+            </div>;
+            <Button type="submit" className="w - full" size="lg">;
+              Create White - Label Instance;
+
+            </Button>;
+          </form>;
+        </Form>;
+      </CardContent>;
+
+      <CardFooter className="bg - muted / 50 text - xs text - muted - foreground">;
+
+        <p>;
+          After creating the tenant, you must upload a logo via the tenant management dashboard.;
+          DNS verification for custom domains must be completed before they can be used.;
+        </p>;
+      </CardFooter>;
+
+    </Card>);
+}
+
+=======
+
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -17,6 +17,7 @@
   }
 }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -25,9 +26,10 @@
     setError(null)
     try {
       // Call the edge function to process the hire request
-      const { data: response, error } = await supabase.functions.invoke('process-hire-request', {
+      const { data: response, error } = await supabase && supabase.functions.invoke('process-hire-request', {
         body: requestData
 
+=======
       if (error) throw error;
       // Show success message
       toast({
@@ -110,3 +112,6 @@ export function useHireRequest() {;
   }
 }
 ;
+  }
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

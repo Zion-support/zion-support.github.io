@@ -1,3 +1,29 @@
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+'use client';
+;
+import React from 'react';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
   Brain;
@@ -12,6 +38,8 @@
     visible: {
       opacity: 1
       transition: {
+
+
 import {;
   Brain,;
   Cloud,;
@@ -171,6 +199,7 @@ const ServicesSection: React.FC = () => {;
   return (
     <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>;
       {/* Background Elements */}
+
       <div className='absolute inset-0'>;
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0 && 0.1),transparent_50%)]' />;
@@ -179,6 +208,39 @@ const ServicesSection: React.FC = () => {;
   };
   const cardVariants = {
 
+  return (
+    <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">;
+      {/* Background Elements */}
+
+      <div className="absolute inset-0">;
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0 && 0.1),transparent_50%)]" />;
+        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0 && 0.1),transparent_50%)]" />;
+      </div>;
+      <div className="relative container mx-auto px-4">;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+        {/* Section Header */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.8 }}
+          viewport={{ once: true }}
+
+
+        >
+          <motion.div
+        stagger_children: 0.1,
+      },
+    },  }
+;
+  const card_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
+    visible: { opacity: 1, coordinate_y: 0 },        stagger_children: 0.1;
+=======
+    hidden: { opacity: 0, y: 20 }
+    visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
     }
   }
@@ -213,6 +275,7 @@ const ServicesSection: React.FC = () => {;
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
             viewport={{ once: true }}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <Zap className='w-5 h-5 text-blue-400' />
             <span className='text-blue-400 font-medium'>Our Services</span>
           </motion.div>
@@ -229,7 +292,9 @@ const ServicesSection: React.FC = () => {;
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth
             for businesses across all industries.
+
           </p>
+
         </motion.div>
 
         {/* Services Grid */}
@@ -314,9 +379,17 @@ const ServicesSection: React.FC = () => {;
                 <div className={`w - 16 h - 16 bg - gradient - to - br ${service.color} rounded - 2xl flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300`}>;
                   <service.icon className="w - 8 h - 8 text - white" />;
                 </div>;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Services Grid */}
+        <motion&& motion.div
+          variants={containerVariants}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 {/* Content */}
                 <h3 className="text - 2xl font - bold text - white mb - 4 group - hover:text - blue - 400 transition - colors duration - 300">;
                   {service.title}
+
                   className={`absolute inset-0 bg-gradient-to-br ${service && service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
                 />;
                 {/* Icon */}
@@ -345,14 +418,12 @@ const ServicesSection: React.FC = () => {;
                 <p className="text-gray-300 mb-6 leading-relaxed">;
                   {service && service.description}
                 </p>;
+
+
                 {/* Features */}
-                <ul className="space-y-2 mb-8">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center space-x-3 text-gray-400">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full" />
-                      <span className="text-sm">{feature}</span>
-                    </li>
+
                   ))}
+
                 </h3>;
                 <p className="text - gray - 300 mb - 6 leading - relaxed">;
                   {service.description}
@@ -371,11 +442,14 @@ const ServicesSection: React.FC = () => {;
                       <div className="w - 2 h - 2 bg - blue - 400 rounded - full" />;
                       <span className="text - sm">{feature}</span>))}
                 </ul>;
+
                 {/* CTA */}
                 <Link;
                   href={service.href}
+
                   className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 group-hover:translate-x-1"
                 >
+
                   <span className="font-medium">Learn More</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -388,8 +462,10 @@ const ServicesSection: React.FC = () => {;
                   <ArrowRight className='w-4 h-4' />;
                 </Link>;
                 {/* Hover Effect */}
+
                 <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
             </motion.div>
           ))}
@@ -398,11 +474,18 @@ const ServicesSection: React.FC = () => {;
         {/* Bottom CTA */}
         <motion.div
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Bottom CTA */}
+        <motion&& motion.div
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           viewport={{ once: true }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -412,6 +495,7 @@ const ServicesSection: React.FC = () => {;
               Let&apos;s discuss how our technology solutions can drive your
               success and accelerate your growth.
             </p>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
               href='/contact'
               className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1'
@@ -441,3 +525,5 @@ const ServicesSection: React.FC = () => {;
 export default ServicesSection;  )
 }
 export default ServicesSection;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,4 +1,82 @@
 
+=======
+export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
+;
+export type JobCategory = ;
+  | 'development' ;
+  | 'design' ;
+  | 'marketing' ;
+  | 'content' ;
+  | 'data' ;
+  | 'business' ;
+  | 'other',;
+;
+export interface JobBudget {;
+  min:number,;
+  max:number,;
+  currency:string;
+}
+;
+export interface Job {;
+  id:string,;
+  client_id:string,;
+  title:string,;
+  description:string,;
+  category:JobCategory,;
+  skills:string[],;
+  budget:JobBudget,;
+  deadline:string,;
+  status:JobStatus,;
+  created_at:string,;
+  updated_at:string;
+}
+;
+export interface JobFormData {;
+  title:string,;
+  description:string,;
+  category:JobCategory,;
+  skills:string,;
+  budgetMin:number,;
+  budgetMax:number,;
+  deadline:Date;
+}
+;
+// Add JobMatch interface to be shared across components;
+export interface JobMatch {;
+  id:string,;
+  job_id:string,;
+  talent_id:string,;
+  match_score:number,;
+  matched_skills:string[],;
+  status?:'new' | 'viewed' | 'applied' | 'declined',;
+  created_at:string,;
+  viewed_at?:string,;
+  job?:Job,;
+  talent_profile?:{;
+    id?:string,;
+    user_id:string,;
+    full_name:string,;
+    professional_title:string,;
+    profile_picture_url?:string,;
+    hourly_rate?:number,;
+    bio:string,;
+    years_experience:number,;
+    key_projects:any[],;
+    skills:string[],;
+    location?:string,;
+    category?:string,;
+    company_name?:string;
+  },;}
+;
+export interface ResumeAttachment {;
+  id:string,;
+  title:string,;
+  type:'ai_resume' | 'custom_upload',;
+  file_url?:string,;
+  resume_id?:string,;
+  summary?:string,;
+  skills?:string[];
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 ;
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected',;
@@ -48,4 +126,5 @@ export interface JobApplication {;
 } export type JobStatus = 'new' | 'in progress' | 'filled' | 'closed';
 export type JobCategory = | 'development' | 'design' | 'marketing' | 'content' | 'data' | 'business' | 'other';
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
+<<<<<<< HEAD
 

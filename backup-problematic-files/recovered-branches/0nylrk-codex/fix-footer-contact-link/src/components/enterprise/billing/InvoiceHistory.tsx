@@ -1,8 +1,25 @@
 
+=======
+import React from "react",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { Download, FileText, Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { toast } from "@/hooks/use-toast",;
+;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function InvoiceHistory() {;
   // Mock invoice data;
   const invoices = [;
     {;
+<<<<<<< HEAD
 
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -39,12 +56,5 @@ export function InvoiceHistory() {;
           Previous;
         </Button>;
         <div className="text-sm text-muted-foreground">;
-
-          Showing 1 - 6 of 12 invoices;
-        </div>;
-        <Button variant="outline" size="sm">;
-          Next;
-        </Button>;
-      </div>;
 
 }

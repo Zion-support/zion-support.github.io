@@ -4,6 +4,7 @@ import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const testimonials = [
   {
     name: "Alex Johnson"
@@ -12,6 +13,36 @@ const testimonials = [
     rating: 5
     avatar: "/placeholder.svg"
 
+=======
+import React from './react';
+import { Star } from './lucide-react';
+import { Card, CardContent, CardFooter } from '@/components / ui / card';
+const testimonials = [;
+  {
+    name: "Alex Johnson",
+    role: "AI Developer",
+    text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",
+    rating: 5,
+    avatar: "/placeholder.svg";
+
+  }
+  {
+    name: "Sarah Williams"
+    role: "Tech Recruiter"
+    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";
+
+
+  },
+  {
+    name: "Sarah Williams",
+    role: "Tech Recruiter",
+    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
+    rating: 5,
+    avatar: "/placeholder.svg"
+  },
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   {
     name: "Michael Chen"
     role: "Full Stack Developer"
@@ -36,26 +67,6 @@ export const AppTestimonials: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="flex mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-200 mb-6">"{testimonial.text}"</p>
-              </CardContent>
-              <CardFooter className="border-t border-zion-purple/20 pt-4">
-                <div className="flex items-center">
-                  <div className="h-10 w-10 rounded-full overflow-hidden mr-4">
-                    <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-sm text-gray-400">{testimonial.role}</p>
-                  </div>
-                </div>
-              </CardFooter>
-            </Card>
 
-  );
-};
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

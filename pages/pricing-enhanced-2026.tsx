@@ -1,4 +1,7 @@
 
+=======
+
+
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -6,6 +9,7 @@
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -27,6 +31,8 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
 
   ],
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -36,11 +42,15 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features';
+
+
         'Mobile App AccessAPI Access (1000 calls/month)'
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       color: 'from-blue-500 to-indigo-600'
+
     };
+
     {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
@@ -48,11 +58,15 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-        'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features';
+
+
         'Custom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       color: 'from-purple-500 to-pink-600'
+
     };
+
     {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
@@ -60,9 +74,11 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-        'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance';
+
+
         'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
@@ -72,6 +88,17 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
           <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee" />
           <link rel="icon" href="/favicon.svg" />
 
+=======
+
+          {/* Open Graph */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
@@ -84,6 +111,8 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
         </Head>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             className="max-w-7xl mx-auto text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
@@ -115,6 +144,18 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${;
                     billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1';
                   }`  } catch (error) {
+            <div className="flex items-center justify-center space-x-4 mb-8">
+              <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
+              <button
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+                className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
+                  billingCycle === 'yearly' ? 'bg-cyan-600' : 'bg-gray-600'
+                }`}
+              >
+                <span
+                  className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
+                    billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
+                  }`}
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -126,6 +167,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
               </span>
             </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -146,6 +188,46 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
           </motion.div>
         </div>
 
+=======
+                />;
+              </button>;
+              <span className={`text - lg ${billing_cycle === 'yearly' ? 'text - white' : 'text - gray - 400'}`}>;
+                Yearly <span className="text - cyan - 400 text - sm">(Save 20%)</span>;
+              </span>;
+            </div>;
+            {/* Contact Information */}
+            <div className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 backdrop - blur - sm rounded - xl p - 6 border border - gray - 600 / 30 max - w-2xl mx - auto">;
+              <h3 className="text - xl font - semibold text - cyan - 400 mb - 4">Need Custom Pricing?</h3>;
+              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text - sm">;
+                <div className="flex items - center justify - center space - x-2">;
+                  <Phone className="w - 4 h - 4 text - purple - 400" />;
+                  <span>{contact_info.mobile}</span>;
+                </div>;
+                <div className="flex items - center justify - center space - x-2">;
+                  <Mail className="w - 4 h - 4 text - purple - 400" />;
+                  <span>{contact_info.email}</span>;
+                </div>;
+                <div className="flex items - center justify - center space - x-2">;
+                  <MapPin className="w - 4 h - 4 text - purple - 400" />;
+                  <span className="text - center">{contact_info.address}</span>;
+                </div>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+
+        {/* Enhanced Pricing Tiers */}
+
+
+        {/* Enhanced Pricing Tiers */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -173,6 +255,30 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                         </div>
                       </div>
 
+                  className="relative"
+                >
+                  <UltraFuturisticCard
+                    variant={tier.variant}
+                    className={`h - full ${tier.popular ? 'ring - 2 ring - cyan - 500 ring - opacity - 50' : ''}`}
+                  >;
+                    {tier.popular && (
+
+
+=======
+
+                    
+
+=======
+                    )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
@@ -184,6 +290,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                         </div>
                       </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       <p className="text-gray-400 mb-6">{tier.description}</p>
                       <div className="mb-6">
                         <span className="text-4xl font-bold text-cyan-400">${tier.price}</span>
@@ -191,6 +298,17 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                         {tier.savings && (
                           <div className="text-sm text-green-400 mt-1">{tier.savings}</div>
 
+=======
+
+                        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       </div>
                       <ul className="text-left space-y-3 mb-8">
                         {tier.features.map((feature, idx) => (
@@ -223,6 +341,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
           </div>
         </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -286,6 +405,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                         size="sm"
                         className="w-full"
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       >
                         View Services
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -294,6 +414,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                   </UltraFuturisticCard>
                 </motion.div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -356,6 +477,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                           size="sm"
                           className="flex-1"
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         >
                           Learn More
                           <ArrowRight className="w-4 h-4 ml-1" />
@@ -377,6 +499,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
           </div>
         </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -390,6 +513,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                   variant="primary"
                   size="lg"
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
@@ -398,6 +522,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                   variant="secondary"
                   size="lg"
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
@@ -418,3 +543,5 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

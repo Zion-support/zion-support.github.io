@@ -1,4 +1,26 @@
 
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -124,9 +146,11 @@ const categories = [;
         <meta
           name="description"
           content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts."
+
         />;
       </Head>;
       <div className="min-h-screen bg-gray-50">;
+
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="container mx-auto px-4">;
@@ -134,6 +158,7 @@ const categories = [;
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0 && 0.8 }}>;
               <h1 className="text-5xl font-bold mb-6">;
                 Expert Guides & Tutorials;
@@ -143,6 +168,7 @@ const categories = [;
                 tutorials, and best practices from industry experts.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+
                 <Link
                   href="#guides"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">;
@@ -151,6 +177,7 @@ const categories = [;
                 </Link>;
                 <Link
                   href="#categories"
+
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center">;
                   View Categories;
                   <BookOpen className="ml-2 w-5 h-5" />;
@@ -159,6 +186,8 @@ const categories = [;
             </motion && motion.div>;
           </div>;
         </section>;
+
+
         {/* Categories Section */}
         <section id="categories" className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -166,6 +195,7 @@ const categories = [;
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 Explore by Category;
@@ -179,6 +209,7 @@ const categories = [;
               {categories && categories.map((category, index) => (;
                 <motion&& motion.div
                   key={category && category.name}
+
                   className="bg-gray-50 rounded-lg p-4 text-center hover:bg-blue-50 hover:border-blue-200 border-2 border-transparent transition-all cursor-pointer"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -193,9 +224,12 @@ const categories = [;
                   </p>;
                 </motion && motion.div>;
               ))}
+
             </div>;
           </div>;
         </section>;
+
+
         {/* Guides Grid */}
         <section id="guides" className="py-16 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -203,6 +237,7 @@ const categories = [;
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 Featured Guides;
@@ -216,6 +251,7 @@ const categories = [;
               {guides && guides.map((guide, index) => (;
                 <motion&& motion.div
                   key={guide && guide.title}
+
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -237,12 +273,23 @@ const categories = [;
                             : guide && guide.difficulty === "Intermediate"
                               ? "bg-yellow-100 text-yellow-600"
                               : "bg-red-100 text-red-600"
+
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
 import {
+=======
+
+import React from 'react';
+import Head from 'next/head';
+
+
+
+import {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   BookOpen,
   Clock,
   User,
@@ -439,10 +486,12 @@ import {
   TiredFace2,
   SleepyFace2,
   YawningFace2,
-  DizzyFace2,
-} from './lucide-react';
-;
-const guides = [;
+
+  DizzyFace2,;
+
+} from "lucide-react";
+const guides = [
+
   {
     id: 1,
     title: "Getting Started with AI Development",
@@ -544,11 +593,16 @@ const categories = [;
   { name: "Database", count: 1, icon: Database },
   { name: "Performance", count: 1, icon: Zap },
 ];
-;
-export default /**
- * GuidesPage - Function description
- */
-function GuidesPage() {
+
+
+
+interface GuidesProps {
+  className?: string;
+}
+
+const Guides: React.FC<GuidesProps> = ({ className }) => {
+
+
   return (
     <Layout>;
       <Head>;
@@ -678,6 +732,7 @@ function GuidesPage() {
                         }`}
                       >;
                         {guide.difficulty}
+
                         }`}>;
                         {guide && guide.difficulty}
                       </span>;
@@ -702,6 +757,7 @@ function GuidesPage() {
                       <div className="flex items-center">;
                         <div className="flex items-center">;
                           {[...Array(5)].map((_, i) => (;
+
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -712,6 +768,7 @@ function GuidesPage() {
                               fill="currentColor"
                             />;
                           ))}
+
                         </div>;
                         <span className="ml-2 text-sm text-gray-600">;
                           {guide && guide.rating} ({guide && guide.students} students);
@@ -720,14 +777,17 @@ function GuidesPage() {
                     </div>;
                     <div className="flex flex-wrap gap-2 mb-6">;
                       {guide && guide.tags.map((tag) => (;
+
                         <span
                           key={tag}
                           className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">;
                           {tag}
                         </span>;
                       ))}
+
                     </div>;
                     <div className="flex gap-2">;
+
                       <Link
                         href="#"
                         className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center inline-flex items-center justify-center">;
@@ -743,9 +803,12 @@ function GuidesPage() {
                   </div>;
                 </motion && motion.div>;
               ))}
+
             </div>;
           </div>;
         </section>;
+
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;
           <div className="container mx-auto px-4">;
@@ -770,6 +833,7 @@ function GuidesPage() {
                 </Link>;
                 <Link
                   href="/contact"
+
 import Layout from '../components/Layout';
 export default function GuidesPage() {
     >
@@ -787,6 +851,9 @@ export default function GuidesPage() {
           </div>
         </section>
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       </div>
 
     </Layout>;

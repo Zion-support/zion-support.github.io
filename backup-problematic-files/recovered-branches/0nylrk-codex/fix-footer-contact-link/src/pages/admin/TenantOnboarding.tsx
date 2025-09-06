@@ -1,8 +1,78 @@
 
+=======
+import React, { useState } from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { SEO } from "@/components/SEO",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { toast } from "sonner",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Switch } from "@/components/ui/switch",;
+;
+export default function TenantOnboarding() {;
+  const { user } = useAuth(),;
+  const [activeTab, setActiveTab] = useState("company"),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [formData, setFormData] = useState({;
+    brand_name:"",;
+    subdomain:"",;
+    logo_url:"",;
+    primary_color:"#9b87f5",;
+    theme_preset:"light",;
+    company_size:"",;
+    industry:"",;
+    custom_domain:"",;
+    is_co_branded:true;
+  }),;
+  ;
+  // Check if user has admin role;
+  const isAdmin = user?.role === "admin",;
+  ;
+  if (!isAdmin) {;
+    return <Navigate to="/unauthorized" />,;
+  }
+;
+  const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e.target,;
+    setFormData(prev => ({ ...prev, [name]:value })),;
+  },;
+  ;
+  const handleSelectChange = (name:string, value:string) => {;
+    setFormData(prev => ({ ...prev, [name]:value })),;
+  },;
+  ;
+  const handleSwitchChange = (name:string, checked:boolean) => {;
+    setFormData(prev => ({ ...prev, [name]:checked })),;
+  },;
+  ;
+  const handleSubmit = async (e:React.FormEvent) => {;
+    e.preventDefault(),;
+    setIsSubmitting(true),;
+    ;
+    try {;
+      // Generate subdomain if not provided;
+      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),;
+      ;
+      // Create landing page copy;
+      const landingPageCopy = {;
+        headline:"AI Hiring Assistant",;
+        subtitle:`Find the best talent for your ${formData.industry || "company"}`,;
+        cta:"Get Started";
+      },;
+      ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Submit to Supabase;
       const { data, error } = await supabase;
         .from('whitelabel_tenants');
         .insert({;
+<<<<<<< HEAD
 
       />;
       <Header />;
@@ -26,11 +96,6 @@
               <form onSubmit={handleSubmit} className="space-y-6">;
                 <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
                   <TabsList className="mb-4 grid grid-cols-3 w-full">;
-
-                    <TabsTrigger value="company">Company Info</TabsTrigger>;
-                    <TabsTrigger value="branding">Branding</TabsTrigger>;
-                    <TabsTrigger value="domain">Domain Setup</TabsTrigger>;
-                  </TabsList>;
 
                       >;
                         <SelectTrigger>;

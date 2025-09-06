@@ -33,7 +33,20 @@ export default function ProfilePage() {
           title: "Error"
           description: "Failed to load profile. Please try again later."
           variant: "destructive"})
+        setProfileData (data);
+      } catch (error) {
+        logErrorToProduction (error instanceof Error ? error.message : String (error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
+        setIsError (true);
+        toast ({
+          title: "Error",
+          description: "Failed to load profile. Please try again later.",
+          variant: "destructive"});
       } finally {
+
+import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Star } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
         setIsLoading(false)
 
   if (isLoading) {
@@ -51,6 +64,30 @@ export default function ProfilePage() {
     )
   }
 
+=======
+
+  if (isError || !profileData) {;
+
+    return (
+      <div className="min-h-screen flex items-center justify-center">;
+        <p className="text-red-500">Failed to load profile.</p>;
+      </div>;
+    );
+  }
+  return (
+    <>
+      <SEO
+
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-red-500">Failed to load profile.</p>
+      </div>
+    )
+  }
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <>
       <SEO
@@ -59,6 +96,11 @@ export default function ProfilePage() {
       />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+        title={`${profileData && profileData.full_name} | Talent Profile`}
+        description = {profileData && profileData.bio || "View the profile of this talented individual.",}
+      />;
+      <div className="container mx-auto px-4 py-8">;
+        <div className="grid grid-cols-12 gap-6">;
           {/* Main Content Area */}
           <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
@@ -78,7 +120,10 @@ export default function ProfilePage() {
                       <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
                     </div>
                   )}
-                </div>
+
+                </div>;
+
+
                 {/* Main Info */}
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
@@ -87,7 +132,10 @@ export default function ProfilePage() {
                       <p className="text-zion-cyan font-medium">{profileData.professional_title}</p>
                     </div>
                     {/* Add Save/Unsave Button Here */}
-                  </div>
+
+                  </div>;
+
+
                   {/* Location & Availability */}
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">
                     {profileData.location && (
@@ -104,12 +152,12 @@ export default function ProfilePage() {
                     )}
 
               {/* Skills */}
-              {profileData.skills && profileData.skills.length > 0 && (
-                <div className="mt-4">
-                  <h4 className="text-lg font-bold text-white mb-2">Skills</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {profileData.skills.map((skill: string, index: number) => (
-                      <Badge key={skill + index} variant="secondary">{skill}</Badge>
+              {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
+                <div className="mt-4">;
+                  <h4 className="text-lg font-bold text-white mb-2">Skills</h4>;
+                  <div className="flex flex-wrap gap-2">;
+                    {profileData && profileData.skills.map((skill: string, index: number,) => (;
+                      <Badge key={skill + index} variant="secondary">{skill}</Badge>;
                     ))}
                   </div>
                 </div>
@@ -120,15 +168,23 @@ export default function ProfilePage() {
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
 
             </div>
+            </div>;
+
+            {/* Bio Section */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
+              <h2 className="text-xl font-bold text-white mb-3">About Me</h2>;
+              <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
+            </div>;
+
             {/* Portfolio Section */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
-              <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
-              <div className="space-y-3">
-                {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (
-                  profileData.portfolio_links.map((link: string, index: number) => (
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
+              <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>;
+              <div className="space-y-3">;
+                {profileData && profileData.portfolio_links && profileData && profileData.portfolio_links.length > 0 ? (;
+                  profileData && profileData.portfolio_links.map((link: string, index: number,) => (;
                     <a
-                      key={link + index}
-                      href={link}
+                      key = {link + index,}
+                      href = {link,}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center text-zion-cyan hover:text-white transition-colors"
@@ -147,17 +203,27 @@ export default function ProfilePage() {
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
 
             </div>
+              </div>;
+            </div>;
+
+            {/* Experience Section */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
+              <h2 className="text-xl font-bold text-white mb-3">Experience</h2>;
+              <p className="text-zion-slate-light">{profileData && profileData.experience || "No experience provided."}</p>;
+            </div>;
+
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>
               <div className="flex space-x-4">
                 {profileData.github_link && (
                   <a
-                    href={profileData.github_link}
+                    href = {profileData && profileData.github_link,}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="GitHub"
+
                     title="GitHub"
                   >
                     <Github className="h-6 w-6" />
@@ -166,26 +232,30 @@ export default function ProfilePage() {
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="Twitter"
-                    title="Twitter"
-                  >
-                    <Twitter className="h-6 w-6" />
-                  </Link>
+                    title="Twitter">;
+                    <Twitter className="h-6 w-6" />;
+                  </a>;
                 )}
-                {profileData.linkedin_link && (;
-                  <a;
-                    href={profileData.linkedin_link}
+                {profileData && profileData.linkedin_link && (;
+                  <a
+                    href = {profileData && profileData.linkedin_link,}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="LinkedIn"
+
                     title="LinkedIn"
                   >
                     <Linkedin className="h-6 w-6" />
 
+<<<<<<< HEAD
                 )}
-              </div>
-            </div>
-          </div>
+
+              </div>;
+            </div>;
+          </div>;
+
+
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">
             <HireNowCTA

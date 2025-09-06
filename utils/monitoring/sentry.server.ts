@@ -1,4 +1,15 @@
 
+=======
+import * as Sentry from '@sentry / node',
+if (.get_client ()) {) {
+  $2
+}
+  Sentry.init ({
+    dsn: process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN || '',
+    tracesSampleRate: 0.1;
+    enabled: Boolean (process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN)});
+}
+
 
 if (!Sentry.getCurrentHub().getClient()) {;
   Sentry.init({;
@@ -12,3 +23,4 @@ if (!Sentry.getCurrentHub().getClient()) {;
   }
 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

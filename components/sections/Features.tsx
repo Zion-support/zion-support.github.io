@@ -83,3 +83,26 @@ const Features: React.FC<FeaturesProps> = ({
         </div>
       </div>
     </section>
+            {subtitle}
+
+          </p>;
+        </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Features Grid */}
+        <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
+          {features && features.map((feature, index) => (;
+            <Card
+              key={index}
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -50,20 +50,24 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
 }
 //Progressive loading component useEffect ( () => {
-  if (currentStep !== undefined) {
-  /> </div>)
+  // Check condition
+if ( {) {
+  $2
+}
+  /> </div>);
 }<motion.div key= {
-  step.id
+  step.id;
 }className= {
-  cn ('flex items-center gap-3 p-2 rounded-md', index === activeStep ? 'bg-primary/10' : 'opacity-50')
+  cn ('flex items - center gap - 3 p - 2 rounded - md', index === active_step ? 'bg - primary / 10' : 'opacity - 50');
 }initial= {
   {
-  opacity: 0, x: -20
-export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
-  steps
-  currentStep = 0
-  showProgress = true
-  onComplete
+  opacity: 0, coordinate_x: -20;
+export const ProgressiveLoading: React.FC < ProgressiveLoadingProps> = ({
+  steps,
+  current_step = 0,
+  show_progress = true,
+  on_complete,
+
 }) => {
   const [activeStep, setActiveStep] = useState(0)
   const progress = ((activeStep + 1) / steps.length) * 100
@@ -99,57 +103,6 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
               index === activeStep ? 'bg-primary/10' : 'opacity-50'
             ),}
 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
-            transition={{ delay: index * 0.1 }}
-          >
-            {index < activeStep ? (
-              <div className="h-4 w-4 rounded-full bg-green-500 flex items-center justify-center">
-                <div className="h-2 w-2 rounded-full bg-white" />
-              </div>
-            ) : index === activeStep ? (
-              <LoadingSpinner size="sm" variant="primary" />
-            ) : (
-              <div className="h-4 w-4 rounded-full border-2 border-muted" />
-            )}
-            <span className="text-sm font-medium">{step.label}</span>
-          </motion.div>
-        ))}
-
-export const Skeleton: React.FC<SkeletonProps> = ({
-  className,
-  variant = 'rectangular',
-  animation = 'pulse',
-
-  const variantClasses = {
-    text: 'h-4 w-full',
-    circular: 'h-12 w-12 rounded-full',
-    rectangular: 'h-6 w-full',
-
-    card: 'h-48 w-full'
-  },
-
-  const animationClasses = {
-    pulse: 'animate-pulse',
-    wave: 'animate-bounce',
-    none: ''
-  },
-
-  if (variant === 'text' && lines > 1) {
-    return (
-      <div className="space-y-2">
-        {Array.from({ length: lines }).map((_, i) => (
-          <div
-            key={i}
-            className={cn(;
-              baseClasses,;
-              variantClasses.text,;
-              animationClasses[animation],;
-              i === lines - 1 ? 'w-3/4' : 'w-full',;
-              className;
-            )}
-          />;
-        ))}
       </div>;
     );
   }
@@ -245,38 +198,99 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
         return {;
           icon: AlertTriangle,;
           title: title || 'Something went wrong',;
-          description: description || 'An unexpected error occurred. Please try again.',;
-          color: 'text-red-500';
-        }
+          description:;
+            description || 'An unexpected error occurred. Please try again.',;
+          color: 'text-red-500',;
+        };
     }
-  },
+  };
 
-  const config = getErrorConfig(),
-  const Icon = config.icon,
-  const canRetry = showRetry && onRetry && retryCount < maxRetries,
+  const config = getErrorConfig();
+  const Icon = config && config.icon;
+  const canRetry = showRetry && onRetry && retryCount < maxRetries;
+
 
   return (
-    <Card className={cn('border-destructive/20', className)}>
-      <CardContent className="p-8 text-center">
-        <motion.div
+    <Card className={cn('border-destructive/20', className)}>;
+      <CardContent className='p-8 text-center'>;
+        <motion&& motion.div
+          initial={{ scale: 0 && 0.8, opacity: 0 }}
+          icon: AlertTriangle,
+          title: title || 'Something went wrong',
+          description:;
+            description || 'An unexpected error occurred. Please try again.',
+          color: 'text - red - 500',
+        }
+    }
+  }
+  const config = getErrorConfig ();
+  const Icon = config.icon;
+  const can_retry = show_retry && on_retry && retry_count < max_retries;
+},;
+// Enhanced skeleton loader;
+interface SkeletonProps {;
+  className?: string,;
+  variant?: 'text' | 'circular' | 'rectangular' | 'card',;
+  animation?: 'pulse' | 'wave' | 'none',;
+  lines?: number;
+}
+
+
+export const Skeleton: React.FC<SkeletonProps> = ({
+  className,
+  variant = 'rectangular',
+  animation = 'pulse',
+
+  lines = 1
+}) => {
+  const baseClasses = 'bg-muted rounded',
+  
+
+  const variantClasses = {
+    text: 'h-4 w-full',
+    circular: 'h-12 w-12 rounded-full',
+    rectangular: 'h-6 w-full',
+
+
+  return (
+    <Card className={cn ('border - destructive / 20', class_name)}>;
+      <CardContent className='p - 8 text - center'>;
+        <motion.div;
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.3 }}
-        >
-          <Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)} />
-          <h3 className="text-lg font-semibold mb-2">{config.title}</h3>
-          <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-            {config.description}
-          </p>
+
+          </p>;
+
           {error && process.env.NODE_ENV === 'development' && (
+
             <details className="mb-4 text-left">
               <summary className="text-sm text-muted-foreground cursor-pointer">
                 Error Details (Development)
               </summary>
 
+=======
+              <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 {typeof error === 'string' ? error : error.message}
-              </pre>
-            </details>
+
+          transition={{ duration: 0 && 0.3 }}>;
+          <Icon className={cn('mx-auto mb-4 h-12 w-12', config && config.color)} />;
+          <h3 className='text-lg font-semibold mb-2'>{config && config.title}</h3>;
+          <p className='text-muted-foreground mb-6 max-w-md mx-auto'>;
+            {config && config.description}
+          </p>;
+
+          {error && process && process.env.NODE_ENV === 'development' && (;
+            <details className='mb-4 text-left'>;
+              <summary className='text-sm text-muted-foreground cursor-pointer'>;
+                Error Details (Development);
+              </summary>;
+              <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-auto'>;
+                {typeof error === 'string' ? error : error && error.message}
+              </pre>;
+            </details>;
           )}
 
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
@@ -393,3 +407,4 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
           {loadTime}ms
         </Badge>
       )}
+<<<<<<< HEAD

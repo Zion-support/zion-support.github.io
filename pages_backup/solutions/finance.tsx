@@ -164,15 +164,26 @@ const benefits = [
 ];
 export default function FinanceSolutions() {
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Layout
       title="Finance Solutions - Zion Tech Group"
       description="Secure financial technology solutions for banks, fintech companies, and financial institutions. Regulatory compliant and secure."
-      keywords="finance solutions, fintech, banking technology, financial services, regulatory compliance, risk management"
+      keywords="finance solutions, fintech, banking technology, financial services, regulatory compliance, risk management">;
+      <div className="min-h-screen bg-white">;
+        {/* Hero Section */}
+
+=======
+  
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <section className="bg-gradient-to-r from-blue-600 to-green-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -205,9 +216,11 @@ export default function FinanceSolutions() {
                 Built for financial institutions with security, compliance, and performance as top priorities.
               </p>
 
+<<<<<<< HEAD
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -352,6 +365,8 @@ export default function FinanceSolutions() {
                 </button>
               </div>
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
           </div>
         </section>
@@ -379,4 +394,5 @@ export default function FinanceSolutions() {
 
     </>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );

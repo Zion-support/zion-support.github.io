@@ -1,5 +1,5 @@
-import { ServiceVariant } from '../types / service - variants';
-;
+
+
   id: string;
   name: string;
   tagline: string;
@@ -10,6 +10,9 @@ import { ServiceVariant } from '../types / service - variants';
   popular?: boolean;
   icon: string;
   color: string;
+
+  link: string;
+=======
 export interface Q3Service {
   id: string, name: string,
   tagline: string, price: string,
@@ -17,14 +20,23 @@ export interface Q3Service {
   features: string[], popular?: boolean,
   icon: string, color: string,
   textColor: string, link: string,
+
   marketPosition?: string;
   targetAudience?: string;
   trialDays?: number;
   setupTime?: string;
+
   category: string, realService: boolean,
+
   technology?: string[];
   integrations?: string[];
 
+=======
+
+  useCases?: string[];
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   roi?: string;
   competitors?: string[],
   marketSize?: string;
@@ -46,6 +58,7 @@ export interface Q3Service {
   rating?: number;
 
 const contact = {
+
   mobile: '+1 302 464 0950',
   reviews?: number
   email: 'kleber@ziontechgroup.com',
@@ -61,8 +74,10 @@ export const realServicesQ32025: Q3Service[] = [;
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 };
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const realServicesQ32025: Q3Service[] = [
   {
     id: 'subscription-analytics-revenue-optimization',
@@ -84,9 +99,15 @@ export const realServicesQ32025: Q3Service[] = [
 
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   },];    contactInfo: contact
   }
 ];
+  }
+];
+;
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14,

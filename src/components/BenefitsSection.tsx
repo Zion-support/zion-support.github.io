@@ -16,7 +16,7 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
         <div className="text-center mb-16">
 
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
-          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
+          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
             {t('home.benefits_subtitle')}
           </p>
         </div>
@@ -26,6 +26,75 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
             <FeatureCard
 
               key={index}
+
               title={benefit.title}
               description={benefit.description}
               icon={benefit.icon}
+<<<<<<< HEAD
+=======
+
+          ))}
+
+              className='bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300'            />              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
+              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
+            />))}
+        </div>;
+      </div>;
+    </section>);
+}
+import React, { useState } from 'react';
+export /**;
+
+export default BenefitsSection }}}}</motion.div></motion.div></motion.div>}
+import { GradientHeading } from './ui / GradientHeading';
+export default /**
+ * Page - Function description
+ */
+function Page() {
+  {
+
+
+      "Direct provider connections",";
+      "Competitive pricing",";
+      "Bulk discount options",";
+      "Transparent cost structure" ];
+
+              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
+            />
+          ))}
+
+        </div>;
+      </div>;
+    </section>;
+  );
+
+
+  );
+}
+";
+    title: "24 / 7 Support", ";
+    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.", ";
+    icon: <Clock className="w - 8 h - 8"  />, ";
+    color: "from - zion - blue to - zion - blue - dark", ";
+    bg_color: "from - zion - blue / 20 to - zion - blue - dark / 20", "    stats: "99.9% Uptime",
+    features: [";
+      "Round - the - clock assistance", ";
+      "Expert technical support", ";
+      "Rapid response times", ";
+      "Proactive monitoring" ];
+},
+  {
+";
+    title: "Cost Reduction", ";
+    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.", ";
+    icon: <TrendingDown className="w - 8 h - 8"  />, ";
+    color: "from - zion - green to - zion - green - dark", ";
+    bg_color: "from - zion - green / 20 to - zion - green - dark / 20", "    stats: "40% Cost Savings",
+    features: [";
+      "Direct provider connections", ";
+      "Competitive pricing", ";
+      "Bulk discount options", ";
+      "Transparent cost structure" ];
+}
+;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

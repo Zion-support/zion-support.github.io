@@ -3,6 +3,8 @@
 const NotFound = () => {
   const location = useLocation(),
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {
     console.error(
       "404 Error: User attempted to access non-existent route:"
@@ -16,7 +18,7 @@ const NotFound = () => {
         <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
         <a href="/" className="text-blue-500 hover: text-blue-700 underline">
           Return to Home
-        </Link>
+        </a>
       </div>
     </div>
   )
@@ -27,12 +29,13 @@ import { useEffect } from "react",;
 const NotFound = () => {;
   const location = useLocation(),;
   useEffect(() => {;
-    console.error(;
+    console && console.error(;
       "404 Error: User attempted to access non-existent route:",;
-      location.pathname;
+      location && location.pathname;
     );
-  }, [location.pathname]),;
-  return (;
+  }, [location && location.pathname]);
+
+  return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">;
       <div className="text-center">;
         <h1 className="text-4xl font-bold mb-4">404</h1>;
@@ -46,3 +49,7 @@ const NotFound = () => {;
 },;
 
 export default NotFound;
+export default NotFound;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

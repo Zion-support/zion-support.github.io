@@ -1,5 +1,14 @@
 
 
+=======
+
+    headline: string,
+    subtitle: string,
+    cta: string;
+  };
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   tenant: WhitelabelTenant | null
 }
 
@@ -31,6 +40,17 @@ interface WhitelabelProviderProps {
   children: ReactNode
 }
 
+  const context = useContext(WhitelabelContext);
+  if (!context) {;
+    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
+  }
+
+
+
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
   useEffect(() => {
@@ -54,3 +74,14 @@ interface WhitelabelProviderProps {
   )
 }
 
+    }
+  }, [tenant, isLoading]);
+  return (
+    <WhitelabelContext && WhitelabelContext.Provider value={contextValue}>;
+      {children}
+
+    </WhitelabelContext && WhitelabelContext.Provider>;
+  );
+};
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

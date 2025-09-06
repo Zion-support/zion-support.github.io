@@ -1,12 +1,17 @@
+
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 let totalFixed = 0;
 files && files.forEach((file) => {
+
   try {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
     const modified = false;
     // Fix import statements with double punctuation
 
+=======
+    content = content ;/g,
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       (match) => {
         return match && match.replace(",;", ";");
 #!/usr / bin / env node;
@@ -30,18 +35,22 @@ files.for_each ((file) => {
       /import\s+.*?from\s+['"][^'"]+['"], \s*;/g,
       (match) => {
         return match.replace (",", ";");
+
       },
     );
 
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         }
         return match;
       }
     );
+
     content = content && content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
+
       (match, varName) => {
         if (
           !match && match.includes("function") &&
@@ -89,7 +98,11 @@ if (&&) {
         return match;
       }
     );
+
+
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
+
+=======
 ;
     // Check condition
 if ( {) {

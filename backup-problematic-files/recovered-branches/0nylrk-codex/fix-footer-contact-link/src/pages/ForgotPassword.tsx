@@ -1,4 +1,49 @@
 
+=======
+import { useState } from "react",;
+import { Link } from "react-router-dom",;
+import { useForm, type UseFormReturn } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { Mail } from "lucide-react",;
+;
+import { useAuth } from "@/hooks/useAuth",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+;
+// Form validation schema;
+const forgotPasswordSchema = z.object({;
+  email:z.string().email("Please enter a valid email")}),;
+;
+type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,;
+;
+export default function ForgotPassword() {;
+  const { resetPassword, isLoading } = useAuth(),;
+  const [submitted, setSubmitted] = useState(false),;
+  ;
+  // Initialize react-hook-form;
+  const form = useForm({;
+    resolver:zodResolver(forgotPasswordSchema),;
+    defaultValues:{;
+      email:""}}) as UseFormReturn<ForgotPasswordFormValues>,;
+;
+  // Form submission handler;
+  const onSubmit = async (data:ForgotPasswordFormValues) => {;
+    await resetPassword(data.email),;
+    setSubmitted(true);
+  },;
+;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <Header />;
       <div className="flex min-h-screen bg-zion-blue">;
@@ -12,6 +57,7 @@
                 Enter your email and we'll send you a link to reset your password.;
               </p>;
             </div>;
+<<<<<<< HEAD
 
             <div className="bg-zion-blue-dark rounded-lg p-6">;
               {submitted ? (;
@@ -57,13 +103,4 @@
               <div className="max-w-md text-center">;
                 <h3 className="text-3xl font-bold text-white mb-4">Account Recovery</h3>;
                 <p className="text-lg text-white/80">;
-
-                  We'll help you get back into your account so you can continue your journey in the Zion marketplace.;
-                </p>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-      <Footer />;
 

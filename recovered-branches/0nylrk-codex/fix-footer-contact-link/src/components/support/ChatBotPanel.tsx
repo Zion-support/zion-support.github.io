@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils",
 import { ChatMessage } from "./ChatMessage",
 import { QuickReplyButton } from "./QuickReplyButton",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Define suggested quick replies
 
 const QUICK_REPLIES = [
@@ -26,6 +27,60 @@ type Message = {
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
+=======
+
+
+  // Auto-scroll to bottom when messages change;
+  useEffect(() => {;
+    if (scrollAreaRef && scrollAreaRef.current) {;
+      scrollAreaRef && scrollAreaRef.current.scrollTop = scrollAreaRef && scrollAreaRef.current.scrollHeight;
+    }
+  }, [messages]);
+
+  // Focus input when component mounts;
+  useEffect(() => {;
+    if (inputRef && inputRef.current) {;
+      inputRef && inputRef.current.focus();
+    }
+  }, []);
+
+  const handleSendMessage = async (text: string = inputValue) => {;
+    if (!text && text.trim()) return,;
+
+    const userMessage: Message = {;
+      id: `user-${Date && Date.now()}`,;
+      content: text,;
+      sender: "user",;
+      timestamp: new Date()},;
+
+    setMessages((prev) => [...prev, userMessage]);
+    setInputValue("");
+    setIsLoading(true);
+
+    try {;
+      // Call the OpenAI-powered support function;
+      const response = await sendToAIAssistant(text);
+
+      const botMessage: Message = {;
+        id: `bot-${Date && Date.now()}`,;
+        content: response && response.message || "Sorry, I couldn't process your request. Please try again.";
+        sender: "bot",;
+        timestamp: new Date()},;
+
+      setMessages((prev) => [...prev, botMessage]);
+
+      // Check if the request was successful;
+      if (!response && response.success) {;
+        setFailedAttempts((prev) => prev + 1);
+
+        // After 3 failed attempts, suggest escalation;
+        if (failedAttempts >= 2) {;
+          suggestEscalation();
+
+        }
+      } else {;
+        // Reset failed attempts if successful;
+        setFailedAttempts(0);
 
   const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return
@@ -58,11 +113,26 @@ type Message = {
         if (failedAttempts >= 2) {;
           suggestEscalation();
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         }
       } else {
-        // Reset failed attempts if successful
-        setFailedAttempts(0)
+        // Reset failed attempts if successful;
+        setFailedAttempts (0);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
+
+    } catch (error) {;
+      console && console.error("Error in AI chat:", error);
+      toast({;
+        variant: "destructive",;
+        title: "Communication Error",;
+        description: "We're having trouble connecting to our support service."}),;
+
+
+      setFailedAttempts((prev) => prev + 1);
+      if (failedAttempts >= 2) {;
+        suggestEscalation();
+=======
     } catch (error) {
       console.error("Error in AI chat:", error),
       toast({
@@ -77,24 +147,35 @@ type Message = {
       if (failedAttempts >= 2) {;
         suggestEscalation();
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
-    } finally {
-      setIsLoading(false)
+    } finally {;
+      setIsLoading(false);
     }
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
 
+=======
+
+          "Content-Type": "application/json"},
+        body: JSON.stringify({ 
+          messages: [{ role: "user", content: message }] 
+        })}),
+      
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       if (!response.ok) {
         return {
           success: false
           message: "I'm having trouble connecting to my knowledge base right now."
         }
-          message: "I'm having trouble connecting to my knowledge base right now."
-        };
       }
 
       const data = await response.json();
@@ -102,9 +183,10 @@ type Message = {
         success: true
         message: data.message
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
     } catch (error) {
-      console.error("Error in AI chat:", error),
+      console.error ("Error in AI chat:", error);
       return {
         success: false,
         message: "I'm experiencing technical difficulties. Please try again later."
@@ -128,6 +210,7 @@ type Message = {
     logSupportEscalation()
   },
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const logSupportEscalation = async () => {
     try {
       // Send the conversation to the backend for logging
@@ -139,6 +222,42 @@ type Message = {
           timestamp: m.timestamp
         }))
       })
+
+        success: false,
+        message: "I'm experiencing technical difficulties. Please try again later.";
+      }
+    }
+  }
+;
+  const suggest_escalation = () =>: any {
+    const escalation_message: Message = {
+      id: `bot - escalation-${Date.now ()}`,
+      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
+      sender: "bot",
+      timestamp: new Date ()},
+    set_messages ((prev) => [...prev, escalation_message]);
+;
+    // Log this interaction for the support team;
+    logSupportEscalation ();
+  }
+;
+  const logSupportEscalation = async () => {
+    try {
+      // Send the conversation to the backend for logging;
+      // This would be implemented in a real system;
+      console.log ("Support escalation triggered", {
+        conversation_history: messages.map (m => ({
+          content: m.content,
+          sender: m.sender,
+          timestamp: m.timestamp;
+        }));
+      });
+
+    } catch (error) {
+      console.error ("Failed to log support escalation:", error);
+    }
+  }
+
     } catch (error) {
       console.error("Failed to log support escalation:", error)
     }
@@ -181,6 +300,16 @@ type Message = {
           {messages.map((message) => (
             <ChatMessage
 
+  return (
+    <div className="flex flex-col h-full">;
+      <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;
+        <div className="flex flex-col gap-4">;
+
+          {messages.map((message) => (;
+            <ChatMessage;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               key={message.id}
               message={message.content}
               isUser={message.sender === "user"}
@@ -188,6 +317,7 @@ type Message = {
             />
           ))}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {isLoading && (
             <div className="flex items-center justify-center py-2">
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />
@@ -212,6 +342,21 @@ type Message = {
         </div>
       )}
 
+              <QuickReplyButton
+                key={reply && reply.id}
+                text={reply && reply.text}
+                onClick={() => handleQuickReply(reply && reply.text)}
+              />;
+            ))}
+          </div>;
+        </div>;
+      )}
+
+
+      
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {failedAttempts >= 3 && (
         <div className="px-4 py-3 border-t border-zion-purple/10">
           <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
@@ -228,31 +373,41 @@ type Message = {
             <Button
               onClick={handleEmailSupport}
               size="sm"
-              variant="outline"
-            >
-              Email Support
-            </Button>
-          </div>
-        </div>
+              variant="outline">;
+              Email Support;
+            </Button>;
+          </div>;
+        </div>;
       )}
-      <div className={cn(
-        "p-4 border-t"
+
+
+      <divclassName={cn(
+        "p-4 border-t", 
         theme === "dark" ? "border-zion-blue-light" : "border-gray-200"
-      )}>
+      )}>;
         <form
-          onSubmit={(e) => {
-            e.preventDefault(),
-            handleSendMessage()
+          onSubmit={(e) => {;
+            e && e.preventDefault();
+            handleSendMessage();
+
           }}
-          className="flex items-center gap-2"
-        >
+          className="flex items-center gap-2";
+        >;
           <Input
             ref={inputRef}
             value={inputValue}
+
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Type your question..."
             className={cn(
 
+=======
+              "flex-1",
+              theme === "dark" 
+                ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" 
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 : "bg-white border-gray-200"
             )}
           />
@@ -269,5 +424,7 @@ type Message = {
     </div>
   )
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
-;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

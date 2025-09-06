@@ -12,29 +12,27 @@
   priceRange: [number, number];
 
   setPriceRange: (range: [number, number]) => void;
-  experienceRange: [number, number],
+  experience_range: [number, number];
+
   setExperienceRange: (range: [number, number]) => void;
-  expandedSections: {
+  expanded_sections: {
     skills: boolean;
     availability: boolean;
     region: boolean;
 
-    experience: boolean
-    price: boolean
+    experience: boolean,
+    price: boolean;
   }
-  toggleSection: (sectionName: string) => void;
-  sortOption: string;
+  toggle_section: (section_name: string) => void;
+  sort_option: string;
   setSortOption: (option: string) => void;
-  clearFilters: () => void
-
-  isMobileFilterOpen?: boolean
+  clear_filters: () => void,
+  isMobileFilterOpen?: boolean;
 }
 
   expanded: boolean;
-
-  toggleSection: () => void
-
-  isMobileFilterOpen?: boolean
+  toggle_section: () => void,
+  isMobileFilterOpen?: boolean;
 }
 
   searchTerm: string,;
@@ -88,15 +86,22 @@ export interface ExperienceFilterProps extends FilterComponentProps {;
   experienceRange: [number, number],;
   setExperienceRange: (range: [number, number]) => void;
 }
-;
-export interface PriceFilterProps extends FilterComponentProps {;
-  priceRange: [number, number],;
+export interface PriceFilterProps extends FilterComponentProps {
+  price_range: [number, number];
   setPriceRange: (range: [number, number]) => void;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 export interface SearchFilterProps {
 
-  searchTerm: string
-
-  setSearchTerm: (term: string) => void
+  search_term: string,
+  setSearchTerm: (term: string) => void;
 }
+=======
+export interface SortFilterProps {
+  sort_option: string,
+  setSortOption: (option: string) => void;
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

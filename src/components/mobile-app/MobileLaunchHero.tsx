@@ -27,6 +27,12 @@ export const MobileLaunchHero: React.FC = () => {
             </div>
             <div className="mb-8">
 
+=======
+
+              <AppStoreButtons 
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}              />
             </div>
@@ -64,3 +70,4 @@ export const MobileLaunchHero: React.FC = () => {
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
+<<<<<<< HEAD

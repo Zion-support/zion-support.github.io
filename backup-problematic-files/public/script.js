@@ -125,42 +125,13 @@ document.addEventListener('click', function(e) {;
 
   lastScrollTop = scrollTop
 });
-//Form handling for contact forms submitBtn && submitBtn.disabled = true;
-//Simulate form submission (replace with actual API call) //Reset form form && form.reset ();
+//Form handling for contact forms submitBtn.disabled = true;
+//Simulate form submission (replace with actual API call) //Reset form form.reset ();
 //Reset button after delay //Lazy loading for images if ('IntersectionObserver' in window) {
   const imageObserver = new IntersectionObserver ( (entries, observer) => {
 
 });
-//Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
-  entries.for_each (entry => {
-  // Check condition
-if ( {) {
-  $2
-}
-  lastScrollTop = scroll_top;
-});
-//Form handling for contact forms submit_btn.disabled = true;
-//Simulate form submission (replace with actual API call) //Reset form form.reset ();
-//Reset button after delay //Lazy loading for images // Check condition
-if ( {) {
-  $2
-}
-  const image_observer = new IntersectionObserver ( (entries, observer) => {
-  entries.for_each (entry => {
-  // Check condition
-if ( {) {
-  $2
-}
-});
-}//Newsletter subscription submit_btn.disabled = true;
-//Simulate subscription (replace with actual API call) //Reset form this.reset ();
-//Reset button after delay //Initialize tooltips initialize_tooltips ();
-//Initialize modals initialize_modals ();
-});
-//Search /**
- * if - Function description
- */
-function if() {
+//Search function if (searchResults) {
   const results = [ {
 
 //Send to error tracking service

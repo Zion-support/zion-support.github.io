@@ -1,4 +1,23 @@
 
+=======
+import { CountryPricing } from "@/data/onsiteServicePricing",;
+import { CountryServiceSelector } from "../CountryServiceSelector",;
+;
+interface ServiceDetailsSectionProps {;
+  selectedCountry:CountryPricing | null,;
+  setSelectedCountry:(country:CountryPricing | null) => void;
+}
+;
+export function ServiceDetailsSection({ selectedCountry, setSelectedCountry } ServiceDetailsSectionProps) {;
+  return (;
+    <div id="service-details" className="mt-12">;
+      {selectedCountry ? (;
+        <CountryServiceSelector ;
+          selectedCountry={selectedCountry}
+          onCountryChange={setSelectedCountry}
+        />;
+      ) :(;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="text-center">;
           <h2 className="text-2xl font-bold text-white mb-4">Select a Country for Details</h2>;
           <p className="text-zion-slate-light mb-6">;
@@ -7,4 +26,5 @@
         </div>;
       )}
     </div>;
+<<<<<<< HEAD
 

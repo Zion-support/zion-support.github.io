@@ -6,7 +6,7 @@
 
       })
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
 
   return (
@@ -18,6 +18,11 @@
             AI Listing Optimizer
           </CardTitle>
 
+=======
+          <p className="text-sm text-zion-slate-light">
+            Provide basic information and let AI generate optimized, SEO-friendly content for your listing
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </p>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -44,7 +49,7 @@
               <>Generating Optimized Content...</>
             ) : (
               <>
-                <Sparkles className="h-4 w-4 mr-2" />
+                <Sparkles className='h-4 w-4 mr-2' />
                 Generate Optimized Content
               </>
             )}
@@ -52,9 +57,9 @@
         </CardContent>
       </Card>
       {isLoading && (
-        <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">
+        <Card className='border border-zion-blue-light bg-zion-blue-dark overflow-hidden'>
           <CardHeader>
-            <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />
+            <Skeleton className='h-8 w-3/4 bg-zion-blue-light/20' />
           </CardHeader>
 
       )}
@@ -89,11 +94,36 @@ case 'keyFeatures': setKeyFeatures (e.target.value)
 break;'
 case 'targetAudience': const handleGenerate = async () => {
   if (!title |!category) {
+            <Button;
+              on_click={handle_apply}
+              className='w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white'            >;
+              Apply to My Listing;
+              <ArrowRight className='ml - 2 h - 4 w - 4' />;
+            </Button>;
+          </CardFooter>;
+        </Card>)}
+    </div>);
+  target: {
+  value: string;
+}, field: string) => {
+  switch (field) {
+  case 'title': set_title (e.target.value);
+break;';
+case 'category': set_category (e.target.value);
+break;';
+case 'key_features': setKeyFeatures (e.target.value);
+break;';
+case 'target_audience': const handle_generate = async () => {
+  // Check condition
+if ( {) {
+  $2
+}
   toast ({
   return;
-}setIsLoading (true)
-}catch (error) {'
+}setIsLoading (true);
+}catch (error) {';
   logErrorToProduction ('Error generating content:', {
+<<<<<<< HEAD
   data: error
 })
 toast ({

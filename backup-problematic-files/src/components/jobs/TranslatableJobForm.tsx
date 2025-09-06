@@ -262,6 +262,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   }
   // Ensure all translations are available;
   const ensureAllTranslations = async () => {
+
 interface TranslatableJobFormProps {;
   onSubmit: (formData: any) => void;
   isSubmitting?: boolean;}
@@ -317,7 +318,10 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     const promises = [];
 }
   );
+
 }
+
+
 export function TranslatableJobForm({ onSubmit, isSubmitting;
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -497,3 +501,14 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
           ) : (
             t('jobs.post_job_button')
           )}
+<<<<<<< HEAD
+=======
+
+
+        </Button>;
+      </div>;
+    </form>;
+  );
+}
+;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

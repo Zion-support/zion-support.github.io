@@ -5,16 +5,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });
   }
-  const { email, password, code } = req.body |{}
-  if (!email |!password |!code) {
-    return res.status(400).json({ error: 'Missing credentials' });
+
+  const { email, password, code } = req && req.body || {};
+  if (!email || !password || !code) {
+    return res && res.status(400).json({ error: 'Missing credentials' });
+
   }
 
   const result = validateCredentials(email, password, code);
+
   const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true });
+
   res.setHeader('Set-Cookie', cookie);
   return res.status(200).json({ ok: true })
-}
+
   if (!result && result.ok || !result && result.role) {
     return res && res.status(401).json({ error: 'Invalid credentials' });
   }
@@ -28,6 +32,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.setHeader('Set-Cookie', cookie);
   return res && res.status(200).json({ ok: true })
 }
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
   createSessionCookie,
   validate_credentials,
 } from '../../../utils / auth - utils';import { createSessionCookie, validate_credentials } from '../../../utils / auth - utils';
@@ -64,3 +72,9 @@ if ( {) {
   return res.status (200).json ({ ok: true });  const cookie = createSessionCookie ({ email, role: result.role, twofa_verified: true });
   res.set_header ('Set - Cookie', cookie);
   return res.status (200).json ({ ok: true });
+=======
+
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

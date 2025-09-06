@@ -1,5 +1,6 @@
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Performance monitoring;
     // Check condition
 if ( {) {
@@ -15,6 +16,13 @@ if ( {) {
             // // // console.log ("LCP:", entry.start_time);
           }
 
+=======
+          // Check condition
+if ( {) {
+  $2
+}
+            const firstInputEntry = entry as FirstInputEntry,
+            // // // console.log ("FID:", firstInputEntry.processing_start - firstInputEntry.start_time);
           }
         }
       }),
@@ -39,6 +47,12 @@ if ( {) {
       }),
       // Cleanup;
 
+<<<<<<< HEAD
+=======
+      return () => {;
+        observer.disconnect();
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         observer2.disconnect();
 
       }

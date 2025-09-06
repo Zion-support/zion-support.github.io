@@ -71,14 +71,117 @@ export function DynamicListingPage({
         : [...prev, category]
     )
 
+=======
+
+  },
+  const clearCategories = () => setSelectedCategories([]),
+  const [view, setView] = useState<ListingView>("grid"),
+  const isGrid = view === "grid",
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Swap icons to match action
   const ToggleViewIcon = isGrid ? (
-    <List className="h-4 w-4" />
+    <List className='h-4 w-4' />
   ) : (
 
     setCurrentPriceFilter([min, max])
+import { useState, useEffect } from 'react';
+import { use_router } from 'next / router';
+import { GradientHeading } from '@/components / GradientHeading';
+import { ProductListingCard } from '@/components / ProductListingCard';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input'; import { use_router } from 'next / router';
+import { GradientHeading  } from '@/components / GradientHeading';
+import { ProductListingCard  } from '@/components / ProductListingCard';
+import { Button  } from '@/components / ui / button';
+import { Input  } from '@/components / ui / input';
+import { log_info, logErrorToProduction } from '@/utils / production_logger';
+import {
+  Select,
+  SelectValue,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,
+} from '@/components / ui / select';
+import { Checkbox } from '@/components / ui / checkbox';
+import Skeleton from 'react - loading - skeleton';
+import 'react - loading - skeleton / dist / skeleton.css';
+import { Slider } from '@/components / ui / slider';
+import { ProductListing, ListingView } from '@/types / listings';
+import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react';
+import { toast } from '@/hooks / use - toast';
+import { capture_exception } from '@/utils / sentry';
+interface PriceRange {
+  min: number;
+max: number;
+}interface DynamicListingPageProps {
+  title: string;
+description: string;
+category_slug: string;
+listings: ProductListing[];
+category_filters: {
+  label: string, value: string;
+}[];
+initial_price?: PriceRange;
+}const toggle_category = (category: string) =>: any {
+  setSelectedCategories (prev => prev.includes (category) ? prev.filter (c => c !== category) : [...prev, category] min: 0;
+max: 10000;
+});
+export /**
+ * DynamicListingPage - Function description
+ */
+function DynamicListingPage() {
+  const router = use_router ();
+  const [search_query, setSearchQuery] = useState ('');
+  const [selected_categories, setSelectedCategories] = useState < string[]>([]);
+  const toggle_category = (category: string) =>: any {    setSelectedCategories (prev =>;
+      prev.includes (category);
+        ? prev.filter (c => c !== category);
+        : [...prev, category]);
   }
-  let filteredListings: ProductListing[] = []
+  const clear_categories = () =>: any setSelectedCategories ([]);
+  const [view, set_view] = useState < ListingView>('grid');
+  const is_grid = view === 'grid';
+  // Swap icons to match action;
+  const ToggleViewIcon = is_grid ? (
+    <List className='h - 4 w - 4' />) : (
+    <LayoutGrid className='h - 4 w - 4' />);
+  const [is_loading, setIsLoading] = useState (false);
+  const [price_range, setPriceRange] = useState < PriceRange>({
+    min: 0,
+    max: 10000,
+  });
+  const [selected_rating, setSelectedRating] = useState < number | null>(null);
+  const [selected_brand, setSelectedBrand] = useState ('all');
+  const [spec_query, setSpecQuery] = useState ('');
+  const [selected_availability, setSelectedAvailability] = useState ('all');
+  const [sort_option, setSortOption] = useState ('newest');
+  const brand_options = Array.from (
+    new Set (all_listings.map (l => l.brand).filter (Boolean)));
+  const availability_options = Array.from (
+    new Set (all_listings.map (l => l.availability).filter (Boolean)));
+  useEffect (() => {
+    const listingsWithPrice = all_listings.filter (l => l.price !== null);
+    // Check condition
+if ( {) {
+  $2
+}
+      const max = Math.max (...listingsWithPrice.map (l => l.price || 0));
+      setPriceRange ({ min: 0, max });
+      setCurrentPriceFilter ([0, max]) }
+  }, [all_listings]);
+  const [currentPriceFilter, setCurrentPriceFilter] = useState<;
+    [number, number];
+  >([0, initial_price.max]);
+  const handleSliderChange = (values: number[]) =>: any {
+    const [min, max] = values.map (Number);
+    if (|| isNaN (max)) return) {
+  $2
+}
+    setCurrentPriceFilter ([min, max]);
+  }
+  let filtered_listings: ProductListing[] = [];
   try {
 
         !searchQuery ||
@@ -88,22 +191,6 @@ export function DynamicListingPage({
           listing.tags.some((tag: string) =>
 
             tag.toLowerCase().includes(searchQuery.toLowerCase()))),
-
-      const matchesBrand =
-        selectedBrand === "all" ||
-        (listing.brand && listing.brand === selectedBrand),
-
-      const matchesSpecs =
-        !specQuery |
-        (listing.specifications &&
-
-      const matchesPrice =
-        listing.price === null |
-        (listing.price >= currentPriceFilter[0] &&
-
-      const matchesRating =
-        selectedRating === null |
-        (listing.rating !== undefined && listing.rating >= selectedRating)
 
         selectedRating === null ||
         (listing.rating !== undefined && listing.rating >= selectedRating),
@@ -150,8 +237,9 @@ export function DynamicListingPage({
 
                   Categories
                 </label>
-                <div className="space-y-2">
+                <div className='space-y-2'>
                   {categoryFilters.map(filter => (
+
                     <div key={filter.value} className="flex items-center">
                       <Checkbox
                         id={`cat-${filter.value}`}
@@ -167,13 +255,16 @@ export function DynamicListingPage({
                       </label>
                     </div>
                   ))}
-                </div>
-              </div>
-              {brandOptions.length > 0 && (
-                <div className="mb-6">
-                  <label className="text-sm font-medium text-zion-slate-light block mb-2">
-                    Brand
-                  </label>
+
+                </div>;
+              </div>;
+
+              {brandOptions && brandOptions.length > 0 && (;
+                <div className='mb-6'>;
+                  <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
+                    Brand;
+                  </label>;
+
                   <Select
 
                       ))}
@@ -183,16 +274,24 @@ export function DynamicListingPage({
               )}
 
                   value={specQuery}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setSpecQuery(e.target.value)
+                  onChange={(e: React && React.ChangeEvent<HTMLInputElement>) =>;
+                    setSpecQuery(e && e.target.value);
                   }
 
               </div>
               {availabilityOptions.length > 0 && (
-                <div className="mb-6">
-                  <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                <div className='mb-6'>
+                  <label className='text-sm font-medium text-zion-slate-light block mb-2'>
                     Availability
                   </label>
+                  className='bg-zion-blue border border-zion-blue-light text-white'                />;
+              </div>;
+
+              {availabilityOptions && availabilityOptions.length > 0 && (;
+                <div className='mb-6'>;
+                  <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
+                    Availability;
+                  </label>;
                   <Select
 
                   >
@@ -205,20 +304,26 @@ export function DynamicListingPage({
                       </SelectItem>
 
                       ))}
-                    </SelectContent>
-                  </Select>
-                </div>
+                    </SelectContent>;
+                  </Select>;
+                </div>;
               )}
 
                   Price Range
                 </label>
-                <div className="mt-6 px-2">
+                <div className='mt-6 px-2'>
+
+              <div className='mb-6'>;
+                <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
+                  Price Range;
+                </label>;
+                <div className='mt-6 px-2'>;
                   <Slider
 
                     defaultValue={[0, priceRange.max]}
                     min={0}
-                    max={priceRange.max}
-                    step={priceRange.max / 100}
+                    max={priceRange && priceRange.max}
+                    step={priceRange && priceRange.max / 100}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
 
@@ -239,10 +344,10 @@ export function DynamicListingPage({
                       ) : (
 
                           ))}
-                          <span className="ml-1">& Up</span>
-                        </div>
+                          <span className='ml-1'>& Up</span>;
+                        </div>;
                       )}
-                    </Button>
+                    </Button>;
                   ))}
                 </div>
               </div>
@@ -259,16 +364,85 @@ export function DynamicListingPage({
           </div>
 
                   <Select value={sortOption} onValueChange={setSortOption}>
-                    <SelectTrigger className="w-[150px] bg-zion-blue border border-zion-blue-light text-white">
-                      <SelectValue placeholder="Sort" />
+                    <SelectTrigger className='w-[150px] bg-zion-blue border border-zion-blue-light text-white'>
+                      <SelectValue placeholder='Sort' />
                     </SelectTrigger>
-                    <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                      <SelectItem value="newest" className="text-white">Newest</SelectItem>
-                      <SelectItem value="price-asc" className="text-white">Price: Low to High</SelectItem>
-                      <SelectItem value="price-desc" className="text-white">Price: High to Low</SelectItem>
-                      <SelectItem value="rating" className="text-white">Highest Rating</SelectItem>
+                    <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
+                      <SelectItem value='newest' className='text-white'>
+                        Newest
+                      </SelectItem>
+                      <SelectItem value='price-asc' className='text-white'>
+                        Price: Low to High
+                      </SelectItem>
+                      <SelectItem value='price-desc' className='text-white'>
+                        Price: High to Low
+                      </SelectItem>
+                      <SelectItem value='rating' className='text-white'>
+                        Highest Rating
+                      </SelectItem>
                     </SelectContent>
                   </Select>
+
+                    onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => {;
+                      logInfo('Search query:', { data: e && e.target.value });
+                      setSearchQuery(e && e.target.value);                    }}
+                    className='pl-10 bg-zion-blue border border-zion-blue-light text-white';
+                  />;
+                </div>;
+
+                <div className='flex items-center gap-2 ml-auto'>;
+                  <Select value={sortOption} onValueChange={setSortOption}>;
+                    <SelectTrigger className='w-[150px] bg-zion-blue border border-zion-blue-light text-white'>;
+                      <SelectValue placeholder='Sort' />;
+                    </SelectTrigger>;
+                    <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>;
+                      <SelectItem value='newest' className='text-white'>;
+                        Newest;
+                      </SelectItem>;
+                      <SelectItem value='price-asc' className='text-white'>;
+                        Price: Low to High;
+                      </SelectItem>;
+                      <SelectItem value='price-desc' className='text-white'>;
+                        Price: High to Low;
+                      </SelectItem>;
+                      <SelectItem value='rating' className='text-white'>;
+          <div className='lg:col - span - 3'>;
+            <div className='bg - zion - blue - dark rounded - lg p - 4 mb - 6 border border - zion - blue - light'>;
+              <div className='flex flex - col md:flex - row gap - 4'>;
+                <div className='relative flex - grow'>;
+                  <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
+                  <Input;
+                    type='text';
+                    placeholder='Search listings...';
+                    value={search_query}
+                    on_change={(e: React.ChangeEvent < HTMLInputElement>) => {
+                      log_info ('Search query:', { data: e.target.value });
+                      setSearchQuery (e.target.value) }}
+                    className='pl - 10 bg - zion - blue border border - zion - blue - light text - white';
+                  />;
+                </div>;
+                <div className='flex items - center gap - 2 ml - auto'>;
+                  <Select value={sort_option} onValueChange={setSortOption}>;
+                    <SelectTrigger className='w-[150px] bg - zion - blue border border - zion - blue - light text - white'>;
+                      <SelectValue placeholder='Sort' />;
+                    </SelectTrigger>;
+                    <SelectContent className='bg - zion - blue - dark border border - zion - blue - light'>;
+                      <SelectItem value='newest' className='text - white'>;
+                        Newest;
+                      </SelectItem>;
+                      <SelectItem value='price - asc' className='text - white'>;
+                        Price: Low to High;
+                      </SelectItem>;
+                      <SelectItem value='price - desc' className='text - white'>;
+                        Price: High to Low;
+                      </SelectItem>;
+                      <SelectItem value='rating' className='text - white'>;
+
+                        Highest Rating;
+                      </SelectItem>;
+                    </SelectContent>;
+                  </Select>;
+
                   <Button
 
                     {ToggleViewIcon}
@@ -287,7 +461,32 @@ export function DynamicListingPage({
               </p>
             </div>
             {isLoading ? (
-              <div
+                  <Button;
+                    variant='outline';
+                    size='icon';
+                    on_click={() => set_view (is_grid ? 'list' : 'grid')}
+                    aria - label={is_grid ? 'List view' : 'Grid view'}
+                    title={is_grid ? 'List view' : 'Grid view'}
+                    className='border - zion - blue - light text - zion - slate - light focus - visible:ring - zion - purple'                  >;
+                    {ToggleViewIcon}
+                    <span className='sr - only'>;
+                      {is_grid ? 'List view' : 'Grid view'}
+                    </span>;
+                  </Button>;
+                </div>;
+              </div>;
+            </div>;
+
+            <div className='mb - 6'>;
+              <p className='text - zion - slate - light'>;
+                Showing {filtered_listings.length} results;
+                {selected_categories.length > 0 &&;
+                  ` in ${selected_categories.join (', ')}`}
+                {search_query && ` for "${search_query}"`}
+              </p>;
+            </div>;
+            {is_loading ? (
+              <div;
                 className={
 
                 }
@@ -300,8 +499,8 @@ export function DynamicListingPage({
                     </div>
                   </div>
                 ))}
-              </div>
-            ) : filteredListings.length > 0 ? (
+              </div>;
+            ) : filteredListings && filteredListings.length > 0 ? (;
               <div
                 className={
 
@@ -321,3 +520,4 @@ export function DynamicListingPage({
                   Clear All
                 </Button>
               </div>
+<<<<<<< HEAD

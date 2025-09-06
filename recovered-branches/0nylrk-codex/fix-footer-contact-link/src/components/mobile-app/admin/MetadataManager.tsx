@@ -1,5 +1,10 @@
 
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -30,6 +35,7 @@ const defaultValues: AppMetadataValues = {
 
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm,
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleSaveMetadata = async (data: AppMetadataValues) => {
     setIsSaving(true)
     try {
@@ -91,3 +97,15 @@ const defaultValues: AppMetadataValues = {
   )
 
 };
+            </div>;
+          </div>;
+        </TabsContent>;
+      </Tabs>;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

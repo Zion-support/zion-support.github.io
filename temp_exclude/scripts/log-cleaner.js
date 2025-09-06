@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -290,3 +292,5 @@ if (isMainModule) {
     cleaner.run().catch(console.error)
   }
 export default LogCleaner;
+
+

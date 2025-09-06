@@ -1,3 +1,30 @@
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function SecurityAudit({ report }: Props) {
+};
+</pre> </div>) ;
+export default function SecurityAudit(): any ({ report }: Props) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  return (
+    <div className="space-y-4">;
+      <header className="space-y-1">;
+        <h1 className="text-3xl font-bold">Security Audit</h1>;
+        <p className="text-gray-600 dark:text-gray-300">Automated vulnerability scan summary.</p>;
+      </header>;
+      {report && report.error && <div className="text-red-600">{report && report.error}</div>}
+      {report && report.generatedAt && (;
+        <div className="text-sm text-gray-500">Generated at: {new Date(report && report.generatedAt).toLocaleString()}</div>;
+      )}
+
+
+    </div>;
+
+
+);
+}
 
 
 export default function SecurityAudit({ report }: Props) {
@@ -17,3 +44,4 @@ export default function SecurityAudit({ report }: Props) {
 
 );
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

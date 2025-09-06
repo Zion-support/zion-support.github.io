@@ -1,5 +1,8 @@
 
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -61,6 +64,8 @@ async function main() {}
   const dirty = sh('git status --porcelain || true');
   let stashed = false;
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (dirty && dirty.split('\n').filter(Boolean).length) {}
     console.log('Local changes detected, stashing...');
     try { sh('git stash push -u -m "auto-resolve-temp"'); stashed = true} catch {};
@@ -73,6 +78,8 @@ async function main() {}
     const head = pr.head.ref;
     const base = pr.base.ref;
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`);
     try {}
       // Checkout PR branch;
@@ -95,6 +102,8 @@ async function main() {}
       if (result && result.merged) {}
         merged++;
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         console.log(`Merged PR #${pr.number}`)} else {`}
         console.log(`Skipped PR #${pr.number}: ${result && result.message ? result.message : 'not merged'}`)};
     } catch (e) {}
@@ -111,3 +120,8 @@ async function main() {}
   };
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
+=======
+<<<<<<< HEAD
+});
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

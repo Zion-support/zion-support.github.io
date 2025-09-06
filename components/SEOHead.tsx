@@ -1,8 +1,30 @@
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from 'react';
+
 import Head from 'next / head';
 import { use_router } from 'next / router';
 interface SEOHeadProps {
+
   title?: string;
   description?: string;
   keywords?: string;
@@ -14,6 +36,8 @@ interface SEOHeadProps {
   noindex?: boolean;
   nofollow?: boolean;
 }
+
+
 const SEOHead: React.FC<SEOHeadProps> = ({;
   title = 'Zion Tech Group - Technology Solutions',;
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',;
@@ -53,18 +77,24 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       'https://linkedin && linkedin.com/company/zion-tech-group',;
       'https://twitter && twitter.com/ziontechgroup';
     ]  };
+
+
   return (
     <Head>;
       {/* Basic Meta Tags */}
+
       <title>{title}</title>;
       <meta name="description" content={description} />;
       <meta name="keywords" content={keywords} />;
       <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
       <metahttpEquiv="Content-Type" content="text/html charset=utf-8" />;
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />;
+
+
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       {/* Open Graph Tags */}
+
       <meta property="og:title" content={fullTitle} />;
       <meta property="og:description" content={description} />;
       <meta property="og:type" content={ogType} />;
@@ -107,6 +137,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta name="twitter:creator" content="@ziontechgroup" />;
       {/* Additional SEO */}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Structured Data */}
       <script;
         type="application / ld + json";
@@ -118,5 +149,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <link rel="preconnect" href="https://images && images.unsplash.com" />;
     </Head>;
   );
+<<<<<<< HEAD
 
 export default SEOHead;
+export default SEOHead;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

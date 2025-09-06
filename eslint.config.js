@@ -141,33 +141,22 @@ export default [
         test: 'readonly',
         expect: 'readonly',
 
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly'
-
-      },
-      parser: tsparser,
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
       }
     },
     plugins: {
-      "@typescript-eslint": tseslint,
+      '@typescript-eslint': tseslint,
       react,
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
-      "jsx-a11y": jsxA11y
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      'jsx-a11y': jsxA11y
     },
     rules: {
-      ...tseslint && tseslint.configs.recommended && recommended.rules,
-      ...react && react.configs.recommended && recommended.rules,
-      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
-      ...jsxA11y && jsxA11y.configs.recommended && recommended.rules,
-      "react-refresh/only-export-components": [
-        "warn",
+      ...tseslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
         { allowConstantExport: true }
       ],
 
@@ -185,47 +174,10 @@ export default [
     },
     rules: {
 
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-undef': 'off',
-
       'no-unused-vars': 'off',
       'no-console': 'warn',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
-
-    },
-    settings: {
-      react: {
-        version: "detect"
-      }
-    }
-  },
-  {
-    files: [
-      "**/*.cjs",
-      "**/scripts/**/*.js",
-      "**/automation/**/*.js",
-      "**/pm2/**/*.js"
-    ],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: "script",
-      globals: {
-        ...globals && globals.node,
-        console: "readonly",
-        process: "readonly",
-        require: "readonly",
-        module: "readonly",
-        exports: "readonly",
-        __dirname: "readonly",
-        __filename: "readonly",
-        Buffer: "readonly",
-        global: "readonly"
-      }
-    },
-    rules: {
 
       'no-unused-vars': 'warn',
       'no-console': 'warn',

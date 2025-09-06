@@ -3,6 +3,20 @@ import Head from 'next/head';
 
 import { motion } from 'framer-motion';
 import {
+import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import { innovative2030Services } from '../data/2030-innovative-services';
+
+
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   ArrowRight,
   Star,
@@ -12,6 +26,11 @@ import {
   Award,
   Phone,
 
+=======
+  Mail,;
+  MapPin,;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
@@ -28,6 +47,7 @@ export default function Revolutionary2030ServicesPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <UltraFuturisticBackground2030>
       <Head>
@@ -98,6 +118,8 @@ export default function Revolutionary2030ServicesPage() {
                 "contactType": "customer service";
                 "email": "kleber@ziontechgroup.com"
               };
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               "address": {
                 "@type": "PostalAddress"
                 "streetAddress": "364 E Main St STE 1008"
@@ -112,6 +134,7 @@ export default function Revolutionary2030ServicesPage() {
               ]
             })
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Hero Section */}
       <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
@@ -122,6 +145,8 @@ export default function Revolutionary2030ServicesPage() {
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+
+
       {/* Hero Section */}
       <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
@@ -138,6 +163,7 @@ export default function Revolutionary2030ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight"
           >
 
@@ -153,15 +179,21 @@ export default function Revolutionary2030ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
+
           >
             Experience the next generation of revolutionary technology services. From AI consciousness
             and quantum computing to space mining and DNA computing, we're building the future today.
+
           </motion.p>
+
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
+
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
 
@@ -177,6 +209,8 @@ export default function Revolutionary2030ServicesPage() {
         </div>
       </section>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -227,189 +261,21 @@ export default function Revolutionary2030ServicesPage() {
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
-              same_as: ['https://github.com / Zion - Holdings'],
-            }),          }}              "contact_point": {
-                "@type": "ContactPoint";
-                "telephone": "+1 - 302 - 464 - 0950";
-                "contact_type": "customer service",
-                "email": "kleber@ziontechgroup.com";
-              }
-              "address": {
-                "@type": "PostalAddress";
-                "street_address": "364 E Main St STE 1008";
-                "address_locality": "Middletown";
-                "address_region": "DE";
-                "postal_code": "19709";
-                "address_country": "US";
-              }
-              "same_as": [;
-                "https://github.com / Zion - Holdings";
-              ];
-            });
-        />;
-      </Head>;
-      {/* Navigation */}
-      <UltraFuturisticNavigation2030 />;
-      {/* Hero Section */}
-      <section className='py - 32 px - 4 sm:px - 6 lg:px - 8 relative overflow - hidden'>;
-        <div className='max - w-7xl mx - auto text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}      <section className="py - 32 px - 4 sm:px - 6 lg:px - 8 relative overflow - hidden">;
-        <div className="max - w-7xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            className='mb - 8';
-          >;
-            <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 400 / 30 mb - 6'>;
-              <Zap className='w - 4 h - 4 text - cyan - 400 mr - 2' />;
-              <span className='text - cyan - 400 text - sm font - medium'>                2030 Revolutionary Technology Services            className="mb - 8";
-          >;
-            <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 400 / 30 mb - 6">;
-              <Zap className="w - 4 h - 4 text - cyan - 400 mr - 2" />;
-              <span className="text - cyan - 400 text - sm font - medium">;
-              </span>;
-            </div>;
-          </motion.div>;
-          <motion.h1;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className='text - 5xl md:text - 7xl lg:text - 8xl font - bold text - white mb - 8 leading - tight';
-          >;
-            <span className='bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
-              2030 Revolutionary;
-            </span>;
-            <br />;
-            <span className='bg - gradient - to - r from - pink - 400 via - purple - 400 to - cyan - 400 bg - clip - text text - transparent'>              Technology Services          >;
-            <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
-              2030 Revolutionary;
-            </span>;
-            <br />;
-            <span className="bg - gradient - to - r from - pink - 400 via - purple - 400 to - cyan - 400 bg - clip - text text - transparent">;
-              Technology Services;
-            </span>;
-          </motion.h1>;
-          <motion.p;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className='text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto mb - 12 leading - relaxed';
-          >;
-            Experience the next generation of revolutionary technology services.;
-            From AI consciousness and quantum computing to space mining and DNA;
-            computing, we're building the future today.          </motion.p>            className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto mb - 12 leading - relaxed";
-          >;
-            Experience the next generation of revolutionary technology services. From AI consciousness;
-            and quantum computing to space mining and DNA computing, we're building the future today.;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className='flex flex - col sm:flex - row gap - 4 justify - center items - center';
-          >;
-            <button className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - xl font - semibold text - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 group'>;
-              Schedule Consultation;
-              <ArrowRight className='w - 5 h - 5 ml - 2 inline group - hover:translate - x-1 transition - transform' />;
-            </button>;
-            <button className='px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 rounded - xl font - semibold text - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 200'>              View Pricing          >;
-            <button className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - xl font - semibold text - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 group">;
-              Schedule Consultation;
-              <ArrowRight className="w - 5 h - 5 ml - 2 inline group - hover:translate - x-1 transition - transform" />;
-            </button>;
-            <button className="px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 rounded - xl font - semibold text - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 200">;
-              View Pricing;
-            </button>;
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Services Showcase */}
-      <section className='py - 24 px - 4 sm:px - 6 lg:px - 8 relative overflow - hidden'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div      <section className="py - 24 px - 4 sm:px - 6 lg:px - 8 relative overflow - hidden">;
-        <div className="max - w-7xl mx - auto">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text - center mb - 20';
-            <h2 className='text - 4xl md:text - 6xl font - bold text - white mb - 6'>;
-              <span className='bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
-                Revolutionary;
-              </span>;
-              <br />;
-              <span className='bg - gradient - to - r from - pink - 400 via - purple - 400 to - cyan - 400 bg - clip - text text - transparent'>;
-                2030 Services;
-              </span>;
-            </h2>;
-            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-              Discover our comprehensive range of cutting - edge 2030 technology;
-              services that will transform your business and propel you into the;
-              future.            </p>;
-          </motion.div>;
-          {/* Services Grid */}
-          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8 mb - 20'>            {innovative2030Services.map ((service, index) => (
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-              Discover our comprehensive range of cutting - edge 2030 technology services that will;
-              transform your business and propel you into the future.;
-          </motion.div>;
-          {/* Services Grid */}
-          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8 mb - 20'>          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8 mb - 20">;
-            {innovative2030Services.map ((service, index) => (
-              <motion.div;
-                key={service.id}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                while_hover={{ coordinate_y: -5 }}
-                className='group cursor - pointer';
-              >;
-                <div className='p - 8 rounded - 3xl bg - gradient - to - br from - gray - 900 / 60 to - gray - 800 / 60 border border - cyan - 500 / 20 hover:border - cyan - 400 / 40 transition - all duration - 300 backdrop - blur - sm'>;
-                  {/* Service Header */}
-                  <div className='flex items - start justify - between mb - 6'>;
-                    <div className='flex items - center space - x-4'>;
-                      <div;
-                        className={`w - 16 h - 16 bg - gradient - to - r ${service.color} rounded - 2xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300`}
-                      >;
-                        <span className='text - 2xl'>{service.icon}</span>;
-                      </div>;
-                      <div>;
-                        <h3 className='text - 2xl font - bold text - white mb - 2'>;
-                          {service.name}
-                        </h3>;
-                        <p className='text - gray - 300'>{service.tagline}</p>;
-                      </div>;
-                    </div>;
-                    {service.popular && (
-                      <div className='px - 3 py - 1 bg - gradient - to - r from - yellow - 500 to - orange - 500 rounded - full text - xs font - semibold text - black'>                        Popular              >;
-                <div className="p - 8 rounded - 3xl bg - gradient - to - br from - gray - 900 / 60 to - gray - 800 / 60 border border - cyan - 500 / 20 hover:border - cyan - 400 / 40 transition - all duration - 300 backdrop - blur - sm">;
-                  {/* Service Header */}
-                  <div className="flex items - start justify - between mb - 6">;
-                    <div className="flex items - center space - x-4">;
-                      <div className={`w - 16 h - 16 bg - gradient - to - r ${service.color} rounded - 2xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300`}>;
-                        <span className="text - 2xl">{service.icon}</span>;
-                      </div>;
-                      <div>;
-                        <h3 className="text - 2xl font - bold text - white mb - 2">{service.name}</h3>;
-                        <p className="text - gray - 300">{service.tagline}</p>;
-                      </div>;
-                    </div>;
-                    {service.popular && (
-                      <div className="px - 3 py - 1 bg - gradient - to - r from - yellow - 500 to - orange - 500 rounded - full text - xs font - semibold text - black">;
-                        Popular;
-                      </div>)}
-                  </div>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Description */}
                   <p className='text - gray - 300 leading - relaxed mb - 6'>;
                     {service.description}
+
                   </div>;
+
                   {/* Description */}
                   <p className='text-gray-300 leading-relaxed mb-6'>;
                     {service && service.description}
                   </p>;
+
+
                   {/* Features */}
                   <div className='grid grid-cols-2 gap-3 mb-6'>;
                     {service && service.features;
@@ -422,6 +288,7 @@ export default function Revolutionary2030ServicesPage() {
                           <span>{feature}</span>;
                         </div>;
                       ))}
+
                 className="group cursor-pointer"
               >
                 <div className="p-8 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm">
@@ -440,6 +307,7 @@ export default function Revolutionary2030ServicesPage() {
                       <div className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-semibold text-black">
                         Popular
                       </div>
+
                     )}
                   </div>
 
@@ -500,6 +368,7 @@ export default function Revolutionary2030ServicesPage() {
                     ))}
                   </div>
                   </div>;
+
                   {/* Service Details */}
                   <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>;
                     <div className='flex items-center space-x-2'>;
@@ -536,6 +405,7 @@ export default function Revolutionary2030ServicesPage() {
                         <span>{feature}</span>;
                       </div>;
                     ))}
+
                   </div>;
                   {/* Price and CTA */}
                   <div className="flex items-center justify-between">
@@ -553,6 +423,8 @@ export default function Revolutionary2030ServicesPage() {
             ))}
           </div>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {/* Call to Action */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -584,9 +456,26 @@ export default function Revolutionary2030ServicesPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section className='py-24 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0 && 0.8 }}>;
+            <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>;
+              Ready to Transform Your Business with;
+              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+                {' '}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -595,8 +484,9 @@ export default function Revolutionary2030ServicesPage() {
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business with
+
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-{' '}2030 Technology?
+                {' '}2030 Technology?
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -613,6 +503,7 @@ export default function Revolutionary2030ServicesPage() {
             </div>
 
                 <span>{contactInfo.mobile}</span>
+
               </div>
               <div className="flex items-center justify-center space-x-2">
                 <Mail className="w-5 h-5 text-purple-400" />
@@ -626,3 +517,4 @@ export default function Revolutionary2030ServicesPage() {
           </motion.div>
         </div>
       </section>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

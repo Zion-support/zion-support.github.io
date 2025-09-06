@@ -53,6 +53,11 @@ export function ZapierIntegration() {
             </div>
           </CardContent>
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <CardFooter className="flex flex-col items-start">
             <Button variant="outline" className="gap-2">
               <ExternalLink className="h-4 w-4" />
@@ -88,3 +93,4 @@ export function ZapierIntegration() {
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
+<<<<<<< HEAD

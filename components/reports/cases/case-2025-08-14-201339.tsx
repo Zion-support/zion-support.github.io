@@ -1,4 +1,11 @@
 
+=======
+
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>;
+      <Head>;
+        <title>Case Study — Trigger Homepage</title>;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <meta
           name='description'
           content='Pragmatic case scenario inspired by live site signals.'
@@ -18,7 +25,9 @@
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
+
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
+
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -27,11 +36,10 @@
       </main>;
     </div>;
   );export default function Page() {;
-export default function Page() {
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
-    <div className="min-h-screen bg-slate-950 text-white">;
-      <Head>;
-        <title>Case Study — Trigger Homepage</title>;
+
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -75,12 +83,16 @@ function Page() {
     <div className="min - h-screen bg - slate - 950 text - white">;
       <Head>;
         <title > Case Study — Trigger Homepage</title>;
+
         <meta name="description" content="Pragmatic case scenario inspired by live site signals." />;
         <meta property="og:title" content="Case Study — Trigger Homepage" />;
         <meta property="og:description" content="Pragmatic case scenario inspired by live site signals." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
+
 }
+
+=======
       <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
         <h1 className="text - 3xl font - extrabold">Case Study — Trigger Homepage</h1>;
         <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><h2 > Scenario</h2><p > Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 > Approach</h2><ul><li > Baseline metrics</li><li > Iterative improvements</li><li > Risk management</li></ul><h2 > Results</h2><p > Lower latency, higher reliability, and faster iteration speed.</p>" }} />;
@@ -106,6 +118,7 @@ function Page() {
   );export default function Page() {
   return (
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Case Study — Trigger Homepage</title>
@@ -127,3 +140,4 @@ function Page() {
   }
 }
 ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

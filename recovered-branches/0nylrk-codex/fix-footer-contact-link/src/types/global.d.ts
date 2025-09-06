@@ -1,30 +1,34 @@
 
 
+=======
+import {ReactNode} from 'react';
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
-  export interface FeatureCardProps {;
+  export interface FeatureCardProps {
     title: string;
     description: string;
     icon: ReactNode;
 
-    className?: string
-
-    key?: number | string
+    class_name?: string,
+    key?: number | string;
   }
 }
-// Extend ListingScoreCardProps to include key for mapping
-declare module '@/components/ListingScoreCard' {
-  export interface ListingScoreCardProps {;
+// Extend ListingScoreCardProps to include key for mapping;
+declare module '@/components / ListingScoreCard' {
+
+  export interface ListingScoreCardProps {
     title: string;
     description: string;
     category: string;
     image?: string;
     tags?: string[];
     author?: string;
-    authorImage?: string;
-    aiScore?: number;
+    author_image?: string;
+    ai_score?: number;
     rating?: number;
-    reviewCount?: number;
 
     key?: string | number
 
@@ -52,5 +56,6 @@ declare module '@/components/ProductListingCard' {
 
     key?: string | number
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }

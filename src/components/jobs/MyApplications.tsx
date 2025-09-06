@@ -11,9 +11,8 @@ import { formatDistanceToNow } from "date-fns",
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-  }
 
-  if (isLoading) {
+import {ApplicationStatus} from "@/types/jobs";
     return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -44,6 +43,11 @@ import { formatDistanceToNow } from "date-fns",
   return (
     <div className="grid gap-4 md:grid-cols-2">
 
+=======
+      {applications.map((application) => (
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
@@ -78,14 +82,14 @@ import { formatDistanceToNow } from "date-fns",
 
                   size="sm"
                   className="text-xs"
-                  asChild
-                >
-                  <Link href={`/messages?jobId=${application.job_id}`}>
-                    <MessageSquare className="h-3 w-3 mr-1" /> Contact Client
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+                  asChild>;
+                  <Link href={`/messages?jobId=${application && application.job_id}`}>;
+                    <MessageSquare className="h-3 w-3 mr-1" /> Contact Client;
+                  </Link>;
+                </Button>;
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
       ))}
+<<<<<<< HEAD

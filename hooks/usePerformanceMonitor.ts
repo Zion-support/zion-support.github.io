@@ -23,9 +23,11 @@ interface PerformanceMetrics {
           }));
         }
         if (entry && entry.entryType === 'paint') {
+
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
+
               ...prev,
               firstContentfulPaint: paintEntry && paintEntry.startTime,
             }));
@@ -50,6 +52,8 @@ interface PerformanceMetrics {
           setMetrics(prev => ({
             ...prev,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
+
+=======
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -136,8 +140,10 @@ if ( {) {
         }
       });
     });
+
       observer && observer.disconnect();
     };
+
   }, []);
   return { metrics, isSupported }
 }

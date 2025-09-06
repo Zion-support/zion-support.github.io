@@ -135,7 +135,7 @@ export function SignUpForm() {;
         <Button
           variant="outline"
           className="w-full py-6 relative"
-          onClick={handleGoogleLogin}
+          onClick = {handleGoogleLogin,}
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
@@ -146,6 +146,13 @@ export function SignUpForm() {;
           Continue with Google
         </Button>
 
+=======
+
+        <Button 
+          variant="outline" 
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -183,6 +190,11 @@ export function SignUpForm() {;
         {signupMode && (
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
+
+      <form onSubmit={handleSubmit} className="space-y-4">;
+        {signupMode && (;
+          <div className="space-y-2">;
+            <Label htmlFor="name">Full name</Label>;
             <Input
               id="name"
               name="name"
@@ -197,44 +209,49 @@ export function SignUpForm() {;
 
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
+
+        <div className="space-y-2">;
+          <Label htmlFor="email">Email address</Label>;
           <Input
             id="email"
             name="email"
             type="email"
 
             placeholder="Enter your email"
-          />
-          {fieldErrors.email && (
-            <p className="text-red-500 text-sm">{fieldErrors.email}</p>
+          />;
+          {fieldErrors && fieldErrors.email && (;
+            <p className="text-red-500 text-sm">{fieldErrors && fieldErrors.email}</p>;
           )}
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="password">Password</Label>
+
+        </div>;
+
+        <div className="space-y-2">;
+          <Label htmlFor="password">Password</Label>;
+
           <Input
             id="password"
             name="password"
             type="password"
 
             placeholder="Create a password"
-          />
-          <PasswordStrengthMeter password={formData.password} />
-          {fieldErrors.password && (
-            <p className="text-red-500 text-sm">{fieldErrors.password}</p>
+          />;
+          <PasswordStrengthMeter password={formData && formData.password} />;
+          {fieldErrors && fieldErrors.password && (;
+            <p className="text-red-500 text-sm">{fieldErrors && fieldErrors.password}</p>;
           )}
         </div>
 
         <Button
           type="submit"
           className="w-full py-6"
-          disabled={isLoading}
-        >
-          {isLoading ? (
-            <>
-              <LoadingSpinner size="sm" className="mr-2" />
-              Please wait...
-            </>
-          ) : (
-            signupMode ? "Create Account" : "Sign In"
+          disabled = {isLoading,}>;
+          {isLoading ? (;
+            <>;
+              <LoadingSpinner size="sm" className="mr-2" />;
+              Please wait...;
+            </>;
+          ) : (;
+            signupMode ? "Create Account" : "Sign In";
           )}
         </Button>
       </form>
@@ -243,4 +260,97 @@ export function SignUpForm() {;
         {signupMode
           ? "Already have an account? "
           : "Don't have an account? "
+      <div className="relative flex items - center">;
+        <div className="flex - grow border - t border - border"></div>;
+        <span className="mx - 2 text - xs text - muted - foreground">OR</span>;
+        <div className="flex - grow border - t border - border"></div>;
+      </div>;
+      {/* Error Alert */}
+      {error && (
+        <Alert variant="destructive" className="mb - 4">;
+          <AlertCircle className="h - 4 w - 4" />;
+          <AlertDescription>{error}</AlertDescription>;
+        </Alert>)}
+      {/* Verification Message */}
+      {showVerificationMessage && (
+        <Alert className="mb - 4 border - blue - 500 bg - blue - 50">;
+          <AlertCircle className="h - 4 w - 4" />;
+          <AlertDescription>;
+            Please check your email and click the verification link before signing in.;
+          </AlertDescription>;
+        </Alert>)}
+      <form on_submit={handle_submit} className="space - y-4">;
+        {signup_mode && (
+          <div className="space - y-2">;
+            <Label html_for="name">Full name</Label>;
+            <Input;
+              id="name";
+              name="name";
+              value = {form_data.name, }
+              on_change = {handleInputChange, }
+              required;
+              aria - invalid = {!!field_errors.name, }
+              placeholder="Enter your full name";
+            />;
+            {field_errors.name && (
+              <p className="text - red - 500 text - sm">{field_errors.name}</p>)}
+          </div>)}
+        <div className="space - y-2">;
+          <Label html_for="email">Email address</Label>;
+          <Input;
+            id="email";
+            name="email";
+            type="email";
+            value = {form_data.email, }
+            on_change = {handleInputChange, }
+            required;
+            aria - invalid = {!!field_errors.email, }
+            placeholder="Enter your email";
+          />;
+          {field_errors.email && (
+            <p className="text - red - 500 text - sm">{field_errors.email}</p>)}
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="password">Password</Label>;
+          <Input;
+            id="password";
+            name="password";
+            type="password";
+            value = {form_data.password, }
+            on_change = {handleInputChange, }
+            required;
+            aria - invalid = {!!field_errors.password, }
+            placeholder="Create a password";
+          />;
+          <PasswordStrengthMeter password={form_data.password} />;
+          {field_errors.password && (
+            <p className="text - red - 500 text - sm">{field_errors.password}</p>)}
+        </div>;
+        <Button;
+          type="submit";
+          className="w - full py - 6";
+          disabled = {is_loading, }
+        >;
+          {is_loading ? (
+            <>;
+              <LoadingSpinner size="sm" className="mr - 2" />;
+              Please wait...;
+            </>) : (
+            signup_mode ? "Create Account" : "Sign In")}
+        </Button>;
+      </form>;
+      <p className="text - center text - sm">;
+        {signup_mode;
+          ? "Already have an account? ";
+          : "Don't have an account? ";
         }
+
+        </Button>;
+      </form>;
+
+      <p className="text-center text-sm">;
+        {signupMode;
+          ? "Already have an account? ";
+          : "Don't have an account? ";
+        }
+<<<<<<< HEAD

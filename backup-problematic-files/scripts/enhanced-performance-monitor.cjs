@@ -45,6 +45,10 @@
 
 #!/usr/bin/env node;
 
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -96,3 +100,8 @@ console.log('=')
       "message"
       "action"
       log('warn', 'Performance "Alerts")
+=======
+<<<<<<< HEAD
+      log('info', 'Performance "Recommendations")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

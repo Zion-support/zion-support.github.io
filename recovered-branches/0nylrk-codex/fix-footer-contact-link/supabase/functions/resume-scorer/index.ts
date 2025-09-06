@@ -4,9 +4,10 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
 
@@ -19,6 +20,7 @@ serve(async (req) => {
   try {
     const { applicationId } = await req.json(),
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (!applicationId) {
       throw new Error("Application ID is required")
     }
@@ -36,43 +38,74 @@ serve(async (req) => {
       `)
       .eq("id", applicationId)
 
+        id;
+        job_id;
+        talent_id;
+        cover_letter;
+        resume_id;
+
+
+      .single(),
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (appError) {
-      throw new Error(`Failed to fetch application: ${appError.message}`)
+      throw new Error(`Failed to fetch application: ${appError && appError.message}`)
     }
     if (!application) {
       throw new Error("Application not found")
     }
     // 2. Fetch resume details if a resume_id is provided
 
+=======
+    let resumeSkills: string[] = [],
+    
+    if (application && application.resume_id) {
+
     if (application.resume_id) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       const { data: resume, error: resumeError } = await supabase
         .from("talent_resumes")
         .select(`
-          summary,
-          headline,
-          resume_skills!inner(name, category, years_experience),
-          work_history!inner(company_name, role_title, start_date, end_date, description),
+          summary;
+          headline;
+          resume_skills!inner(name, category, years_experience);
+          work_history!inner(company_name, role_title, start_date, end_date, description);
           education!inner(institution, degree, field_of_study)
         `)
+
         .eq("id", application.resume_id)
 
+=======
+        .single(),
+        
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       if (resumeError) {
-        console.error("Error fetching resume:", resumeError)
+        console && console.error("Error fetching resume:", resumeError)
       } else if (resume) {
         // Format resume content for analysis
         resumeContent = `
-          Summary: ${resume.summary |""}
-          Headline: ${resume.headline |""}
+
+          Summary: ${resume && resume.summary || ""}
+          Headline: ${resume && resume.headline || ""}
+          
           Work Experience:
-          ${resume.work_history.map((job: any) =>
-            `${job.role_title} at ${job.company_name} (${new Date(job.start_date).getFullYear()} - ${job.end_date ? new Date(job.end_date).getFullYear() : 'Present'})
-            ${job.description |""}`
+          ${resume && resume.work_history.map((job: any) => 
+            `${job && job.role_title} at ${job && job.company_name} (${new Date(job && job.start_date).getFullYear()} - ${job && job.end_date ? new Date(job && job.end_date).getFullYear() : 'Present'})
+            ${job && job.description || ""}`
+
           ).join("\n\n")}
           Education:
-          ${resume.education.map((edu: any) =>
-            `${edu.degree} in ${edu.field_of_study |""} from ${edu.institution}`
+
+          ${resume && resume.education.map((edu: any) => 
+            `${edu && edu.degree} in ${edu && edu.field_of_study || ""} from ${edu && edu.institution}`
+
           ).join("\n")}
           Skills:
+
           ${resume.resume_skills.map((skill: any) => skill.name).join(", ")}
 
         resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
@@ -82,6 +115,23 @@ serve(async (req) => {
     if (!resumeContent) {
       resumeContent = `
 
+=======
+        Bio: ${application && application.talent_profile?.bio || ""}
+        Cover Letter: ${application && application.cover_letter || ""}
+        Skills: ${application && application.talent_profile?.skills?.join(", ") || ""}
+      `;
+      resumeSkills = application && application.talent_profile?.skills || []
+
+    }
+    // 4. Prepare job details
+
+
+        Bio: ${application.talent_profile?.bio || ""}
+        Cover Letter: ${application.cover_letter || ""}
+        Skills: ${application.talent_profile?.skills?.join(", ") || ""}
+      `;
+      resumeSkills = application.talent_profile?.skills || []
+
     }
 
     // 4. Prepare job details
@@ -89,13 +139,17 @@ serve(async (req) => {
     const jobDescription = application.job?.description || "",
     const jobSkills = application.job?.skills || [],
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // 5. Process using OpenAI to calculate match score
     const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
 
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+        model: "gpt-4o-mini";
         messages: [
           {
             role: "system"
@@ -103,13 +157,22 @@ serve(async (req) => {
             to determine how well a candidate matches a job. Analyze the resume and job details
             provided, focusing on skills, experience, and qualifications.`
 
+=======
+
+          },
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {
             role: "user"
             content: `
             # Job Details
             Title: ${jobTitle}
             Description: ${jobDescription}
-            Required Skills: ${jobSkills.join(", ")}
+
+            Required Skills: ${jobSkills && jobSkills.join(", ")}
+            
+
             # Resume Content
             ${resumeContent}
             Compare the resume to the job description and provide:
@@ -119,7 +182,7 @@ serve(async (req) => {
             4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match"
 
                 "experience_match": {
-                  "score": 70,
+                  "score": 70;
                   "analysis": "Candidate has X years experience in relevant field."
 
                 "education_match": {
@@ -197,23 +260,13 @@ serve(async (req) => {
     if (!openAIResponse.ok) {;
       const errorData = await openAIResponse.json(),;
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`);
-
-    }
-
-    const aiResult = await openAIResponse.json(),
-    let matchResult,
-
-    try {
-      // Extract JSON from the response
-      const content = aiResult.choices[0].message.content,
-      matchResult = JSON.parse(content),
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
         throw new Error("Invalid response format")
       }
     } catch (error) {
-      console.error("Error parsing AI response:", error),
+      console && console.error("Error parsing AI response:", error);
       throw new Error("Failed to parse AI analysis results")
     }
     // 6. Update the application with the match results
@@ -221,8 +274,9 @@ serve(async (req) => {
       .from("job_applications")
       .update({
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (updateError) {
-      throw new Error(`Failed to update application with score: ${updateError.message}`)
+      throw new Error(`Failed to update application with score: ${updateError && updateError.message}`)
     }
     // 7. Return the match results
     return new Response(
@@ -287,3 +341,69 @@ serve(async (req) => {
 
   }
 });
+      }
+    } catch (error) {
+      console.error ("Error parsing AI response:", error);
+      throw new Error ("Failed to parse AI analysis results");
+    }
+    // 6. Update the application with the match results;
+    const { error: update_error } = await supabase;
+      .from ("job_applications");
+      .update ({
+        match_score: match_result.score;
+        match_summary: match_result.summary;
+        match_breakdown: match_result.breakdown;
+        match_suggestion: match_result.suggestion,
+        scored_at: new Date ().toISOString ();
+      });
+      .eq ("id", application_id);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error (`Failed to update application with score: ${update_error.message}`);
+    }
+    // 7. Return the match results;
+    return new Response (
+      JSON.stringify ({
+        success: true,
+        match_result;
+      });
+      {
+        status: 200,
+        headers: { ...cors_headers, "Content - Type": "application / json" }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      }
+    );
+  } catch (error) {
+
+      JSON && JSON.stringify({ error: error && error.message });
+      { 
+        status: 500, 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+
+=======
+    console.error ("Error in resume - scorer function:", error);
+    return new Response (
+      JSON.stringify ({ error: error.message });
+      {
+        status: 500,
+        headers: { ...cors_headers, "Content - Type": "application / json" }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      }
+    );
+=======
+
+      JSON.stringify({ error: error.message }),
+      { 
+        status: 500, 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+});
+
+;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

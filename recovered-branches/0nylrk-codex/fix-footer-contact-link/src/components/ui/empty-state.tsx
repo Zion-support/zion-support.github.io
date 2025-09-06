@@ -3,6 +3,7 @@
 import React from "react",
 import { cn } from "@/lib/utils",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface EmptyStateProps {
 
   icon: React.ReactNode
@@ -21,6 +22,7 @@ export function EmptyState({
   secondaryAction,
 
   className}: EmptyStateProps) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div
 
@@ -79,14 +81,16 @@ export function EmptyState({;
     >
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
         {icon}
+
       </div>;
       <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>;
       <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>;
+
       <div className="flex flex-col sm:flex-row gap-4">;
         {action && (;
-          action.href ? (;
+          action && action.href ? (;
             <Button asChild size="lg" className="bg-zion-purple hover:bg-zion-purple-light">;
-              <Link to={action.href}>{action.text}</Link>;
+              <Link to={action && action.href}>{action && action.text}</Link>;
             </Button>;
           ) : (;
             <Button;
@@ -100,6 +104,11 @@ export function EmptyState({;
           )
         )}
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {secondaryAction && (
           secondaryAction.href ? (
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
@@ -107,15 +116,17 @@ export function EmptyState({;
             </Button>
           ) : (
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               size="lg"
               className="border-zion-blue-light hover:bg-zion-blue-light"
-              onClick={secondaryAction.onClick}
-            >
-              {secondaryAction.text}
-            </Button>
-          )
+              onClick={secondaryAction && secondaryAction.onClick}>;
+              {secondaryAction && secondaryAction.text}
+            </Button>;
+          );
         )}
-      </div>
-    </div>
-  )
+
+      </div>;
+    </div>;
+  );
 }
+

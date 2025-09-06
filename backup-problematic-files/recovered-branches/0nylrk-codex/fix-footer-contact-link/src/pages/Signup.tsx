@@ -1,4 +1,71 @@
 
+=======
+import { useState } from "react",;
+import { Link, Navigate } from "react-router-dom",;
+import { useForm, type UseFormReturn } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",;
+;
+import { useAuth } from "@/hooks/useAuth",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Checkbox } from "@/components/ui/checkbox",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+;
+// Form validation schema;
+const signupSchema = z;
+  .object({;
+    displayName:z.string().min(2, "Name must be at least 2 characters"),;
+    email:z.string().email("Please enter a valid email"),;
+    password:z.string();
+      .min(8, "Password must be at least 8 characters");
+      .regex(/[A-Z]/, "Password must contain at least one uppercase letter");
+      .regex(/[a-z]/, "Password must contain at least one lowercase letter");
+      .regex(/[0-9]/, "Password must contain at least one number"),;
+    confirmPassword:z.string(),;
+    termsAccepted:z.boolean().refine(val => val === true, {;
+      message:"You must accept the terms and conditions"})});
+  .refine(data => data.password === data.confirmPassword, {;
+    message:"Passwords do not match",;
+    path:["confirmPassword"]}),;
+;
+type SignupFormValues = z.infer<typeof signupSchema>,;
+;
+export default function Signup() {;
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth(),;
+  const [showPassword, setShowPassword] = useState(false),;
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  ;
+  // Initialize react-hook-form;
+  const form = useForm({;
+    resolver:zodResolver(signupSchema),;
+    defaultValues:{;
+      displayName:"",;
+      email:"",;
+      password:"",;
+      confirmPassword:"",;
+      termsAccepted:false}}) as UseFormReturn<SignupFormValues>,;
+;
+  // Form submission handler;
+  const onSubmit = async (data:SignupFormValues) => {;
+    if (isSubmitting) return, // Prevent multiple submissions;
+    ;
+    setIsSubmitting(true),;
+    try {;
+      await signup(data.email, data.password, data.displayName),;
+    } finally {;
+      setIsSubmitting(false),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   },;
 ;
@@ -6,6 +73,7 @@
   if (isAuthenticated && user?.profileComplete) {;
     return <Navigate to="/" />,;
   }
+<<<<<<< HEAD
 
                   Sign in;
                 </Link>;
@@ -82,13 +150,6 @@
                   >;
                     <span className="sr-only">Sign in with Twitter</span>;
                     <Twitter className="h-5 w-5" />;
-
-                  </Button>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
 
                   Create your profile, showcase your AI services, find jobs, and connect with professionals worldwide.;
                 </p>;

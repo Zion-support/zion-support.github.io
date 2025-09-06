@@ -1,4 +1,19 @@
 
+=======
+
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import Card from '../components/ui/Card',;
+import Button from '../components/ui/Button',;
+import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react',;
+export default function EmailValidatorPage() {;
+  const [emails, setEmails] = useState(''),;
+  const [validationResults, setValidationResults] = useState<any[]>([]),;
+  const [isValidating, setIsValidating] = useState(false),;
+  const [bulkMode, setBulkMode] = useState(false),;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const validateEmails = async () => {;
     if (!emails.trim()) return;
     setIsValidating(true);
@@ -47,6 +62,7 @@
       score = 60;
       issues.push('Possible typo in domain');
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
     // Additional checks;
     if (email.length > 254) {status = 'invalid';
@@ -158,13 +174,15 @@ type=&quot;checkbox&quot;
 value={emails}
                       onChange={(e) => setEmails(e.target.value)}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     )}
                   </Button>;
-                  {validationResults.length > 0 && (;
+                  {validation_results.length > 0 && (
                     <Button;
                       onClick={clearResults}
 variant=&quot;outline&quot;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
                     >
                       Clear
@@ -198,6 +216,24 @@ onClick={copyResults}
                 )}
               </div>
               {stats && (
+
+                      className={`p - 4 rounded - lg border ${
+                        result.status === 'valid' ? 'border - green - 500 / 30 bg - green - 500 / 10' :;
+                        result.status === 'suspicious' ? 'border - yellow - 500 / 30 bg - yellow - 500 / 10' :;
+                        result.status === 'disposable' ? 'border - orange - 500 / 30 bg - orange - 500 / 10' :;
+                        'border - red - 500 / 30 bg - red - 500 / 10';
+
+                      }`}
+>;
+                      <div className=&quot;flex items - center justify - between mb - 2&quot;>;
+                        <div className=&quot;flex items - center space - x-3 & quot;>;
+                          {getStatusIcon (result.status)}
+                          <span className={`font - medium ${getStatusColor (result.status)}`}>;
+                            {result.email}
+                          </span>;
+                        </div>;
+                        <span className={`text - sm font - medium ${getScoreColor (result.score)}`}>;
+=======
                 <div className=&quot;mb-6 p-4 bg-gray-900 rounded-lg border border-gray-700&quot;>
                   <div className=&quot;grid grid-cols-2 gap-4 text-sm&quot;>                    <div>
                       <span className=&quot;text-gray-400&quot;>Total:</span>
@@ -215,18 +251,31 @@ onClick={copyResults}
                       <span className=&quot;text-gray-400&quot;>Avg Score:</span>
                       <span className={`ml-2 font-medium ${getScoreColor(stats.avgScore)}`}>
 
+=======
+                        {stats.avgScore.toFixed(0)}                      </span>
+                    </div>
+                  </div>
+                </div>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               )}
 {validationResults.length > 0 ? (
                 <div className=&quot;space-y-3 max-h-96 overflow-y-auto&quot;>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                           Score: {result.score}
-</span>
-                      </div>
-                      <div className=&quot;text-sm text-gray-300 mb-2&quot;>
-                        <span className=&quot;text-gray-400&quot;>Domain:</span>
-                        <span className=&quot;ml-2&quot;>{result.domain}</span>
-                      </div>
+
+</span>;
+                      </div>;
+                      <div className=&quot;text - sm text - gray - 300 mb - 2&quot;>;
+                        <span className=&quot;text - gray - 400 & quot;>Domain:</span>;
+                        <span className=&quot;ml - 2&quot;>{result.domain}</span>;
+                      </div>;
+
                       {result.issues.length > 0 && (
+
                         <div className=&quot;text-sm&quot;>
                           <span className=&quot;text-gray-400&quot;>Issues:</span>
                           <ul className=&quot;mt-1 space-y-1&quot;>
@@ -235,10 +284,12 @@ onClick={copyResults}
                                 <XCircle className=&quot;w-3 h-3 mr-2 flex-shrink-0&quot; />
 
                             ))}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </ul>;
                         </div>;
                       )}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         </div>
                       )}
                       {result.hasTypo && (
@@ -261,124 +312,137 @@ onClick={copyResults}
         </div>;
       </section>;
 
+=======
+
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Features */}
-<section className=&quot;py-20 bg-gray-800&quot;>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-          <div className=&quot;text-center mb-16&quot;>
-            <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>              Advanced Email Validation Features
-            </h2>
-            <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
-              Comprehensive email validation with real-time checking and intelligent analysis.
-            </p>
-          </div>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-            <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>🔍</div>
-              <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Syntax Validation</h3>
-              <p className=&quot;text-gray-400&quot;>
-                Checks email format, length, and RFC compliance standards for maximum accuracy.
-              </p>
-            </Card>
-            <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>🛡️</div>
-              <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Disposable Detection</h3>
-              <p className=&quot;text-gray-400&quot;>
-                Identifies temporary and disposable email addresses to prevent fraud and abuse.
-              </p>
-            </Card>
-            <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>💡</div>
-              <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Typo Detection</h3>
-              <p className=&quot;text-gray-400&quot;>
-                Smart algorithms detect common typos in popular email domains like Gmail and Yahoo.
-              </p>
-            </Card>
-            <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>📊</div>
-              <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Deliverability Score</h3>
-              <p className=&quot;text-gray-400&quot;>
-                Get a comprehensive score indicating the likelihood of successful email delivery.
-              </p>
-            </Card>
-            <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>⚡</div>
-              <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Bulk Validation</h3>
-              <p className=&quot;text-gray-400&quot;>
-                Validate thousands of email addresses simultaneously with our high-performance engine.
-              </p>
-            </Card>
-            <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>🌍</div>
-              <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Global Coverage</h3>
-              <p className=&quot;text-gray-400&quot;>
-                Supports all international email formats and domain types worldwide.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
+
+<section className=&quot;py - 20 bg - gray - 800 & quot;>;
+        <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8&quot;>;
+          <div className=&quot;text - center mb - 16 & quot;>;
+            <h2 className=&quot;text - 3xl sm:text - 4xl font - bold text - white mb - 6&quot;>;
+              Advanced Email Validation Features;
+            </h2>;
+            <p className=&quot;text - xl text - gray - 400 max - w-3xl mx - auto & quot;>;
+              Comprehensive email validation with real - time checking and intelligent analysis.;
+            </p>;
+          </div>;
+          <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8&quot;>;
+            <Card className=&quot;text - center p - 8 bg - gray - 700 border border - gray - 600 & quot;>;
+              <div className=&quot;text - 4xl mb - 4&quot;>🔍</div>;
+              <h3 className=&quot;text - xl font - bold text - white mb - 4&quot;>Syntax Validation</h3>;
+              <p className=&quot;text - gray - 400 & quot;>;
+                Checks email format, length, and RFC compliance standards for maximum accuracy.;
+              </p>;
+            </Card>;
+            <Card className=&quot;text - center p - 8 bg - gray - 700 border border - gray - 600 & quot;>;
+              <div className=&quot;text - 4xl mb - 4&quot;>🛡️</div>;
+              <h3 className=&quot;text - xl font - bold text - white mb - 4&quot;>Disposable Detection</h3>;
+              <p className=&quot;text - gray - 400 & quot;>;
+                Identifies temporary and disposable email addresses to prevent fraud and abuse.;
+              </p>;
+            </Card>;
+            <Card className=&quot;text - center p - 8 bg - gray - 700 border border - gray - 600 & quot;>;
+              <div className=&quot;text - 4xl mb - 4&quot;>💡</div>;
+              <h3 className=&quot;text - xl font - bold text - white mb - 4&quot;>Typo Detection</h3>;
+              <p className=&quot;text - gray - 400 & quot;>;
+                Smart algorithms detect common typos in popular email domains like Gmail and Yahoo.;
+              </p>;
+            </Card>;
+            <Card className=&quot;text - center p - 8 bg - gray - 700 border border - gray - 600 & quot;>;
+              <div className=&quot;text - 4xl mb - 4&quot;>📊</div>;
+              <h3 className=&quot;text - xl font - bold text - white mb - 4&quot;>Deliverability Score</h3>;
+              <p className=&quot;text - gray - 400 & quot;>;
+                Get a comprehensive score indicating the likelihood of successful email delivery.;
+              </p>;
+            </Card>;
+            <Card className=&quot;text - center p - 8 bg - gray - 700 border border - gray - 600 & quot;>;
+              <div className=&quot;text - 4xl mb - 4&quot;>⚡</div>;
+              <h3 className=&quot;text - xl font - bold text - white mb - 4&quot;>Bulk Validation</h3>;
+              <p className=&quot;text - gray - 400 & quot;>;
+                Validate thousands of email addresses simultaneously with our high - performance engine.;
+              </p>;
+            </Card>;
+            <Card className=&quot;text - center p - 8 bg - gray - 700 border border - gray - 600 & quot;>;
+              <div className=&quot;text - 4xl mb - 4&quot;>🌍</div>;
+              <h3 className=&quot;text - xl font - bold text - white mb - 4&quot;>Global Coverage</h3>;
+              <p className=&quot;text - gray - 400 & quot;>;
+                Supports all international email formats and domain types worldwide.;
+              </p>;
+            </Card>;
+          </div>;
+        </div>;
+      </section>;
       {/* Use Cases */}
-      <section className=&quot;py-20 bg-gray-900&quot;>
-        <div className=&quot;max-w-6xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-          <div className=&quot;text-center mb-16&quot;>
-            <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>              Perfect For Every Use Case
-            </h2>
-            <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
-              From user registration to email marketing, our validation service ensures quality and deliverability.
-            </p>
-          </div>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
-            <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>👥</div>
-              <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>User Registration</h3>
-              <p className=&quot;text-gray-400 mb-6&quot;>
-                Ensure only valid email addresses are used during user signup, reducing bounce rates and improving user experience.
-              </p>
-              <ul className=&quot;space-y-2 text-gray-300&quot;>
-                <li>• Prevent fake accounts and spam</li>
-                <li>• Improve user onboarding success</li>
-                <li>• Reduce support tickets</li>
-              </ul>
-            </Card>
-            <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>📧</div>
-              <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Email Marketing</h3>
-              <p className=&quot;text-gray-400 mb-6&quot;>
-                Clean your email lists before campaigns to maximize deliverability and improve engagement metrics.
-              </p>
-              <ul className=&quot;space-y-2 text-gray-300&quot;>
-                <li>• Higher open and click rates</li>
-                <li>• Better sender reputation</li>
-                <li>• Reduced bounce rates</li>
-              </ul>
-            </Card>
-            <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>🛒</div>
-              <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>E-commerce</h3>
-              <p className=&quot;text-gray-400 mb-6&quot;>
-                Validate customer emails during checkout to ensure order confirmations and updates reach customers.
-              </p>
-              <ul className=&quot;space-y-2 text-gray-300&quot;>
-                <li>• Improve customer communication</li>
-                <li>• Reduce order abandonment</li>
-                <li>• Better customer support</li>
-              </ul>
-            </Card>
-            <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
-              <div className=&quot;text-4xl mb-4&quot;>🏢</div>
-              <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Business Applications</h3>
-              <p className=&quot;text-gray-400 mb-6&quot;>
-                Integrate email validation into your business processes for data quality and compliance.
-              </p>
-              <ul className=&quot;space-y-2 text-gray-300&quot;>
-                <li>• Data quality assurance</li>
-                <li>• Compliance requirements</li>
-                <li>• Operational efficiency</li>
-              </ul>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <section className=&quot;py - 20 bg - gray - 900 & quot;>;
+        <div className=&quot;max - w-6xl mx - auto px - 4 sm:px - 6 lg:px - 8&quot;>;
+          <div className=&quot;text - center mb - 16 & quot;>;
+            <h2 className=&quot;text - 3xl sm:text - 4xl font - bold text - white mb - 6&quot;>;
+              Perfect For Every Use Case;
+            </h2>;
+            <p className=&quot;text - xl text - gray - 400 max - w-3xl mx - auto & quot;>;
+              From user registration to email marketing, our validation service ensures quality and deliverability.;
+            </p>;
+          </div>;
+          <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 gap - 8&quot;>;
+            <Card className=&quot;p - 8 bg - gray - 800 border border - gray - 700 & quot;>;
+              <div className=&quot;text - 4xl mb - 4&quot;>👥</div>;
+              <h3 className=&quot;text - 2xl font - bold text - white mb - 4&quot;>User Registration</h3>;
+              <p className=&quot;text - gray - 400 mb - 6&quot;>;
+                Ensure only valid email addresses are used during user signup, reducing bounce rates and improving user experience.;
+              </p>;
+              <ul className=&quot;space - y-2 text - gray - 300 & quot;>;
+                <li>• Prevent fake accounts and spam</li>;
+                <li>• Improve user onboarding success</li>;
+                <li>• Reduce support tickets</li>;
+              </ul>;
+            </Card>;
+            <Card className=&quot;p - 8 bg - gray - 800 border border - gray - 700 & quot;>;
+              <div className=&quot;text - 4xl mb - 4&quot;>📧</div>;
+              <h3 className=&quot;text - 2xl font - bold text - white mb - 4&quot;>Email Marketing</h3>;
+              <p className=&quot;text - gray - 400 mb - 6&quot;>;
+                Clean your email lists before campaigns to maximize deliverability and improve engagement metrics.;
+              </p>;
+              <ul className=&quot;space - y-2 text - gray - 300 & quot;>;
+                <li>• Higher open and click rates</li>;
+                <li>• Better sender reputation</li>;
+                <li>• Reduced bounce rates</li>;
+              </ul>;
+            </Card>;
+            <Card className=&quot;p - 8 bg - gray - 800 border border - gray - 700 & quot;>;
+              <div className=&quot;text - 4xl mb - 4&quot;>🛒</div>;
+              <h3 className=&quot;text - 2xl font - bold text - white mb - 4&quot;>E - commerce</h3>;
+              <p className=&quot;text - gray - 400 mb - 6&quot;>;
+                Validate customer emails during checkout to ensure order confirmations and updates reach customers.;
+              </p>;
+              <ul className=&quot;space - y-2 text - gray - 300 & quot;>;
+                <li>• Improve customer communication</li>;
+                <li>• Reduce order abandonment</li>;
+                <li>• Better customer support</li>;
+              </ul>;
+            </Card>;
+            <Card className=&quot;p - 8 bg - gray - 800 border border - gray - 700 & quot;>;
+              <div className=&quot;text - 4xl mb - 4&quot;>🏢</div>;
+              <h3 className=&quot;text - 2xl font - bold text - white mb - 4&quot;>Business Applications</h3>;
+              <p className=&quot;text - gray - 400 mb - 6&quot;>;
+                Integrate email validation into your business processes for data quality and compliance.;
+              </p>;
+              <ul className=&quot;space - y-2 text - gray - 300 & quot;>;
+                <li>• Data quality assurance</li>;
+                <li>• Compliance requirements</li>;
+                <li>• Operational efficiency</li>;
+              </ul>;
+            </Card>;
+          </div>;
+        </div>;
+      </section>;
       {/* CTA Section */}
+<<<<<<< HEAD
 
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

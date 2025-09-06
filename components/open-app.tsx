@@ -1,5 +1,8 @@
 import { useEffect } from 'react';
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     const isAndroid = /Android/i.test(navigator.userAgent);
     const now = Date.now();
@@ -15,35 +18,7 @@ import { useEffect } from 'react';
     iframe.src = DEEP_LINK_URL;
     document.body.appendChild(iframe);
     const timer = setTimeout(() => {
-      try {
-        document.body.removeChild(iframe);
-      } catch {}    }, 1500);      try { document.body.removeChild(iframe) } catch {}
-    }, 1500);
-    return () => {
-      clearTimeout(timeout);
-      clearTimeout(timer);
-      try {
-        document.body.removeChild(iframe);
-      } catch {}
-    }
-  }, []);
+=======
 
-  return (
-    <div className='min-h-[50vh] flex items-center justify-center'>
-      <div className='text-center'>
-        <div className='text-lg font-semibold'>Opening the Zion app…</div>
-        <div className='mt-2 text-sm opacity-70'>
-          If nothing happens, you’ll be redirected to the store.
-        </div>
-      </div>
-    </div>
-  );  }, []);
-
-  return (
-    <div className="min-h-[50vh] flex items-center justify-center">
-      <div className="text-center">
-        <div className="text-lg font-semibold">Opening the Zion app…</div>
-        <div className="mt-2 text-sm opacity-70">If nothing happens, you’ll be redirected to the store.</div>
-      </div>
-    </div>
-  );
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

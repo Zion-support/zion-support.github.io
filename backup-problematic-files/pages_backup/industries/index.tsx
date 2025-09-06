@@ -838,3 +838,7 @@ import Layout from '../../components/Layout';
                 Let our industry experts help you leverage technology to solve your sector-specific challenges.
               </p>
 
+<<<<<<< HEAD
+=======
+export default Index;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

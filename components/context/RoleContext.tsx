@@ -25,6 +25,12 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
   useEffect(() => {
     try {
 
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
     } catch {}
   }, []);
@@ -32,6 +38,15 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
     try {
       if (typeof window !== 'undefined') {
 
+<<<<<<< HEAD
+=======
+
+        window.localStorage.setItem('zion_user_role', role);      }
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
     } catch {}
   }, [role]);
@@ -40,3 +55,4 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 
 const ctx = useContext(RoleContext);
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

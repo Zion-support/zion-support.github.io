@@ -37,7 +37,14 @@ export const MobileAppHero: React.FC = () => {
             </Link>
           </div>
 
+=======
+
+          
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
+<<<<<<< HEAD

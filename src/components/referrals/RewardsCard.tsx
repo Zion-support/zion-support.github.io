@@ -2,22 +2,13 @@
 
 import { BadgeDollarSign, Badge } from 'lucide-react'
 interface RewardsCardProps {
-  rewards: ReferralReward[]
-  isLoading: boolean
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ReferralReward } from "@/types/referrals"
-import { formatDate } from "@/utils/referralUtils"
-import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-
-interface RewardsCardProps {
 
   rewards: ReferralReward[]
 
   isLoading: boolean
 }
-export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
-  if (isLoading) {
+
+
     return (
       <Card>
         <CardHeader>
@@ -33,6 +24,11 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </CardContent>
       </Card>
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     )
   }
   if (rewards.length === 0) {
@@ -42,7 +38,9 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
 
             Your Rewards
           </CardTitle>
-          <CardDescription>Rewards earned from successful referrals</CardDescription>
+          <CardDescription>
+            Rewards earned from successful referrals
+          </CardDescription>
         </CardHeader>
         <CardContent>
 
@@ -65,3 +63,4 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         <CardDescription>Rewards earned from successful referrals</CardDescription>
       </CardHeader>
       <CardContent>
+<<<<<<< HEAD

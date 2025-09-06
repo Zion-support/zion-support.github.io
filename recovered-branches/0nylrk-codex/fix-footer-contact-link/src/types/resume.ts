@@ -3,9 +3,6 @@
   id?: string;
   title: string;
 
-  headline?: string
-
-  summary?: string
 }
 
   id?: string;
@@ -16,9 +13,9 @@
   is_current: boolean;
   description?: string;
 
-  company_logo_url?: string
+  company_logo_url?: string,
+  location?: string;
 
-  location?: string
 }
 
   id?: string;
@@ -30,18 +27,18 @@
   is_current: boolean;
   description?: string;
 
-  institution_logo_url?: string
+  institution_logo_url?: string,
+  location?: string;
 
-  location?: string
 }
 
   id?: string;
   name: string;
   proficiency?: number;
 
-  category?: string
+  category?: string,
+  years_experience?: number;
 
-  years_experience?: number
 }
 
   id?: string;
@@ -50,9 +47,9 @@
   issue_date?: Date | string;
   expiration_date?: Date | string;
 
-  credential_id?: string
+  credential_id?: string,
+  credential_url?: string;
 
-  credential_url?: string
 }
 
   id?: string;
@@ -62,9 +59,9 @@
   image_url?: string;
   github_url?: string;
 
-  demo_url?: string
+  demo_url?: string,
+  pdf_url?: string;
 
-  pdf_url?: string
 }
 
   id?: string;
@@ -80,3 +77,4 @@
   is_active: boolean
 }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

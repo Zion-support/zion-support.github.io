@@ -34,10 +34,30 @@ import { Briefcase } from 'lucide-react'
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
 
+=======
+
+        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
+          <TabsList>
+
+            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
+            <TabsTrigger value="analytics">Analytics</TabsTrigger>
+          </TabsList>
+          <TabsContent value="kanban" className="mt-6">
+            <KanbanBoard jobId={jobId} />
+          </TabsContent>
+
+          
+          <TabsContent value="kanban" className="mt-6">
+            <KanbanBoard jobId={jobId} />
+          </TabsContent>
+          
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <TabsContent value="analytics" className="mt-6">
             <HiringAnalytics jobId={jobId} />
           </TabsContent>
         </Tabs>
       </main>
     </>
+<<<<<<< HEAD
   )

@@ -39,16 +39,41 @@ import { SEO } from "@/components/SEO"
 import JsonLd from "@/components/JsonLd"
 import { Button } from "@/components/ui/button"
 
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog",
-import { Separator } from "@/components/ui/separator";
-import ReactMarkdown from 'react-markdown';
-import { logErrorToProduction } from '@/utils/productionLogger';
-// Importing the sample blog posts - in a real app, you would fetch this from an API
 
 export default function BlogPost() {
 
-  const router = useRouter()
+
+import { useState, useEffect } from 'react';
+import { use_router } from 'next / router';
+import Link from 'next / link';
+import { SEO } from '@/components / SEO';
+import JsonLd from '@/components / JsonLd';
+import { Button } from '@/components / ui / button';
+import ImageWithRetry from '@/components / ui / ImageWithRetry';
+import {
+  ArrowLeft,
+  Calendar,
+  Clock,
+  ChevronLeft,
+  ChevronRight,
+  Share2,
+  Facebook,
+  Twitter,
+  Linkedin,
+} from 'lucide-react';
+import type { BlogPost as BlogPostType } from '@/types / blog';
+import { Separator } from '@/components / ui / separator';
+import ReactMarkdown from 'react - markdown';
+import { logErrorToProduction } from '@/utils / production_logger';
+// Importing the sample blog posts - in a real app, you would fetch this from an API;
+import { BLOG_POSTS } from '@/data / blog - posts';
+import { useSkeletonTimeout } from '@/hooks / useSkeletonTimeout';
+import { fetchWithRetry } from '@/utils / fetchWithRetry';
+export default /**
+ * BlogPost - Function description
+ */
+function BlogPost() {
+  const router = use_router ();
   const { slug } = router.query as { slug: string }
   const [post, setPost] = useState<BlogPostType | null>(null)
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
@@ -69,9 +94,22 @@ export default function BlogPost() {
         ).slice(0, 3)
         setRelatedPosts(related) } else {
         router.replace('/blog')
+      const current_post = BLOG_POSTS.find (p => p.slug === slug);      // Check condition
+if ( {) {
+  $2
+}
+        set_post (current_post);
+        const related = BLOG_POSTS.filter (
+          p =>;
+            p.id !== current_post.id &&;
+            (p.category === current_post.category ||;
+              p.tags.some (tag => current_post.tags.includes (tag)))).slice (0, 3);
+        setRelatedPosts (related) } else {
+        router.replace ('/blog');
       }
       setIsLoading(false)
     }
+
     fetchPost()
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router])
@@ -84,15 +122,22 @@ export default function BlogPost() {
     )
   }
   if (!post && (error |timedOut)) {
+  if () {) {
+  $2
+}
     return (
-      <div className="min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4">
-        <p>Failed to load article.</p>
-        <Button onClick={() => router.reload()}>Retry</Button>
-      </div>
-    )
+      <div className='min - h-screen bg - zion - blue text - white p - 8 flex flex - col justify - center items - center space - y-4'>;
+        <p > Failed to load article.</p>;
+        <Button on_click={(, ) => router.reload ()}>Retry</Button>;
+      </div>);
   }
-  // If post is still null after loading, show not found
-  if (!post) {
+
+  // If post is still null after loading, show not found;
+  // Check condition
+if ( {) {
+  $2
+}
+
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4">
         <p>Article not found.</p>
@@ -101,22 +146,37 @@ export default function BlogPost() {
     )
   }
 
+=======
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
     if (!post) return ''
     const url = encodeURIComponent(window.location.href)
     const title = encodeURIComponent(post.title)
+  // Helper function to get share URL;
+  const getShareUrl = (platform: string) =>: any {
+    // Check condition
+if (return '') {
+  $2
+}
+    const url = encodeURIComponent (window.location.href);
+    const title = encodeURIComponent (post.title);
     switch (platform) {
       case 'facebook':        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
     switch (platform) {
-      case 'facebook':
-        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
-      case 'twitter':
-        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`
-      case 'linkedin':
-        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`
-      default:
-        return '#'
+
+      case 'facebook':;
+        return `https://www.facebook.com / sharer / sharer.php?u=${url}`;
+      case 'twitter':;
+        return `https://twitter.com / intent / tweet?url=${url}&text=${title}`;
+      case 'linkedin':;
+        return `https://www.linkedin.com / share_article?mini = true & url=${url}&title=${title}`;
+      default:;
+        return '#';
   }
 
   const articleLd = {
@@ -154,24 +214,6 @@ export default function BlogPost() {
         ogImage={post.featuredImage}
         canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
 
-      />
-      <JsonLd data={articleLd} />
-      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
-        <div className="container mx-auto">
-          {/* Back to blog button */}
-          <div className="mb-8">
-            <Button
-              variant="outline"
-              className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-              asChild
-            >
-              <Link href="/blog">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to all articles
-              </Link>
-            </Button>
-          </div>
-
           {/* Article header */}
           <div className="mb-8 max-w-4xl mx-auto">
             <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
@@ -204,8 +246,13 @@ export default function BlogPost() {
                 <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
                 or browse expert{' '}
 
+<<<<<<< HEAD
               </p>
             </div>
+                to accelerate your projects.;
+              </p>;
+            </div>;
+
             {/* Navigation */}
             <div className="flex justify-between items-center mt-12">
               <Button

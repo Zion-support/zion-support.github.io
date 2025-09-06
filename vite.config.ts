@@ -40,18 +40,8 @@ export default defineConfig({
     reportCompressedSize: false,
     emptyOutDir: true,
     assetsInlineLimit: 4096,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-        },
-        chunkFileNames: 'js/[name]-[hash].js',
-        entryFileNames: 'js/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const name = assetInfo.name || '';
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
           if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
-          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
           return 'assets/[name]-[hash].[ext]';
         }
       }
@@ -60,6 +50,9 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+=======
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         passes: 2,
         unsafe: true,
         unsafe_comps: true,
@@ -123,5 +116,6 @@ export default defineConfig({
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+<<<<<<< HEAD
   }
 });

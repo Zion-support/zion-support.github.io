@@ -80,11 +80,6 @@ const mockReplies: ForumReply[] = [
     downvotes: 0
   }
 
-export default function ForumPostPage() {
-  // Using `useParams` without type arguments avoids issues when TypeScript
-  // can't determine the generic type for the helper from React Router.
-  // Cast the result instead to provide the expected shape.
-
     }
 
     setPost({ ...post, upvotes: post.upvotes + 1 }),
@@ -183,6 +178,9 @@ export default function ForumPostPage() {
 
   const handlePinPost = () => {
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     setPost({ ...post, isPinned: !post.isPinned }),
 
     toast({
@@ -200,3 +198,4 @@ export default function ForumPostPage() {
   },
 
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
+<<<<<<< HEAD

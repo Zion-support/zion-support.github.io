@@ -4,6 +4,7 @@ import React from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface FraudFiltersProps {
 
   searchQuery: string
@@ -21,12 +22,27 @@ interface FraudFiltersProps {
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
   setContentTypeFilter,
+  setSearchQuery;
+  status_filter;
+  setStatusFilter;
+  severity_filter;
+  setSeverityFilter;
+  contentTypeFilter;
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   resetFilters}) => {
+=======
+  setContentTypeFilter,;
+  resetFilters}) => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <div className="flex flex-col md:flex-row gap-4 mb-6">
-      <div className="relative flex-1">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+    <div className="flex flex-col md:flex-row gap-4 mb-6">;
+      <div className="relative flex-1">;
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
         <Input
           placeholder="Search by user or content..."
           value={searchQuery}
@@ -47,6 +63,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         </SelectContent>
       </Select>
 
+=======
+
+      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
         </SelectTrigger>
@@ -75,3 +97,5 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </Button>
     </div>
   )
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

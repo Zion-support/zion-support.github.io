@@ -1,5 +1,23 @@
 
 
+interface SendNewsletterRequest {
+  subject: string;
+  preview_text: string;
+  body: string;
+
+
+
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Resend } from "npm: resend@2.0.0",
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {Resend} from "npm: resend@2.0.0";
+=======
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Resend } from "npm: resend@2.0.0",
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -10,18 +28,20 @@ interface SendNewsletterRequest {
   body: string,
   testMode?: boolean,
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   testEmail?: string
 }
 serve(async (req) => {
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
-    const resendApiKey = Deno.env.get("RESEND_API_KEY"),
+    const resendApiKey = Deno && Deno.env.get("RESEND_API_KEY");
     if (!resendApiKey) {
       throw new Error("Resend API key is not set in environment variables")
     }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         status: 200})
     }
     // In production, we would fetch subscriber emails from the database
@@ -89,3 +109,8 @@ serve(async (req) => {;
 
   }
 });
+  }
+});
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

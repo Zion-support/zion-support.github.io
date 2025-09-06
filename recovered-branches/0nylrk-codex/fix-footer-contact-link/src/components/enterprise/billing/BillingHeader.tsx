@@ -3,6 +3,7 @@
 import React from "react",
 import { Button } from "@/components/ui/button",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function BillingHeader() {
   return (
     <div className="space-y-2">
@@ -63,3 +64,4 @@ export function BillingHeader() {;
   );
 }
 ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

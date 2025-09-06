@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+=======
+import { ProfileData } from "@/types/profile",;
+import { TalentProfile } from "@/types/talent",;
+;
+export function convertProfileToTalentProfile(profile:ProfileData | any):TalentProfile {;
+  // Handle both ProfileData and existing TalentProfile inputs;
+  ;
+  // If this is already a TalentProfile, just return it;
+  if (profile.professional_title !== undefined) {;
+    return profile,;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
   ;
   // Convert ProfileData to TalentProfile;

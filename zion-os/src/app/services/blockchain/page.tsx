@@ -1,4 +1,12 @@
 
+=======
+
+export default function BlockchainServicesPage() {;
+  return (;
+
+
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
 
       {/* Hero Section */}
@@ -33,6 +41,14 @@
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">;
             {/* DeFi Platform Development */}
 
+=======
+            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
+              <div className="text - 4xl mb - 6">💰</div>;
+              <h2 className="text - 3xl font - bold mb - 4">DeFi Platform Development</h2>;
+              <p className="text - zinc - 300 mb - 6 text - lg">;
+                Build next - generation decentralized finance platforms with lending, borrowing,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 yield farming, and automated market making capabilities.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -72,6 +88,14 @@
             </div>;
             {/* NFT Marketplace */}
 
+=======
+            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
+              <div className="text - 4xl mb - 6">🎨</div>;
+              <h2 className="text - 3xl font - bold mb - 4">NFT Marketplace Development</h2>;
+              <p className="text - zinc - 300 mb - 6 text - lg">;
+                Create cutting - edge NFT marketplaces with advanced features, multi - chain support,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 and innovative monetization strategies for digital assets.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -111,6 +135,14 @@
             </div>;
             {/* Smart Contract Development */}
 
+=======
+            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
+              <div className="text - 4xl mb - 6">📜</div>;
+              <h2 className="text - 3xl font - bold mb - 4">Smart Contract Development</h2>;
+              <p className="text - zinc - 300 mb - 6 text - lg">;
+                Secure, audited smart contracts for any blockchain use case with comprehensive testing,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 security analysis, and deployment support.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -150,6 +182,14 @@
             </div>;
             {/* Web3 Infrastructure */}
 
+=======
+            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
+              <div className="text - 4xl mb - 6">🌐</div>;
+              <h2 className="text - 3xl font - bold mb - 4">Web3 Infrastructure</h2>;
+              <p className="text - zinc - 300 mb - 6 text - lg">;
+                Build robust Web3 infrastructure with node management, API gateways,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 indexing services, and decentralized storage solutions.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -189,6 +229,14 @@
             </div>;
             {/* DAO Development */}
 
+=======
+            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
+              <div className="text - 4xl mb - 6">🏛️</div>;
+              <h2 className="text - 3xl font - bold mb - 4">DAO Development</h2>;
+              <p className="text - zinc - 300 mb - 6 text - lg">;
+                Create sophisticated decentralized autonomous organizations with advanced governance,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 treasury management, and community engagement tools.;
               </p>;
               <div className="space - y-4 mb - 8">;

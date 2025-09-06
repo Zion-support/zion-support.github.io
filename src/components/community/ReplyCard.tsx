@@ -37,14 +37,14 @@ export const ReplyCard = ({
                 {reply.authorRole}
               </Badge>
             )}
-            {reply.isAnswer && (
-              <Badge className="ml-2 bg-green-500 text-white">
-                <CheckCircle className="h-3 w-3 mr-1" />
-                Answer
-              </Badge>
+            {reply && reply.isAnswer && (;
+              <Badge className="ml-2 bg-green-500 text-white">;
+                <CheckCircle className="h-3 w-3 mr-1" />;
+                Answer;
+              </Badge>;
             )}
-          </div>
-          <div className="text-xs text-muted-foreground">
+          </div>;
+          <div className="text-xs text-muted-foreground">;
             {timeAgo}
           </div>
         </div>

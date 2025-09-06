@@ -1,0 +1,21 @@
+import React from 'react';
+
+const Component = () => {
+  return (
+    <div>
+      <h1>Page Content</h1>
+      <p>This page is under construction.</p>
+    </div>
+  );
+};
+
+export default Component;
+=======
+export default function IoTPlatforms(){
+  return <div className="max-w-3xl mx-auto p-6">IoT Platforms</div>;
+}
+=======
+export default function IotPlatformsPage() { return null }
+>>>>>>> origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

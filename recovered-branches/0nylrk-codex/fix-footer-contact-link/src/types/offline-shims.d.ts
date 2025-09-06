@@ -1,9 +1,19 @@
 
+=======
+
+  export default React,
+  // Basic overloads for useRef to handle common cases;
+  export function useRef<T>(initialValue: T): { current: T };
+  export function useRef<T>(initialValue: T | null): { current: T | null };
+  export function useRef<T = undefined>(initialValue?: T): { current: T | undefined };
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   export const useEffect: any;
   export type Dispatch<A> = (value: A) => void;
   export type SetStateAction<S> = S | ((prevState: S) => S)
   export function useState<S>(
-    initialState: S | (() => S);
+    initialState: S | (() => S)
   ): [S, Dispatch<SetStateAction<S>>];
   export function createContext<T>(defaultValue: T): any;
   export function useContext<T>(context: any): T;
@@ -12,13 +22,20 @@
   export function useId(): string
   // Generic definition to allow usage like forwardRef<HTMLDivElement, Props>()
   export function forwardRef<T, P = {}>(
-    render: (props: P, ref: Ref<T>) => ReactElement | null;
+    render: (props: P, ref: Ref<T>) => ReactElement | null
   ): any;
   export const Fragment: any;
   export const StrictMode: any;
-  export const cloneElement: any;
+  export const clone_element: any;
   export type ReactNode = any;
 
+=======
+
+  export type ReactElement = any,
+  export type ComponentType<P = {}> = (props: P) => any,;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   export type FC<P = {}> = (props: P) => any;
   export type ComponentProps<T = any> = any;
   export type ComponentPropsWithoutRef<T = any> = any;
@@ -37,4 +54,7 @@
   export type LegacyRef<T = any> = any;
   export type ElementRef<T = any> = any
   export type CSSProperties = Record<string, string | number | undefined>
+<<<<<<< HEAD
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

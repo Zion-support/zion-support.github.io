@@ -1,4 +1,5 @@
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 // Mock Next.js router
 jest.mock("next/router", () => ({
@@ -17,6 +18,11 @@ jest.mock("next/router", () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
+=======
+        emit: jest.fn()
+      },
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     };
   },
@@ -57,3 +63,5 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

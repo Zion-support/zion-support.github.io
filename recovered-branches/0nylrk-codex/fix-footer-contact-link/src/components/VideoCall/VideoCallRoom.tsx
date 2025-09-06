@@ -2,14 +2,18 @@
 
 import React from 'react',
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface VideoCallRoomProps {
   room?: string,
   token?: string,
   serverUrl?: string,
   onDisconnect?: () => void,
   className?: string
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
+
+
+export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (
     <Card className={className |"w-full max-w-3xl mx-auto"}>
       <CardHeader>
@@ -28,3 +32,4 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
   )
 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

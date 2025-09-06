@@ -1,5 +1,11 @@
 
 
+=======
+
+  const { projectId } = useParams() as { projectId: string },;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
@@ -22,6 +28,17 @@
     }
   ]);
 
+import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'lucide-react';
+import {VideoCallRoom} from '@/components / video / VideoCallRoom';
+import {toast} from 'sonner';
+
+  ]),
+
+
+
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const startVideoCall = () => {
     setIsInCall(true),
     toast.success("Video call started", {
@@ -32,11 +49,13 @@
       setActiveTab('video')
     }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const endVideoCall = () => {
-    setIsInCall(false),
+    setIsInCall(false);
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
     })
+<<<<<<< HEAD
 
   ]),;
   const startVideoCall = () => {;
@@ -69,41 +88,45 @@
     }
   },
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
-    <>
-      <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />
-      <Header />
-      <main className="container mx-auto py-8">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>
-          <div className="flex gap-2">
-            {isInCall && (
-              <Button variant="destructive" className="flex items-center gap-2">
-                <X className="h-4 w-4" />
-                End Call
-              </Button>
+    <>;
+      <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;
+      <Header />;
+      <main className="container mx-auto py-8">;
+        <div className="flex justify-between items-center mb-6">;
+          <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>;
+          <div className="flex gap-2">;
+            {isInCall && (;
+              <Button variant="destructive" className="flex items-center gap-2">;
+                <X className="h-4 w-4" />;
+                End Call;
+              </Button>;
             )}
-            <Button variant="outline">Invite Team Member</Button>
-          </div>
-        </div>
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
-          <TabsList className="grid grid-cols-6 md:w-fit">
-            <TabsTrigger value="chat" className="flex items-center gap-2">
-              <MessageSquare className="h-4 w-4" />
-              <span className="hidden sm:inline">Chat</span>
-            </TabsTrigger>
-            <TabsTrigger value="files" className="flex items-center gap-2">
-              <FileText className="h-4 w-4" />
-              <span className="hidden sm:inline">Files</span>
-            </TabsTrigger>
-            <TabsTrigger value="video" className="flex items-center gap-2">
-              <Video className="h-4 w-4" />
-              <span className="hidden sm:inline">Video</span>
-              {isInCall && (
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                </span>
+
+            <Button variant="outline">Invite Team Member</Button>;
+          </div>;
+        </div>;
+
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">;
+          <TabsList className="grid grid-cols-6 md:w-fit">;
+            <TabsTrigger value="chat" className="flex items-center gap-2">;
+              <MessageSquare className="h-4 w-4" />;
+              <span className="hidden sm:inline">Chat</span>;
+            </TabsTrigger>;
+            <TabsTrigger value="files" className="flex items-center gap-2">;
+              <FileText className="h-4 w-4" />;
+              <span className="hidden sm:inline">Files</span>;
+            </TabsTrigger>;
+            <TabsTrigger value="video" className="flex items-center gap-2">;
+              <Video className="h-4 w-4" />;
+              <span className="hidden sm:inline">Video</span>;
+              {isInCall && (;
+                <span className="relative flex h-2 w-2">;
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>;
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>;
+                </span>;
               )}
             </TabsTrigger>
             <TabsTrigger value="calendar" className="flex items-center gap-2">
@@ -155,31 +178,35 @@
                 {isInCall ? (
                   <div className="space-y-4">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
-                    />
+
+                    />;
+
+
                     {/* This button is just for demo/testing purposes */}
-                    <div className="flex justify-center mt-4">
-                      <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
-                        Simulate user joining (demo only)
-                      </Button>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="flex flex-col items-center justify-center h-[400px] space-y-4">
-                    <p className="text-muted-foreground">Start a video call with your team</p>
-                    <div className="flex gap-2">
-                      <Button onClick={startVideoCall} className="bg-zion-blue hover:bg-zion-blue-light gap-2">
-                        <Video className="h-4 w-4" />
-                        Start Video Call
-                      </Button>
-                    </div>
-                    <div className="text-xs text-muted-foreground mt-4">
-                      <p>Recent calls:</p>
-                      <p>No recent calls for this project</p>
-                    </div>
-                  </div>
+                    <div className="flex justify-center mt-4">;
+                      <Button variant="outline" onClick={simulateUserJoining} className="text-sm">;
+                        Simulate user joining (demo only);
+                      </Button>;
+                    </div>;
+                  </div>;
+                ) : (;
+                  <div className="flex flex-col items-center justify-center h-[400px] space-y-4">;
+                    <p className="text-muted-foreground">Start a video call with your team</p>;
+                    <div className="flex gap-2">;
+                      <Button onClick={startVideoCall} className="bg-zion-blue hover:bg-zion-blue-light gap-2">;
+                        <Video className="h-4 w-4" />;
+                        Start Video Call;
+                      </Button>;
+                    </div>;
+                    <div className="text-xs text-muted-foreground mt-4">;
+                      <p>Recent calls:</p>;
+                      <p>No recent calls for this project</p>;
+                    </div>;
+                  </div>;
                 )}
               </CardContent>
             </Card>
@@ -228,3 +255,4 @@
       <Footer />
     </>
   )
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

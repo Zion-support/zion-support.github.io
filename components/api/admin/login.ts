@@ -1,5 +1,25 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+import { setSessionCookie } from '../../../utils/adminAuth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {;
+    res.status(405).json({ error: 'Method Not Allowed' });
+
+    return;  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {;
+    res.status(405).json({ error: 'Method Not Allowed' });
+
+
+    return
+
+  const { username, password } = req.body |{}
+  const envUser = process.env.ADMIN_USERNAME |'kleber@ziontechgroup.com';
+  const envPass = process.env.ADMIN_PASSWORD |'Tw2.R5u&2!sDfeW';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     res.status(405).json({ error: 'Method Not Allowed' });
 
     return
@@ -13,7 +33,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   } else {
     res && res.status(401).json({ error: 'Invalid credentials' });
   }
-}
+
+
+=======
 import { setSessionCookie } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -53,3 +75,4 @@ if ( {) {
 
   }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

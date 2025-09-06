@@ -1,24 +1,13 @@
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Head from 'next/head';
+
 import Link from 'next/link';
 import React from 'react';
 export default function CloudNativeAutomation() {
   return (
-
-    <>
-      <Head>
-        <title>
-          Building Cloud-Native Automation Infrastructure | Zion Tech Group
-        </title>
-        <meta
-
-        />
-        <meta
-          property='og:title'
-          content='Building Cloud-Native Automation Infrastructure'
-        />
-        <meta
-          property='og:description'
 
         />
         <meta name='twitter:card' content='summary_large_image' />
@@ -125,6 +114,7 @@ export default function CloudNativeAutomation() {
                 </ul>
                 <p className='text-white/90 mb-4'>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   environments, test changes safely, and maintain consistency
                   across our automation platform.
                 </p>
@@ -180,6 +170,8 @@ export default function CloudNativeAutomation() {
 
                   like: </p>
 
+                  like: </p>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Serverless computing for event-driven automation</li>
                   <li>Edge computing for low-latency processing</li>
@@ -285,3 +277,13 @@ export default function CloudNativeAutomation() {
           </div>;
         </main>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </>);
+}
+
+;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

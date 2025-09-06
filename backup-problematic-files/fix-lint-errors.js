@@ -115,17 +115,17 @@ async function $1() {;
 
   };
 };
-        return match && match.replace(imports, cleanImports)};
+        return match.replace(imports, cleanImports)};
       return match,
-  fixed = fixed && fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {,
+  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {,
   // Check if imports have proper commas,
-    if (imports && !imports && imports.includes() && imports && imports.trim().split(/\s+/).length > 1) {,
-  const cleanImports = imports && imports.trim().split(/\s+/).join(),
-      return match && match.replace(imports, cleanImports)};
+    if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {,
+  const cleanImports = imports.trim().split(/\s+/).join(),
+      return match.replace(imports, cleanImports)};
   ),
   // Fix missing semicolons after variable declarations,
-  fixed = fixed && fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm, match => {,
-  if (!match && match.endsWith(",")) {,
+  fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm, match => {,
+  if (!match.endsWith(",")) {,
   return match + ","};
   fixed += "\n}".repeat(openBraces - closeBraces)};
 ,
@@ -136,21 +136,24 @@ async function $1() {,
   // Get all TypeScript/JavaScript files,
   const files = await glob("src/**/*.{ts,tsx,js,jsx}", {,
   "ignore": ["node_modules/**"]}),
-  console && console.log(""Found ${files && files.length} files to process...""),
+  console.log(""Found ${files.length} files to process...""),
   let fixedCount = 0,
   let errorCount = 0,
   for (const file of files) {,
   try {,
-  const content = fs && fs.readFileSync(file, "utf8"),
+  const content = fs.readFileSync(file, "utf8"),
       const fixed = fixLintErrors(content),
       if (content !== fixed) {,
-  fs && fs.writeFileSync(file, fixed, "utf8"),
-        console && console.log("""Fixed": ${file}""),
+  fs.writeFileSync(file, fixed, "utf8"),
+        console.log("""Fixed": ${file}""),
         fixedCount++};
     } catch (error) {,
-  console && console.error(`Error processing ${file}:`, error && error.message),
+  console.error(`Error processing ${file}:`, error.message),
       errorCount++};
   };
 ,
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

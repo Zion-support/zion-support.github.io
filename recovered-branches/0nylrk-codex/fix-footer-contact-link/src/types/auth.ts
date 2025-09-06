@@ -16,21 +16,20 @@
 }
 
   id?: string;
-  displayName?: string;
+  display_name?: string;
   email: string;
-  userType: string;
-  profileComplete: boolean;
-  createdAt: string;
-  updatedAt: string;
+  user_type: string;
+  profile_complete: boolean;
+  created_at: string;
+  updated_at: string;
   avatar_url?: string;
   bio?: string;
-  avatarUrl?: string;
+  avatar_url?: string;
   headline?: string;
   role?: string;
 
-  permissions?: string[]
-
-  companyId?: string
+  permissions?: string[],
+  company_id?: string;
 }
 // Update AuthContextType definition to match implementation
 export interface AuthContextType {;
@@ -105,3 +104,5 @@ export interface AuthContextType {;
 
 }
 ;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

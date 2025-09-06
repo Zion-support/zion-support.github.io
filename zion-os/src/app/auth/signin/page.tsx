@@ -1,4 +1,31 @@
 
+=======
+
+"use client",;
+import { useState } from "react",;
+import Link from "next/link",;
+import { useAuth } from "@/contexts/AuthContext",;
+export default function SignInPage() {;
+  const [email, setEmail] = useState(""),;
+  const [password, setPassword] = useState(""),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [error, setError] = useState(""),;
+  const { login } = useAuth(),;
+  const handleSubmit = async (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    setIsLoading(true),;
+    setError("");
+    try {;
+      await login(email, password);
+    } catch (error) {;
+      setError(error instanceof Error ? error.message : "Login failed");
+    } finally {;
+      setIsLoading(false);
+    }
+  };
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (;
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
       <div className="max-w-md w-full space-y-8 p-8">;
@@ -16,6 +43,8 @@
               </div>;
             )}
 
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <div>;
               <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Email Address;

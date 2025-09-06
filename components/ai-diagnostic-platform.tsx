@@ -1,4 +1,10 @@
 
+=======
+
+import React from 'react';
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
@@ -77,7 +83,26 @@ const pricingPlans = [
   },];    features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrationsTraining included']
     popular: false
   }
-];
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next / head';
+import { motion } from 'framer-motion';
 
 export default function AIDiagnosticPlatform() {
   return (
@@ -150,6 +175,23 @@ export default function AIDiagnosticPlatform() {
               Advanced medical diagnostic platform using AI and machine learning to provide accurate disease detection and treatment recommendations.
             </p>
           </motion.div>
+          >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <a
+              href='#pricing'
+              className='inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold text-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105'>;
+              <Target className='w-5 h-5 mr-2' />;
+              Get Started;
+            </a>;
+            <a
+              href='#contact'
+              className='inline-flex items-center px-8 py-4 rounded-full border-2 border-blue-500/30 text-blue-400 font-semibold text-lg hover:bg-blue-500/10 transition-all duration-300'>;
+              <Phone className='w-5 h-5 mr-2' />              Contact Sales          >;
+
+            <a
+=======
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
           {/* CTA Buttons */}
           <motion.div
@@ -181,11 +223,14 @@ export default function AIDiagnosticPlatform() {
             <a
               href="#contact"
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -212,37 +257,21 @@ export default function AIDiagnosticPlatform() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
-            className='text-center mb-16'>;
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
-              Revolutionary Medical Technology;
-            </h2>;
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-              Experience the future of medical diagnostics with AI-powered;
-              analysis and comprehensive healthcare solutions.;
-            </p>;
-          </motion && motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {features && features.map((feature, index) => (          >;
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
-              Revolutionary Medical Technology;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Experience the future of medical diagnostics with AI-powered analysis and comprehensive healthcare solutions.;
-            </p>;
-          </motion && motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {features && features.map((feature, index) => (;
-              <motion&& motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               >
                 <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4'>
                   <CheckCircle className='w-6 h-6 text-white' />
                 </div>
                 <h3 className='text-lg font-semibold text-white mb-2'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {feature}
                 </h3>              </motion.div>              >
 
@@ -253,12 +282,35 @@ export default function AIDiagnosticPlatform() {
               </motion.div>
 
             ))}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Pricing Section */}
+      <section id='pricing' className='py-20 bg-black'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="pricing" className="py-20 bg-black">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+          <motion&& motion.div
+
+=======
+          </div>
+        </div>
+      </section>
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -285,26 +337,6 @@ export default function AIDiagnosticPlatform() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
-            className='text-center mb-16'>;
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
-              Choose Your Plan;
-            </h2>;
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-              Flexible pricing options designed for healthcare providers of all;
-              sizes, from clinics to large hospital systems.;
-            </p>;
-          </motion && motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (          >;
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
-              Choose Your Plan;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Flexible pricing options designed for healthcare providers of all sizes, from clinics to large hospital systems.;
-            </p>;
-          </motion && motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricingPlans && pricingPlans.map((plan, index) => (;
-              <motion&& motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -553,7 +585,9 @@ function AIDiagnosticPlatform() {
                 }`}
               >;
                 {plan.popular && (
+
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+
                     <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
@@ -562,10 +596,15 @@ function AIDiagnosticPlatform() {
 
                       {feature}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     </li>
                   ))}
                 </ul>
 
+=======
+                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   Get Started
                 </button>
               </motion.div>
@@ -584,11 +623,20 @@ function AIDiagnosticPlatform() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Contact Section */}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform Healthcare?
@@ -610,11 +658,16 @@ function AIDiagnosticPlatform() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
               viewport={{ once: true }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             >
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Phone className='w-8 h-8 text-white' />
@@ -629,24 +682,6 @@ function AIDiagnosticPlatform() {
               <p className="text-gray-300">{contactInfo.mobile}</p>
             </motion.div>
             <motion.div
-              className='text-center'>;
-              <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
-                <Phone className='w-8 h-8 text-white' />;
-              </div>;
-              <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>;
-              <p className='text-gray-300'>{contactInfo && contactInfo.mobile}</p>            </motion && motion.div>            >;
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4">;
-                <Phone className="w-8 h-8 text-white" />;
-              </div>;
-              <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>;
-              <p className="text-gray-300">{contactInfo && contactInfo.mobile}</p>;
-            </motion && motion.div>;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-              viewport={{ once: true }}
-
             >
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Mail className='w-8 h-8 text-white' />
@@ -661,6 +696,8 @@ function AIDiagnosticPlatform() {
               <p className="text-gray-300">{contactInfo.email}</p>
             </motion.div>
             <motion.div
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <Mail className='w-8 h-8 text-white' />;
@@ -679,6 +716,9 @@ function AIDiagnosticPlatform() {
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
               viewport={{ once: true }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             >
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <MapPin className='w-8 h-8 text-white' />
@@ -697,3 +737,5 @@ function AIDiagnosticPlatform() {
       </section>
 
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

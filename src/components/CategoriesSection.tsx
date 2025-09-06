@@ -18,18 +18,6 @@ interface CategoryType {
   // Add a 'link' property if your API provides it, or construct it.
   link?: string
 
-}
-  {
-    title: "Comprehensive Services"
-    link: "/comprehensive - services"
-}
-  {
-    title: "Services Comparison"
-    link: "/services - comparison"
-
-}
-// Default static categories with translation keys
-
   {
     id: "services"
     name: t('categories.services')
@@ -38,6 +26,12 @@ interface CategoryType {
     link: "/services"
     color: "from-purple-500 to-indigo-600", // Keep color for styling
 
+=======
+
+  },
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   {
     id: "talents"
     name: t('categories.talents')
@@ -55,7 +49,7 @@ interface CategoryType {
   {
 
 // Helper to get icon component from name
-const getIcon = (iconName?: string) => {
+const getIcon = (iconName?: string,) => {
   switch (iconName) {
 
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
@@ -88,15 +82,15 @@ const getIcon = (iconName?: string) => {
   }
 
   return (
-    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
-      <div className="container mx-auto px-4">
-        {showTitle && (
-          <div className="text-center mb-16">
-            <GradientHeading>{t('home.categories_title')}</GradientHeading>
-            <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-              {t('home.categories_subtitle')}
-            </p>
-          </div>
+    <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
+      <div className="container mx-auto px-4">;
+        {showTitle && (;
+          <div className="text-center mb-16">;
+            <GradientHeading>{t('home && home.categories_title')}</GradientHeading>;
+            <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">;
+              {t('home && home.categories_subtitle')}
+            </p>;
+          </div>;
         )}
 
             <Link
@@ -155,3 +149,4 @@ icon: getIcon (cat.iconName)
   t ('home.view all categories')
 }</Link> </div> </div> </section>)
 }'"}
+<<<<<<< HEAD

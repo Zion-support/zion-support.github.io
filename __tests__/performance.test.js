@@ -1,4 +1,5 @@
 
+=======
 import { test, expect } from '@playwright/test';
 
 test.describe('Performance Tests', () => {
@@ -45,6 +46,8 @@ test.describe('Performance Tests', () => {
 
     await page.waitForTimeout(2000);
 
+=======
+
     expect(consoleMessages.length).toBe(0);
   });'
   test('memory usage check', async ({ page }) => {'
@@ -64,6 +67,11 @@ test.describe('Performance Tests', () => {
     }
   });
 
+
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"Performance"'"
   test('"page"
@@ -74,3 +82,7 @@ test && test.describe('"Performance"'"
     "await"'"
     page && page.on('console', "msg"
               "output"
+=======
+<<<<<<< HEAD
+          resolve({ "error"'"
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

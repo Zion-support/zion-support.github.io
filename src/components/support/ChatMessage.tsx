@@ -30,9 +30,23 @@ import { format } from "date-fns";
             : theme === 'dark'
               ? 'bg-zion-blue-light text-white'
               : 'bg-gray-100 text-gray-800'
+
         )}
       >
 
+=======
+
+      
+      <div className={cn(
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
+        isUser 
+          ? "bg-zion-purple text-white" 
+          : theme === "dark"
+            ? "bg-zion-blue-light text-white"
+            : "bg-gray-100 text-gray-800"
+      )}>
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div dangerouslySetInnerHTML={sanitizedHtml} />
         <div className={cn(
           "text-xs mt-1",
@@ -43,11 +57,6 @@ import { format } from "date-fns";
               : "text-gray-500"
         )}>
           {format(timestamp, "h:mm a")}
-
-        </div>
-      </div>
-    </div>
-  )
 
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
@@ -143,6 +152,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
               : "text-gray-500";
         )}>;
           {format(timestamp, "h:mm a")}
+
         </div>;
       </div>;
     </div>;
@@ -155,6 +165,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 // before we perform our link replacements below.;
 function escapeHtml(unsafe: string): string {;
   return unsafe;
+
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -179,3 +190,4 @@ function formatMessageWithLinks(message: string): string {
   return formattedMessage; return formattedMessage
 }
 ;
+<<<<<<< HEAD

@@ -1,4 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+
+
 
 import fs from 'fs';
 import path from 'path';
@@ -22,6 +25,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const serviceMatch = prompt && prompt.match(/^(.*?)\s+in\s+/i);
       const service = serviceMatch ? serviceMatch[1].trim() : undefined;
 
+=======
+      const genReq = await fetch(`${process && process.env.SELF_HOST || 'http://localhost:3000'}/api/seo/generate`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON && JSON.stringify({ prompt, region, service })
+
+      });
+      const gen = await genReq && genReq.json();
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       const gen = await genReq.json();
 
       if (gen?.slug && gen?.payload) {
@@ -37,3 +49,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
 };
+=======
+
+=======
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import fs from 'fs';
+import path from 'path';
+import OpenAI from 'openai';
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

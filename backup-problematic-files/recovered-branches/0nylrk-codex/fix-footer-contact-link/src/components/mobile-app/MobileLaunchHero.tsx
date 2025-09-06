@@ -1,4 +1,19 @@
 
+=======
+import React from "react",;
+import { Link } from "react-router-dom",;
+import { ArrowRight, Smartphone } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { AppStoreButtons } from "./AppStoreButtons",;
+import { Card, CardContent } from "@/components/ui/card",;
+;
+export const MobileLaunchHero:React.FC = () => {;
+  // App store links - these would come from environment variables in production;
+  const appStoreUrl = "#", // Replace with actual App Store URL;
+  const googlePlayUrl = "#", // Replace with actual Google Play URL;
+;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24">;
       <div className="container mx-auto px-4 lg:px-8">;
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">;
@@ -7,6 +22,7 @@
               The Power of <span className="text-zion-cyan">Zion</span><br />;
               In Your Pocket;
             </h1>;
+<<<<<<< HEAD
 
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
@@ -39,12 +55,4 @@
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">;
                     <Smartphone className="w-40 h-40 text-white opacity-40" />;
                     {/* In production, replace with actual app screenshot */}
-
-                  </div>;
-                </CardContent>;
-              </Card>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
 

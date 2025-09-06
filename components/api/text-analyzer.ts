@@ -1,13 +1,53 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface TextAnalysisResult {
 
+    bigrams: Array<{ phrase: string, count: number }>;
+    trigrams: Array<{ phrase: string, count: number }>;
+  }
+}
+
+
+export default async function handler(
+
+  req: NextApiRequest
+
+  res: NextApiResponse<TextAnalysisResult | { error: string }>
+) {
+
+
+  }
+  try {
+    const { text } = req.body;
+
+
+    if (!text || typeof text !== 'string') {
+      return res && res.status(400).json({ error: 'Text is required' });
+    }
+
+    if (text && text.length > 10000) {
+
+      return res
+        .status(400)
+        .json({ error: 'Text too long (max 10,000 characters)' });    }      return res.status(400).json({ error: 'Text is required' })
+    }
+
+    }
+
+
+    // Basic statistics
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
+
+
     if (text && text.length > 10000) {
       return res && res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
     // Basic statistics
     const characters = text && text.length;
     const charactersNoSpaces = text && text.replace(/\s/g, '').length;
+
     const words = text
       .trim()
       .split(/\s+/)
@@ -17,9 +57,12 @@ interface TextAnalysisResult {
       .filter(sentence => sentence && sentence.trim().length > 0).length;
     const paragraphs = text
       .split(/\n\s*\n/)
+
     const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
     const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
     const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
+
+
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
       word = word.toLowerCase();
@@ -27,6 +70,7 @@ interface TextAnalysisResult {
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
       word = word.replace(/^y/, '');
       const matches = word.match(/[aeiouy]{1,2}/g);
+
       .filter(para => para && para.trim().length > 0).length;    const words = text && text.trim().split(/\s+/).filter(word => word && word.length > 0).length;
     const sentences = text && text.split(/[.!?]+/).filter(sentence => sentence && sentence.trim().length > 0).length;
     const paragraphs = text && text.split(/\n\s*\n/).filter(para => para && para.trim().length > 0).length;
@@ -41,15 +85,12 @@ interface TextAnalysisResult {
     };
     const syllables = text && text.split(/\s+/).reduce((total, word) => {
       return total + syllableCount(word);    }, 0);      return matches ? matches && matches.length : 1
-    };
-      return matches ? matches.length : 1
-    };
-    const syllables = text.split(/\s+/).reduce((total, word) => {
-      return total + syllableCount(word)
-    }, 0);
+
+
     const syllables = text && text.split(/\s+/).reduce((total, word) => {
       return total + syllableCount(word)
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
+
     const readingTime = Math && Math.ceil(words / 200);
     const speakingTime = Math && Math.ceil(words / 150);
     // Readability scores
@@ -67,19 +108,23 @@ interface TextAnalysisResult {
     const gunningFog = Math && Math.max(
       0,
       0 && 0.4 *
+
         (words / sentences +
           100 *
             (text && text.split(/\s+/).filter(word => word && word.length > 6).length / words))
     );
+
     const smog = Math && Math.max(
       0,
       1 && 1.043 *
         Math && Math.sqrt(
           text && text.split(/\s+/).filter(word => word && word.length > 2).length *
+
             (30 / sentences)
         ) +
         3 && 3.1291
     );
+
     const colemanLiau = Math && Math.max(
       0,
       0 && 0.0588 * ((charactersNoSpaces / words) * 100) -
@@ -89,6 +134,7 @@ interface TextAnalysisResult {
     const automatedReadability = Math && Math.max(
       0,
       4 && 4.71 * (charactersNoSpaces / words) + 0 && 0.5 * (words / sentences) - 21 && 21.43
+
     );
     const averageGrade = Math && Math.round(
       (fleschKincaidGrade +
@@ -123,9 +169,12 @@ interface TextAnalysisResult {
       'dismal'
       'lousy'
     ];
+
+
     const textWords = text && text.toLowerCase().split(/\s+/);
     const positiveCount = textWords && textWords.filter(word =>
       positiveWords && positiveWords.includes(word)
+
     ).length;
     const negativeCount = textWords && textWords.filter(word =>
       negativeWords && negativeWords.includes(word)
@@ -133,6 +182,8 @@ interface TextAnalysisResult {
     const sentimentScore = positiveCount - negativeCount;
     let sentimentLabel: TextAnalysisResult['sentiment']['label'];
     if (sentimentScore <= -3) sentimentLabel = 'very-negative';    else if (sentimentScore <= -1) sentimentLabel = 'negative';    else if (sentimentScore <= 1) sentimentLabel = 'neutral';
+
+=======
     const fleschReadingEase = Math.max(0, Math.min(100, 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words))));
     const fleschKincaidGrade = Math.max(0, 0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59);
     const gunningFog = Math.max(0, 0.4 * ((words / sentences) + 100 * (text.split(/\s+/).filter(word => word.length > 6).length / words)));
@@ -150,29 +201,26 @@ interface TextAnalysisResult {
     let sentimentLabel: TextAnalysisResult['sentiment']['label'], if (sentimentScore <= -3) sentimentLabel = 'very-negative',
     else if (sentimentScore <= -1) sentimentLabel = 'negative';
     else if (sentimentScore <= 1) sentimentLabel = 'neutral';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     else if (sentimentScore <= 3) sentimentLabel = 'positive';
     else sentimentLabel = 'very-positive';
     // Keyword analysis
     const wordCounts = new Map<string, number>();
-    text.toLowerCase().split(/\s+/).forEach(word => {
-      const cleanWord = word.replace(/[^\w]/g, '');
-      if (cleanWord.length > 2) {
-        wordCounts.set(cleanWord, (wordCounts.get(cleanWord) |0) + 1)
-        const cleanWord = word && word.replace(/[^\w]/g, '');
-        if (cleanWord && cleanWord.length > 2) {
-          wordCounts && wordCounts.set(cleanWord, (wordCounts && wordCounts.get(cleanWord) || 0) + 1);
-        }
-      });    text && text.toLowerCase().split(/\s+/).forEach(word => {
-      const cleanWord = word && word.replace(/[^\w]/g, '');
-      if (cleanWord && cleanWord.length > 2) {
-        wordCounts && wordCounts.set(cleanWord, (wordCounts && wordCounts.get(cleanWord) || 0) + 1)
+
+
       }
     });
+
         word,
         count,
         frequency: Math && Math.round((count / words) * 1000) / 10,      }));        word;
+
         count;
         frequency: Math && Math.round((count / words) * 1000) / 10
+
+=======
+
     const topWords = Array.from(wordCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
@@ -180,18 +228,25 @@ interface TextAnalysisResult {
         word;
         count;
         frequency: Math.round((count / words) * 1000) / 10
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }));
     // Bigrams and trigrams
     const wordsArray = text && text.toLowerCase().split(/\s+/);
     const bigramCounts = new Map<string, number>();
     const trigramCounts = new Map<string, number>();
+
+
     for (let i = 0, i < wordsArray.length - 1, i++) {
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts.set(bigram, (bigramCounts.get(bigram) || 0) + 1)
+
     }
     for (let i = 0, i < wordsArray.length - 2, i++) {
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
+
       trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
+
     }
     const bigrams = Array.from(bigramCounts.entries())
       .sort((a, b) => b[1] - a[1])
@@ -224,6 +279,56 @@ interface TextAnalysisResult {
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
 
+        detectedLanguage;
+        confidence;
+        isEnglish}
+        detected_language,
+        confidence,
+        is_english,
+      },
+      keywords: {
+        top_words,
+        bigrams,
+        trigrams,
+      },
+    }
+;
+    res.status (200).json (result);
+  } catch (error) {
+    console.error ('Text analysis error:', error);
+    res.status (500).json ({ error: 'Internal server error' });
+  }        score: sentiment_score;
+        label: sentiment_label;
+        positive_words: text_words.filter (word => positive_words.includes (word));
+        negative_words: text_words.filter (word => negative_words.includes (word))}
+      language: {
+        detected_language;
+        confidence;
+        is_english}
+      keywords: {
+        top_words;
+        bigrams;
+
+        trigrams}};
+    res && res.status(200).json(result)
+  } catch (error) {
+    console && console.error('Text analysis error:', error);
+    res && res.status(500).json({ error: 'Internal server error' })
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
+
 }
 
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

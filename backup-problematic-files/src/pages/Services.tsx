@@ -1,39 +1,8 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import ServiceCard from '../components/ServiceCard';
-import Card from '../components/Card';
+import React from 'react'
+import ServiceCard from '../components/ServiceCard'
+import Card from '../components/Card'
 
 const Services: React.FC = () => {
-
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
-            Comprehensive technology solutions designed to transform your business
-            and drive innovation across all sectors.
-          </p>
-        </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card
@@ -63,6 +32,12 @@ const Services: React.FC = () => {
           </div>
         </div>
 
+=======
+        {/* Industry Solutions */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🏥</span>
@@ -99,33 +74,5 @@ const Services: React.FC = () => {
               </div>
               <h3 className="text-lg font-semibold">Government</h3>
             </div>
+<<<<<<< HEAD
 
-          </div>
-        </div>
-      </div>
-    </div>
-const Services: React.FC = () => {;
-  return (
-    <div className="min-h-screen bg-gray-50">;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>;
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-          <div className="bg-white p-6 rounded-lg shadow">;
-            <h3 className="text-xl font-semibold mb-4">AI Services</h3>;
-            <p className="text-gray-600">Cutting-edge AI solutions for your business.</p>;
-          </div>;
-          <div className="bg-white p-6 rounded-lg shadow">;
-            <h3 className="text-xl font-semibold mb-4">IT Services</h3>;
-            <p className="text-gray-600">Comprehensive IT solutions and support.</p>;
-          </div>;
-          <div className="bg-white p-6 rounded-lg shadow">;
-            <h3 className="text-xl font-semibold mb-4">Cloud Solutions</h3>;
-            <p className="text-gray-600">Scalable cloud infrastructure and services.</p>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  );
-};
-
-export default Services;

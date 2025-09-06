@@ -262,6 +262,7 @@ export default function PerformanceOptimization() {
     </>
   )
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from 'react';
 export default function PerformanceOptimization(req, res) {
   try {
@@ -517,6 +518,7 @@ export default function PerformanceOptimization(req, res) {
                     href='/case-studies';
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300';
                   >;
+
                     View Success Stories;
                   </Link>;
                 </div>;
@@ -533,3 +535,6 @@ export default function PerformanceOptimization(req, res) {
   }
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

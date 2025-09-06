@@ -96,11 +96,6 @@
                   </div>;
                   <p className="text-sm text-zion-slate">;
 
-                    For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
-                  </p>;
-                </div>;
-              </div>;
-
                         />;
                       </FormControl>;
                       <FormMessage className="text-red-400" />;
@@ -116,11 +111,6 @@
                           AI Profile Enhancement;
                         </FormLabel>;
                         <FormDescription className="text-zion-slate-light">;
-
-                          Let AI help optimize your profile for better visibility and engagement;
-                        </FormDescription>;
-                      </div>;
-                      <FormControl>;
 
                     </Button>;
                   </div>;

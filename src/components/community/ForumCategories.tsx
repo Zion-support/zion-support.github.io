@@ -27,12 +27,25 @@ import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-reac
     adminOnly: false
     icon: "FileText"
 
+=======
+
+  },
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   {
     id: "announcements"
     name: "Announcements"
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
+const categories: ForumCategoryInfo[] = [;
+  {
+    id: "getting - hired",
+    name: "Getting Hired",
+    description: "Tips, strategies, and questions about getting hired on the platform.";
+    admin_only: false,
+    icon: "Briefcase";
   }
 
           <Link key={category.id} href={`/community/category/${category.id}`}>
@@ -49,3 +62,4 @@ import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-reac
             </Card>
           </Link>
         )
+<<<<<<< HEAD

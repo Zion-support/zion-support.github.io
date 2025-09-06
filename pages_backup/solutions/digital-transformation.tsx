@@ -1,6 +1,11 @@
 
 import React from 'react';
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
@@ -102,9 +107,10 @@ const industries = [
 export default function DigitalTransformation() {
 
 import Layout from "../../components/Layout";";
-import { motion } from 'framer-motion';
-import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
-export default function DigitalTransformationPage() {
+import {motion} from 'framer-motion';
+import {Rocket,, RefreshCw,, Target,, TrendingUp,, CheckCircle,, ArrowRight} from 'lucide-react';
+export default function DigitalTransformationPage() {;
+
   const transformationServices = [;
     {}
       title: "Process Automation","
@@ -131,6 +137,9 @@ export default function DigitalTransformationPage() {
       features: ["KPI Tracking", "Performance Analytics", "Continuous Improvement"]"
     }
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;  ];
   return (;
     <Layout );
@@ -176,6 +185,12 @@ export default function DigitalTransformationPage() {
           </div>;
         </section>;
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -199,6 +214,9 @@ export default function DigitalTransformationPage() {
           </div>
         </section>
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 :pages/solutions/digital-transformation.tsx
         {/* Transformation Process */}
         <section className="py-20 bg-white">
@@ -223,6 +241,12 @@ export default function DigitalTransformationPage() {
 
         {/* Services Section */}
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+        {/* Services Section */}
+
+                
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <section className="py-20">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
@@ -255,6 +279,9 @@ export default function DigitalTransformationPage() {
                         <li key={idx} className="flex items-center">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   >,
                     <div className="text-purple-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
@@ -281,6 +308,7 @@ export default function DigitalTransformationPage() {
           </div>
         </section>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>,
           </div>;
         </section>;
@@ -366,13 +394,14 @@ export default function DigitalTransformationPage() {
                   </motion.div>
                 );
               })}
-            </div>
-          </div>
-        </section>
+
+            </div>;
+          </div>;
+        </section>;
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
+          <div className="container mx-auto px-4 text-center">;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -399,19 +428,49 @@ export default function DigitalTransformationPage() {
     </MainLayout>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600 text-white">"
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
+          <div className="container mx-auto px-4 text-center">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className="text-xl mb-8 max-w-2xl mx-auto">;
+                Let our experts help you navigate your digital transformation journey with proven strategies and cutting-edge technology.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+                  Get Free Consultation;
+                </Link>;
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
+                  View All Solutions;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </MainLayout>;
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">";
-              Start Your Digital Journey;
+
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Start Your Digital Journey,;
+
             </h2>;
             <p className="text-xl mb-8 max-w-2xl mx-auto">";
               Ready to transform your business? Let our experts guide you through your digital transformation journey.;
             </p>;
-            <motion.a;
-              href="/contact"";
-              className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
-              whileHover={{ scale: 1.05 }}
-            >,
+
+            <motion&& motion.a
+              href="/contact""
+              className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
+              whileHover={{ scale: 1 && 1.05 }}>,;
+
               Begin Transformation;
               <ArrowRight className="w-5 h-5 ml-2" />";
             </motion.a>;

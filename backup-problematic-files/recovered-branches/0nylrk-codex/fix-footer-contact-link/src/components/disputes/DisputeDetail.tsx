@@ -1,4 +1,116 @@
 
+=======
+import React, { useState, useEffect } from "react",;
+import { useParams, useNavigate } from "react-router-dom",;
+import { useDisputes } from "@/hooks/useDisputes",;
+import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Separator } from "@/components/ui/separator",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { format, formatDistanceToNow } from "date-fns",;
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
+import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { toast } from "sonner",;
+;
+export function DisputeDetail() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { disputeId } = useParams() as { disputeId?:string },;
+  const navigate = useNavigate(),;
+  const { user } = useAuth(),;
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),;
+  ;
+  const [dispute, setDispute] = useState<any>(null),;
+  const [messages, setMessages] = useState<DisputeMessage[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [message, setMessage] = useState(""),;
+  const [isSending, setIsSending] = useState(false),;
+  const [resolution, setResolution] = useState({;
+    summary:"",;
+    resolution_type:"compromise"}),;
+  const [activeTab, setActiveTab] = useState("overview"),;
+;
+  // Check if user is admin (placeholder - implement proper admin check);
+  const isAdmin = user?.userType === "admin",;
+  ;
+  useEffect(() => {;
+    if (!disputeId) return,;
+;
+    const loadDisputeData = async () => {;
+      setIsLoading(true),;
+      try {;
+        const disputeData = await getDisputeById(disputeId),;
+        if (!disputeData) {;
+          toast.error("Dispute not found"),;
+          navigate("/dashboard/disputes"),;
+          return,;
+        }
+        setDispute(disputeData),;
+        ;
+        const messagesData = await getDisputeMessages(disputeId),;
+        setMessages(messagesData),;
+      } catch (error) {;
+        console.error("Error loading dispute data:", error),;
+        toast.error("Failed to load dispute"),;
+      } finally {;
+        setIsLoading(false),;
+      }
+    },;
+    ;
+    loadDisputeData(),;
+  }, [disputeId, navigate, getDisputeById, getDisputeMessages]),;
+;
+  const handleStatusChange = async (status:DisputeStatus) => {;
+    if (!disputeId) return,;
+    ;
+    const success = await updateDisputeStatus(disputeId, status),;
+    if (success && dispute) {;
+      setDispute({ ...dispute, status }),;
+    }
+  },;
+;
+  const handleResolveDispute = async () => {;
+    if (!disputeId) return,;
+    ;
+    if (!resolution.summary) {;
+      toast.error("Please provide a resolution summary"),;
+      return,;
+    }
+    ;
+    const success = await resolveDispute(disputeId, resolution),;
+    if (success && dispute) {;
+      setDispute({ ;
+        ...dispute, ;
+        status:"resolved", ;
+        resolution_summary:resolution.summary,;
+        resolution_type:resolution.resolution_type,;
+        resolved_at:new Date().toISOString();
+      }),;
+    }
+  },;
+;
+  const handleSendMessage = async () => {;
+    if (!disputeId || !message.trim()) return,;
+    ;
+    setIsSending(true),;
+    try {;
+      const success = await addDisputeMessage(disputeId, message, isAdmin),;
+      if (success) {;
+        // Refresh messages;
+        const updatedMessages = await getDisputeMessages(disputeId),;
+        setMessages(updatedMessages),;
+        setMessage(""),;
+      }
+    } catch (error) {;
+      console.error("Error sending message:", error),;
+    } finally {;
+      setIsSending(false),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   },;
 ;
@@ -11,6 +123,7 @@
     ),;
   }
 ;
+<<<<<<< HEAD
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
         <div className="lg:col-span-2">;
@@ -43,6 +156,7 @@
                           <span>Under review</span>;
                         </li>;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     </ul>;
                   </div>;
                 </CardContent>;
@@ -152,13 +266,6 @@
                 <div>;
                   <p className="font-medium">Talent</p>;
                   <p className="text-sm text-muted-foreground">;
-
-                    {dispute.talent_profile?.display_name || "Unknown Talent"}
-                  </p>;
-                </div>;
-              </div>;
-            </CardContent>;
-          </Card>;
 
               </div>;
             </CardContent>;

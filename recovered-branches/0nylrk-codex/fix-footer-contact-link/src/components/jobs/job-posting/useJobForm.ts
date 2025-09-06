@@ -1,7 +1,26 @@
 
 
+export interface JobPostingProps {
+  job_id?: string;
+  on_success?: () => void;
+}
+
+
+  const { user } = useAuth(),
+  const navigate = useNavigate(),
+
+  
+  const [startDate, setStartDate] = useState<Date | undefined>(undefined),
+  const [endDate, setEndDate] = useState<Date | undefined>(undefined),
+  const [isRemote, setIsRemote] = useState(false),
+  const [isLoading, setIsLoading] = useState(false),
+  const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const form = useForm<JobSchemaType>({
-    resolver: zodResolver(jobSchema),
+    resolver: zodResolver(jobSchema);
     defaultValues: {
 
 import { useState, useEffect } from 'react',;
@@ -70,10 +89,14 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
       }
 
       return jobData
+      }
+      return job_data;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     } catch (error: any) {
-      console.error("Error in job form submission:", error),
-      toast.error(error.message || "Failed to process form"),
-      throw error
+      console.error ("Error in job form submission:", error);
+      toast.error (error.message || "Failed to process form");
+      throw error;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading(false)
 
@@ -102,3 +125,9 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
 
   }
 };
+  }
+}
+
+;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

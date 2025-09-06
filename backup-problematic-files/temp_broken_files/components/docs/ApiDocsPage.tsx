@@ -1,3 +1,12 @@
+=======
+
+import React, { useMemo, useState } from 'react',;
+import Sidebar from './Sidebar',;
+import EndpointDetail from './EndpointDetail',;
+import v1 from '../../data/api-docs/v1',;
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',;
+;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later
@@ -17,6 +26,7 @@ export default function ApiDocsPage() {
         onChangeVersion={(v) => { setSelectedVersion(v), setActiveEndpointId(undefined) }}
         visibilityFilter={visibility}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <div>
             <div className="text-2xl font-bold">Zion OS API Documentation</div>
             <div className="text-sm text-high-contrast-muted">Developer-friendly API docs with live testing</div>
@@ -28,6 +38,7 @@ export default function ApiDocsPage() {
           </div>
         </header>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <EndpointDetail endpoint={activeEndpoint} />
         ) : (
           <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>
@@ -62,3 +73,6 @@ function ChangelogWidget() {
         <button onClick={save} className="px-3 py-1 rounded bg-high-contrast-accent text-black">Save</button>
         {message && <span className="text-xs text-high-contrast-muted">{message}</span>}
       </div>
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

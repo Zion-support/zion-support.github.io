@@ -1,4 +1,17 @@
 
+=======
+
+import Link from "next/link",;
+export const metadata = {;
+  title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",;
+  description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",;
+  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"},;
+export default function QuantumServicesPage() {;
+  return (;
+
+
+    <div className="min-h-screen">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="min-h-screen">;
 
       {/* Hero Section */}
@@ -82,6 +95,12 @@
                 </svg>;
               </div>;
 
+=======
+              <h3 className="text - xl font - semibold mb - 3">Quantum Algorithm Development</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                Custom quantum algorithms designed for your specific business problems,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 from optimization challenges to complex simulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;

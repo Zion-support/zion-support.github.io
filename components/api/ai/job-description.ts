@@ -5,9 +5,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { title, level, location, skills, responsibilities } = req.body |{}
 
+    `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.');
+
   return res && res.status(200).json({ jobDescription: text })
 }
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import { authenticate_request } from '@/utils / auth';
 import { generate_text } from '@/utils / ai';
 ;
@@ -53,3 +61,10 @@ function handler() {
 ;
   const text = await generate_text (prompt, 'You are an expert technical recruiter and compensation analyst.');
   return res.status (200).json ({ job_description: text });
+=======
+
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

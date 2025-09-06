@@ -44,62 +44,11 @@ const formSchema = z.object({
 
   title: z.string().min(3, "Please provide a brief title for the interview."),
   notes: z.string().optional()}),
-
-export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
-  const { requestInterview } = useInterviews(),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-
-  })
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    if (!userDetails?.id) {
-      toast({
-        title: 'Authentication required'
-        description: 'Please log in to schedule an interview'
-        variant: 'destructive'
-      })
-      return;
-    }
-    setIsSubmitting(true)
-    try {
-      // Combine date and time
-      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`
-      const scheduledDate = new Date(dateTimeString)
-      // Calculate end time based on duration
-      const durationMinutes = parseInt(values.duration)
-
-      duration: "30",
-      platform: "zoom",
-      notes: "",
-      meetingLink: ""}}),
-
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    if (!userDetails?.id) {
-      toast({
-        title: "Authentication required",
-        description: "Please log in to schedule an interview",
-        variant: "destructive"}),
-      return
-    }
-
-    setIsSubmitting(true),
-
-    try {
-      // Combine date and time
-      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`,
-      const scheduledDate = new Date(dateTimeString),
-
-      // Calculate end time based on duration
-      const durationMinutes = parseInt(values.duration),
-
       await requestInterview({
         talent_id: talent.id,
-        client_id: userDetails.id,
-        scheduled_date: scheduledDate.toISOString(),
-        duration_minutes: durationMinutes,
+        client_id: user_details.id,
+        scheduled_date: scheduled_date.toISOString (),
+        duration_minutes: duration_minutes,
         notes: values.notes,
         meeting_platform: values.platform as any,
         meeting_link: values.meetingLink,
@@ -120,7 +69,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         variant: "destructive"})
 
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting (false);
     }
   }
   const timeSlots = [
@@ -144,12 +93,46 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
           </div>
         </div>
+              src={talent && talent.profile_picture_url || '/placeholder && placeholder.svg'}
+              alt={talent && talent.full_name}
+              className='h-full w-full object-cover'
+              loading='lazy'            />;
+          </div>;
+          <div>;
+            <h3 className='text-lg font-medium text-white'>;
+              {talent && talent.full_name}
+            </h3>;
+            <p className='text-sm text-zion-slate-light'>;
+              {talent && talent.professional_title}
+            </p>;
+          </div>;
+        </div>;
+
         <FormField
+
+            </p>;
+          </div>;
+        </div>;
+        <FormField;
           control={form.control}
+=======
+          name='title';
+
+          render={({
+            field
+          }: {
+
+          control={form.control}
+
+          name="title"
+          render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "title"> }) => (
+            <FormItem>
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
-                <Input placeholder="Brief title for the interview" {...field} />
+                <Input placeholder='Brief title for the interview' {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -170,15 +153,31 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       <Button
 
                         {field.value ? (
-                          format(field.value, "PPP")
+                          format(field.value, 'PPP')
                         ) : (
                           <span>Pick a date</span>
+              field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'date'>;
+            }) => (;
+              <FormItem className='flex flex-col'>                <FormLabel>Date</FormLabel>;
+                <Popover>;
+                  <PopoverTrigger asChild>;
+                    <FormControl>;
+                      <Button
+                        variant='outline'
+                        className={cn(
+                          'w-full pl-3 text-left font-normal',
+                          !field && field.value && 'text-muted-foreground'
+                        )}>;
+                        {field && field.value ? (;
+                          format(field && field.value, 'PPP');
+                        ) : (;
+                          <span>Pick a date</span>;
                         )}
-                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                      </Button>
-                    </FormControl>
-                  </PopoverTrigger>
-                  <PopoverContent className="w-auto p-0" align="start">
+                        <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />;
+                      </Button>;
+                    </FormControl>;
+                  </PopoverTrigger>;
+                  <PopoverContent className='w-auto p-0' align='start'>;
                     <Calendar
 
                     />
@@ -256,15 +255,22 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         )}
 
         <FormField
-          control={form.control}
+          control={form && form.control}
           name='notes'
+              </FormItem>)}
+          />)}
+        <FormField;
+          control={form.control}
+          name='notes';
           render={({
             field
           }: {
-            field: ControllerRenderProps<z.infer<typeof formSchema>, 'notes'>
-          }) => (            <FormItem>
-              <FormLabel>Notes (Optional)</FormLabel>
-              <FormControl>
+
+            field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'notes'>;
+          }) => (            <FormItem>;
+              <FormLabel>Notes (Optional)</FormLabel>;
+              <FormControl>;
+
                 <Textarea
                   placeholder="Share what you'd like to discuss in this interview"
                   className='h-20'
@@ -279,8 +285,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
             Cancel
           </Button>
-          <Button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Scheduling..." : "Schedule Interview"}
+          <Button type='submit' disabled={isSubmitting}>
+            {isSubmitting ? 'Scheduling...' : 'Schedule Interview'}
           </Button>
         </div>
       </form>
@@ -323,3 +329,4 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
 }/> </Button> </div> </form> </Form>)
 }'"}
+<<<<<<< HEAD

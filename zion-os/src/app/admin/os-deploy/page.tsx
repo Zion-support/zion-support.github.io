@@ -58,9 +58,10 @@ export default function OSDeployPage() {;
       treasury: 'Treasury Management';
     }
     return labels[key] || key;
-    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+
+
         {/* Header */}
+
         <div className="text-center mb-12">;
           <h1 className="text-4xl font-bold mb-4">🚀 Launch Your Digital Economy</h1>;
           <p className="text-xl text-white/70 max-w-2xl mx-auto">;
@@ -77,6 +78,7 @@ export default function OSDeployPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Instance Name *</label>;
+
                 <input
                   id="instanceName"
                   name="instanceName"
@@ -84,13 +86,16 @@ export default function OSDeployPage() {;
                   required
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="My Digital Economy"
+
                 />;
               </div>;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Vertical</label>;
+
                 <select
                   id="vertical"
                   name="vertical"
+
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
   }
 ;
@@ -140,6 +145,7 @@ ai: 'Advanced AI capabilities and automation',
                   name="vertical";
                   className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";
                 >;
+
                   <option value="GENERAL">General</option>;
                   <option value="HEALTH">Healthcare</option>;
                   <option value="EDUCATION">Education</option>;
@@ -149,45 +155,44 @@ ai: 'Advanced AI capabilities and automation',
                   <option value="TECH">Technology</option>;
                 </select>;
               </div>;
+
                   placeholder="zion && zion.example.com"
                 />;
               </div>;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Subdomain</label>;
+
                 <input
                   id="subdomain"
                   name="subdomain"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="latam"
+
                 />;
               </div>;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Default Language</label>;
+
                 <input
                   id="defaultLanguage"
                   name="defaultLanguage"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+
                 />;
               </div>;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Region</label>;
+
                 <input
                   id="region"
                   name="region"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="North America"
-          {/* Economy Settings */}
-          <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">💰</span>
-              Economic Configuration
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label htmlFor="tokenSystem" className="block text-sm font-medium text-white/90">Token System</label>
+
+
                 />;
               </div>;
             </div>;
@@ -201,9 +206,13 @@ ai: 'Advanced AI capabilities and automation',
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Token System</label>;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <select
                   id="tokenSystem"
                   name="tokenSystem"
+
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
               <div className="space - y-2">;
                 <label html_for="domain" className="block text - sm font - medium text - white / 90">Domain</label>;
@@ -260,11 +269,13 @@ ai: 'Advanced AI capabilities and automation',
                   name="token_system";
                   className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";
                 >;
+
                   <option value="SHARED">ZION$ Shared</option>;
                   <option value="LOCAL">Local Token</option>;
                   <option value="HYBRID">Hybrid System</option>;
                 </select>;
               </div>;
+
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
                   <option value="ADMIN">Admin Control</option>;
                   <option value="DAO LITE">DAO-lite</option>;
@@ -277,17 +288,21 @@ ai: 'Advanced AI capabilities and automation',
                 >;
                   <option value="ADMIN">Admin Control</option>;
                   <option value="DAO LITE">DAO - lite</option>;
+
                   <option value="DAO FULL">Full DAO</option>;
                   <option value="HYBRID">Hybrid Governance</option>;
                 </select>;
               </div>;
+
                 />;
               </div>;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Payment Gateway</label>;
+
                 <select
                   id="paymentGateway"
                   name="paymentGateway"
+
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
                   <option value="">None</option>;
                   <option value="stripe">Stripe</option>;
@@ -309,6 +324,7 @@ ai: 'Advanced AI capabilities and automation',
                 <label
                   key={k}
                   className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
+
                   <input
               <div className="space - y-2">;
                 <label html_for="country" className="block text - sm font - medium text - white / 90">Country</label>;
@@ -354,6 +370,7 @@ ai: 'Advanced AI capabilities and automation',
                     type="checkbox";
                     name="features";
                     value={k}
+
             </div>;
           </div>;
           {/* Additional Features */}
@@ -364,12 +381,14 @@ ai: 'Advanced AI capabilities and automation',
             </h2>;
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
+
                 <input
                   id="treasury"
                   type="checkbox"
                   name="treasury"
                   aria-label="Treasury Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+
                 />;
                 <div>;
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
@@ -379,12 +398,14 @@ ai: 'Advanced AI capabilities and automation',
                 </div>;
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
+
                 <input
                   id="governance"
                   type="checkbox"
                   name="governance"
                   aria-label="Governance System"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+
                 />;
                 <div>;
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
@@ -394,12 +415,14 @@ ai: 'Advanced AI capabilities and automation',
                 </div>;
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
+
                 <input
                   id="moderation"
                   type="checkbox"
                   name="moderation"
                   aria-label="Content Moderation"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+
                 />;
                 <div>;
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
@@ -409,12 +432,14 @@ ai: 'Advanced AI capabilities and automation',
                 </div>;
               </label>;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
+
                 <input
                   id="partnerships"
                   type="checkbox"
                   name="partnerships"
                   aria-label="Partnership Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+
                 />;
                 <div>;
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;
@@ -498,12 +523,15 @@ ai: 'Advanced AI capabilities and automation',
                     Partnership Management;
                   </div>;
                   <div className="text - sm text - white / 60">Institutional partnership management</div>;
+
                 </div>;
               </label>;
             </div>;
           </div>;
+
             </button>;
             {message && (;
+
               <div
                 className={`mt-6 p-4 rounded-lg ${
                   messageType === 'success'
@@ -513,3 +541,59 @@ ai: 'Advanced AI capabilities and automation',
                 {message}
               </div>;
             )}
+                {message}
+              </div>;
+            )}
+
+
+          </div>;
+        </form>;
+      </div>;
+    </div>);
+}
+
+;
+function labelFor(key: string) {;
+  switch (key) {;
+    case "marketplace": return "Marketplace",;
+    case "zion_gpt": return "ZionGPT Core",;
+    case "resume_ai": return "Resume AI",;
+    case "token_rewards": return "Token System",;
+    case "onchain_contracts": return "Smart Contracts",;
+    case "kyc_aml": return "KYC/AML",;
+    case "dao_voting": return "DAO Voting",;
+    case "incubator_grants": return "Incubator",;
+    case "academy": return "Zion Academy",;
+    case "partner_api": return "Partner API",;
+    case "regional_dashboards": return "Regional Dashboards",;
+    case "vendor_plugin": return "Vendor Plugin",;
+    case "web3_login": return "Web3 Login",;
+    case "multi_currency": return "Multi-Currency",;
+    default: return key;
+  }
+}
+;
+function getFeatureDescription(key: string) {;
+  switch (key) {;
+    case "marketplace": return "Jobs, talent, and project marketplace",;
+    case "zion_gpt": return "Core AI intelligence system",;
+    case "resume_ai": return "AI-powered resume and proposal builder",;
+    case "token_rewards": return "Token system with rewards",;
+    case "onchain_contracts": return "Smart contract builder",;
+    case "kyc_aml": return "Identity verification and compliance",;
+    case "dao_voting": return "Proposal and voting system",;
+    case "incubator_grants": return "Startup incubation and funding",;
+    case "academy": return "Educational platform",;
+    case "partner_api": return "API access for partners",;
+    case "regional_dashboards": return "Regional and institutional views",;
+    case "vendor_plugin": return "White-label vendor solutions",;
+    case "web3_login": return "Web3 authentication and DID";
+    case "multi_currency": return "Multi-currency support";
+    default: return "Core platform feature";
+  }
+}
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,4 +1,40 @@
 
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.45.0",
+import {Resend} from "npm: resend@2 ;
+// Initialize Resend with API key
+const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
+
+// Initialize Supabase client
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*";
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+interface EmailData {
+  user_id: string;
+  email_type: string;
+  display_name: string;
+  user_type: string;
+  days_inactive?: number;
+  onboarding_status?: any;
+
+
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
+import {Resend} from "npm: resend@2.0.0";
+
+=======
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+import { Resend } from "npm: resend@2.0.0",
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 // Initialize Resend with API key
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
@@ -21,30 +57,42 @@ interface EmailData {
   onboarding_status?: any,
   job_id?: string,
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   job_title?: string
 }
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
     // Extract job data from request
 
+=======
+
+    const jobData = await req.json(),
+    const { id: jobId, payload } = jobData,
+    const emailData = payload as EmailData,
+    
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Fetch user's email
     const { data: userData, error: userError } = await supabase
       .from("profiles")
       .select("id, display_name, avatar_url, user_type")
+
       .eq("id", emailData.user_id)
 
     if (userError) {
-      throw new Error(`Error fetching user data: ${userError.message}`)
+      throw new Error(`Error fetching user data: ${userError && userError.message}`)
     }
     const { data: authUser, error: authError } = await supabase
-      .from("auth.users")
+      .from("auth && auth.users")
       .select("email")
       .eq("id", emailData.user_id)
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (!userEmail) {
       throw new Error("User email not found")
     }
@@ -179,6 +227,63 @@ serve(async (req) => {;
     );
   }
 }),
+        status: 200}
+    );
+  } catch (error) {
+
+    console.error ("Error in send - retention - email function:", error);
+;
+    return new Response (
+      JSON.stringify ({
+        success: false,
+
+        error: error.message});
+=======
+    console && console.error("Error in send-retention-email function:", error);
+
+    return new Response(
+      JSON && JSON.stringify({
+        success: false,
+        error: error && error.message});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {
+        headers: {
+
+          ...cors_headers,
+          "Content - Type": "application / json"}
+
+        status: 500}
+    );
+  }
+});
+
+      .eq("user_id", emailData.user_id)
+
+      .eq("campaign_type", emailData.email_type),
+
+    return new Response(
+      JSON.stringify({
+        success: true,
+        message: "Email sent successfully",
+        email: emailResponse}),
+      {
+        headers: {
+          ...corsHeaders,
+          "Content-Type": "application/json"},
+        status: 200}
+    )
+  } catch (error) {
+    console.error("Error in send-retention-email function:", error),
+
+    return new Response(
+      JSON.stringify({
+        success: false,
+        error: error.message}),
+      {
+        headers: {
+          ...corsHeaders,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {
   const { email_type, display_name, user_type } = emailData,
@@ -189,52 +294,56 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
   let ctaLink = "/dashboard",
   let ctaText = "Go to Dashboard",
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (email_type === "welcome_series") {
     // Customize based on user type
     if (user_type === "jobSeeker" |user_type === "creator") {
       return {
-        subject: `Welcome to Zion AI Marketplace, ${firstName}!`,
-        html: `
-          <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
-            <h2>Welcome to Zion AI Marketplace!</h2>
-            <p>Hi ${firstName},</p>
-            <p>We're excited to have you join our community of talented AI professionals.</p>
-            <p>Here's what to do next to get started: </p>
-            <ol>
-              <li>Complete your profile to help clients find you</li>
-              <li>Add your skills and expertise</li>
-              <li>Set your availability preferences</li>
-              <li>Browse available jobs and start applying</li>
-            </ol>
-            <div style="margin: 25px 0,">
-              <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Complete Your Profile</a>
-            </div>
-            <p>If you have any questions, just reply to this email.</p>
-            <p>The Zion AI Marketplace Team</p>
-          </div>
+        subject: `Welcome to Zion AI Marketplace, ${first_name}!`;
+        html: `;
+          <div style="font - family: sans - serif, max - width: 600px, margin: 0 auto, ">;
+            <h2 > Welcome to Zion AI Marketplace!</h2>;
+            <p > Hi ${first_name}, </p>;
+            <p > We're excited to have you join our community of talented AI professionals.</p>;
+            <p > Here's what to do next to get started: </p>;
+            <ol>;
+              <li > Complete your profile to help clients find you</li>;
+              <li > Add your skills and expertise</li>;
+              <li > Set your availability preferences</li>;
+              <li > Browse available jobs and start applying</li>;
+            </ol>;
+            <div style="margin: 25px 0, ">;
+              <a href="${supabase_url}/dashboard" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Complete Your Profile</a>;
+            </div>;
+            <p > If you have any questions, just reply to this email.</p>;
+            <p > The Zion AI Marketplace Team</p>;
+          </div>;
         `}
     } else {
-      // For clients/employers
+      // For clients / employers;
       return {
-        subject: `Welcome to Zion AI Marketplace, ${firstName}!`,
-        html: `
-          <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
-            <h2>Welcome to Zion AI Marketplace!</h2>
-            <p>Hi ${firstName},</p>
-            <p>We're excited to have you join our community of innovative businesses and entrepreneurs.</p>
-            <p>Here's what to do next to get started: </p>
-            <ol>
-              <li>Complete your company profile</li>
-              <li>Post your first job or project</li>
-              <li>Browse talent profiles in our directory</li>
-              <li>Connect with AI professionals that match your needs</li>
-            </ol>
-            <div style="margin: 25px 0,">
-              <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Post Your First Job</a>
-            </div>
-            <p>If you have any questions, just reply to this email.</p>
-            <p>The Zion AI Marketplace Team</p>
-          </div>
+        subject: `Welcome to Zion AI Marketplace, ${first_name}!`;
+        html: `;
+          <div style="font - family: sans - serif, max - width: 600px, margin: 0 auto, ">;
+            <h2 > Welcome to Zion AI Marketplace!</h2>;
+            <p > Hi ${first_name}, </p>;
+            <p > We're excited to have you join our community of innovative businesses and entrepreneurs.</p>;
+            <p > Here's what to do next to get started: </p>;
+            <ol>;
+              <li > Complete your company profile</li>;
+              <li > Post your first job or project</li>;
+              <li > Browse talent profiles in our directory</li>;
+              <li > Connect with AI professionals that match your needs</li>;
+            </ol>;
+            <div style="margin: 25px 0, ">;
+              <a href="${supabase_url}/dashboard" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Post Your First Job</a>;
+            </div>;
+            <p > If you have any questions, just reply to this email.</p>;
+            <p > The Zion AI Marketplace Team</p>;
+          </div>;
         `}
     }
   } else if (email_type === "inactivity_3") {
@@ -244,26 +353,82 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
         if (!onboarding.profile_completed) {
           nextAction = "complete your profile",
           ctaLink = "/profile",
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ctaText = "Complete Your Profile"
-        } else if (!onboarding.skills_added) {
-          nextAction = "add your skills to get matched with the right opportunities",
-          ctaLink = "/profile/skills",
+        } else if (!onboarding && onboarding.skills_added) {
+          nextAction = "add your skills to get matched with the right opportunities";
+          ctaLink = "/profile/skills";
           ctaText = "Add Your Skills"
-        } else if (!onboarding.availability_set) {
-          nextAction = "set your availability to help clients find you",
-          ctaLink = "/profile/settings",
+        } else if (!onboarding && onboarding.availability_set) {
+          nextAction = "set your availability to help clients find you";
+          ctaLink = "/profile/settings";
           ctaText = "Set Your Availability"
         }
       } else {
         // For clients
-        if (!onboarding.job_posted) {
-          nextAction = "post your first job to start finding talent",
-          ctaLink = "/post-job",
+        if (!onboarding && onboarding.job_posted) {
+          nextAction = "post your first job to start finding talent";
+          ctaLink = "/post-job";
           ctaText = "Post a Job"
-        } else if (!onboarding.talent_invited) {
-          nextAction = "invite talent to speed up your hiring process",
-          ctaLink = "/talent",
+        } else if (!onboarding && onboarding.talent_invited) {
+          nextAction = "invite talent to speed up your hiring process";
+          ctaLink = "/talent";
           ctaText = "Find Talent"
+=======
+  } else // Check condition
+if ( {) {
+  $2
+}
+    // Day 3 incomplete action reminder;
+    // Check condition
+if ( {) {
+  $2
+}
+      const onboarding = email_data.onboarding_status;
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        // Check condition
+if ( {) {
+  $2
+}
+          next_action = "complete your profile";
+          cta_link = "/profile";
+          cta_text = "Complete Your Profile";
+        } else // Check condition
+if ( {) {
+  $2
+}
+          next_action = "add your skills to get matched with the right opportunities";
+          cta_link = "/profile / skills";
+          cta_text = "Add Your Skills";
+        } else // Check condition
+if ( {) {
+  $2
+}
+          next_action = "set your availability to help clients find you";
+          cta_link = "/profile / settings";
+          cta_text = "Set Your Availability";
+        }
+      } else {
+        // For clients;
+        // Check condition
+if ( {) {
+  $2
+}
+          next_action = "post your first job to start finding talent";
+          cta_link = "/post - job";
+          cta_text = "Post a Job";
+        } else // Check condition
+if ( {) {
+  $2
+}
+          next_action = "invite talent to speed up your hiring process";
+          cta_link = "/talent";
+          cta_text = "Find Talent";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }
     }
@@ -417,3 +582,6 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
     `}
 }
 ;
+    `}
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

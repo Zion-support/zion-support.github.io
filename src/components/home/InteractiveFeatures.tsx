@@ -64,6 +64,14 @@ export function InteractiveFeatures({
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
 
+=======
+
+              className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
+            >
+              <CardHeader className="flex flex-row items-start space-x-3">
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 {feature.icon}
                 <div>
                   <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
@@ -91,3 +99,4 @@ export function InteractiveFeatures({
               </div>
             </Card>
           ))}
+<<<<<<< HEAD

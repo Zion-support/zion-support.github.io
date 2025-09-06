@@ -1,4 +1,13 @@
 
+=======
+import { ReactNode } from "react";
+
+export default function AdminLayout({ children }: { children: ReactNode }) {;
+  return (;
+
+
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
 
       {/* Admin Header */}
@@ -38,3 +47,16 @@
       <div className="py - 8">;
         {children}
       </div>;
+<<<<<<< HEAD
+=======
+
+    </div>;
+  );
+
+};
+
+export default Layout;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

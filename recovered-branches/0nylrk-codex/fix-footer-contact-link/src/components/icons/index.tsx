@@ -1,4 +1,12 @@
 
+=======
+
+    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
+    return <LucideIcon {...props} />;
+  };
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   IconComponent.displayName = aliasName;
   return IconComponent
 }
@@ -9,12 +17,19 @@ Object.entries(iconAliases).forEach(([alias, lucideName]) => {
   if (LucideIcons[lucideName]) {
     iconExports[alias] = createIconComponent(alias, lucideName)
   } else {
-    console.warn(`Icon '${lucideName}' not found in lucide-react`);
-    // Use a fallback icon
-    iconExports[alias] = createIconComponent(alias, 'HelpCircle')
+    console.warn (`Icon '${lucide_name}' not found in lucide-react`);
+    // Use a fallback icon;
+    icon_exports[alias] = createIconComponent (alias, 'HelpCircle');
   }
 });
 
+=======
+
+
+export const {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   LayoutGrid;
   List;
   Zap;
@@ -81,3 +96,4 @@ Object.entries(iconAliases).forEach(([alias, lucideName]) => {
   Key;
   Tag} = iconExports;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -4,6 +4,15 @@ import Button from '../components/ui/Button';
 
 import {
 
+=======
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Code,
   GitBranch,
   Database,
@@ -15,6 +24,10 @@ import {
   CheckCircle,
   TrendingUp,
 
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Code;
   GitBranch,
   Database,
@@ -26,8 +39,10 @@ import {
   CheckCircle;
   TrendingUp;
   Cpu;
-  Globe
-} from 'lucide-react';
+
+
+
+
       icon: <Code className="w-8 h-8 text-white" />,
 
 export default function DeveloperToolsPage() {_const _developerTools = [
@@ -46,6 +61,7 @@ export default function DeveloperToolsPage() {_const _developerTools = [
       text_color: 'text - gray - 400',
       gradient: 'from - gray - 400 to - black',
       popular: true,
+
       category: 'Code Generation',
     },
       icon: <GitBranch className='w - 8 h - 8 text - white' />,
@@ -59,6 +75,7 @@ export default function DeveloperToolsPage() {_const _developerTools = [
         'Advanced insights',
         'Team management features',
       ],      pricing: '$4 / month',        'Unlimited private repositories_advanced code review tools_priority support_advanced insights_team management features';
+
       ];
       pricing: '$4 / month',
       market_price: '$4 / month',
@@ -67,6 +84,7 @@ export default function DeveloperToolsPage() {_const _developerTools = [
       text_color: 'text - green - 400',
       gradient: 'from - green - 400 to - emerald - 500',
       popular: true,
+
       category: 'Version Control',
     },
       icon: <Database className='w - 8 h - 8 text - white' />,
@@ -80,6 +98,7 @@ export default function DeveloperToolsPage() {_const _developerTools = [
         'Advanced security',
         'Real - time analytics',
       ],      pricing: '$9 / month',        'Fully managed MongoDBAuto - scaling & optimization_global distribution_advanced security_real - time analytics';
+
       ];
       pricing: '$9 / month',
       market_price: '$9 - 57 / month',
@@ -88,6 +107,7 @@ export default function DeveloperToolsPage() {_const _developerTools = [
       text_color: 'text - green - 400',
       gradient: 'from - green - 400 to - blue - 500',
       popular: false,
+
       category: 'Database',
     },
       icon: <Cloud className='w - 8 h - 8 text - white' />,
@@ -101,6 +121,7 @@ export default function DeveloperToolsPage() {_const _developerTools = [
         'Team collaboration',
         'Custom domains',
       ],      pricing: '$20 / month',        'Zero - config deployments_preview deployments_advanced analytics_team collaboration_custom domains';
+
       ];
       pricing: '$20 / month',
       market_price: '$20 / month',
@@ -109,6 +130,7 @@ export default function DeveloperToolsPage() {_const _developerTools = [
       text_color: 'text - gray - 400',
       gradient: 'from - black to - gray - 500',
       popular: false,
+
       category: 'Deployment',
     },
       icon: <Shield className='w - 8 h - 8 text - white' />,
@@ -122,8 +144,10 @@ export default function DeveloperToolsPage() {_const _developerTools = [
         'Infrastructure as Code',
         'CI / CD integration',
       ],      pricing: '$25 / month',        'Vulnerability scanning_dependency monitoring_container security_infrastructure as CodeCI / CD integration';
+
       ];
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       ];
       pricing: '$12 / month',
       market_price: '$12 - 99 / month',
@@ -132,71 +156,45 @@ export default function DeveloperToolsPage() {_const _developerTools = [
       text_color: 'text - orange - 400',
       gradient: 'from - orange - 400 to - red - 500',
       popular: false,
+
       category: 'API Development',
     },  ];      category: 'API Development';
     }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   ];
+
 ;
   const devMarketStats = [;
+
     {
+
       title: 'Dev Tools Market',
       value: '$8.2B',
       growth: '+24% YoY',
       description: 'Global developer tools market size'
-};
+    };
     {
       title: 'AI Code Tools',
       value: '$2.1B',
       growth: '+45% YoY',
-description: 'AI - powered development tools market',
-    },    {
-      title: 'Cloud Dev Tools',
-      value: '$4.8B',
-      growth: '+32% YoY',
-      description: 'Cloud - based development platforms',
-    },    {
-      title: 'Dev Productivity',
-      value: '35%',
-      growth: '+18% YoY',
-      description: 'Average productivity improvement',
-    },  ];      description: 'Global developer tools market size';
-    }
+
     {
-      title: 'AI Code Tools',
-      value: '$2.1B',
-      growth: '+45% YoY',
-      description: 'AI - powered development tools market',
-    },      description: 'AI - powered development tools market';
-    }
-    {
-      title: 'Cloud Dev Tools',
-      value: '$4.8B',
-      growth: '+32% YoY',
-description: 'Cloud - based development platforms',
-    },      description: 'Cloud - based development platforms';
-    }
-    {
-      title: 'Dev Productivity',
-      value: '35%',
-      growth: '+18% YoY',
-description: 'Average productivity improvement',
-    },      description: 'Average productivity improvement';
-    }
-  ];
-;
-  const dev_categories = [;
-    {
+
       name: 'Code Generation',
       description: 'AI - powered coding assistants and code completion tools',
       tools: 1,
+
   ];
   const devWorkflow = [
     {
+
       phase: 'Development',
       tools: ['GitHub CopilotVS CodeGit'],
+
       description: 'Write and manage code with AI assistance'
-}
+    }
+
 export default function DeveloperToolsPage() {;
   const developerTools = [;
     {;
@@ -352,6 +350,7 @@ export default function DeveloperToolsPage() {;
         </div>
       </section>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <h3 className="text-lg font-semibold text-white mb-3">{stat.title}</h3>
                   <div className="text-2xl font-bold text-cursor-blue mb-2">{stat.value}</div>
                   <div className="text-sm text-green-400 mb-3">{stat.growth}</div>
@@ -363,6 +362,21 @@ export default function DeveloperToolsPage() {;
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+            ))}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Developer Tools Grid */}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               Curated Developer Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -402,6 +416,9 @@ export default function DeveloperToolsPage() {;
           </div>;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {developerTools && developerTools.map((tool, index) => (;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <Card
                 key={index}
                 className={`card-hover group border-gradient-blue relative ${
@@ -520,6 +537,7 @@ export default function DeveloperToolsPage() {;
                       ))}
                     </ul>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         variant="primary"
                         size="sm"
                         className="bg-cursor-blue hover:bg-cursor-blue-dark"
@@ -535,7 +553,25 @@ export default function DeveloperToolsPage() {;
                   </div>
                 </div>
               </Card>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
+      {/* Developer Workflow */}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              Complete Developer Workflow
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Build a complete development pipeline with these essential tools
+              that work together seamlessly.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {devWorkflow.map((phase, index) => (
 
       {/* Developer Workflow */}
       <section className='section-padding bg-gradient-cursor-accent'>
@@ -544,6 +580,7 @@ export default function DeveloperToolsPage() {;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
               Complete Developer Workflow
+
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Build a complete development pipeline with these essential tools that work together seamlessly.
@@ -562,17 +599,8 @@ export default function DeveloperToolsPage() {;
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="p-6 text-center">
-                  <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Cpu className="w-8 h-8 text-cursor-blue" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{phase.phase}</h3>
-                  <p className="text-gray-400 mb-4">{phase.description}</p>
-                  <div className="space-y-1">
-                    {phase.tools.map((tool, toolIndex) => (
-                      <div key={toolIndex} className="text-sm text-cursor-blue font-medium">
+
+
                         {tool}
                       </div>;
                     ))}
@@ -580,6 +608,22 @@ export default function DeveloperToolsPage() {;
                 </div>;
               </Card>;
             ))}
+      {/* Tool Categories */}
+
+
+
+              Developer Tool Categories
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Understanding the different types of developer tools helps you
+              build a comprehensive development stack.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {devCategories.map((category, index) => (
 
       {/* Tool Categories */}
       <section className='section-padding bg-gradient-cursor'>
@@ -643,9 +687,110 @@ export default function DeveloperToolsPage() {;
               href='/contact'
               variant='outline'
               size='lg'
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
+
+            Start with one tool or build a complete development stack. Each tool;
+            is designed to work independently and integrate seamlessly with your;
+            existing workflow.;
+          </p>;
+
+
+
+
+
+      {/* CTA Section */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor text-center'>
+          <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
+
+            Ready to Level Up Your Development?
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          </h2>
+          <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>
+            Start with one tool or build a complete development stack. Each tool
+            is designed to work independently and integrate seamlessly with your
+            existing workflow.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <Button
+              href='/ai-tools'
+              variant='primary'
+              size='lg'
+              className='bg-cursor-blue hover:bg-cursor-blue-dark'>;
+              Explore AI Tools;
+            </Button>;
+            <Button
+              href='/contact'
+              variant='outline'
+              size='lg'
+
+              Get Dev Consultation
+
+=======
+          <div className='flex flex - col sm:flex - row gap - 6 justify - center'>;
+            <Button;
+              href='/ai - tools';
+              variant='primary';
+              size='lg';
+              className='bg - cursor - blue hover:bg - cursor - blue - dark'            >;
+              Explore AI Tools;
+            </Button>;
+            <Button;
+              href='/contact';
+              variant='outline';
+              size='lg';
+              className='border - cursor - blue text - cursor - blue hover:bg - cursor - blue hover:text - white'            >              href="/ai - tools";
+              variant="primary";
+              size="lg";
+              className="bg - cursor - blue hover:bg - cursor - blue - dark";
+              Explore AI Tools;
+            </Button>;
+            <Button;
+              href='/contact';
+              variant='outline';
+              size='lg';
+              className='border - cursor - blue text - cursor - blue hover:bg - cursor - blue hover:text - white'              href="/contact";
+              variant="outline";
+              size="lg";
+              className="border - cursor - blue text - cursor - blue hover:bg - cursor - blue hover:text - white";
+              Get Dev Consultation;
+
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+  );
+}
+
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/ai-tools"
               variant="primary"
               size="lg"
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore AI Tools
             </Button>
+<<<<<<< HEAD
+=======
+
+            <Button
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

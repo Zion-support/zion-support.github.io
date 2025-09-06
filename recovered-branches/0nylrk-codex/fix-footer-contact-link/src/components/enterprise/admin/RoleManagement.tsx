@@ -1,5 +1,29 @@
 
 
+=======
+
+import React from "react",
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Switch } from "@/components/ui/switch",
+import { toast } from "@/hooks/use-toast",
+import { InfoIcon } from "lucide-react",
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger} from "@/components/ui/tooltip",
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
@@ -9,36 +33,42 @@ export function RoleManagement() {
       email: "alex@example.com"
       role: "Admin"
       permissions: {
-        viewCandidates: true
-        editCandidates: true
-        createJobs: true
-        manageTeam: true
-        viewBilling: true
-        manageBilling: true}}
+
+        view_candidates: true,
+        edit_candidates: true,
+        create_jobs: true,
+        manage_team: true,
+        view_billing: true,
+        manage_billing: true}},
+
     {
       id: 2
       name: "Jamie Smith"
       email: "jamie@example.com"
       role: "Recruiter"
       permissions: {
-        viewCandidates: true
-        editCandidates: true
-        createJobs: true
-        manageTeam: false
-        viewBilling: false
-        manageBilling: false}}
+
+        view_candidates: true,
+        edit_candidates: true,
+        create_jobs: true,
+        manage_team: false,
+        view_billing: false,
+        manage_billing: false}},
+
     {
       id: 3
       name: "Sam Williams"
       email: "sam@example.com"
       role: "Manager"
       permissions: {
-        viewCandidates: true
-        editCandidates: false
-        createJobs: true
-        manageTeam: false
-        viewBilling: true
-        manageBilling: false}}
+
+        view_candidates: true,
+        edit_candidates: false,
+        create_jobs: true,
+        manage_team: false,
+        view_billing: true,
+        manage_billing: false}},
+
     {
       id: 4
       name: "Taylor Brown"
@@ -183,6 +213,26 @@ export function RoleManagement() {
                 </TableCell>
                 <TableCell className="text-center">
 
+  return (
+    <div className="space-y-6">;
+      <div>;
+        <h3 className="text-xl font-medium mb-4">Role Permissions</h3>;
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;
+          {Object && Object.entries(roleDescriptions).map(([role, description]) => (;
+            <div key={role} className="bg-card rounded-lg p-4 border border-border">;
+              <div className="flex items-center gap-2 mb-2">;
+                <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>;
+              </div>;
+              <p className="text-sm text-muted-foreground">{description}</p>;
+            </div>;
+          ))}
+
+
+                  <Switch 
+                    checked={member.permissions.viewCandidates} 
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "viewCandidates", checked)
                     }
@@ -190,6 +240,13 @@ export function RoleManagement() {
                 </TableCell>
                 <TableCell className="text-center">
 
+=======
+
+                  <Switch 
+                    checked={member.permissions.editCandidates} 
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     onCheckedChange={(checked) =>
                       handlePermissionChange(member.id, "editCandidates", checked)
                     }
@@ -218,10 +275,13 @@ export function RoleManagement() {
                 </TableCell>
               </TableRow>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             ))}
-          </TableBody>
-        </Table>
-      </div>
-    </div>
-  )
+
+          </TableBody>;
+        </Table>;
+      </div>;
+    </div>;
+  );
 }
+

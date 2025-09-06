@@ -1,4 +1,52 @@
 
+=======
+import React, { useState } from 'react',;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Switch } from '@/components/ui/switch',;
+import { Button } from '@/components/ui/button',;
+import { Label } from '@/components/ui/label',;
+import { ShieldAlert, Info } from 'lucide-react',;
+import {;
+  Accordion,;
+  AccordionContent,;
+  AccordionItem,;
+  AccordionTrigger} from "@/components/ui/accordion",;
+import { toast } from '@/hooks/use-toast',;
+import { supabase } from '@/integrations/supabase/client',;
+import { useAuth } from '@/hooks/useAuth',;
+;
+export function FraudDetectionSettings() {;
+  const { user } = useAuth(),;
+  const [messageScanningEnabled, setMessageScanningEnabled] = useState(true),;
+  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),;
+  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),;
+  const [isSaving, setIsSaving] = useState(false),;
+  ;
+  const handleSavePreferences = async () => {;
+    if (!user?.id) return,;
+    ;
+    setIsSaving(true),;
+    try {;
+      // In a real implementation, we would save these preferences to the database;
+      // For now, we'll just simulate a successful save;
+      await new Promise(resolve => setTimeout(resolve, 1000)),;
+      ;
+      toast({;
+        title:"Settings saved",;
+        description:"Your fraud detection preferences have been updated."}),;
+    } catch (error) {;
+      console.error('Error saving preferences:', error),;
+      toast({;
+        title:"Error",;
+        description:"Failed to save your preferences. Please try again.",;
+        variant:"destructive"}),;
+    } finally {;
+      setIsSaving(false),;
+    }
+  },;
+;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card className="mb-8">;
       <CardHeader className="space-y-1">;
         <div className="flex items-center gap-2">;
@@ -21,6 +69,7 @@
                   Scan message content for potentially harmful or abusive material;
                 </p>;
               </div>;
+<<<<<<< HEAD
 
                 checked={messageScanningEnabled}
                 onCheckedChange={setMessageScanningEnabled}
@@ -78,11 +127,6 @@
                 <p>;
                   You can opt out of some of these protections, but this may limit your ability to use certain platform features. ;
                   We prioritize keeping our marketplace safe while respecting your privacy.;
-
-                </p>;
-              </AccordionContent>;
-            </AccordionItem>;
-          </Accordion>;
 
             </Button>;
           </div>;

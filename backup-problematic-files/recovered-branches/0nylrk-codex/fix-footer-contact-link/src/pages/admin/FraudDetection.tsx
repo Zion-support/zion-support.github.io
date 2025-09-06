@@ -28,7 +28,7 @@
           </TabsList>;
 
               setStatusFilter={setStatusFilter}
-              severity_filter={severity_filter}
+              severityFilter={severityFilter}
               setSeverityFilter={setSeverityFilter}
               contentTypeFilter={contentTypeFilter}
               setContentTypeFilter={setContentTypeFilter}

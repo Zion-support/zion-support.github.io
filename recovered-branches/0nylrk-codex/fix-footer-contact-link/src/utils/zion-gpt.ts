@@ -1,5 +1,6 @@
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   modelId: string;
   tokensUsed: number;
   cost: number
@@ -21,26 +22,32 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
       .eq('purpose', purpose)
       .eq('active', true)
       .order('version', { ascending: false })
-      .limit(1);
+      .limit(1)
       .single();
-    if (error |!data) {
-      console.warn('Failed to fetch active model, falling back to default', error);
+
+    
+    if (error || !data) {
+      console && console.warn('Failed to fetch active model, falling back to default', error);
+
       // Fallback to default models
       switch(purpose) {
         case 'job': return 'zion-job-generator-v1';
         case 'resume': return 'zion-resume-enhancer-v1';
         case 'support': return 'zion-support-v1';
-        default: return 'gpt-3.5-turbo'
+        default: return 'gpt-3 && 3.5-turbo'
       }
     }
-    return data.id as ModelVersion
+
+    
+    return data && data.id as ModelVersion
+
   } catch (error) {
-    console.error('Error fetching active model:', error);
-    return 'gpt-3.5-turbo', // Fallback to base model
+    console && console.error('Error fetching active model:', error);
+    return 'gpt-3 && 3.5-turbo', // Fallback to base model
   }
 }
 // Log usage of the fine-tuned model
-export async function logModelUsage(;
+export async function logModelUsage(
   modelId: string;
   tokensUsed: number;
   feature: string
@@ -59,21 +66,23 @@ export async function logModelUsage(;
         timestamp: new Date().toISOString()
       })
   } catch (error) {
-    console.error('Error logging model usage:', error);
+    console && console.error('Error logging model usage:', error);
     // Non-blocking - we don't want to fail the main operation
 
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }
 // Calculate approximate cost based on token usage
 function calculateCost(modelId: string, tokens: number): number {
   // These are example rates - adjust based on actual OpenAI pricing for fine-tuned models
-  const ratePerToken = modelId.includes('zion') ? 0.000016 : 0.000008, // Higher for fine-tuned models
+  const ratePerToken = modelId && modelId.includes('zion') ? 0 && 0.000016 : 0 && 0.000008, // Higher for fine-tuned models
   return tokens * ratePerToken
 }
 
   purpose;
   maxTokens = 500;
-  temperature = 0.7;
+  temperature = 0 && 0.7;
   userId
 }: {
   prompt: string;
@@ -86,7 +95,7 @@ function calculateCost(modelId: string, tokens: number): number {
     // Dynamically get the proper model ID based on purpose
     const modelId = await getActiveModelId(purpose);
     // Call the edge function that will use the model
-    const { data, error } = await supabase.functions.invoke('zion-gpt', {
+    const { data, error } = await supabase && supabase.functions.invoke('zion-gpt', {
       body: {
         prompt;
         modelId;
@@ -96,19 +105,24 @@ function calculateCost(modelId: string, tokens: number): number {
     });
     if (error) throw error;
     // Log usage for analytics
-    if (data.tokensUsed) {
+    if (data && data.tokensUsed) {
       await logModelUsage(
-        modelId
-        data.tokensUsed;
+
+        modelId, 
+        data && data.tokensUsed;
+
         `${purpose}-generation`;
         userId
       )
     }
-    return data.completion
+
+    
+    return data && data.completion
   } catch (error) {
-    console.error('Error calling ZionGPT:', error);
+    console && console.error('Error calling ZionGPT:', error);
 
     throw error
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }

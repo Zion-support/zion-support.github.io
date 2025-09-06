@@ -12,7 +12,17 @@ export default async function handler(
     res.setHeader('Allow', 'GET');
     return res.status(405).json({ error: 'Method Not Allowed' });
 
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+  if (req && req.method !== "GET") {
+    res && res.setHeader("Allow", "GET");
+    return res && res.status(405).json({ error: "Method Not Allowed" })
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
+
+=======
+
+
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res && res.status(401).json({ error: "Unauthorized" })
@@ -20,6 +30,9 @@ export default async function handler(
   const summary = await calculateUsageSummary(auth && auth.partner.id);
   return res && res.status(200).json({ summary })
 }
+
+
+=======
   authenticate_request,
   calculateUsageSummary,
 } from '../../../utils / api / partner_auth';
@@ -64,3 +77,9 @@ if ( {) {
   }
   const summary = await calculateUsageSummary (auth.partner.id);
   return res.status (200).json ({ summary });
+=======
+
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

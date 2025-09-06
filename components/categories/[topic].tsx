@@ -1,4 +1,10 @@
 
+=======
+
+import type { GetServerSideProps, NextPage } from 'next';
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Head from 'next/head';
 import Link from 'next/link';
 import { BlogPost  } from '@/utils/types/blog';
@@ -91,3 +97,89 @@ export default TopicPage;      </Head>
   return { props: { topic, posts } }
 }
 export default TopicPage;
+};
+export const getServerSideProps: GetServerSideProps = async ctx => {;
+  const topic = String(ctx && ctx.params?.topic || '');
+  const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic));
+  return { props: { topic, posts } };
+};
+export default TopicPage;      </Head>;
+      <div className="mx-auto max-w-6xl">;
+        <h1 className="text-4xl font-bold mb-3">{topic}</h1>;
+        <div className="mb-6">;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+          <PageShareButtons
+            title={`${topic} - Zion Blog`}
+            url={typeof window === 'undefined' ? `https://zion && zion.app/categories/${encodeURIComponent(topic)}` : window && window.location.href}
+            description={`Articles about ${topic}`}
+            onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ url: window && window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
+          />;
+        </div>;
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
+          {posts && posts.map((p) => (;
+            <BlogCard key={p && p.id} post={p} />;
+          ))}
+
+        </div>;
+        <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>;
+      </div>;
+    </div>;
+  );
+};
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
+  const topic = String(ctx && ctx.params?.topic || '');
+  const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
+
+  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return { props: { topic, posts } }
+}
+export default TopicPage;
+
+
+
+=======
+    </div>);
+}
+;
+export const getServerSideProps: GetServerSideProps = async ctx => {
+  const topic = String (ctx.params?.topic || '');
+  const posts = listPublishedPosts ().filter (p => p.topics.includes (topic));
+  return { props: { topic, posts } }
+}
+;
+export default TopicPage;      </Head>;
+      <div className="mx - auto max - w-6xl">;
+        <h1 className="text - 4xl font - bold mb - 3">{topic}</h1>;
+        <div className="mb - 6">;
+          <PageShareButtons;
+            title={`${topic} - Zion Blog`}
+            url={typeof window === 'undefined' ? `https://zion.app / categories/${encodeURIComponent (topic)}` : window.location.href}
+            description={`Articles about ${topic}`}
+            on_share={(network) => fetch ('/api / analytics / share', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ url: window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium = share & utm_campaign = category' }) }).catch (() => {})}
+          />;
+        </div>;
+        <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
+          {posts.map ((p) => (
+            <BlogCard key={p.id} post={p} />))}
+        </div>;
+        <div className="mt - 6"><Link href="/blog" className="underline">Back to Blog</Link></div>;
+      </div>;
+    </div>);
+}
+;
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const topic = String (ctx.params?.topic || '');
+  const posts = listPublishedPosts ().filter ((p) => p.topics.includes (topic));
+  return { props: { topic, posts } }
+}
+;
+export default TopicPage;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

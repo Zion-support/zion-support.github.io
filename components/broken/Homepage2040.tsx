@@ -2,6 +2,8 @@
 
 };
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2
@@ -68,6 +70,193 @@ const Homepage2040: React.FC = () => {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+ //Enhanced animation variants for better performance const containerVariants = {;
+  hidden: {;
+  opacity: 0 ;
+};
+visible: {;
+  opacity: 1, transition: {;
+  staggerChildren: 0 && 0.1, delayChildren: 0 && 0.2 ;
+};
+};
+};
+<section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" aria-labelledby="hero-heading" > left: `$ {;
+  Math && Math.random () * 100 ;
+}%`;
+top: `$ {;
+  Math && Math.random () * 100 ;
+}%`;
+animationDelay: `$ {;
+  Math && Math.random () * 3 ;
+}s` ;
+}animate= {;
+  {;
+  scale: [0, 1, 0], opacity: [0, 1, 0] ;
+}transition= {;
+  {;
+  duration: 3, repeat: Infinity, delay: Math && Math.random () * 3 ;
+}/>) ) ;
+}</div> </div> <div className="text-center max-w-6xl mx-auto relative z-10" > <motion && motion.div > {;
+  /* Enhanced Company Badge */ ;
+}<motion && motion.div > <Star className="w-5 h-5 animate-pulse" aria-hidden="true" /> <span>Innovation Leader 2040</span> <Sparkles className="w-5 h-5 animate-pulse" aria-hidden="true" /> </motion && motion.div> <motion && motion.h1 > Zion Tech Group </motion && motion.h1> <motion && motion.p > Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide </motion && motion.p> {;
+  /* Enhanced CTA Section */ ;
+}<motion && motion.div > <Link href="/get-started" aria-label="Get started with our services" > <button className="group px-10 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black" > <span className="flex items-center gap-3" > Get Started <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" aria-hidden="true" /> </span> </button> </a> <Link href="/services" aria-label="Learn more about our services" > <button className="px-10 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black" > Explore Services </button> </a> <Link href="/pricing" aria-label="View our pricing" > <button className="px-10 py-5 border-3 border-purple-400 text-purple-400 font-bold text-lg rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-black" > View Pricing </button> </a> </motion && motion.div> {;
+  /* Enhanced Trust Indicators */ ;
+}<motion && motion.div > <div className="flex items-center gap-2" > <ShieldCheck className="w-5 h-5 text-green-400" /> <span>SOC 2 Type II Certified</span> </div> <div className="flex items-center gap-2" > <Globe className="w-5 h-5 text-blue-400" /> <span>Global Infrastructure</span> </div> <div className="flex items-center gap-2" > <Users className="w-5 h-5 text-purple-400" /> <span>10, 000+ Happy Customers</span> </div> <div className="flex items-center gap-2" > <Star className="w-5 h-5 text-yellow-400" /> <span>4 && 4.9/5 Rating</span> </div> </motion && motion.div> </motion && motion.div> </div> </section> > {;
+  statsData && statsData.map ( (stat, index) => (<motion&& motion.div key= {
+  stat && stat.label 
+}</div> <divclassName= {
+  `text-4xl font-bold mb-2 bg-gradient-to-r $ {
+  stat && stat.color 
+}bg-clip-text text-transparent` 
+}> {;
+  stat && stat.number ;
+}</div> </motion && motion.div>) ) ;
+}</motion && motion.div> </div> </section> > Revolutionary Service Categories </motion && motion.h2> <motion && motion.p > Explore our cutting-edge technology solutions across multiple domains </motion && motion.p> </motion && motion.div> <motion && motion.div > {;
+  serviceCategories && serviceCategories.map ( (category, index) => (<motion&& motion.div key= {
+  category && category.name 
+}</div> </motion && motion.div>) ) ;
+}</motion && motion.div> </div> </section> > Featured Revolutionary Services </motion && motion.h2> <motion && motion.p > Discover our most popular and innovative technology solutions </motion && motion.p> </motion && motion.div> <motion && motion.div > {;
+  featuredServices && featuredServices.map ( (service, index) => (<motion&& motion.div key= {
+  service && service.id 
+}Popular </div>) ;
+}</div> </span> </div> {;
+  /* CTA Button */ ;
+}<Link > Learn More <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </motion && motion.div>) ) ;
+}</motion && motion.div> {;
+  /* View All Services Button */ ;
+}<motion && motion.div > <Link href="/innovative-2040-futuristic-services-showcase" className="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-lg" > View All 2040 Services <ArrowRight className="w-6 h-6 ml-3" /> </a> </motion && motion.div>) ) ;
+}</motion && motion.div> </div> </section> > Ready to Transform Your Business? </motion && motion.h2> <motion && motion.p > Join thousands of companies already leveraging our revolutionary technology solutions </motion && motion.p> <motion && motion.div > <Link href="/contact" aria-label="Contact us" > <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25" > Contact Us Today </button> </a> <Link href="/demo" aria-label="Request a demo" > <button className="px-12 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Request Demo </button> </a> </motion && motion.div> <motion && motion.div > <div className="flex items-center gap-2" > <Shield className="w-5 h-5 text-green-400" /> <span>Enterprise Security</span> </div> <div className="flex items-center gap-2" > <Zap className="w-5 h-5 text-yellow-400" /> <span>24/7 Support</span> </div> <div className="flex items-center gap-2" > <TrendingUp className="w-5 h-5 text-blue-400" /> <span>Proven Results</span> </div> </motion && motion.div> </motion && motion.div> </div> </section> </main> </Layout>) ;
+};
+export default Homepage2040;
+// Import new service data;
+import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro-saas-expansion-v2';
+import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
+// Lazy load heavy components for better performance;
+const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
+const Homepage2040: React.FC = () => {;
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {;
+    setIsVisible(true);
+    const interval = setInterval(() => {;
+      setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2 && innovativeMicroSaasServices2025V2.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+//Enhanced animation variants for better performance const container_variants = {
+  hidden: {
+  opacity: 0;
+}
+visible: {
+  opacity: 1, transition: {
+  stagger_children: 0.1, delay_children: 0.2;
+}
+;
+}
+;
+}
+<section className="min - h-screen flex items - center justify - center px - 4 relative overflow - hidden" aria - labelledby="hero - heading" > left: `$ {
+  Math.random () * 100;
+}%`;
+top: `$ {
+  Math.random () * 100;
+}%`;
+animation_delay: `$ {
+  Math.random () * 3;
+}s`;
+}animate= {
+  {
+  scale: [0, 1, 0], opacity: [0, 1, 0];
+}transition= {
+  {
+  duration: 3, repeat: Infinity, delay: Math.random () * 3;
+}/>) );
+}</div> </div> <div className="text - center max - w-6xl mx - auto relative z - 10" > <motion.div > {
+  /* Enhanced Company Badge */;
+}<motion.div > <Star className="w - 5 h - 5 animate - pulse" aria - hidden="true" /> <span > Innovation Leader 2040</span> <Sparkles className="w - 5 h - 5 animate - pulse" aria - hidden="true" /> </motion.div> <motion.h1 > Zion Tech Group </motion.h1> <motion.p > Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide </motion.p> {
+  /* Enhanced CTA Section */;
+}<motion.div > <Link href="/get - started" aria - label="Get started with our services" > <button className="group px - 10 py - 5 bg - gradient - to - r from - cyan - 500 via - blue - 600 to - purple - 600 text - white font - bold text - lg rounded - xl hover:from - cyan - 600 hover:via - blue - 700 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - 2xl shadow - cyan - 500 / 25 focus:outline - none focus:ring - 4 focus:ring - cyan - 300 focus:ring - offset - 2 focus:ring - offset - black" > <span className="flex items - center gap - 3" > Get Started <ArrowRight className="w - 6 h - 6 group - hover:translate - x-2 transition - transform" aria - hidden="true" /> </span> </button> </a> <Link href="/services" aria - label="Learn more about our services" > <button className="px - 10 py - 5 border - 3 border - cyan - 400 text - cyan - 400 font - bold text - lg rounded - xl hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105 focus:outline - none focus:ring - 4 focus:ring - cyan - 300 focus:ring - offset - 2 focus:ring - offset - black" > Explore Services </button> </a> <Link href="/pricing" aria - label="View our pricing" > <button className="px - 10 py - 5 border - 3 border - purple - 400 text - purple - 400 font - bold text - lg rounded - xl hover:bg - purple - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105 focus:outline - none focus:ring - 4 focus:ring - purple - 300 focus:ring - offset - 2 focus:ring - offset - black" > View Pricing </button> </a> </motion.div> {
+  /* Enhanced Trust Indicators */;
+}<motion.div > <div className="flex items - center gap - 2" > <ShieldCheck className="w - 5 h - 5 text - green - 400" /> <span > SOC 2 Type II Certified</span> </div> <div className="flex items - center gap - 2" > <Globe className="w - 5 h - 5 text - blue - 400" /> <span > Global Infrastructure</span> </div> <div className="flex items - center gap - 2" > <Users className="w - 5 h - 5 text - purple - 400" /> <span > 10, 000+ Happy Customers</span> </div> <div className="flex items - center gap - 2" > <Star className="w - 5 h - 5 text - yellow - 400" /> <span > 4.9 / 5 Rating</span> </div> </motion.div> </motion.div> </div> </section> > {
+  stats_data.map ( (stat, index) => (<motion.div key= {
+  stat.label;
+}</div> <div className= {
+  `text - 4xl font - bold mb - 2 bg - gradient - to - r $ {
+  stat.color;
+}bg - clip - text text - transparent`;
+}> {
+  stat.number;
+}</div> </motion.div>) );
+}</motion.div> </div> </section> > Revolutionary Service Categories </motion.h2> <motion.p > Explore our cutting - edge technology solutions across multiple domains </motion.p> </motion.div> <motion.div > {
+  service_categories.map ( (category, index) => (<motion.div key= {
+  category.name;
+}</div> </motion.div>) );
+}</motion.div> </div> </section> > Featured Revolutionary Services </motion.h2> <motion.p > Discover our most popular and innovative technology solutions </motion.p> </motion.div> <motion.div > {
+  featured_services.map ( (service, index) => (<motion.div key= {
+  service.id;
+}Popular </div>);
+}</div> </span> </div> {
+  /* CTA Button */;
+}<Link > Learn More <ArrowRight className="w - 5 h - 5 ml - 2 group - hover:translate - x-1 transition - transform duration - 300" /> </a> </motion.div>) );
+}</motion.div> {
+  /* View All Services Button */;
+}<motion.div > <Link href="/innovative - 2040 - futuristic - services - showcase" className="inline - flex items - center justify - center px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - 2xl hover:bg - cyan - 400 hover:text - black transition - all duration - 300 focus:outline - none focus:ring - 4 focus:ring - cyan - 400 / 50 text - lg" > View All 2040 Services <ArrowRight className="w - 6 h - 6 ml - 3" /> </a> </motion.div>) );
+}</motion.div> </div> </section> > Ready to Transform Your Business? </motion.h2> <motion.p > Join thousands of companies already leveraging our revolutionary technology solutions </motion.p> <motion.div > <Link href="/contact" aria - label="Contact us" > <button className="px - 12 py - 5 bg - gradient - to - r from - cyan - 500 via - blue - 600 to - purple - 600 text - white font - bold text - lg rounded - xl hover:from - cyan - 600 hover:via - blue - 700 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - 2xl shadow - cyan - 500 / 25" > Contact Us Today </button> </a> <Link href="/demo" aria - label="Request a demo" > <button className="px - 12 py - 5 border - 3 border - cyan - 400 text - cyan - 400 font - bold text - lg rounded - xl hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105" > Request Demo </button> </a> </motion.div> <motion.div > <div className="flex items - center gap - 2" > <Shield className="w - 5 h - 5 text - green - 400" /> <span > Enterprise Security</span> </div> <div className="flex items - center gap - 2" > <Zap className="w - 5 h - 5 text - yellow - 400" /> <span > 24 / 7 Support</span> </div> <div className="flex items - center gap - 2" > <TrendingUp className="w - 5 h - 5 text - blue - 400" /> <span > Proven Results</span> </div> </motion.div> </motion.div> </div> </section> </main> </Layout>);
+}
+export default Homepage2040;
+// Import new service data;
+import { innovativeMicroSaasServices2025V2 } from '../data / 2025 - innovative - micro - saas - expansion - v2';
+import { emergingTechServices2025V2 } from '../data / 2025 - emerging - tech - services - v2';
+// Lazy load heavy components for better performance;
+const LazyServiceCard = lazy (() => import ('./ui / UltraFuturisticServiceCard2026'));
+;
+const Homepage2040: React.FC = () => {
+  const [currentServiceIndex, setCurrentServiceIndex] = useState (0);
+  const [is_visible, setIsVisible] = useState (false);
+;
+  useEffect (() => {
+    setIsVisible (true);
+    const interval = set_interval (() => {
+      setCurrentServiceIndex ((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length);
+    }, 5000);
+    return () => clear_interval (interval);
+  }, []);
+;
+  // Enhanced animation variants for better performance;
+  const container_variants = {
+    hidden: { opacity: 0 },
+
+    visible: {
+      opacity: 1
+      transition: {
+
+
+  };
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
@@ -219,6 +408,8 @@ const Homepage2040: React.FC = () => {
               {/* Enhanced CTA Section */}
               <motion.div
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
               >
@@ -281,6 +472,109 @@ const Homepage2040: React.FC = () => {
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
+                variants={itemVariants}
+                id="hero-heading"
+                className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight">;
+                Zion Tech Group;
+              </motion && motion.h1>;
+
+              <motion&& motion.p 
+                variants={itemVariants}
+                className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">;
+                Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide;
+              </motion && motion.p>;
+
+              {/* Enhanced CTA Section */}
+              <motion&& motion.div 
+                variants={itemVariants}
+                className="flex flex-col sm:flex-row gap-6 justify-center mb-12">;
+                <Link href="/get-started" aria-label="Get started with our services">;
+                  <button className="group px-10 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">;
+                    <span className="flex items-center gap-3">;
+                      Get Started;
+                      <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" aria-hidden="true" />;
+                    </span>;
+                  </button>;
+                </Link>;
+                <Link href="/services" aria-label="Learn more about our services">;
+                  <button className="px-10 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">;
+                    Explore Services;
+                  </button>;
+                </Link>;
+                <Link href="/pricing" aria-label="View our pricing">;
+                  <button className="px-10 py-5 border-3 border-purple-400 text-purple-400 font-bold text-lg rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-black">;
+                    View Pricing;
+                  </button>;
+                </Link>;
+              </motion && motion.div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              {/* Enhanced Trust Indicators */}
+              <motion&& motion.div
+                variants={itemVariants}
+
+                className="flex flex-wrap justify-center gap-8 text-sm text-gray-400">;
+                <div className="flex items-center gap-2">;
+                  <ShieldCheck className="w-5 h-5 text-green-400" />;
+                  <span>SOC 2 Type II Certified</span>;
+                </div>;
+                <div className="flex items-center gap-2">;
+                  <Globe className="w-5 h-5 text-blue-400" />;
+                  <span>Global Infrastructure</span>;
+                </div>;
+                <div className="flex items-center gap-2">;
+                  <Users className="w-5 h-5 text-purple-400" />;
+                  <span>10,000+ Happy Customers</span>;
+                </div>;
+                <div className="flex items-center gap-2">;
+                  <Star className="w-5 h-5 text-yellow-400" />;
+                  <span>4 && 4.9/5 Rating</span>;
+                </div>;
+
+                {/* SVG Pattern Background */}
+                <div className="absolute inset-0 bg-gray-800/20"></div>;
+              </motion && motion.div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+        {/* Enhanced Stats Section */}
+        <section className="py-20 px-4 relative">;
+          <div className="max-w-7xl mx-auto">;
+            <motion&& motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+              {statsData && statsData.map((stat, index) => (;
+                <motion&& motion.div
+                  key={stat && stat.label}
+                  variants={itemVariants}
+                  className="group text-center p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105">;
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat && stat.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>;
+                    <stat && stat.icon className="w-8 h-8 text-white" aria-hidden="true" />;
+                  </div>;
+                  <div className={`text-4xl font-bold mb-2 bg-gradient-to-r ${stat && stat.color} bg-clip-text text-transparent`}>;
+                    {stat && stat.number}
+                  </div>;
+                  <div className="text-xl font-semibold text-white mb-2">{stat && stat.label}</div>;
+                  <div className="text-gray-400">{stat && stat.description}</div>;
+                </motion && motion.div>;
+              ))}
+
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Enhanced Service Categories */}
+        <section className="py-20 px-4 relative">;
+          <div className="max-w-7xl mx-auto">;
+            <motion&& motion.div
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -313,6 +607,12 @@ const Homepage2040: React.FC = () => {
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Enhanced Featured Services Section */}
+        <section className="py-20 px-4 relative">;
+          <div className="max-w-7xl mx-auto">;
+            <motion&& motion.div
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -342,6 +642,8 @@ const Homepage2040: React.FC = () => {
                       {/* CTA Button */}
                       <Link
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         href={service.link}
                         className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25"
                       >
@@ -370,6 +672,17 @@ const Homepage2040: React.FC = () => {
         <section className="py-20 px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                {/* View All Services Button */}
+                <motion&& motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Enhanced CTA Section */}
+        <section className="py-20 px-4 relative">;
+          <div className="max-w-4xl mx-auto text-center">;
+            <motion&& motion.div
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -418,12 +731,11 @@ const Homepage2040: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-5 h-5 text-blue-400" />
 
-                  <span>Proven Results</span>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-      </main>
-    </Layout>
-  )
+=======
+export default Homepage2040;
+
+
+export default Homepage2040;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

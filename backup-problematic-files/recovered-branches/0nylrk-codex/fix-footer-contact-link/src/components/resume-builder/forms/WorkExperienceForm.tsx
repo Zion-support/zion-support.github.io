@@ -60,10 +60,4 @@
                   </Button>;
                 )}
 
-              </div>;
-            </div>;
-          </form>;
-        </Form>;
-      </div>;
-
 }

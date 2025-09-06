@@ -3,20 +3,35 @@
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleConnectWallet = async () => {
     try {
-      // Check if wallet is available
-      const ethereum = (window as any).ethereum,
-      if (!ethereum) {
-        toast({
-          title: "Wallet not detected"
-          description: "Please install MetaMask or another Ethereum wallet to use this feature"
-          variant: "destructive"
-        }),
-        return
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;
+
+  const handleConnectWallet = async () => {;
+    try {;
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;
+      if (!ethereum) {;
+        toast({;
+          title: "Wallet not detected",;
+          description: "Please install MetaMask or another Ethereum wallet to use this feature",;
+          variant: "destructive";
+
+        });
+        return;
       }
+
       // Request accounts
 
+=======
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
+      const address = accounts[0],
+      
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Sign message to verify ownership
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`
       await ethereum.request({
@@ -47,58 +62,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
     } finally {
       setIsExporting(false)
 
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          {isConnected ? (
-            <Wallet className="h-5 w-5 text-primary" />
-          ) : (
-            <Wallet className="h-5 w-5" />
+    <Card>;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          {isConnected ? (;
+            <Wallet className="h-5 w-5 text-primary" />;
+          ) : (;
+            <Wallet className="h-5 w-5" />;
           )}
-          On-chain Export
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Info className="h-4 w-4 text-muted-foreground cursor-help" />
-              </TooltipTrigger>
-              <TooltipContent>
-                <p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        </CardTitle>
-        <CardDescription>Export your ZION$ to an external wallet</CardDescription>
-      </CardHeader>
-      <CardContent>
-        {isConnected ? (
-          <div className="space-y-4">
-            <div className="flex justify-between text-sm">
-              <span>Available to export:</span>
-              <span className="font-medium">250 ZION$</span>
-            </div>
-            {exportStatus === 'success' ? (
-              <Button className="w-full bg-green-600 hover:bg-green-700" disabled>
-                <Check className="mr-2 h-4 w-4" />
-                Tokens Exported
-              </Button>
-            ) : (
-              <Button
-                className="w-full"
-                onClick={handleExportTokens}
-                disabled={isExporting}
-              >
-                {isExporting ? "Processing..." : "Export Tokens"}
-                {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
-              </Button>
-            )}
-          </div>
-        ) : (
-          <div className="space-y-2">
-            <p className="text-sm text-muted-foreground mb-3">
-              Connect your web3 wallet to export tokens to the blockchain.
-            </p>
-            <Button onClick={handleConnectWallet} className="w-full">
-              Connect Wallet
-            </Button>
-          </div>
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

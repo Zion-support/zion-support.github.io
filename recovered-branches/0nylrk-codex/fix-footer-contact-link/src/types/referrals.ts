@@ -1,12 +1,16 @@
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string;
   user_id: string;
   code: string;
-  created_at: string
-  updated_at: string
+
+  created_at: string,
+  updated_at: string;
+
 }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string;
   referrer_id: string;
   referred_id: string | null;
@@ -18,10 +22,13 @@
   referrer_user_type: string | null;
   created_at: string;
   completed_at: string | null;
-  reward_issued: boolean
-  reward_issued_at: string | null
+
+  reward_issued: boolean,
+  reward_issued_at: string | null;
+
 }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string;
   user_id: string;
   referral_id: string;
@@ -38,3 +45,4 @@
   totalRewards: number
 }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

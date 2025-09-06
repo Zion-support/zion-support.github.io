@@ -1,5 +1,7 @@
+=======
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const fs = require('fs');
 const { execSync } = require('child_process');
 console.log('🔧 Final Syntax Cleanup');
@@ -80,3 +82,9 @@ for (const file of filesToFix) {
   }
 }
 console.log(`\n✅ Fixed ${totalFixed} files`);
+}
+console.log(`\n✅ Fixed ${totalFixed} files`);
+console.log('🎉 Final syntax cleanup completed!');
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

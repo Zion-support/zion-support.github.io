@@ -1,11 +1,33 @@
 
+=======
+import React from 'react',;
+import { format } from 'date-fns',;
+import { Label } from "@/components/ui/label",;
+import { Button } from "@/components/ui/button",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { Calendar } from "@/components/ui/calendar",;
+import { FormControl } from "@/components/ui/form",;
+import { cn } from "@/lib/utils",;
+;
+interface DateFieldsProps {;
+  startDate:Date | undefined,;
+  setStartDate:(date:Date | undefined) => void,;
+  endDate:Date | undefined,;
+  setEndDate:(date:Date | undefined) => void;
+}
+;
+export function DateFields({ startDate, setStartDate, endDate, setEndDate } DateFieldsProps) {;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       <div>;
         <Label htmlFor="publishedDate">Published Date (Optional)</Label>;
         <Popover>;
           <PopoverTrigger asChild>;
             <FormControl>;
+<<<<<<< HEAD
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </Button>;
             </FormControl>;
           </PopoverTrigger>;

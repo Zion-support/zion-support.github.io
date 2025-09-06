@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button",
 import { TemplateList } from "./TemplateList",
 import { TemplateSaveForm } from "./TemplateSaveForm",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface TemplateManagerProps {
 
   isOpen: boolean
@@ -42,6 +43,7 @@ export function TemplateManager({
         <DialogHeader>
           <DialogTitle>
             {mode === "list" ? "Contract Templates" : "Save Template"}
+
           </DialogTitle>
         </DialogHeader>
         {mode === "list" ? (
@@ -103,6 +105,7 @@ export function TemplateManager({;
 
                 onClick={() => setMode("save")}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 disabled={!currentValues}
               >
                 Save Current as Template
@@ -126,17 +129,51 @@ export function TemplateManager({;
                 setSelectedTemplate(template);
                 setMode("save");
               }}
+
             />;
           </div>;
         ) : (;
-          <TemplateSaveForm;
+          <TemplateSaveForm
             onCancel={() => {;
               setMode("list");
               setSelectedTemplate(null);
 
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             }}
             onComplete={handleSaveComplete}
             editTemplate={selectedTemplate}
             currentValues={currentValues}
-          />
+          />;
         )}
+=======
+
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+
+            <TemplateList;
+              templates={templates}
+              is_loading={is_loading}
+              on_select={handleSelectTemplate}
+              on_edit={(template) => {
+                setSelectedTemplate (template);
+                set_mode ("save");
+              }}
+            />;
+          </div>) : (
+          <TemplateSaveForm;
+            on_cancel={() => {
+              set_mode ("list");
+              setSelectedTemplate (null);
+            }}
+            on_complete={handleSaveComplete}
+            edit_template={selected_template}
+            current_values={current_values}
+          />)}
+      </DialogContent>;
+    </Dialog>);
+}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

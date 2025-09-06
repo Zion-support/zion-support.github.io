@@ -6,7 +6,9 @@
     } catch (error) {
       toast({
 
-  if (!user) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  if (!user) {;
     return (
       <div className="hidden md: flex items-center space-x-4">
         <Link to="/login" className="text-zion-slate-light hover:text-white">Login</Link>
@@ -20,11 +22,18 @@
     )
   }
   return (
+
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="h-8 w-8 rounded-full">
           <Avatar className="h-8 w-8">
 
+=======
+            <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />
+            <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </Avatar>
           <span className="sr-only">Open user menu</span>
         </Button>
@@ -50,3 +59,5 @@
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

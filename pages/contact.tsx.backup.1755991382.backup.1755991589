@@ -1,0 +1,22 @@
+export default function ContactPage() {
+  return (
+    <div className="prose dark:prose-invert">
+      <h1>Contact</h1>
+      <p>For partnerships and media, email contact@zion.global</p>
+    </div>
+  );
+}
+=======
+  return <div className="py-10">Contact us at contact@zion.ai</div>;
+}
+=======
+export default function ContactPage() { return <div className="py-12">Contact form coming soon.</div>; }
+=======
+export default function Contact(){
+  return <div className="max-w-3xl mx-auto p-6">Contact us at hello@zion.ai</div>;
+}
+=======
+export default function ContactPage() { return null }
+>>>>>>> origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

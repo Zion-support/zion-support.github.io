@@ -29,6 +29,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const [currentStep, setCurrentStep] = useState(0),
   const router = useRouter(), // Changed from useNavigate to useRouter
   const { user } = useAuth(),
+=======
+  
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
@@ -132,32 +136,25 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
-
-      <CardHeader>
-        <CardTitle className="text-center text-white">
-          {type === 'client' ?
-            "Ready to find top IT talent?" :
-            "Let's build your professional profile"}
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="flex items-center mb-6">
-          {/* Step dots */}
-
             {steps.map((_, index) => (
               <div
                 key={index}
                 className={cn(
 
             {steps[currentStep]?.icon}
-          </div>
-          <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep]?.title}</h3>
-          <p className="text-zion-slate-light mb-6">{steps[currentStep]?.description}</p>
-        </div>
-      </CardContent>
-      <CardFooter className="flex flex-col space-y-2">
+          </div>;
+          <h3 className='text-xl font-bold text-white mb-2'>;
+            {steps[currentStep]?.title}
+          </h3>;
+          <p className='text-zion-slate-light mb-6'>;
+            {steps[currentStep]?.description}
+          </p>;
+        </div>;
+      </CardContent>;
+      <CardFooter className='flex flex-col space-y-2'>;
         <Button
 
+<<<<<<< HEAD
             {steps[currentStep]?.skipText}
           </Button>
         )}

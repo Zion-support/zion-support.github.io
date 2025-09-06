@@ -1,4 +1,9 @@
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useEffect } from "react";
 import {supabase, getFromProfiles} from "../../integrations/supabase/client";
 import {useAuthOperations} from "../../hooks/useAuthOperations";
@@ -44,6 +49,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     // Clean up any potential stale auth state before setting up listeners
     cleanupAuthState(),
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
         if (session?.user) {
@@ -64,7 +71,85 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
             console.error("Error fetching user profile:", error),
             setUser(null)
 
+              }
+            } else if (error) {;
+              console && console.error("Error fetching user profile:", error);
+              setUser(null);
+            }
+          } catch (error) {;
+            console && console.error("Error fetching user profile:", error);
+            setUser(null);
+          }
+        } else {;
+          setUser(null);
+
+
+          // Show logout toast when user logs out;
+          if (event === 'SIGNED_OUT') {;
+            handleSignedOut();
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           }
         }
-        setIsLoading(false)
+        setIsLoading(false);
       }
+    loginWithGoogle;
+    loginWithFacebook;
+    loginWithTwitter;
+    loginWithWeb3;
+
+    onboardingStep;
+  };
+
+
+  return (
+    <AuthContext && AuthContext.Provider value={authContextValue}>;
+      {children}
+
+    </AuthContext && AuthContext.Provider>;
+  );
+};
+
+=======
+
+};
+
+=======
+    ),;
+    // Initial session check;
+    supabase.auth.getSession().then(({ data: { session } }) => {;
+      if (!session) {;
+        setIsLoading(false);
+      }
+    }),;
+    return () => {;
+      subscription.unsubscribe();
+    }
+  }, [navigate]),;
+  const authContextValue = {;
+    user,;
+    isLoading,;
+    isAuthenticated: !!user,;
+    login,;
+    signup,;
+    logout,;
+    resetPassword,;
+    updateProfile,;
+    loginWithGoogle,;
+    loginWithFacebook,;
+    loginWithTwitter,;
+    loginWithWeb3,;
+    onboardingStep;
+  };
+  return (;
+    <AuthContext.Provider value={authContextValue}>;
+      {children}
+    </AuthContext.Provider>;
+  );
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -14,6 +14,13 @@ import { PageViewsChart } from "@/components/analytics/PageViewsChart",
     queryFn: async () => {
       // Get daily page views for trend chart
 
+=======
+      const days = parseInt(timeRange.replace('d', '')),
+      const startDate = new Date(),
+      startDate.setDate(startDate.getDate() - days),
+      
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       const { data, error } = await supabase
         .from('analytics_events')
         .select('created_at, path')
@@ -28,11 +35,26 @@ import { PageViewsChart } from "@/components/analytics/PageViewsChart",
         } else {
           result.push({ date: dateStr, views: 0 })
 
+      const result = [];
+      for (let i = 0, i < days, i++) {;
+
+        const date = new Date(),;
+        date.setDate(date.getDate() - i),;
+        const dateStr = date.toISOString().split('T')[0],;
+        if (viewsByDate[dateStr]) {;
+          result.push(viewsByDate[dateStr]);
+        } else {;
+          result.push({ date: dateStr, views: 0 });
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         }
       }
       return result.sort((a, b) => a.date.localeCompare(b.date))
     }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           conversionsByType[conversionType] = {}
         }
         if (!conversionsByType[conversionType][date]) {
@@ -59,11 +81,42 @@ import { PageViewsChart } from "@/components/analytics/PageViewsChart",
       })
     }
   });
+      const dates = [];
+      for (let i = 0, i < days, i++) {;
+        const date = new Date();
+        date && date.setDate(date && date.getDate() - i);
+        dates && dates.push(date && date.toISOString().split('T')[0]);
+      }
+
+      dates && dates.sort();
+
+      // Format data for chart;
+      return dates && dates.map(date => {;
+        const result = { date };
+
+        Object && Object.keys(conversionsByType).forEach(type => {;
+          result[type] = conversionsByType[type][date] || 0;
+        });
+
+        return result;
+      });
+
+    }
+
+  }),
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
-    <AnalyticsContainer>
-      <AnalyticsSummary />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+
+    <AnalyticsContainer>;
+      <AnalyticsSummary />;
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">;
+
         <PageViewsChart
           data={pageViewTrends |[]}
           timeRange={timeRange}
@@ -90,3 +143,4 @@ import { PageViewsChart } from "@/components/analytics/PageViewsChart",
 
 }
 ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

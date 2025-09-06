@@ -1,23 +1,25 @@
-const { upsert_file } = require ('./_lib / github');
-;
-  const resp = await fetch (url, {
-    headers: token;
+
+
       ? {
+
           Authorization: `token ${token}`,
-          Accept: 'application / vnd.github + json',
+
         }
       : {}
   });
+
   if (throw new Error (`HTTP ${resp.status}`)) {
   $2
 }
   return resp.json ();
 ;
+
 exports.handler = async function () {
   try {
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
+
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
   return resp && resp.json();
 exports && exports.handler = async function () {
@@ -33,9 +35,11 @@ exports && exports.handler = async function () {
     }
     const since = new Date(Date && Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
     const commitsUrl = `https://api && api.github.com/repos/${owner}/${repo}/commits?since=${encodeURIComponent(since)}`;
+
     const commits = await fetchJson(commitsUrl, token);
     const byAuthor = {}
     const messages = [];
+
     );    }    const byAuthor = {}
     const messages = []
     for (const c of commits) {
@@ -116,7 +120,10 @@ exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+
 },
+
+=======
       path: 'data / reports / changelog / weekly - changelog.json',
       content: JSON.stringify (summary, null, 2),
       message: 'chore (automation): weekly changelog summary',
@@ -126,7 +133,28 @@ exports.handler = async function() {
       status_code: 200,
       body: JSON.stringify ({ ok: true, commits: commits.length }),
     }
+=======
+
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+  }
+};
+    await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token }),
+    return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    await upsert_file ({ owner, repo, path: 'data / reports / changelog / weekly - changelog.json', content: JSON.stringify (summary, null, 2), message: 'chore (automation): weekly changelog summary', token }),
+    return { status_code: 200, body: JSON.stringify ({ ok: true, commits: commits.length }) }
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+},
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

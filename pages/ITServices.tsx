@@ -27,6 +27,90 @@ export default function ITServices() {
 
 }
 
+export default function ITServices() {
+  return (
+    <Layout
+      title="IT Services - Zion Tech Group"
+      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">IT Services</h1>
+
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Complete IT solutions to power your digital transformation.
+            </p>
+          </div>
+          <div className="text-center">
+
+            <p className="text-gray-600">IT Services page is under construction.</p>
+
+          </div>
+        </div>
+      </div>
+    </Layout>
+=======
+export default function ITServices() {;
+  return (
+    <Layout
+      title="IT Services - Zion Tech Group"
+      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.">;
+      <div className="min-h-screen bg-gray-50 py-20">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+              IT Services;
+            </h1>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Complete IT solutions to power your digital transformation.;
+            </p>;
+          </div>;
+          <div className="text-center">;
+            <p className="text-gray-600">;
+=======
+import React from './react';
+import Layout from "../components / Layout";
+;
+export default /**
+ * ITServices - Function description
+ */
+function ITServices() {
+  return (
+    <Layout;
+      title="IT Services - Zion Tech Group";
+      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
+              IT Services;
+            </h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              Complete IT solutions to power your digital transformation.;
+            </p>;
+          </div>;
+          <div className="text - center">;
+            <p className="text - gray - 600">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              IT Services page is under construction.;
+            </p>;
+          </div>;
+        </div>;
+      </div>;
+
+=======
+
+=======
+
+}
+
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -617,3 +701,12 @@ export default function ITServices() {
       </section>
     </Layout>
   );
+=======
+
+
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

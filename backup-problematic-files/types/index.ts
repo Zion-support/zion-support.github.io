@@ -1,10 +1,9 @@
 
 export interface ContactInfo {
-export interface ContactInfo {;
-export interface ContactInfo {
-  phone: string, email: string,
-  address: string, site: string,
-export interface Service {;
+  phone: string;
+  email: string;
+  address: string;
+  site: string;
 }
 
 // Service interfaces
@@ -12,31 +11,12 @@ export interface Service {
 
   features: string[];
   technologies: string[];
-  delivery_time: string;
+  deliveryTime: string;
   support: string;
   image?: string;
   popular?: boolean;
 
-}
-
-export interface ServiceCategory {
-  title: string;
-  description: string;
-  count: number;
-  features: string[];
-  href: string;
-  color: string;
-}
-
 export interface SEOProps {
-  title?: string;
-  description?: string;
-  title: string;
-  href: string;
-  icon: string;
-  color: string;
-}
-export interface ServiceCategory {
   title: string;
   description: string;
   count: number;
@@ -115,6 +95,15 @@ export interface LoadingState {
   progress?: number;
 }
 
+=======
+export interface ErrorInfo {
+  message: string;
+  code?: string;
+  details?: any;
+  timestamp: string;
+  userAgent?: string;
+  url?: string;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 
 // Form interfaces
@@ -157,7 +146,7 @@ export interface User {
     experience: number;
     location: string;
     timezone: string;
-  }
+  };
   preferences: {
     theme: 'light' | 'dark' | 'auto';
     language: string;
@@ -165,21 +154,21 @@ export interface User {
       email: boolean;
       push: boolean;
       sms: boolean;
-    }
-  }
+    };
+  };
   activity: {
-    last_login: Date;
-    login_count: number;
+    lastLogin: Date;
+    loginCount: number;
     projects: string[];
     tasks: string[];
-  }
+  };
   subscription: {
     plan: 'free' | 'basic' | 'premium' | 'enterprise';
     status: 'active' | 'inactive' | 'cancelled' | 'expired';
-    start_date: Date;
-    end_date: Date;
+    startDate: Date;
+    endDate: Date;
     features: string[];
-  }
+  };
 }
 
 export interface Notification {
@@ -192,32 +181,33 @@ export interface Notification {
   action?: {
     label: string;
     url: string;
-  }
+  };
   category: 'system' | 'project' | 'team' | 'client' | 'billing';
   priority: 'low' | 'medium' | 'high';
   expires?: Date;
 }
 
 export interface BaseComponentProps {
-  class_name?: string;
+  className?: string;
   children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
   loading?: boolean;
-  on_click?: () => void;
+  onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
 }
+
 export interface InputProps {
-  class_name?: string;
+  className?: string;
   children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
   loading?: boolean;
-  on_click?: () => void;
+  onClick?: () => void;
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
   placeholder?: string;
   value?: string;
-  on_change?: (value: string) => void;
+  onChange?: (value: string) => void;
   error?: string;
   required?: boolean;
 }
@@ -228,4 +218,5 @@ export interface Environment {
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
+<<<<<<< HEAD
 

@@ -22,3 +22,14 @@ import path from 'path';
     }
 
   }
+}
+        course_progress.completed_lessons.push (lesson_id);
+      }
+      // Check condition
+if ( {) {
+  $2
+}
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

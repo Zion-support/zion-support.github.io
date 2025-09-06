@@ -8,6 +8,42 @@ import Layout from '../components/Layout';
 
 export default function Training() {
 
+import React from 'react';
+
+export default function Training() {
+  return (
+    <Layout
+      title="Training & Education - Zion Tech Group"
+      description="Professional training and education services for technology professionals."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Training & Education</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional training and education services for technology professionals.
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-600">Training page is under construction.</p>
+          </div>
+        </div>
+
+import React from 'react';
+import Layout from '../components/Layout';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function Training() {
+
+
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -18,6 +54,10 @@ import { motion } from 'framer-motion';
     { id: 'ai-consciousness', name: 'AI Consciousness', count: 8 },
     { id: 'quantum-computing', name: 'Quantum Computing', count: 6 },
     { id: 'autonomous-ops', name: 'Autonomous Operations', count: 5 },
+=======
+    { id: 'enterprise-it', name: 'Enterprise IT', count: 5 }
+  ];
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   const featuredPrograms = [
     {
@@ -45,6 +85,7 @@ import { motion } from 'framer-motion';
       title: 'Enterprise AI Integration',
 
   return (
+
     <Layout>
       <SEO
         title="Training & Certification - Zion Tech Group"
@@ -252,6 +293,7 @@ import { motion } from 'framer-motion';
 }
   )
 
+
   {
   opacity: 0, y: 20
 }animate= {
@@ -298,6 +340,26 @@ import { motion } from 'framer-motion';
   )
 }
 export default Training;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+};export default Training;
+
+>>>>>>> origin/main
+=======
+  )
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+
+export default Training;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+};export default Training;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   )
   );
@@ -308,3 +370,4 @@ export default Training;
 
 export default Training;
 };export default Training;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

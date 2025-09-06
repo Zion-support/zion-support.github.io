@@ -1,0 +1,15 @@
+import React from 'react';
+
+const Component = () => {
+  return (
+    <div>
+      <h1>Page Content</h1>
+      <p>This page is under construction.</p>
+    </div>
+  );
+};
+
+export default Component;
+  );
+}
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

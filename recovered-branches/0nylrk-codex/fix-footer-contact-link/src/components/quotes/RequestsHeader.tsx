@@ -1,5 +1,19 @@
 
 
+=======
+
+import React from "react",
+import { Badge } from "@/components/ui/badge",
+import { 
+  Select,
+  SelectContent, 
+  SelectItem, 
+  SelectTrigger, 
+  SelectValue 
+} from "@/components/ui/select",
+import type { QuoteStatus } from "@/types/quotes",
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 type RequestsHeaderProps = {
   unreadCount: number,
   statusFilter: QuoteStatus | 'all',
@@ -46,6 +60,32 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
             <SelectItem value="closed">Closed</SelectItem>
           </SelectContent>
         </Select>
+  setArchiveFilter
+}) => {
+=======
+type RequestsHeaderProps = {;
+  unreadCount: number,;
+  statusFilter: QuoteStatus | 'all',;
+  setStatusFilter: (value: QuoteStatus | 'all') => void,;
+  archiveFilter: 'active' | 'archived' | 'all',;
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
+};
+
+export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
+  unreadCount;
+  statusFilter;
+  setStatusFilter;
+  archiveFilter,;
+  setArchiveFilter;
+}) => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+
+
+        <Select 
+          value={archiveFilter} 
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
         >
@@ -61,3 +101,45 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
       </div>
     </div>
   )
+=======
+
+            <SelectValue placeholder="All Statuses" />;
+          </SelectTrigger>;
+          <SelectContent>;
+            <SelectItem value="all">All Statuses</SelectItem>;
+            <SelectItem value="new">New</SelectItem>;
+            <SelectItem value="in_review">In Review</SelectItem>;
+            <SelectItem value="responded">Responded</SelectItem>;
+            <SelectItem value="accepted">Accepted</SelectItem>;
+            <SelectItem value="closed">Closed</SelectItem>;
+          </SelectContent>;
+        </Select>;
+
+        <Select;
+          value={archive_filter}
+          onValueChange={(value) => setArchiveFilter (value as 'active' | 'archived' | 'all')}
+        >;
+          <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
+
+            <SelectValue placeholder="Active Only" />;
+          </SelectTrigger>;
+          <SelectContent>;
+            <SelectItem value="active">Active Only</SelectItem>;
+            <SelectItem value="archived">Archived Only</SelectItem>;
+            <SelectItem value="all">All Requests</SelectItem>;
+          </SelectContent>;
+        </Select>;
+      </div>;
+
+    </div>);
+}
+;
+
+=======
+
+export default RequestsHeader;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

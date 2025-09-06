@@ -14,6 +14,7 @@ import { CountryTabs } from "@/components/services/PageSections/CountryTabs",
 import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
@@ -22,6 +23,16 @@ import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceP
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})
     }
 
+=======
+
+  }, [success]),
+  
+  // Popular countries for the featured cards
+  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],
+  
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter(country =>
@@ -42,27 +53,47 @@ import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceP
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
+
+  return (
+    <AppLayout>;
+      <section className="py-16 bg-zion-blue">;
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {/* Hero Section with Features */}
-          <PageHero />
+
+          <PageHero />;
+
           {/* Country Selection Tabs */}
           <div className="mb-12">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
-            />
-          </div>
+
+            />;
+          </div>;
+
+
           {/* Service Details Section */}
           <ServiceDetailsSection
             selectedCountry={selectedCountry}
             setSelectedCountry={setSelectedCountry}
-          />
+
+          />;
+
           {/* How It Works Section */}
-          <ServiceProcessSteps />
+          <ServiceProcessSteps />;
+
           {/* What's Included Section */}
-          <ServiceIncludes />
+          <ServiceIncludes />;
+
           {/* Complete Pricing Table */}
           <div id="pricing-table" className="my-16">
             <div className="text-center mb-8">
@@ -82,3 +113,4 @@ import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceP
       <QuoteFormSection />
     </AppLayout>
   )
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

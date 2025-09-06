@@ -15,7 +15,8 @@ import { cn } from '@/lib/utils'
 
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button';
-interface ValidationRule {
+
+interface ValidationRule {;
   required?: boolean;
   minLength?: number;
   maxLength?: number;
@@ -53,7 +54,7 @@ export function ValidatedFormField({
   useEffect((,) => {
     if (!fieldValue |!isTouched) {
       setValidationState('idle')
-      return;
+      return
     }
     if (debounceTimer) {
       clearTimeout(debounceTimer)
@@ -64,85 +65,143 @@ export function ValidatedFormField({
       setValidationState(error ? 'invalid' : 'valid')
     }, debounceMs)
     setDebounceTimer(timer)
+import React, { useState, useEffect } from 'react';
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components / ui / form';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components / ui / select'; import { Checkbox } from '@/components / ui / checkbox';
+import { cn } from '@/lib / utils';
+import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
+import { Button } from '@/components / ui / button';
+interface ValidationRule {
+  required?: boolean;
+  min_length?: number;
+  max_length?: number;
+  pattern?: RegExp;
+  custom?: (value: any) => string | null;
+interface ValidatedFormFieldProps {
+  name: string;
+  label: string;
+  type?:;
+    | 'text';
+    | 'email';
+    | 'password';
+    | 'tel';
+    | 'url';
+    | 'number';
+    | 'textarea';
+    | 'select';
+    | 'checkbox';
+  placeholder?: string;
+  description?: string;
+  validation?: ValidationRule;
+  options?: { value: string; label: string }[];
+  form: any; // React Hook Form control;
+  class_name?: string;
+  disabled?: boolean;
+  showValidIcon?: boolean;
+  debounce_ms?: number;
+export /**
+ * ValidatedFormField - Function description
+ */
+function ValidatedFormField() {
+  const [show_password, setShowPassword] = useState (false);
+  const [validation_state, setValidationState] = useState<;
+    'idle' | 'validating' | 'valid' | 'invalid';
+  >('idle');
+  const [debounce_timer, setDebounceTimer] = useState < NodeJS.Timeout | null>(
+    null);
+  const field_value = form.watch (name);
+  const field_error = form.form_state.errors[name];
+  const is_touched = form.form_state.touched_fields[name];
+  // Debounced validation;
+  useEffect ((, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      setValidationState ('idle');
+      return;
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      clear_timeout (debounce_timer);
+    }
+    setValidationState ('validating');
+    const timer = set_timeout (() => {
+      const error = validate_field (field_value);
+      setValidationState (error ? 'invalid' : 'valid');
+    }, debounce_ms);
+    setDebounceTimer (timer);
     return () => {
-      if (timer) clearTimeout(timer)
+      if (clear_timeout (timer)) {
+  $2
+}
     }
-  }, [fieldValue, isTouched, debounceMs])
-  const validateField = (value: any): string | null => {
-    if (
-      validation.required &&
-      (!value |(typeof value === 'string' && value.trim() === ''))
+
+  }, [field_value, is_touched, debounce_ms]);
+  const validate_field = (value: any): string | null => {
+    if (=== ''))) {
+  $2
+}
+
     ) {
-      return `${label} is required`
+      return `${label} is required`;
     }
-    if (typeof value === 'string') {
-      if (validation.minLength && value.length < validation.minLength) {
-        return `${label} must be at least ${validation.minLength} characters`
+
+    // Check condition
+if ( {) {
+  $2
+}
+      // Check condition
+if ( {) {
+  $2
+}
+        return `${label} must be at least ${validation.min_length} characters`;
       }
-      if (validation.maxLength && value.length > validation.maxLength) {
-        return `${label} must not exceed ${validation.maxLength} characters`
+      // Check condition
+if ( {) {
+  $2
+}
+        return `${label} must not exceed ${validation.max_length} characters`;
       }
-      if (validation.pattern && !validation.pattern.test(value)) {
-        return `${label} format is invalid`
+      if () {) {
+  $2
+}
+        return `${label} format is invalid`;
       }
     }
-    if (validation.custom) {
-      return validation.custom(value)
+    // Check condition
+if ( {) {
+  $2
+}
+      return validation.custom (value);
     }
 
   const getValidationIcon = () => {
 
     if (!showValidIcon || !isTouched || validationState === 'idle') return null,
 
-    switch (validationState) {
-      case 'validating':
-        return <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full" />,
-      case 'valid':
-        return <CheckCircle className="h-4 w-4 text-green-500" />,
-      case 'invalid':
-        return <AlertCircle className="h-4 w-4 text-red-500" />,
-      default: return null
-;
-    return null;
-  },;
-  const getValidationIcon = () => {;
-    if (!showValidIcon || !isTouched || validationState === 'idle') return null,;
-    switch (validationState) {;
-      case 'validating':;
-        return <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full" />,;
-      case 'valid':;
-        return <CheckCircle className="h-4 w-4 text-green-500" />,;
-      case 'invalid':;
-        return <AlertCircle className="h-4 w-4 text-red-500" />,;
-      default: return null;
-    }
-  },;
-  const getFieldClasses = () => {;
-    if (!isTouched) return '',;
-    switch (validationState) {;
-      case 'valid':;
-        return 'border-green-500 focus: border-green-500 focus:ring-green-500/20',;
-      case 'invalid':;
-        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20',;
-      default:;
-        return '';
-    }
-  },
 
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className),
 
-    switch (type) {
-      case 'textarea':
-        return (
-          <div className="relative">
-            <Textarea
-
               {...form.register(name)}
             />
-            <div className="absolute top-2 right-2">
-              {getValidationIcon()}
-            </div>
+            <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
           </div>
 
                     {option.label}
@@ -156,25 +215,43 @@ export function ValidatedFormField({
           </div>
 
       case 'checkbox':
+              </SelectContent>;
+            </Select>;
+            <div className='absolute top-2 right-8'>{getValidationIcon()}</div>;
+          </div>;
+        );
+
+      case 'checkbox':;
         return (
-          <div className="flex items-center space-x-2">
+          <div className='flex items-center space-x-2'>;
             <Checkbox
               id={name}
               checked={fieldValue}
-              onCheckedChange={checked => form.setValue(name, checked)}
+              onCheckedChange={checked => form && form.setValue(name, checked)}
               disabled={disabled}
-            />
+            />;
             <label
               htmlFor={name}
 
+=======
+
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {label}
-            </label>
+            </label>;
             {getValidationIcon()}
           </div>
 
       case 'password':
+          </div>;
+        );
+
+      case 'password':;
         return (
-          <div className="relative">
+          <div className='relative'>;
             <Input
 
               {...form.register(name)}
@@ -193,8 +270,14 @@ export function ValidatedFormField({
           </div>
 
       default:
+              </Button>;
+            </div>;
+          </div>;
+        );
+
+      default:;
         return (
-          <div className="relative">
+          <div className='relative'>;
             <Input
 
                     {fieldError.message}
@@ -203,9 +286,9 @@ export function ValidatedFormField({
                 {description && !fieldError && (
 
                 )}
-              </div>
+              </div>;
             )}
-          </FormItem>
+          </FormItem>;
         )}
 
                   {fieldError.message}
@@ -213,6 +296,7 @@ export function ValidatedFormField({
               )}
               {description && !fieldError && (
 
+<<<<<<< HEAD
               )}
             </div>
           )}

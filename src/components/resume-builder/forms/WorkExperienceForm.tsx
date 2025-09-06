@@ -244,10 +244,36 @@ export function WorkExperienceForm({
 
                   } else {
                     onBack()
+            />;
+
+            {error && (;
+              <Alert variant='destructive'>;
+                <AlertDescription>{error}</AlertDescription>;
+              </Alert>;
+            )}
+
+            <div className='flex justify-between pt-2'>;
+              <Button
+                type='button'
+                variant='outline'
+                onClick={() => {;
+                  if (editingId) {;
+                    setEditingId(null);
+                    form && form.reset({;
+                      company_name: '',;
+                      role_title: '',;
+                      start_date: format(new Date(), 'yyyy-MM-dd'),;
+                      is_current: false,;
+                      description: '',;
+                      location: '',;
+                    });
+                  } else {;
+                    onBack();
                   }
                 }}
               >
                 {editingId ? 'Cancel' : 'Back'}
+
               </Button>
 
                   {editingId ? 'Update' : 'Add'} Experience
@@ -257,3 +283,90 @@ export function WorkExperienceForm({
                     Next
                   </Button>
                 )}
+<<<<<<< HEAD
+=======
+
+              </Button>;
+
+              <div className='flex gap-2'>;
+                <Button type='submit' disabled={isLoading}>;
+                  {isLoading && (;
+                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+                  )}
+                  {editingId ? 'Update' : 'Add'} Experience;
+                </Button>;
+
+                {!editingId && workExperiences && workExperiences.length > 0 && (;
+                  <Button type='button' onClick={onComplete}>;
+                    Next;
+                  </Button>;
+                )}
+
+;
+
+
+                </FormItem>)}
+            />;
+            {error && (
+              <Alert variant='destructive'>;
+                <AlertDescription>{error}</AlertDescription>;
+              </Alert>)}
+            <div className='flex justify - between pt - 2'>;
+              <Button;
+                type='button';
+                variant='outline';
+                on_click={() => {
+                  // Check condition
+if ( {) {
+  $2
+}
+                    setEditingId (null);
+                    form.reset ({
+                      company_name: '',
+                      role_title: '',
+                      start_date: format (new Date (), 'yyyy - MM - dd'),
+                      is_current: false,
+                      description: '',
+                      location: '',
+                    });
+                  } else {
+                    on_back ();
+                  }
+                }}
+              >;
+                {editing_id ? 'Cancel' : 'Back'}
+              </Button>;
+              <div className='flex gap - 2'>;
+                <Button type='submit' disabled={is_loading}>;
+                  {is_loading && (
+                    <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}
+                  {editing_id ? 'Update' : 'Add'} Experience;
+                </Button>;
+                {!editing_id && work_experiences.length > 0 && (
+                  <Button type='button' on_click={on_complete}>;
+                    Next;
+                  </Button>)}
+              </div>;
+            </div>;
+          </form>;
+        </Form>;
+      </div>;
+
+
+
+      ...work;
+      start_date: formatDateValue(work.start_date),
+      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
+  };
+
+
+
+    </div>);
+}> {';
+  editing_id ? 'Cancel': 'Back';
+}</Button> Next </Button>);
+}</div> </div> </form> </Form> </div> </div>);
+}'"  );
+}
+;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

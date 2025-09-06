@@ -9,9 +9,9 @@ import { Textarea } from "@/components/ui/textarea",
 import { Check, Pencil } from 'lucide-react'
 interface GeneratedDescriptionDisplayProps {;
   description: string;
-  onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {
-  description: string
-  onSave: (editedDescription: string,) => void
+  onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {;
+  description: string,;
+  onSave: (editedDescription: string,) => void;
 }
 
 export function GeneratedDescriptionDisplay({
@@ -37,6 +37,15 @@ export function GeneratedDescriptionDisplay({
         <CardTitle className="text-white flex items-center justify-between">
           Generated Description
 
+=======
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick={() => setIsEditing(!isEditing)}
+            className="border-zion-blue-light text-zion-slate-light hover:text-white"
+          >
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {isEditing ? (
               <>
                 <Check className="h-4 w-4 mr-1" />
@@ -56,3 +65,4 @@ export function GeneratedDescriptionDisplay({
           </Button>
         </CardFooter>
       )}
+<<<<<<< HEAD

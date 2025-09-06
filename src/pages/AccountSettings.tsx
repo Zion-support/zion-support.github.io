@@ -86,6 +86,13 @@ export default function AccountSettings() {
       <SEO title="Account Settings" description="Manage your account" />
       <Header />
 
+=======
+      <main className="container mx-auto py-8 px-4">
+        <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
+        
+        <div className="grid gap-6 md:grid-cols-2">
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
@@ -104,6 +111,7 @@ export default function AccountSettings() {
                 </p>
               </div>
 
+<<<<<<< HEAD
                     Decentralized Backup
                   </Label>
                   <p className="text-xs text-gray-500">
@@ -168,29 +176,37 @@ export default function AccountSettings() {
               </div>
 
               <div>
-                <h3 className="font-medium mb-2">Backup Status</h3>
-                <div className="grid grid-cols-2 gap-2">
-                  <div className="bg-gray-100 p-3 rounded-md">
-                    <p className="text-sm font-medium">Profile Data</p>
-                    <p className="text-xs text-gray-500">
+                <h3 className='font-medium mb-2'>Backup Status</h3>
+                <div className='grid grid-cols-2 gap-2'>
+                  <div className='bg-gray-100 p-3 rounded-md'>
+                    <p className='text-sm font-medium'>Profile Data</p>
+                    <p className='text-xs text-gray-500'>
+              </div>;
+
+              <div>;
+                <h3 className='font-medium mb-2'>Backup Status</h3>;
+                <div className='grid grid-cols-2 gap-2'>;
+                  <div className='bg-gray-100 p-3 rounded-md'>;
+                    <p className='text-sm font-medium'>Profile Data</p>;
+                    <p className='text-xs text-gray-500'>;
                       {enableBackup ? 'Backed up' : 'Not backed up'}
-                    </p>
-                  </div>
-                  <div className="bg-gray-100 p-3 rounded-md">
-                    <p className="text-sm font-medium">Resume Data</p>
-                    <p className="text-xs text-gray-500">
+                    </p>;
+                  </div>;
+                  <div className='bg-gray-100 p-3 rounded-md'>;
+                    <p className='text-sm font-medium'>Resume Data</p>;
+                    <p className='text-xs text-gray-500'>;
                       {enableBackup ? 'Backed up' : 'Not backed up'}
-                    </p>
-                  </div>
-                  <div className="bg-gray-100 p-3 rounded-md">
-                    <p className="text-sm font-medium">Project History</p>
-                    <p className="text-xs text-gray-500">
+                    </p>;
+                  </div>;
+                  <div className='bg-gray-100 p-3 rounded-md'>;
+                    <p className='text-sm font-medium'>Project History</p>;
+                    <p className='text-xs text-gray-500'>;
                       {enableBackup ? 'Backed up' : 'Not backed up'}
-                    </p>
-                  </div>
-                  <div className="bg-gray-100 p-3 rounded-md">
-                    <p className="text-sm font-medium">Reviews</p>
-                    <p className="text-xs text-gray-500">
+                    </p>;
+                  </div>;
+                  <div className='bg-gray-100 p-3 rounded-md'>;
+                    <p className='text-sm font-medium'>Reviews</p>;
+                    <p className='text-xs text-gray-500'>;
                       {enableBackup ? 'Backed up' : 'Not backed up'}
                     </p>
                   </div>

@@ -19,6 +19,7 @@ fallback: false
 }</ul> </div>) )
 }</ul> </div> <div>) )
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {
   `tel:$ {
   contactInfo.mobile.replace (/[^+\\d]/g, '')
@@ -42,7 +43,24 @@ fallback: false
 }<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {
   service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >Position:</span> {
 
+=======
+
+  service.marketPosition 
+}</p>
+}{
+  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
+  service.roi 
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }</p>
 }{
   service.competitors?.length ? () : null
 }<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
+}
+
+export default ServiceDetail
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

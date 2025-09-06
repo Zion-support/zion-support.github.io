@@ -4,6 +4,9 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 class ComprehensiveAutomationRunner {
   constructor() {
     this.projectRoot = process.cwd();
@@ -32,11 +35,3 @@ class ComprehensiveAutomationRunner {
       this.log(`❌ ${scriptName} failed: ${error.message}`, 'ERROR');
       this.results.push({ script: scriptName, success: false, error: error.message });
       return { success: false, error: error.message };
-
-    }
-  }
-
-  async runAllAutomations() {
-this.log('🎯 Starting Comprehensive Automation Runner');
-    this.log('
-

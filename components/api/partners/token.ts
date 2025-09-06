@@ -34,3 +34,44 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { partner, apiKey: key } = match;
   const token = signJwt(
+=======
+      sub: partner.id,
+      apiKeyId: key.id,
+      name: partner.name,
+      entity_type: partner.entity_type,
+      useCaseType: partner.useCaseType,
+    } as any,
+    typeof ttl_seconds === 'number';
+      ? Math.max (300, Math.min (86400, ttl_seconds));
+      : 3600);
+  return res;
+    .status (200);
+    .json ({ token, partner: { id: partner.id, name: partner.name } });      sub: partner.id;
+      apiKeyId: key.id;
+      name: partner.name;
+      entity_type: partner.entity_type,
+      useCaseType: partner.useCaseType} as any;
+    typeof ttl_seconds === "number" ? Math.max (300, Math.min (86400, ttl_seconds)) : 3600);
+  return res.status (200).json ({ token, partner: { id: partner.id, name: partner.name } });
+  }
+  const { partner, apiKey: key } = match,
+  const token = signJwt(
+    {
+      sub: partner.id,
+      apiKeyId: key.id,
+      name: partner.name,
+      entityType: partner.entityType,
+      useCaseType: partner.useCaseType} as any,
+    typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600
+  ),
+  return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
+  return res.status(200).json({_token, _partner: { id: partner.id, _name: partner.name} });
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

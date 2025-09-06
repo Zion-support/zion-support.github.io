@@ -8,6 +8,55 @@ export type OnboardingStep = {;
   label: string;
   completed: boolean;
 
+=======
+
+};
+
+export type OnboardingProgressCardProps = {;
+
+
+  title: string;
+  steps: OnboardingStep[];
+  highlightColorClass?: string;}
+function computePercentage(steps: OnboardingStep[]): number {
+  if (!steps |steps.length === 0) return 0;
+  const completedCount = steps.filter(s => s.completed).length;
+
+
+
+
+function computePercentage(steps: OnboardingStep[]): number {
+  if (!steps |steps.length === 0) return 0;
+  const completedCount = steps.filter(s => s.completed).length;
+  return Math.round((completedCount / steps.length) * 100);
+
+
+  title,
+  steps,
+  highlightColorClass = 'from-neon-green to-neon-blue',
+}: OnboardingProgressCardProps) {;
+
+
+  const percentage = computePercentage(steps);
+  const allDone = percentage === 100;
+  const firstIncomplete = steps.find(
+    s => !s.completed && s.ctaHref && s.ctaLabel
+      {/* Progress Bar */}
+      <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>;
+        <div
+          className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
+
+
+      {/* Progress Bar */}
+      <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">;
+        <div
+  cta_label?: string;
+  cta_href?: string;
+=======
+  ctaLabel?: string;
+  ctaHref?: string;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 ;
 export type OnboardingProgressCardProps = {
@@ -52,6 +101,125 @@ function computePercentage(steps: OnboardingStep[]): number {
         <div className='text - sm opacity - 75'>{percentage}% complete</div>;
       </div>;
       {/* Progress Bar */}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ) : null}
+          </li>;
+        ))}
+
+      </ul>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Primary CTA for next step */}
+
+
+      ) : null}
+    </div>
+
+
+  );
+
+}
+=======
+}
+=======
+
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+        />;
+      </div>;
+      {all_done ? (
+        <div className='mt - 4 flex items - center gap - 2 text - green - 600 dark:text - green - 400'>;
+          <PartyPopper size={18} />;
+          <span className='text - sm'>All steps completed — great job!</span>        </div>) : null}
+      {/* Checklist */}        <div className="mt - 4 flex items - center gap - 2 text - green - 600 dark:text - green - 400">;
+          <PartyPopper size={18} />;
+          <span className="text - sm">All steps completed — great job!</span>;
+        </div>) : null}
+      {/* Checklist */}
+      <ul className='mt - 4 space - y-2'>;
+        {steps.map (step => (
+          <li key={step.id} className='flex items - center justify - between'>;
+            <div className='flex items - center gap - 2'>;
+                <CheckCircle2;
+                  className='text - green - 600 dark:text - green - 400';
+                  size={18}
+                />) : (
+                <Circle className='text - gray - 400' size={18} />)}
+              <span className={step.completed ? 'line - through opacity - 70' : ''}>;
+                {step.label}
+              </span>;
+            </div>;
+            {!step.completed && step.cta_href && step.cta_label ? (
+              <Link href={step.cta_href}>;
+                <a className='text - xs px - 3 py - 1.5 rounded - md border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 50 dark:hover:bg - gray - 900 transition'>                  {step.cta_label}                <a className="text - xs px - 3 py - 1.5 rounded - md border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 50 dark:hover:bg - gray - 900 transition">;
+                  {step.cta_label}
+                </a>;
+              </Link>) : null}
+          </li>))}
+      </ul>;
+      {/* Primary CTA for next step */}
+      {!all_done && first_incomplete ? (
+        <div className='mt - 5'>;
+          <Link href={first_incomplete.cta_href!}>;
+            <a className='inline - flex items - center justify - center px - 4 py - 2 rounded - lg text - sm font - medium text - black dark:text - white bg - gradient - to - r from - neon - blue to - neon - green shadow - neon - blue hover:opacity - 90 transition'>              {first_incomplete.cta_label}        <div className="mt - 5">;
+          <Link href={first_incomplete.cta_href!}>;
+            <a className="inline - flex items - center justify - center px - 4 py - 2 rounded - lg text - sm font - medium text - black dark:text - white bg - gradient - to - r from - neon - blue to - neon - green shadow - neon - blue hover:opacity - 90 transition">;
+              {first_incomplete.cta_label}
+            </a>;
+          </Link>;
+        </div>) : null}
+    </div>);
+        <div
+          className={_`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`
+          }
+          style={_{ width: `${percentage}%` }}
+        />
+      </div>
+
+      {allDone ? (
+        <div className=&quot;mt-4 flex items-center gap-2 text-green-600 dark:text-green-400&quot;>
+          <PartyPopper size={18} />
+          <span className=&quot;text-sm&quot;>All steps completed — great job!</span>
+        </div>
+      ) : null}
+
+      {/* Checklist */}
+      <ul className=&quot;mt-4 space-y-2&quot;>
+        {steps.map((step) => (
+          <li key={step.id} className=&quot;flex items-center justify-between&quot;>
+            <div className=&quot;flex items-center gap-2&quot;>
+              {step.completed ? (
+                <CheckCircle2 className=&quot;text-green-600 dark:text-green-400&quot; size={18} />
+              ) : (
+                <Circle className=&quot;text-gray-400&quot; size={18} />
+              )}
+              <span className={_step.completed ? 'line-through opacity-70' : ''}>{_step.label}</span>
+            </div>
+            {_!step.completed && step.ctaHref && step.ctaLabel ? (
+              <Link href={step.ctaHref}>
+                <a className=&quot;text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition&quot;>
+                  {step.ctaLabel}
+                </a>
+              </a>
+=======
+      <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
+        <div
+          className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
+export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {;
+  const percentage = computePercentage(steps);
+  const allDone = percentage === 100;
+  const firstIncomplete = steps.find((s) => !s.completed && s.ctaHref && s.ctaLabel);
+=======
+
+};
+
+function computePercentage(steps: OnboardingStep[]): number {
+  if (!steps || steps.length === 0) return 0;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
@@ -122,3 +290,4 @@ function computePercentage(steps: OnboardingStep[]): number {
     </div>
 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,26 +1,22 @@
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
 import {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (
     !id |
     !fileName |
     typeof id !== "string" |
     typeof fileName !== "string"
   ) {
-    return res && res.status(400).json({ error: "Invalid parameters" });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import { getDisputeById } from '../../../../utils/fsdb';
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id, fileName } = req.query as { id?: string, fileName?: string };
-  if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {
-    return res.status(400).json({ error: 'Invalid parameters' })
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
@@ -47,3 +43,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const stream = fs && fs.createReadStream(att && att.path);
   stream && stream.pipe(res);
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

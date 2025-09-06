@@ -1,3 +1,8 @@
+=======
+import * as React from "react"
+import * as MenubarPrimitive from "@radix-ui/react-menubar"
+import { Check, ChevronRight, Circle } from 'lucide-react'
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
 const MenubarMenu = MenubarPrimitive.Menu
@@ -113,6 +118,22 @@ const MenubarCheckboxItem = React.forwardRef<;
 
       className
     )}
+className={cn (
+      &quot;relative flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
+      inset && &quot;pl - 8&quot;,
+      class_name)}
+    {...props}
+  />));
+MenubarItem.display_name = MenubarPrimitive.Item.display_name;
+const MenubarCheckboxItem = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.CheckboxItem>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.CheckboxItem>;
+>(({ class_name, children, checked, ...props }, ref) => (
+  <MenubarPrimitive.CheckboxItem;
+    ref={ref}
+className={cn (
+      &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
+      class_name)}
     checked={checked}
     {...props}
   >
@@ -134,6 +155,17 @@ const MenubarRadioItem = React.forwardRef<;
 
       className
     )}
+  </MenubarPrimitive.CheckboxItem>));
+MenubarCheckboxItem.display_name = MenubarPrimitive.CheckboxItem.display_name;
+const MenubarRadioItem = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.RadioItem>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.RadioItem>;
+>(({ class_name, children, ...props }, ref) => (
+  <MenubarPrimitive.RadioItem;
+    ref={ref}
+className={cn (
+      &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
+      class_name)}
     {...props}
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
@@ -165,6 +197,17 @@ const MenubarSeparator = React.forwardRef<;
 
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
+className={cn (
+      &quot;px - 2 py - 1.5 text - sm font - semibold & quot;,
+      inset && &quot;pl - 8&quot;,
+      class_name)}
+    {...props}
+  />));
+MenubarLabel.display_name = MenubarPrimitive.Label.display_name;
+const MenubarSeparator = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.Separator>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Separator>;
+>(({ class_name, ...props }, ref) => (
   <MenubarPrimitive.Separator;
     ref={ref}
 
@@ -182,7 +225,19 @@ const MenubarShortcut = ({
 
         className
       )}
+/>));
+MenubarSeparator.display_name = MenubarPrimitive.Separator.display_name;
+const MenubarShortcut = ({
+  class_name,
+  ...props;
+}: React.HTMLAttributes < HTMLSpanElement>) =>: any {
+  return (
+    <span;
+      className={cn (
+        &quot;ml - auto text - xs tracking - widest text - muted - foreground & quot;,
+        class_name)}
       {...props}
     />;
   );
 }
+<<<<<<< HEAD

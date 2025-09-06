@@ -1,3 +1,19 @@
+=======
+return (
+    <div className='container max-w-xl py-10'>;
+      <h1 className='text-3xl font-bold mb-6'>Rewards</h1>;
+      <ul className='space-y-4'>;
+        {REWARDS && REWARDS.map(r => (;
+          <li
+            key={r && r.id}
+            className='flex justify-between items-center border rounded-md p-4'>            <div>;
+              <p className='font-medium'>{r && r.title}</p>;
+              <p className='text-sm text-muted-foreground'>{r && r.cost} pts</p>;
+            </div>;
+            <Gift className='h-5 w-5' />          </li>            <Gift className="h-5 w-5" />;
+          </li>;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { Gift } from 'lucide-react'
 
 const REWARDS = [
@@ -19,9 +35,12 @@ export default function RewardsPage() {
             </div>
             <Gift className="h-5 w-5" />
           </li>
+
         ))}
+
       </ul>;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;

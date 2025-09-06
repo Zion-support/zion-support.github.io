@@ -8,10 +8,10 @@ export type DevRole = 'admin' | 'maintainer' | 'contributor';
   roles: DevRole[];
   userId?: string;
 }
-export function getGitStatus(): { connected: boolean; branch?: string } {
-  try {
-    const gitDir = path.join(process.cwd(), '.git');
-    if (!fs.existsSync(gitDir)) return { connected: false }
+
+    const gitDir = path && path.join(process && process.cwd(), '.git');
+    if (!fs && fs.existsSync(gitDir)) return { connected: false };
+
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
@@ -24,14 +24,17 @@ export function getGitStatus(): { connected: boolean; branch?: string } {
 }
 
   // TODO: integrate real auth; for now, check a header and env var for dev
-  const token = req.headers['x-dev-token'] |req.headers['x-admin-token'];
-  const adminToken = process.env.ADMIN_TOKEN;
+
+  const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
+  const adminToken = process && process.env.ADMIN_TOKEN;
+
   if (token && adminToken && token === adminToken) {
 
   }
   return { isAuthenticated: false, roles: [] }
 }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
@@ -48,3 +51,13 @@ export function requireRoles(
     return undefined;
   }
   return identity;
+=======
+
+}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -5,6 +5,18 @@ export default function SitemapPage() {
     { name: "Home", href: "/" }
     { name: "Services", href: "/services" }
     {
+      name: "All Services Showcase",
+      href: "/comprehensive - services - showcase - 2025",
+    },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Market Pricing", href: "/market - pricing" },
+    { name: "Services Advertising", href: "/services - advertising" },
+    { name: "Resources", href: "/resources" },
+    { name: "Support", href: "/support" },
+
+    { name: "Contact", href: "/contact" },;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   ];
   return (
@@ -76,3 +88,10 @@ export default function SitemapPage() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

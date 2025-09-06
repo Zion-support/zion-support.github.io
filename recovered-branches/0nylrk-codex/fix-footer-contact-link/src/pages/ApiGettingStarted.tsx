@@ -7,9 +7,12 @@ export function ApiGettingStarted() {
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   headers: {
-    Authorization: \`Bearer \${API_KEY}\`
+    Authorization: \`Bearer \${API_KEY}\`;
   }
 
   return (
@@ -25,6 +28,13 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
         <h2>Authentication</h2>
         <p>
 
+=======
+
+          All API requests must include your API key in the Authorization header. 
+          You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</Link>.
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         </p>
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />
         <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">
@@ -63,10 +73,18 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors"
           >
             Download Postman Collection
-          </Link>
+          </a>
         </div>
       </div>
     </ApiDocsLayout>
   )
 
 export default ApiGettingStarted;
+}
+
+;
+
+
+export default ApiGettingStarted;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

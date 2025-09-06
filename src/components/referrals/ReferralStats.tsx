@@ -2,16 +2,25 @@
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
 
 interface ReferralStatsProps {
+
   stats: ReferralStatsType
   isLoading: boolean
-export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
-  const statCards = [
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { ReferralStats as ReferralStatsType } from '@/types / referrals';
+import { Award, Share, Star, TrendingUp } from 'lucide-react';
+interface ReferralStatsProps {
+  stats: ReferralStatsType;
+  is_loading: boolean;
+export /**
+ * ReferralStats - Function description
+ */
+function ReferralStats() {
+  const stat_cards = [;
     {
 
 interface ReferralStatsProps {
-
-  stats: ReferralStatsType
-  isLoading: boolean
+  stats: ReferralStatsType,
+  is_loading: boolean;
 }
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [
@@ -58,7 +67,14 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
           <CardContent>
             {isLoading ? (
 
+=======
+
+              <div className="h-6 w-20 bg-muted animate-pulse rounded" />
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             ) : (
               <>
                 <div className="text-2xl font-bold">{card.value}</div>
                 <p className="text-xs text-muted-foreground">{card.description}</p>
+<<<<<<< HEAD

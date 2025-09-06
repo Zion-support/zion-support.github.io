@@ -1,8 +1,46 @@
 
+=======
+import React from "react",;
+import { ;
+  Dialog,;
+  DialogContent, ;
+  DialogHeader, ;
+  DialogTitle, ;
+  DialogDescription ;
+} from "@/components/ui/dialog",;
+import { Button } from "@/components/ui/button",;
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Separator } from "@/components/ui/separator",;
+import { QuoteStatusBadge } from "./QuoteStatusBadge",;
+import type { QuoteRequest } from "@/types/quotes",;
+import { format } from "date-fns",;
+;
+interface QuoteDetailsProps {;
+  quote:QuoteRequest | null,;
+  isOpen:boolean,;
+  onClose:() => void;
+}
+;
+export const QuoteDetails = ({ quote, isOpen, onClose } QuoteDetailsProps) => {;
+  if (!quote) return null,;
+;
+  const formatDate = (dateString?:string) => {;
+    if (!dateString) return 'Not specified',;
+    try {;
+      return format(new Date(dateString), 'PPP'),;
+    } catch (e) {;
+      return dateString,;
+    }
+  },;
+;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>;
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle className="text-2xl flex items-center justify-between">;
+<<<<<<< HEAD
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
           <Card>;

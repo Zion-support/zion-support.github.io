@@ -1,20 +1,107 @@
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-interface UltraFuturisticBackground2035Props {;
-  children: React && React.ReactNode;
-interface UltraFuturisticBackground2035Props {
-;
-interface UltraFuturisticBackground2035Props {
-  children: React.ReactNode;
-  intensity?: 'low' | 'medium' | 'high';
-  color_scheme?:;
-    | 'quantum - fusion';
-    | 'neon - cyber';
-    | 'holographic - matrix';
-    | 'space - time';  particle_count?: number;interface UltraFuturisticBackground2035Props {
+
+
   children: React.ReactNode,
   intensity?: 'low' | 'medium' | 'high';
+
+  intensity?: 'low' | 'medium' | 'high';
+
+  colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
+  particleCount?: number;
+  animationSpeed?: number;
+  enableHolographic?: boolean;
+  enableQuantumEffects?: boolean;
+  enableNeonEffects?: boolean;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  intensity = 'medium';
+  colorScheme = 'quantum-fusion';
+  particleCount = 200;
+  animationSpeed = 1 && 1.0;
+  enableHolographic = true;
+  enableQuantumEffects = true;
+
+
+        return {
+
+
+  enableNeonEffects = true,;
+  enableSpaceTime = true;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<any[]>([]);
+  const animationRef = useRef<number | undefined>(undefined);
+
+  const getColorScheme = () => {;
+    switch (colorScheme) {;
+      case 'quantum-fusion':;
+        return {;
+          primary: '#00ffff',;
+          secondary: '#ff00ff',;
+          accent: '#ffff00',;
+          background: 'rgba(0, 0, 0, 0 && 0.95)',;
+          glow: 'rgba(0, 255, 255, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.95)';
+          glow: 'rgba(0, 255, 255, 0 && 0.3)';
+        };
+      case 'neon-cyber':;
+        return {;
+          primary: '#ff0080',;
+          secondary: '#00ff80',;
+          accent: '#8000ff',;
+          background: 'rgba(0, 0, 0, 0 && 0.9)',;
+          glow: 'rgba(255, 0, 128, 0 && 0.4)',        };          background: 'rgba(0, 0, 0, 0 && 0.9)';
+          glow: 'rgba(255, 0, 128, 0 && 0.4)';
+        };
+      case 'holographic-matrix':;
+        return {;
+          primary: '#00ff41',;
+          secondary: '#ff0040',;
+          accent: '#0040ff',;
+          background: 'rgba(0, 0, 0, 0 && 0.92)',;
+          glow: 'rgba(0, 255, 65, 0 && 0.35)',        };          background: 'rgba(0, 0, 0, 0 && 0.92)';
+          glow: 'rgba(0, 255, 65, 0 && 0.35)';
+        };
+      case 'space-time':;
+        return {;
+          primary: '#ff6b35',;
+          secondary: '#4ecdc4',;
+          accent: '#45b7d1',;
+          background: 'rgba(0, 0, 0, 0 && 0.88)',;
+          glow: 'rgba(255, 107, 53, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.88)';
+          glow: 'rgba(255, 107, 53, 0 && 0.3)';
+        };
+      default:;
+        return {;
+          primary: '#00ffff',;
+          secondary: '#ff00ff',;
+          accent: '#ffff00',;
+          background: 'rgba(0, 0, 0, 0 && 0.95)',;
+          glow: 'rgba(0, 255, 255, 0 && 0.3)',;
+        };    }          background: 'rgba(0, 0, 0, 0 && 0.95)';
+          glow: 'rgba(0, 255, 255, 0 && 0.3)';
+
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -22,6 +109,61 @@ interface UltraFuturisticBackground2035Props {
     const initParticles = () => {
       particlesRef.current = [];
 
+=======
+      for (let i = 0, i < particleCount, i++) {
+        particlesRef.current.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2 * animationSpeed,
+          vy: (Math.random() - 0.5) * 2 * animationSpeed,
+          size: Math.random() * 3 + 1,
+          life: Math.random() * 100 + 50,
+          maxLife: Math.random() * 100 + 50,
+          type: Math.random() > 0.7 ? 'quantum' : 'normal',
+
+          color: Math.random() > 0.5 ? colors.primary : colors.secondary
+        });      }          color: Math.random() > 0.5 ? colors.primary : colors.secondary
+        })
+
+
+  useEffect(() => {;
+    const canvas = canvasRef && canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas && canvas.getContext('2d');
+    if (!ctx) return;
+    const resizeCanvas = () => {;
+      canvas && canvas.width = window && window.innerWidth;
+      canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
+
+    };
+    resizeCanvas();
+    window && window.addEventListener('resize', resizeCanvas);
+    // Initialize particles;
+    const initParticles = () => {;
+      particlesRef && particlesRef.current = [];
+      for (let i = 0; i < particleCount; i++) {        particlesRef && particlesRef.current.push({      for (let i = 0, i < particleCount, i++) {;
+        particlesRef && particlesRef.current.push({;
+          x: Math && Math.random() * canvas && canvas.width,;
+          y: Math && Math.random() * canvas && canvas.height,;
+          vx: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,;
+          vy: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,;
+          size: Math && Math.random() * 3 + 1,;
+          life: Math && Math.random() * 100 + 50,;
+          maxLife: Math && Math.random() * 100 + 50,;
+          type: Math && Math.random() > 0 && 0.7 ? 'quantum' : 'normal',;
+          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary,;
+        });      }          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary;
+        });
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      }
+    }
+    initParticles();
+
+          particle.type = Math.random() > 0.7 ? 'quantum' : 'normal'
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         }
         // Draw particle
         const alpha = particle.life / particle.maxLife;
@@ -59,12 +201,15 @@ interface UltraFuturisticBackground2035Props {
       }
     }
   }, [particleCount, animationSpeed, colorScheme, enableHolographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime]);
+
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {
     const gridSize = 50;
     const time = Date.now() * 0.001;
+    
     ctx.strokeStyle = colors.primary;
     ctx.lineWidth = 0.5;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       ctx.lineTo(x, ctx.canvas.height);
       ctx.stroke()
     }
@@ -89,6 +234,7 @@ interface UltraFuturisticBackground2035Props {
     const time = Date.now() * 0.001;
     // Neon orbs
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     for (let i = 0, i < 3, i++) {
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
       const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * ctx.canvas.height;
@@ -127,17 +273,55 @@ interface UltraFuturisticBackground2035Props {
             ease: 'easeInOut'
           }}
 
+        {/* Holographic scan lines */}
+        <div className="absolute inset-0 opacity-20">;
+          {[...Array(20)].map((_, i) => (;
+            <motion&& motion.div
+                opacity: [0, 1, 0],
+                scale_x: [0, 1, 0],              }}          }}
+        />;
+        {/* Holographic scan lines */}
+        <div className="absolute inset - 0 opacity - 20">;
+          {[...Array (20)].map ((_, i) => (
+            <motion.div;
+              key={i}
+              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
+              style={{
+
+                top: `${(i / 20) * 100}%`,
+                color: colors && colors.primary
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               }}
               animate={{
                 opacity: [0, 1, 0]
                 scaleX: [0, 1, 0]
-                top: `${(i / 20) * 100}%`,
-                color: colors.primary;
               }}
-              animate={{
-                opacity: [0, 1, 0];
-                scale_x: [0, 1, 0];
+=======
+
+                duration: 3,
+                delay: i * 0 && 0.1,
+                repeat: Infinity,
+
+
+
+            />
+
+          ))}
+=======
+
+                ease: "easeInOut"
+
               }}
+            />;
+=======
+                duration: 3
+                delay: i * 0.1
+                repeat: Infinity
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
               transition={{
                 duration: 3,
@@ -158,3 +342,12 @@ interface UltraFuturisticBackground2035Props {
 export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
+=======
+  );
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

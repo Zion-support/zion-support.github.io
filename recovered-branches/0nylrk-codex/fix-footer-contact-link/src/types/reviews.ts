@@ -1,5 +1,6 @@
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string;
   project_id: string;
   reviewer_id: string;
@@ -17,8 +18,10 @@
   is_visible: boolean;
   report_count: number;
   reviewer_profile?: {
-    display_name: string
-    avatar_url?: string
+
+    display_name: string,
+    avatar_url?: string;
+
   }
 }
 
@@ -27,8 +30,8 @@
   reporter_id: string;
   reason: string;
   status: 'pending' | 'resolved' | 'dismissed';
-  created_at: string
 
   resolved_at?: string
 }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -9,6 +9,7 @@ import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures",
 import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA",
 import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function EnterprisePlans() {
   return (
     <>
@@ -31,3 +32,21 @@ export default function EnterprisePlans() {
 
 }
 ;
+        <EnterpriseHero />;
+        <EnterprisePricingTable />;
+        <EnterpriseFeatures />;
+        <EnterpriseTestimonials />;
+        <EnterpriseTrustBadges />;
+        <EnterpriseCTA />;
+      </main>;
+      <Footer />;
+
+    </>);
+}
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

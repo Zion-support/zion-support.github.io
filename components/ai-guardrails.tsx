@@ -1,8 +1,20 @@
 
+=======
+
+import React from 'react';
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Head from 'next/head';
 
 import {
 
+  const features = [
+    'Prompt/output policy engine with allow/deny lists'
+    'Jailbreak and prompt injection detection'
+    'PII/PHI detection and redaction'
+    'Toxicity, bias and safety classifiers'
+    'Human handoff flows and escalation policies'
+    'Audit logs, alerting and exportable evidence'
   Check,
   Shield,
   ShieldAlert,
@@ -178,3 +190,25 @@ export default function AIGuardrailsPage() {
 		</UltraAdvancedFuturisticBackground>
 
 }
+	);
+}
+
+
+=======
+    </UltraAdvancedFuturisticBackground>);					<div className="bg - black / 20 border border - rose - 500 / 30 rounded - 2xl p - 6">;
+      <h3 className="text - xl font - semibold text - white mb - 4 text - center">Contact</h3>;
+      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - sm">;
+      <div className="flex items - center justify - center gap - 2 text - cyan - 400"><Phone className="w - 4 h - 4" /> <a href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`}>{contact_info.mobile}</a></div>;
+      <div className="flex items - center justify - center gap - 2 text - purple - 400"><Mail className="w - 4 h - 4" /> <a href={`mailto:${contact_info.email}`}>{contact_info.email}</a></div>;
+      <div className="flex items - center justify - center gap - 2 text - emerald - 400"><MapPin className="w - 4 h - 4" /> <a href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`} target="_blank" rel="noopener noreferrer" className="text - xs">{contact_info.address}</a></div>;
+      </div>;
+      <div className="text - center mt - 6">;
+      <Button href="/services" variant="outline" className="border - rose - 500 text - rose - 400">Explore Services <ExternalLink className="w - 4 h - 4 ml - 2" /></Button>;
+      </div>;
+    </div>;
+    </div>;
+  </section>;
+  </UltraAdvancedFuturisticBackground>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

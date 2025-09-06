@@ -1,0 +1,4 @@
+export default function EnhancedHome() {
+  return <div className="py-10">Enhanced Home</div>;
+}
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

@@ -7,12 +7,9 @@
   if (ip.startsWith('::ffff:')) return ip.substring(7);
   return ip;
 }
+=======
 
-  const forwarded = req.headers['x-forwarded-for'];
-  const remoteAddress = req.socket?.remoteAddress;
-  if (forwarded) {
-    return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim();
-  }
-  return remoteAddress |'unknown';
-}
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -9,6 +9,14 @@
         <Link href=&quot;/&quot;><a className=&quot;text-blue-600 hover:underline&quot;>Back to Home</a></a>
       </div>
 
+=======
+
+
+export default function Placeholder() {
+  return (
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <main className="min-h-screen p-8">
       <Head>
         <title>Reports • Seo • Latest.json - Placeholder</title>
@@ -27,3 +35,4 @@
   }
 }
 ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

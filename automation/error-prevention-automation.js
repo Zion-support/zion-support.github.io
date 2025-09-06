@@ -1,11 +1,20 @@
 
 
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 log(message) {
     const timestamp = new Date().toISOString(});
     const logMessage = `[${timestamp}] ${message}\;n;`;
     );
     fs.appendFileSync(this.logFile, logMessage)}
 
+=======
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async runErrorPrevention() {}
     try {}
       this.log('Running error prevention checks...');',
@@ -18,6 +27,17 @@ log(message) {
       // Run all prevention checks;
 ;      results.checks.linting = await this.checkLinting();
 
+=======
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node
 /**
  * Error Prevention Automation - PM2 Automation Script
@@ -50,6 +70,12 @@ class ErrorPreventionAutomation {
     fs.appendFileSync(this.logFile, logMessage);
   }
 
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   log(message) {
     const timestamp = new Date().toISOString(;
   });
@@ -57,6 +83,17 @@ class ErrorPreventionAutomation {
     console.log(logMessage.trim(););
     fs.appendFileSync(this.logFile, logMessage)}
 
+=======
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   async runErrorPrevention() {
     try {
@@ -64,17 +101,47 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       const startTime = Date.now();
       const results = {
 
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         timestamp: new Date().toISOString(),
         checks: {},
         fixes: {},
         errors: {}
      ; ;};
 
+=======
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         "timestamp": new Date().toISOString(),
         "checks": {},
         "fixes": {},
         "errors": {}
 
+=======
+
+
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+     };
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       // Run all prevention checks
       results.checks.linting = await this.checkLinting();
@@ -84,6 +151,12 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       results.checks.security = await this.checkSecurity();
       results.checks.performance = await this.checkPerformance();
 
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Apply fixes if needed;
       results.fixes = await this.applyFixes(results.checks);
       const endTime = Date.now();
@@ -377,6 +450,10 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       this.isRunning = false;,
       process.exit(0)})}
 
+=======
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Start the error prevention automation;
 const automation = new ErrorPreventionAutomation;(;);
 automation.start().catch(error => {}),
@@ -384,6 +461,17 @@ automation.start().catch(error => {}),
   process.exit(1)});,
 ;
 
+=======
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Apply fixes if needed
       results.fixes = await this.applyFixes(results.checks);
       const endTime = Date.now();
@@ -424,6 +512,9 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 30000
       };);
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
         "success": true,
@@ -471,6 +562,9 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 30000
       };);
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
         "success": true,
@@ -516,6 +610,9 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 300000
       };);
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
         "success": true,
@@ -561,12 +658,21 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 30000
       };);
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
         "success": true,
         "output": result,
         "outdated": 0
 
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }} catch (error) {
       if ( {
         // npm outdated returns 1 when there are outdated packages) {
@@ -576,6 +682,17 @@ automation.start().catch(error => {}),
         const output = error.stdout || ;';';
         const outdatedCount = (output.match(/\n/g) || []).length -;1; // Subtract header line
 
+=======
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 };
     } catch (error) {
       if (error.status === 1) {
@@ -626,6 +743,9 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 120000
       };);
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
         "success": true,
@@ -655,18 +775,33 @@ automation.start().catch(error => {}),
       const memoryUsage = process.memoryUsage();
       const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 100;
 
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Check memory usage
       const memoryUsage = process.memoryUsage(;
   });
       const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 1;0;0;
       return {;
 
+=======
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
         "success": true,
         "buildSize": buildSize,
         "memoryUsage": memoryUsagePercent,
         "needsOptimization": buildSize > 100 * 1024 * 1024 || memoryUsagePercent > 80
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       };
     } catch (error) {
       return {
@@ -679,12 +814,29 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   parseVulnerabilities(output) {
     const vulnerabilities = {
 
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       critical: 0,
       high: 0,
       moderate: 0,
       low: 0
    ; ;};
 
+=======
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       "critical": 0,
       "high": 0,
       "moderate": 0,
@@ -709,6 +861,14 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     return vulnerabilities) {
     vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {
 
+=======
+
+
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       this.log(`Failed to parse "vulnerabilities": ${error.message}`)}
     return vulnerabilities}}
   getDirectorySize(dirPath) {
@@ -734,11 +894,28 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       // Ignore errors
     }
 
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     return totalSize;
   }}
   async applyFixes(checks) {
     const fixes = ;{;};
 
+=======
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     return totalSize}}
   async applyFixes(checks) {
     const fixes = ;{};
@@ -790,6 +967,12 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       }
     } catch (error) {
 
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       this.log(`Failed to apply fixes: ${error.message}`)}
     return fixes;}
   async saveReport(results) {
@@ -800,6 +983,17 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       platform: process.platform
    ; ;};
 
+=======
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       this.log(`Failed to apply "fixes": ${error.message}`)}
     return fixes}
   async saveReport(results) {
@@ -813,6 +1007,12 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   async reportError(type, error) {
     const errorReport = {
 
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       timestamp: new Date().toISOString(),
       type: type,
       error: error.message,
@@ -820,6 +1020,17 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       projectRoot: this.projectRoot
    ; ;};
 
+=======
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       "timestamp": new Date().toISOString(),
       "type": type,
       "error": error.message,
@@ -842,6 +1053,14 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
      {
         await this.runErrorPrevention()}
 
+=======
+
+
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }, this.runInterval)}
     // Handle graceful shutdown
     process.on('SIGTERM', () => {
@@ -858,3 +1077,12 @@ const automation = new ErrorPreventionAutomation;(;);
 automation.start().catch(error => {
   console.error('Failed to start error prevention "automation": ', error);
   process.exit(1)});
+=======
+
+
+
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

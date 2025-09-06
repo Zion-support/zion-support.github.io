@@ -32,6 +32,8 @@ useEffect ( () => {
       { threshold }
     );
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
@@ -42,6 +44,17 @@ useEffect ( () => {
 
         <motion.img
 
+=======
+      />
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Actual Image */}
+      {isInView && (;
+        <motion&& motion.img
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           ref={imgRef}
           src={src}
           alt={alt}
@@ -62,3 +75,4 @@ alt=''        className={`absolute inset - 0 w - full h - full object - cover tr
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: is_loaded ? 1 : 0, scale: is_loaded ? 1 : 1.1 }}
           transition={{ duration: 0.5 }}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

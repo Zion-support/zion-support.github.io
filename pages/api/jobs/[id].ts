@@ -1,4 +1,9 @@
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
@@ -6,14 +11,18 @@ import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
 const FILE = "jobs.json";
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
-  const idx = jobs && jobs.findIndex((j) => j && j.id === id);
+
+
   if (idx === -1) {
     res && res.status(404).json({ error: "Job not found" });
     return;
   }
+
+
   if (req && req.method === "GET") {
     res && res.status(200).json({ job: jobs[idx] });
     return;
@@ -25,58 +34,19 @@ const FILE = "jobs.json";
     res.status(200).json({ job: jobs[idx] });
     return
   }
+
   if (req && req.method === "PATCH") {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const userEmail = getRequestUserEmail(req);
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job && job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {
-import type { NextApiRequest, NextApiResponse } from './next';
-import { readJsonFile, writeJsonFile  } from '../../../utils / db';
-import type { Job } from "../../../utils / types";
-import { rate_limit  } from '../../../utils / rate_limit';
-import { getRequestUserEmail, isAdminEmail  } from '../../../utils / auth';
-;
-const FILE = "jobs.json";
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  if () return) {
-  $2
-}
-  const { id } = req.query;
-  const jobs = readJsonFile < Job[]>(FILE, []);
-  const idx = jobs.find_index ((j) => j.id === id);
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    res.status (404).json ({ error: "Job not found" });
-    return;
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    res.status (200).json ({ job: jobs[idx] });
-    return;
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    const user_email = getRequestUserEmail (req);
-    const job = jobs[idx];
-    const is_owner = user_email && user_email === job.client_email;
-    if () {) {
-  $2
-}
-      res.status (403).json ({ error: "Forbidden" });
+
+
       return;
     }
     const {
+
       title,
       description,
       category,
@@ -85,10 +55,13 @@ if ( {) {
       budgetMaxUsd,
       deliveryDeadlineIso,
       status,
+
       res.status(403).json({ error: 'Forbidden' });
       return
     }
+
     const { title, description, category, requiredSkills, budgetMinUsd, budgetMaxUsd, deliveryDeadlineIso, status } = req.body || {};
+
     if (typeof title === 'string') job.title = title;
     if (typeof description === 'string') job.description = description;
     if (typeof category === 'string') job.category = category;
@@ -97,15 +70,7 @@ if ( {) {
     if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
-job.updatedAtIso = new Date().toISOString();
-    jobs[idx] = job;
-    writeJsonFile<Job[]>(FILE, jobs);
-    res.status(200).json({ job });
-    return
-  }
-  res.setHeader('AllowGET, PATCH');
-  res.status(405).end('Method Not Allowed')
-}
+
     } = req.body || {}
     // Check condition
 if (job.title = title) {
@@ -156,3 +121,14 @@ if (job.status = status as Job["status"]) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

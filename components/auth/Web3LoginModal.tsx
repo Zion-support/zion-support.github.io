@@ -23,12 +23,37 @@ type Web3LoginModalProps = {
   onClose: () => void
   onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void
 
+=======
+};
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     if (!isOpen) {
 
+    }
+  }, [isOpen]);
+
+
+  const handleEvmConnect = useCallback(async () => {;
+
+    setError(null);
+    setLoading(true);
+    try {;
+      const Web3ModalCtor = (await import('web3modal')).default;
+
+
+          walletconnect: {
+            package: WalletConnectProvider
+            options: {
+
+              rpc: { 1: 'https://cloudflare-eth.com' }}}}}),
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       const provider = await web3Modal.connect();
       const ethers = await import('ethers');
       const web3Provider = new ethers.providers.Web3Provider(provider as any);
@@ -52,21 +77,21 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       const encodedMessage = new TextEncoder().encode(message);
       const { signature } = await provider.signMessage(encodedMessage, 'utf8');
       const bs58 = (await import('bs58')).default;
+
       const verifyRes = await fetch('/api/auth/verify-sol', {
-
-      onLoggedIn?.({ address: publicKey, chain: 'sol' }),
-
-      onClose()
-    } catch (e: any) {
-      console.error(e);
-      setError(e?.message |'Phantom connection failed')
-    } finally {
-      setLoading(false)
-
     }
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
   return (
+=======
+
+
+            Cancel;
+          </button>;
+        </div>;
+      </div>;
+
+
 
   return <ModalInner {...props} />;        </div>
         {error && (
@@ -88,3 +113,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

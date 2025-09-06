@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 
 interface StartupProps {
@@ -13,3 +15,5 @@ export default function Startup({ }: StartupProps) {
   );
 }
 }
+
+

@@ -21,9 +21,12 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     category: "Equipment",
     subcategory: "Cameras",
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     images: [
-      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800",
+      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
+      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1581591524425-c7e0978865fc?auto=format&fit=crop&w=1200&h=800"
     ]
     price: 6999
@@ -39,7 +42,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     features: [
 
     images: [
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",
+      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&h=800"
     ]
     price: 3499
@@ -57,25 +60,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       { name: "Dynamics", value: "Compressor/Gate on all channels" }
       { name: "Effects", value: "8 stereo effects processors" }
       { name: "Recording", value: "64-channel USB interface" }
-      { name: "Weight", value: "32 lbs" }
-    ],
-    features: [
-      "32-channel digital mixer with 24 premium mic preamps",
-      "16 motorized faders with touch-sensitive control",
-      "7-inch high-resolution color touchscreen",
-      "Comprehensive routing matrix",
-      "Onboard multi-track recording to USB",
-      "iOS and Android remote control app",
-      "Configurable user layers",
-      "8 DCA groups and 6 mute groups",
-      "Integrated WiFi for wireless control"
-    ]
-    warranty: "3 years manufacturer warranty"
-    returnPolicy: "21-day return policy for items in original condition"
-  }
 
-  // In a real app, this would fetch from an API
-  const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined,
 
   if (!equipment) {
     return (
@@ -95,6 +80,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   }
   const handleAddToCart = () => {
 
+=======
+    setIsAdding(true),
+    
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Simulate API call
     setTimeout(() => {
       setIsAdding(false),
@@ -146,113 +136,288 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
                         />
                       </div>
 
+      { name: "Weight", value: "32 lbs" }
+    ];
+    features: [;
+      "32-channel digital mixer with 24 premium mic preamps";
+      "16 motorized faders with touch-sensitive control";
+      "7-inch high-resolution color touchscreen";
+      "Comprehensive routing matrix";
+      "Onboard multi - track recording to USB";
+      "iOS and Android remote control app";
+      "Configurable user layers";
+      "8 DCA groups and 6 mute groups";
+
+      "Integrated WiFi for wireless control";
+    ],;
+    warranty: "3 years manufacturer warranty",;
+    returnPolicy: "21-day return policy for items in original condition";
+  }
+};
+
+export default function EquipmentDetail() {;
+  const { equipmentId } = useParams() as { equipmentId?: string };
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [quantity, setQuantity] = useState(1);
+  const [isAdding, setIsAdding] = useState(false);
+
+  // In a real app, this would fetch from an API;
+  const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined;
+
+  if (!equipment) {;
+
+    return (
+      <>;
+        <Header />;
+        <div className="min-h-screen bg-zion-blue py-12 px-4">;
+          <div className="container mx-auto">;
+            <div className="text-center py-20">;
+              <h1 className="text-3xl font-bold text-white mb-4">Equipment Not Found</h1>;
+              <p className="text-zion-slate-light mb-8">The equipment you're looking for doesn't exist or has been removed.</p>;
+=======
+      "Integrated WiFi for wireless control";
+    ],
+    warranty: "3 years manufacturer warranty",
+    return_policy: "21 - day return policy for items in original condition";
+  }
+}
+;
+export default /**
+ * EquipmentDetail - Function description
+ */
+function EquipmentDetail() {
+  const { equipment_id } = use_params () as { equipment_id?: string }
+  const [selectedImageIndex, setSelectedImageIndex] = useState (0);
+  const [quantity, set_quantity] = useState (1);
+  const [is_adding, setIsAdding] = useState (false);
+;
+  // In a real app, this would fetch from an API;
+  const equipment = equipment_id ? SAMPLE_EQUIPMENT[equipment_id] : undefined;
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <>;
+        <Header />;
+        <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
+          <div className="container mx - auto">;
+            <div className="text - center py - 20">;
+              <h1 className="text - 3xl font - bold text - white mb - 4">Equipment Not Found</h1>;
+              <p className="text - zion - slate - light mb - 8">The equipment you're looking for doesn't exist or has been removed.</p>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            </div>;
+          </div>;
+        </div>;
+        <Footer />;
+
+
+  const handleAddToCart = () => {;
+    setIsAdding(true);
+
+    // Simulate API call;
+    setTimeout(() => {;
+      setIsAdding(false);
+      toast({;
+        title: "Added to cart",;
+        description: `${quantity}x ${equipment && equipment.name} added to your cart.`});
+    }, 800);
+  };
+
+  const handleBuyNow = () => {;
+    setIsAdding(true);
+
+    // Simulate API call;
+    setTimeout(() => {;
+      setIsAdding(false);
+      toast({;
+        title: "Proceeding to checkout",;
+        description: `Preparing your order for ${equipment && equipment.name}.`});
+    }, 800);
+  };
+
+
+  return (
+    <>;
+      <Header />;
+      <div className="min-h-screen bg-zion-blue py-12 px-4">;
+        <div className="container mx-auto">;
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
+            {/* Left Column - Images */}
+            <div className="lg:col-span-2">;
+              <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">;
+                {/* Main Image */}
+
+                <div className="aspect-video w-full relative">;
+                  <img
+                    src={equipment && equipment.images[selectedImageIndex]} 
+                    alt={equipment && equipment.name} 
+                    className="w-full h-full object-contain bg-zion-blue-light/10 p-4"
+                  />;
+                </div>;
+
+                {/* Thumbnail Gallery */}
+                {equipment && equipment.images.length > 1 && (;
+                  <div className="flex p-4 gap-2 overflow-x-auto">;
+                    {equipment && equipment.images.map((image, index) => (;
+
+                      <div
+                        key={index}
+                        onClick={() => setSelectedImageIndex(index)}
+                        className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${;
+                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent";
+                        }`}
+
+                      >;
+                        <img
+                          src={image} 
+                          alt={`${equipment && equipment.name} - image ${index + 1}`} 
+
+                          className="w-full h-full object-cover"
+                        />;
+                      </div>;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     ))}
-                  </div>
+                  </div>;
                 )}
-              </div>
+
+              </div>;
+
               {/* Product Details Tabs */}
-              <div className="mt-8">
-                <Tabs defaultValue="description" className="w-full">
-                  <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-3 h-auto">
-                    <TabsTrigger value="description" className="py-3 data-[state=active]:bg-zion-purple/10">
-                      Description
-                    </TabsTrigger>
-                    <TabsTrigger value="specifications" className="py-3 data-[state=active]:bg-zion-purple/10">
-                      Specifications
-                    </TabsTrigger>
-                    <TabsTrigger value="features" className="py-3 data-[state=active]:bg-zion-purple/10">
-                      Features
-                    </TabsTrigger>
-                  </TabsList>
-                  <TabsContent value="description" className="mt-4">
-                    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
-                      <p className="text-zion-slate-light whitespace-pre-line">
-                        {equipment.description}
-                      </p>
-                    </div>
-                  </TabsContent>
-                  <TabsContent value="specifications" className="mt-4">
-                    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {equipment.specifications.map((spec, index) => (
-                          <div key={index} className="border-b border-zion-blue-light pb-2 mb-2 last:border-0 last:mb-0 last:pb-0">
-                            <div className="flex justify-between">
-                              <span className="text-zion-slate-light">{spec.name}</span>
-                              <span className="text-white font-medium">{spec.value}</span>
-                            </div>
-                          </div>
+              <div className="mt-8">;
+                <Tabs defaultValue="description" className="w-full">;
+                  <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-3 h-auto">;
+                    <TabsTrigger value="description" className="py-3 data-[state=active]:bg-zion-purple/10">;
+                      Description;
+                    </TabsTrigger>;
+                    <TabsTrigger value="specifications" className="py-3 data-[state=active]:bg-zion-purple/10">;
+                      Specifications;
+                    </TabsTrigger>;
+                    <TabsTrigger value="features" className="py-3 data-[state=active]:bg-zion-purple/10">;
+                      Features;
+                    </TabsTrigger>;
+                  </TabsList>;
+
+                  <TabsContent value="description" className="mt-4">;
+                    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+                      <p className="text-zion-slate-light whitespace-pre-line">;
+                        {equipment && equipment.description}
+                      </p>;
+                    </div>;
+                  </TabsContent>;
+
+                  <TabsContent value="specifications" className="mt-4">;
+                    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+                        {equipment && equipment.specifications.map((spec, index) => (;
+                          <div key={index} className="border-b border-zion-blue-light pb-2 mb-2 last:border-0 last:mb-0 last:pb-0">;
+                            <div className="flex justify-between">;
+                              <span className="text-zion-slate-light">{spec && spec.name}</span>;
+                              <span className="text-white font-medium">{spec && spec.value}</span>;
+                            </div>;
+                          </div>;
                         ))}
-                      </div>
-                    </div>
-                  </TabsContent>
-                  <TabsContent value="features" className="mt-4">
-                    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
-                      <ul className="space-y-2">
-                        {equipment.features.map((feature, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <div className="text-zion-cyan mt-1 flex-shrink-0">•</div>
-                            <span className="text-zion-slate-light">{feature}</span>
-                          </li>
+                      </div>;
+                    </div>;
+                  </TabsContent>;
+
+                  <TabsContent value="features" className="mt-4">;
+                    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+                      <ul className="space-y-2">;
+                        {equipment && equipment.features.map((feature, index) => (;
+                          <li key={index} className="flex items-start gap-2">;
+                            <div className="text-zion-cyan mt-1 flex-shrink-0">•</div>;
+                            <span className="text-zion-slate-light">{feature}</span>;
+                          </li>;
                         ))}
 
+                      </ul>;
+                    </div>;
+                  </TabsContent>;
+                </Tabs>;
+              </div>;
+            </div>;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {/* Right Column - Purchase Info */}
-            <div className="lg:col-span-1">
-              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
+            <div className="lg:col-span-1">;
+              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
                 {/* Category and Brand */}
-                <div className="flex flex-wrap gap-2 mb-3">
-                  <Badge variant="outline" className="text-zion-slate-light border-zion-blue-light">
-                    {equipment.category}
-                  </Badge>
-                  {equipment.subcategory && (
-                    <Badge variant="outline" className="text-zion-slate-light border-zion-blue-light">
-                      {equipment.subcategory}
-                    </Badge>
+                <div className="flex flex-wrap gap-2 mb-3">;
+                  <Badge variant="outline" className="text-zion-slate-light border-zion-blue-light">;
+                    {equipment && equipment.category}
+                  </Badge>;
+                  {equipment && equipment.subcategory && (;
+                    <Badge variant="outline" className="text-zion-slate-light border-zion-blue-light">;
+                      {equipment && equipment.subcategory}
+                    </Badge>;
                   )}
-                </div>
+
+                </div>;
+
                 {/* Product Title */}
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment.name}</h1>
                 <p className="text-zion-cyan mb-4">Brand: {equipment.brand}</p>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 {/* Rating */}
-                {equipment.rating && (
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
+                {equipment && equipment.rating && (;
+                  <div className="flex items-center gap-2 mb-4">;
+                    <div className="flex items-center">;
+                      {[...Array(5)].map((_, i) => (;
                         <Star
                           key={i}
                           className={`h-5 w-5 ${
 
+=======
+                            i < Math && Math.floor(equipment && equipment.rating!) 
+                              ? "text-zion-cyan fill-zion-cyan" 
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                               : "text-zion-slate-light"
                           }`}
-                        />
+                        />;
                       ))}
-                    </div>
-                    <span className="text-sm text-zion-slate-light">
-                      {equipment.rating.toFixed(1)} ({equipment.reviewCount} reviews)
-                    </span>
-                  </div>
+                    </div>;
+                    <span className="text-sm text-zion-slate-light">;
+                      {equipment && equipment.rating.toFixed(1)} ({equipment && equipment.reviewCount} reviews);
+                    </span>;
+                  </div>;
                 )}
+
+
                 {/* Price */}
-                <div className="text-3xl font-bold text-white mb-4">
-                  {equipment.currency}{equipment.price.toLocaleString()}
-                </div>
+                <div className="text-3xl font-bold text-white mb-4">;
+                  {equipment && equipment.currency}{equipment && equipment.price.toLocaleString()}
+                </div>;
+
+
                 {/* Stock Status */}
-                <div className="mb-6">
-                  {equipment.inStock ? (
-                    <div className="text-emerald-400 flex items-center gap-1">
-                      <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-                      <span>In Stock</span>
-                      {equipment.expectedShipping && (
-                        <span className="text-zion-slate-light ml-1 text-sm">
-                          (Ships in {equipment.expectedShipping})
-                        </span>
+                <div className="mb-6">;
+                  {equipment && equipment.inStock ? (;
+                    <div className="text-emerald-400 flex items-center gap-1">;
+                      <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>;
+                      <span>In Stock</span>;
+                      {equipment && equipment.expectedShipping && (;
+                        <span className="text-zion-slate-light ml-1 text-sm">;
+                          (Ships in {equipment && equipment.expectedShipping});
+                        </span>;
                       )}
-                    </div>
-                  ) : (
-                    <div className="text-rose-400 flex items-center gap-1">
-                      <span className="w-2 h-2 bg-rose-400 rounded-full"></span>
-                      <span>Out of Stock</span>
-                    </div>
+                    </div>;
+                  ) : (;
+                    <div className="text-rose-400 flex items-center gap-1">;
+                      <span className="w-2 h-2 bg-rose-400 rounded-full"></span>;
+                      <span>Out of Stock</span>;
+                    </div>;
                   )}
                 </div>
                 {/* Quantity */}
@@ -273,6 +438,12 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
                       readOnly
                     />
 
+=======
+
+                    <button 
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment.inStock}
@@ -301,25 +472,161 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
                   </Button>
                 </div>
                 {/* Additional Info */}
-                <div className="space-y-4 border-t border-zion-blue-light pt-4">
+                <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
-                  <div className="flex gap-3 text-zion-slate-light">
-                    <Truck className="h-5 w-5 text-zion-cyan flex-shrink-0" />
-                    <div>
-                      <p className="text-white text-sm font-medium">Free Shipping</p>
-                      <p className="text-xs">For orders over $100 within the US</p>
-                    </div>
-                  </div>
+
+                  <div className="flex gap-3 text-zion-slate-light">;
+                    <Truck className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
+                    <div>;
+                      <p className="text-white text-sm font-medium">Free Shipping</p>;
+                      <p className="text-xs">For orders over $100 within the US</p>;
+                    </div>;
+                  </div>;
+
+
+                  {/* Warranty */}
+                  {equipment && equipment.warranty && (;
+                    <div className="flex gap-3 text-zion-slate-light">;
+                      <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
+                      <div>;
+                        <p className="text-white text-sm font-medium">Warranty</p>;
+                        <p className="text-xs">{equipment && equipment.warranty}</p>;
+                      </div>;
+                    </div>;
+                  )}
+
+
+
+                  {/* Return Policy */}
+                  {equipment && equipment.returnPolicy && (;
+                    <div className="flex gap-3 text-zion-slate-light">;
+                      <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
+                      <div>;
+                        <p className="text-white text-sm font-medium">Returns</p>;
+                        <p className="text-xs">{equipment && equipment.returnPolicy}</p>;
+                      </div>;
+                    </div>;
+                  )}
+
+=======
+            {/* Right Column - Purchase Info */}
+            <div className="lg:col - span - 1">;
+              <div className="bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top - 6">;
+                {/* Category and Brand */}
+                <div className="flex flex - wrap gap - 2 mb - 3">;
+                  <Badge variant="outline" className="text - zion - slate - light border - zion - blue - light">;
+                    {equipment.category}
+                  </Badge>;
+                  {equipment.subcategory && (
+                    <Badge variant="outline" className="text - zion - slate - light border - zion - blue - light">;
+                      {equipment.subcategory}
+                    </Badge>)}
+                </div>;
+                {/* Product Title */}
+                <h1 className="text - 2xl font - bold text - white mb - 1">{equipment.name}</h1>;
+                <p className="text - zion - cyan mb - 4">Brand: {equipment.brand}</p>;
+                {/* Rating */}
+                {equipment.rating && (
+                  <div className="flex items - center gap - 2 mb - 4">;
+                    <div className="flex items - center">;
+                      {[...Array (5)].map ((_, i) => (
+                        <Star;
+                          key={i}
+                          className={`h - 5 w - 5 ${
+                            i < Math.floor (equipment.rating!);
+                              ? "text - zion - cyan fill - zion - cyan";
+                              : "text - zion - slate - light";
+                          }`}
+                        />))}
+                    </div>;
+                    <span className="text - sm text - zion - slate - light">;
+                      {equipment.rating.to_fixed (1)} ({equipment.review_count} reviews);
+                    </span>;
+                  </div>)}
+                {/* Price */}
+                <div className="text - 3xl font - bold text - white mb - 4">;
+                  {equipment.currency}{equipment.price.toLocaleString ()}
+                </div>;
+                {/* Stock Status */}
+                <div className="mb - 6">;
+                  {equipment.in_stock ? (
+                    <div className="text - emerald - 400 flex items - center gap - 1">;
+                      <span className="w - 2 h - 2 bg - emerald - 400 rounded - full"></span>;
+                      <span > In Stock</span>;
+                      {equipment.expected_shipping && (
+                        <span className="text - zion - slate - light ml - 1 text - sm">;
+                          (Ships in {equipment.expected_shipping});
+                        </span>)}
+                    </div>) : (
+                    <div className="text - rose - 400 flex items - center gap - 1">;
+                      <span className="w - 2 h - 2 bg - rose - 400 rounded - full"></span>;
+                      <span > Out of Stock</span>;
+                    </div>)}
+                </div>;
+                {/* Quantity */}
+                <div className="mb - 6">;
+                  <label className="text - sm text - zion - slate - light block mb - 2">Quantity</label>;
+                  <div className="flex items - center border border - zion - blue - light rounded - md w - 32">;
+                    <button;
+                      className="px - 3 py - 1 text - zion - slate - light hover:text - white disabled:opacity - 50";
+                      on_click={() => set_quantity (prev => Math.max (1, prev - 1))}
+                      disabled={quantity <= 1 || !equipment.in_stock}
+                    >;
+                      -;
+                    </button>;
+                    <input;
+                      type="number";
+                      className="w - full text - center bg - transparent border - 0 text - white focus:ring - 0";
+                      value={quantity}
+                      read_only;
+                    />;
+                    <button;
+                      className="px - 3 py - 1 text - zion - slate - light hover:text - white disabled:opacity - 50";
+                      on_click={() => set_quantity (prev => prev + 1)}
+                      disabled={!equipment.in_stock}
+                    >;
+                      +;
+                    </button>;
+                  </div>;
+                </div>;
+                {/* Purchase Buttons */}
+                <div className="space - y-3 mb - 6">;
+                  <Button;
+                    on_click={handleBuyNow}
+                    disabled={is_adding || !equipment.in_stock}
+                    className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6";
+                  >;
+                    {is_adding ? "Processing..." : "Buy Now"}
+                  </Button>;
+                  <Button;
+                    on_click={handleAddToCart}
+                    disabled={is_adding || !equipment.in_stock}
+                    variant="outline";
+                    className="w - full border - zion - purple text - zion - cyan hover:bg - zion - purple / 10";
+                  >;
+                    <ShoppingCart className="h - 4 w - 4 mr - 2" />;
+                    Add to Cart;
+                  </Button>;
+                </div>;
+                {/* Additional Info */}
+                <div className="space - y-4 border - t border - zion - blue - light pt - 4">;
+                  {/* Shipping */}
+                  <div className="flex gap - 3 text - zion - slate - light">;
+                    <Truck className="h - 5 w - 5 text - zion - cyan flex - shrink - 0" />;
+                    <div>;
+                      <p className="text - white text - sm font - medium">Free Shipping</p>;
+                      <p className="text - xs">For orders over $100 within the US</p>;
+                    </div>;
+                  </div>;
                   {/* Warranty */}
                   {equipment.warranty && (
-                    <div className="flex gap-3 text-zion-slate-light">
-                      <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />
-                      <div>
-                        <p className="text-white text-sm font-medium">Warranty</p>
-                        <p className="text-xs">{equipment.warranty}</p>
-                      </div>
-                    </div>
-                  )}
+                    <div className="flex gap - 3 text - zion - slate - light">;
+                      <Shield className="h - 5 w - 5 text - zion - cyan flex - shrink - 0" />;
+                      <div>;
+                        <p className="text - white text - sm font - medium">Warranty</p>;
+                        <p className="text - xs">{equipment.warranty}</p>;
+                      </div>;
+                    </div>)}
                   {/* Return Policy */}
                   {equipment.returnPolicy && (
                     <div className="flex gap-3 text-zion-slate-light">
@@ -330,3 +637,19 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
                       </div>
                     </div>
                   )}
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;
+
+    </>);
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,3 +1,6 @@
+interface FeatureCTAsProps {;
+  className?: string;
+  style?: React && React.CSSProperties;
 
 
 interface FeatureCTAsProps {
@@ -170,9 +173,10 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
           <h2 className='text-3xl font-bold tracking-tight mb-3'>
 
       key: 'ai_talent_matching',
-      descriptionKey: 'ai_talent_matching_desc',
-      detailsKey: 'ai_talent_matching_details',
-      icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
+      description_key: 'ai_talent_matching_desc',
+      details_key: 'ai_talent_matching_details',
+      icon: (
+        <Search className='h - 10 w - 10 p - 2 rounded - md bg - blue - 100 text - blue - 700' />),
       link: '/match',
 
     {

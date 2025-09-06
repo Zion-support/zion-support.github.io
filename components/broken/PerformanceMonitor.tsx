@@ -1,9 +1,20 @@
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
 })
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
+  return new Promise ( (resolve) => {;
+  if (typeof window !== 'undefined' && 'performance' in window) {;
+  //Wait for page to be fully loaded if (document && document.readyState === 'complete') {;
+
+}) ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
 if (newMetrics.loadTime > 3000) {
@@ -69,3 +80,8 @@ if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
 }
 export default PerformanceMonitor;
+export default PerformanceMonitor;
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

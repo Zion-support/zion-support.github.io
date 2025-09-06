@@ -31,32 +31,8 @@
     address: string;
 
   }
-;
-export const comprehensiveITSolutions: ComprehensiveItSolution[] = [;
-  {
-    id: 'full - stack - development',
-    name: 'Full - Stack Development Services',
-    tagline: 'End - to - end web application development',
-    price: '$80 / hour',
-    description:;
-      'Complete full - stack development services from frontend to backend and database design.',
-    features: [;
-      'Frontend development',
-      'Backend APIs',
-      'Database design',
-      'DevOps integration',
-      'Testing & deployment',
-    ],
-    link: '/services / full - stack - development',
-    category: 'IT Solutions',
-    real_implementation: true,
-    contact_info: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
-];      mobile: "+1 302 464 0950";
+];
+=======
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -81,6 +57,7 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
     realImplementation: true,
     contactInfo: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

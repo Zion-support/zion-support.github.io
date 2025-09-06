@@ -1,5 +1,12 @@
 
 
+=======
+
+import React from "react",
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function CreateTalentProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -18,3 +25,19 @@ export default function CreateTalentProfile() {
 
 }
 ;
+            Showcase your skills to top clients and employers. Create a professional profile;
+            to get discovered for AI and tech projects on the Zion Marketplace.;
+          </p>;
+        </div>;
+
+        <TalentRegistrationForm />;
+      </div>;
+    </div>);
+}
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

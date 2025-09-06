@@ -1,4 +1,5 @@
 
+=======
 
 interface MilestoneManagerProps {
   projectId: string,
@@ -31,11 +32,96 @@ export function MilestoneManager({
   onDeleteMilestone,
   onUploadDeliverable,
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   refetch
 }: MilestoneManagerProps) {
 
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
+
+  refetch;
+}: MilestoneManagerProps) {;
+  const handleMilestoneApproved = async (milestoneId: string) => {;
+    try {;
+
+      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus);
+      toast && toast.success("Milestone approved");
+      await refetch();
+    } catch (error) {;
+      console && console.error("Error approving milestone:", error);
+      toast && toast.error("Failed to approve milestone");
+    }
+
+  };
+
+  const handleMilestoneRejected = async (milestoneId: string) => {;
+    try {;
+
+      await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus);
+      toast && toast.success("Milestone rejected");
+      await refetch();
+    } catch (error) {;
+      console && console.error("Error rejecting milestone:", error);
+      toast && toast.error("Failed to reject milestone");
+    }
+  }
+
+  return (
+
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
+      <div className="lg:col-span-2">;
+
+        <MilestonesList
+=======
+import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
+import { toast } from './sonner';
+interface MilestoneManagerProps {
+  project_id: string,
+  milestones: Milestone[],
+  activities: Record < string, MilestoneActivity[]>;
+  is_loading: boolean,
+  is_client: boolean,
+  is_talent: boolean,
+  payment_terms?: string;
+  is_submitting: boolean,
+  onCreateMilestone: (data: any) => Promise < Milestone | null>,
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise < boolean>;
+  onDeleteMilestone: (id: string) => Promise < boolean>,
+  onUploadDeliverable: (id: string, file: File) => Promise < any>,
+  refetch: () => Promise < void>;
+}
+export /**
+ * MilestoneManager - Function description
+ */
+function MilestoneManager() {
+  const handleMilestoneApproved = async (milestone_id: string) => {
+    try {
+      await onUpdateStatus (milestone_id, "completed" as MilestoneStatus);
+      toast.success ("Milestone approved");
+      await refetch ();
+    } catch (error) {
+      console.error ("Error approving milestone:", error);
+      toast.error ("Failed to approve milestone");
+    }
+  }
+;
+  const handleMilestoneRejected = async (milestone_id: string) => {
+    try {
+      await onUpdateStatus (milestone_id, "rejected" as MilestoneStatus);
+      toast.success ("Milestone rejected");
+      await refetch ();
+    } catch (error) {
+      console.error ("Error rejecting milestone:", error);
+      toast.error ("Failed to reject milestone");
+    }
+  }
+;
+  return (
+    <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
+      <div className="lg:col - span - 2">;
+        <MilestonesList;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
       toast.success("Milestone approved"),
       await refetch()
@@ -44,6 +130,11 @@ export function MilestoneManager({
       toast.error("Failed to approve milestone")
     }
 
+=======
+  },
+  
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleMilestoneRejected = async (milestoneId: string) => {
     try {
       await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),
@@ -53,6 +144,7 @@ export function MilestoneManager({
       console.error("Error rejecting milestone:", error),
       toast.error("Failed to reject milestone")
     }
+<<<<<<< HEAD
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -119,10 +211,11 @@ export function MilestoneManager({;
       <div className="lg:col-span-2">;
         <MilestonesList;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           milestones={milestones}
           activities={activities}
-          isLoading={isLoading}
-          isClient={isClient}
+          is_loading={is_loading}
+          is_client={is_client}
           onCreateMilestone={onCreateMilestone}
           onUpdateStatus={onUpdateStatus}
           onDeleteMilestone={onDeleteMilestone}
@@ -136,3 +229,4 @@ export function MilestoneManager({;
         <PaymentSummary
           milestones={milestones}
           paymentTerms={paymentTerms}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

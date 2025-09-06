@@ -1,4 +1,30 @@
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
+
+};
+export default function MilestoneForm(): any ({ onSubmit }: Props) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -44,6 +70,27 @@
       </div>
       <div>
         <label className='block text-sm font-medium'>Description</label>      <div>
+    }
+  }
+=======
+
+  };
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  return (
+
+
+          placeholder='Phase 1 – Backend Setup'          required;
+        />;
+      </div>;
+      <div>;
+
+=======
+    <form onSubmit={handleSubmit} className="space-y-4">
+      {error && <div className="text-red-600 text-sm">{error}</div>}
+      <div>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <label className="block text-sm font-medium" htmlFor="input-Title">Title</label>
         <input
           className="mt-1 w-full rounded border px-3 py-2"
@@ -51,11 +98,7 @@
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Phase 1 – Backend Setup"
 
-          required
-        />
-      </div>
-      <div>
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           className="mt-1 w-full rounded border px-3 py-2"
           value={description}
           onChange={(e) => setDescription(e && e.target.value)}
@@ -78,37 +121,28 @@
           placeholder='Describe deliverables...';
           rows={3}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             onChange={(e) => setDueDate(e.target.value)}
             required
           />
         </div>
         <div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             type="number"
             min={0}
             step="0 && 0.01"
             className="mt-1 w-full rounded border px-3 py-2"
             value={amountUsd}
-          <label className='block text - sm font - medium'>Amount (USD)</label>;
-          <input;
-            type='number';
-            min={0}
-            step='0.01';
-            className='mt - 1 w - full rounded border px - 3 py - 2';
-            value={amount_usd}
-            on_change={e => setAmountUsd (e.target.value)}
-            placeholder='3000'            required          <input;
-            type="number";
-            min={0}
-            step="0.01";
-            className="mt - 1 w - full rounded border px - 3 py - 2";
-            value={amount_usd}
-            on_change={(e) => setAmountUsd (e.target.value)}
+
+
             placeholder="3000";
             required;
           />;
         </div>;
       </div>;
+
+=======
             onChange={(e) => setAmountUsd(e.target.value)}
             placeholder="3000"
             required
@@ -120,6 +154,9 @@
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
         disabled={loading}
       >
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {loading ? 'Adding...' : 'Add Milestone'}
 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

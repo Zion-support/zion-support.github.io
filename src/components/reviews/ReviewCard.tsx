@@ -1,3 +1,24 @@
+=======
+return (
+      <div className='flex'>;
+        {[1, 2, 3, 4, 5].map(star => (;
+          <Star
+            key={star}
+            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
+          />;
+
+import {  Dialog,  Dialog,
+
+import { useState } from "react",
+import { formatDistanceToNow } from "date-fns",
+import { Star, Flag, User } from 'lucide-react'
+import { Review } from "@/types/reviews",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import {
+  Dialog,
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   DialogContent,
   DialogDescription,
@@ -173,17 +194,56 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
-            <Textarea
-              placeholder='Why are you reporting this review?'              value={reportReason}
-              onChange={e => setReportReason(e.target.value)}
-              className='min-h-[100px]'
-              placeholder="Why are you reporting this review?"
-              value = {reportReason,}
+
+      <div className='mt-3 flex justify-end'>;
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
+          <DialogTrigger asChild>;
+            <Button variant='ghost' size='sm' className='text-muted-foreground'>;
+              <Flag className='h-3 w-3 mr-1' />              Report      ;
+      <div className="mt-3 flex justify-end">;
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
+          <DialogTrigger asChild>;
+            <Button variant="ghost" size="sm" className="text-muted-foreground">;
+              <Flag className="h-3 w-3 mr-1" />;
+              </Badge>)}
+          </div>;
+        </div>)}
+      <div className='mt - 3 flex justify - end'>;
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
+          <DialogTrigger as_child>;
+            <Button variant='ghost' size='sm' className='text - muted - foreground'>;
+              <Flag className='h - 3 w - 3 mr - 1' />              Report;
+      <div className="mt - 3 flex justify - end">;
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
+          <DialogTrigger as_child>;
+            <Button variant="ghost" size="sm" className="text - muted - foreground">;
+              <Flag className="h - 3 w - 3 mr - 1" />;
+            </Button>;
+          </DialogTrigger>;
+          <DialogContent>;
+            <DialogHeader>;
+
+              onChange = {(e,) => setReportReason(e && e.target.value),}
+              className="min-h-[100px]";
+            />;
+
+            <DialogFooter>;
+
+              <Button
+                variant='outline'
+                onClick={() => setIsReportDialogOpen(false)}
+              >;
+                Cancel;
+              </Button>;
+              <Button
+                onClick={handleReport}
+
               onChange = {(e,) => setReportReason(e.target.value),}
 
               className="min-h-[100px]"
             />
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <DialogFooter>
               <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
                 Cancel
@@ -194,41 +254,42 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
           </DialogContent>
         </Dialog>
 
+<<<<<<< HEAD
 };"
 return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {"
   review.is anonymous ? (<Avatar> <AvatarFallback className="bg-muted"> <User className="h-4 w-4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
-  review.reviewer profile.avatar url
+  review.reviewer profile.avatar url;
 }alt= {
-  review.reviewer profile.display name
-}/>) : (<AvatarFallback> {"
-  review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : "??"
-}</AvatarFallback>)
-}</Avatar>) "
-}<div> </div> <div className="text-sm text-muted-foreground"> {
+  review.reviewer profile.display name;
+}/>) : (<AvatarFallback> {";
+  review.reviewer profile?.display name ? get_initials (review.reviewer profile.display name) : "??";
+}</AvatarFallback>);
+}</Avatar>) ";
+}<div> </div> <div className="text - sm text - muted - foreground"> {
   formatDistanceToNow (new Date (review.created at), {
-  addSuffix: true
-}) "
+  add_suffix: true;
+}) ";
 }</div> </div> </div> <div className="flex"> {
-  renderStars (review.rating) "
-}</div> </div> <div className="mb-4"> <p className="text-sm whitespace-pre-wrap"> {
-  review.review text
-}</p> </div> {"
-  (review.communication rating |review.quality rating |review.timeliness rating |review.would work again !== undefined) && (<div className="border-t pt-3 mt-3"> <div className="flex flex-wrap gap-2" > {"
-  review.communication rating && (<Badge variant="outline" className="flex gap-1 items-center"> Communication <span className="ml-1 text-yellow-500" > {
-  review.communication rating
-}/5</span> </Badge>) "
-}Quality <span className="ml-1 text-yellow-500" > {
-  review.quality rating
-}/5</span> </Badge>) "
-}Timeliness <span className="ml-1 text-yellow-500" > {
-  review.timeliness rating
-}/5</span> </Badge>)
+  render_stars (review.rating) ";
+}</div> </div> <div className="mb - 4"> <p className="text - sm whitespace - pre - wrap"> {
+  review.review text;
+}</p> </div> {";
+  (review.communication rating || review.quality rating || review.timeliness rating || review.would work again !== undefined) && (<div className="border - t pt - 3 mt - 3"> <div className="flex flex - wrap gap - 2" > {";
+  review.communication rating && (<Badge variant="outline" className="flex gap - 1 items - center"> Communication <span className="ml - 1 text - yellow - 500" > {
+  review.communication rating;
+}/5</span> </Badge>) ";
+}Quality <span className="ml - 1 text - yellow - 500" > {
+  review.quality rating;
+}/5</span> </Badge>) ";
+}Timeliness <span className="ml - 1 text - yellow - 500" > {
+  review.timeliness rating;
+}/5</span> </Badge>);
 }{
-  review.would work again !== undefined && (<Badge </Badge>)
-}</div> </div>) "
-}<DialogTrigger asChild> <Button variant="ghost" size="sm" className="text-muted-foreground"> <Flag className="h-3 w-3 mr-1" /> Report </Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Report Review</DialogTitle> <DialogDescription> If you believe this review violates our community guidelines, please provide details below. </DialogDescription> </DialogHeader> <Textarea Cancel </Button> <Button onClick={
-  handleReport
+  review.would work again !== undefined && (<Badge </Badge>);
+}</div> </div>) ";
+}<DialogTrigger as_child> <Button variant="ghost" size="sm" className="text - muted - foreground"> <Flag className="h - 3 w - 3 mr - 1" /> Report </Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle > Report Review</DialogTitle> <DialogDescription> If you believe this review violates our community guidelines, please provide details below. </DialogDescription> </DialogHeader> <Textarea Cancel </Button> <Button on_click={
+  handle_report;
 }disabled= {
   !reportReason.trim () |isReporting
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>)

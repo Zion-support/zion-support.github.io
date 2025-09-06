@@ -4,12 +4,7 @@ import path from 'path';
 import fse from 'fs-extra';
 import { randomUUID } from 'crypto';
 
-async function summarizeAndTag(input: {fullName: string;
 
-  professionalTitle: string;
-  bio: string;
-  projects?: string;
-  skills: string;
   tools?: string
 }) {
 
@@ -25,6 +20,7 @@ async function summarizeAndTag(input: {fullName: string;
   const basicTags = Array && Array.from(
     new Set(
       (input && input.skills + ',' + (input && input.tools || ''))
+
         .split(/[,\n]/)
         .map(s => s && s.trim())
         .filter(Boolean)
@@ -32,54 +28,23 @@ async function summarizeAndTag(input: {fullName: string;
     )
   );
   if (!openaiApiKey) {
+
+=======
     const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
     return { summary, tags: basicTags.slice(0, 24) }
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   try {
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey: openaiApiKey });
     const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT:\n${combinedText}`;
+
+
     const response = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
       messages: [
-;
-async /**
- * summarizeAndTag - Function description
- */
-function summarizeAndTag() {
-  const openaiApiKey =;
-    process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY_ZION || '';
-  const combined_text = [;
-    input.professional_title,
-    input.bio,
-    input.projects || '',
-    input.skills,
-    input.tools || '',
-  ].join ('\n');
-;
-  const basic_tags = Array.from (
-    new Set (
-      (input.skills + ', ' + (input.tools || ''));
-        .split (/[, \n]/);
-        .map (string => s.trim ());
-        .filter (Boolean);
-        .map (string => s.toLowerCase ())));
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    const summary = `${input.full_name} — ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '…' : ''}`;
-    return { summary, tags: basic_tags.slice (0, 24) }  }    return { summary, tags: basic_tags.slice (0, 24) }
-  }
-  try {
-    const { OpenAI } = await import ('openai');
-    const client = new OpenAI ({ api_key: openaiApiKey });
-    const prompt = `Create a concise professional summary (max 70 words) and extract 8 - 15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT:\n${combined_text}`;
-;
-    const response = await client.chat.completions.create ({
-      model: 'gpt - 4o - mini',
-      messages: [;
+
         { role: 'system', content: 'You are an expert technical recruiter.' },
         { role: 'user', content: prompt },
       ],
@@ -87,6 +52,8 @@ if ( {) {
     });
     const content = response && response.choices?.[0]?.message?.content || '';
     try {
+
+=======
         { role: 'system', content: 'You are an expert technical recruiter.' };
         { role: 'user', content: prompt }];
       temperature: 0.4
@@ -96,6 +63,8 @@ if ( {) {
       const parsed = JSON.parse(content);
 
         return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
+
+=======
       const parsed = JSON.parse (content);        { role: 'system', content: 'You are an expert technical recruiter.' }
         { role: 'user', content: prompt }];
       temperature: 0.4});
@@ -112,6 +81,8 @@ if (
   $2
 }
         return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } catch (_) {
       // fall through to heuristic;
@@ -152,10 +123,113 @@ export default async function handler(
         cv: savedCvPath
     },
     ai: {
+      if (base64Data) {
+        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
+        savedCvPath = `/uploads/${filename}`
+
+      hourly_rate,
+      portfolio_links,
+      cv_file,
+    } = req.body || {}
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (400).json ({ error: 'Missing required fields' });
+    }
+    const uploads_dir = path.join (process.cwd (), 'public', 'uploads');
+    const data_dir = path.join (process.cwd (), 'data', 'talent - submissions');
+    await fse.ensure_dir (uploads_dir);
+    await fse.ensure_dir (data_dir);
+;
+    let savedProfileImagePath: string | null = null;    // Check condition
+if ( {) {
+  $2
+}
+      const ext = path.extname (profile_picture.name) || '.png';
+      const filename = `${id}-profile${ext}`;
+      const file_path = path.join (uploads_dir, filename);
+      const base64Data = profile_picture.base64.split (', ')[1];
+        await fse.write_file (file_path, Buffer.from (base64Data, 'base64'));
+        savedProfileImagePath = `/uploads/${filename}`;
+      }
+    }
+    let savedCvPath: string | null = null;    // Check condition
+if ( {) {
+  $2
+}
+      const ext = path.extname (cv_file.name) || '.pdf';
+      const filename = `${id}-cv${ext}`;
+      const file_path = path.join (uploads_dir, filename);
+      const base64Data = cv_file.base64.split (', ')[1];
+      // Check condition
+if ( {) {
+  $2
+}
+        await fse.write_file (file_path, Buffer.from (base64Data, 'base64'));
+        savedCvPath = `/uploads/${filename}`;      }
+    }
+    const { summary, tags } = await summarizeAndTag ({      const base64Data = cv_file.base64.split ()[1];
+      // Check condition
+if ( {) {
+  $2
+}
+        await fse.write_file (file_path, Buffer.from (base64Data, 'base64'));
+        savedCvPath = `/uploads/${filename}`;
+    }
+    const { summary, tags } = await summarizeAndTag ({
+      full_name,
+      professional_title,
+      bio,
+      projects,
+      skills,
+      tools,
+    });
+    const record = {
+      id,
+      created_at: new Date ().toISOString (),
+      full_name,
+      professional_title,
+      bio,
+      projects,
+      yearsOfExperience: Number (yearsOfExperience) || 0,
+      skills,
+      tools,
+      availability,
+      timezone,
+hourly_rate: hourly_rate ? Number (hourly_rate) : null,
+      portfolio_links,
+      assets: {
+        profile_image: savedProfileImagePath,
+        cv: savedCvPath,
+      },
+
+      ai: {
+
+        summary,
+        tags,
+      },
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         summary;
         tags}};
     const perRecordPath = path && path.join(dataDir, `${id}.json`);
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
+
+
+
+    );    let aggregate: any[] = [];
+    if (fs && fs.existsSync(aggregatePath)) {
+      try {
+        const content = await fse && fse.readJSON(aggregatePath);
+        if (Array && Array.isArray(content)) aggregate = content;      } catch (_) {    const aggregatePath = path && path.join(process && process.cwd(), 'datatalent-submissions && submissions.json');
+    let aggregate: any[] = [];
+    if (fs && fs.existsSync(aggregatePath)) {
+      try {
+        const content = await fse && fse.readJSON(aggregatePath);
+        if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content
+
+=======
     const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json');
     }
     const perRecordPath = path.join (data_dir, `${id}.json`);
@@ -178,13 +252,43 @@ export default async function handler(
         if () aggregate = content) {
   $2
 }      } catch (_) {    const aggregate_path = path.join (process.cwd (), 'datatalent - submissions.json');
+
     let aggregate: any[] = [];
     if () {) {
   $2
 }
       try {
 
+=======
+        const content = await fse.readJSON (aggregate_path);
+        if () aggregate = content) {
+  $2
+}        if () aggregate = content) {
+  $2
+}
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       } catch (_) {
         // ignore;
       }
     }
+<<<<<<< HEAD
+=======
+    aggregate.push (record);
+    await fse.writeJSON (aggregate_path, aggregate, { spaces: 2 });
+;
+    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup);
+    // For now, just return success with AI data;
+    return res.status (200).json ({ ok: true, id, summary, tags });
+  } catch (error) {
+    return res.status (500).json ({ error: 'Internal server error' });
+  }    return res.status (200).json ({ ok: true, id, summary, tags });
+  } catch (error) {
+    return res.status (500).json ({ error: 'Internal server error' });
+}
+  }
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

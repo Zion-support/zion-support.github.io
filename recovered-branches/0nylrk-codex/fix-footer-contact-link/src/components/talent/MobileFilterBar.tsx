@@ -3,6 +3,7 @@
 import React from "react",
 import { Button } from "@/components/ui/button",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface MobileFilterBarProps {
 
   searchTerm: string
@@ -36,3 +37,11 @@ interface MobileFilterBarProps {
       </div>
     </div>
   )
+=======
+
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Search, Sliders} from "lucide-react";
+import {Input} from "@/components/ui/input";
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

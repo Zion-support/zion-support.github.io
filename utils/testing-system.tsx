@@ -23,6 +23,7 @@ export class TestingSystem {
 }
 import &quot;@testing-library/jest-dom&quot;; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: &apos;click&apos; | &apos;type&apos; | &apos;hover&apos; ) { switch (action) { case &apos;click&apos;: element.click(); break; case &apos;type&apos;: break; case &apos;hover&apos;: break; default: break} } }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import "@testing-library/jest-dom";
 // Type definition for HTMLElement
 interface HTMLElement {
@@ -48,3 +49,78 @@ export class TestingSystem {
     }
   }
 }
+=======
+
+
+=======
+import "@testing-library/jest-dom;
+import &quot,@testing-library/jest-dom&quot, interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction(element: HTMLElement,action: &apos,click&apos, | &apos,type&apos, | &apos,hover&apos) { switch (action) { case &apos,click&apos,: element.click(), break, case &apos,type&apos,: break, case &apos,hover&apos,: break, default: break} } };
+import "@testing-library/jest-dom", interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: 'click | 'type' | hover' ) { switch (action) { case 'click: element.click(), break, case 'type': break, case hover': break, default: break} } };
+export class TestingSystem {,
+  static async testUserInteraction(,
+    element: HTMLElement,
+    action: click" | "type | "hover") {,
+    switch (action) {,
+      case click":,
+        element.click(),
+        break,
+      case "type:,
+        // Handle type action,
+        break,
+      case "hover":,
+        // Handle hover action,
+        break,
+      default:,
+        throw new Error(`Unknown action: ${action}`)
+    };
+  };
+};
+// Type definition for HTMLElement,
+interface HTMLElement {,
+  click(): void
+};
+export class TestingSystem {,
+  static async testUserInteraction(,
+    element": HTMLElement,
+    "action": 'click | 'type' | hover') {,
+    switch (action) {,
+      case 'click:,
+        element.click(),
+        break,
+      case 'type':,
+        // Type action implementation,
+        break,
+      case hover':,
+        // Hover action implementation,
+        break,
+      default: ,
+        break
+    };
+  };
+};
+
+
+
+// Testing system utilities
+export const testingSystem = {
+  // Add testing utilities here
+}
+
+=======
+
+>>>>>>> origin/automation-improvements-final
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+}};
+},;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+// Testing system utilities
+export const testingSystem = {
+  // Add testing utilities here;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

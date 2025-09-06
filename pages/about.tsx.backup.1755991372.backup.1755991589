@@ -1,0 +1,11 @@
+export default function AboutPage() {
+  return (
+export default function About() {
+  return (
+    <div className="py-10">
+      <h1 className="text-2xl font-bold">About Zion</h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-300">We connect companies with vetted AI and IT professionals.</p>
+    </div>
+  );
+}
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

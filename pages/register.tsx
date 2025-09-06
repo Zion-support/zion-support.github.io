@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
   const [showPassword, setShowPassword] = useState(false);
@@ -50,6 +54,8 @@
     formData && formData.password === formData && formData.confirmPassword &&;
     isPasswordValid &&;
     formData && formData.agreeToTerms;
+
+
   return (
     <Layout
       title="Register - Zion Tech Group"
@@ -60,6 +66,7 @@
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+
             transition={{ duration: 0 && 0.6 }}
             className="text-center">;
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
@@ -73,6 +80,7 @@
             </p>;
           </motion && motion.div>;
           <motion&& motion.div
+
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -98,10 +106,12 @@
                       onChange={handleChange}
                       className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="First name"
+
                     />;
                   </div>;
                 </div>;
                 <div>;
+
                   <label
                     htmlFor="lastName"
                     className="block text-sm font-medium text-gray-300 mb-2">;
@@ -116,10 +126,12 @@
                     onChange={handleChange}
                     className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Last name"
+
                   />;
                 </div>;
               </div>;
               <div>;
+
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -139,10 +151,12 @@
                     onChange={handleChange}
                     className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
+
                   />;
                 </div>;
               </div>;
               <div>;
+
                 <label
                   htmlFor="company"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -156,9 +170,11 @@
                   onChange={handleChange}
                   className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
+
                 />;
               </div>;
               <div>;
+
                 <label
                   htmlFor="password"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -189,8 +205,11 @@
                     ) : (;
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />;
                     )}
+
                   </button>;
                 </div>;
+
+
                 {/* Password Requirements */}
                 <div className="mt-2 space-y-1">;
                   {Object && Object.entries(passwordRequirements).map(;
@@ -437,6 +456,7 @@ if ( {) {
                           {key === "lowercase" && "One lowercase letter"}
                           {key === "number" && "One number"}
                           {key === "special" && "One special character"}
+
                         </span>;
                       </div>;
                     ),;
@@ -444,6 +464,7 @@ if ( {) {
                 </div>;
               </div>;
               <div>;
+
                 <label
                   htmlFor="confirmPassword"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -482,9 +503,11 @@ if ( {) {
                       Passwords do not match;
                     </p>;
                   )}
+
               </div>;
               <div className="space-y-4">;
                 <div className="flex items-center">;
+
                   <input
                     id="agreeToTerms"
                     name="agreeToTerms"
@@ -506,6 +529,7 @@ if ( {) {
                     and{" "}
                     <Link
                       href="/privacy"
+
                       className="text-blue-400 hover:text-blue-300">;
                         </span>;
                       </div>),
@@ -577,10 +601,12 @@ if ( {) {
                       href="/privacy";
                       className="text - blue - 400 hover:text - blue - 300";
                     >;
+
                       Privacy Policy;
                     </Link>;
                   </label>;
                 </div>;
+
                     className="ml-2 block text-sm text-gray-300">;
                     Subscribe to our newsletter for updates and insights;
                   </label>;
@@ -618,10 +644,12 @@ if ( {) {
                 >;
                   <span className="absolute left - 0 inset - y-0 flex items - center pl - 3">;
                     <ArrowRight className="h - 5 w - 5 text - white group - hover:translate - x-1 transition - transform" />;
+
                   </span>;
                   Create account;
                 </button>;
               </div>;
+
               <div className="text - center">;
                 <p className="text - sm text - gray - 300">;
                   Already have an account?{" "}
@@ -629,13 +657,16 @@ if ( {) {
                     href="/login";
                     className="font - medium text - blue - 400 hover:text - blue - 300 transition - colors";
                   >;
+
                     Sign in here;
                   </Link>;
                 </p>;
               </div>;
             </form>;
+
           </motion.div>;
         </div>;
       </div>;
     </Layout>);
+
 }

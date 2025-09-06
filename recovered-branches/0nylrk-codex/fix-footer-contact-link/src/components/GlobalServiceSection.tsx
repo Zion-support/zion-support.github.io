@@ -1,9 +1,15 @@
 
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {GradientHeading} from "./GradientHeading";
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
 import {Button} from "./ui/button";
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const services = [
   {
     title: "Servers"
@@ -15,6 +21,15 @@ const services = [
     icon: <HardDrive className="h-10 w-10" />}
   {
 
+  {
+
+
+    title: "Networking",
+    description: "Connectivity solutions including switches, routers, and network security devices",
+    icon: <Network className="h-10 w-10" />},
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   {
     title: "24x7x365 Support"
     description: "Around-the-clock technical support with rapid response times guaranteed"
@@ -58,3 +73,9 @@ export function GlobalServiceSection() {
     </section>
   )
 
+
+export function GlobalServiceSection() {;
+  return (
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

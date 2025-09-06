@@ -1,4 +1,17 @@
 
+=======
+
+import Link from "next/link",;
+export const metadata = {;
+  title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",;
+  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",;
+  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"},;
+export default function EnterpriseITPage() {;
+  return (;
+
+
+    <div className="min-h-screen">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="min-h-screen">;
 
       {/* Hero Section */}
@@ -24,6 +37,11 @@
                   Modernize Your Enterprise Infrastructure;
                 </h2>;
 
+=======
+                <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
+                  In today's digital - first world, enterprises need agile, scalable,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   and secure IT infrastructure to compete and thrive. Our comprehensive;
                   solutions help organizations modernize their technology stack while;
                   maintaining operational excellence.;
@@ -81,6 +99,12 @@
                 </svg>;
               </div>;
 
+=======
+              <h3 className="text - xl font - semibold mb - 3">Cloud Migration & Strategy</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                Seamless migration to cloud platforms with strategic planning,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 cost optimization, and performance tuning.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -102,6 +126,12 @@
                 </svg>;
               </div>;
 
+=======
+              <h3 className="text - xl font - semibold mb - 3">DevOps & Automation</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                Streamline development and operations with automated CI / CD pipelines,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 infrastructure as code, and monitoring solutions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -122,6 +152,12 @@
                 </svg>;
               </div>;
 
+=======
+              <h3 className="text - xl font - semibold mb - 3">Infrastructure Management</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                Comprehensive infrastructure management including server provisioning,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 network configuration, and performance optimization.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -142,6 +178,12 @@
                 </svg>;
               </div>;
 
+=======
+              <h3 className="text - xl font - semibold mb - 3">Data Management</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                Enterprise data solutions including warehousing, analytics,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 and business intelligence platforms.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -184,6 +226,12 @@
                 </svg>;
               </div>;
 
+=======
+              <h3 className="text - xl font - semibold mb - 3">Managed Services</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                24 / 7 managed IT services including monitoring, maintenance,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 and support for enterprise infrastructure.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -267,6 +315,12 @@
                 <span className="text - 2xl font - bold text - blue - 400">1</span>;
               </div>;
 
+=======
+              <h3 className="text - xl font - semibold mb - 3">Assessment</h3>;
+              <p className="text - gray - 400">;
+                Comprehensive evaluation of current infrastructure,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 identifying opportunities and challenges.;
               </p>;
             </div>;

@@ -5,30 +5,6 @@
   DialogTitle,
   DialogDescription
 
-interface QuoteDetailsProps {
-  quote: QuoteRequest | null
-  isOpen: boolean
-  onClose: () => void
-
-    if (!dateString) return 'Not specified';    try {
-      return format(new Date(dateString), 'PPP')
-    } catch (e) {
-      return dateString
-    }
-  }
-
-  return (
-    <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-2xl flex items-center justify-between">
-            <span>{quote.project_name}</span>
-            <QuoteStatusBadge status={quote.status} />
-          </DialogTitle>
-          <DialogDescription>
-            Quote request submitted on {formatDate(quote.created_at)}
-          </DialogDescription>
-        </DialogHeader>
 
           <Card>
             <CardContent className="pt-6">
@@ -46,6 +22,12 @@ interface QuoteDetailsProps {
             </CardContent>
           </Card>
 
+=======
+
+          
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>
@@ -94,3 +76,4 @@ interface QuoteDetailsProps {
       </DialogContent>
     </Dialog>
   )
+<<<<<<< HEAD

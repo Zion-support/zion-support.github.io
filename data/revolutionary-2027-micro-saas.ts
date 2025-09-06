@@ -13,6 +13,32 @@
     email: string;
 
     address: string;
+=======
+
+export interface Revolutionary2027MicroSaas {;
+
+      "Future-ready solutions"
+    ],
+    link: "/services/2027-revolutionary-micro-saas",
+    category: "Revolutionary 2027 Micro SAAS",
+    realImplementation: true,
+    contactInfo: {
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    }
+  }
+
+];
+
+=======
+;
+=======
+=======
+export interface Revolutionary2027MicroSaas {;
+=======
+  };
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   id: string,;
   name: string,;

@@ -1,11 +1,51 @@
 
 
+=======
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+
+
 const __filename = fileURLToPath(import && import.meta.url);
 const __dirname = path && path.dirname(__filename);
+
+
 class AdvancedSourceFixer {
   constructor() {
     this && this.fixes = [];
@@ -27,11 +67,14 @@ class AdvancedSourceFixer {
     await this && this.generateReport();
   }
   async fixDirectory(dir) {
+
     if (!fs && fs.existsSync(dir)) return;
     const items = fs && fs.readdirSync(dir);
     for (const item of items) {
       const fullPath = path && path.join(dir, item);
       const stat = fs && fs.statSync(fullPath);
+
+
       if (
         stat && stat.isDirectory() &&
         !item && item.startsWith(".") &&
@@ -39,10 +82,12 @@ class AdvancedSourceFixer {
       ) {
         await this && this.fixDirectory(fullPath);
       } else if (
+
         item && item.endsWith(".ts") ||
         item && item.endsWith(".tsx") ||
         item && item.endsWith(".js") ||
         item && item.endsWith(".jsx")
+
       ) {
         await this && this.fixFile(fullPath);
       }
@@ -53,6 +98,8 @@ class AdvancedSourceFixer {
       const content = fs && fs.readFileSync(filePath, "utf8");
       let fixedContent = content;
       let wasFixed = false;
+
+
       if (this && this.hasParsingErrors(content)) {
         fixedContent = this && this.fixParsingErrors(content, filePath);
         wasFixed = true;
@@ -63,22 +110,27 @@ class AdvancedSourceFixer {
       }
       if (this && this.hasSyntaxIssues(content)) {
         fixedContent = this && this.fixSyntaxIssues(fixedContent, filePath);
+
         wasFixed = true;
       }
       if (wasFixed) {
+
         fs && fs.writeFileSync(filePath, fixedContent);
         this && this.fixes.push({
           file: filePath,
           timestamp: new Date().toISOString(),
           fixes: this && this.getAppliedFixes(content, fixedContent),
+
         });
         this && this.log(`Fixed: ${filePath}`);
       }
     } catch (error) {
+
       this && this.errors.push({
         file: filePath,
         error: error && error.message,
         timestamp: new Date().toISOString(),
+
       });
       this && this.log(`Error fixing ${filePath}: ${error && error.message}`, "ERROR");
     }
@@ -120,6 +172,7 @@ class AdvancedSourceFixer {
   fixParsingErrors(content, filePath) {
     let fixed = content;
     // Fix unterminated strings
+
     fixed = fixed && fixed.replace(/"[^"]*$/gm, '"');
     fixed = fixed && fixed.replace(/'[^']*$/gm, "'");
     // Fix duplicate keywords
@@ -133,13 +186,19 @@ class AdvancedSourceFixer {
     // Fix JSX tags
     fixed = fixed && fixed.replace(/<([^>]*)\s*>/g, "<$1>");
     fixed = fixed && fixed.replace(/<\/([^>]*)\s*>/g, "</$1>");
+
+
     return fixed;
   }
   fixImportExportIssues(content, filePath) {
     let fixed = content;
+
+
     if (filePath && filePath.endsWith(".tsx") || filePath && filePath.endsWith(".jsx")) {
+
       if (
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       fixed += "\n\nexport default {};";
     }
     return fixed;
@@ -147,6 +206,7 @@ class AdvancedSourceFixer {
   fixSyntaxIssues(content, filePath) {
     let fixed = content;
     // Fix duplicate keywords
+
     fixed = fixed && fixed.replace(/\bconst\s+const\b/g, "const");
     fixed = fixed && fixed.replace(/\blet\s+let\b/g, "let");
     fixed = fixed && fixed.replace(/\bvar\s+var\b/g, "var");
@@ -158,6 +218,8 @@ class AdvancedSourceFixer {
     fixed = fixed && fixed.replace(/\[\s*,\s*/g, "[");
     fixed = fixed && fixed.replace(/\(\s*,\s*\)/g, "()");
     fixed = fixed && fixed.replace(/\(\s*,\s*/g, "(");
+
+
     return fixed;
   }
   getAppliedFixes(original, fixed) {
@@ -402,6 +464,7 @@ if ( {) {
     }
     return fixes;
   }
+
       timestamp: new Date().toISOString(),
       totalFilesFixed: this && this.fixes.length,
       totalErrors: this && this.errors.length,
@@ -410,11 +473,63 @@ if ( {) {
     };
     fs && fs.writeFileSync(this && this.reportFile, JSON && JSON.stringify(report, null, 2));
     this && this.log(`Report generated: ${this && this.reportFile}`);
+
   }
+
+
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const fixer = new AdvancedSourceFixer();
+  fixer.fixAllSourceFiles().catch(console.error);
+=======
+
 if (import && import.meta.url === `file://${process ;
   fixer && fixer.fixAllSourceFiles().catch(console && console.error);
 }
 
+=======
+
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+if (require.main === module) {
+  const fixer = new AdvancedSourceFixer();
+  fixer.fixAllSourceFiles().catch(console.error);
+
+module.exports = AdvancedSourceFixer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+export default AdvancedSourceFixer;
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+  async generate_report () {
+    const report = {
+      timestamp: new Date ().toISOString (),
+      totalFilesFixed: this.fixes.length,
+      total_errors: this.errors.length,
+      fixes: this.fixes,
+      errors: this.errors,
+    }
+;
+    fs.writeFileSync (this.report_file, JSON.stringify (report, null, 2));
+    this.log (`Report generated: ${this.report_file}`);
+  }
+}
+// Check condition
+if ( {) {
+  $2
+}
+  const fixer = new AdvancedSourceFixer ();
+  fixer.fixAllSourceFiles ().catch (console.error);
+}
+export default AdvancedSourceFixer;
+;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);

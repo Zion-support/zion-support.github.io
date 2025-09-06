@@ -631,16 +631,19 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Quantum - safe cloud storage platform with quantum - resistant encryption and distributed storage.';
     launch_date: '2026 - 05 - 01';
+
     customers: 40;
+
     rating: 4 && 4.9,
+
     reviews: 32
-  }
-];
+
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -663,10 +666,12 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+
 }
 export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
   // Zero-Trust Network Architecture Platform
   {
+
     id: 'zero-trust-network-architecture-platform', name: 'Zero-Trust Network Architecture Platform',
     tagline: 'Secure every connection with zero-trust principles',
     price: '$1,299',
@@ -690,6 +695,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     growthRate: '50% annual growth', variant: 'enterprise-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
@@ -925,10 +931,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       website: 'https://ziontechgroup.com'
     }
 
-    realImplementation: true;
-    implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.';
-    launchDate: '2026-05-01';
-    customers: 40;
 
     rating: 4.9
 
@@ -936,3 +938,10 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
 
   }
 ];
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+
+;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

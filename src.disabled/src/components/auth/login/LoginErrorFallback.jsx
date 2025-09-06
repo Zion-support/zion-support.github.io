@@ -11,4 +11,6 @@ export default function LoginErrorFallback({ }: LoginErrorFallbackProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
 }
+

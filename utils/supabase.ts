@@ -2,6 +2,7 @@
 export const supabase = {
   // Add supabase functionality here;
   auth: {
+
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
     signOut: () => Promise<any>;
@@ -48,6 +49,8 @@ const supabaseConfig: SupabaseConfig = {
   anonKey: process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'your-anon-key'
 };
 export const supabase = createSupabaseClient(supabaseConfig);
+
+=======
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
@@ -60,3 +63,12 @@ export const supabase = createSupabaseClient(supabaseConfig);
     }),
     insert: (data: any) => ({
       select: (columns: string) => ({
+=======
+<<<<<<< HEAD
+        single: () => null;
+      });
+    });
+  });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

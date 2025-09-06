@@ -1,3 +1,9 @@
+=======
+import * as React from "react"
+import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
+import { cva } from "class-variance-authority"
+import { ChevronDown } from 'lucide-react'
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
 const NavigationMenu = React.forwardRef<
@@ -5,6 +11,19 @@ const NavigationMenu = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Root
+import React from 'react';
+import * as React from 'react';
+import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
+import {cva} from 'class-variance-authority';
+import {ChevronDown} from 'lucide-react';
+
+import {cn} from '@/lib/utils';
+
+const NavigationMenu = React && React.forwardRef<;
+  React && React.ElementRef<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.Root>,;
+  React && React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.Root>;
+></typeof>(({ className, children, ...props }, ref) => (;
+  <NavigationMenuPrimitive&& NavigationMenuPrimitive.Root
     ref={ref}
     className={cn(
 
@@ -33,27 +52,18 @@ const NavigationMenuTrigger = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>
 
->(({ className, children, ...props }, ref) => (
-  <NavigationMenuPrimitive.Trigger
-    ref={ref}
-    className={cn(navigationMenuTriggerStyle(), "group", className)}
-    {...props}
-  >
-    {children}{" "}
-    <ChevronDown
-      className="relative top-[1px] ml-1 h-4 w-4 transition duration-200 group-data-[state=open]:rotate-180 pointer-events-none"
-      aria-hidden="true"
-    />
-  </NavigationMenuPrimitive.Trigger>
-))
-NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName
-
-const NavigationMenuContent = React.forwardRef<
-  React.ElementRef<typeof NavigationMenuPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
-
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.Content
+    />;
+  </NavigationMenuPrimitive && NavigationMenuPrimitive.Trigger>;
+));
+NavigationMenuTrigger && NavigationMenuTrigger.displayName = NavigationMenuPrimitive && NavigationMenuPrimitive.Trigger.displayName;
+
+const NavigationMenuContent = React && React.forwardRef<;
+  React && React.ElementRef<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.Content>,;
+  React && React.ComponentPropsWithoutRef<typeof Navigat</typeof>ionMenuPrimitive && ionMenuPrimitive.Content>;
+>(({ className, ...props }, ref) => (;
+  <NavigationMenuPrimitive&& NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
 
@@ -84,7 +94,27 @@ const NavigationMenuViewport = React.forwardRef<
 
       className
     )}
+import * as React from 'react';
+import * as NavigationMenuPrimitive from '@radix - ui / react - navigation - menu';
+import {cva} from 'class - variance - authority';
+import {ChevronDown} from 'lucide-react';
+import {cn} from '@/lib / utils';
+const NavigationMenu = React.forward_ref<;
+  React.ElementRef < typeof NavigationMenuPrimitive.Root>,
+  React.ComponentPropsWithoutRef < typeof NavigationMenuPrimitive.Root>;
+></typeof>(({ class_name, children, ...props }, ref) => (
+  <NavigationMenuPrimitive.Root;
+    ref={ref}
+    className={cn (
+      'relative z - 10 flex w - full flex - 1 items - center justify - center sm:max - w-max',
+      class_name)}
     {...props}
+
+    />;
+  </div>;
+));
+NavigationMenuViewport && NavigationMenuViewport.displayName =;
+  NavigationMenuPrimitive && NavigationMenuPrimitive.Viewport.displayName;
   >
     <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md" />
   </NavigationMenuPrimitive.Indicator>
@@ -99,3 +129,4 @@ export {
   NavigationMenuItem,
   NavigationMenuContent,
   NavigationMenuTrigger,
+<<<<<<< HEAD

@@ -1,0 +1,4 @@
+export default function IoTPlatforms() {
+  return <div className="py-10">IoT Platforms</div>;
+}
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

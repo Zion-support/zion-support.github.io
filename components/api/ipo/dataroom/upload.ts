@@ -1,4 +1,10 @@
 
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
@@ -31,7 +37,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     );
     fs && fs.copyFileSync(file && file.filepath, targetPath);
     appendAuditLog({
+
     if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
+
+
     res.status(200).json({ ok: true })
       type: 'file_upload',
       section,
@@ -40,4 +49,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(200).json({ ok: true });
   });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
     res && res.status(200).json({ ok: true })
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   })
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

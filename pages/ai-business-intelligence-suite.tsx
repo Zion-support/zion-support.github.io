@@ -1,3 +1,31 @@
+=======
+
+
+import Button from '../components/ui/Button';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+  DollarSign, Shield, Mail, MapPin, Rocket, BarChart3,
+  Brain, Database, TrendingUp as TrendingUpIcon, Users,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  Target, BarChart, PieChart, Activity, Eye, Lock
+
+} from 'lucide-react',;
+import Button from '../components/ui/Button',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function AIBusinessIntelligenceSuite() {
+  const contactInfo = {
+
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
+    website: 'https://ziontechgroup.com'
+}
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
   DollarSign, Shield, Mail, MapPin, Rocket, BarChart3,
@@ -41,6 +69,7 @@ export default function AIBusinessIntelligenceSuite() {
   }
 }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     >
       <div className="min-h-screen">
         <Head>
@@ -68,6 +97,7 @@ export default function AIBusinessIntelligenceSuite() {
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 className="mb-8"
               >
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl shadow-2xl mb-6 relative overflow-hidden">
@@ -90,6 +120,7 @@ export default function AIBusinessIntelligenceSuite() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
 
               >
@@ -105,6 +136,7 @@ export default function AIBusinessIntelligenceSuite() {
                 Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.
               </motion.p>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="bg-gradient-to-r from-blue-500 to-indigo-600 p-1 rounded-2xl shadow-2xl"
                 >
                   <div className="bg-gray-900 rounded-2xl px-8 py-6">
@@ -122,21 +154,9 @@ export default function AIBusinessIntelligenceSuite() {
                   </div>
                 </motion.div>
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.2, delay: 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2, delay: 0.1 }}
                 >
 
                     variant="secondary"
@@ -150,6 +170,7 @@ export default function AIBusinessIntelligenceSuite() {
                 </motion.div>
               </motion.div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
               >
                 <div className="text-center p-4">
@@ -169,6 +190,7 @@ export default function AIBusinessIntelligenceSuite() {
           </div>
         </section>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -184,6 +206,7 @@ export default function AIBusinessIntelligenceSuite() {
               {features.map((feature, index) => (
                 <motion.div
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="group bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/60 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-3 mb-4">
@@ -192,6 +215,7 @@ export default function AIBusinessIntelligenceSuite() {
                     </div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -215,6 +239,24 @@ export default function AIBusinessIntelligenceSuite() {
                     </div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
 
+                  className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
+                >
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
+                      <CheckCircle className="w-5 h-5 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
+
+                  while_hover={{ scale: 1.02, coordinate_y: -5 }}
+                  className="group bg - gradient - to - br from - green - 900 / 20 to - emerald - 900 / 20 border border - green - 500 / 30 rounded - 2xl p - 6 hover:border - green - 400 / 60 hover:shadow - 2xl hover:shadow - green - 500 / 20 transition - all duration - 300";
+                >;
+                  <div className="flex items - center space - x-3 mb - 4">;
+                    <div className="w - 10 h - 10 bg - gradient - to - r from - green - 500 to - emerald - 600 rounded - xl flex items - center justify - center">;
+                      <Target className="w - 5 h - 5 text - white" />;
+                    </div>;
+                    <h3 className="text - lg font - semibold text - white group - hover:text - green - 300 transition - colors">;
+                      {use_case}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -225,12 +267,59 @@ export default function AIBusinessIntelligenceSuite() {
                   {technology.map((tech, index) => (
                     <motion.div
 
+=======
+              >;
+                <h3 className="text - 3xl font - bold text - white mb - 8">;
+                  <span className="bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent">;
+                    Technology Stack;
+                  </span>;
+                </h3>;
+                <div className="grid grid - cols - 2 gap - 4">;
+                  {technology.map ((tech, index) => (
+                    <motion.div;
+
+                      key={index}
+                      initial={{ opacity: 0, coordinate_y: 10 }}
+                      whileInView={{ opacity: 1, coordinate_y: 0 }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >
                       <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                       <span className="text-gray-200">{tech}</span>
                     </motion.div>
 
+              {/* Integrations */}
+              <motion.div;
+
+                initial={{ opacity: 0, x: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               >
                 <h3 className="text-3xl font-bold text-white mb-8">
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -241,12 +330,14 @@ export default function AIBusinessIntelligenceSuite() {
                   {integrations.map((integration, index) => (
                     <motion.div
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       className="flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50"
                     >
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                       <span className="text-gray-200">{integration}</span>
                     </motion.div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -259,6 +350,7 @@ export default function AIBusinessIntelligenceSuite() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
 
               >
@@ -284,6 +376,7 @@ export default function AIBusinessIntelligenceSuite() {
               </motion.div>
               <motion.div
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
 
               >
@@ -360,6 +453,14 @@ export default function AIBusinessIntelligenceSuite() {
 }
                 >
 
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     variant="primary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-2xl hover:shadow-blue-500/25"
                   >
@@ -371,23 +472,14 @@ export default function AIBusinessIntelligenceSuite() {
                   </Button>
                 </motion.div>
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.2, delay: 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2, delay: 0.1 }}
                 >
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     variant="secondary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
                   >
@@ -401,6 +493,7 @@ export default function AIBusinessIntelligenceSuite() {
 
                 <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-blue-400 hover:text-blue-300">{contactInfo.mobile}</a> | <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:text-blue-300">{contactInfo.email}</a></p>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <p className="mt-2">{contactInfo.address}</p>
               </div>
             </motion.div>
@@ -410,3 +503,9 @@ export default function AIBusinessIntelligenceSuite() {
     </UltraAdvancedFuturisticBackground>
 
   )
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

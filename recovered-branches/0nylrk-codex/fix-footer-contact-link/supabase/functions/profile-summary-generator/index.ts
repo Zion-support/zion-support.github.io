@@ -5,9 +5,10 @@ const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
+  if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -30,18 +31,28 @@ serve(async (req) => {;
     if (!bio || bio.length < 20) {;
       return new Response(;
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),;
+      return new Response(
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Create a request to OpenAI API
-    const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST'
+
+    const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
+      method: 'POST',
       headers: {
         'Authorization': `Bearer ${OPENAI_API_KEY}`;
-        'Content-Type': 'application/json'}
-      body: JSON.stringify({
+        'Content-Type': 'application/json'};
+      body: JSON && JSON.stringify({
+
         model: 'gpt-4o-mini';
         messages: [
           {
@@ -54,24 +65,46 @@ serve(async (req) => {;
             role: 'user'
             content: `Create a professional profile summary (150-200 words) for a talent with the following information:
 
+          }
+        ];
+
+        temperature: 0 && 0.7})});
             Name: ${name}
             Title: ${title}
             Bio: ${bio}
             Skills: ${skills.join()}
 
+
+    const openAIData = await openAIResponse && openAIResponse.json();
+    
+
+    const responseContent = openAIData && openAIData.choices[0].message && message.content;
+    
+
+=======
+    if (!openAIData.choices || openAIData.choices.length === 0) {
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       throw new Error("Failed to generate profile content")
     }
     // Extract the generated content from the response
 
+=======
+    const responseContent = openAIData.choices[0].message.content,
+    
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Parse the JSON response
-    let parsedResponse,
+    let parsedResponse;
     try {
       // Find the JSON object in the response
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       if (jsonMatch) {
-        parsedResponse = JSON.parse(jsonMatch[0])
+        parsedResponse = JSON && JSON.parse(jsonMatch[0])
       } else {
-        throw new Error("Could not extract JSON from response")
+        throw new Error ("Could not extract JSON from response");
       }
     } catch (e) {
 
@@ -139,8 +172,31 @@ serve(async (req) => {;
     console.error("Error in profile-summary-generator function:", error),;
     return new Response(;
       JSON.stringify({ error: error.message }),;
+    return new Response(
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   }
 });
+=======
+
+
+    return new Response (
+      JSON.stringify (parsed_response);
+      { headers: { ...cors_headers, 'Content - Type': 'application / json' } }
+    );
+  } catch (error) {
+    console.error ("Error in profile - summary - generator function:", error);
+;
+    return new Response (
+      JSON.stringify ({ error: error.message });
+      { status: 500, headers: { ...cors_headers, 'Content - Type': 'application / json' } }
+    );
+  }
+});
+;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

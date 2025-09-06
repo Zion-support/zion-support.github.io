@@ -114,6 +114,8 @@ function fixSyntaxErrors(filePath) {
     // Fix common syntax errors
     // Fix unnecessary escape characters
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     content = content.replace(/\\:/g, ':');
     content = content.replace(/\\,/g, ',');
     content = content.replace(/\\;/g, ';');
@@ -172,12 +174,17 @@ function fixSyntaxErrors(filePath) {
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Fix malformed function declarations
     content = content.replace(/export\s+const\s+SEO:\s*Reac\s+t\.FC<[^>]+>\s*=\s*\(/g, 'export const SEO: React.FC<SEOProps> = (');
     // Fix malformed return statements in functions
     content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
     // Fix missing semicolons
 
+    // Fix missing semicolons at end of statements
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     content = content.replace(/([^;}])\s*$/gm, '$1;');
     // Fix missing commas in objects
     content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
@@ -224,6 +231,8 @@ function fixSyntaxErrors(filePath) {
 
 }
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Function to process a single file
 function processFile(filePath) {
     try {
@@ -639,3 +648,14 @@ console.log('\n🎯 Syntax error fixing completed!');
     return false;
   }
 }
+=======
+
+console.log('\n🎯 Syntax error fixing completed!');
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,5 +1,21 @@
 
 
+=======
+  } catch (err: any) {
+
+}
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+    res.status(400).json({
+      error: err.message
+    });
+import type { NextApiRequest, NextApiResponse } from "next",
+import { redeemToCredits } from "../../../utils/token/service",
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const { userId, amount } = req.body || {},
@@ -45,3 +61,4 @@ export default function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

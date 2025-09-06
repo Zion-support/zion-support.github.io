@@ -8,16 +8,86 @@
     clientName: string
   ): Promise<string> => {
     try {
-      setIsLoading(true)
-      const { data, error } = await supabase.functions.invoke("generate-smart-contract", {
+
+      setIsLoading(true),
+      
+      const { data, error } = await supabase && supabase.functions.invoke("generate-smart-contract", {
+
         body: {
 
+=======
+          projectName: values && values.projectName;
+          scopeSummary: values && values.scopeSummary;
+          startDate: values && values.startDate.toISOString();
+          endDate: values && values.endDate?.toISOString();
+          paymentTerms: values && values.paymentTerms;
+          paymentAmount: values && values.paymentAmount,
+          additionalClauses: values && values.additionalClauses || []}
+
+      });
+      if (error) throw error;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       if (data && data.solidityCode) {
         return data.solidityCode
+=======
+import {useState} from 'react';
+import {use_auth} from '@/hooks / use_auth';
+import {supabase} from '@/integrations / supabase / client';
+import {toast} from 'sonner';
+import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from '@/types / smart - contracts';
+import {TalentProfile} from '@/types / talent';
+import { ContractFormValues } from '@/components / contracts / components / ContractForm';
+export /**
+ * useSmartContracts - Function description
+ */
+function useSmartContracts() {
+  const { user } = use_auth ();
+  const [is_loading, setIsLoading] = useState (false);
+  const [deployment_status, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
+;
+  const generateSolidityContract = async (
+    values: ContractFormValues,
+    talent: TalentProfile,
+    client_name: string): Promise < string> => {
+    try {
+      setIsLoading (true),
+      const { data, error } = await supabase.functions.invoke ("generate - smart - contract", {
+        body: {
+          talent_name: talent.full_name;
+          client_name: client_name;
+          project_name: values.project_name;
+          scope_summary: values.scope_summary;
+          start_date: values.start_date.toISOString ();
+          end_date: values.end_date?.toISOString ();
+          payment_terms: values.payment_terms;
+          payment_amount: values.payment_amount,
+          additional_clauses: values.additional_clauses || []}
+      });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Check condition
+if ( {) {
+  $2
+}
+        return data.solidity_code;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
-        throw new Error("Failed to generate Solidity contract")
+        throw new Error ("Failed to generate Solidity contract");
       }
     } catch (err: any) {
+
+      console.error ("Error generating Solidity contract:", err);
+      toast.error ("Failed to generate smart contract");
+      throw err;
+
+    } finally {
+      setIsLoading (false);
+    }
+  }
+
       console.error("Error generating Solidity contract:", err),
       toast.error("Failed to generate smart contract"),
       throw err
@@ -25,12 +95,20 @@
       setIsLoading(false)
     }
 
+=======
+  },
+  
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const deploySmartContract = async (
-    contractCode: string,
+    contractCode: string;
     options: DeploymentOptions
   ): Promise<SmartContractInfo | null> => {
     if (!user?.id) {
-      toast.error("You must be logged in to deploy a contract")
+
+      toast && toast.error("You must be logged in to deploy a contract"),
+
       return null
     }
     try {
@@ -131,3 +209,6 @@ export function useSmartContracts() {;
   }
 }
 ;
+  }
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

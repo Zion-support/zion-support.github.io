@@ -1,4 +1,10 @@
 
+=======
+
+import { useEffect, useState } from 'react';
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function Reports() {
   const [uptime, setUptime] = useState<any[]>([]),
   const [seo, setSeo] = useState<any>({}),
@@ -96,6 +102,7 @@ export default function Reports() {
     </div>
 );
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }, []);
   const lastUptime = uptime[uptime.length - 1];
   return (
@@ -105,6 +112,7 @@ export default function Reports() {
         <div className="text-sm text-gray-500">Autonomously generated and synced</div>
       </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="border rounded p-4">
           <div className="font-medium mb-1">Changelog (weekly)</div>
           <div className="text-sm text-gray-600">Commits: {changelog?.totalCommits || 0}</div>
@@ -112,3 +120,5 @@ export default function Reports() {
         <div className="border rounded p-4">
           <div className="font-medium mb-1">PageSpeed (weekly)</div>
           <div className="text-sm text-gray-600">Pages: {pagespeed?.results?.length || 0}</div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

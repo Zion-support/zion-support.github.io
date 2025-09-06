@@ -1,4 +1,17 @@
 
+=======
+
+import Link from "next/link",;
+export const metadata = {;
+  title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",;
+  description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.",;
+  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"},;
+export default function SpaceTechPage() {;
+  return (;
+
+
+    <div className="min-h-screen">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="min-h-screen">;
 
       {/* Hero Section */}
@@ -82,6 +95,12 @@
                 </svg>;
               </div>;
 
+=======
+              <h3 className="text - xl font - semibold mb - 3">Satellite Communications</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                High - speed satellite internet, global connectivity solutions,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 and communication infrastructure for remote regions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;

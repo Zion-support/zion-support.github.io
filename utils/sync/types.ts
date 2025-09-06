@@ -33,6 +33,7 @@ export interface InstanceConfig {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 ;
 
@@ -77,6 +78,19 @@ export interface TokenTransferPayload extends BaseEventPayload {;
   toSubnet: string;
   timestamp: number;
 
+=======
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export interface TalentMobilityPayload extends BaseEventPayload {;
+  personId: string;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   fromNation: string;
   toNation: string;
   role: string;
@@ -115,6 +129,15 @@ export type SyncEventPayload =;
   timestamp: number;
   merkleRoot?: string, // required for proposal events;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+=======
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
 }
 ;
 export interface MultiverseState {;
@@ -131,3 +154,4 @@ export interface MultiverseState {;
   }
 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

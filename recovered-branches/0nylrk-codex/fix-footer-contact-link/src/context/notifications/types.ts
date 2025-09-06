@@ -1,12 +1,18 @@
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
   | 'message'
   | 'quote_request'
   | 'booking_confirmation'
   | 'hire_request'
-  | 'onboarding';
+  | 'onboarding'
   | 'system';
+<<<<<<< HEAD
 
   type: NotificationType;
   action_url?: string
@@ -16,7 +22,7 @@ export type FilterType =
   | 'all'
   | 'unread'
   | 'messages'
-  | 'onboarding';
+  | 'onboarding'
   | 'system';
 
   notifications: Notification[];
@@ -32,3 +38,6 @@ export type FilterType =
   fetchNotifications: () => Promise<void>
 
 }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

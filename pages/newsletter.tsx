@@ -1,13 +1,36 @@
 
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useState } from "react";
 import Head from "next/head";
 import Layout from "./components/Layout";
 import { motion } from "framer-motion";
+
 import React, { useState } from './react';
 import Head from './next / head';
 import Layout from "./components / Layout";
 import { motion  } from './framer-motion';
+
 import {
 
 import React, { useState } from 'react';
@@ -33,6 +56,13 @@ import {
 } from "lucide-react";
   Clock
 } from 'lucide-react';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+} from "lucide-react";
+  Clock
+} from 'lucide-react';
+>>>>>>> origin/automation-improvements-final
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   ArrowRight
   Users
@@ -51,6 +81,9 @@ import {
   Clock
 } from "lucide-react";
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const benefits = [
   {
     title: "Exclusive Content"
@@ -58,6 +91,7 @@ const benefits = [
       "Get access to exclusive white papers, case studies, and industry insights."
     icon: FileText
   }
+
 } from './lucide-react';
 ;
 const benefits = [;
@@ -67,8 +101,10 @@ const benefits = [;
       "Get access to exclusive white papers, case studies, and industry insights.",
     icon: FileText,
   },
+
   {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     description:
       "Receive invitations to our expert-led webinars and virtual events."
     icon: Video
@@ -101,15 +137,23 @@ const benefits = [;
     icon: TrendingUp
   }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       "Stay updated with the latest trends and developments in technology."
     icon: TrendingUp
   }
 ];
+
 ;
 const testimonials = [;
+
   {
+
+=======
+
+
     name: "Sarah Johnson"
     role: "CTO, TechCorp"
+
     content:
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable."
     rating: 5
@@ -150,6 +194,14 @@ export default function NewsletterPage() {
   }
 ];
 
+=======
+
+
+export default function NewsletterPage() {;
+  const [email, setEmail] = useState("");
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
@@ -210,15 +262,15 @@ export default function NewsletterPage() {;
   const handleSubmit = async (e) => {;
     e && e.preventDefault();
     setIsLoading(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    setIsSubscribed(true);
-    setIsLoading(false);
-  }
-  return (
 
+
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+=======
+    <Layout>;
+      <Head>;
+        <title>Newsletter - Zion Tech Group</title>;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <meta
           name="description"
           content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
@@ -233,6 +285,15 @@ export default function NewsletterPage() {;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
 
+=======
+                Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
+              </p>
+              
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -283,9 +344,12 @@ export default function NewsletterPage() {;
                   Successfully subscribed! Welcome to our community.;
                 </motion && motion.div>;
               )}
+
             </motion && motion.div>;
           </div>;
         </section>;
+
+
         {/* Benefits Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -297,12 +361,12 @@ export default function NewsletterPage() {;
                 Join thousands of professionals who rely on our newsletter for
                 the latest insights and updates.
 
-                Join thousands of professionals who rely on our newsletter for the latest insights and updates.
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
+
     content:;
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.",
     rating: 5,
@@ -428,6 +492,7 @@ function NewsletterPage() {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
               {benefits.map ((benefit, index) => (
                 <motion.div;
+
                   key={benefit.title}
                   className="text - center";
                   initial={{ opacity: 0, coordinate_y: 30 }}
@@ -440,6 +505,12 @@ function NewsletterPage() {
                   <h3 className="text - xl font - semibold text - gray - 900 mb - 2">;
                     {benefit.title}
 
+=======
+                  <p className="text-gray-600">
+                    {benefit.description}
+                  </p>
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </motion.div>
               ))}
             </div>
@@ -483,6 +554,10 @@ function NewsletterPage() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
+=======
+                <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <div className="text-gray-600">Subscribers</div>
               </motion.div>
               <motion.div
@@ -505,6 +580,10 @@ function NewsletterPage() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
+=======
+                <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <div className="text-gray-600">Delivery</div>
               </motion.div>
               <motion.div
@@ -547,7 +626,6 @@ function NewsletterPage() {
                 Don't just take our word for it. Here's what our community has
                 to say.
 
-                Don't just take our word for it. Here's what our community has to say.
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -631,7 +709,10 @@ function NewsletterPage() {
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
+
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+
+=======
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 What Our Subscribers Say;
@@ -654,6 +735,11 @@ function NewsletterPage() {
                         className="w-4 h-4 text-yellow-400 fill-current"
                       />
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     ))}
                   </div>;
                   <p className="text-gray-600 mb-4 italic">;
@@ -669,9 +755,12 @@ function NewsletterPage() {
                   </div>;
                 </motion && motion.div>;
               ))}
+
             </div>;
           </div>;
         </section>;
+
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;
           <div className="container mx-auto px-4">;
@@ -680,6 +769,15 @@ function NewsletterPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
+=======
+                Subscribe now and start receiving valuable insights delivered to your inbox every week.
+              </p>
+              
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -721,6 +819,8 @@ function NewsletterPage() {
                   </div>;
                 </form>;
               )}
+
+
               <div className="mt-8 text-green-100 text-sm">;
                 >;
                   <div className="flex items - center mb - 4">;
@@ -790,12 +890,15 @@ function NewsletterPage() {
                   </div>;
                 </form>)}
               <div className="mt - 8 text - green - 100 text - sm">;
+
                 <p>✓ No spam, ever</p>;
                 <p>✓ Unsubscribe anytime</p>;
                 <p>✓ Free forever</p>;
               </div>;
+
 }
-}
+
+=======
             </motion.div>;
           </div>;
         </section>;

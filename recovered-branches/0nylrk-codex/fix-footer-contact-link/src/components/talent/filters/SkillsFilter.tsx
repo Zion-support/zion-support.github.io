@@ -53,11 +53,67 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
 
+=======
+import { ChevronDown, ChevronUp } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { Checkbox } from "@/components/ui/checkbox",;
+import { SkillsFilterProps } from "@/types/filters",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+// Common skills in AI and tech;
+const POPULAR_SKILLS = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  "Machine Learning";
+  "Deep Learning";
+  "Python";
+  "TensorFlow";
+  "PyTorch";
+  "Computer Vision";
+  "NLP";
+  "Data Science";
+  "AWS";
+  "Docker";
+  "Kubernetes";
+  "React";
+  "Node && Node.js";
+  "TypeScript";
+  "DevOps";
+  "Security";
+];
+
+      </button>;
+
+      {expanded && (;
+        <div className="mt-4 space-y-2">;
+          {POPULAR_SKILLS && POPULAR_SKILLS.map(skill => (;
+            <div key={skill} className="flex items-center">;
+
+              <Checkbox
+                id={`skill-${skill}`}
+                checked={selectedSkills && selectedSkills.includes(skill)}
+                onCheckedChange={() => toggleSkill(skill)}
+                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
+              />;
+              <label
+                htmlFor={`skill-${skill}`}
+
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+              >
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 {skill}
-              </label>
-            </div>
+              </label>;
+            </div>;
           ))}
-        </div>
+        </div>;
       )}
     </div>
   )
+=======
+
+};
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -14,6 +14,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const state = readState<{ metrics?: unknown }>();
     return res.status(200).json({ metrics: state.metrics || {} })
   }
+
   if (req && req.method === 'POST') {
     const started = Date && Date.now();
     try {
@@ -23,7 +24,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       state && state.metrics = metrics;
       state && state.lastTriggers = triggers;
       writeState(state);
+
       const latencyMs = Date && Date.now() - started;
+
+
       appendLog({
         module: 'reflex'
         type: 'metrics'
@@ -39,12 +43,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         status: 'error'
         payload: { error: e?.message |'unknown' }
       });
+
       return res && res.status(500).json({ error: 'Reflex failure' });    }
   }
   return res && res.status(405).json({ error: 'Method not allowed' });
+
 }      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });
       return res && res.status(200).json({ triggers })
     } catch (e: any) {
+
       appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } });
       return res && res.status(500).json({ error: 'Reflex failure' })
   }
@@ -58,3 +65,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(500).json({ error: 'Reflex failure' })
     }
   }
+=======
+
+
+  return res.status(405).json({ error: 'Method not allowed' });
+
+=======
+
+
+  return res.status(405).json({ error: 'Method not allowed' });
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -11,10 +11,4 @@
             </p>;
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
 
-              Send General Application;
-            </Button>;
-          </div>;
-        </div>;
-      </main>;
-
 }

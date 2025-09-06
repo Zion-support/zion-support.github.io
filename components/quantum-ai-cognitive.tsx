@@ -8,6 +8,10 @@ import Button from '../components/ui/Button';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function QuantumAICognitivePage() {;
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-cognitive'));
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 return (<UltraAdvancedFuturisticBackground> <Head> </li>) )
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> Start Free Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
@@ -54,6 +58,7 @@ export default function QuantumAICognitivePage() {
               </ul>
             </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <div className="flex items-end justify-between mb-3">
                 <div>
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
@@ -90,3 +95,10 @@ export default function QuantumAICognitivePage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+=======
+
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

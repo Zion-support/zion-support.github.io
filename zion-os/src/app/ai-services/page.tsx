@@ -1,4 +1,15 @@
 
+=======
+import Link from "next/link",;
+export const metadata = {;
+  title: "AI Services - Zion Tech Group | Artificial Intelligence & Machine Learning Solutions",;
+  description: "Transform your business with Zion Tech Group's cutting-edge AI services including autonomous operations, business intelligence, content generation, and research automation.",;
+  keywords: "AI services, artificial intelligence, machine learning, autonomous business, business intelligence, content generation, Zion Tech Group"},;
+export default function AIServicesPage() {;
+  return (;
+
+    <div className="min-h-screen">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="min-h-screen">;
 
       {/* Hero Section */}

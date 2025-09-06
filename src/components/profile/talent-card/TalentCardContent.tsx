@@ -28,10 +28,11 @@ export function TalentCardContent({
         className='overflow-hidden transition-all duration-300'        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
-      >
-        <p className='text-zion-slate mb-4'>{summary |bio}</p>
-      </div>          <span>{timezone}</span>
-        </div>
+
+      >;
+        <p className='text-zion-slate mb-4'>{summary || bio}</p>;
+      </div>          <span>{timezone}</span>;
+        </div>;
       )}
 
 import React, { useState } from "react",;

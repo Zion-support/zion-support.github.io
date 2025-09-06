@@ -31,32 +31,8 @@
     address: string;
 
   }
-;
-export const revolutionary2027Services: Revolutionary2027Service[] = [;
-  {
-    id: '2027 - revolutionary - service',
-    name: '2027 Revolutionary Service Platform',
-    tagline: 'Revolutionary services for 2027',
-    price: '$299 / month',
-    description:;
-      'Revolutionary service platform that transforms how businesses operate in 2027.',
-    features: [;
-      'Revolutionary services',
-      'Transformative capabilities',
-      'Advanced technology',
-      'Innovation platform',
-      'Future - ready solutions',
-    ],
-    link: '/services / 2027 - revolutionary - service',
-    category: 'Revolutionary 2027 Services',
-    real_implementation: true,
-    contact_info: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
-];      mobile: "+1 302 464 0950";
+];
+=======
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -81,6 +57,7 @@ export const revolutionary2027Services: Revolutionary2027Service[] = [
     realImplementation: true,
     contactInfo: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

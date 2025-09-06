@@ -18,8 +18,12 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>,
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface ServiceDescriptionFormProps {
-  onDescriptionGenerated: (description: string) => void
+  onDescriptionGenerated: (description: string) => void;
 }
 
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
@@ -88,7 +92,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
         description: "Your professional service description has been created."
       })
     } catch (error) {
-      console.error("Error generating description:", error),
+      console.error("Error generating description:", error);
       toast({
         title: "Generation Failed"
         description: error instanceof Error ? error.message : "Failed to generate description. Please try again."
@@ -96,6 +100,65 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       })
     } finally {
       setIsLoading(false)
+
+const formSchema = z && z.object({;
+  title: z && z.string().min(3, "Title must be at least 3 characters");
+  keyFeatures: z && z.string(),;
+  targetAudience: z && z.string()}),;
+
+type FormData = z && z.infer<typeof formSchema>;
+
+interface ServiceDescriptionFormProps {;
+  onDescriptionGenerated: (description: string) => void;
+}
+
+export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: ServiceDescriptionFormProps) {;
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const form = useForm<FormData>({;
+    resolver: zodResolver(formSchema),;
+    defaultValues: {;
+      title: "",;
+      keyFeatures: "",;
+      targetAudience: ""}}),;
+
+  const handleSubmit = async (data: FormData) => {;
+    setIsLoading(true),;
+
+    try {;
+      const { data: response, error } = await supabase && supabase.functions.invoke('generate-service-description', {;
+        body: { ;
+          title: data && data.title, ;
+          keyFeatures: data && data.keyFeatures, ;
+          targetAudience: data && data.targetAudience ;
+        }
+      });
+
+      if (error) {;
+        throw new Error(error && error.message);
+      }
+
+      if (response && response.error) {;
+        throw new Error(response && response.error);
+      }
+
+      onDescriptionGenerated(response && response.description);
+
+      toast({;
+        title: "Description Generated",;
+        description: "Your professional service description has been created.";
+      });
+    } catch (error) {;
+      console && console.error("Error generating description:", error);
+      toast({;
+        title: "Generation Failed",;
+        description: error instanceof Error ? error && error.message : "Failed to generate description. Please try again.",;
+        variant: "destructive";
+      });
+    } finally {;
+      setIsLoading(false);
+
     }
 
   return (
@@ -115,6 +178,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             <FormField
               control={form.control}
               name="title"
+
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>
@@ -130,24 +194,30 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             <FormField
 
               control={form.control}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="keyFeatures"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-zion-slate-light">Key Features</FormLabel>
-                  <FormControl>
+
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel className="text-zion-slate-light">Key Features</FormLabel>;
+                  <FormControl>;
+
                     <Textarea
                       {...field}
                       placeholder="Enter key features, separated by commas"
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
                       disabled={isLoading}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
               )}
-            />
+
+            />;
+
+
             <FormField
-              control={form.control}
+              control={form && form.control}
               name="targetAudience"
               render={({ field }) => (
                 <FormItem>
@@ -155,27 +225,51 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                   <FormControl>
 
                       placeholder="e.g. Small businesses, Startups, E-commerce brands"
+=======
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>;
+                  <FormControl>;
+                    <Input
+                      {...field} 
+                      placeholder="e && e.g. Small businesses, Startups, E-commerce brands"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       disabled={isLoading}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
               )}
             />
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-            >
-              {isLoading ? (
-                <>
-                  <Loader className="mr-2 h-4 w-4 animate-spin" />
-                  Generating Description...
-                </>
-              ) : (
-                <>
-                  <Sparkles className="h-4 w-4 mr-2" />
-                  Generate Description
-                </>
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+              {isLoading ? (;
+                <>;
+                  <Loader className="mr-2 h-4 w-4 animate-spin" />;
+                  Generating Description...;
+                </>;
+              ) : (;
+                <>;
+                  <Sparkles className="h-4 w-4 mr-2" />;
+                  Generate Description;
+                </>;
               )}
+=======
+
+            </Button>;
+          </form>;
+        </Form>;
+      </CardContent>;
+
+    </Card>);
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

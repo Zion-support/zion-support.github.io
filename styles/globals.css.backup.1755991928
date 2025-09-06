@@ -165,62 +165,33 @@ h2 {
   font-weight: 800;
 }
 
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 h3 {
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 700;
 }
-h3 {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 700;}
-
-h3 {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  font-weight: 700;
-
 /* Line Clamp Utilities */
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
-}
-
 .line-clamp-2 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-}
-
 .line-clamp-3 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-}
-
 /* Text Gradient Utilities */
 .text-gradient-cyan {
   background: linear-gradient(135deg, #00ffff, #0080ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
 .text-gradient-purple {
   background: linear-gradient(135deg, #8b5cf6, #ec4899);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 .text-gradient-pink {
   background: linear-gradient(135deg, #ec4899, #f97316);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 /* Enhanced Body Styles */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -228,13 +199,13 @@ body {
   color: white;
   overflow-x: hidden;
   position: relative;
-
-}
-
-}
+=======
 h3 {
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 700;}
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> main
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 /* Futuristic font for special elements */
 .futuristic-font {

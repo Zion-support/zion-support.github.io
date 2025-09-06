@@ -3,38 +3,50 @@ import { User } from 'lucide-react'
 import { Conversation  } from '@/types/messaging';
 import { ConversationItem  } from './ConversationItem';
 import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
+
 interface ConversationsListProps {
   conversations: Conversation[];
   activeConversation: Conversation | null;
-  setActiveConversation: (conversation: Conversation) => void;
-  markAsRead: (conversationId: string) => Promise<void>
-export function ConversationsList({
+  onConversationSelect: (conversation: Conversation) => void;
+  loading?: boolean;
+}
 
-  conversations
-  activeConversation
-  setActiveConversation
-  markAsRead
-}: ConversationsListProps) {
-  const itemSize = 80
-  const listHeight = useMemo(() => {
-    return Math.min(conversations.length * itemSize, 600)
-  }, [conversations.length])
-  const Row = ({ index, style }: ListChildComponentProps) => {
-    const conversation = conversations[index]
-    if (!conversation) {
-      return <div style={style} />
-    }
+export const ConversationsList: React.FC<ConversationsListProps> = ({
+  conversations,
+  activeConversation,
+  onConversationSelect,
+  loading = false,
+}) => {
+  const sortedConversations = useMemo(() => {
+    return [...conversations].sort((a, b) => {
+      const aTime = new Date(a.lastMessage?.timestamp || a.createdAt).getTime();
+      const bTime = new Date(b.lastMessage?.timestamp || b.createdAt).getTime();
+      return bTime - aTime;
+    });
+  }, [conversations]);
+
+  const ConversationRow = ({ index, style }: ListChildComponentProps) => {
+    const conversation = sortedConversations[index];
     return (
       <div style={style}>
         <ConversationItem
           conversation={conversation}
           isActive={activeConversation?.id === conversation.id}
-          onClick={() => {
-            setActiveConversation(conversation)
-            markAsRead(conversation.id) }}
+          onClick={() => onConversationSelect(conversation)}
         />
       </div>
-    )
+    );
+  };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-full">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>
+          <p className="mt-2 text-sm text-gray-500">Loading conversations...</p>
+        </div>
+      </div>
+    );
   }
 
   return (

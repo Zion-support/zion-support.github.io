@@ -59,6 +59,94 @@ export default function QuantumServicesPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
 
             </p>
+            <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
+              Explore Quantum Solutions
+              <ArrowRight className='w-5 h-5' />            </button>
+          </motion.div>
+        </div>
+      </section>
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            transition={{ duration: 0 && 0.8 }}
+            className='mb-8'>;
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>;
+              Quantum Computing;
+            </h1>;
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
+              Revolutionary quantum solutions that unlock unprecedented;
+              computational power            </p>;
+          </motion && motion.div>;
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+            className='mb-12'>;
+            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
+    <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
+      <Head>;
+        <title > Quantum Computing Services - Zion Tech Group</title>;
+        <meta;
+          name='description';
+          content='Revolutionary quantum computing solutions from Zion Tech Group. Quantum algorithms, security, and AI integration for the future of computing.';
+        />;
+        <meta;
+          property='og:title';
+          content='Quantum Computing Services - Zion Tech Group';
+        />;
+        <meta;
+          property='og:description';
+          content='Revolutionary quantum computing solutions for the future of computing.';
+        />;
+        <link;
+          rel='canonical';
+          href='https://ziontechgroup.com / services / quantum';
+        />      </Head>;
+      <EnhancedNavigation />;
+      {/* Hero Section */}
+      <section className='relative pt - 32 pb - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='mb - 8';
+          >;
+            <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - blue - 400 via - cyan - 400 to - blue - 400 bg - clip - text text - transparent mb - 6'>;
+              Quantum Computing;
+            </h1>;
+            <p className='text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed'>;
+              Revolutionary quantum solutions that unlock unprecedented;
+              computational power            </p>;
+          </motion.div>;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='mb - 12';
+          >;
+            <p className='text - lg text - white / 70 max - w-2xl mx - auto mb - 8'>;
+              Experience the future of computing with our quantum solutions.;
+              From algorithm development to security protocols, we're pioneering;
+              the quantum revolution.;
+            </p>;
+
+=======
+            className="mb-12"
+          >
+            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+              Experience the future of computing with our quantum solutions. From algorithm development 
+=======
+            className='mb-12'
+          >
+            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
+              Experience the future of computing with our quantum solutions.
+              From algorithm development to security protocols, we're pioneering
+              the quantum revolution.
+=======
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Revolutionary quantum solutions that unlock unprecedented computational power
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            </p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 30 }  } catch (error) {
@@ -97,17 +185,34 @@ export default function QuantumServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
 
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-cyan-400" />
-                </div>
+          </div>;
+        </div>;
+      </section>;
 
+
+      {/* Services Grid */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+=======
+
+      {/* Services Grid */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
             <h2 className="text-4xl font-bold text-white mb-6">Quantum Computing Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -115,8 +220,10 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
             </p>
           </motion.div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <motion.div
-                key={service.title}
+
+
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
               Quantum Computing Services;
@@ -129,6 +236,9 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services && services.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.title}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -146,6 +256,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     <li key={feature} className="flex items-center text-white/80">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </ul>
                 <div className="flex items-center justify-between">
 
@@ -156,6 +267,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 </div>
               </motion.div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -168,28 +280,10 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
 
                 Learn More
+
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-
-}</div> </div> </section> <motion.div initial= {
-
-  {
-  opacity: 0, y: 30
-}whileInView= {
-  {
-  opacity: 1, y: 0
-}transition= {
-  {
-  duration: 0 && 0.8
-}viewport= {
-  {
-
-              </button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      <EnhancedFooter />;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -9,12 +9,17 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Function to fix hover syntax errors
 function fixHoverSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Fix various hover syntax patterns
     const patterns = [
       { from: /"hover":\s*/g, to: 'hover:' },
@@ -27,6 +32,8 @@ function fixHoverSyntax(filePath) {
       { from: /"2xl":\s*/g, to: '2xl:' },
     ];
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     patterns.forEach(pattern => {
       if (pattern.from.test(content)) {
         content = content.replace(pattern.from, pattern.to);
@@ -41,6 +48,8 @@ function fixHoverSyntax(filePath) {
       return true;
     }
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     return false;
   } catch (error) {
     console.log(`❌ Error fixing ${filePath}: ${error.message}`);
@@ -66,6 +75,8 @@ function fixAllFiles() {
   ];
   let totalFixed = 0;
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   filesToCheck.forEach(file => {
     const filePath = path.join(process.cwd(), file);
     if (fs.existsSync(filePath)) {
@@ -78,6 +89,10 @@ function fixAllFiles() {
   return totalFixed;
 }
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Main execution
 try {
   console.log('🔍 Scanning for syntax errors...');
@@ -88,6 +103,16 @@ try {
   if (fixedCount > 0) {
     console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+  
+  if (fixedCount > 0) {
+    console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
+    
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Try to build after fixes
     console.log('🔨 Attempting build after fixes...');
     try {
@@ -106,3 +131,6 @@ try {
 } catch (error) {
   console.error('❌ Error:', error.message);
   process.exit(1);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -3,6 +3,7 @@
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Mock data
 
 const projectData = {
@@ -87,3 +88,26 @@ export function MobileProjects() {;
       <BottomNavigation />
     </div>
   )
+=======
+
+      />;
+
+      <main className="py-4">;
+        <MobileProjectView
+          project={projectData} 
+          milestones={milestonesData}
+        />;
+      </main>;
+
+      <BottomNavigation />;
+    </div>;
+  );
+}
+
+=======
+
+};
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,10 +1,22 @@
 
+=======
+
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
 
 const categories: GrantCategory[] = [
 
+=======
+  'Ecosystem Tools',
+  'Talent Development',
+  'Regional Expansion',
+  'Research Grants',
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+export default function ApplyGrantPage() {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -144,6 +156,38 @@ const categories: GrantCategory[] = [
           />
         </label>
 
+          budgetCurrency;
+          supportingLinks: supportingLinks;
+            .split('\n');
+            .map((s) => s && s.trim());
+            .filter(Boolean);
+      set_loading (false);    }          budget_amount: Number (budget_amount || 0),
+          budget_currency;
+          supporting_links: supporting_links;
+            .split ('\n');
+            .map ((s) => s.trim ());
+            .filter (Boolean);
+          pitchDeckUrl;
+          region;
+
+          sector: (sector as any) || undefined,;
+          submit})});
+      const data = await resp && resp.json();
+      if (!resp && resp.ok) throw new Error(data?.error || 'Failed');
+      router && router.push(`/grants/${data && data.id}`);
+    } catch (e: any) {;
+      setError(e && e.message);
+    } finally {;
+      setLoading(false);
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    }
+  }
+
+  return (
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
           <button
@@ -212,3 +256,30 @@ const categories: GrantCategory[] = [
         </div>
       </div>
     </EnhancedLayout>
+=======
+          <label className="text - sm">Region;
+            <input className="mt - 1 w - full border rounded p - 2" value={region} on_change={(e) => set_region (e.target.value)} placeholder="e.g., LATAM, EU, Global" />;
+          </label>;
+        </div>;
+        <label className="text - sm">Supporting Links (one per line);
+          <textarea className="mt - 1 w - full border rounded p - 2" rows={3} value={supporting_links} on_change={(e) => setSupportingLinks (e.target.value)} />;
+        </label>;
+        <label className="text - sm">Pitch Deck URL;
+          <input className="mt - 1 w - full border rounded p - 2" value={pitchDeckUrl} on_change={(e) => setPitchDeckUrl (e.target.value)} />;
+        </label>;
+        {error && <div className="text - sm text - red - 600">{error}</div>}
+        <div className="flex gap - 3">;
+          <button disabled={loading} on_click={() => save (false)} className="px - 4 py - 2 border rounded disabled:opacity - 50">Save Draft</button>;
+          <button disabled={loading} on_click={() => save (true)} className="px - 4 py - 2 bg - blue - 600 text - white rounded disabled: opacity - 50">Submit for Review</button>;
+        </div>;
+      </div>;
+    </EnhancedLayout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

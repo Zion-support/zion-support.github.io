@@ -1,4 +1,28 @@
 
+=======
+import { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",;
+;
+interface ReferralLinkProps {;
+  referralLink:string,;
+  onCopy:() => void,;
+  onShare:(platform:'twitter' | 'facebook' | 'linkedin') => void;
+}
+;
+export function ReferralLink({ referralLink, onCopy, onShare } ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false),;
+  ;
+  const handleCopy = () => {;
+    onCopy(),;
+    setCopied(true),;
+    setTimeout(() => setCopied(false), 2000),;
+  },;
+;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card className="mt-6">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -12,6 +36,7 @@
       <CardContent>;
         <div className="flex flex-col space-y-3">;
           <div className="flex space-x-2">;
+<<<<<<< HEAD
 
             />;
             <Button variant="outline" size="icon" onClick={handleCopy}>;

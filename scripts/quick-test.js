@@ -1,6 +1,8 @@
 
 
 #!/usr/bin/env node const fs = const path =    const scripts = [ 'enhanced-automation-orchestrator.js','enhanced-test-automation.js','enhanced-deployment-automation.js','enhanced-monitoring-system.js','master-automation-orchestrator.js' ];  scripts.forEach(script => { const scriptPath = path.join(__dirname,script); if (fs.existsSync(scriptPath)) { } else { } });
+#!/usr/bin/env node const fs = const path =    const scripts = [ 'enhanced-automation-orchestrator.js','enhanced-test-automation.js','enhanced-deployment-automation.js','enhanced-monitoring-system.js','master-automation-orchestrator.js' ];  scripts.forEach(script => { const scriptPath = path.join(__dirname,script); if (fs.existsSync(scriptPath)) { } else { } }); 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node
 const fs = // // require('fs');
 const path = // // require('path');
@@ -22,3 +24,4 @@ scripts.forEach(script => {
     console.log(`❌ ${script} - missing`)}
 });
 console.log('\n🎉 Quick test completed successfully!');
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

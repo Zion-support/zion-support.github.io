@@ -1,29 +1,16 @@
 
 
+=======
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
+export default function WhitepaperGeneratorRedirect() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const router = useRouter();
   useEffect(() => {;
     router && router.replace('/tokenomics');
   }, [router]);
   return null;
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-export default function WhitepaperGeneratorRedirect() {
-  const router = useRouter();
-  useEffect(() => {
-    router.replace('/tokenomics')
-  }, [router]);
-  return null
-}
-import {useEffect} from 'react';
-import {use_router} from 'next / router';
-export default /**
- * WhitepaperGeneratorRedirect - Function description
- */
-function WhitepaperGeneratorRedirect() {
-  const router = use_router ();
-  useEffect (() => {
-router.replace ('/tokenomics');
-  }, [router]);
-  return null;
-;
-}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

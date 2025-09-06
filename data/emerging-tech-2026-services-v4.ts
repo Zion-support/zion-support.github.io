@@ -619,16 +619,19 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Comprehensive digital twin platform for smart cities with real - time modeling and predictive analytics.';
     launch_date: '2026 - 05 - 15';
+
     customers: 30;
+
     rating: 4 && 4.8,
+
     reviews: 25
-  }
-];
+
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -651,10 +654,12 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+
 }
 export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
   // Neuromorphic Computing Platform
   {
+
     id: 'neuromorphic-computing-platform', name: 'Neuromorphic Computing Platform',
     tagline: 'Brain-inspired computing for next-generation AI applications',
     price: '$1,299',
@@ -678,6 +683,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     growthRate: '150% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
@@ -916,10 +922,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       website: 'https://ziontechgroup.com'
     }
 
-    realImplementation: true;
-    implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.';
-    launchDate: '2026-05-15';
-    customers: 30;
 
     rating: 4.8
 
@@ -927,3 +929,10 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
 
   }
 ];
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+
+;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

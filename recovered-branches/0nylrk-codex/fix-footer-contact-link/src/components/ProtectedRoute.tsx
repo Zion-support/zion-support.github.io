@@ -2,7 +2,7 @@
 
   adminOnly?: boolean;
   tenantAdminAllowed?: boolean;
-  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
+  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
 }
 
   tenantAdminAllowed = false,
@@ -14,6 +14,10 @@
 
   const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Show loading state if auth or tenant admin status is still being checked
   if (isCheckingPermissions) {
     return <div className="flex h-screen w-full items-center justify-center">
@@ -35,4 +39,6 @@
   if (requiredUserType && user.userType !== requiredUserType) {
     return <Navigate to="/unauthorized" />
 
+<<<<<<< HEAD
 export default ProtectedRoute;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

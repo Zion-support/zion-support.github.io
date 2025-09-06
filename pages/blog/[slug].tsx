@@ -1,5 +1,7 @@
 
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
@@ -9,6 +11,11 @@ import { AuthorBio } from '@/components/blog/AuthorBio';
 import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
 import { CommentsSection } from '@/components/blog/CommentsSection';
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { BlogPost } from '@/types/blog';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import fs from 'fs';
@@ -61,6 +68,15 @@ interface BlogPostPageProps {
    */
   initialPost: BlogPost | null
 }
+const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
+  const router = useRouter()
+  const { slug } = router.query
+  const [post, setPost] = React.useState<BlogPost | null>(initialPost)
+  const [error, setError] = React.useState<string | null>(null)
+  React.useEffect(() => {
+    if (initialPost && initialPost.slug === slug) {
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       setError(null), // Clear any previous error
     } else if (slug) {
@@ -91,6 +107,32 @@ interface BlogPostPageProps {
   const slug = path.basename(filePath).replace(/\.md$/, '');
   return { ...meta, id: slug, slug, content } as BlogPost;
   } catch (error) {
+    tags: post.tags || []},
+  const body = (post as any).body || post.content;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  return (
+    <>;
+      <AdvancedSEO;
+        title={post.title}
+        description={post.excerpt}
+
+        image={post.featured_image}
+        type="article";
+        article={article_ld}
+      />;
+      <main className="prose dark:prose - invert max - w-3xl mx - auto py - 8">;
+        <h1>{post.title}</h1>;
+
+        {post.excerpt && <p className="lead">{post.excerpt}</p>}
+        <div className="flex items - center gap - 3 mb - 6">;
+          <img;
+            src={post.author.avatar_url}
+            alt={post.author.name}
+
+
+}
+      } catch (error) {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -150,6 +192,20 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
               const target = e.currentTarget as HTMLImageElement
               target.src = '/images/blog-placeholder.svg'
             }  } catch (error) {
+            className="w-10 h-10 rounded-full"
+            onError={(e) => {
+              const target = e.currentTarget as HTMLImageElement
+              target.src = '/images/blog-placeholder.svg'
+
+
+                {post.author.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </p>;
+            )  } catch (error) {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -167,6 +223,30 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
 
               className="object-cover w-full h-full"
 
+          </div>
+        </div>
+        {post.featuredImage && (
+          <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
+            <img
+
+              alt={post.title}
+
+
+              src={post.featuredImage  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              alt={post.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              className="object-cover w-full h-full"
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
                 target.src = '/images/blog-placeholder.svg'
@@ -221,6 +301,10 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
   // Validate slug to prevent malformed paths;
   if (!/^[a-z0-9-]+$/.test(slug)) {;
     return { notFound: true   } catch (error) {
+=======
+
+              }  } catch (error) {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -249,3 +333,4 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
   }
 }
 };
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

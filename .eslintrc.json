@@ -4,31 +4,20 @@
     "next/core-web-vitals",
     "@typescript-eslint/recommended"
   ],
-
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
-  "env": {
-    "browser": true,
-    "node": true,
-    "es2021": true
-  },
-  "globals": {
-    "IntersectionObserver": "readonly",
-    "HTMLElement": "readonly",
-    "HTMLButtonElement": "readonly",
-    "KeyboardEvent": "readonly",
-    "HTMLImageElement": "readonly",
-    "alert": "readonly"
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
+
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
     "no-undef": "error",
     "react/no-unescaped-entities": "off"
 
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   },
   "ignorePatterns": [
     "node_modules/",
@@ -101,7 +90,9 @@
     "security-reports/",
     "pages.__backup/",
     "pages-disabled/",
+
     "pages.disabled_auto/"
 
+<<<<<<< HEAD
   ]
 }

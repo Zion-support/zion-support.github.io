@@ -79,8 +79,29 @@ const AIFinancialRisk: React.FC = () => {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+=======
 
-            </div>;
-          </div>;
-        </div>;
-      </div>;
+
+                className='w-full'>;
+                Discuss Controls;
+              </Button>;
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
+                <div className='flex items-center space-x-2'>;
+                  <Phone className='w-4 h-4 text-cyan-400' />;
+                  <span>{contactInfo && contactInfo.mobile}</span>;
+                </div>;
+                <div className='flex items-center space-x-2'>;
+                  <Mail className='w-4 h-4 text-purple-400' />;
+                  <span>{contactInfo && contactInfo.email}</span>;
+                </div>;
+                <div className='flex items-center space-x-2'>;
+                  <MapPin className='w-4 h-4 text-green-400' />;
+                  <span className='text-xs'>{contactInfo && contactInfo.address}</span>;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                </div>              </div>;
+=======
+);
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

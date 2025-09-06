@@ -1,6 +1,34 @@
 
 
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useState } from 'react';
+
 import React, { useState, useEffect } from 'react',
 
 import Head from 'next/head';
@@ -8,6 +36,30 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
 
+=======
+import {
+
+  Search,
+  Filter,
+  ArrowRight,
+  Clock,
+  Star,
+  FileText,
+  Code,
+  Database,
+  Cloud,
+  Shield,
+  Brain,
+  Users,
+  Settings,
+  Globe,
+  CheckCircle,
+  X,
+  ChevronDown,
+  ChevronUp;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from 'lucide-react';
 const searchResults = [
   {
@@ -90,21 +142,40 @@ const filters = [
   { name: 'Popular', count: 2 }
 ];
 
+=======
+export default function SearchPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [showFilters, setShowFilters] = useState(false);
+
+
   const filteredResults = searchResults && searchResults.filter(result => {;
     const matchesQuery = result && result.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
                         result && result.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'All' || result && result.category === selectedCategory;
     const matchesFilter = selectedFilter === 'All' || result && result.type === selectedFilter;
+
+
     return matchesQuery && matchesCategory && matchesFilter;
   });
 
   return (
 
       <div className="min-h-screen bg-gray-50">
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+    <Layout>;
+      <Head>;
+        <title>Search - Zion Tech Group</title>;
+        <meta name="description" content="Search our website for information, guides, services, and more." />;
+      </Head>;
+      <div className="min-h-screen bg-gray-50">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
@@ -113,6 +184,7 @@ const filters = [
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0 && 0.8 }}>;
               <h1 className="text-5xl font-bold mb-6">;
                 Search Our Website;
@@ -120,20 +192,9 @@ const filters = [
               <p className="text-xl mb-8 text-blue-100">;
                 Find the information you need quickly and easily.;
               </p>;
+
+
               {/* Search Bar */}
-
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-
-                  <input
-                    type="text"
-                    placeholder="Search for services, guides, articles..."
-                    value={searchQuery}
-
-              >
-                <div className="flex flex-wrap gap-4">
-                  {filters.map((filter) => (
-
                     <button
                       key={filter && filter.name}
                       onClick={() => setSelectedFilter(filter && filter.name)}
@@ -146,9 +207,11 @@ const filters = [
                       {filter.name} ({filter.count})
                     </button>
 
-                  ))}                </div>
-                  ))}
-                </div>
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
 ))}
                 </div>
               </motion.div>
@@ -175,51 +238,11 @@ const filters = [
                     className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                  >;
-                    {category.name} ({category.count});
-                  </button>))}
-              </div>;
-              <div className="text - sm text - gray - 600">;
-                {filtered_results.length} results found;
-              </div>;
-            </div>;
-            {show_filters && (
-              <motion.div;
-                className="mt - 4 p - 4 bg - gray - 50 rounded - lg";
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                transition={{ duration: 0.3 }}
-              >;
-                <div className="flex flex - wrap gap - 4">;
-                  {filters.map ((filter) => (
-                    <button;
-                      key={filter.name}
-                      on_click={() => setSelectedFilter (filter.name)}
-                      className={`px - 3 py - 1 rounded - full text - sm transition - colors ${
-                        selected_filter === filter.name;
-                          ? 'bg - blue - 600 text - white';
-                          : 'bg - white text - gray - 700 hover:bg - gray - 100';
-                      }`}
-                    >;
-                      {filter.name} ({filter.count});
-                    </button>))}
-                </div>;
-              </motion.div>)}
-          </div>;
-        </section>;
-        {/* Search Results */}
-        <section className="py - 16">;
-          <div className="container mx - auto px - 4">;
-            {filtered_results.length > 0 ? (
-              <div className="space - y-6">;
-                {filtered_results.map ((result, index) => (
-                  <motion.div;
-                    key={result.id}
-                    className="bg - white rounded - lg shadow - sm border border - gray - 200 p - 6 hover:shadow - md transition - shadow";
-                    initial={{ opacity: 0, coordinate_y: 20 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
+
                     transition={{ duration: 0.5, delay: index * 0.1 }}
 
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -240,6 +263,7 @@ const filters = [
 
                       </Link>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -249,6 +273,296 @@ const filters = [
     status: 'all',
     priceRange: 'all',
 
+=======
+          switch (filters.priceRange) {
+            case 'under-500':
+              matchesPrice = price < 500,
+              break,
+            case '500-1000':
+              matchesPrice = price >= 500 && price < 1000,
+              break,
+            case '1000-2500':
+              matchesPrice = price >= 1000 && price < 2500,
+              break,
+            case 'over-2500':
+              matchesPrice = price >= 2500,
+              break
+          }
+              matchesPrice = price >= 2500;
+              break;}
+
+        }
+        
+        return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice
+      }),
+
+      // Sort results
+      const _sortedResults = results.sort(_(a, _b) => {_switch (sortBy) {
+          case 'relevance':
+            return b.relevance - a.relevance,
+          case 'price-low':
+            return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),
+          case 'price-high':
+            return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, '')),
+          case 'name':
+            return a.title.localeCompare(b.title),
+          case 'status':
+          case 'name':
+            return a.title.localeCompare(b.title),
+          case 'status':
+
+            return a.status.localeCompare(b.status),
+          default: return 0
+        }
+      }),
+
+      setSearchResults(sortedResults),
+      setIsSearching(false)
+    }, 500)
+  },
+
+  // Handle search on Enter key
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      performSearch()
+    }
+};
+  // Update search when filters change
+  useEffect(() => {
+    if (searchTerm.trim()) {
+      performSearch()
+    }
+}, [filters, sortBy]);
+  // Clear all filters
+  const clearFilters = () => {
+    setFilters({
+      category: 'all',
+      status: 'all',
+      priceRange: 'all',
+      technology: 'all'
+});
+    setSortBy('relevance')
+  };
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+      <Head>
+        <title>Search | Zion Tech Group</title>
+        <meta name="description" content="Search across all AI and technology services, solutions, and resources at Zion Tech Group. Find exactly what you need with our advanced search and filtering." />
+        <meta property="og:title" content="Search | Zion Tech Group" />
+        <meta property="og:description" content="Advanced search across all services and solutions." />
+        <link rel="canonical" href="https://ziontechgroup.com/search" />
+      </Head>
+      <SmartHeader />
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+              Search Our Services
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
+              Find the perfect AI and technology solutions for your business needs. 
+              Search across our comprehensive service catalog with advanced filtering options.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+{/* Search Interface */}
+      <section className="px-6 pb-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
+            {/* Search Bar */}
+            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-6">
+              <div className="flex-1 max-w-2xl">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-6 h-6" />
+
+                  <input
+                    type="text"
+                    placeholder="Search for services, technologies, or solutions..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all text-lg"
+                  />
+                  <button
+
+                    onClick={performSearch}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+{/* View Mode Toggle */}
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded-lg transition-all duration-300 ${
+                    viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
+                  }`}
+                >
+                  <Grid className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded-lg transition-all duration-300 ${
+                    viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
+                  }`}
+                >
+                  <List className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+            {/* Filters and Sort */}
+            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={() => setShowFilters(!showFilters)}
+                  className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors"
+                >
+                  <Sliders className="w-4 h-4" />
+                  Filters
+                  {Object.values(filters).some(f => f !== 'all') && (
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                  )}
+                </button>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                >
+                  <option value="relevance">Sort by Relevance</option>
+                  <option value="price-low">Sort by Price: Low to High</option>
+                  <option value="price-high">Sort by Price: High to Low</option>
+                  <option value="name">Sort by Name</option>
+                  <option value="status">Sort by Status</option>
+                </select>
+              </div>
+              {Object.values(filters).some(f => f !== 'all') && (
+                <button
+                  onClick={clearFilters}
+                  className="flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                  Clear Filters
+                </button>
+              )}
+            </div>
+
+            {/* Expanded Filters */}
+            {showFilters && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+className="mt-6 pt-6 border-t border-white/20"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {/* Category Filter */}
+                  <div>
+                    <label className="block text-white font-medium mb-2">Category</label>
+                    <select
+                      value={filters.category}
+                      onChange={(e) => setFilters(prev => ({ ...prev, category: e.target.value }))}
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                    >
+                      {categories.map(category => (
+                        <option key={category.id} value={category.id} className="bg-slate-800 text-white">
+                          {category.icon} {category.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+{/* Status Filter */}
+                  <div>
+                    <label className="block text-white font-medium mb-2">Status</label>
+                    <select
+                      value={filters.status}
+                      onChange={(e) => setFilters(prev => ({ ...prev, status: e.target.value }))}
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                    >
+                      {statuses.map(status => (
+                        <option key={status.id} value={status.id} className="bg-slate-800 text-white">
+                          {status.icon} {status.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+{/* Price Range Filter */}
+                  <div>
+                    <label className="block text-white font-medium mb-2">Price Range</label>
+                    <select
+                      value={filters.priceRange}
+                      onChange={(e) => setFilters(prev => ({ ...prev, priceRange: e.target.value }))}
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                    >
+                      {priceRanges.map(range => (
+                        <option key={range.id} value={range.id} className="bg-slate-800 text-white">
+                          {range.icon} {range.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+{/* Technology Filter */}
+                  <div>
+                    <label className="block text-white font-medium mb-2">Technology</label>
+                    <select
+                      value={filters.technology}
+                      onChange={(e) => setFilters(prev => ({ ...prev, technology: e.target.value }))}
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                    >
+                      {technologies.map(tech => (
+                        <option key={tech.id} value={tech.id} className="bg-slate-800 text-white">
+                          {tech.icon} {tech.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </motion.div>
+
+            )}
+          </div>
+        </div>
+      </section>
+
+
+      {/* Search Results */}
+      <section className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto">
+          {/* Results Header */}
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold text-white mb-2">
+              {searchTerm ? `Search Results for "${searchTerm}"` : 'All Services'}
+            </h2>
+            <p className="text-white/60">
+              {isSearching ? 'Searching...' : `${searchResults.length} services found`}
+              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
+=======
+        </div>
+      </section>
+
+      {/* Search Results */}
+      <section className='px-6 pb-20'>
+        <div className='max-w-7xl mx-auto'>
+          {/* Results Header */}
+          <div className='mb-8'>
+            <h2 className='text-3xl font-bold text-white mb-2'>
+              {searchTerm
+                ? `Search Results for "${searchTerm}"`
+                : 'All Services'}
+            </h2>
+            <p className='text-white/60'>
+              {isSearching
+                ? 'Searching...'
+                : `${searchResults.length} services found`}              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </p>
           </div>
 {/* Loading State */}
@@ -277,12 +591,26 @@ const filters = [
                         </div>
                       </div>
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+</Link>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     </div>
 
                   </motion.div>
                 ))}
               </div>
 
+=======
+
+            ) : (
+              <motion.div
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             ) : (
               <motion.div
 
@@ -309,8 +637,11 @@ const filters = [
                 </button>;
               </motion && motion.div>;
             )}
+
           </div>;
         </section>;
+
+
         {/* Popular Searches */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -318,6 +649,30 @@ const filters = [
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+=======
+              transition={{ duration: 0 && 0.8 }}>;
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">;
+                Popular Searches;
+              </h2>;
+              <p className="text-gray-600 max-w-2xl mx-auto">;
+                Common searches to help you find what you're looking for.;
+              </p>;
+            </motion && motion.div>;
+
+
+            <div className="flex flex-wrap gap-3 justify-center">;
+              {[;
+                'AI Development',;
+                'Cloud Services',;
+                'Cybersecurity',;
+                'Database Design',;
+                'Mobile Apps',;
+                'Web Development',;
+                'IT Support',;
+                'Consulting';
+              ].map((term, index) => (;
+                <motion&& motion.button
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                   key={term}
                   onClick={() => setSearchQuery(term)}
@@ -419,6 +774,7 @@ const filters = [
           </div>;
         </section>;
       </div>;
+
   );
 }
 
@@ -440,3 +796,31 @@ const filters = [
     </div>
 
 }
+}
+
+
+  )
+}
+
+
+
+)
+}
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/automation-improvements-final
+=======
+)
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    </Layout>);
+}  );
+}
+);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

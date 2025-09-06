@@ -1,10 +1,14 @@
 
 
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node;
 /**
  * Fix Critical Errors - Comprehensive fix for all critical syntax errors;
  */
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const fs = require('fs');
 const path = require('path');
 class CriticalErrorFixer {
@@ -137,6 +141,9 @@ if (require.main === module) {
   fixer.run()}
 module.exports = CriticalErrorFixer;
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -164,3 +171,11 @@ const path = require('path')
         this.log("Fixed ${fixesApplied} issues in ${path.basename(filePath)}"
       this.log("Error fixing ${filePath}: ${error.message}")
     this.log(" Total Fixes "Applied": ${report.totalFixes}")
+=======
+    this.log(" Total "Errors": ${report.totalErrors}")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

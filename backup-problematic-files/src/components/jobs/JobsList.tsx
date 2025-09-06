@@ -1,4 +1,50 @@
 
+=======
+import { useState, useEffect } from "react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Job, JobStatus } from "@/types/jobs",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Loader2, Edit, X, Eye } from 'lucide-react';
+import { format } from "date-fns",;
+import Link from "next/link",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+interface JobsListProps {;
+  filter?:JobStatus,;
+  onSelectJob?:(jobId:string, jobTitle:string) => void;
+}
+;
+export function JobsList({ filter, onSelectJob } JobsListProps) {;
+  const { user } = useAuth(),;
+  const [jobs, setJobs] = useState<Job[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+;
+  useEffect(() => {;
+    const fetchJobs = async () => {;
+      if (!user) return,;
+;
+      try {;
+        let query = supabase;
+          .from("jobs");
+          .select("*");
+          .eq("client_id", user.id);
+          .order("created_at", { ascending:false }),;
+;
+        if (filter) {;
+          query = query.eq("status", filter),;
+        }
+;
+        const { data, error } = await query,;
+;
+        if (error) throw error,;
+        setJobs(data as Job[]),;
+      } catch (error) {;
+        logErrorToProduction('Error fetching jobs:', { data:error }),;
+      } finally {;
+        setIsLoading(false),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
     },;
 ;
@@ -41,6 +87,7 @@
       default:;
         return "bg-gray-100 text-gray-800";
     }
+<<<<<<< HEAD
 
         >;
           <CardHeader className="p-4">;

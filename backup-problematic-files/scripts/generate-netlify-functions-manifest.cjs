@@ -20,3 +20,7 @@ fs.mkdirSync(outDir, { recursive: true });
 const manifestPath = path.join(outDir, 'functions-manifest.json');
 const manifest = { generatedAt: new Date().toISOString(), functions: [] };
 fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+=======
+console.log('[netlify] Functions manifest generated at', manifestPath);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

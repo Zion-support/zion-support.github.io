@@ -1,7 +1,21 @@
 
 
 interface UserBadgesProps {
-  badges: Badge[]
+  badges: Badge[];
+}
+
+const icon_map = {
+  Trophy;
+  Award;
+  BadgeCheck;
+  Star;
+  MessageSquare;
+}
+export const UserBadges = ({ badges }: UserBadgesProps) =>: any {
+  // Check condition
+if (return null) {
+  $2
+
 }
 const iconMap = {
 

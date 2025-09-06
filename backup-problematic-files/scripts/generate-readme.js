@@ -2,7 +2,7 @@
 ;
 /**;
  * Generate README;
- * Creates or updates the main README && README.md file;
+ * Creates or updates the main README.md file;
  */;
 
 const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub;
@@ -46,7 +46,7 @@ npm run automation:all;
 ;
 ### Maintenance;
 - \`npm run lint\` - Run ESLint;
-- \`npm run type - check\` - Run TypeScript type checking;
+- \`npm run type-check\` - Run TypeScript type checking;
 - \`npm run fix:all\` - Fix linting issues;
 ;
 ## 🌟 Features;
@@ -56,22 +56,6 @@ npm run automation:all;
 - **Redundancy Management** - High-availability infrastructure;
 - **Performance Optimization** - Continuous performance monitoring;
 - **Modern UI/UX** - Responsive design with Tailwind CSS;
-;
-
-## 📚 Documentation;
-;
-- [Architecture](./ARCHITECTURE.md) - System architecture overview;
-- [API Reference](./API.md) - API documentation;
-- [Deployment](./DEPLOYMENT.md) - Deployment instructions;
-- [Contributing](./CONTRIBUTING.md) - Contribution guidelines;
-;
-## 🔒 Security;
-;
-- Regular security audits;
-- Automated vulnerability scanning;
-- Secure dependency management;
-;
-## 📊 Monitoring;
 ;
 
 - Automated health checks;

@@ -14,6 +14,7 @@
   Calendar,
   ShoppingCart,
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   BookOpen,
   Brain,
   Building,
@@ -57,6 +58,19 @@
 
 } from 'lucide-react';
 
+
+
+=======
+
+
+} from 'lucide-react';
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   ArrowRight
   Award
   BarChart3
@@ -100,6 +114,12 @@
   Zap
 } from "lucide-react";
 
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const navigationItems = [
   {
     title: "Services"
@@ -164,6 +184,7 @@ const navigation_items = [;
         popular: false
       }
       {
+
         title: "Cloud Solutions",
         href: "/cloud - solutions",
         icon: Cloud,
@@ -258,6 +279,7 @@ const navigation_items = [;
     href: "/resources",
     icon: FileText,
     submenu: [;
+
       {
         title: "Blog"
         href: "/blog"
@@ -265,6 +287,7 @@ const navigation_items = [;
         description: "Latest insights and trends"
       }
       {
+
         title: "Case Studies",
         href: "/case - studies",
         icon: BarChart3,
@@ -282,6 +305,7 @@ const navigation_items = [;
         icon: BookOpen,
         description: "Step - by - step guides",
       },
+
       {
         title: "FileTextation"
         href: "/docs"
@@ -291,10 +315,12 @@ const navigation_items = [;
     ]
   }
   {
+
     title: "Company",
     href: "/about",
     icon: Building,
     submenu: [;
+
       {
         title: "About Us"
         href: "/about"
@@ -334,6 +360,7 @@ const navigation_items = [;
     ]
   }
 ];
+
 const navigationItems = [;
   {;
     title: "Services",;
@@ -540,9 +567,11 @@ const navigationItems = [;
   },;
 ];
 
+<<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}
@@ -567,6 +596,7 @@ const navigationItems = [;
               </Link>;
               <Link
                 href="/pricing"
+
                 className="hover:text-blue-200 transition-colors">;
 ;
 const quick_links = [;
@@ -612,12 +642,14 @@ function Navigation() {
                 href="/pricing";
                 className="hover:text - blue - 200 transition - colors";
               >;
+
                 View Pricing;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
+
           <Link href="/" className="flex items-center space-x-2">;
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
               <span className="text-white font-bold text-xl">Z</span>;
@@ -640,16 +672,20 @@ function Navigation() {
                 Zion Tech Group;
               </div>;
               <div className="text - sm text - gray - 500">;
+
                 AI & Technology Solutions;
               </div>;
             </div>;
           </Link>;
+
                   href={item && item.href}
                   className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2">;
                   <item && item.icon className="w-5 h-5" />;
                   <span>{item && item.title}</span>;
                   <ChevronDown className="w-4 h-4" />;
                 </Link>;
+
+
                 {/* Submenu */}
                 {activeSubmenu === item && item.title && (;
                   <motion&& motion.div
@@ -698,16 +734,22 @@ function Navigation() {
                   <span>{link && link.title}</span>;
                 </Link>;
               ))}
+
             </div>;
           </div>;
+
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+
           </button>;
         </div>;
+
+
         {/* Mobile Navigation */}
         {isOpen && (;
           <motion&& motion.div

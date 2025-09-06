@@ -1,5 +1,6 @@
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export type TokenTransactionType =;
   | "earn";
   | "burn";
@@ -61,3 +62,21 @@ export interface WalletSummary {;
   }
 
 }
+  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+
+
+
+
+}
+
+export interface WalletSummary {
+  wallet: Wallet,
+
+  transactions: TokenTransaction[];
+  config: TokenConfig;
+
+
+
+}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

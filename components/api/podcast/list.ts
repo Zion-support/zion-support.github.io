@@ -75,6 +75,7 @@ function handler() {
   return res.status (200).json ({ episodes: simplified });  const simplified = episodes.map ((e) => ({
     id: e.id;
     title: e.title;
+
   ensureStorage(),
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const simplified = episodes && episodes.map(e => ({
@@ -93,7 +94,8 @@ function handler() {
     summary: e && e.bestQuote || '',
     audio: e && e.audio || {}}));
   return res && res.status(200).json({ episodes: simplified })
-}
+
+=======
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
@@ -109,4 +111,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     summary: e.bestQuote || '',
     audio: e.audio || {}}));
   return res.status(200).json({ episodes: simplified })
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,12 +1,55 @@
 
+=======
+import { useState } from "react",;
+import { Dialog, DialogContent } from "@/components/ui/dialog",;
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
+import { Button } from "@/components/ui/button",;
+import { Save } from "lucide-react",;
+import { TalentProfile } from "@/types/talent",;
+import { ContractForm, ContractFormValues } from "./components/ContractForm",;
+import { ContractPreview } from "./components/ContractPreview",;
+import { TemplateManager } from "./templates/TemplateManager",;
+import { SmartContractBuilder } from "./SmartContractBuilder",;
+;
+interface ContractBuilderProps {;
+  isOpen:boolean,;
+  onClose:() => void,;
+  talent:TalentProfile,;
+  clientName:string,;
+  onContractGenerated?:(contractContent:string) => void;
+}
+;
+export function ContractBuilder({;
+  isOpen,;
+  onClose,;
+  talent,;
+  clientName,;
+  onContractGenerated;
+} ContractBuilderProps) {;
+  const [activeTab, setActiveTab] = useState<string>("form"),;
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null),;
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
+    undefined;
+  ),;
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),;
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false),;
+;
+  const handleLoadTemplate = (templateData:ContractFormValues) => {;
+    setFormValues(templateData);
+  },;
+;
+  const handleContractGenerated = (contract:string) => {;
+    setGeneratedContract(contract),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     setActiveTab("preview"),;
     if (onContractGenerated) {;
       onContractGenerated(contract);
     }
+<<<<<<< HEAD
 
         }}
         talent={talent}
-        client_name={client_name}
+        clientName={clientName}
         onContractGenerated={onContractGenerated}
 
     <Dialog open={isOpen} onOpenChange={onClose}>;

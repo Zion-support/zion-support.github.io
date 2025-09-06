@@ -4,6 +4,10 @@ import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
@@ -40,3 +44,4 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

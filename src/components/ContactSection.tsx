@@ -86,6 +86,14 @@ export function ContactSection() {
       body: JSON.stringify(formData)})
       .then(async (res) => {
 
+=======
+          const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         }
         toast({
           title: "Message Sent",
@@ -211,3 +219,4 @@ export function ContactSection() {
                   {submitted && (
                     <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
                   )}
+<<<<<<< HEAD

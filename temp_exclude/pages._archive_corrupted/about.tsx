@@ -1,3 +1,4 @@
+
   const values = [{
       title: \'Innovation\',
       \"description\": \'We constantly push the boundaries of technology to deliver cutting-edge solutions.\',
@@ -27,6 +28,7 @@
       \"title\": \'Results-Driven\',
       \"description\": \'We focus on delivering measurable outcomes that drive business growth.\',
       \"icon\": Target
+
     }
   ];
   const team = [{
@@ -54,6 +56,8 @@
       \"image\": \'/team/david.jpg\'
     }
   ];
+
+
     <MainLayout
       title=\"About Us - Zion Tech Group\"
       description=\"Learn about Zion Tech Group\'s mission, values, and the team behind our innovative technology solutions.\"
@@ -102,6 +106,7 @@
         </div>
       </section>
       {/* Stats Section */}
+
       <section className=\"py-20 bg-gray-50\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">
@@ -132,11 +137,13 @@
                   {value.description}
                 </p>
               </div>
+
             ))}
           </div>
         </div>
       </section>
       {/* Team Section */}
+
       <section className=\"py-20 bg-gray-50\" id=\"team\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -161,6 +168,7 @@
                   </p>
                 </div>
               </div>
+
             ))}
           </div>
         </div>
@@ -223,6 +231,7 @@
     </MainLayout>
   );
 }
+
     <>
       <Helmet>
         <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>
@@ -230,6 +239,7 @@
         <meta name=\"keywords\" content=\"about zion tech group, technology company, AI solutions, cybersecurity, cloud services\" />
         <link rel=\"canonical\" href=\""https\": //ziontechgroup.com/about\" />
       </Helmet>
+
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
@@ -363,3 +373,5 @@
   );
 }
 }
+
+

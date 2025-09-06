@@ -1,2 +1,48 @@
+=======
 
 
+  getData: () => [],
+  setData: (data: any) => null,
+  updateData: (id: string, data: any) => null,
+  deleteData: (id: string) => null;
+};
+
+
+=======
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  status: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+=======
+class DataStore {
+  private projects: Project[] = [];
+  private reviews: Review[] = [];
+
+  // Project methods
+  findProjectById(id: string): Project | undefined {
+    return this.projects.find(project => project.id === id);
+  }
+
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+export const findProjectById = (id: string) => store.findProjectById(id);
+export const createProject = (data: Partial<Project>) => store.createProject(data);
+export const hasExistingReview = (projectId: string, fromRole: string, fromId: string) => store.hasExistingReview(projectId, fromRole, fromId);
+export const upsertReview = (data: Partial<Review>) => store.upsertReview(data);
+export const getReviewsByProject = (projectId: string) => store.getReviewsByProject(projectId);
+export const getAllReviews = () => store.getAllReviews();
+export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role);
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -27,13 +27,15 @@
     headline: string,;
     subtitle: string,;
     cta: string;
-  },;
+  }
   is_active: boolean;
 
 }
 
 export interface TenantResponse {
   tenant: TenantInfo | null,
-  error?: string
+  error?: string;
+
 }
 ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

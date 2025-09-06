@@ -1,13 +1,9 @@
 
 
-  const stats = {
-    totalReferrals: 42
-    pendingReferrals: 8
-    completedReferrals: 34
-    conversionRate: 18.5
-    totalRevenue: 850.0
-    pendingRevenue: 200.0
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -88,3 +84,4 @@ export function PartnerDashboard() {
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD

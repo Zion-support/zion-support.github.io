@@ -1,9 +1,10 @@
 
 // This is a simple script wrapper to execute our icon update script
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   if (error) {
-    console.error(`Error executing script: ${error}`),
+    console && console.error(`Error executing script: ${error}`);
     return
   }
 
@@ -28,3 +29,7 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
   // // // console.log('Icon imports updated successfully!');
 
 });
+});
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

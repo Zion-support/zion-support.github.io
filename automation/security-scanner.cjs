@@ -190,6 +190,37 @@ if (require.main === module) {}
 };
 module.exports = SecurityScanner;
 
+=======
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+/**
+ * Security Scanner
+ * Comprehensive security scanning and enhancement automation
+ */
+class SecurityScanner {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.startTime = new Date();
+    this.results = {
+      dependencyAudit: { success: false, vulnerabilities: 0, fixes: [] },
+      codeSecurity: { success: false, issues: [], fixes: [] },
+      headersSecurity: { success: false, headers: [], recommendations: [] },
+      contentSecurityPolicy: { success: false, policy: '', recommendations: [] },
+      authenticationSecurity: { success: false, checks: [], recommendations: [] }
+    };
+  }
+
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+};
+function runSecurityCheck(name, checkFunction) {
+    securityReport.summary.total++;
+    console.log(`\n🔍 Security Check: ${name}`);
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
     const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
@@ -198,6 +229,8 @@ module.exports = SecurityScanner;
   async runCommand(command, description, options = {}) {
     this.log(`Running: ${description}`);
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     try {
         const result = checkFunction();
         if (result.status === 'pass') {
@@ -230,6 +263,7 @@ module.exports = SecurityScanner;
         console.log(`❌ ${name}: Error - ${error.message}`);
     }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 // Check for sensitive data in files
 runSecurityCheck('Sensitive Data Scan', () => {
@@ -282,6 +316,21 @@ runSecurityCheck('Dependency Security', () => {
   async auditDependencies() {
     this.log('\n🔍 AUDITING DEPENDENCIES');
 
+  }
+  async auditDependencies() {
+    this.log('\n🔍 AUDITING DEPENDENCIES');
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+    try {
+        if (!fs.existsSync('package.json')) {
+            return {
+                status: 'fail',
+                message: 'package.json not found'
+            };
+        }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     try {
         if (!fs.existsSync('package.json')) {
             return {
@@ -355,6 +404,7 @@ runSecurityCheck('Security Headers', () => {
             };
         }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
       // Try to fix vulnerabilities
       if (vulnerabilities > 0) {
@@ -372,6 +422,8 @@ runSecurityCheck('Security Headers', () => {
         fixes
       };
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     } catch (error) {
         return {
             status: 'fail',
@@ -379,6 +431,7 @@ runSecurityCheck('Security Headers', () => {
         };
     }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 });
 // Check for environment file security
 runSecurityCheck('Environment Security', () => {
@@ -400,6 +453,7 @@ runSecurityCheck('Environment Security', () => {
                 issues.push(`Weak password detected in ${file}`);
             }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
   async scanCodeSecurity() {
     this.log('\n🔍 SCANNING CODE SECURITY');
@@ -428,10 +482,13 @@ runSecurityCheck('Environment Security', () => {
           issue: 'Potential XSS in localStorage',
           fix: 'Sanitize data before storing in localStorage'
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         }
 
     });
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (issues.length === 0) {
         return {
             status: 'pass',
@@ -464,6 +521,8 @@ runSecurityCheck('HTTPS Configuration', () => {
             recommendation: 'Ensure HTTPS is properly configured for production'
         };
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const report = {
       timestamp: new Date().toISOString(),
       totalDuration,
@@ -477,6 +536,7 @@ runSecurityCheck('HTTPS Configuration', () => {
       }
     };
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     try {
       await this.auditDependencies();
       await this.scanCodeSecurity();
@@ -484,6 +544,8 @@ runSecurityCheck('HTTPS Configuration', () => {
       await this.setupContentSecurityPolicy();
       await this.checkAuthenticationSecurity();
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     } catch (error) {
         return {
             status: 'fail',
@@ -491,6 +553,7 @@ runSecurityCheck('HTTPS Configuration', () => {
         };
     }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 });
 // Check for file permissions
 runSecurityCheck('File Permissions', () => {
@@ -539,6 +602,7 @@ runSecurityCheck('File Permissions', () => {
   }
 }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }
 // Run the security scanner
@@ -546,3 +610,4 @@ if (require.main === module) {
     const scanner = new SecurityScanner(),
     scanner.run().catch(console.error)
   }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -3,6 +3,7 @@
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function About() {
   return (
     <>
@@ -113,3 +114,26 @@ export default function About() {
       <Footer />
     </>
   )
+=======
+
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+                  We maintain the highest standards of integrity, transparency, and ethical practices in everything we do.;
+                </p>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </main>;
+      <Footer />;
+
+    </>);
+=======
+
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

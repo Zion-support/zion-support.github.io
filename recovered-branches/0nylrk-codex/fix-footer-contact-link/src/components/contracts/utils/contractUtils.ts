@@ -8,6 +8,9 @@ interface Milestone {
   description: string,
   dueDate: string,
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   estimatedHours: number
 }
 export async function generateContract(
@@ -65,6 +68,7 @@ export async function generateContract(;
 
   }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (data.success && data.contract) {
     return data.contract
   } else {
@@ -73,3 +77,6 @@ export async function generateContract(;
   }
 }
 ;
+  }
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

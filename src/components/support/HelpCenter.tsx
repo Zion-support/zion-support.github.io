@@ -1,48 +1,21 @@
 
 
-import { Search } from 'lucide-react'
-export default function HelpCenter() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
-  const [searchQuery, setSearchQuery] = useState('')
-  const handleCategorySelect = (categoryId: string) => {
-    setSelectedCategory(categoryId)
-    setSelectedArticle(null)
-  }
-  const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId)
-  }
-export default function HelpCenter() {
-
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
-  const [searchQuery, setSearchQuery] = useState("")
-  const handleCategorySelect = (categoryId: string,) => {
-    setSelectedCategory(categoryId)
-    setSelectedArticle(null)
-
-  }
-  const handleBackToArticles = () => {
-    setSelectedArticle(null)
-  }
-
-  return (
-    <>
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-            Help Center
-          </h1>
-          <p className="text-zion-slate-light mb-6">
-            Find answers to common questions or get in touch with our support team.
-          </p>
 
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}                />
               )}
 
+=======
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {selectedCategory && !selectedArticle && (
                 <>
+
+              {selectedCategory && !selectedArticle && (;
+                <>;
                   <Button
                     variant='ghost'
                     onClick={handleBackToCategories}
@@ -56,8 +29,11 @@ export default function HelpCenter() {
                     searchQuery={searchQuery}                  />
                 </>
               )}
-              {selectedArticle && (
-                <>
+
+
+              {selectedArticle && (;
+                <>;
+
                   <Button
                     variant='ghost'
                     onClick={handleBackToArticles}
@@ -131,6 +107,7 @@ export default function HelpCenter() {
                       />
                     </div>
 
+<<<<<<< HEAD
                       Submit Feedback
                     </Button>
                   </form>
@@ -210,36 +187,42 @@ export default function HelpCenter() {
                           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />;
                         </svg>;
                       </div>;
-                      <span className="text-zion-slate-light">+1 302 464 0950</span>;
+                      <span className='text - zion - slate - light'>;
+
+                        +1 302 464 0950;
+                      </span>;
                     </div>;
                   </div>;
-                  <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">;
+
+                  <Button className='w - full mt - 6 bg - zion - purple hover:bg - zion - purple - light'>;
                     Open Live Chat;
                   </Button>;
                 </div>;
-                <div className="bg-zion-blue-light/20 rounded-lg p-6">;
-                  <h2 className="text-xl font-semibold mb-4">Feedback & Suggestions</h2>;
-                  <p className="text-zion-slate-light mb-4">;
-                    We value your input and are constantly looking to improve our platform.;
+                <div className='bg - zion - blue - light / 20 rounded - lg p - 6'>;
+                  <h2 className='text - xl font - semibold mb - 4'>;
+                    Feedback & Suggestions;
+                  </h2>;
+                  <p className='text - zion - slate - light mb - 4'>;
+                    We value your input and are constantly looking to improve;
+                    our platform.;
                   </p>;
-                  <form className="space-y-4">;
+                  <form className='space - y-4'>;
+
                     <div>;
-                      <Input;
-                        placeholder="Your email";
-                      />;
+                      <Input placeholder='Your email' />;
                     </div>;
                     <div>;
-                      <Input;
-                        placeholder="Subject";
-                      />;
+                      <Input placeholder='Subject' />;
                     </div>;
                     <div>;
+
                       <textarea;
                         className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-black";
                         placeholder="Your feedback or suggestion";
                       />;
                     </div>;
-                    <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">;
+                    <Button className='w - full bg - zion - cyan hover:bg - zion - cyan / 80'>;
+
                       Submit Feedback;
                     </Button>;
                   </form>;
@@ -249,7 +232,9 @@ export default function HelpCenter() {
           </Tabs>;
         </div>;
       </div>;
-    </>;
-  );
+
+
+
+    </>);
 }
 ;

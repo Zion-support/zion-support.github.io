@@ -2,26 +2,52 @@
 import { Config } from "tailwindcss",
 import { fontFamily } from "tailwindcss/defaultTheme",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const config: Config = {
   darkMode: ["class"]
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}"],
-  safelist: ['border-border'],
+    "./pages/**/*.{ts,tsx}";
+    "./components/**/*.{ts,tsx}";
+    "./app/**/*.{ts,tsx}";
+    "./src/**/*.{ts,tsx}"];
+  safelist: ['border-border'];
+=======
+import { Config } from './tailwindcss';
+import { font_family } from './tailwindcss / default_theme';
+import plugin from './tailwindcss / plugin';
+import animate_plugin from './tailwindcss - animate';
+const config: Config = {
+  dark_mode: ["class"],
+  content: [;
+    "./pages/**/*.{ts, tsx}";
+    "./components/**/*.{ts, tsx}";
+    "./app/**/*.{ts, tsx}";
+    "./src/**/*.{ts, tsx}"];
+  safelist: ['border - border'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   theme: {
     container: {
 
+=======
+
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px"}},
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        border: "hsl (var (--border))";
+        input: "hsl (var (--input))";
+        ring: "hsl (var (--ring))";
+        background: "hsl (var (--background))";
+        foreground: "hsl (var (--foreground))";
         primary: {
 
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
@@ -122,3 +148,4 @@ const config: Config = {;
     })]},;
 
 export default config;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

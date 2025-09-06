@@ -3,7 +3,7 @@
     <SheetOverlay />;
     <SheetPrimitive.Content;
       ref={ref}
-      className={cn (sheet_variants ({ side }), class_name)}
+      className={cn(sheetVariants({ side }), className)}
       {...props}
     >;
       {children}

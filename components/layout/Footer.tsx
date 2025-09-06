@@ -7,6 +7,9 @@
   Shield,
   Zap;
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from 'lucide-react';
 const Footer: React.FC = () => {
 
@@ -36,6 +39,57 @@ const Footer: React.FC = () => {
     { name: 'Twitter', href: '#', icon: Twitter }
     { name: 'LinkedIn', href: '#', icon: Linkedin }
     { name: 'Instagram', href: '#', icon: Instagram }
+
+import { ;
+  Phone, ;
+  Mail, ;
+  MapPin, ;
+  Facebook, ;
+  Twitter, ;
+  Linkedin, ;
+  Instagram,;
+  Code,;
+  Smartphone,;
+  Cloud,;
+  Database,;
+  Shield,;
+  Zap;
+} from 'lucide-react';
+
+const Footer: React.FC = () => {;
+  const currentYear = new Date().getFullYear(),;
+
+  const services = [;
+    { name: 'Web Development', href: '/services/web-development' },;
+    { name: 'Mobile Apps', href: '/services/mobile-apps' },;
+    { name: 'AI Solutions', href: '/services/ai-solutions' },;
+    { name: 'Cloud Services', href: '/services/cloud-services' },;
+  ];
+
+  const solutions = [;
+    { name: 'E-commerce', href: '/solutions/ecommerce' },;
+    { name: 'CRM Systems', href: '/solutions/crm' },;
+    { name: 'Data Analytics', href: '/solutions/analytics' },;
+    { name: 'Automation', href: '/solutions/automation' },;
+
+  ];
+
+  const company = [;
+    { name: 'About Us', href: '/about' },;
+
+    { name: 'Our Team', href: '/team' },;
+    { name: 'Careers', href: '/careers' },;
+    { name: 'Contact', href: '/contact' },;
+    { name: 'Privacy Policy', href: '/privacy' },;
+    { name: 'Terms of Service', href: '/terms' }
+  ];
+
+  const socialLinks = [;
+    { name: 'Facebook', href: '#', icon: Facebook },;
+    { name: 'Twitter', href: '#', icon: Twitter },;
+    { name: 'LinkedIn', href: '#', icon: Linkedin },;
+    { name: 'Instagram', href: '#', icon: Instagram },;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   ];
   return (
@@ -94,6 +148,17 @@ const Footer: React.FC = () => {
             </ul>
           </div>
               {socialLinks.map((social) => (
+                  Middletown DE 19709;
+                </span>;
+              </div>;
+            </div>;
+          </div>;
+
+            </ul>;
+          </div>;
+
+              {socialLinks && socialLinks.map((social) => (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                 <a
                   key={social && social.name}
@@ -113,6 +178,7 @@ const Footer: React.FC = () => {
               {services && services.map((service) => (;
                 <li key={service && service.name}>;
                   <Link
+
                     href={service && service.href}
                     className="text-gray-400 hover:text-white transition-colors">;
                     {service && service.name}
@@ -121,6 +187,8 @@ const Footer: React.FC = () => {
               ))}
             </ul>;
           </div>;
+
+
           {/* Solutions */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>;
@@ -137,6 +205,7 @@ const Footer: React.FC = () => {
             </ul>;
           </div>;
           {/* Company & Support */}
+
           <div>;
             <h3 className="text-lg font-semibold mb-4">Company</h3>;
             <ul className="space-y-2 mb-6">;
@@ -165,3 +234,5 @@ const Footer: React.FC = () => {
           </div>;
         </div>;
         {/* Bottom Bar */}
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

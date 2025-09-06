@@ -23,6 +23,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .select('ip_address, created_at')
       .eq('partner_code', code)
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
     const flags: any[] = []
     counts.forEach((count, ip) => {
@@ -63,3 +66,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -27,7 +27,7 @@ import { ContractPreview } from "./components/ContractPreview",
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => setTemplateManagerOpen(true)}
+                onClick = {(,) => setTemplateManagerOpen(true),}
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />
@@ -58,10 +58,13 @@ import { ContractPreview } from "./components/ContractPreview",
                 talent = {talent,}
                 onClose = {onClose,}
                 status="ready"
-              />
+              />;
             )}
-          </TabsContent>
-        </Tabs>
+
+          </TabsContent>;
+        </Tabs>;
+
+
         <TemplateManager
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}

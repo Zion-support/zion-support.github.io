@@ -1,5 +1,23 @@
 
 
+=======
+
+import {useState} from 'react';
+import {useForm} from 'react-hook-form';
+import {Button} from '@/components/ui/button';
+import {Form} from '@/components/ui/form';
+import {Certification} from '@/types/resume';
+import {Loader2} from 'lucide-react';
+import {useResume} from '@/hooks/useResume';
+import {Alert, AlertDescription} from '@/components/ui/alert';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {format} from 'date-fns';
+import {CertificationsList} from './CertificationsList';
+import {CertificationFormFields} from './CertificationFormFields';
+import {CertificationFormValues, certificationSchema} from './types';
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface CertificationsFormProps {
 
   resumeId: string
@@ -8,6 +26,7 @@ interface CertificationsFormProps {
 
   onBack: () => void
 }
+<<<<<<< HEAD
 
   const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
 
@@ -59,6 +78,14 @@ interface CertificationsFormProps {
       setError(err.message |'An error occurred')
     }
 
+      }
+
+
+  };
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
     form.reset({
@@ -71,53 +98,73 @@ interface CertificationsFormProps {
       await deleteCertification(id)
     }
 
+    }
+
+  },
+
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
-    <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>
-        <p className="text-muted-foreground">
-          Add any professional certifications, licenses, or credentials you have earned.
-        </p>
-      </div>
-      {certifications.length > 0 && (
+
+    <div className="space-y-6">;
+      <div>;
+        <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>;
+        <p className="text-muted-foreground">;
+          Add any professional certifications, licenses, or credentials you have earned.;
+        </p>;
+      </div>;
+
+      {certifications && certifications.length > 0 && (;
         <CertificationsList
-          certifications={certifications}
-          onEdit={handleEdit}
-          onDelete={handleDelete}
-        />
+          certifications={certifications} 
+          onEdit={handleEdit} 
+          onDelete={handleDelete} 
+        />;
       )}
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
+
+      <div className="bg-muted/40 p-6 rounded-lg">;
+        <h3 className="text-md font-medium mb-4">;
           {editingId ? 'Update Certification' : 'Add Certification'}
-        </h3>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
-            <CertificationFormFields form={form} />
+        </h3>;
+
+        <Form {...form}>;
+          <form onSubmit={form && form.handleSubmit(handleAddOrUpdate)} className="space-y-4">;
+            <CertificationFormFields form={form} />;
+
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-            <div className="flex justify-between pt-2">
+
+            <div className="flex justify-between pt-2">;
+
               <Button
                 type="button"
                 variant="outline"
-                onClick={() => {
-                  if (editingId) {
-                    setEditingId(null),
-                    form.reset({
-                      name: ''
-                      issuing_organization: ''
-                      issue_date: ''
-                      expiration_date: ''
-                      credential_id: ''
+                onClick={() => {;
+                  if (editingId) {;
+                    setEditingId(null);
 
-                      credential_url: ''})
-                  } else {
-                    onBack()
+                    form && form.reset({;
+                      name: '',;
+                      issuing_organization: '',;
+                      issue_date: '',;
+                      expiration_date: '',;
+                      credential_id: '',;
+                      credential_url: ''});
+                  } else {;
+                    onBack();
+
                   }
                 }}
-              >
+              >;
                 {editingId ? 'Cancel' : 'Back'}
-              </Button>
-              <div className="flex gap-2">
-                <Button type="submit" disabled={isLoading}>
+
+              </Button>;
+
+              <div className="flex gap-2">;
+                <Button type="submit" disabled={isLoading}>;
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                   {editingId ? 'Update' : 'Add'} Certification
                 </Button>
@@ -131,3 +178,4 @@ interface CertificationsFormProps {
       </div>
     </div>
   )
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

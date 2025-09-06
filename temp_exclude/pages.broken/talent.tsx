@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
+
       "Strong problem-solving and communication skills"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
@@ -35,15 +36,19 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-reac
 
 
   "Client success focus"
+
 ];
 
 export default function TalentPage() {
   return (
+
+
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
+
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
               className="text-center max-w-4xl mx-auto"
@@ -80,6 +85,7 @@ export default function TalentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
+
                 return (
                   <motion.div,
     key={index}
@@ -106,6 +112,7 @@ export default function TalentPage() {
         </section>
 
         {/* Values Section */}
+
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             >
@@ -119,6 +126,7 @@ export default function TalentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {values.map((value, index) => (
                 <motion.div,
+
     key={index}
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
@@ -180,6 +188,7 @@ export default function TalentPage() {
         </section>
 
         {/* Job Openings Section */}
+
         <section id="openings" className="py-20 bg-white">
           <div className="container mx-auto px-4">
             >
@@ -194,6 +203,7 @@ export default function TalentPage() {
               {jobOpenings.map((job, index) => (
                 <motion.div,
     key={job.id}
+
                   className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -294,6 +304,7 @@ export default function TalentPage() {
         </section>
 
         {/* CTA Section */}
+
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             >
@@ -312,4 +323,5 @@ export default function TalentPage() {
       </div>
     </MainLayout>
   );
+
 }

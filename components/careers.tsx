@@ -1,3 +1,36 @@
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+> <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
+  /* Company Culture */
+}<motion.div </div>) )
+}</div> </motion.div> {
+  /* Benefits */
+}<motion.div </div>) )
+}</div> </div> </motion.div> {
+  /* Job Openings */
+}<motion.div > <h2 className="text-3xl font-bold text-white text-center mb-8" >Open Positions</h2> key= {
+  dept.id
+}onClick= {
+  () => setSelectedDepartment (dept.id)
+}className= {
+  `px-4 py-2 rounded-lg font-medium transition-all duration-300 $ {
+  selectedDepartment === dept.id ? 'bg-blue-500 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+}`
+}> {
+  dept.name
+}</button>) )
+}</div> > <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4" > <div> </span> </div> </div> <a > Apply Now <ArrowRight className="w-5 h-5 ml-2" /> </a> </div> </li>) )
+}</ul> </div> </motion.div>) )
+}</div> We don't have any open positions in this department at the moment. Check back later or send us your resume for future opportunities. </p> </div>)
+}</motion.div> {
+  /* General Application */
+}<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
+};export default CareersPage;import React, { useState } from 'react';
+
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
 > <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
@@ -28,6 +61,8 @@
 
 };export default CareersPage;import React, { useState } from 'react';
 import React, { useState } from 'react';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
@@ -64,6 +99,7 @@ import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckC
       title: 'Quantum Computing Researcher'
       department: 'quantum'
       location: 'Remote / Middletown, DE';
+
       type: 'Full - time',
       experience: '3+ years',
       description: 'Research and develop quantum algorithms and quantum computing solutions.',
@@ -82,18 +118,21 @@ import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckC
       requirements: [;
         'Degree in Aerospace Engineering, Physics, or related field_experience with satellite design and space systems_knowledge of orbital mechanics and space environment_familiarity with space industry standards and regulations';
       ];
+
     }
     {
       id: 4
       title: 'Full Stack Developer'
       department: 'engineering'
       location: 'Remote / Middletown, DE';
+
       type: 'Full - time',
       experience: '3+ years',
       description: 'Build scalable web applications and cloud - based solutions.',
       requirements: [;
         'Experience with React, Node.js, and cloud platforms_knowledge of modern web technologies and APIsUnderstanding of software architecture and design patterns_experience with DevOps and CI / CD practices';
       ];
+
     }
     {
       id: 5
@@ -141,6 +180,8 @@ import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckC
         {/* Hero Section */}
         <motion.div
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -202,63 +243,46 @@ import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckC
         {/* Job Openings */}
         <motion.div
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>
-          {/* Department Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {departments.map((dept) => (
-              <button
-                key={dept.id}
-                onClick={() => setSelectedDepartment(dept.id)}
-                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                  selectedDepartment === dept.id
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
-                }`}
-              >
-                {dept.name}
-              </button>
-            ))}
-          </div>
-
           {/* Job Listings */}
-          <div className="space-y-6">
-
-            {filteredJobs.map((job) => (
-              <motion.div
-                key={job.id}
+          <div className="space-y-6">;
+            {filteredJobs && filteredJobs.map((job) => (;
+              <motion&& motion.div
+                key={job && job.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-
-                        {job.experience}
-                      </span>
-                    </div>
-                  </div>
+                className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300">;
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">;
+                  <div>;
+                    <h3 className="text-xl font-bold text-white mb-2">{job && job.title}</h3>;
+                    <div className="flex flex-wrap gap-3 text-sm">;
+                      <span className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">;
+                        {departments && departments.find(d => d && d.id === job && job.department)?.name}
+                      </span>;
+                      <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full">;
+                        {job && job.location}
+                      </span>;
+                      <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full">;
+                        {job && job.type}
+                      </span>;
+                      <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full">;
+                        {job && job.experience}
+                      </span>;
+                    </div>;
+                  </div>;
                   <a
-                    href={`/contact?position=${encodeURIComponent(job.title)}`}
 
-                        {req}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
-          </div>
 
-                Check back later or send us your resume for future opportunities.
-              </p>
-            </div>
-          )}
-        </motion.div>
 
-        {/* General Application */}
-        <motion.div
-
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -282,12 +306,9 @@ import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckC
                 href="/about"
                 className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
 
-              >
-                Learn More About Us
-              </a>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </Layout>
-  )
+=======
+
+export default CareersPage;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -327,3 +327,6 @@ checks.forEach(check => {
   } catch (error) {
     console.log(`❌ ${check.name}: FAILED`);
   }
+=======
+<<<<<<< HEAD
+});

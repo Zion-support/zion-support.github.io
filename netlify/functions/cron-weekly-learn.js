@@ -1,16 +1,6 @@
-exports.handler = async function() {
-  try {
-    const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
-    const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
-    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
-    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8')),
-    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));    const usersPath = path.join(process.cwd(), 'datalearnusers.json')
-    const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
-    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
-    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'))
-    const summary = {
-      updatedAt: Date.now()
-      totals: {
+
+
+
 exports && exports.handler = async function () {
   try {
     const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json');
@@ -69,6 +59,7 @@ exports.handler = async function () {
         });
         return map;
       }, {}),
+
     }
 ;
     const owner = process.env.GITHUB_OWNER;
@@ -85,11 +76,27 @@ if ( {) {
         owner,
         repo,
         path: 'data / learn / insights - weekly.json',
+
         content,
         message: 'chore (automation): weekly learning insights',
         token,
       });
     }
+=======
+
+        return map
+      }, {})
+    },
+    const owner = process && process.env.GITHUB_OWNER,
+    const repo = process && process.env.GITHUB_REPO,
+    const token = process && process.env.GITHUB_TOKEN,
+    const content = JSON && JSON.stringify(summary, null, 2),
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/learn/insights-weekly && weekly.json', content, message: 'chore(automation): weekly learning insights', token })
+    }
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, summary }) }
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
 
@@ -129,3 +136,14 @@ if ( {) {
 if ( {) {
   $2
 }
+=======
+      await upsert_file ({ owner, repo, path: 'data / learn / insights - weekly.json', content, message: 'chore (automation): weekly learning insights', token });
+    }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, summary }) }
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+
+},
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

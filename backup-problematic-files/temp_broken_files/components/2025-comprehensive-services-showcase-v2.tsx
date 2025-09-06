@@ -188,12 +188,28 @@ export default function ComprehensiveServicesShowcase2025V2() {const allNewServi
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                     {category.description}
 
+=======
+                  </p>
+                </div>
+                
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {category.services.map((service) => (
+                    <motion.div,
+key={service.id}
+                      className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
+                      whileHover={_{ y: -5}}
+                    >
+                      <h4 className="text-xl font-semibold text-white mb-3">
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         {service.title}
                       </h4>;
                       <p className="text-gray-300 mb-4">;
                         {service.description}
                       </p>;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       <div className="space-y-3 mb-6">;
                         <div className="flex items-center text-sm text-cyan-400">;
                           <TrendingUp className="w-4 h-4 mr-2" />;
@@ -203,7 +219,10 @@ export default function ComprehensiveServicesShowcase2025V2() {const allNewServi
                           <Star className="w-4 h-4 mr-2" />;
                           {service.growthRate}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   ))}
                 </div>;
               </motion.div>;
             ))}
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

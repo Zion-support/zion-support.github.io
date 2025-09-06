@@ -4,6 +4,9 @@
     if (typeof emailParam === 'string') {
       setEmail(emailParam)
     }
+=======
+  }, [emailParam]),
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   // Countdown timer for resend button
   useEffect(() => {
@@ -13,6 +16,23 @@
         setCountdown(prev => prev - 1)
       }, 1000)
 
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+
+
+import { supabase } from '@/integrations/supabase/client', // Import Supabase client
+import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
+export default function VerifyStatus() {
+
+  const router = useRouter()
+  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
+
+  const { email: emailParam } = router.query,
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
     return () => clearInterval(interval)
   }, [countdown]),
@@ -27,6 +47,98 @@
     setError(''),
     setMessage(''),
 
+=======
+    try {
+      const response = await fetch('/api/resend-verification-email', {
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessage('Verification email sent successfully! Please check your inbox.');
+        setLastSentTime(new Date());
+
+        setCountdown(60), // 60 second cooldown
+      } else {
+        setError(data.message |'Failed to resend verification email')
+import { useState, useEffect } from 'react',
+import { use_router } from 'next / router',
+import { Input } from '@/components / ui / input',
+import { Button } from '@/components / ui / button',
+import { Alert, AlertDescription } from '@/components / ui / alert',
+import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
+import { AuthLayout } from '@/layout',
+import { supabase } from '@/integrations / supabase / client', // Import Supabase client;
+import { use_auth } from '@/hooks / use_auth', // Import use_auth to access user state;
+import { log_warn, logErrorToProduction } from '@/utils / production_logger',
+;
+export default /**
+ * VerifyStatus - Function description
+ */
+function VerifyStatus() {
+  const router = use_router (),
+  const { user: auth_user, is_loading: auth_loading } = use_auth (), // Get user from AuthContext;
+  const { email: email_param } = router.query,
+  const [email, set_email] = useState (''),
+  const [message, set_message] = useState (''),
+  const [error, set_error] = useState (''),
+  const [is_resending, setIsResending] = useState (false),
+  const [isCheckingStatus, setIsCheckingStatus] = useState (false),
+  const [lastSentTime, setLastSentTime] = useState < Date | null>(null),
+  const [countdown, set_countdown] = useState (0),
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_email (email_param);
+    }
+  }, [email_param]),
+  // Countdown timer for resend button;
+  useEffect (() => {
+    let interval: NodeJS.Timeout,
+    // Check condition
+if ( {) {
+  $2
+}
+      interval = set_interval (() => {
+        set_countdown (prev => prev - 1);
+      }, 1000);
+    }
+    return () => clear_interval (interval);
+  }, [countdown]),
+  const handleResendEmail = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_error ('Please enter your email address'),
+      return;
+    }
+    setIsResending (true),
+    set_error (''),
+    set_message (''),
+    try {
+      const response = await fetch ('/api / resend - verification - email', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ email });
+      }),
+      const data = await response.json (),
+      // Check condition
+if ( {) {
+  $2
+}
+        set_message ('Verification email sent successfully! Please check your inbox.'),
+        setLastSentTime (new Date ()),
+        set_countdown (60), // 60 second cooldown;
+      } else {
+        set_error (data.message || 'Failed to resend verification email');
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Input } from '@/components/ui/input';
@@ -35,6 +147,17 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
 import { AuthLayout } from '@/layout';
 
+      }
+    } catch (err) {
+      set_error ('Network error. Please try again.');
+    } finally {
+
+      setIsResending (false);
+
+    }
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       return
     }
     setIsCheckingStatus(true)
@@ -88,6 +211,94 @@ import { AuthLayout } from '@/layout';
       } else {;
         setError(data.message || 'Failed to resend verification email');
         } catch (error) {
+          {/* Header */}
+
+
+          {/* Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          <div className="text-center">
+            <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <Mail className="h-6 w-6 text-blue-600" />
+            </div>
+            <h1 className="text-2xl font-bold text-gray-900">Email Verification</h1>
+            <p className="text-sm text-gray-600 mt-2">
+              Check and manage your email verification status
+            </p>
+          </div>
+
+
+          {/* Success Message */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {message && (
+            <Alert className="border-green-500 bg-green-50 text-green-900">
+              <CheckCircle className="h-4 w-4" />
+              <AlertDescription>{message}</AlertDescription>
+            </Alert>
+
+
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+          {/* Error Message */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+          {error && (
+            <Alert variant="destructive">
+              <AlertCircle className="h-4 w-4" />
+              <AlertDescription>{error}</AlertDescription>
+            </Alert>
+
+
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+          {/* Email Input */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          <div className="space-y-2">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              Email Address
+            </label>
+            <Input
+              id="email"
+              type="email"
+
+              value={email}
+              on_change={(e) => set_email (e.target.value)}
+              placeholder="Enter your email address";
+              className="w - full";
+            />;
+=======
+
+              value={email  } catch (error) {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -214,9 +425,11 @@ import { AuthLayout } from '@/layout';
               id="email"
               type="email"
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               placeholder="Enter your email address"
               className="w-full"
             />
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {email && (
               <p className="text-xs text-gray-500">
 
@@ -240,6 +453,71 @@ import { AuthLayout } from '@/layout';
             </div>
           )}
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {email && (
+
+            <div className="bg - blue - 50 dark:bg - slate - 800 border border - blue - 200 dark:border - slate - 700 rounded - lg p - 4">;
+              <h3 className="text - sm font - medium text - slate - 900 dark:text - slate - 100 mb - 2">Verification Status</h3>;
+              <div className="text - sm text - slate - 700 dark:text - slate - 300 space - y-1">;
+                <p>• Check your email inbox for a verification link</p>;
+                <p>• Click the link in the email to verify your account</p>;
+                <p>• Return here or try logging in after verification</p>;
+              </div>;
+              {lastSentTime && (
+
+            {/* Check Status Button */}
+
+
+=======
+
+              disabled={!email || isCheckingStatus}
+
+=======
+                  Last email sent: {lastSentTime.toLocaleTimeString()  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </p>;
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+          {/* Action Buttons */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="space-y-3">
+            {/* Check Status Button */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <Button;
+              onClick={handleCheckStatus  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              disabled={!email || isCheckingStatus  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="w-full"
               variant="outline"
             >
@@ -247,14 +525,8 @@ import { AuthLayout } from '@/layout';
                 <>
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
 
-                  Checking Status...
-                </>
-              ) : (
-                <>
-
-                  Check Verification Status
-                </>
-
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="w-full"
               variant="secondary"
             >
@@ -279,18 +551,24 @@ import { AuthLayout } from '@/layout';
               on_click={handleTryLogin}
               disabled={!email}
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="w-full"
             >
               Try Login
             </Button>
           </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
             </p>
             <Button
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               variant="ghost"
               size="sm"
               className="text-blue-600 hover:text-blue-500"
@@ -300,6 +578,7 @@ import { AuthLayout } from '@/layout';
             </Button>
           </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               variant="ghost"
               className="w-full text-sm"
             >
@@ -307,6 +586,7 @@ import { AuthLayout } from '@/layout';
             </Button>
             <Button
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               variant="ghost"
               className="w-full text-sm"
             >
@@ -317,3 +597,6 @@ import { AuthLayout } from '@/layout';
       </div>
     </AuthLayout>
   )
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

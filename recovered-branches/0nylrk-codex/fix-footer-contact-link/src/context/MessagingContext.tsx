@@ -1,4 +1,23 @@
 
+=======
+
+
+const defaultContext: MessagingContextType = {
+  messages: [],
+  conversations: [],
+  unreadCount: 0,
+  activeConversation: null,
+  activeMessages: [],
+  isLoading: false,
+  sendMessage: async () => {},
+  createConversation: async () => {},
+  markAsRead: async () => {},
+  setActiveConversation: () => {},
+  fetchConversations: async () => {},
+  loadMessages: async () => {}
+};
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 const defaultContext: MessagingContextType = {
   messages: []
@@ -25,69 +44,69 @@ export function useMessaging(): MessagingContextType {
 
   if (context === undefined) {
     throw new Error('useMessaging must be used within a MessagingProvider')
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
-  return context
+  return context;
 }
 
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { user } = useAuth();
-  const {
+
+  const {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     messages;
-    activeMessages;
+    active_messages;
     setActiveMessages;
     conversations;
-    setConversations;
-    unreadCount;
+    set_conversations;
+    unread_count;
     setUnreadCount;
-    activeConversation;
+    active_conversation;
     setActiveConversation;
-    isLoading;
-    sendMessage;
-    createConversation;
+    is_loading;
+    send_message;
+    create_conversation;
     markAsRead;
-    fetchConversations;
-    loadMessages
-  } = useMessagingOperations(user);
-  // Setup real-time subscription
-  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations);
-  // Calculate unread count from conversations
-  useEffect(() => {
-    if (conversations.length > 0) {
-      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0);
-      setUnreadCount(count)
-    }
-  }, [conversations, setUnreadCount]);
-  // Fetch conversations when user changes
-  useEffect(() => {
-    if (user) {
-      fetchConversations()
-    } else {
-      setConversations([]);
-      setUnreadCount(0)
-    }
-  }, [user, fetchConversations, setConversations, setUnreadCount]);
-  // Create context value with all the methods and states
-  const contextValue: MessagingContextType = {
-    messages;
-    activeMessages;
-    conversations;
-    unreadCount;
-    activeConversation;
-    isLoading;
-    sendMessage;
-    createConversation;
-    markAsRead;
-    setActiveConversation;
-    fetchConversations
-    loadMessages
-  }
 
   return (
     <MessagingContext.Provider value={contextValue}>
 
+    messages;
+    active_messages;
+    conversations;
+    unread_count;
+    active_conversation;
+    is_loading;
+    send_message;
+    create_conversation;
+    markAsRead;
+    setActiveConversation;
+
+    fetchConversations,;
+    loadMessages;
+  };
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {children}
-    </MessagingContext.Provider>;
+
+    </MessagingContext && MessagingContext.Provider>;
   );
 }
+
+=======
+    fetch_conversations,
+    load_messages;
+  }
 ;
+<<<<<<< HEAD
+=======
+  return (
+    <MessagingContext.Provider value={context_value}>;
+      {children}
+    </MessagingContext.Provider>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

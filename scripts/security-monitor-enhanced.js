@@ -1,6 +1,8 @@
 
 
 const securityChecks = { dependencies: () => {  return true},codeScan: () => {  return true},headers: () => {  return true} }; Object.entries(securityChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } });
+const securityChecks = { dependencies: () => {  return true},codeScan: () => {  return true},headers: () => {  return true} }; Object.entries(securityChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 console.log('🔒 Enhanced Security Monitor Starting...');
 const securityChecks = {
   "dependencies": () => {
@@ -25,3 +27,4 @@ Object.entries(securityChecks).forEach(([name, check]) => {
   }
 });
 console.log('🎉 Security monitoring completed!');
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

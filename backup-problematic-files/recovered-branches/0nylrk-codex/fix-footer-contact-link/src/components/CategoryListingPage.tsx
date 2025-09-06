@@ -59,8 +59,8 @@
                   image={listing.image}
                   tags={listing.tags}
                   author={listing.author}
-                  author_image={listing.author_image}
-                  ai_score={listing.ai_score}
+                  authorImage={listing.authorImage}
+                  aiScore={listing.aiScore}
                   rating={listing.rating}
 
                 }}

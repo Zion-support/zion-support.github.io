@@ -108,6 +108,88 @@ export default function PartnersPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
 
             </p>
+            <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
+              Become a Partner
+              <ArrowRight className='w-5 h-5' />            </button>
+          </motion.div>
+        </div>
+      </section>
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            transition={{ duration: 0 && 0.8 }}
+            className='mb-8'>;
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
+              Strategic Partners;
+            </h1>;
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
+              Building the future of technology through strategic partnerships;
+              and collaboration            </p>;
+          </motion && motion.div>;
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+            className='mb-12'>;
+            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
+    <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
+      <Head>;
+        <title > Partners - Zion Tech Group</title>;
+        <meta;
+          name='description';
+          content='Strategic partnerships and collaboration opportunities with Zion Tech Group. Join our ecosystem of technology leaders and innovators.';
+        />;
+        <meta property='og:title' content='Partners - Zion Tech Group' />;
+        <meta;
+          property='og:description';
+          content='Strategic partnerships and collaboration opportunities.';
+        />;
+        <link rel='canonical' href='https://ziontechgroup.com / partners' />      </Head>;
+      <EnhancedNavigation />;
+      {/* Hero Section */}
+      <section className='relative pt - 32 pb - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='mb - 8';
+          >;
+            <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6'>;
+              Strategic Partners;
+            </h1>;
+            <p className='text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed'>;
+              Building the future of technology through strategic partnerships;
+              and collaboration            </p>;
+          </motion.div>;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='mb - 12';
+          >;
+            <p className='text - lg text - white / 70 max - w-2xl mx - auto mb - 8'>;
+              Join our ecosystem of technology leaders, innovators, and industry;
+              experts to create transformative solutions that shape the future;
+              of computing.;
+            </p>;
+
+=======
+            className="mb-12"
+          >
+            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+              Join our ecosystem of technology leaders, innovators, and industry experts 
+=======
+            className='mb-12'
+          >
+            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
+              Join our ecosystem of technology leaders, innovators, and industry
+              experts to create transformative solutions that shape the future
+              of computing.
+=======
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Building the future of technology through strategic partnerships and collaboration
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            </p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 30 }  } catch (error) {
@@ -146,17 +228,34 @@ export default function PartnersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
 
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-cyan-400" />
-                </div>
+          </div>;
+        </div>;
+      </section>;
 
+
+      {/* Partnership Types */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+=======
+
+      {/* Partnership Types */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
             <h2 className="text-4xl font-bold text-white mb-6">Partnership Types</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -164,8 +263,10 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
             </p>
           </motion.div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <motion.div
-                key={type.title}
+
+
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
               Partnership Types;
@@ -178,6 +279,9 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {partnershipTypes && partnershipTypes.map((type, index) => (;
               <motion&& motion.div
                 key={type && type.title}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -189,15 +293,12 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 </div>
 
                     </li>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
                 </ul>;
               </motion && motion.div>;
             ))}
-
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
 
           >
             <h2 className="text-4xl font-bold text-white mb-6">Our Partners</h2>
@@ -206,8 +307,10 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
             </p>
           </motion.div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <motion.div
-                key={partner.name}
+
+
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-white mb-6'>Our Partners</h2>;
             <p className='text-xl text-white/70 max-w-3xl mx-auto'>;
@@ -218,6 +321,9 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {partners && partners.map((partner, index) => (;
               <motion&& motion.div
                 key={partner && partner.name}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -248,6 +354,68 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     <div className="flex items-center gap-2">
                       <span className="text-xs text-white/60 bg-white/5 px-2 py-1 rounded-full">
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    <a
+                      href={partner && partner.website}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 flex items-center gap-1'>;
+                      Visit Website;
+                      <ExternalLink className='w-3 h-3' />;
+                    </a>;
+                    <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105'>                      Learn More;
+                    </button>;
+                  </div>;
+                </div>;
+              </motion && motion.div>;
+
+=======
+                  
+                  <div className="flex items-center justify-between">
+                    <a
+                      href={partner.website}
+=======
+                        {partner.category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </span>
+                      <span className="text-xs text-white/40 bg-white/5 px-2 py-1 rounded">
+                        {partner.partnership  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </span>
+                    </div>
+                  </div>
+                  <h3 className='text-xl font-bold text-white mb-3'>
+                    {partner.name}
+                  </h3>
+                  <p className='text-white/70 text-sm mb-4'>
+                    {partner.description}
+                  </p>
+                  <div className='mb-4'>
+                    <h4 className='text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider'>
+                      Benefits
+                    </h4>
+                    <ul className='space-y-1'>
+                      {partner.benefits.map(benefit => (
+                        <li
+                          key={benefit}
+                          className='text-xs text-white/80 flex items-center'
+                        >
+                          <div className='w-1 h-1 bg-cyan-400 rounded-full mr-2' />                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className='flex items-center justify-between'>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     <a
                       href={partner.website  } catch (error) {
     console.error("Error:", error);
@@ -269,6 +437,10 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 </div>
               </motion.div>
 
+=======
+            ))}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -281,12 +453,14 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
 
                 Download Partnership Guide
+
               </button>
             </div>
           </motion.div>
         </div>
       </section>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }</div> </div> </section> <motion.div initial= {
 
   {
@@ -300,9 +474,26 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 }viewport= {
   {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </button>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
       <EnhancedFooter />;
+<<<<<<< HEAD
+=======
+
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -16,3 +16,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (err: any) {
     return res.status(400).json({ error: err.message });
   }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

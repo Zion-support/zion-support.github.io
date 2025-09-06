@@ -48,23 +48,47 @@ export function SmartContractDeployment({
   const handleDownloadSolidity = () => {;
     // Create a blob from the Solidity code;
     const blob = new Blob([solidityCode], { type: 'text/plain' }),;
-    const url = URL.createObjectURL(blob),;
+    const url = URL && URL.createObjectURL(blob);
+
     // Create a temporary anchor to trigger download;
-    const a = document.createElement('a'),;
-    a.href = url,;
-    a.download = 'ZionContract.sol',;
-    document.body.appendChild(a),;
-    a.click(),;
+    const a = document && document.createElement('a');
+    a && a.href = url;
+    a && a.download = 'ZionContract && ZionContract.sol';
+    document && document.body.appendChild(a);
+    a && a.click();
+
     // Clean up;
-    URL.revokeObjectURL(url),;
-    document.body.removeChild(a),;
-    toast.success("Solidity contract downloaded");
-  },;
-  return (;
+    URL && URL.revokeObjectURL(url);
+    document && document.body.removeChild(a);
+
+    toast && toast.success("Solidity contract downloaded");
+  };
+
+  return (
     <Card className="w-full">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
+  const handleDownloadSolidity = () =>: any {
+    // Create a blob from the Solidity code;
+    const blob = new Blob ([solidity_code], { type: 'text / plain' }),
+    const url = URL.createObjectURL (blob);
+    // Create a temporary anchor to trigger download;
+    const array = document.create_element ('a');
+    a.href = url;
+    a.download = 'ZionContract.sol';
+    document.body.append_child (a);
+    a.click ();
+    // Clean up;
+    URL.revokeObjectURL (url);
+    document.body.remove_child (a);
+    toast.success ("Solidity contract downloaded");
+  }
+  return (
+    <Card className="w - full">;
+      <CardHeader>;
+        <CardTitle className="flex items - center gap - 2">;
+          <ShieldCheck className="h - 5 w - 5 text - primary" />;
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
@@ -92,6 +116,21 @@ export function SmartContractDeployment({
               <div className="space-y-2">
                 <Label>Select blockchain network</Label>
 
+=======
+
+                <RadioGroup 
+                  defaultValue={deploymentOptions.network}
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+
+
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   })}
                   className="flex flex-col space-y-1"
                 >
@@ -127,10 +166,43 @@ export function SmartContractDeployment({
                   checked={deploymentOptions.useEscrow}
 
                   })}
-                />
-                <Label htmlFor="use-escrow">Use escrow for payments</Label>
-              </div>
-            </>
+                  className="flex flex-col space-y-1";
+                >;
+                  <div className="flex items-center space-x-2">;
+                    <RadioGroupItem value="ethereum" id="ethereum" />;
+                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>;
+                  </div>;
+                  <div className="flex items-center space-x-2">;
+                    <RadioGroupItem value="polygon" id="polygon" />;
+                    <Label htmlFor="polygon">Polygon (lower fees, faster)</Label>;
+                  </div>;
+                </RadioGroup>;
+              </div>;
+
+              <div className="space-y-2">;
+                <Label htmlFor="wallet-address">Wallet address for transactions</Label>;
+                <Input
+                  id="wallet-address" 
+                  placeholder="0x..." 
+                  value={deploymentOptions && deploymentOptions.walletAddress || ''}
+                  onChange={(e) => setDeploymentOptions({;
+                    ...deploymentOptions;                    walletAddress: e && e.target.value;
+                  })}
+                />;
+              </div>;
+
+              <div className="flex items-center space-x-2">;
+                <Switch
+                  id="use-escrow"
+                  aria-label="Use escrow"
+                  checked={deploymentOptions && deploymentOptions.useEscrow}
+                  onCheckedChange={(checked) => setDeploymentOptions({;
+                    ...deploymentOptions;                    useEscrow: checked;
+                  })}
+                />;
+                <Label htmlFor="use-escrow">Use escrow for payments</Label>;
+              </div>;
+            </>;
           )}
 
           <div className="rounded-md bg-muted p-4">
@@ -157,3 +229,4 @@ export function SmartContractDeployment({
           ) : (
             'Deploy Contract'
           )}
+<<<<<<< HEAD

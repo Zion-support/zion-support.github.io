@@ -20,7 +20,16 @@ export default function TranslationPreview() {
       <div className="grid md:grid-cols-2 gap-4">
         {targets.map((lng) => (
 
+=======
+          <div key={lng} className=&quot;border rounded p-3&quot;>
+            <div className=&quot;text-xs uppercase opacity-70 mb-2&quot;>{lng}</div>
+            <div className=&quot;whitespace-pre-wrap text-sm min-h-[4rem]&quot;>
+              {translations[lng] || (lng === 'en' ? text : '')}            </div>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </div>
         ))}
       </div>
     </div>
+<<<<<<< HEAD

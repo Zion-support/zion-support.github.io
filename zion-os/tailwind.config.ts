@@ -1,3 +1,4 @@
+
 import type { Config } from 'tailwindcss';
 const config: Config = {
 
@@ -18,6 +19,12 @@ const config: Config = {
         xs: '2px'},
       background_image: {
         'gradient - radial': 'radial - gradient (var (--tw - gradient - stops))gradient - conic': 'conic - gradient (from 180deg at 50% 50%, var (--tw - gradient - stops))'}}},
+
   plugins: []}
 
+<<<<<<< HEAD
+=======
+;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default config;

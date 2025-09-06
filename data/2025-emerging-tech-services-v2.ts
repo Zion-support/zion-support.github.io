@@ -143,9 +143,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     growth_rate: '85% annually',
   },
   {
+
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS',
     ],
     realImplementation: true,
+
     implementationDetails:
       'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.'
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
@@ -163,6 +165,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     support:
       '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
     compliance: [
+
       'Research ethics, Data privacy, Scientific standards, Industry regulations',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-bio-computing-platform',
@@ -236,6 +239,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       'Research ethics, Data privacy, Scientific standards, Industry regulations',
     ],
     link: 'https://ziontechgroup.com / quantum - bio - computing - platform',
+
     icon: '🧬',
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
@@ -247,9 +251,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     growth_rate: '65% annually',
   },
   {
+
       'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware',
     ],
     realImplementation: true,
+
     implementationDetails:
       'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.'
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.'
@@ -267,6 +273,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     support:
       '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.'
     compliance: [
+
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface-platform',
@@ -340,6 +347,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup.com / brain - computer - interface - platform',
+
     icon: '🧠',
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
@@ -351,9 +359,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     growth_rate: '55% annually',
   },
   {
+
       'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems',
     ],
     realImplementation: true,
+
     implementationDetails:
       'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.'
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.'
@@ -371,6 +381,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     support:
       '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.'
     compliance: [
+
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-platform',
@@ -444,6 +455,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
     ],
     link: 'https://ziontechgroup.com / quantum - energy - platform',
+
     icon: '⚡',
     color: 'from - yellow - 500 to - orange - 600',
     popular: true,
@@ -455,9 +467,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     growth_rate: '45% annually',
   },
   {
+
       'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
     ],
     realImplementation: true,
+
     implementationDetails:
       'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.'
     roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.'
@@ -476,6 +490,22 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     compliance: [
 
+=======
+      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
+    ],
+    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
+    icon: '🚗',
+    color: 'from-red-500 to-pink-600',
+    popular: true,
+    launchDate: '2024-01-25',
+    customers: 180,
+    rating: 4.9,
+    reviews: 65,
+    marketSize: '$35B autonomous vehicle market',
+    growthRate: '75% annually',
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 
     ];
@@ -579,6 +609,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',
+
     icon: '🚗',
     color: 'from - red - 500 to - pink - 600',
     popular: true,
@@ -589,42 +620,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     market_size: '$35B autonomous vehicle market',
     growth_rate: '75% annually',
   },
-  id: string, name: string,
-  tagline: string, description: string,
-  category: string,
-  price: {
-    monthly: number, yearly: number,
-    currency: string, trialDays: number,
-    setupTime: string,
-    enterprise: number
-    },
-    features: string[], benefits: string[],
-  targetAudience: string[], marketPosition: string,
-  competitors: string[], techStack: string[],
-  realImplementation: boolean, implementationDetails: string,
-  roi: string, useCases: string[],
-  integrations: string[], support: string,
-  compliance: string[], link: string,
-  icon: string, color: string,
-  popular: boolean, launchDate: string,
-  customers: number, rating: number,
-  reviews: number, marketSize: string,
-  growthRate: string
-}
-];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development';
-    ];
-    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
-    support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
-    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
-    link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform';
-    icon: '🚗';
-    color: 'from - red - 500 to - pink - 600';
-    popular: true;
-    launch_date: '2024 - 01 - 25';
-    customers: 180;
-    rating: 4 && 4.9;
-    reviews: 65;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string,;
   name: string,;
   tagline: string,;
@@ -901,3 +898,5 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
 
   }
 ];
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

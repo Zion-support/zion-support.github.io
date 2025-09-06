@@ -3,6 +3,7 @@
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function TalentPool() {
   // Mock talent data
 
@@ -40,6 +41,11 @@ export function TalentPool() {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
+=======
+
+  },
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
     <Card>
@@ -71,14 +77,91 @@ export function TalentPool() {
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
 
-                  <Badge key={index} variant="secondary" className="text-xs">
-                    {skill}
+      case "available": return <Badge className="bg-green-500">Available</Badge>;
+      case "interviewing":;
+        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;
+
+      case "hired":;
+        return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Hired</Badge>,;
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
+
+    }
+  }
+
+  return (
+    <Card>;
+      <CardHeader>;
+        <div className="flex items-center justify-between">;
+          <div>;
+            <CardTitle>Dedicated Talent Pool</CardTitle>;
+            <CardDescription>Candidates matched to your company</CardDescription>;
+          </div>;
+          <Button size="sm">View All</Button>;
+        </div>;
+      </CardHeader>;
+
+                  {getStatusBadge(talent.status)}
+                  <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">
+                    {talent.match}% Match
                   </Badge>
+                </div>
+              </div>
+              <div className="mt-2 flex flex-wrap gap-1">
+                {talent.skills.map((skill, index) => (
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                  <Badge key={index} variant="secondary" className="text-xs">
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    {skill}
+                  </Badge>;
                 ))}
-              </div>
-              <div className="mt-3 flex gap-2">
-                <Button size="sm" variant="outline">View Profile</Button>
-                <Button size="sm">Contact</Button>
-              </div>
-            </div>
+              </div>;
+              <div className="mt-3 flex gap-2">;
+                <Button size="sm" variant="outline">View Profile</Button>;
+                <Button size="sm">Contact</Button>;
+              </div>;
+            </div>;
           ))}
+=======
+
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+}
+
+      <CardContent className="p - 0">;
+        <div className="divide - y divide - border">;
+          {talents.map ((talent) => (
+            <div key={talent.id} className="p - 4">;
+              <div className="flex items - center justify - between">;
+                <div>;
+                  <p className="font - semibold">{talent.name}</p>;
+                  <p className="text - sm text - muted - foreground">{talent.role}</p>;
+                </div>;
+                <div className="flex items - center gap - 2">;
+                  {getStatusBadge (talent.status)}
+                  <Badge variant="outline" className="bg - purple - 100 text - purple - 800 border - purple - 200">;
+                    {talent.match}% Match;
+                  </Badge>;
+                </div>;
+              </div>;
+              <div className="mt - 2 flex flex - wrap gap - 1">;
+                {talent.skills.map ((skill, index) => (
+                  <Badge key={index} variant="secondary" className="text - xs">;
+                    {skill}
+                  </Badge>))}
+              </div>;
+              <div className="mt - 3 flex gap - 2">;
+                <Button size="sm" variant="outline">View Profile</Button>;
+                <Button size="sm">Contact</Button>;
+              </div>;
+            </div>))}
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

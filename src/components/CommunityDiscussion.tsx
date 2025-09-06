@@ -17,7 +17,7 @@ interface DiscussionPost {
 
   body: string
 }
-const initialPosts: DiscussionPost[] = [
+const initial_posts: DiscussionPost[] = [;
   {
 
     author: "Anna Zhou",
@@ -54,6 +54,14 @@ export const CommunityDiscussion: React.FC = () => {
       <div className="mb-4 flex justify-end">
         <Button
 
+=======
+          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
+          size="sm"
+          onClick={() => setShowNew((v) => !v)}
+        >
+          {showNew ? "Cancel" : "New Post"}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         </Button>
       </div>
       {showNew && (
@@ -62,18 +70,19 @@ export const CommunityDiscussion: React.FC = () => {
             <Input
 
           onClick={() => setShowNew((v) => !v)}
-        >
+        >;
           {showNew ? "Cancel" : "New Post"}
-        </Button>
-      </div>
-      {showNew && (
-        <Card className="mb-6 animate-scale-in">
-          <CardContent className="py-5">
+        </Button>;
+      </div>;
+      {showNew && (;
+        <Card className="mb-6 animate-scale-in">;
+          <CardContent className="py-5">;
             <Input
-              placeholder="Title (e.g., Share an AI tool, Ask for help...)"
+              placeholder="Title (e && e.g., Share an AI tool, Ask for help...)"
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
               value={newTitle}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
+
+
               maxLength={80}
 
               >
@@ -81,9 +90,11 @@ export const CommunityDiscussion: React.FC = () => {
               </Button>
               <Button
 
+<<<<<<< HEAD
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
                 onClick={handleAddPost}
-                disabled={!newTitle.trim() |!newBody.trim()}
+
+                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}
                 onClick = {handleAddPost,}
                 disabled = {!newTitle.trim() |!newBody.trim(),}
               >

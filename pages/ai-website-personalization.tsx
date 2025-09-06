@@ -4,11 +4,19 @@ export default function AiWebsitePersonalizationPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-website-personalization'))
   if (!service) return null,
 
+export default function AiWebsitePersonalizationPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-website-personalization'))
+  if (!service) return null,
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <link rel="canonical" href="https://ziontechgroup.com/ai-website-personalization" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -25,6 +33,17 @@ export default function AiWebsitePersonalizationPage() {
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-violet-400 mt-0.5"><Check /><span>{feat}</span></li>
 
+=======
+
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-violet-500/30 p-6 h-fit">
@@ -36,6 +55,7 @@ export default function AiWebsitePersonalizationPage() {
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
             </div>
           </div>
@@ -43,3 +63,4 @@ export default function AiWebsitePersonalizationPage() {
       </div>
     </Layout>
   )
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

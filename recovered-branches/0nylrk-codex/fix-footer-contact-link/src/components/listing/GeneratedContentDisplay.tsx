@@ -5,6 +5,35 @@ import {
 
 } from "@/components/ui/card";
 
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+
+  key_points: string[];
+
+}
+interface GeneratedContentDisplayProps {
+=======
+interface GeneratedContentDisplayProps {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  CardTitle,;
+
+} from "@/components/ui/card";
+
+
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { ArrowRight } from "lucide-react",
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -14,6 +43,15 @@ interface GeneratedContent {
   onApply: () => void
 }
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  content: GeneratedContent;
+
+
+
+export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -21,40 +59,109 @@ interface GeneratedContent {
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">
+            Description
+          </h3>
           <p className="text-white">{content.description}</p>
         </div>
 
+=======
+
+        
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div>
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">
+            Tags
+          </h3>
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 {tag}
-              </Badge>
+              </Badge>;
             ))}
           </div>
         </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div>
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">
+            Suggested Price Range
+          </h3>
           <p className="text-white">
-            ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
+            ${content.suggestedPrice.min.toFixed(2)} - $
+            {content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div>
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">
+            Key Selling Points
+          </h3>
           <ul className="list-disc pl-5 text-white space-y-1">
             {content.keyPoints.map((point, index) => (
               <li key={index}>{point}</li>
             ))}
-          </ul>
-        </div>
-      </CardContent>
-      <CardFooter>
-        <Button
-          onClick={onApply}
+=======
+  on_apply: () => void;
+}
+export /**
+ * GeneratedContentDisplay - Function description
+ */
+function GeneratedContentDisplay() {
+  return (
+    <Card className="border border - zion - blue - light bg - zion - blue - dark">;
+      <CardHeader>;
+        <CardTitle className="text - white">Generated Content</CardTitle>;
+      </CardHeader>;
+      <CardContent className="space - y-4">;
+        <div>;
+          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
+            Description;
+          </h3>;
+          <p className="text - white">{content.description}</p>;
+        </div>;
+        <div>;
+          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
+            Tags;
+          </h3>;
+          <div className="flex flex - wrap gap - 2">;
+            {content.tags.map ((tag, index) => (
+              <Badge;
+                key={index}
+                className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30";
+              >;
+                {tag}
+              </Badge>))}
+          </div>;
+        </div>;
+        <div>;
+          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
+            Suggested Price Range;
+          </h3>;
+          <p className="text - white">;
+            ${content.suggested_price.min.to_fixed (2)} - $;
+            {content.suggested_price.max.to_fixed (2)}
+          </p>;
+        </div>;
+        <div>;
+          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
+            Key Selling Points;
+          </h3>;
+          <ul className="list - disc pl - 5 text - white space - y-1">;
+            {content.key_points.map ((point, index) => (
+              <li key={index}>{point}</li>))}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          </ul>;
+        </div>;
+      </CardContent>;
+      <CardFooter>;
+
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing
@@ -74,3 +181,5 @@ interface GeneratedContent {
   );
 }
 ;
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

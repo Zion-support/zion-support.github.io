@@ -26,7 +26,7 @@
 );
 
     ref={ref}
-    className={cn ('text - lg font - semibold', class_name)}
+    className={cn(buttonVariants(), className)}
     {...props}
 
     ref={ref}

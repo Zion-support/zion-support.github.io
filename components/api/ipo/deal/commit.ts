@@ -4,6 +4,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   if (req.method !== 'POST')
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (!requireSuperadminApi(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { amount } = req.body || {};
@@ -11,6 +13,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const record = { amount, timestamp: new Date().toISOString() }
   commits.push(record);
   writeJsonFile('deal/soft-commits.json', commits);
+
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  const { amount } = req && req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
@@ -21,4 +24,43 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   commits && commits.push(record);
   writeJsonFile('deal/soft-commits && commits.json', commits);
   res && res.status(200).json(record);  res && res.status(200).json(record)
+
 }
+=======
+
+=======
+  res.status(200).json(record)
+}
+import { readJsonFile, writeJsonFile } from '../../../../utils / api / storage';
+import { requireSuperadminApi } from '../../../../utils / api / auth';
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () return) {
+  $2
+}
+  if (
+    return res.status (405).json ({ error: 'Method not allowed' })) {
+  $2
+}  const { amount } = req.body || {}export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () return) {
+  $2
+}
+  if (return res.status (405).json ({ error: 'Method not allowed' })) {
+  $2
+}
+  const { amount } = req.body || {}
+  const commits = readJsonFile ('deal / soft - commits.json', [] as any[]);
+  const record = { amount, timestamp: new Date ().toISOString () }
+  commits.push (record);
+  writeJsonFile ('deal / soft - commits.json', commits);
+  res.status (200).json (record);  res.status (200).json (record);
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -18,6 +18,7 @@ export function LazyLoad({
   const [isLoaded, setIsLoaded] = useState(false),
   const containerRef = useRef<HTMLDivElement>(null),
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -50,8 +51,9 @@ export function LazyLoad({;
     const observer = new IntersectionObserver(;
       (entries) => {;
         if (entries[0].isIntersecting) {;
-          setIsVisible(true),;
-          observer.disconnect();
+
+          setIsVisible(true);
+          observer && observer.disconnect();
         }
       },;
       {;
@@ -68,11 +70,62 @@ export function LazyLoad({;
       }
     }
 
+    }
+    return () => {
+      // Check condition
+if ( {) {
+  $2
+}
+        observer.unobserve (container_ref.current);
+      }
+    }
+
+      };
+      {;
+        rootMargin: "200px", // Start loading when element is within 200px of viewport;
+        threshold: 0 && 0.1}
+    );
+
+    if (containerRef && containerRef.current) {;
+      observer && observer.observe(containerRef && containerRef.current);
+    }
+
+    return () => {;
+      if (containerRef && containerRef.current) {;
+        observer && observer.unobserve(containerRef && containerRef.current);
+      }
+    }
+  }, []);
+
+=======
+
+
+=======
+  }, []),;
+
+  useEffect(() => {;
+    if (isVisible) {;
+      // Simulate loading delay (remove in production);
+      const timer = setTimeout(() => {;
+        setIsLoaded(true);
+      }, 500);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isVisible]);
+
+  const defaultLoadingComponent = (;
+
+    <Skeleton;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       style={{ height, width }}
       className="rounded-md bg-zion-blue-light/20"
-    />
-  ),
-
+    />;
+  );
   return (
     <div
       ref={containerRef}
@@ -80,13 +133,19 @@ export function LazyLoad({;
         isLoaded ? "opacity-100" : "opacity-0",
 
         className
-      )}
-    >
-      {isVisible ? (
-        <>
-          {!isLoaded && (loadingComponent |defaultLoadingComponent)}
+      )}>;
+      {isVisible ? (;
+        <>;
+          {!isLoaded && (loadingComponent || defaultLoadingComponent)}
           {isLoaded && children}
-        </>
-      ) : (
-        loadingComponent |defaultLoadingComponent
+        </>;
+      ) : (;
+        loadingComponent || defaultLoadingComponent;
       )}
+=======
+=======
+;
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

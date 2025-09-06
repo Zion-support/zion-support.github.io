@@ -22,6 +22,10 @@ export interface AuthContextType {;
   loginWithTwitter: () => Promise<void>,;
   loginWithWeb3: () => Promise<void>;
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   user: UserDetails | null
   isAuthenticated: boolean
@@ -47,7 +51,7 @@ export interface AuthContextType {;
 
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth
-    // // // console.log("Sign in attempted with:", email),
+    console.log("Sign in attempted with:", email);
     // Mock successful sign-in
 
       companyId: "company-123"
@@ -56,12 +60,12 @@ export interface AuthContextType {;
 
   const signOut = async () => {
     // This would be replaced with actual Supabase auth
-    // // // console.log("Sign out attempted"),
+    console.log("Sign out attempted");
     setUser(null)
 
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth
-    // // // console.log("Sign up attempted with:", email, userData),
+    console.log("Sign up attempted with:", email, userData);
     // Mock successful sign-up
     setUser({
       id: "mock-user-id"
@@ -70,24 +74,24 @@ export interface AuthContextType {;
       name: userData?.name |"New User"
       userType: userData?.userType
       profileComplete: false
-    }),
+    });
     return { error: null }
 
   const resetPassword = async (email: string) => {
     // Mock implementation
-    // // // console.log("Password reset requested for:", email),
+    console.log("Password reset requested for:", email);
     return { error: null }
 
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation
-    // // // console.log("Profile update requested with:", data),
+    console.log("Profile update requested with:", data);
     if (user) {
       setUser({ ...user, ...data })
     }
     return { error: null }
 
   const loginWithGoogle = async () => {
-    // // // console.log("Google login requested"),
+    console.log("Google login requested");
     // Mock implementation
     setUser({
       id: "google-user-id"
@@ -98,7 +102,7 @@ export interface AuthContextType {;
     })
 
   const loginWithFacebook = async () => {
-    // // // console.log("Facebook login requested"),
+    console.log("Facebook login requested");
     // Mock implementation
     setUser({
       id: "facebook-user-id"
@@ -109,7 +113,7 @@ export interface AuthContextType {;
     })
 
   const loginWithTwitter = async () => {
-    // // // console.log("Twitter login requested"),
+    console.log("Twitter login requested");
     // Mock implementation
     setUser({
       id: "twitter-user-id"
@@ -128,3 +132,141 @@ export interface AuthContextType {;
   return context;
 }
 ;
+      displayName: "Google User",;
+      name: "Google User",;
+      profileComplete: true;
+    });
+
+  },;
+  const loginWithFacebook = async () => {;
+    // // // console.log("Facebook login requested"),;
+    // Mock implementation;
+    setUser({;
+      id: "facebook-user-id",;
+      email: "facebook@example.com",;
+      displayName: "Facebook User",;
+      name: "Facebook User",;
+      profileComplete: true;
+    });
+  },;
+  const loginWithTwitter = async () => {;
+    // // // console.log("Twitter login requested"),;
+    // Mock implementation;
+    setUser({;
+      id: "twitter-user-id",;
+      email: "twitter@example.com",;
+
+      displayName: "Twitter User",;
+      name: "Twitter User",;
+      profileComplete: true;
+    });
+
+      const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
+      const address = accounts[0];
+      await ethereum.request ({
+        method: 'personal_sign',
+        params: [address, address];
+      });
+      set_user ({
+        id: address,
+        display_name: address,
+        profile_complete: true;
+      });
+
+    } catch (err) {
+      console.error ('Web3 login failed', err);
+    }
+  }
+
+    setIsLoading(true);
+    setTimeout(() => {;
+      setUser(null);
+      setIsLoading(false);
+    }, 100);
+  }, []);
+
+
+  const value = {;
+    user;
+    isAuthenticated: !!user,;
+
+    isLoading;
+    signIn;
+    signOut;
+    signUp;
+
+    // Add aliases for compatibility;
+    login: signIn,;
+    logout: signOut,;
+    signup: signUp,;
+
+    resetPassword;
+    updateProfile;
+    loginWithGoogle;
+    loginWithFacebook;
+    loginWithTwitter;
+
+;
+  // Check for existing session on mount;
+  useEffect (() => {
+    // Mock loading state and then set a null user to simulate no session;
+    setIsLoading (true);
+    set_timeout (() => {
+      set_user (null);
+      setIsLoading (false);
+    }, 100);
+  }, []);
+;
+  const value = {
+    user;
+    is_authenticated: !!user,
+    is_loading;
+    sign_in;
+    sign_out;
+    sign_up;
+    // Add aliases for compatibility;
+    login: sign_in,
+    logout: sign_out,
+    signup: sign_up,
+    reset_password;
+    update_profile;
+    loginWithGoogle;
+    loginWithFacebook;
+    loginWithTwitter;
+    loginWithWeb3;
+
+  }
+;
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+}
+
+    loginWithWeb3;
+  };
+
+  return <AuthContext && AuthContext.Provider value={value}>{children}</AuthContext && AuthContext.Provider>;
+}
+
+// Custom hook to use the auth context;
+export function useAuth(): any (): AuthContextType {;
+  const context = useContext(AuthContext);
+  if (context === undefined) {;
+    throw new Error("useAuth must be used within an AuthProvider");
+
+  }
+  return context;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+// Custom hook to use the auth context;
+export function use_auth (): AuthContextType {
+  const context = useContext (AuthContext);
+  // Check condition
+if ( {) {
+  $2
+}
+    throw new Error ("use_auth must be used within an AuthProvider");
+  }
+  return context;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

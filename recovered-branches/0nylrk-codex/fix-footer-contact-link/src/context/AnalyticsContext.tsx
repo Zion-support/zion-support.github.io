@@ -1,4 +1,9 @@
 
+=======
+import React, { create_context, useState, useContext, useEffect, ReactNode } from 'react';
+import {use_location} from 'react-router-dom';
+import {use_auth} from '@/hooks / use_auth';
+import {supabase} from '@/integrations / supabase / client';
 
   path?: string;
   component?: string;
@@ -19,16 +24,63 @@
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 ),
+export interface AnalyticsEvent {
+  type: AnalyticsEventType
+  path?: string;
+  component?: string;
+
+import {useLocation} from 'react-router-dom';
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+// Analytics event types;
+export type AnalyticsEventType = ;
+  | 'page_view';
+  | 'button_click';
+  | 'form_submit';
+  | 'form_error';
+  | 'search';
+  | 'filter';
+  | 'conversion';
+  | 'listing_view';
+  | 'listing_contact';
+  | 'payment_initiated';
+  | 'payment_completed';
+  | 'signup';
+  | 'login';
+
+// Interface for analytics events;
+export interface AnalyticsEvent {;
+  type: AnalyticsEventType,;
+  path?: string;
+  component?: string;
+  elementId?: string;
+  timestamp: number,;
+
+  userId?: string | null;
+  metadata?: Record<string, any>;
+}
+
+
+export interface AnalyticsContextType {;
+  trackEvent: (type: AnalyticsEventType, metadata?: Record<string, any>) => void;
+  trackConversion: (conversionType: string, value?: number, metadata?: Record<string, any>) => void;
+  pageViews: number,;
+  lastEvent: AnalyticsEvent | null,;
+  events: AnalyticsEvent[],;
+  clearEvents: () => void;
+}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   // Track page views when location changes
   useEffect(() => {
-    trackEvent('page_view', { path: location.pathname }),
-    setPageViews((prev) => prev + 1),
+    trackEvent('page_view', { path: location.pathname })
+    setPageViews((prev) => prev + 1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]),
 
   // Function to track general analytics events
-  const trackEvent = async (type: AnalyticsEventType, metadata: Record<string any> = {}) => {
+  const trackEvent = async (type: AnalyticsEventType, metadata: Record<string, any> = {}) => {
     const event: AnalyticsEvent = {
       type
       path: location.pathname
@@ -36,6 +88,16 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
       userId: user?.id
       metadata
 
+=======
+
+    },
+    
+    setEvents((prevEvents) => [...prevEvents, event]),
+    setLastEvent(event),
+    
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     try {
       // Store event in Supabase for persistent analytics
       await supabase.from('analytics_events').insert([{
@@ -76,6 +138,14 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   )
 }
 
+      {children}
+    </AnalyticsContext && AnalyticsContext.Provider>;
+  );
+}
+
+
+export const useAnalytics = (): AnalyticsContextType => {;
+
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')
@@ -85,3 +155,61 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   return context as AnalyticsContextType
 
 };
+  const context = useContext(AnalyticsContext);
+  if (!context) {;
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+
+  // Cast is used here because the context default is undefined until provided;
+  // by `AnalyticsProvider`. The runtime check above ensures it's defined.;
+  return context as AnalyticsContextType;
+
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  }
+;
+  // Function to track conversion events;
+  const track_conversion = (conversion_type: string, value?: number, metadata: Record < string, any> = {}) =>: any {
+    track_event ('conversion', {
+      conversion_type,
+      value,
+      ...metadata;
+    });
+  }
+;
+  // Clear events (for development or testing);
+  const clear_events = () =>: any {
+    set_events ([]);
+    setLastEvent (null);
+  }
+;
+  return (
+    <AnalyticsContext.Provider;
+      value={{
+        track_event;
+        track_conversion;
+        page_views;
+        last_event;
+        events;
+        clear_events;
+      }}
+    >;
+      {children}
+    </AnalyticsContext.Provider>);
+}
+export const use_analytics = (): AnalyticsContextType => {
+  const context = useContext (AnalyticsContext);
+  // Check condition
+if ( {) {
+  $2
+}
+    throw new Error ('use_analytics must be used within an AnalyticsProvider');
+  }
+  // Cast is used here because the context default is undefined until provided;
+  // by `AnalyticsProvider`. The runtime check above ensures it's defined.;
+  return context as AnalyticsContextType;
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

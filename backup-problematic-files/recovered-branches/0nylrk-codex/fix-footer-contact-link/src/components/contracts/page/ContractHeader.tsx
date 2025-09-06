@@ -1,4 +1,14 @@
 
+=======
+import { Button } from "@/components/ui/button",;
+;
+interface ContractHeaderProps {;
+  onCreateClick:() => void;
+}
+;
+export function ContractHeader({ onCreateClick } ContractHeaderProps) {;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="flex justify-between items-center mb-8">;
       <div>;
         <h1 className="text-3xl font-bold">Smart Contract Builder</h1>;
@@ -6,6 +16,7 @@
           Create legally binding agreements with optional blockchain deployment;
         </p>;
       </div>;
+<<<<<<< HEAD
 
       <Button size="lg" onClick={onCreateClick}>;
         Create New Contract;

@@ -1,5 +1,6 @@
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
@@ -19,6 +20,14 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
     if (data.ok) load()
   }
 
+
+    if (data.ok) load()
+  }
+
+}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <>
       <Head>
@@ -56,6 +65,12 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
                 <div className="font-medium text-sm mb-1">Documents</div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
 
+=======
+
+                  {(p.documents || []).map((d) => (
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     <div key={d.id} className="border rounded p-2 text-xs">
                       <div>Kind: {d.kind}</div>
                       <div>Filename: {d.filename}</div>
@@ -83,3 +98,5 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

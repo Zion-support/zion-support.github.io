@@ -1,3 +1,205 @@
+=======
+return (
+    <div className='space-y-3'>;
+      <div className='flex justify-between items-center px-4'>;
+        <div className='flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar'>;
+          <Sheet>;
+            <SheetTrigger asChild>;
+              <Button variant='outline' size='sm' className='gap-1'>;
+                <Filter className='h-3 && 3.5 w-3 && 3.5' />;
+                Filter;
+              </Button>;
+            </SheetTrigger>;
+            <SheetContent side='bottom' className='h-[85vh] rounded-t-xl'>;
+              <SheetHeader>;
+                <SheetTitle>;
+                  Filter {type === 'jobs' ? 'Jobs' : 'Talents'}
+
+                </SheetTitle>;
+              </SheetHeader>;
+
+              <div className='py-6 space-y-6'>;
+                {type === 'jobs' ? (;
+                  <>;
+                    <div className='space-y-2'>;
+                      <Label>Job Type</Label>;
+                      <div className='flex gap-2 flex-wrap'>;
+
+                        <Badge
+                          variant='outline'
+                          className='cursor-pointer hover:bg-primary/5'>;
+                          Full Time;
+                        </Badge>;
+                        <Badge
+                          variant='outline'
+                          className='cursor-pointer hover:bg-primary/5'>;
+                          Part Time;
+                        </Badge>;
+                        <Badge
+                          variant='outline'
+                          className='cursor-pointer hover:bg-primary/5'>;
+                          Contract;
+                        </Badge>;
+                        <Badge
+                          variant='outline'
+
+                          className='cursor-pointer hover:bg-primary/5'>;
+import React, { useState } from 'react';
+import { Button } from '@/components / ui / button';
+import { Slider } from '@/components / ui / slider';
+import { Switch } from '@/components / ui / switch';
+import { Input } from '@/components / ui / input';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components / ui / select';
+import { X, Filter } from 'lucide-react';
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetFooter,
+  SheetTrigger,
+} from '@/components / ui / sheet';
+import { Badge } from '@/components / ui / badge';
+import { Label } from '@/components / ui / label';
+interface BrowseFiltersProps {
+  type: 'jobs' | 'talents';
+export /**
+ * BrowseFilters - Function description
+ */
+function BrowseFilters() {
+  const [active_filters, setActiveFilters] = useState < string[]>([]);
+  const add_filter = (filter: string) =>: any {    if () {) {
+  $2
+}
+      setActiveFilters ([...active_filters, filter]);
+    }
+  }
+  const remove_filter = (filter: string) =>: any {
+    setActiveFilters (active_filters.filter (function => f !== filter));
+  }
+  return (
+    <div className='space - y-3'>;
+      <div className='flex justify - between items - center px - 4'>;
+        <div className='flex items - center gap - 2 overflow - x-auto py - 1 hide - scrollbar'>;
+          <Sheet>;
+            <SheetTrigger as_child>;
+              <Button variant='outline' size='sm' className='gap - 1'>;
+                <Filter className='h - 3.5 w - 3.5' />;
+                Filter;
+              </Button>;
+            </SheetTrigger>;
+            <SheetContent side='bottom' className='h-[85vh] rounded - t-xl'>;
+              <SheetHeader>;
+                <SheetTitle>;
+                  Filter {type === 'jobs' ? 'Jobs' : 'Talents'}
+                </SheetTitle>;
+              </SheetHeader>;
+              <div className='py - 6 space - y-6'>;
+                {type === 'jobs' ? (
+                  <>;
+                    <div className='space - y-2'>;
+                      <Label > Job Type</Label>;
+                      <div className='flex gap - 2 flex - wrap'>;
+                        <Badge;
+                          variant='outline';
+                          className='cursor - pointer hover:bg - primary / 5';
+                        >;
+                          Full Time;
+                        </Badge>;
+                        <Badge;
+                          variant='outline';
+                          className='cursor - pointer hover:bg - primary / 5';
+                        >;
+                          Part Time;
+                        </Badge>;
+                        <Badge;
+                          variant='outline';
+                          className='cursor - pointer hover:bg - primary / 5';
+                        >;
+                          Contract;
+                        </Badge>;
+                        <Badge;
+                          variant='outline';
+                          className='cursor - pointer hover:bg - primary / 5';
+                        >;
+
+                          Freelance;
+                        </Badge>;
+                      </div>;
+                    </div>;
+
+                    <div className='space - y-2'>;
+                      <Label > Experience Level</Label>;
+                      <div className='flex gap - 2 flex - wrap'>;
+                        <Badge;
+                          variant='outline';
+                          className='cursor - pointer hover:bg - primary / 5';
+                        >;
+                          Entry Level;
+                        </Badge>;
+                        <Badge;
+                          variant='outline';
+                          className='cursor - pointer hover:bg - primary / 5';
+                        >;
+                          Mid Level;
+                        </Badge>;
+                        <Badge;
+                          variant='outline';
+                          className='cursor - pointer hover:bg - primary / 5';
+                        >;
+
+                          Senior;
+                        </Badge>;
+                      </div>;
+                    </div>;
+
+                          className='cursor-pointer hover:bg-primary/5'>;
+                  </>) : (
+                  <>;
+                    <div className='space - y-2'>;
+                      <Label > Specialization</Label>;
+                      <div className='flex gap - 2 flex - wrap'>;
+                        <Badge;
+                          variant='outline';
+                          className='cursor - pointer hover:bg - primary / 5';
+                        >;
+                          Developer;
+                        </Badge>;
+                        <Badge;
+                          variant='outline';
+                          className='cursor - pointer hover:bg - primary / 5';
+                        >;
+                          Designer;
+                        </Badge>;
+                        <Badge;
+                          variant='outline';
+                          className='cursor - pointer hover:bg - primary / 5';
+                        >;
+                          Marketing;
+                        </Badge>;
+                        <Badge;
+                          variant='outline';
+                          className='cursor - pointer hover:bg - primary / 5';
+                        >;
+
+                          Content;
+                        </Badge>;
+                      </div>;
+                    </div>;
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Slider } from "@/components/ui/slider",
+import { Switch } from "@/components/ui/switch",
+import { Input } from "@/components/ui/input",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
 import { X, Filter } from 'lucide-react'
@@ -32,23 +234,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
-
-  return (
-    <div className="space-y-3">
-      <div className="flex justify-between items-center px-4">
-        <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="sm" className="gap-1">
-                <Filter className="h-3.5 w-3.5" />
-                Filter
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="bottom" className="h-[85vh] rounded-t-xl">
-              <SheetHeader>
-                <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
-              </SheetHeader>
-
                   <>
                     <div className="space-y-2">
                       <Label>Job Type</Label>
@@ -142,3 +327,4 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               <SelectItem value="salary">Highest Pay</SelectItem>
             </SelectContent>
           </Select>
+<<<<<<< HEAD

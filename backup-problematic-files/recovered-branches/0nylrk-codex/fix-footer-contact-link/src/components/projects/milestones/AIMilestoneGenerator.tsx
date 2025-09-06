@@ -1,10 +1,97 @@
 
+=======
+import React, { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent } from '@/components/ui/card',;
+import {;
+  Accordion,;
+  AccordionContent,;
+  AccordionItem,;
+  AccordionTrigger} from '@/components/ui/accordion',;
+import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react',;
+import { format, parseISO } from 'date-fns',;
+import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
+import { Badge } from '@/components/ui/badge',;
+;
+interface AIMilestoneGeneratorProps {;
+  scope:string,;
+  startDate:string,;
+  endDate:string | null,;
+  projectType:string,;
+  onAddMilestones:(milestones:GeneratedMilestone[]) => void,;
+  onAddMilestone:(milestone:GeneratedMilestone) => void;
+}
+;
+export function AIMilestoneGenerator({;
+  scope,;
+  startDate,;
+  endDate,;
+  projectType,;
+  onAddMilestones,;
+  onAddMilestone;
+} AIMilestoneGeneratorProps) {;
+  const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator(),;
+  const [selectedMilestones, setSelectedMilestones] = useState<Record<string boolean>>({}),;
+;
+  const handleGenerateMilestones = async () => {;
+    if (!scope || !startDate || !projectType) {;
+      return,;
+    }
+;
+    const input:MilestoneInput = {;
+      scope,;
+      startDate,;
+      endDate,;
+      projectType;
+    },;
+;
+    await generateMilestones(input),;
+    // Initially select all milestones;
+    const initialSelection = {},;
+    generatedMilestones.forEach((_, index) => {;
+      initialSelection[index] = true,;
+    }),;
+    setSelectedMilestones(initialSelection),;
+  },;
+;
+  const handleAddToProject = () => {;
+    const selectedMilestonesList = generatedMilestones.filter((_, index) => ;
+      selectedMilestones[index];
+    ),;
+    ;
+    onAddMilestones(selectedMilestonesList),;
+    clearGeneratedMilestones(),;
+    setSelectedMilestones({}),;
+  },;
+;
+  const toggleMilestoneSelection = (index:number) => {;
+    setSelectedMilestones(prev => ({;
+      ...prev,;
+      [index]:!prev[index];
+    })),;
+  },;
+;
+  const handleAddSingleMilestone = (milestone:GeneratedMilestone) => {;
+    onAddMilestone(milestone);
+  },;
+;
+  const formatDate = (dateString:string) => {;
+    try {;
+      return format(parseISO(dateString), 'MMM dd, yyyy'),;
+    } catch (error) {;
+      return dateString,;
+    }
+  },;
+;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <h3 className="text-lg font-medium flex items-center">;
           <Sparkles className="w-5 h-5 mr-2 text-primary" />;
           AI Milestone Generator;
         </h3>;
+<<<<<<< HEAD
 
           {isGenerating ? (;
             <>;

@@ -30,7 +30,6 @@
     email: string;
     address: string;
 
-    website: string;
   }
 
   realImplementation: boolean;
@@ -459,6 +458,12 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     rating: 4 && 4.9,
     reviews: 28
 
+=======
+;
+=======
+  }
+];
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string,;
   name: string,;
   tagline: string,;

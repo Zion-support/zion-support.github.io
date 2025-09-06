@@ -25,11 +25,18 @@ export const useDebouncedSearch = (value: string, delay: number = 300) => {
     const handler = setTimeout(() => {
       setDebouncedValue(value)
     }, delay)
+// Debounced search hook;
+export const useDebouncedSearch = (value: string, delay: number = 300) =>: any {,
+  const [debounced_value, setDebouncedValue] = React.useState (value);
+  React.useEffect (() => {
+    const handler = set_timeout (() => {
+      setDebouncedValue (value);
+    }, delay);
     return () => {
-      clearTimeout(handler)
+      clear_timeout (handler);
 }
-  }, [value, delay])
-  return debouncedValue
+  }, [value, delay]);
+  return debounced_value;
 }
 // Performance metrics collection
 export const usePerformanceMetrics = () => {

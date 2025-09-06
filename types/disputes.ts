@@ -1,4 +1,6 @@
 
+=======
+export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 
 export type DisputeReason =;
   | 'Scope Disagreement';
@@ -6,6 +8,7 @@ export type DisputeReason =;
   | 'Delivery Delay';
   | 'Payment Issue';
   | 'Communication Breakdown';
+
   | 'Other',;
 
 export type DisputeAttachment = {

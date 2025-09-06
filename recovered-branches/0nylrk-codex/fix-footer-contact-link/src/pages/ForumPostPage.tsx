@@ -15,26 +15,7 @@ import { formatDistanceToNow, format } from "date-fns",
 import { ForumPost, ForumReply } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
 import ReplyCard from "@/components/community/ReplyCard",
-
-// Mock data for a forum post
-const mockPost: ForumPost = {
-  id: "1",
-  title: "Best practices for AI model fine-tuning",
-  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
-  authorId: "user1",
-  authorName: "Alex Johnson",
-  authorAvatar: "https://i.pravatar.cc/150?img=3",
-  authorRole: "Verified Talent",
-  categoryId: "ai-tools",
-  tags: ["machine-learning", "fine-tuning", "gpt"],
-  createdAt: "2025-04-01T12:00:00Z",
-  updatedAt: "2025-04-01T12:00:00Z",
-  upvotes: 48,
-  downvotes: 2,
-  replyCount: 4,
-  isAnswered: true,
-  isFeatured: true
-},
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 const mockPost: ForumPost = {
   id: "1"
@@ -68,6 +49,37 @@ const mockReplies: ForumReply[] = [
     upvotes: 12
     downvotes: 0
 
+=======
+
+  },
+  {
+    id: "reply2",
+    postId: "1",
+    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.window.performance.",
+    authorId: "user3",
+    authorName: "Michael Wong",
+    authorRole: "AI Engineer",
+    createdAt: "2025-04-01T16:15:00Z",
+    updatedAt: "2025-04-01T16:15:00Z",
+    upvotes: 8,
+    downvotes: 0
+  },
+  {
+    id: "reply3",
+    postId: "1",
+    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",
+    authorId: "user4",
+    authorName: "Emma Davis",
+    authorRole: "ML Research Lead",
+    createdAt: "2025-04-02T09:45:00Z",
+    updatedAt: "2025-04-02T09:45:00Z",
+    upvotes: 15,
+    downvotes: 0,
+    isAnswer: true
+  },
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   {
     id: "reply4"
     postId: "1"
@@ -115,6 +127,24 @@ export default function ForumPostPage() {
       title: "Vote recorded"
       description: "You upvoted this post"})
 
+    return (
+      <AppLayout>;
+        <div className="container py-8">;
+          <h1>Post not found</h1>;
+          <Button asChild className="mt-4">;
+            <Link to="/community">Back to Community</Link>;
+          </Button>;
+        </div>;
+      </AppLayout>;
+    );
+  }
+
+
+  },
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleDownvote = () => {
     if (!user) {
       toast({
@@ -148,11 +178,18 @@ export default function ForumPostPage() {
         title: "Permission denied"
         description: "Only the original poster or moderators can mark answers"
         variant: "destructive"
-      }),
-      return
+      });
+      return;
     }
-    // Update the replies
-    const updatedReplies = replies.map(reply => ({
+
+
+    // Update the replies;
+    const updatedReplies = replies && replies.map(reply => ({;
+
+      ...reply;
+      isAnswer: reply && reply.id === replyId;
+    }));
+
       ...reply,
       isAnswer: reply.id === replyId
 
@@ -179,6 +216,15 @@ export default function ForumPostPage() {
       title: post.isLocked ? "Post unlocked" : "Post locked"
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
 
+=======
+  },
+  
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
+  
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <AppLayout>
       <SEO
@@ -211,6 +257,7 @@ export default function ForumPostPage() {
                   {post.authorRole && (
                     <Badge variant="outline" className="mt-1">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       {post.authorRole}
                     </Badge>
                   )}
@@ -228,64 +275,70 @@ export default function ForumPostPage() {
               {post.tags.map(tag => (
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
                   {tag}
-                </Badge>
+                </Badge>;
               ))}
-            </div>
-            <div className="prose dark:prose-invert max-w-none mb-6">
-              {post.content.split('\n\n').map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
+
+            </div>;
+
+            <div className="prose dark:prose-invert max-w-none mb-6">;
+              {post && post.content.split('\n\n').map((paragraph, i) => (;
+                <p key={i}>{paragraph}</p>;
               ))}
-            </div>
-            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
-              <div className="flex items-center gap-4">
+            </div>;
+
+            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">;
+              <div className="flex items-center gap-4">;
+
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={handleUpvote}
-                  className="flex items-center gap-2"
-                >
-                  <ThumbsUp className="h-4 w-4" />
-                  <span>{post.upvotes}</span>
-                </Button>
+                  className="flex items-center gap-2">;
+                  <ThumbsUp className="h-4 w-4" />;
+                  <span>{post && post.upvotes}</span>;
+                </Button>;
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={handleDownvote}
-                  className="flex items-center gap-2"
-                >
-                  <ThumbsDown className="h-4 w-4" />
-                  <span>{post.downvotes}</span>
-                </Button>
-              </div>
-              <div className="flex items-center gap-2">
-                {(isAuthor |isAdminOrMod) && (
-                  <Button variant="ghost" size="sm" asChild>
-                    <Link to={`/community/edit/${post.id}`}>
-                      <Edit className="h-4 w-4 mr-1" />
-                      Edit
-                    </Link>
-                  </Button>
+
+                  className="flex items-center gap-2">;
+                  <ThumbsDown className="h-4 w-4" />;
+                  <span>{post && post.downvotes}</span>;
+                </Button>;
+              </div>;
+
+              <div className="flex items-center gap-2">;
+                {(isAuthor || isAdminOrMod) && (;
+                  <Button variant="ghost" size="sm" asChild>;
+                    <Link to={`/community/edit/${post && post.id}`}>;
+                      <Edit className="h-4 w-4 mr-1" />;
+                      Edit;
+                    </Link>;
+                  </Button>;
                 )}
-                {isAdminOrMod && (
-                  <>
+
+                {isAdminOrMod && (;
+                  <>;
+
                     <Button
                       variant="ghost"
                       size="sm"
-                      onClick={handlePinPost}
-                    >
-                      <Pin className="h-4 w-4 mr-1" />
-                      {post.isPinned ? "Unpin" : "Pin"}
-                    </Button>
+                      onClick={handlePinPost}>;
+                      <Pin className="h-4 w-4 mr-1" />;
+                      {post && post.isPinned ? "Unpin" : "Pin"}
+                    </Button>;
                     <Button
                       variant="ghost"
                       size="sm"
-                      onClick={handleLockPost}
-                    >
-                      <Lock className="h-4 w-4 mr-1" />
-                      {post.isLocked ? "Unlock" : "Lock"}
-                    </Button>
-                  </>
+                      onClick={handleLockPost}>;
+                      <Lock className="h-4 w-4 mr-1" />;
+                      {post && post.isLocked ? "Unlock" : "Lock"}
+                    </Button>;
+                  </>;
                 )}
+
+
                 <Button
                   variant="ghost"
                   size="sm"
@@ -327,6 +380,15 @@ export default function ForumPostPage() {
             </div>
           )}
 
+              )}
+            </div>;
+          )}
+
+
+          
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
@@ -343,3 +405,74 @@ export default function ForumPostPage() {
                   key={reply.id}
                   reply={reply}
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
+                <ReplyCard
+                  key={reply && reply.id}
+                  reply={reply}
+
+                  onMarkAnswer={() => handleMarkAsAnswer(reply && reply.id)}
+                  canMarkAnswer={!post && post.isAnswered && (isAuthor || isAdminOrMod)}
+                />;
+=======
+                  onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
+
+                  canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
+                />
+
+              ))}
+          </div>;
+        </div>;
+      </div>;
+    </AppLayout>;
+  );
+}
+
+        <div className="mt - 8">;
+          <h2 className="text - xl font - bold mb - 6">Responses ({post.reply_count})</h2>;
+          {post.is_answered && (
+            <div className="mb - 6">;
+              <h3 className="flex items - center text - green - 600 font - medium mb - 2">;
+                <CheckCircle className="h - 4 w - 4 mr - 2" />;
+                Accepted Answer;
+              </h3>;
+              {replies.filter (reply => reply.is_answer).map (reply => (
+                <ReplyCard key={reply.id} reply={reply} className="border - green - 500" />))}
+            </div>)}
+          {!post.is_locked && (
+            <div className="mb - 8">;
+              <h3 className="text - lg font - medium mb - 4">Your Response</h3>;
+              {user ? (
+                <ReplyForm on_submit={handleSubmitReply} />) : (
+                <Alert>;
+                  <AlertDescription>;
+                    Please <Link to="/login" className="font - medium text - zion - purple hover:underline">sign in</Link> to join the discussion.;
+                  </AlertDescription>;
+                </Alert>)}
+            </div>)}
+          {post.is_locked && (
+            <Alert className="mb - 8">;
+              <AlertDescription className="flex items - center">;
+                <Lock className="h - 4 w - 4 mr - 2" />;
+                This thread has been locked and is no longer open for responses.;
+              </AlertDescription>;
+            </Alert>)}
+          <div className="space - y-6">;
+            {replies;
+              .filter (reply => !reply.is_answer);
+              .map (reply => (
+                <ReplyCard;
+                  key={reply.id}
+                  reply={reply}
+                  onMarkAnswer={() => handleMarkAsAnswer (reply.id)}
+                  canMarkAnswer={!post.is_answered && (is_author || isAdminOrMod)}
+                />))}
+          </div>;
+        </div>;
+      </div>;
+    </AppLayout>);
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

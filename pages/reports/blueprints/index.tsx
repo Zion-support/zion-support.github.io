@@ -1,9 +1,23 @@
 import React from 'react';
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const BlueprintsIndexPage: React.FC = () => {
   const blueprint_categories = [;
     {
 
+=======
+      category: 'System Architecture',
+      blueprints: [;
+        {
+          id: 'comprehensive - redundancy',
+          name: 'Comprehensive Redundancy System',
+          description: 'Multi - layer redundancy architecture for maximum uptime',
+          status: 'active',
+          complexity: 'high',
+          last_updated: '2025 - 01 - 17';
+        },
+        {
+          id: 'ultimate - redundancy',
           id: 'comprehensive-redundancy',
           name: 'Comprehensive Redundancy System',
           description: 'Multi-layer redundancy architecture for maximum uptime',
@@ -12,11 +26,16 @@ const BlueprintsIndexPage: React.FC = () => {
           lastUpdated: '2025-01-17'
         },
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           id: 'ultimate-redundancy',
+
           name: 'Ultimate Redundancy System',
           description: 'Advanced redundancy with automated failover',
           status: 'active',
           complexity: 'critical',
+
           lastUpdated: '2025-01-16'
         },
 
@@ -32,13 +51,8 @@ const BlueprintsIndexPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-      ]
-    },
-    {
-      category: 'Deployment Patterns',
-      blueprints: [
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           id: 'zero-downtime-deployment',
           name: 'Zero-Downtime Deployment',
           description: 'Blue-green deployment with health checks',
@@ -129,6 +143,7 @@ const BlueprintsIndexPage: React.FC = () => {
       id: 'blueprint-2025-01-17-130921',
       name: 'Quantum Integration Blueprint',
       description: 'Quantum computing integration framework',
+
       date: '2025-01-17',
       status: 'research'
 
@@ -148,14 +163,18 @@ const BlueprintsIndexPage: React.FC = () => {
       case 'research': return 'text-purple-400';
       default: return 'text-gray-400';
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const getComplexityColor = (complexity: string) => {
     switch (complexity) {
+
       case 'critical': return 'bg-red-500/20 text-red-400';
       case 'high': return 'bg-orange-500/20 text-orange-400';
       case 'medium': return 'bg-yellow-500/20 text-yellow-400';
       case 'low': return 'bg-green-500/20 text-green-400';
       default: return 'bg-gray-500/20 text-gray-400';
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white">
       <Head>
@@ -165,6 +184,17 @@ const BlueprintsIndexPage: React.FC = () => {
       </Head>
       <div className="container mx-auto px-4 py-8">
 
+=======
+
+        {/* Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="mb-8">
           <Link href="/reports" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Reports
@@ -177,6 +207,7 @@ const BlueprintsIndexPage: React.FC = () => {
           </p>
         </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-indigo-400">Total Blueprints</h3>
@@ -200,6 +231,7 @@ const BlueprintsIndexPage: React.FC = () => {
           </div>
         </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Categories</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -246,6 +278,7 @@ const BlueprintsIndexPage: React.FC = () => {
                       <div className="flex justify-between items-center text-xs">
                         <span className={`${getStatusColor(blueprint.status)}`}>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         </span>
                         <span className="text-gray-400">{blueprint.lastUpdated}</span>
                       </div>
@@ -260,6 +293,8 @@ const BlueprintsIndexPage: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white">{blueprint.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(blueprint.status)}`}>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{blueprint.description}</p>
@@ -268,6 +303,7 @@ const BlueprintsIndexPage: React.FC = () => {
 
                   <Link
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     className="text-indigo-400 hover:text-indigo-300 text-sm transition-colors"
                   >
                     View Blueprint →
@@ -275,6 +311,7 @@ const BlueprintsIndexPage: React.FC = () => {
                 </div>
               </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Benefits</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -310,6 +347,8 @@ const BlueprintsIndexPage: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
@@ -322,6 +361,7 @@ const BlueprintsIndexPage: React.FC = () => {
             Performance
           </Link>
 
+<<<<<<< HEAD
             href="/reports/innovation"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50"
           >
@@ -332,4 +372,5 @@ const BlueprintsIndexPage: React.FC = () => {
     </div>
   );
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default BlueprintsIndexPage;

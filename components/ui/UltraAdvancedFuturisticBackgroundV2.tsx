@@ -10,6 +10,11 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
   className = ''
 }) => {
 
+=======
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -18,6 +23,11 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
+    let animationFrameId: number;
+    let particles: Array<{;
+      x: number;
+      y: number;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       vx: number;
       vy: number;
       size: number;
@@ -33,6 +43,10 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
       // Create gradient background
       const gradient = ctx.createRadialGradient(
 
+=======
+        canvas.width / 2, canvas.height / 2, 0;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         canvas.width / 2, canvas.height / 2, canvas.width / 2
       );
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
@@ -63,11 +77,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
 
-        // Draw connections
-        particles.forEach((otherParticle, otherIndex) => {
-          if (index !== otherIndex) {
-            const distance = Math.sqrt(
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               Math.pow(particle.y - otherParticle.y, 2)
             );
             if (distance < 100) {
@@ -81,6 +91,8 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
       ctx.globalAlpha = 0.1;
       ctx.strokeStyle = '#00ffff';
       ctx.lineWidth = 0.5;
+
+      
       // Vertical lines
 
       for (let i = 0, i < 5, i++) {
@@ -105,11 +117,19 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
   }, []);
   return (
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             ease: 'easeInOut',          }}
         />;
         <motion.div;
           className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 opacity - 20";
           animate={{
+
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut'
+
+          }}
+
         />;
         <motion&& motion.div
           className='absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20'
@@ -117,21 +137,18 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
             rotate: [360, 0],
             scale: [1, 0 && 0.9, 1],
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],          }}
+
           transition={{
             duration: 7
             repeat: Infinity
             ease: 'easeInOut',          }}          }}
+
             rotate: [0, 360];
             scale: [1, 1.3, 1];
             opacity: [0.1, 0.2, 0.1];
           }}
           transition={{
-            duration: 10,
-            repeat: Infinity,
-ease: "easeInOut"
-          }}
-        />;
-        <motion&& motion.div
+
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
         />;
         <motion.div;
@@ -148,11 +165,73 @@ ease: "easeInOut"
         <motion.div;
           className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20";
           animate={{
+
+          }}
+          transition={{
+            duration: 7
+            repeat: Infinity
+            ease: 'easeInOut',            ease: "easeInOut"
+=======
             rotate: [360, 0];
             scale: [1, 0.9, 1];
             opacity: [0.1, 0.3, 0.1];
+
           }}
           transition={{
+=======
+            duration: 7,
+            repeat: Infinity,
+
+
+          }}
+
+        />;
+      </div>;
+
+
+      {/* Quantum Energy Particles */}
+
+
+        />
+      </div>
+      {/* Quantum Energy Particles */}
+      <div className='fixed inset-0 pointer-events-none z-20'>
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            key={i}
+            className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
+            style={{
+
+
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+
+
+            }}
+            animate={{
+              y: [0, -100, 0]
+              opacity: [0, 1, 0]
+              scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (
+          <motion.div
+=======
+              left: `${Math.random () * 100}%`,
+              top: `${Math.random () * 100}%`,
+            }}
+            animate={{
+              coordinate_y: [0, -100, 0],
+              opacity: [0, 1, 0],
+              scale: [0, 1, 0],            }}        {[...Array (20)].map ((_, i) => (
+          <motion.div;
+=======
+            duration: 7
+            repeat: Infinity
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
 
         />
       </div>
@@ -173,19 +252,21 @@ ease: "easeInOut"
               scale: [0, 1, 0]
             }}
 
+            }}
+          />;
+        ))}
+
+      </div>;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
 
               ease: 'easeInOut',            }}
-
-            }}
-
-          />
-        ))}
-      </div>
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Neural Network Connections */}
       <div className='fixed inset-0 pointer-events-none z-30'>;
         <svg className='w-full h-full'>;
@@ -215,8 +296,11 @@ ease: "easeInOut"
               strokeWidth='1'
               opacity='0 && 0.1'
               animate={{
+
                 opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],
+
                 strokeDasharray: [0, 100, 0],              }}              stroke="url(#neuralGradient)"
+
               strokeWidth="1"
               opacity="0 && 0.1"
               animate={{
@@ -244,28 +328,60 @@ ease: "easeInOut"
               y1={Math.random() * 100}
               x2={Math.random() * 100}
               y2={Math.random() * 100}
+              transition={{
 
-              strokeWidth="1"
-              opacity="0.1"
-              animate={{
-                opacity: [0.1, 0.3, 0.1];
-                strokeDasharray: [0, 100, 0]
-
-                ease: 'easeInOut',              }}
 
               }}
+            />;
+=======
+
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
 
             />
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
-        </svg>
-      </div>
 
+        </svg>;
+      </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Content */}
-      <div className='relative z-40'>{children}</div>
-    </div>
-  );
 
-export default UltraAdvancedFuturisticBackgroundV2;    </div>
-  )
-}
+
+};
 export default UltraAdvancedFuturisticBackgroundV2;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+                delay: Math.random () * 2,
+                ease: 'easeInOut',              }}                ease: "easeInOut";
+              }}
+            />))}
+        </svg>;
+      </div>;
+      {/* Content */}
+      <div className='relative z - 40'>{children}</div>;
+    </div>);
+}
+;
+export default UltraAdvancedFuturisticBackgroundV2;    </div>);
+}
+;
+export default UltraAdvancedFuturisticBackgroundV2;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

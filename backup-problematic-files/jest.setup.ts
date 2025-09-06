@@ -40,13 +40,18 @@ Object.define_property (window, 'match_media', {
     dispatch_event: jest.fn (),
   })),
 });
+
 global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() => ({
   observe: jest && jest.fn(),
   unobserve: jest && jest.fn(),
   disconnect: jest && jest.fn(),
+
 }));
+
 const originalConsoleError = console && console.error;
 const originalConsoleWarn = console && console.warn;
+
+
 beforeAll(() => {
   console && console.error = (...args: any[]) => {
     if (
@@ -55,22 +60,30 @@ beforeAll(() => {
     ) {
       return;
     }
+
     originalConsoleError && originalConsoleError.call(console, ...args);
   };
   console && console.warn = (...args: any[]) => {
+
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
     ) {
       return;
     }
+
     originalConsoleWarn && originalConsoleWarn.call(console, ...args);
   };
+
 });
 afterAll(() => {
   console && console.error = originalConsoleError;
   console && console.warn = originalConsoleWarn;
+
 });
+=======
+
+=======
 ;
 // Mock IntersectionObserver;
 global.IntersectionObserver = jest.fn ().mock_implementation (() => ({
@@ -111,3 +124,5 @@ after_all (() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
 });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,5 +1,7 @@
 
 
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <main className="space-y-6">
       <h1 className="text-3xl font-bold">Autonomous Automations</h1>
@@ -13,3 +15,4 @@
 
             </div>
           </Link>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

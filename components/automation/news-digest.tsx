@@ -1,3 +1,17 @@
+=======
+
+
+}</div> </div>) import fs from 'fs';
+import fs from 'fs';
+import path from 'path';
+
+
+ </div> </div>) ) ;
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },;
+export async function getServerSideProps() {;
+  const file = path && path.join(process && process.cwd(), 'datanews-digest && digest.json');
 
 }</div> </div>) import fs from 'fs';
 import path from 'path';
@@ -30,6 +44,16 @@ function getServerSideProps() {
   return { props: { items, generated_at } }
 }
 
+=======
+
+    items = json.items || [];
+    generatedAt = json.generatedAt || ''
+  } catch {}
+  return { props: { items, generatedAt } }
+}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
   return (
     <div className="space-y-6">
@@ -45,11 +69,6 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
             <div className="text-sm text-gray-700">{n.summary}</div>
             <div className="flex flex-wrap gap-2 pt-1">
               {n.tags?.map(t => (<span key={t} className="text-xs px-2 py-0.5 rounded bg-gray-100">{t}</span>))}
+<<<<<<< HEAD
 
-            </div>
-          </div>
-        ))}
-      </div>
-
-);
-}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

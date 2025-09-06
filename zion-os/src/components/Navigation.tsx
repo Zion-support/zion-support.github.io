@@ -1,4 +1,18 @@
 
+=======
+
+"use client",;
+import { useState, useEffect, useRef } from "react",;
+import Link from "next/link",;
+export function Navigation() {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
+  const [isSearchOpen, setIsSearchOpen] = useState(false),;
+
+
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
@@ -179,6 +193,10 @@
               </svg>;
             </div>;
 
+=======
+          </div>)}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade - in">;

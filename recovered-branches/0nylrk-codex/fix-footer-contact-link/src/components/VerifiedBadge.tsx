@@ -1,10 +1,29 @@
 
+=======
+
+
+  verified: boolean,
+  size?: 'sm' | 'md' | 'lg'
+}
+
+export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {;
+  if (!verified) return null;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   verified: boolean
   size?: 'sm' | 'md' | 'lg'
 }
 export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
 
+=======
+
+  if (!verified) return null,
+
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const sizeClasses = {
     sm: 'h-3.5 w-3.5'
     md: 'h-4 w-4'

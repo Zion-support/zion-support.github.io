@@ -11,6 +11,20 @@
 interface EnhancedServiceCardProps {
   service: {
 
+import {;
+  Star,;
+  ExternalLink,;
+  ArrowRight,;
+  TrendingUp,;
+  Users,;
+  Clock,;
+  Shield,;
+  Zap,;
+} from 'lucide-react';
+interface EnhancedServiceCardProps {;
+  service: {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     id: string;
     name: string;
     tagline: string;
@@ -35,11 +49,26 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       scale: 1
       transition: {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     hidden: { rotate: -180, scale: 0 },
     visible: {      rotate: 0,
       scale: 1,
       transition: {
         duration: 0.6,
+=======
+        ease: 'back_out' as const,
+      },
+    },    hover: {        ease: "ease_out" as const;
+
+      }
+    }
+  }
+;
+  const icon_variants = {
+    hidden: { rotate: -180, scale: 0 },
+
+    visible: {    visible: {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       rotate: 0,
       scale: 1,
@@ -60,6 +89,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         }}
       />;
       {/* Popular Badge */}
+
       {service.popular && (
         <div className="absolute top-4 right-4 z-10">
           <motion.div
@@ -72,6 +102,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             POPULAR
           </motion.div>
         </div>
+
       )}
 
       {/* Card Content */}
@@ -100,6 +131,35 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         {/* Description */}
         <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>          {service.description}
         </p>
+            variants={iconVariants}
+            initial='hidden'
+            animate='visible'
+
+      <div className="relative p-6">
+        {/* Header */}
+        <div className="flex items-start justify-between mb-4">
+          <motion.div
+            className={`text-4xl ${service.textColor}`}
+            variants={iconVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover="hover"
+          >
+            {service.icon}
+          </motion.div>
+          
+          <div className="text-right">
+            <div className="text-2xl font-bold text-white">{service.price}</div>
+            <div className="text-sm text-gray-400">{service.period}</div>
+          </div>
+
+        </div>
+        {/* Title & Tagline */}
+
+
+        {/* Key Metrics */}          
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
           <div className="text-right">
             <div className="text-2xl font-bold text-white">{service.price}</div>
@@ -112,13 +172,17 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         </h3>
         <p className="text-gray-300 text-sm mb-4 leading-relaxed">
           {service.tagline}
+
         </p>
         {/* Description */}
+
         <p className="text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3">
+
           {service.description}
         </p>
         {/* Key Metrics */}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </div>
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
             <div className='text-purple-400 text-lg font-bold'>
@@ -138,7 +202,9 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
             <div className="text-purple-400 text-lg font-bold">{service.rating}</div>
             <div className="text-xs text-gray-400">Rating</div>
+
           </div>
+
         </div>
             whileHover='hover'>;
             {service && service.icon}
@@ -189,14 +255,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             <div className='text-xs text-gray-400'>Rating</div>          </div>;
         </div>;
         {/* Features Preview */}
-        <div className="mb-6">
-          <h4 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
-            <Zap className="w-4 h-4 text-yellow-400" />
-            Key Features
-          </h4>
-          <div className="space-y-2">
-            {service.features.slice(0, 3).map((feature, index) => (
-              <motion.div
+
                 key={index}
                 className="flex items-center gap-2 text-sm text-gray-300"
                 initial={{ opacity: 0, x: -20 }}
@@ -209,8 +268,18 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             ))}
             {service.features.length > 3 && (
 
+                {feature}
+              </motion && motion.div>;
+            ))}
+
+=======
+            {service.features.length > 3 && (
+              <div className="text-xs text-gray-500 mt-2">
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 +{service.features.length - 3} more features
               </div>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
         <div className="mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10">
           <div className="flex items-center justify-between mb-2">
@@ -226,6 +295,14 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             </span>
             <span className='text-xs text-cyan-400'>{service.marketSize}</span>
 
+        {/* Market Info */}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </div>
           <div className='flex items-center justify-between mb-2'>
             <span className='text-xs font-semibold text-white'>
@@ -250,6 +327,10 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         </div>
         {/* Trial & Setup Info */}
 
+=======
+        <div className="flex items-center justify-between mb-6 text-sm">
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <div className="flex items-center gap-2 text-gray-400">
             <Clock className="w-4 h-4" />
             {service.trialDays} day trial
@@ -319,11 +400,27 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           <motion.a
             href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
 
+          <motion.a
+            href={service.link}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
+
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }}>;
+            <ExternalLink className='w-4 h-4' />;
+            Learn More;
+          </motion && motion.a>;
+
+          <motion&& motion.a
+            href={`mailto:${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center'
             whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }}>;
             <ArrowRight className='w-4 h-4' />          </motion && motion.a>;
         </div>;
+
+
         {/* Contact Info */}
         <div className='mt-4 pt-4 border-t border-white/10'>;
           <div className='text-xs text-gray-500 text-center'>            Contact: {service && service.contactInfo.email}          <motion&& motion.a
@@ -344,3 +441,38 @@ export default EnhancedServiceCard;    </motion.div>
   )
 }
 export default EnhancedServiceCard;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          </div>
+        </div>
+      </div>
+whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }}>;
+            <ExternalLink className="w-4 h-4" />;
+            Learn More;
+          </motion && motion.a>;
+          <motion&& motion.a
+            href={`mailto:${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}
+            className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center"
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }}>;
+            <ArrowRight className="w-4 h-4" />;
+          </motion && motion.a>;
+        </div>;
+        {/* Contact Info */}
+        <div className='mt-4 pt-4 border-t border-white/10'>;
+          <div className='text-xs text-gray-500 text-center'>        <div className="mt-4 pt-4 border-t border-white/10">;
+          <div className="text-xs text-gray-500 text-center">;
+            Contact: {service && service.contactInfo.email}
+          </div>;
+        </div>;
+      </div>;
+      {/* Hover Effect Border */}
+
+};
+export default EnhancedServiceCard;    </motion && motion.div>;
+  );
+
+};
+export default EnhancedServiceCard;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

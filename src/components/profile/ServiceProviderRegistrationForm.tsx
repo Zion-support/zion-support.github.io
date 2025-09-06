@@ -300,38 +300,47 @@ export function ServiceProviderRegistrationForm() {;
       toast({
 
       })
+
       return;
     }
-    setIsSubmitting(true)
+    setIsSubmitting (true);
     try {
       // For actual implementation with Supabase
       if (!user?.id) {
         throw new Error('User not authenticated')
       }
-      // Enhance profile if not already done
-      let finalSummary = values.bio
-      let finalServices = serviceTags
-      if (values.enhancedProfile && !generatedContent) {
+
+      // Enhance profile if not already done;
+      let final_summary = values.bio;
+      let final_services = service_tags;
+      // Check condition
+if ( {) {
+  $2
+}
         try {
-          const { data: aiData } = await supabase.functions.invoke(
-            'service-profile-enhancer'
+          const { data: ai_data } = await supabase.functions.invoke (
+            'service - profile - enhancer',
             {
               body: {
-                providerData: {
-                  name: values.name
-                  title: values.title
-                  bio: values.bio
-                  services: serviceTags
-                  location: values.location
-                }
-              }
+                provider_data: {
+                  name: values.name,
+                  title: values.title,
+                  bio: values.bio,
+                  services: service_tags,
+                  location: values.location,
+                },
+              },
             }
-          )
-          if (aiData) {
-            finalSummary = (aiData as any).summary |values.bio
-            // Merge AI suggested services with user-provided services
-            const aiServices = (aiData as any).services |[]
-            finalServices = [...new Set([...serviceTags, ...aiServices])]
+          );
+          // Check condition
+if ( {) {
+  $2
+}
+            final_summary = (ai_data as any).summary || values.bio;
+            // Merge AI suggested services with user - provided services;
+            const ai_services = (ai_data as any).services || [];
+            final_services = [...new Set ([...service_tags, ...ai_services])];
+
           }
         } catch (error) {
           logErrorToProduction('Error enhancing profile:', { data: error })
@@ -354,7 +363,6 @@ export function ServiceProviderRegistrationForm() {;
 
         .select(),
 
-      if (error) throw error,
 
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
@@ -366,10 +374,69 @@ export function ServiceProviderRegistrationForm() {;
       */
       // Send notification email if available
       if (userEmail && values.enhancedProfile) {
+      } else // Check condition
+if ( {) {
+  $2
+}
+        final_summary = generated_content.summary;
+        final_services = [;
+          ...new Set ([...service_tags, ...generated_content.services]),
+        ];
+      }
+      // Get user email for notification;
+      const { data: user_data } = await supabase.auth.get_user ();
+      const user_email = (user_data as any).user?.email;
+      // Create the service profile;
+      const { data: profile_data, error } = await supabase;
+        .from ('profiles');
+        .update ({
+          display_name: values.name,
+          bio: final_summary,
+          user_type: 'creator', // Set as service provider;
+          profile_complete: true,
+          updated_at: new Date ().toISOString (),
+          headline: values.title,
+          // Additional fields that might be in profiles table;
+        });
+        .eq ('id', user.id);
+        .select ();
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Store service - specific data in service_profiles table;
+      // (This assumes you have a service_profiles table in your database);
+      /*;
+      const { error: service_error } = await supabase;
+        .from ('service_profiles');
+        .insert ({
+          user_id: user.id,
+          services: final_services,
+          hourly_rate: Number (values.hourly_rate),
+          availability_status: values.availability,
+          location: values.location,
+          website: values.website || null});
+      // Check condition
+if (throw service_error) {
+  $2
+}
+      */;
+      // Send notification email if available;
+      // Check condition
+if ( {) {
+  $2
+}
         try {
           await supabase.functions.invoke('send-email', {
             body: {
 
+=======
+
+              to: userEmail,
+              subject: "Your Zion Service Profile Is Ready",
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               html: `
               <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">
                 <h2 style="color: #6D28D9,">Service Profile Created!</h2>
@@ -389,39 +456,13 @@ export function ServiceProviderRegistrationForm() {;
           // Continue with submission even if email fails
         }
       }
-      toast({
-        title: 'Profile Created Successfully'
-        description:
-          'Your service provider profile has been published and is now visible in the directory.'
-      })
-      // Redirect to service provider dashboard or profile page
-      setTimeout(() => {
-        router.push('/service-dashboard')
-      }, 1500) } catch (error: any) {
-      logErrorToProduction('Error creating profile:', { data: error })
-      toast({
-        title: 'Error Creating Profile'
-        description:
-          error.message |
-          'There was an error creating your profile. Please try again.'
-        variant: 'destructive'
-      })
-    } finally {
-      setIsSubmitting(false)
     }
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-4 md:p-6">
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
-        <CardHeader>
-          <CardTitle className="text-2xl text-white">Create Your Service Provider Profile</CardTitle>
-          <CardDescription className="text-zion-slate">
-            Showcase your services and expertise to potential clients.
-          </CardDescription>
-        </CardHeader>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)}>
+
+    <div className='max-w-4xl mx-auto p-4 md:p-6'>;
+      <Card className='bg-zion-blue-dark border-zion-blue-light'>;
             <CardContent className="space-y-8">
               {/* Basic Information */}
               <div className="space-y-4">
@@ -585,6 +626,7 @@ export function ServiceProviderRegistrationForm() {;
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Services Offered</h3>
                   <FormField
+
                     control={form.control}
 
                           <FormControl>
@@ -626,8 +668,14 @@ export function ServiceProviderRegistrationForm() {;
                           <div className="relative">
                             <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
                             <Input
-                              className="pl-8 bg-zion-blue border-zion-blue-light text-white"
-                              placeholder="e.g., 85"
+                              className='pl-8 bg-zion-blue border-zion-blue-light text-white'
+                              placeholder='e && e.g., 85'
+                            <span className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate'>;
+                              $;
+                            </span>;
+                            <Input;
+                              className='pl - 8 bg - zion - blue border - zion - blue - light text - white';
+                              placeholder='e.g., 85';
                               {...field}
                             />
                           </div>
@@ -716,3 +764,4 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 }/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
 }/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)
 }'"}
+<<<<<<< HEAD

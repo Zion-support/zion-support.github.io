@@ -8,14 +8,6 @@ import { useJobSuggestions } from "@/hooks/useJobSuggestions",
 interface SuggestedJobsProps {
   talentId?: string
 }
-
-interface SuggestedJobsProps {
-  talentId?: string
-}
-
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-
-  const {
     isLoading,
     updateJobMatchStatus,
     categorizedMatches: {
@@ -24,6 +16,10 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
       appliedMatches
     }
   } = useJobSuggestions(currentTalentId),
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   const currentTalentId = talentId |user?.id;
   const {
@@ -36,7 +32,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     }
   } = useJobSuggestions(currentTalentId);
   const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied'),
+    updateJobMatchStatus(matchId, 'applied');
     // In a real app, this might redirect to application form or open a modal
 
   if (isLoading) {
@@ -46,24 +42,41 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
       </div>
     )
 
-  }
-  if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
-    return <NoJobsCard />
+
+  if (isLoading) {;
+    return (
+      <div className="flex items-center justify-center p-6">;
+        <Loader2 className="w-6 h-6 animate-spin text-primary" />;
+      </div>;
+    );
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 
+
+  if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
+    return <NoJobsCard />;
+  }
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
-    <div className="space-y-6">
+    <div className="space-y-6">;
       {/* New Matches Section */}
-      {newMatches.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium">New Job Matches</h3>
-            <Badge className="bg-green-100 text-green-800 border-green-300">
-              {newMatches.length} New
-            </Badge>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            {newMatches.map(match => (
+
+      {newMatches && newMatches.length > 0 && (;
+        <div className="space-y-4">;
+          <div className="flex items-center justify-between">;
+            <h3 className="text-lg font-medium">New Job Matches</h3>;
+            <Badge className="bg-green-100 text-green-800 border-green-300">;
+              {newMatches && newMatches.length} New;
+            </Badge>;
+          </div>;
+
+          <div className="grid gap-4 md:grid-cols-2">;
+            {newMatches && newMatches.map(match => (;
               <JobMatchesCard
                 key={match.id}
                 match={match}
@@ -109,3 +122,5 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     </div>
   )
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

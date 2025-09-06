@@ -30,6 +30,10 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
               </div>
             )}
 
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <CardContent className='p-4'>
               <h4 className='text-white font-medium mb-2'>{project.title}</h4>
               <p className='text-zion-slate text-sm mb-3 line-clamp-2'>
@@ -70,6 +74,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
                       {tag}
                     </Badge>
+<<<<<<< HEAD
 
                   ))}
                 </div>

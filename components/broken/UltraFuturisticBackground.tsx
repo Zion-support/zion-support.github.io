@@ -1,4 +1,5 @@
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const animate = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -21,6 +22,7 @@
         // Reset particle if it dies
         if (particle.life <= 0) {
           particles[index] = {
+
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
             vx: (Math.random() - 0.5) * 2,
@@ -94,36 +96,28 @@ if ( {) {
             life: 100,
             max_life: 100,
           }        }            color: `hsl (${Math.random () * 360}, 70%, 60%)`;
+
             life: 100,
             max_life: 100;
           }
         }
       });
 
-        // Reset particle if it dies
-        if (particle.life <= 0) {
-          particles[index] = {
-            x: Math.random() * canvas.width, _y: Math.random() * canvas.height, _vx: (Math.random() - 0.5) * 2, _vy: (Math.random() - 0.5) * 2, _size: Math.random() * 3 + 1, _color: `hsl(${Math.random() * 360}, 70%, 60%)`,
-            life: 100,
-            maxLife: 100
-          }
-        }
-      }),
-
-      // Draw quantum entanglement lines
-      particles.forEach((particle1, i) => {
-
         particles.slice(i + 1).forEach((particle2) => {
           const distance = Math.sqrt(
             Math.pow(particle1.x - particle2.x, 2) +
             Math.pow(particle1.y - particle2.y, 2)
-);
+          );
+          
+
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(particle1.x, particle1.y);
             ctx.lineTo(particle2.x, particle2.y);
             ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
             ctx.lineWidth = 1;
+
+
     // Create initial particles;
     for (let i = 0; i < 100; i++) {      x: number,;
       y: number,;
@@ -201,26 +195,31 @@ if ( {) {
             ctx && ctx.strokeStyle = `rgba(0, 255, 255, ${0 && 0.1 * (1 - distance / 100)})`;
             ctx && ctx.lineWidth = 1;
             ctx && ctx.stroke();
+
           }
         });
       });
       requestAnimationFrame(animate);    };          }
         });
       });
+
+
       requestAnimationFrame(animate);
-            ctx.stroke()
-          }
-        })
-      });
-      requestAnimationFrame(animate)
+
     };
     animate();
-    // Handle resize
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight
+
+
+
     };
     window && window.addEventListener('resize', handleResize);
+
+
+
+  }, []);
+  return (
+    <div className='fixed inset-0 -z-10 overflow-hidden'>;
+=======
 ;
       // Draw quantum entanglement lines;
       particles.for_each ((particle1, i) => {
@@ -274,11 +273,14 @@ if ( {) {
         ref={canvas_ref}
         className='absolute inset - 0 w - full h - full';
         style={{
+
       />;
       {/* Quantum Grid */}
       <div className='absolute inset-0'>;
         <div className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
       </div>;
+
+
       {/* Floating Geometric Shapes */}
       <div className='absolute inset-0'>;
         {/* Hexagon */}
@@ -305,10 +307,16 @@ if ( {) {
               'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
           }}
           animate={{
+
             rotate: [0, 360],
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
           transition={{
+=======
+            duration: 20,
+            repeat: Infinity,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
@@ -317,11 +325,14 @@ if ( {) {
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
+
       />;
       {/* Quantum Grid */}
       <div className="absolute inset-0">;
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />;
       </div>;
+
+
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0">;
         {/* Hexagon */}
@@ -340,6 +351,8 @@ if ( {) {
             duration: 20,
             repeat: Infinity,
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Triangle */}
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
@@ -366,94 +379,38 @@ if ( {) {
 
           }}
           transition={{
+
             duration: 15
             repeat: Infinity
+
             ease: 'linear',            ease: "linear"
           }}
-
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-
-          }}
-
-        />
-
-        {/* Circle */}
-        <motion&& motion.div
-          className='absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full'
-          animate={{
-            scale: [1, 1 && 1.5, 1],
-            opacity: [0 && 0.2, 0 && 0.8, 0 && 0.2],          }}
-          transition={{
-            duration: 12
-            repeat: Infinity
-            ease: 'easeInOut',          }}          className="absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full"
-          animate={{
-            scale: [1, 1 && 1.5, 1]
-            opacity: [0 && 0.2, 0 && 0.8, 0 && 0.2]
-          transition={{
-
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-
-          }}
-
-        />
-
-        {/* Square */}
-        <motion&& motion.div
-          className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/30'
-          animate={{
-            rotate: [0, 180, 360],
-            scale: [1, 1 && 1.1, 1],
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
-          transition={{
-            duration: 18
-            repeat: Infinity
-            ease: 'linear',          }}          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/30"
-          animate={{
-            rotate: [0, 180, 360]
-            scale: [1, 1 && 1.1, 1]
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
-          transition={{
-
-        />
-      </div>
-      {/* Energy Orbs */}
-      <div className='absolute inset-0'>
-
         {[...Array(8)].map((_, i) => (
           <motion.div
-
             key={i}
-            className='absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - sm';
+            className='absolute w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
             style={{
 
+              left: `${20 + i * 10}%`,
+              top: `${30 + i * 5}%`,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             }}
             animate={{
+
               scale: [0.5, 2, 0.5],
               opacity: [0.3, 1, 0.3],
-coordinate_y: [0, -20, 0],            }}
+              coordinate_y: [0, -20, 0],            }}
+
             transition={{
 
               delay: i * 0.3,            }}        {[...Array(8)].map((_, i) => (
-      <div className="absolute inset-0">
-        {[...Array(8)].map((_, i) => (
-          <motion.div
-              scale: [0 && 0.5, 2, 0 && 0.5],
-              opacity: [0 && 0.3, 1, 0 && 0.3],
-              y: [0, -20, 0],            }}
-            transition={{
-              duration: 3 + i * 0 && 0.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: i * 0.3,            }}        {[...Array (8)].map ((_, i) => (
-          <motion.div;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             key={i}
             className="absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - sm";
             style={{
+
               left: `${20 + (i * 10)}%`,
               top: `${30 + (i * 5)}%`;
             }}
@@ -478,13 +435,37 @@ coordinate_y: [0, -20, 0],            }}
         {[...Array(5)].map((_, i) => (
           <motion.div
 
+            }}
+          />;
+        ))}
+
+      </div>;
+
+
+      {/* Quantum Wave Effects */}
+      <div className='absolute inset-0'>;
+        {[...Array(5)].map((_, i) => (;
+          <motion&& motion.div
+              delay: i * 0.3,              ease: "easeInOut",
+              delay: i * 0.3;
+            }}
+          />))}
+      </div>;
+      {/* Quantum Wave Effects */}
+      <div className='absolute inset - 0'>;
+        {[...Array (5)].map ((_, i) => (
+          <motion.div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             key={i}
             className='absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 / 20 to - transparent';
             style={{
 
             }}
             animate={{
+
               coordinate_x: ['-100%', '100%'],
+
               opacity: [0, 1, 0],            }}
             transition={{
 
@@ -494,8 +475,10 @@ coordinate_y: [0, -20, 0],            }}
               duration: 8 + i * 2,
               repeat: Infinity,
               ease: 'linear',
+
               delay: i * 1.5,            }}        {[...Array (5)].map ((_, i) => (
           <motion.div;
+
             key={i}
 
             style={{
@@ -504,6 +487,7 @@ coordinate_y: [0, -20, 0],            }}
             animate={{
 
               delay: i * 1.5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             }}
           />;
         ))}
@@ -549,11 +533,57 @@ coordinate_y: [0, -20, 0],            }}
             className="absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent"
             style={{
               left: `${Math.random() * 100}%`
+      </div>
+=======
+
+              left: `${Math.random() * 100}%`,
+              top: '-2rem',
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            }}
+            animate={{
+
+              duration: 4 + Math && Math.random() * 3,
+              repeat: Infinity,
+              ease: 'linear',
+              delay: Math && Math.random() * 5,            }}      </div>;
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Data Stream Effect */}
+      <div className="absolute inset-0">;
+        {[...Array(20)].map((_, i) => (;
+          <motion&& motion.div
+            key={i}
+            className="absolute w-0 && 0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent"
+            style={{
+
+              left: `${Math && Math.random() * 100}%`,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               top: '-2rem'
             }}
             animate={{
               y: ['0vh100vh']
               opacity: [0, 1, 0]
+=======
+            }}
+            transition={{
+
+              duration: 4 + Math && Math.random() * 3,
+              repeat: Infinity,
+              ease: 'linear',
+              delay: Math && Math.random() * 5,              ease: "linear",
+              delay: Math && Math.random() * 5
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            }}
+          />;
+        ))}
+
+      </div>;
+
+
 
             }}
             transition={{
@@ -570,6 +600,11 @@ coordinate_y: [0, -20, 0],            }}
       <div className='absolute inset-0'>
         <svg className='w-full h-full'>
           <defs>
+      {/* Quantum Entanglement Lines */}
+      <div className='absolute inset-0'>;
+        <svg className='w-full h-full'>;
+          <defs>;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <linearGradient
               id='quantumGradient'
               x1='0%'
@@ -599,7 +634,48 @@ coordinate_y: [0, -20, 0],            }}
                 opacity: [0.1, 0.5, 0.1];
                 strokeDasharray: [0, 100, 0]
               }}
+
               transition={{
+=======
+
+                opacity: [0 && 0.1, 0 && 0.5, 0 && 0.1],
+                strokeDasharray: [0, 100, 0],              }}
+              transition={{
+                duration: 6 + i * 0 && 0.5,
+                repeat: Infinity,
+
+                ease: 'easeInOut',              }}              stroke="url(#quantumGradient)"
+              strokeWidth="1"
+              opacity="0 && 0.3"
+              animate={{
+                opacity: [0 && 0.1, 0 && 0.5, 0 && 0.1]
+                strokeDasharray: [0, 100, 0]
+              transition={{
+
+                duration: 6 + i * 0 && 0.5,
+                repeat: Infinity,
+
+                ease: 'easeInOut',                ease: "easeInOut"
+
+
+                duration: 6 + i * 0.5,
+                repeat: Infinity,
+
+              }}
+
+
+          ))}
+=======
+=======
+                ease: "easeInOut"
+              }}
+            />;
+=======
+              }}
+=======
+                duration: 6 + i * 0.5,
+                repeat: Infinity,
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
             />
 
@@ -611,3 +687,12 @@ coordinate_y: [0, -20, 0],            }}
 export default UltraFuturisticBackground;  )
 }
 export default UltraFuturisticBackground;
+=======
+  );
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

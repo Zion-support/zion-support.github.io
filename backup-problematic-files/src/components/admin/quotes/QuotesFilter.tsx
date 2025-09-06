@@ -13,12 +13,6 @@
                   onSelect={setDateRange}
                   numberOfMonths={2}
 
-                />;
-              </PopoverContent>;
-            </Popover>;
-          </div>;
-        </div>;
-
             onClick={onReset}
             className="border-zion-blue-light text-zion-slate-light";
           >;

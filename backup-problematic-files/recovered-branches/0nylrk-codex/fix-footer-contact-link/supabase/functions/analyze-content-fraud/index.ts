@@ -23,7 +23,7 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
   try {
 
       classification = "SUSPICIOUS"
-    } else if (analysisText && analysisText.includes("DANGEROUS")) {
+    } else if (analysisText.includes("DANGEROUS")) {
       classification = "DANGEROUS"
     }
 
@@ -52,7 +52,7 @@ const _updateFraudFlag = async (
 // Main request handler
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req && req.method === "OPTIONS") {
+  if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
 
@@ -81,7 +81,7 @@ serve(async (req) => {
   } catch (error) {
 
       }
-    );
+    )
   }
 }),;}return request;
 };
@@ -130,4 +130,7 @@ headers: {
 })
 }
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

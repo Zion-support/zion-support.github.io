@@ -1,4 +1,8 @@
 
+=======
+    .join("")};
+;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ,;
 // Function to extract display name from service name,;
 function getDisplayName(serviceName) {,;
@@ -9,6 +13,7 @@ function getDisplayName(serviceName) {,;
     .trim()};
 ,;
 // Fix remaining corrupted files,;
+<<<<<<< HEAD
 
 ;  // Remove common prefixes and convert to readable format;
   return serviceName;

@@ -46,6 +46,21 @@ export default function CourseCard({ course }: { course: Course }) {
     </div>;
   );
 }
+  id: string;
+  title: string;
+  duration_minutes: number;
+  level: string;
+  is_free: boolean;
+  category: string;
+
+
+
+export default function CourseCard(): any ({ course }: { course: Course }) {;
+  return (
+
+
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   certification_badge: string,
   description?: string;
 export default /**
@@ -91,3 +106,11 @@ function CourseCard() {
 
       </div>
     </div>
+=======
+<<<<<<< HEAD
+  )
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

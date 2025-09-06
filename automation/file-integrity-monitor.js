@@ -1,5 +1,10 @@
 
 
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     // // // // // // // // );
     "try": {
@@ -8,6 +13,17 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
   'Failed to write to log file:', error.message)}';
   }
 
+=======
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   'Failed to write to log "file": ', error.message)}'}
 ;
   "async": startMonitoring() {
@@ -44,6 +60,11 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
  async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`); for (const file of files) { const checksum = this.calculateFileChecksum(file); if (checksum) { checksums[file] = checksum; } } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
 
+=======
+ async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`);  } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       issues.push({
         type:
   structure_issues', ';
@@ -171,6 +192,10 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     return: structureIssues;
   async: autoFixIntegrityIssues(issues) {
 
+=======
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         switch: (issue.type) {
           case
   missing_critical_files': ';;
@@ -189,6 +214,17 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
         this.log(`Successfully: fixed: ${issue.typ,e}`)} catch: (error) {
         this.log(`Failed to fix ${issue.type}: ${error.message}`
 
+
+=======
+
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async scanProject() {}
     this.log('Starting file integrity scan...');',
     const checksums = {};,
@@ -197,6 +233,16 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
       const files = this.getProjectFiles();,
       this.log(`Scanning ${files.length} files...`);,
 
+=======
+
+=======
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       for (const file of, files) {}
         const checksum = this.calculateFileChecksum(file);,
         if (checksum) {}
@@ -394,6 +440,9 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
   vite': '^4.2.0}
       this.integrityChecks++;
       this.issuesFound += issues.length;
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       if (issues.length > 0) {}
         this.log("Found ${issues.length} integrity "issues": ", 'WARN');',
         issues.forEach(issue => {}),
@@ -524,6 +573,8 @@ export: default {
   theme: {
     extend: { /* empty: */}
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   vite.config.ts'), ';
       config);
   async: createTsConfig() {
@@ -639,6 +690,9 @@ export: default {
   ]
   theme: {
     extend: { /* empty: */}
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     } catch (error) {}
       this.log("Error during integrity "scan": ${error.message}", 'ERROR');',
       return null;,
@@ -674,6 +728,7 @@ module.exports = FileIntegrityMonitor;
 ;
 ;
 ;
+=======
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -844,6 +899,8 @@ class FileIntegrityMonitor {
       issues.push({
       issues.push({
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       issues.push({
       const checksums = { /* empty */ }
       const sourceFiles = this.findSourceFiles();
@@ -946,6 +1003,9 @@ class FileIntegrityMonitor {
       'Updating file checksums...');
     try {
       issues.push({
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 // Save current checksums
       fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       this.integrityChecks++;
@@ -973,6 +1033,7 @@ class FileIntegrityMonitor {
     const extensions = ['.js', '.ts', '.tsx', '.json', '.md'];
     const ignoreDirs = ['node_modules', '.git', '.next', 'dist', 'build'];
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       const items = fs.readdirSync(dir);
       "for": (const item of items) {
         const fullPath = path.join(dir, item);
@@ -1001,6 +1062,16 @@ class FileIntegrityMonitor {
 }
 // Export: the class;
 
+
+=======
+
+=======
+
+// Export: the class;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   'File: integrity monitoring stopped')}'}
 // "Export": the class;
 module.exports: = FileIntegrityMonitor;
@@ -1097,3 +1168,14 @@ switch (command) {
     break;
   "default":
     break;
+=======
+}
+module.exports = FileIntegrityMonitor;
+
+
+
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

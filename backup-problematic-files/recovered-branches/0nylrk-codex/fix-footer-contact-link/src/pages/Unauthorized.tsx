@@ -1,4 +1,14 @@
 
+=======
+import { Link } from "react-router-dom",;
+import { Button } from "@/components/ui/button",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { ShieldAlert } from "lucide-react",;
+;
+export default function Unauthorized() {;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12">;
@@ -13,6 +23,7 @@
             You don't have permission to access this page. This could be because your account doesn't have the required permissions or you need to complete your profile.;
           </p>;
           <div className="flex flex-col gap-3">;
+<<<<<<< HEAD
 
             >;
               Return to Home;

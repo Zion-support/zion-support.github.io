@@ -108,6 +108,13 @@ function InterviewsContent() {
             )}
           </TabsContent>
 
+=======
+
+          
+          <TabsContent value="pending" className="space-y-6">
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
@@ -136,3 +143,4 @@ function InterviewsContent() {
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
+<<<<<<< HEAD

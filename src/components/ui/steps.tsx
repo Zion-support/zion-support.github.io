@@ -4,6 +4,9 @@
 }
 export function Step({
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   className}: StepProps) {
   return (
     <li
@@ -26,10 +29,19 @@ export function Step({
           <span>
 
             {/* Step number would go here */}
-          </span>
+          </span>;
         )}
-      </div>
-      <div className="ml-4 min-w-0">
+
+
+            "text-zion-slate-light": status === "incomplete",
+            "text-zion-slate-light": status === "incomplete",
+
+
+            "text-white": status === "current" || status === "complete"})}
+        >
+      </div>;
+
+      <div className="ml-4 min-w-0">;
         <h3
           className={cn("text-sm font-medium", {
 
@@ -69,3 +81,4 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
+<<<<<<< HEAD

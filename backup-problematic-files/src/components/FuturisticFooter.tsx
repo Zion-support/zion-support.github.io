@@ -57,11 +57,6 @@
                 <ul className="space-y-3">";
 </ul>;
 
-                    <li key={link.name}>;
-</li>;
-                      <Link;
-                        href={link.href}";
-
 </ArrowRight>;
                       </Link>;
                     </li>;

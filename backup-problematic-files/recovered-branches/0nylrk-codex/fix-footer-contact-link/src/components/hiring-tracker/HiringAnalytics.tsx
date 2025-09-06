@@ -1,4 +1,81 @@
 
+=======
+import { useState, useEffect } from "react",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',;
+;
+interface HiringAnalyticsProps {;
+  jobId?:string,;
+}
+;
+export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
+  const { applications, isLoading } = useJobApplications(jobId),;
+  const [analyticsData, setAnalyticsData] = useState<{;
+    statusDistribution:any[],;
+    timeToHire:number,;
+    conversionRate:number,;
+    funnelData:any[];
+  }>({;
+    statusDistribution:[],;
+    timeToHire:0,;
+    conversionRate:0,;
+    funnelData:[]}),;
+  ;
+  useEffect(() => {;
+    if (applications && applications.length > 0) {;
+      // Calculate status distribution;
+      const statusCounts:Record<string number> = {},;
+      applications.forEach(app => {;
+        statusCounts[app.status] = (statusCounts[app.status] || 0) + 1,;
+      }),;
+      ;
+      const statusDistribution = Object.entries(statusCounts).map(([status, count]) => ({;
+        status,;
+        count})),;
+      ;
+      // Calculate time to hire (in days);
+      const hiredApplications = applications.filter(app => app.status === 'hired'),;
+      let avgTimeToHire = 0,;
+      ;
+      if (hiredApplications.length > 0) {;
+        const totalDays = hiredApplications.reduce((sum, app) => {;
+          const hireDate = new Date(app.updated_at),;
+          const applyDate = new Date(app.created_at),;
+          const daysDiff = (hireDate.getTime() - applyDate.getTime()) / (1000 * 3600 * 24),;
+          return sum + daysDiff,;
+        }, 0),;
+        ;
+        avgTimeToHire = Math.round(totalDays / hiredApplications.length),;
+      }
+      ;
+      // Calculate conversion rate;
+      const conversionRate = hiredApplications.length > 0;
+        ? Math.round((hiredApplications.length / applications.length) * 100);
+        :0,;
+      ;
+      // Funnel data;
+      const funnelData = [;
+        { name:'Applied', value:applications.length },;
+        { name:'Shortlisted', value:applications.filter(app => app.status === 'shortlisted').length },;
+        { name:'Interview', value:applications.filter(app => app.status === 'interview').length },;
+        { name:'Hired', value:applications.filter(app => app.status === 'hired').length }],;
+      ;
+      setAnalyticsData({;
+        statusDistribution,;
+        timeToHire:avgTimeToHire,;
+        conversionRate,;
+        funnelData}),;
+    }
+  }, [applications]),;
+  ;
+  if (isLoading) {;
+    return <div>Loading analytics data...</div>,;
+  }
+  ;
+  if (!applications || applications.length === 0) {;
+    return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <Card className="text-center py-16">;
         <CardContent>;
           <h3 className="text-lg font-semibold mb-2">No data available</h3>;
@@ -7,6 +84,7 @@
           </p>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
       {/* Status Distribution */}

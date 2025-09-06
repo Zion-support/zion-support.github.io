@@ -44,16 +44,81 @@ export function EducationFormFields({
       await onSubmit(data)
     } catch (err: any) {
       setError(err.message |'An error occurred')
+import { use_form } from 'react - hook - form';
+import { zod_resolver } from '@hookform / resolvers / zod';
+import { z } from 'zod';
+import { format } from 'date - fns';
+import { Loader2 } from 'lucide-react';
+import { Button } from '@/components / ui / button';
+import { Textarea } from '@/components / ui / textarea';
+import { Input } from '@/components / ui / input';
+import { Checkbox } from '@/components / ui / checkbox';
+import { Alert, AlertDescription } from '@/components / ui / alert';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components / ui / form';
+import { useState } from 'react';
+import { EducationFormFieldsProps } from './types';
+import { Education } from '@/types / resume';
+// Define schema for form validation;
+const education_schema = z.object ({
+  institution: z.string ().min (1, 'Institution is required'),
+  degree: z.string ().min (1, 'Degree is required'),
+  field_of_study: z.string ().optional (),
+  start_date: z.string ().min (1, 'Start date is required'),
+  end_date: z.string ().optional (),
+  is_current: z.boolean ().default (false),
+  description: z.string ().optional (),
+  location: z.string ().optional (),
+});
+type EducationFormValues = z.infer < typeof education_schema>;
+export /**
+ * EducationFormFields - Function description
+ */
+function EducationFormFields() {
+  const [is_loading, setIsLoading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+  const form = use_form < EducationFormValues>({
+    resolver: zod_resolver (education_schema),
+    default_values: {
+      institution: '',
+      degree: '',
+      field_of_study: '',
+      start_date: format (new Date (), 'yyyy - MM - dd'),
+      is_current: false,
+      description: '',
+      location: '',
+    },
+  });
+  const handle_submit = async (data: EducationFormValues) => {
+    setIsLoading (true);
+    set_error (null);    try {
+      await on_submit (data);
+    } catch (err: any) {
+      set_error (err.message || 'An error occurred');
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
   }
 
+=======
+
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
+    <Form {...form}>;
+
+      <form on_submit={form.handle_submit (handle_submit)} className='space - y-4'>;
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+          <FormField;
             control={form.control}
 
                 <FormLabel>Institution</FormLabel>
@@ -89,8 +154,9 @@ export function EducationFormFields({
             )}
           />
 
-          <div className="space-y-4">
+          <div className='space-y-4'>;
             <FormField
+
               control={form.control}
 
               name="is_current"
@@ -116,6 +182,13 @@ export function EducationFormFields({
 
                     <FormMessage />
                   </FormItem>
+                render={({ field }: { field: any }) => (;
+                  <FormItem>;
+                    <FormLabel>End Date</FormLabel>;
+                    <FormControl>;
+                      <Input type='date' {...field} value={field && field.value || ''} />                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>;
                 )}
               />
             )}
@@ -128,6 +201,7 @@ export function EducationFormFields({
             </FormItem>
           )}
 
+<<<<<<< HEAD
                   {...field}
                 />
               </FormControl>
@@ -138,21 +212,7 @@ export function EducationFormFields({
 
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
-        <div className="flex justify-between pt-2">
-          <Button
-            type="button"
-            variant="outline"
-            onClick={onCancel}
-          >;
-            {isEditing ? 'Cancel' : 'Back'}
-          </Button>
 
           <Button type="submit" disabled={isLoading}>
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
 
-            {isEditing ? 'Update' : 'Add'} Education
-          </Button>
-        </div>
-      </form>
-    </Form>
-  )

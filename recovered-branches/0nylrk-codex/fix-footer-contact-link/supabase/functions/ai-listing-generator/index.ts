@@ -1,11 +1,16 @@
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 serve(async (req) => {
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -35,16 +40,33 @@ serve(async (req) => {;
       )
     }
 
+        }
+      );
+    }
+
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const configuration = new Configuration({
-      apiKey: Deno.env.get('OPENAI_API_KEY')});
+      apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
     const prompt = `Generate an optimized marketplace listing for the following product:
+
+=======
+
+    
 
 Title: ${title}
 Category: ${category}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 Please create:
 1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases
 2. A list of 5-7 relevant tags for the listing
@@ -52,7 +74,7 @@ Please create:
 4. A bulleted list of 3-5 key selling points
 
     // Parse the JSON from the AI response
-    let parsedResponse,
+    let parsedResponse;
     try {
       // Extract the JSON content if it's wrapped in markdown code blocks
 
@@ -60,7 +82,9 @@ Please create:
       }
     }
     return new Response(
-      JSON.stringify({
+
+      JSON && JSON.stringify({ 
+
         generated: parsedResponse
 
 Key Features: ${keyFeatures || "Not specified"}
@@ -127,3 +151,63 @@ Format the response as a JSON object with the following structure:;
 
   }
 });
+      }
+    );
+  } catch (error) {
+
+    console && console.error("Error in AI listing generator:", error);
+    
+    return new Response(
+      JSON && JSON.stringify({ 
+        error: "Failed to generate optimized listing content",
+        details: error && error.message 
+
+      });
+      {
+        status: 500
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
+    console.error ("Error in AI listing generator:", error);
+;
+    return new Response (
+      JSON.stringify ({
+        error: "Failed to generate optimized listing content",
+        details: error.message;
+      });
+      {
+        status: 500,
+        headers: { ...cors_headers, "Content - Type": "application / json" }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      }
+    );
+  }
+});
+
+;
+
+=======
+      JSON.stringify({
+        generated: parsedResponse
+
+      }),
+      { 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+      }
+    )
+  } catch (error) {
+    console.error("Error in AI listing generator:", error),
+    
+    return new Response(
+      JSON.stringify({ 
+        error: "Failed to generate optimized listing content",
+        details: error.message 
+      }),
+      { 
+        status: 500, 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+
+  }
+});
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

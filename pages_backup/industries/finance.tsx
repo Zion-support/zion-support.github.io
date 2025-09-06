@@ -3,6 +3,11 @@ import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -50,61 +55,74 @@ const services = [
     ];
   },
   {}
-    title: 'AI Trading Algorithms,',
-    description: 'Advanced machine learning algorithms for automated trading and investment strategies.,',
-    icon: Brain,
-    features: [;
-      'Algorithmic trading systems,',
-      'Risk management AI',',
-      'Market prediction models',',
+
+    title: 'AI Trading Algorithms,',;
+    description: 'Advanced machine learning algorithms for automated trading and investment strategies.,',;
+    icon: Brain,;
+    features: [,;
+      'Algorithmic trading systems,',;
+      'Risk management AI',',;
+      'Market prediction models',',;
+
       'Portfolio optimization'';
     ];
   },
   {}
-    title: 'Digital Payment Systems,',
-    description: 'Secure, scalable payment processing solutions for modern financial transactions.',',
-    icon: CreditCard,
-    features: [;
-      'Payment gateway integration,',
-      'Mobile payment solutions',',
-      'Cross-border payments',',
+
+    title: 'Digital Payment Systems,',;
+    description: 'Secure, scalable payment processing solutions for modern financial transactions.',',;
+    icon: CreditCard,;
+    features: [,;
+      'Payment gateway integration,',;
+      'Mobile payment solutions',',;
+      'Cross-border payments',',;
+
       'Fraud detection systems'';
     ];
   },
   {}
-    title: 'Risk Management AI,',
-    description: 'AI-powered risk assessment and management tools for financial institutions.,',
-    icon: TrendingUp,
-    features: [;
-      'Credit risk analysis,',
-      'Market risk modeling',',
-      'Operational risk assessment',',
+
+    title: 'Risk Management AI,',;
+    description: 'AI-powered risk assessment and management tools for financial institutions.,',;
+    icon: TrendingUp,;
+    features: [,;
+      'Credit risk analysis,',;
+      'Market risk modeling',',;
+      'Operational risk assessment',',;
+
       'Regulatory compliance monitoring'';
     ];
   },
   {}
-    title: 'Fraud Detection Systems,',
-    description: 'Real-time fraud detection and prevention using advanced AI and machine learning.,',
-    icon: Lock,
-    features: [;
-      'Real-time transaction monitoring,',
-      'Behavioral analysis',',
-      'Pattern recognition',',
+
+    title: 'Fraud Detection Systems,',;
+    description: 'Real-time fraud detection and prevention using advanced AI and machine learning.,',;
+    icon: Lock,;
+    features: [,;
+      'Real-time transaction monitoring,',;
+      'Behavioral analysis',',;
+      'Pattern recognition',',;
+
       'Automated alert systems'';
     ];
   },
   {}
-    title: 'Regulatory Compliance Tools,',
-    description: 'Automated compliance monitoring and reporting for financial regulations.,',
-    icon: FileText,
-    features: [;
-      'KYC/AML automation,',
-      'Regulatory reporting',',
-      'Audit trail management',',
+
+    title: 'Regulatory Compliance Tools,',;
+    description: 'Automated compliance monitoring and reporting for financial regulations.,',;
+    icon: FileText,;
+    features: [,;
+      'KYC/AML automation,',;
+      'Regulatory reporting',',;
+      'Audit trail management',',;
+
       'Compliance dashboards'';
     ];
   }
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;];
 const benefits = [;
   {}
@@ -112,6 +130,7 @@ const benefits = [;
     description: 'Bank-grade security measures protect sensitive financial data and transactions.,',
     icon: Shield;
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ];
 const benefits = [
   {
@@ -120,21 +139,26 @@ const benefits = [
     icon: Shield
   },
   {}
-    title: 'Improved Efficiency,',
-    description: 'Automated processes reduce manual work and increase operational efficiency.,',
-    icon: BarChart3;
-  },
+
+    title: 'Improved Efficiency,',;
+    description: 'Automated processes reduce manual work and increase operational efficiency.,',;
+    icon: BarChart3,;
+  },;
   {}
-    title: 'Better Risk Management,',
-    description: 'AI-powered risk assessment helps make informed financial decisions.,',
-    icon: TrendingUp;
-  },
+    title: 'Better Risk Management,',;
+    description: 'AI-powered risk assessment helps make informed financial decisions.,',;
+    icon: TrendingUp,;
+  },;
   {}
-    title: 'Regulatory Compliance,',
-    description: 'Built-in compliance tools ensure adherence to financial regulations.,',
-    icon: FileText;
+    title: 'Regulatory Compliance,',;
+    description: 'Built-in compliance tools ensure adherence to financial regulations.,',;
+    icon: FileText,;
+
   }
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;];
 export default function FinancePage() {
   return (;
@@ -160,8 +184,9 @@ export default function FinancePage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <DollarSign className="w-12 h-12 text-green-400 mr-4" />";
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Financial;
+
+                <h1 className="text-5xl md: text-6xl font-bold">", Financial,;
+
                   <span className="block bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -171,12 +196,12 @@ export default function FinancePage() {
                 Revolutionizing financial services with cutting-edge blockchain, AI, and digital payment solutions.
                 Enhance security, efficiency, and compliance in your financial operations.,
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
                   Get Fintech Consultation;
                 </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">";
-                  View Finance Case Studies;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-green-600 transition-all duration-300 font-semibold">", View Finance Case Studies,;
+
                 </Link>;
               </div>;
             </motion.div>;
@@ -266,6 +291,9 @@ export default function FinancePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">";
@@ -278,6 +306,7 @@ export default function FinancePage() {
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">
@@ -296,6 +325,14 @@ export default function FinancePage() {
                 </motion.div>;
               ))}
 
+=======
+
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
           </div>
         </section>
@@ -348,6 +385,14 @@ export default function FinancePage() {
                 </motion.div>;
               ))}
 
+=======
+
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
           </div>
         </section>
@@ -367,12 +412,12 @@ export default function FinancePage() {
                 Let our fintech experts help you implement cutting-edge financial technology;
                 solutions that enhance security and efficiency.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
                   Start Your Fintech Project;
                 </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">";
-                  Learn About Our Expertise;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-green-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,;
+
                 </Link>;
               </div>;
             </motion.div>;
@@ -381,6 +426,12 @@ export default function FinancePage() {
       </div>;
     </Layout>;
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Financial Services?

@@ -34,6 +34,17 @@
   );
 }
 
+=======
+function Card({ title, description, href, icon }: { 
+  title: string; 
+  description: string; 
+  href: string; 
+  icon: string; 
+}) {
+  return (
+    <Link 
+      href={href} 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
@@ -43,6 +54,7 @@
   );
 }
 
+<<<<<<< HEAD
   return (
     <div className="text-center p-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>

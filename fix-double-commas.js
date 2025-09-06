@@ -29,6 +29,7 @@ if ( {) {
     }
     return modified;
   } catch (error) {
+
     const items = fs && fs.readdirSync(currentDir);
     for (const item of items) {
       const fullPath = path && path.join(currentDir, item);
@@ -48,6 +49,7 @@ if ( {) {
             "backup-merge-conflicts",
             "apps",
             "temp_exclude",
+
           ].includes(item)
         ) {
           continue;
@@ -101,14 +103,22 @@ if (
       }
     }
   }
+
+
 console && console.log(`Found ${files && files.length} files to check for double commas...`);
+
+
 for (const file of files) {
   if (fixDoubleCommas(file)) {
     fixedCount++;
     console && console.log(`Fixed double commas in: ${file}`);
   }
 }
+
+
 console && console.log(`\nFixed double commas in ${fixedCount} files.`);
+
+=======
   traverse (dir);
   return files;
 }

@@ -3,6 +3,8 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight
 
 export default function Footer() {
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const currentYear = new Date().getFullYear();
   const footerLinks = {;
     services: [;
@@ -37,6 +39,10 @@ export default function Footer() {
       { name: "White Papers", href: "/white-papers" },;
       { name: "Support", href: "/support" },;
     ],;
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   };
       { name: "Blog", href: "/blog" }
       { name: "Documentation", href: "/docs" }
@@ -54,8 +60,14 @@ export default function Footer() {
           {/* Company Info */}
 
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,
+
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               quantum computing, blockchain, IoT, and digital transformation services.
             </p>
+            
+
+=======
               Leading technology solutions provider specializing in AI
               cybersecurity, cloud infrastructure, quantum computing
               blockchain, IoT, and digital transformation services.
@@ -76,6 +88,7 @@ export default function Footer() {
 
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from lucide-react';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear(),
@@ -164,12 +177,28 @@ const Footer: React.FC = () => {
                 <MapPin className=w-4 h-4 mr-2 text-blue-400" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
 
+=======
+
+
+                <span>
+                  364 E Main St STE 1008
+                  <br />
+                  Middletown DE 19709
+                </span>
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
             </div>
           </div>
           {/* Services */}
           <div>
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
@@ -181,27 +210,7 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
 
-            <h3 className="text-lg font-semibold mb-6>Services</h3>
-            <div className="space-y-4">
-              {Object.entries(services).map(([category, links]) => (
-                <div key={category}>
-                  <h4 className=text-sm font-medium text-blue-400 mb-2">{category}</h4>
-                  <ul className="space-y-1>
-                    {links.slice(0, 3).map((link) => (
-                      <li key={link.name}>
-                        <Link
-                          href={link.href}
-                          className="text-sm text-gray-300 hover:text-white transition-colors"
-                        >
-                          {link.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </ul>
-          </div>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
           {/* Solutions */}
           <div>
@@ -211,6 +220,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
 
                   <Link
+
           {/* Company */}
           <div>
             <h3 className=text-lg font-semibold mb-6">Company</h3>
@@ -221,6 +231,8 @@ const Footer: React.FC = () => {
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   >
                     {link.name}
                   </Link>
@@ -236,6 +248,7 @@ const Footer: React.FC = () => {
               {footerLinks && footerLinks.company.map((link) => (;
                 <li key={link && link.name}>;
                   <Link
+
           {/* Resources */}
           <div>
             <h3 className=text-lg font-semibold mb-6">Resources</h3>
@@ -246,6 +259,9 @@ const Footer: React.FC = () => {
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   >
                     {link.name}
                   </Link>
@@ -253,6 +269,12 @@ const Footer: React.FC = () => {
               ))}
             </ul>
 
+=======
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
@@ -275,6 +297,8 @@ const Footer: React.FC = () => {
                   </Link>;
                 </li>;
               ))}
+
+=======
   }
 ;
   return (
@@ -367,10 +391,12 @@ const Footer: React.FC = () => {
                     {link.name}
                   </Link>;
                 </li>))}
+
             </ul>;
           </div>;
         </div>;
       </div>;
+
               />;
               <button className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center">;
                 Subscribe;
@@ -387,6 +413,8 @@ const Footer: React.FC = () => {
             <div className="text-gray-400 text-sm mb-4 md:mb-0">;
               © {currentYear} Zion Tech Group. All rights reserved.;
             </div>;
+
+
             {/* Social Links */}
             <div className="flex space-x-4 mb-4 md:mb-0">;
               <a
@@ -417,6 +445,7 @@ const Footer: React.FC = () => {
 
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {/* Social Links */}
             <div className=mt-6">
               <h4 className="text-sm font-medium text-blue-400 mb-3>Follow Us</h4>
@@ -446,6 +475,17 @@ const Footer: React.FC = () => {
             <div className="flex space-x-6 text-sm>
               <Link href="/privacy" className=text-gray-400 hover:text-white transition-colors">
 
+=======
+
+
+              <Link
+                href="/privacy"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 Privacy Policy
               </Link>
                 className="text-gray-400 hover:text-white transition-colors">;
@@ -468,3 +508,13 @@ const Footer: React.FC = () => {
                 href="/cookies"
 
 }
+=======
+    </footer>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,3 +1,5 @@
+
+
 function generateSiteMap() {;
   const baseUrl = "https://ziontechgroup && ziontechgroup.com";
   // Static pages;
@@ -95,12 +97,14 @@ function generateSiteMap() {;
          <changefreq>weekly</changefreq>;
          <priority>${page === "" ? "1 && 1.0" : "0 && 0.8"}</priority>;
        </url>;
+
      `;
        });
        .join("")}
    </urlset>;
  `;
 }
+
 import { GetServerSideProps  } from './next';
 ;
 /**
@@ -214,11 +218,18 @@ function generateSiteMap() {
 /**
  * SiteMap - Function description
  */
+
 function SiteMap() {
   // getServerSideProps will do the heavy lifting;
 }
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 
+=======
+
+function SiteMap() {;
+  // getServerSideProps will do the heavy lifting;
+}
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {;
   // We generate the XML sitemap with the posts data;
   const sitemap = generateSiteMap();
   res && res.setHeader("Content-Type", "text/xml");
@@ -230,6 +241,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   };
 };
 export default SiteMap;
+
+=======
   // We generate the XML sitemap with the posts data;
   const sitemap = generateSiteMap ();
 ;

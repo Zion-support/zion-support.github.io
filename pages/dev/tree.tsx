@@ -1,3 +1,47 @@
+=======
+
+
+import React, { useEffect, useState } from 'react';
+
+
+
+
+
+import Tree, { TreeNode } from '../../components / ui / Tree';
+interface ApiResponse {
+  nodes: TreeNode[],
+status: {
+  git_connected: boolean, git_branch?: string;
+export default /**
+ * DevTreePage - Function description
+ */
+function DevTreePage() {
+  const [nodes, set_nodes] = useState < TreeNode[] | null>(null);
+  const [error, set_error] = useState < string | null>(null);
+  const [git, set_git] = useState < ApiResponse['status'] | null>(null);
+  const [admin_token, setAdminToken] = useState < string>('');
+;
+  const fetch_tree = async (token?: string) => {
+    try {
+      const resp = await fetch ('/api / dev / source - map', {
+        headers: token ? { 'x - admin - token': token } : undefined,
+      });
+      // Check condition
+if ( {) {
+  $2
+}
+        const inner_index = await resp.json ().catch (() => ({}));
+        throw new Error (j.error || `HTTP ${resp.status}`);
+
+      }
+      const data: ApiResponse = await resp.json();
+      setNodes(data.nodes);
+      setGit(data.status);
+    } catch (e: any) {
+
+import React, { useEffect, useState } from "react";
+import Tree, { TreeNode } from "../../components/ui/Tree";
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
 export default function DevTreePage() {
@@ -42,6 +86,19 @@ export default function DevTreePage() {
       {nodes ? (
         <div className="rounded border p-3 bg-white">
           <Tree nodes={nodes} onDeploy={onDeploy} />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </div>
       ) : (
         <div>Loading...</div>
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

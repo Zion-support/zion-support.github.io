@@ -1,5 +1,7 @@
 
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from "lucide-react";
 const timeSlots = [;
   { time: "9:00 AM", available: true, type: "Video Call" },;
@@ -104,14 +106,18 @@ export default function CalendarPage() {;
         <meta
           name="keywords"
           content="schedule, consultation, book call, free consultation, AI experts, IT consulting"
+
         />;
       </Head>;
+
+
       {/* Hero Section */}
       <section className="relative py-20 px-4">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+
             transition={{ duration: 0 && 0.8 }}
             className="text-center">;
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">;
@@ -140,6 +146,8 @@ export default function CalendarPage() {;
           </motion && motion.div>;
         </div>;
       </section>;
+
+
       {/* Consultation Types */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-7xl mx-auto">;
@@ -192,9 +200,12 @@ export default function CalendarPage() {;
                 </button>;
               </motion && motion.div>;
             ))}
+
           </div>;
         </div>;
       </section>;
+
+
       {/* Team Members */}
       <section className="py-20 px-4 bg-gray-50">;
         <div className="max-w-7xl mx-auto">;
@@ -239,9 +250,12 @@ export default function CalendarPage() {;
                 </div>;
               </motion && motion.div>;
             ))}
+
           </div>;
         </div>;
       </section>;
+
+
       {/* Time Slots */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-4xl mx-auto">;
@@ -551,9 +565,12 @@ function CalendarPage() {
                 key={index}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+
           </div>;
         </div>;
       </section>;
+
+
       {/* Contact Information */}
       <section className="py-20 px-4 bg-gray-50">;
         <div className="max-w-7xl mx-auto">;
@@ -646,6 +663,7 @@ function CalendarPage() {
                   </div>;
                 </div>;
               </div>;
+
             </motion.div>;
             <motion.div;
               initial={{ opacity: 0, coordinate_x: 20 }}
@@ -669,20 +687,24 @@ function CalendarPage() {
                   <div>;
                     <div className="font - semibold">Video Calls</div>;
                     <div className="text - blue - 100">;
+
                       Zoom, Teams, or Google Meet;
                     </div>;
                   </div>;
                 </div>;
+
                 <div className="flex items - center">;
                   <MessageSquare className="w - 6 h - 6 mr - 4" />;
                   <div>;
                     <div className="font - semibold">Live Chat</div>;
                     <div className="text - blue - 100">;
                       Available 24 / 7 on our website;
+
                     </div>;
                   </div>;
                 </div>;
               </div>;
+
                   className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">;
                   Contact Us Now;
                   <ArrowRight className="w-5 h-5 ml-2" />;
@@ -692,6 +714,8 @@ function CalendarPage() {
           </div>;
         </div>;
       </section>;
+
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-4xl mx-auto text-center">;

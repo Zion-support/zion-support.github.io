@@ -15,28 +15,6 @@ import { useReviews } from '@/hooks/useReviews'
 import { useAuth } from '@/hooks/useAuth'
 interface ProjectReviewSectionProps {
   project: Project
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
-  const { user } = useAuth()
-  const { reviews, userReview, isLoading, reportReview } = useReviews(
-    project.id
-  )
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false)
-  const isCompleted = project.status === 'completed'
-  const isClient = user?.id === project.client_id
-  const isTalent = user?.id === project.talent_id
-  const clientProfile = project?.talent_profile
-  const talentProfile = project.talent_profile
-  // Determine who the current user needs to review
-  const revieweeId = isClient ? project.talent_id : project.client_id
-  const revieweeName = isClient
-    ? talentProfile?.full_name |'Talent'
-    : clientProfile?.full_name |'Client'
-  const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview
-  const hasLeftReview = userReview != null
-
-  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
-  const hasLeftReview = userReview != null,
-
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -49,28 +27,17 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
         </CardDescription>
       </CardHeader>
 
+=======
+
+
+      
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <CardContent>
         {isCompleted ? (
           <div className="space-y-6">
             {(isClient || isTalent) && (
               <div className="border-b pb-4 mb-4">
-
-                {canLeaveReview ? (
-                  <div className="bg-muted/20 rounded-lg p-4 text-center">
-                    <h3 className="font-medium mb-2">Share your experience</h3>
-                    <p className="text-sm text-muted-foreground mb-3">
-                      Your review will help build a trustworthy community
-                    </p>
-                    <Button onClick={() => setIsReviewModalOpen(true)}>
-                      Leave Review
-                    </Button>
-                  </div>
-                ) : hasLeftReview ? (
-                  <div className="bg-muted/20 rounded-lg p-4 text-center">
-                    <h3 className="font-medium mb-2">Thank you for your review!</h3>
-                    <p className="text-sm text-muted-foreground mb-3">
-                      Your review is {userReview.status === "approved" ? "published" : "pending approval"}
-                    </p>
 
                     )}
                   </div>
@@ -93,3 +60,4 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
             </p>
           </div>
         )}
+<<<<<<< HEAD

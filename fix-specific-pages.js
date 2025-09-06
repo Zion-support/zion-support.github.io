@@ -1,8 +1,15 @@
 
+=======
+
+'),
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       if (parts.length > 1) {
         // Take the content after the conflict resolution
         backupContent = parts[1].split('>>>>>>>')[0]
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
     }
     // Clean up the content
@@ -27,6 +34,7 @@
 
       corruptedBackup: corruptedBackupPath
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
@@ -58,6 +66,8 @@ function fixSpecificPages() {
 
     const result = restorePage(pagePath),
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (result.restored) {
       results.restored++
       console.log(`✅ Restored: ${pagePath}`)
@@ -74,20 +84,15 @@ function fixSpecificPages() {
   }
   // Generate summary
 
-  console.log('\n📊 Restoration Summary: ')
-  console.log(`   Total pages: ${results.total}`)
-  console.log(`   Restored: ${results.restored}`)
-  console.log(`   Failed: ${results.failed}`)
-  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`)
-  // Save detailed report
-  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json')
-  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2))
-  console.log(`\n📄 Detailed report saved to: ${reportPath}`)
 
   return results
 
-}
-// Run the restoration if this script is executed directly
-if ({
-  fixSpecificPages()
-}
+module.exports = {
+  restore_page,
+  fixSpecificPages,
+  findBestBackup;
+
+
+};
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

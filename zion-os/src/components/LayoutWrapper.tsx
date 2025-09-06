@@ -1,4 +1,16 @@
 
+=======
+
+"use client",;
+import { useWalkthroughTarget } from "./OnboardingWalkthrough",;
+import { useAuth } from "@/contexts/AuthContext",;
+import Link from "next/link",;
+export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
+  const { user, isAuthenticated, logout } = useAuth();
+
+
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (;
 
     <>;
@@ -28,6 +40,12 @@
                   Dashboard;
                 </Link>;
 
+=======
+                <div className="flex items - center gap - 3">;
+                  <span className="text - sm text - zinc - 400">;
+                    Welcome, {user?.name || user?.email}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </span>;
                   <button;
                     on_click={logout}

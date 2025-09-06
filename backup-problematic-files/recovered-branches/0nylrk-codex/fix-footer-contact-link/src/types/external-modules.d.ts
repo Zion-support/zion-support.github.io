@@ -5,8 +5,8 @@
   // type definitions.;
 
 declare module 'react-dom';
-declare module 'react - beautiful - dnd';
-declare module 'react - redux';
+declare module 'react-beautiful-dnd';
+declare module 'react-redux';
 declare module 'semver';
 declare module 'ws';
 declare module 'recharts';

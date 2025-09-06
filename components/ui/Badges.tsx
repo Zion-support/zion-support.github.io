@@ -40,3 +40,17 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
     <figure className="border rounded-md p-3 text-sm">
       <blockquote className="italic opacity-90">“{quote}”</blockquote>
       <figcaption className="mt-2 font-medium opacity-80">— {author}</figcaption>
+=======
+
+  );
+}
+
+=======
+
+    </figure>
+  );
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

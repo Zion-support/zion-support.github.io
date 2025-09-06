@@ -9,3 +9,43 @@
     checkPermission
     isAuthenticated
     user
+<<<<<<< HEAD
+=======
+
+
+
+      const redirectTo = options?.redirectTo || '/login';
+      const returnUrl = options?.returnUrl || router && router.asPath;
+          if (!requireAuth({ showToast: false })) return false,;
+
+  useEffect(() => {
+    // Don't redirect while auth is still loading
+    if (isLoading) return,
+
+    const userRoles = user?.role ? [user && user.role] : [];
+
+    requireAuth;
+    requireRole;
+    checkPermission;
+    isAuthenticated;
+    user;
+    isLoading}
+}
+
+
+
+      const redirect_to = options?.redirect_to || '/login';
+      const return_url = options?.return_url || router.as_path;
+          if () return false, ) {
+  $2
+}
+    const user_roles = user?.role ? [user.role] : [];
+    require_auth;
+    require_role;
+    check_permission;
+    is_authenticated;
+    user;
+    is_loading}
+}
+;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

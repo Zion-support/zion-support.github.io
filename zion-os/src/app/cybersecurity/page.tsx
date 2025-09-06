@@ -1,4 +1,17 @@
 
+=======
+
+import Link from "next/link",;
+export const metadata = {;
+  title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",;
+  description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.",;
+  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"},;
+export default function CybersecurityPage() {;
+  return (;
+
+
+    <div className="min-h-screen">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="min-h-screen">;
 
       {/* Hero Section */}
@@ -10,6 +23,10 @@
           <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
             Protect your organization from evolving cyber threats with our comprehensive;
 
+=======
+            security solutions. From threat detection to compliance management,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             we secure your digital assets and ensure business continuity.;
           </p>;
         </div>;
@@ -104,6 +121,12 @@
                 </svg>;
               </div>;
 
+=======
+              <h3 className="text - xl font - semibold mb - 3">Security Assessment</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                Comprehensive security assessments including penetration testing,
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 vulnerability scanning, and risk analysis.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -124,6 +147,13 @@
                 </svg>;
               </div>;
 
+=======
+
+                Ensure compliance with industry standards including SOC2, ISO 27001,;
+
+
+                GDPR, and industry-specific regulations.;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 GDPR, and industry-specific regulations.;
 
               </p>;

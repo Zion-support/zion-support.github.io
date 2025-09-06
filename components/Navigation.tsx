@@ -14,6 +14,12 @@
 } from "lucide-react";
 import SearchModal from "./SearchModal";
 
+
+
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Menu
   X
   ChevronDown
@@ -40,12 +46,19 @@ import SearchModal from "./SearchModal";
 
 export default function Navigation() {
 
+export default function Navigation() {
+=======
+export default function Navigation() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+
 } from './lucide-react';
 import SearchModal from "./SearchModal";
 ;
@@ -79,6 +92,7 @@ function Navigation() {
       description: "Custom SaaS Solutions",
       icon: Zap,
     },
+
     {
       name: "Blockchain"
       href: "/blockchain"
@@ -98,6 +112,7 @@ function Navigation() {
       icon: Shield
     }
   ];
+
 ;
   const solutions = [;
     {
@@ -106,6 +121,7 @@ function Navigation() {
       description: "Large - scale business solutions",
       icon: Building,
     },
+
     {
       name: "Startup Solutions"
       href: "/startup"
@@ -113,6 +129,7 @@ function Navigation() {
       icon: Zap
     }
     {
+
       name: "E - commerce",
       href: "/ecommerce",
       description: "Online store solutions",
@@ -193,6 +210,7 @@ function Navigation() {
       href: "/tutorials",
       description: "Step - by - step guides",
     },
+
     {
       name: "Training"
       href: "/training"
@@ -205,6 +223,8 @@ function Navigation() {
     }
     { name: "News", href: "/news", description: "Industry news and updates" }
   ];
+
+
   const services = [;
     {;
       name: "AI Services",;
@@ -354,8 +374,10 @@ function Navigation() {
     { name: "Contact", href: "/contact" },;
     { name: "Support", href: "/support" },;
     { name: "Status", href: "/status" },;
+
   ];
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <>;
       {/* Top Bar */}
@@ -372,6 +394,7 @@ function Navigation() {
               <div className="flex items-center">;
                 <Mail className="w-4 h-4 mr-2" />;
                 <a
+
                   href="mailto:kleber@ziontechgroup && ziontechgroup.com"
                   className="hover:text-blue-300">;
                   kleber@ziontechgroup && ziontechgroup.com;
@@ -439,12 +462,14 @@ function Navigation() {
                 </a>;
                 <a href="#" className="hover:text - blue - 300">;
                   <Instagram className="w - 4 h - 4" />;
+
                 </a>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+
             <Link href="/" className="flex items-center space-x-2">;
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
                 <span className="text-white font-bold text-xl">Z</span>;
@@ -468,13 +493,17 @@ function Navigation() {
                   Zion Tech Group;
                 </div>;
                 <div className="text - xs text - gray - 500">;
+
                   Technology Solutions;
                 </div>;
               </div>;
             </Link>;
+
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Home;
               </Link>;
+
+
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button
@@ -532,8 +561,11 @@ function Navigation() {
                           return (
                             <Link;
                               key={index}
+
                 </AnimatePresence>;
               </div>;
+
+
               {/* Solutions Dropdown */}
               <div className="relative group">;
                 <button
@@ -610,8 +642,11 @@ function Navigation() {
                           return (
                             <Link;
                               key={index}
+
                 </AnimatePresence>;
               </div>;
+
+
               {/* Industries Dropdown */}
               <div className="relative group">;
                 <button
@@ -649,8 +684,11 @@ function Navigation() {
                       </div>;
                     </motion && motion.div>;
                   )}
+
                 </AnimatePresence>;
               </div>;
+
+
               {/* Resources Dropdown */}
               <div className="relative group">;
                 <button
@@ -688,28 +726,15 @@ function Navigation() {
                       </div>;
                     </motion && motion.div>;
                   )}
+
+
+=======
                 </AnimatePresence>;
               </div>;
               <Link
                 href="/pricing"
-
-            {/* Search and CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">;
-              <button
-                onClick={() => setIsSearchOpen(true)}
-                className="p-2 text-gray-700 hover:text-blue-600 transition-colors";
-                aria-label="Search";
-              >;
-                <Search className="w-5 h-5" />;
-              </button>;
-              <Link
-                href="/contact"
-            {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <Link
-                href=/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
-
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               >
                 Get Started
               </Link>
@@ -739,8 +764,11 @@ function Navigation() {
               ) : (;
                 <Menu className="w-6 h-6" />;
               )}
+
             </button>;
           </div>;
+
+
           {/* Mobile Menu */}
           <AnimatePresence>;
             {isMenuOpen && (;
@@ -754,9 +782,12 @@ function Navigation() {
                     href="/"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
+
                   >;
                     Home;
                   </Link>;
+
+
                   {/* Mobile Services */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -773,8 +804,11 @@ function Navigation() {
                           {service && service.name}
                         </Link>;
                       ))}
+
                     </div>;
                   </div>;
+
+
                   {/* Mobile Solutions */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -791,8 +825,11 @@ function Navigation() {
                           {solution && solution.name}
                         </Link>;
                       ))}
+
                     </div>;
                   </div>;
+
+
                   {/* Mobile Industries */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -809,8 +846,11 @@ function Navigation() {
                           {industry && industry.name}
                         </Link>;
                       ))}
+
                     </div>;
                   </div>;
+
+
                   {/* Mobile Resources */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -827,16 +867,21 @@ function Navigation() {
                           {resource && resource.name}
                         </Link>;
                       ))}
+
                     </div>;
                   </div>;
+
+
                   <Link
                     href="/pricing"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
+
                   >;
                     Pricing;
                   </Link>;
                   <div className="px-4 py-2 space-y-2">;
+
                     <Link
                       href="/contact"
                       className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center"
@@ -1099,9 +1144,12 @@ function Navigation() {
                     </a>;
                   </div>;
                 </div>;
+
           </AnimatePresence>;
         </div>;
       </nav>;
+
+
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}

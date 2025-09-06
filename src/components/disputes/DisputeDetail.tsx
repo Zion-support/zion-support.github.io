@@ -118,18 +118,27 @@ export function DisputeDetail() {
   }
 
   if (isLoading) {
+
     return (
-      <div className="p-8 text-center">
-        <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>
-        <p>Loading dispute details...</p>
-      </div>
-    )
+      <div className='p-8 text-center'>;
+        <div className='w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full'></div>;
+        <p>Loading dispute details...</p>;
+      </div>;
+    );
   }
-  if (!dispute) {
+
+  if (!dispute) {;
     return (
+
       <div className="p-8 text-center">
         <p>Dispute not found</p>
 
+=======
+        <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
+          Back to Disputes
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         </Button>
       </div>
     )
@@ -234,19 +243,21 @@ export function DisputeDetail() {
         <div className="lg:col-span-2">
 
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="mb-6">
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="messages">Messages</TabsTrigger>
-              <TabsTrigger value="attachments">Attachments</TabsTrigger>
-              {isAdmin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
+            <TabsList className='mb-6'>
+              <TabsTrigger value='overview'>Overview</TabsTrigger>
+              <TabsTrigger value='messages'>Messages</TabsTrigger>
+              <TabsTrigger value='attachments'>Attachments</TabsTrigger>
+              {isAdmin && <TabsTrigger value='admin'>Admin Notes</TabsTrigger>}
             </TabsList>
 
               <Card>
                 <CardHeader>
                   <CardTitle>Dispute Details</CardTitle>
-                  <CardDescription>Information about this dispute case</CardDescription>
+                  <CardDescription>
+                    Information about this dispute case
+                  </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className='space-y-4'>
                   <div>
                     <h3 className="font-medium">Reason</h3>
                     <p>{
@@ -268,10 +279,69 @@ export function DisputeDetail() {
                   </div>
 
                   {dispute.milestone_id && (
-                    <div>
-                      <h3 className="font-medium">Related Milestone</h3>
-                      <p className="text-sm">Milestone ID: {dispute.milestone_id}</p>
-                    </div>
+                    <div>;
+                      <h3 className='font - medium'>Related Milestone</h3>;
+                      <p className='text - sm'>;
+                        Milestone ID: {dispute.milestone_id}
+
+        </div>;
+      </div>;
+
+      {dispute && dispute.status === 'resolved' && dispute && dispute.resolution_summary && (;
+        <Alert className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900'>;
+          <Check className='h-4 w-4' />;
+          <AlertTitle>This dispute has been resolved</AlertTitle>;
+          <AlertDescription>{dispute && dispute.resolution_summary}</AlertDescription>;
+        </Alert>;
+      )}
+
+      <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>;
+        <div className='lg:col-span-2'>;
+          <Tabs value={activeTab} onValueChange={setActiveTab}>;
+            <TabsList className='mb-6'>;
+              <TabsTrigger value='overview'>Overview</TabsTrigger>;
+              <TabsTrigger value='messages'>Messages</TabsTrigger>;
+              <TabsTrigger value='attachments'>Attachments</TabsTrigger>;
+              {isAdmin && <TabsTrigger value='admin'>Admin Notes</TabsTrigger>}
+            </TabsList>;
+
+            <TabsContent value='overview' className='space-y-6'>;
+              <Card>;
+                <CardHeader>;
+                  <CardTitle>Dispute Details</CardTitle>;
+                  <CardDescription>;
+                    Information about this dispute case;
+                  </CardDescription>;
+                </CardHeader>;
+                <CardContent className='space-y-4'>;
+                  <div>;
+                    <h3 className='font-medium'>Reason</h3>;
+                    <p>;
+                      {disputeReasonLabels[dispute && dispute.reason_code] ??;
+                        dispute && dispute.reason_code}
+                    </p>;
+                  </div>;
+
+                  <div>;
+                    <h3 className='font-medium'>Description</h3>;
+                    <p className='whitespace-pre-wrap'>{dispute && dispute.description}</p>;
+                  </div>;
+
+                  <div>;
+                    <h3 className='font-medium'>Project</h3>;
+                    <p>{dispute && dispute.project?.title || 'Unknown Project'}</p>;
+                    <p className='text-sm text-muted-foreground'>;
+                      {dispute && dispute.project?.scope_summary}
+                    </p>;
+                  </div>;
+
+                  {dispute && dispute.milestone_id && (;
+                    <div>;
+                      <h3 className='font-medium'>Related Milestone</h3>;
+                      <p className='text-sm'>;
+                        Milestone ID: {dispute && dispute.milestone_id}
+                      </p>;
+                    </div>;
                   )}
 
                           <span>Under review</span>
@@ -298,36 +368,38 @@ export function DisputeDetail() {
                   <CardContent>
 
                     {dispute.resolution_type && (
-                      <div className="mt-4">
+                      <div className='mt-4'>
                         <Badge>
 
                     )}
-                  </CardContent>
-                </Card>
+                  </CardContent>;
+                </Card>;
               )}
             </TabsContent>
 
               <Card>
                 <CardHeader>
                   <CardTitle>Messages</CardTitle>
-                  <CardDescription>Communication regarding this dispute</CardDescription>
+                  <CardDescription>
+                    Communication regarding this dispute
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-6 max-h-[600px] overflow-y-auto p-2">
+                  <div className='space-y-6 max-h-[600px] overflow-y-auto p-2'>
                     {messages.length === 0 ? (
-                      <div className="text-center py-12">
-                        <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" />
-                        <p className="text-muted-foreground">No messages yet</p>
+                      <div className='text-center py-12'>
+                        <MessageSquare className='mx-auto h-12 w-12 text-muted-foreground mb-2' />
+                        <p className='text-muted-foreground'>No messages yet</p>
                       </div>
                     ) : (
                       messages
                         .filter(msg => !msg.is_admin_note)
 
                     )}
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <div className="w-full space-y-4">
+                  </div>;
+                </CardContent>;
+                <CardFooter>;
+                  <div className='w-full space-y-4'>;
                     <Textarea
 
                       </Button>
@@ -340,25 +412,31 @@ export function DisputeDetail() {
               <Card>
                 <CardHeader>
                   <CardTitle>Attachments</CardTitle>
-                  <CardDescription>Files related to this dispute</CardDescription>
+                  <CardDescription>
+                    Files related to this dispute
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-center py-12">
-                    <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" />
-                    <p className="text-muted-foreground">No attachments available</p>
+                  <div className='text-center py-12'>
+                    <Download className='mx-auto h-12 w-12 text-muted-foreground mb-2' />
+                    <p className='text-muted-foreground'>
+                      No attachments available
+                    </p>
                   </div>
                 </CardContent>
               </Card>
             </TabsContent>
 
             {isAdmin && (
-              <TabsContent value="admin" className="space-y-6">
+              <TabsContent value='admin' className='space-y-6'>
                 <Card>
                   <CardHeader>
                     <CardTitle>Admin Actions</CardTitle>
-                    <CardDescription>Handle this dispute as an administrator</CardDescription>
+                    <CardDescription>
+                      Handle this dispute as an administrator
+                    </CardDescription>
                   </CardHeader>
-                  <CardContent className="space-y-6">
+                  <CardContent className='space-y-6'>
                     <div>
 
                         >
@@ -367,10 +445,10 @@ export function DisputeDetail() {
                         <Button
                           variant='outline'
                           onClick={() => handleStatusChange('under_review')}
-                          disabled={dispute.status === 'under_review'}
-                        >
-                          Mark as Under Review
-                        </Button>
+                          disabled={dispute && dispute.status === 'under_review'}
+                        >;
+                          Mark as Under Review;
+                        </Button>;
                         <Button
                           variant='outline'
                           onClick={() => handleStatusChange('closed')}
@@ -386,7 +464,9 @@ export function DisputeDetail() {
                           <Textarea
 
                             <div>
-                              <label className="text-sm font-medium mb-1 block">Resolution Type</label>
+                              <label className='text-sm font-medium mb-1 block'>
+                                Resolution Type
+                              </label>
                               <select
 
                         </div>
@@ -394,19 +474,21 @@ export function DisputeDetail() {
                     )}
 
                     <div>
-                      <h3 className="font-medium mb-2">Admin Notes</h3>
-                      <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
+                      <h3 className='font-medium mb-2'>Admin Notes</h3>
+                      <div className='space-y-4 max-h-[300px] overflow-y-auto p-2'>
                         {messages
                           .filter(msg => msg.is_admin_note)
 
                               </div>
-                              <span className="text-xs opacity-70">
-                                {format(new Date(msg.created_at), 'MMM d, h:mm a')}
-                              </span>
+                              <p className='whitespace-pre-wrap text-sm'>
+                                {msg.message}
+                              </p>
                             </div>
 
                         {!messages.some(msg => msg.is_admin_note) && (
-                          <p className="text-sm text-muted-foreground italic">No admin notes yet</p>
+                          <p className='text-sm text-muted-foreground italic'>
+                            No admin notes yet
+                          </p>
                         )}
                       </div>
 
@@ -450,24 +532,35 @@ export function DisputeDetail() {
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4 text-sm">
-              <div className="flex justify-between">
-                <span className="font-medium">Case ID:</span>
-                <span className="font-mono">{dispute.id}</span>
+            <CardContent className='space-y-4 text-sm'>
+              <div className='flex justify-between'>
+                <span className='font-medium'>Case ID:</span>
+                <span className='font-mono'>{dispute.id}</span>
               </div>
-              <div className="flex justify-between">
-                <span className="font-medium">Created:</span>
-                <span>{format(new Date(dispute.created_at), "MMM d, yyyy")}</span>
+              <div className='flex justify-between'>
+                <span className='font-medium'>Created:</span>
+                <span>
+                  {format(new Date(dispute.created_at), 'MMM d, yyyy')}
+                </span>
               </div>
-              <div className="flex justify-between">
-                <span className="font-medium">Status:</span>
+              <div className='flex justify-between'>
+                <span className='font-medium'>Status:</span>
                 <Badge variant={getStatusBadgeVariant(dispute.status)}>
-                  {dispute.status.replace('_ ')}
+                  {dispute.status.replace('_', ' ')}
                 </Badge>
               </div>
-              <div className="flex justify-between">
-                <span className="font-medium">Raised by:</span>
-                <span>{dispute.client_profile && dispute.talent_profile && dispute.raised_by === (dispute.client_profile as any).id ? "Client" : dispute.talent_profile && dispute.raised_by === (dispute.talent_profile as any).id ? "Talent" : "Unknown"}</span>
+              <div className='flex justify-between'>
+                <span className='font-medium'>Raised by:</span>
+                <span>
+                  {dispute.client_profile &&
+                  dispute.talent_profile &&
+                  dispute.raised_by === (dispute.client_profile as any).id
+                    ? 'Client'
+                    : dispute.talent_profile &&
+                        dispute.raised_by === (dispute.talent_profile as any).id
+                      ? 'Talent'
+                      : 'Unknown'}
+                </span>
               </div>
             </CardContent>
           </Card>
@@ -475,8 +568,145 @@ export function DisputeDetail() {
       </div>
     </div>
   )
+                      dispute && dispute.talent_profile?.display_name || 'Talent avatar'
+                    }
+                  />;
+                  <AvatarFallback>T</AvatarFallback>;
+                </Avatar>;
+                <div>;
+                  <p className='font-medium'>Talent</p>;
+                  <p className='text-sm text-muted-foreground'>;
+                    {dispute && dispute.talent_profile?.display_name || 'Unknown Talent'}
+                  </p>;
+                </div>;
+              </div>;
+            </CardContent>;
+          </Card>;
+
+          <Card>;
+            <CardHeader>;
+              <CardTitle>Case Information</CardTitle>;
+            </CardHeader>;
+            <CardContent className='space-y-4 text-sm'>;
+              <div className='flex justify-between'>;
+                <span className='font-medium'>Case ID:</span>;
+                <span className='font-mono'>{dispute && dispute.id}</span>;
+              </div>;
+              <div className='flex justify-between'>;
+                <span className='font-medium'>Created:</span>;
+                <span>;
+                  {format(new Date(dispute && dispute.created_at), 'MMM d, yyyy')}
+                </span>;
+              </div>;
+              <div className='flex justify-between'>;
+                <span className='font-medium'>Status:</span>;
+                <Badge variant={getStatusBadgeVariant(dispute && dispute.status)}>;
+                  {dispute && dispute.status.replace('_', ' ')}
+                </Badge>;
+              </div>;
+              <div className='flex justify-between'>;
+                <span className='font-medium'>Raised by:</span>;
+                <span>;
+                  {dispute && dispute.client_profile &&;
+                  dispute && dispute.talent_profile &&;
+                  dispute && dispute.raised_by === (dispute && dispute.client_profile as any).id;
+                    ? 'Client';
+                    : dispute && dispute.talent_profile &&;
+                        dispute && dispute.raised_by === (dispute && dispute.talent_profile as any).id;
+                      ? 'Talent';
+                      : 'Unknown'}
+              </TabsContent>)}
+          </Tabs>;
+        </div>;
+        <div className='space - y-6'>;
+          <Card>;
+            <CardHeader>;
+              <CardTitle > Parties Involved</CardTitle>;
+            </CardHeader>;
+            <CardContent className='space - y-6'>;
+              <div className='flex items - start gap - 4'>;
+                <Avatar className='h - 10 w - 10'>;
+                  <AvatarImage;
+                    src={dispute.client_profile?.avatar_url}
+                    alt={
+                      dispute.client_profile?.display_name || 'Client avatar';
+                    }
+                  />;
+                  <AvatarFallback > C</AvatarFallback>;
+                </Avatar>;
+                <div>;
+                  <p className='font - medium'>Client</p>;
+                  <p className='text - sm text - muted - foreground'>;
+                    {dispute.client_profile?.display_name || 'Unknown Client'}
+                  </p>;
+                </div>;
+              </div>;
+              <div className='flex justify - center'>;
+                <ArrowDown className='h - 6 w - 6 text - muted - foreground' />;
+              </div>;
+              <div className='flex items - start gap - 4'>;
+                <Avatar className='h - 10 w - 10'>;
+                  <AvatarImage;
+                    src={dispute.talent_profile?.avatar_url}
+                    alt={
+                      dispute.talent_profile?.display_name || 'Talent avatar';
+                    }
+                  />;
+                  <AvatarFallback > T</AvatarFallback>;
+                </Avatar>;
+                <div>;
+                  <p className='font - medium'>Talent</p>;
+                  <p className='text - sm text - muted - foreground'>;
+                    {dispute.talent_profile?.display_name || 'Unknown Talent'}
+                  </p>;
+                </div>;
+              </div>;
+            </CardContent>;
+          </Card>;
+          <Card>;
+            <CardHeader>;
+              <CardTitle > Case Information</CardTitle>;
+            </CardHeader>;
+            <CardContent className='space - y-4 text - sm'>;
+              <div className='flex justify - between'>;
+                <span className='font - medium'>Case ID:</span>;
+                <span className='font - mono'>{dispute.id}</span>;
+              </div>;
+              <div className='flex justify - between'>;
+                <span className='font - medium'>Created:</span>;
+                <span>;
+                  {format (new Date (dispute.created_at), 'MMM d, yyyy')}
+                </span>;
+              </div>;
+              <div className='flex justify - between'>;
+                <span className='font - medium'>Status:</span>;
+                <Badge variant={getStatusBadgeVariant (dispute.status)}>;
+                  {dispute.status.replace ('_', ' ')}
+                </Badge>;
+              </div>;
+              <div className='flex justify - between'>;
+                <span className='font - medium'>Raised by:</span>;
+                <span>;
+                  {dispute.client_profile &&;
+                  dispute.talent_profile &&;
+                  dispute.raised_by === (dispute.client_profile as any).id;
+                    ? 'Client';
+                    : dispute.talent_profile &&;
+                        dispute.raised_by === (dispute.talent_profile as any).id;
+                      ? 'Talent';
+                      : 'Unknown'}
+                </span>;
+              </div>;
+            </CardContent>;
+          </Card>;
+        </div>;
+      </div>;
+
+    </div>);
+
 }
 
+<<<<<<< HEAD
 try {
 }catch (error) {
   logErrorToProduction ('Error sending message:', {

@@ -1,27 +1,7 @@
 
 
-import { Handshake, MessageSquare, Star } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { HireNowCTA } from "./HireNowCTA",
-import { ProfileHero } from "./ProfileHero",
-import { ProfileSkills } from "./ProfileSkills",
-import { ProfileExperience } from "./ProfileExperience",
-import { ProfileProjects } from "./ProfileProjects",
-import { ProfileAvailability } from "./ProfileAvailability",
-import { ProfileContact } from "./ProfileContact",
-import { ProfileRatings } from "./ProfileRatings",
-import { TalentProfile as TalentProfileType } from "@/types/talent",
-
-  profile,
-  onRequestHire,
-  onMessageTalent
-}: TalentProfileProps) {
-
-  // Create proper availability object from talent profile
-
-  const availability: Availability = {
-
-    status: profile.availability_type === 'full_time' ? 'available' :
+    status: profile.availability_type === 'full_time' ? 'available' : 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
   },
@@ -105,6 +85,40 @@ export function TalentProfile({;
           <ProfileSkills skills={skillsArray} />
           <ProfileAvailability availability={availability} />
 
+=======
+          <ProfileContact 
+            email={profile.user_id}
+            profileName={profile.full_name}
+            profileType="talent"
+          />
+        </div>
+        
+        {/* Right Column - Bio & Projects */}
+        <div className="lg:col-span-2 space-y-8">
+          {/* Bio Section */}
+          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
+            <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>
+            <div className="prose prose-invert max-w-none">
+              <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>
+            </div>
+          </div>
+          
+          {/* Projects Section */}
+          <ProfileProjects projects={projectsArray} />;
+          {/* Ratings Section */}
+          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
+            <h2 className="text-xl font-bold text-white mb-4 flex items-center">
+              <Star className="mr-2 h-5 w-5 text-yellow-400" />
+              Reviews & Ratings
+            </h2>
+            <ProfileRatings 
+              userId={profile.id}
+              averageRating={profile.average_rating}
+              ratingCount={profile.rating_count}
+            />;
+          </div>;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {/* Hire Now CTA */}
           {isAuthenticated && (
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">
@@ -122,3 +136,4 @@ export function TalentProfile({;
               </div>
             </div>
           )}
+<<<<<<< HEAD

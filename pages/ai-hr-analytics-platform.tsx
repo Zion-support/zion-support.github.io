@@ -12,38 +12,4 @@ export default function AiHrAnalyticsPlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-			implementationWeeks="1-2 weeks"
-			roiNote="HR teams report measurable gains in retention and hiring yield"
-			features={[
-				"Attrition risk scoring and alerting",
-				"Diversity and inclusion analytics",
-				"Recruiting funnel and hiring yield insights",
-				"Performance signal detection and calibration",
-				"Headcount planning and skills inventory",
-				"Integrations: Workday, BambooHR, Greenhouse, Lever",
-				"Compensation benchmarking and ranges",
-				"Engagement drivers and action suggestions"
-
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["SaaS", "Retail", "Healthcare", "Manufacturing"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

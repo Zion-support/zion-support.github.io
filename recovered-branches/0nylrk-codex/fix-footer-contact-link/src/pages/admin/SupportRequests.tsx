@@ -10,6 +10,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge",
 import { Search, Filter } from "lucide-react",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -24,6 +25,12 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-15T15:45:00Z"
     category: "authentication"
 
+=======
+
+  },
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   {
     id: "SR-1002"
     user: "sarah.smith@company.co"
@@ -100,6 +107,7 @@ const MOCK_SUPPORT_REQUESTS = [
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
@@ -178,9 +186,9 @@ const MOCK_SUPPORT_REQUESTS = [
           </TabsList>
           <TabsContent value="all" className="mt-6">
             {/* Search and Filters */}
-            <div className="flex flex-col md:flex-row gap-4 mb-6">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+            <div className="flex flex-col md:flex-row gap-4 mb-6">;
+              <div className="relative flex-1">;
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
@@ -200,6 +208,12 @@ const MOCK_SUPPORT_REQUESTS = [
                 </SelectContent>
               </Select>
 
+=======
+
+              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -260,28 +274,31 @@ const MOCK_SUPPORT_REQUESTS = [
                               : 'outline'
                           }>
 
-                            {request.status}
-                          </Badge>
-                        </TableCell>
-                        <TableCell>
-                          <Badge variant={
-                            request.priority === 'high'
-                              ? 'destructive'
-                              : request.priority === 'medium'
-                              ? 'default'
                               : 'outline'
-                          }>
-                            {request.priority}
-                          </Badge>
-                        </TableCell>
-                        <TableCell>{request.category}</TableCell>
-                        <TableCell>{new Date(request.createdAt).toLocaleDateString()}</TableCell>
-                        <TableCell>{new Date(request.lastUpdated).toLocaleDateString()}</TableCell>
-                        <TableCell>
-                          <Button variant="ghost" size="sm">View</Button>
-                          <Button variant="ghost" size="sm">Assign</Button>
-                        </TableCell>
-                      </TableRow>
+                          }>;
+                            {request && request.status}
+                          </Badge>;
+                        </TableCell>;
+                        <TableCell>;
+                          <Badgevariant={
+                            request && request.priority === 'high' 
+                              ? 'destructive' 
+                              : request && request.priority === 'medium' 
+                              ? 'default' 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                              : 'outline'
+                          }>;
+                            {request && request.priority}
+                          </Badge>;
+                        </TableCell>;
+                        <TableCell>{request && request.category}</TableCell>;
+                        <TableCell>{new Date(request && request.createdAt).toLocaleDateString()}</TableCell>;
+                        <TableCell>{new Date(request && request.lastUpdated).toLocaleDateString()}</TableCell>;
+                        <TableCell>;
+                          <Button variant="ghost" size="sm">View</Button>;
+                          <Button variant="ghost" size="sm">Assign</Button>;
+                        </TableCell>;
+                      </TableRow>;
                     ))}
                   </TableBody>
                 </Table>
@@ -316,3 +333,4 @@ const MOCK_SUPPORT_REQUESTS = [
       </div>
     </AppLayout>
   )
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

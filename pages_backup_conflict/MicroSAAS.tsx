@@ -1,5 +1,11 @@
 
 
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -421,29 +427,31 @@ export default function MicroSAAS() {
         </div>
       </section>
       {/* Contact Section */}
-      <section className="py-20 px-4 "sm": px-6 lg:px-8 bg-gray-800">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-            Ready to Transform Your Business with Micro SAAS?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact us today to discuss your needs and get started with the perfect micro SAAS solution
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 text-gray-300 mb-8">
-            <div>
-              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Phone</h3>
-              <p>+1 302 464 0950</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Email</h3>
-              <p>kleber@ziontechgroup.com</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Address</h3>
-              <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+      <section className="py-20 px-4 "sm": px-6 lg: px-8 bg-gray-800">;
+        <div className="max-w-7xl mx-auto text-center">;
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">;
+            Ready to Transform Your Business with Micro SAAS?;
+          </h2>;
+          <p className="text-xl text-gray-300 mb-8">;
+            Contact us today to discuss your needs and get started with the perfect micro SAAS solution;
+          </p>;
+          <div className="grid md:grid-cols-3 gap-8 text-gray-300 mb-8">;
+            <div>;
+              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Phone</h3>;
+              <p>+1 302 464 0950</p>;
+            </div>;
+            <div>;
+              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Email</h3>;
+              <p>kleber@ziontechgroup && ziontechgroup.com</p>;
+            </div>;
+            <div>;
+              <h3 className="text-xl font-semibold text-cyan-400 mb-2">Address</h3>;
+              <p>364 E Main St STE 1008<br />Middletown DE 19709</p>;
+            </div>;
+          </div>;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+
             <Link
               href="/contact"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
@@ -461,3 +469,4 @@ export default function MicroSAAS() {
       </section>
     </div>
   );
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

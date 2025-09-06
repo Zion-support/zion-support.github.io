@@ -16,6 +16,9 @@ interface AppStoreButtonsProps {
   onAppStoreClick,
   onGooglePlayClick
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (!appStoreUrl || appStoreUrl === "#") {
       e.preventDefault(),
       logInfo("App Store download clicked"),
@@ -30,22 +33,51 @@ interface AppStoreButtonsProps {
       onGooglePlayClick?.()
     }
   }
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
+  className;
+  appStoreUrl = "#";
+  googlePlayUrl = "#";
+};  className,;
+  appStoreUrl = "#",;
+  googlePlayUrl = "#",;
+  onAppStoreClick,;
+  onGooglePlayClick;
+},) => {;
+  const handleAppStoreClick = (e: React && React.MouseEvent<HTMLAnchorElement>,) => {;
+    if (!appStoreUrl || appStoreUrl === "#") {;
+      e && e.preventDefault(),;
+      logInfo("App Store download clicked"),;
+      onAppStoreClick?.();
+    }
+  },;
+
+  const handleGooglePlayClick = (e: React && React.MouseEvent<HTMLAnchorElement>,) => {;
+    if (!googlePlayUrl || googlePlayUrl === "#") {;
+      e && e.preventDefault(),;
+      logInfo("Google Play download clicked"),;
+      onGooglePlayClick?.();
+    }
+  },;
+
   return (
     <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
       <a
 
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Download on the App Store"
-      >
-        <Apple className="h-8 w-8 mr-3" aria-hidden="true" />
-        <div>
-          <div className="text-xs">Download on the</div>
-          <div className="text-xl font-semibold">App Store</div>
-        </div>
-      </a>
+
+        aria-label="Download on the App Store">;
+        <Apple className="h-8 w-8 mr-3" aria-hidden="true" />;
+        <div>;
+          <div className="text-xs">Download on the</div>;
+          <div className="text-xl font-semibold">App Store</div>;
+        </div>;
+      </a>;
+
+
       <a
 
+<<<<<<< HEAD
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Get it on Google Play"

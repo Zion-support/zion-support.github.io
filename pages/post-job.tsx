@@ -1,4 +1,7 @@
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function PostJobPage() {
   const router = useRouter()
   const [title, setTitle] = useState('')
@@ -25,72 +28,16 @@ export default function PostJobPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          title;
-          description;
-          category;
-          requiredSkills: skills
-            .split()
-            .map((s) => s.trim())
-            .filter(Boolean);
-          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,
-          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,
-          deliveryDeadlineIso: deliveryDeadlineIso || undefined,
-          clientEmail})});
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Failed to post job');
+
+
       router.push(`/client/dashboard`)
     } catch (err: any) {
       setError(err.message |'Something went wrong')
     } finally {
+
       setIsSubmitting(false),
+
     }
-
-  }
-}
-;
-    try {
-      setIsSubmitting(true);
-      const res = await fetch('/api/jobs', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({;
-          title,;
-          description,;
-          category,;
-          requiredSkills: skills;
-            .split();
-            .map((s) => s.trim());
-            .filter(Boolean);
-          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,;
-          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,;
-          deliveryDeadlineIso: deliveryDeadlineIso || undefined,;
-          clientEmail})}),;
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Failed to post job');
-      router.push(`/client/dashboard`);
-    } catch (error) {
-      setError(err.message || 'Something went wrong');
-    } finally {;
-      setIsSubmitting(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  return (
-    <div className="max-w-2xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
-
-      {error && <p className="text-red-600 mb-3">{error}</p>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
@@ -135,3 +82,4 @@ export default function PostJobPage() {
         </div>
       </form>
     </div>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

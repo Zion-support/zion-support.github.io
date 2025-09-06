@@ -1,0 +1,26 @@
+{
+  "summary": {
+<<<<<<< HEAD
+  "results": [],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-19T17:23:22.064Z"
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    "filesWithIssues": 0,
+    "totalIssues": 0,
+    "totalWarnings": 0,
+    "buildBreakingFiles": 0,
+    "canBuild": true
+  },
+  "results": [],
+  "buildBreakingFiles": [],
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "generatedAt": "2025-08-19T15:46:17.458Z"
+  "generatedAt": "2025-08-19T16:26:24.267Z"
+  "generatedAt": "2025-08-19T18:52:46.253Z"
+  "generatedAt": "2025-08-19T15:46:17.458Z"  "generatedAt": "2025-08-19T16:26:24.267Z"
+  "generatedAt": "2025-08-19T18:52:46.253Z"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}

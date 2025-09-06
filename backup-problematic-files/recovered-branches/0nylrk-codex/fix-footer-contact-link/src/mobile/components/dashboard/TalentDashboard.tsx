@@ -1,4 +1,15 @@
 
+=======
+import React from "react",;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",;
+import { Link } from "react-router-dom",;
+;
+export function TalentDashboard() {;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-6 px-4 pb-24">;
       <section>;
         <div className="flex items-center justify-between mb-4">;
@@ -9,6 +20,7 @@
             </Button>;
           </Link>;
         </div>;
+<<<<<<< HEAD
 
         <div className="space-y-3">;
           <Card>;
@@ -30,12 +42,6 @@
                 </div>;
               </div>;
               <div className="flex gap-2 mt-3">;
-
-                <Button size="sm">Apply Now</Button>;
-                <Button size="sm" variant="outline">View Details</Button>;
-              </div>;
-            </CardContent>;
-          </Card>;
 
                 <Button size="sm">Apply Now</Button>;
                 <Button size="sm" variant="outline">View Details</Button>;

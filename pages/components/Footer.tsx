@@ -1,4 +1,45 @@
 
+=======
+
+
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Facebook,;
+  Twitter,;
+  Linkedin,;
+  Instagram,;
+  Github,;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -60,6 +101,9 @@ import {
   Layers;
 } from 'lucide-react';
 
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -70,12 +114,53 @@ import {
       { name: "Database Solutions", href: "/database-solutions" }
     ]
 
+=======
+
+
+    solutions: [
+      { name: "Enterprise Solutions", href: "/enterprise-solutions" }
+      { name: "Startup Solutions", href: "/startup-solutions" }
+      { name: "Industries", href: "/industries" }
+      { name: "Custom Development", href: "/custom-development" }
+      { name: "Digital Transformation", href: "/digital-transformation" }
+      { name: "Consulting", href: "/consulting" }
+    ]
+    company: [
+      { name: "About Us", href: "/about" }
+      { name: "Our Team", href: "/team" }
+      { name: "Careers", href: "/careers" }
+      { name: "Case Studies", href: "/case-studies" }
+      { name: "News", href: "/news" }
+      { name: "Partners", href: "/partners" }
+    ]
+    resources: [
+      { name: "Blog", href: "/blog" }
+      { name: "Documentation", href: "/docs" }
+      { name: "API Documentation", href: "/docs/api" }
+      { name: "Tutorials", href: "/tutorials" }
+      { name: "White Papers", href: "/white-papers" }
+      { name: "Webinars", href: "/webinars" }
+    ]
+    legal: [
+      { name: "Privacy Policy", href: "/privacy" }
+      { name: "Terms of Service", href: "/terms" }
+      { name: "Cookie Policy", href: "/cookies" }
+      { name: "Security", href: "/security" }
+      { name: "Compliance", href: "/compliance" }
+      { name: "Accessibility", href: "/accessibility" }
+    ]
+  }
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
     { name: "LinkedIn", href: "#", icon: Linkedin }
     { name: "Instagram", href: "#", icon: Instagram }
     { name: "GitHub", href: "#", icon: Github }
+
   const footerLinks = {;
     services: [;
       { name: "AI Services", href: "/ai-services" },;
@@ -118,6 +203,7 @@ import {
       { name: "Accessibility", href: "/accessibility" },;
     ],;
   };
+
   const socialLinks = [;
     { name: "Facebook", href: "#", icon: Facebook },;
     { name: "Twitter", href: "#", icon: Twitter },;
@@ -135,6 +221,7 @@ import {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0 && 0.8 }}>;
               <div className="flex items-center space-x-2 mb-6">;
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
@@ -162,6 +249,8 @@ import {
               </div>;
             </motion && motion.div>;
           </div>;
+
+
           {/* Services */}
           <div>;
             <motion&& motion.div
@@ -179,9 +268,12 @@ import {
                     </Link>;
                   </li>;
                 ))}
+
               </ul>;
             </motion && motion.div>;
           </div>;
+
+
           {/* Solutions */}
           <div>;
             <motion&& motion.div
@@ -199,9 +291,12 @@ import {
                     </Link>;
                   </li>;
                 ))}
+
               </ul>;
             </motion && motion.div>;
           </div>;
+
+
           {/* Company */}
           <div>;
             <motion&& motion.div
@@ -219,9 +314,12 @@ import {
                     </Link>;
                   </li>;
                 ))}
+
               </ul>;
             </motion && motion.div>;
           </div>;
+
+
           {/* Resources & Legal */}
           <div>;
             <motion&& motion.div
@@ -239,11 +337,13 @@ import {
                     </Link>;
                   </li>;
                 ))}
+
               </ul>;
               <h3 className="text-lg font-semibold mb-6">Legal</h3>;
               <ul className="space-y-3">;
                 {footerLinks && footerLinks.legal.map((link, index) => (;
                   <li key={index}>;
+
                     <Link
                       href={link && link.href}
                       className="text-gray-400 hover:text-white transition-colors">;
@@ -252,6 +352,11 @@ import {
                   </li>;
                 ))}
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
@@ -259,6 +364,12 @@ import {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <motion.div
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <motion.div
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;
@@ -279,6 +390,7 @@ import {
                 </a>;
               ))}
 
+=======
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -355,6 +467,12 @@ import {
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
 
+=======
+            
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -372,6 +490,7 @@ import {
                 </a>
               ))}
             </motion.div>
+<<<<<<< HEAD
 
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">

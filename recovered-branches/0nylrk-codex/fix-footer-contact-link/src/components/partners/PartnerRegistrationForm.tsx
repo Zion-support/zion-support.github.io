@@ -1,4 +1,9 @@
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {useState} from "react";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
@@ -27,6 +32,8 @@ const partnerFormSchema = z.object({
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const form = useForm<PartnerFormValues>({
     resolver: zodResolver(partnerFormSchema)
     defaultValues: {
@@ -54,11 +61,12 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,
         variant: "destructive"})
       return
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           }
-        ])
-        .select(),
+        ]);
+        .select();
+      if (error) throw error;
 
-      if (error) throw error,
 
       toast({
         title: "Application submitted!"
@@ -74,7 +82,7 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,
         await supabase.rpc('generate_referral_code', { user_id: user.id })
       }
     } catch (error: any) {
-      console.error('Error submitting partner application:', error),
+      console.error('Error submitting partner application:', error);
       toast({
         title: "Submission failed"
         description: error.message |"There was a problem submitting your application."
@@ -82,6 +90,9 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)
+
+
+=======
     }
   }
   return (
@@ -106,21 +117,127 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,
                     <FormMessage />
                   </FormItem>
 
+=======
+        ]);
+        .select(),;
+      if (error) throw error,;
+
+      toast({;
+        title: "Application submitted!",;
+        description: "Your partner application has been submitted for review.",;
+        variant: "default"}),;
+
+      // Create a referral code if they don't have one already;
+      const { data: existingCode } = await supabase;
+        .from('referral_codes');
+        .select('code');
+        .eq('user_id', user && user.id);
+        .single();
+
+      if (!existingCode) {;
+        await supabase && supabase.rpc('generate_referral_code', { user_id: user && user.id });
+      }
+
+    } catch (error: any) {;
+      console && console.error('Error submitting partner application:', error);
+      toast({;
+        title: "Submission failed",;
+        description: error && error.message || "There was a problem submitting your application.",;
+        variant: "destructive"});
+    } finally {;
+      setIsSubmitting(false);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    }
+
+              twitter: data.twitter || null,
+              instagram: data.instagram || null,
+              youtube: data.youtube || null,
+              linkedin: data.linkedin || null},
+            niche: data.niche,
+            audience_size: data.audience_size,
+            payout_method: data.payout_method,
+            bio: data.bio,
+            status: 'pending', // Partners need approval;
+          }
+        ]);
+        .select ();
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      toast ({
+        title: "Application submitted!",
+        description: "Your partner application has been submitted for review.",
+        variant: "default"}),
+      // Create a referral code if they don't have one already;
+      const { data: existing_code } = await supabase;
+        .from ('referral_codes');
+        .select ('code');
+        .eq ('user_id', user.id);
+        .single ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        await supabase.rpc ('generate_referral_code', { user_id: user.id });
+      }
+    } catch (error: any) {
+      console.error ('Error submitting partner application:', error);
+      toast ({
+        title: "Submission failed",
+        description: error.message || "There was a problem submitting your application.",
+        variant: "destructive"});
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
+  return (
+    <Card className="bg - zion - blue - dark border - zion - blue - light">;
+      <CardHeader>;
+        <CardTitle > Partner Registration</CardTitle>;
+        <CardDescription > Register to become a Zion AI partner and start earning rewards</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
+            <div className="space - y-4">;
+              <FormField;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 control={form.control}
-                name="website"
+                name="name";
                 render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Website (Optional)</FormLabel>
-                    <FormControl>
-                      <Input placeholder="https://yourwebsite.com" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
+                  <FormItem>;
+                    <FormLabel > Name / Brand</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                    <FormControl>;
+                      <Input placeholder="Your name or brand name" {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
+
+              />;
+
+
+              <FormField
+                control={form && form.control}
+                name="website"
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Website (Optional)</FormLabel>;
+                    <FormControl>;
+                      <Input placeholder="https://yourwebsite && yourwebsite.com" {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>;
                 )}
-              />
-              <div className="grid sm:grid-cols-2 gap-4">
+
+              />;
+
+              <div className="grid sm:grid-cols-2 gap-4">;
+
                 <FormField
-                  control={form.control}
+                  control={form && form.control}
                   name="twitter"
                   render={({ field }) => (
                     <FormItem>
@@ -160,93 +277,226 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,
                     </FormItem>
                   )}
 
+                      <FormControl>;
+                        <Input placeholder="@username" {...field} />;
+                      </FormControl>;
+                      <FormMessage />;
+
+                />;
+
+
+                <FormField
+                  control={form && form.control}
+                  name="instagram"
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel>Instagram (Optional)</FormLabel>;
+=======
+                    </FormItem>)}
+                />;
+                <FormField;
+=======
+
+                />;
+                <FormField;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   control={form.control}
+                  name="instagram";
+                  render={({ field }) => (
+                    <FormItem>;
+                      <FormLabel > Instagram (Optional)</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                      <FormControl>;
+                        <Input placeholder="@username" {...field} />;
+                      </FormControl>;
+                      <FormMessage />;
+
+                />;
+              </div>;
+
+              <div className="grid sm:grid-cols-2 gap-4">;
+
+                <FormField
+                  control={form && form.control}
+                  name="youtube"
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel>YouTube (Optional)</FormLabel>;
+=======
+                    </FormItem>)}
+                />;
+              </div>;
+              <div className="grid sm:grid - cols - 2 gap - 4">;
+                <FormField;
+                  control={form.control}
+                  name="youtube";
+                  render={({ field }) => (
+                    <FormItem>;
+                      <FormLabel > YouTube (Optional)</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                      <FormControl>;
+                        <Input placeholder="Channel name or URL" {...field} />;
+                      </FormControl>;
+                      <FormMessage />;
+
+                />;
+
+
+                <FormField
+                  control={form && form.control}
                   name="linkedin"
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel>LinkedIn (Optional)</FormLabel>;
+=======
+                    </FormItem>)}
+                />;
+                <FormField;
+                  control={form.control}
+                  name="linkedin";
                   render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>LinkedIn (Optional)</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Profile URL or username" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
+                    <FormItem>;
+                      <FormLabel > LinkedIn (Optional)</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                      <FormControl>;
+                        <Input placeholder="Profile URL or username" {...field} />;
+                      </FormControl>;
+                      <FormMessage />;
+
+                />;
+              </div>;
+
+
               <FormField
-                control={form.control}
+                control={form && form.control}
                 name="niche"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Your Niche</FormLabel>
-                    <FormControl>
-                      <Input placeholder="AI development, machine learning, tech tutorials, etc." {...field} />
-                    </FormControl>
-                    <FormDescription>
-                      What topics do you focus on in your content?
-                    </FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <div className="grid sm:grid-cols-2 gap-4">
-                <FormField
-                  control={form.control}
-                  name="audience_size"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Audience Size</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select audience size" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="under1k">Under 1,000</SelectItem>
-                          <SelectItem value="1k-10k">1,000 - 10,000</SelectItem>
-                          <SelectItem value="10k-50k">10,000 - 50,000</SelectItem>
-                          <SelectItem value="50k-100k">50,000 - 100,000</SelectItem>
-                          <SelectItem value="over100k">Over 100,000</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="payout_method"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Preferred Payout Method</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select payout method" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="paypal">PayPal</SelectItem>
-                          <SelectItem value="bank">Bank Transfer</SelectItem>
-                          <SelectItem value="crypto">Cryptocurrency</SelectItem>
-                          <SelectItem value="platform_credit">Platform Credit</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-              <FormField
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Your Niche</FormLabel>;
+=======
+                    </FormItem>)}
+                />;
+              </div>;
+              <FormField;
                 control={form.control}
-                name="bio"
+                name="niche";
                 render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Bio</FormLabel>
-                    <FormControl>
+                  <FormItem>;
+                    <FormLabel > Your Niche</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                    <FormControl>;
+                      <Input placeholder="AI development, machine learning, tech tutorials, etc." {...field} />;
+                    </FormControl>;
+                    <FormDescription>;
+                      What topics do you focus on in your content?;
+                    </FormDescription>;
+                    <FormMessage />;
+
+              />;
+
+              <div className="grid sm:grid-cols-2 gap-4">;
+
+                <FormField
+                  control={form && form.control}
+                  name="audience_size"
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel>Audience Size</FormLabel>;
+                      <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
+=======
+                  </FormItem>)}
+              />;
+              <div className="grid sm:grid - cols - 2 gap - 4">;
+                <FormField;
+                  control={form.control}
+                  name="audience_size";
+                  render={({ field }) => (
+                    <FormItem>;
+                      <FormLabel > Audience Size</FormLabel>;
+                      <Select onValueChange={field.on_change} default_value={field.value}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                        <FormControl>;
+                          <SelectTrigger>;
+                            <SelectValue placeholder="Select audience size" />;
+                          </SelectTrigger>;
+                        </FormControl>;
+                        <SelectContent>;
+
+                />;
+
+
+                <FormField
+                  control={form && form.control}
+                  name="payout_method"
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel>Preferred Payout Method</FormLabel>;
+                      <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
+=======
+                          <SelectItem value="under1k">Under 1, 000</SelectItem>;
+                          <SelectItem value="1k - 10k">1, 000 - 10, 000</SelectItem>;
+                          <SelectItem value="10k - 50k">10, 000 - 50, 000</SelectItem>;
+                          <SelectItem value="50k - 100k">50, 000 - 100, 000</SelectItem>;
+                          <SelectItem value="over100k">Over 100, 000</SelectItem>;
+                        </SelectContent>;
+                      </Select>;
+                      <FormMessage />;
+                    </FormItem>)}
+                />;
+                <FormField;
+                  control={form.control}
+                  name="payout_method";
+                  render={({ field }) => (
+                    <FormItem>;
+                      <FormLabel > Preferred Payout Method</FormLabel>;
+                      <Select onValueChange={field.on_change} default_value={field.value}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                        <FormControl>;
+                          <SelectTrigger>;
+                            <SelectValue placeholder="Select payout method" />;
+                          </SelectTrigger>;
+                        </FormControl>;
+                        <SelectContent>;
+                          <SelectItem value="paypal">PayPal</SelectItem>;
+                          <SelectItem value="bank">Bank Transfer</SelectItem>;
+                          <SelectItem value="crypto">Cryptocurrency</SelectItem>;
+                          <SelectItem value="platform_credit">Platform Credit</SelectItem>;
+                        </SelectContent>;
+                      </Select>;
+                      <FormMessage />;
+
+                />;
+              </div>;
+
+
+              <FormField
+                control={form && form.control}
+                name="bio"
+
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Bio</FormLabel>;
+                    <FormControl>;
                       <Textarea
                         placeholder="Tell us about yourself and how you plan to promote Zion AI"
+                        rows={4} 
+                        {...field} 
+=======
+                    </FormItem>)}
+                />;
+              </div>;
+              <FormField;
+                control={form.control}
+                name="bio";
+                render={({ field }) => (
+                  <FormItem>;
+                    <FormLabel > Bio</FormLabel>;
+                    <FormControl>;
+                      <Textarea;
+                        placeholder="Tell us about yourself and how you plan to promote Zion AI";
                         rows={4}
                         {...field}
                       />
@@ -261,12 +511,37 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>,
             </div>
 
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
-              disabled={isSubmitting}
-            >
+              disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : "Submit Application"}
+
+                  </FormItem>)}
+              />;
+            </div>;
+            <Button;
+              type="submit";
+              className="w - full bg - zion - purple hover:bg - zion - purple - dark";
+              disabled={is_submitting}
+            >;
+              {is_submitting ? "Submitting..." : "Submit Application"}
+
+            </Button>;
+          </form>;
+        </Form>;
+      </CardContent>;
+
+    </Card>);
+
+}
+=======
             </Button>
           </form>
         </Form>
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

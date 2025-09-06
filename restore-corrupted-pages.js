@@ -1,8 +1,15 @@
 
+=======
+
+'),
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       if (parts.length > 1) {
         // Take the content after the conflict resolution
         backupContent = parts[1].split('>>>>>>>')[0]
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
     }
     // Clean up the content
@@ -27,6 +34,7 @@
 
       corruptedBackup: corruptedBackupPath
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
@@ -55,6 +63,8 @@ function restoreAllCorruptedPages() {
 
         const result = restorePage(fullPath),
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         if (result.restored) {
           results.restored++
           console.log(`✅ Restored: ${fullPath}`)
@@ -115,8 +125,18 @@ function restoreAllCorruptedPages() {
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
   return results;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 // Run the restoration if this script is executed directly
 if ({
   restoreAllCorruptedPages()
 }
+module.exports = {
+  restore_page,
+  restoreAllCorruptedPages,
+  findBestBackup;
+
+
+};
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

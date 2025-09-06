@@ -4,9 +4,19 @@ import React, { useEffect, useMemo, useState } from 'react';
 interface FraudItem {
 
     } finally {
+
       set_loading (false);
+
     }
 
+=======
+    fetchItems();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [adminToken]);
+  const onSaveToken = () => {
+    localStorage.setItem('admin-token', adminToken);
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     fetchItems()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken])
@@ -15,6 +25,7 @@ interface FraudItem {
     fetchItems()
   }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
 
     const res = await fetch('/api/fraud/admin/action', {
@@ -29,6 +40,7 @@ interface FraudItem {
           className="border rounded px-2 py-1 w-80"
           placeholder="Admin token (optional)"
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
@@ -51,6 +63,12 @@ interface FraudItem {
             {items.map((it) => (
               <tr key={it.id} className="border-t">
 
+=======
+
+                <td className="p-2 border">{it.userId || '—'}</td>
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <td className="p-2 border">{it.source}</td>
                 <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>
                 <td className="p-2 border">
@@ -58,6 +76,7 @@ interface FraudItem {
                     {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
                       <div key={idx} className="text-gray-700">{r}</div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </div>
                 </td>
                 <td className="p-2 border">
@@ -84,3 +103,5 @@ interface FraudItem {
         </table>
       </div>
     </div>
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -105,6 +105,7 @@ const serviceCategories = [
 ];
 ;
 const stats = [;
+
   { number: "500+", label: "Projects Completed" },
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24 / 7", label: "Support Available" },
@@ -164,30 +165,35 @@ const serviceCategories = [
     color: 'from-indigo-500 to-purple-600'
   }
 ];
-  { number: "500+", label: "Projects Completed" }
-  { number: "99.9%", label: "Uptime Guarantee" }
-  { number: "24/7", label: "Support Available" }
-  { number: "50+", label: "Countries Served" }
+
+
+
+
 ];
 const benefits = [
 ;
 const benefits = [;
   {
+
     title: "Expert Team"
     description: "Experienced professionals with deep industry knowledge"
     icon: Users
   }
+
   {
+
     title: "Cutting - Edge Technology",
     description: "Latest technologies and innovative solutions",
     icon: Target,
   },
+
   {
     title: "Scalable Solutions"
     description: "Solutions that grow with your business"
     icon: Globe
   }
   {
+
     title: 'Expert Team',
     description: 'Experienced professionals with deep industry knowledge',
     icon: Users
@@ -207,6 +213,8 @@ const benefits = [;
     description: 'Track record of successful implementations',
     icon: Award
   }
+
+=======
     title: "Proven Results"
     description: "Track record of successful implementations"
     icon: Award
@@ -214,6 +222,14 @@ const benefits = [;
 ];
 export default function ServicesOverviewPage() {
 
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -233,12 +249,7 @@ export default function ServicesOverviewPage() {
                 business operations, enhance security, and drive innovation
                 across all technology domains.
 
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Comprehensive technology services designed to transform your business operations,
-                enhance security, and drive innovation across all technology domains.
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </p>
             </motion.div>
           </div>
@@ -299,6 +310,7 @@ function ServicesOverviewPage() {
                 business operations, enhance security, and drive innovation;
                 across all technology domains.;
               </p>;
+
             </motion.div>;
           </div>;
         </section>;
@@ -311,12 +323,19 @@ function ServicesOverviewPage() {
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
+
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text - center";
                 >;
                   <div className="text - 3xl md:text - 4xl font - bold text - blue - 600 mb - 2">;
                     {stat.number}
 
+=======
+                  <div className="text-gray-600 font-medium">
+                    {stat.label}
+                  </div>
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </motion.div>
               ))}
             </div>
@@ -343,7 +362,6 @@ function ServicesOverviewPage() {
                 We offer a comprehensive range of technology services to meet
                 all your business needs.
 
-                We offer a comprehensive range of technology services to meet all your business needs.
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -386,11 +404,21 @@ function ServicesOverviewPage() {
                     <category.icon className="w-16 h-16 text-white" />
                   </div>
 
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
@@ -405,6 +433,10 @@ function ServicesOverviewPage() {
                             className="flex items-center text-sm text-gray-600"
                           >
 
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
@@ -414,6 +446,13 @@ function ServicesOverviewPage() {
                         {category.services.map((service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-12">;
@@ -458,6 +497,16 @@ function ServicesOverviewPage() {
                           </li>;
                         ))}
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     <Link
                       href={category && category.link}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">;
@@ -467,9 +516,12 @@ function ServicesOverviewPage() {
                   </div>;
                 </motion && motion.div>;
               ))}
+
             </div>;
           </div>;
         </section>;
+
+
         {/* Benefits Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -478,6 +530,11 @@ function ServicesOverviewPage() {
               animate={{ opacity: 1, y: 0 }}
 
                 We deliver exceptional results through innovation, expertise
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and unwavering commitment to your success.
                 We deliver exceptional results through innovation, expertise, and unwavering commitment to your success.
               </p>
@@ -551,6 +608,10 @@ function ServicesOverviewPage() {
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
+=======
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
               ))}
@@ -594,6 +655,10 @@ function ServicesOverviewPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
 
+=======
+                Let's discuss how our comprehensive services can help you achieve your business goals.
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
               transition={{ duration: 0 && 0.8 }}>;

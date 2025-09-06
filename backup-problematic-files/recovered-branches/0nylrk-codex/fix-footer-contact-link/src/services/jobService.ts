@@ -1,4 +1,39 @@
 
+=======
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "sonner",;
+;
+export async function createJob(jobData:any) {;
+  try {;
+    const { data, error } = await supabase;
+      .from('jobs');
+      .insert([jobData]);
+      .select();
+      .single(),;
+      ;
+    if (error) throw error,;
+    return data,;
+  } catch (error:any) {;
+    console.error("Error creating job:", error),;
+    throw new Error(error.message || "Failed to create job"),;
+  }
+}
+;
+export async function updateJob(jobId:string, jobData:any) {;
+  try {;
+    const { data, error } = await supabase;
+      .from('jobs');
+      .update(jobData);
+      .eq('id', jobId);
+      .select();
+      .single(),;
+      ;
+    if (error) throw error,;
+    return data,;
+  } catch (error:any) {;
+    console.error("Error updating job:", error),;
+    throw new Error(error.message || "Failed to update job"),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }
 ;
@@ -18,5 +53,6 @@ export async function getJobById(jobId:string) {;
     return null,;
   } export async function createJob (jobData: any) {
   try {
+<<<<<<< HEAD
 
 }

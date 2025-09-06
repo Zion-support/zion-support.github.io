@@ -28,6 +28,24 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     ) : null
   }
 
+=======
+  delay?: number; // Delay in milliseconds before showing the banner;
+}
+
+
+  
+  // Detect iOS or Android
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
+  
+
+
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
+  
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
       <div className="flex items-center">
@@ -60,3 +78,4 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     </div>
   )
+<<<<<<< HEAD

@@ -1,5 +1,10 @@
 
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {Job, JobStatus} from "@/types/jobs";
@@ -14,9 +19,11 @@ import {createJob, updateJob, getJobById} from "@/services/jobService";
 
   const clientId = userId || user?.id,
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const fetchJobs = async () => {
     if (!clientId) {
-      setIsLoading(false),
+      setIsLoading(false);
       return
     }
     try {
@@ -44,12 +51,12 @@ import {createJob, updateJob, getJobById} from "@/services/jobService";
         .eq("client_id", clientId), // Ensure user can only update their own jobs
 
       // Update local state
-      setJobs(jobs.map(job => job.id === jobId ? {...job, status: newStatus} : job)),
-      toast.success("Job status updated successfully"),
+      setJobs(jobs && jobs.map(job => job && job.id === jobId ? {...job, status: newStatus} : job));
+      toast && toast.success("Job status updated successfully");
       return true
     } catch (err: any) {
-      console.error("Error updating job status:", err),
-      toast.error("Failed to update job status"),
+      console && console.error("Error updating job status:", err);
+      toast && toast.error("Failed to update job status");
       return false
     }
 
@@ -61,14 +68,20 @@ import {createJob, updateJob, getJobById} from "@/services/jobService";
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only delete their own jobs
 
+<<<<<<< HEAD
       // Update local state
-      setJobs(jobs.filter(job => job.id !== jobId)),
-      toast.success("Job deleted successfully"),
+      setJobs(jobs && jobs.filter(job => job && job.id !== jobId));
+      toast && toast.success("Job deleted successfully");
       return true
     } catch (err: any) {
-      console.error("Error deleting job:", err),
-      toast.error("Failed to delete job"),
+      console && console.error("Error deleting job:", err);
+      toast && toast.error("Failed to delete job");
       return false
 
   }
 };
+  }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -31,8 +31,8 @@ import {;
               )}
 
                     min={0}
-                    max={priceRange && priceRange.max}
-                    step={priceRange && priceRange.max / 100}
+                    max={priceRange.max}
+                    step={priceRange.max / 100}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
 

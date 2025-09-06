@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+=======
 
 // Function to fix common syntax errors in test files
 function fixTestFile(filePath) {
@@ -48,6 +49,10 @@ files.forEach(file => {
 });
 console.log(`Fixed ${fixedCount} out of ${files.length} test files`);
 
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Function to fix malformed test files;
 function fixTestFile(filePath) {}
   try {}
@@ -140,6 +145,13 @@ console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const { execSync } = require('child_process');
 class TestFileFixer {
   constructor() {
@@ -215,3 +227,9 @@ if (require.main === module) {
     process.exit(fixedCount > 0 ? 0 : 1);
   });
 }
+=======
+<<<<<<< HEAD
+module.exports = TestFileFixer;
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

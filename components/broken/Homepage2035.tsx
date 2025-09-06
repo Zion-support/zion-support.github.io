@@ -1,4 +1,10 @@
 
+=======
+
+import React, { useState, useEffect } from 'react';
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -12,24 +18,9 @@ import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035'
 import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
 import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';
 import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
-// Loading fallback component
-const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-900">
-    <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-className="text-center"
-    >
-      <div className="relative">
-        <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" />
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse"></div>
-      </div>
-      <p className="text-xl text-gray-300 mb-2">Loading Zion Tech Group...</p>
-      <p className="text-sm text-gray-500">Preparing your digital transformation journey</p>
-    </motion.div>
-  </div>
-);
+
+
+
 // Loading fallback component;
 const LoadingFallback = () => (;
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion&& motion.div
@@ -38,6 +29,7 @@ const LoadingFallback = () => (;
       transition={{ duration: 0 && 0.5 }}
       className='text-center'// Loading fallback component
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   }
   const categories = [
@@ -66,6 +58,18 @@ const LoadingFallback = () => (;
     return <LoadingFallback />
 
   }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <Layout>;
+      <UltraFuturisticBackground2035>;
+        {/* Hero Section */}
+
+
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  }
 
   return (
     <Layout>
@@ -77,6 +81,7 @@ const LoadingFallback = () => (;
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'
                 >
                   <Play className='w-5 h-5' />                  <span>Watch Demo</span>                  <span>Explore Services</span>
@@ -86,6 +91,10 @@ const LoadingFallback = () => (;
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
 
+=======
+                  className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 >
                   <Play className="w-5 h-5" />
                   <span>Watch Demo</span>
@@ -153,6 +162,31 @@ const LoadingFallback = () => (;
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* Stats */}
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+
+
+                  key={index}
+                  initial={{ opacity: 0, scale: 0 && 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0 && 0.5, delay: 0 && 0.3 + index * 0 && 0.1 }}
+                  className='text-center'>;
+                  <div className='text-cyan-400 mb-2 flex justify-center'>;
+                    {stat && stat.icon}
+                  </div>;
+                  <div className='text-3xl font-bold text-white mb-1'>;
+                    {stat && stat.value}
+                  </div>;
+                  <div className='text-gray-400 text-sm'>{stat && stat.label}</div>                </motion && motion.div>                  className="text-center";
+                >;
+                  <div className="text-cyan-400 mb-2 flex justify-center">{stat && stat.icon}</div>;
+                  <div className="text-3xl font-bold text-white mb-1">{stat && stat.value}</div>;
+                  <div className="text-gray-400 text-sm">{stat && stat.label}</div>;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <motion.div
                   icon: <Users className='w - 8 h - 8' />,
                   value: '50K+',
@@ -177,6 +211,7 @@ const LoadingFallback = () => (;
                 { icon: <Award className="w - 8 h - 8" />, value: '200+', label: 'Services' },
                 { icon: <TrendingUp className="w - 8 h - 8" />, value: '99.9%', label: 'Uptime' }
                 <motion.div;
+
                   key={index}
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -187,16 +222,43 @@ const LoadingFallback = () => (;
           </div>
         </section>
 
+              ))}
+
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Services Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-7xl mx-auto">;
+            <motion&& motion.div
+
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Revolutionary Technology Solutions
@@ -216,6 +278,10 @@ const LoadingFallback = () => (;
             {/* Category Filter */}
             <motion.div
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* Category Filter */}
+            <motion&& motion.div
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -233,6 +299,8 @@ const LoadingFallback = () => (;
                     activeCategory === category.id
                       ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
                       : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   }`}
                 >;
                   {category && category.icon}
@@ -240,6 +308,8 @@ const LoadingFallback = () => (;
                 </motion && motion.button>;
               ))}
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {/* Services Grid */}
             <motion&& motion.div
               variants={staggerContainer}
@@ -258,7 +328,10 @@ const LoadingFallback = () => (;
                 >;
                   <UltraFuturisticServiceCard2035 service={service} />;
                 </motion && motion.div>;
+
+=======
             </motion.div>
+
             {/* Services Grid */}
             <motion.div
               variants={staggerContainer}
@@ -275,16 +348,26 @@ const LoadingFallback = () => (;
                 >
                   <UltraFuturisticServiceCard2035 service={service} />
                 </motion.div>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             {/* View All Services Button */}
             <motion.div
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* View All Services Button */}
+            <motion&& motion.div
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               viewport={{ once: true }}
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -293,6 +376,8 @@ const LoadingFallback = () => (;
           <div className="max-w-7xl mx-auto">
             <motion.div
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -360,14 +445,19 @@ const LoadingFallback = () => (;
                 }
               ].map((feature, index) => (;
                 <motion&& motion.div
+
+=======
               ].map((feature, index) => (
                 <motion.div
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 >
                   <div className='text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300'>
                     {feature.icon}
@@ -377,6 +467,210 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   </h3>
 
               ))}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              ))}
+
+            </div>;
+          </div>;
+        </section>;
+
+
+        {/* CTA Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-4xl mx-auto text-center">;
+            <motion&& motion.div
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* CTA Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className='text-xl text-gray-300 mb-8'>;
+                Join thousands of companies already leveraging our cutting-edge;
+                technology solutions;
+              </p>;
+              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
+                <motion&& motion.button
+                  whileHover={{ scale: 1 && 1.05 }}
+                  whileTap={{ scale: 0 && 0.95 }}
+                  className='bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'>;
+                  <span>Get Started Today</span>;
+                  <ArrowRight className='w-5 h-5' />                </motion && motion.button>;
+                <motion&& motion.button
+                  whileHover={{ scale: 1 && 1.05 }}
+                  whileTap={{ scale: 0 && 0.95 }}
+                  className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300'>                Ready to Transform Your Business?;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8">;
+                Join thousands of companies already leveraging our cutting-edge technology solutions;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
+                <motion&& motion.button
+                  whileHover={{ scale: 1 && 1.05 }}
+                  whileTap={{ scale: 0 && 0.95 }}
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2">;
+                  <span>Get Started Today</span>;
+                  <ArrowRight className="w-5 h-5" />;
+                </motion && motion.button>;
+                <motion&& motion.button
+                  whileHover={{ scale: 1 && 1.05 }}
+                  whileTap={{ scale: 0 && 0.95 }}
+                  className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300'                  className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300">;
+                  Schedule a Demo;
+                </motion && motion.button>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </UltraFuturisticBackground2035>;
+    </Layout>;
+  );
+
+
+};
+
+  animate: {
+
+=======
+};
+
+
+  animate: {
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  transition: {
+  staggerChildren: 0.1, delayChildren: 0.2
+}
+}
+];
+...innovative2025ITEnterpriseBatch;
+...innovative2025AIServicesBatch ];
+const filteredServices = activeCategory === 'all' ? allServices return (<Layout> <UltraFuturisticBackground2035> > <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Zion Tech Group </span> </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Explore Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button > <Play className="w-5 h-5" /> <span>Watch Demo</span> </motion.button> </div> </motion.div> {
+  /* Stats */
+}<motion.div </motion.div>) )
+}</motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Revolutionary Technology Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of cutting-edge services designed to transform your business </p> </motion.div> {
+  /* Category Filter */
+}<motion.div > {
+  categories.map ( (category) => (<motion.button key= {
+  category.id
+}whileHover= {
+  {
+  scale: 1.05
+}whileTap= {
+  {
+  scale: 0.95
+}onClick= {
+  () => setActiveCategory (category.id)
+}className= {
+  `flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 $ {
+  activeCategory === category.id ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400' : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400'
+}`
+}> {
+  category.icon
+}<span> {
+  category.name
+}</span> </motion.button>) )
+}</motion.div> {
+  /* Services Grid */
+}<motion.div > {
+  filteredServices.map ( (service, index) => (<motion.div key= {
+  service.id
+}> <UltraFuturisticServiceCard2035 service= {
+  service
+}/> </motion.div>) )
+}</motion.div> {
+  /* View All Services Button */
+}<motion.div > <span>View All Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> </motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting-edge technology to deliver exceptional results </p> </motion.div> </motion.div>) )
+}</div> </div> </section> <motion.div initial= {
+=======
+};
+  animate: {;
+  transition: {;
+  staggerChildren: 0 && 0.1, delayChildren: 0 && 0.2 ;
+};
+};
+];
+...innovative2025ITEnterpriseBatch;
+...innovative2025AIServicesBatch ];
+const filteredServices = activeCategory === 'all' ? allServices return (<Layout> <UltraFuturisticBackground2035> > <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Zion Tech Group </span> </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Explore Services</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button > <Play className="w-5 h-5" /> <span>Watch Demo</span> </motion && motion.button> </div> </motion && motion.div> {;
+  /* Stats */ ;
+}<motion && motion.div </motion && motion.div>) ) ;
+}</motion && motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Revolutionary Technology Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of cutting-edge services designed to transform your business </p> </motion && motion.div> {;
+  /* Category Filter */ ;
+}<motion && motion.div > {;
+  categories && categories.map ( (category) => (<motion&& motion.button key= {
+  category && category.id 
+}whileHover= {
+  {
+  scale: 1 && 1.05 
+}whileTap= {
+  {
+  scale: 0 && 0.95 
+}onClick= {
+  () => setActiveCategory (category && category.id) ;
+}className= {;
+  `flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 $ {;
+  activeCategory === category && category.id ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400' : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400' ;
+}` ;
+}> {;
+  category && category.icon ;
+}<span> {;
+  category && category.name ;
+}</span> </motion && motion.button>) ) ;
+}</motion && motion.div> {;
+  /* Services Grid */ ;
+}<motion && motion.div > {;
+  filteredServices && filteredServices.map ( (service, index) => (<motion&& motion.div key= {
+  service && service.id 
+}> <UltraFuturisticServiceCard2035service= {
+  service 
+}/> </motion && motion.div>) ) ;
+}</motion && motion.div> {;
+  /* View All Services Button */ ;
+}<motion && motion.div > <span>View All Services</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> </motion && motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting-edge technology to deliver exceptional results </p> </motion && motion.div> </motion && motion.div>) ) ;
+}</div> </div> </section> <motion&& motion.div initial= {
+  {
+  opacity: 0, y: 30
+}whileInView= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+
+  duration: 0 && 0.8 
+}viewport= {
+  {
+=======
+
+
+  once: true 
+}> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;
+};
+
+=======
+            </div>
+          </div>
+        </section>
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -417,6 +711,13 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
       </UltraFuturisticBackground2035>
     </Layout>
 
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export default Homepage2035;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 ;
 animate: {
@@ -482,3 +783,8 @@ export default Homepage2035);
 }
 ;
 export default Homepage2035;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

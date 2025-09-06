@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -16,6 +18,8 @@ import { Cloud,
   Brain;
 } from 'lucide-react';
 import Layout from "../../components/Layout";";
+
+
 
 
 const phases = [;
@@ -320,6 +324,7 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -343,4 +348,5 @@ export default function CloudMigrationPage() {
       </div>
     </Layout>
   );
+
 }

@@ -53,6 +53,19 @@ export function SupportChatbot() {
           headers: { 'Content-Type': 'application/json' }
           body: JSON.stringify({
 
+=======
+
+        const message = null;
+          data.message ||
+          data.choices?.[0]?.message?.content ||
+          data.choices?.[0]?.text ||
+          data.completion ||
+          ''
+        const finalMsg = null;
+          message.trim() ||
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           FALLBACK_RESPONSES[
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
@@ -100,7 +113,7 @@ export function SupportChatbot() {
 
                 }
               } catch (_) {
-                // ignore parse errors
+                // ignore parse errors;
               }
             }
           }
@@ -118,7 +131,7 @@ export function SupportChatbot() {
     } catch (err) {
       logErrorToProduction('Chatbot error:', { data: err })
       // Provide a helpful fallback response instead of generic error
-      const fallbackResponse = null;
+      const fallbackResponse =
         FALLBACK_RESPONSES[
           Math.floor(Math.random() * FALLBACK_RESPONSES.length)
         ] |
@@ -127,6 +140,17 @@ export function SupportChatbot() {
         id: Date.now().toString() + '-e'
         role: 'assistant'
         message: fallbackResponse
+
+          buffer = lines[lines.length - 1] || '';
+        }
+        const final =;
+          accumulated.trim () ||;
+          FALLBACK_RESPONSES[;
+            Math.floor (Math.random () * FALLBACK_RESPONSES.length);
+          ] ||;
+          "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
+        set_messages (prev =>;
+          prev.map (m => (m.id === bot_id ? { ...m, message: final } : m)));
       }
       setMessages(prev => [...prev, errorMsg])
     } finally {
@@ -153,14 +177,15 @@ export function SupportChatbot() {
           />
 
         )}
-        {messages.map(m => (
-          <ChatMessage key={m.id} role={m.role} message={m.message} />
+        {messages && messages.map(m => (;
+          <ChatMessage key={m && m.id} role={m && m.role} message={m && m.message} />;
         ))}
 
         <div ref={endRef} />
       </div>
-      <div className="p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30">
+      <div className='p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30'>
         <ChatInput onSend={sendMessage} disabled={loading} />
       </div>
     </div>
   )
+<<<<<<< HEAD

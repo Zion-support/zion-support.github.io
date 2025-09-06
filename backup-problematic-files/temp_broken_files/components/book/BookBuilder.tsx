@@ -28,6 +28,13 @@ function fileToBase64(file: File): Promise<string> {
 }
 export default function BookBuilder() {
 
+=======
+  const [project, setProject] = useState<BookProject>(initialProject),
+  const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER'),
+  const [busy, setBusy] = useState<boolean>(false),
+  const coverPreview = useMemo_(() => {
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     return (
       <div className="w-full max-w-2xl border rounded-lg overflow-hidden shadow bg-white text-gray-900">
         <div className="p-8 space-y-2">
@@ -37,6 +44,7 @@ export default function BookBuilder() {
           <div className="pt-6 text-sm opacity-70">By {project.meta.author}</div>
           {project.meta.isbn ? (
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 src={`/api/barcode/isbn?code=${encodeURIComponent(project.meta.isbn)}`}
               />
             </div>
@@ -115,11 +123,13 @@ export default function BookBuilder() {
             <Wand2 className="w-4 h-4 mr-1" /> AI Assist
           </button>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </select>
           <button className="btn btn-sm btn-primary" onClick={handleExportPdf} disabled={busy}>
             <Download className="w-4 h-4 mr-1" /> PDF
           </button>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         </div>
       </div>
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -128,24 +138,29 @@ export default function BookBuilder() {
             <BookOpen className="w-4 h-4" /> Cover & Branding
           </h2>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 value={project.meta.title}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, title: e.target.value } })}              />
             </label>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 value={project.meta.subtitle}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}              />
             </label>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 value={project.meta.author}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}              />
             </label>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 value={project.meta.isbn}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, isbn: e.target.value } })}
               />
             </label>
           </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </h2>
           <div className="space-y-3">
             <label className="block">
@@ -163,6 +178,7 @@ export default function BookBuilder() {
             <div className="grid grid-cols-3 gap-2">
               {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(0, 6).map((src, i) => (
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               ))}
             </div>
           </div>
@@ -173,6 +189,7 @@ export default function BookBuilder() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {project.chapters.map((ch, idx) => (
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 value={ch.content}
                 onChange={(e) => {
                   const chapters: BookChapter[] = [...project.chapters],
@@ -189,6 +206,7 @@ export default function BookBuilder() {
         <div className="space-y-2">
           {project.visuals.quoteCallouts.map((q, i) => (
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 value={q.text}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts]
@@ -197,6 +215,7 @@ export default function BookBuilder() {
                 }}
               />
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 value={q.attribution ?? ''}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts],
@@ -209,3 +228,4 @@ export default function BookBuilder() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD

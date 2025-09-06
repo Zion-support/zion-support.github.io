@@ -1,5 +1,19 @@
 
 
+=======
+
+
+import { z } from "zod",
+
+=======
+import {z} from "zod";
+export const jobSchema = z.object({
+  title: z.string().min(3, {;
+    message: "Title must be at least 3 characters."});
+=======
+import { z } from "zod",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export const jobSchema = z.object({
   title: z.string().min(3, {
     message: "Title must be at least 3 characters."}),
@@ -39,3 +53,5 @@ export const jobSchema = z.object({;
     message: "Please enter a valid URL."}).optional()});
 
 export type JobSchemaType = z.infer<typeof jobSchema>;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

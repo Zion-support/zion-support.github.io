@@ -1,4 +1,30 @@
 
+=======
+
+import React, { useEffect, useState } from 'react',;
+import type { NextPage, GetServerSideProps } from 'next',;
+import ReviewSummary from '../../components/reviews/ReviewSummary',;
+import ReviewCard from '../../components/reviews/ReviewCard',;
+import type { PublicReview, ReviewsSummary } from '../../types/reviews',;
+;
+type Props = { clientId: string },
+
+const ClientPage: NextPage<Props> = ({ clientId }) => {
+  const [summary, setSummary] = useState<ReviewsSummary | null>(null),
+  const [reviews, setReviews] = useState<PublicReview[]>([]),
+
+  useEffect(() => {
+    (async () => {
+      const res = await fetch(`/api/reviews/list?targetType=client&targetId=${clientId}`),
+      const data = await res.json(),
+      if (res.ok) { setSummary(data.summary), setReviews(data.reviews) }
+    })()
+  }, [clientId]),
+
+  async function handleReport(id: string) {
+    await fetch('/api/reviews/report', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ reviewId: id, reason: 'Inappropriate content' })})
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useEffect, useState } from 'react';
 
 import type { NextPage, GetServerSideProps } from 'next';
@@ -6,6 +32,17 @@ import ReviewSummary from '../../components/reviews/ReviewSummary';
 import ReviewCard from '../../components/reviews/ReviewCard';
 import type { PublicReview, ReviewsSummary } from '../../types/reviews';
 
+=======
+
+
+const ClientPage: NextPage<Props> = ({ clientId }) => {
+  const [summary, setSummary] = useState<ReviewsSummary | null>(null)
+  const [reviews, setReviews] = useState<PublicReview[]>([])
+  useEffect(() => {
+    (async () => {
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async function handleReport(id: string) {
     await fetch('/api/reviews/report', {
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ reviewId: id, reason: 'Inappropriate content' })})
@@ -55,6 +92,20 @@ function handle_report() {
         <h1 className="text-3xl font-bold">Client: {clientId}</h1>
       </header>
 
+}
+  }, [client_id]),
+  async /**
+ * handle_report - Function description
+ */
+function handle_report() {
+    await fetch ('/api / reviews / report', {
+      method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ review_id: id, reason: 'Inappropriate content' })});
+  }
+  return (
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       </section>
     </main>
   )
@@ -69,3 +120,13 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 }
 };
 export default ClientPage;
+      </section>
+    </main>
+  )
+},
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { slug } = ctx.query as { slug: string },
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

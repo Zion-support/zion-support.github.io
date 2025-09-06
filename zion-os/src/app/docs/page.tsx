@@ -1,4 +1,15 @@
 
+=======
+import Link from "next/link",;
+export const metadata = {;
+  title: "Documentation - Zion Tech Group | Technical Guides & Resources",;
+  description: "Access comprehensive technical documentation, guides, and resources for Zion Tech Group's products and services. Find API docs, tutorials, and best practices.",;
+  keywords: "documentation, technical guides, API docs, tutorials, Zion Tech Group, developer resources, technical resources"};
+export default function DocumentationPage() {;
+  return (;
+
+    <div className="min-h-screen">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="min-h-screen">;
 
       {/* Hero Section */}

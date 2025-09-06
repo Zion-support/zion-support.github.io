@@ -26,6 +26,11 @@ interface ProductListingCardProps {
   onRequestQuote?: (id: string) => void,
   detailBasePath?: string
 }
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 const ProductListingCardComponent = ({
   listing,
@@ -57,60 +62,56 @@ const ProductListingCardComponent = ({
       setImageSrc('/placeholder.svg')
       setImageError(true)
     }
-  }
-  const handleViewListing = () => {
-    // Debug logging for development
-    if (process.env.NODE_ENV === 'development') {
-      logDebug('[ProductCard] Navigating to:', {
-        path: `${detailBasePath}/${listing.id}`
-      })
-      logDebug('[ProductCard] Listing ID:', { id: listing.id })
-      logDebug('[ProductCard] Listing Title:', { title: listing.title })
-    }
-    // Validate listing ID exists before navigation
-    if (!listing.id) {
-      logErrorToProduction(
-        '[ProductCard] Missing listing ID, cannot navigate'
-        new Error('Missing listing ID')
+    // Validate listing ID exists before navigation;
+    // Check condition
+if ( {) {
+  $2
+}
+      logErrorToProduction (
+        '[ProductCard] Missing listing ID, cannot navigate',
+        new Error ('Missing listing ID'),
         { component: 'ProductListingCard' }
-      )
-      toast({
-        title: 'Navigation Error'
-        description: 'Product information is incomplete'
-        variant: 'destructive'
-      })
+      );
+      toast ({
+        title: 'Navigation Error',
+        description: 'Product information is incomplete',
+        variant: 'destructive',
+      });
       return;
     }
-    router.push(`${detailBasePath}/${listing.id}`)
+    router.push (`${detailBasePath}/${listing.id}`);
   }
-  const dispatch = useDispatch<AppDispatch>()
-  const addToCart = () => {
-    setLoading(true)
-    dispatch(
-      addItem({
-        id: listing.id
-        title: listing.title
-        price: listing.price ?? 0
-      })
-    )
-    toast.success(`1× ${listing.title} added`, {
+  const dispatch = use_dispatch < AppDispatch>();
+  const addToCart = () =>: any {
+    set_loading (true);
+    dispatch (
+      add_item ({
+        id: listing.id,
+        title: listing.title,
+        price: listing.price ?? 0,
+      }));
+    toast.success (`1× ${listing.title} added`, {
       action: {
-        label: 'View Cart'
-        onClick: () => router.push('/cart')
-      }
-    })
-    setLoading(false)
+        label: 'View Cart',
+        on_click: () => router.push ('/cart'),
+      },
+    });
+    set_loading (false);
+
   }
-  const handleRequestQuote = (e: React.MouseEvent) => {
-    e.preventDefault()
-    e.stopPropagation()
-    if (onRequestQuote) {
-      onRequestQuote(listing.id)
+  const handleRequestQuote = (e: React.MouseEvent) =>: any {
+    e.prevent_default ();
+    e.stop_propagation ();
+    // Check condition
+if ( {) {
+  $2
+}
+      onRequestQuote (listing.id);
     } else {
-      router.push(`/request-quote?listing=${listing.id}`)
+      router.push (`/request - quote?listing=${listing.id}`);
     }
   }
-  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48'
+  const imageContainerClasses = is_grid ? 'h - 48' : 'h - 32 w - 48';
       onKeyDown={e => {
         if (e.key === 'Enter' |e.key === ' ') {
           e.preventDefault()
@@ -122,7 +123,7 @@ const ProductListingCardComponent = ({
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
 
         onClick={handleViewListing} // Keep existing onClick for navigation
-        role="button"
+        role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
 
           if (e.key === 'Enter' || e.key === ' ') {
@@ -141,16 +142,20 @@ const ProductListingCardComponent = ({
             onError={handleImageError}
 
             priority={false} // Assuming these are not LCP images
-            sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
-          />
-          {listing.featured && (
-            <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
-              Featured
-            </Badge>
+            sizes={
+              isGrid
+                ? '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                : '192px'
+            } // 192px is w-48
+          />;
+          {listing && listing.featured && (;
+            <Badge className='absolute top-2 right-2 bg-primary text-primary-foreground border-none'>;
+              Featured;
+            </Badge>;
           )}
 
               {stockStatus}
-            </Badge>
+            </Badge>;
           )}
 
               {listing.category}
@@ -164,9 +169,9 @@ const ProductListingCardComponent = ({
             )}
 
                   {tag}
-                </span>
+                </span>;
               ))}
-            </div>
+            </div>;
           )}
 
             {listing.price !== null ? (
@@ -192,7 +197,8 @@ const ProductListingCardComponent = ({
 
                 router.push('/checkout')
               }}
-              disabled={loading}
+              disabled = {loading,}
             >
               Buy Now
             </Button>
+<<<<<<< HEAD

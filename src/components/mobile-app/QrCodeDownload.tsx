@@ -23,6 +23,10 @@ export const QrCodeDownload: React.FC = () => {
                 googlePlayUrl={googlePlayUrl}
               />
 
+=======
+              
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <div className="flex gap-2 items-center text-sm text-gray-400">
                 <span className="block h-1 w-1 rounded-full bg-zion-purple"></span>
                 <span>Compatible with iOS 14+ and Android 8.0+</span>
@@ -92,3 +96,4 @@ export const QrCodeDownload: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD

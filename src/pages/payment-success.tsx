@@ -15,12 +15,27 @@ export default function PaymentSuccess() {
           <CheckCircle2 className="h-6 w-6 text-green-600" />
         </div>
 
+=======
+
+        
+        <h1 className="text-2xl font-bold text-white mb-2">{t('errors.payment_success_title')}</h1>
+        
+        <p className="text-zion-slate-light mb-6">
+          {t('errors.payment_success_message')}
+        </p>
+        
+        <div className="flex flex-col space-y-3">
+          <Button 
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             {t('errors.go_to_dashboard')}
           </Button>
 
+<<<<<<< HEAD
             variant="outline"
             onClick={() => router.push('/')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"

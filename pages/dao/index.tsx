@@ -30,6 +30,7 @@ export default function DaoMetrics(req, res) {
   if (loading) return <div>Loading...</div>,
   if (!data) return <div>Error loading data</div>,
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -51,16 +52,7 @@ export default function DaoMetrics(req, res) {
                 <div className="w-full h-2 bg-gray-200 dark:bg-gray-800 rounded">
                   <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
 
-                </div>
-              </div>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </div>
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <div className="font-medium mb-2">Top Holders (approx)</div>
           <table className="w-full text-sm">
             <thead>
@@ -72,6 +64,7 @@ export default function DaoMetrics(req, res) {
             <tbody>
               {data.topHolders.map((h) => (
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <td className="py-1 pr-2 truncate max-w-[10rem]">{h.address}</td>
                   <td className="py-1">{h.amount}</td>
                 </tr>
@@ -85,6 +78,11 @@ export default function DaoMetrics(req, res) {
         </div>
       </section>
 
+=======
+
+      <section className="grid lg:grid-cols-2 gap-6">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Active Proposals</div>
           {data.activeProposals.length ? (
@@ -101,6 +99,7 @@ export default function DaoMetrics(req, res) {
 
           )}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
@@ -114,3 +113,5 @@ export default function DaoMetrics(req, res) {
     </div>
 
   )
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

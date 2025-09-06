@@ -1,5 +1,10 @@
 
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
@@ -31,6 +36,7 @@ const testimonials = [
     avatar: "https://i.pravatar.cc/150?img=67",
     company: "EcoTech"}],
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function TestimonialCarousel() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -43,6 +49,25 @@ export function TestimonialCarousel() {
         </div>
         <div className="max-w-5xl mx-auto px-8">
           <Carousel
+=======
+    avatar: "https://i.pravatar.cc / 150?img = 67",
+    company: "EcoTech"}],
+export /**
+ * TestimonialCarousel - Function description
+ */
+function TestimonialCarousel() {
+  return (
+    <section className="py - 20 bg - zion - blue - dark">;
+      <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
+        <div className="text - center mb - 12">;
+          <h3 className="text - 3xl font - bold text - white mb - 3">What Our Users Say</h3>;
+          <p className="text - zion - slate - light text - lg max - w-2xl mx - auto">;
+            Discover how Zion is transforming the tech and AI marketplace ecosystem;
+          </p>;
+        </div>;
+        <div className="max - w-5xl mx - auto px - 8">;
+          <Carousel;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             opts={{
               align: "start"
 
@@ -81,3 +106,18 @@ export function TestimonialCarousel() {
       </div>
     </section>
   )
+            </div>;
+          </Carousel>;
+        </div>;
+      </div>;
+
+    </section>);
+}
+
+=======
+
+
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

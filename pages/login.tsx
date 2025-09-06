@@ -1,5 +1,26 @@
 
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,16 +32,18 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
-import React, { useState } from './react';
-import Head from './next / head';
-import Link from './next / link';
-import { motion  } from './framer-motion';
-import Layout from "./components / Layout";
-import {
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from "lucide-react";
   DizzyFace2
 } from 'lucide-react';
+>>>>>>> origin/automation-improvements-final
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   Mail
   Lock
@@ -202,14 +225,6 @@ import {
 export default function LoginPage() {
   const [formData, setFormData] = useState({
 
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const [error, setError] = useState("");
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
 
       ...prev,
       [name]: value,
@@ -222,11 +237,30 @@ export default function LoginPage() {
       ...prev
       [name]: value
 
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+export default function LoginPage() {
+  const [formData, setFormData] = useState({
+
+    email: "",
+    password: "",;
+
+  });
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     setError("");
     try {
       // Simulate API call
@@ -237,6 +271,7 @@ export default function LoginPage() {
         // Redirect to dashboard or home page;
         window && window.location.href = "/";
       } else {;
+
         setError("Please fill in all fields");
       }
     } catch (err) {;
@@ -256,6 +291,13 @@ export default function LoginPage() {
     } catch (err) {
       setError('Login failed. Please try again.');
 
+=======
+    } finally {
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     } finally {
     } finally {;
       setIsLoading(false);
@@ -268,7 +310,6 @@ export default function LoginPage() {
           content="Sign in to your Zion Tech Group account to access your dashboard and services."
         />
 
-        <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
       </Head>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -285,6 +326,7 @@ export default function LoginPage() {
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
+
     <Layout>;
       <Head>;
         <title>Login - Zion Tech Group</title>;
@@ -309,14 +351,21 @@ export default function LoginPage() {
             <p className="mt-2 text-sm text-gray-600">;
               Or{" "}
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <Link
                 href="/contact"
+
                 className="font-medium text-blue-600 hover:text-blue-500">;
                 contact us for access;
               </Link>;
             </p>;
           </motion && motion.div>;
           <motion&& motion.div
+
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -333,6 +382,11 @@ export default function LoginPage() {
                 </motion && motion.div>;
               )}
 
+=======
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   Email address
                 </label>
                 <div className="relative">
@@ -365,6 +419,7 @@ export default function LoginPage() {
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   Password
                 </label>
                 <div className="relative">
@@ -405,11 +460,13 @@ export default function LoginPage() {
                     ) : (;
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
                     )}
+
                   </button>;
                 </div>;
               </div>;
               <div className="flex items-center justify-between">;
                 <div className="flex items-center">;
+
                   <input
                     id="remember-me"
                     name="remember-me"
@@ -421,6 +478,7 @@ export default function LoginPage() {
                     className="ml-2 block text-sm text-gray-900"
                   >
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     Remember me
                   </label>
                 </div>
@@ -440,6 +498,11 @@ export default function LoginPage() {
                   </span>
 
                   <span className="px-2 bg-white text-gray-500">Or continue with</span>
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -461,6 +524,7 @@ export default function LoginPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
+
                 </button>;
               </div>;
             </form>;
@@ -495,6 +559,11 @@ export default function LoginPage() {
             <p className="text-sm text-gray-600">;
               Don't have an account?{" "}
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;

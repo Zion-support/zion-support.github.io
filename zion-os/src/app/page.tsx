@@ -1,4 +1,13 @@
 
+=======
+
+  const features = [
+    {
+
+
+    }
+  ]
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     {
       icon: &quot;🏪&quot;,
       title: &quot;Complete Marketplace & quot;,
@@ -122,6 +131,113 @@
   return (
 
               <br />
+              <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
+            </h1>
+
+
+              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+
+
+              Built for the future of decentralized business.
+            </p>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
+              <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift&quot;>
+
+=======
+            
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+              Built for the future of decentralized business.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                🚀 Launch Your Economy
+              </Link>
+              <a href=&quot;/admin/instances&quot; className=&quot;btn-secondary hover-lift&quot;>
+                📊 View Instances
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Features Section */}
+      <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 bg-white/5&quot;>
+        <div className=&quot;max-w-7xl mx-auto&quot;>
+          <div className=&quot;text-center mb-16 animate-slide-up&quot;>
+            <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6&quot;>
+              Everything You Need to Build the Future
+            </h2>
+
+
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+              From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit 
+              for launching sovereign digital economies.
+            </p>
+          </div>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {features.map((feature, index) => (
+              <FeatureCard
+=======
+      <section className=&quot;relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
+        <div className=&quot;max - w-7xl mx - auto text - center & quot;>;
+          <div className=&quot;hero - gradient absolute inset - 0 -z - 10 & quot;></div>;
+          <div className=&quot;animate - fade - in & quot;>;
+            <h1 className=&quot;text - 5xl md:text - 7xl font - bold mb - 6&quot;>;
+              <span className=&quot;gradient - text & quot;>Launch Sovereign</span>;
+              <br />;
+              <span className=&quot;text - white & quot;>AI - Powered Digital Economies</span>;
+            </h1>;
+            <p className=&quot;text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto mb - 8 leading - relaxed & quot;>;
+              Deploy complete AI - powered marketplaces, governance systems, and digital economies with one click.;
+              Built for the future of decentralized business.;
+            </p>;
+            <div className=&quot;flex flex - col sm:flex - row gap - 4 justify - center items - center & quot;>;
+              <a href=&quot;/multiverse / launch & quot; className=&quot;btn - primary hover - lift & quot;>;
+                🚀 Launch Your Economy;
+              </Link>;
+              <a href=&quot;/admin / instances & quot; className=&quot;btn - secondary hover - lift & quot;>;
+                📊 View Instances;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Features Section */}
+      <section className=&quot;py - 20 px - 4 sm:px - 6 lg:px - 8 bg - white / 5&quot;>;
+        <div className=&quot;max - w-7xl mx - auto & quot;>;
+          <div className=&quot;text - center mb - 16 animate - slide - up & quot;>;
+            <h2 className=&quot;text - 4xl md:text - 5xl font - bold mb - 6&quot;>;
+              Everything You Need to Build the Future;
+            </h2>;
+            <p className=&quot;text - xl text - white / 70 max - w-2xl mx - auto & quot;>;
+              From AI - powered marketplaces to decentralized governance, Zion OS provides the complete toolkit;
+              for launching sovereign digital economies.;
+            </p>;
+          </div>;
+          <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8&quot;>;
+            {features.map ((feature, index) => (
+              <FeatureCard;
+=======
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className=&quot;relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8&quot;>
+        <div className=&quot;max-w-7xl mx-auto text-center&quot;>
+          <div className=&quot;hero-gradient absolute inset-0 -z-10&quot;></div>
+          <div className=&quot;animate-fade-in&quot;>
+            <h1 className=&quot;text-5xl md:text-7xl font-bold mb-6&quot;>
+              <span className=&quot;gradient-text&quot;>Launch Sovereign</span>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <br />
               <span className="text-white">AI-Powered Digital Economies</span>
             </h1>
 
@@ -162,6 +278,35 @@
       </section>;
       {/* CTA Section */}
 
+=======
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="glass-effect rounded-2xl p-12 animate-slide-up">
+            <h2 className="text-4xl font-bold mb-6">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              Ready to Build the Future?
+            </h2>
+            <p className=&quot;text-xl text-white/70 mb-8 max-w-2xl mx-auto&quot;>
+              Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
+            </p>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift text-lg px-8 py-4&quot;>
+                🚀 Start Building Now
+              </Link>
+              <a href=&quot;/admin/instances&quot; className=&quot;btn-secondary hover-lift text-lg px-8 py-4&quot;>
+                📊 Explore Examples
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               Ready to Build the Future?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">

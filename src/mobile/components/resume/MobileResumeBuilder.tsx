@@ -39,12 +39,21 @@ export function MobileResumeBuilder() {
       default:
         return <BasicsStep />
     }
-  }
+  },;
+
   return (
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
         <Button
 
+=======
+
+          variant={currentStep === "basics" ? "default" : "outline"}
+          className="flex-1 rounded-full"
+          onClick={() => setCurrentStep("basics")}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         >
           Basics
         </Button>
@@ -115,3 +124,4 @@ function ExperienceStep() {
   }
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
+<<<<<<< HEAD

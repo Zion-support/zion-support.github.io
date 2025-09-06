@@ -6,16 +6,15 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { logErrorToProduction } from '@/utils/productionLogger'
 import {
-  Zap
-  Download
-  Trash2
-  RefreshCw
-  Settings
-  Activity
-  Package
-  Monitor
-} from 'lucide-react'
-
+  Zap,
+  Download,
+  Trash2,
+  RefreshCw,
+  Settings,
+  Activity,
+  Package,
+  Monitor,
+} from 'lucide-react';
 interface QuickAction {
   id: string;
   label: string;
@@ -23,22 +22,27 @@ interface QuickAction {
   icon: React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
-  dangerous?: boolean
-export function QuickActions() {
-
-  const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
-  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
-  if (!isAllowed) {
-    return null
+  dangerous?: boolean;
+export /**
+ * QuickActions - Function description
+ */
+function QuickActions() {
+  const { user } = use_auth ();
+  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
+  const is_allowed = process.env.NODE_ENV !== 'production' || is_admin;
+  // Check condition
+if ( {) {
+  $2
+}
+    return null;
   }
 
     setIsProcessing(actionId);    try {
       await action()
     } catch (error) {
-      logErrorToProduction(`Failed to execute action ${actionId}:`, {
-        data: error
-      })
+      logErrorToProduction (`Failed to execute action ${action_id}:`, {
+        data: error,
+      });
     } finally {
       setIsProcessing(null)
     }
@@ -54,6 +58,11 @@ export function QuickActions() {
       category: 'performance',
       action: () => {
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -69,13 +78,6 @@ export function QuickActions() {
       icon: <Trash2 className="w-4 h-4" />,
       category: 'maintenance',
       dangerous: true,
-
-      action: () => {
-        if ('caches' in window) {
-          caches.keys().then(names => {
-            names.forEach(name => caches.delete(name))
-          })
-        }
 
     {
       id: 'preload-critical-resources'
@@ -134,23 +136,6 @@ export function QuickActions() {
         })
       }},
 
-    {
-      id: 'download-performance-report',
-      label: 'Download Performance Report',
-      description: 'Export current performance metrics',
-      icon: <Download className="w-4 h-4" />,
-      category: 'development',
-      action: () => {
-        const metrics = {
-          timestamp: new Date().toISOString(),
-          performance: window.window.window.performance.getEntriesByType('navigation')[0],
-          resources: window.window.window.performance.getEntriesByType('resource').slice(0, 20),
-          memory: (performance as any).memory || {},
-          userAgent: navigator.userAgent,
-          screen: {
-            width: screen.width,
-            height: screen.height,
-
             colorDepth: screen.colorDepth
           }
         },
@@ -170,15 +155,6 @@ export function QuickActions() {
       }},
 
     {
-      id: 'test-error-boundary',
-      label: 'Test Error Boundary',
-      description: 'Trigger an error to test Sentry integration',
-      icon: <Monitor className="w-4 h-4" />,
-      category: 'development',
-      dangerous: true,
-      action: () => {
-
-    {
       id: 'refresh-app',
       label: 'Hard Refresh',
       description: 'Force reload with cache bypass',
@@ -186,18 +162,6 @@ export function QuickActions() {
       category: 'maintenance',
       action: () => {
         window.location.reload()
-
-      }}],
-
-  const categorizedActions = {
-    performance: actions.filter(a => a.category === 'performance'),
-    development: actions.filter(a => a.category === 'development'),
-    maintenance: actions.filter(a => a.category === 'maintenance')},
-
-  const categoryColors = {
-    performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
-    development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
-    maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
 
   if (!isVisible) {
     return (
@@ -208,6 +172,12 @@ export function QuickActions() {
         </Button>
       </div>
     )
+          className='bg-background/80 backdrop-blur-sm'        >;
+          <Settings className='w-4 h-4 mr-2' />;
+          Quick Actions;
+        </Button>;
+      </div>;
+    );
   }
   return (
     <div className="fixed bottom-4 left-4 z-50 w-80">
@@ -224,3 +194,4 @@ export function QuickActions() {
             </Button>
           </div>
         </CardHeader>
+<<<<<<< HEAD

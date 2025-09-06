@@ -22,6 +22,18 @@ export function CountryTabs({
   onQuote,
   searchQuery,
 
+=======
+  popularCountries,
+  filteredCountries,
+  handleCountrySelect,
+  onQuote,
+  searchQuery,
+  const paginatedCountries = filteredCountries.slice(
+    (currentPage - 1) * countriesPerPage,
+    currentPage * countriesPerPage
+  )
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
@@ -31,14 +43,11 @@ export function CountryTabs({
   }, [searchQuery]),
 
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),
-
-  const paginatedCountries = filteredCountries.slice(
-    (currentPage - 1) * countriesPerPage
-    currentPage * countriesPerPage
+<<<<<<< HEAD
 
   return (
-    <Tabs defaultValue="featured" className="w-full">
-      <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">
+    <Tabs defaultValue='featured' className='w-full'>;
+      <TabsList className='bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6'>;
         <TabsTrigger
           value="featured"
           className="data-[state=active]:bg-zion-purple"
@@ -59,11 +68,41 @@ export function CountryTabs({
 
           ))}
         </div>
-        {totalPages > 1 && (
-          <div className="mt-8">
-            <Pagination className="justify-center">
-              <PaginationContent>
-                <PaginationItem>
+      </TabsContent>
+
+      <TabsContent value="all" className="mt-0">
+        <div className="mb-6 max-w-md mx-auto">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+            <Input
+              type="text"
+              placeholder="Search by country..."
+              className="pl-10 bg-zion-blue border-zion-blue-light text-white"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {paginatedCountries.map((country) => (
+            <CountryServiceCard
+              key={country.country}
+              country={country}
+              onSelect={handleCountrySelect}
+              onQuote={onQuote}
+              isPopular={popularCountries.includes(country.country)}
+            />;
+
+          ))}
+
+        </div>;
+
+        {totalPages > 1 && (;
+          <div className='mt-8'>;
+            <Pagination className='justify-center'>;
+              <PaginationContent>;
+                <PaginationItem>;
                   <PaginationPrevious
                     href={`?page=${currentPage - 1}`}
 
@@ -84,21 +123,3 @@ export function CountryTabs({
                       />;
                     </PaginationItem>;
                   );
-
-                )}
-                <PaginationItem>;
-                  <PaginationNext;
-                    href={`?page=${currentPage + 1}`}
-
-                  />
-                </PaginationItem>
-              </PaginationContent>
-            </Pagination>
-          </div>
-        )}
-
-      </TabsContent>;
-    </Tabs>;
-  );
-}
-;

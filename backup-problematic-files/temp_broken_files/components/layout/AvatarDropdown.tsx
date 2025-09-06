@@ -16,3 +16,11 @@ import Link from 'next/link'
           <button onClick={logout} className=&quot;w-full text-left px-3 py-2 hover:bg-gray-50/60 dark:hover:bg-white/5&quot;>Logout</button>        </div>
       )}
     </div>;
+<<<<<<< HEAD
+=======
+
+  );}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

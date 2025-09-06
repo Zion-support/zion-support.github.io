@@ -48,12 +48,28 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: false
     icon: "FileText"
 
+=======
+
+  },
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   "announcements": {
     id: "announcements"
     name: "Announcements"
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
+import { log_info } from '@/utils / production_logger';
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
+// Mock category data;
+const categories_info: Record < string, ForumCategoryInfo> = {
+  "getting - hired": {
+    id: "getting - hired",
+    name: "Getting Hired",
+    description: "Tips, strategies, and questions about getting hired on the platform.";
+    admin_only: false,
+    icon: "Briefcase";
   }
 
   user}: {
@@ -78,9 +94,16 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 
       return;
 
+      return;
+
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
     if (isFollowed(categoryId)) {
       unfollow(categoryId)
     } else {
       follow(categoryId)
     }
+<<<<<<< HEAD

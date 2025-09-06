@@ -11,25 +11,30 @@ import { NotificationCenter } from "@/components/NotificationCenter",
 
   if (!user) return null,
 
-  const handleTestNotification = async () => {
-    const result = await createTestNotification(user.id),
-    if (result.success) {
-      toast({
-        title: "Test notification created"
-        description: "Check your notification center"})
-    } else {
-      toast({
-        title: "Error creating test notification"
-        description: "Something went wrong"
-        variant: "destructive"})
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+  const handleTestNotification = async () => {;
+    const result = await createTestNotification(user && user.id);
+    if (result && result.success) {;
+      toast({;
+        title: "Test notification created",;
+        description: "Check your notification center"});
+    } else {;
+      toast({;
+        title: "Error creating test notification",;
+        description: "Something went wrong",;
+        variant: "destructive"});
+
     }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
-    <>
-      <Header />
-      <div className="min-h-screen bg-zion-blue">
-        <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <>;
+      <Header />;
+      <div className="min-h-screen bg-zion-blue">;
+        <div className="container mx-auto px-4 py-8">;
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Sidebar - User Profile */}
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
@@ -45,6 +50,12 @@ import { NotificationCenter } from "@/components/NotificationCenter",
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
                   </Badge>
 
+=======
+
+                  <Button 
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                     onClick={() => window.location.href = "/profile"}
                   >
@@ -71,7 +82,7 @@ import { NotificationCenter } from "@/components/NotificationCenter",
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">ZION$ Balance</span>
                     <span className="text-zion-cyan font-medium">
-                      <a href="/wallet" className="hover:underline">View Wallet</Link>
+                      <a href="/wallet" className="hover:underline">View Wallet</a>
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
@@ -113,7 +124,7 @@ import { NotificationCenter } from "@/components/NotificationCenter",
                           message: "We've added a new notification center to help you stay updated with important information."
                           actionUrl: "/notifications"
                           actionText: "Explore Now"
-                        }),
+                        });
                         toast({
                           title: "System notification sent"
 
@@ -213,3 +224,5 @@ import { NotificationCenter } from "@/components/NotificationCenter",
       <Footer />
     </>
   )
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

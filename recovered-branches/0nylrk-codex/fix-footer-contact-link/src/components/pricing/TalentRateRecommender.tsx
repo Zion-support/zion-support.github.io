@@ -1,6 +1,8 @@
 
 
 import {
+import { 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   getTalentRateSuggestion;
   PricingSuggestion;
   TalentRateParams;
@@ -8,6 +10,21 @@ import {
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 
+=======
+import {Button} from "@/components/ui/button";
+import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
+import {PricingSuggestionBox} from "./PricingSuggestionBox";
+import {useAuth} from "@/hooks/useAuth";
+import {Sparkles} from "lucide-react";
+interface TalentRateRecommenderProps {;
+  skills: string[],;
+  yearsExperience: number,;
+  location?: string;
+  onSuggestionApplied: (value: number) => void,;
+  rateType: "hourly" | "fixed";
+}
+
+export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 interface TalentRateRecommenderProps {
   skills: string[],
   yearsExperience: number,
@@ -32,11 +49,6 @@ interface TalentRateRecommenderProps {;
   location?: string,;
   onSuggestionApplied: (value: number) => void,;
   rateType: "hourly" | "fixed";
-
-}
-
-export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
-
     }
 
     setIsLoading(true),
@@ -54,10 +66,38 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
     } finally {
       setIsLoading(false)
 
+  const handleApplySuggestion = () => {;
+    if (suggestion) {;
+      // We'll use the middle of the range as the suggested rate;
+      const suggestedRate = Math && Math.round((suggestion && suggestion.minRate + suggestion && suggestion.maxRate) / 2);
+      onSuggestionApplied(suggestedRate);
+
+      // Track this suggestion application;
+      if (user) {;
+        trackPricingSuggestion({;
+          userId: user && user.id,;
+          suggestionType: 'talent',;
+          suggestedMin: suggestion && suggestion.minRate,;
+          suggestedMax: suggestion && suggestion.maxRate,;
+          actualValue: suggestedRate,;
+          accepted: true;
+        });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      }
+    }
+
+  },
+
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
-    <div className="space-y-4">
-      <div>
-        {!suggestion && !isLoading ? (
+    <div className="space-y-4">;
+      <div>;
+        {!suggestion && !isLoading ? (;
           <Button
             type="button"
             variant="outline"
@@ -77,3 +117,30 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
         )}
 
 };
+            suggestion={suggestion}
+            is_loading={is_loading}
+            onApplySuggestion={handleApplySuggestion}
+
+
+
+
+=======
+      </div>;
+    </div>;
+  );
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+            rate_type={rate_type}
+          />)}
+      </div>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

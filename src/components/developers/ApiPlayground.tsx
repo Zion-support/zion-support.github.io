@@ -40,12 +40,12 @@ export function ApiPlayground({
       headers: {
 
       try {
-        options.body = JSON.stringify(JSON.parse(body))
+        options.body = JSON.stringify (JSON.parse (body));
       } catch {
         options.body = body
 
   return (
-    <div className="space-y-4">
+    <div className='space-y-4'>;
       <Input
         value={apiKey}
 
@@ -55,40 +55,146 @@ export function ApiPlayground({
           key={p.name}
 
           onChange={e => handleParamChange(p.name, e.target.value)}        />
+          key={p && p.name}
+          value={paramValues[p && p.name] || ''}
+          onChange={e => handleParamChange(p && p.name, e && e.target.value)}        />;
       ))}
-      {method !== 'GET' && method !== 'DELETE' && (
+      {method !== 'GET' && method !== 'DELETE' && (;
         <Textarea
           value={body}
-          onChange={e => setBody(e.target.value)}
-          className='font-mono'        />
+          onChange={e => setBody(e && e.target.value)}
+          className='font-mono'        />;
       )}
-      <Button onClick={sendRequest} disabled={loading}>
+      <Button onClick={sendRequest} disabled={loading}>;
         {loading ? 'Sending...' : 'Send Request'}
-      </Button>
+      </Button>;
       {response && <CodeBlock code={response} language='json' />}
-    </div>
-  )
-export default ApiPlayground
-  const val = paramValues[p.name]
-if (val) searchParams.append (p.name, val)
-})
-const query = searchParams.toString ()
-if (query) url += `?$ {
-  query
-}`
+
+        error_message = err.message || 'Unknown error occurred';
+      }
+      set_response (
+        `Error: ${error_message}\n\n_attempted URL: ${url}\n\n_troubleshooting:\n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`);
+    } finally {
+      set_loading (false);
+    }
+  }
+  return (
+    <div className='space - y-4'>;
+      <Input;
+        value={api_key}
+        on_change={e => setApiKey (e.target.value)}
+        placeholder='API Key';
+      />;
+      {params.map (p => (
+        <Input;
+          key={p.name}
+          value={param_values[p.name] || ''}
+          on_change={e => handleParamChange (p.name, e.target.value)}        />))}
+      {method !== 'GET' && method !== 'DELETE' && (
+        <Textarea;
+          value={body}
+          on_change={e => set_body (e.target.value)}
+          className='font - mono'        />)}
+      <Button on_click={send_request} disabled={loading}>;
+        {loading ? 'Sending...' : 'Send Request'}
+      </Button>;
+      {response && <CodeBlock code={response} language='json' />}
+    </div>);
+export default ApiPlayground;
+  const val = param_values[p.name];
+if (search_params.append (p.name, val)) {
+  $2
+}
+});
+const query = search_params.to_string ();
+// Check condition
+if (url += `?$ {) {
+  $2
+}
+  query;
+}`;
 }const options: RequestInit = {
   method, headers: {
   Authorization: `Bearer $ {
-  apiKey
-}`
-"Content-Type" : "application/json"
+  api_key;
+}`;
+"Content - Type" : "application / json";
 }
-//Add timeout to prevent hanging signal: AbortSignal.timeout (15000)
+//Add timeout to prevent hanging signal: AbortSignal.timeout (15000);
 }
-}setLoading (true)
-setResponse (null)
-let responseText: string
-if (contentType?.includes ('application/json') ) {
+}set_loading (true);
+set_response (null);
+let response_text: string;
+if () {) {
+  $2
+
+}
   try {
   /> {
   params.map ( (p) => (<Input key= {
+<<<<<<< HEAD
+=======
+
+
+    </div>;
+  );
+
+export default ApiPlayground;
+  const val = paramValues[p && p.name];
+if (val) searchParams && searchParams.append (p && p.name, val) ;
+});
+const query = searchParams && searchParams.toString ();
+if (query) url += `?$ {;
+  query ;
+}` ;
+}const options: RequestInit = {;
+  method, headers: {;
+  Authorization: `Bearer $ {;
+  apiKey ;
+}`;
+"Content-Type" : "application/json" ;
+};
+//Add timeout to prevent hanging signal: AbortSignal && AbortSignal.timeout (15000) ;
+};
+}setLoading (true);
+setResponse (null);
+let responseText: string;
+if (contentType?.includes ('application/json') ) {;
+  try {;
+  /> {;
+  params && params.map ( (p) => (<Inputkey= {
+  p && p.name 
+}</div>) ;
+}export default ApiPlayground;
+
+  p.name;
+}</div>);
+}export default ApiPlayground;
+'";
+  p.name 
+}</div>) ;
+}export default ApiPlayground;
+'";
+}
+
+          value={paramValues[p.name] || ""}
+          onChange={(e) => handleParamChange(p.name, e.target.value)}
+        />;
+      ))}
+      {method !== "GET" && method !== "DELETE" && (
+        <Textarea
+          value={body}
+          onChange={(e) => setBody(e.target.value)}
+          className="font-mono"
+        />
+      )}
+      <Button onClick={sendRequest} disabled={loading}>
+        {loading ? "Sending..." : "Send Request"}
+      </Button>
+      {response && <CodeBlock code={response} language="json" />}
+    </div>
+  )
+}
+;
+export default ApiPlayground;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

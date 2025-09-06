@@ -37,7 +37,7 @@ export function ITServicePricingTable() {
           <Input
 
         <Table>
-          <TableHeader className="bg-zion-blue">
+          <TableHeader className='bg-zion-blue'>
             <TableRow>
 
                   <span>Country</span>

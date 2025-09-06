@@ -7,16 +7,6 @@ import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea";
 import { Plus, Trash2 } from 'lucide-react'
 
-interface ChangelogManagerProps {
-  platform: AppPlatform
-}
-
-type ChangelogEntry = {
-
-  const handleRemoveEntry = (id: string) => {
-    setEntries(entries.filter(entry => entry.id !== id))
-  }
-  )
 
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id)),
@@ -30,6 +20,8 @@ type ChangelogEntry = {
     const { name, value } = e.target
     setNewEntry(prev => ({ ...prev, [name]: value }))
   }
+
+import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./MetadataManager";
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -43,6 +35,12 @@ type ChangelogEntry = {
                 placeholder="Version (e.g. 1.0.1)"
                 name="version"
 
+=======
+                value={newEntry.version}
+                onChange={handleInputChange}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               />
               <Input
                 type="date"
@@ -53,6 +51,16 @@ type ChangelogEntry = {
               Add
             </Button>
           </div>
+              />;
+            </div>;
+            <Button
+              onClick = {handleAddEntry,}
+              disabled = {!newEntry && newEntry.version || !newEntry && newEntry.changes,}>;
+              <Plus className="mr-2 h-4 w-4" />;
+              Add;
+            </Button>;
+          </div>;
+
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
@@ -64,10 +72,23 @@ type ChangelogEntry = {
                     <span className="text-zion-cyan font-semibold">v{entry.version}</span>
                     <span className="text-sm text-gray-400">{entry.date}</span>
                   </div>
+          />;
+
+          <div className="border-t border-zion-purple/20 pt-4 space-y-4">;
+            {entries && entries.map((entry,) => (;
+              <div
+                key = {entry && entry.id,}
+                className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark">;
+                <div className="flex justify-between mb-2">;
+                  <div className="flex items-center gap-3">;
+                    <span className="text-zion-cyan font-semibold">v{entry && entry.version}</span>;
+                    <span className="text-sm text-gray-400">{entry && entry.date}</span>;
+                  </div>;
                   <Button
                     variant="ghost"
                     size="sm"
 
+<<<<<<< HEAD
                     className="text-gray-400 hover:text-red-400 p-1 h-auto"
                   >
                     <Trash2 className="h-4 w-4" />

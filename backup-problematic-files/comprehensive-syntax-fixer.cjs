@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;
 function fixSyntaxErrors(filePath) {;
   try {;
@@ -124,6 +125,8 @@ class ComprehensiveSyntaxFixer {
       this.log(`❌ Error during syntax fixing: ${error.message}`);
       throw error;
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   }
 
@@ -222,6 +225,7 @@ class ComprehensiveSyntaxFixer {
     return fixed;
   }
 }
+=======
 
 // Run the fixer
 const fixer = new ComprehensiveSyntaxFixer();
@@ -324,3 +328,9 @@ if (require.main === module) {;
 }
 
 module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

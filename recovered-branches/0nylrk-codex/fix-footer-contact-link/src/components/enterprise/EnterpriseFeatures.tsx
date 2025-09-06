@@ -3,10 +3,28 @@
 const features = [
   {
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const features = [
+=======
+import React from './react';
+import { Users, Shield, Briefcase, Award, Settings, Globe } from './lucide-react';
+const features = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
-    title: "Dedicated Talent Pool"
-    description: "Access to a curated pool of pre-vetted talent matched to your industry and needs."
-    icon: Users}
+
+
+    title: "Private Hiring Portal",
+    description: "Create a secure, private hiring portal accessible only to your team members.",
+    icon: Shield},
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  {
+
+    title: "Dedicated Talent Pool",
+    description: "Access to a curated pool of pre - vetted talent matched to your industry and needs.",
+    icon: Users},
+
   {
     title: "Custom SLA"
     description: "Get guaranteed response times and dedicated support with our custom SLAs."
@@ -20,9 +38,8 @@ const features = [
     description: "Powerful analytics and management tools for team leaders and administrators."
     icon: Settings}
   {
-    title: "Global Access"
-    description: "Connect with talent across multiple regions with localized interfaces."
-    icon: Globe}]
+
+=======
 
 export function EnterpriseFeatures() {
   return (
@@ -48,3 +65,34 @@ export function EnterpriseFeatures() {
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
             </div>
+=======
+
+};
+
+
+export function EnterpriseFeatures() {;
+  return (
+
+    <section className="py-20 px-4 md:px-6 bg-muted/50">;
+      <div className="container mx-auto max-w-6xl">;
+        <div className="text-center mb-16">;
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">;
+            Built for Enterprise Needs;
+          </h2>;
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">;
+            Our enterprise solutions offer powerful tools designed for large teams and complex hiring needs;
+          </p>;
+        </div>;
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+
+=======
+          {features.map((feature) => (;
+            <div;
+}
+
+
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

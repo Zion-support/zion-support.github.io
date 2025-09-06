@@ -39,6 +39,66 @@ export default function ProposalGenerator() {
     language: 'English'
     customPrompt:
 
+  targetInstitution: string;
+;
+export type ProposalForm = {
+  target_institution: string;
+  type: ProposalType;
+  regional_scope: string;
+  budgetOrGoals: string;
+  supporting_multiverses: string;
+  language?: string;
+
+  customPrompt?: string;};export type ProposalForm = {
+
+  targetInstitution: string,
+  type: ProposalType,
+  regionalScope: string,
+  budgetOrGoals: string,
+  supportingMultiverses: string,;
+
+
+  language?: string;
+  customPrompt?: string
+}
+=======
+export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
+export type ProposalForm = {
+  targetInstitution: string,
+  custom_prompt?: string;}export type ProposalForm = {
+  target_institution: string,
+  type: ProposalType,
+  regional_scope: string,
+  budgetOrGoals: string,
+  supporting_multiverses: string,
+  language?: string;
+
+  customPrompt?: string;};export type ProposalForm = {;
+  targetInstitution: string,;
+  type: ProposalType,;
+  regionalScope: string,;
+  budgetOrGoals: string,;
+  supportingMultiverses: string,;
+  language?: string;
+  customPrompt?: string;
+};
+export default function ProposalGenerator() {;
+  const [form, setForm] = useState<ProposalForm>({;
+    targetInstitution: 'UNDP',;
+    type: 'Workforce Dev',;
+    regionalScope: 'Global',;
+    budgetOrGoals: '',;
+    supportingMultiverses: '',;
+    language: 'English',;
+    customPrompt:;
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
+
+=======
+
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
@@ -50,11 +110,36 @@ export default function ProposalGenerator() {
   } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
 
+=======
+
+  function handleChange<K extends keyof ProposalForm>(;
+    key: K,;
+    value: ProposalForm[K];
+  ) {;
+
+    setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
 
+=======
+
+      setStatusMessage('Draft ready. You can edit and export.');
+    } catch (e: any) {;
+      console && console.error(e);
+      setStatusMessage('Failed to generate. You can edit manually and export.');
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)}),
+      const data = await res.json();
+      setDraftMarkdown(data.markdown || '');
+      setDraftJson(data.json || null);
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       setStatusMessage('Draft ready. You can edit and export.')
     } catch (e: any) {
       console.error(e);
@@ -67,6 +152,14 @@ export default function ProposalGenerator() {
 
   async function handleExport() {
 
+    }
+  }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  async function handleExport() {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
       const res = await fetch('/api/proposals/export', {
@@ -82,6 +175,11 @@ export default function ProposalGenerator() {
 
   }
 
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
@@ -114,6 +212,7 @@ export default function ProposalGenerator() {
             </div>
           </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               onClick={handleGenerate}
               disabled={isGenerating}
             >
@@ -152,9 +251,9 @@ export default function ProposalGenerator() {
 
                 </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               )}
             </div>;
           )}
-        </div>
 
-}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -15,6 +15,8 @@ export type Review = {
   projectId: string;
   fromRole: ReviewRole;
 
+=======
+
   fromId: string, // clientId or talentSlug depending on fromRole;
   toRole: ReviewRole, // opposite of fromRole;
   toId: string, // target id (talentSlug or clientId);
@@ -25,17 +27,16 @@ export type Review = {
   anonymous?: boolean,;
   approved: boolean, // admin moderated visibility;
   reported: boolean;
-
-  reports?: { reason: string, reportedAt: string }[],;
-  removed?: boolean,;
-  createdAt: string, // ISO;
-},;
-
-export type PublicReview = Omit<Review 'fromId'> & { authorName: string };
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export type ReviewsSummary = {
   averageRating: number;
   totalReviews: number;
   totalCompletedProjects: number;
 
   mostRecent: PublicReview[];
+  mostRecent: PublicReview[];
+
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

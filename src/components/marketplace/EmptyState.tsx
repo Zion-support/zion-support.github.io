@@ -1,18 +1,17 @@
 
 import * as React from 'react'
 import {
-  RefreshCw
-  Wifi
-  Server
-  ShoppingCart
-  Users
-  Wrench
-  Lightbulb
-} from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import { useTranslation } from 'react-i18next'
-
+  RefreshCw,
+  Wifi,
+  Server,
+  ShoppingCart,
+  Users,
+  Wrench,
+  Lightbulb,
+} from 'lucide-react';
+import { Button } from '@/components / ui / button';
+import Link from 'next / link';
+import { use_translation } from 'react - i18next';
 export interface EmptyStateProps {
   type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
   title?: string;
@@ -57,51 +56,23 @@ const defaultContent = {
     title: 'Loading...',
 
     description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
-
-export function EmptyState({
-  type,
-  title,
-  description,
-  action,
-  icon
-}: EmptyStateProps) {
-  const { t } = useTranslation(),
-  const content = defaultContent[type],
-  const displayTitle = title || content.title,
-  const displayDescription = description || content.description,
-  const displayIcon = icon || content.icon,
-
-  return (
-    <div className="flex flex-col items-center justify-center py-12 px-6 text-center">
-      <div className="mb-4">
-        {displayIcon}
-      </div>
-
-      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-        {displayTitle}
-      </h3>
-
-      <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
-        {displayDescription}
-      </p>;
-      {action && (;
-        <Button;
-          onClick={action.onClick}
-          variant="outline"
-          className="flex items-center gap-2"
-        >
-          <RefreshCw className="w-4 h-4" />
-
           {action.label}
         </Button>
       )}
 
+=======
+      
+
+
+      
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {type === 'error' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
 
+<<<<<<< HEAD
       {type === 'network' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>

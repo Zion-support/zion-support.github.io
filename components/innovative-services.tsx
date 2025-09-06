@@ -5,12 +5,29 @@ import {
 
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
+=======
+
+
+} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+
+
+export default function InnovativeServicesPage() {;
+=======
+import {
+  innovativeMicroSaasServices
+  getInnovativeServicesByCategory
+  getPopularInnovativeServices
+  getInnovativeServicesByPriceRange
+  getInnovativeServiceCategories;
+} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
@@ -19,6 +36,7 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
   const [sortBy, setSortBy] = useState('innovation');
   const [showFilters, setShowFilters] = useState(false);
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           const aLevel = a.innovationLevel.split(' - ')[0];
           const bLevel = b.innovationLevel.split(' - ')[0];
           return (innovationOrder[aLevel as keyof typeof innovationOrder] |0) - (innovationOrder[bLevel as keyof typeof innovationOrder] |0)
@@ -99,19 +117,84 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
             </div>
           </section>
 
+
+  // Search filter;
+  if (searchQuery) {;
+    filteredServices = filteredServices && filteredServices.filter(;
+      service =>;
+        service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+    );  }    filteredServices = filteredServices && filteredServices.filter(service =>;
+      service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+      service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+      service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+      service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+    );
+  // Sort services;
+  filteredServices && filteredServices.sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price':;
+        return a && a.price.monthly - b && b.price.monthly;
+      case 'popularity':;
+        return (b && b.popular ? 1 : 0) - (a && a.popular ? 1 : 0);
+      case 'category':;
+        return a && a.category.localeCompare(b && b.category);
+      case 'roi': {;
+        const aRoi = parseInt(a && a.roi.match(/\d+/)?.[0] || '0');
+        const bRoi = parseInt(b && b.roi.match(/\d+/)?.[0] || '0');
+        return bRoi - aRoi;
+      }
+      default: {;
+        // Innovation level sorting;
+        const innovationOrder = { Breakthrough: 3, Advanced: 2, Standard: 1 };
+        const aLevel = a && a.innovationLevel.split(' - ')[0];
+        const bLevel = b && b.innovationLevel.split(' - ')[0];
+        return (
+          (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) -;
+          (innovationOrder[bLevel as keyof typeof innovationOrder] || 0);
+        );
+      }    }              default: {;
+          // Innovation level sorting;
+          const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 };
+          const aLevel = a && a.innovationLevel.split(' - ')[0];
+          const bLevel = b && b.innovationLevel.split(' - ')[0];
+          return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0);
+        }
+
+
+  };
+
+
+
+
+  const popularServices = getPopularInnovativeServices();
+  const categories = getInnovativeServiceCategories();
+  return (
+
+
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+          </section>;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <div className="flex-1">
                     <div className="relative">
                       <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       <input
                         type="text"
                         placeholder="Search innovative services..."
                         value={searchQuery}
-                        onChange={(e) => setSearchQuery(e && e.target.value)}
-                        className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
-                      />;
-                    </div>;
-                  </div>;
+
+
                   {/* Category Filter */}
+
+=======
                   <div className="flex-shrink-0">
                     <select
                       value={selectedCategory}
@@ -123,8 +206,11 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
                       {categories.map((category) => (
                         <option key={category.name} value={category.name}>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                           {category.name} ({category.count})
                         </option>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
 
                     <select
@@ -133,8 +219,15 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
                       className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                     >
 
+                  {/* Price Range Filter */}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                           {range.label}
                         </option>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
 
                     <select
@@ -143,10 +236,28 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
                       className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                     >
 
+                  {/* Sort Options */}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                           {option.value}
                         </option>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
 
+=======
+
+
+                  {/* View Mode Toggle */}
+                  <div className='flex-shrink-0'>
+                    <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${;
@@ -154,6 +265,7 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
                             ? 'bg-cyan-500 text-white';
                             : 'text-gray-400 hover:text-white';
                         }`}
+
                       >
                         <Grid className="w-5 h-5" />
                       </button>
@@ -161,6 +273,9 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
                         onClick={() => setViewMode('list')}
                         className={`px-3 py-2 rounded-lg transition-all ${
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     </div>
                   </div>
                 </div>
@@ -216,11 +331,14 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
                           </div>;
                           {service.popular && (
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
                         </p>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
                           {service.description}
@@ -273,7 +391,9 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
                           <div className="text-center">
                             <div className="text-lg font-bold text-green-400">{service.roi.split(' ')[0]}</div>
                             <div className="text-xs text-gray-400">average ROI</div>
+
                           </div>
+
                         </div>
                         <p className="text-gray-400 text-sm mb-6 leading-relaxed">{service && service.description}</p>;
                         {/* Innovation Level */}
@@ -314,18 +434,8 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
                             <div className="text-xs text-gray-400">average ROI</div>;
                         </div>;
                         {/* Key Features */}
-                        <div className="mb-6">
-                          <h4 className="text-sm font-semibold text-white mb-3">Key Features</h4>
-                          <div className="space-y-2">
-                            {service.features.slice(0, 3).map((feature, index) => (
-                              <div key={index} className="flex items-center space-x-2">
-                                <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                                <span className="text-xs text-gray-300">{feature}</span>
-                              </div>
-                            ))}
-                            {service.features.length > 3 && (
-                              <div className="text-xs text-cyan-400 text-center pt-2">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -366,14 +476,21 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
                             </div>                          </div>;
                         </div>;
                         {/* CTA Buttons */}
+
                             className='px-4'>;
                             <Mail className='w-4 h-4' />                          </Button>;
                         </div>;
+
+
                         {/* Contact Info */}                          <Button
                             href={service && service.link}
+
+=======
                         <div className="flex space-x-3">
                           <Button
                             href={service.link}
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             variant="primary"
                             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">;
                             Learn More;
@@ -382,10 +499,8 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
                           <Button
                             href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}
                             variant="secondary"
-                            className="px-4">;
-                            <Mail className="w-4 h-4" />;
-                          </Button>;
-                        </div>;
+
+
                         {/* Contact Info */}
                         <div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>;
                           <div>;
@@ -397,6 +512,9 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
                         </div>;
                       </div>;
                     </QuantumHolographicCard>;
+
+=======
+
                         {/* Contact Info */}
                         <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">
                           <div>Contact: {contactInfo.mobile} | {contactInfo.email}</div>
@@ -404,9 +522,33 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
                         </div>
                       </div>
                     </QuantumHolographicCard>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 </div>;
               )}
+=======
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {/* Call to Action */}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  Ready to Lead the Future?
+                </h2>
+                <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+                  Join the revolution with our breakthrough micro SAAS services.
+                  Transform your business with quantum AI, autonomous systems
+                  and cutting-edge technology.
+                </p>
+                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>
@@ -441,6 +583,7 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
                   <div>Address: {contactInfo.address}</div>
                   <div className="mt-1">Website: {contactInfo.website}</div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -450,3 +593,12 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
     </>
 
 }
+=======
+    </>);
+=======
+);
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

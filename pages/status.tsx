@@ -1,3 +1,5 @@
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -16,9 +18,12 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+
 import React from "react";
 import Layout from "../components/Layout";
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function Status() {
   return (
     <Layout
@@ -29,6 +34,10 @@ export default function Status() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
 
+=======
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">System Status</h1>
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               All systems are operational.
             </p>

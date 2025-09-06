@@ -9,6 +9,9 @@ interface UseLocalStorageProps {
 
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     try {
 
       const item = window.localStorage.getItem(key);
@@ -41,3 +44,5 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 };
 };
 };
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

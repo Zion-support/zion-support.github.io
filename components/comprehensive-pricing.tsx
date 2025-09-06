@@ -10,6 +10,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import {
 
 } from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
@@ -66,6 +67,17 @@ export default function ComprehensivePricingPage() {;
     });  }
   // Search filter
   if (searchQuery) {    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+  ];
+
+    filteredServices = filteredServices.filter(service => service.category === selectedCategory)
+
+  }
+  // Price range filter
+  if (priceRange !== 'All') {
+
+    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     filteredServices = filteredServices.filter(service => {
       const price = parseFloat(service.price.replace('$', '').replace(, ''));
       return price >= min && (max === Infinity |price <= max)
@@ -215,6 +227,78 @@ export default function ComprehensivePricingPage() {;
     },      icon: <Shield className="w-6 h-6" />
     }
     {
+      name: 'Professional',
+      price: '$199',
+      period: '/month',
+      description: 'Ideal for growing businesses and teams',
+
+      features: [;
+        'Advanced service access',
+        'Priority support',
+        'Advanced features',
+        'API access',
+        'Advanced analytics',
+        'Custom integrations',
+      ],
+      icon: <Gem className="w - 6 h - 6" />,
+      color: 'from - purple - 500 to - pink - 600',
+      popular: true,
+    },    {        'Advanced service access_priority support_advanced featuresAPI access_advanced analytics_custom integrations';
+      ];
+      icon: <Gem className="w - 6 h - 6" />,
+      color: 'from - purple - 500 to - pink - 600',
+      popular: true;
+    }
+
+      name: 'Enterprise',
+      price: '$499',
+      period: '/month',
+      description: 'For large organizations and enterprises',
+
+      features: [;
+        'Full service access',
+        '24 / 7 dedicated support',
+        'All features',
+        'Custom development',
+        'Enterprise analytics',
+        'White - label options',
+        'SLA guarantees',
+      ],
+      icon: <Crown className="w - 6 h - 6" />,
+      color: 'from - yellow - 500 to - orange - 600',
+      popular: false,
+    },  ];        'Full service access24 / 7 dedicated support_all features_custom development_enterprise analytics_white - label optionsSLA guarantees';
+
+      ];
+      icon: <Crown className="w - 6 h - 6" />,
+      color: 'from - yellow - 500 to - orange - 600',
+      popular: false;
+    }
+
+  // Market statistics;
+  const market_stats = [;
+
+    {
+      metric: '$15.2B',
+      label: 'Total Market Size',
+      description: 'Combined market value of all services',
+
+      icon: <ChartBar className='w - 6 h - 6' />,
+    },    {
+      metric: '400+',
+      label: 'Services Available',
+      description: 'Comprehensive micro SaaS portfolio',
+      icon: <Database className='w - 6 h - 6' />,
+    },    {
+      metric: '99.99%',
+      label: 'Uptime Guarantee',
+      description: 'Enterprise - grade reliability',
+      icon: <Shield className='w - 6 h - 6' />,
+    },    {
+      metric: '2000%+',
+      label: 'Average ROI',
+      description: 'Proven business value',
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   ];
   const containerVariants = {
@@ -288,6 +372,59 @@ export default function ComprehensivePricingPage() {;
                 transition={{ duration: 0.8 }}
               >
 
+  return (
+    <UltraFuturisticBackground variant='holographic' intensity='high'>;
+      <div className='min - h-screen'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        <Head>;
+          <title>;
+            Comprehensive Pricing | Zion Tech Group - Micro SaaS Services;
+            Pricing & Plans;
+          </title>;
+
+            href='https://ziontechgroup && ziontechgroup.com/comprehensive-pricing'
+          />;
+        </Head>;
+
+
+        {/* Hero Section */}
+
+        <section className="relative py-20 overflow-hidden">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-5xl mx-auto">
+              <motion.h1 
+                className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
+                initial={{ opacity: 0, y: 30 }}
+
+                animate={{ opacity: 1, y: 0 }}
+
+                transition={{ duration: 0 && 0.8 }}>;
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>        <section className="relative py-20 overflow-hidden">;
+          <div className="container mx-auto px-4 text-center">;
+            <div className="max-w-5xl mx-auto">;
+              <motion&& motion.h1 
+
+                className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
+                animate={{ opacity: 1, y: 0 }}
+
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Comprehensive
+
+                </span>
+                <br />
+                <span className="text-white">Pricing & Plans</span>
+              </motion.h1>
+              <motion.p
+                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+=======
+                transition={{ duration: 0.8 }}
+              >
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -310,6 +447,8 @@ export default function ComprehensivePricingPage() {;
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                     <div className="text-gray-500 text-xs">{stat.description}</div>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
@@ -317,6 +456,8 @@ export default function ComprehensivePricingPage() {;
 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -341,6 +482,7 @@ export default function ComprehensivePricingPage() {;
                       .getElementById('services-pricing');
                       ?.scrollIntoView({ behavior: 'smooth' });
                   }
+
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 {marketStats.map((stat, index) => (
@@ -372,6 +514,9 @@ variant="primary"
                   onClick={() => document.getElementById('services-pricing')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Browse All Services
+=======
+                  <Search className="ml-2 w-5 h-5" />
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                 </Button>
               </motion.div>
@@ -383,14 +528,19 @@ variant="primary"
                 <span className="text-white">{contactInfo.address}</span>
                 <Globe className="w-5 h-5 text-blue-400" />
                 <span className="text-white">{contactInfo.website}</span>
+
               </div>
+
             </div>
           </div>
         </section>
-{/* Pricing Tiers */}
+        {/* Pricing Tiers */}
+
         <section id="pricing-tiers" className="py-20">
+
           <div className="container mx-auto px-4">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -412,301 +562,16 @@ variant="primary"
               </p>
             </motion.div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-          <meta;
-            name='description';
-            content='Explore comprehensive pricing for all Zion Tech Group micro SaaS services. Transparent pricing, market analysis, ROI guarantees, and flexible plans for every business size.';
-          />;
-          <meta;
-            name='keywords';
-            content='micro SaaS pricing, service pricing, business pricing, ROI guarantees, market analysis, transparent pricing, enterprise pricing';
-          />;
-          <meta name='author' content='Zion Tech Group' />;
-          <meta;
-            property='og:title';
-            content='Comprehensive Pricing | Zion Tech Group';
-          />;
-          <meta;
-            property='og:description';
-            content='Transparent pricing for all micro SaaS services with market analysis and ROI guarantees.';
-          />;
-          <meta;
-            property='og:url';
-            content='https://ziontechgroup.com / comprehensive - pricing';
-          />;
-          <meta property='og:type' content='website' />;
-          <link;
-            rel='canonical';
-            href='https://ziontechgroup.com / comprehensive - pricing';
-          />;
-        </Head>;
-        {/* Hero Section */}
-        <section className='relative py - 20 overflow - hidden'>;
-          <div className='container mx - auto px - 4 text - center'>;
-            <div className='max - w-5xl mx - auto'>;
-              <motion.h1;
-                className='text - 6xl md:text - 8xl font - bold mb - 8 futuristic - glow'                initial={{ opacity: 0, coordinate_y: 30 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8 }}
-              >;
-                <span className='bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>        <section className="relative py - 20 overflow - hidden">;
-          <div className="container mx - auto px - 4 text - center">;
-            <div className="max - w-5xl mx - auto">;
-              <motion.h1;
-                className="text - 6xl md:text - 8xl font - bold mb - 8 futuristic - glow";
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8 }}
-              >;
-                <span className='bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
-                  Comprehensive;
-                </span>;
-                <br />;
-                <span className='text - white'>Pricing & Plans</span>;
-              </motion.h1>;
-              <motion.p;
-                className='text - xl md:text - 2xl text - gray - 300 mb - 12 leading - relaxed'                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >;
-                Transparent pricing for all our revolutionary micro SaaS;
-                services. Choose the perfect plan for your business with;
-                guaranteed ROI and enterprise - grade reliability.                  Comprehensive;
-                </span>;
-                <br />;
-                <span className="text - white">Pricing & Plans</span>;
-              </motion.h1>;
-              <motion.p;
-                className="text - xl md:text - 2xl text - gray - 300 mb - 12 leading - relaxed";
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >;
-                Transparent pricing for all our revolutionary micro SaaS;
-                services. Choose the perfect plan for your business with;
-                guaranteed ROI and enterprise - grade reliability.;
-              </motion.p>;
-              {/* Market Stats */}
-              <motion.div;
-                className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 16'                initial={{ opacity: 0, coordinate_y: 20 }}              </motion.p>;
-              {/* Market Stats */}
-              <motion.div;
-                className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 16";
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >;
-                {market_stats.map ((stat, index) => (
-                  <div key={index} className='text - center'>;
-                    <div className='text - 3xl font - bold text - cyan - 400 mb - 2'>;
-                      {stat.metric}
-                    </div>;
-                    <div className='text - gray - 400 text - sm'>{stat.label}</div>;
-                    <div className='text - gray - 500 text - xs'>;
-                      {stat.description}
-                    </div>                  </div>                  <div key={index} className="text - center">;
-                    <div className="text - 3xl font - bold text - cyan - 400 mb - 2">{stat.metric}</div>;
-                    <div className="text - gray - 400 text - sm">{stat.label}</div>;
-                    <div className="text - gray - 500 text - xs">{stat.description}</div>))}
-              </motion.div>;
-              {/* CTA Buttons */}
-              <motion.div;
-                className='flex flex - col sm:flex - row gap - 4 justify - center items - center'                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >              <motion.div;
-                className="flex flex - col sm:flex - row gap - 4 justify - center items - center";
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >;
-                <Button;
-                  variant='primary';
-                  size='lg';
-                  on_click={() =>;
-                    document;
-                      .getElementById ('pricing - tiers');
-                      ?.scrollIntoView ({ behavior: 'smooth' });
-                  }
-                  View Pricing Tiers;
-                  <DollarSign className='ml - 2 w - 5 h - 5' />;
-                </Button>;
-                <Button;
-                  variant='futuristic';
-                  size='lg';
-                  on_click={() =>;
-                    document;
-                      .getElementById ('services - pricing');
-                      ?.scrollIntoView ({ behavior: 'smooth' });
-                  }
-                >;
-                  Browse All Services;
-                  <Search className='ml - 2 w - 5 h - 5' />                </Button>                  <Search className="ml - 2 w - 5 h - 5" />;
-                </Button>;
-              </motion.div>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Contact Information Banner */}
-        <section className='py - 8 bg - gradient - to - r from - slate - 900 / 80 to - slate - 800 / 80 backdrop - blur - sm border - t border - b border - purple - 400 / 20'>;
-          <div className='container mx - auto px - 4'>;
-            <div className='flex flex - col md:flex - row justify - between items - center gap - 4'>;
-              <div className='flex items - center gap - 4'>;
-                <Phone className='w - 5 h - 5 text - cyan - 400' />;
-                <span className='text - white'>{contact_info.mobile}</span>;
-                <Mail className='w - 5 h - 5 text - purple - 400' />;
-                <span className='text - white'>{contact_info.email}</span>;
-              </div>;
-              <div className='flex items - center gap - 4'>;
-                <MapPin className='w - 5 h - 5 text - green - 400' />;
-                <span className='text - white'>{contact_info.address}</span>;
-                <Globe className='w - 5 h - 5 text - blue - 400' />;
-                <span className='text - white'>{contact_info.website}</span>              </div>              <div className="flex items - center gap - 4">;
-                <MapPin className="w - 5 h - 5 text - green - 400" />;
-                <span className="text - white">{contact_info.address}</span>;
-                <Globe className="w - 5 h - 5 text - blue - 400" />;
-                <span className="text - white">{contact_info.website}</span>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Pricing Tiers */}
-        <section id='pricing - tiers' className='py - 20'>;
-          <div className='container mx - auto px - 4'>;
-            <motion.div;
-              className='text - center mb - 16'              initial={{ opacity: 0, coordinate_y: 20 }}        <section id="pricing - tiers" className="py - 20">;
-          <div className="container mx - auto px - 4">;
-            <motion.div;
-              className="text - center mb - 16";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >;
-              <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 4'>;
-                <span className='bg - gradient - to - r from - cyan - 400 to - purple - 400 bg - clip - text text - transparent'>;
-                  Flexible Pricing;
-                </span>;
-                <br />;
-                <span className='text - white'>for Every Business</span>;
-              </h2>;
-              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-                Choose the perfect plan that scales with your business. All;
-                plans include our 21 - day free trial and ROI guarantee.;
-              </p>;
-            </motion.div>;
-            <motion.div;
-              className='grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-6xl mx - auto';
-              variants={container_variants}
-              initial='hidden';
-              whileInView='visible'              viewport={{ once: true }}                  Flexible Pricing;
-                </span>;
-                <br />;
-                <span className="text - white">for Every Business</span>;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                Choose the perfect plan that scales with your business. All plans include our 21 - day free trial and ROI guarantee.;
-              </p>;
-            </motion.div>;
-            <motion.div;
-              className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-6xl mx - auto";
-              variants={container_variants}
-              initial="hidden";
-              whileInView="visible";
-              viewport={{ once: true }}
-            >;
-              {pricing_tiers.map ((tier, index) => (
-                <motion.div;
-                  key={tier.name}
-                  variants={item_variants}
-                  while_hover={{ coordinate_y: -10 }}
-                >;
-                  <UltraFuturisticCard;
-                    variant={
-                      tier.popular ? 'holographic - advanced' : 'quantum - advanced';
-                    }
-                    size='large';
-                    className={`h - full relative ${tier.popular ? 'ring - 2 ring - purple - 400' : ''}`}
-                  >;
-                    {tier.popular && (
-                      <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
-                        <div className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 4 py - 2 rounded - full text - sm font - bold'>                          Most Popular;
-                        </div>;
-                      </div>)}                    variant={tier.popular ? 'holographic - advanced' : 'quantum - advanced'}
-                    size="large";
-                    className={`h - full relative ${tier.popular ? 'ring - 2 ring - purple - 400' : ''}`}
-                  >;
-                    {tier.popular && (
-                      <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
-                        <div className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 4 py - 2 rounded - full text - sm font - bold">;
-                        </div>;
-                      </div>)}
-                    <div className='text - center mb - 8'>;
-                      <div;
-                        className={`inline - flex p - 4 rounded - 2xl bg - gradient - to - br ${tier.color} mb - 6`}
-                      >;
-                        {tier.icon}
-                      </div>;
-                      <h3 className='text - 2xl font - bold text - white mb - 2'>;
-                        {tier.name}
-                      </h3>;
-                      <p className='text - gray - 300 text - sm mb - 4'>;
-                        {tier.description}
-                      </p>;
-                      <div className='text - 4xl font - bold text - cyan - 400 mb - 2'>;
-                        {tier.price}
-                    <div className='text-center mb-8'>;
-                      <div
-                        className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${tier && tier.color} mb-6`}>;
-                        {tier && tier.icon}
-                      </div>;
-                      <h3 className='text-2xl font-bold text-white mb-2'>;
-                        {tier && tier.name}
-                      </h3>;
-                      <p className='text-gray-300 text-sm mb-4'>;
-                        {tier && tier.description}
-                      </p>;
-                      <div className='text-4xl font-bold text-cyan-400 mb-2'>;
-                        {tier && tier.price}
-                      </div>;
-                      <div className='text-sm text-gray-400'>{tier && tier.period}</div>;
-                    </div>;
-                    <div className='space-y-3 mb-8'>;
-                      {tier && tier.features.map((feature, idx) => (;
-                        <div key={idx} className='flex items-center gap-2'>;
-                          <Check className='w-4 h-4 text-green-400 flex-shrink-0' />;
-                          <span className='text-sm text-gray-300'>;
-                            {feature}
-                          </span>                        </div>;
-                      ))}
-                    variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced'}
-                    size="large"
-                    className={`h-full relative ${tier.popular ? 'ring-2 ring-purple-400' : ''}`}
-                  >
-                    {tier.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold">
-                          Most Popular
-                        </div>
-                      </div>
-                    )}
-<div className="text-center mb-8">
-                      <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${tier.color} mb-6`}>
-                        {tier.icon}
-                      </div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                      <p className="text-gray-300 text-sm mb-4">{tier.description}</p>
-                      <div className="text-4xl font-bold text-cyan-400 mb-2">{tier.price}</div>
-                      <div className="text-sm text-gray-400">{tier.period}</div>
-                    </div>
-                    <div className="space-y-3 mb-8">
-                      {tier.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-2">
-                          <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          <span className="text-sm text-gray-300">{feature}</span>
-                        </div>
+
+
                       ))}
                     </div>
+
                     </div>;
                         {tier && tier.icon}
                       </div>;
@@ -724,9 +589,11 @@ variant="primary"
                       ))}
                     </div>;
                     <div className='text-center'>;
+
                       <Button
                         variant={tier && tier.popular ? 'futuristic' : 'primary'}
                         size='md'
+
                         onClick={() =>;
                           window && window.open(;
                             'https://ziontechgroup && ziontechgroup.com/contact',;
@@ -748,22 +615,27 @@ variant="primary"
                     </div>;
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
-                    <div className="text-center">
-                                             <Button
-                         variant={tier.popular ? 'futuristic' : 'primary'}
-                         size="md"
-                         onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
-                         className="w-full"
-                       >
-                        Get Started
-                        <ArrowRight className="ml-2 w-4 h-4" />
 
-                    </div>
-                  </UltraFuturisticCard>
-                </motion.div>
               ))}
 
         {/* Services Pricing Grid */}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Services Pricing Grid */}
+        <section id="services-pricing" className="py-20">
+          <div className="container mx-auto px-4">
+            {/* Filters and Controls */}
+            <motion&& motion.div
+              className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">;
+          <div className="container mx-auto px-4">;
+            {/* Filters and Controls */}
+
+            <motion&& motion.div 
+
+              className="mb-8"
+
+
+        {/* Services Pricing Grid */}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <section id='services-pricing' className='py-20'>
           <div className='container mx-auto px-4'>
             {/* Filters and Controls */}
@@ -814,10 +686,62 @@ variant="primary"
                   <div className='relative'>
                     <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0 && 0.6 }}>;
+              <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
+                <div className='flex flex-wrap gap-4'>;
+                  <select
+                    value={selectedCategory}
+                    onChange={e => setSelectedCategory(e && e.target.value)}
+                    className='px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400';
+                  >;
+                    <option value='All'>All Categories</option>;
+                    {revolutionaryServiceCategories && revolutionaryServiceCategories.map(category => (;
+                      <option key={category} value={category}>;
+                        {category}
+                      </option>;
+                    ))}
+                  </select>;
+                  <select
+                    value={priceRange}
+                    onChange={e => setPriceRange(e && e.target.value)}
+                    className='px-4 py-2 bg-slate-800 border border-purple-400/30 rounded-lg text-white focus:outline-none focus:border-purple-400';
+                  >;
+                    {priceRanges && priceRanges.map(range => (;
+                      <option key={range && range.value} value={range && range.value}>;
+                        {range && range.label}
+                      </option>;
+                    ))}
+
+                  </select>;
+
+
+                  <select
+                    value={sortBy}
+                    onChange={e => setSortBy(e && e.target.value)}
+                    className='px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400';
+                  >;
+                    {sortOptions && sortOptions.map(option => (;
+                      <option key={option && option.value} value={option && option.value}>;
+                        {option && option.label}
+                      </option>;
+                    ))}
+
+                  </select>;
+                </div>;
+
+                <div className='flex items-center gap-4'>;
+                  <div className='relative'>;
+                    <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     <input
                       type='text'
                       placeholder='Search services...'
                       value={searchQuery}
+
                       onChange={e => setSearchQuery(e && e.target.value)}
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64';
                     />;
@@ -828,6 +752,7 @@ variant="primary"
                     >;
                       <Grid className='w-4 h-4' />                    </button>                  ;
                   <div className="flex border border-gray-600 rounded-lg overflow-hidden">;
+
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
@@ -902,6 +827,21 @@ variant="primary"
               </div>
             </motion.div>
 
+                    </button>;
+                  </div>;
+                </div>;
+              </div>;
+
+
+              className={viewMode === 'grid' 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+              whileInView='visible'              viewport={{ once: true }}            <motion.div 
+              className={viewMode === 'grid' 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -917,11 +857,15 @@ variant="primary"
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
                     {viewMode === 'grid' ? (
                       // Grid View
+
               variants={container_variants}
               initial='hidden';
               whileInView='visible'              viewport={{ once: true }}            <motion.div;
@@ -949,6 +893,7 @@ variant="primary"
                       <div className='text - center'>;
                         <div className='text - 4xl mb - 4'>{service.icon}</div>;
                         <h3 className='text - xl font - bold text - white mb - 2'>;
+
                           {service.name}
                         </h3>;
                         <p className='text - gray - 300 mb - 4 text - sm'>;
@@ -959,6 +904,8 @@ variant="primary"
                         </div>;
                         <div className='text - sm text - gray - 400 mb - 4'>;
                           {service.period}
+
+
                     variant={(service && service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service && service.variant as any || 'quantum-advanced'}
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}>;
@@ -1354,6 +1301,7 @@ variant="primary"
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
+
             </motion && motion.div>;
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -1411,6 +1359,9 @@ variant="primary"
                 </Button>              </motion && motion.div>                <div className="text-6xl mb-4">🔍</div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                                  <Button
                    variant="primary"
                    onClick={() => {;
@@ -1427,6 +1378,30 @@ variant="primary"
               transition={{ duration: 0.8 }}
             >
 
+=======
+          </div>;
+        </section>;
+        {/* Contact Section */}
+        <section className='py-20'>;
+          <div className='container mx-auto px-4 text-center'>;
+            <motion&& motion.div
+              className='max-w-4xl mx-auto'              initial={{ opacity: 0, y: 20 }}        <section className="py-20">;
+          <div className="container mx-auto px-4 text-center">;
+            <motion&& motion.div 
+              className="max-w-4xl mx-auto"
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0 && 0.8 }}>;
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+                Ready to Get Started?;
+              </h2>;
+              <p className='text-xl text-gray-300 mb-8'>;
+                Contact our sales team to discuss pricing, custom plans, and;
+                implementation options.;
+              </p>;
+              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <Button
                   variant='primary'
                   size='lg'
@@ -1443,8 +1418,10 @@ variant="primary"
                   onClick={() =>;
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
                   }
+
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
+
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our sales team to discuss pricing, custom plans, and implementation options.
@@ -1483,11 +1460,30 @@ variant="primary"
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
 
+
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              >
+
+
                 </div>
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
+=======
+
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

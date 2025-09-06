@@ -1,5 +1,6 @@
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 ;
 app.command('/zion', async ({ command, ack, respond }) => {;
@@ -64,3 +65,4 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   // eslint-disable-next-line no-console;
   // // // console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -5,6 +5,12 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
 const supabase = createClient(supabaseUrl, supabaseAnonKey),
 
+// Initialize the Supabase client
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
+const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 /**
  * Main function to process job-talent matching
  * @param job The job data to find matches for
@@ -14,20 +20,26 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey),
 export async function processJobMatching(job: JobData, talents: any[]): Promise<MatchResult[]> {
   try {
 
+=======
+    const jobSkillsNormalized = await normalizeSkillsWithAI(job && job.skills);
+    
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Prepare job details for matching prompt
     const jobDetails = {
-      title: job.title,
-      description: job.description,
-      category: job.category,
+      title: job && job.title;
+      description: job && job.description;
+      category: job && job.category;
       skills: jobSkillsNormalized,
+<<<<<<< HEAD
       budget: job.budget
     },
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Use OpenAI to find best matches
-    const bestMatches = await findBestMatches(jobDetails, talents),
+    const bestMatches = await findBestMatches(jobDetails, talents);
     return bestMatches
   } catch (error) {
-    console.error("Error in processJobMatching:", error),
+    console && console.error("Error in processJobMatching:", error);
     throw error
   }
 }
@@ -37,7 +49,7 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
  * @param matchedTalents Array of match results
  */
 export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {
-  const matchInsertPromises = matchedTalents.map(async (match) => {
+  const matchInsertPromises = matchedTalents && matchedTalents.map(async (match) => {
     const { error: matchError } = await supabase
       .from("job_talent_matches")
 
@@ -45,8 +57,9 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
         reason: match.reason
       }),
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (matchError) {
-      console.error(`Error storing match for talent ${match.talentId}:`, matchError)
+      console && console.error(`Error storing match for talent ${match && match.talentId}:`, matchError)
     } else {
       // Create notifications for each matched talent
       await supabase.rpc('create_notification', {
@@ -84,6 +97,7 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
     throw error;
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
 /**;
  * Stores match results in the database and creates notifications;
@@ -118,3 +132,4 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
 
 }
 ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

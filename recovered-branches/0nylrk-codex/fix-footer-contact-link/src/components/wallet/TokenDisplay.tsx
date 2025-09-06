@@ -1,3 +1,4 @@
+
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
 
   const { wallet, loading } = useWallet();
@@ -29,3 +30,20 @@
               </Button>
             </div>
           </div>
+              <Button variant="outline" size="sm">;
+                View Wallet;
+              </Button>;
+            </div>;
+
+          </div>)}
+      </CardContent>;
+    </Card>);
+
+}
+=======
+}
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

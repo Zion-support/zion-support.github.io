@@ -54,17 +54,22 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
     category: 'Marketing Automation',
     pricing: { starter: '$29 / mo' },
     features: [;
+
       'Smart review routing',
       'NPS & CSAT',
       'Churn alerts',
       'Multi - location dashboards',
     ],
     integrations: ['Google Business Profile', 'Yelp'],
+
     use_cases: ['Local ranking', 'Reputation management'],
     link: 'https://ziontechgroup.com / services / local - seo - reviews - booster',
     real_service: true,
+
   },
   {
+
+=======
     id: 'smart - invoice - reconciliation',
     name: 'Smart Invoice Reconciliation',
     description:;
@@ -72,21 +77,31 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
     category: 'Financial Technology',
     pricing: { starter: '$59 / mo' },
     features: [;
+
       'OCR ingestion',
       'Matching heuristics',
       'Discrepancy alerts',
       'Export to ERP',
     ],
     integrations: ['QuickBooks', 'Xero', 'Stripe'],
+
     use_cases: ['Accounting automation', 'Finance ops'],
     link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
     real_service: true,
+
   },
   {
 
+=======
+      'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ];	id: string;
+
+=======
 	id: string, name: string,
 	description: string, tagline?: string,
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 	category:
 		| 'Content Marketing'
 		| 'Business Operations'
@@ -119,7 +134,9 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		useCases: ['Content repurposingSEO growth'];
 		link: 'https://ziontechgroup && ziontechgroup.com/services/podcast-transcription-seo-suite';
 		realService: true;
+
 		rating: 4 && 4.7,
+
 		launchDate: '2025-12-01'
 	}
 	{
@@ -131,7 +148,9 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		features: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards'];
 		integrations: ['Google Business ProfileYelp'];
 		useCases: ['Local rankingReputation management'];
+
 		link: 'https://ziontechgroup && ziontechgroup.com/services/local-seo-reviews-booster',
+
 		realService: true
 	}
 	{
@@ -143,7 +162,9 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		features: ['OCR ingestionMatching heuristicsDiscrepancy alertsExport to ERP'];
 		integrations: ['QuickBooksXeroStripe'];
 		useCases: ['Accounting automationFinance ops'];
+
 		link: 'https://ziontechgroup && ziontechgroup.com/services/smart-invoice-reconciliation',
+
 		realService: true
 	}
 	{
@@ -155,8 +176,20 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		features: ['Resume parsingJD matchingQuestion setsATS sync'];
 		integrations: ['GreenhouseLever'];
 		useCases: ['Faster hiringBias reduction'];
+
 		link: 'https://ziontechgroup && ziontechgroup.com/services/candidate-screening-copilot',
+
 		realService: true
+=======
+<<<<<<< HEAD
+	}
+];
+
+
+];
+;
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 	id: string,;
 	name: string,;

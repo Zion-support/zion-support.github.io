@@ -1,3 +1,8 @@
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 export const cuttingEdgeAIServices2025 = [
 
@@ -415,6 +420,17 @@ export const cuttingEdgeAIServices2025 = [
       'Intellectual property protection',
     ],
 
+    ];
+    integrations: ['Creative software_design tools_marketing platforms_content management systems_collaboration tools'];
+    compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection'];
+  }
+];
+
+
+=======
+  },;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
     ];
     integrations: ['Creative softwareDesign toolsMarketing platformsContent management systemsCollaboration tools'];
@@ -422,3 +438,8 @@ export const cuttingEdgeAIServices2025 = [
 
   }
 ];
+  }
+];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

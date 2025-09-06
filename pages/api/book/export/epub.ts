@@ -1,4 +1,5 @@
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import { NextApiRequest, NextApiResponse } from "next";
 import { randomUUID } from "crypto";
@@ -7,6 +8,100 @@ import { Epub } from "epub-gen";
 export const config = {
   api: {
     bodyParser: {
+=======
+
+
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+function chapterToHtml(text: string): string {
+  if (!text) return "";
+  return text
+    .split(/\n\n+/)
+    .map((p) => `<p>${escapeHtml(p)}</p>`)
+    .join("\n");
+}
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req && req.method !== "POST") {
+    res && res.status(405).json({ error: "Method not allowed" });
+    return;
+  }
+
+
+
+  const { project } = req && req.body as { project: any };
+  if (!project?.meta || !Array && Array.isArray(project?.chapters)) {
+    res && res.status(400).json({ error: "Invalid payload" });
+    return;
+  }
+  const tmpPath = `/tmp/${randomUUID()}.epub`;
+  const options = {
+
+
+    );
+
+    res && res.status(500).json({ error: e?.message || "Failed to build EPUB" });
+
+  } finally {
+    try {
+      await fs && fs.unlink(tmpPath);
+    } catch {}
+  }
+}
+
+  try {
+    await new Epub(options, tmpPath).promise;
+    const buf = await fs.readFile(tmpPath);
+    res.setHeader('Content-Typeapplication/epub+zip');
+    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"');
+    res.status(200).send(buf)
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || 'Failed to build EPUB' })
+  } finally {
+    try { await fs.unlink(tmpPath) } catch {}
+  }
+}
+function chapterToHtml(text: string): string {
+  if (!text) return '';
+  return text
+    .split(/\n\n+/)
+    .map((p) => `<p>${escapeHtml(p)}</p>`)
+    .join('\n')
+}
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, '&amp,')
+    .replace(/</g, '&lt,')
+    .replace(/>/g, '&gt,')
+    .replace(/"/g, '&quot,')
+    .replace(/'/g, '&#039,')
+}
+import { NextApiRequest, NextApiResponse  } from './next';
+import { randomUUID  } from './crypto';
+import { promises as fs  } from './fs';
+import { Epub  } from './epub - gen';
+;
+export const config = {
+  api: {
+    body_parser: {
+      size_limit: "10mb",
+    },
+  },
+=======
+      sizeLimit: "10mb"
+    }
+  }
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 function escapeHtml(s: string): string {
   return s
@@ -59,3 +154,17 @@ function escape_html (string: string): string {
   } catch (e: any) {
     res.status (500).json ({ error: e?.message || "Failed to build EPUB" });
   } finally {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    try {
+      await fs.unlink (tmp_path);
+    } catch {}
+  }
+<<<<<<< HEAD
+}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -5,6 +5,7 @@ interface Listing {
   id: string;
   title: string;
   description: string;
+  price: number;
   category: string;
   subcategory?: string;
   image?: string;

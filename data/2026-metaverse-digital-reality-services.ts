@@ -13,6 +13,32 @@
     email: string;
 
     address: string;
+=======
+
+export interface MetaverseDigitalRealityService2026 {;
+
+      "Social interactions"
+    ],
+    link: "/services/2026-metaverse-digital-reality",
+    category: "Metaverse Digital Reality 2026",
+    realImplementation: true,
+    contactInfo: {
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    }
+  }
+
+];
+
+=======
+;
+=======
+=======
+export interface MetaverseDigitalRealityService2026 {;
+=======
+  };
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   id: string,;
   name: string,;

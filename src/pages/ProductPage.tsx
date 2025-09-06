@@ -56,6 +56,15 @@ export default function ProductPage() {;
           <div className="mb-4 relative w-full h-64">
             <Image
 
+=======
+              src = {product.images[0] |'/placeholder.svg',}
+              alt = {product.title,}
+
+
+              src={product.images[0] || '/placeholder.svg'}
+              alt={product.title}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="object-cover rounded-md"
             />
           </div>
@@ -66,25 +75,35 @@ export default function ProductPage() {;
       </div>
     </>
   );
+
 }
 //Only fetch if id is available (from router) ;
-}const inCart = items.some (i => i.id === product.id);
-const handleAdd = () => {if (inCart) return;
-setAdding (true);
-dispatch ({;
-  type: 'ADD ITEM';
-payload: {;
-  id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 ;
-});
-toast.success (`1× $ {product.title ;
-}added`);
-setTimeout ( () => setAdding (false), 500) ;
+
 }
-product.title ;
-}description= {product.description ;
-}ogImage= {product.images?.[0] ;
-}/> </Button> </div> </>) ;
-}';
+
+import Image from 'next / image';
+import {Button} from '@/components / ui / button';
+import {NEW_PRODUCTS} from '@/data / newProductsData';
+import {use_cart} from '@/context / CartContext';
+import {toast} from '@/hooks / use - toast';
+import {SEO} from '@/components / SEO';
+import {logErrorToProduction} from '@/utils / production_logger';
+export default /**
+ * ProductPage - Function description
+ */
+function ProductPage() {
+  const router = use_router ();
+  const { id: raw_id } = router.query;
+  const id = typeof raw_id === 'string' ? raw_id : undefined;
+  const [product, set_product] = useState (
+    NEW_PRODUCTS.find ((p) => p.id === id) || null);
+  const { items, dispatch } = use_cart ();
+  const [adding, set_adding] = useState (false);
+  useEffect (() => {
+    // Update product if id changes and is available from router.query;
+    // Check condition
+if ( {) {
+  $2
 }
 
         </Button>;
@@ -93,3 +112,4 @@ product.title ;
   );
 }
 ;
+<<<<<<< HEAD

@@ -42,6 +42,13 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     // For now, we'll just show a toast
     toast({
 
+=======
+
+      title: 'Notes saved',
+      description: 'Your notes have been saved',
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     })
     setShowNotes(false)
   }
@@ -66,42 +73,81 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
 
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" className="h-8 w-8 p-0">
-                      <MoreVertical className="h-4 w-4" />
+                    <Button variant='ghost' className='h-8 w-8 p-0'>
+                      <MoreVertical className='h-4 w-4' />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end">
+                  <DropdownMenuContent align='end'>
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
-                      {showNotes ? "Hide notes" : "Add notes"}
-                    </DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => setShowHireModal(true)}>
-                      <BriefcaseIcon className="h-4 w-4 mr-2" aria-hidden="true" /> Hire Candidate
-                    </DropdownMenuItem>
-                    <DropdownMenuItem asChild>
-                      <Link href={`/messages?talentId=${application.talent_id}`}>
-                        Message
-                      </Link>
-                    </DropdownMenuItem>
-                    {application.resume?.file_url && (
-                      <DropdownMenuItem asChild>
-                        <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
-                          View Resume
-                        </Link>
-                      </DropdownMenuItem>
+                  </AvatarPrimitive>;
+                  <div>;
+                    <h4 className='font-medium text-sm'>{candidateName}</h4>;
+                    <p className='text-xs text-muted-foreground'>;
+                      {application && application.talent_profile?.professional_title ||;
+                        'Applicant'}
+                    </p>;
+                  </div>;
+                </div>;
+
+                <DropdownMenu>;
+                  <DropdownMenuTrigger asChild>;
+                    <Button variant='ghost' className='h-8 w-8 p-0'>;
+                      <MoreVertical className='h-4 w-4' />;
+                    </Button>;
+                  </DropdownMenuTrigger>;
+                  <DropdownMenuContent align='end'>;
+                    <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>;
+                      {showNotes ? 'Hide notes' : 'Add notes'}
+                    </DropdownMenuItem>;
+                    <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
+                      <BriefcaseIcon
+                        className='h-4 w-4 mr-2'
+                        aria-hidden='true'
+                      />{' '}
+                      Hire Candidate;
+                    </DropdownMenuItem>;
+                    <DropdownMenuItem asChild>;
+                      <Link
+                        href={`/messages?talentId=${application && application.talent_id}`}>;
+                        Message;
+                      </Link>;
+                    </DropdownMenuItem>;
+                    {application && application.resume?.file_url && (;
+                      <DropdownMenuItem asChild>;
+                        <a
+                          href={application && application.resume.file_url}
+                          target='_blank'
+                          rel='noopener noreferrer'>;
+                          View Resume;
+                        </a>;
+                      </DropdownMenuItem>;
                     )}
 
                   <Link href={`/messages?talentId=${application.talent_id}`}>
-                    <MessageSquare className="h-3 w-3 mr-1" /> Message
+                    <MessageSquare className='h-3 w-3 mr-1' /> Message
                   </Link>
                 </Button>
 
+<<<<<<< HEAD
                   {application.resume?.file_url ? (
-                    <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
-                      <FileText className="h-3 w-3 mr-1" /> Resume
-                    </Link>
-                  ) : (
-                    <span>
-                      <FileText className="h-3 w-3 mr-1" /> No Resume
-                    </span>
+              <div className='flex justify-between mt-2 gap-1'>;
+                <Button variant='outline' size='sm' className='flex-1' asChild>;
+                  <Link href={`/messages?talentId=${application && application.talent_id}`}>;
+                    <MessageSquare className='h-3 w-3 mr-1' /> Message;
+                  </Link>;
+                </Button>;
+
+                <Button variant='outline' size='sm' className='flex-1' asChild>;
+                  {application && application.resume?.file_url ? (;
+                    <a
+                      href={application && application.resume.file_url}
+                      target='_blank'
+                      rel='noopener noreferrer'>;
+                      <FileText className='h-3 w-3 mr-1' /> Resume;
+                    </a>;
+                  ) : (;
+                    <span>;
+                      <FileText className='h-3 w-3 mr-1' /> No Resume;
+                    </span>;
                   )}
                 </Button>

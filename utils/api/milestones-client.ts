@@ -24,6 +24,54 @@ export async function createMilestone(projectId: string, payload: any) {;
   }
 
 }
+export async /**
+ * create_milestone - Function description
+ */
+function create_milestone() {
+  const res = await fetch (`/api / projects/${project_id}/milestones`, {
+    method: 'POST',
+    headers: { 'Content - Type': 'application / json' },
+    credentials: 'include',
+    body: JSON.stringify (payload)}),
+  if (throw new Error (await res.text ()), ) {
+  $2
+}
+  return res.json ();
+}
+export async /**
+ * updateMilestoneStatus - Function description
+ */
+function updateMilestoneStatus() {
+  const res = await fetch (`/api / projects/${project_id}/milestones/${milestone_id}`, {
+    method: 'PATCH',
+    headers: { 'Content - Type': 'application / json' },
+    credentials: 'include',
+    body: JSON.stringify (body)}),
+  if (throw new Error (await res.text ())) {
+  $2
+}
+  return res.json ();
+}
+
+=======
+
+export async function fetchMilestones(projectId: string) {;
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
+    headers: { 'Content-Type': 'application/json' },;
+
+}
+;
+export async function createMilestone(projectId: string, payload: any) {;
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' },;
+    credentials: 'include',;
+    body: JSON.stringify(payload)}),;
+  if (!res.ok) throw new Error(await res.text()),;
+  return res.json();
+
+
+}
 ;
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {;
@@ -40,3 +88,4 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
   }
 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,5 +1,10 @@
 
 
+=======
+=======
+#!/usr/bin/env node const fs = const path = class TestRunner { constructor() { this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } } checkTestFiles() { const testDirs = ['__tests__','src/__tests__','tests']; let testFilesFound = 0; testDirs.forEach(dir => { if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.') ); testFilesFound += testFiles.length} }); if (testFilesFound === 0) { } else { } return testFilesFound} checkPackageJsonScripts() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.test) {  return false}  return true} catch (error) {  return false} } generateReport() { const report = { timestamp: new Date().toISOString(),results: this.results,summary: { testFilesFound: this.checkTestFiles(),testScriptExists: this.checkPackageJsonScripts() } fs.writeFileSync('test-report.json',JSON.stringify(report,null,2)); } } if (require.main === module) { const runner = new TestRunner(); runner.generateReport()} module.exports = TestRunner;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node
 const fs = // // require('fs');
 const path = // // require('path');
@@ -24,6 +29,9 @@ class TestRunner {
     });
     if (testFilesFound === 0) {
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       console.log('⚠️ No test files found');
     } else {
       console.log(`✅ Found ${testFilesFound} test files`);
@@ -31,6 +39,12 @@ class TestRunner {
     return testFilesFound;
   }
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       console.log('⚠️ No test files found')} else {
       console.log(`✅ Found ${testFilesFound} test files`)}
     return testFilesFound}
@@ -40,6 +54,9 @@ class TestRunner {
       if (!packageJson.scripts.test) {
         console.log('⚠️ No test script found in package.json');
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         return false;
       }
       console.log('✅ Test script found in package.json');
@@ -49,6 +66,10 @@ class TestRunner {
       return false;
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         return false}
       console.log('✅ Test script found in package.json');
       return true} catch (error) {

@@ -3,7 +3,9 @@
 interface StickyActionProps {
   className?: string;
 
-  children: React.ReactNode
+interface StickyActionProps {;
+  className?: string;
+  children: React && React.ReactNode,;
 
   showAfterScroll?: number;
 
@@ -27,8 +29,32 @@ export function StickyAction({
     const handleScroll = () => {
       if (window.scrollY > showAfterScroll) {
         setIsVisible(true)
+=======
+import React, { useEffect, useState } from './react';
+import { cn } from '@/lib / utils';
+import { motion, AnimatePresence } from './framer-motion';
+interface StickyActionProps {
+  class_name?: string;
+  children: React.ReactNode,
+  showAfterScroll?: number;
+  position?: "bottom" | "top";
+}
+export /**
+ * StickyAction - Function description
+ */
+function StickyAction() {
+  const [is_visible, setIsVisible] = useState (false);
+;
+  useEffect (() => {
+    const handle_scroll = () =>: any {
+      // Check condition
+if ( {) {
+  $2
+}
+        setIsVisible (true);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
-        setIsVisible(false)
+        setIsVisible (false);
       }
 
   const positionClasses = {
@@ -40,14 +66,59 @@ export function StickyAction({
       {isVisible && (
         <motion.div
 
+=======
+
+  return (
+    <AnimatePresence>;
+      {isVisible && (;
+        <motion&& motion.div
+          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+
+            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
+            positionClasses[position]
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             className
-          )}
-        >
-          <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">
+          )}>;
+          <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">;
             {children}
-          </div>
-        </motion.div>
+          </div>;
+        </motion && motion.div>;
       )}
-    </AnimatePresence>
-  )
+
+    </AnimatePresence>;
+  );
 }
+
+=======
+;
+  const position_classes = {
+    bottom: "bottom - 4",
+    top: "top - 20";
+  }
+;
+  return (
+    <AnimatePresence>;
+      {is_visible && (
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: position === "bottom" ? 20 : -20 }}
+          animate={{ opacity: 1, coordinate_y: 0 }}
+          exit={{ opacity: 0, coordinate_y: position === "bottom" ? 20 : -20 }}
+          transition={{ duration: 0.2 }}
+          className={cn (
+            "fixed left - 0 right - 0 z - 50 mx - auto flex justify - center px - 4";
+            position_classes[position];
+            class_name)}
+        >;
+          <div className="rounded - lg bg - zion - blue - dark border border - zion - blue - light shadow - lg shadow - zion - purple / 10 flex items - center">;
+            {children}
+          </div>;
+        </motion.div>)}
+    </AnimatePresence>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

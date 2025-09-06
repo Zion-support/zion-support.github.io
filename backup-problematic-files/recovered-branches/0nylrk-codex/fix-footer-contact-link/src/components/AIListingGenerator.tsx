@@ -1,39 +1,6 @@
 
     try {
-      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
-        body: { title, category, key_features, target_audience }
-      });
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (error.message);
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (data.error);
-      }
-      setGeneratedContent (data.generated);
-      toast ({
-        title: "Content Generated",
-        description: "AI has created optimized listing content for you.";
-      });
-    } catch (error) {
-      console.error ("Error generating content:", error);
-      toast ({
-        title: "Generation Failed",
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
-        variant: "destructive";
-      });
-    } finally {
-      setIsLoading (false);
-    }
-  }
-    try {;
-      const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator', {;
+      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
         body: { title, category, keyFeatures, targetAudience }
 
             <Input

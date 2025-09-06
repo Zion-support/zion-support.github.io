@@ -1,4 +1,56 @@
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+
+import { 
+  X, 
+  Building2, 
+  Code, 
+  Smartphone, 
+  Cloud, 
+  Shield, 
+  Zap,
+  ShoppingCart,
+  Heart,
+  GraduationCap,
+  Factory,
+  Truck,
+  CreditCard,
+  Phone,
+  Mail,
+  ExternalLink;
+
+
+} from 'lucide-react';
+interface SidebarProps {
+  isOpen: boolean, onClose: () => void
+}
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
+  const handleDropdownToggle = (title: string) => {
+    setOpenDropdowns(prev =>
+      prev.includes(title)
+        ? prev.filter(item => item !== title)
   Zap,
   ShoppingCart,
   Heart,
@@ -39,3 +91,9 @@ interface SidebarProps {
 }
 ;
 export default Sidebar;
+}
+;
+export default Sidebar;
+;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

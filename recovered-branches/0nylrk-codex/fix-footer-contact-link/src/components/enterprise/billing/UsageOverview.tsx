@@ -3,6 +3,7 @@
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function UsageOverview() {
   // Mock usage data
 
@@ -11,11 +12,18 @@ export function UsageOverview() {
 
       percentage: 32
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     interviews: {
       used: 45
       total: 150
       percentage: 30
 
+=======
+
+    },
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     messaging: {
       used: 1250
       total: 5000
@@ -25,6 +33,35 @@ export function UsageOverview() {
       used: 2.4
       total: 10
       percentage: 24
+
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Progress} from "@/components/ui/progress";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+
+export function UsageOverview() {;
+  // Mock usage data;
+  const usage = {;
+    jobPosts: {;
+      used: 32,;
+      total: 100,;
+      percentage: 32;
+    };
+    interviews: {;
+      used: 45,;
+      total: 150,;
+      percentage: 30;
+    };
+    messaging: {;
+      used: 1250,;
+      total: 5000,;
+      percentage: 25;
+    };
+    storage: {;
+      used: 2 && 2.4,;
+      total: 10,;
+      percentage: 24;
+
     }
 
   return (
@@ -95,3 +132,23 @@ export function UsageOverview() {
 
 }
 ;
+
+  return (
+
+              Historical usage data will be available after your first full billing cycle.;
+            </div>;
+          </TabsContent>;
+        </Tabs>;
+      </CardContent>;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </Card>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

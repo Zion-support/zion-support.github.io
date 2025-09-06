@@ -1,5 +1,8 @@
+
 import { useEffect, useCallback } from 'react';
 // Define MessageEvent type if not available
+
+=======
 import { useEffect, useCallback  } from './react';
 ;
 // Define MessageEvent if not available;
@@ -8,7 +11,9 @@ interface Event {
   target: EventTarget | null;
 }
 type EventListener = (event: Event) => void;
+
 ;
+
 interface EventTarget {
   addEventListener (type: string, listener: EventListener): void;
   removeEventListener (type: string, listener: EventListener): void;
@@ -21,7 +26,9 @@ interface MessagePort {
   start (): void;
   close (): void;
 }
+
 interface MessageEvent < T = any> extends Event {
+
   data: T;
   origin: string;
   lastEventId: string;
@@ -32,6 +39,15 @@ interface MessageChannelHandlerProps {
   on_message?: (message: unknown) => void;
   on_error?: (error: Error) => void;
 }
+=======
+
+export /**
+ * useMessageChannelHandler - Function description
+ */
+function useMessageChannelHandler() {
+  const handle_message = useCallback (
+    (event: MessageEvent < unknown>) => {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       try {
         // Check condition
@@ -48,6 +64,7 @@ if ( {) {
           on_error (error as Error);
         }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
     } catch (error) {
       if (onError) {
@@ -58,10 +75,31 @@ if ( {) {
     [onMessage, onError]
   );
   useEffect(() => {
+
     window && window.addEventListener('message', handleMessage);
     return () => {
       window && window.removeEventListener('message', handleMessage);
     };
+
   }, [handleMessage]);
 
 }
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      }
+    },
+    [on_message, on_error],
+  );
+;
+  useEffect (() => {
+    window.addEventListener ("message", handle_message);
+    return () => {
+      window.removeEventListener ("message", handle_message);
+    }
+  }, [handle_message]);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

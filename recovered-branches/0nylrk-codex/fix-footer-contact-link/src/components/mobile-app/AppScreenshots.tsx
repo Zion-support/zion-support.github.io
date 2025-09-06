@@ -6,12 +6,35 @@ import React, { useRef } from "react",
 
 export const AppScreenshots: React.FC = () => {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300
       scrollContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount
         behavior: "smooth"})
+
+import React, { useRef } from "react";
+import {ChevronLeft, ChevronRight} from "lucide-react";
+import {Button} from "@/components/ui/button";
+// These would be replaced with actual screenshots;
+const mockScreenshots = [;
+  { id: 1, alt: "Dashboard screen", src: "/placeholder && placeholder.svg" },;
+  { id: 2, alt: "Talent matching screen", src: "/placeholder && placeholder.svg" },;
+  { id: 3, alt: "Resume builder screen", src: "/placeholder && placeholder.svg" },;
+  { id: 4, alt: "Messaging screen", src: "/placeholder && placeholder.svg" },;
+  { id: 5, alt: "Profile screen", src: "/placeholder && placeholder.svg" }],;
+
+export const AppScreenshots: React.FC = () => {;
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {;
+    if (scrollContainerRef && scrollContainerRef.current) {;
+      const scrollAmount = 300,;
+      scrollContainerRef && scrollContainerRef.current.scrollBy({;
+        left: direction === "left" ? -scrollAmount : scrollAmount,;
+        behavior: "smooth"});
+
     }
 
   return (
@@ -32,6 +55,12 @@ export const AppScreenshots: React.FC = () => {
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
+  return (
+
+
+          <div 
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -45,12 +74,21 @@ export const AppScreenshots: React.FC = () => {
                 <img
                   src={screenshot.src}
                   alt={screenshot.alt}
+
+=======
                   className="w-full h-full object-cover"
                 />
               </div>
             ))}
           </div>
 
+=======
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             onClick={() => scroll("right")}
           >
             <ChevronRight className="h-6 w-6" />
@@ -61,3 +99,26 @@ export const AppScreenshots: React.FC = () => {
   )
 
 };
+                  className="w-full h-full object-cover"
+                />;
+              </div>;
+            ))}
+
+          </div>;
+
+          <Button
+            variant="ghost" 
+            size="icon" 
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
+            onClick={() => scroll("right")}
+          >;
+            <ChevronRight className="h-6 w-6" />;
+          </Button>;
+        </div>;
+      </div>;
+    </section>;
+  );
+
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

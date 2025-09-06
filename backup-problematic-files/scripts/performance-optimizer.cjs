@@ -12,6 +12,79 @@ const { execSync } = require('child_process');
   }
   async optimizePerformance() {
 
+=======
+class PerformanceOptimizer {
+  constructor() {
+    this.metrics = {};
+  }
+  async analyzeBundle() {
+    const buildDir = path.join(process.cwd(), '.next');
+    if (fs.existsSync(buildDir)) {
+      const stats = this.getDirectorySize(buildDir);
+      this.metrics.bundleSize = stats;
+      console.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`);
+    }
+  }
+  getDirectorySize(dirPath) {
+    let totalSize = 0;
+    const files = fs.readdirSync(dirPath);
+    files.forEach(file => {
+      const filePath = path.join(dirPath, file);
+      const stats = fs.statSync(filePath);
+      if (stats.isDirectory()) {
+        totalSize += this.getDirectorySize(filePath);
+      } else {
+        totalSize += stats.size;
+      }
+    });
+    return totalSize;
+  }
+  generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      metrics: this.metrics,
+      recommendations: this.generateRecommendations()
+    };
+    fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
+    console.log('Performance report generated');
+  }
+  generateRecommendations() {
+    const recommendations = [];
+    if (this.metrics.bundleSize > 1000000) { // 1MB
+      recommendations.push('Consider implementing code splitting');
+      recommendations.push('Use dynamic imports for large components');
+      recommendations.push('Optimize images and assets');
+    }
+    return recommendations;
+    this.projectRoot = process.cwd();
+    this.reportFile = path.join(__dirname, '../logs/performance-optimization-report.json');
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+const { execSync } = require('child_process');
+
+class PerformanceOptimizer {
+  constructor() {
+>>>>>>> origin/automation-improvements-final
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    this.optimizations = [];
+    this.logFile = path.join(__dirname, '..', 'logs', 'performance-optimizer.log');
+    this.ensureLogDirectory();
+  }
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+  }
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(message);
+    fs.appendFileSync(this.logFile, logMessage);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+  }
+  async optimizePerformance() {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     try {
       this.log('Starting performance optimization...');
       // Analyze bundle size
@@ -389,3 +462,181 @@ monitor.runBundleAnalysis()
       this.log("⚠️ Public directory not found", "WARN")
       return,,
 }
+=======
+module.exports = PerformanceOptimizer;
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");class PerformanceOptimizer { constructor() { this.projectRoot = process.cwd();" this.reportFile = path.join(__dirname, "./logs/performance-optimization-report.json"); } async optimizePerformance() {" console.log(" Optimizing performance."); " const files = this.getAllFiles(this.projectRoot, [".js", ".jsx", ".ts", ".tsx"]); const optimizations = []; for (const file of files) { try {" const content = fs.readFileSync(file, "utf8"); const optimized = this.optimizeFile(content); if (content !== optimized) { fs.writeFileSync(file, optimized); optimizations.push({ file: path.relative(this.projectRoot, file), optimizations: this.getOptimizations(content, optimized) }); } } catch (error) { console.error(`Error processing ${file}: ${error.message}`); } } this.saveReport(optimizations);` console.log(` Performance optimization completed! Optimized ${optimizations.length} files.`); } optimizeFile(content) { let optimized = content; / Optimize imports" optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+[""]([^""]+)[""]/g, (match, imports, module) => {" const cleanImports = imports.split(",").map(imp => imp.trim()).join(", ");"` return `import { ${cleanImports} } from "${module}"`; }); / Optimize arrow functions" optimized = optimized.replace(/functions+(w+)s*([^)]*)s*{/g, "const $1 = ($2) => {"); / Remove console.logs in production" if (process.env.NODE_ENV === "production") {" optimized = optimized.replace(/console.(log|warn|error)([^)]*);?/g, ""); } return optimized; } getOptimizations(original, optimized) { const optimizations = []; if (original !== optimized) {" optimizations.push("Imports optimized");" optimizations.push("Arrow functions optimized");" if (process.env.NODE_ENV === "production") {" optimizations.push("Console statements removed"); } } return optimizations; } getAllFiles(dir, extensions) { const files = []; try { const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath);" if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") { files.push(.this.getAllFiles(fullPath, extensions)); } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) { files.push(fullPath); } } } catch (error) {" / Skip directories that can"t be read } return files; } saveReport(optimizations) { const report = { timestamp: new Date().toISOString(), totalFiles: optimizations.length, optimizations: optimizations }; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); }}if (require.main === module) { const optimizer = new PerformanceOptimizer(); optimizer.optimizePerformance().catch(console.error);}module.exports = PerformanceOptimizer;""`"`
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    this.reportFile = path.join(__dirname, '../logs/performance-optimization-report.json')
+    console.log('⚡ Optimizing performance...')
+    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
+        const content = fs.readFileSync(file, 'utf8')
+    optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+['"]([^'')]
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+    const imageExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"]
+    const images = this.findFiles(publicDir, imageExtensions)
+    this.log(`🖼️ Found ${images.length} images`, "INFO")
+    if (images.length > 0) {
+      this.optimizations.push({
+        type: "image",
+        description: "Consider using Next.js Image component for automatic optimization",
+        impact: "high",
+        files: images.slice(0, 5) // Show first 5 files,,
+}),,
+}
+  }
+  findFiles(dir, extensions) {
+    const files = []
+    const scanDirectory = (dir) => {
+      try {
+        const items = fs.readdirSync(dir)
+        for (const item of items) {
+          const fullPath = path.join(dir, item)
+          const stat = fs.statSync(fullPath)
+          if (stat.isDirectory()) {
+            scanDirectory(fullPath),,
+} else if (extensions.some(ext => item.toLowerCase().endsWith(ext))) {
+            files.push(path.relative(this.projectRoot, fullPath)),,
+}
+        }
+      } catch (error) {
+        // Skip directories we can"t read,,
+}
+    }
+    scanDirectory(dir)
+    return files,,
+}
+  checkCodeSplitting() {
+    this.log("🔀 Checking code splitting...", "INFO")
+    const pagesDir = path.join(this.projectRoot, "pages")
+    const srcDir = path.join(this.projectRoot, "src")
+    let pageCount = 0;
+    let componentCount = 0;
+    if (fs.existsSync(pagesDir)) {
+      pageCount = this.countFiles(pagesDir, [".js", ".jsx", ".ts", ".tsx"]),,
+}
+    if (fs.existsSync(srcDir)) {
+      componentCount = this.countFiles(srcDir, [".js", ".jsx", ".ts", ".tsx"]),,
+}
+    this.log(`📄 Pages: ${pageCount}`, "INFO")
+    this.log(`🧩 Components: ${componentCount}`, "INFO")
+    if (pageCount > 20) {
+      this.optimizations.push({
+        type: "code-splitting",
+        description: "Consider implementing dynamic imports for large pages",
+        impact: "medium",
+        current: pageCount,,
+}),,
+}
+  }
+  countFiles(dir, extensions) {
+    let count = 0;
+    const scanDirectory = (dir) => {
+      try {
+        const items = fs.readdirSync(dir)
+        for (const item of items) {
+          const fullPath = path.join(dir, item)
+          const stat = fs.statSync(fullPath)
+          if (stat.isDirectory()) {
+            scanDirectory(fullPath),,
+} else if (extensions.some(ext => item.toLowerCase().endsWith(ext))) {
+            count++,,
+}
+        }
+      } catch (error) {
+        // Skip directories we can"t read,,
+}
+    }
+    scanDirectory(dir)
+    return count,,
+}
+  generateOptimizations() {
+    this.log("💡 Generating optimization recommendations...", "INFO")
+    // Bundle size optimizations;
+    if (this.metrics.bundleSize > 5 * 1024 * 1024) { // 5MB;
+      this.optimizations.push({
+        type: "bundle-size",
+        description: "Bundle size is large, consider code splitting and tree shaking",
+        impact: "high",
+        current: `${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)}MB`,,
+}),,
+}
+    // Build time optimizations;
+    if (this.metrics.buildTime > 60000) { // 1 minute;
+      this.optimizations.push({
+        type: "build-time",
+        description: "Build time is slow, consider optimizing build process",
+        impact: "medium",
+        current: `${(this.metrics.buildTime / 1000).toFixed(2)}s`,,
+}),,
+}
+    // Dependency optimizations;
+    if (this.metrics.dependencies > 100) {
+      this.optimizations.push({
+        type: "dependencies",
+        description: "High number of dependencies, consider removing unused packages",
+        impact: "medium",
+        current: this.metrics.dependencies,,
+}),,
+}
+  }
+  generateReport() {
+    this.ensureDirectories()
+    const report = {
+      timestamp: new Date().toISOString(),
+      metrics: this.metrics,
+      optimizations: this.optimizations,
+      recommendations: this.generateRecommendations(),,
+}
+    const reportPath = path.join(this.reportsDir, "performance-optimizer-report.json")
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
+    this.log(`📄 Report saved to: ${reportPath}`, "SUCCESS")
+    return report,,
+}
+  generateRecommendations() {
+    const recommendations = []
+    if (this.optimizations.length === 0) {
+      recommendations.push("Performance looks good! No major optimizations needed."),,
+} else {
+      this.optimizations.forEach(opt => {
+        recommendations.push(`${opt.type}: ${opt.description}`),,
+}),,
+}
+    recommendations.push("Consider running Lighthouse audit for detailed performance metrics")
+    recommendations.push("Monitor Core Web Vitals in production")
+    return recommendations,,
+}
+  printSummary() {
+    this.log("\n📊 Performance Analysis Summary: ", "INFO")
+    this.log("=".repeat(50), "INFO")
+    this.log(`📦 Bundle Size: ${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)}MB`, "INFO")
+    this.log(`⏱️ Build Time: ${(this.metrics.buildTime / 1000).toFixed(2)}s`, "INFO")
+    this.log(`📁 Files: ${this.metrics.fileCount}`, "INFO")
+    this.log(`📦 Dependencies: ${this.metrics.dependencies}`, "INFO")
+    this.log(`💡 Optimizations: ${this.optimizations.length}`, "INFO")
+    if (this.optimizations.length > 0) {
+      this.log("\n🔍 Optimization Recommendations: ", "INFO")
+      this.optimizations.forEach((opt, index) => {
+        this.log(`  ${index + 1}. [${opt.impact.toUpperCase()}] ${opt.description}`, "INFO"),,
+})
+      this.log(`❌ Performance script creation failed: ${error.message}`)
+
+}
+  }
+  async run() {
+    this.log("🚀 Starting performance optimization...")
+    await this.optimizeImages()
+    await this.optimizeBundle()
+    await this.createPerformanceScripts()
+    this.log(`🎉 Performance optimization completed with ${this.optimizations.length} optimizations`)
+    this.optimizations.forEach(opt => this.log(`  - ${opt}`)),,
+}
+}
+const optimizer = new PerformanceOptimizer()
+optimizer.run().catch(console.error)
+>>>>>>> origin/main
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

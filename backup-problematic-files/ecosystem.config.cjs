@@ -7,6 +7,8 @@ module.exports = {
       args: 'scripts/automation/automation-orchestrator.cjs',
       cwd: '/workspace',
 
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       name: 'auto-fix',
       script: 'scripts/pm2/auto-fix.js',
 
@@ -23,6 +25,7 @@ module.exports = {
       time: true,    },
     {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       script: 'npm',
       args: 'run build',
 
@@ -33,6 +36,7 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
@@ -283,6 +287,14 @@ module.exports = {
         NODE_ENV: "production"
       },
 
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/build-monitor-error.log",
+      out_file: "automation/logs/build-monitor-out.log",
+      time: true
+    }
+  ];};
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       cron_restart: '0 */6 * * *', // Restart every 6 hours
       log_file: 'logs/pm2/git-workflow.log',
       error_file: 'logs/pm2/git-workflow-error.log',
@@ -541,8 +553,13 @@ module.exports = {}
 
 };
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
       time: true
     }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

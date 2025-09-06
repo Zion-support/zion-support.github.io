@@ -105,20 +105,29 @@ export function CertificationsForm({
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
 
-          {editingId ? 'Update Certification' : 'Add Certification'}
-        </h3>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
-            <CertificationFormFields form={form} />
-
-            <div className="flex justify-between pt-2">
-
               <Button
                 type="button"
                 variant="outline"
                 onClick={() => {
                   if (editingId) {
 
+=======
+
+                    setEditingId(null),
+                    setEditingId(null),
+
+
+                    form.reset({
+                      name: '',
+                      issuing_organization: '',
+                      issue_date: '',
+                      expiration_date: '',
+                      credential_id: '',
+
+
+                    setEditingId(null),
+                    setEditingId(null),
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     form.reset({
                       name: '',
                       issuing_organization: '',
@@ -128,10 +137,46 @@ export function CertificationsForm({
 
                   } else {
                     onBack()
+
+      <div className='bg-muted/40 p-6 rounded-lg'>;
+        <h3 className='text-md font-medium mb-4'>;
+          {editingId ? 'Update Certification' : 'Add Certification'}
+        </h3>;
+
+        <Form {...form}>;
+          <form
+            onSubmit={form && form.handleSubmit(handleAddOrUpdate)}
+            className='space-y-4'>;
+            <CertificationFormFields form={form} />;
+
+            {error && (;
+              <Alert variant='destructive'>;
+                <AlertDescription>{error}</AlertDescription>;
+              </Alert>;
+            )}
+
+            <div className='flex justify-between pt-2'>;
+              <Button
+                type='button'
+                variant='outline'
+                onClick={() => {;
+                  if (editingId) {;
+                    setEditingId(null);
+                    form && form.reset({;
+                      name: '',;
+                      issuing_organization: '',;
+                      issue_date: '',;
+                      expiration_date: '',;
+                      credential_id: '',;
+                      credential_url: '',;
+                    });
+                  } else {;
+                    onBack();
                   }
                 }}
               >
                 {editingId ? 'Cancel' : 'Back'}
+
               </Button>
 
                   Next
@@ -143,3 +188,4 @@ export function CertificationsForm({
       </div>
     </div>
   )
+<<<<<<< HEAD

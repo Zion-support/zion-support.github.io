@@ -9,6 +9,7 @@ import { Briefcase, Inbox } from "lucide-react",
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <>
       <SEO
@@ -37,3 +38,13 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
   )
+=======
+
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {ApplicationsTracker} from "@/components/jobs/applications";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Briefcase, Inbox} from "lucide-react";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useIsMobile} from "@/hooks/use-mobile";
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

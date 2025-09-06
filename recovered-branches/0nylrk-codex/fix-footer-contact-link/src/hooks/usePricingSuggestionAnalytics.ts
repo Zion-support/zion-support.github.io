@@ -25,6 +25,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
     error: null
   }),
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {
     // This would fetch actual data from the database in a real implementation
     // For now, let's simulate the data
@@ -32,6 +33,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
       try {
         // Simulate API delay
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
@@ -39,3 +41,4 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
         // Process data and setAnalytics({...})
       } catch (error) {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

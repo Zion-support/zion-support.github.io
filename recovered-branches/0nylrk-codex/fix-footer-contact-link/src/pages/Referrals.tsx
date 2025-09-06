@@ -10,6 +10,10 @@
     copyReferralLink,
     shareOnSocialMedia} = useReferrals(),
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {
     if (!isAuthenticated) {
       toast({
@@ -70,3 +74,30 @@
 
 }
 ;
+    }
+
+
+  }, [isAuthenticated, navigate]),
+
+  const referralLink = getReferralLink(),
+
+
+
+  return (
+
+          <ReferralGuide />;
+          <ReferralLeaderboard />;
+        </div>;
+      </div>;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

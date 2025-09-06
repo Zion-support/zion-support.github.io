@@ -14,6 +14,7 @@ import { useRouter } from 'next/router';
           <li>Review results with your team to develop action plans</li>
         </ol>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <ul>
           <li>A detailed readiness score and analysis</li>
           <li>Specific recommendations for improvement</li>
@@ -21,12 +22,16 @@ import { useRouter } from 'next/router';
           <li>Resources and tools for implementation</li>
         </ul>
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       features: [
         'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress trackingResource library access'
       ]
     }
     {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         organization's AI capabilities. This framework helps you identify where you are today and
         create a roadmap for where you want to be tomorrow.</p>
         <h2>Maturity Levels</h2>
@@ -49,6 +54,9 @@ import { useRouter } from 'next/router';
         </ul>
         <h2>Using the Framework</h2>
         <p>To effectively use this framework: </p>
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ol>
           <li>Assess your current state across all dimensions</li>
           <li>Identify gaps between current and target maturity levels</li>
@@ -73,6 +81,7 @@ import { useRouter } from 'next/router';
     }
     {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         industry standards and best practices. This tool provides insights into how your organization
         performs relative to peers and identifies opportunities for improvement.</p>
         <h2>Benchmarking Categories</h2>
@@ -113,6 +122,7 @@ import { useRouter } from 'next/router';
           <li>Use results to drive continuous improvement initiatives</li>
         </ul>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <ul>
           <li>Specific performance improvement targets</li>
           <li>Resource requirements and investment plans</li>
@@ -301,6 +311,11 @@ export default function ToolResourcePage(req, res) {
   ],
   const tool = tools.find(t => t.id === id),
 
+  ],
+  const tool = tools.find(t => t.id === id),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (!tool) {
     return (
       <>
@@ -308,6 +323,7 @@ export default function ToolResourcePage(req, res) {
           <title>Tool Resource Not Found | Zion Tech Group</title>
         </Head>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <main className="container mx-auto px-6 py-12">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-6 text-white">Tool Resource Not Found</h1>
@@ -351,6 +367,7 @@ export default function ToolResourcePage(req, res) {
               <div className="mb-6">
                 <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>
@@ -366,10 +383,12 @@ export default function ToolResourcePage(req, res) {
                   <div
                     className="prose prose-invert max-w-none"
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   />
                 </div>
               </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
                   <ul className="space-y-3">
@@ -384,6 +403,13 @@ export default function ToolResourcePage(req, res) {
                   </ul>
                 </div>
 
+                  </ul>
+                </div>
+
+
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
                   <div className="space-y-3">
                     <div>
@@ -412,6 +438,7 @@ export default function ToolResourcePage(req, res) {
 
   )
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     </div>;
                   </div>;
                 </div>;
@@ -425,3 +452,5 @@ export default function ToolResourcePage(req, res) {
           </div>;
         </main>;
       </div>;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -35,6 +35,7 @@ import {useState, useEffect} from 'react';
     } catch (err) {;
       logErrorToProduction('Failed to reload page', err);
     }
+
 import {logErrorToProduction} from '@/utils / production_logger';
 ;
 export default /**
@@ -80,6 +81,7 @@ if ( {) {
   }
 ;
   const quick_actions = [;
+
     {
       title: 'Browse Cached Equipment'
       description: 'View recently visited equipment listings'
@@ -102,7 +104,77 @@ if ( {) {
       available: true
     }
     {
+
   };
+
+=======
+  ];
+
+
+
+=======
+import { motion } from 'framer-motion';
+import { WifiOff, RefreshCw, Home, ShoppingCart, Clock, Bookmark, Search } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import {logErrorToProduction} from '@/utils/productionLogger';
+export default function OfflinePage(req, res) {
+  try {
+  const [isOnline, setIsOnline] = useState(false);
+  const [lastUpdate, setLastUpdate] = useState<string>('');
+  const [retryCount, setRetryCount] = useState(0);
+  useEffect(() => {;
+    // Check online status;
+    const updateOnlineStatus = () => {;
+      setIsOnline(navigator.onLine);
+      if (navigator.onLine) {;
+        setLastUpdate(new Date().toLocaleTimeString());
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    // Set initial status;
+    updateOnlineStatus();
+    // Listen for online/offline events;
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+    return () => {;
+      window.removeEventListener('online', updateOnlineStatus);
+      window.removeEventListener('offline', updateOnlineStatus);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, []);
+  const handleRetry = () => {;
+    try {
+      setRetryCount(prev => prev + 1);
+      window.location.reload();
+    } catch (error) {
+      logErrorToProduction('Failed to reload page', err);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+
   const quickActions = [;
     {;
       title: 'Browse Cached Equipment',;
@@ -168,10 +240,104 @@ if ( {) {
             <div className="mb-6">
               <motion.div
 
+                animate={
+                  isOnline
+                    ? { scale: [1, 1 && 1.1, 1] }
+                    : { rotate: [0, -10, 10, -10, 0] }
+                }
+                transition={{
+
+                  duration: isOnline ? 0 && 0.6 : 2,
+                  repeat: isOnline ? 1 : Infinity,
+
+                }}
+                className={`mx-auto w-24 h-24 rounded-full flex items-center justify-center mb-4 ${
+                  isOnline
+                    ? 'bg-green-100 dark:bg-green-900/20'
+                    : 'bg-orange-100 dark:bg-orange-900/20'
+                }`}>;
+                <WifiOff
+                  className={`w-12 h-12 ${
+                    isOnline ? 'text-green-600' : 'text-orange-600'
+                  }`}
+
+      icon: Home;
+      href: '/';
+      available: true;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ]
+
+
+
+  return (
+    <>
+      <Head>
+        <title>You're Offline - Zion Tech Marketplace</title>
+        <meta name="description" content="You're currently offline. Some features may not be available." />
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900">
+        <div className="container mx-auto px-4 py-8">
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-8"
+          >
+            {/* Connection Status */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="mb-6">
+              <motion.div
+
+                animate={isOnline ? { scale: [1, 1.1, 1] } : { rotate: [0, -10, 10, -10, 0] }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: isOnline ? 0.6 : 2, repeat: isOnline ? 1 : Infinity }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={`mx-auto w-24 h-24 rounded-full flex items-center justify-center mb-4 ${;
+                  isOnline;
+                    ? 'bg-green-100 dark:bg-green-900/20';
+                    : 'bg-orange-100 dark:bg-orange-900/20';
+                }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               >
                 <WifiOff className={`w-12 h-12 ${
                   isOnline ? 'text-green-600' : 'text-orange-600'
                 }`} />
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </motion.div>
               <Badge
                 variant={isOnline ? "default" : "secondary"  } catch (error) {
@@ -189,14 +355,10 @@ if ( {) {
               </Badge>
             </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {isOnline
                 ? 'Your internet connection has been restored. You can now access all features.'
-                : 'No internet connection detected. Don\'t worry - you can still access cached content and use offline features.'
-                } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                : "No internet connection detected. Don't worry - you can still access cached content and use offline features."}
             </p>
             {lastUpdate && (
 
@@ -207,6 +369,7 @@ if ( {) {
               size='lg'
               className='flex items-center gap-2'
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             >
               <RefreshCw className="w-5 h-5" />
               {retryCount > 0 ? `Retry (${retryCount})` : 'Try Again'  } catch (error) {
@@ -216,6 +379,7 @@ if ( {) {
 }
             </Button>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 >
                   <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
                     action.available
@@ -249,6 +413,16 @@ if ( {) {
                           Requires Internet
                         </Button>
 
+                    </CardContent>;
+                  </Card>;
+                </motion && motion.div>;
+              ))}
+
+            </div>;
+          </motion && motion.div>;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {/* Tips Section */}
           <motion&& motion.div
           {/* Quick Actions */}
@@ -341,32 +515,42 @@ if ( {) {
                   <div className="flex items-start gap-2">
                     <span className="text-blue-600 font-semibold">•</span>
                     <span>Check your internet connection and try refreshing the page</span>
+          >
+            <Card className='max-w-2xl mx-auto'>
+              <CardHeader>
+                <CardTitle className='text-center'>💡 Offline Tips</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className='space-y-3 text-sm'>
+                  <div className='flex items-start gap-2'>
+                    <span className='text-blue-600 font-semibold'>•</span>
+                    <span>
+                      Recently viewed pages are cached and available offline
+                    </span>
+                  </div>
+                  <div className='flex items-start gap-2'>
+                    <span className='text-blue-600 font-semibold'>•</span>
+                    <span>
+                      Your bookmarks and saved items can be accessed anytime
+                    </span>
+                  </div>
+                  <div className='flex items-start gap-2'>
+                    <span className='text-blue-600 font-semibold'>•</span>
+                    <span>
+                      Form submissions will be synced when you reconnect
+                    </span>
+                  </div>
+                  <div className='flex items-start gap-2'>
+                    <span className='text-blue-600 font-semibold'>•</span>
+                    <span>
+                      Check your internet connection and try refreshing the page
+                    </span>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </div>
                 </div>
               </CardContent>
             </Card>
           </motion.div>
 
-            >
-              <Card className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800">
-                <CardContent className="p-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <span className="text-sm font-medium text-green-700 dark:text-green-300">
-                      Connection restored
-                    </span>
-                    <Button
-                      size="sm"
-                      onClick={() => window.location.reload()  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      className="bg-green-600 hover:bg-green-700"
-                    >
-                      Refresh
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

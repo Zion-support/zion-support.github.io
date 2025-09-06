@@ -34,6 +34,12 @@ async function checkAutomationStatus() {
     try {
       const pm2List = execSync('pm2 jlist', { "encoding": 'utf8' });
 
+=======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
       const runningProcesses = pm2Data.filter(
@@ -44,11 +50,31 @@ async function checkAutomationStatus() {
     }
     // Check automation scripts
 
+      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
+    } catch (error) {
+      console.log('⚠️  PM2 not available or no processes running');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+      statusReport.pm2Processes = [];
+    }
+    // Check automation scripts
+    console.log('📋 Checking automation scripts...');
+    const automationScripts = [
+      'automation/master-orchestrator.cjs',
+    console.log('📋 Checking automation scripts...');
+    const automationScripts = [
+      'automation/master-orchestrator.cjs',
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
       'scripts/automation-orchestrator.cjs',
       'scripts/start-all-automations.sh',
       'automation/security-scanner.cjs',
 
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       'automation/health-check.cjs',
       'automation/security-scanner.cjs',
       'automation/code-quality-monitor.cjs',
@@ -59,6 +85,10 @@ async function checkAutomationStatus() {
       const exists = fs.existsSync(scriptPath);
       statusReport.automationScripts.push({
 
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         name: script,
         exists,
         path: scriptPath
@@ -90,6 +120,11 @@ async function checkAutomationStatus() {
             : 'not_executable'
           : 'missing'});
 
+=======
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     try {
       const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
       statusReport.systemHealth.healthCheck = 'passed';
@@ -98,6 +133,8 @@ async function checkAutomationStatus() {
       statusReport.systemHealth.healthCheck = 'failed';
       console.log('❌ Health check failed');
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
     // Determine overall status
     const availableScripts = statusReport.automationScripts.filter(s => s.exists).length;
@@ -118,6 +155,16 @@ async function checkAutomationStatus() {
     console.log(`   Health Check: ${statusReport.systemHealth.healthCheck}`);
     console.log(`   Overall Status: ${statusReport.overallStatus.toUpperCase()}`);
     // Save report
+=======
+    const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
+    try {
+      fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+      fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
+      console.log(`\n💾 Report saved to: ${reportPath}`);
+    } catch (error) {
+      console.log('⚠️  Could not save report file');
+    }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     const reportPath = path.join(
       process.cwd(),
@@ -128,7 +175,9 @@ async function checkAutomationStatus() {
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
+<<<<<<< HEAD
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
       fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -140,6 +189,9 @@ async function checkAutomationStatus() {
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
 
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     statusReport.overallStatus = 'error';
   }
   return statusReport;
@@ -172,3 +224,7 @@ const { execSync } = require('child_process')
     process.exit(report.overallStatus === 'healthy' ? 0 : 1);
   });
 }
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

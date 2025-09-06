@@ -20,6 +20,13 @@ type EventRow = {
     }
     return rows;
 
+    }
+    return rows;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   } catch {
     return [];
   }
@@ -52,3 +59,34 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 .sort((a, b) => b.value - a.value)
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
+=======
+
+    .sort((a, b) => b.value - a.value);
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+};
+
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    await ensureAdminFromApi(req);
+    
+    if (req.method !== 'GET') {
+      res.setHeader('Allow', 'GET');
+      return res.status(405).end('Method Not Allowed');
+    }
+
+    const { start, end } = req.query;
+    const events = parseLines(start as string, end as string);
+    
+    res.json({ events });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

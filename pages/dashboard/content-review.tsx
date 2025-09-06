@@ -35,6 +35,10 @@ export default function ContentReviewPage() {
           <h1 className="text-2xl font-semibold">Admin Content Review</h1>
         </div>
 
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm">
           <select value={filters.status || ''} onChange={e => setFilters(f => ({ ...f, status: e.target.value || undefined }))} className="border rounded px-2 py-1">
             <option value="">All Statuses</option>
@@ -91,6 +95,12 @@ export default function ContentReviewPage() {
         </div>
       </div>
 
+            </tbody>;
+          </table>;
+        </div>;
+      </div>;
+      {selected && (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <ModerationModal
           flag={selected}
           onClose={() => setSelected(null)}
@@ -105,3 +115,17 @@ export default function ContentReviewPage() {
           </table>;
         </div>;
       </div>;
+=======
+<<<<<<< HEAD
+      {selected && (
+        <ModerationModal;
+          flag={selected}
+          on_close={() => set_selected (null)}
+          on_action={handle_action}
+        />)}
+    </EnhancedLayout>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

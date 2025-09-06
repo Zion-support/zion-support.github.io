@@ -3,20 +3,6 @@
 import { Search, Filter } from 'lucide-react'
 import { SEO } from "@/components/SEO";
 
-// Mock data for support requests
-
-const MOCK_SUPPORT_REQUESTS = [
-  {
-
-    id: "SR-1007",
-    user: "jamie.taylor@tech.org",
-    userId: "user-345",
-    issue: "Cannot upload portfolio images",
-    status: "resolved",
-    priority: "medium",
-    createdAt: "2023-12-10T15:10:00Z",
-    lastUpdated: "2023-12-13T11:25:00Z",
-    category: "profile"
   }
 ],
 
@@ -192,6 +178,12 @@ export default function SupportRequests() {;
           </div>
         </div>
 
+=======
+
+        
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Status Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Card>
@@ -326,3 +318,4 @@ export default function SupportRequests() {;
       </div>
     </>
   )
+<<<<<<< HEAD

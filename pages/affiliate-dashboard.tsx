@@ -87,6 +87,7 @@ export default function AffiliateDashboard(req, res) {
 }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (!code) {
     return (
       <div className="space-y-4">
@@ -99,6 +100,12 @@ export default function AffiliateDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+=======
+
+}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>
@@ -118,6 +125,7 @@ export default function AffiliateDashboard(req, res) {
             <input className="border rounded px-3 py-2" placeholder="Amount (optional)" value={amount} onChange={e=>setAmount(e.target.value)} />
             <button className="px-3 py-2 rounded bg-indigo-600 text-white" onClick={requestPayout}>Request Payout</button>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       </div>
     </div>
   )
@@ -135,8 +143,11 @@ function Stat({ label, value }: { label: string, value: number | string }) {
 
   )
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <Stat label="Total Visits" value={metrics?.total_visits ?? '-'} />;
         <Stat label="Total Signups" value={metrics?.total_signups ?? '-'} />;
         <Stat label="Profile Completions" value={metrics?.total_profile_completions ?? '-'} />;
         <Stat label="Job Creations" value={metrics?.total_job_creations ?? '-'} />;
       </div>;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

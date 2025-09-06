@@ -7,21 +7,18 @@ import {
   CardTitle
 } from '@/components/ui/card'
 
-import { Trophy } from 'lucide-react'
-export interface LeaderboardEntry {
-  name: string
-  points: number
-
 }
 
-  name: string
+export interface LeaderboardEntry {;
+  name: string,;
+  points: number;
+}
 
-  points: number
+interface UserLeaderboardProps {;
+  entries: LeaderboardEntry[];
 }
-interface UserLeaderboardProps {
-  entries: LeaderboardEntry[]
-}
-export function UserLeaderboard({ entries }: UserLeaderboardProps) {
+
+export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
   return (
     <Card>
       <CardHeader>
@@ -32,8 +29,20 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
       </CardHeader>
       <CardContent>
 
+=======
+
+
+        <div className="space-y-2">
+          {entries.map((e, idx) => (
+            <div
+              key={e.name}
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
             >
               <span className="font-medium">
                 {idx + 1}. {e.name}
               </span>
+<<<<<<< HEAD

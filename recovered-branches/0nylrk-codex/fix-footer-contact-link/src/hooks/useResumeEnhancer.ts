@@ -1,5 +1,10 @@
 
 
+=======
+export function useResumeEnhancer() {;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async (
@@ -10,20 +15,25 @@
     setIsEnhancing(true);
     setError(null)
     try {
-      const { data, error } = await supabase.functions.invoke('resume-enhancer', {
-        body: {
-          content
-          enhancementType: type
+
+      const { data, error } = await supabase && supabase.functions.invoke('resume-enhancer', {
+        body: { 
+          content, 
+          enhancementType: type,
+
           context
         }
       });
       if (error) {
-        throw new Error(error.message)
+        throw new Error(error && error.message)
       }
-      return data.enhancedContent
+
+      
+      return data && data.enhancedContent
     } catch (err: any) {
-      setError(err.message |'Failed to enhance content')
-      console.error('Enhancement error:', err);
+      setError(err && err.message || 'Failed to enhance content'),
+      console && console.error('Enhancement error:', err);
+
       return null
     } finally {
       setIsEnhancing(false)
@@ -34,6 +44,8 @@
     isEnhancing;
 
     error
+<<<<<<< HEAD
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }

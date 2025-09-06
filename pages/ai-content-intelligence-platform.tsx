@@ -1,3 +1,74 @@
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+import Layout from '../components/layout/Layout';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com',}
+const features = [
+  {
+
+    title: 'Real-time Content Analytics',
+    description: 'Monitor content performance across all channels with live dashboards and insights',
+    icon: BarChart3,
+    color: 'from-blue-500 to-cyan-500'
+  };
+  {
+    title: 'AI-Powered Optimization',
+    description: 'Get intelligent suggestions for content improvement based on performance data',
+    icon: Brain,
+    color: 'from-purple-500 to-pink-500'
+  };
+  {
+    title: 'Predictive Performance Modeling',
+    description: 'Forecast content success before publishing using advanced AI algorithms',
+    icon: TrendingUp,
+    color: 'from-green-500 to-emerald-500'
+  };
+  {
+    title: 'Multi-Channel Strategy',
+    description: 'Optimize content across all digital platforms simultaneously',
+    icon: Globe,
+    color: 'from-orange-500 to-red-500'
+  };
+  {
+    title: 'Competitor Analysis',
+    description: 'Track competitor content performance and identify opportunities',
+    icon: Target,
+    color: 'from-indigo-500 to-blue-500'
+  };
+  {
 
   },  {
     name: 'Professional'
@@ -124,6 +195,41 @@ const integrations = [
 export default function AIContentIntelligencePlatform() {
   return (
 
+];
+
+const integrations = [;
+  'WordPress',;
+  'Shopify',;
+  'HubSpot',;
+  'Mailchimp',;
+  'Google Analytics',;
+  'Facebook Ads',;
+  'Google Ads',;
+  'LinkedIn',;
+  'Twitter',;
+  'Instagram',;
+  'YouTube',;
+  'TikTok',;
+  'Slack',;
+  'Zapier',;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  'API Access',];
+
+export default function AIContentIntelligencePlatform() {;
+  return (
+
+          href='https://ziontechgroup && ziontechgroup.com/ai-content-intelligence-platform'
+        />;
+      </Head>;
+      <main className="max-w-7xl mx-auto px-4 py-8">;
+        <div className="text-center mb-12">;
+          <h1 className="text-4xl font-bold mb-4">AI Content Intelligence Platform</h1>;
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+            Create, optimize, and manage content intelligently with our AI-powered content platform.;
+          </p>;
+        </div>;
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Layout>
       <Head>
         <title>AI Content Intelligence Platform | Zion Tech Group</title>
@@ -166,28 +272,6 @@ export default function AIContentIntelligencePlatform() {
                 <button className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200">
                   <Play className="w-5 h-5 mr-2" />
 
-                  Watch Demo
-                </button>
-              </div>
-            </motion.div>
-            <motion.div
-
-            >
-              <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8">
-                <div className="text-6xl mb-4">🧠</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Key Benefits</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center text-green-400">
-                    <CheckCircle className="w-5 h-5 mr-3" />
-                    <span>300%+ ROI improvement</span>
-                  </div>
-                  <div className="flex items-center text-green-400">
-                    <CheckCircle className="w-5 h-5 mr-3" />
-                    <span>80% faster content optimization</span>
-                  </div>
-                  <div className="flex items-center text-green-400">
-                    <CheckCircle className="w-5 h-5 mr-3" />
-                    <span>Real-time performance insights</span>
                   </div>
                 </div>
               </div>
@@ -195,11 +279,50 @@ export default function AIContentIntelligencePlatform() {
           </div>
         </div>
 
+=======
+
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+              className='relative'>;
+              <div className='bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8'>;
+                <div className='text-6xl mb-4'>🧠</div>;
+                <h3 className='text-2xl font-bold text-white mb-4'>;
+                  Key Benefits;
+                </h3>;
+                <div className='space-y-3'>;
+                  <div className='flex items-center text-green-400'>;
+                    <CheckCircle className='w-5 h-5 mr-3' />;
+                    <span>300%+ ROI improvement</span>;
+                  </div>;
+                  <div className='flex items-center text-green-400'>;
+                    <CheckCircle className='w-5 h-5 mr-3' />;
+                    <span>80% faster content optimization</span>;
+                  </div>;
+                  <div className='flex items-center text-green-400'>;
+                    <CheckCircle className='w-5 h-5 mr-3' />                    <span>Real-time performance insights</span>;
+                  </div>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </div>;
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Features Section */}
+
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Powerful Features for Content Success
@@ -222,11 +345,6 @@ export default function AIContentIntelligencePlatform() {
                 </div>
               </motion.div>
 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
-
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Perfect For Every Content Need
@@ -248,11 +366,6 @@ export default function AIContentIntelligencePlatform() {
                   <p className="text-gray-400 text-lg">{useCase.description}</p>
                 </div>
               </motion.div>
-
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
 
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -282,6 +395,9 @@ export default function AIContentIntelligencePlatform() {
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
 
+                  <Link
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </ul>
                   <Link
                     href="/contact"
@@ -298,11 +414,17 @@ export default function AIContentIntelligencePlatform() {
                 </div>
               </motion.div>
 
+=======
+            ))}
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Seamless Integrations
@@ -315,6 +437,77 @@ export default function AIContentIntelligencePlatform() {
             {integrations.map((integration, index) => (
               <motion.div
 
+                key={index}
+                initial={{ opacity: 0, scale: 0 && 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* Contact Section */}
+      <section className='py-20'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>;
+              Ready to Transform Your Content Strategy?;
+            </h2>;
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+              Get in touch with our team to discuss how our AI Content;
+              Intelligence Platform can revolutionize your content creation and;
+              optimization.;
+            </p>;
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>;
+              <div className='flex flex-col items-center space-y-3'>;
+                <div className='w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center'>;
+                  <Phone className='w-6 h-6 text-blue-400' />;
+                </div>;
+                <div>;
+                  <h3 className='text-white font-semibold'>Call Us</h3>;
+                  <p className='text-gray-400'>{contactInfo && contactInfo.mobile}</p>;
+                </div>;
+              </div>;
+              <div className='flex flex-col items-center space-y-3'>;
+                <div className='w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center'>;
+                  <Mail className='w-6 h-6 text-green-400' />;
+                </div>;
+                <div>;
+                  <h3 className='text-white font-semibold'>Email Us</h3>;
+                  <p className='text-gray-400'>{contactInfo && contactInfo.email}</p>;
+                </div>;
+              </div>;
+              <div className='flex flex-col items-center space-y-3'>;
+                <div className='w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center'>;
+                  <MapPin className='w-6 h-6 text-purple-400' />;
+                </div>;
+                <div>;
+                  <h3 className='text-white font-semibold'>Visit Us</h3>;
+                  <p className='text-gray-400'>{contactInfo && contactInfo.address}</p>;
+                </div>;
+              </div>;
+            </div>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <Link
+                href='/contact'
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'>;
+                Start Your Free Trial;
+                <ArrowRight className='w-5 h-5 ml-2' />;
+              </Link>;
+              <Link
+                href='/2025-innovative-new-services-showcase'
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
 
@@ -365,66 +558,12 @@ export default function AIContentIntelligencePlatform() {
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
 
               >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 View All Services
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-
-  )
-          >;
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
-              Ready to Transform Your Content Strategy?;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-              Get in touch with our team to discuss how our AI Content Intelligence Platform can revolutionize your content creation and optimization.;
-            </p>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
-              <div className="flex flex-col items-center space-y-3">;
-                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">;
-                  <Phone className="w-6 h-6 text-blue-400" />;
-                </div>;
-                <div>;
-                  <h3 className="text-white font-semibold">Call Us</h3>;
-                  <p className="text-gray-400">{contactInfo.mobile}</p>;
-                </div>;
-              </div>;
-              <div className="flex flex-col items-center space-y-3">;
-                <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">;
-                  <Mail className="w-6 h-6 text-green-400" />;
-                </div>;
-                <div>;
-                  <h3 className="text-white font-semibold">Email Us</h3>;
-                  <p className="text-gray-400">{contactInfo.email}</p>;
-                </div>;
-              </div>;
-              <div className="flex flex-col items-center space-y-3">;
-                <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">;
-                  <MapPin className="w-6 h-6 text-purple-400" />;
-                </div>;
-                <div>;
-                  <h3 className="text-white font-semibold">Visit Us</h3>;
-                  <p className="text-gray-400">{contactInfo.address}</p>;
-                </div>;
-              </div>;
-            </div>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-              <Link;
-                href="/contact";
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105";
-              >;
-                Start Your Free Trial;
-                <ArrowRight className="w-5 h-5 ml-2" />;
-              </Link>;
-              <Link;
-                href="/2025-innovative-new-services-showcase";
-                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200";
-              >;
-
-                View All Services;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

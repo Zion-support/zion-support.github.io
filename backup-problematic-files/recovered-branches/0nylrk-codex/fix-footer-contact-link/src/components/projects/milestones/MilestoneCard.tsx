@@ -1,8 +1,36 @@
 
+=======
+import React from 'react',;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { format } from 'date-fns',;
+import { Check, ArrowDown, X } from "lucide-react",;
+import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
+;
+interface MilestoneCardProps {;
+  id:string,;
+  projectId:string,;
+  title:string,;
+  description?:string,;
+  amount:number,;
+  status:string,;
+  dueDate?:string,;
+  onApprove?:(id:string) => Promise<void>,;
+  onReject?:(id:string) => Promise<void>;
+}
+;
+export function MilestoneCard({ ;
+  id,;
+  projectId,;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   title, ;
   description, ;
   amount, ;
   status, ;
+<<<<<<< HEAD
 
     <Card>;
       <CardHeader className="pb-2">;

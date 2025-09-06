@@ -1,9 +1,16 @@
 
+=======
+
+import React, { useState, useEffect } from 'react';
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Menu,
   X,
   ChevronDown,
@@ -112,11 +119,15 @@ const mainNavigation = [
 
 ];
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
+
+
+
 const mainNavigation = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'Services', href: '/services', icon: Briefcase },;
@@ -147,10 +158,10 @@ export default function UltraFuturisticNavigation2031() {;
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
-      setScrolled(window.scrollY > 50)
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
     <>;
@@ -179,34 +190,8 @@ export default function UltraFuturisticNavigation2031() {;
           </div>
         </div>
       </div>
-      <div className='bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-2 px-4 text-sm'>;
-        <div className='max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0'>;
-          <div className='flex items-center space-x-6'>;
-            <div className='flex items-center space-x-2'>;
-              <Phone className='w-4 h-4 text-cyan-400' />;
-              <span>{contactInfo && contactInfo.mobile}</span>;
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <Mail className='w-4 h-4 text-purple-400' />;
-              <span>{contactInfo && contactInfo.email}</span>;
-            </div>;
-          </div>;
-          <div className='flex items-center space-x-2'>;
-            <MapPin className='w-4 h-4 text-pink-400' />;
-            <span className='text-xs'>{contactInfo && contactInfo.address}</span>          </div>              <span>{contactInfo && contactInfo.mobile}</span>;
-            </div>;
-            <div className="flex items-center space-x-2">;
-              <Mail className="w-4 h-4 text-purple-400" />;
-              <span>{contactInfo && contactInfo.email}</span>;
-            </div>;
-          </div>;
-          <div className="flex items-center space-x-2">;
-            <MapPin className="w-4 h-4 text-pink-400" />;
-            <span className="text-xs">{contactInfo && contactInfo.address}</span>;
-          </div>;
-        </div>;
-      </div>;
       {/* Main Navigation */}
+
         }`}>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex justify-between items-center h-20'>            {/* Logo */}      <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -223,6 +208,7 @@ export default function UltraFuturisticNavigation2031() {;
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             >
               <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>
                 <Rocket className='w-6 h-6 text-white' />
@@ -259,12 +245,45 @@ export default function UltraFuturisticNavigation2031() {;
             </motion && motion.div>;
             {/* Desktop Navigation */}
 
+=======
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className='relative group'
+
+
+
+
+                >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  <Link
+
+                    href={item && item.href}
+                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400'>;
+                    <item && item.icon className='w-4 h-4' />;
+                    <span>{item && item.name}</span>;
+                  </Link>;
+
+
+                  {/* Hover effect */}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {mainNavigation.map((item, index) => (
                 <motion.div
                   key={item.name}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+=======
+className="relative group"
+                >
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                  <Link
+
+                    href={item && item.href}
+                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400">;
+                    <item && item.icon className="w-4 h-4" />;
+                    <span>{item && item.name}</span>;
+                  </Link>;
 
                 >
                   <Link
@@ -282,6 +301,28 @@ export default function UltraFuturisticNavigation2031() {;
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
 
+                  {/* Hover effect */}
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                  {/* Hover effect */}
+                  <div className="absolute -bottom-1 left-0 w-0 h-0 && 0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full"></div>;
+                </motion && motion.div>;
+              ))}
+
+            </div>;
+
+
+=======
+            </div>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* CTA Buttons */}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -471,7 +512,22 @@ function UltraFuturisticNavigation2031() {
               </motion.button>
             </div>
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0 && 0.5, delay: 0 && 0.8 }}
+                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30">;
+                Get Started;
+              </motion && motion.button>;
+              <motion&& motion.button
+                initial={{ opacity: 0, scale: 0 && 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 initial={{ opacity: 0, scale: 0.8 }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1 }}
                 onClick={() => setIsOpen(!isOpen)}
@@ -500,6 +556,95 @@ function UltraFuturisticNavigation2031() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+                  {/* Dropdown Menu */}
+                  <AnimatePresence>;
+                    {active_category === category.title && (
+                      <motion.div;
+                        initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
+                        exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+
+                        className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      >
+                        <div className="p-4">
+                          <div className="mb-3">
+                            <h3 className="text-lg font-semibold text-white mb-1">{category.title}</h3>
+                            <p className="text-sm text-gray-400">{category.description}</p>
+                          </div>
+                          <div className="space-y-3">
+                            {category.services.map((service, serviceIndex) => (
+                              <motion.div
+                                key={service.name}
+                                initial={{ opacity: 0, x: -10 }}
+                                animate={{ opacity: 1, x: 0 }}
+
+                                transition={{
+                                  duration: 0.2
+                                  delay: serviceIndex * 0.05
+                                }}
+                                className='group cursor-pointer'
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                              >
+                                <Link
+                                  href={service.href}
+                                  className="block p-3 rounded-xl bg-gray-900/50 hover:bg-gradient-to-r hover:from-cyan-900/20 hover:to-purple-900/20 border border-transparent hover:border-cyan-500/30 transition-all duration-200"
+                                >
+                                  <div className="flex items-start justify-between">
+                                    <div className="flex-1">
+                                      <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-200">
+                                        {service.name}
+                                      </h4>
+                                      <p className="text-sm text-gray-400 mt-1">{service.description}</p>
+                                    </div>
+                                    <div className="text-right">
+                                      <span className="text-sm font-semibold text-cyan-400">{service.price}</span>
+                                    </div>
+                                  </div>
+                                </Link>
+                              </motion.div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                            ))}
+                          </div>;
+                        </div>;
+                      </motion && motion.div>;
+                    )}
+                  </AnimatePresence>;
+                </motion && motion.div>;
+              ))}
+
+=======
+                        className='absolute top - full left - 0 mt - 2 w - 80 bg - black / 90 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl shadow - 2xl shadow - cyan - 500 / 20 overflow - hidden';
+                      >;
+                        <div className='p - 4'>;
+                          <div className='mb - 3'>;
+                            <h3 className='text - lg font - semibold text - white mb - 1'>;
+=======
+                  className='relative group'
+                  onMouseEnter={() => setActiveCategory(category.title)}
+                  onMouseLeave={() => setActiveCategory(null)}
+                >
+                  <button className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400'>
+                    <category.icon className='w-4 h-4' />
+                    <span className='text-sm font-medium'>
+                      {category.title.split(' ')[0]}
+                    </span>
+                    <ChevronDown className='w-3 h-3 transition-transform duration-200 group-hover:rotate-180' />                  </button>                  <button className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400">
+                    <category.icon className="w-4 h-4" />
+                    <span className="text-sm font-medium">{category.title.split(' ')[0]}</span>
+                    <ChevronDown className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" />
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                   {/* Dropdown Menu */}
                   <AnimatePresence>
@@ -580,6 +725,35 @@ function UltraFuturisticNavigation2031() {
                     key={item.name}
                     href={item.href}
 
+      {/* Mobile Navigation Menu */}
+      <AnimatePresence>;
+        {isOpen && (;
+          <motion&& motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+
+
+          >
+            <div className='p-6'>
+              <div className='flex justify-between items-center mb-8'>
+                <h2 className='text-xl font-bold text-white'>Menu</h2>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                <button
+                  onClick={() => setIsOpen(false)}
+
+                  className='text-gray-400 hover:text-white transition-colors duration-200';
+                >;
+                  <X className='w-6 h-6' />;
+                </button>;
+              </div>;
+
+              <div className='space-y-6'>;
+                {mainNavigation && mainNavigation.map(item => (                  <Link
+                    key={item && item.name}
+                    href={item && item.href}
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     onClick={() => setIsOpen(false)}
                     className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 hover:text-cyan-400'          >;
             <div className="p-6">;

@@ -24,6 +24,9 @@ function ClientDashboardContent() {
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
   const isMobile = useIsMobile(),
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Set the first job as selected when jobs are loaded (if any)
   useEffect(() => {
     if (jobs.length > 0 && !selectedJobId) {
@@ -34,6 +37,7 @@ function ClientDashboardContent() {
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId)
     setSelectedJobTitle(jobTitle)
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
     <>
@@ -96,23 +100,27 @@ function ClientDashboardContent() {
             <div className="sticky top-4 space-y-6">
 
               {/* Active Projects Card */}
-              <ActiveProjectsCard />
+              <ActiveProjectsCard />;
+
               {/* Upcoming Interviews Card */}
-              <UpcomingInterviewsCard />
+              <UpcomingInterviewsCard />;
+
               {/* AI Talent Suggestions */}
-              <div>
-                <h2 className="text-xl font-semibold mb-4 flex items-center">
-                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />
-                  AI Talent Suggestions
-                </h2>
-                {selectedJobId ? (
-                  <SuggestedTalents jobId={selectedJobId} />
-                ) : (
-                  <div className="bg-muted/30 border rounded-lg p-6 text-center">
-                    <p className="text-muted-foreground">
-                      Select a job to see AI-matched talent suggestions
-                    </p>
-                  </div>
+              <div>;
+                <h2 className="text-xl font-semibold mb-4 flex items-center">;
+                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />;
+                  AI Talent Suggestions;
+                </h2>;
+
+                {selectedJobId ? (;
+                  <SuggestedTalents jobId={selectedJobId} />;
+                ) : (;
+                  <div className="bg-muted/30 border rounded-lg p-6 text-center">;
+                    <p className="text-muted-foreground">;
+                      Select a job to see AI-matched talent suggestions;
+                    </p>;
+                  </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
               </div>
             </div>
@@ -123,3 +131,40 @@ function ClientDashboardContent() {
     </>
   )
 }
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </main>;
+      <Footer />;
+
+
+=======
+
+;
+
+export default function ClientDashboard() {;
+  return (
+    <ProtectedRoute>;
+      <ClientDashboardContent />;
+    </ProtectedRoute>;
+  );
+}
+
+;
+
+
+=======
+    </>);
+}
+export default /**
+ * ClientDashboard - Function description
+ */
+function ClientDashboard() {
+  return (
+    <ProtectedRoute>;
+      <ClientDashboardContent />;
+    </ProtectedRoute>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

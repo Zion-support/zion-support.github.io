@@ -48,8 +48,8 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
 
   }
 
-  render() {
-    if (this.state.hasError) {
+  render() {;
+    if (this && this.state.hasError) {;
       return (
 
         <div className="container py-8">
@@ -68,15 +68,3 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                   <RefreshCw className="h-4 w-4 mr-2" />
                   Try Again
                 </Button>
-
-                <Button onClick={() => window.location.reload()} variant="default">
-                  Refresh Page
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      )
-    }
-
-}

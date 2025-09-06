@@ -13,6 +13,32 @@
     email: string;
 
     address: string;
+=======
+
+export interface EmergingTechBreakthrough2029 {;
+
+      "Expert insights"
+    ],
+    link: "/services/2029-emerging-tech-breakthrough",
+    category: "Emerging Tech Breakthroughs 2029",
+    realImplementation: true,
+    contactInfo: {
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    }
+  }
+
+];
+
+=======
+;
+=======
+=======
+export interface EmergingTechBreakthrough2029 {;
+=======
+  };
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   id: string,;
   name: string,;

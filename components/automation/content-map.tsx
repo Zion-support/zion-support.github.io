@@ -1,3 +1,9 @@
+=======
+
+
+export default function ContentMap({ report }: Props) {
+  if (!report) return <div>No content map yet. Check back later.</div>;
+  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
 
 
   if (!report) return <div>No content map yet. Check back later.</div>;
@@ -18,6 +24,7 @@
         <ul className="text-sm space-y-1">
           {sections.map(([sec, n]) => (
             <li key={sec} className="flex justify-between"><span>{sec |'root'}</span><span className="text-gray-500">{n}</span></li>
+=======
 
           ))}
         </ul>
@@ -28,3 +35,10 @@
         </ul>
       </section>
     </div>
+=======
+<<<<<<< HEAD
+  )
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

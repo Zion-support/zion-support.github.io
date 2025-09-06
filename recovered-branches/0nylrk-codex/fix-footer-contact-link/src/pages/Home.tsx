@@ -12,6 +12,7 @@ import { SEO } from "@/components/SEO",
 import { HeroSection } from "@/components/HeroSection",
 import { QuickAccess } from "@/components/home/QuickAccess",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -37,3 +38,19 @@ export default function Home() {
 
 }
 ;
+      <CategoriesSection />;
+      <BenefitsSection />;
+      <HowItWorksSection />;
+      <FeaturedListingsSection />;
+      <NewsletterSection />;
+      <Footer />;
+
+    </div>);
+}
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

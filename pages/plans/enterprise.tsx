@@ -61,11 +61,6 @@ export default function EnterprisePlans() {
               </Link>
               <a href="mailto:sales@zion.ai" style={{ padding: '0.5rem 0.75rem', border: '1px solid #111827', borderRadius: 8 }}>Schedule a Demo</a>
 
-            </div>
-          </div>
-        ))}
-      </section>
-
                 ))}
               </tr>
             </thead>
@@ -76,13 +71,27 @@ export default function EnterprisePlans() {
                 </tr>
               ))}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </tbody>
           </table>
         </div>
       </section>
 
+=======
+
+      <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: 8 }}>
+          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SSL</span>
+          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>ISO 27001</span>
+          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SOC 2</span>
+        </div>
+        <div style={{ marginLeft: 'auto' }}>
+          <Link href="/enterprise/admin">Admin Dashboard</Link>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         </div>
       </section>
     </main>
 
   )
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

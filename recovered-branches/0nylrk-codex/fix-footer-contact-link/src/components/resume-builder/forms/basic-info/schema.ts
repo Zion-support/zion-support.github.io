@@ -1,4 +1,8 @@
 
+=======
+export const basicInfoSchema = z.object({;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   fullName: z.string().min(1, "Full name is required");
   title: z.string().min(1, "Professional title is required");
@@ -25,3 +29,12 @@ export const basicInfoSchema = z.object({;
   hourlyRate: z.number().positive().optional()});
 
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
+  github: z.string().optional(),
+  hourlyRate: z.number().positive().optional()}),
+
+
+
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

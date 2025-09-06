@@ -246,6 +246,11 @@ export default function CaseStudyResourcePage(req, res) {
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
 
+  ],
+  const caseStudy = caseStudies.find(study => study.id === id),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (!caseStudy) {
     return (
       <>
@@ -253,6 +258,7 @@ export default function CaseStudyResourcePage(req, res) {
           <title>Case Study Resource Not Found | Zion Tech Group</title>
         </Head>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <main className="container mx-auto px-6 py-12">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>
@@ -260,6 +266,11 @@ export default function CaseStudyResourcePage(req, res) {
                 The case study resource you're looking for doesn't exist.
               </p>
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -280,6 +291,7 @@ export default function CaseStudyResourcePage(req, res) {
       <Head>
         <title>{caseStudy.title} | Zion Tech Group - Case Study Resource</title>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />
         <meta property="og:description" content={caseStudy.description} />
       </Head>
@@ -295,6 +307,7 @@ export default function CaseStudyResourcePage(req, res) {
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -328,6 +341,7 @@ export default function CaseStudyResourcePage(req, res) {
 
   )
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 The case study resource you're looking for doesn't exist.;
               </p>;
               <Link;
@@ -347,3 +361,5 @@ export default function CaseStudyResourcePage(req, res) {
           </div>;
         </main>;
       </div>;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

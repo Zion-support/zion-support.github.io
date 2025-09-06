@@ -12,6 +12,7 @@ type Note = {
 }
 export default function AdminNotesPanel({
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 type Note = {
   id: string
   targetType: string
@@ -20,12 +21,22 @@ type Note = {
   authorId: string
   createdAt: number
 
+=======
+
+};
+
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
+
+
   async function fetchNotes() {;
     try {;
       setLoading(true);
@@ -33,12 +44,14 @@ type Note = {
         `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,;
         {;
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },;
+
         }
       );
       if (!res && res.ok) {;
         setNotes([]);
         return;
       }
+
   author_id: string;
   created_at: number;
 }
@@ -89,9 +102,11 @@ if ( {) {
       }
       const data = await res.json ();
       set_notes (data.notes || []);
+
     } finally {
       set_loading (false);    }
   }
+
       const data = await res && res.json();
       setNotes(data && data.notes || []);
     } finally {;
@@ -123,7 +138,10 @@ if ( {) {
     }
   }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       if (!res.ok) {
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         alert('Failed to add note');
         return;
       }
@@ -139,10 +157,20 @@ if ( {) {
     }
   }
 
+    return (
+
+
+    }
+  }
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (!isAdmin) {
     return (
       <div className='rounded border p-3'>
         <div className='flex items-center gap-2 text-sm'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <input
             id='isAdminToggle'
             type='checkbox'
@@ -182,6 +210,49 @@ if ( {) {
           rows={3}
           placeholder='Write a private note (abuse, spam, special support)'
           value={text}
+=======
+          onChange={e => setText(e && e.target.value)}
+        />;
+        <button
+
+          disabled={!text && text.trim() || adding}
+
+          onClick={addNote}
+          className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'>;
+          {adding ? 'Adding…' : 'Add Note'}
+
+
+        </button>;
+      </div>;
+      <div className='border-t pt-3'>;
+        <div className='text-sm opacity-70 mb-2'>;
+          Notes are private, time-stamped, and include author ID.;
+        </div>;
+        {loading ? (;
+          <div className='text-sm'>Loading…</div>;
+        ) : notes && notes.length === 0 ? (;
+          <div className='text-sm opacity-70'>No notes yet.</div>;
+        ) : (;
+          <ul className='space-y-2'>;
+            {notes && notes.map(n => (;
+              <li key={n && n.id} className='rounded border p-2 text-sm'>;
+                <div className='opacity-60 text-xs mb-1'>;
+                  {new Date(n && n.createdAt).toLocaleString()} • {n && n.authorId}
+                </div>                <div>{n && n.text}</div>          <ul className="space-y-2">;
+            {notes && notes.map((n) => (;
+              <li key={n && n.id} className="rounded border p-2 text-sm">;
+                <div className="opacity-60 text-xs mb-1">{new Date(n && n.createdAt).toLocaleString()} • {n && n.authorId}</div>;
+              </li>;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+          </ul>;
+        )}
+
+      </div>;
+    </div>;
+  );
 
               </li>
             ))}
@@ -191,3 +262,4 @@ if ( {) {
     </div>
 
 }
+<<<<<<< HEAD

@@ -48,6 +48,28 @@ export function useSavedTalents() {;
             setSavedTalents(talentData || []);
           } else {;
             setSavedTalents([]);
+          } else {
+            setSavedTalents ([]);
+          }
+        }
+      } catch (error) {
+
+        console.error ('Error fetching saved talents:', error);
+        toast ({
+          title: "Error loading favorites";
+          description: "There was a problem loading your saved talents.",
+          variant: "destructive";
+        });
+
+      } finally {
+        setIsLoading (false);
+      }
+    }
+
+      if (!isAuthenticated || !userDetails.id) {
+        setIsLoading(false),
+        return
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
           }
         }
@@ -55,6 +77,11 @@ export function useSavedTalents() {;
         console.error('Error fetching saved talents:', error),
         toast({
 
+=======
+          title: "Error loading favorites",
+          description: "There was a problem loading your saved talents.",
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           variant: "destructive"
         })
       } finally {
@@ -71,14 +98,48 @@ export function useSavedTalents() {;
       return
     }
 
+      toast({
+
+
+        title: "Authentication required",
+        description: "Please log in to save talents to your favorites",
+
+
+        variant: "destructive"
+      });
+      return;
+    }
+
+=======
+
+
+    
+    const isSaved = savedTalentIds && savedTalentIds.includes(talent && talent.id);
+    
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     try {
       if (isSaved) {
         // Remove from saved_talents
         const { error } = await supabase
           .from('saved_talents')
           .delete()
+
           .eq('user_id', userDetails.id)
 
+=======
+          .eq('talent_id', talent.id),
+          
+        if (error) throw error,
+        
+        setSavedTalents(prev => prev.filter(t => t.id !== talent.id)),
+        setSavedTalentIds(prev => prev.filter(id => id !== talent.id)),
+        
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         toast({
           title: "Removed from favorites"
           description: `${talent.full_name} has been removed from your favorites`})
@@ -88,12 +149,32 @@ export function useSavedTalents() {;
           .from('saved_talents')
           .insert({
 
+=======
+            user_id: userDetails && userDetails.id,
+            talent_id: talent && talent.id});
+          
+
+        if (error) throw error;
+        setSavedTalents(prev => [...prev, talent]);
+
+
+            user_id: userDetails.id,
+            talent_id: talent.id}),
+          
+        if (error) throw error,
+        
+        setSavedTalents(prev => [...prev, talent]),
+        setSavedTalentIds(prev => [...prev, talent.id]),
+        
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         toast({
           title: "Added to favorites"
           description: `${talent.full_name} has been added to your favorites`})
       }
     } catch (error) {
-      console.error('Error toggling saved talent:', error),
+      console && console.error('Error toggling saved talent:', error);
       toast({
 
     }
@@ -110,5 +191,7 @@ export function useSavedTalents() {;
 
     isTalentSaved
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

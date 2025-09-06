@@ -168,6 +168,13 @@ const benefits = [
 ];
 export default function CybersecurityServices() {
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Layout
       title="Cybersecurity Services - Zion Tech Group"
@@ -198,6 +205,10 @@ export default function CybersecurityServices() {
             </div>
           </div>
         </section>
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -214,6 +225,7 @@ export default function CybersecurityServices() {
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -232,6 +244,7 @@ export default function CybersecurityServices() {
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-red-600" />
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -245,6 +258,7 @@ export default function CybersecurityServices() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -306,3 +320,7 @@ export default function CybersecurityServices() {
     </>
 
   );
+    </>;
+  ),;
+}
+

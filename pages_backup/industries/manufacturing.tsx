@@ -3,6 +3,11 @@ import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -50,61 +55,74 @@ const services = [
     ];
   },
   {}
-    title: 'Predictive Maintenance AI,',
-    description: 'AI-powered systems to predict and prevent equipment failures.,',
-    icon: Brain,
-    features: [;
-      'Equipment health monitoring,',
-      'Failure prediction algorithms',',
-      'Maintenance scheduling',',
+
+    title: 'Predictive Maintenance AI,',;
+    description: 'AI-powered systems to predict and prevent equipment failures.,',;
+    icon: Brain,;
+    features: [,;
+      'Equipment health monitoring,',;
+      'Failure prediction algorithms',',;
+      'Maintenance scheduling',',;
+
       'Cost optimization'';
     ];
   },
   {}
-    title: 'IoT Sensor Networks,',
-    description: 'Connected sensor systems for comprehensive factory monitoring.,',
-    icon: Cpu,
-    features: [;
-      'Environmental monitoring,',
-      'Equipment status tracking',',
-      'Data collection systems',',
+
+    title: 'IoT Sensor Networks,',;
+    description: 'Connected sensor systems for comprehensive factory monitoring.,',;
+    icon: Cpu,;
+    features: [,;
+      'Environmental monitoring,',;
+      'Equipment status tracking',',;
+      'Data collection systems',',;
+
       'Real-time alerts'';
     ];
   },
   {}
-    title: 'Quality Control Systems,',
-    description: 'Automated quality assurance using computer vision and AI.,',
-    icon: Shield,
-    features: [;
-      'Visual inspection systems,',
-      'Defect detection algorithms',',
-      'Quality metrics tracking',',
+
+    title: 'Quality Control Systems,',;
+    description: 'Automated quality assurance using computer vision and AI.,',;
+    icon: Shield,;
+    features: [,;
+      'Visual inspection systems,',;
+      'Defect detection algorithms',',;
+      'Quality metrics tracking',',;
+
       'Automated reporting'';
     ];
   },
   {}
-    title: 'Supply Chain Optimization,',
-    description: 'AI-driven supply chain management for improved efficiency.,',
-    icon: BarChart3,
-    features: [;
-      'Demand forecasting,',
-      'Inventory optimization',',
-      'Supplier management',',
+
+    title: 'Supply Chain Optimization,',;
+    description: 'AI-driven supply chain management for improved efficiency.,',;
+    icon: BarChart3,;
+    features: [,;
+      'Demand forecasting,',;
+      'Inventory optimization',',;
+      'Supplier management',',;
+
       'Logistics coordination'';
     ];
   },
   {}
-    title: 'Digital Twin Technology,',
-    description: 'Virtual replicas of physical manufacturing systems for simulation.,',
-    icon: Database,
-    features: [;
-      '3D factory modeling,',
-      'Process simulation',',
-      'Performance optimization',',
+
+    title: 'Digital Twin Technology,',;
+    description: 'Virtual replicas of physical manufacturing systems for simulation.,',;
+    icon: Database,;
+    features: [,;
+      '3D factory modeling,',;
+      'Process simulation',',;
+      'Performance optimization',',;
+
       'Scenario planning'';
     ];
   }
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;];
 const benefits = [;
   {}
@@ -112,6 +130,7 @@ const benefits = [;
     description: 'Automated processes and AI optimization improve production efficiency.,',
     icon: Activity;
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 ];
 const benefits = [
   {
@@ -120,21 +139,26 @@ const benefits = [
     icon: Activity
   },
   {}
-    title: 'Reduced Downtime,',
-    description: 'Predictive maintenance prevents unexpected equipment failures.,',
-    icon: Wrench;
-  },
+
+    title: 'Reduced Downtime,',;
+    description: 'Predictive maintenance prevents unexpected equipment failures.,',;
+    icon: Wrench,;
+  },;
   {}
-    title: 'Better Quality,',
-    description: 'Automated quality control ensures consistent product quality.,',
-    icon: Shield;
-  },
+    title: 'Better Quality,',;
+    description: 'Automated quality control ensures consistent product quality.,',;
+    icon: Shield,;
+  },;
   {}
-    title: 'Cost Savings,',
-    description: 'Optimized operations and reduced waste lower manufacturing costs.,',
-    icon: BarChart3;
+    title: 'Cost Savings,',;
+    description: 'Optimized operations and reduced waste lower manufacturing costs.,',;
+    icon: BarChart3,;
+
   }
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;];
 export default function ManufacturingPage() {
   return (;
@@ -160,8 +184,9 @@ export default function ManufacturingPage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <Settings className="w-12 h-12 text-blue-400 mr-4" />";
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Manufacturing;
+
+                <h1 className="text-5xl md: text-6xl font-bold">", Manufacturing,;
+
                   <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -171,12 +196,12 @@ export default function ManufacturingPage() {
                 Revolutionize manufacturing with Industry 4.0 technologies including smart factories,
                 IoT networks, predictive maintenance, and digital twin solutions.,
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
                   Get Manufacturing Consultation;
                 </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
-                  View Manufacturing Case Studies;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", View Manufacturing Case Studies,;
+
                 </Link>;
               </div>;
             </motion.div>;
@@ -266,6 +291,9 @@ export default function ManufacturingPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">";
@@ -278,6 +306,9 @@ export default function ManufacturingPage() {
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
@@ -307,6 +338,9 @@ export default function ManufacturingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -321,6 +355,9 @@ export default function ManufacturingPage() {
               {benefits.map((benefit, index) => (,
                 <motion.div}),
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -359,6 +396,9 @@ export default function ManufacturingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Manufacturing?;
@@ -381,6 +421,7 @@ export default function ManufacturingPage() {
       </div>;
     </Layout>;
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Manufacturing?

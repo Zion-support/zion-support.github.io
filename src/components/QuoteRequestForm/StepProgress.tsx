@@ -9,6 +9,9 @@
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const stepOrder = steps.findIndex(s => s.id === stepId),
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),
 
@@ -50,3 +53,4 @@
     </div>
   )
 }
+<<<<<<< HEAD

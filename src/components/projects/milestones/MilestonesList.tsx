@@ -60,6 +60,12 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
     )
   }
 
+=======
+
+  
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
@@ -91,8 +97,11 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           </CardContent>
         </Card>
       )}
-      <div className="space-y-4">
-        {milestones.map((milestone,) => (
+
+
+      <div className="space-y-4">;
+        {milestones && milestones.map((milestone,) => (;
+
           <MilestoneCard
             key = {milestone.id,}
             id = {milestone.id,}
@@ -139,3 +148,4 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
     </div>;
   );
 };
+<<<<<<< HEAD

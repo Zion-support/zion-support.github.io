@@ -1,6 +1,8 @@
 
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
 
+        <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       </Head>
       <main className="min-h-screen bg-gray-50 text-gray-900">
         <div className="mx-auto w-full max-w-5xl px-6 py-12">
@@ -24,13 +26,6 @@
             </p>
             <h2 id="problem-with-traditional-marketplaces">The Problem with Traditional Marketplaces</h2>
 
-            <ul>
-              <li><strong>Platform Rent-Seeking</strong>: Centralized fees and policy risk diminish creator upside and user choice.</li>
-              <li><strong>Captive Reputation</strong>: Profiles and reviews are siloed, your hard-won credibility is non-portable.</li>
-              <li><strong>Low-Trust Transactions</strong>: Disputes, fraud, and misalignment waste time and undermine collaboration.</li>
-              <li><strong>Data as Leverage</strong>: User data is harvested to entrench moats rather than empower the people who generate it.</li>
-            </ul>
-
               credibly neutral.
             </p>
           </section>
@@ -38,3 +33,16 @@
       </main>
     </>
   )
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

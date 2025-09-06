@@ -55,7 +55,10 @@ export default async function handler(
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
+
   const { slug, lang } = req && req.query as { slug: string, lang?: string };
+
+
   try {
     if (hasSupabase) {
       const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single();
@@ -63,6 +66,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang);
       return res && res.status(200).json({ item, translated })
     }
+
+}
+
+
+
+=======
+
     const base = LOCAL && LOCAL.find((t) => t && t.slug === slug) || null;
     if (!base) return res && res.status(404).json({ error: 'Not found' });
     const { item, translated } = applyTranslations(base, lang);
@@ -71,3 +81,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(500).json({ error: e && e.message })
   };
 }
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

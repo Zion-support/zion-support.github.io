@@ -1,5 +1,6 @@
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
@@ -26,6 +27,11 @@
       const fidEntries = window.performance.getEntriesByType("first-input");
       const fid = fidEntries[0] as PerformanceEventTiming;
 
+=======
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/usePerformanceMetrics.ts
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       setMetrics({
         loadTime: navigation.loadEventEnd - navigation.loadEventStart
         firstContentfulPaint: fcp ? fcp.startTime : 0
@@ -34,6 +40,7 @@
         firstInputDelay: fid ? fid.processingStart - fid.startTime : 0
       });
 
+<<<<<<< HEAD
 import { useEffect, useState } from 'react',;
 import { PerformanceMetrics } from '../types',;
 export function usePerformanceMetrics() {;
@@ -51,3 +58,4 @@ export function usePerformanceMetrics() {;
   return { metrics, isSupported }
 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

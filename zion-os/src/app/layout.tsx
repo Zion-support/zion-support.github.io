@@ -1,5 +1,6 @@
 
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <html lang="en">;
       <body className="min - h-screen bg-[var (--bg)] text-[var (--fg)]">;
         <nav className="border - b border - white / 10 sticky top - 0 z - 50 bg - zinc - 900 / 80 backdrop - blur - md">;

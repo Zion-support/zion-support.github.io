@@ -6,12 +6,16 @@ import OpenAI from 'openai';
     bucket.timestamps.push(now);
   }
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
@@ -60,6 +64,7 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     return res.status(200).json({ text })
   } catch (err: any) {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }
   ipToRequests[ip] = bucket;
@@ -106,3 +111,12 @@ export default async function handler(req, res) {
     return res.status(200).json({ text });
 
 }
+<<<<<<< HEAD
+=======
+  
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

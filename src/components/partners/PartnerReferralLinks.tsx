@@ -28,6 +28,10 @@ export function PartnerReferralLinks() {
       if (selectedCampaign !== "default") {
         url.searchParams.append("campaign", selectedCampaign)
 
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
 
       // Add custom parameter if provided
@@ -119,11 +123,35 @@ export function PartnerReferralLinks() {
 
                 </CardTitle>
               </CardHeader>
-              <CardContent className="pb-4">
-                <div className="flex space-x-2">
+              <CardContent className='pb-4'>
+                <div className='flex space-x-2'>
+                className='bg-zion-purple hover:bg-zion-purple-dark'>;
+                Generate Link;
+              </Button>;
+            </DialogFooter>;
+          </DialogContent>;
+        </Dialog>;
+      </div>;
+
+      <div className='grid gap-4'>;
+        {generatedLinks && generatedLinks.length > 0 ? (;
+          generatedLinks && generatedLinks.map((item, index) => (;
+            <Card
+              key={index}
+              className='bg-zion-blue-dark border-zion-blue-light'>;
+              <CardHeader className='pb-2'>;
+                <CardTitle className='text-base flex items-center justify-between'>;
+                  <div className='flex items-center gap-2'>;
+                    <Link className='h-4 w-4 text-zion-purple' />;
+                    <span>{item && item.name || 'Campaign Link'}</span>                  </div>;
+                </CardTitle>;
+              </CardHeader>;
+              <CardContent className='pb-4'>;
+                <div className='flex space-x-2'>;
                   <Input
                     value={item.link}
                     readOnly
+
                     className="font-mono text-xs"
                   />
 
@@ -138,3 +166,4 @@ export function PartnerReferralLinks() {
               <p className="text-zion-slate-light text-center mb-4">
                 Create custom campaign links to track different marketing efforts
               </p>
+<<<<<<< HEAD

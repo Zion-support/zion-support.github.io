@@ -1,3 +1,27 @@
+=======
+
+
+  updateDimensions ();
+window && window.addEventListener ('resize', updateDimensions);
+setIsVisible (true);
+}, []);
+canvas && canvas.width = dimensions && dimensions.width;
+canvas && canvas.height = dimensions && dimensions.height;
+// Particle system class Particle {;
+  x: number;
+y: number;
+  const update_dimensions = () =>: any {
+  set_dimensions ({
+  update_dimensions ();
+window.addEventListener ('resize', update_dimensions);
+setIsVisible (true);
+;
+}, []);
+canvas.width = dimensions.width;
+canvas.height = dimensions.height;
+// Particle system class Particle {
+  coordinate_x: number;
+coordinate_y: number;
 
 useEffect ( () => {
   const updateDimensions = () => {
@@ -18,6 +42,51 @@ size: number;
 color: string;
 life: number;
 
+=======
+
+  children,
+  intensity = 'high',
+  colorScheme = 'quantum',
+  particleCount = 300,
+  animationSpeed = 1.5,
+  className = '',
+}: UltraQuantumHolographicBackgroundProps) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
+export default function UltraQuantumHolographicBackground(): any ({;
+=======
+maxLife: number;
+type: 'quantum' | 'holographic' | 'energy' | 'matrix';
+constructor () {
+  // Bounce off edges if (this.x <= 0 |this.x >= dimensions.width) this.vx *= -1;
+if (this.y <= 0 |this.y >= dimensions.height) this.vy *= -1;
+// Quantum tunneling effect if (Math.random () < 0.001 * intensityMultiplier) {
+  switch (this.type) {
+  case 'quantum': // Quantum particle with wave function case 'holographic': // Holographic projection ctx.beginPath ();
+ctx.moveTo (this.x - this.size, this.y);
+ctx.lineTo (this.x + this.size, this.y);
+ctx.lineTo (this.x, this.y - this.size);
+ctx.lineTo (this.x - this.size, this.y);
+ctx.fillStyle = this.color;
+ctx.fill ();
+// Holographic grid ctx.strokeStyle = this.color;
+ctx.lineWidth = 0.5;
+ctx.globalAlpha = alpha * 0.5;
+ctx.strokeRect (this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
+break;
+case 'energy': // Energy field
+}ctx.restore ()
+export default function UltraQuantumHolographicBackground({
+  children
+  intensity = 'high'
+  colorScheme = 'quantum'
+  particleCount = 300
+  animationSpeed = 1.5
+  className = ''
+}: UltraQuantumHolographicBackgroundProps) {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
 export default function UltraQuantumHolographicBackground({;
@@ -38,6 +107,67 @@ export default function UltraQuantumHolographicBackground({;
     // Particle system
     class Particle {
 
+    updateDimensions();
+    window.addEventListener('resize', updateDimensions);
+    setIsVisible(true);
+
+
+
+      x: number;
+      y: number;
+      background: 'rgba (0, 0, 0, 0.93)',
+      overlay: 'rgba (0, 0, 0, 0.28)',
+    },
+  }
+;
+  const colors = color_schemes[color_scheme];
+  const intensity_multiplier = { low: 0.5, medium: 1, high: 1.5, ultra: 2.5 }[;
+    intensity;
+  ];      background: 'rgba (0, 0, 0, 0.93)';
+      overlay: 'rgba (0, 0, 0, 0.28)';
+    }
+  }
+;
+  const colors = color_schemes[color_scheme];
+  const intensity_multiplier = { low: 0.5, medium: 1, high: 1.5, ultra: 2.5 }[intensity],
+    const update_dimensions = () =>: any {
+      set_dimensions ({
+        width: window.inner_width,
+        height: window.inner_height,
+      });    }        height: window.inner_height;
+      });
+    }
+;
+    update_dimensions ();
+    window.addEventListener ('resize', update_dimensions);
+    setIsVisible (true);
+;
+    return () => window.removeEventListener ('resize', update_dimensions);  }, []);    return () => window.removeEventListener ('resize', update_dimensions);
+  }, []);
+;
+  useEffect (() => {
+    // Check condition
+if (return) {
+  $2
+}
+    const canvas = canvas_ref.current;
+    const ctx = canvas.get_context ('2d');
+    // Check condition
+if (return) {
+  $2
+}
+    canvas.width = dimensions.width;
+    canvas.height = dimensions.height;
+;
+    // Particle system;
+    class Particle {
+      coordinate_x: number;
+      coordinate_y: number;
+=======
+      x: number;
+      y: number;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       vx: number;
       vy: number;
       size: number;
@@ -55,6 +185,23 @@ export default function UltraQuantumHolographicBackground({;
         if (Math.random() < 0.001 * intensityMultiplier) {
           this.x = Math.random() * dimensions.width;
 
+=======
+          this.y = Math.random() * dimensions.height
+        }
+
+        // Holographic flicker
+        if (this.type === 'holographic' && Math.random() < 0.1) {
+          this.size *= 0.8
+        }
+
+        // Energy pulse
+        if (this.type === 'energy') {
+          this.size = Math.sin(Date.now() * 0.01) * 2 + 3
+
+        }
+        // Matrix rain effect
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         if (this.type === 'matrix') {
           this.vy += 0.1;
           if (this.y > dimensions.height) {
@@ -66,6 +213,15 @@ export default function UltraQuantumHolographicBackground({;
 
       draw() {
 
+          }
+        }
+      }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      draw() {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         if (this.life <= 0) return;
         const alpha = this.life / this.maxLife;
         ctx.save();
@@ -79,6 +235,7 @@ export default function UltraQuantumHolographicBackground({;
             ctx.fill();
             // Wave function rings
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             for (let i = 1, i <= 3, i++) {
               ctx.beginPath();
               ctx.arc(this.x, this.y, this.size * i, 0, Math.PI * 2);
@@ -97,6 +254,9 @@ export default function UltraQuantumHolographicBackground({;
             ctx.lineTo(this.x - this.size, this.y);
             ctx.fillStyle = this.color;
             ctx.fill();
+
+            
+
             // Holographic grid
             ctx.strokeStyle = this.color;
             ctx.lineWidth = 0.5;
@@ -147,6 +307,14 @@ export default function UltraQuantumHolographicBackground({;
         }
       }
 
+          }
+        }
+      }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Draw holographic grid
       ctx.strokeStyle = colors.secondary;
       ctx.lineWidth = 0.3;
@@ -187,18 +355,134 @@ export default function UltraQuantumHolographicBackground({;
             repeat: Infinity,
             ease: 'easeInOut',            ease: "easeInOut";
           }}
+      }
+    }
+  }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]);
+  return (
+    <div className={`relative min-h-screen overflow-hidden ${className}`}>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      {/* Quantum Holographic Canvas Background */}
+      <canvas
+        ref={canvasRef}
+
+
+            ],          }}
+          transition={{
+            duration: 8
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+
+      <div className="fixed inset-0 z-10 pointer-events-none">
+        {/* Quantum Field Lines */}
+        <motion.div
+          className="absolute inset-0"
+          animate={{
+            background: [
+              `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`;
+
+              `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`;
+              `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`;
+              `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
+            ]
+
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+
+          }}
+        />
+        />;
+        {/* Holographic Scan Lines */}              `radial-gradient(circle at 20% 20%, ${colors && colors.primary}10 0%, transparent 50%)`;
+              `radial-gradient(circle at 80% 80%, ${colors && colors.secondary}10 0%, transparent 50%)`;
+              `radial-gradient(circle at 20% 80%, ${colors && colors.tertiary}10 0%, transparent 50%)`;
+              `radial-gradient(circle at 80% 20%, ${colors && colors.accent}10 0%, transparent 50%)`;
+            ];
+          transition={{;
+            duration: 8,;
+            repeat: Infinity,;
+            ease: 'easeInOut',            ease: "easeInOut";
+          }}
+        />;
+        {/* Holographic Scan Lines */}
+
+
+                key={i}
+                className='absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent';
+                style={{
+
+                  top: i * 4,
+                  color: colors && colors.primary,
+
+                }}
+                animate={{
+
+                  opacity: [0, 1, 0],
+                  scale_x: [0, 1, 0],
+
+                }}
+                transition={{
+
+                  duration: 2,
+                  delay: i * 0 && 0.1,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+              />;
+            );
+          )}        </div>;
+
+
+        {/* Quantum Fluctuations */}
+        <motion && motion.div        <div className="absolute inset-0 opacity-20">;
+          {Array && Array.from({ length: Math && Math.ceil(dimensions && dimensions.height / 4) }).map((_, i) => (;
+            <motion&& motion.div
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              key={i}
+              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
+              style={{
+
+                top: i * 4,
+                color: colors && colors.primary
+
+              }}
+              animate={{
+                opacity: [0, 1, 0]
+                scaleX: [0, 1, 0]
+                top: i * 4,
+                color: colors.primary;
+              }}
+              animate={{
+                opacity: [0, 1, 0];
+                scale_x: [0, 1, 0];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              }}
+              transition={{
+
+                duration: 2,
+                delay: i * 0 && 0.1,
+                repeat: Infinity,
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+          }}
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        />
+      </div>
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         />;
       </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Content Layer */}
-      <div className='relative z - 20'>{children}</div>;
-      {/* Quantum Noise Effect */}
-      <div className='fixed inset - 0 z - 30 pointer - events - none opacity - 5'>;
-        <motion.div;
-          className='absolute inset - 0';
-          animate={{
-            background: [;
-              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.9' num_octaves='4' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
-              `url ("data:image / svg + xml, %3Csvg view_box='0 0 100 100' xmlns='http://www.w3.org / 2000 / svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractal_noise' base_frequency='0.7' num_octaves='3' stitch_tiles='stitch'/%3E%3C / filter%3E%3Crect width='100' height='100' filter='url (%23noise)'/%3E%3C / svg%3E")`,
+
+
             ],          }}
           transition={{
             duration: 4
@@ -223,3 +507,19 @@ export default function UltraQuantumHolographicBackground({;
             ];
           }}
           transition={{
+=======
+        />
+      </div>
+    </div>
+  );              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`;
+              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`
+            ]
+          }}
+          transition={{
+
+            duration: 4,
+            repeat: Infinity,
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

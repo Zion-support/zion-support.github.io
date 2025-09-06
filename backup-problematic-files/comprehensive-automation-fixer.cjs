@@ -1,3 +1,4 @@
+=======
 
 
 #!/usr/bin/env node;
@@ -610,9 +611,12 @@ if (require.main === module) {
 
 module.exports = ComprehensiveAutomationFixer;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Fix all automation files
 automationFiles.forEach(fixAutomationFile);
       .replace(/script1\."async")
       .replace(/script1\."src")
       .replace(/['"]react;['"]/g, ")
       .replace(/['"]framer-motion;['"]/g, ")
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

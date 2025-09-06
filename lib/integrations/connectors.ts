@@ -1,5 +1,6 @@
 
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
 async function mockProviderCall<T>(
@@ -7,6 +8,7 @@ async function mockProviderCall<T>(
   action: string
   details: Record<string, any>
 ): Promise<{ log: SyncLogEntry; result: T }> {
+
   const log: SyncLogEntry = {
     id: uuidv4()
     timestamp: Date.now()
@@ -55,3 +57,16 @@ export const email = {
     return executeProviderAction(connection, 'sendNotification', { notification });
   },
 };
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+  async createCandidate(
+    connection: ProviderConnection,
+    candidate: Record<string, any>
+  ) {
+    return executeProviderAction(connection, 'createCandidate', { candidate });
+  },
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

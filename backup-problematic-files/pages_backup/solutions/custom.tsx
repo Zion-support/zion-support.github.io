@@ -9,3 +9,16 @@ import { motion } from 'framer-motion';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
+<<<<<<< HEAD
+=======
+const Custom: React.FC<CustomProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Custom</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Custom;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

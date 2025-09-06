@@ -16,6 +16,16 @@ export default function CaseStudy() {
   const slug = router.query.slug as string
   const study = CASE_STUDIES.find((s,) => s.slug === slug)
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`)
+import { ArrowLeft } from 'lucide-react';
+import {  Breadcrumb,;
+  BreadcrumbList,;
+  BreadcrumbItem,;
+  BreadcrumbLink,;
+  BreadcrumbSeparator,;
+} from '@/components/ui/breadcrumb';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
+import { getBreadcrumbsForPath } from '@/utils/routeUtils';
+
 
   if (!study) {
     return (
@@ -33,6 +43,20 @@ export default function CaseStudy() {
         Case study not found.
       </div>
     )
+      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found && found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
+import { getBreadcrumbsForPath } from '@/utils/routeUtils';
+export default function CaseStudy() {;
+  const router = useRouter();
+  const slug = router && router.query.slug as string;
+  const study = CASE_STUDIES && CASE_STUDIES.find((s) => s && s.slug === slug);
+  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);
+
+  if (!study) {;
+    return (
+      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">;
+        Case study not found.;
+      </div>;
+    );
   }
   return (
     <>
@@ -44,6 +68,11 @@ export default function CaseStudy() {
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <Link href="/">Home</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
@@ -83,3 +112,4 @@ export default function CaseStudy() {
             className="prose prose-invert"
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
+<<<<<<< HEAD

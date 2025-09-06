@@ -12,13 +12,44 @@ import { useAuth } from "@/hooks/useAuth",
 
   useEffect(() => {
     if (user) {
-      fetchReferralCode(),
-      fetchReferralStats(),
-      fetchReferrals(),
+      fetchReferralCode();
+      fetchReferralStats();
+      fetchReferrals();
       fetchRewards()
+=======
+import { useState, useEffect } from './react';
+import { toast } from '@/hooks / use - toast';
+import { use_auth } from '@/hooks / use_auth';
+import { supabase } from '@/integrations / supabase / client';
+import { ReferralCode, ReferralStats, Referral, ReferralReward } from '@/types / referrals';
+export /**
+ * useReferrals - Function description
+ */
+function useReferrals() {
+  const { user } = use_auth ();
+  const [referral_code, setReferralCode] = useState < ReferralCode | null>(null);
+  const [is_loading, setIsLoading] = useState (true);
+  const [referrals, set_referrals] = useState < Referral[]>([]);
+  const [rewards, set_rewards] = useState < ReferralReward[]>([]);
+  const [stats, set_stats] = useState < ReferralStats>({
+    total_referrals: 0;
+    pending_referrals: 0;
+    completed_referrals: 0,
+    total_rewards: 0});
+;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      fetchReferralCode ();
+      fetchReferralStats ();
+      fetch_referrals ();
+      fetch_rewards ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
-  }, [user]),
-
+  }, [user]);
+;
   const fetchReferralCode = async () => {
     try {
       setIsLoading(true),
@@ -28,7 +59,7 @@ import { useAuth } from "@/hooks/useAuth",
         .eq('user_id', user?.id)
 
       if (error) {
-        console.error("Error fetching referral code:", error),
+        console && console.error("Error fetching referral code:", error);
         return
       }
       setReferralCode(data)
@@ -38,6 +69,19 @@ import { useAuth } from "@/hooks/useAuth",
       setIsLoading(false)
     }
 
+    } finally {
+      setIsLoading (false);
+    }
+
+
+  },
+
+  const fetchReferrals = async () => {
+    try {
+      if (!user) return,
+      
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       const { data, error } = await supabase
         .from('referrals')
         .select('*')
@@ -53,19 +97,63 @@ import { useAuth } from "@/hooks/useAuth",
         .from('referrals')
         .select('id, status')
 
+=======
+        .eq('referrer_id', user && user.id);
+      
+
+      if (refError) throw refError;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Get rewards
       const { data: rewards, error: rewardsError } = await supabase
         .from('referral_rewards')
         .select('amount')
 
+=======
+        .eq('user_id', user && user.id);
+        
+
+      if (rewardsError) throw rewardsError;
+      // Calculate stats
+
+      const totalReferrals = referrals ? referrals && referrals.length : 0;
+      const pendingReferrals = referrals ? referrals && referrals.filter(r => r && r.status === 'pending').length : 0;
+      const completedReferrals = referrals ? referrals && referrals.filter(r => r && r.status === 'completed').length : 0;
+      
+      const totalRewards = rewards ? rewards && rewards.reduce((sum, item) => {
+        return sum + (item && item.amount || 0)
+
+      }, 0) : 0;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       setStats({
-        totalReferrals,
-        pendingReferrals,
-        completedReferrals,
+        totalReferrals;
+        pendingReferrals;
+        completedReferrals;
         totalRewards
       })
     } catch (error) {
-      console.error("Error fetching referral stats:", error)
+      console && console.error("Error fetching referral stats:", error)
+    }
+
+;
+  const fetch_referrals = async () => {
+    try {
+      // Check condition
+if (return) {
+  $2
+}
+      const { data, error } = await supabase;
+        .from ('referrals');
+        .select ('*');
+        .eq ('referrer_id', user.id);
+        .order ('created_at', { ascending: false });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      set_referrals (data || []);
+    } catch (error) {
+      console.error ("Error fetching referrals:", error);
     }
 
   const generateReferralCode = async () => {
@@ -73,21 +161,49 @@ import { useAuth } from "@/hooks/useAuth",
       if (!user) {
         toast({
 
+=======
+          title: "Authentication required",
+          description: "You need to be logged in to generate a referral code",
+          variant: "destructive"}),
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         return
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
+<<<<<<< HEAD
       const { data, error } = await supabase.rpc('generate_referral_code', {
         user_id: user.id
 
+        title: "Success!";
+        description: "Your referral code has been generated"
+        variant: "success"});
+
+
+      }),
+
+      if (error) throw error,
+
+      toast({
+        title: "Success!",
+        description: "Your referral code has been generated",
+        variant: "success"}),
+
+      // Refresh the code
+      fetchReferralCode(),
+      
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       return data
     } catch (error: any) {
-      console.error("Error generating referral code:", error),
+      console && console.error("Error generating referral code:", error);
       toast({
 
   // Copy the referral link to clipboard
   const copyReferralLink = () => {
-    const link = getReferralLink(),
+    const link = getReferralLink();
     if (link) {
-      navigator.clipboard.writeText(link),
+      navigator && navigator.clipboard.writeText(link);
       toast({
 
         title: "Cannot share",
@@ -139,15 +255,36 @@ export function useReferrals() {;
 
     }
     if (shareUrl) {
-      window.open(shareUrl, '_blank')
+      window && window.open(shareUrl, '_blank')
     }
 
+    let share_url = '';
+;
+    switch (platform) {
+      case 'twitter':;
+        share_url = `https://twitter.com / intent / tweet?text=${encodeURIComponent (text)}&url=${encodeURIComponent (link)}`;
+        break;
+      case 'facebook':;
+        share_url = `https://www.facebook.com / sharer / sharer.php?u=${encodeURIComponent (link)}`;
+        break;
+      case 'linkedin':;
+        share_url = `https://www.linkedin.com / sharing / share - offsite/?url=${encodeURIComponent (link)}`;
+        break;
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      window.open (share_url, '_blank');
+    }
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return {
-    referralCode;
-    isLoading;
+    referral_code;
+    is_loading;
     stats;
-    referrals, // Added this property
-    rewards,   // Added this property
+    referrals, // Added this property;
+    rewards,   // Added this property;
     generateReferralCode;
     getReferralLink;
     copyReferralLink;
@@ -157,5 +294,6 @@ export function useReferrals() {;
     fetchReferrals, // Added this method for refreshing referrals
     fetchRewards,   // Added this method for refreshing rewards
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }

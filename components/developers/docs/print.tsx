@@ -49,6 +49,15 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
+=======
+
+
+
+
+
+export default function PrintDocs({ docs }: PageProps) {
+  useEffect(() => {
+    const id = setTimeout(() => window.print(), 500);
 
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {;
@@ -72,12 +81,17 @@ export default function PrintDocs({ docs }: PageProps) {
                   {c && c.content}
                 </pre>;
               ))}          </section>  }, []);
+
+=======
 };
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
     return () => clearTimeout(id)
   }, []);
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   return (
     <div className="p-8 max-w-4xl mx-auto">;
       <h1 className="text-3xl font-bold mb-6">{docs && docs.title}</h1>;
@@ -89,12 +103,16 @@ export default function PrintDocs({ docs }: PageProps) {
             {s && s.code && s && s.code.map((c, i) => (;
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
             ))}
-          </section>
+
+
         ))}
+
       </div>;
     </div>;
   );
 }
+
+=======
   );
 }
 export default /**
@@ -163,3 +181,11 @@ export default function PrintDocs({ docs }: PageProps) {
         ))}
       </div>
     </div>
+=======
+<<<<<<< HEAD
+  )
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

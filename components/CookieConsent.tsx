@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
   const [isVisible, setIsVisible] = useState(false);
@@ -21,9 +25,12 @@
       marketing: true,;
       functional: true,;
     };
+
     setPreferences(allAccepted);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
     setIsVisible(false);
+
+
     // Initialize analytics if accepted;
     if (allAccepted && allAccepted.analytics) {;
       // Add your analytics initialization code here;
@@ -46,14 +53,18 @@
       marketing: false,;
       functional: false,;
     };
+
     setPreferences(onlyNecessary);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary));
     setIsVisible(false);
+
   };
   if (!isVisible) {;
+
     return null;
   }
   return (
+
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">;
       <div className="max-w-7xl mx-auto p-4">;
         {!showSettings ? (;
@@ -156,12 +167,14 @@ if ( {) {
                   We use cookies to enhance your experience;
                 </h3>;
                 <p className="text - sm text - gray - 600">;
+
                   We use cookies to improve your browsing experience, serve;
                   personalized content, and analyze our traffic. By clicking;
                   "Accept All", you consent to our use of cookies.;
                 </p>;
               </div>;
             </div>;
+
                 className="text-gray-400 hover:text-gray-600 transition-colors";
               >;
                 <X className="w-5 h-5" />;
@@ -177,11 +190,13 @@ if ( {) {
                     Required for the website to function properly;
                   </p>;
                 </div>;
+
                 <input
                   type="checkbox"
                   checked={preferences && preferences.necessary}
                   disabled
                   className="w-4 h-4 text-blue-600 rounded"
+
                 />;
               </div>;
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
@@ -250,6 +265,7 @@ if ( {) {
               </div>;
             </div>;
             <div className="flex flex-col sm:flex-row gap-2 justify-end">;
+
               <button
                 onClick={rejectAll}
                 className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">;

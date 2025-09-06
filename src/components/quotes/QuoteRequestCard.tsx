@@ -1,30 +1,60 @@
 
 
-import React from "react"
-import {format} from "date-fns"
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card"
-import {Button} from "@/components/ui/button"
-import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge"
-import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from 'lucide-react'
-import type { QuoteRequest } from "@/types/quotes"
-type QuoteRequestCardProps = {
-  quote: QuoteRequest
-  onViewDetails: (quote: QuoteRequest) => void
-  onMarkAsResponded?: (id: string) => void
-  onToggleArchive: (id: string, isArchived: boolean) => void
-}
-export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
-
-  onMarkAsResponded,
-
   onToggleArchive
-}) => {
+},) => {
   // Format date for display
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string,) => {
+import React from './react';
+import { format } from './date - fns';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { QuoteStatusBadge } from '@/components / quotes / QuoteStatusBadge';
+import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from 'lucide-react';
+import type { QuoteRequest } from "@/types / quotes";
+type QuoteRequestCardProps = {
+  quote: QuoteRequest,
+  onViewDetails: (quote: QuoteRequest) => void,
+  onMarkAsResponded?: (id: string) => void,
+  onToggleArchive: (id: string, is_archived: boolean) => void;
+}
+export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
+  quote;
+  onViewDetails;
+  onMarkAsResponded,
+  onToggleArchive;
+}, ) => {
+  // Format date for display;
+  const format_date = (date_string: string, ) =>: any {
     try {
       return format(new Date(dateString), 'PP')
     } catch (e) {
-      return dateString
+
+import React from "react";
+import {format} from "date-fns";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
+import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from 'lucide-react';
+import type { QuoteRequest } from "@/types/quotes";
+type QuoteRequestCardProps = {;
+  quote: QuoteRequest,;
+  onViewDetails: (quote: QuoteRequest) => void,;
+  onMarkAsResponded?: (id: string) => void,;
+  onToggleArchive: (id: string, isArchived: boolean) => void;
+};
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
+  quote;
+  onViewDetails;
+  onMarkAsResponded,;
+  onToggleArchive;
+},) => {;
+  // Format date for display;
+  const formatDate = (dateString: string,) => {;
+    try {;
+      return format(new Date(dateString), 'PP');
+    } catch (e) {;
+      return dateString;
+
     }
 
   return (
@@ -51,6 +81,13 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
           <span>Timeline: {quote.timeline}</span>
         </div>
 
+=======
+    <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+
+        
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="flex justify-between items-center mt-4">
           <Button
             variant="outline"
@@ -85,3 +122,4 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
                 <RefreshCw className="h-4 w-4" />
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
+<<<<<<< HEAD

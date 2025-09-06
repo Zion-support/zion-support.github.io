@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (!requireSuperadminApi(req, res)) return;
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { title, date, summary, kpis } = req && req.body || {};
@@ -10,6 +11,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   writeJsonFile('updates && updates.json', updates);
   res && res.status(200).json(update)
 }
+
+
+=======
   }
   updates.unshift (update);
   writeJsonFile ('updates.json', updates);
@@ -32,3 +36,10 @@ function handler() {
   updates.unshift (update);
   writeJsonFile ('updates.json', updates);
   res.status (200).json (update);
+=======
+
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

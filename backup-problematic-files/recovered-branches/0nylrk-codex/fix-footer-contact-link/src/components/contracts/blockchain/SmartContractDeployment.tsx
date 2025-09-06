@@ -1,15 +1,73 @@
 
+=======
+import React, { useState } from "react",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
+import { Label } from "@/components/ui/label",;
+import { Input } from "@/components/ui/input",;
+import { Switch } from "@/components/ui/switch",;
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",;
+import { Loader2, ShieldCheck, Download } from "lucide-react",;
+import { toast } from "sonner",;
+;
+interface SmartContractDeploymentProps {;
+  solidityCode:string,;
+  onDeploy:(options:DeploymentOptions) => Promise<void>,;
+  isDeploying:boolean;
+}
+;
+export function SmartContractDeployment({ ;
+  solidityCode,;
+  onDeploy,;
+  isDeploying;
+} SmartContractDeploymentProps) {;
+  const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({;
+    network:'none',;
+    useEscrow:true,;
+    deployToChain:false,;
+    walletAddress:'';
+  }),;
+;
+  const handleDeployContract = async () => {;
+    if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {;
+      toast.error("Please enter a wallet address for blockchain deployment"),;
+      return,;
+    }
+    ;
+    try {;
+      await onDeploy(deploymentOptions),;
+    } catch (error) {;
+      console.error("Deployment error:", error),;
+    }
+  },;
+  ;
+  const handleDownloadSolidity = () => {;
+    // Create a blob from the Solidity code;
+    const blob = new Blob([solidityCode], { type:'text/plain' }),;
+    const url = URL.createObjectURL(blob),;
+    ;
+    // Create a temporary anchor to trigger download;
+    const a = document.createElement('a'),;
+    a.href = url,;
+    a.download = 'ZionContract.sol',;
+    document.body.appendChild(a),;
+    a.click(),;
+    ;
+    // Clean up;
+    URL.revokeObjectURL(url),;
+    document.body.removeChild(a),;
+    ;
+    toast.success("Solidity contract downloaded"),;
+  },;
+;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <Card className="w-full">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
-
-          Smart Contract Deployment;
-        </CardTitle>;
-        <CardDescription>;
-          Deploy your agreement as a smart contract for enhanced security and automation;
-        </CardDescription>;
-      </CardHeader>;
+<<<<<<< HEAD
 
                   })}
                   className="flex flex-col space-y-1";

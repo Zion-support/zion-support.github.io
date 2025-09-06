@@ -6,6 +6,7 @@
   FileText
   Zap
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Brain,
   MessageSquare,
   Image,
@@ -25,6 +26,7 @@
   FileText
   Zap
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Star;
   ExternalLink;
   CheckCircle;
@@ -149,6 +151,124 @@
         'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.'
       features: [
 
+      category: 'Image Generation'
+    }
+    {
+
+export default function AiToolsPage() {;
+  const aiTools = [;
+    {;
+      icon: <Brain className='w-8 h-8 text-white' />,;
+      description:;
+        'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.',;
+      features: [;
+        'Advanced reasoning & analysis',;
+        'Web browsing & real-time info',;
+        'Plugin ecosystem access',;
+        'Code generation & debugging',;
+        'Professional writing assistance',;
+      ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
+      ];
+      pricing: '$20/month',;
+      marketPrice: '$20/month',;
+      website: 'https://chat && chat.openai.com',;
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',;
+      textColor: 'text-green-400',;
+      gradient: 'from-green-400 to-emerald-500',;
+      popular: true,;
+      category: 'Conversational AI',;
+    },;
+    {;
+      icon: <Image className='w-8 h-8 text-white' />,;
+      title: 'Midjourney',;
+      description:;
+        'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.',;
+      features: [;
+        'High-quality image generation',;
+        'Artistic style control',;
+        'Commercial usage rights',;
+        'Community features',;
+        'Advanced prompting system',;
+      ],      pricing: '$10-30/month',    {;
+      icon: <Image className="w-8 h-8 text-white" />,;
+      title: 'Midjourney',;
+      description: 'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.',;
+      features: [;
+        'High-quality image generationArtistic style controlCommercial usage rightsCommunity featuresAdvanced prompting system';
+      ];
+      pricing: '$10-30/month',;
+      marketPrice: '$10-30/month',;
+      website: 'https://midjourney && midjourney.com',;
+      color: 'bg-gradient-to-br from-purple-500 to-pink-600',;
+      textColor: 'text-purple-400',;
+      gradient: 'from-purple-400 to-pink-500',;
+      popular: true,;
+      category: 'Image Generation',;
+    },;
+    {;
+      icon: <Code className='w-8 h-8 text-white' />,;
+      title: 'GitHub Copilot',;
+      description:;
+        'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',;
+      features: [;
+        'Intelligent code completion',;
+        'Multi-language support',;
+        'IDE integration',;
+        'Code explanation',;
+        'Security vulnerability detection',;
+      ],      pricing: '$10/month',    {;
+      icon: <Code className="w-8 h-8 text-white" />,;
+      title: 'GitHub Copilot',;
+      description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',;
+      features: [;
+        'Intelligent code completionMulti-language supportIDE integrationCode explanationSecurity vulnerability detection';
+      ];
+      pricing: '$10/month',;
+      marketPrice: '$10-20/month',;
+      website: 'https://github && github.com/features/copilot',;
+      color: 'bg-gradient-to-br from-gray-500 to-black',;
+      textColor: 'text-gray-400',;
+      gradient: 'from-gray-400 to-black',;
+      popular: true,;
+      category: 'Code Generation',;
+    },;
+      icon: <Video className='w-8 h-8 text-white' />,;
+      title: 'Runway ML',;
+      description:;
+        'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.',;
+      features: [;
+        'AI video generation',;
+        'Video editing tools',;
+        'Motion tracking',;
+        'Green screen removal',;
+        'Professional workflows',;
+      ],      pricing: '$12-76/month',        'AI video generationVideo editing toolsMotion trackingGreen screen removalProfessional workflows';
+      ];
+      pricing: '$12-76/month',;
+      marketPrice: '$15-100/month',;
+      website: 'https://runwayml && runwayml.com',;
+      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',;
+      textColor: 'text-blue-400',;
+      gradient: 'from-blue-400 to-indigo-500',;
+      popular: false,;
+      category: 'Video Generation',;
+    },;
+    {;
+      icon: <MessageSquare className='w-8 h-8 text-white' />,;
+      title: 'Claude Pro',;
+      description:;
+        "Anthropic's advanced AI assistant with superior reasoning, analysis, and document processing capabilities.",;
+      features: [;
+        'Advanced reasoning abilities',;
+        'Document analysis',;
+        'Code generation',;
+        'Creative writing',;
+        'Research assistance',;
+      ],      pricing: '$20/month',    {;
+      icon: <MessageSquare className="w-8 h-8 text-white" />,;
+      title: 'Claude Pro',;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         'Advanced reasoning abilities',
         'Document analysis',
         'Code generation',
@@ -306,6 +426,89 @@
             Curated AI tools and services that actually work. Each tool has been
             tested and verified to provide real value for professionals and
             businesses. No hype - just results.          </p>      </Head>
+  ];
+
+;
+  const aiMarketStats = [;
+
+    {
+
+      title: 'AI Market Size',
+      value: '$136.6B',
+      growth: '+37% YoY',
+      description: 'Global AI market value in 2024'
+    };
+    {
+      title: 'AI Adoption Rate',
+      value: '35%',
+      growth: '+12% YoY',
+      description: 'Businesses actively using AI tools'
+    };
+    {
+      title: 'AI Investment',
+      value: '$93.5B',
+      growth: '+28% YoY',
+      description: 'Global AI investment in 2024'
+    };
+    {
+      title: 'AI Productivity Gain',
+      value: '40%',
+      growth: '+15% YoY',
+
+    }
+  ];
+;
+  return (
+    <>;
+      <Head>;
+        <title>;
+          AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing;
+        </title>;
+
+      name: 'Conversational AI',
+      description: 'Chatbots, virtual assistants, and language models',
+    tools: 3,
+      avgPrice: '$20/month'
+    };
+    {
+      name: 'Image Generation',
+      description: 'AI-powered art, design, and visual content creation',
+    tools: 1,
+      avgPrice: '$20/month'
+    };
+    {
+      name: 'Code Generation',
+      description: 'AI-assisted programming and development tools',
+      tools: 1,
+      avgPrice: '$10/month'
+    };
+    {
+      name: 'Video Generation',
+      description: 'AI video creation and editing tools',
+      tools: 1,
+      avgPrice: '$44/month'
+    };
+    {
+      name: 'Content Creation',
+      description: 'AI-powered writing and content generation',
+      tools: 1,
+      avgPrice: '$82/month'
+
+    }
+  ];
+
+  return (
+
+    <>
+      <Head>
+        <title>AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing</title>
+        <meta name="description" content="Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links." />
+        <meta property="og:title" content="AI Tools & Services | Zion Tech Group" />
+        <meta property="og:description" content="Real AI tools with pricing and direct links to help boost your productivity and creativity." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
@@ -327,6 +530,7 @@
         </div>
       </section>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <h3 className="text-lg font-semibold text-white mb-3">{stat.title}</h3>
                   <div className="text-2xl font-bold text-cursor-blue mb-2">{stat.value}</div>
                   <div className="text-sm text-green-400 mb-3">{stat.growth}</div>
@@ -338,6 +542,21 @@
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+            ))}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* AI Tools Grid */}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               Curated AI Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -377,6 +596,9 @@
           </div>;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {aiTools && aiTools.map((tool, index) => (;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <Card
                 key={index}
                 className={`card-hover group border-gradient-blue relative ${
@@ -495,6 +717,12 @@
                       ))}
                     </ul>
 
+=======
+                    <div className="flex items-center justify-between">
+                      <Button
+                        href={tool.website}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         variant="primary"
                         size="sm"
                         className="bg-cursor-blue hover:bg-cursor-blue-dark"
@@ -510,7 +738,25 @@
                   </div>
                 </div>
               </Card>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
+      {/* AI Categories Overview */}
+
+
+
+              AI Tool Categories
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Understanding the different types of AI tools helps you build a
+              comprehensive toolkit for your needs.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {aiCategories.map((category, index) => (
 
       {/* AI Categories Overview */}
       <section className='section-padding bg-gradient-cursor-accent'>
@@ -557,6 +803,21 @@
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+            ))}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* AI Implementation Guide */}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               Getting Started with AI Tools
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -616,3 +877,18 @@
           </div>
         </div>
       </section>
+              Get AI Consultation
+
+=======
+              className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/micro-saas"
+              variant="primary"
+              size="lg"
+              className="bg-cursor-blue hover:bg-cursor-blue-dark"
+              Explore More Tools
+            </Button>
+
+            <Button
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

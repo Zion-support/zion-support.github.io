@@ -1,8 +1,44 @@
 
+=======
+import React from "react",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { TalentProfile } from "@/types/talent",;
+import { SmartContractInfo } from "@/types/smart-contracts",;
+;
+interface ContractPreviewProps {;
+  contractContent?:string,;
+  generatedContract?:string, // Added to support both naming conventions;
+  status?:'draft' | 'ready' | 'pending',;
+  talent?:TalentProfile,;
+  onDeploy?:() => void,;
+  onSign?:() => void,;
+  onClose?:() => void,;
+  deployStatus?:string,;
+  deploymentInfo?:SmartContractInfo | null,;
+}
+;
+export function ContractPreview({ ;
+  contractContent,;
+  generatedContract, ;
+  status = 'ready', ;
+  onDeploy, ;
+  onSign,;
+  onClose,;
+  deployStatus,;
+  deploymentInfo;
+} ContractPreviewProps) {;
+  ;
+  // Use either contractContent or generatedContract, whichever is provided;
+  const displayContent = contractContent || generatedContract || "",;
+  ;
+  return (;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="space-y-4">;
       <div className="flex justify-between items-center mb-4">;
         <h2 className="text-2xl font-bold">Contract Preview</h2>;
         {status === 'ready' ? (;
+<<<<<<< HEAD
 
       {/* Contract content */}
       <div className="border rounded-lg p-6 bg-muted/50">;

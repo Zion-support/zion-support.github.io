@@ -1,3 +1,10 @@
+=======
+BarChart3,;
+  Smartphone,;
+} from 'lucide-react';
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
 export default function LandingPage() {
@@ -38,3 +45,4 @@ export default function LandingPage() {
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <span>{t("general.explore")}</span>
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
+<<<<<<< HEAD

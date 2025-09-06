@@ -1,5 +1,44 @@
 
+=======
 import type { HelpArticle } from '../../utils/support';
+export const getStaticPaths: GetStaticPaths = async () => {;
+  const articles = readJson<HelpArticle[]>('help/articles.json', []),;
+  return {;
+    paths: articles.map((a) => ({ params: { slug: a.slug } })),;
+    fallback: false  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+},;
+export const getStaticProps: GetStaticProps = async (ctx) => {;
+  const slug = ctx.params?.slug as string;
+  const articles = readJson<HelpArticle[]>('help/articles.json', []),;
+  const article = articles.find((a) => a.slug === slug) || null;
+  return { props: { article }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
+export default function HelpArticlePage(req, res) {
+  try {
+  const [voted, setVoted] = useState<null | boolean>(null);
+  async function vote(helpful: boolean) {;
+    await fetch('/api/support/feedback', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' };
+      body: JSON.stringify({ articleId: article.id, helpful })});
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    setVoted(helpful);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export const getStaticPaths: GetStaticPaths = async () => {;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
@@ -29,3 +68,15 @@ export const getStaticPaths: GetStaticPaths = async () => {;
         <div className="flex gap-2">
           <button onClick={() => vote(true)} disabled={voted !== null} className="enhanced-button enhanced-button-primary">Yes</button>
           <button onClick={() => vote(false)} disabled={voted !== null} className="enhanced-button enhanced-button-secondary">No</button>
+=======
+
+        </div>
+      </div>
+    </article>
+
+
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

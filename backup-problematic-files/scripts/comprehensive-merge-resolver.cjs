@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -14,6 +18,7 @@ function removeMergeConflictMarkers(content) {
     .replace(/
 }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
   return content
@@ -114,6 +119,9 @@ function findFilesWithConflicts() {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             files.push(fullPath);
           }
         } catch (error) {
@@ -203,3 +211,8 @@ async function main() {
     process.exit(1);
   }
 }
+=======
+<<<<<<< HEAD
+main();
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

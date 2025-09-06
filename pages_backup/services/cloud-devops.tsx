@@ -1,9 +1,14 @@
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
@@ -18,6 +23,7 @@ const features = [;
 import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const features = [
   {
     icon: Cloud,
@@ -31,6 +37,11 @@ const features = [
 
   },
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+  },
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   {
     icon: GitBranch,
     title: 'CI/CD Pipelines',
@@ -52,6 +63,10 @@ const features = [
     description: '24/7 monitoring and proactive alerting systems'
   }
 ];
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
@@ -76,6 +91,11 @@ const benefits = [
 ];
 export default function CloudDevOpsServices() {
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
@@ -238,6 +258,8 @@ export default function CloudDevOpsServices() {
                 </button>
               </div>
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
           </div>
         </section>
@@ -265,4 +287,5 @@ export default function CloudDevOpsServices() {
 
     </>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );

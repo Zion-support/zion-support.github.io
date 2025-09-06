@@ -13,6 +13,32 @@
     email: string;
 
     address: string;
+=======
+
+export interface PracticalBusinessSolution2029 {;
+
+      "Affordable pricing"
+    ],
+    link: "/services/2029-practical-business-solution",
+    category: "Practical Business Solutions 2029",
+    realImplementation: true,
+    contactInfo: {
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    }
+  }
+
+];
+
+=======
+;
+=======
+=======
+export interface PracticalBusinessSolution2029 {;
+=======
+  };
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   id: string,;
   name: string,;

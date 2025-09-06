@@ -3,11 +3,20 @@
 function toSlug(name: string): string {;
   return name;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
     .slice(0, 64);
 
+=======
+
+;
+  // Schedule launch stream (/summit);
+  ensureDir(eventsDir),;
+  const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Schedule launch stream (/summit);
   ensureDir(eventsDir);
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
@@ -25,6 +34,19 @@ function toSlug(name: string): string {;
         activate: [;
           "/about";
           "/manifesto";
+  writeTextFile(;
+
+    summitEventPath,;
+    JSON.stringify(;
+      {;
+        name: `${input.instanceName} Summit`,;
+        route: "/summit",;
+        scheduledAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()},;
+      null,;
+      2;
+    );
+  ),;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
           "/constitution",;
           "/partners",;
@@ -75,3 +97,4 @@ function toSlug(name: string): string {;
   }
 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,21 +1,5 @@
 
 
-import { TalentProfile } from "@/components/profile/TalentProfile",
-import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
-import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
-import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",
-import { useTalentProfile } from "@/hooks/useTalentProfile",
-import { HireRequestModal } from "@/components/profile/hire-request",
-import { useAuthStatus } from "@/hooks/talent",
-import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",
-import { StickyAction } from "@/components/ui/sticky-action",
-import { Handshake, MessageSquare } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
-import { UserProfile } from "@/types/auth",
-
-  // Create a compatible UserProfile from UserDetails or the authenticated user
-
     id: user.id || '',
     displayName: user.displayName || '',
     email: user.email || '', // Ensure email is always a string
@@ -39,17 +23,80 @@ import { UserProfile } from "@/types/auth",
     if (error) {
       toast({
 
+=======
+
+        title: 'Error loading profile',
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         description:
           'There was a problem loading this talent profile. Please try again.'
         variant: 'destructive'
       }) }        title: "Error loading profile"
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
+        id: user.id || '',
+        display_name: user.display_name || '',
+        email: user.email || '', // Ensure email is always a string;
+        user_type: user.user_type || null,
+        profile_complete: user.profile_complete || false,
+        created_at: user.created_at || new Date ().toISOString (),
+        updated_at: user.updated_at || new Date ().toISOString (),
+        role: user.role || '',
+        name: user.name || '',
+        points: user.points || 0,
+      }
+    : {
+        id: user_details?.id || '',
+        display_name: user_details?.name || '',
+        email: user_details?.email || '', // Ensure email is always a string;
+        user_type: null, // Default empty string since user_details doesn't have this property;
+        profile_complete: false, // Default value since user_details doesn't have this property;
+        created_at: new Date ().toISOString (), // Default value since user_details doesn't have this property;
+        updated_at: new Date ().toISOString (), // Default value since user_details doesn't have this property;
+        role: '', // Default empty string since user_details doesn't have this property;
+        name: '',
+        points: 0,
+      }  const user_profile: UserProfile = user ? {
+    id: user.id || '',
+    display_name: user.display_name || '',
+    email: user.email || '', // Ensure email is always a string;
+    user_type: user.user_type || null,
+    profile_complete: user.profile_complete || false,
+    created_at: user.created_at || new Date ().toISOString (), updated_at: user.updated_at || new Date ().toISOString (),    role: user.role || '',
+    name: user.name || '',
+    points: user.points || 0;
+  } : {
+    id: user_details?.id || '',
+    display_name: user_details?.name || '',
+    email: user_details?.email || '', // Ensure email is always a string;
+    user_type: null, // Default empty string since user_details doesn't have this property;
+    profile_complete: false, // Default value since user_details doesn't have this property;
+    created_at: new Date ().toISOString (); // Default value since user_details doesn't have this property;
+    updated_at: new Date ().toISOString (); // Default value since user_details doesn't have this property    role: '', // Default empty string since user_details doesn't have this property;
+    name: '',
+    points: 0;
+  }
+  // Handle loading error gracefully;
+  useEffect ((, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: 'Error loading profile',
+        description:;
+          'There was a problem loading this talent profile. Please try again.',
+        variant: 'destructive',
+      }) }        title: "Error loading profile",
+        description: "There was a problem loading this talent profile. Please try again.",
+        variant: "destructive"});
     }
   }, [error])
   if (isLoading) {
     return <ProfileLoadingState />
   }
+<<<<<<< HEAD
   if (error |!profile) {
     return <ProfileErrorState error={error} />
 
@@ -125,6 +172,19 @@ import { UserProfile } from "@/types/auth",
             <Handshake className="mr-2 h-4 w-4" />
             Hire Now
           </Button>
+      />;
+      <BackToDirectoryButton />;
+
+      {/* Sticky action buttons that appear when scrolling */}
+      <StickyAction>;
+        <div className="p-2 flex gap-2">;
+          <Button
+            size="sm"
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+            onClick = {handleRequestHire,}>;
+            <Handshake className="mr-2 h-4 w-4" />;
+            Hire Now;
+          </Button>;
           <Button
             size="sm"
             variant="outline"
@@ -141,7 +201,10 @@ import { UserProfile } from "@/types/auth",
         isOpen = {isHireModalOpen,}
         onClose = {(,) => setIsHireModalOpen(false),}
         userDetails = {userProfile,}
-      />
+
+      />;
+
+
       {/* Message Talent Modal */}
       <MessageTalentModal
         talent = {profile,}

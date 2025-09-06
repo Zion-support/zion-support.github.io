@@ -1,4 +1,11 @@
 
+=======
+import React, { useState, useEffect, useMemo } from 'react',;
+import {;
+  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
+  BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   BarChart3, Globe, Database, Cpu, Rocket, Brain;
 } from 'lucide-react';
 interface ContentItem {id: string;
@@ -13,6 +20,7 @@ interface ContentItem {id: string;
   source: string;
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 interface ContentCategory {id: string;
   name: string;
@@ -38,6 +46,7 @@ interface ContentCategory {id: string;
       source: 'autonomous-auditor';
       type: 'report';
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
     {id: '2';
       title: 'Security Vulnerability Scan Results';
@@ -188,6 +197,7 @@ interface ContentCategory {id: string;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
           break;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
       return sortOrder === 'asc' ? comparison : -comparison;
     });
@@ -235,12 +245,14 @@ type=&quot;text&quot;
           {/* Category Filter */}          <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name} ({category.count})
                 </option>
               ))}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
 value={selectedSubcategory}
@@ -251,6 +263,7 @@ value={selectedSubcategory}
               {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
                 <option key={sub} value={sub}>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
             <select,
 value={selectedType}
@@ -262,6 +275,7 @@ value={selectedType}
                 </option>;
               ))}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
             <select,
 value={selectedRelevance}
@@ -276,6 +290,7 @@ value={selectedRelevance}
           </div>;
         </div>;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Sort Controls and Clear Filters */}
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
           <div className=&quot;flex items-center gap-4&quot;>
@@ -294,11 +309,13 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;              >
                 {sortOrder === 'asc' ? '↑' : '↓'}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             Clear All Filters
           </button>
         </div>
       </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Results Summary */}
 <div className=&quot;text-sm text-white/60&quot;>
         Showing {filteredItems.length} of {contentItems.length} items
@@ -312,6 +329,7 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 </div>;
               </div>;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {/* Title and Description */}
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
                 {item.title}
@@ -320,6 +338,7 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 {item.desc}
               </p>;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {/* Tags */}
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
                 {item.tags.slice(0, 3).map((tag, index) => (
@@ -328,6 +347,7 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                   </span>;
                 ))}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {/* Metadata */}
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
                 <span className=&quot;flex items-center gap-1&quot;>
@@ -344,10 +364,12 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 <span className=&quot;text-xs text-white/40&quot;>
                   Source: {item.source}
                 </span>
+<<<<<<< HEAD
 
         })}
       </div>;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* No Results */}
 {filteredItems.length === 0 && (
         <div className=&quot;text-center py-12&quot;>

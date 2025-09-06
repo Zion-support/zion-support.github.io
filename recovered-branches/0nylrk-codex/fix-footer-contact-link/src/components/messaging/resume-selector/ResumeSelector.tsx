@@ -26,6 +26,99 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   useEffect(() => {
 
     const loadResumes = async () => {
+=======
+
+
+  // Fetch resume data when component mounts;
+  useEffect(() => {;
+    const loadResumes = async () => {;
+
+      setIsLoading(true);
+      try {;
+        await fetchResume();
+      } catch (error) {;
+        console && console.error("Error loading resumes:", error);
+      } finally {;
+        setIsLoading(false);
+      }
+    }
+    loadResumes();
+  }, [fetchResume]);
+
+export /**
+ * ResumeSelector - Function description
+ */
+function ResumeSelector() {
+  const [selected_option, setSelectedOption] = useState<;
+    "recent" | "select" | "upload";
+  >("recent");
+  const [selected_resume, setSelectedResume] = useState < ResumeOption | null>(
+    null,
+  );
+  const [resume_options, setResumeOptions] = useState < ResumeOption[]>([]);
+  const [custom_file, setCustomFile] = useState < File | null>(null);
+  const [is_loading, setIsLoading] = useState (false);
+;
+  const { resume, fetch_resume } = use_resume ();
+;
+  // Fetch resume data when component mounts;
+  useEffect (() => {
+    const load_resumes = async () => {
+      setIsLoading (true);
+      try {
+        await fetch_resume ();
+      } catch (error) {
+        console.error ("Error loading resumes:", error);
+      } finally {
+        setIsLoading (false);
+      }
+    }
+;
+    load_resumes ();
+  }, [fetch_resume]);
+;
+  // Update resume options when resume data changes;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      const options: ResumeOption[] = [;
+
+        {
+          id: resume.id |"current"
+          title: resume.basic_info.title
+          type: "ai_resume"
+          resume: resume
+        }
+      ];
+
+
+      // Pre-select the most recent resume;
+      if (options && options.length > 0 && selectedOption === "recent") {;
+
+        setSelectedResume(options[0]);
+        onResumeSelected(options[0]);
+      }
+    }
+  }, [resume, selectedOption, onResumeSelected]);
+
+
+  // Handle radio option change;
+  const handleOptionChange = (value: "recent" | "select" | "upload") => {;
+    setSelectedOption(value);
+
+    if (value === "recent" && resumeOptions && resumeOptions.length > 0) {;
+
+      (setSelectedResume(resumeOptions[0]), onResumeSelected(resumeOptions[0]));
+    } else if (value === "select") {;
+      // Reset selection until user chooses;
+      setSelectedResume(null);
+    } else if (value === "upload") {;
+      setSelectedResume(null);
+    }
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       setIsLoading(true),
       try {
         await fetchResume()
@@ -38,20 +131,48 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0],
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Check if it's a PDF file
-      if (file.type !== 'application/pdf') {
+      if (file.type !== "application/pdf") {
         toast({
 
+=======
+  };
+
+  // Handle resume selection change;
+  const handleResumeSelect = (resumeId: string) => {;
+    const selected = resumeOptions && resumeOptions.find((opt) => opt && opt.id === resumeId);
+    if (selected) {;
+      (setSelectedResume(selected), onResumeSelected(selected));
+    }
+  };
+
+  // Handle custom file upload;
+  const handleFileUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    if (e && e.target.files && e && e.target.files[0]) {;
+      const file = e && e.target.files[0];
+
+      // Check if it's a PDF file;
+      if (file && file.type !== "application/pdf") {;
+        toast({;
+          title: "Invalid file type",;
+          description: "Please upload a PDF file",;
+          variant: "destructive",;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         });
         return;
       }
-      // Create a custom resume option
-      const customOption: ResumeOption = {
-        id: "custom-upload"
-        title: file.name
-        type: "custom_upload"
-        file: file
-      }
+
+      // Create a custom resume option;
+      const customOption: ResumeOption = {;
+        id: "custom-upload",;
+        title: file && file.name,;
+        type: "custom_upload",;
+        file: file,;
+      };
+
+
       setCustomFile(file);
       setSelectedResume(customOption);
       onResumeSelected(customOption);
@@ -124,61 +245,116 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         description: "Your resume has been downloaded."})
 
     } catch (error) {
-      console.error('Error downloading PDF:', error),
+      console.error("Error downloading PDF:", error);
       toast({
 
     } finally {
       setIsLoading(false)
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         className="space-y-3"
       >
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="recent" id="recent" />
-          <Label htmlFor="recent" className="text-white">Use most recent AI Resume</Label>
+          <Label htmlFor="recent" className="text-white">
+            Use most recent AI Resume
+          </Label>
         </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="select" id="select" />
-          <Label htmlFor="select" className="text-white">Select from saved versions</Label>
+          <Label htmlFor="select" className="text-white">
+            Select from saved versions
+          </Label>
         </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="upload" id="upload" />
-          <Label htmlFor="upload" className="text-white">Upload a custom resume (PDF)</Label>
+          <Label htmlFor="upload" className="text-white">
+            Upload a custom resume (PDF)
+          </Label>
         </div>
       </RadioGroup>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           resume={resume}
           onDownload={handleDownloadResume}
           isLoading={isLoading}
-        />
+        />;
       )}
 
       {selectedOption === "select" && (
         <SelectResumeSection
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           resumeOptions={resumeOptions}
           selectedResume={selectedResume}
           handleResumeSelect={handleResumeSelect}
           handleDownloadResume={handleDownloadResume}
           isLoading={isLoading}
-        />
+        />;
       )}
 
       {selectedOption === "upload" && (
         <UploadSection
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           customFile={customFile}
           onFileUpload={handleFileUpload}
-        />
+        />;
       )}
 
       {/* Generate Resume Now button */}
       <div className="flex justify-between items-center pt-2">
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Generate Resume Now button */}
+      <div className="flex justify-between items-center pt-2">;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <Button
           variant="outline"
           onClick={handleGenerateResume}
+
+      {/* Resume selection options based on radio selection */}
+      {selected_option === "recent" && resume && (
+        <ResumePreviewCard;
+          resume={resume}
+          on_download={handleDownloadResume}
+          is_loading={is_loading}
+        />)}
+      {selected_option === "select" && (
+        <SelectResumeSection;
+          resume_options={resume_options}
+          selected_resume={selected_resume}
+          handleResumeSelect={handleResumeSelect}
+          handleDownloadResume={handleDownloadResume}
+          is_loading={is_loading}
+        />)}
+      {selected_option === "upload" && (
+        <UploadSection;
+          custom_file={custom_file}
+          onFileUpload={handleFileUpload}
+        />)}
+      {/* Generate Resume Now button */}
+      <div className="flex justify - between items - center pt - 2">;
+        <Button;
+          variant="outline";
+          on_click={handleGenerateResume}
+          className="text - zion - purple border - zion - purple / 20";
+        >;
+          <Plus className="h - 4 w - 4 mr - 2" />;
+          Generate Resume Now;
+        </Button>;
+      </div>;
+    </div>);
+
+}
+=======
           className="text-zion-purple border-zion-purple/20"
         >
           <Plus className="h-4 w-4 mr-2" />
@@ -186,3 +362,13 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+
+  )
+}
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

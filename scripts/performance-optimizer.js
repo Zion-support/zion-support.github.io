@@ -73,6 +73,12 @@ class PerformanceOptimizer {
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
@@ -81,6 +87,13 @@ class PerformanceOptimizer {
   log(message) {
     const timestamp = new Date().toISOString();
 
+=======
+
+=======
+    console.log(`[${timestamp}] ${message}`);
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.log(`[${timestamp}] ${message}`)}
   async optimizePerformance() {
     this.log('⚡ Starting performance optimization');
@@ -94,12 +107,21 @@ class PerformanceOptimizer {
       "errors": []
     };
 
+=======
+
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             fileOptimizations++}
           // Add useCallback to event handlers
           if (content.includes('onClick') && !content.includes('useCallback')) {
             // This is a complex optimization that would need more context
             // For now, we'll just log it as a potential optimization
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             fileOptimizations++}
           // Add useMemo to expensive calculations
           if (content.includes('useState') && content.includes('map(') && !content.includes('useMemo')) {
@@ -122,11 +144,12 @@ class PerformanceOptimizer {
           }
         });
         // Add performance optimizations for React components
-        if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
-          // Add React.memo import if not present
-          if (newContent.includes('React.memo') && !newContent.includes("import React, { memo }")) {
-            newContent = newContent.replace(;
-              /import React from 'react';/g,
+
+        if (file && file.endsWith('.tsx') || file && file.endsWith('.jsx')) {
+          // Add React && React.memo import if not present
+          if (newContent && newContent.includes('React && React.memo') && !newContent && newContent.includes("import React, { memo }")) {
+            newContent = newContent ;/g,
+
               "import React, { memo, useCallback, useMemo } from 'react';"
             );
             fileOptimizations++;
@@ -144,6 +167,12 @@ class PerformanceOptimizer {
         this.log(`❌ Error optimizing ${file}: ${error.message}`);
       }
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           this.log(`✅ "Optimized": ${file} (${fileOptimizations} optimizations)`)}
         results.processed++;
         results.optimizations += fileOptimizations} catch (error) {
@@ -180,6 +209,11 @@ class PerformanceMonitor {
   constructor() {
     this.metrics = {
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       pageLoadTime: 0,
       firstContentfulPaint: 0,
       largestContentfulPaint: 0,
@@ -188,6 +222,9 @@ class PerformanceMonitor {
     };
   }
 
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       "pageLoadTime": 0,
       "firstContentfulPaint": 0,
       "largestContentfulPaint": 0,
@@ -224,18 +261,31 @@ class PerformanceMonitor {
           }
         });
 
+=======
+
+=======
+        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
+      }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         observer.observe({ "entryTypes": ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] })}
     }
   }
   reportMetrics() {
     if (process.env.NODE_ENV === 'development') {
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       console.log('Performance "Metrics": ', this.metrics)}
     // Send to analytics in production
     if (typeof gtag !== 'undefined') {
       Object.entries(this.metrics).forEach(([key, value]) => {
         gtag('event', key, {
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           event_category: 'Performance',
           value: Math.round(value),
           non_interaction: true
@@ -243,6 +293,9 @@ class PerformanceMonitor {
       });
     }
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           "event_category": 'Performance',
           "value": Math.round(value),
           "non_interaction": true
@@ -260,6 +313,9 @@ export default PerformanceMonitor;";
     this.log(`✅ Performance monitoring script created: ${scriptPath}`);
   }
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       fs.mkdirSync(utilsDir, { "recursive": true })}
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(`✅ Performance monitoring script "created": ${scriptPath}`)}

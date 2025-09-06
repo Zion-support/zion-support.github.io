@@ -111,6 +111,8 @@ export const emergingTech2027Services: Service[] = [
     tags: ['Neuromorphic Computing', 'AI', 'Edge Computing', 'IoT', 'Robotics'],
   },
   {
+
+=======
     id: 'synthetic - biology - platform',
     name: 'Synthetic Biology Platform',
     description:;
@@ -140,17 +142,22 @@ export const emergingTech2027Services: Service[] = [
       'Biofuel production',
     ],
     target_audience: [;
+
       'Pharmaceutical companies',
       'Agricultural companies',
       'Industrial biotech firms',
       'Research institutions',
       'Environmental companies',
     ],
+
     market_size: '$22.8B by 2027',
     competitive_advantage:;
+
       'Most comprehensive synthetic biology platform with AI integration',
     implementation_time: '8 - 12 weeks',
     roi: '1500% within 24 months',
+
+=======
     link: 'https://ziontechgroup.com / services / synthetic - biology - platform',
     tags: [;
       'Synthetic Biology',
@@ -190,12 +197,15 @@ export const emergingTech2027Services: Service[] = [
       'Industrial inspection',
     ],
     target_audience: [;
+
       'Medical device companies',
       'Environmental monitoring firms',
       'Navigation companies',
       'Research institutions',
       'Industrial companies',
     ],
+
+=======
     market_size: '$16.5B by 2027',
     competitive_advantage:;
       'Only quantum sensors network with multi - application support',
@@ -240,12 +250,15 @@ export const emergingTech2027Services: Service[] = [
       'Communication aids',
     ],
     target_audience: [;
+
       'Medical device companies',
       'Research institutions',
       'Assistive technology firms',
       'Gaming companies',
       'Healthcare providers',
     ],
+
+=======
     market_size: '$28.9B by 2027',
     competitive_advantage: 'Most advanced brain - computer interface platform',
     implementation_time: '10 - 12 weeks',
@@ -289,17 +302,22 @@ export const emergingTech2027Services: Service[] = [
       'Critical infrastructure',
     ],
     target_audience: [;
+
       'Government agencies',
       'Financial institutions',
       'Healthcare organizations',
       'Military organizations',
       'Critical infrastructure',
     ],
+
     market_size: '$25.4B by 2027',
     competitive_advantage:;
+
       'Only quantum internet security platform with global coverage',
     implementation_time: '4 - 6 weeks',
     roi: '1000% within 18 months',
+
+=======
     link: 'https://ziontechgroup.com / services / quantum - internet - security',
     tags: [;
       'Quantum Security',
@@ -339,21 +357,28 @@ export const emergingTech2027Services: Service[] = [
       'Exploration robots',
     ],
     target_audience: [;
+
       'Manufacturing companies',
       'Logistics companies',
       'Agricultural companies',
       'Service providers',
       'Research institutions',
     ],
+
     market_size: '$19.8B by 2027',
     competitive_advantage:;
+
       'Most advanced autonomous robotics platform with AI learning',
     implementation_time: '5 - 7 weeks',
     roi: '700% within 12 months',
+
     link: 'https://ziontechgroup.com / services / autonomous - robotics - platform',
+
     tags: ['Robotics', 'AI', 'Automation', 'Manufacturing', 'Logistics'],
   },
   {
+
+=======
     id: 'quantum - materials - discovery',
     name: 'Quantum Materials Discovery Platform',
     description:;
@@ -383,17 +408,22 @@ export const emergingTech2027Services: Service[] = [
       'Energy storage',
     ],
     target_audience: [;
+
       'Semiconductor companies',
       'Battery manufacturers',
       'Aerospace companies',
       'Medical device companies',
       'Energy companies',
     ],
+
     market_size: '$21.3B by 2027',
     competitive_advantage:;
+
       'Only quantum materials discovery platform with AI integration',
     implementation_time: '8 - 10 weeks',
     roi: '1100% within 20 months',
+
+=======
     link: 'https://ziontechgroup.com / services / quantum - materials - discovery',
     tags: [;
       'Materials Science',
@@ -433,12 +463,15 @@ export const emergingTech2027Services: Service[] = [
       'Regulatory reporting',
     ],
     target_audience: [;
+
       'Investment banks',
       'Hedge funds',
       'Asset managers',
       'Insurance companies',
       'Regulatory bodies',
     ],
+
+=======
     market_size: '$18.9B by 2027',
     competitive_advantage:;
       'Only quantum financial modeling platform with real - time analysis',
@@ -457,14 +490,23 @@ export const emergingTech2027Services: Service[] = [
 
 ];      'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     ];
     marketSize: '$17 && 17.6B by 2027';
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
     implementationTime: '7-9 weeks';
     roi: '800% within 18 months';
+
     link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-climate-modeling',
+
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
 
+=======
+;
+=======
+  }
+];
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string,;
   name: string,;
   description: string,;

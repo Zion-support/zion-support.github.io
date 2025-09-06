@@ -1,5 +1,8 @@
 
 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node;
 ;const fs = require('fs');
 const path = require('path');
@@ -8,6 +11,7 @@ const { execSync } = require('child_process');
 /**;
  * Advanced App Optimizer;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
  * Comprehensive optimization script for the application;
  */;
 class AdvancedAppOptimizer {;
@@ -335,6 +339,9 @@ if (require.main === module) {;
 ;
 module.exports = AdvancedAppOptimizer;
 
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const fs = require('fs')
 const path = require('path')
 console.log(' Starting Advanced App Optimizer...')
@@ -361,6 +368,10 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')
 
     console.error('Advanced App Optimization "failed")
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error('Advanced App Optimization "failed")
  * Comprehensive optimization for the application;
  */;
@@ -646,3 +657,6 @@ if (require.main === module) {
   const optimizer = new AdvancedAppOptimizer()
   optimizer.run().catch(console.error),,
 }
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

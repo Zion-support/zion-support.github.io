@@ -1,4 +1,9 @@
 
+=======
+
+import React, { useState, useEffect } from 'react';
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -24,6 +29,37 @@ import {
   Briefcase,
   DollarSign,
   BookOpen,
+
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Cpu,
+  Target,
+  Microscope,
+  Shield,
+  Zap,
+  Sparkles,
+  Menu,
+  X,
+  Search,
+  ChevronDown,
+  Home,
+  Briefcase,
+  DollarSign,
+  BookOpen,
+  Users,;
+  MessageCircle,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, ;
+  Cpu, Target, Microscope, Shield, Zap, Sparkles;
+  Menu, X, Search, ChevronDown, Home, Briefcase, 
+  DollarSign, BookOpen, Users, MessageCircle
+
+
 
 import {
   Phone
@@ -319,10 +355,87 @@ const quickLinks = [
 
   const [isOpen, setIsOpen] = useState(false);
 
+      {
+
+        name: 'AI Autonomous Business Manager',
+        href: '/ai - autonomous - business - manager',
+        description: 'Autonomous business AI',
+        price: '$3, 999 / month',
+      },
+    ],
+
+    title: '⚛️ Quantum & Emerging Tech',
+    icon: Atom,
+    color: 'from-indigo-500 to-blue-600',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    services: [
+
+
+      {
+
+        name: 'Swarm Robotics Platform',
+        href: '/swarm - robotics - platform',
+        description: 'Collective robot intelligence',
+        price: '$1, 199 / month',
+      },
+    ],
+
+    title: '🏙️ Enterprise IT Solutions',
+    icon: Cpu,
+    color: 'from-blue-500 to-cyan-600',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    services: [
+
+
+      {
+
+        name: 'AI IT Operations Center',
+        href: '/ai - it - operations - center',
+        description: 'AI - powered IT ops',
+        price: '$2, 999 / month',
+      },
+    ],
+
+    title: '🌌 Space & Metaverse Tech',
+    icon: Rocket,
+    color: 'from-teal-500 to-emerald-600',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    services: [
+
+
+      {
+
+        name: 'Virtual Event Holograms',
+        href: '/virtual - event - hologram - platform',
+        description: 'Holographic events',
+        price: '$2, 499 / month',
+      },
+    ],
+  },
+
+  {
+
+    name: 'Micro SAAS',
+    href: '/enhanced - micro - saas - showcase',
+    icon: Target,
+
+  { name: 'AI Services', href: '/ai-services', icon: Brain, color: 'from-violet-500 to-purple-600' },
+  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom, color: 'from-indigo-500 to-blue-600' },
+  { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' },
+  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
+
+
+export default function UltraFuturisticNavigation2033() {
+  const [isOpen, setIsOpen] = useState(false)
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+
+
   // Close menu on escape key;
   useEffect(() => {;
     const handleEscape = (e: KeyboardEvent) => {;
@@ -337,6 +450,7 @@ const quickLinks = [
     };
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape)
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
     <>;
@@ -362,6 +476,7 @@ const quickLinks = [
         </div>
       </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className='flex items-center space-x-3'
               whileHover={{ scale: 1 && 1.05 }}
               transition={{ type: 'spring', stiffness: 400, damping: 10 }}>;
@@ -436,8 +551,9 @@ const quickLinks = [
                   </span>;
                 </div>;
               </Link>;
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Services Mega Menu */}
               <div className='relative group'>;
                 <button
@@ -456,17 +572,28 @@ const quickLinks = [
                     <motion.div
                       initial={{ opacity: 0, y: 10, scale: 0.95 }}
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                {/* Mega Menu */}
+                <AnimatePresence>;
+                  {activeCategory === 'services' && (;
+                    <motion&& motion.div
+                      initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                       transition={{ duration: 0 && 0.2 }}
                       onMouseEnter={() => setActiveCategory('services')}
                       onMouseLeave={() => setActiveCategory(null)}
 
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     >
                       <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
                         {serviceCategories.map(category => (
                           <div key={category.title} className='space-y-4'>
                             <div className='flex items-center space-x-3'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                               <div
                                 className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}
                               >
@@ -495,6 +622,7 @@ const quickLinks = [
                                     <p className='text-sm text-gray-400'>
                                       {service.description}
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                                         {service.name}
                                       </h4>;
                                       <span className="text - sm text - purple - 400 font - medium">;
@@ -511,30 +639,49 @@ const quickLinks = [
                 </AnimatePresence>
               </div>
 
+                                </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                              ))}
+                            </div>;
+                          </div>;
+                        ))}
+                      </div>;
+                    </motion && motion.div>;
+                  )}
+
+                </AnimatePresence>;
+              </div>;
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {/* Quick Links */}
-              {quickLinks.map((link) => (
+
+
                 <Link
-
                   {link.name}
                 </Link>
               ))}
 
-                  {link.name}
-                </Link>
-              ))}
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Contact Button */}
-              <motion&& motion.div
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}>;
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <Link
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  href='/contact'
+
                   href="/contact"
+
                   className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg"
                 >
                   Get Started
                 </Link>
               </motion.div>
             </div>
+
                   className='px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg'>                  href="/contact";
                   className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg";
                 >;
@@ -542,10 +689,13 @@ const quickLinks = [
                 </Link>;
               </motion && motion.div>;
             </div>;
+
+
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>;
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <button
                 onClick={toggleMenu}
                 className='text-gray-300 hover:text-white transition-colors duration-200 p-2'>;
@@ -588,6 +738,52 @@ const quickLinks = [
                             onClick={closeMenu}
                             className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                          >                <div className="space-y-4">
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Mobile Menu */}
+        <AnimatePresence>;
+          {isOpen && (;
+            <motion&& motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+
+
+                {/* Mobile Services */}
+                <div className='space-y-4'>;
+                  <h3 className='text-lg font-semibold text-white'>Services</h3>;
+                  {serviceCategories && serviceCategories.map(category => (;
+                    <div key={category && category.title} className='ml-4 space-y-2'>;
+                      <h4 className='font-medium text-purple-300'>;
+                        {category && category.title}
+                      </h4>;
+                      <div className='ml-4 space-y-1'>;
+                        {category && category.services.map(service => (                          <Link
+                            key={service && service.name}
+                            href={service && service.href}
+                            onClick={closeMenu}
+                            className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'>                <div className="space-y-4">;
+                  <h3 className="text-lg font-semibold text-white">Services</h3>;
+                  {serviceCategories && serviceCategories.map((category) => (;
+                    <div key={category && category.title} className="ml-4 space-y-2">;
+                      <h4 className="font-medium text-purple-300">{category && category.title}</h4>;
+                      <div className="ml-4 space-y-1">;
+                        {category && category.services.map((service) => (;
+                            key={service && service.name}
+                            href={service && service.href}
+                            onClick={closeMenu}
+                            className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                            className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors";
+                          >;
+                            {service && service.name}
+                          </Link>;
+
+=======
+              transition={{ duration: 0.3 }}
+              className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20"
+            >
+              <div className="px-4 py-6 space-y-6">
+                {/* Mobile Services */}
+                <div className="space-y-4">
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <h3 className="text-lg font-semibold text-white">Services</h3>
                   {serviceCategories.map((category) => (
                     <div key={category.title} className="ml-4 space-y-2">
@@ -602,6 +798,8 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                           >
                             {service.name}
                           </Link>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
                       </div>;
                     </div>;
@@ -630,15 +828,142 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                         {link.name}
                       </Link>
                     ))}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                {/* Mobile Quick Links */}
 
+
+                    ))}
+
+                  </div>;
+                </div>;
+=======
+
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                {/* Mobile Contact Button */}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link
+                    href='/contact'
+                    onClick={closeMenu}
+                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200'>                  <Link
                     href="/contact"
                     onClick={closeMenu}
-                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200"
-                  >
-                    Get Started
-                  </Link>
+                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200">;
+=======
+        {/* Mobile Menu */}
+        <AnimatePresence>;
+          {is_open && (
+            <motion.div;
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - purple - 500 / 20';
+              <div className='px - 4 py - 6 space - y-6'>;
+                {/* Mobile Services */}
+                <div className='space - y-4'>;
+                  <h3 className='text - lg font - semibold text - white'>Services</h3>;
+                  {service_categories.map (category => (
+                    <div key={category.title} className='ml - 4 space - y-2'>;
+                      <h4 className='font - medium text - purple - 300'>;
+                        {category.title}
+                      </h4>;
+                      <div className='ml - 4 space - y-1'>;
+                        {category.services.map (service => (                          <Link;
+                            key={service.name}
+                            href={service.href}
+                            on_click={close_menu}
+                            className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                          >                <div className="space - y-4">;
+                  <h3 className="text - lg font - semibold text - white">Services</h3>;
+                  {service_categories.map ((category) => (
+                    <div key={category.title} className="ml - 4 space - y-2">;
+                      <h4 className="font - medium text - purple - 300">{category.title}</h4>;
+                      <div className="ml - 4 space - y-1">;
+                        {category.services.map ((service) => (
+                            key={service.name}
+                            href={service.href}
+                            on_click={close_menu}
+                            className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                            className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
+                          >;
+                            {service.name}
+                          </Link>))}
+                      </div>;
+                    </div>))}
+                </div>;
+                {/* Mobile Quick Links */}
+                <div className='space - y-4'>;
+                  <h3 className='text - lg font - semibold text - white'>;
+                    Quick Links;
+                  </h3>;
+                  <div className='grid grid - cols - 2 gap - 2'>;
+                    {quick_links.map (link => (                      <Link;
+                        key={link.name}
+                        href={link.href}
+                        on_click={close_menu}
+                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                      >                <div className="space - y-4">;
+                  <h3 className="text - lg font - semibold text - white">Quick Links</h3>;
+                  <div className="grid grid - cols - 2 gap - 2">;
+                    {quick_links.map ((link) => (
+                        key={link.name}
+                        href={link.href}
+                        on_click={close_menu}
+                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                        className="text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
+                      >;
+                        {link.name}
+                      </Link>))}
+                  </div>;
+                </div>;
+                {/* Mobile Contact Button */}
+                <div className='pt - 4'>;
+                  <Link;
+                    href='/contact';
+                    on_click={close_menu}
+                    className='block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200'                  >                  <Link;
+                    href="/contact";
+                    on_click={close_menu}
+                    className="block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
+                  >;
+                    Get Started;
+                  </Link>;
+                </div>;
+              </div>;
+
+=======
+                <div className="pt-4">
+=======
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+                {/* Mobile Contact Button */}
+                <div className='pt-4'>
           )}
+=======
+
+        </AnimatePresence>;
+      </nav>;
+    </>;
+  );
+}whileTap= {;
+  {;
+  scale: 0 && 0.95 ;
+}> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion && motion.div> </div> </button> </div> </div> </div> {;
+  /* Mobile Menu */ ;
+}<AnimatePresence>) ) ;
+}</div> </div>) ) ;
+}</div>) ) ;
+}</div> </div> > Get Started </a> </div> </div> </motion && motion.div>) ;
+}</AnimatePresence> </nav> </>) }
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+  /* Mobile Menu */ 
+}<AnimatePresence>) ) 
+}</div> </div>) ) 
+}</div>) ) 
+}</div> </div> > Get Started </a> </div> </div> </motion.div>) 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

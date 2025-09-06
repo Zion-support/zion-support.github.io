@@ -1,6 +1,8 @@
 
 export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire';
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     await fetch('/api/referrals/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' };
@@ -17,3 +19,4 @@ export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_crea
   }
 
 }
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

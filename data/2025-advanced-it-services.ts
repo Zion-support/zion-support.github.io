@@ -1,3 +1,8 @@
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 export const advancedITServices2025 = [
 
@@ -608,6 +613,7 @@ export const advancedITServices2025 = [
     website: 'https://ziontechgroup.com / quantum - migration - pro',
     contact: {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
@@ -615,6 +621,11 @@ export const advancedITServices2025 = [
 
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
+  }
+];
+;
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   }
 ];

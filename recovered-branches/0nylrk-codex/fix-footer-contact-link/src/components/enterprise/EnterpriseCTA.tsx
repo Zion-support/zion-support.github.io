@@ -14,6 +14,20 @@ export function EnterpriseCTA() {
                   Schedule a personalized demo with our enterprise team to see
                   how Zion AI can help you build your dream team.
 
+                  </li>;
+                </ul>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+    </section>);
+
+}
+=======
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="gap-2">
@@ -126,3 +140,4 @@ export function EnterpriseCTA() {;
   );
 }
 ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

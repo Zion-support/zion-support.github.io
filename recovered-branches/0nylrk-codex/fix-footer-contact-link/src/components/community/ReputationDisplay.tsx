@@ -1,5 +1,12 @@
 
 
+=======
+
+import { Trophy } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface ReputationDisplayProps {
 
   reputation: number
@@ -20,6 +27,17 @@ interface ReputationDisplayProps {
       icon: "w-3 h-3"
       progress: "h-1"
 
+=======
+
+    },
+    md: {
+      container: "text-sm",
+      icon: "w-4 h-4",
+      progress: "h-2" 
+    },
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     lg: {
       container: "text-base"
       icon: "w-5 h-5"
@@ -47,34 +65,36 @@ interface ReputationDisplayProps {;
   reputation: number,;
   size?: 'sm' | 'md' | 'lg';
 }
-;
-export const ReputationDisplay = ({;
-  reputation,;
-  size = 'md';
+
+export const ReputationDisplay = ({ ;
+  reputation;
+  size = 'md' ;
 }: ReputationDisplayProps) => {;
   // Calculate next milestone;
-  const currentLevel = Math.floor(reputation / 100),;
-  const nextMilestone = (currentLevel + 1) * 100,;
-  const progress = ((reputation % 100) / 100) * 100,;
+  const currentLevel = Math && Math.floor(reputation / 100);
+  const nextMilestone = (currentLevel + 1) * 100;
+  const progress = ((reputation % 100) / 100) * 100;
+
   // Styling based on size;
   const sizeClasses = {;
     sm: {;
       container: "text-xs",;
       icon: "w-3 h-3",;
       progress: "h-1";
-    },;
+    };
     md: {;
       container: "text-sm",;
       icon: "w-4 h-4",;
-      progress: "h-2";
-    },;
+      progress: "h-2" ;
+    };
     lg: {;
       container: "text-base",;
       icon: "w-5 h-5",;
       progress: "h-3";
     }
-  },;
-  return (;
+  };
+
+  return (
     <div className="space-y-1">;
       <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>;
         <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />;
@@ -83,10 +103,13 @@ export const ReputationDisplay = ({;
       </div>;
       <Progress value={progress} className={sizeClasses[size].progress} />;
       <div className="text-xs text-muted-foreground">;
-        Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level up;
+        Level {currentLevel} • {Math && Math.round(nextMilestone - reputation)} to level up;
       </div>;
     </div>;
   );
 };
 
 export default ReputationDisplay;
+export default ReputationDisplay;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

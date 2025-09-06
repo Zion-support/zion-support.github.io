@@ -207,6 +207,375 @@ export default function CybersecurityServices() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
+  return (
+
+        />;
+        <meta name='author' content='Zion Tech Group' />;
+        <meta name='robots' content='index, follow' />;
+
+
+        {/* Open Graph */}
+        <meta
+          property='og:title'
+          content='Cybersecurity Services - Zion Tech Group'
+        />;
+        <meta
+          property='og:description'
+          content='Next-generation cybersecurity solutions for modern enterprises.'
+        />;
+        <meta property='og:type' content='website' />;
+        <meta
+          property='og:url'
+          content='https://ziontechgroup && ziontechgroup.com/cybersecurity-services'
+        />;
+        <meta
+          property='og:image'
+
+          content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
+        />;
+
+
+        {/* Twitter */}
+        <meta name='twitter:card' content='summary_large_image' />;
+        <meta
+          name='twitter:title'
+          content='Cybersecurity Services - Zion Tech Group'
+        />;
+        <meta
+          name='twitter:description'
+          content='Next-generation cybersecurity solutions for modern enterprises.'
+        />;
+        <meta
+          name='twitter:image'
+
+          content='https://ziontechgroup && ziontechgroup.com/twitter-image && image.jpg'
+        />;
+
+
+        {/* Contact Information */}
+        <meta name='contact:mobile' content='+1 302 464 0950' />;
+        <meta name='contact:email' content='kleber@ziontechgroup && ziontechgroup.com' />;
+        <meta
+          name='contact:address'
+          content='364 E Main St STE 1008 Middletown DE 19709'
+
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+              <Link href='#services' className='group'>
+                <button className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>
+                  <span>Explore Services</span>
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                </button>
+              </Link>
+              <Link href='/contact' className='group'>
+                <button className='border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2'>
+                  <span>Get Protected</span>
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>
+=======
+    <Layout>
+      <Head>
+=======
+
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
+export default function CybersecurityServices() {
+  return (
+    <Layout>
+      <Head>
+
+
+        <title>Cybersecurity Services - Zion Tech Group | Next-Generation Security Solutions</title>
+        <meta name="description" content="Protect your business with our advanced cybersecurity services. Zero trust security, AI threat intelligence, cloud security posture, and comprehensive protection solutions." />
+        <meta name="keywords" content="cybersecurity, zero trust security, AI threat intelligence, cloud security, DevSecOps, IoT security, Zion Tech Group" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Cybersecurity Services - Zion Tech Group" />
+        <meta property="og:description" content="Next-generation cybersecurity solutions for modern enterprises." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/cybersecurity-services" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Cybersecurity Services - Zion Tech Group" />
+        <meta name="twitter:description" content="Next-generation cybersecurity solutions for modern enterprises." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
+        
+        {/* Contact Information */}
+        <meta name="contact:mobile" content="+1 302 464 0950" />
+        <meta name="contact:email" content="kleber@ziontechgroup.com" />
+        <meta name="contact:address" content="364 E Main St STE 1008 Middletown DE 19709" />
+        <meta name="contact:website" content="https://ziontechgroup.com" />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg">
+        <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent"></div>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          >
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8">
+              <Shield className="w-5 h-5 text-red-400" />
+              <span className="text-red-400 font-medium">Cybersecurity Services</span>
+            </div>
+
+
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text text-white">
+              <span className="bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                Next-Generation
+              </span>
+              <br />
+              <span className="text-white">Cybersecurity</span>
+            </h1>
+
+
+
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+              <Link href='#services' className='group'>
+                <button className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>
+=======
+
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Protect your business with cutting-edge cybersecurity solutions. From zero trust security to AI threat intelligence,
+              we provide comprehensive protection that adapts to evolving threats.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href="#services" className="group">
+                <button className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  <span>Explore Services</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
+
+
+              <Link href="/contact" className="group">
+                <button className="border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  <span>Get Protected</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+
+        />;
+        <meta name='contact:website' content='https://ziontechgroup && ziontechgroup.com' />;
+      </Head>;
+
+      {/* Hero Section */}
+      <section className='relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg'>;
+        <div className='absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent'></div>;
+
+        <div className='relative z-10 container mx-auto px-4 text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            className='max-w-4xl mx-auto'>;
+            <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8'>;
+              <Shield className='w-5 h-5 text-red-400' />;
+              <span className='text-red-400 font-medium'>;
+                Cybersecurity Services;
+              </span>;
+            </div>;
+
+
+            <h1 className='text-5xl md:text-7xl font-bold mb-6 neon-text text-white'>;
+              <span className='bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent'>;
+                Next-Generation;
+              </span>;
+              <br />;
+              <span className='text-white'>Cybersecurity</span>;
+            </h1>;
+
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>;
+              Protect your business with cutting-edge cybersecurity solutions.;
+              From zero trust security to AI threat intelligence, we provide;
+              comprehensive protection that adapts to evolving threats.;
+            </p>;
+
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
+              <Link href='#services' className='group'>;
+                <button className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>;
+                  <span>Explore Services</span>;
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
+                </button>;
+              </Link>;
+
+              <Link href='/contact' className='group'>;
+                <button className='border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2'>;
+                  <span>Get Protected</span>;
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>;
+              </Link>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+        {/* Floating Elements */}
+        <div className='absolute top-20 left-10 opacity-20 animate-float'>;
+          <div className='w-4 h-4 bg-red-400 rounded-full'></div>;
+        </div>;
+        <div
+          className='absolute top-40 right-20 opacity-30 animate-float'
+          style={{ animationDelay: '1s' }}>;
+          <div className='w-6 h-6 bg-pink-400 rounded-full'></div>;
+        </div>;
+        <div
+          className='absolute bottom-40 left-20 opacity-25 animate-float'
+
+
+        </div>
+        <div className="absolute top-40 right-20 opacity-30 animate-float" style={{ animationDelay: '1s' }}>
+          <div className="w-6 h-6 bg-pink-400 rounded-full"></div>
+        </div>
+        <div className="absolute bottom-40 left-20 opacity-25 animate-float" style={{ animationDelay: '2s' }}>
+          <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
+        </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+      </section>
+
+
+          style={{ animationDelay: '2s' }}>;
+          <div className='w-3 h-3 bg-purple-400 rounded-full'></div>        </div>;
+      </section>;
+
+
+
+      {/* Service Highlights */}
+
+=======
+      <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div className="container mx-auto px-4">
+          <motion.div
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Cybersecurity <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Services</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive security solutions that protect your digital assets and ensure business continuity
+            </p>
+          </motion.div>
+
+
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceHighlights.map((service, index) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              <motion.div
+
+              <span className='bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>;
+                Services;
+              </span>;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Comprehensive security solutions that protect your digital assets;
+              and ensure business continuity;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights && serviceHighlights.map((service, index) => (;
+              <motion&& motion.div
+                key={service && service.title}
+
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+
+              >
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className="w-full h-full text-white" />
+                </div>
+
+
+
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                <ul className="space-y-2">
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+
+=======
+
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </ul>;
+              </motion.div>;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+          </div>;
+        </div>;
+      </section>;
+      {/* Detailed Services */}
+      <section className='py-20 bg-black'>;
+        <div className='container mx-auto px-4'>          <motion&& motion.div
+
+=======
+
+      {/* Detailed Services */}
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-4">
+          <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Security</span> Portfolio
@@ -223,6 +592,29 @@ export default function CybersecurityServices() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 
+              <motion.div
+
+
+              Portfolio;
+            </h2>;
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+              Discover our comprehensive range of cybersecurity services;
+              designed for modern enterprises;
+            </p>;
+          </motion && motion.div>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedCybersecurityServices2025 && advancedCybersecurityServices2025.map((service, index) => (;
+              <motion&& motion.div
+                key={service && service.id}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               >
                 <div className="h-full">
                   <div className="flex items-start justify-between mb-4">
@@ -235,6 +627,7 @@ export default function CybersecurityServices() {
                     </div>
                     {service.popular && (
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-red-400">
                       {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
@@ -259,20 +652,28 @@ export default function CybersecurityServices() {
                   <div className="flex flex-wrap gap-2 mb-6">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <span key={featureIndex} className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm">
+=======
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+<div className="flex items-center justify-between">
+                    <Link href={service.link} className="text-red-400 hover:text-red-300 font-medium flex items-center space-x-2 group">
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
 
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     </Link>
                   </div>
                 </div>
               </motion.div>
-
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
 
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -283,8 +684,10 @@ export default function CybersecurityServices() {
             </p>
           </motion.div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <motion.div
-                key={benefit.title}
+
+
               <span className='bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>;
                 Our Security;
               </span>;
@@ -296,6 +699,9 @@ export default function CybersecurityServices() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits && benefits.map((benefit, index) => (;
               <motion&& motion.div
                 key={benefit && benefit.title}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -405,21 +811,24 @@ export default function CybersecurityServices() {
 
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Don't wait for a breach to happen. Protect your business today with our advanced cybersecurity solutions
+              Don't wait for a breach to happen. Protect your business today with our advanced cybersecurity solutions 
               and stay one step ahead of evolving threats.
             </p>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <span>Start Your Security Journey</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <span>View All Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
             </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <div>
                 <div className="text-3xl font-bold text-red-400 mb-2">24/7</div>
                 <div className="text-gray-300">Security Monitoring</div>
@@ -433,6 +842,7 @@ export default function CybersecurityServices() {
                 <div className="text-gray-300">ROI Improvement</div>
 
               </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
           </motion.div>
         </div>
@@ -480,3 +890,5 @@ export default function CybersecurityServices() {
           </motion.div>;
         </div>;
       </section>;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

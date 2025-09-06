@@ -311,3 +311,16 @@ import Link from "next/link";
 								href=\"/\"
 								className=\"text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group\"
 
+<<<<<<< HEAD
+=======
+const Services-broken: React.FC<Services-brokenProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Services-broken</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Services-broken;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

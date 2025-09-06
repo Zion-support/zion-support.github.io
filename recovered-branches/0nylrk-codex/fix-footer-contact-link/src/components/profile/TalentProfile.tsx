@@ -13,6 +13,7 @@ import { ProfileContact } from "./ProfileContact",
 import { ProfileRatings } from "./ProfileRatings",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface TalentProfileProps {
 
   profile: TalentProfileType
@@ -32,6 +33,13 @@ interface TalentProfileProps {
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable'
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
 
+=======
+
+  },
+  
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Create proper skills array for ProfileSkills component
   const skillsArray = profile.skills?.map(skill => ({
     name: skill
@@ -91,29 +99,36 @@ export function TalentProfile({;
   return (;
     <div className="container mx-auto px-4 py-8">;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Profile Header */}
       <ProfileHero
-        name={profile.full_name}
-        title={profile.professional_title}
-        avatarUrl={profile.profile_picture_url}
+        name={profile && profile.full_name}
+        title={profile && profile.professional_title}
+        avatarUrl={profile && profile.profile_picture_url}
         profileType="talent"
-        rating={profile.average_rating}
-        reviewCount={profile.rating_count}
-      />
+
+        rating={profile && profile.average_rating}
+        reviewCount={profile && profile.rating_count}
+      />;
+
+
       {/* Main content area */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
         {/* Left Column - Skills & Info */}
-        <div className="space-y-8">
-          <ProfileSkills skills={skillsArray} />
-          <ProfileAvailability availability={availability} />
+
+        <div className="space-y-8">;
+          <ProfileSkills skills={skillsArray} />;
+          <ProfileAvailability availability={availability} />;
           <ProfileContact
-            email={profile.user_id}
-            profileName={profile.full_name}
+            email={profile && profile.user_id}
+            profileName={profile && profile.full_name}
             profileType="talent"
-          />
-        </div>
+          />;
+        </div>;
+
+
         {/* Right Column - Bio & Projects */}
-        <div className="lg:col-span-2 space-y-8">
+        <div className="lg:col-span-2 space-y-8">;
           {/* Bio Section */}
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
             <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>
@@ -122,6 +137,7 @@ export function TalentProfile({;
             </div>
           </div>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
           {/* Ratings Section */}
@@ -137,40 +153,104 @@ export function TalentProfile({;
             />
           </div>
           {/* Hire Now CTA */}
-          {isAuthenticated && (
-            <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">
-              <div className="flex flex-col items-center text-center">
-                <h3 className="text-xl font-bold text-white mb-2">Ready to collaborate?</h3>
-                <p className="text-zion-slate mb-6 max-w-md">
-                  Connect with {profile.full_name} for your next project and get started right away.
+          {is_authenticated && (
+            <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6 mb - 8">;
+              <div className="flex flex - col items - center text - center">;
+                <h3 className="text - xl font - bold text - white mb - 2">Ready to collaborate?</h3>;
+                <p className="text - zion - slate mb - 6 max - w-md">;
+                  Connect with {profile.full_name} for your next project and get started right away.;
                   {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
-                </p>
-                <div className="flex flex-wrap gap-4 justify-center">
+
+          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;
+            <h2 className="text-xl font-bold text-white mb-4">About {profile && profile.full_name}</h2>;
+            <div className="prose prose-invert max-w-none">;
+              <p className="text-zion-slate whitespace-pre-wrap">{profile && profile.bio}</p>;
+            </div>;
+          </div>;
+
+          {/* Projects Section */}
+          <ProfileProjects projects={projectsArray} />;
+
+          {/* Ratings Section */}
+          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;
+            <h2 className="text-xl font-bold text-white mb-4 flex items-center">;
+              <Star className="mr-2 h-5 w-5 text-yellow-400" />;
+              Reviews & Ratings;
+            </h2>;
+            <ProfileRatings
+              userId={profile && profile.id}
+              averageRating={profile && profile.average_rating}
+              ratingCount={profile && profile.rating_count}
+            />;
+          </div>;
+
+          {/* Hire Now CTA */}
+          {isAuthenticated && (;
+            <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">;
+              <div className="flex flex-col items-center text-center">;
+                <h3 className="text-xl font-bold text-white mb-2">Ready to collaborate?</h3>;
+                <p className="text-zion-slate mb-6 max-w-md">;
+                  Connect with {profile && profile.full_name} for your next project and get started right away.;
+                  {profile && profile.hourly_rate && ` Rate starts at $${profile && profile.hourly_rate}/hour.`}
+                </p>;
+
+                <div className="flex flex-wrap gap-4 justify-center">;
                   <Button
-                    size="lg"
+                    size="lg" 
                     className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-                    onClick={onRequestHire}
-                  >
-                    <Handshake className="mr-2 h-5 w-5" />
-                    Hire Now
-                  </Button>
-                  {onMessageTalent && (
+                    onClick={onRequestHire}>;
+                    <Handshake className="mr-2 h-5 w-5" />;
+                    Hire Now;
+                  </Button>;
+
+                  {onMessageTalent && (;
                     <Button
-                      size="lg"
+                      size="lg" 
+
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-                      onClick={onMessageTalent}
-                    >
-                      <MessageSquare className="mr-2 h-5 w-5" />
-                      Message
-                    </Button>
+                      onClick={onMessageTalent}>;
+                      <MessageSquare className="mr-2 h-5 w-5" />;
+                      Message;
+                    </Button>;
                   )}
-                </div>
-              </div>
-            </div>
+                </div>;
+              </div>;
+            </div>;
           )}
-        </div>
-      </div>
-    </div>
-  )
+
+        </div>;
+      </div>;
+    </div>;
+  );
 }
+
+=======
+                </p>;
+                <div className="flex flex - wrap gap - 4 justify - center">;
+                  <Button;
+                    size="lg";
+                    className="bg - zion - purple text - white hover:bg - zion - purple - dark";
+                    on_click={onRequestHire}
+                  >;
+                    <Handshake className="mr - 2 h - 5 w - 5" />;
+                    Hire Now;
+                  </Button>;
+                  {onMessageTalent && (
+                    <Button;
+                      size="lg";
+                      variant="outline";
+                      className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
+                      on_click={onMessageTalent}
+                    >;
+                      <MessageSquare className="mr - 2 h - 5 w - 5" />;
+                      Message;
+                    </Button>)}
+                </div>;
+              </div>;
+            </div>)}
+        </div>;
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

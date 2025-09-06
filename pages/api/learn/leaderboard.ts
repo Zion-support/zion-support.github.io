@@ -1,3 +1,7 @@
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
@@ -5,11 +9,8 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
     const entries = Object.values(users as any).map((u: any) => ({
-      userId: u.userId, name: u.name || u.userId,
-      certifications: u.certifications?.length || 0,
-      points: (u.certifications?.length || 0) * 100 + Object.values(u.progress || {}).reduce((acc: number, p: any) => acc + (p.percent || 0), 0)
-    }));
-    const top = entries.sort((a: any, b: any) => b.points - a.points).slice(0, 20);
+
+
     res.status(200).json({ leaderboard: top })
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
@@ -74,3 +75,5 @@ export default function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

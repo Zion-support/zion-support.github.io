@@ -1,6 +1,7 @@
 
       {...props}
-    />);
+    />;
+  );
 }
 ;
 export { Toaster, toast } />)

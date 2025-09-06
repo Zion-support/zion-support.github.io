@@ -26,6 +26,7 @@ import { useAuth } from "@/hooks/useAuth",
     )
   }
 
+const ContentGenerator = () => {
   return (
     <>
       <Header />

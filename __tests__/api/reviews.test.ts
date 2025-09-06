@@ -7,6 +7,10 @@ import { supabase } from '@/integrations/supabase/client'
 } from '@supabase/supabase-js'
 import { describe, it, expect, beforeEach, vi } from 'vitest'
 
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 jest.mock('@prisma/client'
           this.name = 'PrismaClientKnownRequestError'
 jest.mock('@/integrations/supabase/client'
@@ -57,3 +61,5 @@ describe('/api/reviews API Endpoint'
           "where"
         "method"
         "method"
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

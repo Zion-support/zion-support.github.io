@@ -1,5 +1,10 @@
 
 
+=======
+
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -59,3 +64,6 @@ type OnboardingStep = "language" | "role" | "signup";
             </div>
             <SignUpForm />
           </div>
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,4 +1,14 @@
 
+=======
+
+import {;
+  Card,;
+  CardHeader,;
+  CardTitle,;
+  CardDescription,;
+  CardContent,;
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
@@ -13,6 +23,7 @@ export function JobMatches({ jobId }: JobMatchesProps) {
 
     useJobMatches(jobId);
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (isLoading) {
     return (
       <Card>
@@ -34,12 +45,27 @@ export function JobMatches({ jobId }: JobMatchesProps) {
               </div>
             </div>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
-    <div className="space-y-4">
-      {matches.map((match) => (
+    <div className="space-y-4">;
+      {matches && matches.map((match) => (;
         <JobMatchCard
           key={match.id}
           matchId={match.id}
+          name={match.talent_profile?.full_name || ""}
+          title={match.talent_profile?.professional_title || ""}
+          company={match.talent_profile?.company_name || ""}
+          avatar={match.talent_profile?.profile_picture_url || ""}
+          location={match.talent_profile?.location || "Remote"}
+          category={match.talent_profile?.category || "Development"}
+          match_percent={match.match_score || 0}
+          skills={match.talent_profile?.skills || []}
+
+        />
+      ))}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   );
+
 }

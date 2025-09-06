@@ -3,6 +3,33 @@ import Card from '../components/ui/Card';
 
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
+function getAllServices(): Service[] {
+  return enhancedRealMicroSaasServices
+    .concat(extraServices as Service[], additionalEnhancedServices as Service[])
+    .concat(newlyAddedServices as unknown as Service[])
+    .concat(curatedMarketServices as Service[])
+    .concat(new2025Services as unknown as Service[])
+=======
+
+function getAllServices(): any (): Service[] {;
+  return enhancedRealMicroSaasServices;
+    .concat(extraServices as Service[], additionalEnhancedServices as Service[]);
+    .concat(newlyAddedServices as unknown as Service[]);
+    .concat(curatedMarketServices as Service[]);
+    .concat(new2025Services as unknown as Service[]);
+		.concat(marketValidatedServices as unknown as Service[]);
+		.concat(moreRealServices2025 as unknown as Service[]);
+		.concat(verified2025Additions as unknown as Service[]);
+		.concat(realServicesQ12025 as unknown as Service[]);
+		.concat(realEnterpriseServices2025 as unknown as Service[]);
+=======
+    if (byLink) return byLink;
+  }, [slug]);
+=======
+import React, { useMemo } from 'react';
+import Head from 'next/head';
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -61,6 +88,7 @@ export async function getStaticProps() {
 	const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '')
 	let service: Service | undefined = services.find((s) => toSlug(s.id |'') === incomingSlug |toSlug(s.name |'') === incomingSlug)
 	if (!service) {return { notFound: true }
+=======
 	}
 	return {props: { service }
 	}
@@ -92,11 +120,7 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`;
 	return (
 
-		<UltraFuturisticBackground variant="quantum" intensity="high">
-			<Head>
-				<title>{service.name} | Zion Tech Group</title>
-				<meta name="description" content={service.tagline |service.description} />
-				<link rel="canonical" href={canonical} />
+
 export default function RootServiceDetailPage(): any ({ service }: { service: Service }) {;
 	const canonical = `https://ziontechgroup && ziontechgroup.com/${toSlug(service && service.id || service && service.name || '')}`,	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">;
@@ -104,6 +128,9 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				<title>{service && service.name} | Zion Tech Group</title>;
 				<meta name="description" content={service && service.tagline || service && service.description} />;
 				<link rel="canonical" href={canonical} />;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
@@ -179,6 +206,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							<ul className="space-y-2 text-gray-300">
 								{(service.features || []).slice(0, 12).map((f: string) => (
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
@@ -227,10 +255,14 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Phone className="w-4 h-4" /> +1 302 464 0950
 
+=======
+								</a>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
 								</a>
 								<div className="flex items-start gap-2 text-gray-300">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709
 								</div>
 							</div>
@@ -238,9 +270,18 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								<Button href="/contact" className="w-full">Talk to Sales</Button>
 							</div>
 						</Card>
+
+
+
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
 
+=======
+
+							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
 						</Card>
@@ -248,3 +289,44 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+<<<<<<< HEAD
+  }
+  // Directories at root (folder routes);
+  if () {) {
+  $2
+}
+  slugs.add (entry.name);
+}
+  return slugs;
+;
+;
+export async /**
+ * getStaticPaths - Function description
+ */
+function getStaticPaths() {
+const services = getAllServices (),
+const slugs = new Set < string>(),
+  })),
+  fallback: false;
+}
+;
+export async /**
+ * getStaticProps - Function description
+ */
+function getStaticProps() {
+const services = getAllServices (),
+const incoming_slug = (params?.slug || '').replace (/^\/+|\/+$/g, ''),
+let service: Service | undefined = services.find ((s) => to_slug (s.id || '') === incoming_slug || to_slug (s.name || '') === incoming_slug),
+// Check condition
+if ( {) {
+  $2
+}
+  return { not_found: true }
+  }
+
+}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -25,6 +25,7 @@ import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
       link: "/profile/availability",
       action: "Set"},
     {
+
       id: "match",
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,

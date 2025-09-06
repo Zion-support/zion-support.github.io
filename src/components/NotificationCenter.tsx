@@ -77,24 +77,6 @@ export const NotificationCenter: React.FC = () => {;
       loadNotifications();
     }
   }, [open, loadedOnce, fetchNotifications]),
-
-  const handleMarkAllAsRead = async () => {
-    try {
-      await markAllAsRead(),
-      enqueueSnackbar("All notifications marked as read", { variant: 'success' })
-    } catch (err) {
-      logErrorToProduction('Failed to mark notifications as read:', { data: err }),
-      enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
-    }
-  },
-
-  const handleFilterChange = (newFilter: FilterType) => {
-    setFilter(newFilter as any)
-  },
-
-  return (
-    <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
-
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
           <Bell className="h-5 w-5 text-zion-slate-light" />
@@ -135,6 +117,7 @@ export const NotificationCenter: React.FC = () => {;
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
         />;
+
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;

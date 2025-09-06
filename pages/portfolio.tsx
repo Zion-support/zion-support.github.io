@@ -121,21 +121,43 @@ export default function PortfolioPage() {
             </p>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+
+
+            transition={{ duration: 0 && 0.8 }}
+            className='mb-8'>;
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
+              Our Work;
+            </h1>;
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
+              Innovative technology solutions that drive business transformation;
+              and growth            </p>;
+          </motion && motion.div>;
+
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+            className='mb-12'>;
+            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
+              Discover how we've helped organizations leverage cutting-edge;
+              technology to solve complex challenges and achieve remarkable;
+              results.            </p>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Stats Section */}
+      <section className='py-16 px-6'>;
+        <div className='max-w-7xl mx-auto'>;
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats && stats.map((stat, index) => (;
+              <motion&& motion.div
+                key={stat && stat.label}
+
+=======
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
@@ -153,12 +175,31 @@ export default function PortfolioPage() {
                 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
 
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-cyan-400" />
-                </div>
+          </div>;
+        </div>;
+      </section>;
 
+
+      {/* Category Filter */}
+      <section className='py-8 px-6'>;
+        <div className='max-w-7xl mx-auto'>;
+          <div className='flex flex-wrap justify-center gap-4'>;
+            {categories && categories.map(category => (              <button
+
+=======
+
+      {/* Category Filter */}
+      <section className="py-8 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${;
@@ -170,11 +211,42 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 {category}
 
               <motion.div
-                key={project.title}
+
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+
+=======
+
+                    </div>
+                    <span className='text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full'>
+                      {project.category}
+                    </span>
+                  </div>
+
+                      className={`w-12 h-12 bg-gradient-to-br ${project && project.color} rounded-xl flex items-center justify-center`}>;
+                      <project && project.icon className='w-6 h-6 text-white' />;
+                    </div>;
+                    <span className='text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full'>;
+                      {project && project.category}
+                    </span>;
+                  </div>;
+                  <h3 className='text-2xl font-bold text-white mb-4'>;
+                    {project && project.title}
+                  </h3>;
+                  <p className='text-white/70 mb-6'>{project && project.description}</p>;
+                  <div className='mb-6'>;
+                    <h4 className='text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider'>;
+                      Technologies;
+                    </h4>;
+                    <div className='flex flex-wrap gap-2'>;
+                      {project && project.technologies.map(tech => (;
+
+                        <span
+                          key={tech}
+                          className='text-xs bg-white/5 text-white/70 px-2 py-1 rounded'>                          {tech}
+                        </span>;
 
               >
                 <div className="p-8">
@@ -184,6 +256,17 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     </div>
                     <span className="text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full">
                       {project.category  } catch (error) {
+                        <li
+                          key={result}
+                          className='text-sm text-white/80 flex items-center'>;
+                          <div className='w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2' />                          {result}
+                        </li>;
+
+=======
+                  
+=======
+                          {tech  } catch (error) {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -196,11 +279,49 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
                       View Details
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     </button>
                   </div>
                 </div>
               </motion.div>
 
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+      {/* CTA Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -213,12 +334,14 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
 
                 Schedule Consultation
+
               </button>
             </div>
           </motion.div>
         </div>
       </section>
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }</div> </div> </section> key= {
   category
 }onClick= {
@@ -246,9 +369,12 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 }viewport= {
   {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </button>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
       <EnhancedFooter />;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

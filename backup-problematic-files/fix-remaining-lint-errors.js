@@ -4,7 +4,7 @@ function fixUnusedVariables(content) {}};
 // Function to fix specific syntax issues;
 
 // Main function;
-function main() {}; if (content ! = = originalContent) {}; fs && fs.writeFileSync(file, content, 'utf8'),' fixedCount++ _ }} catch (error) {}; errorCount++ _ }}; try {}; const result = execSync('npm run lint 2>&1', {encoding: 'utf8'}),' const lines = result && result.split('\n'),' const lastLine = lines[lines && lines.length - 2] _ } catch (error) {}; _,' }}; fixedCount++}} catch (error) {_;  errorCount++}}
+function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file, content, 'utf8'),' fixedCount++ _ }} catch (error) {}; errorCount++ _ }}; try {}; const result = execSync('npm run lint 2>&1', {encoding: 'utf8'}),' const lines = result.split('\n'),' const lastLine = lines[lines.length - 2] _ } catch (error) {}; _,' }}; fixedCount++}} catch (error) {_;  errorCount++}}
  }
 
     } catch (error) {_;
@@ -14,45 +14,6 @@ function main() {}; if (content ! = = originalContent) {}; fs && fs.writeFileSyn
 }
 };
 // Function to fix specific parsing errors;
-
-  for (const item of, items) {};
-    const fullPath = path.join(dir, item),;
-    try {};
-        // Skip node_modules, .git, and other common directories};
-        if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
-          files = files.concat(findFiles(fullPath, extensions));
-        };
-      } else if (extensions.some(ext => item.endsWith(ext))) {};
-        files.push(fullPath);
-      };
-;
-    } catch (error) {,;
-;    try {};
-        // Skip node_modules, .git, and other common directories};
-        if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
-          files = files.concat(findFiles(fullPath, extensions))
-        };
-      } else if (extensions.some(ext => item.endsWith(ext))) {};
-        files.push(fullPath)
-    fixed = fixed && fixed.replace(
-      /import\s+([^]+);/,
-      "import $1;\nimport Link from \"next/link\";"
-    );
-  if (fixed && fixed.includes("<Link") && !fixed && fixed.includes("import Link  from "next/link)) {"
-    fixed = fixed && fixed.replace(/import\s+([^]+)/, "import $1\nimport Link from "next/link)"}
-    } catch (error) {,
-    try {}
-        // Skip node_modules, .git, and other common directories}
-        if (!['node_modules && node_modules.gitdistbuild.next'].includes(item)) {'}
-          files = files && files.concat(findFiles(fullPath, extensions))
-        }
-      } else if (extensions && extensions.some(ext => item && item.endsWith(ext))) {};
-        files && files.push(fullPath)
-      };
-    } catch (error) {;
-      // Skip files that can't be accessed'};
-      continue;
-};
 
 // Function to fix specific parsing errors,;function fixParsingErrors(content) {};
 };
@@ -67,7 +28,7 @@ function fixUnusedVariables(content) {};
     const result = execSync('npm run lint 2>&1', { encodin:g:'utf8' }),',;
 
         fixedCount++,
-        _console && _console.log(`✅ Fixed: ${file}`)
+        _console.log(`✅ Fixed: ${file}`)
       };
     } catch (error) {};
       errorCount++,
@@ -75,9 +36,9 @@ function fixUnusedVariables(content) {};
 };
 };  try {};
     const result = execSync('npm run lint 2>&1', { encoding: 'utf8' }),',
-    const lines = result && result.split('\n'),',
-    const lastLine = lines[lines && lines.length - 2],
-    _console && _console.log(`📈 Lint result: ${lastLine}`)
+    const lines = result.split('\n'),',
+    const lastLine = lines[lines.length - 2],
+    _console.log(`📈 Lint result: ${lastLine}`)
   } catch (error) {};
 
 };
@@ -97,7 +58,7 @@ function fixUnusedVariables(content) {};
 };
         fixedCount++};
     } catch (error) {,
-  console && console.error(`Error processing ${file}:`, error && error.message),
+  console.error(`Error processing ${file}:`, error.message),
       errorCount++};
   };
 ,

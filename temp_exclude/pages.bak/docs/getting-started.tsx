@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 
 interface GettingstartedProps {
@@ -13,3 +15,5 @@ export default function Gettingstarted({ }: GettingstartedProps) {
   );
 }
 }
+
+

@@ -22,6 +22,26 @@ import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
+import Link from 'next/link';
+import MainLayout from '../components/layout/MainLayout';
+=======
+import Link from 'next / link';
+import MainLayout from '../components / layout / MainLayout';
+import { motion } from 'framer-motion';
+
+  Eye,
+  Ear,
+  Hand,
+  Brain,
+  CheckCircle,
+=======
+
+  Eye, 
+  Ear, 
+  Hand, 
+  Brain, 
+  CheckCircle, 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   AlertTriangle,
   Globe,
@@ -31,9 +51,14 @@ import {
   FileText,
   Settings;
 
+=======
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from 'lucide-react';
 const accessibility_features = [;
   {
+
 import {;
   Eye, ;
   Ear, ;
@@ -190,13 +215,23 @@ const accessibilityGuidelines = [;
       "No seizure-inducing content",;
       "Customizable timing";
     ];
+
   }
 ];
-import Head from 'next/head';
-import Layout from '../components/Layout';
+
+
+
 
 export default function AccessibilityPage() {
+=======
+interface AccessibilityProps {
+  className?: string;
+}
 
+const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <MainLayout
       title="Accessibility - Zion Tech Group"
@@ -208,6 +243,19 @@ export default function AccessibilityPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            </motion.div>
+          </div>
+        </section>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </motion.div>
           </div>
         </section>
@@ -363,6 +411,7 @@ export default function AccessibilityPage() {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -375,6 +424,7 @@ export default function AccessibilityPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {accessibilityGuidelines && accessibilityGuidelines.map((category, index) => (;
                 <motion&& motion.div
+
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -394,9 +444,17 @@ export default function AccessibilityPage() {
                   </ul>;
                 </motion && motion.div>;
               ))}
+
             </div>
           </div>
         </section>
+
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
     </MainLayout>
             </div>;
