@@ -93,6 +93,36 @@ export default function HomePage() {
 =======
 >>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           />
+          <Card
+            title="AI Code Reviewer"
+            href="/services/ai-code-reviewer"
+            description="Automated code review and quality analysis powered by AI with 99% accuracy."
+            icon="🔍"
+          />
+          <Card
+            title="Invoice Automation"
+            href="/services/invoice-automation"
+            description="Automate invoice processing, approval workflows, and payment tracking."
+            icon="🧾"
+          />
+          <Card
+            title="AI Meeting Assistant"
+            href="/services/ai-meeting-assistant"
+            description="Transform meetings with AI transcription, action items, and intelligent insights."
+            icon="🎤"
+          />
+          <Card
+            title="API Testing Suite"
+            href="/services/api-testing-suite"
+            description="Comprehensive API testing platform with automated testing and monitoring."
+            icon="🧪"
+          />
+          <Card
+            title="AI Customer Insights"
+            href="/services/ai-customer-insights"
+            description="Unlock customer behavior insights with AI-powered analytics and predictive modeling."
+            icon="🧠"
+          />
         </div>
       </section>
 
