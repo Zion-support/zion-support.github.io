@@ -1,7 +1,14 @@
-// Ref-types utility
-export const Ref-types = () => {
-  // Implementation here
-  return null;
-};
 
-export default Ref-types;
+<<<<<<< HEAD
+import { LegacyRef, Ref } from "react",
+
+// A type that safely handles all possible reference types
+export type SafeRef<T> = LegacyRef<T> | Ref<T>,
+import { LegacyRef, Ref } from "react",;
+// A type that safely handles all possible reference types;
+=======
+import {LegacyRef, Ref} from "react";
+
+// A type that safely handles all possible reference types
+>>>>>>> main
+export type SafeRef<T> = LegacyRef<T> | Ref<T>;

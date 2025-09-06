@@ -1,7 +1,5 @@
-// UseCertifications utility
-export const UseCertifications = () => {
-  // Implementation here
-  return null;
+// Hook for useCertifications,;
+export const useUseCertifications: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseCertifications;

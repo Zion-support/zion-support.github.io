@@ -1,7 +1,5 @@
-// UseMilestones utility
-export const UseMilestones = () => {
-  // Implementation here
-  return null;
+// Hook for useMilestones,;
+export const useUseMilestones: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseMilestones;

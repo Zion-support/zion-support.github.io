@@ -1,16 +1,45 @@
-import React from 'react';
+import React, { useState } from "react";
+import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 
-interface UseTokensButtonProps {
-  className?: string;
-}
-
-const UseTokensButton: React.FC<UseTokensButtonProps> = ({ className }) => {
+export default function UseTokensButton({
+  serviceId,
+  defaultType,
+}: {
+  serviceId?: string;
+  defaultType?: RedemptionType;
+}) {
+  const [open, setOpen] = useState(false);
   return (
-    <div className={className || ''}>
-      <h1>UseTokensButton</h1>
-      <p>This component is under development.</p>
-    </div>
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        className="enhanced-button enhanced-button-primary"
+      >
+        Use Tokens
+      </button>
+      <UseTokensModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        serviceId={serviceId}
+        defaultType={defaultType}
+      />
+    </>
   );
-};
-
-export default UseTokensButton;
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        className="enhanced-button enhanced-button-primary"
+      >
+        Use Tokens
+      </button>
+      <UseTokensModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        serviceId={serviceId}
+        defaultType={defaultType}
+      />
+    </>
+  );
+}

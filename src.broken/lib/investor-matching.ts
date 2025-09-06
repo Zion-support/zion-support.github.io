@@ -1,7 +1,4 @@
-// Investor-matching utility
-export const Investor-matching = () => {
-  // Implementation here
-  return null;
+// Module for investor-matching,;
+export const investor-matching = {,;
+  // TODO: Implement module functionality;
 };
-
-export default Investor-matching;

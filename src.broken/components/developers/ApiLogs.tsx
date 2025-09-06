@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ApiLogsProps {
-  className?: string;
-}
-
-const ApiLogs: React.FC<ApiLogsProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ApiLogs</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ApiLogs() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ApiLogs;
+}
+;

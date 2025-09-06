@@ -1,16 +1,10 @@
-import React from 'react';
-
-interface ActionButtonsProps {
-  className?: string;
-}
-
-const ActionButtons: React.FC<ActionButtonsProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ActionButtons</h1>
-      <p>This component is under development.</p>
-    </div>
+import React from 'react',;
+export function ActionButtons() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder - needs implementation</p>;
+    </div>;
   );
-};
-
-export default ActionButtons;
+}
+;

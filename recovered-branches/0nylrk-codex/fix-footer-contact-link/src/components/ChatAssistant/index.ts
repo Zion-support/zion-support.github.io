@@ -1,7 +1,12 @@
-// Index utility
-export const Index = () => {
-  // Implementation here
-  return null;
-};
+<<<<<<< HEAD
 
-export default Index;
+export { ChatAssistant } from './ChatAssistant',;
+export { ChatInput } from './ChatInput',;
+export { ChatMessage } from './ChatMessage',;
+export * from './types';
+=======
+export { ChatAssistant } from "./ChatAssistant";
+export { ChatInput } from "./ChatInput";
+export { ChatMessage } from "./ChatMessage";
+export * from "./types";
+>>>>>>> main

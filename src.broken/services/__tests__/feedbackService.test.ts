@@ -1,7 +1,4 @@
-// FeedbackService.test utility
-export const FeedbackService.test = () => {
-  // Implementation here
-  return null;
+// Service for feedbackService.test,;
+export const feedbackService.testService = {,;
+  // TODO: Implement service methods;
 };
-
-export default FeedbackService.test;

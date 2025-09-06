@@ -1,16 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-interface LoadingSkeletonProps {
+interface SkeletonProps {
   className?: string;
-}
-
-const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>LoadingSkeleton</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default LoadingSkeleton;
+  height?: string;
+  width?: string;

@@ -1,16 +1,24 @@
-import React from 'react';
-
-interface IntegrationsProps {
-  className?: string;
+<<<<<<< HEAD
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+export default function IntegrationsRedirect(req, res) {
+  try {
+  const router = useRouter();
+  useEffect(() => { router.replace('/admin/integrations') }, [router]);
+  return null;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+=======
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
 
-const Integrations: React.FC<IntegrationsProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Integrations</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Integrations;
+export default function IntegrationsRedirect() {
+  const router = useRouter();
+  useEffect(() => {
+    router.replace('/admin/integrations');
+  }, [router]);
+  return null;
+>>>>>>> main

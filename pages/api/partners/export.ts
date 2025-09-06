@@ -1,7 +1,153 @@
-// Export utility
-export const Export = () => {
-  // Implementation here
-  return null;
-};
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const csv = 'partner,data,export';
+    return res.status(200).send(csv);
+  } catch (e: any) {
+    return res.status(500).json({
+      error: e?.message
+    });
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { getServerSupabase } from '../../../utils/supabase/server',
+export default async function handler(req, res) {
+  try {
+  const code = (req.query.code as string)?.toLowerCase(),
+  if (!code) return res.status(400).json({ error: 'Missing code' }),
+  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key',
+  try {
+    if (usingPlaceholder) {
+      const csv = 'event,timestamp\nvisit,2025-01-01T00:00:00Z\nsignup,2025-01-02T00: 00:00Z',
+      res.setHeader('Content-Typetext/csv'),
+      res.setHeader('Content-Disposition', `attachment, filename="${code}-referrals.csv"`),
+      return res.status(200).send(csv)
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    const supabase = getServerSupabase(),
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../utils/supabase';
 
-export default Export;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', 'GET');
+    return res.status(405).end('Method Not Allowed');
+  }
+
+  try {
+    const { code } = req.query;
+    
+    if (!code || Array.isArray(code)) {
+      return res.status(400).json({ error: 'Partner code is required' });
+    }
+
+    const supabase = getServerSupabase();
+>>>>>>> main
+    const { data, error } = await supabase
+      .from('referral_events')
+      .select('event, created_at')
+      .eq('partner_code', code)
+<<<<<<< HEAD
+      .order('created_at', { ascending: false }),
+    if (error) return res.status(500).json({ error: error.message }),
+    const rows = [['eventtimestamp'], ...(data || []).map((r: any) => [r.event, r.created_at])],
+    const csv = rows.map(r => r.join()).join('\n'),
+    res.setHeader('Content-Typetext/csv'),
+    res.setHeader('Content-Disposition', `attachment, filename="${code}-referrals.csv"`),
+    return res.status(200).send(csv)
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message })
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../utils/supabase/server';
+export default async function handler(req, res) {
+  try {
+  const code = (req.query.code as string)?.toLowerCase();
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      const csv = 'event,timestamp\nvisit,2025-01-01T00:00:00Z\nsignup,2025-01-02T00: 00:00Z',;
+      res.setHeader('Content-Typetext/csv');
+      res.setHeader('Content-Disposition', `attachment, filename="${code}-referrals.csv"`);
+      return res.status(200).send(csv);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    const supabase = getServerSupabase();
+    const { data, error } = await supabase;
+      .from('referral_events');
+      .select('event, created_at');
+      .eq('partner_code', code);
+      .order('created_at', { ascending: false });
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const rows = [['eventtimestamp'], ...(data || []).map((r: any) => [r.event, r.created_at])],;
+    const csv = rows.map(r => r.join()).join('\n');
+    res.setHeader('Content-Typetext/csv');
+    res.setHeader('Content-Disposition', `attachment, filename="${code}-referrals.csv"`);
+    return res.status(200).send(csv);
+  } catch (error) {
+    return res.status(500).json({ error: e?.message });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+=======
+      .order('created_at', { ascending: false });
+
+    if (error) {
+      return res.status(500).json({ error: error.message });
+    }
+
+    // Convert to CSV format
+    const csv = [
+      'Event,Date',
+      ...data.map(row => `${row.event},${row.created_at}`)
+    ].join('\n');
+
+    res.setHeader('Content-Type', 'text/csv');
+    res.setHeader('Content-Disposition', `attachment; filename="partner-${code}-export.csv"`);
+    res.status(200).send(csv);
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+>>>>>>> main
+  }
+}

@@ -1,16 +1,30 @@
-import React from 'react';
-
-interface WalletProps {
-  className?: string;
-}
-
-const Wallet: React.FC<WalletProps> = ({ className }) => {
+import React from "react",
+import EnhancedLayout from "../../components/layout/EnhancedLayout",
+import dynamic from "next/dynamic",
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
+export default function WalletPage() {
   return (
-    <div className={className || ''}>
-      <h1>Wallet</h1>
-      <p>This component is under development.</p>
-    </div>
+    <EnhancedLayout title="Your ZION$ Wallet">
+      <div className="max-w-2xl mx-auto">
+        <WalletPanel />
+      </div>
+    </EnhancedLayout>
+  )
+import React from "react";
+import EnhancedLayout from "../../components/layout/EnhancedLayout";
+import dynamic from "next/dynamic";
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false });
+export default function WalletPage(req, res) {
+  try {
+  return (;
+    <EnhancedLayout title="Your ZION$ Wallet">;
+      <div className="max-w-2xl mx-auto">;
+        <WalletPanel />;
+      </div>;
+    </EnhancedLayout>;
   );
-};
-
-export default Wallet;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

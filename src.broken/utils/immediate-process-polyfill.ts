@@ -1,7 +1,4 @@
-// Immediate-process-polyfill utility
-export const Immediate-process-polyfill = () => {
-  // Implementation here
-  return null;
+// Utility functions for immediate-process-polyfill,;
+export const immediate-process-polyfill = {,;
+  // TODO: Implement utility functions;
 };
-
-export default Immediate-process-polyfill;

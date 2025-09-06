@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface AgendaTimelineProps {
-  className?: string;
-}
-
-const AgendaTimeline: React.FC<AgendaTimelineProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>AgendaTimeline</h1>
-      <p>This component is under development.</p>
-    </div>
+export function AgendaTimeline() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default AgendaTimeline;
+}
+;

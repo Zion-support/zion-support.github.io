@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ToasterProps {
-  className?: string;
-}
-
-const Toaster: React.FC<ToasterProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Toaster</h1>
-      <p>This component is under development.</p>
-    </div>
+export function toaster() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Toaster;
+}
+;

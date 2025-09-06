@@ -1,16 +1,29 @@
-import React from 'react';
-
-interface FutureOfWorkAndAutomationProps {
-  className?: string;
-}
-
-const FutureOfWorkAndAutomation: React.FC<FutureOfWorkAndAutomationProps> = ({ className }) => {
+<<<<<<< HEAD
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const FutureOfWorkAndAutomation: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>FutureOfWorkAndAutomation</h1>
-      <p>This component is under development.</p>
+    <div>
+      <Head>
+        <title>FutureOfWorkAndAutomation - Zion Tech Solutions</title>
+        <meta name="description" content="FutureOfWorkAndAutomation page" />
+      </Head>
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+>>>>>>> main
+      <main>
+        <h1>FutureOfWorkAndAutomation</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
-  );
+<<<<<<< HEAD
+  )
+},
+export default FutureOfWorkAndAutomation,
+=======
+  ),
 };
 
 export default FutureOfWorkAndAutomation;
+>>>>>>> main

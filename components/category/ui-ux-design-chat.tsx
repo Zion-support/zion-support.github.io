@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Ui-ux-design-chatProps {
-  className?: string;
-}
-
-const Ui-ux-design-chat: React.FC<Ui-ux-design-chatProps> = ({ className }) => {
+const UiUxDesignChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Ui-ux-design-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Ui-ux-design-chat;
+    <div>
+      <Head>
+        <title>UiUxDesignChat - Zion Tech Solutions</title>

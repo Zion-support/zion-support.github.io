@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface BetaBannerProps {
-  className?: string;
-}
-
-const BetaBanner: React.FC<BetaBannerProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>BetaBanner</h1>
-      <p>This component is under development.</p>
-    </div>
+export function BetaBanner() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default BetaBanner;
+}
+;

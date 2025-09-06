@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface TalentSkeletonProps {
-  className?: string;
-}
-
-const TalentSkeleton: React.FC<TalentSkeletonProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>TalentSkeleton</h1>
-      <p>This component is under development.</p>
-    </div>
+export function TalentSkeleton() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default TalentSkeleton;
+}
+;

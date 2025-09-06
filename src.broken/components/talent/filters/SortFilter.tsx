@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface SortFilterProps {
-  className?: string;
-}
-
-const SortFilter: React.FC<SortFilterProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>SortFilter</h1>
-      <p>This component is under development.</p>
-    </div>
+export function SortFilter() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default SortFilter;
+}
+;

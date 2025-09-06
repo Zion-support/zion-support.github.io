@@ -1,7 +1,4 @@
-// Contracts utility
-export const Contracts = () => {
-  // Implementation here
-  return null;
-};
-
-export default Contracts;
+// Type definitions for contracts,;
+interface contracts {;
+  // TODO: Add proper type definitions;
+},;

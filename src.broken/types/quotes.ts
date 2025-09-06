@@ -1,7 +1,4 @@
-// Quotes utility
-export const Quotes = () => {
-  // Implementation here
-  return null;
-};
-
-export default Quotes;
+// Type definitions for quotes,;
+interface quotes {;
+  // TODO: Add proper type definitions;
+},;

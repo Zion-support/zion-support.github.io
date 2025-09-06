@@ -1,7 +1,5 @@
-// UseUpdateMilestone utility
-export const UseUpdateMilestone = () => {
-  // Implementation here
-  return null;
+// Hook for useUpdateMilestone,;
+export const useUseUpdateMilestone: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseUpdateMilestone;

@@ -1,15 +1,24 @@
-import React from 'react';
+import React from "react";
+import Head from "next/head";
 
 interface SEOProps {
-  className?: string;
+  title?: string;
+  description?: string;
+  keywords?: string;
 }
 
-const SEO: React.FC<SEOProps> = ({ className }) => {
+const SEO: React.FC<SEOProps> = ({
+  title = "Zion Tech Group - Technology Solutions",
+  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting",
+}) => {
   return (
-    <div className={className || ''}>
-      <h1>SEO</h1>
-      <p>This component is under development.</p>
-    </div>
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </Head>
   );
 };
 

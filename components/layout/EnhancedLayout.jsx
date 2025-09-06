@@ -1,12 +1,15 @@
 import React from 'react';
-
-const EnhancedLayout = ({ className }) => {
+import EnhancedNavigation from './EnhancedNavigation';
+import EnhancedFooter from './EnhancedFooter';
   return (
-    <div className={className || ''}>
-      <h1>EnhancedLayout</h1>
-      <p>This component is under development.</p>
+    <div className="min-h-screen flex flex-col">
+      <EnhancedNavigation />
+      <main className="flex-1">
+        {children}
+      </main>
+      <EnhancedFooter />
     </div>
   );
-};
+},
 
 export default EnhancedLayout;

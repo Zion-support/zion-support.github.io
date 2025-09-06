@@ -1,7 +1,5 @@
-// UseCompanyWorkspace utility
-export const UseCompanyWorkspace = () => {
-  // Implementation here
-  return null;
+// Hook for useCompanyWorkspace,;
+export const useUseCompanyWorkspace: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseCompanyWorkspace;

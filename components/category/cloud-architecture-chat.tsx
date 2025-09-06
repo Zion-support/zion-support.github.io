@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Cloud-architecture-chatProps {
-  className?: string;
-}
-
-const Cloud-architecture-chat: React.FC<Cloud-architecture-chatProps> = ({ className }) => {
+const CloudArchitectureChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Cloud-architecture-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Cloud-architecture-chat;
+    <div>
+      <Head>
+        <title>CloudArchitectureChat - Zion Tech Solutions</title>

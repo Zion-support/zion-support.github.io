@@ -1,7 +1,4 @@
-// Next utility
-export const Next = () => {
-  // Implementation here
-  return null;
-};
-
-export default Next;
+// Type definitions for next,;
+interface next {;
+  // TODO: Add proper type definitions;
+},;

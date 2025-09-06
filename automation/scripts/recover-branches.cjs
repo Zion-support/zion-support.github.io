@@ -42,7 +42,7 @@ function currentBranch() {
 
 function isMergedIntoMain(remoteBranch) {
   const res = spawnSync('bash', ['-lc', `git merge-base --is-ancestor "origin/${remoteBranch}" origin/main`], { encoding: 'utf8' });
-  // exitCode 0 => ancestor; 1 => not ancestor; >1 => error
+  // exitCode 0 =></branch> ancestor; 1 => not ancestor; >1 => error
   return res.status === 0;
 }
 

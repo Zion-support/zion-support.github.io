@@ -1,7 +1,5 @@
-// UseUndoRedo utility
-export const UseUndoRedo = () => {
-  // Implementation here
-  return null;
+// Hook for useUndoRedo,;
+export const useUseUndoRedo: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseUndoRedo;

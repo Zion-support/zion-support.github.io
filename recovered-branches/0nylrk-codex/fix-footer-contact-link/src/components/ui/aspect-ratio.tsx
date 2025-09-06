@@ -1,16 +1,6 @@
-import React from 'react';
+import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio"
 
-interface Aspect-ratioProps {
-  className?: string;
-}
+const AspectRatio = AspectRatioPrimitive.Root
 
-const Aspect-ratio: React.FC<Aspect-ratioProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Aspect-ratio</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Aspect-ratio;
+export { AspectRatio }
+;

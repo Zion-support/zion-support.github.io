@@ -1,7 +1,5 @@
-// UseJobApplications utility
-export const UseJobApplications = () => {
-  // Implementation here
-  return null;
+// Hook for useJobApplications,;
+export const useUseJobApplications: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseJobApplications;

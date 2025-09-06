@@ -1,7 +1,5 @@
-// UseTalentProfile utility
-export const UseTalentProfile = () => {
-  // Implementation here
-  return null;
+// Hook for useTalentProfile,;
+export const useUseTalentProfile: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseTalentProfile;

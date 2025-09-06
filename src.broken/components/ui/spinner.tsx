@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface SpinnerProps {
-  className?: string;
-}
-
-const Spinner: React.FC<SpinnerProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Spinner</h1>
-      <p>This component is under development.</p>
-    </div>
+export function spinner() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Spinner;
+}
+;

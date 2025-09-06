@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ReferralMiddlewareProps {
-  className?: string;
-}
-
-const ReferralMiddleware: React.FC<ReferralMiddlewareProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ReferralMiddleware</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ReferralMiddleware() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ReferralMiddleware;
+}
+;

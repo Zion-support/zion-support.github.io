@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface QuotesTableProps {
-  className?: string;
-}
-
-const QuotesTable: React.FC<QuotesTableProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>QuotesTable</h1>
-      <p>This component is under development.</p>
-    </div>
+export function QuotesTable() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default QuotesTable;
+}
+;

@@ -1,16 +1,55 @@
-import React from 'react';
 
+<<<<<<< HEAD
+import React from "react",
+import { AppHeader } from "./AppHeader",
+import { Footer } from "@/components/Footer",
 interface AppLayoutProps {
-  className?: string;
+  children: React.ReactNode,
+  hideFooter?: boolean
 }
 
-const AppLayout: React.FC<AppLayoutProps> = ({ className }) => {
+export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
   return (
-    <div className={className || ''}>
-      <h1>AppLayout</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
+    <div className="flex flex-col min-h-screen bg-background">
+      <AppHeader />
+      <main className="flex-grow">
+import React from "react",;
+import { AppHeader } from "./AppHeader",;
+import { Footer } from "@/components/Footer",;
+interface AppLayoutProps {;
+  children: React.ReactNode;
+  hideFooter?: boolean;
+}
+;
+export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
+  return (;
+    <div className="flex flex-col min-h-screen bg-background">;
+      <AppHeader />;
+      <main className="flex-grow">;
+=======
+import React from "react";
+import {AppHeader} from "./AppHeader";
+import {Footer} from "@/components/Footer";
+interface AppLayoutProps {
+  children: React.ReactNode,
+  hideFooter?: boolean
+}
 
-export default AppLayout;
+export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
+  return (
+    <div className="flex flex-col min-h-screen bg-background">
+      <AppHeader />
+      <main className="flex-grow">
+>>>>>>> main
+        {children}
+      </main>
+      {!hideFooter && <Footer />}
+<<<<<<< HEAD
+    </div>;
+  );
+=======
+    </div>
+  )
+>>>>>>> main
+}
+;

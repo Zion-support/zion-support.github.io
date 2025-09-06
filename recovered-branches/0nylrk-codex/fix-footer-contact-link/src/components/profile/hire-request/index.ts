@@ -1,7 +1,6 @@
-// Index utility
-export const Index = () => {
-  // Implementation here
-  return null;
-};
 
-export default Index;
+<<<<<<< HEAD
+export { HireRequestModal } from './HireRequestModal';
+=======
+export { HireRequestModal } from './HireRequestModal';
+>>>>>>> main

@@ -1,7 +1,4 @@
-// SignupApi.test utility
-export const SignupApi.test = () => {
-  // Implementation here
-  return null;
+// Service for signupApi.test,;
+export const signupApi.testService = {,;
+  // TODO: Implement service methods;
 };
-
-export default SignupApi.test;

@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface HelpCenterPageProps {
-  className?: string;
-}
-
-const HelpCenterPage: React.FC<HelpCenterPageProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>HelpCenterPage</h1>
-      <p>This component is under development.</p>
-    </div>
+export function HelpCenterPage() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default HelpCenterPage;
+}
+;

@@ -1,16 +1,20 @@
 import React from 'react';
 
-interface Technology-implementation-strategiesProps {
-  className?: string;
-}
-
-const Technology-implementation-strategies: React.FC<Technology-implementation-strategiesProps> = ({ className }) => {
+export default function TechnologyImplementationStrategiesPage() {
   return (
-    <div className={className || ''}>
-      <h1>Technology-implementation-strategies</h1>
-      <p>This component is under development.</p>
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>
+        Technology Implementation Strategies
+      </h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Article coming soon.
+      </p>
+    </div>
+  );export default function TechnologyImplementationStrategiesPage() {
+  return (
+    <div className="container mx-auto px-4 py-10">
+      <h1 className="text-2xl font-semibold">Technology Implementation Strategies</h1>
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
     </div>
   );
-};
-
-export default Technology-implementation-strategies;
+}

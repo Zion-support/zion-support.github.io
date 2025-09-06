@@ -1,7 +1,4 @@
-// PostFeedback.test utility
-export const PostFeedback.test = () => {
-  // Implementation here
-  return null;
+// Service for postFeedback.test,;
+export const postFeedback.testService = {,;
+  // TODO: Implement service methods;
 };
-
-export default PostFeedback.test;

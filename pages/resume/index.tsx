@@ -1,16 +1,16 @@
-import React from 'react';
-
-interface IndexProps {
-  className?: string;
+import { GetServerSideProps } from 'next';
+export const getServerSideProps: GetServerSideProps = async () => {;
+  return {;
+    redirect: {;
+      destination: '/resume/preview';
+      permanent: false}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-const Index: React.FC<IndexProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Index</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
 };
-
-export default Index;
+export default function ResumeIndex() { return null   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

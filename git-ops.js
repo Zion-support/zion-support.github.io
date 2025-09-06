@@ -1,7 +1,6 @@
-// Git-ops utility
-export const Git-ops = () => {
-  // Implementation here
-  return null;
+}};
+main();
 };
-
-export default Git-ops;
+main();
+},;
+main(),;

@@ -1,16 +1,202 @@
-import React from 'react';
+<<<<<<< HEAD
+
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
+import { Textarea } from "@/components/ui/textarea",
+import { Check, Pencil } from 'lucide-react'
 
 interface GeneratedDescriptionDisplayProps {
-  className?: string;
+  description: string,
+  onSave: (editedDescription: string) => void
 }
 
-const GeneratedDescriptionDisplay: React.FC<GeneratedDescriptionDisplayProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>GeneratedDescriptionDisplay</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
+export function GeneratedDescriptionDisplay({ 
+  description, 
+  onSave 
+}: GeneratedDescriptionDisplayProps) {
+  const { toast } = useToast(),
+  const [isEditing, setIsEditing] = useState(false),
+  const [editedDescription, setEditedDescription] = useState(description),
 
-export default GeneratedDescriptionDisplay;
+  const handleSave = () => {
+    onSave(editedDescription),
+    setIsEditing(false),
+    toast({
+      title: "Description Saved",
+      description: "Your edited description has been saved."
+    })
+  },
+
+  return (
+    <Card className="border border-zion-blue-light bg-zion-blue-dark">
+      <CardHeader>
+        <CardTitle className="text-white flex items-center justify-between">
+          Generated Description
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick={() => setIsEditing(!isEditing)}
+            className="border-zion-blue-light text-zion-slate-light hover:text-white"
+          >
+            {isEditing ? (
+              <>
+                <Check className="h-4 w-4 mr-1" />
+=======
+export function GeneratedDescriptionDisplay({
+  description,
+  onSave,
+}: GeneratedDescriptionDisplayProps) {
+  const { toast } = useToast();
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedDescription, setEditedDescription] = useState(description);
+
+  const handleSave = () => {
+    onSave(editedDescription);
+    setIsEditing(false);
+    toast({
+      title: 'Description Saved',
+      description: 'Your edited description has been saved.',
+    });
+  };
+
+  return (
+    <Card className='border border-zion-blue-light bg-zion-blue-dark'>
+      <CardHeader>
+        <CardTitle className='text-white flex items-center justify-between'>
+          Generated Description
+
+          >
+            {isEditing ? (
+              <>
+                <Check className='h-4 w-4 mr-1' />
+>>>>>>> main
+                Done
+              </>
+            ) : (
+              <>
+<<<<<<< HEAD
+                <Pencil className="h-4 w-4 mr-1" />
+                Edit
+              </>
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Check, Pencil } from 'lucide-react';
+interface GeneratedDescriptionDisplayProps {;
+  description: string,;
+  onSave: (editedDescription: string) => void;
+}
+;
+export function GeneratedDescriptionDisplay({;
+  description,;
+  onSave;
+}: GeneratedDescriptionDisplayProps) {;
+  const { toast } = useToast(),;
+  const [isEditing, setIsEditing] = useState(false),;
+  const [editedDescription, setEditedDescription] = useState(description),;
+  const handleSave = () => {;
+    onSave(editedDescription),;
+    setIsEditing(false),;
+    toast({;
+      title: "Description Saved";
+      description: "Your edited description has been saved.";
+    });
+  };
+  return (;
+    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
+      <CardHeader>;
+        <CardTitle className="text-white flex items-center justify-between">;
+          Generated Description;
+          <Button;
+            variant="outline";
+            size="sm";
+            onClick={() => setIsEditing(!isEditing)}
+            className="border-zion-blue-light text-zion-slate-light hover:text-white";
+          >;
+            {isEditing ? (;
+              <>;
+                <Check className="h-4 w-4 mr-1" />;
+                Done;
+              </>;
+            ) : (;
+              <>;
+                <Pencil className="h-4 w-4 mr-1" />;
+                Edit;
+              </>;
+            )}
+          </Button>;
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        {isEditing ? (;
+          <Textarea;
+            value={editedDescription}
+            onChange={(e) => setEditedDescription(e.target.value)}
+            className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none"
+          />
+        ) : (
+          <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
+            {editedDescription}
+          </div>;
+        )}
+      </CardContent>;
+      {isEditing && (;
+        <CardFooter>;
+          <Button;
+            onClick={handleSave}
+            className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
+=======
+                <Pencil className='h-4 w-4 mr-1' />
+                Edit
+              </>
+            )}
+          </Button>
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        {isEditing ? (
+          <Textarea
+
+          />
+        ) : (
+          <div className='bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap'>
+            {editedDescription}
+          </div>
+        )}
+      </CardContent>
+      {isEditing && (
+        <CardFooter>
+
+>>>>>>> main
+          >
+            Save Changes
+          </Button>
+        </CardFooter>
+      )}
+<<<<<<< HEAD
+    </Card>;
+  );
+}
+;
+=======
+    </Card>
+  );
+
+  isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>) ;
+}</Button> </CardTitle> </CardHeader> <CardContent> {;
+  isEditing ? (<Textarea value= {;
+  editedDescription ;
+}</div>) ;
+}</CardContent> {;
+  isEditing && (<CardFooter> <Button onClick={;
+  handleSave ";
+}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
+}</Card>) ;
+}'"
+
+}
+>>>>>>> main

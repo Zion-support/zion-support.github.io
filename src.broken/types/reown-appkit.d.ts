@@ -1,7 +1,4 @@
-// Reown-appkit.d utility
-export const Reown-appkit.d = () => {
-  // Implementation here
-  return null;
-};
-
-export default Reown-appkit.d;
+// Type definitions for reown-appkit.d,;
+export interface reown-appkit.d {;
+  // TODO: Add proper type definitions;
+}

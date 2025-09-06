@@ -1,7 +1,5 @@
-// UseMarketplaceSearch utility
-export const UseMarketplaceSearch = () => {
-  // Implementation here
-  return null;
+// Hook for useMarketplaceSearch,;
+export const useUseMarketplaceSearch: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseMarketplaceSearch;

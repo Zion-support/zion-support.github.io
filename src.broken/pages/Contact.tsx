@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ContactProps {
-  className?: string;
-}
-
-const Contact: React.FC<ContactProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Contact</h1>
-      <p>This component is under development.</p>
-    </div>
+export function Contact() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Contact;
+}
+;

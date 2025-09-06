@@ -1,16 +1,29 @@
-import React from 'react';
-
-interface CallbackProps {
-  className?: string;
-}
-
-const Callback: React.FC<CallbackProps> = ({ className }) => {
+<<<<<<< HEAD
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const Callback: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Callback</h1>
-      <p>This component is under development.</p>
+    <div>
+      <Head>
+        <title>Callback - Zion Tech Solutions</title>
+        <meta name="description" content="Callback page" />
+      </Head>
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+>>>>>>> main
+      <main>
+        <h1>Callback</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
-  );
+<<<<<<< HEAD
+  )
+},
+export default Callback,
+=======
+  ),
 };
 
 export default Callback;
+>>>>>>> main

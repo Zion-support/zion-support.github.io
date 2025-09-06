@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface System-administration-chatProps {
-  className?: string;
-}
-
-const System-administration-chat: React.FC<System-administration-chatProps> = ({ className }) => {
+const SystemAdministrationChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>System-administration-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default System-administration-chat;
+    <div>
+      <Head>
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>

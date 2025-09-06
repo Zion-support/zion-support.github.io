@@ -1,7 +1,10 @@
-// Index utility
-export const Index = () => {
-  // Implementation here
-  return null;
-};
 
-export default Index;
+<<<<<<< HEAD
+export { AuthProvider } from './auth',;
+export { MessagingProvider } from './MessagingContext',;
+export { NotificationProvider } from './notifications/NotificationContext';
+=======
+export { AuthProvider } from './auth';
+export { MessagingProvider } from './MessagingContext';
+export { NotificationProvider } from './notifications/NotificationContext';
+>>>>>>> main

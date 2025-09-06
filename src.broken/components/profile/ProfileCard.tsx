@@ -1,16 +1,56 @@
-import React from 'react';
-
+import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card",
+import { TalentProfile } from "@/types/talent",
 interface ProfileCardProps {
-  className?: string;
+  profile: TalentProfile
 }
 
-const ProfileCard: React.FC<ProfileCardProps> = ({ className }) => {
+export function ProfileCard({ profile }: ProfileCardProps) {
   return (
-    <div className={className || ''}>
-      <h1>ProfileCard</h1>
-      <p>This component is under development.</p>
-    </div>
+    <Card className="bg-zion-blue-dark border-zion-blue-light text-white mb-6">
+      <CardHeader>
+        <CardTitle data-testid="profile-name">{profile.full_name}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        {profile.professional_title && (
+          <p className="text-zion-cyan mb-2">{profile.professional_title}</p>
+        )}
+        {profile.bio && <p className="text-zion-slate mb-2">{profile.bio}</p>}
+        {profile.hourly_rate && (
+          <p className="font-medium">Rate: ${profile.hourly_rate}/hr</p>
+        )}
+        {profile.skills && profile.skills.length > 0 && (
+          <ul className="list-disc ml-5 mt-2 space-y-1">
+            {profile.skills.map(skill => (
+              <li key={skill}>{skill}</li>
+import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card",;
+import { TalentProfile } from "@/types/talent";
+interface ProfileCardProps {;
+  profile: TalentProfile;
+}
+;
+export function ProfileCard({ profile }: ProfileCardProps) {;
+  return (;
+    <Card className="bg-zion-blue-dark border-zion-blue-light text-white mb-6">;
+      <CardHeader>;
+        <CardTitle data-testid="profile-name">{profile.full_name}</CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        {profile.professional_title && (;
+          <p className="text-zion-cyan mb-2">{profile.professional_title}</p>;
+        )}
+        {profile.bio && <p className="text-zion-slate mb-2">{profile.bio}</p>}
+        {profile.hourly_rate && (;
+          <p className="font-medium">Rate: ${profile.hourly_rate}/hr</p>;
+        )}
+        {profile.skills && profile.skills.length > 0 && (;
+          <ul className="list-disc ml-5 mt-2 space-y-1">;
+            {profile.skills.map(skill => (;
+              <li key={skill}>{skill}</li>;
+            ))}
+          </ul>;
+        )}
+      </CardContent>;
+    </Card>;
   );
-};
-
-export default ProfileCard;
+}
+;

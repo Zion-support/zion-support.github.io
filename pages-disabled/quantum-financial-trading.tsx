@@ -1,16 +1,21 @@
-import React from 'react';
-
-interface Quantum-financial-tradingProps {
-  className?: string;
-}
-
-const Quantum-financial-trading: React.FC<Quantum-financial-tradingProps> = ({ className }) => {
+import React from "react";
+import SEO from "../components/SEO";
+export default function AISustainabilityPlatformPage() {
   return (
-    <div className={className || ''}>
-      <h1>Quantum-financial-trading</h1>
-      <p>This component is under development.</p>
+    <div className="min-h-[60vh] px-6 py-24">
+      <SEO
+        title="AI Sustainability Platform | Zion Tech Group"
+        description="Sustainability analytics and optimization"
+      />
+      <div className="max-w-3xl mx-auto">
+        <h1 className="text-4xl font-bold text-white mb-4">
+          AI Sustainability Platform
+        </h1>
+        <p className="text-gray-300">
+          Measure and optimize sustainability metrics with AI. Details coming
+          soon.
+        </p>
+      </div>
     </div>
   );
-};
-
-export default Quantum-financial-trading;
+}

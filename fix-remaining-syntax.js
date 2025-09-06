@@ -1,7 +1,14 @@
-// Fix-remaining-syntax utility
-export const Fix-remaining-syntax = () => {
-  // Implementation here
-  return null;
+<<<<<<< HEAD
+}});
+console.log(`Fixed ${fixedCount} files`);
+;
 };
-
-export default Fix-remaining-syntax;
+});
+console.log(`Fixed ${fixedCount} files`);
+;
+,
+}),;
+console.log(`Fixed ${fixedCount} files`),;
+,;
+=======
+>>>>>>> main

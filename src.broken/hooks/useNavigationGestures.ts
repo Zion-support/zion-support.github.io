@@ -1,7 +1,5 @@
-// UseNavigationGestures utility
-export const UseNavigationGestures = () => {
-  // Implementation here
-  return null;
+// Hook for useNavigationGestures,;
+export const useUseNavigationGestures: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseNavigationGestures;

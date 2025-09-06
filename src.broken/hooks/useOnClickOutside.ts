@@ -1,7 +1,5 @@
-// UseOnClickOutside utility
-export const UseOnClickOutside = () => {
-  // Implementation here
-  return null;
+// Hook for useOnClickOutside,;
+export const useUseOnClickOutside: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseOnClickOutside;

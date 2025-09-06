@@ -1,7 +1,4 @@
-// Jest.d utility
-export const Jest.d = () => {
-  // Implementation here
-  return null;
-};
-
-export default Jest.d;
+// Type definitions for jest.d,;
+export interface jest.d {;
+  // TODO: Add proper type definitions;
+}

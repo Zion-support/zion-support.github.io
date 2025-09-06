@@ -1,16 +1,4 @@
-import React from 'react';
-
-interface AICodeGenerator.testProps {
-  className?: string;
-}
-
-const AICodeGenerator.test: React.FC<AICodeGenerator.testProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>AICodeGenerator.test</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default AICodeGenerator.test;
+import { render,screen } from \"@testing-library/react\"; render(<AICodeGenerator />); expect(screen.getByRole(\"main\")).toBeInTheDocument()}); it(\"displays correct content\",() => {; render(<AICodeGenerator />); it(\"handles user interactions\",() => {; render(<AICodeGenerator />)})
+const { render,screen } from "@testing-library/react"; render(<AICodeGenerator />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => {; render(<AICodeGenerator />); it('handles user interactions', () => {; render(<AICodeGenerator />)})""
+import { render,screen } from "@testing-library/react"; render(<AICodeGenerator />); expect(screen.getByRole("main"
+}); it('displays correct content', () => {; render(<AICodeGenerator />); it('handles user interactions', () => {; render(<AICodeGenerator />)})"

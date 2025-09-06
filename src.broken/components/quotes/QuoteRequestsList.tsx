@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface QuoteRequestsListProps {
-  className?: string;
-}
-
-const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>QuoteRequestsList</h1>
-      <p>This component is under development.</p>
-    </div>
+export function QuoteRequestsList() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default QuoteRequestsList;
+}
+;

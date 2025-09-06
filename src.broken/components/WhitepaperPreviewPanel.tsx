@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface WhitepaperPreviewPanelProps {
-  className?: string;
-}
-
-const WhitepaperPreviewPanel: React.FC<WhitepaperPreviewPanelProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>WhitepaperPreviewPanel</h1>
-      <p>This component is under development.</p>
-    </div>
+export function WhitepaperPreviewPanel() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default WhitepaperPreviewPanel;
+}
+;

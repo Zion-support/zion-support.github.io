@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface TranslationManagerProps {
-  className?: string;
-}
-
-const TranslationManager: React.FC<TranslationManagerProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>TranslationManager</h1>
-      <p>This component is under development.</p>
-    </div>
+export function TranslationManager() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default TranslationManager;
+}
+;

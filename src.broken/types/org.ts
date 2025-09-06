@@ -1,7 +1,4 @@
-// Org utility
-export const Org = () => {
-  // Implementation here
-  return null;
-};
-
-export default Org;
+// Type definitions for org,;
+interface org {;
+  // TODO: Add proper type definitions;
+},;

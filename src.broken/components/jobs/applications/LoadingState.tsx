@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface LoadingStateProps {
-  className?: string;
-}
-
-const LoadingState: React.FC<LoadingStateProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>LoadingState</h1>
-      <p>This component is under development.</p>
-    </div>
+export function LoadingState() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default LoadingState;
+}
+;

@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface FeaturedProps {
-  className?: string;
-}
-
-const Featured: React.FC<FeaturedProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Featured</h1>
-      <p>This component is under development.</p>
-    </div>
+export function Featured() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Featured;
+}
+;

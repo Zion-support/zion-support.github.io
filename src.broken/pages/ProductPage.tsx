@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ProductPageProps {
-  className?: string;
-}
-
-const ProductPage: React.FC<ProductPageProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ProductPage</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ProductPage() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ProductPage;
+}
+;

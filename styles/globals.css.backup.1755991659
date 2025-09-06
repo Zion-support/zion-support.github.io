@@ -554,6 +554,7 @@ code { @apply font-mono; }
   background: rgba(17, 24, 39, 0.8);
   backdrop-filter: blur(20px);
 <<<<<<< HEAD
+<<<<<<< HEAD
   border: 1px solid rgba(6, 182, 212, 0.2);
   border-radius: 16px;
   padding: 24px;
@@ -574,6 +575,56 @@ code { @apply font-mono; }
 .quantum-border {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1849
   position: relative;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all var(--animation-normal) ease;
+=======
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.card-futuristic:hover {
+  transform: translateY(-8px);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+}
+
+/* Quantum effects */
+.quantum-border {
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1849
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  position: relative;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all var(--animation-normal) ease;  position: relative;
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all var(--animation-normal) ease;  position: relative;
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   border: 2px solid transparent;
   background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #06b6d4);
   background-clip: padding-box;
@@ -583,6 +634,24 @@ code { @apply font-mono; }
   content: '';
   position: absolute;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   top: 0;
   left: 0;
   right: 0;
@@ -961,6 +1030,15 @@ code { @apply font-mono; }
 }
 
 .gradient-text {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> main
   background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
 =======
   top: -2px;
@@ -1142,12 +1220,48 @@ code { @apply font-mono; }
 .gradient-text-cyan {
   background: linear-gradient(45deg, #06b6d4, #0891b2);
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1849
+<<<<<<< HEAD
   -webkit-background-clip: text;
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  -webkit-background-clip: text;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));  -webkit-background-clip: text;
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));  -webkit-background-clip: text;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));  -webkit-background-clip: text;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 .gradient-border {
   border: 2px solid;
   border-image: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink)) 1;
@@ -1313,6 +1427,7 @@ code { @apply font-mono; }
     color: #f9fafb;
     background-color: #111827;
   }
+<<<<<<< HEAD
 }
 =======
 .gradient-text-purple {
@@ -1321,6 +1436,19 @@ code { @apply font-mono; }
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+}
+<<<<<<< HEAD
+>>>>>>> main
 
 .gradient-text-pink {
   background: linear-gradient(45deg, #ec4899, #f97316);
@@ -1417,3 +1545,17 @@ code { @apply font-mono; }
   box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.5);
 }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1849
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main

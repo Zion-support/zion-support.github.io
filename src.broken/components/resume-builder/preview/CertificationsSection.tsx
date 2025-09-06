@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface CertificationsSectionProps {
-  className?: string;
-}
-
-const CertificationsSection: React.FC<CertificationsSectionProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>CertificationsSection</h1>
-      <p>This component is under development.</p>
-    </div>
+export function CertificationsSection() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default CertificationsSection;
+}
+;

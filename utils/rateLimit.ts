@@ -1,7 +1,2 @@
-// RateLimit utility
-export const RateLimit = () => {
-  // Implementation here
-  return null;
-};
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default RateLimit;

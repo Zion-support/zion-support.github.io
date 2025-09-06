@@ -1,7 +1,8 @@
-// ModerationDb utility
-export const ModerationDb = () => {
-  // Implementation here
-  return null;
-};
 
-export default ModerationDb;
+  flag.status = status;
+  flag.adminNotes = adminNotes || flag.adminNotes;
+  flag.updatedAt = new Date().toISOString();
+  await upsertFlag(flag);
+  return flag;
+
+}

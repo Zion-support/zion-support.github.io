@@ -1,7 +1,4 @@
-// Case-studies utility
-export const Case-studies = () => {
-  // Implementation here
-  return null;
+// Module for case-studies,;
+export const case-studies = {,;
+  // TODO: Implement module functionality;
 };
-
-export default Case-studies;

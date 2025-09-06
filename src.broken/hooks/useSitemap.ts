@@ -1,7 +1,5 @@
-// UseSitemap utility
-export const UseSitemap = () => {
-  // Implementation here
-  return null;
+// Hook for useSitemap,;
+export const useUseSitemap: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseSitemap;

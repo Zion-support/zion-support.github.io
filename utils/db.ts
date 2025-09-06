@@ -1,7 +1,4 @@
-// Db utility
-export const Db = () => {
-  // Implementation here
-  return null;
-};
+import fs from 'fs';
+import path from 'path';
 
-export default Db;
+}

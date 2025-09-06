@@ -1,16 +1,16 @@
-import React from 'react';
-
-interface EnterpriseProps {
-  className?: string;
+import type { GetServerSideProps } from 'next';
+export const getServerSideProps: GetServerSideProps = async () => {;
+  return {;
+    redirect: {;
+      destination: '/plans/enterprise';
+      permanent: false}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-const Enterprise: React.FC<EnterpriseProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Enterprise</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
 };
-
-export default Enterprise;
+export default function EnterpriseRedirect() { return null   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

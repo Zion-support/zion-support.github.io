@@ -1,16 +1,18 @@
 import React from 'react';
 
-interface Reset-passwordProps {
-  className?: string;
-}
-
-const Reset-password: React.FC<Reset-passwordProps> = ({ className }) => {
+export default function ResetPasswordPage() {
   return (
-    <div className={className || ''}>
-      <h1>Reset-password</h1>
-      <p>This component is under development.</p>
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>Reset Password</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Update your password below.
+      </p>
+    </div>
+  );export default function ResetPasswordPage() {
+  return (
+    <div className="container mx-auto px-4 py-10">
+      <h1 className="text-2xl font-semibold">Reset Password</h1>
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Update your password below.</p>
     </div>
   );
-};
-
-export default Reset-password;
+}

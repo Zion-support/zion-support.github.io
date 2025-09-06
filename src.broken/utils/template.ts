@@ -1,7 +1,4 @@
-// Template utility
-export const Template = () => {
-  // Implementation here
-  return null;
+// Utility functions for template;
+export const template = {;
+  // TODO: Implement utility functions;
 };
-
-export default Template;

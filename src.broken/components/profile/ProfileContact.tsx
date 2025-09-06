@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ProfileContactProps {
-  className?: string;
-}
-
-const ProfileContact: React.FC<ProfileContactProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ProfileContact</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ProfileContact() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ProfileContact;
+}
+;

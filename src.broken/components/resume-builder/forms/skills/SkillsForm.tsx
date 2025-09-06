@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface SkillsFormProps {
-  className?: string;
-}
-
-const SkillsForm: React.FC<SkillsFormProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>SkillsForm</h1>
-      <p>This component is under development.</p>
-    </div>
+export function SkillsForm() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default SkillsForm;
+}
+;

@@ -1,16 +1,32 @@
-import React from 'react';
 
-interface Sidebar-triggerProps {
-  className?: string;
-}
+import * as React from "react"
+import { PanelLeft } from 'lucide-react'
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import { useSidebar } from "./sidebar-context"
 
-const Sidebar-trigger: React.FC<Sidebar-triggerProps> = ({ className }) => {
+export const SidebarTrigger = React.forwardRef<
+  React.ElementRef<typeof Button>,
+  React.ComponentProps<typeof Button>
+>((props, ref) => {
+  const { toggleSidebar } = useSidebar()
+
   return (
-    <div className={className || ''}>
-      <h1>Sidebar-trigger</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Sidebar-trigger;
+    <Button
+      ref={ref}
+      data-sidebar="trigger"
+      variant="ghost"
+      size="icon"
+      className={cn("h-7 w-7", props.className)}
+      onClick={(event) => {
+        props.onClick?.(event)
+        toggleSidebar()
+      }}
+      {...props}
+    >
+      <PanelLeft />
+      <span className="sr-only">Toggle Sidebar</span>
+    </Button>
+  )
+})
+SidebarTrigger.displayName = "SidebarTrigger"

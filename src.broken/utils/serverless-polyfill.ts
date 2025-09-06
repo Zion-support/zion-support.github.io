@@ -1,7 +1,4 @@
-// Serverless-polyfill utility
-export const Serverless-polyfill = () => {
-  // Implementation here
-  return null;
+// Utility functions for serverless-polyfill,;
+export const serverless-polyfill = {,;
+  // TODO: Implement utility functions;
 };
-
-export default Serverless-polyfill;

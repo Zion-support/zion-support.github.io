@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Ai-model-development-chatProps {
-  className?: string;
-}
-
-const Ai-model-development-chat: React.FC<Ai-model-development-chatProps> = ({ className }) => {
+const AiModelDevelopmentChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Ai-model-development-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Ai-model-development-chat;
+    <div>
+      <Head>
+        <title>AiModelDevelopmentChat - Zion Tech Solutions</title>

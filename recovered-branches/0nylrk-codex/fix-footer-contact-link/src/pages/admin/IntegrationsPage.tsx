@@ -1,16 +1,55 @@
-import React from 'react';
 
-interface IntegrationsPageProps {
-  className?: string;
-}
-
-const IntegrationsPage: React.FC<IntegrationsPageProps> = ({ className }) => {
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+=======
+import React, { useState } from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {IntegrationsHub} from "@/components/integrations/IntegrationsHub";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+>>>>>>> main
+export default function IntegrationsPage() {
   return (
-    <div className={className || ''}>
-      <h1>IntegrationsPage</h1>
-      <p>This component is under development.</p>
-    </div>
+    <ProtectedRoute adminOnly={true}>
+      <SEO
+        title="Integrations - Zion AI Marketplace"
+        description="Connect your Zion account with CRMs and Applicant Tracking Systems."
+      />
+      <Header />
+      <main className="min-h-screen bg-background">
+        <IntegrationsHub />
+      </main>
+      <Footer />
+    </ProtectedRoute>
+  )
+<<<<<<< HEAD
+import React, { useState } from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+export default function IntegrationsPage() {;
+  return (;
+    <ProtectedRoute adminOnly={true}>;
+      <SEO;
+        title="Integrations - Zion AI Marketplace";
+        description="Connect your Zion account with CRMs and Applicant Tracking Systems.";
+      />;
+      <Header />;
+      <main className="min-h-screen bg-background">;
+        <IntegrationsHub />;
+      </main>;
+      <Footer />;
+    </ProtectedRoute>;
   );
-};
-
-export default IntegrationsPage;
+=======
+>>>>>>> main
+}
+;

@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface MarketplaceLandingProps {
-  className?: string;
-}
-
-const MarketplaceLanding: React.FC<MarketplaceLandingProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>MarketplaceLanding</h1>
-      <p>This component is under development.</p>
-    </div>
+export function MarketplaceLanding() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default MarketplaceLanding;
+}
+;

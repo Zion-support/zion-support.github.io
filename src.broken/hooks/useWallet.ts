@@ -1,7 +1,5 @@
-// UseWallet utility
-export const UseWallet = () => {
-  // Implementation here
-  return null;
+// Hook for useWallet,;
+export const useUseWallet: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseWallet;

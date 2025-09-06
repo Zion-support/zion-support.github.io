@@ -1,7 +1,4 @@
-// Globals.d utility
-export const Globals.d = () => {
-  // Implementation here
-  return null;
-};
-
-export default Globals.d;
+// Type definitions for globals.d,;
+export interface globals.d {;
+  // TODO: Add proper type definitions;
+}

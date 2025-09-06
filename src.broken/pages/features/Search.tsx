@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface SearchProps {
-  className?: string;
-}
-
-const Search: React.FC<SearchProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Search</h1>
-      <p>This component is under development.</p>
-    </div>
+export function Search() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Search;
+}
+;

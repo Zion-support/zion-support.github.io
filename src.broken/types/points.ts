@@ -1,7 +1,4 @@
-// Points utility
-export const Points = () => {
-  // Implementation here
-  return null;
-};
-
-export default Points;
+// Type definitions for points,;
+interface points {;
+  // TODO: Add proper type definitions;
+},;

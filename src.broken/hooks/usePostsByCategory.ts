@@ -1,7 +1,5 @@
-// UsePostsByCategory utility
-export const UsePostsByCategory = () => {
-  // Implementation here
-  return null;
+// Hook for usePostsByCategory,;
+export const useUsePostsByCategory: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UsePostsByCategory;

@@ -1,7 +1,4 @@
-// Pwa.d utility
-export const Pwa.d = () => {
-  // Implementation here
-  return null;
-};
-
-export default Pwa.d;
+// Type definitions for pwa.d,;
+export interface pwa.d {;
+  // TODO: Add proper type definitions;
+}

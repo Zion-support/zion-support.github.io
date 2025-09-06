@@ -1,7 +1,9 @@
-// Index utility
-export const Index = () => {
-  // Implementation here
-  return null;
-};
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { listVendors } from '../../../utils/vendor-store';
 
-export default Index;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const vendors = listVendors();
+  res.status(200).json({ vendors });export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const vendors = listVendors();
+  res.status(200).json({ vendors })
+}

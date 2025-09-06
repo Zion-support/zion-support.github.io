@@ -1,7 +1,5 @@
-// UsePoints utility
-export const UsePoints = () => {
-  // Implementation here
-  return null;
+// Hook for usePoints,;
+export const useUsePoints: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UsePoints;

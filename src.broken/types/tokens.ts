@@ -1,7 +1,4 @@
-// Tokens utility
-export const Tokens = () => {
-  // Implementation here
-  return null;
-};
-
-export default Tokens;
+// Type definitions for tokens,;
+interface tokens {;
+  // TODO: Add proper type definitions;
+},;

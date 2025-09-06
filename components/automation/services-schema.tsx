@@ -1,16 +1,8 @@
-import React from 'react';
-
-interface Services-schemaProps {
-  className?: string;
-}
-
-const Services-schema: React.FC<Services-schemaProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
-      <h1>Services-schema</h1>
-      <p>This component is under development.</p>
+    <div className="py-10">
+      <h1 className="text-2xl font-semibold text-white">Services Schema</h1>
+      <p className="text-white/80 mt-2">schema.org JSON-LD is generated to <code className="text-white/90">data/services/schema.json</code>.</p>
+      <p className="text-white/70 mt-2">This runs daily and auto-PRs updates.</p>
     </div>
   );
-};
-
-export default Services-schema;
+}

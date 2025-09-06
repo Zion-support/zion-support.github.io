@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface Performance-monitorProps {
-  className?: string;
-}
-
-const Performance-monitor: React.FC<Performance-monitorProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Performance-monitor</h1>
-      <p>This component is under development.</p>
-    </div>
+,;
+export export export default function performance-monitor()   {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Performance-monitor;
+}

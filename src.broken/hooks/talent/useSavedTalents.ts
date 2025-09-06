@@ -1,7 +1,5 @@
-// UseSavedTalents utility
-export const UseSavedTalents = () => {
-  // Implementation here
-  return null;
+// Hook for useSavedTalents,;
+export const useUseSavedTalents: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseSavedTalents;

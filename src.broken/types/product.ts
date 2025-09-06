@@ -1,7 +1,4 @@
-// Product utility
-export const Product = () => {
-  // Implementation here
-  return null;
-};
-
-export default Product;
+// Type definitions for product,;
+interface product {;
+  // TODO: Add proper type definitions;
+},;

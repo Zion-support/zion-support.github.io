@@ -1,7 +1,4 @@
-// Auth.test utility
-export const Auth.test = () => {
-  // Implementation here
-  return null;
+// Service for auth.test,;
+export const auth.testService = {,;
+  // TODO: Implement service methods;
 };
-
-export default Auth.test;

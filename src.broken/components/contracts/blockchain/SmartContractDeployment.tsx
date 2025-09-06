@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface SmartContractDeploymentProps {
-  className?: string;
-}
-
-const SmartContractDeployment: React.FC<SmartContractDeploymentProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>SmartContractDeployment</h1>
-      <p>This component is under development.</p>
-    </div>
+export function SmartContractDeployment() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default SmartContractDeployment;
+}
+;

@@ -1,16 +1,114 @@
-import React from 'react';
 
+<<<<<<< HEAD
+import React from "react",
+import { UseFormReturn } from "react-hook-form",
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { TalentProfile } from "@/types/talent",
+import { FormValues } from "./useHireRequestForm",
 interface BudgetFieldsProps {
-  className?: string;
+  form: UseFormReturn<FormValues>,
+  talent?: TalentProfile
+import React from "react",;
+import { UseFormReturn } from "react-hook-form",;
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { TalentProfile } from "@/types/talent",;
+import { FormValues } from "./useHireRequestForm",;
+interface BudgetFieldsProps {;
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+}
+;
+export function BudgetFields({ form, talent }: BudgetFieldsProps) {;
+  return (;
+    <>;
+      <FormField;
+=======
+import React from "react";
+import {UseFormReturn} from "react-hook-form";
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {TalentProfile} from "@/types/talent";
+import {FormValues} from "./useHireRequestForm";
+interface BudgetFieldsProps {
+  form: UseFormReturn<FormValues>,
+  talent?: TalentProfile
 }
 
-const BudgetFields: React.FC<BudgetFieldsProps> = ({ className }) => {
+export function BudgetFields({ form, talent }: BudgetFieldsProps) {
   return (
-    <div className={className || ''}>
-      <h1>BudgetFields</h1>
-      <p>This component is under development.</p>
-    </div>
+    <>
+      <FormField
+>>>>>>> main
+        control={form.control}
+        name="budgetMin"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel className="text-white">Budget (Min)</FormLabel>
+            <FormControl>
+              <div className="relative">
+                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
+                <Input 
+                  type="number" 
+                  className="pl-7 bg-zion-blue border-zion-blue-light text-white" 
+                  {...field} 
+                />
+              </div>
+            </FormControl>
+            <FormMessage className="text-red-400" />
+          </FormItem>
+<<<<<<< HEAD
+        )}
+      />;
+      <FormField;
+        control={form.control}
+        name="budgetMax"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel className="text-white">Budget (Max)</FormLabel>
+            <FormControl>
+              <div className="relative">
+                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
+                <Input 
+                  type="number" 
+                  className="pl-7 bg-zion-blue border-zion-blue-light text-white" 
+                  {...field} 
+                />
+              </div>
+            </FormControl>
+            <FormMessage className="text-red-400" />
+          </FormItem>
+        )}
+      />;
+    </>;
   );
-};
-
-export default BudgetFields;
+=======
+        )}
+      />
+      
+      <FormField
+        control={form.control}
+        name="budgetMax"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel className="text-white">Budget (Max)</FormLabel>
+            <FormControl>
+              <div className="relative">
+                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
+                <Input 
+                  type="number" 
+                  className="pl-7 bg-zion-blue border-zion-blue-light text-white" 
+                  {...field} 
+                />
+              </div>
+            </FormControl>
+            <FormMessage className="text-red-400" />
+          </FormItem>
+        )}
+      />
+    </>
+  )
+>>>>>>> main
+}
+;

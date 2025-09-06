@@ -1,7 +1,4 @@
-// Jobs utility
-export const Jobs = () => {
-  // Implementation here
-  return null;
-};
-
-export default Jobs;
+// Type definitions for jobs,;
+interface jobs {;
+  // TODO: Add proper type definitions;
+},;

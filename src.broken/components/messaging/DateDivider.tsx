@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface DateDividerProps {
-  className?: string;
-}
-
-const DateDivider: React.FC<DateDividerProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>DateDivider</h1>
-      <p>This component is under development.</p>
-    </div>
+export function DateDivider() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default DateDivider;
+}
+;

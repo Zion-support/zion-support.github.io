@@ -1,7 +1,4 @@
-// Moderation utility
-export const Moderation = () => {
-  // Implementation here
-  return null;
-};
-
-export default Moderation;
+// Type definitions for moderation,;
+interface moderation {;
+  // TODO: Add proper type definitions;
+},;

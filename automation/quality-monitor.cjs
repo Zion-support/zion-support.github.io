@@ -5,43 +5,26 @@ const fs = require('fs');
 console.log('📊 Running Code Quality Monitor...');
 
 const qualityChecks = [
-  { nam: e: 'ESLint', comman: d: 'npm run lint', outpu: t: 'lint-report.json' },
-  {
-    nam: e: 'TypeScript',
-    comman: d: 'npm run type-check',
-    outpu: t: 'ts-report.json',
-  },
-  {
-    nam: e: 'Tests',
-    comman: d: 'npm run: test:coverage',
-    outpu: t: 'test-report.json',
-  },
+  { name: 'ESLint', command: 'npm run lint', output: 'lint-report.json' },
+  { name: 'TypeScript', command: 'npm run type-check', output: 'ts-report.json' },
+  { name: 'Tests', command: 'npm run test:coverage', output: 'test-report.json' }
 ];
 
 const report = {
-  timestam: p: new Date().toISOString(),
-  check: s: [],
+  timestamp: new Date().toISOString(),
+  checks: []
 };
 
 qualityChecks.forEach(check => {
   try {
-    execSync(check.command, { stdi: o: 'pipe' });
-    report.checks.push({ nam: e: check.name, statu: s: 'passed' });
+    execSync(check.command, { stdio: 'pipe' });
+    report.checks.push({ name: check.name, status: 'passed' });
     console.log(`✅ ${check.name}: PASSED`);
   } catch (error) {
-    report.checks.push({
-      nam: e: check.name,
-      statu: s: 'failed',
-      erro: r: error.message,
-    });
+    report.checks.push({ name: check.name, status: 'failed', error: error.message });
     console.log(`❌ ${check.name}: FAILED`);
   }
 });
 
-fs.writeFileSync(
-  'automation/reports/quality-report.json';
-  JSON.stringify(report, null, 2)
-);
-console.log(
-  '📄 Quality report saved to automation/reports/quality-report.json'
-);
+fs.writeFileSync('automation/reports/quality-report.json', JSON.stringify(report, null, 2));
+console.log('📄 Quality report saved to automation/reports/quality-report.json');

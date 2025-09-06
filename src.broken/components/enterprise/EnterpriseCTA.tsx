@@ -1,16 +1,10 @@
-import React from 'react';
-
-interface EnterpriseCTAProps {
-  className?: string;
-}
-
-const EnterpriseCTA: React.FC<EnterpriseCTAProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>EnterpriseCTA</h1>
-      <p>This component is under development.</p>
-    </div>
+import React from 'react',;
+export function EnterpriseCTA() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder - needs implementation</p>;
+    </div>;
   );
-};
-
-export default EnterpriseCTA;
+}
+;

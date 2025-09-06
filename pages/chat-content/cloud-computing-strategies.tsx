@@ -1,16 +1,29 @@
-import React from 'react';
-
-interface CloudComputingStrategiesProps {
-  className?: string;
-}
-
-const CloudComputingStrategies: React.FC<CloudComputingStrategiesProps> = ({ className }) => {
+<<<<<<< HEAD
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const CloudComputingStrategies: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>CloudComputingStrategies</h1>
-      <p>This component is under development.</p>
+    <div>
+      <Head>
+        <title>CloudComputingStrategies - Zion Tech Solutions</title>
+        <meta name="description" content="CloudComputingStrategies page" />
+      </Head>
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+>>>>>>> main
+      <main>
+        <h1>CloudComputingStrategies</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
-  );
+<<<<<<< HEAD
+  )
+},
+export default CloudComputingStrategies,
+=======
+  ),
 };
 
 export default CloudComputingStrategies;
+>>>>>>> main

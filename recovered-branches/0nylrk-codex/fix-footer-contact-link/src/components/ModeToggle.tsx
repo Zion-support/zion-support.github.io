@@ -1,16 +1,72 @@
-import React from 'react';
 
-interface ModeToggleProps {
-  className?: string;
-}
+<<<<<<< HEAD
+import { Moon, Sun } from "lucide-react"
+import { Button } from "@/components/ui/button"
+=======
+import {Moon, Sun} from "lucide-react"
+import {Button} from "@/components/ui/button"
+>>>>>>> main
 
-const ModeToggle: React.FC<ModeToggleProps> = ({ className }) => {
+// Create a simplified theme hook for offline mode
+const useTheme = () => ({
+  theme: "dark",
+<<<<<<< HEAD
+  setTheme: (theme: string) => // // // console.log(`Theme would change to: ${theme}`)
+}),
+
+export function ModeToggle() {
+  const { theme, setTheme } = useTheme(),
+=======
+  setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
+});
+
+export function ModeToggle() {
+  const { theme, setTheme } = useTheme();
+>>>>>>> main
+
   return (
-    <div className={className || ''}>
-      <h1>ModeToggle</h1>
-      <p>This component is under development.</p>
-    </div>
+    <Button
+      variant="ghost"
+      size="icon"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+    >
+      {theme === "dark" ? (
+        <Sun className="h-5 w-5 text-yellow-300" />
+      ) : (
+        <Moon className="h-5 w-5 text-slate-300" />
+<<<<<<< HEAD
+      )}
+      <span className="sr-only">Toggle theme</span>
+    </Button>
+  )
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/components/ui/button";
+// Create a simplified theme hook for offline mode;
+const useTheme = () => ({;
+  theme: "dark",;
+  setTheme: (theme: string) => // // // console.log(`Theme would change to: ${theme}`);
+}),;
+export function ModeToggle() {;
+  const { theme, setTheme } = useTheme();
+  return (;
+    <Button;
+      variant="ghost";
+      size="icon";
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+    >;
+      {theme === "dark" ? (;
+        <Sun className="h-5 w-5 text-yellow-300" />;
+      ) : (;
+        <Moon className="h-5 w-5 text-slate-300" />;
+      )}
+      <span className="sr-only">Toggle theme</span>;
+    </Button>;
   );
-};
-
-export default ModeToggle;
+=======
+      )}
+      <span className="sr-only">Toggle theme</span>
+    </Button>
+  )
+>>>>>>> main
+}
+;

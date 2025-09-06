@@ -1,16 +1,19 @@
-import React from 'react';
-
-interface Technology5gAndItsImpactOnIotChatProps {
-  className?: string;
-}
-
-const Technology5gAndItsImpactOnIotChat: React.FC<Technology5gAndItsImpactOnIotChatProps> = ({ className }) => {
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
+const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>5G Technology and Its Impact on IoT Chat</h1>
-      <p>This component is under development.</p>
+    <div>
+      <Head>
+        <title>5gTechnologyAndItsImpactOnIotChat - Zion Tech Solutions</title>
+        <meta name="description" content="5gTechnologyAndItsImpactOnIotChat blog post" />
+      </Head>
+      <main>
+        <h1>5gTechnologyAndItsImpactOnIotChat</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog"><a>Back to Blog</Link></Link>
+      </main>
     </div>
-  );
-};
-
-export default Technology5gAndItsImpactOnIotChat;
+  )
+},
+export default Chat5gTechnologyAndItsImpactOnIotChat,

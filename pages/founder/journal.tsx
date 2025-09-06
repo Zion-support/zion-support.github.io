@@ -1,16 +1,10 @@
-import React from 'react';
-
-interface JournalProps {
-  className?: string;
+import dynamic from 'next/dynamic';
+const BookBuilder = dynamic(() => import('../../components/book/BookBuilder'), { ssr: false });
+export default function FounderJournalPage(req, res) {
+  try {
+  return <BookBuilder />;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-const Journal: React.FC<JournalProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Journal</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Journal;

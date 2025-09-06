@@ -1,16 +1,54 @@
-import React from 'react';
+
+<<<<<<< HEAD
+import { Badge } from "@/components/ui/badge",
+import { QuoteStatus } from "@/types/quotes",
+const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
+=======
+import {Badge} from "@/components/ui/badge";
+import {QuoteStatus} from "@/types/quotes";
+const statusConfig: Record<QuoteStatus, { label: string, className: string }> = {
+>>>>>>> main
+  new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },
+  in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },
+  accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },
+  responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" },
+  closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" },
+  archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }},
 
 interface QuoteStatusBadgeProps {
-  className?: string;
+  status: QuoteStatus
+<<<<<<< HEAD
+import { Badge } from "@/components/ui/badge",;
+import { QuoteStatus } from "@/types/quotes",;
+const statusConfig: Record<QuoteStatus { label: string, className: string }> = {;
+  new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },;
+  in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },;
+  accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },;
+  responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" },;
+  closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" },;
+  archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }},;
+interface QuoteStatusBadgeProps {;
+  status: QuoteStatus;
 }
-
-const QuoteStatusBadge: React.FC<QuoteStatusBadgeProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>QuoteStatusBadge</h1>
-      <p>This component is under development.</p>
-    </div>
+;
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
+  const config = statusConfig[status];
+  return (;
+    <Badge className={config.className}>;
+      {config.label}
+    </Badge>;
   );
 };
+=======
+}
 
-export default QuoteStatusBadge;
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
+  const config = statusConfig[status];
+  
+  return (
+    <Badge className={config.className}>
+      {config.label}
+    </Badge>
+  )
+};
+>>>>>>> main

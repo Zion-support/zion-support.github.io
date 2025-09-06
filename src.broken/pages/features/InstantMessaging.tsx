@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface InstantMessagingProps {
-  className?: string;
-}
-
-const InstantMessaging: React.FC<InstantMessagingProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>InstantMessaging</h1>
-      <p>This component is under development.</p>
-    </div>
+export function InstantMessaging() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default InstantMessaging;
+}
+;

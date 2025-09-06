@@ -1,16 +1,10 @@
-import React from 'react';
-
-interface TimelineFieldProps {
-  className?: string;
-}
-
-const TimelineField: React.FC<TimelineFieldProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>TimelineField</h1>
-      <p>This component is under development.</p>
-    </div>
+import React from 'react',;
+export function TimelineField() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder - needs implementation</p>;
+    </div>;
   );
-};
-
-export default TimelineField;
+}
+;

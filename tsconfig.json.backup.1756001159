@@ -1,6 +1,21 @@
 {
   "compilerOptions": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "target": "ES2017",
     "useDefineForClassFields": true,
     "lib": [
@@ -55,6 +70,12 @@
         "./types/*"
       ]
     },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     /* Bundler mode */
 =======
     "target": "es5",
@@ -67,9 +88,23 @@
     "esModuleInterop": true,
     "module": "esnext",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2750
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    /* Bundler mode */    "moduleResolution": "node",
+    "resolveJsonModule": true,
 <<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    /* Bundler mode */    "moduleResolution": "node",
+    "resolveJsonModule": true,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -100,6 +135,12 @@
     "zion.app/recovered-content/**",
     "apps/**",
     "src/**"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
   ]
 =======
     "isolatedModules": true,
@@ -113,4 +154,18 @@
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2750
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
+  ]}
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  ]}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  ]}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

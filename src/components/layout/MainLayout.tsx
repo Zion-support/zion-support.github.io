@@ -1,16 +1,24 @@
 import React from 'react';
 
-interface MainLayoutProps {
-  className?: string;
+export default function MainLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <div className="main-layout">{children}</div>;
 }
-
-const MainLayout: React.FC<MainLayoutProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>MainLayout</h1>
-      <p>This component is under development.</p>
-    </div>
+                isOpen={sidebarOpen},;
+                onClose={() => setSidebarOpen(false)},;
+              />,;
+              <div className="flex-1 ml-80">,;
+                {children},;
+              </div>,;
+            </div>,;
+          )},;
+          {!showSidebar && children},;
+        </main>,;
+        <Footer />,;
+      </div>,;
+    </>,;
   );
-};
-
-export default MainLayout;
+},;

@@ -1,7 +1,5 @@
-// UseContractTemplates utility
-export const UseContractTemplates = () => {
-  // Implementation here
-  return null;
+// Hook for useContractTemplates,;
+export const useUseContractTemplates: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseContractTemplates;

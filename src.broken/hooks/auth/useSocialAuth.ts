@@ -1,7 +1,5 @@
-// UseSocialAuth utility
-export const UseSocialAuth = () => {
-  // Implementation here
-  return null;
+// Hook for useSocialAuth,;
+export const useUseSocialAuth: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseSocialAuth;

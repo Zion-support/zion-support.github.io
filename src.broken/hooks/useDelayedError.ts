@@ -1,7 +1,5 @@
-// UseDelayedError utility
-export const UseDelayedError = () => {
-  // Implementation here
-  return null;
+// Hook for useDelayedError,;
+export const useUseDelayedError: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseDelayedError;

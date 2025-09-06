@@ -1,16 +1,46 @@
-import React from 'react';
+<<<<<<< HEAD
 
+import React from "react",
+import { SeverityIndicator } from "@/components/ui/severity-indicator",
 interface SeverityDisplayProps {
-  className?: string;
+  severity: string
 }
 
-const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ className }) => {
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
   return (
-    <div className={className || ''}>
-      <h1>SeverityDisplay</h1>
-      <p>This component is under development.</p>
-    </div>
+    <SeverityIndicator 
+      severity={severity as "safe" | "suspicious" | "dangerous"} 
+import React from "react",;
+import { SeverityIndicator } from "@/components/ui/severity-indicator",;
+interface SeverityDisplayProps {;
+  severity: string;
+}
+;
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {;
+  return (;
+    <SeverityIndicator;
+      severity={severity as "safe" | "suspicious" | "dangerous"} ;
+      showIcon={true}
+      showText={true}
+    />;
   );
 };
+=======
+import React from "react";
+import { SeverityIndicator } from "@/components/ui/severity-indicator";
+interface SeverityDisplayProps {
+  severity: string;
+}
 
-export default SeverityDisplay;
+export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
+  severity,
+}) => {
+  return (
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      showIcon={true}
+      showText={true}
+    />
+  );
+};
+>>>>>>> main

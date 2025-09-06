@@ -1,7 +1,5 @@
-// UseSkills utility
-export const UseSkills = () => {
-  // Implementation here
-  return null;
+// Hook for useSkills,;
+export const useUseSkills: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseSkills;

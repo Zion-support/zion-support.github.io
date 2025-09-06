@@ -1,16 +1,188 @@
-import React from 'react';
 
-interface TalentGridProps {
-  className?: string;
+<<<<<<< HEAD
+import { TalentCard } from "@/components/talent/TalentCard",
+import { TalentProfile } from "@/types/talent",
+=======
+import {TalentCard} from "@/components/talent/TalentCard";
+import {TalentProfile} from "@/types/talent";
+>>>>>>> main
+export interface TalentGridProps {
+  talents: TalentProfile[],
+  isLoading: boolean,
+  onTalentClick: (id: string) => void,
+  savedTalentIds: string[],
+  onToggleSave: (id: string, isSaved: boolean) => void,
+  isAuthenticated: boolean,
+  viewProfile?: (id: string) => void,
+<<<<<<< HEAD
+  clearFilters?: () => void,
+  handleRequestHire?: (talent: TalentProfile) => void
 }
 
-const TalentGrid: React.FC<TalentGridProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>TalentGrid</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
+export function TalentGrid({ 
+  talents, 
+  isLoading, 
+  onTalentClick, 
+  savedTalentIds, 
+  onToggleSave, 
+  isAuthenticated,
+  viewProfile,
+  clearFilters,
+  handleRequestHire
+}: TalentGridProps) {
+  const handleRequestHireInternal = (talent: TalentProfile) => {
+    if (handleRequestHire) {
+      handleRequestHire(talent)
+    } else {
+      // Default implementation
+      // // // console.log("Request to hire:", talent.id)
+import { TalentCard } from "@/components/talent/TalentCard",;
+import { TalentProfile } from "@/types/talent",;
+export interface TalentGridProps {;
+  talents: TalentProfile[],;
+  isLoading: boolean,;
+  onTalentClick: (id: string) => void,;
+  savedTalentIds: string[],;
+  onToggleSave: (id: string, isSaved: boolean) => void,;
+  isAuthenticated: boolean,;
+  viewProfile?: (id: string) => void,;
+  clearFilters?: () => void,;
+  handleRequestHire?: (talent: TalentProfile) => void;
+}
+;
+export function TalentGrid({;
+  talents,;
+  isLoading,;
+  onTalentClick,;
+  savedTalentIds,;
+  onToggleSave,;
+  isAuthenticated,;
+  viewProfile,;
+  clearFilters,;
+  handleRequestHire;
+}: TalentGridProps) {;
+  const handleRequestHireInternal = (talent: TalentProfile) => {;
+    if (handleRequestHire) {;
+      handleRequestHire(talent);
+    } else {;
+      // Default implementation;
+      // // // console.log("Request to hire:", talent.id);
+    }
+  };
+  const handleViewProfile = (id: string) => {;
+    if (viewProfile) {;
+      viewProfile(id);
+    } else {;
+      onTalentClick(id);
+    }
+  },
+=======
+  clearFilters?: () => void;
+  handleRequestHire?: (talent: TalentProfile) => void
+}
 
-export default TalentGrid;
+export function TalentGrid({ 
+  talents, 
+  isLoading, 
+  onTalentClick, 
+  savedTalentIds, 
+  onToggleSave, 
+  isAuthenticated;
+  viewProfile;
+  clearFilters;
+  handleRequestHire
+}: TalentGridProps) {
+  const handleRequestHireInternal = (talent: TalentProfile) => {
+    if (handleRequestHire) {
+      handleRequestHire(talent)
+    } else {
+      // Default implementation
+      console.log("Request to hire:", talent.id)
+    }
+  };
+
+  const handleViewProfile = (id: string) => {
+    if (viewProfile) {
+      viewProfile(id)
+    } else {
+      onTalentClick(id)
+    }
+  };
+>>>>>>> main
+  
+  if (isLoading) {
+    return <div className="py-8 text-center">
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>
+      <p className="text-zion-cyan">Loading talent profiles...</p>
+    </div>
+<<<<<<< HEAD
+  }
+
+  if (!talents || talents.length === 0) {
+    return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
+      <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>
+      {clearFilters && (
+        <button 
+          onClick={clearFilters}
+          className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors"
+        >
+          Clear Filters
+        </button>
+  };
+  if (isLoading) {;
+    return <div className="py-8 text-center">;
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>;
+      <p className="text-zion-cyan">Loading talent profiles...</p>;
+    </div>;
+  }
+;
+  if (!talents || talents.length === 0) {;
+    return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">;
+      <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>;
+      {clearFilters && (;
+        <button;
+=======
+  }
+
+  if (!talents || talents.length === 0) {
+    return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
+      <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>
+      {clearFilters && (
+        <button 
+>>>>>>> main
+          onClick={clearFilters}
+          className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors"
+        >
+          Clear Filters
+        </button>
+      )}
+<<<<<<< HEAD
+    </div>;
+=======
+    </div>
+>>>>>>> main
+  }
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {talents.map((talent) => (
+        <TalentCard
+          key={talent.id}
+          talent={talent}
+          onViewProfile={() => handleViewProfile(talent.id)}
+          onRequestHire={() => handleRequestHireInternal(talent)}
+          isSaved={savedTalentIds.includes(talent.id)}
+          onToggleSave={onToggleSave}
+          isAuthenticated={isAuthenticated}
+        />
+      ))}
+<<<<<<< HEAD
+    </div>;
+  );
+}
+;
+=======
+    </div>
+  )
+}
+>>>>>>> main

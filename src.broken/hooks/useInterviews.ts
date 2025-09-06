@@ -1,7 +1,5 @@
-// UseInterviews utility
-export const UseInterviews = () => {
-  // Implementation here
-  return null;
+// Hook for useInterviews,;
+export const useUseInterviews: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseInterviews;

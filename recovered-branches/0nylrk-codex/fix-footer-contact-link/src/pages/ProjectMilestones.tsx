@@ -1,16 +1,38 @@
+
+<<<<<<< HEAD
+import React from 'react',
+import { SEO } from '@/components/SEO',
+import { AppHeader } from '@/layout/AppHeader',
+import { Footer } from '@/components/Footer',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent',
+=======
 import React from 'react';
-
-interface ProjectMilestonesProps {
-  className?: string;
-}
-
-const ProjectMilestones: React.FC<ProjectMilestonesProps> = ({ className }) => {
+import {SEO} from '@/components/SEO';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {ProjectMilestonesContent} from '@/components/projects/milestones/ProjectMilestonesContent';
+>>>>>>> main
+function ProjectMilestones() {
   return (
-    <div className={className || ''}>
-      <h1>ProjectMilestones</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
+    <ProtectedRoute>
+      <>
+        <SEO 
+          title="Payment Milestones | Zion AI Marketplace" 
+          description="Manage project payment milestones and deliverables"
+        />
+        <AppHeader />
+        <ProjectMilestonesContent />
+        <Footer />
+      </>
+    </ProtectedRoute>
+  )
+}
+<<<<<<< HEAD
+;
+export default ProjectMilestones;
+=======
 
 export default ProjectMilestones;
+>>>>>>> main

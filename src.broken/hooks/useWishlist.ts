@@ -1,7 +1,5 @@
-// UseWishlist utility
-export const UseWishlist = () => {
-  // Implementation here
-  return null;
+// Hook for useWishlist,;
+export const useUseWishlist: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseWishlist;

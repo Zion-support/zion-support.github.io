@@ -1,7 +1,4 @@
-// Auth utility
-export const Auth = () => {
-  // Implementation here
-  return null;
-};
-
-export default Auth;
+// Type definitions for auth,;
+interface auth {;
+  // TODO: Add proper type definitions;
+},;

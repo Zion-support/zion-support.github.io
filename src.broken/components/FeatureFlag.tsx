@@ -1,16 +1,14 @@
-import React from 'react';
-
-interface FeatureFlagProps {
-  className?: string;
+import React from 'react',;
+import { useFeatureFlags } from '@/context/FeatureFlagContext',;
+interface FeatureFlagProps {;
+  name: string,;
+  children: React.ReactNode;
 }
-
-const FeatureFlag: React.FC<FeatureFlagProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>FeatureFlag</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
+;
+export function FeatureFlag({ name, children }: FeatureFlagProps) {;
+  const { isEnabled } = useFeatureFlags(),;
+  if (!isEnabled(name)) return null;
+  return <>{children}</>;
+}
+;
 export default FeatureFlag;

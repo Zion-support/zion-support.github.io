@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Business-intelligence-chatProps {
-  className?: string;
-}
-
-const Business-intelligence-chat: React.FC<Business-intelligence-chatProps> = ({ className }) => {
+const BusinessIntelligenceChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Business-intelligence-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Business-intelligence-chat;
+    <div>
+      <Head>
+        <title>BusinessIntelligenceChat - Zion Tech Solutions</title>

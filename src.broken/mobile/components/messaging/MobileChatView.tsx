@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface MobileChatViewProps {
-  className?: string;
-}
-
-const MobileChatView: React.FC<MobileChatViewProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>MobileChatView</h1>
-      <p>This component is under development.</p>
-    </div>
+export function MobileChatView() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default MobileChatView;
+}
+;

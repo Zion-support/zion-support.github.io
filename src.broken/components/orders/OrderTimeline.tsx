@@ -1,16 +1,10 @@
-import React from 'react';
-
-interface OrderTimelineProps {
-  className?: string;
-}
-
-const OrderTimeline: React.FC<OrderTimelineProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>OrderTimeline</h1>
-      <p>This component is under development.</p>
-    </div>
+import React from 'react',;
+export function OrderTimeline() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder - needs implementation</p>;
+    </div>;
   );
-};
-
-export default OrderTimeline;
+}
+;

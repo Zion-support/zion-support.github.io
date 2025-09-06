@@ -1,16 +1,11 @@
 import React from 'react';
+import type { KycProfile } from '../../utils/kyc';
+import { getBadgeLabels } from '../../utils/kyc';
+import { VerifiedBadge } from './VerifiedBadge';
 
-interface ProfileBadgesProps {
-  className?: string;
+export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
+  const labels = getBadgeLabels(profile || undefined);
+  return <VerifiedBadge labels={labels} />;export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
+  const labels = getBadgeLabels(profile || undefined);
+  return <VerifiedBadge labels={labels} />
 }
-
-const ProfileBadges: React.FC<ProfileBadgesProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ProfileBadges</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default ProfileBadges;

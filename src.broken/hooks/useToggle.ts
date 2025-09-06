@@ -1,7 +1,5 @@
-// UseToggle utility
-export const UseToggle = () => {
-  // Implementation here
-  return null;
+// Hook for useToggle,;
+export const useUseToggle: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseToggle;

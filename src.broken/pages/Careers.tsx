@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface CareersProps {
-  className?: string;
-}
-
-const Careers: React.FC<CareersProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Careers</h1>
-      <p>This component is under development.</p>
-    </div>
+export function Careers() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Careers;
+}
+;

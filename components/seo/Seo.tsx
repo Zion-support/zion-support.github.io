@@ -1,16 +1,10 @@
 import React from 'react';
+import { NextSeo } from 'next-seo';
+import { NextSeoProps } from 'next-seo';
 
-interface SeoProps {
-  className?: string;
+export type SeoProps = NextSeoProps;
+
+export default function Seo(props: SeoProps) {
+  return <NextSeo {...props} />;export type SeoProps = NextSeoProps, export default function Seo(props: SeoProps) {
+  return <NextSeo {...props} />;
 }
-
-const Seo: React.FC<SeoProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Seo</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Seo;

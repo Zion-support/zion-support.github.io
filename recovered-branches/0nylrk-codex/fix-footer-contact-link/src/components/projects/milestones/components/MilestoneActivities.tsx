@@ -1,16 +1,20 @@
-import React from 'react';
 
+import React from 'react';
+<<<<<<< HEAD
+interface MilestoneActivitiesProps {;
+  projectId: string;
+}
+;
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
+  return <div>Activity will be shown here</div>;
+}
+;
+=======
 interface MilestoneActivitiesProps {
-  className?: string;
+  projectId: string
 }
 
-const MilestoneActivities: React.FC<MilestoneActivitiesProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>MilestoneActivities</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default MilestoneActivities;
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+  return <div>Activity will be shown here</div>
+}
+>>>>>>> main

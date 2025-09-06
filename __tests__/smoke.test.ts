@@ -1,7 +1,3 @@
-// Smoke.test utility
-export const Smoke.test = () => {
-  // Implementation here
-  return null;
-};
-
-export default Smoke.test;
+describe('smoke'
+  it('true is truthy'
+describe('smoke', () => { it("true is truthy"

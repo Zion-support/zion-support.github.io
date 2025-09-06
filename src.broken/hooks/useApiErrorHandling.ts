@@ -1,7 +1,5 @@
-// UseApiErrorHandling utility
-export const UseApiErrorHandling = () => {
-  // Implementation here
-  return null;
+// Hook for useApiErrorHandling,;
+export const useUseApiErrorHandling: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseApiErrorHandling;

@@ -1,7 +1,4 @@
-// Resume utility
-export const Resume = () => {
-  // Implementation here
-  return null;
-};
-
-export default Resume;
+// Type definitions for resume,;
+interface resume {;
+  // TODO: Add proper type definitions;
+},;

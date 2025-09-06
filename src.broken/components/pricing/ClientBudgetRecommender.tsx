@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ClientBudgetRecommenderProps {
-  className?: string;
-}
-
-const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ClientBudgetRecommender</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ClientBudgetRecommender() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ClientBudgetRecommender;
+}
+;

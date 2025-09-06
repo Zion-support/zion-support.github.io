@@ -1,16 +1,42 @@
+
+<<<<<<< HEAD
+import React from 'react',
+import { SEO } from '@/components/SEO',
+import { AppHeader } from '@/layout/AppHeader',
+import { Footer } from '@/components/Footer',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent',
+=======
 import React from 'react';
-
-interface ContractBuilderProps {
-  className?: string;
-}
-
-const ContractBuilder: React.FC<ContractBuilderProps> = ({ className }) => {
+import {SEO} from '@/components/SEO';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {ContractBuilderContent} from '@/components/contracts/page/ContractBuilderContent';
+>>>>>>> main
+function ContractBuilderPage() {
   return (
-    <div className={className || ''}>
-      <h1>ContractBuilder</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
+    <ProtectedRoute>
+      <>
+        <SEO 
+          title="Smart Contract Builder | Zion AI Marketplace" 
+          description="Create and deploy blockchain-backed smart contracts for your projects"
+        />
+        <AppHeader />
+        
+        <main className="container mx-auto py-10 px-4">
+          <ContractBuilderContent />
+        </main>
+        
+        <Footer />
+      </>
+    </ProtectedRoute>
+  )
+}
+<<<<<<< HEAD
+;
+export default ContractBuilderPage;
+=======
 
-export default ContractBuilder;
+export default ContractBuilderPage;
+>>>>>>> main

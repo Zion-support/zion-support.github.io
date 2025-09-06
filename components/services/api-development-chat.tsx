@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Api-development-chatProps {
-  className?: string;
-}
-
-const Api-development-chat: React.FC<Api-development-chatProps> = ({ className }) => {
+const ApiDevelopmentChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Api-development-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Api-development-chat;
+    <div>
+      <Head>
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>

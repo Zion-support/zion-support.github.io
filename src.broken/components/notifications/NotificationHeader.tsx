@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface NotificationHeaderProps {
-  className?: string;
-}
-
-const NotificationHeader: React.FC<NotificationHeaderProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>NotificationHeader</h1>
-      <p>This component is under development.</p>
-    </div>
+export function NotificationHeader() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default NotificationHeader;
+}
+;

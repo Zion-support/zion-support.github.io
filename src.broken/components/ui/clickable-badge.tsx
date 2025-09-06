@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface Clickable-badgeProps {
-  className?: string;
-}
-
-const Clickable-badge: React.FC<Clickable-badgeProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Clickable-badge</h1>
-      <p>This component is under development.</p>
-    </div>
+,;
+export export export default function clickable-badge()   {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Clickable-badge;
+}

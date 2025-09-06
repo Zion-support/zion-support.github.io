@@ -1,16 +1,43 @@
-import React from 'react';
 
-interface SidebarMenuItemProps {
+<<<<<<< HEAD
+import React from "react",
+import { cn } from "@/lib/utils",
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+  className?: string,
+  children?: React.ReactNode
+import React from "react",;
+import { cn } from "@/lib/utils",;
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {;
   className?: string;
+  children?: React.ReactNode;
+}
+;
+export function SidebarMenuItem({ className, children, ...props }: SidebarMenuItemProps) {;
+  return (;
+    <li;
+      className={cn("", className)} ;
+      {...props}
+    >;
+      {children}
+    </li>;
+  );
+=======
+import React from "react";
+import {cn} from "@/lib/utils";
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+  className?: string;
+  children?: React.ReactNode
 }
 
-const SidebarMenuItem: React.FC<SidebarMenuItemProps> = ({ className }) => {
+export function SidebarMenuItem({ className, children, ...props }: SidebarMenuItemProps) {
   return (
-    <div className={className || ''}>
-      <h1>SidebarMenuItem</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default SidebarMenuItem;
+    <li 
+      className={cn("", className)} 
+      {...props}
+    >
+      {children}
+    </li>
+  )
+>>>>>>> main
+}
+;

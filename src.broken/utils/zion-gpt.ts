@@ -1,7 +1,4 @@
-// Zion-gpt utility
-export const Zion-gpt = () => {
-  // Implementation here
-  return null;
+// Utility functions for zion-gpt,;
+export const zion-gpt = {,;
+  // TODO: Implement utility functions;
 };
-
-export default Zion-gpt;

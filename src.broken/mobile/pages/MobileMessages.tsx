@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface MobileMessagesProps {
-  className?: string;
-}
-
-const MobileMessages: React.FC<MobileMessagesProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>MobileMessages</h1>
-      <p>This component is under development.</p>
-    </div>
+export function MobileMessages() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default MobileMessages;
+}
+;

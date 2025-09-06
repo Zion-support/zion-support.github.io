@@ -1,16 +1,26 @@
-import React from 'react';
-
-interface WhitepaperGeneratorProps {
-  className?: string;
+<<<<<<< HEAD
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+export default function WhitepaperGeneratorRedirect(req, res) {
+  try {
+  const router = useRouter();
+  useEffect(() => {;
+    router.replace('/tokenomics');
+  }, [router]);
+  return null;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+=======
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
 
-const WhitepaperGenerator: React.FC<WhitepaperGeneratorProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>WhitepaperGenerator</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default WhitepaperGenerator;
+export default function WhitepaperGeneratorRedirect() {
+  const router = useRouter();
+  useEffect(() => {
+    router.replace('/tokenomics');
+  }, [router]);
+  return null;
+>>>>>>> main

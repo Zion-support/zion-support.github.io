@@ -1,16 +1,24 @@
-import React from 'react';
-
-interface ThemeTestProps {
-  className?: string;
-}
-
-const ThemeTest: React.FC<ThemeTestProps> = ({ className }) => {
+import React from "react",
+import ThemeToggle from "@/components/ThemeToggle",
+import { ThemeProvider } from "@/context/ThemeContext",
+export default function ThemeTest() {
   return (
-    <div className={className || ''}>
-      <h1>ThemeTest</h1>
-      <p>This component is under development.</p>
-    </div>
+    <ThemeProvider>
+      <div className="p-4">
+        <ThemeToggle />
+      </div>
+    </ThemeProvider>
+  )
+import React from "react",;
+import ThemeToggle from "@/components/ThemeToggle",;
+import { ThemeProvider } from "@/context/ThemeContext";
+export default function ThemeTest() {;
+  return (;
+    <ThemeProvider>;
+      <div className="p-4">;
+        <ThemeToggle />;
+      </div>;
+    </ThemeProvider>;
   );
-};
-
-export default ThemeTest;
+}
+;

@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface RouteSEO.testProps {
-  className?: string;
-}
-
-const RouteSEO.test: React.FC<RouteSEO.testProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>RouteSEO.test</h1>
-      <p>This component is under development.</p>
-    </div>
+,;
+export export export default function RouteSEO.test()   {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default RouteSEO.test;
+}

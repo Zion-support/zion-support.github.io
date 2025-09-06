@@ -1,7 +1,5 @@
-// Ref-types utility
-export const Ref-types = () => {
-  // Implementation here
-  return null;
-};
-
-export default Ref-types;
+// Type definitions for ref-types,;
+interface ref-types {,;
+  // TODO: Add proper type definitions;
+}
+;

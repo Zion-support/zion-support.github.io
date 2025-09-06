@@ -1,7 +1,4 @@
-// Enhanced-error-logger utility
-export const Enhanced-error-logger = () => {
-  // Implementation here
-  return null;
+// Utility functions for enhanced-error-logger,;
+export const enhanced-error-logger = {,;
+  // TODO: Implement utility functions;
 };
-
-export default Enhanced-error-logger;

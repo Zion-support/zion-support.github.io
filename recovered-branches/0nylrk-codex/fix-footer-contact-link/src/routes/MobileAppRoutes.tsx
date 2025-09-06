@@ -1,16 +1,53 @@
-import React from 'react';
-
-interface MobileAppRoutesProps {
-  className?: string;
-}
-
-const MobileAppRoutes: React.FC<MobileAppRoutesProps> = ({ className }) => {
+<<<<<<< HEAD
+import { Route, Routes } from "react-router-dom",
+import MobileAppPage from "../pages/MobileAppPage",
+import MobileLaunchPage from "../pages/MobileLaunchPage",
+import OpenAppRedirect from "../pages/OpenAppRedirect",
+const MobileAppRoutes = () => {
   return (
-    <div className={className || ''}>
-      <h1>MobileAppRoutes</h1>
-      <p>This component is under development.</p>
-    </div>
+    <Routes>
+      {/* Mobile App Routes */}
+      <Route path="/download" element={<MobileAppPage />} />
+      <Route path="/mobile-app" element={<MobileAppPage />} />
+      <Route path="/mobile-launch" element={<MobileLaunchPage />} />
+      <Route path="/open-app" element={<OpenAppRedirect />} />
+    </Routes>
+  )
+},
+
+export default MobileAppRoutes,
+import { Route, Routes } from "react-router-dom",;
+import MobileAppPage from "../pages/MobileAppPage",;
+import MobileLaunchPage from "../pages/MobileLaunchPage",;
+import OpenAppRedirect from "../pages/OpenAppRedirect",;
+const MobileAppRoutes = () => {;
+  return (;
+    <Routes>;
+      {/* Mobile App Routes */}
+      <Route path="/download" element={<MobileAppPage />} />;
+      <Route path="/mobile-app" element={<MobileAppPage />} />;
+      <Route path="/mobile-launch" element={<MobileLaunchPage />} />;
+      <Route path="/open-app" element={<OpenAppRedirect />} />;
+    </Routes>;
   );
+},;
+export default MobileAppRoutes;
+=======
+import {Route, Routes} from "react-router-dom";
+import MobileAppPage from "../pages/MobileAppPage";
+import MobileLaunchPage from "../pages/MobileLaunchPage";
+import OpenAppRedirect from "../pages/OpenAppRedirect";
+const MobileAppRoutes = () => {
+  return (
+    <Routes>
+      {/* Mobile App Routes */}
+      <Route path="/download" element={<MobileAppPage />} />
+      <Route path="/mobile-app" element={<MobileAppPage />} />
+      <Route path="/mobile-launch" element={<MobileLaunchPage />} />
+      <Route path="/open-app" element={<OpenAppRedirect />} />
+    </Routes>
+  )
 };
 
 export default MobileAppRoutes;
+>>>>>>> main

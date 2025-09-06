@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface MetadataFormProps {
-  className?: string;
-}
-
-const MetadataForm: React.FC<MetadataFormProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>MetadataForm</h1>
-      <p>This component is under development.</p>
-    </div>
+export function MetadataForm() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default MetadataForm;
+}
+;

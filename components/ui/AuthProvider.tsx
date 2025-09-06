@@ -1,16 +1,41 @@
-import React from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
-interface AuthProviderProps {
-  className?: string;
-}
+type UserRole = 'talent' | 'client';
 
-const AuthProvider: React.FC<AuthProviderProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>AuthProvider</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
+type AuthContextType = {
+  role: UserRole;
+  setRole: (role: UserRole) => void;
 };
 
-export default AuthProvider;
+const AuthContext = createContext<AuthContextType>({
+  role: 'talent',
+  setRole: () => {},
+});
+
+export function AuthProvider({ children }: { children: React.ReactNode }) {
+  const [role, setRoleState] = useState<UserRole>('talent');
+
+  useEffect(() => {
+    try {
+      const stored = window.localStorage.getItem('userRole') as UserRole | null;
+      if (stored === 'talent' || stored === 'client') {
+        setRoleState(stored);      }
+
+      }
+
+    } catch {}
+  }, []);
+
+  const setRole = (r: UserRole) => {
+    setRoleState(r);
+    try {
+      window.localStorage.setItem('userRole', r);
+      document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;    } catch {}
+  };
+
+  return (
+
+    } catch {}
+  };
+
+  return (

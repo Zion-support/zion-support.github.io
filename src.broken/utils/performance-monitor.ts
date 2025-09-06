@@ -1,7 +1,4 @@
-// Performance-monitor utility
-export const Performance-monitor = () => {
-  // Implementation here
-  return null;
+// Utility functions for performance-monitor,;
+export const performance-monitor = {,;
+  // TODO: Implement utility functions;
 };
-
-export default Performance-monitor;

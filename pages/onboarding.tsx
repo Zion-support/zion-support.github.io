@@ -1,16 +1,13 @@
-import React from 'react';
-
-interface OnboardingProps {
-  className?: string;
-}
-
-const Onboarding: React.FC<OnboardingProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Onboarding</h1>
-      <p>This component is under development.</p>
-    </div>
+import OnboardingWizard from '../components/onboarding/OnboardingWizard';
+export default function OnboardingPage(req, res) {
+  try {
+  return (;
+    <div>;
+      <OnboardingWizard />;
+    </div>;
   );
-};
-
-export default Onboarding;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

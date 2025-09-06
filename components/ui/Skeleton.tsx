@@ -1,16 +1,24 @@
 import React from 'react';
 
-interface SkeletonProps {
+export type SkeletonProps = {
   className?: string;
-}
-
-const Skeleton: React.FC<SkeletonProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Skeleton</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
 };
 
-export default Skeleton;
+export default function Skeleton({ className = '' }: SkeletonProps) {
+
+    >
+      <div className='absolute inset-0 -translate-x-full animate-[shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent' />
+      <style jsx global>{`
+        @keyframes shimmer {
+          100% {
+            transform: translateX(100%);
+          }        }
+      `}</style>
+    </div>
+  );
+}
+
+        }
+      `}</style>
+    </div>
+  );

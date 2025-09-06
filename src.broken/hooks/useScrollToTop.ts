@@ -1,7 +1,5 @@
-// UseScrollToTop utility
-export const UseScrollToTop = () => {
-  // Implementation here
-  return null;
+// Hook for useScrollToTop,;
+export const useUseScrollToTop: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseScrollToTop;

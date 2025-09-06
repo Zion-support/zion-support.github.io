@@ -1,7 +1,5 @@
-// UseRecordActivity utility
-export const UseRecordActivity = () => {
-  // Implementation here
-  return null;
+// Hook for useRecordActivity,;
+export const useUseRecordActivity: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseRecordActivity;

@@ -1,16 +1,37 @@
-import React from 'react';
+import {useEffect, useState} from 'react';
+import {useRouter} from 'next/router';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GrantApplication } from '../../types/grants';
 
-interface [id]Props {
-  className?: string;
-}
+export default function GrantDetailPage() {
+  const router = useRouter();
+  const { id } = router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);
 
-const [id]: React.FC<[id]Props> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>[id]</h1>
-      <p>This component is under development.</p>
-    </div>
+  const [item, setItem] = useState<GrantApplication | null>(null);
+
+  const [loading, setLoading] = useState(true);
+  const [updateContent, setUpdateContent] = useState('');
+
+  useEffect(() => {
+    if (!id) return;
+    setLoading(true);
+    fetch(`/api/grants/${id}`)
+      .then(r => r.json())
+      .then(d => setItem(d.record))
+      .finally(() => setLoading(false));  }, [id]);
+
+  const addUpdate = async () => {
+    if (!id || !updateContent.trim()) return;
+
+  }, [id]);
+
+  const addUpdate = async () => {
+    if (!id || !updateContent.trim()) return;
+
+          </section>
+
+        </aside>
+      </div>
+    </EnhancedLayout>
   );
-};
-
-export default [id];
+}

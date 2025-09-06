@@ -1,7 +1,5 @@
-// UseSessionDuration utility
-export const UseSessionDuration = () => {
-  // Implementation here
-  return null;
+// Hook for useSessionDuration,;
+export const useUseSessionDuration: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseSessionDuration;

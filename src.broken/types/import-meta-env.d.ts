@@ -1,7 +1,4 @@
-// Import-meta-env.d utility
-export const Import-meta-env.d = () => {
-  // Implementation here
-  return null;
-};
-
-export default Import-meta-env.d;
+// Type definitions for import-meta-env.d,;
+export interface import-meta-env.d {;
+  // TODO: Add proper type definitions;
+}

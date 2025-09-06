@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Data-pipeline-engineering-chatProps {
-  className?: string;
-}
-
-const Data-pipeline-engineering-chat: React.FC<Data-pipeline-engineering-chatProps> = ({ className }) => {
+const DataPipelineEngineeringChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Data-pipeline-engineering-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Data-pipeline-engineering-chat;
+    <div>
+      <Head>
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>

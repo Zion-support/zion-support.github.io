@@ -1,7 +1,5 @@
-// UseTranslationService utility
-export const UseTranslationService = () => {
-  // Implementation here
-  return null;
+// Hook for useTranslationService,;
+export const useUseTranslationService: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseTranslationService;

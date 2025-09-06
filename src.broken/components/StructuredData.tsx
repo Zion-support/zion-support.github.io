@@ -1,16 +1,14 @@
-import React from 'react';
-
-interface StructuredDataProps {
-  className?: string;
+import { Helmet } from 'react-helmet-async',;
+interface StructuredDataProps {;
+  data: Record<string unknown>;
 }
 
-const StructuredData: React.FC<StructuredDataProps> = ({ className }) => {
+export function StructuredData({ data }: StructuredDataProps) {
+  const json = JSON.stringify(data),
   return (
-    <div className={className || ''}>
-      <h1>StructuredData</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default StructuredData;
+    <Helmet>
+      <script type="application/ld+json">{json}</script>
+    </Helmet>
+  )
+}
+;

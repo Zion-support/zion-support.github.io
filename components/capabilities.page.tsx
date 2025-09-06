@@ -1,16 +1,33 @@
-import React from 'react';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
 
-interface Capabilities.pageProps {
-  className?: string;
-}
+const CAPABILITIES = [
+  'Full‑stack Web',
+  'Mobile (iOS/Android)',
+  'AI/ML',
+  'Cloud & DevOps',
+  'Data Engineering',
+  'Blockchain',
+  'IoT',
+  'Security',];const CAPABILITIES = [
+  'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
+];
 
-const Capabilities.page: React.FC<Capabilities.pageProps> = ({ className }) => {
+export default function CapabilitiesPage() {
   return (
-    <div className={className || ''}>
-      <h1>Capabilities.page</h1>
-      <p>This component is under development.</p>
-    </div>
+    <EnhancedLayout>
+      <h1 className='text-2xl font-semibold'>Capabilities</h1>
+      <div className='mt-6 grid md:grid-cols-4 gap-4 text-sm'>
+        {CAPABILITIES.map(c => (
+          <div
+            key={c}
+            className='rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950'
+          >            {c}      <h1 className="text-2xl font-semibold">Capabilities</h1>
+      <div className="mt-6 grid md:grid-cols-4 gap-4 text-sm">
+        {CAPABILITIES.map((c) => (
+          <div key={c} className="rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950">
+          </div>
+        ))}
+      </div>
+    </EnhancedLayout>
   );
-};
-
-export default Capabilities.page;
+}

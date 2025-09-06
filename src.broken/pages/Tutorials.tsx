@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface TutorialsProps {
-  className?: string;
-}
-
-const Tutorials: React.FC<TutorialsProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Tutorials</h1>
-      <p>This component is under development.</p>
-    </div>
+export function Tutorials() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Tutorials;
+}
+;

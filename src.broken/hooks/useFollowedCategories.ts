@@ -1,7 +1,5 @@
-// UseFollowedCategories utility
-export const UseFollowedCategories = () => {
-  // Implementation here
-  return null;
+// Hook for useFollowedCategories,;
+export const useUseFollowedCategories: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseFollowedCategories;

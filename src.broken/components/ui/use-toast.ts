@@ -1,7 +1,4 @@
-// Use-toast utility
-export const Use-toast = () => {
-  // Implementation here
-  return null;
+// Module for use-toast,;
+export const use-toast = {,;
+  // TODO: Implement module functionality;
 };
-
-export default Use-toast;

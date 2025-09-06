@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ContainerProps {
-  className?: string;
-}
-
-const Container: React.FC<ContainerProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Container</h1>
-      <p>This component is under development.</p>
-    </div>
+export function Container() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Container;
+}
+;

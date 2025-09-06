@@ -1,7 +1,13 @@
-// Index utility
-export const Index = () => {
-  // Implementation here
-  return null;
-};
 
-export default Index;
+<<<<<<< HEAD
+export { AuthContext } from './AuthContext',;
+export { AuthProvider } from './AuthProvider',;
+// Re-export the context type for convenience;
+export type { AuthContextType } from '@/types/auth';
+=======
+export { AuthContext } from './AuthContext';
+export { AuthProvider } from './AuthProvider';
+
+// Re-export the context type for convenience
+export type { AuthContextType } from '@/types/auth';
+>>>>>>> main

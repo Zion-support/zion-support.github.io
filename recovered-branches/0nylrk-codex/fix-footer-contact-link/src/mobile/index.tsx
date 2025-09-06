@@ -1,16 +1,48 @@
+
+<<<<<<< HEAD
+import React from 'react',;
+import { MobileApp } from './MobileApp',;
+export { MobileApp },;
+// Export all mobile components for potential reuse in other projects;
+export * from './components/common/BottomNavigation',;
+export * from './components/common/MobileHeader',;
+export * from './components/dashboard/ClientDashboard',;
+export * from './components/dashboard/TalentDashboard',;
+export * from './components/messaging/MobileChatView',;
+export * from './components/messaging/MobileConversationList',;
+export * from './components/browse/BrowseCards',;
+export * from './components/browse/BrowseFilters',;
+export * from './components/projects/MobileProjectView',;
+export * from './theme/MobileThemeProvider',;
+// Export all mobile pages;
+export * from './pages/MobileOnboarding',;
+export * from './pages/MobileHome',;
+export * from './pages/MobileBrowse',;
+export * from './pages/MobileProjects',;
+export * from './pages/MobileMessages',;
+=======
 import React from 'react';
+import {MobileApp} from './MobileApp';
+export { MobileApp };
 
-interface IndexProps {
-  className?: string;
-}
+// Export all mobile components for potential reuse in other projects
+export * from './components/common/BottomNavigation';
+export * from './components/common/MobileHeader';
+export * from './components/dashboard/ClientDashboard';
+export * from './components/dashboard/TalentDashboard';
+export * from './components/messaging/MobileChatView';
+export * from './components/messaging/MobileConversationList';
+export * from './components/browse/BrowseCards';
+export * from './components/browse/BrowseFilters';
+export * from './components/projects/MobileProjectView';
+export * from './theme/MobileThemeProvider';
 
-const Index: React.FC<IndexProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Index</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Index;
+// Export all mobile pages
+export * from './pages/MobileOnboarding';
+export * from './pages/MobileHome';
+export * from './pages/MobileBrowse';
+export * from './pages/MobileProjects';
+export * from './pages/MobileMessages';
+>>>>>>> main
+export * from './pages/MobileResumeBuilder';
+export * from './pages/MobileJobPost';

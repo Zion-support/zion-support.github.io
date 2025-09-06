@@ -1,16 +1,29 @@
-import React from 'react';
-
-interface CybersecurityBestPracticesProps {
-  className?: string;
-}
-
-const CybersecurityBestPractices: React.FC<CybersecurityBestPracticesProps> = ({ className }) => {
+<<<<<<< HEAD
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const CybersecurityBestPractices: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>CybersecurityBestPractices</h1>
-      <p>This component is under development.</p>
+    <div>
+      <Head>
+        <title>CybersecurityBestPractices - Zion Tech Solutions</title>
+        <meta name="description" content="CybersecurityBestPractices page" />
+      </Head>
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+>>>>>>> main
+      <main>
+        <h1>CybersecurityBestPractices</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
-  );
+<<<<<<< HEAD
+  )
+},
+export default CybersecurityBestPractices,
+=======
+  ),
 };
 
 export default CybersecurityBestPractices;
+>>>>>>> main

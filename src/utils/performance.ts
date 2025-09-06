@@ -1,7 +1,4 @@
-// Performance utility
-export const Performance = () => {
-  // Implementation here
-  return null;
-};
-
-export default Performance;
+// TypeScript file
+export const placeholder = 'placeholder';
+;
+}})),;

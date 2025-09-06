@@ -1,7 +1,5 @@
-// UseConversations utility
-export const UseConversations = () => {
-  // Implementation here
-  return null;
+// Hook for useConversations,;
+export const useUseConversations: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseConversations;

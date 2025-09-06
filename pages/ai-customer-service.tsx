@@ -1,16 +1,43 @@
-import React from 'react';
-
-interface AiCustomerServiceProps {
-  className?: string;
-}
-
-const AiCustomerService: React.FC<AiCustomerServiceProps> = ({ className }) => {
+import React from 'react',
+import Head from 'next/head',
+export default function AICustomerService() {
   return (
-    <div className={className || ''}>
-      <h1>AiCustomerService</h1>
-      <p>This component is under development.</p>
-    </div>
+    <>
+      <Head>
+        <title>AI Customer Service | Zion Tech Group</title>
+        <meta name="description" content="AI-powered customer service automation: chat, voice, support workflows, and analytics." />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-customer-service" />
+      </Head>
+      <div className="min-h-screen bg-black text-white">
+        <section className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold mb-6">AI Customer Service</h1>
+          <p className="text-gray-300">Automate and augment customer support experiences with AI agents and analytics.</p>
+        </section>
+      </div>
+    </>
+  )
+import React from 'react';
+import Head from 'next/head';
+export default function AICustomerService(req, res) {
+  try {
+  return (;
+    <>;
+      <Head>;
+        <title>AI Customer Service | Zion Tech Group</title>;
+        <meta name="description" content="AI-powered customer service automation: chat, voice, support workflows, and analytics." />;
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-customer-service" />;
+      </Head>;
+      <div className="min-h-screen bg-black text-white">;
+        <section className="container mx-auto px-4 py-20">;
+          <h1 className="text-4xl font-bold mb-6">AI Customer Service</h1>;
+          <p className="text-gray-300">Automate and augment customer support experiences with AI agents and analytics.</p>;
+        </section>;
+      </div>;
+    </>;
   );
-};
-
-export default AiCustomerService;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;

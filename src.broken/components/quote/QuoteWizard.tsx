@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface QuoteWizardProps {
-  className?: string;
-}
-
-const QuoteWizard: React.FC<QuoteWizardProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>QuoteWizard</h1>
-      <p>This component is under development.</p>
-    </div>
+export function QuoteWizard() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default QuoteWizard;
+}
+;

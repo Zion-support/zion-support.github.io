@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface Lazy-loadProps {
-  className?: string;
-}
-
-const Lazy-load: React.FC<Lazy-loadProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Lazy-load</h1>
-      <p>This component is under development.</p>
-    </div>
+,;
+export export export default function lazy-load()   {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Lazy-load;
+}

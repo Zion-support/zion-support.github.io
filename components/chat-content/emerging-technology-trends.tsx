@@ -1,16 +1,18 @@
 import React from 'react';
 
-interface Emerging-technology-trendsProps {
-  className?: string;
-}
-
-const Emerging-technology-trends: React.FC<Emerging-technology-trendsProps> = ({ className }) => {
+export default function EmergingTechnologyTrendsPage() {
   return (
-    <div className={className || ''}>
-      <h1>Emerging-technology-trends</h1>
-      <p>This component is under development.</p>
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>Emerging Technology Trends</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Article coming soon.
+      </p>
+    </div>
+  );export default function EmergingTechnologyTrendsPage() {
+  return (
+    <div className="container mx-auto px-4 py-10">
+      <h1 className="text-2xl font-semibold">Emerging Technology Trends</h1>
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
     </div>
   );
-};
-
-export default Emerging-technology-trends;
+}

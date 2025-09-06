@@ -1,7 +1,5 @@
-// UseDeleteMilestone utility
-export const UseDeleteMilestone = () => {
-  // Implementation here
-  return null;
+// Hook for useDeleteMilestone,;
+export const useUseDeleteMilestone: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseDeleteMilestone;

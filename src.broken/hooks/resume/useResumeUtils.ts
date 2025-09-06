@@ -1,7 +1,5 @@
-// UseResumeUtils utility
-export const UseResumeUtils = () => {
-  // Implementation here
-  return null;
+// Hook for useResumeUtils,;
+export const useUseResumeUtils: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseResumeUtils;

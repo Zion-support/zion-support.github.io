@@ -1,16 +1,82 @@
 import React from 'react';
+import Link from 'next/link';
+import { useWhitelabel } from '@/context/WhitelabelContext';
 
-interface LogoProps {
-  className?: string;
+<<<<<<< HEAD
+import React from 'react',;
+import Link from 'next/link',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
+interface LogoProps {;
+  customLogo?: string;
 }
 
-const Logo: React.FC<LogoProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Logo</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
+export function Logo({ customLogo }: LogoProps) {
+  const { isWhitelabel, logoUrl, brandName } = useWhitelabel(),
+  
+  // Use the white-label logo if available and no specific customLogo is provided
+  const logoToUse = customLogo || (isWhitelabel ? logoUrl : null),
+  // Use the white-label color if available and no specific _customColor is provided
+  // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined),
+  
+=======
+interface LogoProps {
+  customLogo?: string;
 
-export default Logo;
+export function Logo({ customLogo }: LogoProps) {
+  const { isWhitelabel, logoUrl, brandName } = useWhitelabel();
+
+  // Use the white-label logo if available and no specific customLogo is provided
+  const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
+  // Use the white-label color if available and no specific _customColor is provided
+  // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined);
+>>>>>>> main
+  if (logoToUse) {
+    return (
+      <Link href="/" className="flex items-center">
+        <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" width={32} height={32} />
+      </Link>
+<<<<<<< HEAD
+    )
+  }
+  
+=======
+    );
+  }
+
+>>>>>>> main
+  return (
+    <Link href="/" className="flex items-center">
+      <img src="/logos/zion-logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />
+    </Link>
+<<<<<<< HEAD
+  )
+}
+;
+=======
+  );
+  if (logoToUse) {
+    return (
+      <Link href='/' className='flex items-center'>
+        <img
+          src={logoToUse}
+          alt={`${brandName} Logo`}
+          className='h-8'
+          width={32}
+          height={32}
+        />
+      </Link>
+    );
+  }
+
+  return (
+    <Link href='/' className='flex items-center'>
+      <img
+        src='/logos/zion-logo.png'
+        alt='Zion Logo'
+        className='h-8'
+        width={32}
+        height={32}
+      />
+    </Link>
+  );
+>>>>>>> main

@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface MilestonesListProps {
-  className?: string;
-}
-
-const MilestonesList: React.FC<MilestonesListProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>MilestonesList</h1>
-      <p>This component is under development.</p>
-    </div>
+export function MilestonesList() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default MilestonesList;
+}
+;

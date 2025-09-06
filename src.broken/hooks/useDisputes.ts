@@ -1,7 +1,5 @@
-// UseDisputes utility
-export const UseDisputes = () => {
-  // Implementation here
-  return null;
+// Hook for useDisputes,;
+export const useUseDisputes: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseDisputes;

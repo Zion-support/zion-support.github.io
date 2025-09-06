@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface Input-otpProps {
-  className?: string;
-}
-
-const Input-otp: React.FC<Input-otpProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Input-otp</h1>
-      <p>This component is under development.</p>
-    </div>
+,;
+export export export default function input-otp()   {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Input-otp;
+}

@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface SidebarGroupContentProps {
-  className?: string;
-}
-
-const SidebarGroupContent: React.FC<SidebarGroupContentProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>SidebarGroupContent</h1>
-      <p>This component is under development.</p>
-    </div>
+export function SidebarGroupContent() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default SidebarGroupContent;
+}
+;

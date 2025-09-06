@@ -1,16 +1,18 @@
 import React from 'react';
 
-interface VerifyProps {
-  className?: string;
-}
-
-const Verify: React.FC<VerifyProps> = ({ className }) => {
+export default function VerifyEmailPage() {
   return (
-    <div className={className || ''}>
-      <h1>Verify</h1>
-      <p>This component is under development.</p>
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>Verify Email</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Please verify your email to continue.
+      </p>
+    </div>
+  );export default function VerifyEmailPage() {
+  return (
+    <div className="container mx-auto px-4 py-10">
+      <h1 className="text-2xl font-semibold">Verify Email</h1>
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Please verify your email to continue.</p>
     </div>
   );
-};
-
-export default Verify;
+}

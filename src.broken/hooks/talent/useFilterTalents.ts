@@ -1,7 +1,5 @@
-// UseFilterTalents utility
-export const UseFilterTalents = () => {
-  // Implementation here
-  return null;
+// Hook for useFilterTalents,;
+export const useUseFilterTalents: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseFilterTalents;

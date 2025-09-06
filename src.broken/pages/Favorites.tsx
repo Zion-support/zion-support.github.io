@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface FavoritesProps {
-  className?: string;
-}
-
-const Favorites: React.FC<FavoritesProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Favorites</h1>
-      <p>This component is under development.</p>
-    </div>
+export function Favorites() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Favorites;
+}
+;

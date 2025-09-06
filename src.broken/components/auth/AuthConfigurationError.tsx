@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface AuthConfigurationErrorProps {
-  className?: string;
-}
-
-const AuthConfigurationError: React.FC<AuthConfigurationErrorProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>AuthConfigurationError</h1>
-      <p>This component is under development.</p>
-    </div>
+export function AuthConfigurationError() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default AuthConfigurationError;
+}
+;

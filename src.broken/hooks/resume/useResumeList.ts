@@ -1,7 +1,5 @@
-// UseResumeList utility
-export const UseResumeList = () => {
-  // Implementation here
-  return null;
+// Hook for useResumeList,;
+export const useUseResumeList: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseResumeList;

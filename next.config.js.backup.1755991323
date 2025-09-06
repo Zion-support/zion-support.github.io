@@ -3,6 +3,21 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   swcMinify: true,
   // Static export for Netlify deployment
   // output: 'export',
@@ -17,6 +32,12 @@ const nextConfig = {
   reactStrictMode: false,
   // React version enforcement
   webpack: (config, { isServer }) => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     // Ensure React version consistency
 =======
 
@@ -588,13 +609,42 @@ const nextConfig = {
     // COMPREHENSIVE ESM FIX for Next.js 15 + React 19
     // Handle formik and lodash ESM issues with multiple strategies
 >>>>>>> origin/cursor/build-project-with-netlify-95a5
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     config.resolve.alias = {
+    // Ensure React version consistency    config.resolve.alias = {
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    // Ensure React version consistency    config.resolve.alias = {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    // Ensure React version consistency    config.resolve.alias = {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       ...config.resolve.alias,
       'react': require.resolve('react'),
       'react-dom': require.resolve('react-dom'),
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
     // Override module resolution for problematic packages
     config.resolve.extensionAlias = {
@@ -729,7 +779,22 @@ const nextConfig = {
       };
     }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-project-with-netlify-95a5
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     return config;
   },
 };

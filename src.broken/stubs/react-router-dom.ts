@@ -1,7 +1,4 @@
-// React-router-dom utility
-export const React-router-dom = () => {
-  // Implementation here
-  return null;
+// Stub for react-router-dom,;
+export const react-router-dom = {,;
+  // TODO: Implement stub;
 };
-
-export default React-router-dom;

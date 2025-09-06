@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ApiWebhooksProps {
-  className?: string;
-}
-
-const ApiWebhooks: React.FC<ApiWebhooksProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ApiWebhooks</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ApiWebhooks() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ApiWebhooks;
+}
+;

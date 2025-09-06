@@ -1,7 +1,5 @@
-// UseAutocomplete utility
-export const UseAutocomplete = () => {
-  // Implementation here
-  return null;
+// Hook for useAutocomplete,;
+export const useUseAutocomplete: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseAutocomplete;

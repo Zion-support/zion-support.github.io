@@ -1,7 +1,5 @@
-// UseSmartContracts utility
-export const UseSmartContracts = () => {
-  // Implementation here
-  return null;
+// Hook for useSmartContracts,;
+export const useUseSmartContracts: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseSmartContracts;

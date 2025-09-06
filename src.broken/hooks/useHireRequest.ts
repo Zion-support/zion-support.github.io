@@ -1,7 +1,5 @@
-// UseHireRequest utility
-export const UseHireRequest = () => {
-  // Implementation here
-  return null;
+// Hook for useHireRequest,;
+export const useUseHireRequest: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseHireRequest;

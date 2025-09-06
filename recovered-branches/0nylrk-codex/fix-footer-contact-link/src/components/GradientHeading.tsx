@@ -1,16 +1,63 @@
-import React from 'react';
 
+<<<<<<< HEAD
+import { cn } from "@/lib/utils",
+import React from "react",
 interface GradientHeadingProps {
-  className?: string;
+  children: React.ReactNode,
+  className?: string,
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 }
 
-const GradientHeading: React.FC<GradientHeadingProps> = ({ className }) => {
+export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {
+  const Tag = level,
+  
   return (
-    <div className={className || ''}>
-      <h1>GradientHeading</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
+    <Tag 
+      className={cn(
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
+        className
+import { cn } from "@/lib/utils",;
+import React from "react",;
+interface GradientHeadingProps {;
+  children: React.ReactNode,;
+  className?: string,;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+;
+export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {;
+  const Tag = level;
+  return (;
+    <Tag;
+      className={cn(;
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";
+        className;
+=======
+import {cn} from "@/lib/utils";
+import React from "react";
+interface GradientHeadingProps {
+  children: React.ReactNode,
+  className?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+}
 
-export default GradientHeading;
+export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {
+  const Tag = level;
+  
+  return (
+    <Tag 
+      className={cn(
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";
+        className
+>>>>>>> main
+      )}
+    >
+      {children}
+<<<<<<< HEAD
+    </Tag>;
+  );
+=======
+    </Tag>
+  )
+>>>>>>> main
+}
+;

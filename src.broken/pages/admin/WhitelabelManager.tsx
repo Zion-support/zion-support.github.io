@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface WhitelabelManagerProps {
-  className?: string;
-}
-
-const WhitelabelManager: React.FC<WhitelabelManagerProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>WhitelabelManager</h1>
-      <p>This component is under development.</p>
-    </div>
+export function WhitelabelManager() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default WhitelabelManager;
+}
+;

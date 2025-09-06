@@ -1,16 +1,37 @@
-import React from 'react';
+import {useState} from 'react';
+import Head from 'next/head';
 
-interface IndexProps {
-  className?: string;
-}
+export default function OffworldConsole() {
+  const [chat, setChat] = useState('');
+  const [voteChoice, setVoteChoice] = useState('yes');
+  const [proposalId, setProposalId] = useState('prop-1');
+  const [name, setName] = useState('');
+  const [skills, setSkills] = useState('');
+  const [status, setStatus] = useState('');
 
-const Index: React.FC<IndexProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Index</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
+  async function sendChat() {
+    setStatus('Sending chat...');
 
-export default Index;
+  }
+
+  async function castVote() {
+    setStatus('Recording vote...');
+    const res = await fetch('/api/offworld/orbit?action=vote', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }),
+    });
+    setStatus(res.ok ? 'Vote recorded' : 'Vote failed');  }
+
+  async function syncProfile() {
+    setStatus('Pinning profile...');
+
+  }
+
+  async function syncProfile() {
+    setStatus('Pinning profile...');
+
+  }
+
+  async function broadcast() {
+    setStatus('Broadcasting manifesto...');

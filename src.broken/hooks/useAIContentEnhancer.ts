@@ -1,7 +1,5 @@
-// UseAIContentEnhancer utility
-export const UseAIContentEnhancer = () => {
-  // Implementation here
-  return null;
+// Hook for useAIContentEnhancer,;
+export const useUseAIContentEnhancer: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseAIContentEnhancer;

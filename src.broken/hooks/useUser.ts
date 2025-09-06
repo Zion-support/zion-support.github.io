@@ -1,7 +1,5 @@
-// UseUser utility
-export const UseUser = () => {
-  // Implementation here
-  return null;
+// Hook for useUser,;
+export const useUseUser: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseUser;

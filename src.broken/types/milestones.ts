@@ -1,7 +1,4 @@
-// Milestones utility
-export const Milestones = () => {
-  // Implementation here
-  return null;
-};
-
-export default Milestones;
+// Type definitions for milestones,;
+interface milestones {;
+  // TODO: Add proper type definitions;
+},;

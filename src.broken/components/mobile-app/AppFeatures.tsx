@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface AppFeaturesProps {
-  className?: string;
-}
-
-const AppFeatures: React.FC<AppFeaturesProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>AppFeatures</h1>
-      <p>This component is under development.</p>
-    </div>
+export function AppFeatures() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default AppFeatures;
+}
+;

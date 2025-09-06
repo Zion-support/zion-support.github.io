@@ -1,16 +1,17 @@
-import React from 'react';
-
-interface AiCreativityStudioProps {
-  className?: string;
-}
-
-const AiCreativityStudio: React.FC<AiCreativityStudioProps> = ({ className }) => {
+import React from 'react',
+import SEO from '../components/SEO',
+export default function AICreativityStudioPage() {
   return (
-    <div className={className || ''}>
-      <h1>AiCreativityStudio</h1>
-      <p>This component is under development.</p>
+    <div className="min-h-[60vh] px-6 py-24">
+      <SEO title="AI Creativity Studio | Zion Tech Group" description="AI tools for creative workflows" />
+      <div className="max-w-3xl mx-auto">
+        <h1 className="text-4xl font-bold text-white mb-4">AI Creativity Studio</h1>
+        <p className="text-gray-300">Creative automation tools for content, video, and design. Details coming soon.</p>
+      </div>
     </div>
-  );
-};
-
-export default AiCreativityStudio;
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

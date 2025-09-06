@@ -1,16 +1,17 @@
-import React from 'react';
-
-interface Price-intelligence-serviceProps {
-  className?: string;
-}
-
-const Price-intelligence-service: React.FC<Price-intelligence-serviceProps> = ({ className }) => {
+import Link from 'next/link';
+export default function Placeholder() {
   return (
-    <div className={className || ''}>
-      <h1>Price-intelligence-service</h1>
-      <p>This component is under development.</p>
+    <main className="min-h-screen p-8">
+      <Head>
+        <title>Services • Price-intelligence-service - Placeholder</title>
+        <meta name="robots" content="noindex" />
+      </Head>
+      
+      <main>
+        <h1>PriceIntelligenceService</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+      </main>
     </div>
   );
-};
-
-export default Price-intelligence-service;
+}

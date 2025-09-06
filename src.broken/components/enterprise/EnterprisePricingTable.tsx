@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface EnterprisePricingTableProps {
-  className?: string;
-}
-
-const EnterprisePricingTable: React.FC<EnterprisePricingTableProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>EnterprisePricingTable</h1>
-      <p>This component is under development.</p>
-    </div>
+export function EnterprisePricingTable() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default EnterprisePricingTable;
+}
+;

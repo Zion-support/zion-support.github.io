@@ -1,7 +1,4 @@
-// Profile utility
-export const Profile = () => {
-  // Implementation here
-  return null;
-};
-
-export default Profile;
+// Type definitions for profile,;
+interface profile {;
+  // TODO: Add proper type definitions;
+},;

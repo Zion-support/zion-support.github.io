@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ReplyCardProps {
-  className?: string;
-}
-
-const ReplyCard: React.FC<ReplyCardProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ReplyCard</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ReplyCard() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ReplyCard;
+}
+;

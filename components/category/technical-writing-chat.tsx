@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Technical-writing-chatProps {
-  className?: string;
-}
-
-const Technical-writing-chat: React.FC<Technical-writing-chatProps> = ({ className }) => {
+const TechnicalWritingChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Technical-writing-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Technical-writing-chat;
+    <div>
+      <Head>
+        <title>TechnicalWritingChat - Zion Tech Solutions</title>

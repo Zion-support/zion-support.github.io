@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ProfileProps {
-  className?: string;
-}
-
-const Profile: React.FC<ProfileProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Profile</h1>
-      <p>This component is under development.</p>
-    </div>
+export function Profile() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Profile;
+}
+;

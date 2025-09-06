@@ -1,16 +1,16 @@
-import React from 'react';
-
-interface LaunchProps {
-  className?: string;
+import type { GetServerSideProps } from 'next';
+export const getServerSideProps: GetServerSideProps = async () => {;
+  return {;
+    redirect: {;
+      destination: '/media/kit';
+      permanent: false}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-const Launch: React.FC<LaunchProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Launch</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
 };
-
-export default Launch;
+export default function LaunchRedirect() { return null   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

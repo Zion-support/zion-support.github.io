@@ -1,16 +1,82 @@
-import React from 'react';
+<<<<<<< HEAD
 
-interface NavigationButtonsProps {
-  className?: string;
-}
+import { Button } from "@/components/ui/button",
+import { Loader2 } from 'lucide-react'
+import { NavigationButtonsProps } from "./types",
+=======
+import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react';
+import { NavigationButtonsProps } from './types';
 
-const NavigationButtons: React.FC<NavigationButtonsProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
-      <h1>NavigationButtons</h1>
-      <p>This component is under development.</p>
+    <div className="flex justify-between">
+      {onBack && (
+        <Button variant='outline' onClick={onBack}>
+>>>>>>> main
+export const NavigationButtons = ({
+  onBack,
+  onNext,
+  isNextDisabled = false,
+<<<<<<< HEAD
+  backLabel = "Back",
+  nextLabel = "Next",
+  isLoading = false}: NavigationButtonsProps) => {
+  return (
+    <div className="flex justify-between">
+      {onBack && (
+        <Button variant="outline" onClick={onBack}>
+import { Button } from "@/components/ui/button",;
+import { Loader2 } from 'lucide-react';
+import { NavigationButtonsProps } from "./types",;
+export const NavigationButtons = ({;
+  onBack,;
+  onNext,;
+  isNextDisabled = false,;
+  backLabel = "Back",;
+  nextLabel = "Next";
+  isLoading = false}: NavigationButtonsProps) => {;
+  return (;
+    <div className="flex justify-between">;
+      {onBack && (;
+        <Button variant="outline" onClick={onBack}>;
+          {backLabel}
+        </Button>;
+      )}
+      {onNext && (
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {nextLabel}
+        </Button>;
+      )}
+    </div>;
+  );
+};
+=======
+  backLabel = 'Back',
+  nextLabel = 'Next',
+  isLoading = false,
+}: NavigationButtonsProps) => {
+  return (
+    <div className='flex justify-between'>
+      {onBack && (
+        <Button variant='outline' onClick={onBack}>          {backLabel}
+
+          {backLabel}
+
+        </Button>
+      )}
+      {onNext && (
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
+          {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}          {nextLabel}
+        </Button>
+      )}
     </div>
   );
 };
+"
 
-export default NavigationButtons;
+          {nextLabel}
+        </Button>
+      )}
+    </div>
+>>>>>>> main

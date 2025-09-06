@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ITServicePricingTableProps {
-  className?: string;
-}
-
-const ITServicePricingTable: React.FC<ITServicePricingTableProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ITServicePricingTable</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ITServicePricingTable() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ITServicePricingTable;
+}
+;

@@ -1,7 +1,4 @@
-// Tutorial utility
-export const Tutorial = () => {
-  // Implementation here
-  return null;
-};
-
-export default Tutorial;
+// Type definitions for tutorial,;
+interface tutorial {;
+  // TODO: Add proper type definitions;
+},;

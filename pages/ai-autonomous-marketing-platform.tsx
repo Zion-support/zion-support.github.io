@@ -1,16 +1,18 @@
-import React from 'react';
-
-interface AiAutonomousMarketingPlatformProps {
-  className?: string;
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+export async function getStaticProps() {;
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-const AiAutonomousMarketingPlatform: React.FC<AiAutonomousMarketingPlatformProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>AiAutonomousMarketingPlatform</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default AiAutonomousMarketingPlatform;
+;
+export default function AIAutonomousMarketingPlatform(req, res) {
+  try {
+	return <ServicePage {...props} />;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;

@@ -1,16 +1,18 @@
 import React from 'react';
 
-interface Forgot-passwordProps {
-  className?: string;
-}
-
-const Forgot-password: React.FC<Forgot-passwordProps> = ({ className }) => {
+export default function ForgotPasswordPage() {
   return (
-    <div className={className || ''}>
-      <h1>Forgot-password</h1>
-      <p>This component is under development.</p>
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>Forgot Password</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Enter your email to reset your password.
+      </p>
+    </div>
+  );export default function ForgotPasswordPage() {
+  return (
+    <div className="container mx-auto px-4 py-10">
+      <h1 className="text-2xl font-semibold">Forgot Password</h1>
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Enter your email to reset your password.</p>
     </div>
   );
-};
-
-export default Forgot-password;
+}

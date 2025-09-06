@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface AppLayoutProps {
-  className?: string;
-}
-
-const AppLayout: React.FC<AppLayoutProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>AppLayout</h1>
-      <p>This component is under development.</p>
-    </div>
+export function AppLayout() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default AppLayout;
+}
+;

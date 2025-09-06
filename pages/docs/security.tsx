@@ -1,16 +1,31 @@
-import React from 'react';
-
-interface SecurityProps {
-  className?: string;
-}
-
-const Security: React.FC<SecurityProps> = ({ className }) => {
+import Head from 'next/head',
+export default function SecurityDocRedirect() {
   return (
-    <div className={className || ''}>
-      <h1>Security</h1>
-      <p>This component is under development.</p>
-    </div>
+    <>
+      <Head>
+        <meta httpEquiv="refresh" content="0, url=/SECURITY.md" />
+      </Head>
+      <main style={{ padding: 24 }}>
+        <p>Redirecting to Security documentation…</p>
+      </main>
+    </>
+  )
+import Head from 'next/head';
+export default function SecurityDocRedirect(req, res) {
+  try {
+  return (;
+    <>;
+      <Head>;
+        <meta httpEquiv="refresh" content="0, url=/SECURITY.md" />;
+      </Head>;
+      <main style={{ padding: 24 }}>;
+        <p>Redirecting to Security documentation…</p>;
+      </main>;
+    </>;
   );
-};
-
-export default Security;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;

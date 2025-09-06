@@ -1,16 +1,11 @@
-import React from 'react';
-
-interface IndexProps {
-  className?: string;
-}
-
-const Index: React.FC<IndexProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Index</h1>
-      <p>This component is under development.</p>
+import EmptyState from '../../components/ui/EmptyState'
+export default function RequestsPage() {_return (
+    <div>
+      <h2 className="text-xl font-semibold mb-2">Requests</h2>
+      <EmptyState title="Nothing here yet..." message="Submit a quote or respond to invitations to see them here." ctaLabel="Submit a quote" ctaHref="/dashboard" />
     </div>
-  );
-};
-
-export default Index;
+  )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

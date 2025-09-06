@@ -1,7 +1,5 @@
-// UseMessages utility
-export const UseMessages = () => {
-  // Implementation here
-  return null;
+// Hook for useMessages,;
+export const useUseMessages: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseMessages;

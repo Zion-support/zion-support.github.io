@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Mobile-development-chatProps {
-  className?: string;
-}
-
-const Mobile-development-chat: React.FC<Mobile-development-chatProps> = ({ className }) => {
+const MobileDevelopmentChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Mobile-development-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Mobile-development-chat;
+    <div>
+      <Head>
+        <title>MobileDevelopmentChat - Zion Tech Solutions</title>

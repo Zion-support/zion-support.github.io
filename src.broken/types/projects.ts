@@ -1,7 +1,4 @@
-// Projects utility
-export const Projects = () => {
-  // Implementation here
-  return null;
-};
-
-export default Projects;
+// Type definitions for projects,;
+interface projects {;
+  // TODO: Add proper type definitions;
+},;

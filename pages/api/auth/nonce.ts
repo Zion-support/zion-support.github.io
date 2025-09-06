@@ -1,6 +1,31 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  // Placeholder for actual logic
-  res.status(200).json({ message: 'API route is working' });
+function randomString(length: number): string {
+=======
+function randomString(length: number) {
+>>>>>>> main
+  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let res = '';
+  const cryptoObj = require('crypto');
+  const bytes: Buffer = cryptoObj.randomBytes(length);
+  for (let i = 0; i < length; i++) res += charset[bytes[i] % charset.length];
+  return res;
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+  try {
+    const nonce = randomString(16);
+    res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`);
+    res.status(200).json({ nonce });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+=======
+  const nonce = randomString(16);
+  res.setHeader('Set-Cookie', `siwe-nonce=${nonce}; HttpOnly; Path=/; SameSite=Lax`);
+  res.status(200).json({ nonce });
+>>>>>>> main
 }

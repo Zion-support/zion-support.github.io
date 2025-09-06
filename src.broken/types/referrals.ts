@@ -1,7 +1,4 @@
-// Referrals utility
-export const Referrals = () => {
-  // Implementation here
-  return null;
-};
-
-export default Referrals;
+// Type definitions for referrals,;
+interface referrals {;
+  // TODO: Add proper type definitions;
+},;

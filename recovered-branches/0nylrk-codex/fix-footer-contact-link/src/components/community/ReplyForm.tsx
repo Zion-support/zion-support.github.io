@@ -1,16 +1,151 @@
-import React from 'react';
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/form";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+
+<<<<<<< HEAD
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage
+} from "@/components/ui/form",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
 
 interface ReplyFormProps {
-  className?: string;
+  onSubmit: (content: string) => Promise<void>,
+  parentId?: string
+import { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormMessage;
+} from "@/components/ui/form",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+interface ReplyFormProps {;
+  onSubmit: (content: string) => Promise<void>,;
+  parentId?: string;
+}
+;
+interface ReplyFormValues {;
+  content: string;
+}
+;
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const form = useForm<ReplyFormValues>({;
+    defaultValues: {;
+      content: "";
+    }
+  }),;
+  const handleSubmit = async (values: ReplyFormValues) => {;
+    setIsSubmitting(true),;
+    try {;
+      await onSubmit(values.content),;
+      form.reset();
+    } finally {;
+      setIsSubmitting(false);
+    }
+  },
+=======
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string;
 }
 
-const ReplyForm: React.FC<ReplyFormProps> = ({ className }) => {
+interface ReplyFormValues {
+  content: string;
+}
+
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<ReplyFormValues>({
+    defaultValues: {
+      content: "",
+    },
+  });
+
+  const handleSubmit = async (values: ReplyFormValues) => {
+    setIsSubmitting(true);
+    try {
+      (await onSubmit(values.content), form.reset());
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+>>>>>>> main
+
   return (
-    <div className={className || ''}>
-      <h1>ReplyForm</h1>
-      <p>This component is under development.</p>
-    </div>
+    <Card>
+      <CardContent className="pt-6">
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(handleSubmit)}>
+            <FormField
+              control={form.control}
+              name="content"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Textarea
+<<<<<<< HEAD
+                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
+                      className="min-h-[100px] resize-y"
+                      {...field}
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
+=======
+                      placeholder={
+                        parentId
+                          ? "Write your reply..."
+                          : "Join the discussion..."
+                      }
+                      className="min-h-[100px] resize-y"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+>>>>>>> main
+              )}
+            />
+            <div className="mt-4 flex justify-end">
+              <Button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Post Reply"}
+              </Button>
+            </div>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
+<<<<<<< HEAD
+  )
+},
+
+export default ReplyForm,
+=======
   );
 };
 
 export default ReplyForm;
+>>>>>>> main

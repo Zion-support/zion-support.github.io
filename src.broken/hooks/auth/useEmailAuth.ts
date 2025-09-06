@@ -1,7 +1,5 @@
-// UseEmailAuth utility
-export const UseEmailAuth = () => {
-  // Implementation here
-  return null;
+// Hook for useEmailAuth,;
+export const useUseEmailAuth: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseEmailAuth;

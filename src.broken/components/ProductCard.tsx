@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ProductCardProps {
-  className?: string;
-}
-
-const ProductCard: React.FC<ProductCardProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ProductCard</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ProductCard() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ProductCard;
+}
+;

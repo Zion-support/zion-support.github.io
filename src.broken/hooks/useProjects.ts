@@ -1,7 +1,5 @@
-// UseProjects utility
-export const UseProjects = () => {
-  // Implementation here
-  return null;
+// Hook for useProjects,;
+export const useUseProjects: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseProjects;

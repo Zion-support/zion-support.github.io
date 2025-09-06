@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface RewardsCardProps {
-  className?: string;
-}
-
-const RewardsCard: React.FC<RewardsCardProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>RewardsCard</h1>
-      <p>This component is under development.</p>
-    </div>
+export function RewardsCard() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default RewardsCard;
+}
+;

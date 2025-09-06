@@ -1,7 +1,5 @@
-// UseTokenBalance utility
-export const UseTokenBalance = () => {
-  // Implementation here
-  return null;
+// Hook for useTokenBalance,;
+export const useUseTokenBalance: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseTokenBalance;

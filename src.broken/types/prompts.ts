@@ -1,7 +1,4 @@
-// Prompts utility
-export const Prompts = () => {
-  // Implementation here
-  return null;
-};
-
-export default Prompts;
+// Type definitions for prompts,;
+interface prompts {;
+  // TODO: Add proper type definitions;
+},;

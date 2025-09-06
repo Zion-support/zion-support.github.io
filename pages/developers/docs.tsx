@@ -1,16 +1,10 @@
-import React from 'react';
-
-interface DocsProps {
-  className?: string;
+import dynamic from 'next/dynamic';
+const ApiDocsPage = dynamic(() => import('../../components/docs/ApiDocsPage'), { ssr: false });
+export default function DocsRoute(req, res) {
+  try {
+  return <ApiDocsPage />;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-const Docs: React.FC<DocsProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Docs</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Docs;

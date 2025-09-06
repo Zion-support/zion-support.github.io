@@ -1,7 +1,4 @@
-// Cart utility
-export const Cart = () => {
-  // Implementation here
-  return null;
-};
-
-export default Cart;
+// Type definitions for cart,;
+interface cart {;
+  // TODO: Add proper type definitions;
+},;

@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface InterestSelectionProps {
-  className?: string;
-}
-
-const InterestSelection: React.FC<InterestSelectionProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>InterestSelection</h1>
-      <p>This component is under development.</p>
-    </div>
+export function InterestSelection() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default InterestSelection;
+}
+;

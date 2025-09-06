@@ -1,7 +1,5 @@
-// UseReactId utility
-export const UseReactId = () => {
-  // Implementation here
-  return null;
+// Hook for useReactId,;
+export const useUseReactId: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseReactId;

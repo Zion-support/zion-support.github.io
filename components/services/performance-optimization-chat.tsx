@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Performance-optimization-chatProps {
-  className?: string;
-}
-
-const Performance-optimization-chat: React.FC<Performance-optimization-chatProps> = ({ className }) => {
+const PerformanceOptimizationChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Performance-optimization-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Performance-optimization-chat;
+    <div>
+      <Head>
+        <title>PerformanceOptimizationChat - Zion Tech Solutions</title>

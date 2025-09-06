@@ -1,7 +1,5 @@
-// UseAISearch utility
-export const UseAISearch = () => {
-  // Implementation here
-  return null;
+// Hook for useAISearch,;
+export const useUseAISearch: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseAISearch;

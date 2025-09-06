@@ -1,7 +1,5 @@
-// UseWebhooks utility
-export const UseWebhooks = () => {
-  // Implementation here
-  return null;
+// Hook for useWebhooks,;
+export const useUseWebhooks: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseWebhooks;

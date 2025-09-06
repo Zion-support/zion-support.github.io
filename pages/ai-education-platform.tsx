@@ -1,16 +1,18 @@
-import React from 'react';
-
-interface AiEducationPlatformProps {
-  className?: string;
-}
-
-const AiEducationPlatform: React.FC<AiEducationPlatformProps> = ({ className }) => {
+import React from 'react'
+import SEO from '../components/SEO'
+export default function AIEducationPlatformPage() {
   return (
-    <div className={className || ''}>
-      <h1>AiEducationPlatform</h1>
-      <p>This component is under development.</p>
+    <div className="min-h-[60vh] px-6 py-24">
+      <SEO title="AI Education Platform | Zion Tech Group" description="Personalized learning with AI" />
+      <div className="max-w-3xl mx-auto">
+        <h1 className="text-4xl font-bold text-white mb-4">AI Education Platform</h1>
+        <p className="text-gray-300">Adaptive learning and skill development powered by AI. Details coming soon.</p>
+      </div>
     </div>
-  );
-};
-
-export default AiEducationPlatform;
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231

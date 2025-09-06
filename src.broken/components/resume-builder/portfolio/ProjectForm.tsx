@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ProjectFormProps {
-  className?: string;
-}
-
-const ProjectForm: React.FC<ProjectFormProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ProjectForm</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ProjectForm() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ProjectForm;
+}
+;

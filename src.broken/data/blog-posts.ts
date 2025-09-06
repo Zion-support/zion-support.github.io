@@ -1,7 +1,4 @@
-// Blog-posts utility
-export const Blog-posts = () => {
-  // Implementation here
-  return null;
+// Module for blog-posts,;
+export const blog-posts = {,;
+  // TODO: Implement module functionality;
 };
-
-export default Blog-posts;

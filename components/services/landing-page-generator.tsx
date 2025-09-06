@@ -1,16 +1,17 @@
-import React from 'react';
-
-interface Landing-page-generatorProps {
-  className?: string;
-}
-
-const Landing-page-generator: React.FC<Landing-page-generatorProps> = ({ className }) => {
+import Link from 'next/link';
+export default function Placeholder() {
   return (
-    <div className={className || ''}>
-      <h1>Landing-page-generator</h1>
-      <p>This component is under development.</p>
+    <main className="min-h-screen p-8">
+      <Head>
+        <title>Services • Landing-page-generator - Placeholder</title>
+        <meta name="robots" content="noindex" />
+      </Head>
+      
+      <main>
+        <h1>LandingPageGenerator</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+      </main>
     </div>
   );
-};
-
-export default Landing-page-generator;
+}

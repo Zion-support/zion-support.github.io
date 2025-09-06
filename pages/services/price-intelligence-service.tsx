@@ -1,16 +1,21 @@
-import React from 'react';
-
-interface PriceIntelligenceServiceProps {
-  className?: string;
-}
-
-const PriceIntelligenceService: React.FC<PriceIntelligenceServiceProps> = ({ className }) => {
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
+import UseTokensButton from '../../components/tokens/UseTokensButton',
+const PriceIntelligenceService: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>PriceIntelligenceService</h1>
-      <p>This component is under development.</p>
+    <div>
+      <Head>
+        <title>PriceIntelligenceService - Zion Tech Solutions</title>
+        <meta name="description" content="PriceIntelligenceService service" />
+      </Head>
+      <main className="space-y-4">
+        <h1>PriceIntelligenceService</h1>
+        <p>Service details coming soon...</p>
+        <UseTokensButton serviceId="price-intelligence" />
+        <Link href="/services">Back to Services</Link>
+      </main>
     </div>
-  );
-};
-
-export default PriceIntelligenceService;
+  )
+},
+export default PriceIntelligenceService,

@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface RoadmapProps {
-  className?: string;
-}
-
-const Roadmap: React.FC<RoadmapProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Roadmap</h1>
-      <p>This component is under development.</p>
-    </div>
+export function Roadmap() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Roadmap;
+}
+;

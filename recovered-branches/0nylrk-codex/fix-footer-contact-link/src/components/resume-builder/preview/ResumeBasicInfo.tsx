@@ -1,16 +1,28 @@
-import React from 'react';
 
-interface ResumeBasicInfoProps {
-  className?: string;
+<<<<<<< HEAD
+import { ResumeBasicInfo } from '@/types/resume';
+interface ResumeBasicInfoSectionProps {;
+  basicInfo: ResumeBasicInfo;
+=======
+import {ResumeBasicInfo} from '@/types/resume';
+interface ResumeBasicInfoSectionProps {
+  basicInfo: ResumeBasicInfo
+>>>>>>> main
 }
 
-const ResumeBasicInfo: React.FC<ResumeBasicInfoProps> = ({ className }) => {
+export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProps) {
   return (
-    <div className={className || ''}>
-      <h1>ResumeBasicInfo</h1>
-      <p>This component is under development.</p>
-    </div>
+    <div className="space-y-2 border-b pb-4 mb-6">
+      <h1 className="text-2xl font-bold">{basicInfo.headline || basicInfo.title}</h1>
+      {basicInfo.summary && (
+        <p className="text-sm">{basicInfo.summary}</p>
+      )}
+<<<<<<< HEAD
+    </div>;
   );
-};
-
-export default ResumeBasicInfo;
+=======
+    </div>
+  )
+>>>>>>> main
+}
+;

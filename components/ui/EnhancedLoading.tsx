@@ -1,16 +1,14 @@
-import React from 'react';
-
-interface EnhancedLoadingProps {
-  className?: string;
-}
-
-const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>EnhancedLoading</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
+import React from "react";
+type EnhancedLoadingProps = {
+  lines?: number;
 };
 
-export default EnhancedLoading;
+export default function EnhancedLoading({ lines = 3 }: EnhancedLoadingProps) {
+  return (
+    <div className="space-y-2">
+      {Array.from({ length: lines }).map((_, idx) => (
+        <div key={idx} className="skeleton h-4 rounded" />
+      ))}
+    </div>
+  );
+}

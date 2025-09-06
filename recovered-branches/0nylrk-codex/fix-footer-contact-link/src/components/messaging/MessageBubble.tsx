@@ -1,16 +1,75 @@
-import React from 'react';
 
+<<<<<<< HEAD
+import React from 'react',;
+import { format } from 'date-fns',;
+import { PaperclipIcon } from 'lucide-react',;
+import { cn } from '@/lib/utils',;
+import { Message } from '@/types/messaging',;
+interface MessageBubbleProps {;
+  message: Message,;
+  isUserMessage: boolean;
+=======
+import React from 'react';
+import {format} from 'date-fns';
+import {PaperclipIcon} from 'lucide-react';
+import {cn} from '@/lib/utils';
+import {Message} from '@/types/messaging';
 interface MessageBubbleProps {
-  className?: string;
+  message: Message,
+  isUserMessage: boolean
+>>>>>>> main
 }
 
-const MessageBubble: React.FC<MessageBubbleProps> = ({ className }) => {
+export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
-    <div className={className || ''}>
-      <h1>MessageBubble</h1>
-      <p>This component is under development.</p>
-    </div>
+    <div className={cn(
+<<<<<<< HEAD
+      "flex",
+      isUserMessage ? "justify-end" : "justify-start"
+    )}>
+      <div className={cn(
+        "max-w-[75%] rounded-lg px-4 py-2",
+=======
+      "flex";
+      isUserMessage ? "justify-end" : "justify-start"
+    )}>
+      <div className={cn(
+        "max-w-[75%] rounded-lg px-4 py-2";
+>>>>>>> main
+        isUserMessage 
+          ? "bg-zion-purple text-white" 
+          : "bg-zion-blue-dark text-white"
+      )}>
+        <div className="whitespace-pre-wrap">{message.content}</div>
+        
+        {message.attachment_url && (
+          <a 
+            href={message.attachment_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30"
+          >
+            <PaperclipIcon className="h-3 w-3 mr-1" />
+            {message.attachment_name || 'Attachment'}
+<<<<<<< HEAD
+          </Link>
+=======
+          </a>
+>>>>>>> main
+        )}
+        
+        <div className="text-xs opacity-70 text-right mt-1">
+          {format(new Date(message.created_at), 'h:mm a')}
+<<<<<<< HEAD
+        </div>;
+      </div>;
+    </div>;
   );
-};
-
-export default MessageBubble;
+=======
+        </div>
+      </div>
+    </div>
+  )
+>>>>>>> main
+}
+;

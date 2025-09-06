@@ -1,7 +1,9 @@
-// Index utility
-export const Index = () => {
-  // Implementation here
-  return null;
-};
-
-export default Index;
+<<<<<<< HEAD
+export { AppHeader } from './AppHeader',;
+export { AppLayout } from './AppLayout',;
+export { MainNavigation } from './MainNavigation';
+=======
+export { AppHeader } from './AppHeader';
+export { AppLayout } from './AppLayout';
+export { MainNavigation } from './MainNavigation';
+>>>>>>> main

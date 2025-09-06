@@ -1,7 +1,5 @@
-// UseJobMatches utility
-export const UseJobMatches = () => {
-  // Implementation here
-  return null;
+// Hook for useJobMatches,;
+export const useUseJobMatches: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseJobMatches;

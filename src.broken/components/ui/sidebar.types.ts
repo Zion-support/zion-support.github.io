@@ -1,7 +1,4 @@
-// Sidebar.types utility
-export const Sidebar.types = () => {
-  // Implementation here
-  return null;
+// Module for sidebar.types,;
+export const sidebar.types = {,;
+  // TODO: Implement module functionality;
 };
-
-export default Sidebar.types;

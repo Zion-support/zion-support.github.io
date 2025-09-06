@@ -1,7 +1,10 @@
-// Monitoring utility
-export const Monitoring = () => {
-  // Implementation here
-  return null;
+// Monitoring utilities
+export const logEvent = (event: string) => {
+  console.log('Event logged:', event);
 };
 
-export default Monitoring;
+export const trackPerformance = () => {
+  console.log('Tracking performance...');
+};
+  });
+};

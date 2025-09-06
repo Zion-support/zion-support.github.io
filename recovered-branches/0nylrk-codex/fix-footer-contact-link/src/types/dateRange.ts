@@ -1,7 +1,12 @@
-// DateRange utility
-export const DateRange = () => {
-  // Implementation here
-  return null;
-};
-
-export default DateRange;
+<<<<<<< HEAD
+export interface DateRange {;
+  from?: Date;
+  to?: Date;
+}
+;
+=======
+export interface DateRange {
+  from?: Date;
+  to?: Date
+}
+>>>>>>> main

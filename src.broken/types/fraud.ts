@@ -1,7 +1,4 @@
-// Fraud utility
-export const Fraud = () => {
-  // Implementation here
-  return null;
-};
-
-export default Fraud;
+// Type definitions for fraud,;
+interface fraud {;
+  // TODO: Add proper type definitions;
+},;

@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface UseQuoteWizard.testProps {
-  className?: string;
-}
-
-const UseQuoteWizard.test: React.FC<UseQuoteWizard.testProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>UseQuoteWizard.test</h1>
-      <p>This component is under development.</p>
-    </div>
+,;
+export export export default function useQuoteWizard.test()   {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default UseQuoteWizard.test;
+}

@@ -1,16 +1,36 @@
-import React from 'react';
-
-interface LinksProps {
-  className?: string;
+import { useEffect } from 'react';
+<<<<<<< HEAD
+export default function LinksReportRedirect(req, res) {
+  try {
+  useEffect(() => {;
+    if (typeof window !== 'undefined') {;
+      window.location.replace('/reports/links/index.html');
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+  }, []);
+  return null;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 
-const Links: React.FC<LinksProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Links</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Links;
+export default function LinksReportRedirect() {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.location.replace('/reports/links/index.html');
+    }
+  }, []);
+  return null;export default function LinksReportRedirect() {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.location.replace('/reports/links/index.html')
+    }
+  }, []);
+  return null
+}
+>>>>>>> main

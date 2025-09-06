@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ProjectRoomProps {
-  className?: string;
-}
-
-const ProjectRoom: React.FC<ProjectRoomProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ProjectRoom</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ProjectRoom() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ProjectRoom;
+}
+;

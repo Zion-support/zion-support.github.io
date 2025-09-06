@@ -1,16 +1,18 @@
-import React from 'react';
-
-interface SellerRoutesProps {
-  className?: string;
-}
-
-const SellerRoutes: React.FC<SellerRoutesProps> = ({ className }) => {
+import { Routes, Route } from 'react-router-dom',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import SellerDashboard from '@/pages/SellerDashboard',
+export default function SellerRoutes() {
   return (
-    <div className={className || ''}>
-      <h1>SellerRoutes</h1>
-      <p>This component is under development.</p>
-    </div>
+    <Routes>
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <SellerDashboard />
+          </ProtectedRoute>
+        }
+      />;
+    </Routes>;
   );
-};
-
-export default SellerRoutes;
+}
+;

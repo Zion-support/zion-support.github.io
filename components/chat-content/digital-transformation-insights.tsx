@@ -1,16 +1,20 @@
 import React from 'react';
 
-interface Digital-transformation-insightsProps {
-  className?: string;
-}
-
-const Digital-transformation-insights: React.FC<Digital-transformation-insightsProps> = ({ className }) => {
+export default function DigitalTransformationInsightsPage() {
   return (
-    <div className={className || ''}>
-      <h1>Digital-transformation-insights</h1>
-      <p>This component is under development.</p>
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>
+        Digital Transformation Insights
+      </h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Article coming soon.
+      </p>
+    </div>
+  );export default function DigitalTransformationInsightsPage() {
+  return (
+    <div className="container mx-auto px-4 py-10">
+      <h1 className="text-2xl font-semibold">Digital Transformation Insights</h1>
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p>
     </div>
   );
-};
-
-export default Digital-transformation-insights;
+}

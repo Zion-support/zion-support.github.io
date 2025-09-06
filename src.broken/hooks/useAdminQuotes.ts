@@ -1,7 +1,5 @@
-// UseAdminQuotes utility
-export const UseAdminQuotes = () => {
-  // Implementation here
-  return null;
+// Hook for useAdminQuotes,;
+export const useUseAdminQuotes: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseAdminQuotes;

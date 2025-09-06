@@ -1,7 +1,4 @@
-// Wallet.d utility
-export const Wallet.d = () => {
-  // Implementation here
-  return null;
-};
-
-export default Wallet.d;
+// Type definitions for wallet.d,;
+export interface wallet.d {;
+  // TODO: Add proper type definitions;
+}

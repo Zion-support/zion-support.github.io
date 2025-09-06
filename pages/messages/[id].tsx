@@ -1,20 +1,5 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-
-interface MessageDetailProps {
-  className?: string;
+export default function MessageThreadPage() {_return <div>Thread</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-const MessageDetail: React.FC<MessageDetailProps> = ({ className }) => {
-  const router = useRouter();
-  const { id } = router.query;
-
-  return (
-    <div className={className || ''}>
-      <h1>Message: {id}</h1>
-      <p>This is a message detail page with ID: {id}</p>
-    </div>
-  );
-};
-
-export default MessageDetail;

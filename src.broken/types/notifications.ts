@@ -1,7 +1,4 @@
-// Notifications utility
-export const Notifications = () => {
-  // Implementation here
-  return null;
-};
-
-export default Notifications;
+// Type definitions for notifications,;
+interface notifications {;
+  // TODO: Add proper type definitions;
+},;

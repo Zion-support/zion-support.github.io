@@ -1,7 +1,4 @@
-// Partner-profiles utility
-export const Partner-profiles = () => {
-  // Implementation here
-  return null;
+// Module for partner-profiles,;
+export const partner-profiles = {,;
+  // TODO: Implement module functionality;
 };
-
-export default Partner-profiles;

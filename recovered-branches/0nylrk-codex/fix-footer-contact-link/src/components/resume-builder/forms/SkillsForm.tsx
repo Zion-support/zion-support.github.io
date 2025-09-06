@@ -1,16 +1,14 @@
-import React from 'react';
 
-interface SkillsFormProps {
-  className?: string;
+<<<<<<< HEAD
+import { SkillsForm as SkillsFormComponent } from './skills',;
+import { SkillsFormProps } from './skills/types';
+export function SkillsForm(props: SkillsFormProps) {;
+  return <SkillsFormComponent {...props} />;
+=======
+import {SkillsForm, as, SkillsFormComponent} from './skills';
+import {SkillsFormProps} from './skills/types';
+export function SkillsForm(props: SkillsFormProps) {
+  return <SkillsFormComponent {...props} />
+>>>>>>> main
 }
-
-const SkillsForm: React.FC<SkillsFormProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>SkillsForm</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default SkillsForm;
+;

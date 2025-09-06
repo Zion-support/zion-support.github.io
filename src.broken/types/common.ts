@@ -1,7 +1,4 @@
-// Common utility
-export const Common = () => {
-  // Implementation here
-  return null;
-};
-
-export default Common;
+// Type definitions for common,;
+interface common {;
+  // TODO: Add proper type definitions;
+},;

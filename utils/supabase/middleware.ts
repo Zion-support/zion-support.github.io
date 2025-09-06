@@ -1,7 +1,22 @@
-// Middleware utility
-export const Middleware = () => {
-  // Implementation here
-  return null;
-};
-
-export default Middleware;
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+export function middleware(request: NextRequest) {;
+  const { pathname } = request.nextUrl;
+  if (pathname === '/dashboard' || pathname === '/dashboard/') {;
+    const role = request.cookies.get('userRole')?.value || 'talent';
+    const target = role === 'client' ? '/dashboard/client' : '/dashboard/talent';
+    return NextResponse.redirect(new URL(target, request.url));
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return NextResponse.next();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export const config = {;
+  matcher: ['/dashboard/dashboard/']};

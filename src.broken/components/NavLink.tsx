@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface NavLinkProps {
-  className?: string;
-}
-
-const NavLink: React.FC<NavLinkProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>NavLink</h1>
-      <p>This component is under development.</p>
-    </div>
+export function NavLink() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default NavLink;
+}
+;

@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface OnChainExportProps {
-  className?: string;
-}
-
-const OnChainExport: React.FC<OnChainExportProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>OnChainExport</h1>
-      <p>This component is under development.</p>
-    </div>
+export function OnChainExport() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default OnChainExport;
+}
+;

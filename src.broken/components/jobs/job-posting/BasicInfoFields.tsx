@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface BasicInfoFieldsProps {
-  className?: string;
-}
-
-const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>BasicInfoFields</h1>
-      <p>This component is under development.</p>
-    </div>
+export function BasicInfoFields() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default BasicInfoFields;
+}
+;

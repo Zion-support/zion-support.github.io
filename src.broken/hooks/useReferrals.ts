@@ -1,7 +1,5 @@
-// UseReferrals utility
-export const UseReferrals = () => {
-  // Implementation here
-  return null;
+// Hook for useReferrals,;
+export const useUseReferrals: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseReferrals;

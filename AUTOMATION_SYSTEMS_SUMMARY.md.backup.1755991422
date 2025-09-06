@@ -361,6 +361,21 @@ The system is now capable of continuously improving the application, fixing erro
 - **Output**: `performance-*.json` artifacts with thresholds and alert flags. Useful for tracking regressions in server responsiveness and page weight.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 ## New: Supervisor (Non-Invasive)
 - Location: `automation/supervisor/`
 - Entrypoints:
@@ -370,9 +385,23 @@ The system is now capable of continuously improving the application, fixing erro
   - `automation/supervisor-agents-factory.cjs`
   - `automation/install-supervisor-cron.sh`
 - Purpose: Continuously discover `*-cron.sh` scripts, verify health via PID/logs, stop problematic ones, run fix routines, and restart. Writes status to `data/reports/supervisor/`.
-- Does not modify existing factories or cron scripts. Uses PID/log/log conventions already present in `automation/`.
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
-### 10. Link Monitor Continuous (GitHub Actions)
-- **File**: `.github/workflows/link-monitor-continuous.yml`
-- **Purpose**: Runs crawler and fixer every 30 minutes against `https://ziontechgroup.com`, uploads `data/reports/links` and automation logs.
->>>>>>> origin/cursor/continuous-website-link-checker-and-fixer-d4cc
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+- Does not modify existing factories or cron scripts. Uses PID/log/log conventions already present in `automation/`.
+- Does not modify existing factories or cron scripts. Uses PID/log/log conventions already present in `automation/`.
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+- Does not modify existing factories or cron scripts. Uses PID/log/log conventions already present in `automation/`.
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

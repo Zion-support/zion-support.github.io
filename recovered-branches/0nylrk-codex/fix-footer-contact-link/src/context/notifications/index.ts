@@ -4,4 +4,12 @@ export const Index = () => {
   return null;
 };
 
-export default Index;
+<<<<<<< HEAD
+export * from './types',;
+export * from './NotificationContext',;
+export * from './useNotificationOperations';
+=======
+export * from './types';
+export * from './NotificationContext';
+export * from './useNotificationOperations';
+>>>>>>> main

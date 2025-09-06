@@ -1,15 +1,63 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { ChevronUp } from 'lucide-react';
 
-interface ScrollToTopProps {
-  className?: string;
-}
+export default function ScrollToTop() {
+  const [isVisible, setIsVisible] = useState(false);
 
-const ScrollToTop: React.FC<ScrollToTopProps> = ({ className }) => {
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);  }, []);
+
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });  };
+
+  };
+
   return (
-    <div className={className || ''}>
-      <h1>ScrollToTop</h1>
-      <p>This component is under development.</p>
-    </div>
+    <>
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className='fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group'
+          aria-label='Scroll to top'
+
+        >
+          <svg
+            className='w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
+              d='M5 10l7-7m0 0l7 7m-7-7v18'            />
+
+            />
+
+          </svg>
+        </button>
+      )}
+    </>
   );
 };
 

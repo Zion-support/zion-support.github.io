@@ -1,7 +1,4 @@
-// CaseStudy utility
-export const CaseStudy = () => {
-  // Implementation here
-  return null;
-};
-
-export default CaseStudy;
+// Type definitions for caseStudy,;
+interface caseStudy {;
+  // TODO: Add proper type definitions;
+},;

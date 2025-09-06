@@ -1,7 +1,5 @@
-// UsePricingSuggestionAnalytics utility
-export const UsePricingSuggestionAnalytics = () => {
-  // Implementation here
-  return null;
+// Hook for usePricingSuggestionAnalytics,;
+export const useUsePricingSuggestionAnalytics: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UsePricingSuggestionAnalytics;

@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface HelpArticleListProps {
-  className?: string;
-}
-
-const HelpArticleList: React.FC<HelpArticleListProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>HelpArticleList</h1>
-      <p>This component is under development.</p>
-    </div>
+export function HelpArticleList() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default HelpArticleList;
+}
+;

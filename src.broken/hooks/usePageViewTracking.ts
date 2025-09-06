@@ -1,7 +1,5 @@
-// UsePageViewTracking utility
-export const UsePageViewTracking = () => {
-  // Implementation here
-  return null;
+// Hook for usePageViewTracking,;
+export const useUsePageViewTracking: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UsePageViewTracking;

@@ -1,16 +1,19 @@
-import React from 'react';
-
-interface SimpleLayoutProps {
-  className?: string;
-}
-
-const SimpleLayout: React.FC<SimpleLayoutProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>SimpleLayout</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
+import React from 'react;';
+import * as React from 'react';
+import Head from next/head';
+;
+interface SimpleLayoutProps {,
+  title: string,
+  description?: string,
+  children: React.ReactNode
 };
-
-export default SimpleLayout;
+export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {,
+  return (,
+    <>,
+      <Head>,
+        <title>{title}</title>,
+        {description && <meta name="description" content={description} />};
+      </Head>,
+      {children};
+    </>)
+};

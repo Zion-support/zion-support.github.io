@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ServiceDescriptionGeneratorProps {
-  className?: string;
-}
-
-const ServiceDescriptionGenerator: React.FC<ServiceDescriptionGeneratorProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ServiceDescriptionGenerator</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ServiceDescriptionGenerator() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ServiceDescriptionGenerator;
+}
+;

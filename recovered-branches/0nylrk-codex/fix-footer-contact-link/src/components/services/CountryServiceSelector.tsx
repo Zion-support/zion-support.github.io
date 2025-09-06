@@ -1,16 +1,70 @@
-import React from 'react';
 
+<<<<<<< HEAD
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
+import { CountrySelector } from "./CountrySelector",
+import { PaymentSection } from "./PaymentSection",
+import { ServiceDetails } from "./ServiceDetails",
 interface CountryServiceSelectorProps {
-  className?: string;
+  onCountryChange?: (country: CountryPricing | null) => void,
+  selectedCountry?: CountryPricing | null
 }
 
-const CountryServiceSelector: React.FC<CountryServiceSelectorProps> = ({ className }) => {
+export function CountryServiceSelector({ onCountryChange, selectedCountry: initialCountry }: CountryServiceSelectorProps) {
   return (
-    <div className={className || ''}>
-      <h1>CountryServiceSelector</h1>
-      <p>This component is under development.</p>
-    </div>
+    <div className="space-y-6">
+      <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
+        <CountrySelector 
+          onCountryChange={onCountryChange || (() => {})} 
+          selectedCountry={initialCountry || null} 
+        />
+        
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
+import { CountrySelector } from "./CountrySelector",;
+import { PaymentSection } from "./PaymentSection",;
+import { ServiceDetails } from "./ServiceDetails",;
+interface CountryServiceSelectorProps {;
+  onCountryChange?: (country: CountryPricing | null) => void;
+  selectedCountry?: CountryPricing | null;
+}
+;
+export function CountryServiceSelector({ onCountryChange, selectedCountry: initialCountry }: CountryServiceSelectorProps) {;
+  return (;
+    <div className="space-y-6">;
+      <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;
+        <CountrySelector;
+          onCountryChange={onCountryChange || (() => {})} ;
+          selectedCountry={initialCountry || null} ;
+        />;
+        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
+      </div>;
+      {initialCountry && <ServiceDetails country={initialCountry.country} />}
+    </div>;
   );
-};
+=======
+import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
+import {CountrySelector} from "./CountrySelector";
+import {PaymentSection} from "./PaymentSection";
+import {ServiceDetails} from "./ServiceDetails";
+interface CountryServiceSelectorProps {
+  onCountryChange?: (country: CountryPricing | null) => void,
+  selectedCountry?: CountryPricing | null
+}
 
-export default CountryServiceSelector;
+export function CountryServiceSelector({ onCountryChange, selectedCountry: initialCountry }: CountryServiceSelectorProps) {
+  return (
+    <div className="space-y-6">
+      <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
+        <CountrySelector 
+          onCountryChange={onCountryChange || (() => {})} 
+          selectedCountry={initialCountry || null} 
+        />
+        
+        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
+      </div>
+      
+      {initialCountry && <ServiceDetails country={initialCountry.country} />}
+    </div>
+  )
+>>>>>>> main
+}
+;

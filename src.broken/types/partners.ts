@@ -1,7 +1,4 @@
-// Partners utility
-export const Partners = () => {
-  // Implementation here
-  return null;
-};
-
-export default Partners;
+// Type definitions for partners,;
+interface partners {;
+  // TODO: Add proper type definitions;
+},;

@@ -1,7 +1,5 @@
-// UseJobPostings utility
-export const UseJobPostings = () => {
-  // Implementation here
-  return null;
+// Hook for useJobPostings,;
+export const useUseJobPostings: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseJobPostings;

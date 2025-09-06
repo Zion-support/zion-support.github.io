@@ -1,16 +1,10 @@
-import React from 'react';
-
-interface BookBuilderProps {
-  className?: string;
+import dynamic from 'next/dynamic';
+const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), { ssr: false });
+export default function BookBuilderPage(req, res) {
+  try {
+  return <BookBuilder />;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-const BookBuilder: React.FC<BookBuilderProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>BookBuilder</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default BookBuilder;

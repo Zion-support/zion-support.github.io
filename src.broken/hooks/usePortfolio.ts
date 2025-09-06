@@ -1,7 +1,5 @@
-// UsePortfolio utility
-export const UsePortfolio = () => {
-  // Implementation here
-  return null;
+// Hook for usePortfolio,;
+export const useUsePortfolio: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UsePortfolio;

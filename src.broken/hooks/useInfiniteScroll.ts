@@ -1,7 +1,5 @@
-// UseInfiniteScroll utility
-export const UseInfiniteScroll = () => {
-  // Implementation here
-  return null;
+// Hook for useInfiniteScroll,;
+export const useUseInfiniteScroll: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseInfiniteScroll;

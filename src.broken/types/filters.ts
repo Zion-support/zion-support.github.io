@@ -1,7 +1,4 @@
-// Filters utility
-export const Filters = () => {
-  // Implementation here
-  return null;
-};
-
-export default Filters;
+// Type definitions for filters,;
+interface filters {;
+  // TODO: Add proper type definitions;
+},;

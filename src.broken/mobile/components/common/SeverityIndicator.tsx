@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface SeverityIndicatorProps {
-  className?: string;
-}
-
-const SeverityIndicator: React.FC<SeverityIndicatorProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>SeverityIndicator</h1>
-      <p>This component is under development.</p>
-    </div>
+export function SeverityIndicator() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default SeverityIndicator;
+}
+;

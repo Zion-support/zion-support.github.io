@@ -1,7 +1,2 @@
-// Server utility
-export const Server = () => {
-  // Implementation here
-  return null;
-};
-
-export default Server;
+// Auto-generated basic file for server.ts;
+// Please configure this file according to your needs;

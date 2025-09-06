@@ -1,7 +1,5 @@
-// UseAuthOperations utility
-export const UseAuthOperations = () => {
-  // Implementation here
-  return null;
+// Hook for useAuthOperations,;
+export const useUseAuthOperations: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseAuthOperations;

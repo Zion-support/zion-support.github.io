@@ -1,16 +1,4 @@
-import React from 'react';
-
-interface AIChatbot.testProps {
-  className?: string;
-}
-
-const AIChatbot.test: React.FC<AIChatbot.testProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>AIChatbot.test</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default AIChatbot.test;
+import { render,screen } from \"@testing-library/react\"; render(<AIChatbot />); expect(screen.getByRole(\"main\")).toBeInTheDocument()}); it(\"displays correct content\",() => {; render(<AIChatbot />); it(\"handles user interactions\",() => {; render(<AIChatbot />)})
+const { render,screen } from "@testing-library/react"; render(<AIChatbot />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => {; render(<AIChatbot />); it('handles user interactions', () => {; render(<AIChatbot />)})""
+import { render,screen } from "@testing-library/react"; render(<AIChatbot />); expect(screen.getByRole("main"
+}); it('displays correct content', () => {; render(<AIChatbot />); it('handles user interactions', () => {; render(<AIChatbot />)})"

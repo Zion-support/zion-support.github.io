@@ -1,7 +1,9 @@
-// Index.d utility
-export const Index.d = () => {
-  // Implementation here
-  return null;
-};
-
-export default Index.d;
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type;
+interface Buffer {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+declare const __dirname: string;
+declare const __filename: string;
+export {};

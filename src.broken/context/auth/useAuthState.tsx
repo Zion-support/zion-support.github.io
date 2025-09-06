@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface UseAuthStateProps {
-  className?: string;
-}
-
-const UseAuthState: React.FC<UseAuthStateProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>UseAuthState</h1>
-      <p>This component is under development.</p>
-    </div>
+export function useAuthState() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default UseAuthState;
+}
+;

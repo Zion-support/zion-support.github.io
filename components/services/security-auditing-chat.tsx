@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Security-auditing-chatProps {
-  className?: string;
-}
-
-const Security-auditing-chat: React.FC<Security-auditing-chatProps> = ({ className }) => {
+const SecurityAuditingChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Security-auditing-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Security-auditing-chat;
+    <div>
+      <Head>
+        <title>SecurityAuditingChat - Zion Tech Solutions</title>

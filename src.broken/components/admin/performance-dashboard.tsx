@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface Performance-dashboardProps {
-  className?: string;
-}
-
-const Performance-dashboard: React.FC<Performance-dashboardProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Performance-dashboard</h1>
-      <p>This component is under development.</p>
-    </div>
+,;
+export export export default function performance-dashboard()   {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Performance-dashboard;
+}

@@ -1,7 +1,16 @@
-// Index utility
-export const Index = () => {
-  // Implementation here
-  return null;
-};
 
-export default Index;
+<<<<<<< HEAD
+export { useAuthStatus } from './useAuthStatus',;
+export { useTalentData } from './useTalentData',;
+export { useFilterTalents } from './useFilterTalents',;
+export { useUIState } from './useUIState',;
+export { useSavedTalents } from './useSavedTalents',;
+export { useHireRequest } from '../useHireRequest';
+=======
+export { useAuthStatus } from './useAuthStatus';
+export { useTalentData } from './useTalentData';
+export { useFilterTalents } from './useFilterTalents';
+export { useUIState } from './useUIState';
+export { useSavedTalents } from './useSavedTalents';
+export { useHireRequest } from '../useHireRequest';
+>>>>>>> main

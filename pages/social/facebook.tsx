@@ -1,16 +1,80 @@
-import React from 'react';
-
-interface FacebookProps {
-  className?: string;
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+export default function FacebookRedirect(req, res) {
+  try {
+	useEffect(() => {;
+		if (typeof window !== 'undefined') {;
+			window.location.replace('https: //facebook.com/ziontechgroup');
+		  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+	}, []),
+	return (
+		<>
+			<Head>
+				<title>Facebook | Zion Tech Group</title>
+				<link rel="canonical" href="https: //facebook.com/ziontechgroup" />
+				<meta httpEquiv="refresh" content="0,url=https://facebook.com/ziontechgroup" />
+				<meta name="robots" content="noindex, nofollow" />
+			</Head>
+			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
+				<a href="https: //facebook.com/ziontechgroup" className="text-cyan-400 underline">
+					Continue to Facebook
+				</Link>
+			</div>
+		</>
+	)
+	}, []);
+	return (;
+		<>;
+			<Head>;
+				<title>Facebook | Zion Tech Group</title>;
+				<link rel="canonical" href="https: //facebook.com/ziontechgroup" />;
+				<meta httpEquiv="refresh" content="0,url=https://facebook.com/ziontechgroup" />;
+				<meta name="robots" content="noindex, nofollow" />;
+			</Head>;
+			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">;
+				<a href="https: //facebook.com/ziontechgroup" className="text-cyan-400 underline">;
+					Continue to Facebook;
+				</a>;
+			</div>;
+		</>;
+	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 
-const Facebook: React.FC<FacebookProps> = ({ className }) => {
+export default function FacebookRedirect() {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.location.replace('https: //facebook.com/ziontechgroup'),
+    }
+  }, []);
   return (
-    <div className={className || ''}>
-      <h1>Facebook</h1>
-      <p>This component is under development.</p>
-    </div>
+    <>
+      <Head>
+        <title>Facebook | Zion Tech Group</title>
+        <link rel='canonical' href='https: //facebook.com/ziontechgroup' />
+        <meta
+          httpEquiv='refresh'
+          content='0,url=https://facebook.com/ziontechgroup'
+        />
+        <meta name='robots' content='noindex, nofollow' />
+      </Head>
+      <div className='min-h-screen bg-black text-white flex items-center justify-center p-8'>
+        <a
+          href='https: //facebook.com/ziontechgroup'
+          className='text-cyan-400 underline'
+        >
+          Continue to Facebook
+        </a>
+      </div>
+    </>
   );
-};
-
-export default Facebook;
+>>>>>>> main

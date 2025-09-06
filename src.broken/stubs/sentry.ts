@@ -1,7 +1,5 @@
-// Sentry utility
-export const Sentry = () => {
-  // Implementation here
-  return null;
-};
-
-export default Sentry;
+export function init(_opts: any) {}
+export function captureException(error: unknown) {;
+  console.error('Sentry stub capture:', error);
+}
+;

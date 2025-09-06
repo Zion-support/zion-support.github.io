@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface UsageStatsProps {
-  className?: string;
-}
-
-const UsageStats: React.FC<UsageStatsProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>UsageStats</h1>
-      <p>This component is under development.</p>
-    </div>
+export function UsageStats() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default UsageStats;
+}
+;

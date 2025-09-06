@@ -1,7 +1,8 @@
-// Index utility
-export const Index = () => {
-  // Implementation here
-  return null;
-};
+<<<<<<< HEAD
 
-export default Index;
+export { ResumeSelector } from './ResumeSelector',;
+export type { ResumeOption } from './types';
+=======
+export { ResumeSelector } from "./ResumeSelector";
+export type { ResumeOption } from "./types";
+>>>>>>> main

@@ -1,7 +1,4 @@
-// Env-polyfill utility
-export const Env-polyfill = () => {
-  // Implementation here
-  return null;
+// Utility functions for env-polyfill,;
+export const env-polyfill = {,;
+  // TODO: Implement utility functions;
 };
-
-export default Env-polyfill;

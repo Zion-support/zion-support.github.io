@@ -1,7 +1,5 @@
-// UseConversationState utility
-export const UseConversationState = () => {
-  // Implementation here
-  return null;
+// Hook for useConversationState,;
+export const useUseConversationState: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseConversationState;

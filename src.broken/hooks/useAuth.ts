@@ -1,7 +1,5 @@
-// UseAuth utility
-export const UseAuth = () => {
-  // Implementation here
-  return null;
+// Hook for useAuth,;
+export const useUseAuth: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseAuth;

@@ -1,7 +1,5 @@
-// UseFeatureUsage utility
-export const UseFeatureUsage = () => {
-  // Implementation here
-  return null;
+// Hook for useFeatureUsage,;
+export const useUseFeatureUsage: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseFeatureUsage;

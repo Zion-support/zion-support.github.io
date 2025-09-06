@@ -1,7 +1,5 @@
-// UseMessagingRealtime utility
-export const UseMessagingRealtime = () => {
-  // Implementation here
-  return null;
+// Hook for useMessagingRealtime,;
+export const useUseMessagingRealtime: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseMessagingRealtime;

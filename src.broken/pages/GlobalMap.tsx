@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface GlobalMapProps {
-  className?: string;
-}
-
-const GlobalMap: React.FC<GlobalMapProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>GlobalMap</h1>
-      <p>This component is under development.</p>
-    </div>
+export function GlobalMap() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default GlobalMap;
+}
+;

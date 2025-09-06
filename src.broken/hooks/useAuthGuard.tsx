@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface UseAuthGuardProps {
-  className?: string;
-}
-
-const UseAuthGuard: React.FC<UseAuthGuardProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>UseAuthGuard</h1>
-      <p>This component is under development.</p>
-    </div>
+export function useAuthGuard() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default UseAuthGuard;
+}
+;

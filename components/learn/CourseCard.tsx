@@ -1,16 +1,31 @@
-import React from 'react';
+import Link from 'next/link';
 
-interface CourseCardProps {
-  className?: string;
-}
+export type Course = {
+  id: string;
+  title: string;
+  durationMinutes: number;
+  level: string;
+  isFree: boolean;
+  category: string;
+  certificationBadge: string;
+  description?: string;};
 
-const CourseCard: React.FC<CourseCardProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>CourseCard</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
+export default function CourseCard({ course }: { course: Course }) {
+  return (  id: string,
+  title: string,
+  durationMinutes: number,
+  level: string,
+  isFree: boolean,
+  category: string,
+  certificationBadge: string,
+  description?: string
+
 };
 
-export default CourseCard;
+export default function CourseCard({ course }: { course: Course }) {
+  return (
+
+        </Link>
+      </div>
+    </div>
+  );

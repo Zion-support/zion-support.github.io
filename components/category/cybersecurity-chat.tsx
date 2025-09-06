@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Cybersecurity-chatProps {
-  className?: string;
-}
-
-const Cybersecurity-chat: React.FC<Cybersecurity-chatProps> = ({ className }) => {
+const CybersecurityChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Cybersecurity-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Cybersecurity-chat;
+    <div>
+      <Head>
+        <title>CybersecurityChat - Zion Tech Solutions</title>

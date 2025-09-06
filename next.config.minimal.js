@@ -1,7 +1,14 @@
-// Next.config.minimal utility
-export const Next.config.minimal = () => {
-  // Implementation here
-  return null;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  images: {
+    domains: ["localhost", "ziontechgroup.com"],
+  },
+  output: 'standalone',
+  trailingSlash: false,
+  distDir: '.next',
 };
-
-export default Next.config.minimal;
+module.exports = nextConfig;

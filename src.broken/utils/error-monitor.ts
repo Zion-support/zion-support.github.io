@@ -1,7 +1,4 @@
-// Error-monitor utility
-export const Error-monitor = () => {
-  // Implementation here
-  return null;
+// Utility functions for error-monitor,;
+export const error-monitor = {,;
+  // TODO: Implement utility functions;
 };
-
-export default Error-monitor;

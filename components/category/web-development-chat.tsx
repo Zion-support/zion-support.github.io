@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Web-development-chatProps {
-  className?: string;
-}
-
-const Web-development-chat: React.FC<Web-development-chatProps> = ({ className }) => {
+const WebDevelopmentChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Web-development-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Web-development-chat;
+    <div>
+      <Head>
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>

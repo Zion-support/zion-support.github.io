@@ -1,7 +1,5 @@
-// Types utility
-export const Types = () => {
-  // Implementation here
-  return null;
+// Hook for types,;
+export const useTypes: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default Types;

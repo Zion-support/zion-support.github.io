@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface TenantOnboardingProps {
-  className?: string;
-}
-
-const TenantOnboarding: React.FC<TenantOnboardingProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>TenantOnboarding</h1>
-      <p>This component is under development.</p>
-    </div>
+export function TenantOnboarding() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default TenantOnboarding;
+}
+;

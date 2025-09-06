@@ -1,7 +1,5 @@
-// UseQuoteWizard utility
-export const UseQuoteWizard = () => {
-  // Implementation here
-  return null;
+// Hook for useQuoteWizard,;
+export const useUseQuoteWizard: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseQuoteWizard;

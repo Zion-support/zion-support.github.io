@@ -1,7 +1,5 @@
-// UseTalentData utility
-export const UseTalentData = () => {
-  // Implementation here
-  return null;
+// Hook for useTalentData,;
+export const useUseTalentData: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseTalentData;

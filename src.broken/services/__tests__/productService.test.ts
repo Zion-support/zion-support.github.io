@@ -1,7 +1,4 @@
-// ProductService.test utility
-export const ProductService.test = () => {
-  // Implementation here
-  return null;
+// Service for productService.test,;
+export const productService.testService = {,;
+  // TODO: Implement service methods;
 };
-
-export default ProductService.test;

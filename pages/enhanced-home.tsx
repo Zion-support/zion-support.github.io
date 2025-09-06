@@ -1,16 +1,29 @@
-import React from 'react';
-
-interface EnhancedHomeProps {
-  className?: string;
-}
-
-const EnhancedHome: React.FC<EnhancedHomeProps> = ({ className }) => {
+<<<<<<< HEAD
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const EnhancedHome: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>EnhancedHome</h1>
-      <p>This component is under development.</p>
+    <div>
+      <Head>
+        <title>EnhancedHome - Zion Tech Solutions</title>
+        <meta name="description" content="EnhancedHome page" />
+      </Head>
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+>>>>>>> main
+      <main>
+        <h1>EnhancedHome</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
-  );
+<<<<<<< HEAD
+  )
+},
+export default EnhancedHome,
+=======
+  ),
 };
 
 export default EnhancedHome;
+>>>>>>> main

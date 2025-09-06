@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface Sticky-actionProps {
-  className?: string;
-}
-
-const Sticky-action: React.FC<Sticky-actionProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Sticky-action</h1>
-      <p>This component is under development.</p>
-    </div>
+,;
+export export export default function sticky-action()   {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Sticky-action;
+}

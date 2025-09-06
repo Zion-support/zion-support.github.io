@@ -1,16 +1,29 @@
-import React from 'react';
-
-interface AutoUpdate20250808t172307688zProps {
-  className?: string;
-}
-
-const AutoUpdate20250808t172307688z: React.FC<AutoUpdate20250808t172307688zProps> = ({ className }) => {
+<<<<<<< HEAD
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const AutoUpdate20250808t172307688z: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>AutoUpdate20250808t172307688z</h1>
-      <p>This component is under development.</p>
+    <div>
+      <Head>
+        <title>AutoUpdate20250808t172307688z - Zion Tech Solutions</title>
+        <meta name="description" content="AutoUpdate20250808t172307688z page" />
+      </Head>
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+>>>>>>> main
+      <main>
+        <h1>AutoUpdate20250808t172307688z</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
-  );
+<<<<<<< HEAD
+  )
+},
+export default AutoUpdate20250808t172307688z,
+=======
+  ),
 };
 
 export default AutoUpdate20250808t172307688z;
+>>>>>>> main

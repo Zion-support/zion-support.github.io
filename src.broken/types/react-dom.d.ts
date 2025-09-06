@@ -1,7 +1,4 @@
-// React-dom.d utility
-export const React-dom.d = () => {
-  // Implementation here
-  return null;
-};
-
-export default React-dom.d;
+// Type definitions for react-dom.d,;
+export interface react-dom.d {;
+  // TODO: Add proper type definitions;
+}

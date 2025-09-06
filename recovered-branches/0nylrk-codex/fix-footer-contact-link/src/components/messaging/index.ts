@@ -1,7 +1,14 @@
-// Index utility
-export const Index = () => {
-  // Implementation here
-  return null;
-};
+<<<<<<< HEAD
 
-export default Index;
+export { ConversationItem } from './ConversationItem',;
+export { MessageBubble } from './MessageBubble',;
+export { DateDivider } from './DateDivider',;
+export { ConversationDetailView } from './ConversationDetailView',;
+export { ConversationsList } from './ConversationsList';
+=======
+export { ConversationItem } from "./ConversationItem";
+export { MessageBubble } from "./MessageBubble";
+export { DateDivider } from "./DateDivider";
+export { ConversationDetailView } from "./ConversationDetailView";
+export { ConversationsList } from "./ConversationsList";
+>>>>>>> main

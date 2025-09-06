@@ -1,16 +1,269 @@
-import React from 'react';
+import React, { useEffect } from "react";
+import { useDisputes } from "@/hooks/useDisputes";
+import { DisputesList } from "./DisputesList";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from "lucide-react";
+export function DisputeDashboard() {
+  const { disputes, isLoading, refetch } = useDisputes();
 
-interface DisputeDashboardProps {
-  className?: string;
-}
+<<<<<<< HEAD
+import React, { useEffect } from "react",
+import { useDisputes } from "@/hooks/useDisputes",
+import { DisputesList } from "./DisputesList",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { ShieldAlert } from "lucide-react",
+export function DisputeDashboard() {
+  const { disputes, isLoading, refetch } = useDisputes(),
 
-const DisputeDashboard: React.FC<DisputeDashboardProps> = ({ className }) => {
+  useEffect(() => {
+    refetch()
+  }, [refetch]),
+
+  const openDisputes = disputes.filter(d => d.status === 'open'),
+  const underReviewDisputes = disputes.filter(d => d.status === 'under_review'),
+  const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),
+=======
+  useEffect(() => {
+    refetch();
+  }, [refetch]);
+
+  const openDisputes = disputes.filter((d) => d.status === "open");
+  const underReviewDisputes = disputes.filter(
+    (d) => d.status === "under_review",
+  );
+  const resolvedDisputes = disputes.filter((d) => d.status === "resolved");
+>>>>>>> main
+
   return (
-    <div className={className || ''}>
-      <h1>DisputeDashboard</h1>
-      <p>This component is under development.</p>
+    <div className="container mx-auto p-4 space-y-6">
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h1 className="text-3xl font-bold">Dispute Resolution Center</h1>
+<<<<<<< HEAD
+          <p className="text-muted-foreground">Manage and resolve disputes between clients and talents</p>
+        </div>
+        
+=======
+          <p className="text-muted-foreground">
+            Manage and resolve disputes between clients and talents
+          </p>
+        </div>
+
+>>>>>>> main
+        <Button onClick={refetch} variant="outline">
+          Refresh
+        </Button>
+      </div>
+<<<<<<< HEAD
+      
+=======
+
+>>>>>>> main
+      <div className="grid gap-4 md:grid-cols-3">
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-lg font-medium flex justify-between items-center">
+              <span>Open Disputes</span>
+              <span className="text-xl font-bold">{openDisputes.length}</span>
+            </CardTitle>
+            <CardDescription>Awaiting review</CardDescription>
+          </CardHeader>
+          <CardContent>
+<<<<<<< HEAD
+            <div className={`w-full bg-red-100 rounded-full h-2.5 dark:bg-red-900/20`}>
+              <div className="bg-red-600 h-2.5 rounded-full" style={{ 
+                width: `${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
+              }}></div>
+            </div>
+          </CardContent>
+        </Card>
+        
+=======
+            <div
+              className={`w-full bg-red-100 rounded-full h-2.5 dark:bg-red-900/20`}
+            >
+              <div
+                className="bg-red-600 h-2.5 rounded-full"
+                style={{
+                  width: `${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%`,
+                }}
+              ></div>
+            </div>
+          </CardContent>
+        </Card>
+
+>>>>>>> main
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-lg font-medium flex justify-between items-center">
+              <span>Under Review</span>
+<<<<<<< HEAD
+              <span className="text-xl font-bold">{underReviewDisputes.length}</span>
+=======
+              <span className="text-xl font-bold">
+                {underReviewDisputes.length}
+              </span>
+>>>>>>> main
+            </CardTitle>
+            <CardDescription>Being actively processed</CardDescription>
+          </CardHeader>
+          <CardContent>
+<<<<<<< HEAD
+            <div className={`w-full bg-yellow-100 rounded-full h-2.5 dark:bg-yellow-900/20`}>
+              <div className="bg-yellow-500 h-2.5 rounded-full" style={{ 
+                width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
+              }}></div>
+            </div>
+          </CardContent>
+        </Card>
+        
+=======
+            <div
+              className={`w-full bg-yellow-100 rounded-full h-2.5 dark:bg-yellow-900/20`}
+            >
+              <div
+                className="bg-yellow-500 h-2.5 rounded-full"
+                style={{
+                  width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%`,
+                }}
+              ></div>
+            </div>
+          </CardContent>
+        </Card>
+
+>>>>>>> main
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-lg font-medium flex justify-between items-center">
+              <span>Resolved</span>
+<<<<<<< HEAD
+              <span className="text-xl font-bold">{resolvedDisputes.length}</span>
+=======
+              <span className="text-xl font-bold">
+                {resolvedDisputes.length}
+              </span>
+>>>>>>> main
+            </CardTitle>
+            <CardDescription>Successfully concluded</CardDescription>
+          </CardHeader>
+          <CardContent>
+<<<<<<< HEAD
+            <div className={`w-full bg-green-100 rounded-full h-2.5 dark:bg-green-900/20`}>
+              <div className="bg-green-500 h-2.5 rounded-full" style={{ 
+                width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
+              }}></div>
+=======
+            <div
+              className={`w-full bg-green-100 rounded-full h-2.5 dark:bg-green-900/20`}
+            >
+              <div
+                className="bg-green-500 h-2.5 rounded-full"
+                style={{
+                  width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%`,
+                }}
+              ></div>
+>>>>>>> main
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+<<<<<<< HEAD
+      
+      <DisputesList disputes={disputes} isLoading={isLoading} />
+    </div>
+  )
+import React, { useEffect } from "react",;
+import { useDisputes } from "@/hooks/useDisputes",;
+import { DisputesList } from "./DisputesList",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { ShieldAlert } from "lucide-react",;
+export function DisputeDashboard() {;
+  const { disputes, isLoading, refetch } = useDisputes(),;
+  useEffect(() => {;
+    refetch();
+  }, [refetch]),;
+  const openDisputes = disputes.filter(d => d.status === 'open'),;
+  const underReviewDisputes = disputes.filter(d => d.status === 'under_review');
+  const resolvedDisputes = disputes.filter(d => d.status === 'resolved');
+  return (;
+    <div className="container mx-auto p-4 space-y-6">;
+      <div className="flex flex-wrap items-center justify-between gap-4">;
+        <div>;
+          <h1 className="text-3xl font-bold">Dispute Resolution Center</h1>;
+          <p className="text-muted-foreground">Manage and resolve disputes between clients and talents</p>;
+        </div>;
+        <Button onClick={refetch} variant="outline">;
+          Refresh;
+        </Button>;
+      </div>;
+      <div className="grid gap-4 md:grid-cols-3">;
+        <Card>;
+          <CardHeader className="pb-2">;
+            <CardTitle className="text-lg font-medium flex justify-between items-center">;
+              <span>Open Disputes</span>;
+              <span className="text-xl font-bold">{openDisputes.length}</span>;
+            </CardTitle>;
+            <CardDescription>Awaiting review</CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <div className={`w-full bg-red-100 rounded-full h-2.5 dark:bg-red-900/20`}>;
+              <div className="bg-red-600 h-2.5 rounded-full" style={{;
+                width: `${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%`;
+              }}></div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+        <Card>;
+          <CardHeader className="pb-2">;
+            <CardTitle className="text-lg font-medium flex justify-between items-center">;
+              <span>Under Review</span>;
+              <span className="text-xl font-bold">{underReviewDisputes.length}</span>;
+            </CardTitle>;
+            <CardDescription>Being actively processed</CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <div className={`w-full bg-yellow-100 rounded-full h-2.5 dark:bg-yellow-900/20`}>;
+              <div className="bg-yellow-500 h-2.5 rounded-full" style={{;
+                width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%`;
+              }}></div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+        <Card>;
+          <CardHeader className="pb-2">;
+            <CardTitle className="text-lg font-medium flex justify-between items-center">;
+              <span>Resolved</span>;
+              <span className="text-xl font-bold">{resolvedDisputes.length}</span>;
+            </CardTitle>;
+            <CardDescription>Successfully concluded</CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <div className={`w-full bg-green-100 rounded-full h-2.5 dark:bg-green-900/20`}>;
+              <div className="bg-green-500 h-2.5 rounded-full" style={{;
+                width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%`;
+              }}></div>;
+            </div>;
+          </CardContent>;
+        </Card>;
+      </div>;
+      <DisputesList disputes={disputes} isLoading={isLoading} />;
+    </div>;
+  );
+}
+;
+=======
+
+      <DisputesList disputes={disputes} isLoading={isLoading} />
     </div>
   );
-};
-
-export default DisputeDashboard;
+}
+>>>>>>> main

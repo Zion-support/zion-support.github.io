@@ -1,7 +1,5 @@
-// UseLogout utility
-export const UseLogout = () => {
-  // Implementation here
-  return null;
+// Hook for useLogout,;
+export const useUseLogout: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseLogout;

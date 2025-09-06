@@ -1,7 +1,5 @@
-// UseTalentDirectory utility
-export const UseTalentDirectory = () => {
-  // Implementation here
-  return null;
+// Hook for useTalentDirectory,;
+export const useUseTalentDirectory: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseTalentDirectory;

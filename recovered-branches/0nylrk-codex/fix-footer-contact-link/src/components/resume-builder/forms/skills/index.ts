@@ -1,7 +1,8 @@
-// Index utility
-export const Index = () => {
-  // Implementation here
-  return null;
-};
 
-export default Index;
+<<<<<<< HEAD
+export { SkillsForm } from './SkillsForm',;
+export * from './types';
+=======
+export { SkillsForm } from './SkillsForm';
+export * from './types';
+>>>>>>> main

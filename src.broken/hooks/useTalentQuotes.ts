@@ -1,7 +1,5 @@
-// UseTalentQuotes utility
-export const UseTalentQuotes = () => {
-  // Implementation here
-  return null;
+// Hook for useTalentQuotes,;
+export const useUseTalentQuotes: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseTalentQuotes;

@@ -1,7 +1,9 @@
-// Logout utility
-export const Logout = () => {
-  // Implementation here
-  return null;
-};
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { clearSessionCookie } from '../../../utils/adminAuth';
 
-export default Logout;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  clearSessionCookie(res);
+  res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  clearSessionCookie(res);
+  res.status(200).json({ ok: true })
+}

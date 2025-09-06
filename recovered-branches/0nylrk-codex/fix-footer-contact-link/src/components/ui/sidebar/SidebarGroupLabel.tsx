@@ -1,16 +1,45 @@
-import React from 'react';
 
-interface SidebarGroupLabelProps {
+<<<<<<< HEAD
+import React from "react",
+import { cn } from "@/lib/utils",
+interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string,
+=======
+import React from "react";
+import {cn} from "@/lib/utils";
+interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
+>>>>>>> main
+  children?: React.ReactNode
 }
 
-const SidebarGroupLabel: React.FC<SidebarGroupLabelProps> = ({ className }) => {
+export function SidebarGroupLabel({ className, children, ...props }: SidebarGroupLabelProps) {
   return (
-    <div className={className || ''}>
-      <h1>SidebarGroupLabel</h1>
-      <p>This component is under development.</p>
-    </div>
+    <div 
+      className={cn("px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider", className)} 
+<<<<<<< HEAD
+import React from "react",;
+import { cn } from "@/lib/utils",;
+interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {;
+  className?: string;
+  children?: React.ReactNode;
+}
+;
+export function SidebarGroupLabel({ className, children, ...props }: SidebarGroupLabelProps) {;
+  return (;
+    <div;
+      className={cn("px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider", className)} ;
+      {...props}
+    >;
+      {children}
+    </div>;
   );
-};
-
-export default SidebarGroupLabel;
+=======
+      {...props}
+    >
+      {children}
+    </div>
+  )
+>>>>>>> main
+}
+;

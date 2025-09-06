@@ -1,16 +1,14 @@
-import React from 'react';
 
-interface EducationFormProps {
-  className?: string;
+<<<<<<< HEAD
+import { EducationForm as EducationFormComponent } from './education',;
+import { EducationFormProps } from './education/types';
+export function EducationForm(props: EducationFormProps) {;
+  return <EducationFormComponent {...props} />;
+=======
+import {EducationForm, as, EducationFormComponent} from './education';
+import {EducationFormProps} from './education/types';
+export function EducationForm(props: EducationFormProps) {
+  return <EducationFormComponent {...props} />
+>>>>>>> main
 }
-
-const EducationForm: React.FC<EducationFormProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>EducationForm</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default EducationForm;
+;

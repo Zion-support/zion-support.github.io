@@ -1,7 +1,5 @@
-// UseWorkExperience utility
-export const UseWorkExperience = () => {
-  // Implementation here
-  return null;
+// Hook for useWorkExperience,;
+export const useUseWorkExperience: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseWorkExperience;

@@ -1,7 +1,5 @@
-// UseRecommendations utility
-export const UseRecommendations = () => {
-  // Implementation here
-  return null;
+// Hook for useRecommendations,;
+export const useUseRecommendations: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseRecommendations;

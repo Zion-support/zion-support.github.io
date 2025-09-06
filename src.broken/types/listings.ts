@@ -1,7 +1,4 @@
-// Listings utility
-export const Listings = () => {
-  // Implementation here
-  return null;
-};
-
-export default Listings;
+// Type definitions for listings,;
+interface listings {;
+  // TODO: Add proper type definitions;
+},;

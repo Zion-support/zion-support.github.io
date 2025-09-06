@@ -1,16 +1,25 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Github,
+  Linkedin,
+  ExternalLink,;
+} from 'lucide-react';
 
-interface NeoFuturisticFooterProps {
-  className?: string;
-}
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',};
 
-const NeoFuturisticFooter: React.FC<NeoFuturisticFooterProps> = ({ className }) => {
+export default function NeoFuturisticFooter() {
   return (
-    <div className={className || ''}>
-      <h1>NeoFuturisticFooter</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
+
 };
 
-export default NeoFuturisticFooter;
+export default function NeoFuturisticFooter() {
+  return (

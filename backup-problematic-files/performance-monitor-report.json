@@ -1,0 +1,77 @@
+{
+  "timestamp": "2025-09-06T00:08:31.766Z",
+  "metrics": {},
+  "performanceIssues": [
+    {
+      "file": "/workspace/src/components/NewsletterSection.jsx",
+      "type": "console_statements",
+      "severity": "info",
+      "message": "Console statements found (remove in production)"
+    },
+    {
+      "file": "/workspace/src/utils/accessibility-checker.ts",
+      "type": "console_statements",
+      "severity": "info",
+      "message": "Console statements found (remove in production)"
+    },
+    {
+      "file": "/workspace/src/utils/authUtils.ts",
+      "type": "console_statements",
+      "severity": "info",
+      "message": "Console statements found (remove in production)"
+    },
+    {
+      "file": "/workspace/src/utils/monitoring.ts",
+      "type": "console_statements",
+      "severity": "info",
+      "message": "Console statements found (remove in production)"
+    },
+    {
+      "file": "/workspace/src/utils/performance-optimizer.ts",
+      "type": "console_statements",
+      "severity": "info",
+      "message": "Console statements found (remove in production)"
+    },
+    {
+      "file": "/workspace/src/utils/productionLogger.ts",
+      "type": "console_statements",
+      "severity": "info",
+      "message": "Console statements found (remove in production)"
+    },
+    {
+      "file": "/workspace/src/utils/seo-optimizer.ts",
+      "type": "console_statements",
+      "severity": "info",
+      "message": "Console statements found (remove in production)"
+    },
+    {
+      "file": "/workspace/pages/quote.tsx",
+      "type": "console_statements",
+      "severity": "info",
+      "message": "Console statements found (remove in production)"
+    },
+    {
+      "file": "/workspace/components/PerformanceMonitor.tsx",
+      "type": "console_statements",
+      "severity": "info",
+      "message": "Console statements found (remove in production)"
+    }
+  ],
+  "optimizations": [
+    {
+      "priority": "medium",
+      "category": "production_optimization",
+      "message": "Console statements in production code",
+      "action": "Remove console.log statements or use a build-time tool to strip them"
+    }
+  ],
+  "summary": {
+    "buildTime": 0,
+    "bundleSize": 0,
+    "totalIssues": 9,
+    "criticalIssues": 0,
+    "warnings": 0,
+    "info": 9,
+    "totalOptimizations": 1
+  }
+}

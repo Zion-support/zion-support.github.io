@@ -1,7 +1,5 @@
-// UseIsMounted utility
-export const UseIsMounted = () => {
-  // Implementation here
-  return null;
+// Hook for useIsMounted,;
+export const useUseIsMounted: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseIsMounted;

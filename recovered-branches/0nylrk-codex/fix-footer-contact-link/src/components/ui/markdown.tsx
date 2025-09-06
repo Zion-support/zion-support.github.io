@@ -1,16 +1,48 @@
-import React from 'react';
 
+<<<<<<< HEAD
+import React from "react",
+import ReactMarkdown from "react-markdown",
+import { cn } from "@/lib/utils",
 interface MarkdownProps {
-  className?: string;
+  content: string,
+  className?: string
 }
 
-const Markdown: React.FC<MarkdownProps> = ({ className }) => {
+export function Markdown({ content, className }: MarkdownProps) {
   return (
-    <div className={className || ''}>
-      <h1>Markdown</h1>
-      <p>This component is under development.</p>
+    <div className={cn("prose dark:prose-invert max-w-none", className)}>
+      <ReactMarkdown>{content}</ReactMarkdown>
     </div>
+  )
+import React from "react",;
+import ReactMarkdown from "react-markdown",;
+import { cn } from "@/lib/utils",;
+interface MarkdownProps {;
+  content: string;
+  className?: string;
+}
+;
+export function Markdown({ content, className }: MarkdownProps) {;
+  return (;
+    <div className={cn("prose dark:prose-invert max-w-none", className)}>;
+      <ReactMarkdown>{content}</ReactMarkdown>;
+    </div>;
   );
-};
+=======
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import {cn} from "@/lib/utils";
+interface MarkdownProps {
+  content: string,
+  className?: string
+}
 
-export default Markdown;
+export function Markdown({ content, className }: MarkdownProps) {
+  return (
+    <div className={cn("prose dark:prose-invert max-w-none", className)}>
+      <ReactMarkdown>{content}</ReactMarkdown>
+    </div>
+  )
+>>>>>>> main
+}
+;

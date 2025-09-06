@@ -1,16 +1,15 @@
-import React from 'react';
-
-interface IndexProps {
-  className?: string;
-}
-
-const Index: React.FC<IndexProps> = ({ className }) => {
+import Link from 'next/link';
+export default function AdminIndex() {
   return (
-    <div className={className || ''}>
-      <h1>Index</h1>
-      <p>This component is under development.</p>
+    <div className="space-y-2">
+      <h1 className="text-2xl font-semibold">Admin</h1>
+      <ul className="list-disc pl-6">
+        <li><Link href="/admin/partners"><a className="text-blue-600 underline">Partners</a></Link></li>
+      </ul>
     </div>
   );
-};
-
-export default Index;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

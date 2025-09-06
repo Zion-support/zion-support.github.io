@@ -1,7 +1,4 @@
-// Disputes utility
-export const Disputes = () => {
-  // Implementation here
-  return null;
-};
-
-export default Disputes;
+// Type definitions for disputes,;
+interface disputes {;
+  // TODO: Add proper type definitions;
+},;

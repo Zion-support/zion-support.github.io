@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface PreviewResumeProps {
-  className?: string;
-}
-
-const PreviewResume: React.FC<PreviewResumeProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>PreviewResume</h1>
-      <p>This component is under development.</p>
-    </div>
+export function PreviewResume() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default PreviewResume;
+}
+;

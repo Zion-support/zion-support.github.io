@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface Dropdown-menuProps {
-  className?: string;
-}
-
-const Dropdown-menu: React.FC<Dropdown-menuProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Dropdown-menu</h1>
-      <p>This component is under development.</p>
-    </div>
+,;
+export export export default function dropdown-menu()   {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Dropdown-menu;
+}

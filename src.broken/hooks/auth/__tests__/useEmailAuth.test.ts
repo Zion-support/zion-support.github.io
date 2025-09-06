@@ -1,7 +1,5 @@
-// UseEmailAuth.test utility
-export const UseEmailAuth.test = () => {
-  // Implementation here
-  return null;
+// Hook for useEmailAuth.test,;
+export const useUseEmailAuth.test = () => {,;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseEmailAuth.test;

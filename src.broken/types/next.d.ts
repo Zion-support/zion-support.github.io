@@ -1,7 +1,4 @@
-// Next.d utility
-export const Next.d = () => {
-  // Implementation here
-  return null;
-};
-
-export default Next.d;
+// Type definitions for next.d,;
+export interface next.d {;
+  // TODO: Add proper type definitions;
+}

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-09-06T09:39:43.268Z",
+  "filesFixed": 5,
+  "errors": 0,
+  "fixedFiles": [
+    "pages/api/learn/coach.ts",
+    "pages/api/learn/progress.ts",
+    "pages/api/livekit/room.ts",
+    "pages/api/livekit/token.ts",
+    "pages/api/marketplace/offers.ts"
+  ]
+}

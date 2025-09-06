@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface CountrySelectorProps {
-  className?: string;
-}
-
-const CountrySelector: React.FC<CountrySelectorProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>CountrySelector</h1>
-      <p>This component is under development.</p>
-    </div>
+export function CountrySelector() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default CountrySelector;
+}
+;

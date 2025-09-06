@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface PageViewsTableProps {
-  className?: string;
-}
-
-const PageViewsTable: React.FC<PageViewsTableProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>PageViewsTable</h1>
-      <p>This component is under development.</p>
-    </div>
+export function PageViewsTable() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default PageViewsTable;
+}
+;

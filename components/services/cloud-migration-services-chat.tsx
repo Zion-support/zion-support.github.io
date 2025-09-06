@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Cloud-migration-services-chatProps {
-  className?: string;
-}
-
-const Cloud-migration-services-chat: React.FC<Cloud-migration-services-chatProps> = ({ className }) => {
+const CloudMigrationServicesChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Cloud-migration-services-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Cloud-migration-services-chat;
+    <div>
+      <Head>
+        <title>CloudMigrationServicesChat - Zion Tech Solutions</title>

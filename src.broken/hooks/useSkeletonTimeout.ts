@@ -1,7 +1,5 @@
-// UseSkeletonTimeout utility
-export const UseSkeletonTimeout = () => {
-  // Implementation here
-  return null;
+// Hook for useSkeletonTimeout,;
+export const useUseSkeletonTimeout: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseSkeletonTimeout;

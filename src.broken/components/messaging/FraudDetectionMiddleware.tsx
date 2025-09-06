@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface FraudDetectionMiddlewareProps {
-  className?: string;
-}
-
-const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>FraudDetectionMiddleware</h1>
-      <p>This component is under development.</p>
-    </div>
+export function FraudDetectionMiddleware() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default FraudDetectionMiddleware;
+}
+;

@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface PartnerResourcesProps {
-  className?: string;
-}
-
-const PartnerResources: React.FC<PartnerResourcesProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>PartnerResources</h1>
-      <p>This component is under development.</p>
-    </div>
+export function PartnerResources() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default PartnerResources;
+}
+;

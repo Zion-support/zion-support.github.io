@@ -1,7 +1,11 @@
-// Url.d utility
-export const Url.d = () => {
-  // Implementation here
-  return null;
-};
 
-export default Url.d;
+<<<<<<< HEAD
+declare module 'url' {;
+  export function fileURLToPath(url: string | URL): string;
+}
+;
+=======
+declare module 'url' {
+  export function fileURLToPath(url: string | URL): string
+}
+>>>>>>> main

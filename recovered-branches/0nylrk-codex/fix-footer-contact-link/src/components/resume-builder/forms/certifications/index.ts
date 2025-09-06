@@ -1,7 +1,6 @@
-// Index utility
-export const Index = () => {
-  // Implementation here
-  return null;
-};
 
-export default Index;
+<<<<<<< HEAD
+export { CertificationsForm } from './CertificationsForm';
+=======
+export { CertificationsForm } from './CertificationsForm';
+>>>>>>> main

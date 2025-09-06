@@ -1,7 +1,5 @@
-// UseApiKeys utility
-export const UseApiKeys = () => {
-  // Implementation here
-  return null;
+// Hook for useApiKeys,;
+export const useUseApiKeys: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseApiKeys;

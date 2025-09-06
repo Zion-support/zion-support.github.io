@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ResumeStepContentProps {
-  className?: string;
-}
-
-const ResumeStepContent: React.FC<ResumeStepContentProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ResumeStepContent</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ResumeStepContent() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ResumeStepContent;
+}
+;

@@ -1,16 +1,72 @@
-import React from 'react';
+useEffect ( () => {
+  const load = async () => {
+  try {
 
-interface PodcastProps {
-  className?: string;
-}
+  if (loading) return <div>Loading episodes…</div>;
 
-const Podcast: React.FC<PodcastProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
-      <h1>Podcast</h1>
-      <p>This component is under development.</p>
+    <div className='space-y-6'>
+      <div className='flex items-center justify-between'>
+        <h1 className='text-3xl font-bold'>Zion Podcast</h1>
+        <Link href='/studio/host' className='text-blue-600 underline'>
+          Create Episode
+        </Link>
+      </div>
+      {episodes.length === 0 && <p>No episodes yet.</p>}
+      <ul className='space-y-4'>
+        {episodes.map(ep => (
+          <li key={ep.id} className='border rounded p-4'>
+            <div className='flex items-center justify-between'>
+              <div>
+                <h2 className='text-xl font-semibold'>{ep.title}</h2>
+                <p className='text-sm text-gray-500'>
+                  Guest: {ep.inviteeName} ·{' '}
+                  {new Date(ep.createdAt).toLocaleString()}
+                </p>
+                {ep.summary && (
+                  <p className='mt-2 text-gray-700'>{ep.summary}</p>
+                )}
+              </div>
+              <div className='flex gap-3'>
+                {ep.audio?.mp3Url && (
+                  <a
+                    href={ep.audio.mp3Url}
+                    className='px-3 py-2 bg-blue-600 text-white rounded'
+                    download
+                  >                    MP3
+                  </a>
+                )}
+                {ep.audio?.wavUrl && (
+
+                    MP3
+                  </a>
+                )}
+                {ep.audio?.wavUrl && (
+
+                    WAV
+                  </a>
+                )}
+                {ep.audio?.mp4Url && (
+
+                    MP4
+
+                  </a>
+                )}
+              </div>
+            </div>
+            <div className='mt-3 flex gap-4'>
+              <Link
+                href={`/media/podcast/${ep.id}`}
+                className='text-blue-600 underline'
+              >
+                View Transcript
+              </Link>            </div>
+
+            </div>
+
+          </li>
+        ))}
+      </ul>
     </div>
   );
-};
-
-export default Podcast;
+}

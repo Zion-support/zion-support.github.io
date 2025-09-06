@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Quality-assurance-testing-chatProps {
-  className?: string;
-}
-
-const Quality-assurance-testing-chat: React.FC<Quality-assurance-testing-chatProps> = ({ className }) => {
+const QualityAssuranceTestingChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Quality-assurance-testing-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Quality-assurance-testing-chat;
+    <div>
+      <Head>
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>

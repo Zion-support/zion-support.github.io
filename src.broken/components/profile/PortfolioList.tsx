@@ -1,16 +1,36 @@
-import React from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 
-interface PortfolioListProps {
-  className?: string;
+interface PortfolioItem {
+  title: string,
+  description: string
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+interface PortfolioItem {;
+  title: string,;
+  description: string;
+}
+;
+interface PortfolioListProps {;
+  projects: PortfolioItem[];
 }
 
-const PortfolioList: React.FC<PortfolioListProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>PortfolioList</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
+export function PortfolioList({ projects }: PortfolioListProps) {
+  if (!projects.length) return null,
 
-export default PortfolioList;
+  return (
+    <Card className="bg-zion-blue-dark border-zion-blue-light text-white mb-6">
+      <CardHeader>
+        <CardTitle>Portfolio</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <ul className="space-y-2 list-disc ml-5">
+          {projects.map((p, i) => (
+            <li key={i}>
+              <span className="font-medium">{p.title}:</span> {p.description}
+            </li>
+          ))}
+        </ul>;
+      </CardContent>;
+    </Card>;
+  );
+}
+;

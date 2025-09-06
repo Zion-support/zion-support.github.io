@@ -1,12 +1,10 @@
 import React from 'react';
-
-const Category = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Category</h1>
-      <p>This component is under development.</p>
-    </div>
+export export export default function Category()      {;
+  return (;
+    <div>;
+      <h1>Category</h1>;
+      <p>Component placeholder - needs implementation</p>;
+    </div>;
   );
-};
-
-export default Category;
+}
+;

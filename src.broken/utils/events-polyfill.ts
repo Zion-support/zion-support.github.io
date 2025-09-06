@@ -1,7 +1,4 @@
-// Events-polyfill utility
-export const Events-polyfill = () => {
-  // Implementation here
-  return null;
+// Utility functions for events-polyfill,;
+export const events-polyfill = {,;
+  // TODO: Implement utility functions;
 };
-
-export default Events-polyfill;

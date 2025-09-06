@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface MarketplaceLayoutProps {
-  className?: string;
-}
-
-const MarketplaceLayout: React.FC<MarketplaceLayoutProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>MarketplaceLayout</h1>
-      <p>This component is under development.</p>
-    </div>
+export function MarketplaceLayout() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default MarketplaceLayout;
+}
+;

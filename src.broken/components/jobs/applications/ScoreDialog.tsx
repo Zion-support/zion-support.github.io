@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ScoreDialogProps {
-  className?: string;
-}
-
-const ScoreDialog: React.FC<ScoreDialogProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ScoreDialog</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ScoreDialog() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ScoreDialog;
+}
+;

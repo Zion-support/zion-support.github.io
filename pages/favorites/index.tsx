@@ -1,16 +1,32 @@
-import React from 'react';
-
-interface IndexProps {
-  className?: string;
+import { useEffect, useState } from 'react'
+import EmptyState from '../../components/ui/EmptyState'
+export default function FavoritesPage() {
+  const [favorites, setFavorites] = useState<string[]>([])
+  useEffect(() => {
+    const raw = localStorage.getItem('zion.favorites')
+    setFavorites(raw ? JSON.parse(raw) : [])
+  }, [])
+  if (!favorites.length) {
+    return <EmptyState title="Nothing here yet..." message="Save profiles to revisit them easily." ctaLabel="Browse Talent" ctaHref="/talent" />
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-const Index: React.FC<IndexProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
-      <h1>Index</h1>
-      <p>This component is under development.</p>
-    </div>
+    <div>
+      <h2 className="text-xl font-semibold mb-4">Favorites</h2>
+      <ul className="list-disc pl-6">
+        {favorites.map(f => <li key={f}>{f}</li>)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      </ul>;
+    </div>;
   );
-};
-
-export default Index;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

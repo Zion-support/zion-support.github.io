@@ -1,7 +1,5 @@
-// UseUploadDeliverable utility
-export const UseUploadDeliverable = () => {
-  // Implementation here
-  return null;
+// Hook for useUploadDeliverable,;
+export const useUseUploadDeliverable: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseUploadDeliverable;

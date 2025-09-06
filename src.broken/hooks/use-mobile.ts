@@ -1,7 +1,5 @@
-// Use-mobile utility
-export const Use-mobile = () => {
-  // Implementation here
-  return null;
+// Hook for use-mobile,;
+export const useUse-mobile = () => {,;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default Use-mobile;

@@ -1,16 +1,10 @@
-import React from 'react';
+import * as CollapsiblePrimitive from "@radix-ui/react-collapsible"
 
-interface CollapsibleProps {
-  className?: string;
-}
+const Collapsible = CollapsiblePrimitive.Root
 
-const Collapsible: React.FC<CollapsibleProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Collapsible</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
+const CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger
 
-export default Collapsible;
+const CollapsibleContent = CollapsiblePrimitive.CollapsibleContent
+
+export { Collapsible, CollapsibleTrigger, CollapsibleContent }
+;

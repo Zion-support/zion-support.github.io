@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-interface CoachWidgetProps {
-  className?: string;
-}
+export default function CoachWidget() {
+  const [input, setInput] = useState('');
+  const [reply, setReply] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
-const CoachWidget: React.FC<CoachWidgetProps> = ({ className }) => {
+  async function ask() {
+    if (!input.trim()) return;
+    setLoading(true);
+    try {
+      const resp = await fetch('/api/learn/coach', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: input }),
+
+      });
+      const data = await resp.json();
+      setReply(data.text || '');
+    } finally {
+      setLoading(false);    }
+  }
+
   return (
-    <div className={className || ''}>
-      <h1>CoachWidget</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
 
-export default CoachWidget;
+    }
+  }
+
+  return (

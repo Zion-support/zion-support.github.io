@@ -1,7 +1,5 @@
-// UseDebounce utility
-export const UseDebounce = () => {
-  // Implementation here
-  return null;
+// Hook for useDebounce,;
+export const useUseDebounce: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseDebounce;

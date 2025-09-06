@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface TestimonialCarouselProps {
-  className?: string;
-}
-
-const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>TestimonialCarousel</h1>
-      <p>This component is under development.</p>
-    </div>
+export function TestimonialCarousel() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default TestimonialCarousel;
+}
+;

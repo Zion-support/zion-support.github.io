@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ValidatedFormFieldProps {
-  className?: string;
-}
-
-const ValidatedFormField: React.FC<ValidatedFormFieldProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ValidatedFormField</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ValidatedFormField() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ValidatedFormField;
+}
+;

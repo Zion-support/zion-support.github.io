@@ -1,7 +1,4 @@
-// Talent utility
-export const Talent = () => {
-  // Implementation here
-  return null;
-};
-
-export default Talent;
+// Type definitions for talent,;
+interface talent {;
+  // TODO: Add proper type definitions;
+},;

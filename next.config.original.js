@@ -1,7 +1,8 @@
-// Next.config.original utility
-export const Next.config.original = () => {
-  // Implementation here
-  return null;
 };
-
-export default Next.config.original;
+;
+export default nextConfig;
+;
+export default nextConfig;
+},;
+,;
+export default nextConfig;

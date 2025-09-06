@@ -1,16 +1,25 @@
+
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
-
-interface UseThemeProps {
-  className?: string;
-}
-
-const UseTheme: React.FC<UseThemeProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>UseTheme</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
+>>>>>>> main
+// This is a simplified version of the theme hook for offline development
+export const useTheme = () => {
+  return {
+    theme: "dark",
+<<<<<<< HEAD
+    setTheme: (theme: string) => // // // console.log(`Theme would change to: ${theme}`)
+  }
+},
+import React from 'react',;
+// This is a simplified version of the theme hook for offline development;
+export const useTheme = () => {;
+  return {;
+    theme: "dark";
+    setTheme: (theme: string) => // // // console.log(`Theme would change to: ${theme}`);
+=======
+    setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
+>>>>>>> main
+  }
 };
-
-export default UseTheme;

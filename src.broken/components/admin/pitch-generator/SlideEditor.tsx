@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface SlideEditorProps {
-  className?: string;
-}
-
-const SlideEditor: React.FC<SlideEditorProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>SlideEditor</h1>
-      <p>This component is under development.</p>
-    </div>
+export function SlideEditor() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default SlideEditor;
+}
+;

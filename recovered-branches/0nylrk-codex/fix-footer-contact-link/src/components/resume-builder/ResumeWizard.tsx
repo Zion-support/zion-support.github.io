@@ -1,16 +1,13 @@
-import React from 'react';
 
-interface ResumeWizardProps {
-  className?: string;
+<<<<<<< HEAD
+import { ResumeWizard as WizardComponent } from './wizard';
+export function ResumeWizard() {;
+  return <WizardComponent />;
 }
-
-const ResumeWizard: React.FC<ResumeWizardProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ResumeWizard</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default ResumeWizard;
+;
+=======
+import {ResumeWizard, as, WizardComponent} from './wizard';
+export function ResumeWizard() {
+  return <WizardComponent />
+}
+>>>>>>> main

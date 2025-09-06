@@ -1,16 +1,14 @@
 import React from 'react';
-
-interface TestSimpleProps {
-  className?: string;
-}
-
-const TestSimple: React.FC<TestSimpleProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>TestSimple</h1>
-      <p>This component is under development.</p>
-    </div>
+export default function TestSimple(req, res) {
+  try {
+  return (;
+    <div>;
+      <h1>Simple Test Page</h1>;
+      <p>This is a simple test page to check if Next.js is working.</p>;
+    </div>;
   );
-};
-
-export default TestSimple;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

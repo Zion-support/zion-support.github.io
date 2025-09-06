@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface HireNowCTAProps {
-  className?: string;
-}
-
-const HireNowCTA: React.FC<HireNowCTAProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>HireNowCTA</h1>
-      <p>This component is under development.</p>
-    </div>
+export function HireNowCTA() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default HireNowCTA;
+}
+;

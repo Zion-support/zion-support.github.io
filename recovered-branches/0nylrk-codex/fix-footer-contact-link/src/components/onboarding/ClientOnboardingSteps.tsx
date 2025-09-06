@@ -1,16 +1,71 @@
-import React from 'react';
 
-interface ClientOnboardingStepsProps {
-  className?: string;
+<<<<<<< HEAD
+import React from "react",
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
+import { PlusCircle, SendIcon, InboxIcon } from "lucide-react",
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
+
+export function ClientOnboardingSteps() {
+  const onboardingStatus = useOnboardingStatus(),
+=======
+import React from "react";
+import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
+import {PlusCircle, SendIcon, InboxIcon} from "lucide-react";
+import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
+
+export function ClientOnboardingSteps() {
+  const onboardingStatus = useOnboardingStatus();
+>>>>>>> main
+  
+  const steps: OnboardingStep[] = [
+    {
+      id: "post-job",
+      label: "Post your first job",
+      completed: onboardingStatus.jobPosted,
+      link: "/post-job",
+      action: "Post Job"},
+    {
+      id: "invite",
+      label: "Send invitation to talent",
+      completed: onboardingStatus.inviteSent,
+      link: "/talent",
+      action: "Find Talent"},
+    {
+      id: "response",
+      label: "Receive your first application",
+      completed: onboardingStatus.responseReceived,
+      link: "/client-dashboard",
+      action: "Check Dashboard"}],
+  
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
+<<<<<<< HEAD
+import React from "react",;
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",;
+import { PlusCircle, SendIcon, InboxIcon } from "lucide-react",;
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",;
+export function ClientOnboardingSteps() {;
+  const onboardingStatus = useOnboardingStatus(),;
+  const steps: OnboardingStep[] = [;
+    {;
+      id: "post-job",;
+      label: "Post your first job",;
+      completed: onboardingStatus.jobPosted,;
+      link: "/post-job",;
+      action: "Post Job"},;
+    {;
+      id: "invite",;
+      label: "Send invitation to talent",;
+      completed: onboardingStatus.inviteSent,;
+      link: "/talent",;
+      action: "Find Talent"},;
+    {;
+      id: "response",;
+      label: "Receive your first application",;
+      completed: onboardingStatus.responseReceived,;
+      link: "/client-dashboard";
+      action: "Check Dashboard"}];
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
+=======
+>>>>>>> main
 }
-
-const ClientOnboardingSteps: React.FC<ClientOnboardingStepsProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ClientOnboardingSteps</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default ClientOnboardingSteps;
+;

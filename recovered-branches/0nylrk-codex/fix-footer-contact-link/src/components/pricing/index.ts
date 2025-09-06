@@ -4,4 +4,12 @@ export const Index = () => {
   return null;
 };
 
-export default Index;
+<<<<<<< HEAD
+export * from './PricingSuggestionBox',;
+export * from './ClientBudgetRecommender',;
+export * from './TalentRateRecommender';
+=======
+export * from './PricingSuggestionBox';
+export * from './ClientBudgetRecommender';
+export * from './TalentRateRecommender';
+>>>>>>> main

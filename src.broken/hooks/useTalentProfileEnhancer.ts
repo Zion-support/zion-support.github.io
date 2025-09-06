@@ -1,7 +1,5 @@
-// UseTalentProfileEnhancer utility
-export const UseTalentProfileEnhancer = () => {
-  // Implementation here
-  return null;
+// Hook for useTalentProfileEnhancer,;
+export const useUseTalentProfileEnhancer: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseTalentProfileEnhancer;

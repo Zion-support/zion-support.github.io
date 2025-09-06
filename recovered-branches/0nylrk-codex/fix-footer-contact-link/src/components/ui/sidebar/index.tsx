@@ -1,16 +1,13 @@
-import React from 'react';
 
-interface IndexProps {
-  className?: string;
-}
+import * as React from "react"
 
-const Index: React.FC<IndexProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Index</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
+// Export all components from the sidebar subcomponents
+export * from "./sidebar-context"
+export * from "./sidebar-trigger"
+export * from "./sidebar-main"
+export * from "./sidebar-content"
+export * from "./sidebar-group"
+export * from "./sidebar-menu"
 
-export default Index;
+// Also export types 
+export type { SafeRef } from "../sidebar.types"

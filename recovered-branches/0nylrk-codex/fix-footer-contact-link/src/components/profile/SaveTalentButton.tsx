@@ -1,16 +1,50 @@
-import React from 'react';
 
+<<<<<<< HEAD
+import React from 'react',
+import { Button } from "@/components/ui/button",
+import { Star } from "lucide-react",
+=======
+import React from 'react';
+import {Button} from "@/components/ui/button";
+import {Star} from "lucide-react";
+>>>>>>> main
 interface SaveTalentButtonProps {
-  className?: string;
+  talentId: string,
+  onSave: (talentId: string) => void,
+  isSaved: boolean
+<<<<<<< HEAD
+import React from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Star } from "lucide-react",;
+interface SaveTalentButtonProps {;
+  talentId: string,;
+  onSave: (talentId: string) => void;
+  isSaved: boolean;
+}
+;
+export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButtonProps) {;
+  return (;
+    <Button;
+=======
 }
 
-const SaveTalentButton: React.FC<SaveTalentButtonProps> = ({ className }) => {
+export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButtonProps) {
   return (
-    <div className={className || ''}>
-      <h1>SaveTalentButton</h1>
-      <p>This component is under development.</p>
-    </div>
+    <Button
+>>>>>>> main
+      onClick={() => onSave(talentId)}
+      variant={isSaved ? "default" : "outline"}
+      size="sm"
+      className={isSaved ? "bg-yellow-500 hover:bg-yellow-600 text-white" : "text-yellow-500 border-yellow-500 hover:bg-yellow-500/10"}
+    >
+      <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : ''} mr-1`} />
+      {isSaved ? 'Saved' : 'Save'}
+<<<<<<< HEAD
+    </Button>;
   );
-};
-
-export default SaveTalentButton;
+=======
+    </Button>
+  )
+>>>>>>> main
+}
+;

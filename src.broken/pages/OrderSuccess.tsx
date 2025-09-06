@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react',
+import { useSearchParams, Link } from 'react-router-dom',
 
-interface OrderSuccessProps {
-  className?: string;
-}
+export default function OrderSuccess() {
+  const [params] = useSearchParams(),
+  const sessionId = params.get('session_id'),
 
-const OrderSuccess: React.FC<OrderSuccessProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
-      <h1>OrderSuccess</h1>
-      <p>This component is under development.</p>
+    <div className="min-h-screen flex flex-col items-center justify-center p-6">
+      <h1 className="text-2xl font-bold mb-4">Payment Successful</h1>
+      {sessionId && <p className="mb-4">Session ID: {sessionId}</p>}
+      <Link className="underline" to="/">Return Home</Link>
     </div>
-  );
-};
-
-export default OrderSuccess;
+  )
+}
+;

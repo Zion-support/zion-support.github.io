@@ -1,5 +1,20 @@
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 const nextConfig = {
   // assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
@@ -11,6 +26,12 @@ const nextConfig = {
   },
   images: {
     domains: ["localhost"],
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     unoptimized: true,
 =======
 const os = require('os');
@@ -23,19 +44,21 @@ const nextConfig = {
   bundlePagesRouterDependencies: true,
   eslint: {
     ignoreDuringBuilds: true,
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
-
-  // Optimized for fast builds (hanging issue SOLVED)
-  // outputFileTracing: false, // Intentionally disabled via env vars in build scripts and netlify.toml to prevent hanging.
-  productionBrowserSourceMaps: false, // Disable for faster builds
-  
-  // Environment configuration
-  env: {
-    NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
-    NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
-    NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
->>>>>>> origin/cursor/website-audit-and-enhancement-8a0c
-  },
+    unoptimized: true,  },
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    unoptimized: true,  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    unoptimized: true,  },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
@@ -87,6 +110,12 @@ const nextConfig = {
       },
     });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Polyfills for Node.js APIs
 =======
@@ -145,7 +174,21 @@ const nextConfig = {
 
     // Add polyfills for Node.js APIs
 >>>>>>> origin/cursor/website-audit-and-enhancement-8a0c
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     config.resolve.fallback = {
+    // Polyfills for Node.js APIs    config.resolve.fallback = {
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    // Polyfills for Node.js APIs    config.resolve.fallback = {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    // Polyfills for Node.js APIs    config.resolve.fallback = {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       ...config.resolve.fallback,
       fs: false,
       net: false,

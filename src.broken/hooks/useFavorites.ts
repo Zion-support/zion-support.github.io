@@ -1,7 +1,5 @@
-// UseFavorites utility
-export const UseFavorites = () => {
-  // Implementation here
-  return null;
+// Hook for useFavorites,;
+export const useUseFavorites: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseFavorites;

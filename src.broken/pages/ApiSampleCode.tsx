@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ApiSampleCodeProps {
-  className?: string;
-}
-
-const ApiSampleCode: React.FC<ApiSampleCodeProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ApiSampleCode</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ApiSampleCode() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ApiSampleCode;
+}
+;

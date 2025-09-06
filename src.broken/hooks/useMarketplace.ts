@@ -1,7 +1,5 @@
-// UseMarketplace utility
-export const UseMarketplace = () => {
-  // Implementation here
-  return null;
+// Hook for useMarketplace,;
+export const useUseMarketplace: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseMarketplace;

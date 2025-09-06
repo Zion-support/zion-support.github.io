@@ -1,16 +1,17 @@
+
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
-
-interface ProfileLoadingStateProps {
-  className?: string;
-}
-
-const ProfileLoadingState: React.FC<ProfileLoadingStateProps> = ({ className }) => {
+>>>>>>> main
+export function ProfileLoadingState() {
   return (
-    <div className={className || ''}>
-      <h1>ProfileLoadingState</h1>
-      <p>This component is under development.</p>
+    <div className="min-h-screen bg-zion-blue flex justify-center items-center p-4">
+      <div className="text-zion-cyan animate-pulse text-xl">Loading profile...</div>
     </div>
-  );
-};
-
-export default ProfileLoadingState;
+  )
+}
+<<<<<<< HEAD
+;
+=======
+>>>>>>> main

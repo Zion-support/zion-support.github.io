@@ -1,7 +1,5 @@
-// UseOrder utility
-export const UseOrder = () => {
-  // Implementation here
-  return null;
+// Hook for useOrder,;
+export const useUseOrder: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseOrder;

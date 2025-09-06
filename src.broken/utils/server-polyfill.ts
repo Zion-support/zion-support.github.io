@@ -1,7 +1,4 @@
-// Server-polyfill utility
-export const Server-polyfill = () => {
-  // Implementation here
-  return null;
+// Utility functions for server-polyfill,;
+export const server-polyfill = {,;
+  // TODO: Implement utility functions;
 };
-
-export default Server-polyfill;

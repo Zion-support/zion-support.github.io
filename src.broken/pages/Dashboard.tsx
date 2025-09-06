@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface DashboardProps {
-  className?: string;
-}
-
-const Dashboard: React.FC<DashboardProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Dashboard</h1>
-      <p>This component is under development.</p>
-    </div>
+export function Dashboard() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Dashboard;
+}
+;

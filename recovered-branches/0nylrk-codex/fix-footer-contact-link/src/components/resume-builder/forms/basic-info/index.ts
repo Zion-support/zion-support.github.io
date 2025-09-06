@@ -1,7 +1,9 @@
-// Index utility
-export const Index = () => {
-  // Implementation here
-  return null;
-};
 
-export default Index;
+<<<<<<< HEAD
+export * from "./BasicInfoForm",
+export * from "./schema",
+export * from "./BasicInfoForm",;
+=======
+export * from "./BasicInfoForm";
+>>>>>>> main
+export * from "./schema";

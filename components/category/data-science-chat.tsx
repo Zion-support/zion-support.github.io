@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Data-science-chatProps {
-  className?: string;
-}
-
-const Data-science-chat: React.FC<Data-science-chatProps> = ({ className }) => {
+const DataScienceChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Data-science-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Data-science-chat;
+    <div>
+      <Head>
+        <title>DataScienceChat - Zion Tech Solutions</title>

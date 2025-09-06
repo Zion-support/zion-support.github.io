@@ -1,16 +1,31 @@
-import React from 'react';
-
-interface Pm2RedundancyProps {
-  className?: string;
-}
-
-const Pm2Redundancy: React.FC<Pm2RedundancyProps> = ({ className }) => {
+import Head from 'next/head',
+export default function Pm2RedundancyRedirect() {
   return (
-    <div className={className || ''}>
-      <h1>Pm2Redundancy</h1>
-      <p>This component is under development.</p>
-    </div>
+    <>
+      <Head>
+        <meta httpEquiv="refresh" content="0, url=/README_PM2_REDUNDANCY_COMPLETE.md" />
+      </Head>
+      <main style={{ padding: 24 }}>
+        <p>Redirecting to PM2 Redundancy docs…</p>
+      </main>
+    </>
+  )
+import Head from 'next/head';
+export default function Pm2RedundancyRedirect(req, res) {
+  try {
+  return (;
+    <>;
+      <Head>;
+        <meta httpEquiv="refresh" content="0, url=/README_PM2_REDUNDANCY_COMPLETE.md" />;
+      </Head>;
+      <main style={{ padding: 24 }}>;
+        <p>Redirecting to PM2 Redundancy docs…</p>;
+      </main>;
+    </>;
   );
-};
-
-export default Pm2Redundancy;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;

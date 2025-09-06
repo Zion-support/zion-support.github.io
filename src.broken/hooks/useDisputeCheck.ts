@@ -1,7 +1,5 @@
-// UseDisputeCheck utility
-export const UseDisputeCheck = () => {
-  // Implementation here
-  return null;
+// Hook for useDisputeCheck,;
+export const useUseDisputeCheck: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseDisputeCheck;

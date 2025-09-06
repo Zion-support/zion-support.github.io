@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface SimpleSignupProps {
-  className?: string;
-}
-
-const SimpleSignup: React.FC<SimpleSignupProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>SimpleSignup</h1>
-      <p>This component is under development.</p>
-    </div>
+export function SimpleSignup() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default SimpleSignup;
+}
+;

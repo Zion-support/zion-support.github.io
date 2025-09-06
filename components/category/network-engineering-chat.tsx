@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Network-engineering-chatProps {
-  className?: string;
-}
-
-const Network-engineering-chat: React.FC<Network-engineering-chatProps> = ({ className }) => {
+const NetworkEngineeringChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Network-engineering-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Network-engineering-chat;
+    <div>
+      <Head>
+        <title>NetworkEngineeringChat - Zion Tech Solutions</title>

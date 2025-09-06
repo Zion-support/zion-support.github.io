@@ -1,7 +1,5 @@
-// UseAuthStatus utility
-export const UseAuthStatus = () => {
-  // Implementation here
-  return null;
+// Hook for useAuthStatus,;
+export const useUseAuthStatus: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseAuthStatus;

@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface BlogSectionProps {
-  className?: string;
-}
-
-const BlogSection: React.FC<BlogSectionProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>BlogSection</h1>
-      <p>This component is under development.</p>
-    </div>
+export function BlogSection() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default BlogSection;
+}
+;

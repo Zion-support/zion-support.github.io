@@ -1,16 +1,45 @@
-import React from 'react';
 
-interface SidebarMenuProps {
+<<<<<<< HEAD
+import React from "react",
+import { cn } from "@/lib/utils",
+interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
+  className?: string,
+=======
+import React from "react";
+import {cn} from "@/lib/utils";
+interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
   className?: string;
+>>>>>>> main
+  children?: React.ReactNode
 }
 
-const SidebarMenu: React.FC<SidebarMenuProps> = ({ className }) => {
+export function SidebarMenu({ className, children, ...props }: SidebarMenuProps) {
   return (
-    <div className={className || ''}>
-      <h1>SidebarMenu</h1>
-      <p>This component is under development.</p>
-    </div>
+    <ul 
+      className={cn("space-y-1", className)} 
+<<<<<<< HEAD
+import React from "react",;
+import { cn } from "@/lib/utils",;
+interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
+  className?: string;
+  children?: React.ReactNode;
+}
+;
+export function SidebarMenu({ className, children, ...props }: SidebarMenuProps) {;
+  return (;
+    <ul;
+      className={cn("space-y-1", className)} ;
+      {...props}
+    >;
+      {children}
+    </ul>;
   );
-};
-
-export default SidebarMenu;
+=======
+      {...props}
+    >
+      {children}
+    </ul>
+  )
+>>>>>>> main
+}
+;

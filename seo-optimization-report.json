@@ -1,0 +1,81 @@
+{
+  "timestamp": "2025-09-06T04:26:54.075Z",
+  "issues": [
+    {
+      "file": "/workspace/pages_minimal/_app.tsx",
+      "issue": "Missing Head component for meta tags",
+      "severity": "high"
+    },
+    {
+      "file": "/workspace/pages_minimal/_app.tsx",
+      "issue": "Missing page title",
+      "severity": "high"
+    },
+    {
+      "file": "/workspace/pages_minimal/_app.tsx",
+      "issue": "Missing meta description",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/pages_minimal/about.tsx",
+      "issue": "Missing Head component for meta tags",
+      "severity": "high"
+    },
+    {
+      "file": "/workspace/pages_minimal/about.tsx",
+      "issue": "Missing page title",
+      "severity": "high"
+    },
+    {
+      "file": "/workspace/pages_minimal/about.tsx",
+      "issue": "Missing meta description",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/pages_minimal/contact.tsx",
+      "issue": "Missing Head component for meta tags",
+      "severity": "high"
+    },
+    {
+      "file": "/workspace/pages_minimal/contact.tsx",
+      "issue": "Missing page title",
+      "severity": "high"
+    },
+    {
+      "file": "/workspace/pages_minimal/contact.tsx",
+      "issue": "Missing meta description",
+      "severity": "medium"
+    },
+    {
+      "file": "/workspace/pages_minimal/index.tsx",
+      "issue": "Missing Head component for meta tags",
+      "severity": "high"
+    },
+    {
+      "file": "/workspace/pages_minimal/index.tsx",
+      "issue": "Missing page title",
+      "severity": "high"
+    },
+    {
+      "file": "/workspace/pages_minimal/index.tsx",
+      "issue": "Missing meta description",
+      "severity": "medium"
+    }
+  ],
+  "optimizations": [
+    "Add Head component to all pages",
+    "Include unique titles for each page",
+    "Add meta descriptions",
+    "Implement structured data",
+    "Optimize images with alt tags",
+    "Create XML sitemap",
+    "Add robots.txt"
+  ],
+  "recommendations": [
+    "Use Next.js Head component for meta tags",
+    "Implement dynamic titles based on page content",
+    "Add Open Graph tags for social sharing",
+    "Create canonical URLs",
+    "Implement breadcrumb navigation"
+  ]
+}

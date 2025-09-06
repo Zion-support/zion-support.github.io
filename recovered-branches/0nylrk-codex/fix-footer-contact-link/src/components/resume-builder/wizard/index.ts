@@ -1,7 +1,10 @@
-// Index utility
-export const Index = () => {
-  // Implementation here
-  return null;
-};
 
-export default Index;
+<<<<<<< HEAD
+export { ResumeWizard } from './ResumeWizard',;
+export * from './types',;
+export * from './constants';
+=======
+export { ResumeWizard } from './ResumeWizard';
+export * from './types';
+export * from './constants';
+>>>>>>> main

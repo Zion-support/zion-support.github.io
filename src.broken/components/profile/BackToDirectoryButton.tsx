@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface BackToDirectoryButtonProps {
-  className?: string;
-}
-
-const BackToDirectoryButton: React.FC<BackToDirectoryButtonProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>BackToDirectoryButton</h1>
-      <p>This component is under development.</p>
-    </div>
+export function BackToDirectoryButton() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default BackToDirectoryButton;
+}
+;

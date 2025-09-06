@@ -1,7 +1,11 @@
-// Performance.test utility
-export const Performance.test = () => {
-  // Implementation here
-  return null;
-};
-
-export default Performance.test;
+const { test, expect } = require('@playwright/test')'
+test.describe('"Performance"
+  test('"page"
+    "await"
+    "await"
+            "output"
+  test('"bundle"
+    "await"
+    page.on('console', "msg"
+              "output"
+          resolve({ "error"

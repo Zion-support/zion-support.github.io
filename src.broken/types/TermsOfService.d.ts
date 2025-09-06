@@ -1,7 +1,4 @@
-// TermsOfService.d utility
-export const TermsOfService.d = () => {
-  // Implementation here
-  return null;
-};
-
-export default TermsOfService.d;
+// Type definitions for TermsOfService.d,;
+export interface TermsOfService.d {;
+  // TODO: Add proper type definitions;
+}

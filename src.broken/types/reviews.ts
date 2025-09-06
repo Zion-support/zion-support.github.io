@@ -1,7 +1,4 @@
-// Reviews utility
-export const Reviews = () => {
-  // Implementation here
-  return null;
-};
-
-export default Reviews;
+// Type definitions for reviews,;
+interface reviews {;
+  // TODO: Add proper type definitions;
+},;

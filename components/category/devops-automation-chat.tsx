@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Devops-automation-chatProps {
-  className?: string;
-}
-
-const Devops-automation-chat: React.FC<Devops-automation-chatProps> = ({ className }) => {
+const DevopsAutomationChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Devops-automation-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Devops-automation-chat;
+    <div>
+      <Head>
+        <title>DevopsAutomationChat - Zion Tech Solutions</title>

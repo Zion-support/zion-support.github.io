@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface CarouselProps {
-  className?: string;
-}
-
-const Carousel: React.FC<CarouselProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Carousel</h1>
-      <p>This component is under development.</p>
-    </div>
+export function carousel() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Carousel;
+}
+;

@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ResizableProps {
-  className?: string;
-}
-
-const Resizable: React.FC<ResizableProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Resizable</h1>
-      <p>This component is under development.</p>
-    </div>
+export function resizable() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Resizable;
+}
+;

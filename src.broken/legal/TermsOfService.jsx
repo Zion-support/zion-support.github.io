@@ -1,12 +1,10 @@
 import React from 'react';
-
-const TermsOfService = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>TermsOfService</h1>
-      <p>This component is under development.</p>
-    </div>
+export export export default function TermsOfService()   {;
+  return (;
+    <div>;
+      <h1>TermsOfService</h1>;
+      <p>Component placeholder - needs implementation</p>;
+    </div>;
   );
-};
-
-export default TermsOfService;
+}
+;

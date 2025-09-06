@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 
-interface EnhancedCardProps {
+export default function EnhancedCard({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
   className?: string;
-}
-
-const EnhancedCard: React.FC<EnhancedCardProps> = ({ className }) => {
+}) {
   return (
-    <div className={className || ''}>
-      <h1>EnhancedCard</h1>
-      <p>This component is under development.</p>
-    </div>
+    <div className={["card-base p-4", className].join(" ")}>{children}</div>
   );
-};
-
-export default EnhancedCard;
+  return (
+    <div className={["card-base p-4", className].join(" ")}>{children}</div>
+  );
+}

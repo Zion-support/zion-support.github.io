@@ -1,7 +1,4 @@
-// Stream-polyfill utility
-export const Stream-polyfill = () => {
-  // Implementation here
-  return null;
+// Utility functions for stream-polyfill,;
+export const stream-polyfill = {,;
+  // TODO: Implement utility functions;
 };
-
-export default Stream-polyfill;

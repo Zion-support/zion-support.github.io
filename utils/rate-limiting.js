@@ -1,7 +1,13 @@
-// Rate-limiting utility
-export const Rate-limiting = () => {
-  // Implementation here
-  return null;
+}};
+export const rateLimiter = new RateLimiter();
+export { RateLimiter };
+;
 };
-
-export default Rate-limiting;
+export const rateLimiter = new RateLimiter();
+export { RateLimiter };
+;
+;
+};
+export const rateLimiter = new RateLimiter();
+export { RateLimiter },;
+;

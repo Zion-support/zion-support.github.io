@@ -1,7 +1,4 @@
-// Badge-variants utility
-export const Badge-variants = () => {
-  // Implementation here
-  return null;
+// Module for badge-variants,;
+export const badge-variants = {,;
+  // TODO: Implement module functionality;
 };
-
-export default Badge-variants;

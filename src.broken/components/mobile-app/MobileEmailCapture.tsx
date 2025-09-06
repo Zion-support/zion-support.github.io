@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface MobileEmailCaptureProps {
-  className?: string;
-}
-
-const MobileEmailCapture: React.FC<MobileEmailCaptureProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>MobileEmailCapture</h1>
-      <p>This component is under development.</p>
-    </div>
+export function MobileEmailCapture() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default MobileEmailCapture;
+}
+;

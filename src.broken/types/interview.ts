@@ -1,7 +1,4 @@
-// Interview utility
-export const Interview = () => {
-  // Implementation here
-  return null;
-};
-
-export default Interview;
+// Type definitions for interview,;
+interface interview {;
+  // TODO: Add proper type definitions;
+},;

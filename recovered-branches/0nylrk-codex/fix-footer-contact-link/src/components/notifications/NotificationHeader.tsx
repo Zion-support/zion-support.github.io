@@ -1,16 +1,42 @@
-import React from 'react';
 
+<<<<<<< HEAD
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+interface NotificationHeaderProps {;
+  unreadCount: number,;
+  onMarkAllAsRead: () => Promise<void>;
+=======
+import React from 'react';
+import {Button} from '@/components/ui/button';
 interface NotificationHeaderProps {
-  className?: string;
+  unreadCount: number,
+  onMarkAllAsRead: () => Promise<void>
+>>>>>>> main
 }
 
-const NotificationHeader: React.FC<NotificationHeaderProps> = ({ className }) => {
+export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
+  unreadCount,
+  onMarkAllAsRead
+}) => {
   return (
-    <div className={className || ''}>
-      <h1>NotificationHeader</h1>
-      <p>This component is under development.</p>
-    </div>
+    <div className="flex justify-between items-center p-4 border-b border-zion-blue-light">
+      <h3 className="font-medium text-white">Notifications</h3>
+      {unreadCount > 0 && (
+        <Button 
+          variant="ghost" 
+          size="sm" 
+          onClick={onMarkAllAsRead}
+          className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark"
+        >
+          Mark all as read
+        </Button>
+      )}
+<<<<<<< HEAD
+    </div>;
   );
 };
-
-export default NotificationHeader;
+=======
+    </div>
+  )
+};
+>>>>>>> main

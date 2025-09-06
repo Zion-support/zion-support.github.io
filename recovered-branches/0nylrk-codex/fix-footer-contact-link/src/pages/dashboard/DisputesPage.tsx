@@ -1,16 +1,38 @@
+
+<<<<<<< HEAD
+import React from 'react',
+import { SEO } from '@/components/SEO',
+import { AppHeader } from '@/layout/AppHeader',
+import { Footer } from '@/components/Footer',
+import { DisputeDashboard } from '@/components/disputes',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+=======
 import React from 'react';
-
-interface DisputesPageProps {
-  className?: string;
-}
-
-const DisputesPage: React.FC<DisputesPageProps> = ({ className }) => {
+import {SEO} from '@/components/SEO';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {DisputeDashboard} from '@/components/disputes';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+>>>>>>> main
+function DisputesPage() {
   return (
-    <div className={className || ''}>
-      <h1>DisputesPage</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
+    <ProtectedRoute>
+      <>
+        <SEO 
+          title="Dispute Resolution Center | Zion AI Marketplace" 
+          description="View and manage disputes between clients and talents"
+        />
+        <AppHeader />
+        <DisputeDashboard />
+        <Footer />
+      </>
+    </ProtectedRoute>
+  )
+}
+<<<<<<< HEAD
+;
+export default DisputesPage;
+=======
 
 export default DisputesPage;
+>>>>>>> main

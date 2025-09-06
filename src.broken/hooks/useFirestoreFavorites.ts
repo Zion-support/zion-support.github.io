@@ -1,7 +1,5 @@
-// UseFirestoreFavorites utility
-export const UseFirestoreFavorites = () => {
-  // Implementation here
-  return null;
+// Hook for useFirestoreFavorites,;
+export const useUseFirestoreFavorites: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseFirestoreFavorites;

@@ -1,16 +1,10 @@
-import React from 'react';
-
-interface CandidateCardProps {
-  className?: string;
-}
-
-const CandidateCard: React.FC<CandidateCardProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>CandidateCard</h1>
-      <p>This component is under development.</p>
-    </div>
+import React from 'react',;
+export function CandidateCard() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder - needs implementation</p>;
+    </div>;
   );
-};
-
-export default CandidateCard;
+}
+;

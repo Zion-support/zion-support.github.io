@@ -1,16 +1,17 @@
-import React from 'react';
-
-interface Ai-seo-auditorProps {
-  className?: string;
-}
-
-const Ai-seo-auditor: React.FC<Ai-seo-auditorProps> = ({ className }) => {
+import Link from 'next/link';
+export default function Placeholder() {
   return (
-    <div className={className || ''}>
-      <h1>Ai-seo-auditor</h1>
-      <p>This component is under development.</p>
+    <main className="min-h-screen p-8">
+      <Head>
+        <title>Services • Ai-seo-auditor - Placeholder</title>
+        <meta name="robots" content="noindex" />
+      </Head>
+      
+      <main>
+        <h1>AiSeoAuditor</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+      </main>
     </div>
   );
-};
-
-export default Ai-seo-auditor;
+}

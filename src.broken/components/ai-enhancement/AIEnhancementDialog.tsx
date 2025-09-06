@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface AIEnhancementDialogProps {
-  className?: string;
-}
-
-const AIEnhancementDialog: React.FC<AIEnhancementDialogProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>AIEnhancementDialog</h1>
-      <p>This component is under development.</p>
-    </div>
+export function AIEnhancementDialog() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default AIEnhancementDialog;
+}
+;

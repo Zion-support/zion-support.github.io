@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface ListingScoreCardProps {
-  className?: string;
-}
-
-const ListingScoreCard: React.FC<ListingScoreCardProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>ListingScoreCard</h1>
-      <p>This component is under development.</p>
-    </div>
+export function ListingScoreCard() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default ListingScoreCard;
+}
+;

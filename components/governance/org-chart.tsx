@@ -1,16 +1,13 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 
-interface Org-chartProps {
-  className?: string;
+const OrgChartPage = dynamic(
+  () => import('../../components/org/OrgChartPage'),
+  { ssr: false }
+);
+
+export default function OrgChartGovernancePage() {
+  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
+export default function OrgChartGovernancePage() {
+  return <OrgChartPage />;
 }
-
-const Org-chart: React.FC<Org-chartProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Org-chart</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Org-chart;

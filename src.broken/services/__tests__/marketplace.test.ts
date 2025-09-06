@@ -1,7 +1,4 @@
-// Marketplace.test utility
-export const Marketplace.test = () => {
-  // Implementation here
-  return null;
+// Service for marketplace.test,;
+export const marketplace.testService = {,;
+  // TODO: Implement service methods;
 };
-
-export default Marketplace.test;

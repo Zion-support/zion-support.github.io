@@ -1,16 +1,54 @@
-import React from 'react';
 
+<<<<<<< HEAD
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { StepProps } from "./types",
+=======
+import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {StepProps} from "./types";
+>>>>>>> main
 interface ResumeStepsProps {
-  className?: string;
+  steps: StepProps[],
+  activeTab: string,
+  onChange: (value: string) => void
+<<<<<<< HEAD
 }
 
-const ResumeSteps: React.FC<ResumeStepsProps> = ({ className }) => {
+export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) => {
   return (
-    <div className={className || ''}>
-      <h1>ResumeSteps</h1>
-      <p>This component is under development.</p>
-    </div>
+    <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
+      {steps.map((step) => (
+        <TabsTrigger key={step.id} value={step.id}>
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { StepProps } from "./types",;
+interface ResumeStepsProps {;
+  steps: StepProps[],;
+  activeTab: string,;
+  onChange: (value: string) => void;
+}
+;
+export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) => {;
+  return (;
+    <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">;
+      {steps.map((step) => (;
+        <TabsTrigger key={step.id} value={step.id}>;
+=======
+}
+
+export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) => {
+  return (
+    <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
+      {steps.map((step) => (
+        <TabsTrigger key={step.id} value={step.id}>
+>>>>>>> main
+          {step.label}
+        </TabsTrigger>
+      ))}
+<<<<<<< HEAD
+    </TabsList>;
   );
 };
-
-export default ResumeSteps;
+=======
+    </TabsList>
+  )
+};
+>>>>>>> main

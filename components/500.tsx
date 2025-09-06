@@ -6,11 +6,9 @@ interface 500Props {
 
 const 500: React.FC<500Props> = ({ className }) => {
   return (
-    <div className={className || ''}>
-      <h1>500</h1>
-      <p>This component is under development.</p>
+    <div className='min-h-screen flex items-center justify-center'>
+      Something went wrong.
     </div>
-  );
-};
-
-export default 500;
+  );export default function FiveHundred(){
+  return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;
+}

@@ -1,7 +1,5 @@
-// UseCurrency utility
-export const UseCurrency = () => {
-  // Implementation here
-  return null;
+// Hook for useCurrency,;
+export const useUseCurrency: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseCurrency;

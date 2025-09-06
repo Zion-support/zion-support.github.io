@@ -1,7 +1,5 @@
-// UseWhitelabelTenant utility
-export const UseWhitelabelTenant = () => {
-  // Implementation here
-  return null;
+// Hook for useWhitelabelTenant,;
+export const useUseWhitelabelTenant: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default UseWhitelabelTenant;

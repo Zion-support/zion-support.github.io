@@ -1,16 +1,48 @@
-import React from 'react';
 
+<<<<<<< HEAD
+import { Education } from '@/types/resume',;
+import { EducationItem } from './EducationItem',;
+interface EducationListProps {;
+  educationEntries: Education[],;
+  onEdit: (education: Education) => void;
+  onDelete: (id: string) => void;
+}
+;
+export function EducationList({ educationEntries, onEdit, onDelete }: EducationListProps) {;
+  if (!educationEntries || educationEntries.length === 0) {;
+    return null;
+=======
+import {Education} from '@/types/resume';
+import {EducationItem} from './EducationItem';
 interface EducationListProps {
-  className?: string;
+  educationEntries: Education[],
+  onEdit: (education: Education) => void,
+  onDelete: (id: string) => void
 }
 
-const EducationList: React.FC<EducationListProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>EducationList</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
+export function EducationList({ educationEntries, onEdit, onDelete }: EducationListProps) {
+  if (!educationEntries || educationEntries.length === 0) {
+    return null
+>>>>>>> main
+  }
 
-export default EducationList;
+  return (
+    <div className="space-y-4">
+      <h3 className="text-md font-medium">Added Education</h3>
+      {educationEntries.map((edu) => (
+        <EducationItem 
+          key={edu.id} 
+          education={edu} 
+          onEdit={onEdit} 
+          onDelete={onDelete} 
+        />
+      ))}
+<<<<<<< HEAD
+    </div>;
+  );
+=======
+    </div>
+  )
+>>>>>>> main
+}
+;

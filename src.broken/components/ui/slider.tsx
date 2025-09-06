@@ -1,16 +1,10 @@
 import React from 'react';
-
-interface SliderProps {
-  className?: string;
-}
-
-const Slider: React.FC<SliderProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Slider</h1>
-      <p>This component is under development.</p>
-    </div>
+export function slider() {;
+  return (;
+    <div>;
+      <h1>Component</h1>;
+      <p>Component placeholder</p>;
+    </div>;
   );
-};
-
-export default Slider;
+}
+;

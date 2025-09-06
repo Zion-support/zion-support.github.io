@@ -1,16 +1,50 @@
-import React from 'react';
 
-interface MobileResumeBuilderProps {
-  className?: string;
-}
-
-const MobileResumeBuilder: React.FC<MobileResumeBuilderProps> = ({ className }) => {
+<<<<<<< HEAD
+import React from "react",
+import { MobileHeader } from "../components/common/MobileHeader",
+import { BottomNavigation } from "../components/common/BottomNavigation",
+import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder",
+=======
+import React from "react";
+import {MobileHeader} from "../components/common/MobileHeader";
+import {BottomNavigation} from "../components/common/BottomNavigation";
+import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/resume/MobileResumeBuilder";
+>>>>>>> main
+export function MobileResumeBuilder() {
   return (
-    <div className={className || ''}>
-      <h1>MobileResumeBuilder</h1>
-      <p>This component is under development.</p>
+    <div className="min-h-screen">
+      <MobileHeader
+        title="Resume Builder"
+        showBack
+      />
+      
+      <main className="py-4">
+        <ResumeBuilderComponent />
+      </main>
+      
+      <BottomNavigation />
     </div>
+  )
+<<<<<<< HEAD
+import React from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder";
+export function MobileResumeBuilder() {;
+  return (;
+    <div className="min-h-screen">;
+      <MobileHeader;
+        title="Resume Builder";
+        showBack;
+      />;
+      <main className="py-4">;
+        <ResumeBuilderComponent />;
+      </main>;
+      <BottomNavigation />;
+    </div>;
   );
-};
-
-export default MobileResumeBuilder;
+}
+;
+=======
+}
+>>>>>>> main

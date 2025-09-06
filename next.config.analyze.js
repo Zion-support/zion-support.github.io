@@ -3,5 +3,26 @@ export const Next.config.analyze = () => {
   // Implementation here
   return null;
 };
-
-export default Next.config.analyze;
+;
+;
+<<<<<<< HEAD
+},;
+,;
+=======
+};
+,
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+module.exports = {
+  "webpack": (config, { isServer }) => {
+  if (!isServer) {
+  config.plugins.push(;
+        new BundleAnalyzerPlugin({
+  "analyzerMode": "static",
+          "openAnalyzer": false,
+          "reportFilename": "bundle-analysis.html"});
+      )}
+    return config}
+}
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",; openAnalyzer: 'false',; reportFilename: "bundle-analysis.html";,}); )} return config} }
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
+>>>>>>> main

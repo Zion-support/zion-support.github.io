@@ -1,7 +1,9 @@
-// Accessibility-checker utility
-export const Accessibility-checker = () => {
-  // Implementation here
-  return null;
+// Accessibility checker utilities
+export const checkAccessibility = () => {
+  console.log('Checking accessibility...');
 };
 
-export default Accessibility-checker;
+export const validateAriaLabels = () => {
+  console.log('Validating ARIA labels...');
+};
+

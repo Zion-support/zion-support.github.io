@@ -1,16 +1,9 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-interface Database-design-chatProps {
-  className?: string;
-}
-
-const Database-design-chat: React.FC<Database-design-chatProps> = ({ className }) => {
+const DatabaseDesignChat: NextPage = () => {
   return (
-    <div className={className || ''}>
-      <h1>Database-design-chat</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Database-design-chat;
+    <div>
+      <Head>
+        <title>DatabaseDesignChat - Zion Tech Solutions</title>

@@ -1,7 +1,5 @@
-// Index utility
-export const Index = () => {
-  // Implementation here
-  return null;
+// Hook for index,;
+export const useIndex: unknown = () => {;
+  // TODO: Implement hook logic,;
+  return {}
 };
-
-export default Index;

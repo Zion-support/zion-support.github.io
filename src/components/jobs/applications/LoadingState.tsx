@@ -1,16 +1,20 @@
-import React from 'react';
+<<<<<<< HEAD
 
-interface LoadingStateProps {
-  className?: string;
-}
+import { Loader2 } from 'lucide-react'
 
-const LoadingState: React.FC<LoadingStateProps> = ({ className }) => {
+export function LoadingState() {
   return (
-    <div className={className || ''}>
-      <h1>LoadingState</h1>
-      <p>This component is under development.</p>
+    <div className="flex justify-center items-center p-8">
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />
+    </div>
+  ),
+}
+;
+=======
+export function LoadingState() {
+  return (
+    <div className='flex justify-center items-center p-8'>
+      <Loader2 className='h-8 w-8 animate-spin text-primary' />
     </div>
   );
-};
-
-export default LoadingState;
+>>>>>>> main

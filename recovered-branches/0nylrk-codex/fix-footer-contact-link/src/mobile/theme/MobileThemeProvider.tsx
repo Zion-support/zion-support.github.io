@@ -1,16 +1,37 @@
-import React from 'react';
 
+<<<<<<< HEAD
+import React from "react",
+import { useTheme } from "@/hooks/useTheme",
 interface MobileThemeProviderProps {
-  className?: string;
+  children: React.ReactNode
+import React from "react",;
+import { useTheme } from "@/hooks/useTheme",;
+interface MobileThemeProviderProps {;
+  children: React.ReactNode;
+}
+;
+export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
+  const { theme } = useTheme();
+  return (;
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
+      {children}
+    </div>;
+  );
+=======
+import React from "react";
+import {useTheme} from "@/hooks/useTheme";
+interface MobileThemeProviderProps {
+  children: React.ReactNode
 }
 
-const MobileThemeProvider: React.FC<MobileThemeProviderProps> = ({ className }) => {
+export function MobileThemeProvider({ children }: MobileThemeProviderProps) {
+  const { theme } = useTheme();
+  
   return (
-    <div className={className || ''}>
-      <h1>MobileThemeProvider</h1>
-      <p>This component is under development.</p>
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
+      {children}
     </div>
-  );
-};
-
-export default MobileThemeProvider;
+  )
+>>>>>>> main
+}
+;

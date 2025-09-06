@@ -1,16 +1,12 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 
-interface TeamProps {
-  className?: string;
+const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), {
+  ssr: false,
+});
+
+export default function TeamPage() {
+  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false }),
+export default function TeamPage() {
+  return <OrgChartPage />;
 }
-
-const Team: React.FC<TeamProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Team</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Team;
