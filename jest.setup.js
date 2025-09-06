@@ -20,7 +20,10 @@ jest.mock('next/router', () => ({
         off: jest.fn(),
         emit: jest.fn(),
       },
+<<<<<<< HEAD
       isFallback: false,
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
     };
   },
 }));
@@ -38,7 +41,15 @@ jest.mock('next/image', () => ({
 jest.mock('next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
+<<<<<<< HEAD
     return <a href={href} {...props}>{children}</a>;
+=======
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
   },
 }));
 
@@ -73,9 +84,46 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 };
 
+<<<<<<< HEAD
 // Global test setup
 beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
 });
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+// Mock fetch
+global.fetch = jest.fn();
+
+// Mock console methods to reduce noise in tests
+const originalConsoleError = console.error;
+const originalConsoleWarn = console.warn;
+
+beforeAll(() => {
+  console.error = (...args) => {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM.render is no longer supported')
+    ) {
+      return;
+    }
+    originalConsoleError.call(console, ...args);
+  };
+
+  console.warn = (...args) => {
+    if (
+      typeof args[0] === 'string' &&
+      (args[0].includes('componentWillReceiveProps') ||
+        args[0].includes('componentWillMount'))
+    ) {
+      return;
+    }
+    originalConsoleWarn.call(console, ...args);
+  };
+});
+
+afterAll(() => {
+  console.error = originalConsoleError;
+  console.warn = originalConsoleWarn;
+});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
