@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
 
 export const metadata = {
-  title: 'Blockchain Solutions | Zion Tech Group',
-  description: 'DeFi, NFTs, smart contracts, and Web3 applications with enterprise-grade security. Build the future of finance with our blockchain expertise.',
-  keywords: 'blockchain development, DeFi, NFTs, smart contracts, Web3, cryptocurrency, dApps, tokenization'
+  title: "Blockchain Solutions | Zion Tech Group",
+  description:
+    "DeFi, NFTs, smart contracts, and Web3 applications with enterprise-grade security. Build the future of finance with our blockchain expertise.",
+  keywords:
+    "blockchain development, DeFi, NFTs, smart contracts, Web3, cryptocurrency, dApps, tokenization",
 };
 
 <<<<<<< HEAD
@@ -316,7 +318,15 @@ interface BlockchainServiceProps {
   href: string;
 }
 
-function BlockchainService({ title, description, price, features, benefits, icon, href }: BlockchainServiceProps) {
+function BlockchainService({
+  title,
+  description,
+  price,
+  features,
+  benefits,
+  icon,
+  href,
+}: BlockchainServiceProps) {
   return (
     <a
       href={href}
@@ -331,7 +341,9 @@ function BlockchainService({ title, description, price, features, benefits, icon
       </div>
       <p className="text-gray-600 mb-4">{description}</p>
       <div className="mb-4">
-        <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+        <h4 className="text-sm font-semibold text-gray-900 mb-2">
+          Key Features:
+        </h4>
         <ul className="space-y-1">
           {features.map((feature, index) => (
             <li key={index} className="text-sm text-gray-600 flex items-center">
@@ -345,7 +357,10 @@ function BlockchainService({ title, description, price, features, benefits, icon
         <h4 className="text-sm font-semibold text-gray-900 mb-2">Benefits:</h4>
         <div className="flex flex-wrap gap-1">
           {benefits.map((benefit, index) => (
-            <span key={index} className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">
+            <span
+              key={index}
+              className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded"
+            >
               {benefit}
             </span>
           ))}
@@ -364,7 +379,9 @@ export default function BlockchainSolutionsPage() {
           Blockchain Solutions
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          DeFi, NFTs, smart contracts, and Web3 applications with enterprise-grade security. Build the future of finance with our blockchain expertise.
+          DeFi, NFTs, smart contracts, and Web3 applications with
+          enterprise-grade security. Build the future of finance with our
+          blockchain expertise.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -385,9 +402,12 @@ export default function BlockchainSolutionsPage() {
       {/* Blockchain Services Grid */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Blockchain Services</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Our Blockchain Services
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive blockchain solutions for modern businesses and innovative projects.
+            Comprehensive blockchain solutions for modern businesses and
+            innovative projects.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -400,9 +420,14 @@ export default function BlockchainSolutionsPage() {
               "Lending protocols",
               "Yield farming",
               "Liquidity pools",
-              "Governance tokens"
+              "Governance tokens",
             ]}
-            benefits={["Decentralization", "Transparency", "Accessibility", "Innovation"]}
+            benefits={[
+              "Decentralization",
+              "Transparency",
+              "Accessibility",
+              "Innovation",
+            ]}
             icon="🏦"
             href="/services/defi-protocols"
           />
@@ -415,9 +440,14 @@ export default function BlockchainSolutionsPage() {
               "Marketplace trading",
               "Auction system",
               "Royalty management",
-              "Multi-chain support"
+              "Multi-chain support",
             ]}
-            benefits={["Digital Ownership", "Creator Economy", "New Revenue", "Community Building"]}
+            benefits={[
+              "Digital Ownership",
+              "Creator Economy",
+              "New Revenue",
+              "Community Building",
+            ]}
             icon="🎨"
             href="/services/nft-marketplace"
           />
@@ -430,7 +460,7 @@ export default function BlockchainSolutionsPage() {
               "Governance systems",
               "Automation protocols",
               "Security audits",
-              "Gas optimization"
+              "Gas optimization",
             ]}
             benefits={["Automation", "Trust", "Efficiency", "Cost Reduction"]}
             icon="📜"
@@ -445,9 +475,14 @@ export default function BlockchainSolutionsPage() {
               "Blockchain connectivity",
               "User authentication",
               "Transaction management",
-              "Real-time updates"
+              "Real-time updates",
             ]}
-            benefits={["User Control", "Interoperability", "Innovation", "Future-Proof"]}
+            benefits={[
+              "User Control",
+              "Interoperability",
+              "Innovation",
+              "Future-Proof",
+            ]}
             icon="🌐"
             href="/services/web3-applications"
           />
@@ -460,7 +495,7 @@ export default function BlockchainSolutionsPage() {
               "Security tokens",
               "Stablecoins",
               "Token economics",
-              "Compliance features"
+              "Compliance features",
             ]}
             benefits={["Digital Assets", "Liquidity", "Utility", "Investment"]}
             icon="🪙"
@@ -475,9 +510,14 @@ export default function BlockchainSolutionsPage() {
               "Technology selection",
               "Implementation planning",
               "Compliance guidance",
-              "Training & support"
+              "Training & support",
             ]}
-            benefits={["Expert Guidance", "Risk Mitigation", "Cost Optimization", "Innovation"]}
+            benefits={[
+              "Expert Guidance",
+              "Risk Mitigation",
+              "Cost Optimization",
+              "Innovation",
+            ]}
             icon="💼"
             href="/services/blockchain-consulting"
           />
@@ -486,9 +526,11 @@ export default function BlockchainSolutionsPage() {
 
       {/* Contact CTA */}
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Build the Future with Blockchain?</h2>
+        <h2 className="text-3xl font-bold mb-4">
+          Ready to Build the Future with Blockchain?
+        </h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Let's discuss how blockchain technology can transform your business and create new opportunities.
+          Let&apos;s discuss how blockchain technology can transform your business and create new opportunities.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
