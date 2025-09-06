@@ -1,20 +1,3 @@
-import React from 'react'
-import { HelpCategory } from './types'
-import {
-  HelpCircle
-  CreditCard
-  Users
-  Calendar
-  Briefcase
-} from 'lucide-react'
-export const HELP_CATEGORIES: HelpCategory[] = [
-  {
-    id: 'getting-started'
-    name: 'Getting Started'
-    description: 'Learn the basics of using the Zion AI Marketplace'
-    icon: <HelpCircle className='h-6 w-6 text-zion-purple' />
-    articles: [
-      {
       {
         id: "complete-profile",
         title: "Completing your profile",

@@ -1,31 +1,7 @@
-import Image from 'next/image';
-import { Button  } from '@/components/ui/button';
-import { NEW_PRODUCTS  } from '@/data/newProductsData';
-import { useCart  } from '@/context/CartContext';
-import { toast  } from '@/hooks/use-toast';
-import { SEO  } from '@/components/SEO';
-import {logErrorToProduction} from '@/utils/productionLogger';
-export default function ProductPage() {;
-;
-  const router = useRouter();
-  const { id: rawId } = router.query;
-  const id = typeof rawId === 'string' ? rawId : undefined;
-  const [product, setProduct] = useState(
-    NEW_PRODUCTS.find((p) => p.id === id) |null
-  );
-  const { items, dispatch } = useCart();
-  const [adding, setAdding] = useState(false);
-  useEffect(() => {
-    // Update product if id changes and is available from router.query
-    if (id) {
-      const foundProduct = NEW_PRODUCTS.find((p) => p.id === id);
         }
         // Fail silently and fall back to local data
         logErrorToProduction('Error fetching product', { data: err });
       }
-    return <div className="p-6 text-white">Loading product details...</div>;
-  }
-  if (!product) {
     }
   }, [id]), // id is now from router && router.query;
 
@@ -50,30 +26,6 @@ export default function ProductPage() {;
           </div>
         ) : null}
         <p className="mb-6">{product.description}</p>
-        </Button>
-      </div>
-    </>
-  );
-}
-//Only fetch if id is available (from router) ;
-}const inCart = items.some (i => i.id === product.id);
-const handleAdd = () => {if (inCart) return;
-setAdding (true);
-dispatch ({;
-  type: 'ADD ITEM';
-payload: {;
-  id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 ;
-});
-toast.success (`1× $ {product.title ;
-}added`);
-setTimeout ( () => setAdding (false), 500) ;
-}
-product.title ;
-}description= {product.description ;
-}ogImage= {product.images?.[0] ;
-}/> </Button> </div> </>) ;
-}';
-}
         </Button>;
       </div>;
     </>;

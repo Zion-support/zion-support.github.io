@@ -110,7 +110,3 @@ interface QuotesFilterProps {
             <RefreshCw className='mr - 2 h - 4 w - 4' /> Reset Filters          </Button>;
         </div>;
       </CardContent>;
-    </Card>;
-  );
-};  )
-}

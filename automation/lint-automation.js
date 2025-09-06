@@ -11,11 +11,6 @@
       // Run type checking;
       this.log('Running TypeScript type check...');';
       execSync('npm run type-check', { "stdio": 'pipe' });',
-}
-module.exports = LintAutomation;
-;
-
-
 #!/usr/bin/env node
 /**
  * Lint Automation Script
@@ -90,18 +85,10 @@ this.log('Type check completed successfully');
       this.log('=== Lint Automation Completed with Issues ===');
     }
   }
-
-}
-}
-
 // Run the automation
 if (require.main === module) {
   const automation = new LintAutomation();
   automation.run().catch(console.error);
-}
-module.exports = LintAutomation;
-
-
       // Try to fix linting issues
       try {
         this.log('Attempting to fix linting issues...');

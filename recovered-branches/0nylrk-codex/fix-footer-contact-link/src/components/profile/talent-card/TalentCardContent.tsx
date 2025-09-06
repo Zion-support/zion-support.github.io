@@ -4,12 +4,6 @@ interface TalentCardContentProps {
   timezone: string | undefined;
 }
 
-export function TalentCardContent({
-  summary
-  bio
-  timezone
-  skills
-}: TalentCardContentProps) {
 
 import React, { useState } from "react",;
 import { MapPin } from "lucide-react",;
@@ -34,8 +28,6 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
           <span>{timezone}</span>;
         </div>;
       )}
-        </p>
-      </div>
       {/* Skills */}
       <TalentCardSkills skills={skills} />
     </div>

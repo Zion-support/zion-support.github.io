@@ -1,5 +1,9 @@
 
-import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+import { readJson } from '../../../utils/fsDb';
+import { HelpArticle, matchIntent } from '../../../utils/support';
+import { logSupportEventToOperator } from '../../../utils/operator';
+const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { sessionId, messages } = req.body as { sessionId?: string, messages: Array<{ role: 'user' | 'assistant' | 'system', content: string }> };
   if (!messages || !Array.isArray(messages)) return res.status(400).json({ error: 'Invalid messages' });
@@ -49,34 +53,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       temperature: 0.2
     });
 
-    const assistantMessage = completion.choices?.[0]?.message?.content ?? 'Let me know how I can help.';
-
-    await logSupportEventToOperator({ type: 'chat_completion', sessionId: sessionId ?? 'unknown', payload: { intent } });
-
-    return res.status(200).json({
-      assistantMessage,
-import type { NextApiRequest, NextApiResponse } from './next';
-import OpenAI from './openai';
-import { read_json  } from '../../../utils / fs_db';
-import { HelpArticle, match_intent  } from '../../../utils / support';
-import { logSupportEventToOperator  } from '../../../utils / operator';
-const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (
-    return res.status (405).json ({ error: "Method not allowed" })) {
-  $2
-}
-  const { session_id, messages } = req.body as {
-    session_id?: string;
-    messages: Array<{ role: "user" | "assistant" | "system"; content: string }>;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
   }
+  if ()) {
   $2
 }
     return res.status (400).json ({ error: "messages required" });

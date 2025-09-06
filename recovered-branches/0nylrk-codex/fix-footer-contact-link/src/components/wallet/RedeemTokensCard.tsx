@@ -17,7 +17,6 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
-
 type RewardOption = {
   id: string
   title: string
@@ -176,3 +175,5 @@ const REWARD_OPTIONS: RewardOption[] = [;
           </DialogContent>;
         </Dialog>;
       </CardContent>;
+}
+;

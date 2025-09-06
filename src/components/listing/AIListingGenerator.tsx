@@ -1,10 +1,3 @@
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { AIListingForm } from "./AIListingForm",
-import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 interface GeneratedContent {
 
   description: string
@@ -25,26 +18,6 @@ interface AIListingGeneratorProps {
   }
 }
 
-  }) => {
-    setIsLoading(true)
-    try {
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
-        body: { title, category, keyFeatures, targetAudience }
-      })
-      if (error) {
-        throw new Error(error.message)
-      }
-
-      setGeneratedContent((data as any)?.generated || null)
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { AIListingForm } from "./AIListingForm",
-import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
-import {logErrorToProduction} from '@/utils/productionLogger',
       toast({
         description: "AI has created optimized listing content for you."
       })
@@ -62,29 +35,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
       })
-  return (
-    <div className="space-y-6">
-      <Card className="border border-zion-blue-light bg-zion-blue-dark">
-        <CardHeader>
-          <CardTitle className="flex items-center text-white">
-            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
-            AI Listing Optimizer
-          </CardTitle>
-          <p className="text-sm text-zion-slate-light">
-            Provide basic information and let AI generate optimized, SEO-friendly content for your listing
-          </p>
-        </CardHeader>
-        <CardContent>
-            onSubmit = {handleGenerate,}
-            isLoading = {isLoading,}
-            initialValues = {initialValues,}
-          />
-        </CardContent>
-      </Card>
-            onSubmit={handleGenerate} 
-            isLoading={isLoading} 
-;
-      setGeneratedContent((data as any)?.generated || null),;
       toast({;
         title: "Content Generated",;
         description: "AI has created optimized listing content for you.";

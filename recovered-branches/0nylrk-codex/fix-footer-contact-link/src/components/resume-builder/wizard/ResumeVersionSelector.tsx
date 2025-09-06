@@ -42,7 +42,6 @@ export function ResumeVersionSelector({
   const [newResumeTitle, setNewResumeTitle] = useState('');
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]),
   const [isLoading, setIsLoading] = useState(false);
-        setNewResumeTitle("");
       }
       setIsLoading(false);
     }
@@ -84,6 +83,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
       }
       setIsLoading(false);
     }
+
 
   return (
     <div className="flex items-center gap-2">
@@ -143,14 +143,3 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         </DialogContent>
       </Dialog>
     </div>
-            Save as new version;
-          </DropdownMenuItem>;
-        </DropdownMenuContent>;
-      </DropdownMenu>;
-      ;
-      <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>;
-              Save;
-            </Button>;
-          </DialogFooter>;
-        </DialogContent>;
-      </Dialog>;

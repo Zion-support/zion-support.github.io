@@ -9,10 +9,6 @@ const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
 ></typeof>(({ className, ...props }, ref) => (
-      'flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground'
-      className
-    )}
-    {...props}
   />
 ))
 Command.displayName = CommandPrimitive.displayName
@@ -23,14 +19,7 @@ Command.displayName = CommandPrimitive.displayName;
 interface CommandDialogProps;
   extends React.ComponentPropsWithoutRef<typeof Dialog> {}
 
-const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
 
-
-const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
-  extends React.ComponentPropsWithoutRef<typeof Dialog> {}
-
-const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
-  return (
 interface CommandDialogProps;
   extends React && React.ComponentPropsWithoutRef<typeof Dialog> {}
 
@@ -42,20 +31,13 @@ const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {
         <DialogHeader>
           <DialogTitle className="sr-only">Command Menu</DialogTitle>
         </DialogHeader>
-          {children}
-        </Command>
-      </DialogContent>
-    </Dialog>
-  )
-}
         </Command>;
       </DialogContent>;
     </Dialog>;
   );
 }
 
->(({ className, ...props }, ref) => (
-onst CommandInput = React.forwardRef<
+const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
 const CommandInput = React.forwardRef<
@@ -108,7 +90,6 @@ const CommandSeparator = React.forwardRef<;
     ref={ref}
     className={cn("-mx-1 h-px bg-border", className)}
     {...props}
-
   />;
 ));
 CommandSeparator.displayName = CommandPrimitive.Separator.displayName;
@@ -125,19 +106,6 @@ const CommandItem = React.forwardRef<;
     />;
   </div>;
 ));
-CommandItem.displayName = CommandPrimitive.Item.displayName
-
-const CommandShortcut = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLSpanElement>) => {
-  return (
-    <span
-      className={cn(
-        "ml-auto text-xs tracking-widest text-muted-foreground",
-        className
-      )}
-      {...props}
     />;
   );
 }

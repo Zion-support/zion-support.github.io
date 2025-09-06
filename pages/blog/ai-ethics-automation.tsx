@@ -492,6 +492,14 @@ import React from 'react';
 export default function AIEthicsAutomation(req, res) {
   try {
   return (;
+import Head from 'next / head';
+import Link from 'next / link';
+import React from 'react',
+export default /**
+ * AIEthicsAutomation - Function description
+ */
+function AIEthicsAutomation() {
+  return (
     <>;
       <Head>;
         <title>;

@@ -13,7 +13,6 @@
     address: string;
 
 
-    website: string;
   }
 export const realMicroSaasServices: RealMicroSaasService[] = [
   // AI-Powered Business Solutions
@@ -3858,39 +3857,49 @@ color: 'from - purple - 600 to - pink - 600';
 popular: false;
 launch_date: '2025 - 01 - 20';
 customers: 60;
-  'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
-reviews: 14;
-}
-;
-export const service_categories = [;
-  'Legal Technology',
-  'Customer Service & Support',
-  'Digital Marketing & SEO',
-  'Creative & Media',
-  'Data & Analytics',
-  'Human Resources',
-  'Sales & CRM',
-  'Market Research',
-  'Blockchain & Cryptocurrency',
-  'Cloud & DevOps',
-  'Database & Performance',
-  'Design & UI / UX',
-  'Development & DevOps',
-  'Business Intelligence',
-  'Quantum Computing',
-  'Cybersecurity',
-  'Metaverse & Virtual Reality',
-  'Web3 & DeFi',
-  'IoT & Edge Computing',
-  'Autonomous Vehicles & Robotics',
-  'Climate & Environmental',
-  'Biotechnology & Healthcare',
-  'Financial Technology',
-  'Education Technology',
-  'Enterprise IT',;
+  'Legal Technology'
+  'Customer Service & Support'
+  'Digital Marketing & SEO'
+  'Creative & Media'
+  'Data & Analytics'
+  'Human Resources'
+  'Sales & CRM'
+  'Market Research'
+  'Blockchain & Cryptocurrency'
+  'Cloud & DevOps'
+  'Database & Performance'
+  'Design & UI/UX'
+  'Development & DevOps'
+  'Business Intelligence'
+  'Quantum Computing'
+  'Cybersecurity'
+  'Metaverse & Virtual Reality'
+  'Web3 & DeFi'
+  'IoT & Edge Computing'
+  'Autonomous Vehicles & Robotics'
+  'Climate & Environmental'
+  'Biotechnology & Healthcare'
+  'Financial Technology'
+  'Education Technology'
+  'Enterprise IT'
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
-  'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
-  'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
+  return realMicroSaasServices.filter(service => service.category === category)
+};
+];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+
+  return realMicroSaasServices.filter(service => service.category === category)
+};
+
+export const getServicesByPriceRange = (min: number, max: number) => {
+  return realMicroSaasServices.filter(service => {
+    const price = parseFloat(service.price.replace('$', '').replace(, ''));
+    return price >= min && (max === Infinity || price <= max)
+  })
+};
+export const serviceCategories = [
+  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+
+  'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   id: string,;
   name: string,;
   tagline: string,;
@@ -3924,3 +3933,11 @@ export const service_categories = [;
   }
 }
 ;
+  'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
+  'Enterprise IT';
+];
+
+
+;
+
+export interface RealMicroSaasService {;

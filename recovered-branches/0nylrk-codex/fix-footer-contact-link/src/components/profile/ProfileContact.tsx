@@ -6,6 +6,35 @@ import { Mail, Send } from "lucide-react",
     setIsSending(true);
     // Here would be the actual API call to send the message
     setTimeout(() => {
+interface ProfileContactProps {
+  email?: string,
+  profileName: string,
+  profileType: 'service' | 'talent'
+}
+
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {;
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [isSending, setIsSending] = useState(false);
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
+  const [message, setMessage] = useState(""),
+  const [subject, setSubject] = useState(""),
+  const [isSending, setIsSending] = useState(false),
+  
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault(),
+    setIsSending(true),
+    
+    // Here would be the actual API call to send the message
+    setTimeout(() => {
+      setIsSending(false),
+      setMessage(""),
+      setSubject(""),
+      toast({
+        title: "Message Sent",
+        description: `Your message has been sent to ${profileName}.`})
+    }, 1000)
+  },
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -84,3 +113,7 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
       </form>;
     </div>);
 }
+
+  )
+  )
+

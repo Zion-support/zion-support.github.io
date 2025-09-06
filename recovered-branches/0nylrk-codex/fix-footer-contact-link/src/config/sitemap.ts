@@ -203,5 +203,12 @@ export const getAccessibleRoutes = (
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes],;
     }
   }
+
+;
+  return accessibleRoutes;
+  
+  return accessibleRoutes
+;
+
   return accessibleRoutes;
 };

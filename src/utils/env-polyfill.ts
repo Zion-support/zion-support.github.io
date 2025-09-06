@@ -1,16 +1,3 @@
-  NEXT_PUBLIC_APP_URL: ''
-  NEXT_PUBLIC_SUPABASE_URL: ''
-  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''
-}
-// Create a safe process object
-const createProcessObject = () => ({
-  env: { ...defaultEnv }
-  versions: {}
-  platform: 'browser'
-  arch: 'x64'
-  version: '18.0.0'
-  browser: true
-})
 // Export a safe environment accessor
 export const safeEnv = {
   NODE_ENV:
@@ -29,6 +16,15 @@ export function isDevelopment(): boolean {
 
 // Check if we're in production mode safely
 export function isProduction(): boolean {
+
+
+export default safeEnv;
+export default safeEnv;
+}
+}
+}
+}
+
     (globalThis as any).process.env = { ...defaultEnv }
   }
 }
@@ -75,6 +71,5 @@ export default safeEnv;
 
 
 console.log ('✅ Environment polyfill loaded successfully');
-export default safe_env;
 export default safe_env;
 export default safe_env;

@@ -36,9 +36,6 @@
     }
   }
 ];
-  }
-}
-
 export const serviceExpansions2025: ServiceExpansion2025[] = [
   {
     id: "ai-workflow-automation", name: "AI Workflow Automation",
@@ -54,6 +51,11 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [
     link: "/services/ai-workflow-automation", category: "Service Expansions 2025",
     realImplementation: true,
     contactInfo: {
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

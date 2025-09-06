@@ -51,6 +51,10 @@ interface ReviewsModerationTableProps {
 export function ReviewsModerationTable({
   reviews,
   isLoading,
+
+
+
+
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
@@ -181,6 +185,8 @@ if ( {) {
       <Table>;
         <TableHeader>;
           <TableRow>;
+                        src={review.reviewer_profile.avatar_url}
+                        alt={review.reviewer_profile.display_name || ""}
                       />
                     ) : (
                       <AvatarFallback>

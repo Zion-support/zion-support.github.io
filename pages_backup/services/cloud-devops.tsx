@@ -22,29 +22,30 @@ const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
-  {}
-  {}
   }
 ;];
 const services = [;
-  'Cloud Architecture Design',',
-  'Container Orchestration (Kubernetes)',',
-  'Microservices Implementation',',
-  'Monitoring & Logging Setup',',
-  'Disaster Recovery Planning',',
-  'Performance Optimization',',
-  'Cost Optimization',',
-  'Security Hardening'';
-;];
-export default function CloudDevOpsPage() {
-  return (;
-    <Layout );
-      title="Cloud & DevOps Services - Zion Tech Group"";
-      description="Expert cloud migration, infrastructure automation, and DevOps solutions. Transform your operations with scalable, secure cloud infrastructure.""
-    >;
+
+
+  'Cloud Architecture Design',',;
+  'Container Orchestration (Kubernetes)',',;
+  'Microservices Implementation',',;
+  'Monitoring & Logging Setup',',;
+  'Disaster Recovery Planning',',;
+  'Performance Optimization',',;
+  'Cost Optimization',',;
+  'Security Hardening'',;
+
+  ];
+export default function CloudDevOpsPage() {;
+  return (
+    <Layout)
+      title="Cloud & DevOps Services - Zion Tech Group""
+      description="Expert cloud migration, infrastructure automation, and DevOps solutions. Transform your operations with scalable, secure cloud infrastructure."">;
+
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">"
+        <section className="relative py-20 overflow-hidden">";
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto text-center">";
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">";
@@ -52,8 +53,8 @@ export default function CloudDevOpsPage() {
                 </span>;
               </h1>;
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
-                Accelerate your digital transformation with our comprehensive cloud migration, 
-                infrastructure automation, and DevOps expertise. Build, deploy, and scale with confidence.,
+                Accelerate your digital transformation with our comprehensive cloud migration, ;
+                infrastructure automation, and DevOps expertise. Build, deploy, and scale with confidence.,;
               </p>;
                 </button>;
               </div>;
@@ -61,7 +62,7 @@ export default function CloudDevOpsPage() {
           </div>;
         </section>;
         {/* Features Section */}
-        <section className="py-20">"
+        <section className="py-20">";
           <div className="container mx-auto px-4">";
             <div className="text-center mb-16">";
               <h2 className="text-4xl font-bold text-white mb-4">";
@@ -74,33 +75,33 @@ export default function CloudDevOpsPage() {
             </div>;
                 </div>;
               ))}
-            </div>,
+            </div>,;
           </div>;
         </section>;
         {/* Services List */}
-        <section className="py-20 bg-gray-800/30">"
+        <section className="py-20 bg-gray-800/30">";
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto">";
               <h2 className="text-3xl font-bold text-white text-center mb-12">";
                 Our Cloud & DevOps Expertise;
               </h2>;
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
-                    <span className="text-gray-300 text-lg">{service}</span>"
+                    <span className="text-gray-300 text-lg">{service}</span>";
                   </div>;
                 ))}
-              </div>,
+              </div>,;
             </div>;
           </div>;
         </section>;
         {/* CTA Section */}
-        <section className="py-20">"
+        <section className="py-20">";
           <div className="container mx-auto px-4">";
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
               <h2 className="text-4xl font-bold text-white mb-6">";
                 Ready to Transform Your Infrastructure?;
               </h2>;
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">";
-                Let our cloud and DevOps experts help you build a scalable, secure, 
+                Let our cloud and DevOps experts help you build a scalable, secure, ;
                 and efficient infrastructure that grows with your business.;
               </p>;
                 </button>;
@@ -140,14 +141,6 @@ const benefits = [
   'Faster time-to-market for applications'
 ];
 export default function CloudDevOpsServices() {
-export default function CloudDevOpsPage() {;
-const benefits = [;
-  'Reduced infrastructure costs by up to 50%',;
-  'Improved deployment speed and reliability',;
-  'Enhanced security and compliance',;
-  'Automated scaling and resource management',;
-  'Better disaster recovery capabilities',;
-  'Faster time-to-market for applications';
 ];
 export default function CloudDevOpsServices() {;
   return (
@@ -156,8 +149,6 @@ export default function CloudDevOpsServices() {;
       description="Comprehensive cloud migration and DevOps services. Transform your infrastructure with modern cloud technologies and automated processes."
     >
       <div className="min-h-screen bg-white">
-      keywords="cloud services, DevOps, cloud migration, infrastructure as code, CI/CD, cloud optimization">;
-      <div className="min-h-screen bg-white">;
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-cyan-700 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;

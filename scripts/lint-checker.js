@@ -376,10 +376,6 @@ function checkFile(filePath) {
     totalFiles++;
     const fileIssues = [];
     // Check each line for issues;
-    lines && lines.forEach((line, lineNum) => {;
-      Object && Object.entries(lintRules).forEach(([rule, pattern]) => {;
-        if (pattern && pattern.test(line)) {;
-          fileIssues && fileIssues.push({;
             rule,;
             line: lineNum + 1,;
             content: line && line.trim(),;

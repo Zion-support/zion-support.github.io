@@ -185,41 +185,6 @@ import Layout from '../components/Layout';
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
   }
 ];
-  }
-];
-const values = ["Innovation and creativity";
-  "Collaboration and teamwork";
-  "Continuous learning";
-  "Work-life balance";
-  "Diversity and inclusion";
-const benefits = [;
-  {;
-    title: "Competitive Compensation",;
-    description: "We offer competitive salaries and performance-based bonuses",;
-    icon: Star;
-  },;
-  {;
-    title: "Health & Wellness",;
-    description: "Comprehensive health insurance and wellness programs",;
-    icon: Users;
-  },;
-  {;
-    title: "Flexible Work",;
-    description: "Remote work options and flexible schedules",;
-    icon: Clock;
-  },;
-  {;
-    title: "Professional Growth",;
-    description: "Learning opportunities and career development support",;
-    icon: ArrowRight;
-  }
-];
-const values = [;
-  "Innovation and creativity",;
-  "Collaboration and teamwork",;
-  "Continuous learning",;
-  "Work-life balance",;
-  "Diversity and inclusion",;
 const benefits = [{
     "title": "Competitive Compensation"
     "description": "We offer competitive salaries and performance-based bonuses"
@@ -239,54 +204,6 @@ const benefits = [{
     "title": "Professional Growth"
     "description": "Learning opportunities and career development support"
     "icon": ArrowRight
-const benefits = [{;
-    "title": "Competitive Compensation";
-    "description": "We offer competitive salaries and performance-based bonuses";
-    "icon": Star;
-  },;
-  {;
-    "title": "Health & Wellness";
-    "description": "Comprehensive health insurance and wellness programs";
-    "icon": Users;
-  },;
-  {;
-    "title": "Flexible Work";
-    "description": "Remote work options and flexible schedules";
-    "icon": Clock;
-  },;
-  {;
-    "title": "Professional Growth";
-    "description": "Learning opportunities and career development support";
-    "icon": ArrowRight;
-  }
-];
-const values = ["Innovation and creativity";
-  "Collaboration and teamwork";
-  "Continuous learning";
-  "Work-life balance";
-  "Diversity and inclusion";
-const benefits = [;
-  {;
-    title: "Competitive Compensation",;
-    description: "We offer competitive salaries and performance-based bonuses",;
-    icon: Star;
-  },;
-  {;
-    title: "Health & Wellness",;
-    description: "Comprehensive health insurance and wellness programs",;
-    icon: Users;
-  },;
-  {;
-    title: "Flexible Work",;
-    description: "Remote work options and flexible schedules",;
-    icon: Clock;
-  },;
-  {;
-    title: "Professional Growth",;
-    description: "Learning opportunities and career development support",;
-    icon: ArrowRight;
-  }
-];
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Join Our Team - Zion Tech Group</title>

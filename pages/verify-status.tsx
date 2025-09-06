@@ -57,8 +57,6 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
 import { AuthLayout } from '@/layout';
 
-import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react'
-import { AuthLayout } from '@/layout';
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
@@ -72,15 +70,6 @@ export default function VerifyStatus() {
       }, 1000)
     }
     return () => clearInterval(interval)
-  }, [countdown])
-  const handleResendEmail = async () => {
-    if (!email) {
-      setError('Please enter your email address')
-  }, [countdown]);
-
-  const handleResendEmail = async () => {
-    if (!email) {
-      setError('Please enter your email address');
       return
     }
     setIsResending(true)
@@ -187,12 +176,21 @@ export default function VerifyStatus() {
       set_error ('Please enter your email address'),
       return;
     }
-  return (
-    <AuthLayout>;
-      <div className="flex min - h-screen items - center justify - center p - 4">;
-        <div className="w - full max - w-md space - y-6">;
-          {/* Header */}
-
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="text-center">
+            <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <Mail className="h-6 w-6 text-blue-600" />
+            </div>
+            <h1 className="text-2xl font-bold text-gray-900">Email Verification</h1>
+            <p className="text-sm text-gray-600 mt-2">
+              Check and manage your email verification status
+            </p>
+          </div>
+          {/* Success Message */}
+          {/* Success Message */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -209,7 +207,6 @@ export default function VerifyStatus() {
               <AlertCircle className="h-4 w-4" />
               <AlertDescription>{error}</AlertDescription>
             </Alert>
-
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -228,20 +225,6 @@ export default function VerifyStatus() {
             <Input
               id="email"
               type="email"
-          {/* Email Input */}
-          <div className="space - y-2">;
-            <label html_for="email" className="block text - sm font - medium text - gray - 700">;
-              Email Address;
-            </label>;
-            <Input;
-              id="email";
-              type="email";
-              value={email}
-              on_change={(e) => set_email (e.target.value)}
-              placeholder="Enter your email address";
-              className="w - full";
-            />;
-
               value={email  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -261,7 +244,6 @@ export default function VerifyStatus() {
               </p>
             )}
           </div>
-
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -385,6 +367,17 @@ export default function VerifyStatus() {
             <Button;
               on_click={handleTryLogin}
               disabled={!email}
+              className="w-full"
+            >
+              Try Login
+            </Button>
+          </div>
+          {/* Help Text */}
+          {/* Help Text */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
@@ -417,6 +410,9 @@ export default function VerifyStatus() {
       </div>
     </AuthLayout>
   )
+
+};
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

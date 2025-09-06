@@ -11,6 +11,22 @@ export const flagContent = async (
   contentExcerpt: string;
   severity: FraudSeverity;
   reason: string
+  userId: string,
+  userEmail: string | undefined,
+  contentType: FraudFlag['content_type'],
+  contentId: string,
+  contentExcerpt: string,
+  severity: FraudSeverity,
+  reason: string,
+  ipAddress?: string
+): Promise<FlagResult> => {
+  try {
+    // // // console.log('Flagging content for review:', {
+      userId,
+      contentType,
+      contentId,
+      reason,
+      severity
     });
     const { error } = await supabase.from('fraud_flags').insert({
       user_id: userId;
@@ -92,7 +108,6 @@ export const flagContent = async (;
     return {;
       success: false;
       error: error instanceof Error ? error.message : 'Unknown error';
+
     }
   }
-}
-;

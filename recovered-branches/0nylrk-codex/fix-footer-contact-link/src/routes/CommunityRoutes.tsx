@@ -10,6 +10,27 @@ const CommunityRoutes = () => {;
   return (
     <Routes>;
       {/* Public routes */}
+const CommunityRoutes = () => {
+const CommunityRoutes = () => {;
+  return (
+    <Routes>;
+      {/* Public routes */}
+
+      {/* Protected routes */}
+      <Route
+        path="/community/create"
+        element={
+          <ProtectedRoute>
+            <CreatePostPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/community/edit/:postId"
+        element={
+          <ProtectedRoute>
+            <EditPostPage />
+          </ProtectedRoute>
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "../components/ProtectedRoute",;

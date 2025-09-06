@@ -1,7 +1,3 @@
-import Head from 'next / head';
-import UltraFuturisticBackground from '../../components / ui / UltraFuturisticBackground';
-import Button from '../../components / ui / Button';
-import Card from '../../components / ui / Card';
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../../data / enhanced - real - micro - saas - services';
 import {extra_services} from '../../data / extra - services';
@@ -10,12 +6,6 @@ import {newRealServices} from '../../data / new - real - services';
 import {marketReadyServices} from '../../data / market - ready - services';
 ;
 type Service = (typeof enhancedRealMicroSaasServices)[number];
-;
-const contact_info = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
 }
 ;
 function getAllServices (): Service[] {
@@ -44,11 +34,16 @@ function extractServiceSlugFromLink (link: string): string | null {
   } catch {;
     return null;
   }
+
+
+export async function getStaticPaths() {;
   const services = getAllServices();
   const slugs = new Set<string>();
-    // Fall back to normalized id or name to provide a stable URL under /services/*
-    if (s.id) slugs.add(toSlug(s.id));
-    else if (s.name) slugs.add(toSlug(s.name));
+
+
+    // Fall back to normalized id or name to provide a stable URL under /services/*;
+    if (s && s.id) slugs && slugs.add(toSlug(s && s.id));
+    else if (s && s.name) slugs && slugs.add(toSlug(s && s.name));
   }
   return {
     paths: Array.from(slugs).map(slug => ({ params: { slug } }))
@@ -56,19 +51,31 @@ function extractServiceSlugFromLink (link: string): string | null {
   }
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   const services = getAllServices();
-  const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '');
-  let service: Service | undefined = services.find(s => {
-    if (!s.link) return false;
-    const fromLink = extractServiceSlugFromLink(s.link);
+  const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
+
+  let service: Service | undefined = services && services.find(s => {;
+    if (!s && s.link) return false;
+    const fromLink = extractServiceSlugFromLink(s && s.link);
     return fromLink === incomingSlug;
   });
-  if (!service) {
-    service = services.find(
-      s =>
-        toSlug(s.id |'') === incomingSlug |
-        toSlug(s.name |'') === incomingSlug
+
+  if (!service) {;
+    service = services && services.find(;
+      s =>;
+        toSlug(s && s.id || '') === incomingSlug ||;
+        toSlug(s && s.name || '') === incomingSlug;
     );
   }
+
+  if (!service) {;
+    return { notFound: true };
+  }
+
+  return {;
+    props: { service },;
+  };
+
+export default function ServiceDetailPage(): any ({ service }: { service: Service }) {;
 
   if (!service) {
     return { notFound: true }
@@ -132,6 +139,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
 							<p className="text-gray-300 leading-relaxed">{service.description}</p>
 						</Card>
+
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
@@ -155,3 +163,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+    </UltraFuturisticBackground>);
+;
+
+

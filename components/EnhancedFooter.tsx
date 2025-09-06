@@ -11,21 +11,61 @@
   Phone,
   MapPin,
   Globe,
-const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear()
-  const footerSections = [
-    {
-      title: 'Services'
-      links: [
-        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' }
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' }
-        { name: 'Edge Computing', href: '/edge-computing-orchestration' }
-        { name: 'Space Technology', href: '/space-technology' }
-        {
-          name: 'View All Services'
-          href: '/comprehensive-2025-services-showcase'
-        }
-      ]
+} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+import React from 'react';
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next/link';
+import {;
+  Brain,;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Globe,;
+  Github,;
+  Linkedin,;
+  Twitter,;
+} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+
+const EnhancedFooter: React.FC = () => {;
+  const currentYear = new Date().getFullYear(),;
+
+  const footerSections = [;
+    {;
+      title: 'Services',;
+      links: [;
+        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },;
+        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },;
+        { name: 'Edge Computing', href: '/edge-computing-orchestration' },;
+        { name: 'Space Technology', href: '/space-technology' },;
+        {;
+          name: 'View All Services',;
+          href: '/comprehensive-2025-services-showcase',;
+        },;
+      ],;
     },    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
       ]
     }
@@ -56,7 +96,6 @@ const EnhancedFooter: React.FC = () => {
       ]
     }
   ];
-  const socialLinks = [
     {
       name: 'LinkedIn'
       href: 'https://linkedin.com/company/ziontechgroup'
@@ -67,7 +106,6 @@ const EnhancedFooter: React.FC = () => {
       href: 'https://twitter.com/ziontechgroup'
       icon: Twitter
     }
-
   return (
     <footer className='bg-slate-950 border-t border-white/10'>;
       <div className='max-w-7xl mx-auto px-6 py-16'>;
@@ -114,6 +152,61 @@ const EnhancedFooter: React.FC = () => {
               </div>
             </div>
           </div>
+import Link from 'next/link';
+
+import {
+  Brain,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Github,
+        {/* Bottom Section */}
+        <div className='pt-8 border-t border-white/10'>;
+          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
+            {/* Copyright */}
+
+            <div className='text-white/60 text-sm'>              © {currentYear} Zion Tech Group. All rights reserved.;
+            </div>;
+
+
+            {/* Social Links */}
+            <div className='flex items-center space-x-4'>;
+              {socialLinks && socialLinks.map(social => (        <div className="pt-8 border-t border-white/10">;
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
+            {/* Copyright */}
+            <div className="text-white/60 text-sm">
+            </div>
+            {/* Social Links */}
+            <div className='flex items-center space-x-4'>
+              {socialLinks.map(social => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200'
+                  aria-label={social.name}
+                >
+                  <social.icon className='w-5 h-5' />                </a>                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200"
+                  aria-label={social.name}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+
+            <div className="text-white/60 text-sm">;
+            </div>;
+
+
+            {/* Social Links */}
+
+};export default EnhancedFooter;  );
+
               ))}
             </div>
           </div>

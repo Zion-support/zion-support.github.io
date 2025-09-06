@@ -1,5 +1,5 @@
-        const inner_index = await r.json (),
-        results.push ({ id: j.id || f.name, file: f.name, generated_at: j.generated_at, insights: j.insights });
+
+
       } catch {
         // ignore;
       }
@@ -95,14 +95,9 @@ export default async function handler(req, res) {
   }
 const remote = await fetchFromGitHub()
 
-  return res.status(200).json({ logs: remote });
-}
 }
 const remote = await fetchFromGitHub (),
   return res.status (200).json ({ logs: remote });
 }
 ;
 
-  const remote = await fetchFromGitHub();
-  return res.status(200).json({ logs: remote });
-};

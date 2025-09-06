@@ -1,20 +1,3 @@
-import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react'
-import { toast } from '@/hooks/use-toast';
-interface SocialShareButtonsProps {
-  title: string
-import { Button } from '@/components/ui/button';
-import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
-import { toast } from '@/hooks/use-toast',;
-interface SocialShareButtonsProps {;
-  title: string;
-}
-
-
-  const shareUrl =
-    typeof window !== 'undefined'
-      ? encodeURIComponent(window.location.href)
-      : ''
-  const shareText = encodeURIComponent(title)
     window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
@@ -79,25 +62,6 @@ if (return) {
     </div>);
 }
 }
-  },
-  const copyLink = () => {
-    if (typeof window === 'undefined') return
-
-  }
-  const shareToFacebook = () => {
-    window.open(
-      `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`
-      '_blank'
-    )
-  }
-  const shareToLinkedIn = () => {
-    window.open(
-      `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`
-      '_blank'
-    )
-  }
-  const copyLink = () => {
-    if (typeof window === 'undefined') return
   },
 
   const shareToFacebook = () => {

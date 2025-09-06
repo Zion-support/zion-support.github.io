@@ -1,8 +1,3 @@
-    <div className='mb-6 border-b border-zion-blue-light pb-6'>;
-      <button
-        onClick={toggleSection}
-
-
         className="flex w-full items-center justify-between text-white font-medium"
       >
         <span>Availability</span>

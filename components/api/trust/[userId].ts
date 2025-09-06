@@ -245,5 +245,3 @@ if ( {) {
   return res.status (405).json ({ error: 'Method not allowed' });
 }
   res.setHeader('Allow', 'GET, POST');
-
-  return res.status(405).json({ error: 'Method not allowed' });

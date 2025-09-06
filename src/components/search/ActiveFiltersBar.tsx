@@ -163,11 +163,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   if (activeFilters.length === 0) {;
     return null;
   }
-}
-
-import { X } from 'lucide-react'
-import { Button  } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
       
       {activeFilters.map(filter => (
         <Badge 
@@ -195,18 +190,6 @@ import { Badge } from '@/components/ui/badge';
       </Button>
     </div>
   )
-;
-export default ActiveFiltersBar; import React from 'react';
-import { X } from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-interface SearchFilters {
-  types: string[],
-  category: string,
-  min_price: number,
-  max_price: number,
-  min_rating: number,
-  sort: string;
 }
 interface ActiveFiltersBarProps {
   filters: SearchFilters,
@@ -361,9 +344,6 @@ interface Filter {
   value: string
   label: string
 }
-interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
-  filters: Filter[]
-  onRemoveFilter: key: string void
   onClearAll: : unknown void}
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >

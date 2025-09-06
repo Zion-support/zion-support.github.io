@@ -3,10 +3,28 @@ export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;
 export type TimelineType = "fixed" | "flexible";
 export type BudgetType = "fixed" | "hourly" | "range";
+export interface ListingItem {
   id: string;
   title: string;
   category: string
   image?: string
+}
+
+export interface ListingItem {;
+
+  id: string;
+  title: string;
+  category: string,
+  image?: string;
+}
+
+
+export interface ContactInfo {;
+  name: string;
+  email: string;
+
+  phone: string,
+  company: string;
 }
 }
 export interface QuoteFormData {
@@ -17,6 +35,12 @@ export interface QuoteFormData {
   project_description: string;
   start_date?: Date;
   end_date?: Date;
+  name: string;
+  email: string;
+  phone: string
+  company: string
+}
+export interface Budget {
 
 
 export interface Budget {;

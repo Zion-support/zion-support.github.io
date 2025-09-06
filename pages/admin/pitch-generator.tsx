@@ -96,40 +96,6 @@ if (return result) {
     setLoading(true);
     try {;
       const metrics = await autoFetchMetrics();
-      const res = await fetch('/api/admin/pitch/generate', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          operatorPrompt
-          inputs: builder
-          metrics
-        })
-      });
-      const json = await res.json();
-      const newSlides: Slide[] = json.slides |[];      setSlides(newSlides);
-      setActiveIndex(0);
-      const v = json.version |`v${new Date().toISOString()}`;
-      setVersionTag(v);
-      setHistory(h => [
-        { id: uid(), createdAt: new Date().toISOString(), version: v }
-        ...h
-      const res = await fetch('/api/admin/pitch/generate', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          operatorPrompt,;
-          inputs: builder,;
-          metrics,;
-        }),;
-      });
-      const json = await res && res.json();
-      const newSlides: Slide[] = json && json.slides || [];      setSlides(newSlides);
-      setActiveIndex(0);
-      const v = json && json.version || `v${new Date().toISOString()}`;
-      setVersionTag(v);
-      setHistory(h => [;
-        { id: uid(), createdAt: new Date().toISOString(), version: v },;
-        ...h,;
       ]);
     } catch (e) {;
       // noop;
@@ -137,21 +103,10 @@ if (return result) {
       setLoading(false);
     }
   }, [autoFetchMetrics, builder, operatorPrompt]);
-  const rephraseSlide = useCallback(
-    async (idx: number) => {
-      if (!slides[idx]) return;
-      setLoading(true)
-      try {
-        const res = await fetch('/api/admin/pitch/rewrite', {
-          method: 'POST'
-          headers: { 'Content-Type': 'application/json' }
-          body: JSON.stringify({ slide: slides[idx] })
-        });
               ? {
                   ...s
                   title: json.title |s.title
                   content: json.content |s.content
-
     } catch (error) {
       return {  } catch (error) {
     console.error("Error:", error);
@@ -231,37 +186,6 @@ if (return result) {
       a.href = url;
       a.download = `pitch-deck-${versionTag |'draft'}.pdf`;
       a.click();
-  const exportGoogleSlides = useCallback(async () => {
-    setLoading(true);
-    try {
-  }, [slides && slides.length]);
-
-  const exportPdf = useCallback(async () => {;
-    setLoading(true);
-    try {;
-      const res = await fetch('/api/admin/pitch/export', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ slides, format: 'pdf', version: versionTag }),;
-      });      const blob = await res && res.blob();
-      const url = URL && URL.createObjectURL(blob);
-      const a = document && document.createElement('a');
-      a && a.href = url;
-      a && a.download = `pitch-deck-${versionTag || 'draft'}.pdf`;
-      a && a.click();
-      URL && URL.revokeObjectURL(url);
-    } catch (e) {;
-    } finally {;
-      setLoading(false);    }
-  }, [slides, versionTag]);
-  const updateActiveSlide = (updates: Partial<Slide>) => {;
-    setSlides(arr =>;
-      arr && arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s));
-    );  };
-
-  const renderChartPreview = (slide: Slide) => {;
-    if (!slide && slide.chart) return null,;
-    const { type, data } = slide && slide.chart;
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -282,6 +206,26 @@ if (return result) {
   const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null,
     const { type, data } = slide.chart,
+      });
+      const json = await res && res.json();
+      if (json && json.url) {;
+        window && window.open(json.url, '_blank');
+      }
+    } catch (e) {;
+    } finally {;
+      setLoading(false);    }
+  }, [slides, versionTag]);
+
+
+
+  const updateActiveSlide = (updates: Partial<Slide>) => {;
+    setSlides(arr =>;
+      arr && arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s));
+    );  };
+
+  const renderChartPreview = (slide: Slide) => {;
+    if (!slide && slide.chart) return null,;
+    const { type, data } = slide && slide.chart;
     return (
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
@@ -292,7 +236,6 @@ if (return result) {
             <div className="w-full">
               <div className="flex flex-col gap-1">
                 {data.map((d, idx) => (
-
                   <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -313,6 +256,11 @@ if (return result) {
                   <div className="font-medium">{d.label}</div>
                   <div>{d.value}</div>
                 </div>
+        </div>
+      </div>
+    )
+  };
+
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -333,8 +281,6 @@ if (return result) {
       <Head>
         <title>Pitch Generator - Admin</title>
       </Head>
-
-
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Pitch Generator</h1>
@@ -362,10 +308,42 @@ if (return result) {
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
-                Version: {versionTag || '—'}
               </div>
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
+                className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'>;
+                Drag & drop logos, photos here;
+                <div className='text-xs mt-1'>;
+                  {builder && builder.assets.length} file(s) added;
+                </div>;
+              </div>;
+            </div>;
+
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
+              <div className='font-medium mb-2'>Auto Data</div>;
+              <button
+                onClick={autoFetchMetrics}
+                className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm'>;
+                Refresh;
+              </button>;
+              <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>;
+                <li>GMV, MRR, YoY growth</li>;
+                <li>Total completed projects</li>;
+                <li>Global reach</li>;
+                <li>Conversion funnel</li>;
+                <li>Notable clients or case studies</li>;
+              </ul>;
+            </div>;
+
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
+              <div className='font-medium mb-2'>History</div>;
+              <div className='text-xs text-gray-500 dark:text-gray-400'>;
+                Version: {versionTag || '—'}
+              </div>;
+              <ul className='mt-2 space-y-1 text-sm'>;
+                {history && history.map(h => (;
+
+
                   <li
                     key={h && h.id}
                     className='flex justify-between border rounded px-2 py-1'>;
@@ -373,6 +351,23 @@ if (return result) {
                     <span className='text-gray-500 dark:text-gray-400'>;
                       {new Date(h && h.createdAt).toLocaleString()}
                     </span>                  </li>;
+                ))}
+
+              </ul>;
+            </div>;
+          </div>;
+
+          <div className='lg:col-span-2 space-y-4'>;
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
+              <div className='flex items-center justify-between'>;
+                <div className='font-medium'>Slides</div>;
+                <div className='text-sm text-gray-500 dark:text-gray-400'>;
+                  {slides && slides.length} total;
+                </div>;
+              </div>;
+              <div className='mt-3 flex gap-3 overflow-x-auto py-2'>;
+                {slides && slides.map((s, i) => (;
+
                   <SlidePreview
                     key={s && s.id}
                     slide={s}
@@ -423,6 +418,10 @@ if (return result) {
                     Timeline;
                   </button>;
                 </div>              </div>;
+
+}
+}
+}
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
               <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>

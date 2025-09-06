@@ -23,24 +23,6 @@ const EnterpriseRoutes = () => {;
     <Routes>;
       {/* Enterprise Routes */}
 
-const EnterpriseRoutes = () => {;
-  return (
-import { Fragment } from "react",;
-import { Route, Routes } from "react-router-dom",;
-import EnterprisePlans from "../pages/EnterprisePlans",;
-import EnterpriseAdmin from "../pages/EnterpriseAdmin",;
-import CompanyWorkspace from "../pages/CompanyWorkspace",;
-import EnterpriseBilling from "../pages/EnterpriseBilling",;
-import ZionHireAI from "../pages/ZionHireAI",;
-;
-const EnterpriseRoutes = () => {;
-  return (;
-    <Routes>;
-      {/* Enterprise Routes */}
-const EnterpriseRoutes = () => {;
-  return (
-    <Routes>;
-      {/* Enterprise Routes */}
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import EnterprisePlans from "../pages / EnterprisePlans";
@@ -63,3 +45,4 @@ const EnterpriseRoutes = () =>: any {
     </Routes>);
 }
 ;
+export default EnterpriseRoutes;

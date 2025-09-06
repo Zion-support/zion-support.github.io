@@ -1,4 +1,5 @@
 
+const features = [
   {
     title: "Private Hiring Portal"
     description: "Create a secure, private hiring portal accessible only to your team members.";

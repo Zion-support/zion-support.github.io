@@ -19,10 +19,24 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
     } else {
       updateFormData({
         budget: {
+
+
+        }
+      });
+    } else {;
+      updateFormData({;
+        budget: {;
+          ...formData && formData.budget,;
+          type;
+        }
+      });
+    }
+  },
+
+
   },
   };
   },
-
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
@@ -144,7 +158,6 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                   defaultValue={[formData && formData.budget.amount]}
                   max={50000}
                   step={500}
-                        maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount;
                       }
                     });
                   }}

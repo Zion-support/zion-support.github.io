@@ -9,8 +9,6 @@ export type ProjectStatus =;
   | 'in_progress';
   | 'completed';
   | 'canceled';
-
-export interface Project {;
   id: string;
   client_id: string;
   talent_id: string;

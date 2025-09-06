@@ -1,3 +1,6 @@
+import type { UserDetails } from "@/types/auth";
+import { supabase } from "@/integrations/supabase/client",
+import type { UserDetails } from "@/types/auth",
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
@@ -40,13 +43,29 @@ export const checkNewRegistration = async (user: UserDetails) => {
     const { data: existingCampaign } = await supabase
       .from("email_campaigns")
       .select("id")
-      .eq("campaign_type", "welcome_series")
     // If no welcome email sent yet, schedule one
     if (!existingCampaign) {
       // Create a scheduled job for the welcome email
       await supabase
         .from("scheduled_jobs")
         .insert({
+          job_type: "send_retention_email";
+          scheduled_for: new Date ().toISOString ();
+          status: "pending";
+          payload: {
+            user_id: user.id;
+            email_type: "welcome_series";
+            user_type: user.userType |"unknown"
+            display_name: user.displayName |user.email?.split("@")[0] |"User"
+          }
+        });
+            user_id: user.id,
+            email_type: "welcome_series",
+            user_type: user.userType || "unknown",
+            display_name: user.displayName || user.email?.split("@")[0] || "User"
+          }
+        }),
+        
       // Create entry in email_campaigns table
       await supabase
         .from("email_campaigns")
@@ -93,3 +112,5 @@ export const checkNewRegistration = async (user: UserDetails) => {;
         });
     }
   } catch (error) {
+  }
+};

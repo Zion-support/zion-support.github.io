@@ -1,4 +1,12 @@
 
+import {useState} from "react";
+import {Button} from "@/components/ui/button";
+import {cn} from "@/lib/utils";
+import {useAuth} from "@/hooks/useAuth";
+import {toast} from "@/hooks/use-toast";
+import {supabase} from "@/integrations/supabase/client";
+import {Loader2} from "lucide-react";
+import {useNavigate} from "react-router-dom";
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
@@ -215,6 +223,10 @@ if ( {) {
         variant: "destructive"});
     } finally {;
       // Reset button state after a short delay;
+      onClick={handlePaymentClick}
+      disabled={isProcessing}
+      className={cn(
+        "relative min-w-[120px]",
         className
       )}>;
       {isProcessing ? (;
@@ -225,38 +237,16 @@ if ( {) {
       ) : (;
         buttonText;
       )}
-;
-  return (
-    <Button;
-      on_click={handlePaymentClick}
-      disabled={is_processing}
-      className={cn (
-        "relative min - w-[120px]";
-        class_name)}
-    >;
-      {is_processing ? (
-        <>;
-          <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" />;
-          Processing...;
-        </>) : (
-        button_text)}
-    </Button>);
-
-import { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { cn } from "@/lib/utils",;
-import { useAuth } from "@/hooks/useAuth",;
-import { toast } from "@/hooks/use-toast",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Loader2 } from "lucide-react",;
-import { useNavigate } from "react-router-dom",;
-;
-interface PaymentButtonProps {;
-  amount:number,;
-  serviceId:string,;
-  providerId:string,;
-  buttonText?:string,;
-  className?:string,;
-  onPaymentInitiated?:() => void,;
-  redirectUrl?:string;
 }
+
+    </Button>;
+  );
+
+    </Button>;
+  );
+    </Button>;
+  );
+
+
+}
+;

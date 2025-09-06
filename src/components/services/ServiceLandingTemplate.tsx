@@ -1,10 +1,3 @@
-export interface Benefit {
-  title: string;
-  description: string;
-  icon?: React.ReactNode
-}
-export interface Testimonial {
-  name: string;
   role?: string;
   text: string;
   avatar?: string
@@ -62,12 +55,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">;
             {subtitle}
           </p>;
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
-            {description}
-          </p>
-        </div>
-      </section>
-            {description}
           </p>;
         </div>;
       </section>;
@@ -153,29 +140,3 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
       </section>
     </div>
   )
-
-                  </div>;
-                  <div className="text - gray - 600">{stat.label}</div>;
-                </div>))}
-            </div>;
-          </div>;
-        </section>)}
-      <section className="py - 16 px - 4 bg - blue - 600">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <h2 className="text - 3xl font - bold text - white mb - 4">;
-            Ready to Get Started?;
-          </h2>;
-          <p className="text - xl text - blue - 100 mb - 8">;
-            Contact us today to learn more about our services.;
-          </p>;
-          <a;
-            href={cta_link}
-            className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors inline - block";
-          >;
-            {cta_text}
-          </a>;
-        </div>;
-      </section>;
-    </div>);
-}
-},

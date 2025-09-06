@@ -13,6 +13,7 @@ interface ConversationItemProps {;
   conversation: Conversation,;
   isActive: boolean,;
   onClick: () => void;
+}
 
   conversation: Conversation
   isActive: boolean

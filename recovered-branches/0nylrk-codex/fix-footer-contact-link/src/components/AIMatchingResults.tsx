@@ -28,7 +28,6 @@ interface AIMatchingResultsProps {
   onSelectMatch?: (match: MatchResultItem) => void,
   isLoading?: boolean,
   projectDescription?: string,
-
   // Group matches by category
   const categories = {
     all: matches
@@ -42,6 +41,7 @@ interface AIMatchingResultsProps {
     if (lowerCategory.includes("equipment")) return Monitor
     return BriefcaseIcon
   }
+    return (
       <div className="space-y-4">;
         <Skeleton className="h-10 w-full" />;
         <div className="space-y-3">;

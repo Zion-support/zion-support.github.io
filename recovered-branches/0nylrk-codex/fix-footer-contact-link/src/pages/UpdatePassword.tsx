@@ -63,65 +63,6 @@ export default function UpdatePassword() {
     // Extract access token from URL hash
     const hashParams = new URLSearchParams(location.hash.substring(1));
     const token = hashParams.get("access_token");
-    if (token) {
-      setAccessToken(token)
-import { useState, useEffect } from './react';
-import { use_navigate, use_location } from './react-router-dom';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { use_form } from './react - hook - form';
-import { z } from './zod';
-import { LockKeyhole } from './lucide-react';
-import { supabase } from '@/integrations / supabase / client';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
-import { toast } from '@/hooks / use - toast';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { cleanupAuthState } from '@/utils / auth_utils';
-// Form validation schema;
-const updatePasswordSchema = z;
-  .object ({
-    password: z;
-      .string ();
-      .min (8, "Password must be at least 8 characters");
-      .max (64, "Password must be less than 64 characters");
-    confirm_password: z.string ()});
-  .refine ((data) => data.password === data.confirm_password, {
-    message: "Passwords do not match",
-    path: ["confirm_password"]}),
-type UpdatePasswordFormValues = z.infer < typeof updatePasswordSchema>;
-;
-export default /**
- * UpdatePassword - Function description
- */
-function UpdatePassword() {
-  const [is_loading, setIsLoading] = useState (false);
-  const [access_token, setAccessToken] = useState < string | null>(null);
-  const [error, set_error] = useState < string | null>(null);
-  const [success, set_success] = useState (false);
-  const navigate = use_navigate ();
-  const location = use_location ();
-;
-  // Initialize react - hook - form;
-  const form = use_form < UpdatePasswordFormValues>({
-    resolver: zod_resolver (updatePasswordSchema),
-    default_values: {
-      password: "",
-      confirm_password: ""}}),
-  useEffect (() => {
-    // Extract access token from URL hash;
-    const hash_params = new URLSearchParams (location.hash.substring (1));
-    const token = hash_params.get ("access_token");
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      setAccessToken (token);
-    } else {
-      set_error ("No access token found. Please request a new password reset link.");
-    }
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
@@ -163,121 +104,6 @@ if ( {) {
     } finally {
       setIsLoading(false)
 
-  return (
-    <>
-      <Header />
-      <div className="flex min-h-screen bg-zion-blue">
-        <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">
-          <div className="mx-auto w-full max-w-sm lg:w-96">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold tracking-tight text-white">
-                Update your password
-              </h2>
-              <p className="mt-2 text-sm text-zion-slate-light">
-                Enter your new password below.
-              </p>
-            </div>
-            <div className="bg-zion-blue-dark rounded-lg p-6">
-              {error && (
-                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
-                  <p className="text-sm">{error}</p>
-import { useState, useEffect } from "react",;
-import { useNavigate, useLocation } from "react-router-dom",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { useForm } from "react-hook-form",;
-import { z } from "zod",;
-import { LockKeyhole } from "lucide-react",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from "@/components/ui/form",;
-import { toast } from "@/hooks/use-toast",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { cleanupAuthState } from "@/utils/authUtils",;
-// Form validation schema;
-const updatePasswordSchema = z;
-  .object({;
-    password: z;
-      .string();
-      .min(8, "Password must be at least 8 characters");
-      .max(64, "Password must be less than 64 characters"),;
-    confirmPassword: z.string()});
-  .refine((data) => data.password === data.confirmPassword, {;
-    message: "Passwords do not match",;
-    path: ["confirmPassword"]}),;
-type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,;
-export default function UpdatePassword() {;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [accessToken, setAccessToken] = useState<string | null>(null),;
-  const [error, setError] = useState<string | null>(null),;
-  const [success, setSuccess] = useState(false),;
-  const navigate = useNavigate(),;
-  const location = useLocation(),;
-  // Initialize react-hook-form;
-  const form = useForm<UpdatePasswordFormValues>({;
-    resolver: zodResolver(updatePasswordSchema),;
-    defaultValues: {;
-      password: "",;
-      confirmPassword: ""}}),;
-  useEffect(() => {;
-    // Extract access token from URL hash;
-    const hashParams = new URLSearchParams(location.hash.substring(1)),;
-    const token = hashParams.get("access_token"),;
-    if (token) {;
-      setAccessToken(token);
-    } else {;
-      setError("No access token found. Please request a new password reset link.");
-    }
-;
-    // Clean up auth state to prevent issues;
-    cleanupAuthState();
-  }, [location]),;
-  // Form submission handler;
-  const onSubmit = async (data: UpdatePasswordFormValues) => {;
-    if (!accessToken) {;
-      setError("No access token found. Please request a new password reset link."),;
-      return;
-    }
-;
-    setIsLoading(true),;
-
-    }
-    }
-
-  },
-
-
-  return (
-
-    }
-  }
-  return (
-;
-    setIsLoading(true),;
-    try {;
-      // Set the session with the access token;
-      await supabase.auth.setSession({;
-        access_token:accessToken,;
-        refresh_token:''}),;
-;
-      // Update the password;
-      const { error } = await supabase.auth.updateUser({;
-        password:data.password}),;
-;
-      if (error) {;
-        toast({;
-          title:"Password update failed",;
-          description:error.message,;
-          variant:"destructive"}),;
-        setError(error.message),;
-        return,;
     try {;
       // Set the session with the access token;
       await supabase && supabase.auth.setSession({;
@@ -346,6 +172,16 @@ export default function UpdatePassword() {;
                   </Button>
                 </div>
               )}
+                    onClick={() => navigate('/forgot-password')}
+                  >;
+                    Request new reset link;
+                  </Button>;
+                </div>;
+              )}
+
+
+
+
 
               {success ? (
                 <div className="text-center py-8">
@@ -590,3 +426,5 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
+}
+;

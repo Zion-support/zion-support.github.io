@@ -15,6 +15,27 @@ interface FilterSidebarProps {
   filterOptions;
   onFilterChange;
   onRatingChange;
+interface FilterSidebarProps {;
+  filters: {;
+    selectedProductTypes: string[],;
+    selectedLocations: string[],;
+    selectedAvailability: string[],;
+    selectedRating: number | null;
+  };
+  filterOptions: FilterOptions,;
+  onFilterChange: (filterType: string, value: string) => void,;
+  onRatingChange: (rating: number | null) => void,;
+  onClearFilters: () => void;
+}
+
+export function FilterSidebar(): any ({;
+
+  filters;
+  filterOptions;
+  onFilterChange;
+  onRatingChange;
+  onClearFilters;
+}: FilterSidebarProps) {;
           onClick={onClearFilters}
         >
           Clear All

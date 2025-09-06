@@ -4,9 +4,6 @@ export default function AISolutionsPage() {
 
   const aiSolutions = [
     {
-      complexity: 'Advanced'
-    }
-
         'Predictive Analytics'
         'Pattern Recognition'
         'Anomaly Detection'
@@ -80,9 +77,6 @@ export default function AISolutionsPage() {
   const useCases = [
     {
     {
-      id: 'ai - automation',
-      title: 'AI - Powered Automation',
-      description: 'Intelligent automation that learns and improves over time.',
   const use_cases = [;
     {
       industry: 'Manufacturing',
@@ -211,6 +205,18 @@ export default function AISolutionsPage() {
                     <ul className="space-y-1 mb-4">;
                       {solution && solution.features.map((feature, featureIndex) => (;
                         <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
+                    </ul>
+
+                    <Link
+                      href={`/services#${solution.id}`}
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
+                    >
+                      Learn More <span className='ml-1'>→</span>                    </Link>                      href={`/services#${solution.id}`}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                      Learn More <span className="ml-1">→</span>
+                    </Link>
+
                           {feature}
                         </li>;
                       ))}
@@ -245,6 +251,18 @@ export default function AISolutionsPage() {
                     <Link
 
                           {feature}
+
+                  </div>
+                ))}
+              </div>
+            </div>
+
+              </div>;
+            </div>;
+
+
+            {/* Industry Use Cases */}
+
 
             {/* Industry Use Cases */}
             <div className='mb-16'>
@@ -286,7 +304,6 @@ export default function AISolutionsPage() {
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='flex flex-wrap justify-center gap-4'>
 
-
                   {technologies.map((tech, index) => (
                     <span
                       key={index}
@@ -297,11 +314,9 @@ export default function AISolutionsPage() {
                       {tech}
                     </span>;
                   ))}
-
-                </div>;
-              </div>;
-            </div>;
-
+                </div>
+              </div>
+            </div>
 
             {/* Success Stories */}
             <div className='mb-16'>;
@@ -365,5 +380,23 @@ export default function AISolutionsPage() {
                 </Link>
                 <Link
                   href="/automation-insights"
+
+                  Explore Insights;
+                </Link>;
+              </div>;
+            </div>;
+          </section>;
+        </main>;
+      </div>;
+
+
+}
+  );
+}
 }
 
+}
+    </>);
+}
+  );
+}

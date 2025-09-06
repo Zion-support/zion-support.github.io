@@ -1,5 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/main
 
 /* eslint - env node */;
 =======
@@ -27,8 +32,19 @@ module.exports = {
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /* eslint-env node */
 module.exports = {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -37,10 +53,13 @@ module && module.exports = {
 >>>>>>> origin/main
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
   env: {
     node: true,
     es2021: true
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -48,6 +67,8 @@ module && module.exports = {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
@@ -101,7 +122,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 export default {
   extends: ['next/core-web-vitals', 'next/typescript'],
 ursor/add-new-services-and-deploy-updates-0462
+<<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -123,7 +147,10 @@ ursor/add-new-services-and-deploy-updates-0462
   },
   env: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   "extends": [
@@ -138,9 +165,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     "ecmaVersion": 12,
     "sourceType": "module"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
   },
   "plugins": [
     "react",
@@ -326,7 +356,10 @@ module.exports = {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
   ignorePatterns: [
     'node_modules/',
     '.next/',
@@ -484,7 +517,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     'commit-and-push.js'
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -493,7 +529,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     }
   extends: ['next/core-web-vitals'],
 origin/automation-improvements-final
+<<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
   rules: {
 <<<<<<< HEAD
     "@typescript-eslint/no-unused-vars": "off",
@@ -519,6 +558,7 @@ origin/automation-improvements-final
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -540,6 +580,8 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> origin/main
   ignorePatterns: [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -751,6 +793,9 @@ origin/automation-improvements-final
     "data && data.disabled/",
     "database/",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
@@ -762,9 +807,20 @@ origin/automation-improvements-final
 <<<<<<< HEAD
   ],
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
@@ -859,56 +915,65 @@ origin/automation-improvements-final
     "commit-and-push.js"
   ]
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     "ecosystem.simple.js",
     "ecosystem.working.js",
-    "execute - automation.js",
+    "execute-automation.js",
     "fix_all_function_names.js",
     "fix_corrupted_files.js",
     "fix_empty_pages.js",
     "fix_utils_files.js",
     "fix_variable_names.js",
-    "git - ops.js",
-    "health - endpoint.js",
+    "git-ops.js",
+    "health-endpoint.js",
     "hooks/",
-    "improve - app.js",
+    "improve-app.js",
     "jest.config.ts",
     "jest.setup.js",
     "lib.broken/",
     "lib.disabled/",
     "lib/",
-    "lint - stub.js",
-    "lint - target/",
-    "maintenance - scheduler.js",
-    "merge - prs.js",
-    "merge - resolver.js",
+    "lint-stub.js",
+    "lint-target/",
+    "maintenance-scheduler.js",
+    "merge-prs.js",
+    "merge-resolver.js",
     "middleware.security.ts",
     "middleware/",
-    "monitoring - system.js",
+    "monitoring-system.js",
     "netlify/",
-    "next - env.d.ts",
+    "next-env.d.ts",
     "next.config.analyze.js",
     "next.config.analyzer.js",
     "next.config.optimized.js",
     "next.config.resolved.js",
-    "optimized - build.js",
-    "pages - backup/",
+    "optimized-build.js",
+    "pages-backup/",
     "pages._quarantine/",
     "pages.disabled_full/",
     "pages.old/",
     "App.tsx",
-    "advanced - app - improvements.js",
-    "analyze - missing - pages.js",
-    "api - disabled/",
+    "advanced-app-improvements.js",
+    "analyze-missing-pages.js",
+    "api-disabled/",
     "api.disabled/",
     "api/",
-    "automation - runner.js",
-    "basic - test.js",
+    "automation-runner.js",
+    "basic-test.js",
     "broken_files_backup/",
 <<<<<<< HEAD
+>>>>>>> origin/main
     "build - verification.js",
     "check - syntax.js",
     "clean - conflicts.js",
     "commit - and - push.js",
+<<<<<<< HEAD
   ],
 }
 ;
@@ -940,6 +1005,8 @@ origin/automation-improvements-final
   ]
 };
     "commit-and-push.js",
+=======
+>>>>>>> origin/main
   ],
 };
 };
@@ -993,10 +1060,15 @@ module.exports = {;
 },;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1012,3 +1084,6 @@ module.exports = {;
 
 
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/main

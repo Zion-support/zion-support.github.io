@@ -8,6 +8,12 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+  try {
+
+    const idx = reviews && reviews.findIndex(r => r && r.id === reviewId);
+    if (idx < 0) return res && res.status(404).json({ error: 'Review not found' });
+
+
     if (action === 'approve') {
       reviews[idx].approved = true;
     } else if (action === 'remove') {
@@ -117,11 +123,6 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }

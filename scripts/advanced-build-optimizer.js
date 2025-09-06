@@ -160,4 +160,3 @@ const optimizer = new BuildOptimizer();
 // Run the optimizer;
 const optimizer = new BuildOptimizer();
 optimizer.optimize().catch(console.error);
-

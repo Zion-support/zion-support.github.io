@@ -27,4 +27,5 @@ export function useResumeBasic() {;
     // From useResumeActions;
     createResume: resumeActions.createResume;
     updateBasicInfo: resumeActions.updateBasicInfo;
+    setActiveResume: resumeActions.setActiveResume}
 }

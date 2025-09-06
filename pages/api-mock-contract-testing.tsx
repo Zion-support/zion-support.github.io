@@ -1,12 +1,3 @@
-import Head from 'next / head';
-import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check, } from 'lucide-react';
-import Layout from '../components / layout / Layout';
-import ServiceAds from '../components / sections / ServiceAds';
-export default /**
- * ApiMockContractTestingPage - Function description
- */
-function ApiMockContractTestingPage() {
-  const contact_info = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',;
@@ -66,6 +57,8 @@ export default function ApiMockContractTestingPage(req, res) {
   ];
 ;
   const tiers = [;
+    },  ];
+;
   return (
         />;
         <link
@@ -78,10 +71,6 @@ export default function ApiMockContractTestingPage(req, res) {
           heading='API Quality Fast-Track'
           subheading='Mock, validate, and ship with confidence.'
           items={adItems}
-        />
-        <div className='max-w-5xl mx-auto mt-8'>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-            {tiers.map(t => (
               <div
                 key={t && t.name}
                 className='bg-black/30 border border-gray-700/50 rounded-2xl p-6'>;
@@ -99,8 +88,6 @@ export default function ApiMockContractTestingPage(req, res) {
                       className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
                       <Check /> <span>{i}</span>;
                     </li>                  ))}
-                </ul>;
-              </div>;
           </div>
           <div className='mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4'>
@@ -117,6 +104,7 @@ export default function ApiMockContractTestingPage(req, res) {
                 <span>{contactInfo.address}</span>
               </div>
           </div>
+
           <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
               <div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
@@ -139,3 +127,6 @@ export default function ApiMockContractTestingPage(req, res) {
 
     </Layout>);
 ;
+;
+
+

@@ -1,3 +1,9 @@
+// Extend FeatureCardProps to include key for mapping
+declare module '@/components/FeatureCard' {
+import {ReactNode} from 'react';
+// Extend FeatureCardProps to include key for mapping;
+declare module '@/components / FeatureCard' {
+  export interface FeatureCardProps {
     title: string;
     description: string;
     icon: ReactNode;
@@ -11,3 +17,5 @@
     author_image?: string;
     ai_score?: number;
     rating?: number;
+  }
+}

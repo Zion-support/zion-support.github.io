@@ -5,6 +5,12 @@ import { Resume, ResumeBasicInfo  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useResumeActions() {
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Resume, ResumeBasicInfo} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+export function useResumeActions() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -26,6 +32,11 @@ export function useResumeActions() {;
     if (!user) {;
       setError('You must be logged in to create a resume'),;
       return null;
+    }
+    
+    setIsLoading(true),
+    setError(null),
+    
     try {
       const { data, error } = await supabase
         .from('talent_resumes')
@@ -35,53 +46,6 @@ export function useResumeActions() {;
         .single();
       if (error) throw error;
       showSuccessToast("Resume created", "Your resume has been created successfully");
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {Resume, ResumeBasicInfo} from '@/types / resume';
-import {use_auth} from '@/hooks / use_auth';
-import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
-export /**
- * useResumeActions - Function description
- */
-function useResumeActions() {
-  const { user } = use_auth ();
-  const [is_loading, setIsLoading] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-;
-  const create_resume = async (basic_info: ResumeBasicInfo): Promise < string | null> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ('You must be logged in to create a resume'),
-      return null;
-    }
-    setIsLoading (true);
-    set_error (null);
-;
-    try {
-      const { data, error } = await supabase;
-        .from ('talent_resumes');
-        .insert ({
-          user_id: user.id;
-          title: basic_info.title;
-          headline: basic_info.headline,
-          summary: basic_info.summary;
-        });
-        .select ('id');
-        .single ();
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      showSuccessToast ("Resume created", "Your resume has been created successfully");
-;
-      return data.id;
-    } catch (e: any) {
-      return handleResumeError (e, 'Could not create resume') ? null : null;
-    } finally {
-      setIsLoading (false);
     }
   }
   const updateBasicInfo = async (resumeId: string, basicInfo: ResumeBasicInfo): Promise<boolean> => {
@@ -125,37 +89,6 @@ if (throw error) {
         .from('talent_resumes')
         .update({
 ;
-  const updateBasicInfo = async (resume_id: string, basic_info: ResumeBasicInfo): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ('You must be logged in to update a resume'),
-      return false;
-    }
-    setIsLoading (true);
-    set_error (null);
-;
-    try {
-      const { error } = await supabase;
-        .from ('talent_resumes');
-        .update ({
-          title: basic_info.title;
-          headline: basic_info.headline,
-          summary: basic_info.summary;
-        });
-        .eq ('id', resume_id);
-        .eq ('user_id', user.id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      return showSuccessToast ("Resume updated", "Your resume information has been updated");
-    } catch (e: any) {
-      return handleResumeError (e, 'Could not update resume');
-    } finally {
-;
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -180,6 +113,11 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to set active resume'),;
       return false;
+    }
+    
+    setIsLoading(true),
+    setError(null),
+    
     try {
       // First, set all user's resumes to inactive
       const { error: resetError } = await supabase

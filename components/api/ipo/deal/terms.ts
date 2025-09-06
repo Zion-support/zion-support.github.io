@@ -4,14 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   res.status(200).json(terms)
 }
-import { readJsonFile } from '../../../../utils / api / storage';
-import { requireSuperadminApi } from '../../../../utils / api / auth';
-export default /**
- * handler - Function description
- */
-function handler() {
-  if () return) {
-  $2
+
 }
   const terms = readJsonFile ('deal / terms.json', {
     round: 'Series A',
@@ -35,3 +28,8 @@ function handler() {
     lead_investor: 'TBD'});
   res.status (200).json (terms);
 }
+
+}
+
+
+

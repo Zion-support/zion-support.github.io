@@ -1,8 +1,7 @@
 
-  page: number;
-  pageSize: number;
-  total: number;
-  onChange: (nextPage: number) => void;
+
+export type PaginationProps = {
+  on_change: (next_page: number) => void;
 }
 export default function Pagination({
   page
@@ -220,7 +219,11 @@ if ( {) {
         </Link>) : (
         <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor - not - allowed">;
           Next;
+}
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}
     </nav>);
 }
+
+  );
+

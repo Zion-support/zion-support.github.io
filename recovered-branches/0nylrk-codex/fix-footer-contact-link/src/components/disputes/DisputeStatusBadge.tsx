@@ -1,15 +1,18 @@
 
+import { Badge } from "@/components/ui/badge",
 interface DisputeStatusBadgeProps {
-  status: 'open' | 'under_review' | 'resolved' | 'closed';
+  status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
-
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
+  let message = "This item has an open dispute";
 export /**
  * DisputeStatusBadge - Function description
  */
 function DisputeStatusBadge() {
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",
-  let message = "This item has an open dispute";
-;
+  let message = "This item has an open dispute",
+  
   switch (status) {
     case 'under_review':;
       variant = "secondary";
@@ -51,3 +54,5 @@ interface DisputeStatusBadgeProps {;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
+}
+;

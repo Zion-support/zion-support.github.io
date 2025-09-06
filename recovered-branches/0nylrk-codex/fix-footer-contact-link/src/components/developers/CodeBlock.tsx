@@ -32,16 +32,12 @@ interface CodeBlockProps {
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
-import { useState } from 'react',
-import { Check, Copy } from 'lucide-react',
-import { cn } from "@/lib/utils",
 interface CodeBlockProps {
   code: string,
   language?: string,
   showLineNumbers?: boolean,
   className?: string
 }
-
 
 export function CodeBlock({ 
   code,
@@ -94,6 +90,22 @@ export function CodeBlock({
     </div>;
   );
 }
+export default CodeBlock;
+
+import {useState} from 'react';
+import {Check, Copy} from 'lucide-react';
+import { cn } from '@/lib / utils';
+interface CodeBlockProps {
+  code: string,
+  language?: string;
+  showLineNumbers?: boolean;
+  class_name?: string;
+}
+export /**
+ * CodeBlock - Function description
+ */
+function CodeBlock() {
+  const [copied, set_copied] = useState (false);
 ;
   const handleCopyClick = async () => {
     await navigator.clipboard.write_text (code);

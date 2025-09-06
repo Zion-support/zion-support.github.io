@@ -34,6 +34,34 @@ const TalentRoutes = () => {;
       <Route
         path="/create-talent-profile"
         element={
+const TalentRoutes = () => {
+const TalentRoutes = () => {;
+  return (
+    <Routes>;
+      {/* Talent Routes */}
+
+      <Route path="/talent" element={<TalentDirectory />} />;
+      <Route path="/talents" element={<TalentsPage />} />;
+      <Route path="/talent/:id" element={<TalentProfilePage />} />;
+      <Route
+        path="/saved-talents" 
+        element={
+          <ProtectedRoute>;
+            <SavedTalentsPage />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
+        path="/create-talent-profile" 
+        element={
+          <ProtectedRoute>;
+            <CreateTalentProfile />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route path="/profile/:id" element={<ProfilePage />} />;
+    </Routes>;
+  );
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
 import TalentDirectory from "../pages / TalentDirectory";
@@ -69,3 +97,4 @@ const TalentRoutes = () =>: any {
     </Routes>);
 }
 ;
+export default TalentRoutes;

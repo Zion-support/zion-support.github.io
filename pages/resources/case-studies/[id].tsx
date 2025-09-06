@@ -6,6 +6,8 @@ export default function CaseStudyResourcePage() {
   const router = useRouter(),
   const { id } = router.query,
 
+
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -289,6 +291,8 @@ export default function CaseStudyResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  ],
+  const caseStudy = caseStudies.find(study => study.id === id),
   if (!caseStudy) {
     return (
       <>
@@ -312,9 +316,6 @@ export default function CaseStudyResourcePage(req, res) {
         </div>
       </>
     )
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
   return (
     <>
@@ -372,6 +373,13 @@ export default function CaseStudyResourcePage(req, res) {
     return (;
       <>;
         <Head>;
+          <title > Case Study Resource Not Found | Zion Tech Group</title>;
+        </Head>;
+        <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
+          <main className="container mx - auto px - 6 py - 12">;
+            <div className="max - w-4xl mx - auto text - center">;
+              <h1 className="text - 4xl font - bold mb - 6 text - white">Case Study Resource Not Found</h1>;
+              <p className="text - xl text - white / 80 mb - 8">;
                 The case study resource you're looking for doesn't exist.;
               </p>;
               <Link;
@@ -386,3 +394,5 @@ export default function CaseStudyResourcePage(req, res) {
             </div>;
           </div>;
         </main>;
+
+

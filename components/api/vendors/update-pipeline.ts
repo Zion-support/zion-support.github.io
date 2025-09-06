@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
     return res.status(405).json({ error: 'Method not allowed' });
   const { itemId, status } = req.body |{}
   if (!itemId |!status)
@@ -18,4 +17,3 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   } catch (e: any) {
     res.status(500).json({ error: e.message })
   }
-}

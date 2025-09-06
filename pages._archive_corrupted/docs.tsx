@@ -38,7 +38,6 @@ const "DocsPage": React.FC = () => {
       "title": 'Deploy Your Application',
       "description": 'Deploy your application using our cloud infrastructure',
       "icon": <Globe className="w-6 h-6"  />
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -94,43 +93,6 @@ const "DocsPage": React.FC = () => {;
       "description": 'Deploy your application using our cloud infrastructure',;
       "icon": <Globe className="w-6 h-6"  />;
     }
-  ];
-  const apiSections = [{;
-      "title": 'AI Services API',;
-      "description": 'Access our AI and machine learning capabilities',;
-      "endpoints": 1 5,;
-      "icon": <Zap className="w-6 h-6"  />,;
-      "color": 'blue';
-    },;
-    {;
-      "title": 'Micro SaaS API',;
-      "description": 'Manage and deploy micro SaaS applications',;
-      "endpoints": 2 5,;
-      "icon": <Globe className="w-6 h-6"  />,;
-      "color": 'green';
-    },;
-    {;
-      "title": 'IT Infrastructure API',;
-      "description": 'Monitor and manage IT infrastructure',;
-      "endpoints": 2 0,;
-      "icon": <Database className="w-6 h-6"  />,;
-      "color": 'purple';
-    },;
-    {;
-      "title": 'Cybersecurity API',;
-      "description": 'Security monitoring and threat detection',;
-      "endpoints": 1 2,;
-      "icon": <Shield className="w-6 h-6"  />,;
-      "color": 'red';
-    }
-  ];
-  const codeExamples = [{;
-      "language": 'JavaScript',;
-      "title": 'AI Service Integration',;
-      "code": "// Initialize AI service;
-const aiService = new ZionAI({;
-  apiKey: 'your-api-key',;
-  "environment": 'production';
 });
 // Process text with AI;
 const result = await aiService && aiService.processText({;

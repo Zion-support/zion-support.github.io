@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils",
 interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   children?: React.ReactNode
+  className?: string;
+  children?: React && React.ReactNode;
 }
 export function SidebarGroupContent({
   className

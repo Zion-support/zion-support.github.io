@@ -2,7 +2,6 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden py-20 md:py-32">;
       {/* Background gradient effect */}
-      
       {/* Animated floating particles */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse"></div>

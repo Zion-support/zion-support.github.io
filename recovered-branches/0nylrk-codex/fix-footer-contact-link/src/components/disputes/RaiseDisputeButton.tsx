@@ -1,4 +1,11 @@
 
+import {Button} from "@/components/ui/button";
+import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
+import {DisputeForm} from "./DisputeForm";
+import {useNavigate} from "react-router-dom";
+import {ShieldAlert} from "lucide-react";
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
 import { 
   Dialog;
   DialogContent;
@@ -25,10 +32,6 @@ interface RaiseDisputeButtonProps {
   size?: "default" | "sm" | "lg" | "icon",
   className?: string
 }
-
-
-export function RaiseDisputeButton({ 
-  projectId,
 
 export function RaiseDisputeButton({ ;
   projectId;

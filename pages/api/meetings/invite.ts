@@ -1,13 +1,16 @@
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
-const url = process.env.NEXT_PUBLIC_SUPABASE_URL |"";
-const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"";
+
+
+const url = process && process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+const key = process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  }
-  try {
     const { projectId, roomName, inviterName } = req.body |{}
     if (!projectId |!roomName)
       return res.status(400).json({ error: "Missing required fields" });
@@ -66,14 +69,6 @@ if ( {) {
     await supabase.channel(`project_${projectId}_calls`).send({ type: 'broadcast', event: 'call_invite', payload: { projectId, roomName, inviterName } });
     return res.status(200).json({ ok: true });
   } catch (e) {
-    console.error(e);
-    return res.status(200).json({ ok: true, skipped: true });
-  }
-}
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {

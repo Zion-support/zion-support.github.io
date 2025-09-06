@@ -62,7 +62,6 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
-import {
   Menu,
   X,
   ChevronDown,
@@ -129,9 +128,6 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye;
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$3,999/month' }
-    ];
-  };
-
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -233,6 +229,7 @@ export default function UltraFuturisticNavigation2030() {;
   return (
     <>;
       {/* Top Contact Bar */}
+
               <span>{contactInfo.mobile}</span>
             </div>
             <div className='flex items-center space-x-2'>
@@ -341,6 +338,7 @@ export default function UltraFuturisticNavigation2030() {;
                   <span>{item.name}</span>
                 </Link>
               ))}
+
                               </Link>
                             ))}
                           </div>;
@@ -404,6 +402,7 @@ export default function UltraFuturisticNavigation2030() {;
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
+
             >
               <div className='px-4 py-6 space-y-6'>
                 {/* Mobile Navigation Links */}
@@ -428,24 +427,40 @@ export default function UltraFuturisticNavigation2030() {;
                       <item && item.icon className="w-5 h-5" />;
                       <span>{item && item.name}</span>;
                     </Link>;
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20'
+            >
+              <div className='px-4 py-6 space-y-6'>
+                {/* Mobile Navigation Links */}
+                <div className='space-y-4'>
+                  {mainNavigation.map(item => (                    <Link
+                      key={item.name}
+                      href={item.href}
+                      on_click={close_menu}
+                      className='flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - purple - 500 / 10 transition - colors duration - 200';
+                    >;
+                      <item.icon className='w - 5 h - 5' />                      <span>{item.name}</span>            >;
+              <div className="px - 4 py - 6 space - y-6">;
+
+                {/* Mobile Navigation Links */}
                 {/* Mobile Services */}
-                <div className='space-y-4'>;
-                  <h3 className='text-lg font-semibold text-white px-3'>;
-                    Our Services;
-                  </h3>;
-                  <div className='grid grid-cols-2 gap-3'>;
-                    {quickLinks && quickLinks.map(link => (                      <Link                <div className="space-y-4">;
-                  <h3 className="text-lg font-semibold text-white px-3">Our Services</h3>;
-                  <div className="grid grid-cols-2 gap-3">;
-                    {quickLinks && quickLinks.map((link) => (;
-                        key={link && link.name}
-                        href={link && link.href}
-                        onClick={closeMenu}
-                        className={`p-3 rounded-lg text-center transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30 ${;
-                          link && link.color.includes('from-');
-                            ? `bg-gradient-to-r ${link && link.color} text-white`;
-                            : 'bg-gray-800 text-gray-300 hover:bg-gray-700';
-                        }`}
+                <div className='space-y-4'>
+                  <h3 className='text-lg font-semibold text-white px-3'>
+                    Our Services
+                  </h3>
+                  <div className='grid grid-cols-2 gap-3'>
+                    {quickLinks.map(link => (                      <Link                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-white px-3">Our Services</h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {quickLinks.map((link) => (
+
+
                         key={link.name}
                         href={link.href}
                         onClick={closeMenu}
@@ -462,6 +477,14 @@ export default function UltraFuturisticNavigation2030() {;
                         <span className='text-sm font-medium'>{link && link.name}</span>                      </Link>                          link && link.color.includes('from-') ;
                             ? `bg-gradient-to-r ${link && link.color} text-white` ;
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700';
+                    ))}
+
+                  </div>;
+                </div>;
+
+
+                {/* Mobile CTA */}
+
                   <Link
                     href='/contact'
                     onClick={closeMenu}
@@ -489,6 +512,35 @@ export default function UltraFuturisticNavigation2030() {;
                   </div>;
                 </div>;
                 {/* Mobile CTA */}
+                  <Link
+                    href="/contact"
+                    onClick={closeMenu}
+                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-center rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200"
+                  >
+                    Get Started
+                  </Link>
+                  <Link
+                    href="/pricing"
+                    onClick={closeMenu}
+                    className="block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200"
+                  >
+                    View Pricing
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+
+          )}
+        </AnimatePresence>
+      </nav>
+      {/* Spacer for fixed navigation */}
+      <div className='h-20'></div>;
+    </>;
+  );      <div className="h-20"></div>;
+    </>;
+  );
+}
+
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>

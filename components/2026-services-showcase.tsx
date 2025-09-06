@@ -14,6 +14,44 @@
   Atom
   Sparkles
   Target;
+} from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
+
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
+import { emergingTech2026Services  } from '../data/emerging-tech-2026-services';
+import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
+export default function ServicesShowcase2026() {;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
+
+  // Combine all 2026 services;
+  const allServices = [;
+    ...revolutionary2026Services,;
+    ...emergingTech2026Services,;
+    ...comprehensiveIT2026Services,    ...revolutionary2026Services;
+    ...emergingTech2026Services;
+    ...comprehensiveIT2026Services;
+  ];
+
+;
+  // Filter and sort services;
+  const filtered_services = all_services;
+    .filter (service => {
+      const matches_search =;
+        service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+        service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+        service.category.toLowerCase ().includes (search_term.toLowerCase ());
+      const matches_category =;
+        selected_category === 'all' ||;
+        service.category.includes (selected_category);
+      return matches_search && matches_category;    });
+    .sort ((a, b) => {
+      switch (sort_by) {
+        case 'price':;
+
           return (
             parse_float (a.price.replace (/[^0 - 9.]/g, '')) -;
             parse_float (b.price.replace (/[^0 - 9.]/g, '')));        case 'rating':;
@@ -68,8 +106,6 @@
           <meta property="og:type" content="website" />;
           <link rel="canonical" href="https://ziontechgroup.com / 2026 - services - showcase" />;
         {/* Navigation */}
-        <UltraAdvancedNavigation />
-
         {/* Hero Section */}
               {/* Service Statistics */}
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
@@ -166,6 +202,13 @@
                       <option key={category && category.id} value={category && category.id}>;
                         {category && category.name} ({category && category.count});
                       </option>;
+                    ))}
+                  </select>
+                </div>
+
+                {/* Sort By */}
+                <div className='relative'>
+                  <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
                     value={sortBy}
                     onChange={e => setSortBy(e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none'
@@ -182,6 +225,11 @@
             </div>
           </div>
         </section>
+
+
+
+
+                {/* Sort By */}
 
 
                     {/* Service Title */}
@@ -295,6 +343,27 @@
 
                             {feature}
 
+                          </li>
+                        ))}
+
+
+
+
+
+                    {/* Category and Technology */}
+
+                    <div className="flex items-center justify-between mb-4">
+
+                      <span className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
+                        {service.category}
+                      </span>
+                      <span className="text-xs text-gray-500">
+
+                        {service.customers}+ customers
+
+                      </span>
+                    </div>
+
                       </ul>;
                     </div>;
                     {/* Category and Technology */}
@@ -320,9 +389,8 @@
                     </a>
                   </div>
                 </motion.div>
-
-            </div>;
-
+              ))}
+            </div>
 
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
@@ -473,5 +541,79 @@
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+
   );
+
+              className='bg - gradient - to - r from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 700 / 50 backdrop - blur - sm';
+            >;
+              <h2 className='text - 3xl font - bold text - white mb - 6'>;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className='text - xl text - gray - 300 mb - 8'>;
+                Join thousands of companies already leveraging our revolutionary;
+                2026 AI, quantum, and IT solutions;
+              </p>;
+              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8'>;
+                <div className='flex items - center justify - center space - x-3 text - cyan - 300'>;
+                  <span className='text - 2xl'>📱</span>;
+                  <span className='font - semibold'>{contact_info.mobile}</span>;
+                </div>;
+                <div className='flex items - center justify - center space - x-3 text - purple - 300'>;
+                  <span className='text - 2xl'>✉️</span>;
+                  <span className='font - semibold'>{contact_info.email}</span>;
+                </div>;
+                <div className='flex items - center justify - center space - x-3 text - pink - 300'>;
+                  <span className='text - 2xl'>📍</span>;
+                  <span className='font - semibold text - sm'>;
+                    {contact_info.address}
+                  </span>;
+                </div>;
+              </div>;
+              <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+                <a;
+                  href='/contact';
+                  className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105'                >;
+                  Contact Us Now;
+                </a>;
+                <a;
+                  href='/pricing';
+                  className='px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                >            >;
+              <h2 className="text - 3xl font - bold text - white mb - 6">Ready to Transform Your Business?</h2>;
+              <p className="text - xl text - gray - 300 mb - 8">;
+                Join thousands of companies already leveraging our revolutionary 2026 AI, quantum, and IT solutions;
+              </p>;
+              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8">;
+                <div className="flex items - center justify - center space - x-3 text - cyan - 300">;
+                  <span className="text - 2xl">📱</span>;
+                  <span className="font - semibold">{contact_info.mobile}</span>;
+                </div>;
+                <div className="flex items - center justify - center space - x-3 text - purple - 300">;
+                  <span className="text - 2xl">✉️</span>;
+                  <span className="font - semibold">{contact_info.email}</span>;
+                </div>;
+                <div className="flex items - center justify - center space - x-3 text - pink - 300">;
+                  <span className="text - 2xl">📍</span>;
+                  <span className="font - semibold text - sm">{contact_info.address}</span>;
+                </div>;
+              </div>;
+              <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
+                <a;
+                  href="/contact";
+                  className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105";
+                >;
+                  Contact Us Now;
+                </a>;
+                <a;
+                  href='/pricing';
+                  className='px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                  href="/pricing";
+                  className="px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300";
+                >;
+                  View Pricing;
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>);
 }

@@ -68,7 +68,7 @@ self && self.addEventListener('push', (event) => {
     const data = event && event.data.json();
     const options = {
       "data": {
-        dateOfArrival: Date.now()
+        dateOfArrival: Date && Date.now(),
         "primaryKey": 1
       }
     )}});
@@ -104,8 +104,8 @@ async function doBackgroundSync() {
   try {
     // Perform background sync operations
   // Example: Sync offline data
-    const offlineData = await getOfflineData()
-  if (offlineData.length > 0) {
+    const offlineData = await getOfflineData(),
+  if (offlineData && offlineData.length > 0) {
       await syncOfflineData(offlineData)
 }
   } catch (error) {

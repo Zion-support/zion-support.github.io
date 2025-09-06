@@ -57,6 +57,8 @@ interface AIListingFormProps {;
         <Input
           id="targetAudience"
           value={targetAudience}
+        onClick={handleSubmit}
+        disabled={isLoading || !title || !category}
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (
@@ -67,6 +69,26 @@ interface AIListingFormProps {;
             Generate Optimized Content
           </>
         )}
+import React, { useState } from './react';
+import { use_toast } from '@/hooks / use - toast';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+import { Sparkles } from './lucide-react';
+interface AIListingFormProps {
+  on_submit: (form_data: {
+    title: string,
+    category: string,
+    key_features: string,
+    target_audience: string;
+  }) => void;
+  is_loading: boolean,
+  initial_values?: {
+    title?: string;
+    category?: string;
+    key_features?: string;
+    target_audience?: string;
+  }
 }
 export /**
  * AIListingForm - Function description

@@ -26,6 +26,19 @@ export default function Support() {
       name: 'AI Services'
       icon: <Brain className="w-8 h-8 text-cyan-400" />
       description: 'Support for AI consciousness and autonomous systems'
+  BookOpen, Video, FileText, Search, Filter,
+  CheckCircle, ArrowRight, Brain, Atom, Rocket,
+  Shield, Zap, Users, Star, TrendingUp, Code
+} from 'lucide-react',
+export default function Support() {
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const supportCategories = [
+    {
+      id: 'ai-services',
+      name: 'AI Services',
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      description: 'Support for AI consciousness and autonomous systems',
       articles: 25
     }
     {
@@ -66,6 +79,9 @@ export default function Support() {
     {
       title: 'Video Call',
       description: 'Screen share and visual assistance',
+  return (
+
+    <div className="min-h-screen bg-black text-white">
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -523,6 +539,32 @@ export default function Support() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                question: "What is AI Consciousness Evolution?",
+                answer: "AI Consciousness Evolution is our revolutionary platform that creates truly conscious, self - aware, and emotionally intelligent AI systems that transcend traditional artificial intelligence.";
+              },
+              {
+                question: "How does Quantum Neural Ecosystem work?",
+                answer: "Our Quantum Neural Ecosystem combines quantum computing with neural networks to solve previously impossible problems, leveraging quantum superposition and entanglement for exponential computational power.";
+              },
+              {
+                question: "What makes Space Resource Intelligence unique?",
+                answer: "Our space technology uses AI - powered autonomous exploration to discover and extract extraterrestrial resources, enabling sustainable space colonization and resource utilization.";
+              },
+              {
+                question: "How secure is your Quantum Cybersecurity platform?",
+                answer: "Our quantum cybersecurity provides unbreakable encryption using quantum key distribution and quantum - resistant algorithms that future - proof your security beyond current technological limitations.";
+              },
+              {
+                question: "Can I integrate your AI with my existing systems?",
+                answer: "Yes! We provide comprehensive integration support, APIs, and custom development services to seamlessly integrate our revolutionary AI solutions with your existing infrastructure.";
+              },
+              {
+                question: "What support do you offer for enterprise deployments?",
+
+                answer: "We provide dedicated enterprise support including 24/7 technical assistance, custom training programs, and dedicated account managers for large-scale deployments."
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -532,7 +574,6 @@ export default function Support() {
                 <h3 className="text-lg font-semibold mb-3 text-white">{faq.question}</h3>
                 <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
               </div>
-
       {/* FAQs */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -631,7 +672,6 @@ export default function Support() {
                     <div className="flex flex-wrap gap-2">
                       {faq.tags.map((tag) => (
                         <span
-
                           key={tag  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -743,6 +783,13 @@ export default function Support() {
                 initial={{ opacity: 0, coordinate_x: -20 }}
                 whileInView={{ opacity: 1, coordinate_x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group cursor-pointer"
+              >
+                <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                        {article.title}
                         {article.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -752,7 +799,6 @@ export default function Support() {
                       <div className="flex items-center gap-4 text-sm text-gray-400">
                         <span className="flex items-center gap-1">
                           <BookOpen className="w-4 h-4" />
-
                           {article.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -784,16 +830,30 @@ export default function Support() {
                   </div>
                 </div>
               </motion.div>
-      {/* Support Hours & Contact */}
-      <section className="py - 20 bg - gradient - to - r from - gray - 900 / 50 to - black">;
-        <div className="container mx - auto px - 4">;
-          <div className="grid lg:grid - cols - 2 gap - 12 items - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_x: -20 }}
-              whileInView={{ opacity: 1, coordinate_x: 0 }}
-              transition={{ duration: 0.8 }}
-
-
+      <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Support Hours & Availability
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 revolutionary technology solutions.
               </p>
               <div className="space-y-4">
@@ -808,8 +868,6 @@ export default function Support() {
                         ? 'bg-green-500/20 text-green-400'
                         : 'bg-yellow-500/20 text-yellow-400'
                     }`}>
-
-
                       {schedule.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -847,7 +905,6 @@ export default function Support() {
                 <p className="text-gray-300 mb-6">
                   For urgent technical issues or critical support needs, 
                   For urgent technical issues or critical support needs,
-
                   our team is available around the clock.
                 </p>
                 <div className="space-y-4">
@@ -878,14 +935,29 @@ export default function Support() {
         </div>
       </section>
       {/* Contact CTA */}
-      <section className="py - 20 bg - gradient - to - r from - cyan - 900 / 20 via - purple - 900 / 20 to - pink - 900 / 20">;
-        <div className="container mx - auto px - 4 text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-
-
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Still Need Help?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               revolutionary technology solutions. Don't hesitate to reach out.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -907,14 +979,6 @@ export default function Support() {
       </section>
     </div>
   )
-        {/* Contact Support */}
-        <section id="contact - support" className="py - 20 px - 4 bg - gradient - to - r from - cyan - 900 / 20 via - purple - 900 / 20 to - pink - 900 / 20">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6 }}
-
 },
 export default Support,
           </div>

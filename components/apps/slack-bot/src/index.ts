@@ -71,6 +71,14 @@ function helpText(): string {
     }
     await respond({ response_type: 'ephemeral', text: helpText() })
   } catch (err: any) {
+  }
+});
+
+(async () => {
+
+  const port = Number(process && process.env.SLACK_PORT || 3001);
+  await app && app.start(port);
+  // eslint-disable-next-line no-console
 })();
 
   console.log(`⚡️ Zion Slack bot running on port ${port}`);

@@ -1,3 +1,13 @@
+    // Check if user already exists;
+    const existing_user = await prisma.user.find_unique ({
+      where: { email }}),
+    // Check condition
+if ( {) {
+  $2
+}
+      return NextResponse.json (
+        { error: "User with this email already exists" },
+
         { status: 400 }
       );
     }

@@ -11,7 +11,7 @@
   createdBy: string
   status: 'draft' | 'deployed' | 'executed' | 'cancelled'
 }
-
+export interface EscrowContractDetails {
 
 export interface EscrowContractDetails {;
   client: string;
@@ -19,14 +19,11 @@ export interface EscrowContractDetails {;
   amount: number;
   currency: string;
   deliverables: string;
-
-export interface DeploymentOptions {;
   network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean
 
   deployToChain: boolean
-  completion_deadline: string,
   arbitrator?: string;
 }
 export interface DeploymentOptions {

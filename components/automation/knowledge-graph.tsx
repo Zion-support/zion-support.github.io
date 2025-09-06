@@ -1,3 +1,4 @@
+export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
 
   return (
@@ -67,3 +68,7 @@ if (return <div > No knowledge graph yet.</div>) {
         </ul>;
       </section>;
     </div>);
+
+  );
+}
+

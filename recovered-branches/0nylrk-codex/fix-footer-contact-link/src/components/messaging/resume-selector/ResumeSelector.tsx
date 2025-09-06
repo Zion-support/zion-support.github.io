@@ -63,12 +63,6 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
   useEffect(() => {
 
     const loadResumes = async () => {
-      setIsLoading(true);
-      try {;
-        await fetchResume();
-      } catch (error) {;
-        console && console.error("Error loading resumes:", error);
-      } finally {;
         setIsLoading(false);
       }
     }
@@ -230,6 +224,14 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     }
   },
   
+  // Handle custom file upload
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0],
+      
+      // Check if it's a PDF file
+      if (file.type !== "application/pdf") {
+        toast({
         });
         return;
       }
@@ -282,6 +284,38 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     if (!selectedResume || selectedResume.type !== 'ai_resume' || !selectedResume.resume) {;
       return;
     }
+    try {
+      setIsLoading(true),
+      const pdfBlob = await exportResumeToPDF(selectedResume.resume),
+      
+      // Create download link
+      const url = URL.createObjectURL(pdfBlob),
+      const link = document.createElement('a'),
+      link.href = url,
+      link.download = `${selectedResume.title || 'Resume'}.pdf`,
+      document.body.appendChild(link),
+      link.click(),
+      
+      // Clean up
+      document.body.removeChild(link),
+      URL.revokeObjectURL(url),
+      
+      toast({
+        title: "Success!",
+        description: "Your resume has been downloaded."})
+    } catch (error) {
+      console.error("Error downloading PDF:", error);
+      toast({
+        title: "Download failed"
+        description: "There was an error downloading your resume."
+        variant: "destructive"
+      });
+        title: "Download failed",
+        description: "There was an error downloading your resume.",
+        variant: "destructive"
+      })
+    } finally {
+      setIsLoading(false)
     }
   }
   // Handle "Generate Resume Now" button
@@ -321,11 +355,20 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
           </Label>
         </div>
       </RadioGroup>
+            Upload a custom resume (PDF);
+          </Label>;
+        </div>;
+      </RadioGroup>;
+
+      {/* Resume selection options based on radio selection */}
+      {selectedOption === 'recent' && resume && (;
+        <ResumePreviewCard;
           resume={resume}
           onDownload={handleDownloadResume}
           isLoading={isLoading}
         />;
       )}
+
       {selectedOption === "select" && (
         <SelectResumeSection
 ;
@@ -338,6 +381,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
           isLoading={isLoading}
         />;
       )}
+
       {selectedOption === "upload" && (
         <UploadSection
 ;
@@ -347,6 +391,49 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
           onFileUpload={handleFileUpload}
         />;
       )}
+;
+
+;
+      {/* Generate Resume Now button */}
+      <div className="flex justify-between items-center pt-2">;
+        <Button
+          variant="outline"
+          onClick={handleGenerateResume}
+
+      {/* Resume selection options based on radio selection */}
+      {selected_option === "recent" && resume && (
+        <ResumePreviewCard;
+          resume={resume}
+          on_download={handleDownloadResume}
+          is_loading={is_loading}
+        />)}
+      {selected_option === "select" && (
+        <SelectResumeSection;
+          resume_options={resume_options}
+          selected_resume={selected_resume}
+          handleResumeSelect={handleResumeSelect}
+          handleDownloadResume={handleDownloadResume}
+          is_loading={is_loading}
+        />)}
+      {selected_option === "upload" && (
+        <UploadSection;
+          custom_file={custom_file}
+          onFileUpload={handleFileUpload}
+        />)}
+      {/* Generate Resume Now button */}
+      <div className="flex justify - between items - center pt - 2">;
+        <Button;
+          variant="outline";
+          on_click={handleGenerateResume}
+          className="text - zion - purple border - zion - purple / 20";
+        >;
+          <Plus className="h - 4 w - 4 mr - 2" />;
+          Generate Resume Now;
+        </Button>;
+      </div>;
+    </div>);
+
+}
           className="text-zion-purple border-zion-purple/20"
         >
           <Plus className="h-4 w-4 mr-2" />
@@ -354,6 +441,3 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         </Button>
       </div>
     </div>
-  )
-}
-;

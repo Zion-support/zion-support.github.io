@@ -36,6 +36,25 @@ import { Handshake, MessageSquare } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 import { UserProfile } from "@/types/auth",
+
+  const { id } = useParams() as { id?: string }
+  const navigate = useNavigate();
+  const { profile, isLoading, error } = useTalentProfile(id);
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
+  const { userDetails } = useAuthStatus();
+  const { isAuthenticated, user } = useAuth();
+import { toast } from "@/hooks/use-toast",
+export default function TalentProfilePage() {
+  // Cast to specify the expected route param type since useParams may be untyped
+  const { id } = useParams() as { id?: string },
+  const navigate = useNavigate(),
+  const { profile, isLoading, error } = useTalentProfile(id),
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false),
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),
+  const { userDetails } = useAuthStatus(),
+  const { isAuthenticated, user } = useAuth(),
+
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user ? {
     id: user.id |''
@@ -214,10 +233,18 @@ import { UserProfile } from "@/types/auth",
             <Handshake className="mr-2 h-4 w-4" />;
             Hire Now;
           </Button>;
-            Message;
-          </Button>;
-        </div>;
-      </StickyAction>;
+          <Button
+            size="sm"
+            variant="outline"
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+            onClick={handleMessageTalent}
+          >
+            <MessageSquare className="mr-2 h-4 w-4" />
+            Message
+          </Button>
+        </div>
+      </StickyAction>
+      
       {/* Request to Hire Modal */}
       <HireRequestModal
         talent={profile}

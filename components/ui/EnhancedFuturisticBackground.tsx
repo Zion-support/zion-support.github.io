@@ -60,6 +60,16 @@ const EnhancedFuturisticBackground: React.FC<;
         if (this.y > canvas.height) this.y = 0;
         // Fade out near end of life
         if (this.life < 20) {
+          this.opacity *= 0.95;        }
+
+        }
+      }
+
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = this.opacity;
+
+        
         // Create gradient for particle
         const gradient = ctx.createRadialGradient(
           this.x
@@ -78,6 +88,28 @@ const EnhancedFuturisticBackground: React.FC<;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
+      }
+      isDead() {
+        return this.life <= 0 |this.opacity < 0.01;      }
+        return this.life <= 0 || this.opacity < 0.01;      }        
+        ctx.restore()
+        return this.life <= 0 || this.opacity < 0.01;      }
+
+      }
+      isDead() {
+
+        return this.life <= 0 || this.opacity < 0.01
+      }
+
+    }
+
+        return this.life <= 0 || this.opacity < 0.01;      }        
+
+        ctx.restore()
+        return this.life <= 0 || this.opacity < 0.01;      }
+
+
+
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
@@ -225,6 +257,13 @@ if (> 0.975) {) {
         }
       }
 
+
+
+
+          }
+        }
+      }
+
       // Draw connections
       connections.forEach(connection => connection.draw());
       // Add floating geometric shapes
@@ -284,3 +323,13 @@ if (> 0.975) {) {
 }
 export default EnhancedFuturisticBackground;
 
+          background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
+        }}
+      />;
+{/* Content */}
+      <div className='relative z - 10'>{children}</div>;
+    </div>);
+}
+;
+export default EnhancedFuturisticBackground;
+;

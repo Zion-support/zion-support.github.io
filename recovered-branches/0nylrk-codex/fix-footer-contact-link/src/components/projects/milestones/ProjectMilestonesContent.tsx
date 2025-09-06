@@ -28,38 +28,6 @@ import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions,
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
 
-        }
-      } catch (error) {;
-        console && console.error("Error loading project:", error);
-      } finally {;
-        setIsLoading(false);
-      }
-    }
-    
-    loadProject(),
-    refetch()
-  }, [projectId, getProjectById, refetch]),
-    return (
-      <div className="container mx-auto py-8 px-4">;
-        <div className="flex justify-center items-center h-64">;
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
-        </div>;
-      </div>;
-    );
-  }
-    refetch();
-  }, [projectId, getProjectById, refetch]);
-  const handleMilestoneCreated = async () => {;
-    await refetch();
-  };
-  // Determine if the user is the client or talent;
-  const isClient = user?.id === project?.client_id;
-  const isTalent = user?.id === project?.talent_id;
-  // Determine project type based on job category or default to "Other";
-  const projectType = job?.category || "Other";
-  if (isLoading || !project) {;
-    return (
-
 import React, { useState, useEffect } from 'react',;
 import { useParams } from 'react-router-dom',;
 import { useProjects } from '@/hooks/useProjects',;
@@ -98,7 +66,6 @@ export function ProjectMilestonesContent() {;
   const { job, isLoading:jobLoading } = useJobDetails(project?.job_id),;
   ;
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId),;
-;
   useEffect(() => {;
     async function loadProject() {;
       if (!projectId) return,;
@@ -107,7 +74,6 @@ export function ProjectMilestonesContent() {;
       try {;
         const projectData = await getProjectById(projectId),;
         if (projectData) {;
-          setProject(projectData),;
         }
       } catch (error) {;
         console.error("Error loading project:", error),;
@@ -118,24 +84,9 @@ export function ProjectMilestonesContent() {;
           setProject(projectData)}
       } catch (error) {} finally {setIsLoading(false)}
     }
-    ;
     loadProject(),;
     refetch(),;
   }, [projectId, getProjectById, refetch]),;
-;
-  const handleMilestoneCreated = async () => {;
-    await refetch(),;
-  },;
-  ;
-  // Determine if the user is the client or talent;
-  const isClient = user?.id === project?.client_id,;
-  const isTalent = user?.id === project?.talent_id,;
-;
-  // Determine project type based on job category or default to "Other";
-  const projectType = job?.category || "Other",;
-;
-  if (isLoading || !project) {;
-    return (;
   const handleMilestoneCreated = async () => {;
     await refetch();
   };

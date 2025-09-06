@@ -255,6 +255,14 @@ const Revolutionary2027ServicesShowcase = () => {
           </p>;
         </motion && motion.div>;
 
+
+
+
+        {/* Category Overview */}
+        <motion&& motion.div
+          variants={containerVariants}
+
+
         {/* Featured Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
@@ -273,22 +281,13 @@ const Revolutionary2027ServicesShowcase = () => {
               <div className='relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 h-full transform transition-all duration-500 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl group-hover:shadow-purple-500/20'>;
                 {/* Service Icon */}
                 <div
-                </div>
-                {/* Service Content */}
-                <div className='space-y-4'>
-                  <h3 className='text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300'>
-                    {service.name}
-                  </h3>
-                  <p className='text-gray-300 leading-relaxed'>                    {service.description}
-                  </p>
-                  {/* Features */}            >
-          ))}
-        </motion.div>
         {/* Featured Services Grid */}
         <motion.div
           variants={containerVariants}
-          initial='hidden'
-          whileInView='visible'
+
+          initial="hidden"
+          whileInView="visible"
+
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
@@ -605,6 +604,8 @@ const Revolutionary2027ServicesShowcase = () => {
                     </Link>
                   </div>
                 </div>
+        {/* Call to Action */}
+        <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
@@ -655,47 +656,14 @@ const Revolutionary2027ServicesShowcase = () => {
       </div>;
     </section>;
   );
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
-              <Link;
-                href='https://ziontechgroup.com / contact';
-                className='inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - purple - 500 / 25';
-              >;
-                <span > Get Started Today</span>;
-                <ArrowRight className='w - 5 h - 5' />;
-              </Link>;
-              <a;
-                href='tel:+13024640950';
-                className='inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl'              >        >;
-          <div className="bg - gradient - to - r from - purple - 900 / 50 to - cyan - 900 / 50 backdrop - blur - xl border border - purple - 500 / 30 rounded - 3xl p - 12">;
-            <h3 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
-              Ready to Transform Your Business?;
-            </h3>;
-            <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
-              Join the future of technology with our revolutionary 2027 services.;
-              Get in touch to discover how we can accelerate your digital transformation.;
-            </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
-              <Link;
-                href="https://ziontechgroup.com / contact";
-                className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - purple - 500 / 25";
-              >;
-                <span > Get Started Today</span>;
-                <ArrowRight className="w - 5 h - 5" />;
-              </Link>;
-              <a;
-                href="tel:+13024640950";
-                className="inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl";
-              >;
-                <span > Call +1 302 464 0950</span>;
-              </a>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>);
-}
-;
-export default Revolutionary2027ServicesShowcase);
-}
-;
+};
+export default Revolutionary2027ServicesShowcase;  );
+};
 export default Revolutionary2027ServicesShowcase;
+
+export default Revolutionary2027ServicesShowcase;
+  );
+
+};
+
+

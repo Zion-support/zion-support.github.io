@@ -24,24 +24,96 @@ import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-e
     description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
     services: cuttingEdgeAIServices2025,
     icon: Brain,
-    bg_color: 'from - violet - 900 / 20 to - purple - 900 / 20',
-    border_color: 'border - violet - 500 / 30';
-  },
-  {
-  {
-    title: 'Enterprise IT',
-    description: 'Advanced enterprise infrastructure and security solutions',
-    services: cuttingEdgeITServices2025,
-    icon: Shield,
-  {
-    title: 'Micro SAAS',
-    description: 'Innovative business solutions for modern enterprises',
-    services: cuttingEdgeMicroSaasServices2025,
-    icon: Rocket,
+    borderColor: 'border-violet-500/30'
   }
-];
-
-
+  {
+    title: 'Quantum & Emerging Tech'
+    description: 'Breakthrough quantum computing and space technology solutions'
+    services: cuttingEdgeEmergingTechServices2025
+    icon: Atom
+    color: 'from-indigo-500 to-blue-600'
+    bgColor: 'from-indigo-900/20 to-blue-900/20'
+    borderColor: 'border-indigo-500/30'
+  }
+  {
+    title: 'Enterprise IT'
+    description: 'Advanced enterprise infrastructure and security solutions'
+    services: cuttingEdgeITServices2025
+    icon: Shield
+    color: 'from-blue-500 to-cyan-600'
+    bgColor: 'from-blue-900/20 to-cyan-900/20'
+    borderColor: 'border-blue-500/30'
+  }
+  {
+    title: 'Micro SAAS'
+    description: 'Innovative business solutions for modern enterprises'
+    services: cuttingEdgeMicroSaasServices2025
+    icon: Rocket
+    color: 'from-teal-500 to-emerald-600'
+    bgColor: 'from-teal-900/20 to-emerald-900/20'
+    borderColor: 'border-teal-500/30'
+  }
+]
+const contactInfo = {;
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
+};
+const serviceCategories = [;
+  {;
+    title: 'AI & Consciousness';
+    description: 'Revolutionary AI platforms with consciousness and emotional intelligence';
+    services: cuttingEdgeAIServices2025;
+    icon: Brain;
+    color: 'from-violet-500 to-purple-600',;
+    bgColor: 'from-violet-900/20 to-purple-900/20',;
+    borderColor: 'border-violet-500/30';
+  },;
+  {;
+    title: 'Quantum & Emerging Tech',;
+    description: 'Breakthrough quantum computing and space technology solutions',;
+    services: cuttingEdgeEmergingTechServices2025,;
+    icon: Atom,;
+    color: 'from-indigo-500 to-blue-600',;
+    bgColor: 'from-indigo-900/20 to-blue-900/20',;
+    borderColor: 'border-indigo-500/30';
+  },;
+  {;
+    title: 'Enterprise IT',;
+    description: 'Advanced enterprise infrastructure and security solutions',;
+    services: cuttingEdgeITServices2025,;
+    icon: Shield,;
+    color: 'from-blue-500 to-cyan-600',;
+    bgColor: 'from-blue-900/20 to-cyan-900/20',;
+    borderColor: 'border-blue-500/30';
+  },;
+  {;
+    title: 'Micro SAAS',;
+    description: 'Innovative business solutions for modern enterprises',;
+    services: cuttingEdgeMicroSaasServices2025,;
+    icon: Rocket,;
+    color: 'from-teal-500 to-emerald-600',;
+    bgColor: 'from-teal-900/20 to-emerald-900/20',;
+    borderColor: 'border-teal-500/30';
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],
+export default function CuttingEdgeServices2025() {
+  return (
+    <Layout>
+      <Head>
+        <title>Cutting-Edge Services 2025 | Zion Tech Group</title>
+        <meta name="description" content="Discover our revolutionary cutting-edge services including AI consciousness, quantum computing, enterprise IT, and micro SAAS solutions for 2025." />
+        <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, enterprise IT, micro SAAS, 2025 technology" />
+        <meta property="og:title" content="Cutting-Edge Services 2025 - Zion Tech Group" />
+        <meta property="og:description" content="Revolutionary technology services for the future. AI consciousness, quantum computing, enterprise IT, and micro SAAS solutions." />
+        <link rel="canonical" href="https://ziontechgroup.com/cutting-edge-services-2025" />
+      </Head>
+      {/* Hero Section */}
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -65,8 +137,8 @@ import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-e
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Experience the future of technology with our revolutionary services that combine AI consciousness, 
               Experience the future of technology with our revolutionary services that combine AI consciousness,
-
               quantum computing, enterprise IT, and innovative micro SAAS solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -88,7 +160,12 @@ import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-e
           </motion.div>
         </div>
       </section>
-
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+              Revolutionary Technology Categories
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               and give you a competitive advantage in the digital age.
             </p>
           </motion.div>
@@ -113,22 +190,51 @@ import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-e
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                      key={service.id}
-                      initial={{ opacity: 0, coordinate_y: 20 }}
-                      whileInView={{ opacity: 1, coordinate_y: 0 }}
-                      transition={{ duration: 0.6, delay: service_index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="group";
-                    >;
-                      <div className={`bg - gradient - to - br ${category.bg_color} p - 8 rounded - 2xl border ${category.border_color} hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105`}>;
-                        <div className="flex items - start justify - between mb - 4">;
-                          <h4 className="text - xl font - semibold text - white group - hover:text - cyan - 400 transition - colors">;
+                      className="group"
+                    >
+                      <div className={`bg-gradient-to-br ${category.bgColor} p-8 rounded-2xl border ${category.borderColor} hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105`}>
+                        <div className="flex items-start justify-between mb-4">
+                          <h4 className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">
                             {service.name}
-                          </h4>;
-                          <div className="text - right">;
-                            <div className="text - 2xl font - bold text - cyan - 400">;
+                          </h4>
+                          <div className="text-right">
+                            <div className="text-2xl font-bold text-cyan-400">
                               ${service.pricing.starter.price}
-
+                            {service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                            </div>
+                            <div className="text-sm text-gray-400">/month</div>
+                          </div>
+                        </div>
+                        <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                        <div className="mb-6">
+                          <h5 className="text-white font-semibold mb-3">Key Features:</h5>
+                          <div className="space-y-2">
+                            {service.features.slice(0, 4).map((feature, featureIndex) => (
+                              <div key={featureIndex} className="flex items-center space-x-3 text-sm">
+                                <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                                <span className="text-gray-300">{feature}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        <div className="mb-6">
+                          <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
+                            <span>Market Size:</span>
+                            <span className="text-cyan-400 font-semibold">{service.marketSize}</span>
+                          </div>
+                          <div className="flex items-center justify-between text-sm text-gray-400">
+                            <span>Category:</span>
+                            <span className="text-purple-400">{service.category}</span>
+                          </div>
+                        </div>
+                        <div className="flex flex-col sm:flex-row gap-3">
+                          <a
+                            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+                            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -147,11 +253,6 @@ import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-e
                         </div>
                       </div>
                     </motion.div>
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
@@ -164,8 +265,6 @@ import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-e
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {['StarterProfessionalEnterprise'].map((plan, index) => (
               <motion.div
-            className="text - center mb - 16";
-
             className="text-center mb-16";
 
           >;
@@ -240,7 +339,49 @@ import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-e
               Ready to Experience the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact our team of experts to learn how our cutting-edge services can transform your business
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+        <div className="max-w-4xl mx-auto text-center px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+                      <>;
+                        <div className="text - sm text - gray - 400">For large enterprises and organizations</div>;
+                        <div className="text - sm text - gray - 400">Full platform access and custom development</div>;
+                        <div className="text - sm text - gray - 400">Dedicated specialists and 24 / 7 support</div>;
+                      </>)}
+                  </div>;
+                  <div className="text - center mb - 8">;
+                    <div className="text - 4xl font - bold text - cyan - 400 mb - 2">;
+                      {plan === 'Starter' ? 'From $149' : plan === 'Professional' ? 'From $499' : 'From $999'}
+                    </div>;
+                    <div className="text - gray - 400">per month</div>;
+                  </div>;
+                  <a;
+                    href="/contact";
+                    className="w - full inline - flex items - center justify - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - xl hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 300";
+                  >;
+                    Get Started;
+                    <ArrowRight className="ml - 2 w - 4 h - 4" />;
+                  </a>;
+                </div>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Contact Section */}
+      <section className="py - 20 bg - gradient - to - r from - cyan - 900 / 20 to - blue - 900 / 20">;
+        <div className="max - w-4xl mx - auto text - center px - 6">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+
+
+
+
               and give you a competitive advantage in the digital age.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -304,9 +445,53 @@ import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-e
         </div>
       </section>
     </Layout>
+          >;
+            <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 600 bg - clip - text text - transparent">;
+              Ready to Experience the Future?;
+            </h2>;
+            <p className="text - xl text - gray - 300 mb - 8">;
+              Contact our team of experts to learn how our cutting - edge services can transform your business;
+              and give you a competitive advantage in the digital age.;
+            </p>;
+            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8">;
+              <div className="text - center">;
+                <Phone className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 3" />;
+                <div className="text - white font - semibold">Call Us</div>;
+                <div className="text - cyan - 400">{contact_info.mobile}</div>;
+              </div>;
+              <div className="text - center">;
+                <Mail className="w - 8 h - 8 text - purple - 400 mx - auto mb - 3" />;
+                <div className="text - white font - semibold">Email Us</div>;
+                <div className="text - purple - 400">{contact_info.email}</div>;
+              </div>;
+              <div className="text - center">;
+                <MapPin className="w - 8 h - 8 text - green - 400 mx - auto mb - 3" />;
+                <div className="text - white font - semibold">Visit Us</div>;
+                <div className="text - green - 400 text - sm">{contact_info.address}</div>;
+              </div>;
+            </div>;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
+              <motion.a;
+                href="/contact";
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}
+                className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - xl hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 300 shadow - lg hover:shadow - xl";
+              >;
+                Get Started Today;
+                <ArrowRight className="ml - 2 w - 5 h - 5" />;
+              </motion.a>;
+              <motion.a;
+                href="tel:+13024640950";
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}
+                className="inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - xl hover: bg - cyan - 500 hover:text - white transition - all duration - 300";
+              >;
+                <Phone className="mr - 2 w - 5 h - 5" />;
                 Call Now;
               </motion.a>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
+
+

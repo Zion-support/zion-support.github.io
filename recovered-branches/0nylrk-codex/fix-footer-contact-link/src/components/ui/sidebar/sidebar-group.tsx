@@ -42,8 +42,6 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
   ({ title, icon, defaultExpanded = true, showChevron = true, className, children, ...props }, ref) => {;
     const [expanded, setExpanded] = React && React.useState(defaultExpanded);
 
-import React, { forwardRef } from "react",
-import { ChevronDown } from "lucide-react",
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string,
   icon?: React.ReactNode,
@@ -107,9 +105,8 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
             )}
           </button>;
         )}
-SidebarGroup.displayName = "SidebarGroup",
-export { SidebarGroup },
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
       </div>;
     );
   }
+export { SidebarGroup };

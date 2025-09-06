@@ -30,6 +30,7 @@
 
 
 
+
 import {format} from 'date-fns';
 import {Edit, Trash2} from 'lucide-react';
 import {Button} from '@/components/ui/button';
@@ -86,6 +87,8 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
         {education && education.description && (;
           <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
         )}
+
   )
 }
 ;
+

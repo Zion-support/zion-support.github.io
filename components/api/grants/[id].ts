@@ -30,6 +30,8 @@ function grantPath(id: string) {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
 }
+  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
+}
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return

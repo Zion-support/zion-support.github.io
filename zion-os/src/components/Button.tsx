@@ -5,6 +5,23 @@
       <span className={loading ? 'opacity-0' : ''}>{children}</span>;
       {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
     </>;
+  rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
+}
+const Button = forward_ref < HTMLButtonElement ButtonProps>(({
+  children,
+  variant = 'primary',
+  size = 'md',
+  href,
+  on_click,
+  disabled = false,
+  loading = false,
+  icon,
+  icon_position = 'right',
+  class_name = '',
+  type = 'button',
+  full_width = false,
+  rounded = 'lg';
+  return (;
     <button;
       ref={ref}
       type={type}

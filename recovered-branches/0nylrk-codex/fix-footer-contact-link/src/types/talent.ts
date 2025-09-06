@@ -56,7 +56,6 @@ export interface TalentProfile {;
   is_verified?: boolean,;
   key_projects?: {;
     title: string,;
-    title: string,
     description: string;
   }[];
 }
@@ -80,14 +79,5 @@ export interface HireRequest {
 
     max: number,
     currency: string;
-    description: string;
-  }[];
 }
-export interface TalentProfileFilters {
-  search?: string;
-  skills?: string[],
-  availabilities?: string[],
-  regions?: string[],
-  priceRange?: [number, number],
-  experienceRange?: [number, number]
-}
+;

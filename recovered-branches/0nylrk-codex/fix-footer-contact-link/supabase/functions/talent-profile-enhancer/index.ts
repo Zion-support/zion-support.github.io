@@ -172,8 +172,6 @@ interface TalentProfileData {
   title: string;
   bio: string;
 
-  skills: string[],
-  location?: string
 }
 interface EnhancedProfile {
   summary: string;
@@ -207,6 +205,10 @@ interface EnhancedProfile {;
 }
 serve(async (req) => {
   // Handle CORS preflight requests
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      )
+    }
+
     // Create a request to OpenAI API
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
@@ -244,9 +246,6 @@ serve(async (req) => {
             Title: ${talentData.title}
             Bio: ${talentData.bio}
             Skills: ${talentData.skills.join()}
-
-            Location: ${talentData.location || 'Not specified'}
-            
               "summary": "The professional summary text (100-150 words)",
               "categorizedSkills": {
     soft_skills: string[],
@@ -314,6 +313,8 @@ if ( {) {
   } catch (error) {
     console.error("Error in talent-profile-enhancer function:", error);
     return new Response(
+    
+    return new Response(
       JSON.stringify({ error: error.message }),
     );
   } catch (error) {;
@@ -325,126 +326,3 @@ if ( {) {
   }
 });
 
-            Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.`;
-          }
-        ];
-        temperature: 0 && 0.7,
-        response_format: { type: "json_object" }
-      })});
-;
-    const openAIData = await openAIResponse.json ();
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error ("Failed to generate profile content");
-    }
-    // Extract the generated content from the response;
-    const response_content = openAIData.choices[0].message.content;
-;
-    // Parse the JSON response;
-    let enhanced_profile: EnhancedProfile,
-    const _openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {_method: 'POST', _headers: {
-        'Authorization': `Bearer ${OPENAI_API_KEY}`,
-        'Content-Type': 'application/json'},
-      body: JSON.stringify({_model: 'gpt-4o-mini', _messages: [
-          {
-            role: 'system', _content: `You are an expert HR assistant. Based on the user's bio and experience, _write a professional and engaging 100–150 word summary for their profile. Then extract up to 8 clear skill tags, _categorized by type for better filtering.`},
-          {_role: 'user', _content: `Create a professional profile summary and categorize skills based on this information:
-            Name: ${talentData.name}
-            Title: ${talentData.title}
-            Bio: ${talentData.bio}
-            Skills: ${talentData.skills.join()}
-            Location: ${talentData.location || 'Not specified'}
-            
-            Return the result as a JSON object with these keys: 
-            {
-              &quot;summary&quot;: &quot;The professional summary text (100-150 words)&quot;,
-              &quot;categorizedSkills&quot;: {
-                &quot;programming&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
-                &quot;devops&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
-                &quot;platforms&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
-                &quot;softSkills&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
-                &quot;other&quot;: [&quot;skill1&quot;, &quot;skill2&quot;]
-              }            }
-            
-            Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.`
-          }
-        ],
-        temperature: 0.7,
-        response_format: { type: "json_object" }
-      })}),      })});
-
-    const openAIData = await openAIResponse.json(),
-    
-    if (!openAIData.choices || openAIData.choices.length === 0) {
-      throw new Error("Failed to generate profile content")    }
-    
-    // Extract the generated content from the response
-    const responseContent = openAIData.choices[0].message.content,
-    
-    // Parse the JSON response
-    let enhancedProfile: EnhancedProfile,
-    try {
-      enhanced_profile = JSON.parse (response_content);
-    } catch (e) {
-
-      console.error("Error parsing OpenAI response:", e),
-      throw new Error("Failed to parse the generated content")    }
-
-    return new Response(
-      JSON.stringify(enhancedProfile),
-      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-    )
-
-  } catch (error) {
-    console.error("Error in talent-profile-enhancer function:", error),    
-    return new Response(
-      JSON.stringify({ error: error.message }),
-      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-    )
-    const _openAIData = await openAIResponse.json();
-    
-    if (!openAIData.choices || openAIData.choices.length === 0) {_throw new Error("Failed to generate profile content");}
-    
-    // Extract the generated content from the response
-    const _responseContent = openAIData.choices[0].message.content;
-    
-    // Parse the JSON response
-    let enhancedProfile: EnhancedProfile;
-    try {_enhancedProfile = JSON.parse(responseContent);} catch (e) {_throw new Error("Failed to parse the generated content");}
-
-    return new Response(
-      JSON.stringify(enhancedProfile),
-      {_headers: { ...corsHeaders, _'Content-Type': 'application/json'} }
-    );
-
-  } catch (error) {_return new Response(
-      JSON.stringify({ error: error.message}),
-      {_status: 500, _headers: { ...corsHeaders, _'Content-Type': 'application/json'} }
-    );
-  }
-}),;}//Extract the generated content from the response const responseContent = openAIData.choices[0].message.content;
-//Parse the JSON response let enhancedProfile: EnhancedProfile;
-try {
-  enhancedProfile = JSON.parse (responseContent) 
-}catch (e) {
-  
-}return new Response (JSON.stringify (enhancedProfile);
-{
-  headers: {
-  ...corsHeaders, 'Content-Type': 'application/json' 
-}
-}) 
-}catch (error) {
-  return new Response (JSON.stringify ({
-  error: error.message 
-});
-{
-  status: 500, headers: {
-  ...corsHeaders, 'Content-Type': 'application/json' 
-}
-}) 
-}
-});

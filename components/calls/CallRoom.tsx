@@ -22,6 +22,19 @@ export type StartMode = 'video' | 'audio';
   token: string;
   startMode: StartMode;
   onLeave?: (durationSec: number) => void;
+
+};
+export default function CallRoom(): any ({;
+  projectId,;
+  userId,;
+  displayName,;
+  roomName,;
+  serverUrl,;
+  token,;
+  startMode,;
+  onLeave,;
+}: Props) {;
+
   projectId
   userId
   displayName
@@ -31,6 +44,17 @@ export type StartMode = 'video' | 'audio';
   startMode
   onLeave
 }: Props) {
+
+  projectId,
+  userId,
+  displayName,
+  roomName,
+  serverUrl,
+  token,
+  startMode,
+  onLeave,
+}: Props) {;
+
   projectId,
   userId,
   displayName,
@@ -44,6 +68,8 @@ export type StartMode = 'video' | 'audio';
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
   >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';
+import Controls from './Controls';
+export type StartMode = 'video' | 'audio';
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);

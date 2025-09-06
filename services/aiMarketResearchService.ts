@@ -22,7 +22,6 @@
   socialMediaPresence: Record < string, number>;
   last_updated: Date;
 }
-export interface MarketSegment {
   id: string;
   name: string;
   size: number;
@@ -33,16 +32,6 @@ export interface MarketSegment {
   pain_points: string[],
   solutions: string[];
 }
-export interface MarketReport {
-
-
-export interface MarketSegment {;
-  id: string;
-  name: string;
-  size: number;
-
-
-export interface MarketReport {;
   id: string;
   title: string;
   industry: string;
@@ -52,8 +41,6 @@ export interface MarketReport {;
   research_type: 'trends' | 'competitors' | 'segments' | 'comprehensive';
   timeframe: '7d' | '30d' | '90d' | '1y';
 
-
-export interface MarketResearchResponse {;
   success: boolean;
   data: {
     trends?: MarketTrend[];
@@ -386,3 +373,7 @@ if ( {) {
 }
 export const aiMarketResearchService = new AIMarketResearchService (process.env.MARKET_RESEARCH_API_KEY || 'demo - key');
 ;
+
+export interface MarketTrend {;
+
+export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');

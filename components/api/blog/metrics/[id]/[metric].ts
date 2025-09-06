@@ -6,14 +6,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (!['viewslikesshares'].includes(metric)) return res.status(400).json({ error: 'Invalid metric' });
   const post = null;
   return res.status(200).json({ ok: true, metrics: post.metrics })
-import { increment_metric } from '@/utils / data / blog_store';
-export default /**
- * handler - Function description
- */
-function handler() {
-  const { id, metric } = req.query;
-  if (return res.status (405).end ()) {
-  $2
+
 }
   if (
     return res.status (400).json ({ error: 'Invalid params' })) {
@@ -47,3 +40,8 @@ function handler() {
 }
   return res.status (200).json ({ ok: true, metrics: post.metrics });
 }
+
+}
+
+
+

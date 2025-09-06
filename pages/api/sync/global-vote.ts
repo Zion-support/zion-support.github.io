@@ -33,6 +33,8 @@ merkleRoot}
   const headers: Record<string, string> = {}
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
+    timestamp: Date.now(),
+    merkleRoot};
 
   upsertEvent(state, event);
   writeState(state);
@@ -216,5 +218,3 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}

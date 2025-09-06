@@ -1,6 +1,5 @@
 
-const QuantumNeuralNetworkPlatform = () => {
-  const features = [
+
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -58,6 +57,7 @@ const QuantumNeuralNetworkPlatform = () =>: any {
     "Advanced pattern recognition",
     "Future-proof technology foundation"
   ],
+
   const useCases = [
     {
       title: "AI Research & Development",
@@ -79,6 +79,8 @@ const QuantumNeuralNetworkPlatform = () =>: any {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
   ],
   return (
     <>
@@ -92,8 +94,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
         <meta property="og:url" content="https://ziontechgroup.com/quantum-neural-network-platform" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-
-
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -111,19 +111,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-            >
-              <div className="flex justify-center mb-6">
-                <div className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full">
-                  <Atom className="w-8 h-8 text-white" />
-                </div>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Quantum Neural Network
-                <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  Platform
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 performance, security, and capabilities in neural network operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -138,7 +125,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -153,18 +139,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
-                Revolutionary Features;
-              </h2>;
-              <p className="text - xl text - gray - 400 max - w-2xl mx - auto">;
-                Experience the future of AI with our cutting - edge quantum neural network platform;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-              {features.map ((feature, index) => (
-                <motion.div;
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -222,18 +196,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
                 Transform your operations with quantum-powered AI capabilities
               </p>
             </motion.div>
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
-                Unprecedented Benefits;
-              </h2>;
-              <p className="text - xl text - gray - 400 max - w-2xl mx - auto">;
-                Transform your operations with quantum - powered AI capabilities;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-              {benefits.map ((benefit, index) => (
-                <motion.div;
                   key={index}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
@@ -289,18 +251,6 @@ const QuantumNeuralNetworkPlatform = () =>: any {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
-                Real - World Applications;
-              </h2>;
-              <p className="text - xl text - gray - 400 max - w-2xl mx - auto">;
-                Discover how our quantum neural network platform transforms industries;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
-              {use_cases.map ((use_case, index) => (
-                <motion.div;
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -327,30 +277,62 @@ const QuantumNeuralNetworkPlatform = () =>: any {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-        {/* CTA Section */}
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-export default QuantumNeuralNetworkPlatform,
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+                Ready to Experience the Future?
+              </h2>
+              <p className="text-xl text-gray-400 mb-8">
+                Join the quantum revolution and transform your AI capabilities today
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200 text-lg">
+                  Start Your Journey
+                  <Rocket className="ml-2 w-6 h-6" />
+                </Link>
+                <Link href="/services" className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-200 text-lg">
+                  Explore All Services
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  )
+}
+export default QuantumNeuralNetworkPlatform;
+
             >;
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">;
+              <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Experience the Future?;
               </h2>;
-              <p className="text-xl text-gray-400 mb-8">;
+              <p className="text - xl text - gray - 400 mb - 8">;
                 Join the quantum revolution and transform your AI capabilities today;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200 text-lg">;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <Link href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - blue - 500 text - white font - semibold rounded - lg hover:from - purple - 600 hover:to - blue - 600 transition - all duration - 200 text - lg">;
                   Start Your Journey;
-                  <Rocket className="ml-2 w-6 h-6" />;
+                  <Rocket className="ml - 2 w - 6 h - 6" />;
                 </Link>;
                   Explore All Services;
                 </Link>;
@@ -359,3 +341,6 @@ export default QuantumNeuralNetworkPlatform,
           </div>;
         </section>;
       </div>;
+
+},
+

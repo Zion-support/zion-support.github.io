@@ -1,100 +1,7 @@
-import { useState } from 'react'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-import { WorkExperience } from '@/types/resume'
-import { Button } from '@/components/ui/button'
-import { Calendar } from '@/components/ui/calendar'
-import {
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormLabel
-  FormMessage
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-  Popover
-  PopoverContent
-  PopoverTrigger
-} from '@/components/ui/popover'
-import { Textarea } from '@/components/ui/textarea'
-import { cn } from '@/lib/utils'
-import { Switch } from '@/components/ui/switch'
-import { format } from 'date-fns'
-
-import { CalendarIcon, Loader2 } from 'lucide-react'
-import { useState } from 'react',
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { WorkExperience } from "@/types/resume",
-import { Button } from "@/components/ui/button",
-import { Calendar } from "@/components/ui/calendar",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Textarea } from "@/components/ui/textarea",
-import { cn } from "@/lib/utils",
-import { Switch } from "@/components/ui/switch",
-import { format } from "date-fns",
-import { CalendarIcon, Loader2 } from 'lucide-react'
-import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
-import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
-    required_error: 'Start date is required'
-  })
-  end_date: z.date().optional()
-  is_current: z.boolean().default(false)
-  description: z.string().optional()
-  location: z.string().optional()
-})
-type FormValues = z.infer<typeof formSchema>
-interface WorkExperienceItemFormProps {
-  initialData?: WorkExperience
-  onSubmit: (data: WorkExperience) => Promise<void>
-  onCancel: () => void
-export function WorkExperienceItemForm({
-  initialData
-  onSubmit
-  onCancel
-}: WorkExperienceItemFormProps) {
-  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false)
-  location: z.string().optional()}),
-
-type FormValues = z.infer<typeof formSchema>,
-
-interface WorkExperienceItemFormProps {
-  initialData?: WorkExperience,
-  onSubmit: (data: WorkExperience) => Promise<void>,
-  onCancel: () => void
-}
-
-export function WorkExperienceItemForm({
-  initialData,
-  onSubmit,
-  onCancel}: WorkExperienceItemFormProps) {
-  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
-
-  // Set up form
 // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-      company_name: initialData?.company_name |''
-      role_title: initialData?.role_title |''
-      start_date: initialData?.start_date
-        ? new Date(initialData.start_date)
-        : new Date()
-      end_date: initialData?.end_date
-        ? new Date(initialData.end_date)
-        : undefined
-      is_current: initialData?.is_current |false
-      description: initialData?.description |''
-      location: initialData?.location |''
-    }
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
@@ -116,6 +23,34 @@ export function WorkExperienceItemForm({
       is_current: values.is_current, // Required
       description: values.description, // Optional
       location: values.location, // Optional
+      company_name: initialData?.company_name || "",
+      role_title: initialData?.role_title || "",
+      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
+      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
+      is_current: initialData?.is_current || false,
+  })
+  const { isSubmitting } = form.formState
+  const watchIsCurrent = form.watch('is_current')
+  const watchRoleTitle = form.watch('role_title')
+  const watchCompanyName = form.watch('company_name')
+  const handleFormSubmit = async (values: FormValues,) => {
+    // Create a properly typed WorkExperience object with all required fields
+    const workExperience: WorkExperience = {
+      id: initialData?.id
+      company_name: values.company_name, // Required
+      role_title: values.role_title, // Required
+      start_date: values.start_date, // Required
+      end_date: values.end_date, // Optional
+      is_current: values.is_current, // Required
+      description: values.description, // Optional
+      location: values.location, // Optional
+    }
+    await onSubmit(workExperience)
+  }
+  const handleAIEnhancement = (content: string) => {
+    form.setValue('description', content, { shouldDirty: true })
+    setIsEnhancementDialogOpen(false)
+  }
       description: initialData?.description || "",
       location: initialData?.location || ""}}),
   
@@ -145,6 +80,8 @@ export function WorkExperienceItemForm({
     setIsEnhancementDialogOpen(false)
   },
 
+
+  return (
     <>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">
@@ -162,8 +99,6 @@ export function WorkExperienceItemForm({
               control={form.control}
               name='role_title'
               render={({ field }: { field: any }) => (                <FormItem>
-ursor/fix-website-loading-errors-and-merge-6662
-
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -459,29 +394,6 @@ function WorkExperienceItemForm() {
                   <div className="flex gap-2">
                     <AIEnhancementButton
                       options={{
-                      onEnhanced={content =>
-                        form.setValue('description', content, {
-                          shouldDirty: true
-                        })
-                      }
-                      buttonText='Enhance with AI'
-                    />
-                    <Button
-                      type='button'
-                      variant='outline'
-                      size='sm'
-                      onClick={() => setIsEnhancementDialogOpen(true)}
-                      className='text-xs'                    >
-                      onEnhanced={(content) => form.setValue("description", content, { shouldDirty: true })}
-                      buttonText="Enhance with AI"
-                    />
-                    <Button
-                      type="button"
-                      variant="outline"
-                      size="sm"
-                      onClick={() => setIsEnhancementDialogOpen(true)}
-                      className="text-xs"
-                    >
                       AI Writer
                     </Button>
                   </div>
@@ -520,9 +432,6 @@ function WorkExperienceItemForm() {
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
-          enhancementType: 'work-description',
-          content: form.getValues('description') || '',
-          context: `${watchRoleTitle} at ${watchCompanyName}`,
         }}
         initialContent={form.getValues('description') |''}      />
 
@@ -536,11 +445,6 @@ type FormValues = z.infer<typeof formSchema>
 //Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {
   await onSubmit (workExperience)
 }
-}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) 
-}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) ;
-}";
-};
-};
           enhancementType: "work-description",
           content: form.getValues("description") || "",
           context: `${watchRoleTitle} at ${watchCompanyName}`}}

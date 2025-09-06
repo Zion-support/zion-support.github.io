@@ -1,4 +1,6 @@
 
+import {LucideIcon} from "lucide-react";
+import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
 import { LucideIcon } from "lucide-react",
 import {
   BadgeCheck, // publishing a listing
@@ -8,7 +10,6 @@ import {
   BadgePlus,  // first action
   BadgeDollarSign // monetization
 } from "lucide-react",
-
 export type BadgeKey =
   | "first_listing"
   | "top_contributor"
@@ -151,3 +152,12 @@ export interface BadgeMeta {
     color: "#22C55E", // Soft Green;
     bg: "#F2FCE2",    // Soft Green;
   }];
+
+  | "first_action"
+
+  bg: string
+}
+export const badgeList: BadgeMeta[] = [
+
+  {
+

@@ -15,6 +15,14 @@ export default function SEOLandingPage() {;
 export default function SEOLandingPage(req, res) {
   try {
   const router = useRouter();
+  service?: string,;
+  faq: Array<{ q: string, a: string }>;
+},;
+export default function SEOLandingPage(req, res) {
+  try {
+
+
+  const router = useRouter();
   const { slug } = router.query as { slug?: string };
   const [payload, setPayload] = React.useState<LandingPayload | null>(null);
   React.useEffect(() => {;
@@ -56,6 +64,15 @@ export default function SEOLandingPage(req, res) {
       />
       <div className='mt-8'>
         <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>        <TalentGrid region={payload.region} service={payload.service} />
+      </div>
+      <FAQ items={payload.faq} />
+    </div>
+
+  if (!payload) return null;
+
+  return (
+
+
       </div>
       <FAQ items={payload.faq} />
     </div>
@@ -131,6 +148,7 @@ if (return null) {
       <FAQ items={payload.faq} />;
     </div>);
 ;
+);
   )
   } catch (error) {
     console.error("Error:", error);

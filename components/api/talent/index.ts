@@ -17,6 +17,9 @@ export default async function handler(
     } catch (e: any) {
       return res && res.status(500).json({ error: e && e.message });
     }  }
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method === 'GET') {
+    try {
         } as any);
         // Check condition
 if (throw error) {
@@ -29,3 +32,6 @@ if (throw error) {
     } catch (e: any) {
       return res.status (500).json ({ error: e.message });
     }
+    .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+}
+}

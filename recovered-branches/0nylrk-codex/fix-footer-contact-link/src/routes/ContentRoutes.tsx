@@ -72,3 +72,4 @@ const ContentRoutes = () => {;
       <Route path="/blog" element={<Blog />} />;
       <Route path="/blog/:slug" element={<BlogPost />} />;
       {/* Green IT Route */}
+export default ContentRoutes;

@@ -1,18 +1,5 @@
   FormField,
 
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-
-
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
@@ -25,6 +12,12 @@ interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
 }
 export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
+  return (
+interface PersonalInfoFieldsProps {;
+  control: Control<BasicInfoFormData>;
+}
+
+export function PersonalInfoFields(): any ({ control }: PersonalInfoFieldsProps) {;
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
       <FormField
@@ -72,9 +65,6 @@ function PersonalInfoFields() {
             <FormMessage />;
           </FormItem>;
         )}
-        control={control}
-        name="email";
-        render={({ field }) => (
           <FormItem>;
             <FormLabel > Email</FormLabel>;
             <FormControl>;
@@ -85,19 +75,5 @@ function PersonalInfoFields() {
       />;
       <FormField;
         control={control}
-        name="phone";
+        name="email";
         render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Phone</FormLabel>;
-            <FormControl>;
-              <Input placeholder="+1 234 567 8900" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-    </div>);
-}
-
-  )
-}
-;

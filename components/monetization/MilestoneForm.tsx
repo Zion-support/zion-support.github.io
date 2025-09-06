@@ -1,12 +1,12 @@
 
+type Props = {
+  onSubmit: (payload: {
     title: string;
     description?: string;
     dueDate: string;
     amountUsd: number;
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-};
-
-export default function MilestoneForm({ onSubmit }: Props) {;
+  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -44,6 +44,15 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           />;
         </div>;
       </div>;
+        {loading ? 'Adding...' : 'Add Milestone'}
+
+      </button>;
+    </form>;
+  );
+
+  );
+
+}
 }
   );
 }

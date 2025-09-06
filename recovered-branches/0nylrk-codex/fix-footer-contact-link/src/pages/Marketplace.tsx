@@ -74,10 +74,6 @@ export default function Marketplace() {
       case 'productType':
         setSelectedProductTypes(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
-    setSearchQuery("");
-    setSelectedProductTypes([]);
-    setSelectedLocations([]);
-    setSelectedAvailability([]);
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
@@ -212,9 +208,11 @@ if ( {) {
       });
     }
   },
+
+
+  },
   };
   },
-
   return (
     <AppLayout>
       <main className="flex-grow container mx-auto px-4 py-8">

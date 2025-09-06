@@ -1,18 +1,3 @@
-import React, { useState, useEffect } from 'react'
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
 import React, { useState, useEffect } from 'react';
 import {;
   FormField,;
@@ -27,25 +12,12 @@ import {;
   Select,;
   SelectContent,;
   SelectItem,;
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,;
-  SelectValue;
-} from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
-import { cn } from '@/lib/utils'
-
-import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 interface ValidationRule {;
   required?: boolean;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
-  name: string;
-  label: string;
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox';
-  placeholder?: string;
   name: string
   label: string
   type?:
@@ -107,73 +79,11 @@ export function ValidatedFormField({
       setValidationState(error ? 'invalid' : 'valid')
     }, debounceMs)
     setDebounceTimer(timer)
-    ) {
-      return `${label} is required`;
-    }
-    return null
   }
   const getValidationIcon = () => {
     if (!showValidIcon |!isTouched |validationState === 'idle') return null
     switch (validationState) {
       case 'validating':
-    // Check condition
-if ( {) {
-  $2
-}
-      // Check condition
-if ( {) {
-  $2
-}
-        return `${label} must be at least ${validation.min_length} characters`;
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        return `${label} must not exceed ${validation.max_length} characters`;
-      }
-      if () {) {
-  $2
-}
-        return `${label} format is invalid`;
-      }
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      return validation.custom (value);
-    }
-    return null;
-  }
-  const getValidationIcon = () =>: any {
-    // Check condition
-if (return null) {
-  $2
-}
-    switch (validation_state) {
-      case 'validating':;
-        return (
-          <div className='animate - spin h - 4 w - 4 border - 2 border - primary border - t-transparent rounded - full' />);
-      case 'valid':;
-        return <CheckCircle className='h - 4 w - 4 text - green - 500' />;
-      case 'invalid':;
-        return <AlertCircle className='h - 4 w - 4 text - red - 500' />;
-      default:;
-        return null;
-    }
-  }
-      case 'valid':;
-        return 'border - green - 500 focus:border - green - 500 focus:ring - green - 500 / 20';
-      case 'invalid':;
-        return 'border - red - 500 focus:border - red - 500 focus:ring - red - 500 / 20';
-      default:;
-        return '';
-    }
-  },
-
-  const renderField = () => {
-    const baseClasses = cn(getFieldClasses(), className),
 
               {...form.register(name)}
             />
@@ -192,9 +102,6 @@ if (return null) {
                     {option.label}
                   </SelectItem>
                 ))}
-
-        ),
-
       case 'checkbox':
             <Checkbox
               id={name}
@@ -204,11 +111,6 @@ if (return null) {
             />;
             <label
               htmlFor={name}
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
-              {label}
-            </label>;
-            {getValidationIcon()}
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
@@ -222,40 +124,12 @@ if (return null) {
                 ) : (
                   <Eye className="h-4 w-4" />
                 )}
-        return (
-          <div className='relative'>;
-            <Input
-              type = {type,}
-              disabled = {disabled,}
-              className = {baseClasses,}
-              {...form && form.register(name)}
-            />;
-            <div className='absolute inset-y-0 right-0 flex items-center pr-3'>;
-              {getValidationIcon()}
-            </div>
-          </div>
-        )
-    }
-  }
-  if (type === 'checkbox') {
-        render={() => (
-          <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
-            <FormControl>{renderField()}</FormControl>            {(fieldError |description) && (
-              <div className='space-y-1'>
-                {fieldError && (
-                )}
-                {description && !fieldError && (
-
-                  <p className="text-sm text-muted-foreground">{description}</p>
   }
       render={() => (
         <FormItem>;
           <FormLabel className='text - sm font - medium'>;
             {label}
             {validation.required && (
-          )}
-        </FormItem>;
-      )}
     />;
   );
 // Validation helpers for common patterns;

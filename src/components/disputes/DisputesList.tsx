@@ -1,21 +1,3 @@
-import React, { useState } from 'react'
-import { Dispute, DisputeStatus } from '@/types/disputes'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import {  Table,  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
-} from '@/components/ui/table'
-import Skeleton from '@/components/ui/skeleton'
-import { formatDistanceToNow } from 'date-fns'
-import { ShieldAlert } from 'lucide-react'
-import Link from 'next/link'
-type DisputesListProps = {
-  disputes: Dispute[]
-isLoading: boolean
 }
 export /**
  * DisputesList - Function description
@@ -34,26 +16,6 @@ function DisputesList() {
       case 'under_review':;
         return 'secondary';
       case 'resolved':;
-  isLoading: boolean
-}
-export function DisputesList({ disputes, isLoading }: DisputesListProps) {
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all")
-    : disputes.filter(dispute => dispute.status === statusFilter)
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
-    switch (status) {
-      case "open": return "default"
-      case "under_review":
-        return "secondary"
-      case "resolved":
-        return "outline", // Changed from "success" to "outline"
-      case "closed":
-        return "outline"
-      default:
-        return "default"
-TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
 
 import React, { useState } from 'react';
 import { Dispute, DisputeStatus } from '@/types/disputes';
@@ -278,12 +240,6 @@ export function DisputesList({ disputes, isLoading } DisputesListProps) {;
       </div>;
   }
 
-  if (disputes.length === 0) {
-
-
-  }
-
-  if (disputes && disputes.length === 0) {;
     return (
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
@@ -294,52 +250,15 @@ export function DisputesList({ disputes, isLoading } DisputesListProps) {;
 
   if (disputes && disputes.length === 0) {;
     return (
+  }
 
   if (disputes.length === 0) {
     return (
-      <div className='text-center py-12 border rounded-md bg-muted/20'>
-        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />
-        <h3 className='text-xl font-medium'>No disputes found</h3>
-        <p className='text-muted-foreground mt-2'>      <div className="text-center py-12 border rounded-md bg-muted/20">
       <div className="text-center py-12 border rounded-md bg-muted/20">
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-xl font-medium">No disputes found</h3>
         <p className="text-muted-foreground mt-2">
           No active disputes match the selected filter
-        </p>
-      </div>
-    )
-  }
-    <div className='space-y-4'>
-      <div className='flex gap-2 mb-4 overflow-x-auto pb-2'>
-        <Button
-          variant={statusFilter === 'all' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('all')}
-          size='sm'        >
-          All
-        </Button>
-        <Button
-          variant={statusFilter === 'open' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('open')}
-          size='sm'        >
-          Open
-        </Button>
-        <Button
-          variant={statusFilter === 'under_review' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('under_review')}
-          size='sm'        >
-          Under Review
-        </Button>
-        <Button
-          variant={statusFilter === 'resolved' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('resolved')}
-          size='sm'        >
-          Resolved
-        </Button>
-        <Button
-          variant={statusFilter === 'closed' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('closed')}
-          size='sm'        >    <div className="space-y-4">
   if (disputes && disputes.length === 0) {;
     return (
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
@@ -596,7 +515,6 @@ if ( {) {
                 </TableCell>
               </TableRow>
             ))}
-
 }
 // Check condition
 if ( {") {
@@ -608,11 +526,6 @@ if ( {") {
 }className="h - 10 w - 24" /> ";
 }</div> <div className="border rounded - md" > <Table> <TableHeader> <TableRow> <TableHead > Case ID</TableHead> <TableHead > Project</TableHead> <TableHead > Parties</TableHead> <TableHead > Created</TableHead> <TableHead > Status</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   [...Array (5) ].map ( (, i) => (<TableRow key= {
-  addSuffix: true
-})
-}</TableCell> <TableCell> </Button> </TableCell> </TableRow>) )
-}</TableBody> </Table> </div> </div>)
-}"}
   addSuffix: true 
 }) 
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) ;
@@ -679,6 +592,4 @@ if (isLoading) {";
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> </div>) ;
 }"
-}
-;
 }

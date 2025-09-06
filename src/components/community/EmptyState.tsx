@@ -139,35 +139,3 @@ const EmptyState:React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasS
     </div>;
   ),;
 },;
-;
-export default EmptyState,; <TooltipProvider> <Tooltip> <TooltipTrigger asChild> {;
-  hasSession ? (<Button asChild> <Link href= {;
-  href ;
-}> {;
-  cta ;
-}</Link> </Button>) : (<Button disabled> {;
-  cta ;
-}</Button>) ;
-}</TooltipTrigger> {;
-  !hasSession && <TooltipContent>Login required</TooltipContent> ;
-}</Tooltip> </TooltipProvider> </div>) ;
-};
-export default EmptyState;
-          </TooltipTrigger>
-          {!hasSession && <TooltipContent>Login required</TooltipContent>}
-        </Tooltip>
-      </TooltipProvider>
-    </div>
-  )
-};
-export default EmptyState;
-}
-export default EmptyState
-
-        </Tooltip>;
-      </TooltipProvider>;
-    </div>;
-  );
-},;
-export default EmptyState;
-},;

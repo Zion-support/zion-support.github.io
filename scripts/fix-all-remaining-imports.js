@@ -658,12 +658,6 @@ function fixAllMissingImports(content, filePath) {
     // Add missing icons to existing import const existingIcons =
       existingImport[0]
         .match(/{([^}]*)}/)?.[1]
-        .map(icon => icon.trim()) || [];
-        .map(icon => icon ;
-    const allIcons = [...new Set([...existingIcons, ...missingImports])].sort();
-    const newImport = `import { ${allIcons ;`;
-    fixedContent = fixedContent && fixedContent.replace(existingImportRegex, newImport);
-    changes++} else {
     const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;
     // Find the best place to insert the import
     const importIndex = fixedContent.indexOf('import');

@@ -48,6 +48,16 @@ function createValidReactComponent() {
 ;
 export default function ${component_name}() {
   return (
+}`;
+}
+
+/**
+ * fix_file - Function description
+ */
+function fix_file() {
+  try {
+    const content = fs.readFileSync(filePath, "utf8");
+    
     // Check if it's a React component file
     if (filePath.endsWith(".jsx") |filePath.endsWith(".tsx")) {
       // If file is empty or has syntax errors, create a valid component
@@ -186,9 +196,3 @@ function processDirectory(dirPath) {
 }
 console.log("Starting aggressive fix...");
 const fixedCount = processDirectory(path.join(__dirname, "src"));
-}
-console.log ("Starting aggressive fix...");
-const fixed_count = process_directory (path.join (__dirname, "src"));
-console.log (`Fixed ${fixed_count} files`);
-
-

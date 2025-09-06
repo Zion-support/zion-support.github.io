@@ -2,6 +2,15 @@
 
 export default function CapabilitiesPage() {;
   return (
+
+
+        ))}
+
+      </div>;
+    </EnhancedLayout>;
+  );
+}
+
   );
 }
 import EnhancedLayout from '../components / layout / EnhancedLayout';
@@ -49,8 +58,13 @@ function CapabilitiesPage() {
           <div key={c} className="rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950">
           </div>
         ))}
+      </div>
+    </EnhancedLayout>
+);
+}
+  );
+}
     </EnhancedLayout>;
 );
 }
-
 

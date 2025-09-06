@@ -9,6 +9,9 @@ import { Calendar } from "@/components/ui/calendar";
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
 
+
+
+
 import React from 'react',
 import { format } from 'date-fns',
 import { Label } from "@/components/ui/label",
@@ -34,6 +37,16 @@ interface DateFieldsProps {
               <Button
                 variant={"outline"}
                 className={cn(
+                )}
+              </Button>;
+            </FormControl>;
+          </PopoverTrigger>;
+          <PopoverContent className="w-auto p-0" align="start">;
+            <Calendar
+              mode="single"
+              selected={startDate}
+              onSelect={setStartDate}
+
               disabled={(date) =>;
                 date > new Date();
               }
@@ -50,7 +63,6 @@ interface DateFieldsProps {
               <Button
                 variant={"outline"}
                 className={cn(
-
                   !endDate && "text-muted-foreground"
                 )}
               >
@@ -63,3 +75,16 @@ interface DateFieldsProps {
               mode="single"
               selected={endDate}
               onSelect={setEndDate}
+              disabled={(date) =>;
+                date < new Date();
+              }
+
+              initialFocus;
+            />;
+          </PopoverContent>;
+        </Popover>;
+      </div>;
+    </div>;
+  );
+    </div>);
+}

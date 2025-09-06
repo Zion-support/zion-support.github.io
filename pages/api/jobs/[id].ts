@@ -1,19 +1,36 @@
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
 import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
 const FILE = "jobs.json";
+  if (!rateLimit(req, res)) return;
+  const { id } = req && req.query;
+  const jobs = readJsonFile<Job[]>(FILE, []);
 
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const idx = jobs.findIndex((j) => j.id === id);
-  const idx = jobs && jobs.findIndex((j) => j && j.id === id);
 
   if (idx === -1) {
-    res.status(404).json({ error: "Job not found" });
     return;
+  }
+
+
+  if (req && req.method === "GET") {
+    res && res.status(200).json({ job: jobs[idx] });
+    return;
+
+  }
+
+  if (req && req.method === "PATCH") {
+    const userEmail = getRequestUserEmail(req);
+    const job = jobs[idx];
+    const isOwner = userEmail && userEmail === job && job.clientEmail;
+    if (!isOwner && !isAdminEmail(userEmail)) {
+
+
+      return;
+    }
+    const {
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -89,6 +106,11 @@ export default function handler(req, res) {
     const isOwner = userEmail && userEmail === job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {;
       res.status(403).json({ error: 'Forbidden' });
+      return
+    }
+
+    const { title, description, category, requiredSkills, budgetMinUsd, budgetMaxUsd, deliveryDeadlineIso, status } = req.body || {};
+
     if (typeof title === 'string') job.title = title;
     if (typeof description === 'string') job.description = description;
     if (typeof category === 'string') job.category = category;

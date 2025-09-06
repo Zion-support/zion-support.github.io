@@ -5,6 +5,12 @@ import { WorkExperience  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useWorkExperience() {
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {WorkExperience} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+export function useWorkExperience() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -26,6 +32,11 @@ export function useWorkExperience() {;
     if (!user) {;
       setError('You must be logged in to update work experience'),;
       return false;
+    }
+    
+    setIsLoading(true),
+    setError(null),
+    
     try {
       const { error } = await supabase
         .from('work_history')
@@ -36,17 +47,6 @@ export function useWorkExperience() {;
           end_date: work.is_current ? null : formatDateForDB (work.end_date);
           is_current: work.is_current;
           description: work.description;
-          location: work.location;
-        });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      return showSuccessToast ("Work experience added", "Your work experience has been added to your resume");
-    } catch (e: any) {
-      return handleResumeError (e, 'Could not add work experience');
-    } finally {
 ;
     setIsLoading(true),;
     setError(null),;
@@ -76,6 +76,11 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to update work experience'),;
       return false;
+    }
+    
+    setIsLoading(true),
+    setError(null),
+    
     try {
       const { error } = await supabase
         .from('work_history')
@@ -86,19 +91,6 @@ if (throw error) {
           end_date: work.is_current ? null : formatDateForDB (work.end_date);
           is_current: work.is_current;
           description: work.description;
-          company_logo_url: work.company_logo_url,
-          location: work.location;
-        });
-        .eq ('id', work_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      return showSuccessToast ("Work experience updated", "Your work experience has been updated");
-    } catch (e: any) {
-      return handleResumeError (e, 'Could not update work experience');
-    } finally {
 ;
     setIsLoading(true),;
     setError(null),;
@@ -128,12 +120,23 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to delete work experience'),;
       return false;
+    }
+    
+    setIsLoading(true),
+    setError(null),
+    
     try {
       const { error } = await supabase
         .from('work_history')
         .delete()
         .eq('id', workId);
       if (error) throw error;
+    } catch (e: any) {
+      return handleResumeError (e, 'Could not delete work experience');
+    } finally {
+
+;
+
   return {
     is_loading;
     error;
@@ -162,3 +165,6 @@ if (throw error) {
     addWorkExperience;
     updateWorkExperience;
     deleteWorkExperience;
+  }
+}
+;

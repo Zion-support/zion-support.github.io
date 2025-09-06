@@ -1,3 +1,18 @@
+
+  try {
+
+    const { content, enhancementType, context } = await req && req.json();
+    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+
+
+    if (!openAiKey) {
+      throw new Error("OPENAI_API_KEY is not defined")
+;
+  try {;
+    const { content, enhancementType, context } = await req.json(),;
+    const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
+    if (!openAiKey) {;
+      throw new Error("OPENAI_API_KEY is not defined");
     }
     if (!content) {
       throw new Error("Content is required")
@@ -9,6 +24,30 @@
       case "skill - categorization": system_prompt = "You are an expert at categorizing technical and professional skills. Organize skills into logical categories.";
         user_prompt = `Categorize these skills into logical groups: ${content}. Return a JSON object with skill categories as keys and arrays of skills as values. Common categories might include: Programming, DevOps, Cloud, Soft Skills, etc. ${context ? `Professional context: ${context}` : ''}`;
         break;
+        model: "gpt-4o-mini";
+        messages: [
+          {
+            role: "system"
+            content: systemPrompt}
+          {
+            role: "user"
+            content: userPrompt}];
+        temperature: 0.7})});
+            role: "system",
+            content: systemPrompt},
+          {
+            role: "user",
+            content: userPrompt}],
+        temperature: 0.7})}),
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
+    }
+    const data = await response.json();
+    const enhancedContent = data.choices[0].message.content;
+
+
     return new Response(
       JSON && JSON.stringify({
         enhancedContent});
@@ -103,3 +142,5 @@ if ( {) {
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
+  }
+});

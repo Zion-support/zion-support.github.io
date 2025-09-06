@@ -26,18 +26,26 @@ import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
 const partnerFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." })
-  website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal(""))
-  twitter: z.string().optional()
-  instagram: z.string().optional()
-  youtube: z.string().optional()
-  linkedin: z.string().optional()
-  niche: z.string().min(2, { message: "Please specify your niche." })
-  audience_size: z.string()
-  payout_method: z.string()
-  bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)})
-type PartnerFormValues = z.infer<typeof partnerFormSchema>;
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
+  twitter: z.string().optional(),
+  instagram: z.string().optional(),
+  youtube: z.string().optional(),
+  linkedin: z.string().optional(),
+  niche: z.string().min(2, { message: "Please specify your niche." }),
+  audience_size: z.string(),
+  payout_method: z.string(),
+  bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),
+
+type PartnerFormValues = z.infer<typeof partnerFormSchema>,
+
+export function PartnerRegistrationForm() {;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { user } = useAuth();
 export function PartnerRegistrationForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const { user } = useAuth(),
+
   const form = useForm<PartnerFormValues>({
     resolver: zodResolver(partnerFormSchema)
     defaultValues: {
@@ -317,12 +325,60 @@ export function PartnerRegistrationForm() {;
                   control={form.control}
                   name="payout_method";
                   render={({ field }) => (
+                        <FormControl>;
+                          <SelectTrigger>;
+                            <SelectValue placeholder="Select payout method" />;
+                          </SelectTrigger>;
+                        </FormControl>;
+                        <SelectContent>;
+                          <SelectItem value="paypal">PayPal</SelectItem>;
+                          <SelectItem value="bank">Bank Transfer</SelectItem>;
+                          <SelectItem value="crypto">Cryptocurrency</SelectItem>;
+                          <SelectItem value="platform_credit">Platform Credit</SelectItem>;
+                        </SelectContent>;
+                      </Select>;
+                      <FormMessage />;
+
+                />;
+              </div>;
+
+
+              <FormField
+                control={form && form.control}
+                name="bio"
+
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Bio</FormLabel>;
+                    <FormControl>;
+                      <Textarea
+                        placeholder="Tell us about yourself and how you plan to promote Zion AI"
+                        rows={4} 
+                        {...field} 
+                    </FormItem>)}
+                />;
+              </div>;
+              <FormField;
+                control={form.control}
+                name="bio";
+                render={({ field }) => (
+                  <FormItem>;
+                    <FormLabel > Bio</FormLabel>;
+                    <FormControl>;
+                      <Textarea;
+                        placeholder="Tell us about yourself and how you plan to promote Zion AI";
+                        rows={4}
+                        {...field}
                       />;
                     </FormControl>;
                     <FormDescription>;
                       Limit: 500 characters;
                     </FormDescription>;
                     <FormMessage />;
+              className="w-full bg-zion-purple hover:bg-zion-purple-dark"
+              disabled={isSubmitting}>;
+              {isSubmitting ? "Submitting..." : "Submit Application"}
+
                   </FormItem>)}
               />;
             </div>;

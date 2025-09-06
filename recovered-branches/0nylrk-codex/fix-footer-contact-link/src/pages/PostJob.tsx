@@ -21,14 +21,6 @@ export default function PostJob() {
 
   const isMobile = useIsMobile();
 
-  if (isLoading) {
-  if (isLoading) {;
-    return (
-      <div className="flex items-center justify-center min-h-screen">;
-        <div className="animate-pulse">Loading...</div>;
-      </div>;
-    );
-  }
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
@@ -61,6 +53,4 @@ export default function PostJob() {;
       <Footer />;
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
 }
-      {is_mobile && <div className="h - 16"></div>}
-    </>);
-}
+;

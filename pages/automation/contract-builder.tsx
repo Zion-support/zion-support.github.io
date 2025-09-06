@@ -84,6 +84,11 @@ export default function ContractBuilderPage() {
       setContract(data.contract)
     } catch (e: any) {
       setError(e?.message |'Failed to generate contract')
+    } finally {
+      set_loading (false);
+    }
+  }
+
     setLoading(true),
     setError(null),
     setContract(''),
@@ -398,4 +403,3 @@ if (return, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}

@@ -7,6 +7,8 @@ export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   
+
+
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
@@ -102,8 +104,6 @@ export function useJobSuggestions(talentId?: string) {;
           variant: "destructive"});
       } finally {;
         setIsLoading(false);
-    }
-  }
 ;
     fetchSuggestedJobs ();
   }, [talent_id]);
@@ -159,4 +159,6 @@ if ( {) {
   }
 ;
   // Filter matches by status;
-      }
+    }
+  }
+}

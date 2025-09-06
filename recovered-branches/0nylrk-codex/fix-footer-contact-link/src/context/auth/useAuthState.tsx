@@ -29,13 +29,3 @@ export function useAuthState() {;
   }
 }
 ;
-  return {
-
-  return {;
-    user;
-    set_user;
-    is_loading;
-    setIsLoading;
-    onboardingStep;
-    setOnboardingStep;
-  }

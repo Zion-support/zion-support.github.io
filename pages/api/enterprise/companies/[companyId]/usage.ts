@@ -1,3 +1,22 @@
+
+
+}
+
+  return res && res.status(405).json({ error: "method_not_allowed" });
+}
+
+import type { NextApiRequest, NextApiResponse } from './next';
+import { store  } from '../../../../../utils / data / enterprise_store';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const { company_id } = req.query;
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (400).json ({ error: "company_id required" });
   }
   const company = store && store.getCompanyById(companyId);
   if (!company) return res && res.status(404).json({ error: "Company not found" });

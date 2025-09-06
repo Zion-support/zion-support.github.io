@@ -2,9 +2,12 @@ import React from 'react';
 const ComprehensiveRedundancyBlueprint: React.FC = () => {
   const architecture_components = [;
     {
-
-
-
+      name: 'Load Balancer Layer'
+      description: 'Distributes traffic across multiple instances'
+      status: 'active'
+      instances: 3
+      health: 'excellent'
+    }
     {
       name: 'Application Layer'
       description: 'Multiple application instances with health checks'
@@ -33,13 +36,42 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   }
 }
   ];
+  const redundancyFeatures = [
+
+    {
+      feature: 'Geographic Distribution',
+      description: 'Instances distributed across multiple regions',
+      benefit: 'Disaster recovery and low latency',
+      status: 'implemented';
+    },
+    {
+      feature: 'Auto - scaling',
+      description: 'Automatic scaling based on load',
+      benefit: 'Cost optimization and performance',
+      status: 'implemented';
+    },
+    {
+      feature: 'Health Monitoring',
+      description: 'Continuous health checks and alerting',
+      benefit: 'Proactive issue detection',
+      status: 'implemented';
+    },
+    {
+      feature: 'Automated Failover',
+      description: 'Automatic failover on component failure',
+      benefit: 'Zero downtime during failures',
+      status: 'implemented';
+    },
+    {
+      feature: 'Backup & Recovery',
+      description: 'Automated backup and recovery procedures',
+      benefit: 'Data protection and business continuity',
   const performanceMetrics = [
 
     { metric: 'Uptime', value: '99.97%', target: '99.9%', status: 'exceeded' },
     { metric: 'Response Time', value: '45ms', target: '100ms', status: 'exceeded' },
     { metric: 'Throughput', value: '2.4k req / s', target: '1k req / s', status: 'exceeded' },
     { metric: 'Failover Time', value: '2.3s', target: '5s', status: 'exceeded' },
-  ];
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
@@ -53,6 +85,16 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   }
 }
   };
+  const getHealthColor = (health: string) => {
+;
+  const getHealthColor = (health: string) =>: any {
+    switch (health) {
+
+      case 'excellent': return 'bg-green-500/20 text-green-400';
+      case 'good': return 'bg-yellow-500/20 text-yellow-400';
+      case 'warning': return 'bg-orange-500/20 text-orange-400';
+      case 'critical': return 'bg-red-500/20 text-red-400';
+      default: return 'bg-gray-500/20 text-gray-400';
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -101,31 +143,15 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
           </div>
         </div>
         {/* Architecture Components */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Architecture Components</h2>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-            {architecture_components.map ((component, index) => (
-              <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <div className="flex justify - between items - start mb - 4">;
-                  <h3 className="text - lg font - semibold text - white">{component.name}</h3>;
-                  <span className={`px - 2 py - 1 text - xs rounded - full ${getHealthColor (component.health)}`}>;
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Architecture Components</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {architectureComponents.map((component, index) => (
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-white">{component.name}</h3>
+                  <span className={`px-2 py-1 text-xs rounded-full ${getHealthColor(component.health)}`}>
                     {component.health}
-                  </span>;
-                </div>;
-                <p className="text - gray - 300 text - sm mb - 4">{component.description}</p>;
-                <div className="flex justify - between items - center">;
-                  <span className="text - gray - 400 text - sm">{component.instances} instances</span>;
-                  <span className={`text - xs ${getStatusColor (component.status)}`}>;
-        {/* Redundancy Features */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Redundancy Features</h2>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">;
-            {redundancy_features.map ((feature, index) => (
-              <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <div className="flex justify - between items - start mb - 4">;
-                  <h3 className="text - lg font - semibold text - white">{feature.feature}</h3>;
-                  <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (feature.status)}`}>;
-                    {feature.status}
                     {component.health  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -137,7 +163,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400 text-sm">{component.instances} instances</span>
                   <span className={`text-xs ${getStatusColor(component.status)}`}>
-
                     ● {component.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -166,7 +191,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(feature.status)}`}>
-
                     {feature.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -177,29 +201,32 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
                 <p className="text-cyan-400 text-sm font-medium">Benefit: {feature.benefit}</p>
               </div>
-        {/* Performance Metrics */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Performance Metrics</h2>;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <div className="overflow - x-auto">;
-              <table className="w - full">;
-                <thead>;
-                  <tr className="border - b border - white / 20">;
-                    <th className="text - left py - 3 px - 4 text - cyan - 400">Metric</th>;
-                    <th className="text - left py - 3 px - 4 text - cyan - 400">Current Value</th>;
-                    <th className="text - left py - 3 px - 4 text - cyan - 400">Target</th>;
-                    <th className="text - left py - 3 px - 4 text - cyan - 400">Status</th>;
-                  </tr>;
-                </thead>;
-                <tbody>;
-                  {performance_metrics.map ((metric, index) => (
-                    <tr key={index} className="border - b border - white / 10">;
-                      <td className="py - 3 px - 4 text - white">{metric.metric}</td>;
-                      <td className="py - 3 px - 4 text - green - 400 font - semibold">{metric.value}</td>;
-                      <td className="py - 3 px - 4 text - gray - 300">{metric.target}</td>;
-                      <td className="py - 3 px - 4">;
-                        <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (metric.status)}`}>;
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-white/20">
+                    <th className="text-left py-3 px-4 text-cyan-400">Metric</th>
+                    <th className="text-left py-3 px-4 text-cyan-400">Current Value</th>
+                    <th className="text-left py-3 px-4 text-cyan-400">Target</th>
+                    <th className="text-left py-3 px-4 text-cyan-400">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {performanceMetrics.map((metric, index) => (
+                    <tr key={index} className="border-b border-white/10">
+                      <td className="py-3 px-4 text-white">{metric.metric}</td>
+                      <td className="py-3 px-4 text-green-400 font-semibold">{metric.value}</td>
+                      <td className="py-3 px-4 text-gray-300">{metric.target}</td>
+                      <td className="py-3 px-4">
+                        <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
                           {metric.status}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
                           {metric.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -284,9 +311,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >

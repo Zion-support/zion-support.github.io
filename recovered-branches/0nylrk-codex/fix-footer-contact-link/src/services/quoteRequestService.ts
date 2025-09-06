@@ -24,6 +24,17 @@ export const quoteRequestService = {
     if (error) throw error;
     return data as QuoteRequest[]
   }
+  getById: async (id: string) => {
+    const { data, error } = await supabase;
+      .from ('quote_requests');
+      .select (`;
+        *;
+        talent:talent_id (
+
+      talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
+  };
+  
+
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status }
@@ -177,35 +188,5 @@ export const quoteRequestService = {;
       .eq('id', id),;
     if (error) throw error;
     return true;
+
   }
-;
-  // Archive / Unarchive a quote request;
-  toggle_archive: async (id: string, is_archived: boolean) => {
-    const { data, error } = await supabase;
-      .from ('quote_requests');
-      .update ({ is_archived: is_archived });
-      .eq ('id', id);
-      .select ();
-;
-    // Check condition
-if (throw error) {
-  $2
-}
-    return data[0] as QuoteRequest;
-  }
-;
-  // Delete a quote request;
-  delete: async (id: string) => {
-    const { error } = await supabase;
-      .from ('quote_requests');
-      .delete ();
-      .eq ('id', id);
-;
-    // Check condition
-if (throw error) {
-  $2
-}
-    return true;
-  }
-}
-;

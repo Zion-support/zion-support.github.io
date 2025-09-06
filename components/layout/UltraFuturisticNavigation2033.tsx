@@ -1,3 +1,55 @@
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Cpu,
+  Target,
+  Microscope,
+  Shield,
+  Zap,
+  Sparkles,
+  Menu,
+  X,
+  Search,
+  ChevronDown,
+  Home,
+  Briefcase,
+  DollarSign,
+  BookOpen,
+  Users,;
+  MessageCircle,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, ;
+  Cpu, Target, Microscope, Shield, Zap, Sparkles;
+  Menu, X, Search, ChevronDown, Home, Briefcase, 
+  DollarSign, BookOpen, Users, MessageCircle
+
+
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Cpu,
+  Target,
+  Microscope,
+  Shield,
+  Zap,
+  Sparkles,
+  Menu,
+  X,
+  Search,
+  ChevronDown,
+  Home,
+  Briefcase,
+  DollarSign,
+  BookOpen,
   Users,;
   MessageCircle,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, ;
@@ -109,7 +161,6 @@ const contactInfo = {
   /* Contact Button */
 }<motion.div whileHover= {  {  website: 'https://ziontechgroup.com'
 }
-
 const serviceCategories = [
     title: ' Revolutionary AI',
     icon: Brain,
@@ -419,6 +470,77 @@ const quick_links = [;
   { name: 'Quantum Tech', href: '/quantum-services', icon: Atom, color: 'from-indigo-500 to-blue-600' }
   { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' }
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' }
+      {
+
+        name: 'AI Autonomous Business Manager',
+        href: '/ai - autonomous - business - manager',
+        description: 'Autonomous business AI',
+        price: '$3, 999 / month',
+      },
+    ],
+
+    title: '⚛️ Quantum & Emerging Tech',
+    icon: Atom,
+    color: 'from-indigo-500 to-blue-600',
+    services: [
+
+
+      {
+
+        name: 'Swarm Robotics Platform',
+        href: '/swarm - robotics - platform',
+        description: 'Collective robot intelligence',
+        price: '$1, 199 / month',
+      },
+    ],
+
+    title: '🏙️ Enterprise IT Solutions',
+    icon: Cpu,
+    color: 'from-blue-500 to-cyan-600',
+    services: [
+
+
+      {
+
+        name: 'AI IT Operations Center',
+        href: '/ai - it - operations - center',
+        description: 'AI - powered IT ops',
+        price: '$2, 999 / month',
+      },
+    ],
+
+    title: '🌌 Space & Metaverse Tech',
+    icon: Rocket,
+    color: 'from-teal-500 to-emerald-600',
+    services: [
+
+
+      {
+
+        name: 'Virtual Event Holograms',
+        href: '/virtual - event - hologram - platform',
+        description: 'Holographic events',
+        price: '$2, 499 / month',
+      },
+    ],
+  },
+
+  {
+
+    name: 'Micro SAAS',
+    href: '/enhanced - micro - saas - showcase',
+    icon: Target,
+
+  { name: 'AI Services', href: '/ai-services', icon: Brain, color: 'from-violet-500 to-purple-600' },
+  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom, color: 'from-indigo-500 to-blue-600' },
+  { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' },
+  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },
+  { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
+
+
+export default function UltraFuturisticNavigation2033() {
+  const [isOpen, setIsOpen] = useState(false)
+
 
 export default function UltraFuturisticNavigation2033() {;
   const [isOpen, setIsOpen] = useState(false);
@@ -450,6 +572,37 @@ export default function UltraFuturisticNavigation2033() {;
                 <button
                   onMouseEnter={() => setActiveCategory('services')}
                   onMouseLeave={() => setActiveCategory(null)}
+                  <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>              {/* Services Mega Menu */}
+              <div className="relative group">;
+                <button
+                  onMouseEnter={() => setActiveCategory('services')}
+                  onMouseLeave={() => setActiveCategory(null)}
+
+
+            {/* Desktop Navigation */}
+            <div className='hidden lg:flex items-center space-x-8'>
+              {/* Services Mega Menu */}
+              <div className='relative group'>
+                <button
+                  onMouseEnter={() => setActiveCategory('services')}
+                  onMouseLeave={() => setActiveCategory(null)}
+                  className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
+                >
+                  <span>Services</span>
+                  <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>              {/* Services Mega Menu */}
+              <div className="relative group">
+                <button
+                  onMouseEnter={() => setActiveCategory('services')}
+                  onMouseLeave={() => setActiveCategory(null)}
+                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+                >
+                  <span>Services</span>
+                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                </button>
+                  <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>
+
+                </button>
+
                 {/* Mega Menu */}
                 <AnimatePresence>;
                   {activeCategory === 'services' && (;
@@ -460,6 +613,7 @@ export default function UltraFuturisticNavigation2033() {;
                       transition={{ duration: 0 && 0.2 }}
                       onMouseEnter={() => setActiveCategory('services')}
                       onMouseLeave={() => setActiveCategory(null)}
+
                     >
                       <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
                         {serviceCategories.map(category => (
@@ -482,9 +636,44 @@ export default function UltraFuturisticNavigation2033() {;
                                       </h4>;
                                       <span className="text - sm text - purple - 400 font - medium">;
                                         {service.price}
-                                      </span>
-                                    </div>
-                                    <p className="text-sm text-gray-400">{service.description}</p>
+                                </Link>
+                              ))}
+                            </div>;
+                          </div>;
+                        ))}
+                      </div>;
+                    </motion && motion.div>;
+                  )}
+
+                </AnimatePresence>;
+              </div>;
+
+
+              {/* Quick Links */}
+
+
+                <Link
+                  key={link && link.name}
+                  href={link && link.href}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+
+
+              ))}
+                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
+
+                >
+
+                  {link.name}
+                </Link>
+              ))}
+
+              {/* Contact Button */}
+              <motion&& motion.div
+                whileHover={{ scale: 1 && 1.05 }}
+                whileTap={{ scale: 0 && 0.95 }}>;
+                <Link
+
+
                                 </Link>
                               ))}
                             </div>
@@ -495,13 +684,11 @@ export default function UltraFuturisticNavigation2033() {;
                   )}
                 </AnimatePresence>
               </div>
-              ))}
-
-              {/* Contact Button */}
-              <motion&& motion.div
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}>;
+              {/* Quick Links */}
+              {quickLinks.map(link => (
                 <Link
+                  key={link.name}
+                  href={link.href}
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
 
                 >
@@ -526,6 +713,26 @@ export default function UltraFuturisticNavigation2033() {;
 
 
 
+            {/* Mobile Menu Button */}
+            <div className="lg:hidden">
+              <button
+                onClick={toggleMenu}
+                className='text-gray-300 hover:text-white transition-colors duration-200 p-2'
+              >
+                {isOpen ? (
+                  <X className='w-6 h-6' />
+                ) : (
+                  <Menu className='w-6 h-6' />
+                )}              </button>              <button
+                onClick={toggleMenu}
+                className="text-gray-300 hover:text-white transition-colors duration-200 p-2"
+              >
+                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
+          </div>
+        </div>
+
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -533,7 +740,6 @@ export default function UltraFuturisticNavigation2033() {;
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              <div className='px-4 py-6 space-y-6'>
                 {/* Mobile Services */}
                 <div className='space-y-4'>;
                   <h3 className='text-lg font-semibold text-white'>Services</h3>;
@@ -566,19 +772,130 @@ export default function UltraFuturisticNavigation2033() {;
                     </div>;
                   ))}
 
-                </div>;
-
-
                 {/* Mobile Quick Links */}
-                <div className='space-y-4'>;
-                  <h3 className='text-lg font-semibold text-white'>;
+
+
+                    ))}
+                {/* Mobile Contact Button */}
+                <div className='pt-4'>
+
+
+                  <Link
+                    href='/contact'
+                    onClick={closeMenu}
+                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200'>                  <Link
+                    href="/contact"
+                    onClick={closeMenu}
+                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200">;
+        {/* Mobile Menu */}
+        <AnimatePresence>;
+          {is_open && (
+            <motion.div;
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - purple - 500 / 20';
+              <div className='px - 4 py - 6 space - y-6'>;
+                {/* Mobile Services */}
+                <div className='space - y-4'>;
+                  <h3 className='text - lg font - semibold text - white'>Services</h3>;
+                  {service_categories.map (category => (
+                    <div key={category.title} className='ml - 4 space - y-2'>;
+                      <h4 className='font - medium text - purple - 300'>;
+                        {category.title}
+                      </h4>;
+                      <div className='ml - 4 space - y-1'>;
+                        {category.services.map (service => (                          <Link;
+                            key={service.name}
+                            href={service.href}
+                            on_click={close_menu}
+                            className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                          >                <div className="space - y-4">;
+                  <h3 className="text - lg font - semibold text - white">Services</h3>;
+                  {service_categories.map ((category) => (
+                    <div key={category.title} className="ml - 4 space - y-2">;
+                      <h4 className="font - medium text - purple - 300">{category.title}</h4>;
+                      <div className="ml - 4 space - y-1">;
+                        {category.services.map ((service) => (
+                            key={service.name}
+                            href={service.href}
+                            on_click={close_menu}
+                            className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                            className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
+                          >;
+                            {service.name}
+                          </Link>))}
+                      </div>;
+                    </div>))}
+                </div>;
+                {/* Mobile Quick Links */}
+                <div className='space - y-4'>;
+                  <h3 className='text - lg font - semibold text - white'>;
                     Quick Links;
                   </h3>;
-                  <div className='grid grid-cols-2 gap-2'>;
-                    {quickLinks && quickLinks.map(link => (                      <Link
-                        key={link && link.name}
-                        href={link && link.href}
-                        onClick={closeMenu}
+                  <div className='grid grid - cols - 2 gap - 2'>;
+                    {quick_links.map (link => (                      <Link;
+                        key={link.name}
+                        href={link.href}
+                        on_click={close_menu}
+                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                      >                <div className="space - y-4">;
+                  <h3 className="text - lg font - semibold text - white">Quick Links</h3>;
+                  <div className="grid grid - cols - 2 gap - 2">;
+                    {quick_links.map ((link) => (
+                        key={link.name}
+                        href={link.href}
+                        on_click={close_menu}
+                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                        className="text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
+                      >;
+                        {link.name}
+                      </Link>))}
+                  </div>;
+                </div>;
+                {/* Mobile Contact Button */}
+                <div className='pt - 4'>;
+                  <Link;
+                    href='/contact';
+                    on_click={close_menu}
+                    className='block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200'                  >                  <Link;
+                    href="/contact";
+                    on_click={close_menu}
+                    className="block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
+                  >;
+                    Get Started;
+                  </Link>;
+                </div>;
+              </div>;
+
+                <div className="pt-4">
+                  </div>
+                </div>
+                  <Link
+                    href="/contact"
+                    onClick={closeMenu}
+                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200"
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+
+          )}
+
+        </AnimatePresence>;
+      </nav>;
+    </>;
+  );
+}whileTap= {;
+  {;
+  scale: 0 && 0.95 ;
+}> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion && motion.div> </div> </button> </div> </div> </div> {;
+  /* Mobile Menu */ ;
+}<AnimatePresence>) ) ;
+}</div> </div>) ) ;
+}</div>) ) ;
+}</div> </div> > Get Started </a> </div> </div> </motion && motion.div>) ;
+}</AnimatePresence> </nav> </>) }
+
             </motion.div>)}
         </AnimatePresence>;
       </nav>;
@@ -586,15 +903,6 @@ export default function UltraFuturisticNavigation2033() {;
 ;
 }while_tap= {
   {
-  scale: 0.95;
-}> <Link href="/contact" className="px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200 shadow - lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
-  /* Mobile Menu */;
-}<AnimatePresence>) );
-}</div> </div>) );
-}</div>) );
-}</div> </div> > Get Started </a> </div> </div> </motion.div>);
-}</AnimatePresence> </nav> </>) }
-
   /* Mobile Menu */ 
 }<AnimatePresence>) ) 
 }</div> </div>) ) 

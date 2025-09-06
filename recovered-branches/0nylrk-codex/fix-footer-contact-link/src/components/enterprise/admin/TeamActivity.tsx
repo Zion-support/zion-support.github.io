@@ -63,6 +63,13 @@ export function TeamActivity() {
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3)
       category: "billing"
     }
+      id: 6,
+      user: "Jamie Smith",
+      action: "Updated budget",
+      target: "Monthly spending cap",
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
+      category: "billing",
+    },;
   ];
   // Function to format the date in a readable way
   const formatDate = (date: Date) => {
@@ -71,6 +78,40 @@ export function TeamActivity() {
     const diffMins = Math.floor(diffMs / (1000 * 60));
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+      return `${diffMins} minutes ago`;
+    } else if (diffHrs < 24) {;
+      return `${diffHrs} hours ago`;
+    } else if (diffDays < 7) {;
+      return `${diffDays} days ago`;
+    } else {;
+      return date && date.toLocaleDateString();
+    }
+  }
+  const getCategoryBadge = (category: string) => {
+    const categoryStyles: Record<
+      string
+      { variant: "default" | "outline" | "secondary" | "destructive" }
+    > = {;
+      jobs: { variant: "default" },;
+      candidates: { variant: "outline" },;
+      team: { variant: "secondary" },;
+      billing: { variant: "destructive" },;
+    };
+
+
+    return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
+  }
+  },
+
+  const getCategoryBadge = (category: string) => {
+    const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {
+      jobs: { variant: "default" },
+      candidates: { variant: "outline" },
+      team: { variant: "secondary" },
+      billing: { variant: "destructive" }},
+
+    return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
+  },
 
   return (
     <div className="space-y-6">;
@@ -83,7 +124,6 @@ export function TeamActivity() {
               type="search"
               placeholder="Search activities..."
               className="w-[200px] md:w-[300px] pl-9"
-
 import React from "react",;
 import {;
   Table,;

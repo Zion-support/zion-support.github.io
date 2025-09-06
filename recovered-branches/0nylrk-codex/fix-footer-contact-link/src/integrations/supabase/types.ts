@@ -148,6 +148,49 @@ export type Database = {
             referenced_columns: ["id"];
           }
           {
+            foreignKeyName: "api_logs_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      certifications: {
+        Row: {
+          created_at: string;
+          credential_id: string | null;
+          credential_url: string | null;
+          expiration_date: string | null;
+          id: string;
+          issue_date: string | null;
+          issuing_organization: string;
+          name: string;
+          resume_id: string;
+        }
+        Insert: {
+          created_at?: string;
+          credential_id?: string | null;
+          credential_url?: string | null;
+          expiration_date?: string | null;
+          id?: string;
+          issue_date?: string | null;
+          issuing_organization: string;
+          name: string;
+          resume_id: string;
+        }
+        Update: {
+          created_at?: string;
+          credential_id?: string | null;
+          credential_url?: string | null;
+          expiration_date?: string | null;
+          id?: string;
+          issue_date?: string | null;
+          issuing_organization?: string;
+          name?: string;
+          resume_id?: string;
+        }
+        Relationships: [;
+          {
             foreignKeyName: "certifications_resume_id_fkey";
             columns: ["resume_id"];
             isOneToOne: false;
@@ -568,6 +611,14 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
+          }
+          {
+            foreignKeyName: "job_applications_talent_id_fkey";
+            columns: ["talent_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
       }
       jobs: {
         Row: {
@@ -814,6 +865,36 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]
+          }
+          {
+            foreignKeyName: "projects_talent_id_fkey";
+            columns: ["talent_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      quote_requests: {
+        Row: {
+          budget_display: string | null;
+          budget_max: number | null;
+          budget_min: number | null;
+          created_at: string;
+          id: string;
+          is_archived: boolean;
+          project_description: string | null;
+          project_name: string;
+          project_summary: string;
+          replied_at: string | null;
+          requester_email: string;
+          requester_id: string | null;
+          requester_name: string;
+          start_date: string | null;
+          status: Database["public"]["Enums"]["quote_request_status"];
+          talent_id: string | null;
+          timeline: string;
+          updated_at: string;
+          viewed_at: string | null;
         }
         Insert: {
           budget_display?: string | null;
@@ -904,6 +985,14 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "referrals"
             referencedColumns: ["id"]
+          }
+          {
+            foreignKeyName: "referral_rewards_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
       }
       referrals: {
         Row: {
@@ -968,6 +1057,58 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+          }
+          {
+            foreignKeyName: "referrals_referrer_id_fkey";
+            columns: ["referrer_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
+      }
+      reminder_logs: {
+        Row: {
+          clicked_at: string | null
+          email_body: string
+          email_subject: string
+          id: string
+          opened_at: string | null
+          reminder_type: string
+          sent_at: string | null
+          user_id: string
+        }
+        Insert: {
+          clicked_at?: string | null
+          email_body: string
+          email_subject: string
+          id?: string
+          opened_at?: string | null
+          reminder_type: string
+          sent_at?: string | null
+          user_id: string
+        }
+        Update: {
+          clicked_at?: string | null
+          email_body?: string
+          email_subject?: string
+          id?: string
+          opened_at?: string | null
+          reminder_type?: string
+          sent_at?: string | null
+          user_id?: string
+      reminder_logs: {;
+        Row: {;
+
+          clicked_at: string | null;
+          email_body: string;
+          email_subject: string;
+          id: string;
+          opened_at: string | null;
+          reminder_type: string;
+          sent_at: string | null;
+          user_id: string;
+        }
+        Insert: {
           clicked_at?: string | null;
           email_body: string;
           email_subject: string;
@@ -1097,6 +1238,14 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+          }
+          {
+            foreignKeyName: "reviews_reviewer_id_fkey";
+            columns: ["reviewer_id"];
+            isOneToOne: false;
+            referenced_relation: "user_metrics";
+            referenced_columns: ["user_id"];
+          }];
       }
       scheduled_jobs: {
         Row: {
@@ -1814,7 +1963,6 @@ export type TablesUpdate<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
         Update: infer U;
       }
-
       ? U;
       : never;
     : never;

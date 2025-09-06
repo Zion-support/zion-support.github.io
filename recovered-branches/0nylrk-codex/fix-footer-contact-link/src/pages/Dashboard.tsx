@@ -22,9 +22,28 @@ import { NotificationCenter } from "@/components/NotificationCenter",
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 export default function Dashboard() {
+
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
+
+
+  const handleTestNotification = async () => {;
+    const result = await createTestNotification(user && user.id);
+    if (result && result.success) {;
+      toast({;
+        title: "Test notification created",;
+        description: "Check your notification center"});
+    } else {;
+      toast({;
+        title: "Error creating test notification",;
+        description: "Something went wrong",;
+        variant: "destructive"});
+
+    }
+  }
+  },
+
   return (
     <>;
       <Header />;
@@ -32,7 +51,6 @@ export default function Dashboard() {
         <div className="container mx-auto px-4 py-8">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Sidebar - User Profile */}
-                  <Badge 
                     className="bg-zion-purple text-white mb-4"
                   >
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}

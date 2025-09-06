@@ -37,6 +37,8 @@ interface Conversation {
   timestamp: string,
   unreadCount: number,
   isTyping?: boolean
+
+export function MobileConversationList(): any ({;
   conversations;
   activeConversation;
 import React from "react",;

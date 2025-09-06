@@ -36,9 +36,6 @@
     }
   }
 ];
-  }
-}
-
 export const revolutionary2027AIServices: Revolutionary2027AiService[] = [
   {
     id: "2027-revolutionary-ai", name: "2027 Revolutionary AI Platform",
@@ -54,6 +51,11 @@ export const revolutionary2027AIServices: Revolutionary2027AiService[] = [
     link: "/services/2027-revolutionary-ai", category: "Revolutionary 2027 AI",
     realImplementation: true,
     contactInfo: {
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

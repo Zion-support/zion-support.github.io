@@ -19,6 +19,28 @@
       setSuggestion(e?.message |"Failed to fetch suggestion");
     } finally {
       setIsLoading(false);
+    }
+  }
+      const res = await fetch('/api/figma/wireframe-suggest', {;
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({ screenName, role })});
+      const json = await res.json();
+      setSuggestion(json?.suggestion || 'No suggestion received');
+    } catch (error) {
+      setSuggestion(e?.message || 'Failed to fetch suggestion');
+    } finally {;
+      setIsLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   return (
     <>
       <Head>
@@ -122,8 +144,9 @@
         </div>
       </section>
     </>
-  );
 }
+function MapColumn({ title, sections }: { title: string, sections: { id: string, title: string, items: { id: string, title: string }[] }[] }) {
+  return (
             key={s.id}
             className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40"
           >
@@ -134,6 +157,7 @@
                   key={i.id}
                   className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800"
                 >
+                  {i.title}
                 </span>
               ))}
             </div>
@@ -155,3 +179,10 @@
   }
 }
 }
+    <div className="space-y-3">
+      <h3 className="text-lg font-semibold">{title}</h3>
+      <div className="grid gap-3">
+        {sections.map((s) => (
+
+                <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">
+

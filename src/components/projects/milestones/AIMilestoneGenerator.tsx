@@ -1,20 +1,3 @@
-import React, { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import {
-  Accordion
-  AccordionContent
-  AccordionItem
-  AccordionTrigger
-} from '@/components/ui/accordion'
-import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
-import { format, parseISO } from 'date-fns'
-  MilestoneInput
-  GeneratedMilestone
-  useMilestoneGenerator
-} from '@/hooks/useMilestoneGenerator'
-import { Badge } from '@/components/ui/badge'
-
 interface AIMilestoneGeneratorProps {;
   scope: string;
   startDate: string;
@@ -22,23 +5,6 @@ interface AIMilestoneGeneratorProps {;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
 
-  scope
-  startDate
-  endDate
-  projectType
-  onAddMilestones
-  onAddMilestone
-}: AIMilestoneGeneratorProps) {
-  const {
-    generateMilestones
-    generatedMilestones
-    isGenerating
-    clearGeneratedMilestones
-  } = useMilestoneGenerator()
-  const [selectedMilestones, setSelectedMilestones] = useState<
-    Record<string, boolean>
-  >({})
-  const handleGenerateMilestones = async () => {
     }
     const input: MilestoneInput = {
       scope
@@ -147,8 +113,6 @@ export function AIMilestoneGenerator({;
       return dateString;
     }
 
-  return (
-        <Button
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}

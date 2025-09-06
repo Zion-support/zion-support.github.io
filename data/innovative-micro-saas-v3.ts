@@ -36,9 +36,6 @@
     }
   }
 ];
-  }
-}
-
 export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
   {
     id: "ai-customer-support", name: "AI Customer Support Platform",
@@ -54,6 +51,11 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
     link: "/services/ai-customer-support", category: "Customer Support",
     realImplementation: true,
     contactInfo: {
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

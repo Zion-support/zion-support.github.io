@@ -10,6 +10,8 @@
 				"Store ops: labor planning and task automation"
 				"Omni-channel journey orchestration"
 
+
+
 			pricePerMonthUSD={1999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

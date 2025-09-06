@@ -14,3 +14,14 @@ const SEOAudit: NextPage = () => {
       </main>
     </div>
   )
+
+},
+export default SEOAudit,
+
+},
+export default SEOAudit,
+},
+
+export default SEOAudit,;
+export default SEOAudit,
+

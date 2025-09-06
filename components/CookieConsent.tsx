@@ -1,4 +1,5 @@
 
+
 export default function CookieConsent() {;
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);

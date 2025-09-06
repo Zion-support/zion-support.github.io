@@ -1,4 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+  };
+  const data = readOrgData();
+
+  const data = readOrgData();
+  const parseArray = (v?: string | string[]) => {
+    if (!v) return undefined;
+
+
+
   const filters: OrgFilters = {
     view: (req && req.query.view as OrgFilters['view']) || 'all';
     roleTypes: parseArray(req && req.query.roleTypes) as RoleType[] | undefined;
@@ -83,3 +92,4 @@ const filters: OrgFilters = {
   const filtered = filterOrgData (data, filters);
   return res.status (200).json (filtered);  return res.status (200).json (filtered);
 }
+

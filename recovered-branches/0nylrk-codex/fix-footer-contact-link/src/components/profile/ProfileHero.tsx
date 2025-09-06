@@ -1,4 +1,9 @@
 
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {Badge} from "@/components/ui/badge";
+import {Star} from "lucide-react";
+import {cn} from "@/lib/utils";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Badge } from "@/components/ui/badge",
@@ -70,16 +75,19 @@ export function ProfileHero({
                 <Badge
                   variant="outline"
                   className={cn(
-
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}>;
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
 
-
-                {aiScore && (;
-                  <div className="px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">;
-                    AI Match: {aiScore}%;
+                )}
                   </div>;
+                  </div>;
+                )}
+                
+                {aiScore && (
+                  <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
+                    AI Match: {aiScore}%
+                  </div>
                 )}
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { AspectRatio } from '@/components / ui / aspect - ratio';

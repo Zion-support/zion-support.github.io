@@ -1,19 +1,3 @@
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 export default function AIServices() {
   return (
     <Layout
@@ -121,5 +105,4 @@ export default function AIServices() {
       </div>
     </Layout>
   );
-}
 }

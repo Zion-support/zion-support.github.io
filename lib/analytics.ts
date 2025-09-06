@@ -2,6 +2,9 @@
 }
 export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
+
+      page_path: url,;
+      page_path: url,
     });
   }
 };
@@ -58,10 +61,24 @@ export const trackWebVitals = (metric: WebVitalMetric) => {
       event_category: 'Web Vitals'
       event_label: metric.id
       non_interaction: true
+      non_interaction: true,
+    });
+  }
+
 }
 ;
 // Track events;
 export const event = ({
+  action
+  category
+  label
+  value
+}: {
+  action,
+  category,
+  label,
+  value,
+}: {;
   action: string;
   category: string;
   label?: string;

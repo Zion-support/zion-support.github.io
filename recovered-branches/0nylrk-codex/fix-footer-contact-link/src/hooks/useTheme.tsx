@@ -8,3 +8,7 @@ export const use_theme = () =>: any {
     theme: "dark",
     set_theme: (theme: string) => console.log (`Theme would change to: ${theme}`);
   }
+
+    theme: "dark",
+
+};

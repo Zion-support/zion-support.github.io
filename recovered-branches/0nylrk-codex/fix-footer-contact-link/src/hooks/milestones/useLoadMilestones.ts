@@ -37,19 +37,12 @@ import {Milestone, MilestoneActivity} from './types';
       setActivities(activitiesMap);
       setError(null)
     } catch (err: any) {
-export const useLoadMilestones = (project_id?: string) =>: any {
-  const { user } = use_auth ();
-  const [milestones, set_milestones] = useState < Milestone[]>([]);
-  const [activities, set_activities] = useState < Record < string, MilestoneActivity[]>>({});
-  const [is_loading, setIsLoading] = useState (true);
-  const [error, set_error] = useState < string | null>(null);
-;
-  const fetch_milestones = async () => {
-    // Check condition
-if ( {) {
-  $2
-}
-      setIsLoading (false);
+      console && console.error("Error fetching milestones:", err);
+      setError("Failed to fetch milestones: " + err && err.message),
+      toast && toast.error("Failed to fetch milestones")
+
+        
+        activitiesMap[milestone.id] = activitiesData || []
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -81,7 +74,30 @@ export const useLoadMilestones = (projectId?: string) => {;
     if (projectId) {
       fetchMilestones()
     }
-  }, [projectId]);
+
+
+
+      }
+      set_activities (activities_map);
+      set_error (null);
+    } catch (err: any) {
+      console.error ("Error fetching milestones:", err);
+      set_error ("Failed to fetch milestones: " + err.message),
+      toast.error ("Failed to fetch milestones");
+    } finally {
+
+;
+  // Fetch milestones when component mounts or project_id changes;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      fetch_milestones ();
+    }
+  }, [project_id]);
+;
+
   return {
     milestones;
     activities;
@@ -110,3 +126,5 @@ export const useLoadMilestones = (projectId?: string) => {;
     isLoading,;
     error;
     refetch: fetchMilestones;
+  }
+};

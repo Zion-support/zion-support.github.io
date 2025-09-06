@@ -5,6 +5,10 @@ interface Milestone {
 
   dueDate: string
 
+interface Milestone {
+  title: string,
+  description: string,
+  dueDate: string,
   estimatedHours: number
 }
 export async function generateContract(
@@ -75,6 +79,10 @@ export async function generateContract(;
   });
   if (error) {;
     throw error;
+  }
+  
+  if (data.success && data.contract) {
+    return data.contract
   
   if (data && data.success && data && data.contract) {
     return data && data.contract
@@ -133,3 +141,6 @@ if ( {) {
   $2
 }
     return data.contract;
+  }
+}
+;

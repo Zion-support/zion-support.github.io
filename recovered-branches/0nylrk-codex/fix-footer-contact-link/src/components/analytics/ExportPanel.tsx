@@ -10,12 +10,6 @@
   CardHeader,
   CardTitle,;
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";
-
-export function ExportPanel() {
-
-} from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -32,9 +26,6 @@ export function ExportPanel() {
   
   const handleExport = (format: 'csv' | 'json') => {
     // Placeholder for actual export functionality
-    toast({
-      title: `Exporting as ${format.toUpperCase()}`,
-
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;
@@ -87,3 +78,6 @@ function ExportPanel() {
           </Button>;
         </div>;
       </CardContent>;
+  );
+    </Card>);
+}

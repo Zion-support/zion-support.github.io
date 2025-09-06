@@ -27,42 +27,44 @@ import {
 } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Navigate } from "react-router-dom",
-import React, { useState } from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { useAdminQuotes } from '@/hooks / useAdminQuotes';
-import { use_auth } from '@/hooks / use_auth';
-import { Card, CardContent } from '@/components / ui / card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { Navigate } from './react-router-dom';
-import type { QuoteRequest } from "@/types / quotes";
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { QuoteDetails } from '@/components / quotes / QuoteDetails';
-import { ExportToCSV } from '@/components / quotes / ExportToCSV';
-import { QuoteStatusCards, QuotesFilter, QuotesTable } from '@/components / admin / quotes';
-;
-export default /**
- * QuoteManager - Function description
- */
-function QuoteManager() {
-  const { user } = use_auth ();
-  const is_admin = user?.user_type === 'admin';
-;
-  const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
-  const [show_details, setShowDetails] = useState (false);
-;
+
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetails, setShowDetails] = useState(false);
+import type { QuoteRequest } from "@/types/quotes",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { QuoteDetails } from "@/components/quotes/QuoteDetails",
+import { ExportToCSV } from "@/components/quotes/ExportToCSV",
+import {
+  QuoteStatusCards,
+  QuotesFilter,
+  QuotesTable
+} from "@/components/admin/quotes",
+
+export default function QuoteManager() {
+  const { user } = useAuth(),
+  const isAdmin = user?.userType === 'admin',
+  
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
+  const [showDetails, setShowDetails] = useState(false),
+
   const {
-    quotes;
-    is_loading;
-    error;
-    status_filter;
-    setStatusFilter;
-    archive_filter;
-    setArchiveFilter;
-    search_query;
-    setSearchQuery;
-    date_range;
-    setDateRange;
+    quotes,
+    isLoading,
+    error,
+    statusFilter,
+    setStatusFilter,
+    archiveFilter,
+    setArchiveFilter,
+    searchQuery,
+    setSearchQuery,
+    dateRange,
+    setDateRange,
+    updateStatus,
+    toggleArchive,
+    deleteQuote
+  } = useAdminQuotes();
+  } = useAdminQuotes(),
+
   // Count quotes by status
   const statusCounts = {
     new: quotes.filter(q => q.status === 'new').length
@@ -103,7 +105,6 @@ function QuoteManager() {
     return <Navigate to="/unauthorized" replace />;
   }
   return (
-
             
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;

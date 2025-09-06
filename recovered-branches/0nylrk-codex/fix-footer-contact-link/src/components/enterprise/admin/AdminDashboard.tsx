@@ -48,5 +48,3 @@ export function AdminDashboard() {;
           <TeamActivity />;
         </TabsContent>;
       </Tabs>;
-    </div>;
-  );

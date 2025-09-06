@@ -1,9 +1,4 @@
 
-type EventRow = {
-
-    }
-    return rows;
-
   name: string;
   page?: string;
   userType?: string;
@@ -30,6 +25,10 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         rows.push(obj);
     }
     return rows;
+    }
+    return rows;
+
+
   } catch {
     return [];
   }
@@ -39,6 +38,26 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
 .sort((a, b) => b.value - a.value)
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
+    .sort((a, b) => b.value - a.value),
+
+
+  const days = Object.keys(byDay).sort();
+  const line = days.map((d) => ({ date: d, value: byDay[d] }));
+
+  const funnelStages = [
+    'Visit',
+    'AI Prompt Used',
+    'Post Created',
+    'Message Sent',
+  ];
+  const funnel = funnelStages.map((stage) => ({ 
+    label: stage, 
+    value: byEvent[stage] || 0 
+  }));
+
+  res.status(200).json({ pagesMostUsed, events, line, funnel });
+
+
 function featureFromPath (page?: string): string {
 // Check condition
 if (return 'other', ) {
@@ -89,6 +108,7 @@ function handler() {
   res.status (200).json ({ pagesMostUsed, events, line, funnel });
 }
 ;
+};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     await ensureAdminFromApi(req);

@@ -13,6 +13,27 @@
 interface UltraFuturisticNavigationProps {
   className?: string;
 export default function UltraFuturisticNavigation({
+
+  className = '',;
+
+} from 'lucide-react';
+interface UltraFuturisticNavigationProps {
+  className?: string;
+export default function UltraFuturisticNavigation({
+}: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
+interface UltraFuturisticNavigationProps {;
+  className?: string;
+
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield } from 'lucide-react';
+
+interface UltraFuturisticNavigationProps {
+  className?: string
+
+}
+
+
+
+export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -151,7 +172,14 @@ export default function UltraFuturisticNavigation({
       isScrolled 
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
         : 'bg-transparent'
-
+    } ${className}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className='flex items-center space-x-3'
 
 
           >
@@ -318,11 +346,18 @@ export default function UltraFuturisticNavigation({
                   </Link>)}
               </div>))}
           </div>;
+          {/* Contact Info & CTA */}
+
+
             {/* Contact Info */}
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
               <div className='flex items-center space-x-2'>;
                 <Phone className='w-4 h-4 text-cyan-400' />                <span>{contactInfo && contactInfo.mobile}</span>          <div className="hidden lg:flex items-center space-x-6">;
             {/* Contact Info */}
+
+            {/* CTA Button */}
+
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 
               <Link
                 href='/contact'
@@ -331,6 +366,26 @@ export default function UltraFuturisticNavigation({
                 href="/contact"
 
 
+
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className='text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50'
+            >
+              {isOpen ? (
+                <X className='w-6 h-6' />
+              ) : (
+                <Menu className='w-6 h-6' />
+              )}            </button>            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
 
       {/* Mobile Menu */}
       <AnimatePresence>;
@@ -353,12 +408,24 @@ export default function UltraFuturisticNavigation({
                         >
                           {item.dropdownItems?.map(dropdownItem => (
                             <Link
+                              key={dropdownItem.name}
+                              href={dropdownItem.href}
+                              className='flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300'
+                              onClick={() => setIsOpen(false)}
+                            >
+                              <div
+                                className={`w-8 h-8 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center`}
+                              >
+                                <dropdownItem.icon className='w-4 h-4 text-white' />
+                              </div>
+                              <span className='text-gray-300 hover:text-white transition-colors'>                                {dropdownItem.name}                        >
+                          {item.dropdownItems?.map((dropdownItem) => (
+
+                            <Link
                               key={dropdownItem && dropdownItem.name}
                               href={dropdownItem && dropdownItem.href}
                               className='flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300'
                               onClick={() => setIsOpen(false)}
-                            >;
-                              <div
 
                                 {dropdownItem.name}
 
@@ -370,11 +437,21 @@ export default function UltraFuturisticNavigation({
                     </div>;
                   ) : (;
                     <Link
-
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}
 
                       onClick={() => setIsOpen(false)}
 
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>;
+              ))}
+
+              {/* Mobile Contact Info */}
+              <div className='pt-6 border-t border-gray-700/50 space-y-3'>
+                <div className='flex items-center space-x-3 text-gray-300'>
+                  <Phone className='w-4 h-4 text-cyan-400' />
 
                   <span>{contactInfo.mobile}</span>
                 </div>
@@ -534,3 +611,23 @@ export default function UltraFuturisticNavigation({
                 </Link>;
               </div>;
             </div>;
+        )}
+}
+
+
+      </AnimatePresence>;
+    </nav>;
+  );
+}
+
+  );
+}
+
+  );
+
+          </motion.div>)}
+      </AnimatePresence>;
+    </nav>);
+      </AnimatePresence>
+    </nav>
+}

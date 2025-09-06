@@ -1,6 +1,6 @@
+
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/prompt-policy-registry'));
   if (!service) return null;
-
 
 
 import React from 'react',;
@@ -15,6 +15,7 @@ import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 export default function PromptPolicyRegistryPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/prompt-policy-registry'))
+  if (!service) return null,
   return (
     <Layout>
       <Head>

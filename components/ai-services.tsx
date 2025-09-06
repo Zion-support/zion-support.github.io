@@ -98,6 +98,8 @@ export default function AIServices () {
         </section>;
 
 
+
+
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -128,11 +130,6 @@ export default function AIServices () {
                   <motion&& motion.a
                     href={service && service.href}
                     whileHover={{ x: 5 }}
-
-            </div>;
-          </div>;
-        </section>;
-
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -281,5 +278,3 @@ function AIServices() {
       </div>;
     </>),
 }
-
-  ),

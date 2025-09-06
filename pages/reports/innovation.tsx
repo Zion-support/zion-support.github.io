@@ -1,4 +1,7 @@
 import React from 'react';
+const InnovationPage: React.FC = () => {
+  const innovation_areas = [;
+    {
       category: 'AI Automation'
       innovations: [
         { name: 'Content Generation', status: 'active', impact: 'high', description: 'Automated content creation and optimization' }
@@ -26,7 +29,6 @@ import React from 'react';
       ];
     }
   ];
-
       category: 'AI Automation',
       innovations: [
         { name: 'Content Generation', status: 'active', impact: 'high', description: 'Automated content creation and optimization' },
@@ -97,12 +99,23 @@ import React from 'react';
   const upcomingInnovations = [
 
     {
-      id: 'comprehensive-redundancy-2025-01-16'
-      title: 'Comprehensive Redundancy System'
-      date: '2025-01-16'
-      summary: 'Multi-layer redundancy architecture for maximum uptime'
-      status: 'deployed'
-      impact: 'critical'
+      name: 'Quantum Computing Integration',
+      description: 'Exploring quantum algorithms for optimization problems',
+      timeline: 'Q2 2025',
+      status: 'research';
+    },
+    {
+      name: 'Edge Computing Network',
+      description: 'Distributed computing for improved global performance',
+      timeline: 'Q3 2025',
+      status: 'planning';
+    },
+    {
+      name: 'Advanced AI Orchestration',
+      description: 'Multi - agent AI systems for complex automation',
+      timeline: 'Q4 2025',
+
+      status: 'development'
     }
     {
       } catch (error) {
@@ -127,6 +140,16 @@ import React from 'react';
   }
 }
   };
+  const getImpactColor = (impact: string) => {
+;
+  const getImpactColor = (impact: string) =>: any {
+    switch (impact) {
+
+      case 'critical': return 'bg-red-500/20 text-red-400';
+      case 'high': return 'bg-orange-500/20 text-orange-400';
+      case 'medium': return 'bg-yellow-500/20 text-yellow-400';
+      case 'low': return 'bg-blue-500/20 text-blue-400';
+      default: return 'bg-gray-500/20 text-gray-400';
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -170,53 +193,19 @@ import React from 'react';
           </div>
         </div>
         {/* Innovation Areas */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Innovation Areas</h2>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
-            {innovation_areas.map ((area, area_index) => (
-              <div key={area_index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <h3 className="text - xl font - semibold mb - 4 text - purple - 400">{area.category}</h3>;
-                <div className="space - y-4">;
-                  {area.innovations.map ((innovation, innovation_index) => (
-                    <div key={innovation_index} className="border - l-2 border - purple - 400 / 30 pl - 4">;
-                      <div className="flex justify - between items - start mb - 2">;
-                        <span className="text - white font - medium">{innovation.name}</span>;
-                        <span className={`px - 2 py - 1 text - xs rounded - full ${getImpactColor (innovation.impact)}`}>;
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Innovation Areas</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {innovationAreas.map((area, areaIndex) => (
+              <div key={areaIndex} className="bg-white/10 rounded-xl p-6 border border-white/20">
+                <h3 className="text-xl font-semibold mb-4 text-purple-400">{area.category}</h3>
+                <div className="space-y-4">
+                  {area.innovations.map((innovation, innovationIndex) => (
+                    <div key={innovationIndex} className="border-l-2 border-purple-400/30 pl-4">
+                      <div className="flex justify-between items-start mb-2">
+                        <span className="text-white font-medium">{innovation.name}</span>
+                        <span className={`px-2 py-1 text-xs rounded-full ${getImpactColor(innovation.impact)}`}>
                           {innovation.impact}
-                        </span>;
-                      </div>;
-                      <p className="text - gray - 300 text - sm">{innovation.description}</p>;
-                      <div className="flex items - center mt - 2">;
-                        <span className={`text - xs ${getStatusColor (innovation.status)}`}>;
-        {/* Recent Innovations */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Recent Innovations</h2>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-            {recent_innovations.map ((innovation) => (
-              <div key={innovation.id} className="bg - white / 10 rounded - xl p - 6 border border - white / 20 hover:border - purple - 400 / 30 transition - all duration - 300">;
-                <div className="flex justify - between items - start mb - 4">;
-                  <h3 className="text - lg font - semibold text - white">{innovation.title}</h3>;
-                  <span className={`px - 2 py - 1 text - xs rounded - full ${getImpactColor (innovation.impact)}`}>;
-                    {innovation.impact}
-                  </span>;
-                </div>;
-                <p className="text - gray - 300 text - sm mb - 4">{innovation.summary}</p>;
-                <div className="flex justify - between items - center">;
-                  <span className="text - gray - 400 text - sm">{innovation.date}</span>;
-                  <span className={`text - xs ${getStatusColor (innovation.status)}`}>;
-                    {innovation.status}
-        {/* Upcoming Innovations */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Upcoming Innovations</h2>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
-            {upcoming_innovations.map ((innovation, index) => (
-              <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <h3 className="text - lg font - semibold text - white mb - 2">{innovation.name}</h3>;
-                <p className="text - gray - 300 text - sm mb - 4">{innovation.description}</p>;
-                <div className="flex justify - between items - center">;
-                  <span className="text - gray - 400 text - sm">{innovation.timeline}</span>;
-                  <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (innovation.status)}`}>;
-                    {innovation.status}
                           {innovation.impact  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -227,7 +216,6 @@ import React from 'react';
                       <p className="text-gray-300 text-sm">{innovation.description}</p>
                       <div className="flex items-center mt-2">
                         <span className={`text-xs ${getStatusColor(innovation.status)}`}>
-
                           ● {innovation.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -263,7 +251,6 @@ import React from 'react';
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{innovation.title}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getImpactColor(innovation.impact)}`}>
-
                     {innovation.impact  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -275,7 +262,6 @@ import React from 'react';
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400 text-sm">{innovation.date}</span>
                   <span className={`text-xs ${getStatusColor(innovation.status)}`}>
-
                     {innovation.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -297,7 +283,6 @@ import React from 'react';
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400 text-sm">{innovation.timeline}</span>
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(innovation.status)}`}>
-
                     {innovation.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -353,9 +338,6 @@ import React from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50"
           >
@@ -375,3 +357,4 @@ import React from 'react';
       </div>
     </div>
   );
+export default InnovationPage;

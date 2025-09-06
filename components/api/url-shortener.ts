@@ -58,20 +58,9 @@ export default async function handler(
     }
   }
   // Increment click count
-// Handle redirects for short URLs;
-export async /**
- * getServerSideProps - Function description
- */
-function getServerSideProps() {  const short_code = params.short_code;export async /**
- * getServerSideProps - Function description
- */
-function getServerSideProps() {
-  const short_code = params.short_code;
-  const short_url = url_storage.get (short_code);
-;
-  // Check condition
-if ( {) {
-  $2
+      permanent: false
+    }
+}
 }
     return {
       not_found: true,    }      not_found: true;

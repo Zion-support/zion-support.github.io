@@ -1,7 +1,3 @@
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { ProductListing } from "@/types/listings",
-import { DollarSign } from 'lucide-react'
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -37,8 +33,6 @@ import type { AppDispatch } from '@/store'
 import { addItem } from '@/store/cartSlice'
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
-import Image from 'next/image'; // Import next/image
-
 import React, { useState } from 'react',
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 import { useRouter } from 'next/router',
@@ -61,34 +55,14 @@ interface ProductListingCardProps {
   onRequestQuote?: (id: string) => void,
   detailBasePath?: string
 }
-  const stockStatus =
-    listing.stock === undefined
-      ? 'In stock'
-      : listing.stock <= 0
-  const isGrid = view === 'grid'
-  const router = useRouter()
-  const [loading, setLoading] = useState(false);  const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0 && listing.images[0]
-      ? listing.images[0]
-      : '/placeholder.svg'
-  )
-  const [imageError, setImageError] = useState(false)
-        ? 'Out of stock'
-        : listing.stock <= 5
-          ? 'Low stock'
-          : 'In stock'
-  const stockVariant =
-    listing.stock === undefined
-      ? 'success'
-      : listing.stock <= 0
-        ? 'destructive'
-        : listing.stock <= 5
-          ? 'warning'
-          : 'success'
-  const { formatPrice } = useCurrency()
-  const getPrice = () => {
-    if (listing.price === null) return 'Custom pricing'
-    return formatPrice(listing.price)
+
+
+
+
+const ProductListingCardComponent = ({
+  listing,
+  view = 'grid',
+  onRequestQuote,
     }
     // Validate listing ID exists before navigation;
     // Check condition
@@ -168,7 +142,6 @@ if ( {) {
   }
   const imageContainerClasses = is_grid ? 'h - 48' : 'h - 32 w - 48';
       onKeyDown={e => {
-          }  return ()
     <div
       data-testid= "equipment-link";'`
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
@@ -193,20 +166,6 @@ if ( {) {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
-          }
-        }}
-      >;
-        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
-          <Image;
-            src={imageSrc}
-            alt={listing.title}
-            fill={true}
-            style={{ objectFit: 'cover' }}
-            onError={handleImageError}
-            priority={false} // Assuming these are not LCP images
-          {stockStatus && (;
-            <Badge
-              variant={stockVariant as any}
         <div>;
           {/* Category & Rating */}
           <div className="flex justify-between items-center mb-2">
@@ -216,53 +175,8 @@ if ( {) {
             {listing.rating && (
               <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
-          </div>
-          {/* Title & Description */}
-          <div onClick={handleViewListing} className='block'>
-            {listing.uspHeadline && (
-              <p className='text-primary font-semibold text-sm mb-1'>
           </div>;
           {/* Title & Description */}
-
-          <Image;
-            src = {image_src, }
-            alt = {listing.title, }
-            fill = {true, }
-            style={{ object_fit: 'cover' }}
-            on_error = {handleImageError, }
-            priority={false} // Assuming these are not LCP images;
-            sizes={
-              is_grid;
-                ? '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw';
-                : '192px';
-            } // 192px is w - 48;
-          />;
-          {listing.featured && (
-            <Badge className='absolute top - 2 right - 2 bg - primary text - primary - foreground border - none'>;
-              Featured;
-            </Badge>)}
-          {stock_status && (
-            <Badge;
-              variant={stock_variant as any}
-              className='absolute top - 2 left - 2'            >;
-              {stock_status}
-            </Badge>)}
-          <FavoriteButton item_id={listing.id} />;
-        </div>;
-      </div>;
-      {/* Content */}
-      <div;
-        className={`flex flex - col justify - between ${is_grid ? 'p - 4 flex - 1' : 'p - 4 flex - 1'}`}
-      >;
-        <div>;
-          {/* Category & Rating */}
-          <div className='flex justify - between items - center mb - 2'>;
-            <Badge;
-              variant='outline';
-              className='bg - background text - foreground / 80 border - primary / 10';
-            >;
-              {listing.category}
-            </Badge>;
           {/* Tags */}
           {listing && listing.tags && listing && listing.tags.length > 0 && (;
             <div className='flex flex-wrap gap-1 mb-4'>;
@@ -270,10 +184,6 @@ if ( {) {
                 <span
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'>;
-                {listing.uspHeadline}
-              </p>
-            )}
-
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
             </h3>
@@ -289,8 +199,6 @@ if ( {) {
                   key={idx} 
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
-                  {tag}
-                </span>;
               disabled = {loading,}
             >;
               {loading ? (;
@@ -395,72 +303,7 @@ if ( {) {
                 Request Quote;
               </Button>;
             )}
-            
-            {onRequestQuote && (
-              <Button 
-                size="sm"
-                variant="outline" 
-                onClick={handleRequestQuote}
-                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
-              >
-                Request Quote
-              </Button>
-          </div>;
-          <div className="flex gap-2">;
-            <Button;
-              size="sm";
-              className="bg-primary hover: bg-primary/80 text-primary-foreground";
-              onClick={(e) => {;
-                e.stopPropagation(), // Prevent card click event;
-                addToCart();
-              }}
-              disabled={loading}
-            >;
-              {loading ? (;
-                <>;
-                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>;
-                  </svg>;
-                  Loading...;
-                </>;
-              ) : (;
-                "Add to Cart";
-              )}
-            </Button>;
-            <Button;
-              size="sm";
-              variant="default";
-              className="bg-green-600 hover: bg-green-700 text-white";
-              onClick={(e) => {;
-                e.stopPropagation(), // Prevent card click event;
-                // Add to cart first, then redirect to checkout;
-                dispatch(;
-                  addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 });
-                ),;
-                router.push('/checkout');
-              }}
-              disabled={loading}
-            >;
-              Buy Now;
-            </Button>;
-            {onRequestQuote && (;
-              <Button;
-                size="sm";
-                variant="outline";
-                onClick={handleRequestQuote}
-                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground";
-              >;
-                Request Quote;
-              </Button>;
-            )}
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  );
 
-export const ProductListingCard = React.memo (ProductListingCardComponent);
-ProductListingCard.display_name = 'ProductListingCard';
-},;
+
 export const ProductListingCard = React.memo(ProductListingCardComponent);
+ProductListingCard.displayName = 'ProductListingCard';

@@ -41,107 +41,12 @@ import {toast} from "sonner";
       }
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
-      // Transform the data to match our application types
-      const transformedData = data && data.map((app: any) => ({
-import { useState, useEffect } from './react';
-import { supabase } from '@/integrations / supabase / client';
-import { use_auth } from '@/hooks / use_auth';
-import { JobApplication, ApplicationStatus } from '@/types / jobs';
-import { toast } from './sonner';
-export const useJobApplications = (job_id?: string) =>: any {
-  const { user } = use_auth ();
-  const [applications, set_applications] = useState < JobApplication[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-  const [error, set_error] = useState < string | null>(null);
-;
-  const fetch_applications = async () => {
-    // Check condition
-if ( {) {
-  $2
-}
-      setIsLoading (false);
-      return;
-    }
-    try {
-      setIsLoading (true);
-;
-      let query = supabase;
-        .from ("job_applications");
-        .select (`;
-          *;
-          job: jobs (*),
-          talent_profile:profiles ! talent_id (id, display_name, avatar_url, bio);
-        `);
-        .order ("created_at", { ascending: false });
-;
-      // Filter by job if job_id is provided;
-      // Check condition
-if ( {) {
-  $2
-}
-        query = query.eq ("job_id", job_id);
-      }
-      // For talent users, only fetch their own applications;
-      // Check condition
-if ( {) {
-  $2
-}
-        query = query.eq ("talent_id", user.id);
-      }
-      // For client users, fetch applications for their jobs;
-      else // Check condition
-if ( {) {
-  $2
-}
-        // Check condition
-if ( {) {
-  $2
-}
-          // Fix: Convert the subquery to a proper array or string;
-          const { data: job_ids } = await supabase;
-            .from ("jobs");
-            .select ("id");
-            .eq ("client_id", user.id);
-;
-          // Check condition
-if ( {) {
-  $2
-}
-            const jobIdArray = job_ids.map (job => job.id);
-            query = query.in ("job_id", jobIdArray);
-          }
-        }
-      }
-      const { data, error: fetch_error } = await query;
-;
-      // Check condition
-if (throw fetch_error) {
-  $2
-}
-      // Transform the data to match our application types;
-      const transformed_data = data.map ((app: any) => ({
-        ...app;
           skills: []
         } : undefined
       }));
       setApplications(transformedData as JobApplication[]);
       setError(null)
     } catch (err: any) {
-          profile_picture_url: app.talent_profile.avatar_url,
-          skills: [];
-        } : undefined;
-      }));
-;
-      set_applications (transformed_data as JobApplication[]);
-      set_error (null);
-    } catch (err: any) {
-      console.error ("Error fetching applications:", err);
-      set_error ("Failed to fetch applications: " + err.message),
-      toast.error ("Failed to fetch applications");
-    } finally {
-      setIsLoading (false);
-    }
-  }
       return false
     }
     try {
@@ -183,6 +88,7 @@ if ( { // Unique violation) {
         }
         return false;
       }
+      
       // Add the new application to the local state
       const newApplication = data as JobApplication;
       setApplications(prev => [newApplication, ...prev]);
@@ -193,7 +99,6 @@ if ( { // Unique violation) {
       toast.error("Failed to submit application: " + err.message)
       return false
     }
-  }
   const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
     try {
       const { error } = await supabase
@@ -297,3 +202,5 @@ if ( { // Unique violation) {
     applyToJob,;
     updateApplicationStatus;
     markApplicationAsViewed;
+  }
+};

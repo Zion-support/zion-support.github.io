@@ -16,6 +16,8 @@ export default function AISalesIntelligencePlatform() {
     </Layout>
   );
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+
+
 export default function AISalesIntelligencePlatform() {
 	return (
 		<ServiceLanding
@@ -29,6 +31,8 @@ export default function AISalesIntelligencePlatform() {
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
 			]}
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
+
+
 			pricePerMonthUSD={1499  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

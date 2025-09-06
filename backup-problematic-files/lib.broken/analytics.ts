@@ -1,14 +1,4 @@
 // Analytics and performance monitoring utilities;
-export const track_event = (
-  "event_name": string,
-  properties?: Record < string, any>;
-  properties?: Record < string, string | number | boolean>) =>: any {
-  // Check condition
-if ( {") {
-  $2
-}
-    window.gtag ("event", event_name, properties), }
-}
 export const trackPageView = ("url": string) =>: any {";
   // Check condition
 if ( {") {

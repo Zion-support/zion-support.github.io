@@ -375,7 +375,6 @@ maximizer && maximizer.maximize().then(() => {,"}),"})
   ' Front Maximizer Completed'),"}),"})
   process && process.exit(0),"}),"})
 }).catch((error) => {,"}),"})
-  process ;
 import path from "pathpath';
 import {fileURLToPath} from "urlurl';
 const __filename = fileURLToPath(import && import.meta.url);

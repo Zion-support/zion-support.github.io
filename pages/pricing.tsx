@@ -1,3 +1,9 @@
+import React from 'react';
+
+import Head from 'next/head';
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+
 const PricingPage: React.FC = () => {
   return (
     <>
@@ -80,6 +86,9 @@ const PricingPage: React.FC = () => {
 }
 export default PricingPage;
 
+import React from 'react';
+import Head from 'next/head';
+import React from 'react';
 import {
   Check,
   Star,
@@ -275,8 +284,206 @@ export default function PricingPage() {
 
 import React, { useState } from 'react';
 import Head from 'next/head';
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+ursor/fix-lint-push-and-merge-to-main-ae4e
 import React from 'react';
-import Head from 'next / head';
+import {
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  ChevronRight,
+  Crown,
+  Infinity,
+  Zap as ZapIcon2,
+  Shield as ShieldIcon,
+  Users as UsersIcon,
+  Globe as GlobeIcon,
+  Cpu as CpuIcon,
+  Database as DatabaseIcon2,
+  Cloud as CloudIcon,
+  Smartphone as SmartphoneIcon,
+  Palette as PaletteIcon,
+  Search as SearchIcon,
+  MessageSquare as MessageSquareIcon,
+  FileText as FileTextIcon,
+  Calendar as CalendarIcon,
+  CreditCard as CreditCardIcon,
+  BarChart3 as BarChart3Icon,
+  Settings as SettingsIcon,
+  Zap as ZapIcon3,
+  Code as CodeIcon,
+  BookOpen as BookOpenIcon,
+  Activity as ActivityIcon,
+  Database as DatabaseIcon3,
+  Play as PlayIcon,
+  Mail as MailIcon,
+  Phone as PhoneIcon,
+  MapPin as MapPinIcon,
+  Filter as FilterIcon,
+  Grid as GridIcon,
+  List as ListIcon,
+  ChevronDown as ChevronDownIcon,
+  ChevronUp as ChevronUpIcon,
+  Sparkles as SparklesIcon,
+  FlaskConical as FlaskConicalIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Brain as BrainIcon,
+  Atom as AtomIcon,
+  Globe2 as Globe2Icon,
+  Bot as BotIcon,;
+  ChevronRight as ChevronRightIcon,;
+} from 'lucide-react';import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import {
+  enhancedRealMicroSaasServices,
+  getServicesByCategory,;
+  getPopularServices,;
+} from '../data/enhanced-real-micro-saas-services';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+export default function PricingPage() {
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
+    'monthly';
+  );  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+  };
+
+  const popularServices = getPopularServices();
+
+  // Combine all services for comprehensive pricing
+  const allServices = [
+    ...enhancedRealMicroSaasServices,
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
+    ...innovativeMicroSaasV2Services,  ];
+
+  // Enhanced service categories with pricing
+  const serviceCategories = [
+    {
+      name: 'Next-Generation AI',
+      description: 'Revolutionary AI platforms',
+      services: [
+        'AI Multimodal Fusion',
+        'AI Autonomous Decision Engine',
+        'AI Emotional Intelligence',
+      ],
+      avgPrice: '$3,199/month',
+      savings: 'Save 60-80% vs. competitors',
+    },
+    {
+      name: 'Cutting-Edge IT Infrastructure',
+      description: 'Advanced infrastructure solutions',
+      services: [
+        'Zero Trust Architecture',
+        'Edge Computing Orchestration',
+        '5G Private Networks',
+      ],
+      avgPrice: '$4,999/month',
+      savings: 'Save 50-70% vs. competitors',
+    },
+    {
+      name: 'Innovative Micro SaaS',
+      description: 'Creative and practical SaaS tools',
+      services: [
+        'AI Brand Personality',
+        'Virtual Event Holograms',
+        'AI Meeting Transcriber',
+      ],
+      avgPrice: '$199/month',
+      savings: 'Save 40-60% vs. competitors',
+    },
+    {
+      name: 'Quantum & Space Technology',
+      description: 'Quantum computing and space solutions',
+      services: [
+        'Quantum AI Hybrid',
+        'Space Technology Platform',
+        'Quantum Cybersecurity',
+      ],
+      avgPrice: '$5,999/month',
+      savings: 'Save 70-85% vs. competitors',
+    },
+    {
+      name: 'Enterprise IT Services',
+      description: 'Comprehensive enterprise solutions',
+      services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
+      avgPrice: '$2,999/month',
+      savings: 'Save 45-65% vs. competitors',
+    },  ];
+
+import React, { useState } from 'react';
+import React from 'react';
+import Head from 'next/head';
 import {
   Check
   Star
@@ -395,6 +602,60 @@ import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2'
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  // Enhanced service categories with pricing
+  const serviceCategories = [
+    {
+      name: 'Next-Generation AI'
+      description: 'Revolutionary AI platforms'
+      services: [
+        'AI Multimodal Fusion'
+        'AI Autonomous Decision Engine'
+        'AI Emotional Intelligence'
+      ]
+      avgPrice: '$3,199/month'
+      savings: 'Save 60-80% vs. competitors'
+    }
+    {
+      name: 'Cutting-Edge IT Infrastructure'
+      description: 'Advanced infrastructure solutions'
+      services: [
+        'Zero Trust Architecture'
+        'Edge Computing Orchestration'
+        '5G Private Networks'
+      ]
+      avgPrice: '$4,999/month'
+      savings: 'Save 50-70% vs. competitors'
+    }
+    {
+      name: 'Innovative Micro SaaS'
+      description: 'Creative and practical SaaS tools'
+      services: [
+        'AI Brand Personality'
+        'Virtual Event Holograms'
+        'AI Meeting Transcriber'
+      ]
+      avgPrice: '$199/month'
+      savings: 'Save 40-60% vs. competitors'
+    }
+    {
+      name: 'Quantum & Space Technology'
+      description: 'Quantum computing and space solutions'
+      services: [
+        'Quantum AI Hybrid'
+        'Space Technology Platform'
+        'Quantum Cybersecurity'
+      ]
+      avgPrice: '$5,999/month'
+      savings: 'Save 70-85% vs. competitors'
+    }
+    {
+      name: 'Enterprise IT Services'
+      description: 'Comprehensive enterprise solutions'
+      services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening']
+      avgPrice: '$2,999/month'
+      savings: 'Save 45-65% vs. competitors'
+    },  ];
+
 }
   ],
   // Enhanced pricing tiers with more realistic and comprehensive offerings
@@ -628,12 +889,6 @@ export default function PricingPage() {
           Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI &;
           Quantum Services;
         </title>;
-        <meta
-          name='keywords'
-          content='pricing, micro SaaS pricing, AI services pricing, quantum computing pricing, enterprise pricing'
-        />
-        <meta name='author' content='Zion Tech Group' />
-        <meta name='robots' content='index, follow' />
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -730,6 +985,17 @@ export default function PricingPage() {
               href='/comprehensive-pricing-2026'
               variant='primary'
               size='lg'
+          {/* Billing Toggle */}
+          <div className='flex items-center justify-center gap-4 mb-8'>;
+            <span
+              className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>;
+              Monthly;
+            </span>;
+            <button
+
+
+
+
               Monthly
             </span>
             <button
@@ -746,6 +1012,8 @@ export default function PricingPage() {
                 key={tier && tier.name}
                 variant={tier && tier.variant}
                 interactive={true}
+                )}
+
           {/* New 2026 Pricing Link */}
           <div className='mb - 8 p - 6 bg - gradient - to - r from - purple - 800 / 60 to - pink - 800 / 60 border border - purple - 700 / 50 rounded - 2xl max - w-4xl mx - auto'>;
             <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -812,7 +1080,6 @@ export default function PricingPage() {
                 <div className='text - center p - 8'>;
                   <div className='inline - flex items - center justify - center w - 20 h - 20 rounded - full bg - gradient - to - r from - cyan - 500 to - purple - 500 mb - 6'>;
                     {tier.icon}
-                  <h3 className='text-2xl font-bold text-white mb-2'>
                     {tier.name}
                   </h3>
                   <p className='text-gray-300 mb-6'>{tier.description}</p>
@@ -823,17 +1090,44 @@ export default function PricingPage() {
                       </span>;
                       <span className='text - xl text - gray - 400 ml - 2'>;
                         {tier.period}
+                    </div>
+                    {tier.savings && (
+                      <div className='text - green - 400 text - sm mt - 2'>;
+                        {tier.savings}
                     {tier.features.map((feature, idx) => (
                       <li key={idx} className='flex items-start'>
                         <Check className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />
                         <span className='text-gray-300'>{feature}</span>
                       </li>
+                    ))}
+                  </ul>;
+
+
+
+                  <Button
+
+                    href={tier.name === 'Enterprise' ? '/contact' : '/services'}
+                    variant={tier.ctaVariant}
+            ))}
+
+          </div>;
+        </div>;
+
+
+        {/* Value Propositions */}
+        <div className='mb-20'>;
+          <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
+            Why Choose Zion Tech Group?;
+          </h2>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {valuePropositions && valuePropositions.map((proposition, index) => (;
+
+
+
                   >
                     {tier.cta}
                     <ArrowRight className='ml-2 w-5 h-5' />                  </Button>
                 </div>
               </UltraFuturisticCard>
-        {/* Value Propositions */}
         {/* Value Propositions */}
         {/* Value Propositions */}
         <div className="mb-20">
@@ -889,6 +1183,11 @@ export default function PricingPage() {
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            ))}
+
+          </div>;
+        </div>;
+
             {serviceCategoryPricing.map((category, index) => (
               <UltraFuturisticCard
                 key={index}
@@ -911,13 +1210,52 @@ export default function PricingPage() {
                     </div>
                   </div>
                 </div>
-                  {category.services.map((service, idx) => (
                     <li
                       key={idx}
                       className='text-sm text-gray-300 flex items-center'>;
                       <Check className='w-4 h-4 text-green-400 mr-2' />                      {service}
+                </ul>
+                </ul>;
+
+                <Button
+                  href='/services'
+                  variant='secondary'
+                  size='sm'
+                  className='w-full'>;
+                  Explore Services;
+                  <ChevronRight className='ml-2 w-4 h-4' />                </Button>;
+              </UltraFuturisticCard>;
+
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {serviceCategoryPricing.map((category, index) => (
+              <UltraFuturisticCard
+                key={index}
+                variant={index % 3 === 0 ? 'quantum' : index % 3 === 1 ? 'holographic' : 'neural'}
+                interactive={true}
+                className="p-6"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mr-4">
+                    {category.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white">{category.category}</h3>
+                    <div className="text-cyan-400 font-semibold">{category.startingPrice}</div>
+                  </div>
+                </div>
+                
+                <ul className="space-y-2 mb-4">
+                  {category.services.map((service, idx) => (
+                    <li key={idx} className="text-sm text-gray-300 flex items-center">
+                      <Check className="w-4 h-4 text-green-400 mr-2" />
+                      {service}
                     </li>
                   ))}
+                </ul>
+                
+                <Button
                   href="/services"
                   variant="secondary"
                   size="sm"
@@ -957,6 +1295,9 @@ export default function PricingPage() {
                   <ul className='text-xs text-gray-300 space-y-1'>
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className='flex items-center'>
+                        <Check className='w-3 h-3 text-green-400 mr-2' />                        {feature}
+                      </li>;
+
                 className="p-6"
               >
                 <div className="text-center mb-4">
@@ -1133,11 +1474,14 @@ export default function PricingPage() {
               <p className='text-gray-400 text-sm mt-2'>Global operations</p>            </UltraFuturisticCard>;
           </div>;
         </div>;
-          <UltraFuturisticCard
-            variant='quantum-holographic-advanced'
-            className='p-12'
-          >
-            <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+        {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="text-center">
+          <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Ready to Get Started?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -1174,13 +1518,49 @@ export default function PricingPage() {
                 <MessageSquare className='ml-2 w-5 h-5' />;
               </Button>;
             </div>;
-            <div className='text-sm text-gray-400'>;
+              <Button;
+                href='/services';
+                variant='primary';
+                size='lg';
+                className='text - lg px - 8 py - 4';
+              >;
+                Start Free Trial;
+                <Play className='ml - 2 w - 5 h - 5' />;
+              </Button>;
+              <Button;
+                href='/contact';
+                variant='secondary';
+                size='lg';
+                className='text - lg px - 8 py - 4';
+              >;
+                Contact Sales;
+                <MessageSquare className='ml - 2 w - 5 h - 5' />;
+              </Button>;
+            </div>;
+            <div className='text - sm text - gray - 400'>;
               <p>;
-                 30-90 Day Free Trials   No Credit Card Required   Instant;
+                ✓ 30 - 90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant;
                 Setup;
               </p>;
-              <p className='mt-2'>;
+              <p className='mt - 2'>;
+                ✓ 24 / 7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure;
+
+              </p>            </div>;
+          </UltraFuturisticCard>;
+        </div>;
+      </div>;
+    </UltraFuturisticBackground>
+  )
+}
+ursor/integrate-build-improve-and-re-verify-b76c
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+origin/cursor/integrate-build-improve-and-re-verify-242d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+origin/main
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
   );
 }
-  )
 }

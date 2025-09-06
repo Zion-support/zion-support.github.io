@@ -164,10 +164,6 @@ class EnhancedAutomationOrchestrator {
       const files = this && this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']);
       for (const file of files && files.slice(0, 50)) { // Limit to first 50 files
         try {
-          const content = fs && fs.readFileSync(file, 'utf8');
-          for (const pattern of errorPatterns) {
-            if (content && content.includes(pattern)) {
-              errors && errors.push({ file, pattern })}
           }
         } catch (error) {
           // Skip files that can't be read
@@ -211,13 +207,6 @@ class EnhancedAutomationOrchestrator {
   getAllFiles(dir, extensions) {
     let files = [];
     try {
-      const items = fs && fs.readdirSync(dir);
-      for (const item of items) {
-        const fullPath = path && path.join(dir, item);
-        const stat = fs && fs.statSync(fullPath);
-        if (stat && stat.isDirectory()) {
-          files = files && files.concat(this && this.getAllFiles(fullPath, extensions))} else if (extensions && extensions.some(ext => item && item.endsWith(ext))) {
-          files && files.push(fullPath)}
       }
     } catch (error) {
       // Skip directories that can't be read
@@ -247,13 +236,6 @@ class EnhancedAutomationOrchestrator {
   getDirectorySize(dir) {
     let size = 0;
     try {
-      const items = fs && fs.readdirSync(dir);
-      for (const item of items) {
-        const fullPath = path && path.join(dir, item);
-        const stat = fs && fs.statSync(fullPath);
-        if (stat && stat.isDirectory()) {
-          size += this && this.getDirectorySize(fullPath)} else {
-          size += stat && stat.size}
       }
     } catch (error) {
       // Skip directories that can't be read

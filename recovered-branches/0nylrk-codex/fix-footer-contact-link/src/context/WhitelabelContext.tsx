@@ -1,16 +1,9 @@
 
 
-  isWhitelabel: boolean
-  primaryColor: string
-  logoUrl: string | null
-  brandName: string
-  themePreset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup'
-  landingPageCopy: {
-    headline: string
-    subtitle: string
-
-    cta: string
-  }
+    headline: string,
+    subtitle: string,
+    cta: string;
+  };
   tenant: WhitelabelTenant | null
 }
 
@@ -29,6 +22,10 @@ const defaultContext: WhitelabelContextType = {
 // the generic as `WhitelabelContextType | null` we get proper type checking
 // without falling back to an empty object which triggers TS2740 errors.
 const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
+  const context = useContext(WhitelabelContext);
+  if (!context) {
+    throw new Error('useWhitelabel must be used within a WhitelabelProvider')
+  }
   const context = useContext(WhitelabelContext);
   if (!context) {;
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');

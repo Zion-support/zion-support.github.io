@@ -14,24 +14,6 @@ export interface ContentGenerationRequest {
   keywords?: string[],
   target_audience?: string;
 }
-export interface ContentGenerationResponse {
-  content: string;
-  word_count: number;
-  seo_score: number;
-  readability_score: number;
-  suggestions: string[];
-  metadata: {
-    title: string;
-    description: string,
-    tags: string[];
-  }
-}
-export interface ContentTemplate {
-
-  keywords?: string[]
-
-  targetAudience?: string
-}
   content: string;
   word_count: number;
   seo_score: number;
@@ -124,6 +106,7 @@ export class AIContentGeneratorService {;
       return this && this.generateMockContent(request)
     }
   }
+
   async getTemplates(): Promise<ContentTemplate[]> {
     return [
   preview: string,
@@ -175,9 +158,61 @@ if ( {) {
         name: 'Email Sequence';
         description: 'Convert prospects with persuasive email sequences';
         type: 'email';
+      }
+      {
+        id: 'landing - page - copy';
+        name: 'Landing Page Copy';
+        description: 'High-converting landing page content';
+        type: 'landing-page';
+        preview: 'Turn visitors into customers with compelling copy...'
+        price: 59
+;
+  async getTemplates(): Promise<ContentTemplate[]> {;
+    return [;
+      {;
+        id: 'blog-post-starter',;
+        name: 'Blog Post Starter',;
+        description: 'Professional blog post template with SEO optimization',;
+        type: 'blog-post',;
+        preview: 'Create engaging blog posts that rank well in search engines...',;
+        price: 29;
+      },;
+      {;
+        id: 'social-media-campaign',;
+        name: 'Social Media Campaign',;
+        description: 'Complete social media content strategy and posts',;
+        type: 'social-media',;
+        preview: 'Engage your audience with compelling social media content...',;
+        price: 49;
+      },;
+      {;
+        id: 'email-sequence',;
+        name: 'Email Sequence',;
+        description: 'Convert prospects with persuasive email sequences',;
+        type: 'email',;
+        preview: 'Build relationships and drive sales with email automation...',;
+        price: 39;
+      },;
+      {;
+        id: 'landing-page-copy',;
+        name: 'Landing Page Copy',;
+        description: 'High-converting landing page content',;
+        type: 'landing-page',;
+        preview: 'Turn visitors into customers with compelling copy...',;
+        price: 59;
+      }
+    ];
   }
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
+
+      }
+    ];
+  }
+
+
+
+
 
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
 ## Key Points
@@ -250,6 +285,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
     }
   }
 }
+
 // Pricing tiers for the AI Content Generator
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {
@@ -326,3 +362,5 @@ export const AI_CONTENT_PRICING = {;
     features: [;
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee';
     ];
+  }
+};

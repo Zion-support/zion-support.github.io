@@ -5,6 +5,21 @@ interface CountrySelectorProps {
 
   selectedCountry: CountryPricing | null
 }
+
+    const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"];
+    const top = onsiteServicePricing.filter(item =>
+  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]),
+  
+  // Set top/popular countries
+  useEffect(() => {
+    const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"],
+    const top = onsiteServicePricing.filter(item => 
+      popular.includes(item.country)
+    ).sort((a, b) => a.country.localeCompare(b.country));
+    setTopCountries(top)
+  }, []);
+  }, []),
+  
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
     const country = onsiteServicePricing.find(item => item.country === countryName) |null
@@ -26,7 +41,6 @@ interface CountrySelectorProps {
             <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
             {topCountries.map((item) => (
               <SelectItem key={item.country} value={item.country} className="text-white">
-
 import { useState, useEffect } from "react",;
 import { Globe } from "lucide-react",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;

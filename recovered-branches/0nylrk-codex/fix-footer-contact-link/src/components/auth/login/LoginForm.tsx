@@ -7,6 +7,41 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Link} from "react-router-dom";
+
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Link } from "react-router-dom",
+// Form validation schema
+const loginSchema = z.object({
+  email: z.string().email("Please enter a valid email").min(1, "Email is required");
+  password: z.string().min(6, "Password must be at least 6 characters")});
+type LoginFormValues = z.infer<typeof loginSchema>;
+export function LoginForm() {
+  const { login, isLoading } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  email: z.string().email("Please enter a valid email").min(1, "Email is required"),
+  password: z.string().min(6, "Password must be at least 6 characters")}),
+
+type LoginFormValues = z.infer<typeof loginSchema>,
+
+export function LoginForm() {;
+  const { login, isLoading } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+export function LoginForm() {
+  const { login, isLoading } = useAuth(),
+  const [showPassword, setShowPassword] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema)
     defaultValues: {
@@ -18,6 +53,15 @@ import {Link} from "react-router-dom";
       await login(data.email, data.password)
     } finally {
       setIsSubmitting(false)
+    }
+  }
+
+  return (
+
+    <Form {...form}>;
+      <form
+        onSubmit={form && form.handleSubmit(onSubmit)} 
+
         className="space-y-6"
         autoComplete="off" // Disable browser autofill>;
         <FormField
@@ -28,6 +72,8 @@ import {Link} from "react-router-dom";
                 </div>;
               </FormControl>;
               <FormMessage className="text-red-400" />;
+          )}
+
         />;
         <FormField
           control={form && form.control}
@@ -96,35 +142,3 @@ import {Link} from "react-router-dom";
               <FormMessage className="text-red-400" />;
             </FormItem>;
           )}
-                    onClick={() => setShowPassword(!showPassword)}
-              Forgot your password?;
-            </Link>;
-          </div>;
-        </div>;
-        <Button;
-          type="submit";
-          className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
-          disabled={isLoading || isSubmitting}
-        >;
-          {isLoading || isSubmitting ? "Logging in..." :"Login"}
-        </Button>;
-      </form>;
-    </Form>;
-  ),; import {
-  Form;
-FormControl;
-FormField;
-FormItem;
-FormLabel;
-//Form validation schema const loginSchema = z.object ({
-  email: z.string () .email ("Please enter a valid email") .min (1, "Email is required");
-password: z.string () .min (6, "Password must be at least 6 characters") 
-});
-const onSubmit = async (data: LoginFormValues) => {
-  if (isSubmitting) return;
-try {
-  setIsSubmitting (true);
-await login (data.email, data.password) 
-}finally {
-  setIsSubmitting (false) 
-}

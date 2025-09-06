@@ -15,21 +15,6 @@ const MobileAppRoutes = () => {;
     <Routes>;
       {/* Mobile App Routes */}
 
-const MobileAppRoutes = () => {;
-  return (
-import { Route, Routes } from "react-router-dom",;
-import MobileAppPage from "../pages/MobileAppPage",;
-import MobileLaunchPage from "../pages/MobileLaunchPage",;
-import OpenAppRedirect from "../pages/OpenAppRedirect",;
-;
-const MobileAppRoutes = () => {;
-  return (;
-    <Routes>;
-      {/* Mobile App Routes */}
-const MobileAppRoutes = () => {;
-  return (
-    <Routes>;
-      {/* Mobile App Routes */}
 import { Route, Routes } from './react-router-dom';
 import MobileAppPage from "../pages / MobileAppPage";
 import MobileLaunchPage from "../pages / MobileLaunchPage";
@@ -45,3 +30,4 @@ const MobileAppRoutes = () =>: any {
     </Routes>);
 }
 ;
+export default MobileAppRoutes;

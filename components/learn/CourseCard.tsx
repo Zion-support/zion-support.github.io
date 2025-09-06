@@ -22,7 +22,6 @@ function CourseCard() {
         </span>;
       </div>;
       <div className='text - xs text - gray - 500 mt - 1'>;
-        {course.category}  {course.level} {' '}
         {Math.round (course.duration_minutes / 60)}h          {course.is_free ? 'Free' : 'Paid'}
         </span>;
       </div>;
@@ -46,3 +45,5 @@ function CourseCard() {
         </Link>;
       </div>;
     </div>);
+
+  );

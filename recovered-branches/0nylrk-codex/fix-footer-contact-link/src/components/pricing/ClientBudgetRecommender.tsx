@@ -1,4 +1,11 @@
 
+import {Button} from "@/components/ui/button";
+import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
+import {PricingSuggestionBox} from "./PricingSuggestionBox";
+import {useAuth} from "@/hooks/useAuth";
+import {Sparkles} from "lucide-react";
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
 import { 
   getClientBudgetSuggestion;
   PricingSuggestion;
@@ -24,15 +31,6 @@ interface ClientBudgetRecommenderProps {
   const { user } = useAuth();
 
       const result = await getClientBudgetSuggestion(params);
-      setSuggestion(result);
-    } catch (error) {;
-      console && console.error("Error generating budget suggestion:", error);
-    } finally {;
-      setIsLoading(false);
-    }
-
-import { useAuth } from "@/hooks/useAuth",
-import { Sparkles } from "lucide-react",
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
   category: string,
@@ -128,7 +126,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       <div>;
         {!suggestion && !isLoading ? (;
   },
-
   return (
     <div className="space-y-4">;
       <div>;
@@ -140,11 +137,4 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
-            rateType="hourly"
 };
-            rate_type="hourly";
-          />)}
-      </div>;
-    </div>);
-}
-;

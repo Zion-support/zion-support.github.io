@@ -7,10 +7,17 @@ export function getConfig() {
   };
   id: string;
   userId: string;
+
+
+  id: string;
+  user_id: string;
   amount: number;
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
+
+
+
 }
 
 
@@ -50,12 +57,13 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     reason
     timestamp: Date.now()
   }
-
     type: 'redeem',
     reason,
     timestamp: Date.now();
   };
   
+  transactions.push(transaction);
+  return transaction;
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,

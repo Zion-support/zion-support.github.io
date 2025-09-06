@@ -19,6 +19,9 @@ const Callback: NextPage = () => {
     </div>;
   ),;
 };
+export default Callback;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > Callback</h1>;
@@ -29,3 +32,5 @@ import Head from 'next / head';
 ;
 export default Callback;
 ;
+
+

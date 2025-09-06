@@ -353,17 +353,6 @@ import SEOHead from '../src/components/seo/SEOHead';
                 <ul className="space-y-2 mb-6">
                 <ul className=\"space-y-2 mb-6\">
                 <ul className="space-y-2 mb-6">
-                <ul className=\"space-y-2 mb-6\">
-                <ul className="space-y-2 mb-6">
-                <ul className=\"space-y-2 mb-6\">
-                <ul className="space-y-2 mb-6">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-                <ul className=\"space-y-2 mb-6\">
-                <ul className="space-y-2 mb-6">
-                <ul className=\"space-y-2 mb-6\">
-                <ul className="space-y-2 mb-6">
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center gap-x-2\">
                       <CheckCircle className=\"h-4 w-4 text-blue-600\"  />

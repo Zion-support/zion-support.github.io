@@ -19,6 +19,9 @@ const SustainableTechnologyPractices: NextPage = () => {
     </div>;
   ),;
 };
+export default SustainableTechnologyPractices;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > SustainableTechnologyPractices</h1>;
@@ -29,3 +32,5 @@ import Head from 'next / head';
 ;
 export default SustainableTechnologyPractices;
 ;
+
+

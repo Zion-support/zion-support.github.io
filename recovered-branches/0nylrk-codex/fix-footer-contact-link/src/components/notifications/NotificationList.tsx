@@ -33,7 +33,6 @@ interface NotificationListProps {;
   onRetry: () => void;
 }
 
-
   loading: boolean
   error: string | null
   notifications: Notification[]
@@ -43,20 +42,6 @@ interface NotificationListProps {;
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
-import {ScrollArea} from '@/components / ui / scroll - area';
-import {Skeleton} from '@/components / ui / skeleton';
-import {Button} from '@/components / ui / button';
-import {NotificationItem} from './NotificationItem';
-import {Notification} from '@/context / notifications';
-interface NotificationListProps {
-  loading: boolean,
-  error: string | null,
-  notifications: Notification[],
-  onMarkAsRead: (id: string) => Promise < void>,
-  on_dismiss: (id: string) => Promise < void>,
-  on_retry: () => void;
-}
-export const NotificationList: React.FC < NotificationListProps> = ({
   loading;
   error;
   notifications;
@@ -94,3 +79,4 @@ export const NotificationList: React.FC < NotificationListProps> = ({
           />;
         ));
       )}
+};

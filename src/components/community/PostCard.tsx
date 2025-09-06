@@ -9,13 +9,6 @@ interface PostCardProps {
   post: ForumPost
   compact?: boolean
 }
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
-  return (
-    <Card data-testid="post-card" className={cn(
-      "transition-shadow hover:shadow-md"
-export const PostCard = React.memo(PostCardComponent)
-PostCard.displayName = 'PostCard'
-export default PostCard
 
 
       "transition-shadow hover: shadow-md",
@@ -38,8 +31,3 @@ interface PostCardProps {
 const PostCardComponent = ({ post, compact = false }: PostCardProps) =>: any {
   const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
   return (
-    <Card data-testid="post-card" className={cn(
-      "transition-shadow hover:shadow-md"
-export const PostCard = React.memo(PostCardComponent);
-PostCard.displayName = 'PostCard';
-export default PostCard;

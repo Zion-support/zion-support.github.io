@@ -22,10 +22,16 @@ const Messages: NextPage = () => {
       <EmptyState;
         title="No messages yet";
         description="Start a conversation by requesting a quote or responding to an existing one.";
-        icon={<span></span>}
-        primary_action={{ label: 'Explore talent', href: '/talent' }}
-        secondary_action={{ label: 'Browse services', href: '/services' }}
-      />;
+        icon={<span>📫</span>}
+        primaryAction={{ label: 'Explore talent', href: '/talent' }}
+        secondaryAction={{ label: 'Browse services', href: '/services' }}
+      />
+    </div>
+  )
+}
+export default Messages;
+
+export default Messages,;
         icon={<span>📫</span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

@@ -5,6 +5,7 @@ publish = "dist"
 [build.environment]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=4096"
 =======
@@ -19,6 +20,10 @@ NODE_OPTIONS = "--max-old-space-size=4096"
   NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> origin/main
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -27,6 +32,7 @@ NODE_OPTIONS = "--max-old-space-size=4096"
   directory = "netlify/functions"
 
 [[redirects]]
+<<<<<<< HEAD
 <<<<<<< HEAD
 from = "/api/*"
 to = "/.netlify/functions/:splat"
@@ -57,6 +63,11 @@ status = 200
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+>>>>>>> origin/main
 
 # Security and caching headers for static assets
 [[headers]]
@@ -86,6 +97,7 @@ status = 200
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
 # Static redirects to mirror Next.js redirects (since output: export)
@@ -117,6 +129,9 @@ status = 200
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+# Static redirects to mirror Next.js redirects (since output: export)
+>>>>>>> origin/main
 [[redirects]]
 <<<<<<< HEAD
 from = "/ai-customer-success-platform"
@@ -154,6 +169,7 @@ to = "/services/smart-crm-intelligence-suite/"
 status = 301
 
 [[redirects]]
+<<<<<<< HEAD
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
   status = 301
@@ -229,3 +245,8 @@ status = 301
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+>>>>>>> origin/main

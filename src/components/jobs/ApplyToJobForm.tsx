@@ -1,5 +1,3 @@
-import { useState } from "react",
-import { useRouter } from 'next/router',
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { useResume } from "@/hooks/useResume",
 import { useAuth } from "@/hooks/useAuth",
@@ -31,11 +29,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     if (!user) {
       toast.error("You must be logged in to apply")
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`)
-    }
-    if (!coverLetter.trim()) {
-      setError("Please provide a cover letter")
-      return
-    }
     setIsSubmitting(true)
     setError(null)
     try {
@@ -94,9 +87,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   
 
   return (
-
-
-      
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
@@ -304,8 +294,6 @@ export function ApplyToJobForm({ job, onSuccess } ApplyToJobFormProps) {;
             type="file"
             accept=".pdf"
             className="mt-1"
-
-          }}
             onChange = {(e,) => setResumeFile(e.target.files?.[0] |null),}
           />
         </div>
@@ -314,17 +302,10 @@ export function ApplyToJobForm({ job, onSuccess } ApplyToJobFormProps) {;
           />
         </div>
       </div>
-      
       <div className="flex justify-end gap-2">
         <Button
           type="button"
           variant="outline"
-          disabled = {isSubmitting,}
-          onClick={() => {
-            if (onSuccess) onSuccess()
-          disabled={isSubmitting}
-          onClick={() => {;
-            if (onSuccess) onSuccess();
           }}
         >;
           Cancel;
@@ -462,6 +443,4 @@ handleSubmit
       </div>;
     </form>;
   );
-}
-;
 }

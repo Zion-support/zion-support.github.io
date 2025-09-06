@@ -1,4 +1,9 @@
 export default function OnboardingWizard() {;
+
+
+export default function OnboardingWizard() {
+
+export default function OnboardingWizard() {
   const { user, completeOnboarding, setUser } = useUser();
   const { addToast } = useToast();
   const [step, setStep] = useState(0);
@@ -113,3 +118,5 @@ export default function OnboardingWizard() {;
               <button key={s} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5">{s}</button>;
             ))}
           </div>;
+
+

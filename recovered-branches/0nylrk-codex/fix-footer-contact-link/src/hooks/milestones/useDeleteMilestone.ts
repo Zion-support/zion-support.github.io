@@ -27,6 +27,10 @@ export const useDeleteMilestone = () =>: any {
 if (return false) {
   $2
 }
+    } finally {
+      setIsSubmitting (false);
+    }
+
         .eq('id', milestoneId),
       
       if (error) throw error,
@@ -72,8 +76,5 @@ export const useDeleteMilestone = () => {;
   return {;
     deleteMilestone;
     isSubmitting;
-  return {
-    deleteMilestone;
-    isSubmitting
   }
-}
+};

@@ -1,6 +1,4 @@
 
-import {Education} from '@/types/resume';
-export interface EducationFormProps {;
   resumeId: string;
   educationEntries: Education[];
   onComplete: () => void;
@@ -15,7 +13,6 @@ export interface EducationFormProps {;
 
   onCancel: () => void;
 }
-
 import { Education  } from '@/types / resume';
 export interface EducationFormProps {
   resume_id: string;

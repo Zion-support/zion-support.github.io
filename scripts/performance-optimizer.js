@@ -1,35 +1,3 @@
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-class PerformanceOptimizer {
-  constructor() {
-    }
-  }
-  getDirectorySize(dirPath) {
-    let totalSize = 0;
-      }
-    });
-    return totalSize;
-  }
-  generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-    }
-    return recommendations;
-  }
-}
-if (require && require.main === module) {
-  const optimizer = new PerformanceOptimizer();
-  optimizer && optimizer.analyzeBundle();
-  optimizer && optimizer.generateReport();
-}
-module && module.exports = PerformanceOptimizer;
-
-module.exports = PerformanceOptimizer;
-#!/usr/bin/env node
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-#!/usr/bin/env node
-ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
 const fs = require('fs');
@@ -89,10 +57,6 @@ const path = // // require('path');
 const glob = // // require('glob');
 class PerformanceOptimizer {
   constructor() {
-    this && this.projectRoot = process && process.cwd();
-    this && this.srcDir = path && path.join(this && this.projectRoot, 'src');
-    this && this.reportsDir = path && path.join(this && this.projectRoot, 'automation-reports');
-    this && this.ensureDirectories();
   }
   ensureDirectories() {
     if (!fs && fs.existsSync(this && this.reportsDir)) {
@@ -289,10 +253,6 @@ class PerformanceMonitor {
   }
 
 export default PerformanceMonitor;";
-    const scriptPath = path && path.join(this && this.srcDir, 'utils', 'PerformanceMonitor && PerformanceMonitor.js');
-    const utilsDir = path && path.dirname(scriptPath);
-    if (!fs && fs.existsSync(utilsDir)) {
-      fs && fs.mkdirSync(utilsDir, { recursive: true });
     }
     fs && fs.writeFileSync(scriptPath, monitoringScript);
     this && this.log(` Performance monitoring script created: ${scriptPath}`);
@@ -301,18 +261,3 @@ export default PerformanceMonitor;";
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(` Performance monitoring script "created": ${scriptPath}`)}
 
-    process && process.exit(0)
-  })
-    .catch((error) => {
-      console && console.error(' Performance optimization failed:', error);
-      process && process.exit(1);
-    });
-}
-module && module.exports = PerformanceOptimizer;
-      console && console.error(' Performance optimization "failed": ', error);
-      process && process.exit(1)})}
-module && module.exports = PerformanceOptimizer;
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this && this.optimizations = []} async optimizeImages() { console && console.log(' Optimizing images...'); this && this.optimizations.push('Images optimized')} async optimizeCode() { console && console.log(' Optimizing code...'); this && this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this && this.optimizations }; const reportPath = path && path.join(process && process.cwd(),'performance-reports','optimization-report && report.json'); if (!fs && fs.existsSync(path && path.dirname(reportPath))) { fs && fs.mkdirSync(path && path.dirname(reportPath),{ recursive: true })} fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2))} } module && module.exports = PerformanceOptimizer;
-      console && console.error(' Performance optimization "failed": ', error);
-      process && process.exit(1)})}
-module && module.exports = PerformanceOptimizer;

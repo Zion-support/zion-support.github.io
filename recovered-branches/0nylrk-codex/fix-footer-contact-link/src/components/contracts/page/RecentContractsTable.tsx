@@ -1,3 +1,5 @@
+interface Contract {
+
   id: string;
   title: string;
   client: string;
@@ -24,6 +26,13 @@ interface Contract {;
 }
 ;
 interface RecentContractsTableProps {;
+
+
+interface RecentContractsTableProps {;
+
+
+
+
   contracts: Contract[];
   onViewContract: (contractId: string) => void
 }
@@ -31,6 +40,14 @@ export function RecentContractsTable({
   contracts
   onViewContract
 }: RecentContractsTableProps) {
+                  >;
+                    View;
+                  </Button>;
+                </td>;
+
+
+
+
           </tbody>;
         </table>;
       </div>;

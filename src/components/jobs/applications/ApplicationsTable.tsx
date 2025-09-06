@@ -1,36 +1,3 @@
-import { format } from "date-fns",
-import { JobApplication } from "@/types/jobs",
-import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
-import { ClickableBadge } from "@/components/ui/clickable-badge",
-import { 
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow
-} from "@/components/ui/table",
-import { ApplicationActions } from "./ApplicationActions",
-import { StatusBadge } from "./StatusBadge",
-import { Briefcase, User } from 'lucide-react'
-import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
-import React, { useState } from "react", // Import React and useState
-import { toast } from "@/hooks/use-toast",
-import Image from 'next/image', // Import next/image
-
-interface ApplicationsTableProps {
-  applications: JobApplication[],
-  processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,
-  onViewScore: (application: JobApplication) => void
-}
-
-// Sub-component for avatar to handle its own error state
-const ApplicationAvatar = ({ application }: { application: JobApplication }) => {
-  const [avatarError, setAvatarError] = useState(false),
-  const talentName = application.talent_profile?.full_name || "Candidate",
-
 import { format } from 'date-fns'
 import { JobApplication } from '@/types/jobs'
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
@@ -79,12 +46,6 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
   const [avatarError, setAvatarError] = useState(false)
   const talentName = application.talent_profile?.full_name |"Candidate"
   return (
-  applications
-  processingId
-  onViewApplication
-  onStatusChange
-  onViewScore
-}: ApplicationsTableProps) {
   }
     </AvatarPrimitive>;
   );
@@ -166,6 +127,29 @@ export function ApplicationsTable({
                     </div>;
                   </div>;
                 </TableCell>;
+  applications,
+  processingId,
+  onViewApplication,
+},
+
+export function ApplicationsTable({ 
+  applications, 
+  processingId, 
+  onViewApplication, 
+  onStatusChange,
+  onViewScore
+}: ApplicationsTableProps) {
+
+},
+
+export function ApplicationsTable({ 
+  applications, 
+  processingId, 
+  onViewApplication, 
+  onStatusChange,
+  onViewScore
+}: ApplicationsTableProps) {
+
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
@@ -196,13 +180,10 @@ export function ApplicationsTable({
             </TableRow>
           </TableHeader>
           <TableBody>
-            {applications.map((application) => (
-              <TableRow key={application.id}>
                 <TableCell>
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
                     <div>
-
                       <div className="font-medium">
                         {application.talent_profile?.full_name || "Candidate"}
                       </div>
@@ -238,37 +219,6 @@ export function ApplicationsTable({
                     <span className="text-muted-foreground text-sm">Not scored</span>
                   )}
                 </TableCell>
-                    <ApplicationActions
-                      application = {application,}
-                      processingId = {processingId,}
-                      onViewApplication = {onViewApplication,}
-                      onStatusChange = {onStatusChange,}
-            ))}
-          </TableBody>
-        </Table>
-      </div>
-      <HireConfirmationModal
-        isOpen = {hireModalOpen,}
-        onClose = {() => setHireModalOpen(false),}
-        application = {selectedApplication |undefined,}
-        onConfirm = {handleHireConfirmed,}
-      />
-    </>
-  )
-  /* Using Renamed AvatarPrimitive */
-}{
-  application.talent profile?.profile picture url && !avatarError ? (<Image src= {
-  application.talent profile.profile picture url
-}alt= {
-  talentName
-}width= {
-  32
-}//for h-8 w-8 height= {
-  32 "
-}//for h-8 w-8 className="rounded-full object-cover" onError= {
-  () => setAvatarError (true)
-}priority= {
-  false "
 };"
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {

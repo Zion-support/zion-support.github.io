@@ -1,4 +1,3 @@
-
 export function ContactSection() {
   return (
     <section className="py-20 bg-zion-blue" id="contact">
@@ -152,5 +151,7 @@ export function ContactSection() {;
           </div>;
         </div>;
       </div>;
+
+
     </section>;
   );

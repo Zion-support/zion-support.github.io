@@ -1,7 +1,21 @@
+import React from 'react';
+import React, { ReactNode } from 'react';
+
+import Header from '../Header';
+import Footer from '../Footer';
+
+import React, { ReactNode } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import Header from '../Header';
+import Footer from '../Footer';
 
 
 
 
+
+
+;
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -10,6 +24,7 @@ interface LayoutProps {;
   description?: string;
   keywords?: string;
   canonical?: string;
+export default function Layout({
   children
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
   description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses."

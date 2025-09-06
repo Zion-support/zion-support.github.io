@@ -2,15 +2,17 @@
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
   const [additionalNotes, setAdditionalNotes] = useState('');
+
+
   const [tone, setTone] = useState<
     'professional' | 'friendly' | 'persuasive' | 'technical'
 
   >('professional');
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
-
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
@@ -41,6 +43,14 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+  return (
+    <div className="max-w-3xl mx-auto">
+      <h1 className="text-2xl font-semibold mb-4">Service Description Generator</h1>
+      <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
+        Enter your service details. We will generate a polished description using GPT-4. You can edit it on the page and accept when ready.
+      </p>
+      <form
+        onSubmit={handleSubmit}
         <div>
           <label className="block text-sm font-medium mb-1">Service Title</label>
           <input
@@ -78,18 +88,17 @@
               </button>;
               <button
                 onClick={handleAccept}
-            value={additionalNotes  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            onChange={(e) => setAdditionalNotes(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          />
+          <button
+            type="submit"
+            disabled={loading}
+            className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60"
+          >
+            {loading ? 'Generating…' : 'Generate Description'}
+          </button>
+          {error && <span className="text-red-600 text-sm">{error}</span>}
         </div>
+      </form>
+
       {generated && (
         <div className="mt-8 space-y-3">
           <div className="flex items-center justify-between">
@@ -116,6 +125,10 @@
         </div>
       )}
     </div>
+
+
+}
+
         <div>;
           <label className='block text - sm font - medium mb - 1'>;
             Additional Notes (optional);

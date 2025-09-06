@@ -9,6 +9,12 @@ export default function AdminLearn() {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify(form)
+    })
+    const data = await resp.json()
+    if (data.ok) setMessage('Saved')
+    else setMessage('Error: ' + (data.error |'unknown'))
+
+  }
     }),
     const data = await resp.json(),
     if (data.ok) setMessage('Saved'),
@@ -31,6 +37,8 @@ export default function AdminLearn(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+  }
+}
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Learning Admin</h1>

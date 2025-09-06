@@ -74,7 +74,6 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
         ref: 'dev';
         inputs: { issue_number: String(issue.data.number) }} as any);
     } catch (error) {
-
     } catch (e) {
       // ignore if missing;
     }
@@ -85,17 +84,6 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
   }
 }
 ;
-      // ignore if missing;
-    }
-return res.status(200).json({ ok: true, issue: issue.data.number })
-  } catch (e) {
-    console.error(e)
-
-    return res.status(500).json({ error: 'Failed to process webhook' })
-  }
-}
-    return res.status(200).json({ ok: true, issue: issue.data.number })
-  } catch (e) {
     console.error(e);
     return res.status(500).json({ error: 'Failed to process webhook' })
   }

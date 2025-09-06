@@ -1,4 +1,3 @@
-
     popular: false,
     color: 'from-gray-500 to-gray-600'
   };
@@ -177,14 +176,10 @@ const integrations = [;
 }
 ],
 const NeuralFinanceAI: React.FC = () => {
-  return (
-    <Layout>;
-      <Head>;
-        <title>;
-          Neural Finance AI - Advanced AI-Powered Financial Analysis Platform |;
-          Zion Tech Group;
-        </title>;
+  { name: 'TD Ameritrade', logo: '💼', category: 'Broker' },];
 
+const NeuralFinanceAI: React.FC = () => {;
+  return (
         <meta
           name='description'
           content='Transform your financial trading with Neural Finance AI. Advanced AI-powered market prediction, risk assessment, and automated portfolio optimization using neural networks.'
@@ -205,18 +200,26 @@ const NeuralFinanceAI: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-sm text-violet-300 mb-6'>
-                <Brain className='w-4 h-4' />
+
+
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+
+
+                  Neural Finance AI
+                </span>
+                <br />
+                <span className='text-white'>
+                  Revolutionary Trading Intelligence
+                </span>
+              </h1>
+
+              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-sm text-violet-300 mb-6">
+                <Brain className="w-4 h-4" />
                 <span>AI-Powered Financial Intelligence</span>
               </div>
               <h1 className='text-4xl md:text-6xl font-bold text-white mb-6 leading-tight'>
                 <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-                  Neural Finance AI
-                </span>
-                <br />
-                <span className="text-white">Revolutionary Trading Intelligence</span>
-              </h1>
-              
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Neural Finance AI
@@ -224,9 +227,6 @@ const NeuralFinanceAI: React.FC = () => {
                 <br />
                 <span className="text-white">Revolutionary Trading Intelligence</span>
               </h1>
-              
-
-
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Advanced AI-powered financial analysis and trading platform using neural networks for real-time market prediction,
                 risk assessment, and automated portfolio optimization with 94% accuracy.
@@ -243,10 +243,6 @@ const NeuralFinanceAI: React.FC = () => {
                   <span>Watch Demo</span>
                 </button>
               </div>
-
-              <div className="flex flex-wrap gap-6 text-sm text-gray-400">
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
                   <span>94% Market Prediction Accuracy</span>
                 </div>
                 <div className='flex items-center space-x-2'>
@@ -299,24 +295,6 @@ const NeuralFinanceAI: React.FC = () => {
           </div>
         </div>
       </section>
-                        Prediction Accuracy;
-                      </div>;
-                    </div>;
-                  </div>;
-                        Advanced;
-                      </span>;
-                    </div>;
-                    <div className='flex items-center justify-between p-3 bg-gray-800/50 rounded-lg border border-gray-700/50'>;
-                      <span className='text-gray-300'>Risk Management</span>;
-                      <span className='text-purple-400 font-semibold'>;
-                        Real-time;
-                      </span>;
-                    </div>;
-                        Enabled;
-                      </span>                    </div>;
-                  </div>;
-                </div>;
-              </div>;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -332,20 +310,6 @@ const NeuralFinanceAI: React.FC = () => {
               unprecedented insights into financial markets.
             </p>
           </motion.div>
-            className='text-center mb-16'>;
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-              <span className='bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent'>;
-                Advanced Features;
-              </span>;
-            </h2>;
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-              Leverage cutting-edge AI and neural network technology to gain;
-              unprecedented insights into financial markets.;
-            </p>;
-          </motion && motion.div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (;
-              <motion&& motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -356,6 +320,15 @@ const NeuralFinanceAI: React.FC = () => {
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors duration-300">
+      {/* Use Cases Section */}
+      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -367,20 +340,6 @@ const NeuralFinanceAI: React.FC = () => {
               financial trading and investment management.
             </p>
           </motion.div>
-            className='text-center mb-16'>;
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-              <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                Use Cases;
-              </span>;
-            </h2>;
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-              Discover how Neural Finance AI transforms various aspects of;
-              financial trading and investment management.;
-            </p>;
-          </motion && motion.div>;
-
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases && useCases.map((useCase, index) => (;
-              <motion&& motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -400,7 +359,6 @@ const NeuralFinanceAI: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-violet-400 flex-shrink-0" />
                           <span>{benefit}</span>
                         </div>
-
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -441,7 +399,6 @@ const NeuralFinanceAI: React.FC = () => {
                       Most Popular
                     </div>
                   </div>
-
                 )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -451,6 +408,60 @@ const NeuralFinanceAI: React.FC = () => {
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 text-sm mb-6">{plan.description}</p>
                   <div className="text-4xl font-bold text-white mb-2">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3 text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-violet-400 flex-shrink-0" />
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <Link
+                  href="/contact"
+                  className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-200 transform hover:scale-105 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700'
+                      : 'bg-gray-800/50 text-white border border-gray-600 hover:bg-gray-700/50'
+                  }`}
+                >
+                  Get Started
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Integrations Section */}
+      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
+        <div className='max-w-7xl mx-auto'>          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >;
+                  Get Started;
+                </Link>;
+              </motion.div>;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+          </div>;
+        </div>;
+      </section>;
+
+      {/* Integrations Section */}
+      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
 
       {/* Integrations Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
@@ -466,58 +477,62 @@ const NeuralFinanceAI: React.FC = () => {
               Connect with your existing trading platforms and tools for a unified trading experience.
             </p>
           </motion.div>
-                    </span>;
-                  </div>;
-                </div>;
-                <ul className='space - y-4 mb - 8'>;
-                  {plan.features.map ((feature, feature_index) => (
-                    <li;
-                      key={feature_index}
-                      className='flex items - center space - x-3 text - gray - 300';
-                    >;
-                      <CheckCircle className='w - 5 h - 5 text - violet - 400 flex - shrink - 0' />;
-                      <span className='text - sm'>{feature}</span>;
-                    </li>))}
-                </ul>;
-                <Link;
-                  href='/contact'                  className={`w - full py - 3 px - 6 rounded - xl font - semibold text - center transition - all duration - 200 transform hover:scale - 105 ${
-                    plan.popular;
-                      ? 'bg - gradient - to - r from - violet - 500 to - purple - 600 text - white hover:from - violet - 600 hover:to - purple - 700';
-                      : 'bg - gray - 800 / 50 text - white border border - gray - 600 hover:bg - gray - 700 / 50';
-                  }`}
-                >;
-                  Get Started;
-                </Link>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Integrations Section */}
-      <section className='py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gray - 900 / 30'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text - center mb - 16';
-          >;
-            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
-              <span className='bg - gradient - to - r from - green - 400 to - emerald - 400 bg - clip - text text - transparent'>;
-                Seamless Integrations;
-              </span>;
-            </h2>;
-            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-              Connect with your existing trading platforms and tools for a;
-              unified trading experience.;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 6'>            {integrations.map ((integration, index) => (
-              <motion.div;
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Contact CTA */}
+      <section className='py-20 px-4 sm: px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center'>
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index) => (
+              <motion.div
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, scale: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="text-4xl mb-3">{integration.logo}</div>
+                <h3 className="text-sm font-semibold text-white mb-1">{integration.name}</h3>
+                <p className="text-xs text-gray-400">{integration.category}</p>
+              </motion.div>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
               <Link
                 href='/contact'
                 className='bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'>;
@@ -525,6 +540,13 @@ const NeuralFinanceAI: React.FC = () => {
               </Link>;
               <Link
                 href='/contact'
+              Ready to Transform Your Trading?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join leading investment firms using Neural Finance AI to gain competitive advantages 
+              in today's dynamic financial markets.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link
                 href="/contact"
@@ -539,8 +561,6 @@ const NeuralFinanceAI: React.FC = () => {
                 Schedule Demo
               </Link>
             </div>
-
-
             <div className="text-sm text-gray-400">
               <p>✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant Setup</p>
               <p className="mt-2">✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure</p>
@@ -549,10 +569,10 @@ const NeuralFinanceAI: React.FC = () => {
         </div>
       </section>
     </Layout>
-                className='border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200'>;
                 Schedule Demo;
               </Link>;
             </div>;
+
             <div className='text-sm text-gray-400'>;
               <p>;
                  30-Day Free Trial   No Credit Card Required   Instant;
@@ -569,3 +589,12 @@ const NeuralFinanceAI: React.FC = () => {
           </div>;
         </div>;
       </section>;
+              </p>            </div>;
+          </div>;
+        </div>;
+      </section>;
+
+
+
+
+export default NeuralFinanceAI;

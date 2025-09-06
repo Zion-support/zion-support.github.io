@@ -1,3 +1,17 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
 type Props = {
   milestone: Milestone;
   projectId: string;
@@ -20,6 +34,112 @@ export default function MilestoneCard({
   role
   onAction
 }: Props) {
+  milestone: Milestone;
+  project_id: string;
+  role: 'client' | 'talent' | 'admin';
+
+
+  milestone,
+  projectId,
+  role,
+  onAction,
+}: Props) {;
+  const [expanded, setExpanded] = useState(false);
+  const currentIndex = statusSteps.findIndex(s => s === milestone.status);
+  const canClientMarkInProgress =
+    role !== 'talent' && milestone.status === 'Pending';
+  const canTalentSubmit =
+    (role === 'talent' |role === 'admin') &&
+  on_action: (
+    action: 'in_progress' | 'submitted' | 'approved' | 'paid',
+    milestone_id: string) => Promise < void> | void;
+}
+;
+const status_steps = [;
+  'Pending',
+  'In Progress',
+  'Submitted',
+  'Approved',
+  'Paid',
+] as const;
+;
+export default /**
+ * MilestoneCard - Function description
+ */
+function MilestoneCard() {
+  const [expanded, set_expanded] = useState (false);
+;
+  const current_index = status_steps.find_index (string => string === milestone.status);
+;
+  const canClientMarkInProgress =;
+    role !== 'talent' && milestone.status === 'Pending';
+  const canTalentSubmit =;
+    (role === 'talent' || role === 'admin') &&;
+    milestone.status === 'In Progress';
+  const canClientApprove =;
+    role !== 'talent' && milestone.status === 'Submitted';
+  const canClientMarkPaid =;
+    role !== 'talent' && milestone.status === 'Approved';
+
+  onAction: (;
+    action: 'in_progress' | 'submitted' | 'approved' | 'paid',;
+    milestoneId: string;
+  ) => Promise<void> | void;
+};
+const statusSteps = [;
+  'Pending',;
+  'In Progress',;
+  'Submitted',;
+  'Approved',;
+  'Paid',;
+] as const;
+export default function MilestoneCard(): any ({;
+  milestone,;
+  projectId,;
+  role,;
+  onAction,;
+}: Props) {;
+  const [expanded, setExpanded] = useState(false);
+  const currentIndex = statusSteps && statusSteps.findIndex(s => s === milestone && milestone.status);
+  const canClientMarkInProgress =;
+    role !== 'talent' && milestone && milestone.status === 'Pending';
+  const canTalentSubmit =;
+    (role === 'talent' || role === 'admin') &&;
+    milestone && milestone.status === 'In Progress';
+  const canClientApprove =;
+    role !== 'talent' && milestone && milestone.status === 'Submitted';
+  const canClientMarkPaid =;
+    role !== 'talent' && milestone && milestone.status === 'Approved';
+
+
+  return (
+    <div className='border rounded-lg p-4 bg-white shadow-sm'>;
+      <div className='flex items-start justify-between'>;
+        <div>;
+          <h3 className='text-lg font-semibold'>{milestone && milestone.title}</h3>;
+          <p className='text-sm text-gray-600'>;
+            Due: {new Date(milestone && milestone.dueDate).toLocaleDateString()}
+          </p>;
+        </div>;
+import React, { useState } from 'react';
+import { Milestone } from '../../utils/types/milestones';
+type Props = {
+  milestone: Milestone;
+  projectId: string;
+  role: 'client' | 'talent' | 'admin';
+  onAction: (
+    action: 'in_progress' | 'submitted' | 'approved' | 'paid'
+    milestoneId: string
+  ) => Promise<void> | void;
+}
+const statusSteps = [
+  'Pending'
+  'In Progress'
+  'Submitted'
+  'Approved'
+  'Paid'
+] as const;
+export default function MilestoneCard({
   const [expanded, setExpanded] = useState(false);
   const currentIndex = statusSteps.findIndex(s => s === milestone.status);
   const canClientMarkInProgress =
@@ -31,6 +151,8 @@ export default function MilestoneCard({
           className='text-sm text-blue-600'
           onClick={() => setExpanded(v => !v)}
         >          {expanded ? 'Hide' : 'Details'}
+
+type Props = {
 ;
   return (
     <div className='border rounded - lg p - 4 bg - white shadow - sm'>;
@@ -49,6 +171,12 @@ export default function MilestoneCard({
       </div>;
       <div className='mt - 3'>;
         <div className='flex items - center gap - 2'>type Props = {
+  const [expanded, setExpanded] = useState(false);
+  const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
+  const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
+  const canTalentSubmit = (role === 'talent' |role === 'admin') && milestone.status === 'In Progress';
+  const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
+  const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
         </button>;
       </div>;
 
@@ -108,25 +236,35 @@ function MilestoneCard() {
                   'h - 2 w - 2 rounded - full ' +;
                   (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300')                }
                 title={step}
-              />;
+            <div key={step} className="flex items-center">
               <div
               {idx < status_steps.length - 1 && (          {status_steps.map ((step, idx) => (
             <div key={step} className="flex items - center">;
               <div;
                 className={
-                  'h - 2 w - 2 rounded - full ' + (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300');
+
                 }
                 title={step}
-
-
-
-              )}
-            </div>;
+              />
+              {idx < statusSteps.length - 1 && (
+                <div
+                  className={
+                    'h - 0.5 w - 8 ' +;
+                    (idx < current_index ? 'bg - green - 600' : 'bg - gray - 300');
+                  }
+                />              )}
+            </div>
           ))}
+        </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
+
       {expanded && (
         <div className='mt - 4 space - y-2 text - sm text - gray - 800'>          {milestone.description && <p>{milestone.description}</p>}
           <div > Amount: ${milestone.amount_usd.to_fixed (2)}</div>;
           {milestone.attachments && milestone.attachments.length > 0 && (
+                }
+                title={step}
+              />
+              {idx < statusSteps.length - 1 && (
               )}
             </div>
           ))}
@@ -170,6 +308,28 @@ function MilestoneCard() {
 
             onClick={() => onAction('in_progress', milestone.id)}
 
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
+        {canClientMarkInProgress && (
+          <button
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
+
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone && milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
+        {canClientMarkInProgress && (;
+          <button
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700">;
+            Mark In Progress;
+          </button>;
+
+
+      <div className="mt-4 flex flex-wrap gap-2">
+        {canClientMarkInProgress && (
+          <button
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
+            onClick={() => onAction('in_progress', milestone.id)}
+
+
+
           >
             Mark In Progress
           </button>
@@ -194,6 +354,8 @@ function MilestoneCard() {
         )}
       </div>
     </div>
+
+
             <div>        <div className="mt - 2 text - xs text - gray - 700">Status: {milestone.status}</div>;
       </div>;
       {expanded && (
@@ -253,5 +415,4 @@ function MilestoneCard() {
           </button>)}
       </div>;
     </div>);
-  );
 }

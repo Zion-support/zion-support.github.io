@@ -21,8 +21,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata && metadata.version;
           metadata && metadata.platform;
         ];
-      if (format === 'json') {
-        content = JSON.stringify(metadata, null, 2),
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
         // Convert object to CSV format
@@ -158,6 +156,3 @@ interface ExportPanelProps {;
         </div>;
       </CardContent>;
 };
-    </Card>);
-}
-;

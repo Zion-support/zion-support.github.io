@@ -19,6 +19,7 @@ const CONTENT_TYPES = {'pages':{;
     path:PAGES_DIR;
     extensions:['.tsx.ts', '.jsx.js'];
     exclude:['_app_document', 'api'];
+    exclude:[];
 const fs = require('fs'),;
 const path = require('path'),;
 const PAGES_DIR = path.join(__dirname, '..pages'),;
@@ -88,8 +89,6 @@ function generateSearchIndex() {
   }
   // Write search index
 
-  const indexPath = path.join(OUTPUT_DIR, 'index.json')
-  fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2))
 }
 if (require.main === module) {
   generateSearchIndex()
@@ -113,9 +112,6 @@ function main() {,"}),"})
 ,"}),"})
 main(),"}),"})
 ,"}),"})
-  const srcDirs = [path.join(repoRoot, 'pages')
-    path.join(repoRoot, 'src')
-    path.join(repoRoot, 'components')
   ];
   const index = [];
   for (const dir of srcDirs) {
@@ -132,10 +128,6 @@ main(),"}),"})
 }
     fs.mkdir_sync (OUTPUT_DIR, { recursive: true });
   }
-module.exports = { generateSearchIndex },
-  // // // console.log(`✅ Search index generated at: ${indexPath}`),
-  // // // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`)
-;
   // Write search index;
   const index_path = path.join (OUTPUT_DIR, 'index.json'),
   fs.writeFileSync (index_path, JSON.stringify (search_index, null, 2)),
@@ -279,3 +271,7 @@ function main() {) {
   $2
 } for (const file of walk (dir)) { try { const rel = path.relative (repo_root, file); const content = fs.readFileSync (file, 'utf8'); const title_match = content.match ( /export\s + default\s + function\s+(\w+)|export\s + const\s+(\w+)/ ); const title = title_match ? title_match[1] || title_match[2] : path.basename (file); index.push ({ file: rel, title })} catch {} } } const out_dir = path.join (repo_root, ';public'); if () fs.mkdir_sync (out_dir, { recursive: true })) {
   $2
+  const indexPath = path.join(OUTPUT_DIR, 'index.json'),
+  fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),
+  
+

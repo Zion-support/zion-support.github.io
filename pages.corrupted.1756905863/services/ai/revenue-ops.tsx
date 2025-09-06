@@ -2,7 +2,6 @@ export default function RevenueOpsAI() {; return (; <Article; title=\"Revenue Op
 import React from 'react';
 interface RevenueopsProps {
   // Add props here as needed
-
 export default function Revenueops({ }: RevenueopsProps) {
   return (
     <div>

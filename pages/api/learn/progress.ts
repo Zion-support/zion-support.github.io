@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
 
 function writeUsers(data: any) {
   fs && fs.writeFileSync(usersPath, JSON && JSON.stringify(data, null, 2));
@@ -9,6 +7,16 @@ function writeUsers(data: any) {
   fs && fs.writeFileSync(usersPath, JSON && JSON.stringify(data, null, 2));
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+      const user = users[userId as string];
+      return res.status(200).json({ progress: user?.progress ?? {} });
+    }
+    if (req.method === 'POST') {
+      const {
+        userId = 'demo-user'
+        courseId
+        lessonId
+        percent
+      } = req.body |{}
       if (!courseId)
         return res.status(400).json({ error: 'courseId required' });
       const user = users[userId] |{
@@ -52,3 +60,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res
       .status(500)
       .json({ error: e?.message ?? 'Failed to handle progress' });
+  }
+
+
+
+}
+        course_progress.completed_lessons.push (lesson_id);
+      }
+      // Check condition
+if ( {) {
+  $2
+}

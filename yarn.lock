@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@adobe/css-tools@^4.4.0":
-  version "4.4.4"
-  resolved "https://registry.npmjs.org/@adobe/css-tools/-/css-tools-4.4.4.tgz"
-  integrity sha512-Elp+iwUx5rN5+Y8xLt5/GRoG20WGoDCQ/1Fb+1LiGtvwbDavuSk0jhD/eZdckHAuzcDzccnkv+rEjyWfRx18gg==
-
 "@alloc/quick-lru@^5.2.0":
   version "5.2.0"
   resolved "https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz"
@@ -24,12 +19,16 @@
     lru-cache "^10.4.3"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 "@assemblyscript/loader@^0.9.4":
   version "0.9.4"
   resolved "https://registry.npmjs.org/@assemblyscript/loader/-/loader-0.9.4.tgz"
   integrity sha512-HazVq9zwTVwGmqdwYzu7WyQ6FQVZ7SwET0KKQuKm55jD0IfUpZgN0OPIiZG3zV1iSrVYcN0bdwLRXI/VNCYsUA==
+<<<<<<< HEAD
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 "@axe-core/cli@^4.10.2":
@@ -60,6 +59,8 @@
   dependencies:
     axe-core "~4.10.3"
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.27.1":
   version "7.27.1"
@@ -72,6 +73,7 @@
   version "7.28.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/core@^7.23.9", "@babel/core@^7.27.4", "@babel/core@^7.28.3":
 =======
 <<<<<<< HEAD
@@ -80,6 +82,9 @@
 "@babel/core@^7.23.9", "@babel/core@^7.27.4", "@babel/core@^7.28.3", "@babel/core@^7.28.4":
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+"@babel/core@^7.23.9", "@babel/core@^7.27.4", "@babel/core@^7.28.3", "@babel/core@^7.28.4":
+>>>>>>> origin/main
   version "7.28.4"
   dependencies:
     "@babel/code-frame" "^7.27.1"
@@ -797,6 +802,7 @@
     "@babel/plugin-transform-typescript" "^7.27.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -807,6 +813,9 @@
   version "7.28.3"
 =======
 <<<<<<< HEAD
+=======
+"@babel/runtime@^7.12.5":
+>>>>>>> origin/main
   version "7.28.4"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.28.4.tgz"
   integrity sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==
@@ -859,6 +868,7 @@
 "@bcoe/v8-coverage@^0.2.3":
   version "0.2.3"
 
+<<<<<<< HEAD
 "@borewit/text-codec@^0.1.0":
   version "0.1.1"
 
@@ -879,6 +889,8 @@
   dependencies:
     "@chainsafe/is-ip" "^2.0.1"
 
+=======
+>>>>>>> origin/main
 "@bufbuild/protobuf@^1.10.0", "@bufbuild/protobuf@^1.10.1":
   version "1.10.1"
   resolved "https://registry.npmjs.org/@bufbuild/protobuf/-/protobuf-1.10.1.tgz"
@@ -1167,6 +1179,7 @@
   version "2.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@eslint-community/eslint-utils@^4.7.0", "@eslint-community/eslint-utils@^4.8.0":
   version "4.8.0"
 <<<<<<< HEAD
@@ -1176,13 +1189,18 @@
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 "@esbuild/linux-x64@^0.25.9", "@esbuild/linux-x64@0.25.9":
   version "0.25.9"
   resolved "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.25.9.tgz"
   integrity sha512-iSwByxzRe48YVkmpbgoxVzn76BXjlYFXC7NvLYq+b+kDjyyk30J0JY47DIn8z1MO3K0oSl9fZoRmZPQI4Hklzg==
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 "@eslint-community/eslint-utils@^4.7.0", "@eslint-community/eslint-utils@^4.8.0":
   version "4.8.0"
   resolved "https://registry.npmjs.org/@eslint-community/eslint-utils/-/eslint-utils-4.8.0.tgz"
@@ -1222,12 +1240,7 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@eslint/js@^8.57.1":
-  version "8.57.1"
-  resolved "https://registry.npmjs.org/@eslint/js/-/js-8.57.1.tgz"
-  integrity sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==
-
-"@eslint/js@9.35.0":
+"@eslint/js@^9.35.0", "@eslint/js@9.35.0":
   version "9.35.0"
   resolved "https://registry.npmjs.org/@eslint/js/-/js-9.35.0.tgz"
   integrity sha512-30iXE9whjlILfWobBkNerJo+TXYsgVM5ERQwMcMKCHckHflCmf7wXDAHlARoWnh0s1U72WqlbeyE7iAcCzuCPw==
@@ -1242,6 +1255,7 @@
     levn "^0.4.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
@@ -1252,11 +1266,16 @@
     ajv-formats "^3.0.1"
     fast-uri "^3.0.0"
 =======
+=======
+>>>>>>> origin/main
 "@fastify/busboy@^2.0.0":
   version "2.1.1"
   resolved "https://registry.npmjs.org/@fastify/busboy/-/busboy-2.1.1.tgz"
   integrity sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/main
 
 "@fastify/cors@^11.1.0":
   version "11.1.0"
@@ -1657,6 +1676,7 @@
     wrap-ansi-cjs "npm:wrap-ansi@^7.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1670,6 +1690,8 @@
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   dependencies:
@@ -1910,6 +1932,7 @@
     "@jridgewell/trace-mapping" "^0.3.24"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@jridgewell/remapping@^2.3.4", "@jridgewell/remapping@^2.3.5":
 =======
 <<<<<<< HEAD
@@ -1918,6 +1941,9 @@
 "@jridgewell/remapping@^2.3.4", "@jridgewell/remapping@^2.3.5":
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+"@jridgewell/remapping@^2.3.5":
+>>>>>>> origin/main
   version "2.3.5"
   dependencies:
     "@jridgewell/gen-mapping" "^0.3.5"
@@ -1933,6 +1959,7 @@
     "@jridgewell/trace-mapping" "^0.3.25"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@jridgewell/sourcemap-codec@^1.4.10", "@jridgewell/sourcemap-codec@^1.4.14", "@jridgewell/sourcemap-codec@^1.5.0", "@jridgewell/sourcemap-codec@^1.5.5":
 =======
 <<<<<<< HEAD
@@ -1941,6 +1968,9 @@
 "@jridgewell/sourcemap-codec@^1.4.10", "@jridgewell/sourcemap-codec@^1.4.14", "@jridgewell/sourcemap-codec@^1.5.0", "@jridgewell/sourcemap-codec@^1.5.5":
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+"@jridgewell/sourcemap-codec@^1.4.10", "@jridgewell/sourcemap-codec@^1.4.14", "@jridgewell/sourcemap-codec@^1.5.0":
+>>>>>>> origin/main
   version "1.5.5"
 
 "@jridgewell/trace-mapping@^0.3.12", "@jridgewell/trace-mapping@^0.3.23", "@jridgewell/trace-mapping@^0.3.24", "@jridgewell/trace-mapping@^0.3.25", "@jridgewell/trace-mapping@^0.3.28":
@@ -1965,6 +1995,127 @@
 
 "@js-sdsl/ordered-map@^4.4.2":
   version "4.4.2"
+
+"@leichtgewicht/ip-codec@^2.0.1":
+  version "2.0.5"
+  resolved "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.5.tgz"
+  integrity sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==
+
+"@libp2p/crypto@^5.0.0", "@libp2p/crypto@^5.1.7":
+  version "5.1.8"
+  resolved "https://registry.npmjs.org/@libp2p/crypto/-/crypto-5.1.8.tgz"
+  integrity sha512-zkfWd2x12E0NbSRU52Wb0A5I9v5a1uLgCauR8uuTqnC21OVznXUGkMg4A2Xoj90M98lReDHo+Khc/hlQFbJ5Vw==
+  dependencies:
+    "@libp2p/interface" "^2.11.0"
+    "@noble/curves" "^1.9.1"
+    "@noble/hashes" "^1.8.0"
+    multiformats "^13.3.6"
+    protons-runtime "^5.5.0"
+    uint8arraylist "^2.4.8"
+    uint8arrays "^5.1.0"
+
+"@libp2p/interface-connection@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/@libp2p/interface-connection/-/interface-connection-4.0.0.tgz"
+  integrity sha512-6xx/NmEc84HX7QmsjSC3hHredQYjHv4Dkf4G27adAPf+qN+vnPxmQ7gaTnk243a0++DOFTbZ2gKX/15G2B6SRg==
+  dependencies:
+    "@libp2p/interface-peer-id" "^2.0.0"
+    "@libp2p/interfaces" "^3.0.0"
+    "@multiformats/multiaddr" "^12.0.0"
+    it-stream-types "^1.0.4"
+    uint8arraylist "^2.1.2"
+
+"@libp2p/interface-keychain@^2.0.0":
+  version "2.0.5"
+  resolved "https://registry.npmjs.org/@libp2p/interface-keychain/-/interface-keychain-2.0.5.tgz"
+  integrity sha512-mb7QNgn9fIvC7CaJCi06GJ+a6DN6RVT9TmEi0NmedZGATeCArPeWWG7r7IfxNVXb9cVOOE1RzV1swK0ZxEJF9Q==
+  dependencies:
+    "@libp2p/interface-peer-id" "^2.0.0"
+    multiformats "^11.0.0"
+
+"@libp2p/interface-peer-id@^2.0.0", "@libp2p/interface-peer-id@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/@libp2p/interface-peer-id/-/interface-peer-id-2.0.2.tgz"
+  integrity sha512-9pZp9zhTDoVwzRmp0Wtxw0Yfa//Yc0GqBCJi3EznBDE6HGIAVvppR91wSh2knt/0eYg0AQj7Y35VSesUTzMCUg==
+  dependencies:
+    multiformats "^11.0.0"
+
+"@libp2p/interface-peer-info@^1.0.2":
+  version "1.0.10"
+  resolved "https://registry.npmjs.org/@libp2p/interface-peer-info/-/interface-peer-info-1.0.10.tgz"
+  integrity sha512-HQlo8NwQjMyamCHJrnILEZz+YwEOXCB2sIIw3slIrhVUYeYlTaia1R6d9umaAeLHa255Zmdm4qGH8rJLRqhCcg==
+  dependencies:
+    "@libp2p/interface-peer-id" "^2.0.0"
+    "@multiformats/multiaddr" "^12.0.0"
+
+"@libp2p/interface-pubsub@^3.0.0":
+  version "3.0.7"
+  resolved "https://registry.npmjs.org/@libp2p/interface-pubsub/-/interface-pubsub-3.0.7.tgz"
+  integrity sha512-+c74EVUBTfw2sx1GE/z/IjsYO6dhur+ukF0knAppeZsRQ1Kgg6K5R3eECtT28fC6dBWLjFpAvW/7QGfiDAL4RA==
+  dependencies:
+    "@libp2p/interface-connection" "^4.0.0"
+    "@libp2p/interface-peer-id" "^2.0.0"
+    "@libp2p/interfaces" "^3.0.0"
+    it-pushable "^3.0.0"
+    uint8arraylist "^2.1.2"
+
+"@libp2p/interface@^2.0.0", "@libp2p/interface@^2.10.5", "@libp2p/interface@^2.11.0":
+  version "2.11.0"
+  resolved "https://registry.npmjs.org/@libp2p/interface/-/interface-2.11.0.tgz"
+  integrity sha512-0MUFKoXWHTQW3oWIgSHApmYMUKWO/Y02+7Hpyp+n3z+geD4Xo2Rku2gYWmxcq+Pyjkz6Q9YjDWz3Yb2SoV2E8Q==
+  dependencies:
+    "@multiformats/dns" "^1.0.6"
+    "@multiformats/multiaddr" "^12.4.4"
+    it-pushable "^3.2.3"
+    it-stream-types "^2.0.2"
+    main-event "^1.0.1"
+    multiformats "^13.3.6"
+    progress-events "^1.0.1"
+    uint8arraylist "^2.4.8"
+
+"@libp2p/interfaces@^3.0.0", "@libp2p/interfaces@^3.2.0":
+  version "3.3.2"
+  resolved "https://registry.npmjs.org/@libp2p/interfaces/-/interfaces-3.3.2.tgz"
+  integrity sha512-p/M7plbrxLzuQchvNwww1Was7ZeGE2NaOFulMaZBYIihU8z3fhaV+a033OqnC/0NTX/yhfdNOG7znhYq3XoR/g==
+
+"@libp2p/logger@^2.0.5":
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/@libp2p/logger/-/logger-2.1.1.tgz"
+  integrity sha512-2UbzDPctg3cPupF6jrv6abQnAUTrbLybNOj0rmmrdGm1cN2HJ1o/hBu0sXuq4KF9P1h/eVRn1HIRbVIEKnEJrA==
+  dependencies:
+    "@libp2p/interface-peer-id" "^2.0.2"
+    "@multiformats/multiaddr" "^12.1.3"
+    debug "^4.3.4"
+    interface-datastore "^8.2.0"
+    multiformats "^11.0.2"
+
+"@libp2p/logger@^5.0.0":
+  version "5.2.0"
+  resolved "https://registry.npmjs.org/@libp2p/logger/-/logger-5.2.0.tgz"
+  integrity sha512-OEFS529CnIKfbWEHmuCNESw9q0D0hL8cQ8klQfjIVPur15RcgAEgc1buQ7Y6l0B6tCYg120bp55+e9tGvn8c0g==
+  dependencies:
+    "@libp2p/interface" "^2.11.0"
+    "@multiformats/multiaddr" "^12.4.4"
+    interface-datastore "^8.3.1"
+    multiformats "^13.3.6"
+    weald "^1.0.4"
+
+"@libp2p/peer-id@^2.0.0":
+  version "2.0.4"
+  resolved "https://registry.npmjs.org/@libp2p/peer-id/-/peer-id-2.0.4.tgz"
+  integrity sha512-gcOsN8Fbhj6izIK+ejiWsqiqKeJ2yWPapi/m55VjOvDa52/ptQzZszxQP8jUk93u36de92ATFXDfZR/Bi6eeUQ==
+  dependencies:
+    "@libp2p/interface-peer-id" "^2.0.0"
+    "@libp2p/interfaces" "^3.2.0"
+    multiformats "^11.0.0"
+    uint8arrays "^4.0.2"
+
+"@livekit/protocol@^1.39.0":
+  version "1.41.0"
+  resolved "https://registry.npmjs.org/@livekit/protocol/-/protocol-1.41.0.tgz"
+  integrity sha512-bozBB39VSbd0IjRBwShMlLskqkd9weWJNskaB1CVpcEO9UUI1gMwAtBJOKYblzZJT9kE1SJa3L4oWWwsZMzSXw==
+  dependencies:
+    "@bufbuild/protobuf" "^1.10.0"
 
 "@lukeed/ms@^2.0.2":
   version "2.0.2"
@@ -2109,6 +2260,7 @@
     sparse-bitfield "^3.0.3"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2137,6 +2289,8 @@
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/main
 "@multiformats/dns@^1.0.3", "@multiformats/dns@^1.0.6":
   version "1.0.6"
   resolved "https://registry.npmjs.org/@multiformats/dns/-/dns-1.0.6.tgz"
@@ -2228,12 +2382,19 @@
   dependencies:
     webpack-bundle-analyzer "4.7.0"
 
-"@next/env@15.5.2":
-  version "15.5.2"
-  resolved "https://registry.npmjs.org/@next/env/-/env-15.5.2.tgz"
-  integrity sha512-Qe06ew4zt12LeO6N7j8/nULSOe3fMXE4dM6xgpBQNvdzyK1sv5y4oAP3bq4LamrvGCZtmRYnW8URFCeX5nFgGg==
+"@next/env@14.2.32":
+  version "14.2.32"
+  resolved "https://registry.npmjs.org/@next/env/-/env-14.2.32.tgz"
+  integrity sha512-n9mQdigI6iZ/DF6pCTwMKeWgF2e8lg7qgt5M7HXMLtyhZYMnf/u905M18sSpPmHL9MKp9JHo56C6jrD2EvWxng==
 
-"@next/eslint-plugin-next@^14.2.32", "@next/eslint-plugin-next@14.2.32":
+"@next/eslint-plugin-next@^15.5.2":
+  version "15.5.2"
+  resolved "https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-15.5.2.tgz"
+  integrity sha512-lkLrRVxcftuOsJNhWatf1P2hNVfh98k/omQHrCEPPriUypR6RcS13IvLdIrEvkm9AH2Nu2YpR5vLqBuy6twH3Q==
+  dependencies:
+    fast-glob "3.3.1"
+
+"@next/eslint-plugin-next@14.2.32":
   version "14.2.32"
   resolved "https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-14.2.32.tgz"
   integrity sha512-tyZMX8g4cWg/uPW4NxiJK13t62Pab47SKGJGVZJa6YtFwtfrXovH4j1n9tdpRdXW03PGQBugYEVGM7OhWfytdA==
@@ -2252,6 +2413,7 @@
   resolved "https://registry.npmjs.org/@noble/ed25519/-/ed25519-1.7.5.tgz"
   integrity sha512-xuS0nwRMQBvSxDa7UxMb61xTiH3MxTgUfhyPUALVIe0FlOAz4sjELwyDRyUvqeEYfRSG9qNjFIycqLZppg4RSA==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 "@next/eslint-plugin-next@^14.2.32", "@next/eslint-plugin-next@14.2.32":
@@ -2287,6 +2449,8 @@
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/main
 "@noble/hashes@^1.8.0", "@noble/hashes@1.8.0":
   version "1.8.0"
   resolved "https://registry.npmjs.org/@noble/hashes/-/hashes-1.8.0.tgz"
@@ -2296,6 +2460,7 @@
   version "1.7.2"
   resolved "https://registry.npmjs.org/@noble/secp256k1/-/secp256k1-1.7.2.tgz"
   integrity sha512-/qzwYl5eFLH8OWIecQWM31qld2g1NfjgylK+TNhqtaUKP37Nm+Y+z30Fjhw0Ct8p9yCQEm2N3W/AckdIb3SMcQ==
+<<<<<<< HEAD
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 "@next/swc-linux-x64-gnu@^15.5.2", "@next/swc-linux-x64-gnu@15.5.2":
@@ -2303,6 +2468,8 @@
   resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-15.5.2.tgz"
   integrity sha512-o1RV/KOODQh6dM6ZRJGZbc+MOAHww33Vbs5JC9Mp1gDk8cpEO+cYC/l7rweiEalkSm5/1WGa4zY7xrNwObN4+Q==
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -2328,6 +2495,7 @@
 <<<<<<< HEAD
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -2662,6 +2830,8 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 "@pkgr/core@^0.2.9":
   version "0.2.9"
 <<<<<<< HEAD
@@ -3376,7 +3546,11 @@
   resolved "https://registry.npmjs.org/@radix-ui/rect/-/rect-1.1.1.tgz"
   integrity sha512-HPwpGIzkl28mWyZqG52jiqDJ12waP11Pa1lGoiyUkIEuMLBP0oeK/C89esbXrxsky5we7dfd8U58nm0SgAWpVw==
 
+<<<<<<< HEAD
 "@reduxjs/toolkit@^2.9.0":
+=======
+"@reduxjs/toolkit@^2.8.2":
+>>>>>>> origin/main
   version "2.9.0"
   resolved "https://registry.npmjs.org/@reduxjs/toolkit/-/toolkit-2.9.0.tgz"
   integrity sha512-fSfQlSRu9Z5yBkvsNhYF2rPS8cGXn/TZVrlwN1948QyZ8xMZ0JvP50S2acZNaf+o63u6aEeMjipFyksjIcWrog==
@@ -3408,6 +3582,7 @@
   resolved "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.12.0.tgz"
   integrity sha512-5EwMtOqvJMMa3HbmxLlF74e+3/HhwBTMcvt3nqVJgGCozO6hzIPOBlwm8mGVNR9SN2IJpxSnlxczyDjcn7qIyw==
 
+<<<<<<< HEAD
 "@sec-ant/readable-stream@^0.4.1":
   version "0.4.1"
   resolved "https://registry.npmjs.org/@sec-ant/readable-stream/-/readable-stream-0.4.1.tgz"
@@ -3436,6 +3611,8 @@
     "@sendgrid/client" "^8.1.5"
     "@sendgrid/helpers" "^8.0.0"
 
+=======
+>>>>>>> origin/main
 "@sinclair/typebox@^0.27.8":
   version "0.27.8"
   resolved "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.27.8.tgz"
@@ -3445,21 +3622,6 @@
   version "0.34.41"
   resolved "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.34.41.tgz"
   integrity sha512-6gS8pZzSXdyRHTIqoqSVknxolr1kzfy4/CeDnrzsVz8TTIWUbOBr6gnzOmTYJ3eXQNh4IYHIGi5aIL7sOZ2G/g==
-
-"@sindresorhus/is@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.npmjs.org/@sindresorhus/is/-/is-0.7.0.tgz"
-  integrity sha512-ONhaKPIufzzrlNbqtWFFd+jlnemX6lJAgq9ZeiZtS7I1PIf/la7CW4m83rTXRnVnsMbW2k56pGYu7AUFJD9Pow==
-
-"@sindresorhus/is@^6.3.0":
-  version "6.3.1"
-  resolved "https://registry.npmjs.org/@sindresorhus/is/-/is-6.3.1.tgz"
-  integrity sha512-FX4MfcifwJyFOI2lPoX7PQxCqx8BG1HCho7WdiXwpEQx1Ycij0JxkfYtGK7yqNScrZGSlt6RE6sw8QYoH7eKnQ==
-
-"@sindresorhus/merge-streams@^2.1.0":
-  version "2.3.0"
-  resolved "https://registry.npmjs.org/@sindresorhus/merge-streams/-/merge-streams-2.3.0.tgz"
-  integrity sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==
 
 "@sinonjs/commons@^3.0.1":
   version "3.0.1"
@@ -3485,10 +3647,17 @@
   resolved "https://registry.npmjs.org/@standard-schema/utils/-/utils-0.3.0.tgz"
   integrity sha512-e7Mew686owMaPJVNNLs55PUvgz371nKgwsc4vxE49zsODpJEnxgxRo2y/OKrqueavXgZNMDVj3DdHFlaSAeU8g==
 
+<<<<<<< HEAD
 "@stripe/stripe-js@^7.9.0":
   version "7.9.0"
   resolved "https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-7.9.0.tgz"
   integrity sha512-ggs5k+/0FUJcIgNY08aZTqpBTtbExkJMYMLSMwyucrhtWexVOEY1KJmhBsxf+E/Q15f5rbwBpj+t0t2AW2oCsQ==
+=======
+"@stripe/stripe-js@^2.3.0":
+  version "2.4.0"
+  resolved "https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-2.4.0.tgz"
+  integrity sha512-WFkQx1mbs2b5+7looI9IV1BLa3bIApuN3ehp9FP58xGg7KL9hCHDECgW3BwO9l9L+xBPVAD7Yjn1EhGe6EDTeA==
+>>>>>>> origin/main
 
 "@supabase/auth-js@2.71.1":
   version "2.71.1"
@@ -3554,11 +3723,17 @@
     "@supabase/realtime-js" "2.15.5"
     "@supabase/storage-js" "^2.10.4"
 
-"@swc/helpers@0.5.15":
-  version "0.5.15"
-  resolved "https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.15.tgz"
-  integrity sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==
+"@swc/counter@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.npmjs.org/@swc/counter/-/counter-0.1.3.tgz"
+  integrity sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==
+
+"@swc/helpers@0.5.5":
+  version "0.5.5"
+  resolved "https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.5.tgz"
+  integrity sha512-KGYxvIOXcceOAbEk4bi/dVLEK9z8sZ0uBB3Il5b1rhfClSpcX0yfRO0KmTkqR2cnQDymwLB+25ZyMzICg/cm/A==
   dependencies:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "@opentelemetry/api" "^1.3.0"
@@ -5029,6 +5204,10 @@
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+    "@swc/counter" "^0.1.3"
+    tslib "^2.4.0"
+>>>>>>> origin/main
 
 "@tailwindcss/aspect-ratio@^0.4.2":
   version "0.4.2"
@@ -5099,6 +5278,7 @@
   dependencies:
     "@tanstack/query-core" "5.86.0"
 
+<<<<<<< HEAD
 "@testing-library/jest-dom@^6.6.4":
   version "6.8.0"
   dependencies:
@@ -5109,11 +5289,14 @@
     picocolors "^1.1.1"
     redent "^3.0.0"
 
+=======
+>>>>>>> origin/main
 "@testing-library/react@^16.3.0":
   version "16.3.0"
   dependencies:
     "@babel/runtime" "^7.12.5"
 
+<<<<<<< HEAD
 "@testing-library/user-event@^14.6.1":
   version "14.6.1"
 
@@ -5125,6 +5308,8 @@
   integrity sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
+=======
+>>>>>>> origin/main
 "@tootallnate/once@2":
   version "2.0.0"
 
@@ -5174,14 +5359,18 @@
     "@babel/types" "^7.28.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/connect@3.4.38":
   version "3.4.38"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 "@types/dns-packet@^5.6.5":
   version "5.6.5"
   resolved "https://registry.npmjs.org/@types/dns-packet/-/dns-packet-5.6.5.tgz"
   integrity sha512-qXOC7XLOEe43ehtWJCMnQXvgcIpv6rPmQ1jXT98Ad8A3TB1Ue50jsCbSSSyuazScEuZ/Q026vHbrOTVkmwA+7Q==
+<<<<<<< HEAD
 =======
 "@types/connect@3.4.38":
   version "3.4.38"
@@ -5189,6 +5378,8 @@
   integrity sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
   dependencies:
     "@types/node" "*"
 
@@ -5235,8 +5426,11 @@
   version "0.0.29"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 "@types/long@^4.0.1":
   version "4.0.2"
   resolved "https://registry.npmjs.org/@types/long/-/long-4.0.2.tgz"
@@ -5252,9 +5446,12 @@
   resolved "https://registry.npmjs.org/@types/minimist/-/minimist-1.2.5.tgz"
   integrity sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 "@types/mongodb@^4.0.6":
   version "4.0.6"
   resolved "https://registry.npmjs.org/@types/mongodb/-/mongodb-4.0.6.tgz"
@@ -5262,6 +5459,7 @@
   dependencies:
     mongodb "*"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -5303,6 +5501,8 @@
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 "@types/next-server@*":
   version "8.1.2"
   resolved "https://registry.npmjs.org/@types/next-server/-/next-server-8.1.2.tgz"
@@ -5344,12 +5544,16 @@
     undici-types "~5.26.4"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 "@types/normalize-package-data@^2.4.0":
   version "2.4.4"
   resolved "https://registry.npmjs.org/@types/normalize-package-data/-/normalize-package-data-2.4.4.tgz"
   integrity sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
@@ -5373,6 +5577,8 @@
     "@types/node" "*"
     pg-protocol "*"
     pg-types "^2.2.0"
+=======
+>>>>>>> origin/main
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 "@types/phoenix@^1.6.6":
@@ -5425,14 +5631,18 @@
     csstype "^3.0.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/shimmer@^1.2.0":
   version "1.2.0"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 "@types/retry@0.12.0":
   version "0.12.0"
   resolved "https://registry.npmjs.org/@types/retry/-/retry-0.12.0.tgz"
   integrity sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA==
+<<<<<<< HEAD
 =======
 "@types/shimmer@^1.2.0":
   version "1.2.0"
@@ -5440,6 +5650,8 @@
   integrity sha512-UE7oxhQLLd9gub6JKIAhDq06T0F6FnztwMNRvYgjeQSBeMc1ZG/tA47EwfduvkuQS8apbkM/lpLpWsaCeYsXVg==
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 
 "@types/source-list-map@*":
   version "0.1.6"
@@ -5455,6 +5667,7 @@
   integrity sha512-bTHG8fcxEqv1M9+TD14P8ok8hjxoOCkfKc8XXLaaD05kI7ohpeI956jtDOD3XHKBQrlyPughUtzm1jtVhHpA5Q==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -5468,6 +5681,8 @@
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 "@types/tough-cookie@*":
   version "4.0.5"
 
@@ -5699,6 +5914,7 @@ abort-controller@^3.0.0:
     event-target-shim "^5.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5707,10 +5923,13 @@ abort-controller@^3.0.0:
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/main
 abort-error@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/abort-error/-/abort-error-1.0.1.tgz"
   integrity sha512-fxqCblJiIPdSXIUrxI0PL+eJG49QdP9SQ70qtB65MVAoMr2rASlOyAbJFOylfB467F/f+5BCLJJq58RYi7mGfg==
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
@@ -5722,6 +5941,8 @@ abstract-logging@^2.0.1:
 
 acorn-import-attributes@^1.9.5:
   version "1.9.5"
+=======
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5742,6 +5963,7 @@ acorn-walk@^8.0.0, acorn-walk@^8.1.1:
     acorn "^8.11.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 acorn@^8.0.4, acorn@^8.11.0, acorn@^8.14.0, acorn@^8.15.0, acorn@^8.4.1:
 =======
 <<<<<<< HEAD
@@ -5750,6 +5972,9 @@ acorn@^8.0.4, acorn@^8.11.0, acorn@^8.15.0, acorn@^8.4.1:
 acorn@^8.0.4, acorn@^8.11.0, acorn@^8.14.0, acorn@^8.15.0, acorn@^8.4.1:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+acorn@^8.0.4, acorn@^8.11.0, acorn@^8.15.0, acorn@^8.4.1:
+>>>>>>> origin/main
   version "8.15.0"
 
 agent-base@^7.0.2, agent-base@^7.1.0, agent-base@^7.1.2:
@@ -5760,6 +5985,7 @@ agent-base@6:
   dependencies:
     debug "4"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -5789,6 +6015,8 @@ ajv-formats@^3.0.1:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 ajv@^6.12.4:
   version "6.12.6"
   dependencies:
@@ -5797,6 +6025,7 @@ ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -5822,6 +6051,8 @@ ajv@^8.12.0:
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 amp-message@~0.1.1:
   version "0.1.2"
   dependencies:
@@ -5884,8 +6115,11 @@ any-promise@^1.0.0:
   version "1.3.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 any-signal@^2.1.2:
   version "2.1.2"
   resolved "https://registry.npmjs.org/any-signal/-/any-signal-2.1.2.tgz"
@@ -5899,15 +6133,19 @@ any-signal@^3.0.0:
   resolved "https://registry.npmjs.org/any-signal/-/any-signal-3.0.1.tgz"
   integrity sha512-xgZgJtKEa9YmDqXodIgl7Fl1C8yNXr8w6gXjqK3LW4GcEiYT+6AQfJSE/8SPsEpLLmcvbv8YU+qet94UewHxqg==
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 anymatch@^3.0.0, anymatch@^3.1.3, anymatch@~3.1.2:
   version "3.1.3"
   dependencies:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
+<<<<<<< HEAD
 arch@^2.1.0:
   version "2.2.0"
 
@@ -5916,6 +6154,8 @@ archive-type@^4.0.0:
   dependencies:
     file-type "^4.2.0"
 
+=======
+>>>>>>> origin/main
 arg@^4.1.0:
   version "4.1.3"
 
@@ -5935,7 +6175,7 @@ aria-hidden@^1.2.4:
   dependencies:
     tslib "^2.0.0"
 
-aria-query@^5.0.0, aria-query@^5.3.2:
+aria-query@^5.3.2:
   version "5.3.2"
 
 array-buffer-byte-length@^1.0.1, array-buffer-byte-length@^1.0.2:
@@ -6051,6 +6291,7 @@ asynckit@^0.4.0:
   version "0.4.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6081,6 +6322,8 @@ autoprefixer@^10.4.16, autoprefixer@^10.4.21:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 autoprefixer@^10.4.21:
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   version "10.4.21"
@@ -6097,6 +6340,7 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -6160,8 +6404,12 @@ axe-core@^4.10.0, axe-core@^4.10.3, axe-core@~4.10.3:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+axe-core@^4.10.0:
+>>>>>>> origin/main
   version "4.10.3"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 axios@^1.11.0, axios@^1.7.4, axios@^1.8.2:
 =======
@@ -6171,6 +6419,9 @@ axios@^1.11.0, axios@^1.8.2:
 axios@^1.11.0, axios@^1.7.4:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+axios@^1.11.0:
+>>>>>>> origin/main
   version "1.11.0"
   dependencies:
     follow-redirects "^1.15.6"
@@ -6180,6 +6431,7 @@ axios@^1.11.0, axios@^1.7.4:
 axobject-query@^4.1.0:
   version "4.1.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 babel-jest@^30.1.2, babel-jest@30.1.2:
 =======
@@ -6191,6 +6443,9 @@ babel-jest@30.1.2:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+babel-jest@^30.1.2, babel-jest@30.1.2:
+>>>>>>> origin/main
   version "30.1.2"
   dependencies:
     "@jest/transform" "30.1.2"
@@ -6270,6 +6525,7 @@ balanced-match@^1.0.0:
   version "1.0.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6280,10 +6536,13 @@ base64-js@^1.3.0:
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/main
 base-x@^5.0.0:
   version "5.0.1"
   resolved "https://registry.npmjs.org/base-x/-/base-x-5.0.1.tgz"
   integrity sha512-M7uio8Zt++eg3jPj+rHMfCC+IuygQHHCOU+IYsVtik6FWjuYpVt/+MRKcgsAMHh8mMFAwnB+Bs+mTrFiXjMzKg==
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
@@ -6327,6 +6586,10 @@ base64-js@^1.0.2, base64-js@^1.3.0, base64-js@^1.3.1:
 base64-js@^1.0.2, base64-js@^1.3.0, base64-js@^1.3.1:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+
+base64-js@^1.3.0, base64-js@^1.3.1:
+>>>>>>> origin/main
   version "1.5.1"
 
 basic-ftp@^5.0.2:
@@ -6335,6 +6598,7 @@ basic-ftp@^5.0.2:
 bignumber.js@^9.0.0:
   version "9.3.1"
 
+<<<<<<< HEAD
 bin-build@^3.0.0:
   version "3.0.0"
   dependencies:
@@ -6373,14 +6637,24 @@ bin-wrapper@^4.0.0, bin-wrapper@^4.0.1:
     os-filter-obj "^2.0.0"
     pify "^4.0.1"
 
+=======
+>>>>>>> origin/main
 binary-extensions@^2.0.0:
   version "2.3.0"
 
+<<<<<<< HEAD
 bl@^1.0.0:
   version "1.2.3"
+=======
+bl@^5.0.0:
+  version "5.1.0"
+  resolved "https://registry.npmjs.org/bl/-/bl-5.1.0.tgz"
+  integrity sha512-tv1ZJHLfTDnXE6tMHv73YgSJaWR2AFuPwMntBe7XL/GBFHnT0CLnsHMogfk5+GzCDC5ZWarSCYaIGATZt9dNsQ==
+>>>>>>> origin/main
   dependencies:
-    readable-stream "^2.3.5"
-    safe-buffer "^5.1.1"
+    buffer "^6.0.3"
+    inherits "^2.0.4"
+    readable-stream "^3.4.0"
 
 <<<<<<< HEAD
 =======
@@ -6481,8 +6755,11 @@ braces@^3.0.3, braces@~3.0.2:
     fill-range "^7.1.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 browser-readablestream-to-it@^1.0.0:
   version "1.0.3"
   resolved "https://registry.npmjs.org/browser-readablestream-to-it/-/browser-readablestream-to-it-1.0.3.tgz"
@@ -6498,9 +6775,12 @@ browser-readablestream-to-it@^2.0.0:
   resolved "https://registry.npmjs.org/browser-readablestream-to-it/-/browser-readablestream-to-it-2.0.10.tgz"
   integrity sha512-I/9hEcRtjct8CzD9sVo9Mm4ntn0D+7tOVrjbPl69XAoOfgJ8NBdOQU+WX+5SHhcELJDb14mWt7zuvyqha+MEAQ==
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 browserslist@^4.24.0, browserslist@^4.24.4, browserslist@^4.25.1, browserslist@^4.25.3:
   version "4.25.4"
   dependencies:
@@ -6529,6 +6809,7 @@ bser@2.1.1:
 bson@^6.10.4:
   version "6.10.4"
 
+<<<<<<< HEAD
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
 <<<<<<< HEAD
@@ -6551,12 +6832,17 @@ buffer-alloc@^1.2.0:
 buffer-crc32@~0.2.3:
   version "0.2.13"
 
+=======
+>>>>>>> origin/main
 buffer-equal-constant-time@^1.0.1:
   version "1.0.1"
 
+<<<<<<< HEAD
 buffer-fill@^1.0.0:
   version "1.0.0"
 
+=======
+>>>>>>> origin/main
 buffer-from@^1.0.0:
   version "1.1.2"
 <<<<<<< HEAD
@@ -6567,6 +6853,7 @@ buffer-from@^1.0.0:
   resolved "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz"
   integrity sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6589,10 +6876,17 @@ buffer@^5.2.1:
 =======
   resolved "https://registry.npmjs.org/buffer/-/buffer-5.7.1.tgz"
   integrity sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==
+=======
+buffer@^6.0.1, buffer@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.npmjs.org/buffer/-/buffer-6.0.3.tgz"
+  integrity sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==
+>>>>>>> origin/main
   dependencies:
     base64-js "^1.3.1"
-    ieee754 "^1.1.13"
+    ieee754 "^1.2.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 buffer@^6.0.1:
   version "6.0.3"
@@ -6617,16 +6911,24 @@ buffer@4.9.2:
   version "4.9.2"
   resolved "https://registry.npmjs.org/buffer/-/buffer-4.9.2.tgz"
   integrity sha512-xq+q3SRMOxGivLhBNaUdC64hDTQwejJ+H0T/NB1XMtTVEwNTrfFF3gAxiyW0Bu/xWEGhjVKgUcMhCrUy2+uCWg==
+=======
+busboy@1.6.0:
+  version "1.6.0"
+  resolved "https://registry.npmjs.org/busboy/-/busboy-1.6.0.tgz"
+  integrity sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==
+>>>>>>> origin/main
   dependencies:
-    base64-js "^1.0.2"
-    ieee754 "^1.1.4"
-    isarray "^1.0.0"
+    streamsearch "^1.1.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 bwip-js@^4.7.0:
   version "4.7.0"
   resolved "https://registry.npmjs.org/bwip-js/-/bwip-js-4.7.0.tgz"
   integrity sha512-b7oQcgbWUl8rpcZayQ32SQrBCNteiZFuLkimKKBRlPwIHCeUN2VNeUE3HCMYShe04Evxd+ucS9uUAOsvNKjQbA==
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
@@ -6640,6 +6942,8 @@ cacheable-request@^2.1.1:
     lowercase-keys "1.0.0"
     normalize-url "2.0.1"
     responselike "1.0.2"
+=======
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 =======
@@ -6684,15 +6988,21 @@ call-bound@^1.0.2, call-bound@^1.0.3, call-bound@^1.0.4:
 callsites@^3.0.0, callsites@^3.1.0:
   version "3.1.0"
 
+<<<<<<< HEAD
 callsites@^4.1.0:
   version "4.2.0"
 
+=======
+>>>>>>> origin/main
 camelcase-css@^2.0.1:
   version "2.0.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 camelcase-keys@^6.2.2:
   version "6.2.2"
   resolved "https://registry.npmjs.org/camelcase-keys/-/camelcase-keys-6.2.2.tgz"
@@ -6712,9 +7022,12 @@ camelcase-keys@^9.0.0:
     quick-lru "^6.1.1"
     type-fest "^4.3.2"
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 camelcase@^5.3.1:
   version "5.3.1"
 
@@ -6722,6 +7035,14 @@ camelcase@^6.3.0:
   version "6.3.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+camelcase@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.npmjs.org/camelcase/-/camelcase-8.0.0.tgz"
+  integrity sha512-8WB3Jcas3swSvjIeA2yvCJ+Miyz5l1ZmB6HFb9R1317dt9LCQoswg/BGrmAmkWVEszSrrg4RwmO46qIm2OEnSA==
+
+>>>>>>> origin/main
 caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.30001737:
 <<<<<<< HEAD
   version "1.0.30001739"
@@ -6745,12 +7066,16 @@ caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.300017
   integrity sha512-QGUGitqsc8ARjLdgAfxETDhRbJ0REsP6O3I96TAth/mVjh2cYzN2u+3AzPP3aVSm2FehEItaJw1xd+IGBXWeSw==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 carbites@^1.0.6:
   version "1.0.6"
   resolved "https://registry.npmjs.org/carbites/-/carbites-1.0.6.tgz"
   integrity sha512-dS9IQvnrb5VIRvSTNz5Ff+mB9d2MFfi5mojtJi7Rlss79VeF190jr0sZdA7eW0CGHotvHkZaWuM6wgfD9PEFRg==
+<<<<<<< HEAD
   dependencies:
     "@ipld/car" "^3.0.1"
     "@ipld/dag-cbor" "^6.0.3"
@@ -6765,11 +7090,33 @@ caw@^2.0.0, caw@^2.0.1:
   resolved "https://registry.npmjs.org/caw/-/caw-2.0.1.tgz"
   integrity sha512-Cg8/ZSBEa8ZVY9HspcGUYaK63d/bN7rqS3CYCzEGUxuYv6UlmcjzDUz2fCFFHyTvUW5Pk0I+3hkA3iXlIj6guA==
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+=======
+>>>>>>> origin/main
   dependencies:
-    get-proxy "^2.0.0"
-    isurl "^1.0.0-alpha5"
-    tunnel-agent "^0.6.0"
-    url-to-options "^1.0.1"
+    "@ipld/car" "^3.0.1"
+    "@ipld/dag-cbor" "^6.0.3"
+    "@ipld/dag-pb" "^2.0.2"
+    multiformats "^9.0.4"
+
+cborg@^1.5.4:
+  version "1.10.2"
+  resolved "https://registry.npmjs.org/cborg/-/cborg-1.10.2.tgz"
+  integrity sha512-b3tFPA9pUr2zCUiCfRd2+wok2/LBSNUMKOuRRok+WlvvAgEt/PlbgPTsZUcwCOs53IJvLgTp0eotwtosE6njug==
+
+cborg@^1.6.0:
+  version "1.10.2"
+  resolved "https://registry.npmjs.org/cborg/-/cborg-1.10.2.tgz"
+  integrity sha512-b3tFPA9pUr2zCUiCfRd2+wok2/LBSNUMKOuRRok+WlvvAgEt/PlbgPTsZUcwCOs53IJvLgTp0eotwtosE6njug==
+
+cborg@^1.8.0:
+  version "1.10.2"
+  resolved "https://registry.npmjs.org/cborg/-/cborg-1.10.2.tgz"
+  integrity sha512-b3tFPA9pUr2zCUiCfRd2+wok2/LBSNUMKOuRRok+WlvvAgEt/PlbgPTsZUcwCOs53IJvLgTp0eotwtosE6njug==
+
+cborg@^4.0.0, cborg@^4.2.12, cborg@^4.2.3:
+  version "4.2.15"
+  resolved "https://registry.npmjs.org/cborg/-/cborg-4.2.15.tgz"
+  integrity sha512-T+YVPemWyXcBVQdp0k61lQp2hJniRNmul0lAwTj2DTS/6dI4eCq/MRMucGqqvFqMBfmnD8tJ9aFtPu5dEGAbgw==
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6837,9 +7184,12 @@ chalk@3.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
+<<<<<<< HEAD
 change-file-extension@^0.1.1:
   version "0.1.1"
 
+=======
+>>>>>>> origin/main
 char-regex@^1.0.2:
   version "1.0.2"
 
@@ -6908,6 +7258,7 @@ chokidar@^4.0.3:
     readdirp "^4.0.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -6946,6 +7297,8 @@ chromium-bidi@8.0.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 ci-info@^3.2.0:
   version "3.9.0"
   resolved "https://registry.npmjs.org/ci-info/-/ci-info-3.9.0.tgz"
@@ -6986,6 +7339,7 @@ cliui@^8.0.1:
     strip-ansi "^6.0.1"
     wrap-ansi "^7.0.0"
 
+<<<<<<< HEAD
 clone-response@1.0.2:
   version "1.0.2"
 <<<<<<< HEAD
@@ -6996,6 +7350,8 @@ clone-response@1.0.2:
   dependencies:
     mimic-response "^1.0.0"
 
+=======
+>>>>>>> origin/main
 clsx@^2.0.0, clsx@^2.1.1:
   version "2.1.1"
 
@@ -7026,6 +7382,7 @@ color@^4.2.3:
     color-string "^1.9.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -7039,6 +7396,8 @@ colors@^1.4.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 combined-stream@^1.0.8:
   version "1.0.8"
   dependencies:
@@ -7056,6 +7415,7 @@ commander@^2.8.1:
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
+<<<<<<< HEAD
 commander@^4.0.0:
   version "4.1.1"
 =======
@@ -7071,6 +7431,8 @@ commander@^2.8.1:
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
+=======
+>>>>>>> origin/main
 commander@^4.0.0:
   version "4.1.1"
   resolved "https://registry.npmjs.org/commander/-/commander-4.1.1.tgz"
@@ -7083,12 +7445,15 @@ commander@^7.2.0:
   integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 commander@^9.4.1:
   version "9.5.0"
   resolved "https://registry.npmjs.org/commander/-/commander-9.5.0.tgz"
   integrity sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==
 
+=======
+>>>>>>> origin/main
 commander@2.15.1:
   version "2.15.1"
 <<<<<<< HEAD
@@ -7102,6 +7467,7 @@ commander@2.15.1:
   integrity sha512-VlfT9F3V0v+jr4yxPc5gg9s62/fIVWsd2Bk2iD435um1NlGMYdVCq+MjcXnhYq2icNOizHr1kK+5TI6H0Hy0ag==
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
+<<<<<<< HEAD
 compare-versions@^6.1.0:
   version "6.1.1"
   resolved "https://registry.npmjs.org/compare-versions/-/compare-versions-6.1.1.tgz"
@@ -7111,9 +7477,12 @@ compare-versions@^6.1.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 concat-map@0.0.1:
   version "0.0.1"
 
+<<<<<<< HEAD
 config-chain@^1.1.11:
   version "1.1.13"
 <<<<<<< HEAD
@@ -7153,6 +7522,8 @@ content-disposition@^0.5.2:
 convert-hrtime@^5.0.0:
   version "5.0.0"
 
+=======
+>>>>>>> origin/main
 convert-source-map@^2.0.0:
   version "2.0.0"
 
@@ -7253,6 +7624,7 @@ croner@~4.1.92:
   integrity sha512-/f6gpQuxDaqXu+1kwQYSckUglPaOrHdbIlBAu0YuW8/Cdb45XwXYNUBXg3r/9Mo6n540Kn/smKcZWko5x99KrQ==
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
+<<<<<<< HEAD
 cross-spawn@^5.0.1:
   version "5.1.0"
   dependencies:
@@ -7269,6 +7641,8 @@ cross-spawn@^6.0.0:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
+=======
+>>>>>>> origin/main
 cross-spawn@^7.0.3, cross-spawn@^7.0.6:
   version "7.0.6"
   dependencies:
@@ -7276,6 +7650,7 @@ cross-spawn@^7.0.3, cross-spawn@^7.0.6:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -7285,6 +7660,8 @@ csp_evaluator@1.1.5:
   version "1.1.5"
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 css-blank-pseudo@^7.0.1:
   version "7.0.1"
   dependencies:
@@ -7297,11 +7674,14 @@ css-has-pseudo@^7.0.3:
     postcss-selector-parser "^7.0.0"
     postcss-value-parser "^4.2.0"
 
+<<<<<<< HEAD
 css-line-break@^2.1.0:
   version "2.1.0"
   dependencies:
     utrie "^1.0.2"
 
+=======
+>>>>>>> origin/main
 css-prefers-color-scheme@^10.0.0:
   version "10.0.0"
 
@@ -7317,9 +7697,12 @@ css-select@^5.1.0:
 css-what@^6.1.0:
   version "6.2.2"
 
+<<<<<<< HEAD
 css.escape@^1.5.1:
   version "1.5.1"
 
+=======
+>>>>>>> origin/main
 cssdb@^8.4.0:
   version "8.4.0"
 
@@ -7333,6 +7716,7 @@ cssstyle@^4.0.1, cssstyle@^4.2.1:
     rrweb-cssom "^0.8.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 csstype@^3.0.2, csstype@^3.1.3:
 =======
 <<<<<<< HEAD
@@ -7341,11 +7725,15 @@ csstype@^3.0.2:
 csstype@^3.0.2, csstype@^3.1.3:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+csstype@^3.0.2:
+>>>>>>> origin/main
   version "3.1.3"
 
 culvert@^0.1.2:
   version "0.1.2"
 
+<<<<<<< HEAD
 cwebp-bin@^8.0.0:
   version "8.0.0"
   dependencies:
@@ -7388,6 +7776,15 @@ d3-time-format@^4.1.0:
   dependencies:
     d3-array "2 - 3"
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+dag-jose@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/dag-jose/-/dag-jose-4.0.0.tgz"
+  integrity sha512-tw595L3UYoOUT9dSJPbBEG/qpRpw24kRZxa5SLRnlnr+g5L7O8oEs1d3W5TiVA1oJZbthVsf0Vi3zFN66qcEBA==
+  dependencies:
+    "@ipld/dag-cbor" "^9.0.0"
+    multiformats "^11.0.0"
+>>>>>>> origin/main
 
 damerau-levenshtein@^1.0.8:
   version "1.0.8"
@@ -7469,6 +7866,7 @@ debug@^3.2.7:
     ms "^2.1.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3.5, debug@^4.3.7, debug@^4.4.0, debug@^4.4.1, debug@4:
 =======
 <<<<<<< HEAD
@@ -7481,6 +7879,9 @@ debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3
 debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3.5, debug@^4.3.7, debug@^4.4.0, debug@^4.4.1, debug@4:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3.7, debug@^4.4.0, debug@^4.4.1, debug@4:
+>>>>>>> origin/main
   version "4.4.1"
   dependencies:
     ms "^2.1.3"
@@ -7506,6 +7907,7 @@ decamelize@^1.1.0, decamelize@^1.2.0:
 decimal.js@^10.4.3, decimal.js@^10.5.0:
   version "10.6.0"
 
+<<<<<<< HEAD
 decode-uri-component@^0.2.0:
   version "0.2.2"
 
@@ -7557,6 +7959,8 @@ decompress@^4.0.0, decompress@^4.2.0:
     pify "^2.3.0"
     strip-dirs "^2.0.0"
 
+=======
+>>>>>>> origin/main
 dedent@^1.6.0:
   version "1.7.0"
 
@@ -7600,6 +8004,7 @@ delayed-stream@~1.0.0:
   version "1.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 detect-libc@^2.0.4:
@@ -7610,6 +8015,9 @@ dequal@^2.0.3:
 
 detect-libc@^2.0.3, detect-libc@^2.0.4:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+detect-libc@^2.0.4:
+>>>>>>> origin/main
   version "2.0.4"
 
 detect-newline@^3.1.0:
@@ -7618,6 +8026,7 @@ detect-newline@^3.1.0:
 detect-node-es@^1.1.0:
   version "1.1.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -7633,6 +8042,8 @@ devtools-protocol@0.0.1507524:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 didyoumean@^1.2.2:
   version "1.2.2"
 
@@ -7648,8 +8059,11 @@ dlv@^1.1.3:
   version "1.1.3"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 dns-over-http-resolver@^1.2.3:
   version "1.2.3"
   resolved "https://registry.npmjs.org/dns-over-http-resolver/-/dns-over-http-resolver-1.2.3.tgz"
@@ -7676,17 +8090,23 @@ dns-packet@^5.6.1:
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 doctrine@^2.1.0:
   version "2.1.0"
   dependencies:
     esutils "^2.0.2"
 
+<<<<<<< HEAD
 dom-accessibility-api@^0.6.3:
   version "0.6.3"
 
+=======
+>>>>>>> origin/main
 dom-serializer@^2.0.0:
   version "2.0.0"
   dependencies:
@@ -7709,6 +8129,7 @@ domutils@^3.0.1, domutils@^3.2.1, domutils@^3.2.2:
     domelementtype "^2.3.0"
     domhandler "^5.0.3"
 
+<<<<<<< HEAD
 dot-prop@^8.0.2:
   version "8.0.2"
   dependencies:
@@ -7797,6 +8218,8 @@ download@^7.1.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 dunder-proto@^1.0.0, dunder-proto@^1.0.1:
   version "1.0.1"
   dependencies:
@@ -7809,6 +8232,7 @@ duplexer@^0.1.2:
   resolved "https://registry.npmjs.org/duplexer/-/duplexer-0.1.2.tgz"
   integrity sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==
 
+<<<<<<< HEAD
 duplexer3@^0.1.4:
   version "0.1.5"
 <<<<<<< HEAD
@@ -7817,6 +8241,8 @@ duplexer3@^0.1.4:
   integrity sha512-1A8za6ws41LQgv9HrE/66jyC5yuSjQ3L/KOpFtoBilsAK2iA2wuS5rTt1OCzIvtS2V7nVmedsUU+DGRcjBmOYA==
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
+=======
+>>>>>>> origin/main
 duplexify@^4.1.3:
   version "4.1.3"
   dependencies:
@@ -7834,8 +8260,11 @@ ecdsa-sig-formatter@^1.0.11, ecdsa-sig-formatter@1.0.11:
     safe-buffer "^5.0.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 electron-fetch@^1.7.2:
   version "1.9.1"
   resolved "https://registry.npmjs.org/electron-fetch/-/electron-fetch-1.9.1.tgz"
@@ -7843,9 +8272,12 @@ electron-fetch@^1.7.2:
   dependencies:
     encoding "^0.1.13"
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 electron-to-chromium@^1.5.211:
   version "1.5.214"
 
@@ -7865,8 +8297,11 @@ encoding-sniffer@^0.2.1:
     whatwg-encoding "^3.1.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 encoding@^0.1.13:
   version "0.1.13"
   resolved "https://registry.npmjs.org/encoding/-/encoding-0.1.13.tgz"
@@ -7874,10 +8309,14 @@ encoding@^0.1.13:
   dependencies:
     iconv-lite "^0.6.2"
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 end-of-stream@^1.0.0, end-of-stream@^1.1.0, end-of-stream@^1.4.1:
+=======
+end-of-stream@^1.4.1:
+>>>>>>> origin/main
   version "1.4.5"
   dependencies:
     once "^1.4.0"
@@ -7907,9 +8346,12 @@ entities@^4.2.0, entities@^4.4.0:
 entities@^6.0.0:
   version "6.0.1"
 
+<<<<<<< HEAD
 environment@^1.0.0:
   version "1.1.0"
 
+=======
+>>>>>>> origin/main
 err-code@^3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/err-code/-/err-code-3.0.1.tgz"
@@ -8062,9 +8504,12 @@ esbuild@^0.25.0:
 escalade@^3.1.1, escalade@^3.2.0:
   version "3.2.0"
 
+<<<<<<< HEAD
 escape-string-regexp@^1.0.2:
   version "1.0.5"
 
+=======
+>>>>>>> origin/main
 escape-string-regexp@^2.0.0:
   version "2.0.0"
 
@@ -8166,6 +8611,7 @@ eslint-plugin-import@^2.28.1:
     tsconfig-paths "^3.15.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 eslint-plugin-jsx-a11y@^6.10.2, eslint-plugin-jsx-a11y@^6.7.1:
 =======
 <<<<<<< HEAD
@@ -8191,6 +8637,9 @@ eslint-plugin-jsx-a11y@^6.10.2, eslint-plugin-jsx-a11y@^6.7.1:
 eslint-plugin-jsx-a11y@^6.10.2, eslint-plugin-jsx-a11y@^6.7.1:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+eslint-plugin-jsx-a11y@^6.7.1:
+>>>>>>> origin/main
   version "6.10.2"
   dependencies:
     aria-query "^5.3.2"
@@ -8218,11 +8667,14 @@ eslint-plugin-react-hooks@^5.2.0:
   version "5.2.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 eslint-plugin-react-refresh@^0.4.20:
   version "0.4.20"
   resolved "https://registry.npmjs.org/eslint-plugin-react-refresh/-/eslint-plugin-react-refresh-0.4.20.tgz"
   integrity sha512-XpbHQ2q5gUF8BGOX4dHe+71qoirYMhApEPZ7sfhF/dNnOF1UXnCMGZf79SFTBO7Bz5YEIT4TMieSlJBWhP9WBA==
 
+=======
+>>>>>>> origin/main
 eslint-plugin-react@^7.33.2, eslint-plugin-react@^7.37.5:
 =======
 <<<<<<< HEAD
@@ -8372,6 +8824,7 @@ events@^3.3.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8427,6 +8880,8 @@ execa@^1.0.0:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 execa@^5.1.1:
   version "5.1.1"
   dependencies:
@@ -8440,6 +8895,7 @@ execa@^5.1.1:
     signal-exit "^3.0.3"
     strip-final-newline "^2.0.0"
 
+<<<<<<< HEAD
 execa@^6.0.0:
   version "6.1.0"
   dependencies:
@@ -8471,6 +8927,8 @@ executable@^4.1.0:
   dependencies:
     pify "^2.2.0"
 
+=======
+>>>>>>> origin/main
 exit-x@^0.2.2:
   version "0.2.2"
 
@@ -8495,6 +8953,7 @@ expect@30.1.2:
     jest-mock "30.0.5"
     jest-util "30.0.5"
 
+<<<<<<< HEAD
 ext-list@^2.0.0:
   version "2.2.2"
   dependencies:
@@ -8506,6 +8965,8 @@ ext-name@^5.0.0:
     ext-list "^2.0.0"
     sort-keys-length "^1.0.0"
 
+=======
+>>>>>>> origin/main
 extend@^3.0.2:
   version "3.0.2"
 
@@ -8529,6 +8990,7 @@ extrareqp2@^1.0.0:
   dependencies:
     follow-redirects "^1.14.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -8566,9 +9028,12 @@ fast-decode-uri-component@^1.0.1:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
 
+<<<<<<< HEAD
 fast-equals@^5.0.1:
   version "5.2.2"
 
@@ -8581,9 +9046,12 @@ fast-fifo@^1.0.0:
 fast-fifo@^1.2.0, fast-fifo@^1.3.2:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+fast-fifo@^1.0.0:
+>>>>>>> origin/main
   version "1.3.2"
 
-fast-glob@^3.3.2, fast-glob@^3.3.3:
+fast-glob@^3.3.2:
   version "3.3.3"
   dependencies:
     "@nodelib/fs.stat" "^2.0.2"
@@ -8592,12 +9060,24 @@ fast-glob@^3.3.2, fast-glob@^3.3.3:
     merge2 "^1.3.0"
     micromatch "^4.0.8"
 
+fast-glob@3.3.1:
+  version "3.3.1"
+  resolved "https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.1.tgz"
+  integrity sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg==
+  dependencies:
+    "@nodelib/fs.stat" "^2.0.2"
+    "@nodelib/fs.walk" "^1.2.3"
+    glob-parent "^5.1.2"
+    merge2 "^1.3.0"
+    micromatch "^4.0.4"
+
 fast-json-patch@^3.1.0:
   version "3.1.1"
 
 fast-json-stable-stringify@^2.0.0, fast-json-stable-stringify@^2.1.0, fast-json-stable-stringify@2.x:
   version "2.1.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -8632,9 +9112,12 @@ fast-json-stringify@^6.0.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 fast-levenshtein@^2.0.6:
   version "2.0.6"
 
+<<<<<<< HEAD
 fast-png@^6.2.0:
   version "6.4.0"
   dependencies:
@@ -8659,9 +9142,12 @@ fast-uri@^3.0.0, fast-uri@^3.0.1:
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/main
 fastify-plugin@^5.0.0:
   version "5.0.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 fastify@^5.6.0:
   version "5.6.0"
@@ -8696,6 +9182,9 @@ fastq@^1.6.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+fastq@^1.6.0:
+>>>>>>> origin/main
   version "1.19.1"
   dependencies:
     reusify "^1.0.4"
@@ -8708,11 +9197,14 @@ fb-watchman@^2.0.2:
 fclone@~1.0.11, fclone@1.0.11:
   version "1.0.11"
 
+<<<<<<< HEAD
 fd-slicer@~1.1.0:
   version "1.1.0"
   dependencies:
     pend "~1.2.0"
 
+=======
+>>>>>>> origin/main
 fdir@^6.4.4, fdir@^6.5.0:
   version "6.5.0"
 
@@ -8722,14 +9214,18 @@ fetch-blob@^3.1.2, fetch-blob@^3.1.4:
     node-domexception "^1.0.0"
     web-streams-polyfill "^3.0.3"
 
+<<<<<<< HEAD
 fflate@^0.8.1:
   version "0.8.2"
 
+=======
+>>>>>>> origin/main
 file-entry-cache@^8.0.0:
   version "8.0.0"
   dependencies:
     flat-cache "^4.0.0"
 
+<<<<<<< HEAD
 file-type@^10.5.0:
   version "10.11.0"
 <<<<<<< HEAD
@@ -8819,6 +9315,17 @@ filenamify@^2.0.0:
     strip-outer "^1.0.0"
     trim-repeated "^1.0.0"
 <<<<<<< HEAD
+=======
+files-from-path@^0.2.4:
+  version "0.2.6"
+  resolved "https://registry.npmjs.org/files-from-path/-/files-from-path-0.2.6.tgz"
+  integrity sha512-Mz4UNkv+WcRLxcCXAORbfpwYiXI60SN9C1ZfeyGFv0xQUmblgbOkSWwFwX+Ov/TaR3FEyzwDyPnCQjpPRGSxKA==
+  dependencies:
+    err-code "^3.0.1"
+    graceful-fs "^4.2.9"
+    ipfs-unixfs "^6.0.5"
+    it-glob "^0.0.13"
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 =======
@@ -8840,6 +9347,7 @@ fill-range@^7.1.1:
   dependencies:
     to-regex-range "^5.0.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -8883,6 +9391,9 @@ find-up@^4.1.0:
 =======
 find-up@^4.0.0, find-up@^4.1.0:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+find-up@^4.0.0, find-up@^4.1.0:
+>>>>>>> origin/main
   version "4.1.0"
   resolved "https://registry.npmjs.org/find-up/-/find-up-4.1.0.tgz"
   integrity sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==
@@ -8897,11 +9408,14 @@ find-up@^5.0.0:
     locate-path "^6.0.0"
     path-exists "^4.0.0"
 
+<<<<<<< HEAD
 find-versions@^3.0.0:
   version "3.2.0"
   dependencies:
     semver-regex "^2.0.0"
 
+=======
+>>>>>>> origin/main
 flat-cache@^4.0.0:
   version "4.0.1"
   dependencies:
@@ -8940,6 +9454,7 @@ formdata-polyfill@^4.0.10:
     fetch-blob "^3.1.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -8951,6 +9466,8 @@ forwarded-parse@2.1.2:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 fraction.js@^4.3.7:
   version "4.3.7"
 
@@ -8969,6 +9486,7 @@ framer-motion@^10.16.16:
   optionalDependencies:
     "@emotion/is-prop-valid" "^0.8.2"
 
+<<<<<<< HEAD
 from2@^2.1.1:
   version "2.3.0"
 <<<<<<< HEAD
@@ -8988,6 +9506,8 @@ fs-constants@^1.0.0:
   integrity sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
+=======
+>>>>>>> origin/main
 fs-extra@^11.3.1:
   version "11.3.1"
   dependencies:
@@ -9004,9 +9524,12 @@ fs@^0.0.1-security:
 function-bind@^1.1.2:
   version "1.1.2"
 
+<<<<<<< HEAD
 function-timeout@^1.0.1:
   version "1.0.2"
 
+=======
+>>>>>>> origin/main
 function.prototype.name@^1.1.6, function.prototype.name@^1.1.8:
   version "1.1.8"
   dependencies:
@@ -9055,16 +9578,22 @@ get-intrinsic@^1.2.4, get-intrinsic@^1.2.5, get-intrinsic@^1.2.6, get-intrinsic@
     math-intrinsics "^1.1.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 get-iterator@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/get-iterator/-/get-iterator-1.0.2.tgz"
   integrity sha512-v+dm9bNVfOYsY1OrhaCrmyOcYoSeVvbt+hHZ0Au+T+p1y+0Uyj9aMaGIeUTT6xdpRbWzDeYKvfOslPhggQMcsg==
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 get-nonce@^1.0.0:
   version "1.0.1"
 
@@ -9077,6 +9606,7 @@ get-proto@^1.0.0, get-proto@^1.0.1:
     dunder-proto "^1.0.1"
     es-object-atoms "^1.0.0"
 
+<<<<<<< HEAD
 get-proxy@^2.0.0:
   version "2.1.0"
   dependencies:
@@ -9110,6 +9640,8 @@ get-stream@^5.1.0:
 <<<<<<< HEAD
 get-stream@^6.0.0, get-stream@^6.0.1:
 =======
+=======
+>>>>>>> origin/main
 get-stream@^6.0.0:
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 =======
@@ -9118,6 +9650,7 @@ get-stream@^6.0.0:
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   version "6.0.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 get-stream@^6.0.1:
@@ -9141,6 +9674,8 @@ get-stream@^9.0.1:
 get-stream@3.0.0:
   version "3.0.0"
 
+=======
+>>>>>>> origin/main
 get-symbol-description@^1.1.0:
   version "1.1.0"
   dependencies:
@@ -9201,6 +9736,7 @@ glob@^11.0.3:
     package-json-from-dist "^1.0.0"
     path-scurry "^2.0.0"
 
+<<<<<<< HEAD
 glob@^7.1.3:
   version "7.2.3"
 <<<<<<< HEAD
@@ -9215,6 +9751,8 @@ glob@^7.1.3:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
+=======
+>>>>>>> origin/main
 glob@^7.1.4:
   version "7.2.3"
   resolved "https://registry.npmjs.org/glob/-/glob-7.2.3.tgz"
@@ -9256,6 +9794,7 @@ globals@^14.0.0:
   version "14.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -9269,12 +9808,15 @@ globals@^16.3.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 globalthis@^1.0.4:
   version "1.0.4"
   dependencies:
     define-properties "^1.2.1"
     gopd "^1.0.1"
 
+<<<<<<< HEAD
 globby@^14.0.1:
   version "14.1.0"
   dependencies:
@@ -9299,6 +9841,8 @@ goober@^2.1.16:
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 google-auth-library@^10.1.0:
   version "10.3.0"
   dependencies:
@@ -9331,6 +9875,7 @@ google-logging-utils@^1.0.0, google-logging-utils@^1.1.1:
 gopd@^1.0.1, gopd@^1.2.0:
   version "1.2.0"
 
+<<<<<<< HEAD
 got@^7.0.0:
   version "7.1.0"
   dependencies:
@@ -9379,6 +9924,9 @@ graceful-fs@^4.1.10, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.11
 graceful-fs@^4.1.10, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.11, graceful-fs@^4.2.4, graceful-fs@^4.2.9:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.11, graceful-fs@^4.2.9:
+>>>>>>> origin/main
   version "4.2.11"
 
 graphemer@^1.4.0:
@@ -9439,17 +9987,23 @@ has-proto@^1.2.0:
   dependencies:
     dunder-proto "^1.0.0"
 
+<<<<<<< HEAD
 has-symbol-support-x@^1.4.1:
   version "1.4.2"
 
+=======
+>>>>>>> origin/main
 has-symbols@^1.0.3, has-symbols@^1.1.0:
   version "1.1.0"
 
+<<<<<<< HEAD
 has-to-string-tag-x@^1.2.0:
   version "1.4.1"
   dependencies:
     has-symbol-support-x "^1.4.1"
 
+=======
+>>>>>>> origin/main
 has-tostringtag@^1.0.2:
   version "1.0.2"
   dependencies:
@@ -9466,8 +10020,11 @@ hasown@^2.0.2:
     function-bind "^1.1.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 hosted-git-info@^2.1.4:
   version "2.8.9"
   resolved "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.8.9.tgz"
@@ -9480,9 +10037,12 @@ hosted-git-info@^4.0.1:
   dependencies:
     lru-cache "^6.0.0"
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 html-encoding-sniffer@^4.0.0:
   version "4.0.0"
   dependencies:
@@ -9495,6 +10055,7 @@ html-escaper@^2.0.0:
   integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 html-parse-stringify@^3.0.1:
   version "3.0.1"
@@ -9516,6 +10077,8 @@ html2pdf.js@^0.12.0:
     html2canvas "^1.0.0"
     jspdf "^3.0.0"
 
+=======
+>>>>>>> origin/main
 htmlparser2@^10.0.0:
   version "10.0.0"
   dependencies:
@@ -9532,6 +10095,7 @@ htmlparser2@^8.0.2:
     domutils "^3.0.1"
     entities "^4.4.0"
 
+<<<<<<< HEAD
 http-cache-semantics@3.8.1:
   version "3.8.1"
 
@@ -9547,6 +10111,8 @@ http-link-header@^1.1.1:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 http-proxy-agent@^5.0.0:
   version "5.0.0"
   dependencies:
@@ -9590,6 +10156,7 @@ https@^1.0.0:
 human-signals@^2.1.0:
   version "2.1.0"
 
+<<<<<<< HEAD
 human-signals@^3.0.1:
   version "3.0.1"
 
@@ -9604,6 +10171,8 @@ human-signals@^5.0.0:
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
+=======
+>>>>>>> origin/main
 iconv-lite@^0.4.4:
   version "0.4.24"
   dependencies:
@@ -9619,16 +10188,20 @@ idb-keyval@^6.0.3:
   resolved "https://registry.npmjs.org/idb-keyval/-/idb-keyval-6.2.2.tgz"
   integrity sha512-yjD9nARJ/jb1g+CvD0tlhUHOrJ9Sy0P8T9MF3YaLlHnSRpwPfpTX0XIvpmw3gAJUmEu3FiICLBDPXVwyEvrleg==
 
+<<<<<<< HEAD
 identifier-regex@^1.0.0:
   version "1.0.0"
   dependencies:
     reserved-identifiers "^1.0.0"
 
+=======
+>>>>>>> origin/main
 identity-obj-proxy@^3.0.0:
   version "3.0.0"
   dependencies:
     harmony-reflect "^1.4.6"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ieee754@^1.1.13, ieee754@^1.2.1:
@@ -9691,6 +10264,8 @@ ieee754@^1.1.13, ieee754@^1.1.4, ieee754@1.1.13:
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 ieee754@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz"
@@ -9707,6 +10282,7 @@ ignore@^5.2.0:
 ignore@^7.0.0:
   version "7.0.5"
 
+<<<<<<< HEAD
 ignore@^7.0.3:
   version "7.0.5"
 
@@ -9763,9 +10339,12 @@ imagemin@^9.0.1:
     slash "^5.1.0"
     uint8array-extras "^1.1.0"
 
+=======
+>>>>>>> origin/main
 immediate@~3.0.5:
   version "3.0.6"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -9778,12 +10357,20 @@ immer@^10.0.3:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+immer@^10.0.3:
+  version "10.1.3"
+  resolved "https://registry.npmjs.org/immer/-/immer-10.1.3.tgz"
+  integrity sha512-tmjF/k8QDKydUlm3mZU+tjM6zeq9/fFpPqH9SzWmBnVVKsPBg/V66qsMwb3/Bo90cgUN+ghdVBess+hPsxUyRw==
+
+>>>>>>> origin/main
 import-fresh@^3.2.1, import-fresh@^3.3.1:
   version "3.3.1"
   dependencies:
     parent-module "^1.0.0"
     resolve-from "^4.0.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -9804,6 +10391,8 @@ import-in-the-middle@^1.14.2, import-in-the-middle@^1.8.1:
 import-lazy@^3.1.0:
   version "3.1.0"
 
+=======
+>>>>>>> origin/main
 import-local@^3.2.0:
   version "3.2.0"
   dependencies:
@@ -9823,6 +10412,7 @@ inflight@^1.0.4:
     wrappy "1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.3, inherits@2:
 =======
 <<<<<<< HEAD
@@ -9831,17 +10421,23 @@ inherits@^2.0.1, inherits@^2.0.3, inherits@^2.0.4, inherits@~2.0.3, inherits@2:
 inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.3, inherits@2:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+inherits@^2.0.3, inherits@^2.0.4, inherits@~2.0.3, inherits@2:
+>>>>>>> origin/main
   version "2.0.4"
 
 inherits@2.0.3:
   version "2.0.3"
 
-ini@^1.3.4, ini@^1.3.5:
+ini@^1.3.5:
   version "1.3.8"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 interface-blockstore@^2.0.2, interface-blockstore@^2.0.3:
   version "2.0.3"
   resolved "https://registry.npmjs.org/interface-blockstore/-/interface-blockstore-2.0.3.tgz"
@@ -9896,9 +10492,12 @@ interface-store@^6.0.0:
   resolved "https://registry.npmjs.org/interface-store/-/interface-store-6.0.3.tgz"
   integrity sha512-+WvfEZnFUhRwFxgz+QCQi7UC6o9AM0EHM9bpIe2Nhqb100NHCsTvNAn4eJgvgV2/tmLo1MP9nGxQKEcZTAueLA==
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 internal-slot@^1.1.0:
   version "1.1.0"
   dependencies:
@@ -9906,6 +10505,7 @@ internal-slot@^1.1.0:
     hasown "^2.0.2"
     side-channel "^1.1.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -9932,14 +10532,19 @@ into-stream@^3.1.0:
     from2 "^2.1.1"
     p-is-promise "^1.1.0"
 
+=======
+>>>>>>> origin/main
 invariant@^2.2.4:
   version "2.2.4"
   dependencies:
     loose-envify "^1.0.0"
 
+<<<<<<< HEAD
 iobuffer@^5.3.2:
   version "5.4.0"
 
+=======
+>>>>>>> origin/main
 ip-address@^10.0.1:
   version "10.0.1"
 <<<<<<< HEAD
@@ -9949,10 +10554,14 @@ ip-address@^10.0.1:
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ip-regex@^4.1.0:
 =======
 ip-regex@^4.0.0:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+ip-regex@^4.0.0:
+>>>>>>> origin/main
   version "4.3.0"
   resolved "https://registry.npmjs.org/ip-regex/-/ip-regex-4.3.0.tgz"
   integrity sha512-B9ZWJxHHOHUhUjCPrMpLD4xEq35bUTClHM1S6CBU5ixQnkZmwipwgc96vAd7AAGM9TGHvJR+Uss+/Ak6UphK+Q==
@@ -10232,6 +10841,7 @@ is-arguments@^1.0.4:
     has-tostringtag "^1.0.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 is-arguments@^1.0.4:
   version "1.2.0"
@@ -10241,6 +10851,8 @@ is-arguments@^1.0.4:
     call-bound "^1.0.2"
     has-tostringtag "^1.0.2"
 
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
 is-array-buffer@^3.0.4, is-array-buffer@^3.0.5:
   version "3.0.5"
@@ -10294,6 +10906,7 @@ is-callable@^1.2.7:
   version "1.2.7"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 is-core-module@^2.13.0, is-core-module@^2.16.0, is-core-module@^2.16.1:
 =======
 <<<<<<< HEAD
@@ -10314,15 +10927,21 @@ is-core-module@^2.13.0, is-core-module@^2.16.0, is-core-module@^2.16.1, is-core-
 is-core-module@^2.13.0, is-core-module@^2.16.0, is-core-module@^2.16.1:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+is-core-module@^2.13.0, is-core-module@^2.16.0, is-core-module@^2.16.1, is-core-module@^2.5.0:
+>>>>>>> origin/main
   version "2.16.1"
   dependencies:
     hasown "^2.0.2"
 
+<<<<<<< HEAD
 is-cwebp-readable@^3.0.0:
   version "3.0.0"
   dependencies:
     file-type "^10.5.0"
 
+=======
+>>>>>>> origin/main
 is-data-view@^1.0.1, is-data-view@^1.0.2:
   version "1.0.2"
   dependencies:
@@ -10337,6 +10956,7 @@ is-date-object@^1.0.5, is-date-object@^1.1.0:
     has-tostringtag "^1.0.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 is-docker@^2.0.0, is-docker@^2.1.1:
   version "2.2.1"
 <<<<<<< HEAD
@@ -10346,10 +10966,13 @@ is-docker@^2.0.0, is-docker@^2.1.1:
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 is-electron@^2.2.0:
   version "2.2.2"
   resolved "https://registry.npmjs.org/is-electron/-/is-electron-2.2.2.tgz"
   integrity sha512-FO/Rhvz5tuw4MCWkpMzHFKWD2LsfHzIb7i6MdPYZ/KW7AlxawyLkqdy+jPZP1WubqEADE3O4FUENlJHDfQASRg==
+<<<<<<< HEAD
 =======
 is-docker@^2.0.0, is-docker@^2.1.1:
   version "2.2.1"
@@ -10357,6 +10980,8 @@ is-docker@^2.0.0, is-docker@^2.1.1:
   integrity sha512-F+i2BKsFrH66iaUFc0woD8sLy8getkwTwtOBjvs56Cx4CgJDeKQeqfz8wAYiSb8JOprWhHH5p77PbmYCvvUuXQ==
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 
 is-extglob@^2.1.1:
   version "2.1.1"
@@ -10385,6 +11010,7 @@ is-glob@^4.0.0, is-glob@^4.0.1, is-glob@^4.0.3, is-glob@~4.0.1:
   dependencies:
     is-extglob "^2.1.1"
 
+<<<<<<< HEAD
 is-identifier@^1.0.0:
   version "1.0.1"
   dependencies:
@@ -10403,13 +11029,24 @@ is-ip@^3.1.0:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 is-jpg@^3.0.0:
   version "3.0.0"
+=======
+is-ip@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/is-ip/-/is-ip-3.1.0.tgz"
+  integrity sha512-35vd5necO7IitFPjd/YBeqwWnyDWbuLH9ZXQdMfDA8TEo7pv5X8yfrvVO3xbJbLUlERCMvf6X0hTUamQxCYJ9Q==
+  dependencies:
+    ip-regex "^4.0.0"
+>>>>>>> origin/main
 
 is-map@^2.0.3:
   version "2.0.3"
 
+<<<<<<< HEAD
 is-natural-number@^4.0.1:
   version "4.0.1"
 
+=======
+>>>>>>> origin/main
 is-negative-zero@^2.0.3:
   version "2.0.3"
 
@@ -10422,17 +11059,25 @@ is-number-object@^1.1.1:
 is-number@^7.0.0:
   version "7.0.0"
 
+<<<<<<< HEAD
 is-object@^1.0.1:
   version "1.0.2"
 
 is-plain-obj@^1.0.0, is-plain-obj@^1.1.0:
+=======
+is-plain-obj@^1.1.0:
+>>>>>>> origin/main
   version "1.1.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 is-plain-obj@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-2.1.0.tgz"
   integrity sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
@@ -10446,6 +11091,8 @@ is-png@^3.0.1:
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 
 is-potential-custom-element-name@^1.0.1:
   version "1.0.1"
@@ -10458,9 +11105,12 @@ is-regex@^1.2.1:
     has-tostringtag "^1.0.2"
     hasown "^2.0.2"
 
+<<<<<<< HEAD
 is-retry-allowed@^1.0.0, is-retry-allowed@^1.1.0:
   version "1.2.0"
 
+=======
+>>>>>>> origin/main
 is-set@^2.0.3:
   version "2.0.3"
 
@@ -10469,21 +11119,27 @@ is-shared-array-buffer@^1.0.4:
   dependencies:
     call-bound "^1.0.3"
 
+<<<<<<< HEAD
 is-stream@^1.0.0:
   version "1.1.0"
 
 is-stream@^1.1.0:
   version "1.1.0"
 
+=======
+>>>>>>> origin/main
 is-stream@^2.0.0:
   version "2.0.1"
 
+<<<<<<< HEAD
 is-stream@^3.0.0:
   version "3.0.0"
 
 is-stream@^4.0.1:
   version "4.0.1"
 
+=======
+>>>>>>> origin/main
 is-string@^1.1.1:
   version "1.1.1"
   dependencies:
@@ -10517,6 +11173,7 @@ is-weakset@^2.0.3:
     get-intrinsic "^1.2.6"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 is-wsl@^2.2.0:
   version "2.2.0"
@@ -10545,6 +11202,8 @@ isarray@^1.0.0, isarray@~1.0.0:
   resolved "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz"
   integrity sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==
 
+=======
+>>>>>>> origin/main
 isarray@^2.0.5:
   version "2.0.5"
 <<<<<<< HEAD
@@ -10561,13 +11220,24 @@ isarray@~1.0.0:
   resolved "https://registry.npmjs.org/isarray/-/isarray-2.0.5.tgz"
   integrity sha512-xHjhDr3cNBK0BzdUJSPXZntQUx/mwMS5Rw4A7lPJ90XGAO6ISP/ePDNuo0vhqOZU+UD5JoodwCAAoZQd3FeAKw==
 
+<<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+isarray@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz"
+  integrity sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==
+
+>>>>>>> origin/main
 isexe@^2.0.0:
   version "2.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 iso-random-stream@^2.0.0:
   version "2.0.2"
   resolved "https://registry.npmjs.org/iso-random-stream/-/iso-random-stream-2.0.2.tgz"
@@ -10581,9 +11251,12 @@ iso-url@^1.1.5:
   resolved "https://registry.npmjs.org/iso-url/-/iso-url-1.2.1.tgz"
   integrity sha512-9JPDgCN4B7QPkLtYAAOrEuAWvP9rWvR5offAr0/SeF046wIkglqH3VXgYYP6NcsKslH80UIVgmPqNe3j7tG2ng==
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 istanbul-lib-coverage@^3.0.0, istanbul-lib-coverage@^3.2.0:
   version "3.2.2"
 
@@ -10616,11 +11289,142 @@ istanbul-reports@^3.1.3:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 
+<<<<<<< HEAD
 isurl@^1.0.0-alpha5:
   version "1.0.0"
+=======
+it-all@^1.0.4, it-all@^1.0.5:
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/it-all/-/it-all-1.0.6.tgz"
+  integrity sha512-3cmCc6Heqe3uWi3CVM/k51fa/XbMFpQVzFoDsV0IZNHSQDyAXl3c4MjHkFX5kF3922OGj7Myv1nSEUgRtcuM1A==
+
+it-all@^1.0.5:
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/it-all/-/it-all-1.0.6.tgz"
+  integrity sha512-3cmCc6Heqe3uWi3CVM/k51fa/XbMFpQVzFoDsV0IZNHSQDyAXl3c4MjHkFX5kF3922OGj7Myv1nSEUgRtcuM1A==
+
+it-all@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/it-all/-/it-all-2.0.1.tgz"
+  integrity sha512-9UuJcCRZsboz+HBQTNOau80Dw+ryGaHYFP/cPYzFBJBFcfDathMYnhHk4t52en9+fcyDGPTdLB+lFc1wzQIroA==
+
+it-batch@^1.0.8, it-batch@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.npmjs.org/it-batch/-/it-batch-1.0.9.tgz"
+  integrity sha512-7Q7HXewMhNFltTsAMdSz6luNhyhkhEtGGbYek/8Xb/GiqYMtwUmopE1ocPSiJKKp3rM4Dt045sNFoUu+KZGNyA==
+
+it-drain@^1.0.4:
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/it-drain/-/it-drain-1.0.5.tgz"
+  integrity sha512-r/GjkiW1bZswC04TNmUnLxa6uovme7KKwPhc+cb1hHU65E3AByypHH6Pm91WHuvqfFsm+9ws0kPtDBV3/8vmIg==
+
+it-filter@^1.0.2:
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/it-filter/-/it-filter-1.0.3.tgz"
+  integrity sha512-EI3HpzUrKjTH01miLHWmhNWy3Xpbx4OXMXltgrNprL5lDpF3giVpHIouFpr5l+evXw6aOfxhnt01BIB+4VQA+w==
+
+it-first@^1.0.6:
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/it-first/-/it-first-1.0.7.tgz"
+  integrity sha512-nvJKZoBpZD/6Rtde6FXqwDqDZGF1sCADmr2Zoc0hZsIvnE449gRFnGctxDf09Bzc/FWnHXAdaHVIetY6lrE0/g==
+
+it-first@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/it-first/-/it-first-2.0.1.tgz"
+  integrity sha512-noC1oEQcWZZMUwq7VWxHNLML43dM+5bviZpfmkxkXlvBe60z7AFRqpZSga9uQBo792jKv9otnn1IjA4zwgNARw==
+
+it-glob@^0.0.13:
+  version "0.0.13"
+  resolved "https://registry.npmjs.org/it-glob/-/it-glob-0.0.13.tgz"
+  integrity sha512-0Hcd5BraJUPzL28NWiFbdNrcdyNxNTKKdU3sjdFiYynNTQpwlG2UKW31X7bp+XhJwux/oPzIquo5ioztVmc2RQ==
+>>>>>>> origin/main
   dependencies:
-    has-to-string-tag-x "^1.2.0"
-    is-object "^1.0.1"
+    "@types/minimatch" "^3.0.4"
+    minimatch "^3.0.4"
+
+it-glob@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/it-glob/-/it-glob-1.0.2.tgz"
+  integrity sha512-Ch2Dzhw4URfB9L/0ZHyY+uqOnKvBNeS/SMcRiPmJfpHiM0TsUZn+GkpcZxAoF3dJVdPm/PuIk3A4wlV7SUo23Q==
+  dependencies:
+    "@types/minimatch" "^3.0.4"
+    minimatch "^3.0.4"
+
+it-last@^1.0.5:
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/it-last/-/it-last-1.0.6.tgz"
+  integrity sha512-aFGeibeiX/lM4bX3JY0OkVCFkAw8+n9lkukkLNivbJRvNz8lI3YXv5xcqhFUV2lDJiraEK3OXRDbGuevnnR67Q==
+
+it-last@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/it-last/-/it-last-2.0.1.tgz"
+  integrity sha512-uVMedYW0wa2Cx0TAmcOCLbfuLLII7+vyURmhKa8Zovpd+aBTMsmINtsta2n364wJ5qsEDBH+akY1sUtAkaYBlg==
+
+it-map@^1.0.4:
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/it-map/-/it-map-1.0.6.tgz"
+  integrity sha512-XT4/RM6UHIFG9IobGlQPFQUrlEKkU4eBUFG3qhWhfAdh1JfF2x11ShCrKCdmZ0OiZppPfoLuzcfA4cey6q3UAQ==
+
+it-map@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/it-map/-/it-map-2.0.1.tgz"
+  integrity sha512-a2GcYDHiAh/eSU628xlvB56LA98luXZnniH2GlD0IdBzf15shEq9rBeb0Rg3o1SWtNILUAwqmQxEXcewGCdvmQ==
+
+it-parallel-batch@^1.0.9:
+  version "1.0.11"
+  resolved "https://registry.npmjs.org/it-parallel-batch/-/it-parallel-batch-1.0.11.tgz"
+  integrity sha512-UWsWHv/kqBpMRmyZJzlmZeoAMA0F3SZr08FBdbhtbe+MtoEBgr/ZUAKrnenhXCBrsopy76QjRH2K/V8kNdupbQ==
+  dependencies:
+    it-batch "^1.0.9"
+
+it-peekable@^1.0.2:
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/it-peekable/-/it-peekable-1.0.3.tgz"
+  integrity sha512-5+8zemFS+wSfIkSZyf0Zh5kNN+iGyccN02914BY4w/Dj+uoFEoPSvj5vaWn8pNZJNSxzjW0zHRxC3LUb2KWJTQ==
+
+it-peekable@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/it-peekable/-/it-peekable-2.0.1.tgz"
+  integrity sha512-fJ/YTU9rHRhGJOM2hhQKKEfRM6uKB9r4yGGFLBHqp72ACC8Yi6+7/FhuBAMG8cpN6mLoj9auVX7ZJ3ul6qFpTA==
+
+it-pipe@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/it-pipe/-/it-pipe-1.1.0.tgz"
+  integrity sha512-lF0/3qTVeth13TOnHVs0BTFaziwQF7m5Gg+E6JV0BXcLKutC92YjSi7bASgkPOXaLEb+YvNZrPorGMBIJvZfxg==
+
+it-pushable@^3.0.0, it-pushable@^3.2.3:
+  version "3.2.3"
+  resolved "https://registry.npmjs.org/it-pushable/-/it-pushable-3.2.3.tgz"
+  integrity sha512-gzYnXYK8Y5t5b/BnJUr7glfQLO4U5vyb05gPx/TyTw+4Bv1zM9gFk4YsOrnulWefMewlphCjKkakFvj1y99Tcg==
+  dependencies:
+    p-defer "^4.0.0"
+
+it-stream-types@^1.0.4:
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/it-stream-types/-/it-stream-types-1.0.5.tgz"
+  integrity sha512-I88Ka1nHgfX62e5mi5LLL+oueqz7Ltg0bUdtsUKDe9SoUqbQPf2Mp5kxDTe9pNhHQGs4pvYPAINwuZ1HAt42TA==
+
+it-stream-types@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/it-stream-types/-/it-stream-types-2.0.2.tgz"
+  integrity sha512-Rz/DEZ6Byn/r9+/SBCuJhpPATDF9D+dz5pbgSUyBsCDtza6wtNATrz/jz1gDyNanC3XdLboriHnOC925bZRBww==
+
+it-take@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/it-take/-/it-take-1.0.2.tgz"
+  integrity sha512-u7I6qhhxH7pSevcYNaMECtkvZW365ARqAIt9K+xjdK1B2WUDEjQSfETkOCT8bxFq/59LqrN3cMLUtTgmDBaygw==
+
+it-to-stream@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/it-to-stream/-/it-to-stream-1.0.0.tgz"
+  integrity sha512-pLULMZMAB/+vbdvbZtebC0nWBTbG581lk6w8P7DfIIIKUfa8FbY7Oi0FxZcFPbxvISs7A9E+cMpLDBc1XhpAOA==
+  dependencies:
+    buffer "^6.0.3"
+    fast-fifo "^1.0.0"
+    get-iterator "^1.0.2"
+    p-defer "^3.0.0"
+    p-fifo "^1.0.0"
+    readable-stream "^3.6.0"
 
 <<<<<<< HEAD
 =======
@@ -11164,6 +11968,7 @@ jiti@^1.21.6:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
@@ -11192,10 +11997,13 @@ jmespath@0.16.0:
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 jose@^5.1.2:
   version "5.10.0"
   resolved "https://registry.npmjs.org/jose/-/jose-5.10.0.tgz"
   integrity sha512-s+3Al/p9g32Iq+oqXxkW//7jk2Vig6FF1CFqzVXoTUXt2qz89YWbL+OwS17NFYEvxC35n0FKeGO2LGYSxeM2Gg==
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 jpeg-exif@^1.1.4:
@@ -11210,6 +12018,8 @@ jpeg-exif@^1.1.4:
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 jpeg-js@^0.4.1, jpeg-js@^0.4.4:
   version "0.4.4"
+=======
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11317,15 +12127,19 @@ json-bigint@^1.0.0:
   dependencies:
     bignumber.js "^9.0.0"
 
+<<<<<<< HEAD
 json-buffer@3.0.0:
   version "3.0.0"
 
+=======
+>>>>>>> origin/main
 json-buffer@3.0.1:
   version "3.0.1"
 
 json-parse-even-better-errors@^2.3.0:
   version "2.3.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 json-schema-ref-resolver@^2.0.0:
   version "2.0.1"
@@ -11341,16 +12155,13 @@ json-schema-ref-resolver@^2.0.0:
   dependencies:
     dequal "^2.0.3"
 
+=======
+>>>>>>> origin/main
 json-schema-traverse@^0.4.1:
   version "0.4.1"
 
 json-schema-traverse@^1.0.0:
   version "1.0.0"
-
-json-schema-traverse@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz"
-  integrity sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==
 
 json-stable-stringify-without-jsonify@^1.0.1:
   version "1.0.1"
@@ -11380,6 +12191,7 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
+<<<<<<< HEAD
 jspdf@^3.0.0:
   version "3.0.2"
   dependencies:
@@ -11392,6 +12204,8 @@ jspdf@^3.0.0:
     dompurify "^3.2.4"
     html2canvas "^1.0.0-rc.5"
 
+=======
+>>>>>>> origin/main
 "jsx-ast-utils@^2.4.1 || ^3.0.0", jsx-ast-utils@^3.3.5:
   version "3.3.5"
   dependencies:
@@ -11408,9 +12222,12 @@ jszip@^3.10.1:
     readable-stream "~2.3.6"
     setimmediate "^1.0.5"
 
+<<<<<<< HEAD
 junk@^4.0.1:
   version "4.0.1"
 
+=======
+>>>>>>> origin/main
 jwa@^2.0.0:
   version "2.0.1"
   dependencies:
@@ -11429,11 +12246,14 @@ keyv@^4.5.4:
   dependencies:
     json-buffer "3.0.1"
 
+<<<<<<< HEAD
 keyv@3.0.0:
   version "3.0.0"
   dependencies:
     json-buffer "3.0.0"
 
+=======
+>>>>>>> origin/main
 kind-of@^6.0.3:
   version "6.0.3"
   resolved "https://registry.npmjs.org/kind-of/-/kind-of-6.0.3.tgz"
@@ -11448,6 +12268,7 @@ language-tags@^1.0.9:
     language-subtag-registry "^0.3.20"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -11458,6 +12279,8 @@ legacy-javascript@latest:
   integrity sha512-lPyntS4/aS7jpuvOlitZDFifBCb4W8L/3QU0PLbUTUj+zYah8rfVjYic88yG7ZKTxhS5h9iz7duT8oUXKszLhg==
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 leven@^3.1.0:
   version "3.1.0"
 
@@ -11483,6 +12306,7 @@ libp2p-crypto@^0.21.0:
     node-forge "^1.2.1"
     protobufjs "^6.11.2"
     uint8arrays "^3.0.0"
+<<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
 lie@~3.3.0:
@@ -11501,6 +12325,9 @@ lie@~3.3.0:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 lie@~3.3.0:
   version "3.3.0"
   resolved "https://registry.npmjs.org/lie/-/lie-3.3.0.tgz"
@@ -11508,6 +12335,7 @@ lie@~3.3.0:
   dependencies:
     immediate "~3.0.5"
 
+<<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 light-my-request@^6.0.0:
   version "6.6.0"
@@ -11579,6 +12407,8 @@ lightningcss@1.30.1:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 lilconfig@^3.0.0, lilconfig@^3.1.3:
   version "3.1.3"
 
@@ -11586,8 +12416,11 @@ lines-and-columns@^1.1.6:
   version "1.2.4"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 livekit-server-sdk@^2.13.3:
   version "2.13.3"
   resolved "https://registry.npmjs.org/livekit-server-sdk/-/livekit-server-sdk-2.13.3.tgz"
@@ -11598,9 +12431,12 @@ livekit-server-sdk@^2.13.3:
     camelcase-keys "^9.0.0"
     jose "^5.1.2"
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 locate-path@^5.0.0:
   version "5.0.0"
   dependencies:
@@ -11612,6 +12448,7 @@ locate-path@^6.0.0:
     p-locate "^5.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 lodash-es@^4.17.21:
   version "4.17.21"
@@ -11620,6 +12457,8 @@ lodash-es@^4.17.21:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 lodash.camelcase@^4.3.0:
   version "4.3.0"
 
@@ -11739,6 +12578,11 @@ long@^4.0.0:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
+long@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/long/-/long-4.0.0.tgz"
+  integrity sha512-XsP+KhQif4bjX1kbuSiySJFNAehNxgLb6hPRGJ9QsUr8ajHkuXGdrHmFUTUUXhDwVX2R5bY4JNZEwbUiMhV+MA==
+
 long@^5.0.0:
   version "5.3.2"
 
@@ -11756,12 +12600,15 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+<<<<<<< HEAD
 lowercase-keys@^1.0.0:
   version "1.0.1"
 
 lowercase-keys@1.0.0:
   version "1.0.0"
 
+=======
+>>>>>>> origin/main
 lru-cache@^10.2.0:
   version "10.4.3"
   resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz"
@@ -11773,12 +12620,15 @@ lru-cache@^10.4.3:
 lru-cache@^11.0.0:
   version "11.2.1"
 
+<<<<<<< HEAD
 lru-cache@^4.0.1:
   version "4.1.5"
   dependencies:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
+=======
+>>>>>>> origin/main
 lru-cache@^5.1.1:
   version "5.1.1"
   dependencies:
@@ -11831,10 +12681,14 @@ make-dir@^1.2.0:
   integrity sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 main-event@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/main-event/-/main-event-1.0.1.tgz"
   integrity sha512-NWtdGrAca/69fm6DIVd8T9rtfDII4Q8NQbIbsKQq2VzS9eqOGYs8uaNQjcuaCq/d9H/o625aOTJX2Qoxzqw0Pw==
+<<<<<<< HEAD
 =======
 magic-string@^0.30.18:
   version "0.30.18"
@@ -11850,6 +12704,8 @@ make-dir@^1.0.0, make-dir@^1.2.0:
   integrity sha512-2w31R7SJtieJJnQtGc7RVL2StM2vGYVfqUOvUDxH6bC6aJTxPxTF0GnIgCyu7tjockiUWAYQRbxa7vKn34s5sQ==
   dependencies:
     pify "^3.0.0"
+=======
+>>>>>>> origin/main
 
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 make-dir@^4.0.0:
@@ -11866,10 +12722,13 @@ makeerror@1.0.12:
     tmpl "1.0.5"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 marky@^1.2.2:
   version "1.3.0"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 map-obj@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/map-obj/-/map-obj-1.0.1.tgz"
@@ -11884,6 +12743,7 @@ map-obj@5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/map-obj/-/map-obj-5.0.0.tgz"
   integrity sha512-2L3MIgJynYrZ3TYMriLDLWocz15okFakV6J12HXvMXDHui2x/zgChzg1u9mFFGbbGWE+GsLpQByt4POb9Or+uA==
+<<<<<<< HEAD
 =======
 marky@^1.2.2:
   version "1.3.0"
@@ -11891,6 +12751,8 @@ marky@^1.2.2:
   integrity sha512-ocnPZQLNpvbedwTy9kNrQEsknEfgvcLMvOtz3sFeWApDq1MXH1TqkCIx58xlpESsfwQOnuBO9beyQuNGzVvuhQ==
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 
 math-intrinsics@^1.1.0:
   version "1.1.0"
@@ -11955,6 +12817,7 @@ merge2@^1.3.0:
   version "1.4.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -11966,15 +12829,20 @@ metaviewport-parser@0.3.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 micromatch@^4.0.4, micromatch@^4.0.8:
   version "4.0.8"
   dependencies:
     braces "^3.0.3"
     picomatch "^2.3.1"
 
+<<<<<<< HEAD
 mime-db@^1.28.0:
   version "1.54.0"
 
+=======
+>>>>>>> origin/main
 mime-db@1.52.0:
   version "1.52.0"
 
@@ -11986,12 +12854,15 @@ mime-types@^2.1.12:
 mimic-fn@^2.1.0:
   version "2.1.0"
 
+<<<<<<< HEAD
 mimic-fn@^4.0.0:
   version "4.0.0"
 
 mimic-response@^1.0.0:
   version "1.0.1"
 
+=======
+>>>>>>> origin/main
 min-indent@^1.0.0:
   version "1.0.1"
 
@@ -12009,6 +12880,7 @@ minimatch@^3.0.4, minimatch@^3.1.1, minimatch@^3.1.2:
     brace-expansion "^1.1.7"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -12022,6 +12894,8 @@ minimatch@^9.0.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 minimatch@^9.0.1:
   version "9.0.5"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-9.0.5.tgz"
@@ -12044,11 +12918,14 @@ minimatch@^9.0.4:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/main
 minimist-options@4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/minimist-options/-/minimist-options-4.1.0.tgz"
@@ -12058,15 +12935,19 @@ minimist-options@4.1.0:
     is-plain-obj "^1.1.0"
     kind-of "^6.0.3"
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 minimist@^1.2.0, minimist@^1.2.5, minimist@^1.2.6:
   version "1.2.8"
 
 "minipass@^5.0.0 || ^6.0.2 || ^7.0.0", minipass@^7.1.2:
   version "7.1.2"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -12084,6 +12965,8 @@ mkdirp@^3.0.1:
   version "3.0.1"
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 mkdirp@1.0.4:
   version "1.0.4"
 
@@ -12104,12 +12987,16 @@ mongodb@*, mongodb@^6.19.0:
     mongodb-connection-string-url "^3.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 move-file@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/move-file/-/move-file-2.1.0.tgz"
   integrity sha512-i9qLW6gqboJ5Ht8bauZi7KlTnQ3QFpBCvMvFfEcHADKgHGeJ9BZMO7SFCTwHPV9Qa0du9DYY1Yx3oqlGt30nXA==
+<<<<<<< HEAD
   dependencies:
     path-exists "^4.0.0"
 
@@ -12118,9 +13005,10 @@ move-file@^2.1.0:
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 mozjpeg@^8.0.0:
   version "8.0.0"
+=======
+>>>>>>> origin/main
   dependencies:
-    bin-build "^3.0.0"
-    bin-wrapper "^4.0.0"
+    path-exists "^4.0.0"
 
 mrmime@^1.0.0:
   version "1.0.1"
@@ -12131,8 +13019,11 @@ ms@^2.1.1, ms@^2.1.3:
   version "2.1.3"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 ms@^3.0.0-canary.1:
   version "3.0.0-canary.202508261828"
   resolved "https://registry.npmjs.org/ms/-/ms-3.0.0-canary.202508261828.tgz"
@@ -12201,6 +13092,7 @@ murmurhash3js-revisited@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/murmurhash3js-revisited/-/murmurhash3js-revisited-3.0.0.tgz"
   integrity sha512-/sF3ee6zvScXMb1XFJ8gDsSnY+X8PbOyjIuBhtgis10W2Jx4ZjIhikUCIF9c4gpJxVnQIsPAFrSwTCuAjicP6g==
+<<<<<<< HEAD
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 ms@2.1.2:
@@ -12208,6 +13100,8 @@ ms@2.1.2:
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 
 mute-stream@~0.0.4:
   version "0.0.8"
@@ -12310,6 +13204,7 @@ neo-async@^2.6.2:
 netmask@^2.0.2:
   version "2.0.2"
 
+<<<<<<< HEAD
 next@^15.5.2:
   version "15.5.2"
 <<<<<<< HEAD
@@ -12337,13 +13232,22 @@ next@^15.5.2:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+next@^14.2.5:
+  version "14.2.32"
+  resolved "https://registry.npmjs.org/next/-/next-14.2.32.tgz"
+  integrity sha512-fg5g0GZ7/nFc09X8wLe6pNSU8cLWbLRG3TZzPJ1BJvi2s9m7eF991se67wliM9kR5yLHRkyGKU49MMx58s3LJg==
+>>>>>>> origin/main
   dependencies:
-    "@next/env" "15.5.2"
-    "@swc/helpers" "0.5.15"
+    "@next/env" "14.2.32"
+    "@swc/helpers" "0.5.5"
+    busboy "1.6.0"
     caniuse-lite "^1.0.30001579"
+    graceful-fs "^4.2.11"
     postcss "8.4.31"
-    styled-jsx "5.1.6"
+    styled-jsx "5.1.1"
   optionalDependencies:
+<<<<<<< HEAD
     "@next/swc-darwin-arm64" "15.5.2"
     "@next/swc-darwin-x64" "15.5.2"
     "@next/swc-linux-arm64-gnu" "15.5.2"
@@ -12381,6 +13285,17 @@ nice-try@^1.0.4:
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+    "@next/swc-darwin-arm64" "14.2.32"
+    "@next/swc-darwin-x64" "14.2.32"
+    "@next/swc-linux-arm64-gnu" "14.2.32"
+    "@next/swc-linux-arm64-musl" "14.2.32"
+    "@next/swc-linux-x64-gnu" "14.2.32"
+    "@next/swc-linux-x64-musl" "14.2.32"
+    "@next/swc-win32-arm64-msvc" "14.2.32"
+    "@next/swc-win32-ia32-msvc" "14.2.32"
+    "@next/swc-win32-x64-msvc" "14.2.32"
+>>>>>>> origin/main
 
 node-cron@^4.2.1:
   version "4.2.1"
@@ -12389,8 +13304,11 @@ node-domexception@^1.0.0:
   version "1.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 node-fetch@^2.6.1:
   version "2.7.0"
   resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz"
@@ -12405,9 +13323,12 @@ node-fetch@^2.6.8:
   dependencies:
     whatwg-url "^5.0.0"
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 node-fetch@^3.3.2:
   version "3.3.2"
   dependencies:
@@ -12488,6 +13409,7 @@ normalize-path@^3.0.0, normalize-path@~3.0.0:
 normalize-range@^0.1.2:
   version "0.1.2"
 
+<<<<<<< HEAD
 normalize-url@2.0.1:
   version "2.0.1"
   dependencies:
@@ -12506,16 +13428,21 @@ npm-run-path@^2.0.0:
   dependencies:
     path-key "^2.0.0"
 
+=======
+>>>>>>> origin/main
 npm-run-path@^4.0.1:
   version "4.0.1"
   dependencies:
     path-key "^3.0.0"
 
+<<<<<<< HEAD
 npm-run-path@^5.1.0:
   version "5.3.0"
   dependencies:
     path-key "^4.0.0"
 
+=======
+>>>>>>> origin/main
 nth-check@^2.0.1:
   version "2.1.1"
   dependencies:
@@ -12530,7 +13457,7 @@ nwsapi@^2.2.12, nwsapi@^2.2.16:
   integrity sha512-ujSMe1OWVn55euT1ihwCI1ZcAaAU3nxUiDwfDQldc51ZXaB9m2AyOn6/jh1BLe2t/G8xd6uKG1UBF2aZJeg2SQ==
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
-object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
+object-assign@^4.0.1, object-assign@^4.1.1:
   version "4.1.1"
 
 object-hash@^3.0.0:
@@ -12589,6 +13516,7 @@ object.values@^1.1.6, object.values@^1.2.1:
     es-object-atoms "^1.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12614,6 +13542,9 @@ on-exit-leak-free@^2.1.0:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 once@^1.3.0, once@^1.3.1, once@^1.4.0:
+=======
+once@^1.3.0, once@^1.4.0:
+>>>>>>> origin/main
   version "1.4.0"
   dependencies:
     wrappy "1"
@@ -12623,6 +13554,7 @@ onetime@^5.1.2:
   dependencies:
     mimic-fn "^2.1.0"
 
+<<<<<<< HEAD
 onetime@^6.0.0:
   version "6.0.0"
   dependencies:
@@ -12641,6 +13573,8 @@ open@^8.4.0:
     is-wsl "^2.2.0"
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 openai@^5.11.0:
   version "5.19.1"
 
@@ -12659,6 +13593,7 @@ optionator@^0.9.3:
     type-check "^0.4.0"
     word-wrap "^1.2.5"
 
+<<<<<<< HEAD
 os-filter-obj@^2.0.0:
   version "2.0.0"
   dependencies:
@@ -12674,6 +13609,8 @@ ow@^2.0.0:
     fast-equals "^5.0.1"
     is-identifier "^1.0.0"
 
+=======
+>>>>>>> origin/main
 own-keys@^1.0.1:
   version "1.0.1"
   dependencies:
@@ -12681,6 +13618,7 @@ own-keys@^1.0.1:
     object-keys "^1.1.1"
     safe-push-apply "^1.0.0"
 
+<<<<<<< HEAD
 p-cancelable@^0.3.0:
   version "0.3.0"
 
@@ -12726,6 +13664,25 @@ p-finally@^1.0.0:
 
 p-is-promise@^1.1.0:
   version "1.1.0"
+=======
+p-defer@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/p-defer/-/p-defer-3.0.0.tgz"
+  integrity sha512-ugZxsxmtTln604yeYd29EGrNhazN2lywetzpKhfmQjW/VJmhpDmWbiX+h0zL8V91R0UXkhb3KtPmyq9PZw3aYw==
+
+p-defer@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.npmjs.org/p-defer/-/p-defer-4.0.1.tgz"
+  integrity sha512-Mr5KC5efvAK5VUptYEIopP1bakB85k2IWXaRC0rsh1uwn1L6M0LVml8OIQ4Gudg4oyZakf7FmeRLkMMtZW1i5A==
+
+p-fifo@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/p-fifo/-/p-fifo-1.0.0.tgz"
+  integrity sha512-IjoCxXW48tqdtDFz6fqo5q1UfFVjjVZe8TC1QRflvNUJtNfCUhxOUw6MOVZhDPjqhSzc26xKdugsO17gmzd5+A==
+  dependencies:
+    fast-fifo "^1.0.0"
+    p-defer "^3.0.0"
+>>>>>>> origin/main
 
 p-limit@^2.2.0:
   version "2.3.0"
@@ -12747,6 +13704,7 @@ p-locate@^5.0.0:
   dependencies:
     p-limit "^3.0.2"
 
+<<<<<<< HEAD
 p-map-series@^1.0.0:
   version "1.0.0"
 <<<<<<< HEAD
@@ -12754,9 +13712,17 @@ p-map-series@^1.0.0:
   resolved "https://registry.npmjs.org/p-map-series/-/p-map-series-1.0.0.tgz"
   integrity sha512-4k9LlvY6Bo/1FcIdV33wqZQES0Py+iKISU9Uc8p8AjWoZPnFKMpVIVD3s0EYn4jzLh1I+WeUZkJ0Yoa4Qfw3Kg==
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+=======
+p-queue@^8.0.1:
+  version "8.1.0"
+  resolved "https://registry.npmjs.org/p-queue/-/p-queue-8.1.0.tgz"
+  integrity sha512-mxLDbbGIBEXTJL0zEx8JIylaj3xQ7Z/7eEVjcF9fJX4DBiH9oqe+oahYnlKKxm0Ci9TlWTyhSHgygxMxjIB2jw==
+>>>>>>> origin/main
   dependencies:
-    p-reduce "^1.0.0"
+    eventemitter3 "^5.0.1"
+    p-timeout "^6.1.2"
 
+<<<<<<< HEAD
 p-pipe@^4.0.0:
   version "4.0.0"
 <<<<<<< HEAD
@@ -12787,10 +13753,13 @@ p-reduce@^1.0.0:
   integrity sha512-3Tx1T3oM1xO/Y8Gj0sWyE78EIJZ+t+aEmXUdvQgvGmSMri7aPTHoovbXEreWKkL5j21Er60XAWLTzKbAKYOujQ==
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 p-retry@^4.5.0:
   version "4.6.2"
   resolved "https://registry.npmjs.org/p-retry/-/p-retry-4.6.2.tgz"
   integrity sha512-312Id396EbJdvRONlngUx0NydfrIQ5lsYu0znKVUzVvArzEIt08V1qhtyESbGVd1FGX7UKtiFp5uwKZdM8wIuQ==
+<<<<<<< HEAD
   dependencies:
     "@types/retry" "0.12.0"
     retry "^0.13.1"
@@ -12802,9 +13771,13 @@ p-timeout@^1.1.1:
   resolved "https://registry.npmjs.org/p-timeout/-/p-timeout-1.2.1.tgz"
   integrity sha512-gb0ryzr+K2qFqFv6qi3khoeqMZF/+ajxQipEF6NteZVnvz9tzdsfAVj3lYtn1gAXvH5lfLwfxEII799gt/mRIA==
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+=======
+>>>>>>> origin/main
   dependencies:
-    p-finally "^1.0.0"
+    "@types/retry" "0.12.0"
+    retry "^0.13.1"
 
+<<<<<<< HEAD
 p-timeout@^2.0.1:
   version "2.0.1"
 <<<<<<< HEAD
@@ -12815,6 +13788,12 @@ p-timeout@^2.0.1:
   dependencies:
     p-finally "^1.0.0"
 <<<<<<< HEAD
+=======
+p-timeout@^6.1.2:
+  version "6.1.4"
+  resolved "https://registry.npmjs.org/p-timeout/-/p-timeout-6.1.4.tgz"
+  integrity sha512-MyIV3ZA/PmyBN/ud8vV9XzwTrNtR4jFrObymZYnZqMmW0zA8Z17vnT0rBgFE/TlohB+YCHqXMgZzb3Csp49vqg==
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 =======
@@ -12854,6 +13833,7 @@ pako@^0.2.5:
   version "0.2.9"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12862,6 +13842,9 @@ pako@^0.2.5:
 <<<<<<< HEAD
 =======
 pako@^1.0.10:
+=======
+pako@~1.0.2:
+>>>>>>> origin/main
   version "1.0.11"
   resolved "https://registry.npmjs.org/pako/-/pako-1.0.11.tgz"
   integrity sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==
@@ -12908,16 +13891,20 @@ parent-module@^1.0.0:
     callsites "^3.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 parse-cache-control@1.0.1:
   version "1.0.1"
 
 parse-json@^5.2.0:
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 parse-duration@^1.0.0:
   version "1.1.2"
   resolved "https://registry.npmjs.org/parse-duration/-/parse-duration-1.1.2.tgz"
   integrity sha512-p8EIONG8L0u7f8GFgfVlL4n8rnChTt8O5FSxgxMz2tjc9FMP199wxVKVB6IbKx11uTbKHACSvaLVIKNnoeNR/A==
+<<<<<<< HEAD
 
 parse-json@^5.0.0, parse-json@^5.2.0:
 =======
@@ -12929,6 +13916,10 @@ parse-cache-control@1.0.1:
 parse-json@^5.2.0:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+
+parse-json@^5.0.0, parse-json@^5.2.0:
+>>>>>>> origin/main
   version "5.2.0"
   dependencies:
     "@babel/code-frame" "^7.0.0"
@@ -12958,15 +13949,21 @@ path-exists@^4.0.0:
 path-is-absolute@^1.0.0:
   version "1.0.1"
 
+<<<<<<< HEAD
 path-key@^2.0.0, path-key@^2.0.1:
   version "2.0.1"
 
+=======
+>>>>>>> origin/main
 path-key@^3.0.0, path-key@^3.1.0:
   version "3.1.1"
 
+<<<<<<< HEAD
 path-key@^4.0.0:
   version "4.0.0"
 
+=======
+>>>>>>> origin/main
 path-parse@^1.0.7:
   version "1.0.7"
 
@@ -12990,15 +13987,19 @@ path-scurry@^2.0.0:
     lru-cache "^11.0.0"
     minipass "^7.1.2"
 
+<<<<<<< HEAD
 path-type@^6.0.0:
   version "6.0.0"
 
+=======
+>>>>>>> origin/main
 path@^0.12.7:
   version "0.12.7"
   dependencies:
     process "^0.11.1"
     util "^0.10.3"
 
+<<<<<<< HEAD
 peek-readable@^5.3.1:
   version "5.4.2"
 
@@ -13026,6 +14027,8 @@ pg-types@^2.2.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 picocolors@^1.0.0, picocolors@^1.1.1:
   version "1.1.1"
 
@@ -13045,6 +14048,7 @@ pidusage@~3.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 pify@^2.2.0, pify@^2.3.0:
 =======
 =======
@@ -13054,10 +14058,13 @@ pify@^2.2.0:
   resolved "https://registry.npmjs.org/pify/-/pify-2.3.0.tgz"
   integrity sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==
 
+=======
+>>>>>>> origin/main
 pify@^2.3.0:
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   version "2.3.0"
 
+<<<<<<< HEAD
 pify@^3.0.0:
   version "3.0.0"
 
@@ -13101,6 +14108,8 @@ pino@^9.0.0:
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 pirates@^4.0.1, pirates@^4.0.7:
   version "4.0.7"
 
@@ -13168,6 +14177,7 @@ pm2@^6.0.8:
   optionalDependencies:
     pm2-sysmonit "^1.2.8"
 
+<<<<<<< HEAD
 pngquant-bin@^9.0.0:
   version "9.0.0"
   dependencies:
@@ -13175,6 +14185,8 @@ pngquant-bin@^9.0.0:
     bin-wrapper "^4.0.1"
     execa "^8.0.1"
 
+=======
+>>>>>>> origin/main
 possible-typed-array-names@^1.0.0:
   version "1.1.0"
 
@@ -13457,6 +14469,7 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.2.0:
   version "4.2.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 postcss@^8.4.23, postcss@^8.4.31, postcss@^8.4.41, postcss@^8.4.47, postcss@^8.5.6:
 =======
 <<<<<<< HEAD
@@ -13465,6 +14478,9 @@ postcss@^8.4.23, postcss@^8.4.31, postcss@^8.4.47, postcss@^8.5.6:
 postcss@^8.4.23, postcss@^8.4.31, postcss@^8.4.41, postcss@^8.4.47, postcss@^8.5.6:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+postcss@^8.4.23, postcss@^8.4.31, postcss@^8.4.47, postcss@^8.5.6:
+>>>>>>> origin/main
   version "8.5.6"
   dependencies:
     nanoid "^3.3.11"
@@ -13478,6 +14494,7 @@ postcss@8.4.31:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -13498,9 +14515,12 @@ postgres-interval@^1.1.0:
     xtend "^4.0.0"
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 prelude-ls@^1.2.1:
   version "1.2.1"
 
+<<<<<<< HEAD
 prepend-http@^1.0.1:
   version "1.0.4"
 
@@ -13516,6 +14536,9 @@ prettier@^3.0.3:
 prettier@^3.6.2:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+prettier@^3.0.3:
+>>>>>>> origin/main
   version "3.6.2"
 <<<<<<< HEAD
 =======
@@ -13543,6 +14566,7 @@ process-nextick-args@~2.0.0:
   version "2.0.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 process-warning@^4.0.0:
   version "4.0.1"
 
@@ -13554,18 +14578,24 @@ process-warning@^5.0.0:
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 process@^0.11.1:
   version "0.11.10"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 progress@^2.0.3:
   version "2.0.3"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 progress-events@^1.0.0, progress-events@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/progress-events/-/progress-events-1.0.1.tgz"
   integrity sha512-MOzLIwhpt64KIVN64h1MwdKWiyKFNc/S6BoYKPIVUHFg0/eIEyBulhWCgn678v/4c0ri3FdGuzXymNCv02MUIw==
+<<<<<<< HEAD
 =======
 progress@^2.0.3:
   version "2.0.3"
@@ -13573,6 +14603,8 @@ progress@^2.0.3:
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 
 promptly@^2:
   version "2.2.0"
@@ -13586,9 +14618,12 @@ prop-types@^15.8.1:
     object-assign "^4.1.1"
     react-is "^16.13.1"
 
+<<<<<<< HEAD
 proto-list@~1.2.1:
   version "1.2.4"
 
+=======
+>>>>>>> origin/main
 proto3-json-serializer@^3.0.0:
   version "3.0.2"
   dependencies:
@@ -13650,6 +14685,7 @@ protobufjs@^7.0.0, protobufjs@^7.2.5, protobufjs@^7.4.0, protobufjs@^7.5.3:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 proxy-agent@^6.4.0, proxy-agent@~6.4.0:
   version "6.4.0"
   dependencies:
@@ -13667,10 +14703,13 @@ proxy-agent@^6.5.0:
 proxy-agent@^6.4.0, proxy-agent@^6.5.0:
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 =======
+=======
+>>>>>>> origin/main
 protons-runtime@^5.5.0:
   version "5.6.0"
   resolved "https://registry.npmjs.org/protons-runtime/-/protons-runtime-5.6.0.tgz"
   integrity sha512-/Kde+sB9DsMFrddJT/UZWe6XqvL7SL5dbag/DBCElFKhkwDj7XKt53S+mzLyaDP5OqS0wXjV5SA572uWDaT0Hg==
+<<<<<<< HEAD
   dependencies:
     uint8-varint "^2.0.2"
     uint8arraylist "^2.4.3"
@@ -13689,6 +14728,12 @@ proxy-agent@^6.4.0, proxy-agent@^6.5.0:
     proxy-from-env "^1.1.0"
     socks-proxy-agent "^8.0.5"
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+  dependencies:
+    uint8-varint "^2.0.2"
+    uint8arraylist "^2.4.3"
+    uint8arrays "^5.0.1"
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 =======
@@ -13710,23 +14755,30 @@ proxy-agent@~6.4.0:
 proxy-from-env@^1.1.0:
   version "1.1.0"
 
+<<<<<<< HEAD
 pseudomap@^1.0.2:
   version "1.0.2"
 
+=======
+>>>>>>> origin/main
 psl@^1.1.33:
   version "1.15.0"
   dependencies:
     punycode "^2.3.1"
 
+<<<<<<< HEAD
 pump@^3.0.0:
   version "3.0.3"
   dependencies:
     end-of-stream "^1.1.0"
     once "^1.3.1"
 
+=======
+>>>>>>> origin/main
 punycode@^2.1.0, punycode@^2.1.1, punycode@^2.3.1:
   version "2.3.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -13800,9 +14852,12 @@ puppeteer@^24.19.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 pure-rand@^7.0.0:
   version "7.0.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -13856,12 +14911,15 @@ querystring@0.2.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 querystringify@^2.1.1:
   version "2.2.0"
 
 queue-microtask@^1.2.2:
   version "1.2.3"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -13876,6 +14934,29 @@ queue-microtask@^1.2.2:
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 quick-format-unescaped@^4.0.3:
   version "4.0.4"
+=======
+quick-lru@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.npmjs.org/quick-lru/-/quick-lru-4.0.1.tgz"
+  integrity sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==
+
+quick-lru@^6.1.1:
+  version "6.1.2"
+  resolved "https://registry.npmjs.org/quick-lru/-/quick-lru-6.1.2.tgz"
+  integrity sha512-AAFUA5O1d83pIHEhJwWCq/RQcRukCkn/NSm2QsTEMle5f2hP0ChI2+3Xb051PZCkLryI/Ir1MVKviT2FIloaTQ==
+
+rabin-wasm@^0.1.4:
+  version "0.1.5"
+  resolved "https://registry.npmjs.org/rabin-wasm/-/rabin-wasm-0.1.5.tgz"
+  integrity sha512-uWgQTo7pim1Rnj5TuWcCewRDTf0PEFTSlaUjWP4eY9EbLV9em08v89oCz/WO+wRxpYuO36XEHp4wgYQnAgOHzA==
+  dependencies:
+    "@assemblyscript/loader" "^0.9.4"
+    bl "^5.0.0"
+    debug "^4.3.1"
+    minimist "^1.2.5"
+    node-fetch "^2.6.1"
+    readable-stream "^3.6.0"
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 =======
@@ -13943,6 +15024,7 @@ react-helmet-async@^2.0.5:
     shallowequal "^1.1.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -13966,9 +15048,12 @@ react-i18next@^15.7.3:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 react-is@^16.13.1:
   version "16.13.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -13976,10 +15061,14 @@ react-is@^18.0.0, react-is@^18.3.1:
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 react-is@^18.0.0:
+=======
+react-is@^18.0.0, react-is@^18.3.1:
+>>>>>>> origin/main
   version "18.3.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.3.1.tgz"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
 
+<<<<<<< HEAD
 react-is@^18.3.1:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   version "18.3.1"
@@ -13989,12 +15078,15 @@ react-is@^19.1.1:
   version "19.1.1"
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 react-native-fetch-api@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/react-native-fetch-api/-/react-native-fetch-api-3.0.0.tgz"
   integrity sha512-g2rtqPjdroaboDKTsJCTlcmtw54E25OjyaunUP0anOZn4Fuo2IKs8BVfe02zVggA/UysbmfSnRJIqtNkAgggNA==
   dependencies:
     p-defer "^3.0.0"
+<<<<<<< HEAD
 =======
 react-is@^19.1.1:
   version "19.1.1"
@@ -14002,6 +15094,8 @@ react-is@^19.1.1:
   integrity sha512-tr41fA15Vn8p4X9ntI+yCyeGSf1TlYaY5vlTZfQmeLBrFo3psOPX6HhTDnFNL9uj3EhP0KAQ80cugCl4b4BERA==
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 
 react-refresh@^0.17.0:
   version "0.17.0"
@@ -14077,8 +15171,11 @@ read-cache@^1.0.0:
     pify "^2.3.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 read-pkg-up@^7.0.1:
   version "7.0.1"
   resolved "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-7.0.1.tgz"
@@ -14098,14 +15195,18 @@ read-pkg@^5.2.0:
     parse-json "^5.0.0"
     type-fest "^0.6.0"
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 read@^1.0.4:
   version "1.0.7"
   dependencies:
     mute-stream "~0.0.4"
 
+<<<<<<< HEAD
 readable-stream@^2.0.0:
   version "2.3.8"
   dependencies:
@@ -14139,6 +15240,8 @@ readable-stream@^2.3.5:
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
 
+=======
+>>>>>>> origin/main
 readable-stream@^3.1.1, readable-stream@^3.4.0, readable-stream@^3.6.0:
   version "3.6.2"
   dependencies:
@@ -14166,6 +15269,7 @@ readdirp@~3.6.0:
     picomatch "^2.2.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14179,6 +15283,14 @@ readdirp@~3.6.0:
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 real-require@^0.2.0:
   version "0.2.0"
+=======
+receptacle@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.npmjs.org/receptacle/-/receptacle-1.3.2.tgz"
+  integrity sha512-HrsFvqZZheusncQRiEE7GatOAETrARKV/lnfYicIm8lbvp/JQOdADOfhjBd2DajvoszEyxSM6RlAAIZgEoeu/A==
+  dependencies:
+    ms "^2.1.1"
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 =======
@@ -14210,9 +15322,19 @@ redent@^3.0.0:
 
 redux-thunk@^3.1.0:
   version "3.1.0"
+<<<<<<< HEAD
 
 redux@^5.0.1:
   version "5.0.1"
+=======
+  resolved "https://registry.npmjs.org/redux-thunk/-/redux-thunk-3.1.0.tgz"
+  integrity sha512-NW2r5T6ksUKXCabzhL9z+h206HQw/NJkcLm1GPImRQ8IzfXwRGqjVhKJGauHirT0DAuyy6hjdnMZaRoAcy0Klw==
+
+redux@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npmjs.org/redux/-/redux-5.0.1.tgz"
+  integrity sha512-M9/ELqF6fy8FwmkpnF0S3YKOqMyoWJ4+CS5Efg2ct3oY9daQvd/Pc71FpGZsVsbl3Cpb+IIcjBDUnnyBdQbq4w==
+>>>>>>> origin/main
 
 reflect.getprototypeof@^1.0.6, reflect.getprototypeof@^1.0.9:
   version "1.0.10"
@@ -14266,6 +15388,7 @@ require-directory@^2.1.1:
   version "2.1.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 require-from-string@^2.0.2:
   version "2.0.2"
 
@@ -14276,6 +15399,8 @@ require-from-string@^2.0.2:
   resolved "https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz"
   integrity sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==
 
+=======
+>>>>>>> origin/main
 require-in-the-middle@^5.0.0:
   version "5.2.0"
   dependencies:
@@ -14302,8 +15427,15 @@ requires-port@^1.0.0:
 reselect@^5.1.0:
   version "5.1.1"
 
+<<<<<<< HEAD
 reserved-identifiers@^1.0.0:
   version "1.0.0"
+=======
+reselect@^5.1.0:
+  version "5.1.1"
+  resolved "https://registry.npmjs.org/reselect/-/reselect-5.1.1.tgz"
+  integrity sha512-K/BG6eIky/SBpzfHZv/dd+9JBFiS4SWV7FIujVyJRux6e45+73RaUHXLmIR1f7WOMaQ0U1km6qwklRQxpJJY0w==
+>>>>>>> origin/main
 
 resolve-cwd@^3.0.0:
   version "3.0.0"
@@ -14319,6 +15451,7 @@ resolve-from@^5.0.0:
 resolve-pkg-maps@^1.0.0:
   version "1.0.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 resolve@^1.1.7, resolve@^1.22.1, resolve@^1.22.10, resolve@^1.22.4, resolve@^1.22.8:
 =======
@@ -14354,6 +15487,9 @@ resolve@^1.1.7, resolve@^1.22.1, resolve@^1.22.10, resolve@^1.22.4, resolve@^1.2
 <<<<<<< HEAD
 <<<<<<< HEAD
 resolve@^1.22.1:
+=======
+resolve@^1.1.7, resolve@^1.10.0, resolve@^1.22.1, resolve@^1.22.10, resolve@^1.22.4, resolve@^1.22.8:
+>>>>>>> origin/main
   version "1.22.10"
   resolved "https://registry.npmjs.org/resolve/-/resolve-1.22.10.tgz"
   integrity sha512-NPRy+/ncIMeDlTAsuqwKIiferiawhefFJtkNSW0qZJEqMEb+qBt/77B/jGeeek+F0uOeN05CDa6HXbbIgtVX4w==
@@ -14482,16 +15618,21 @@ restructure@^3.0.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
-responselike@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/responselike/-/responselike-1.0.2.tgz"
-  integrity sha512-/Fpe5guzJk1gPqdJLJR5u7eG/gNY4nImjbRDaVWVMRhne55TCmj2i9Q+54PBRfatRC8v/rIiv9BN0pMd9OV5EQ==
-  dependencies:
-    lowercase-keys "^1.0.0"
+retimer@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/retimer/-/retimer-2.0.0.tgz"
+  integrity sha512-KLXY85WkEq2V2bKex/LOO1ViXVn2KGYe4PYysAdYdjmraYIUsVkXu8O4am+8+5UbaaGl1qho4aqAAPHNQ4GSbg==
 
+<<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 ret@~0.5.0:
   version "0.5.0"
+=======
+retimer@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/retimer/-/retimer-3.0.0.tgz"
+  integrity sha512-WKE0j11Pa0ZJI5YIk0nflGI7SQsfl2ljihVy7ogh7DeQSeYAUi0ubZ/yEueGtDfUPk6GH5LRw1hBdLq4IwUBWA==
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 =======
@@ -14531,6 +15672,7 @@ retry@^0.13.1:
 reusify@^1.0.4:
   version "1.1.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14590,6 +15732,8 @@ robots-parser@^3.0.1:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 rollup@^4.43.0, rollup@^4.50.0:
   version "4.50.0"
   dependencies:
@@ -14641,7 +15785,7 @@ safe-array-concat@^1.1.3:
     has-symbols "^1.1.0"
     isarray "^2.0.5"
 
-safe-buffer@^5.0.1, safe-buffer@^5.1.1, safe-buffer@^5.2.1, safe-buffer@~5.2.0, safe-buffer@5.2.1:
+safe-buffer@^5.0.1, safe-buffer@^5.2.1, safe-buffer@~5.2.0:
   version "5.2.1"
 
 safe-buffer@~5.1.0, safe-buffer@~5.1.1:
@@ -14660,6 +15804,7 @@ safe-regex-test@^1.0.3, safe-regex-test@^1.1.0:
     es-errors "^1.3.0"
     is-regex "^1.2.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14685,16 +15830,13 @@ safe-stable-stringify@^2.3.1:
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 "safer-buffer@>= 2.1.2 < 3", "safer-buffer@>= 2.1.2 < 3.0.0":
   version "2.1.2"
 
 sax@^1.2.4:
   version "1.4.1"
-
-sax@>=0.6.0, sax@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/sax/-/sax-1.2.1.tgz"
-  integrity sha512-8I2a3LovHTOpm7NV5yOyO8IHqgVsfK4+UuySrXU8YXkSRX7k6hCV9b3HrkKCr3nMpgj+0bmocaJJWpvp1oc7ZA==
 
 saxes@^6.0.0:
   version "6.0.0"
@@ -14706,6 +15848,7 @@ scheduler@^0.23.2:
   dependencies:
     loose-envify "^1.1.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14737,9 +15880,12 @@ semver@^5.5.0:
 semver@^5.6.0:
   version "5.7.2"
 
+=======
+>>>>>>> origin/main
 semver@^6.3.1:
   version "6.3.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14771,6 +15917,9 @@ semver@^7.5.2:
 semver@^7.3.4:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+semver@^7.3.4:
+>>>>>>> origin/main
   version "7.7.2"
 
 <<<<<<< HEAD
@@ -14820,6 +15969,7 @@ semver@~7.5.4:
     lru-cache "^6.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14832,14 +15982,19 @@ semver@~7.5.4:
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/main
 "semver@2 || 3 || 4 || 5":
   version "5.7.2"
   resolved "https://registry.npmjs.org/semver/-/semver-5.7.2.tgz"
   integrity sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 set-cookie-parser@^2.6.0:
   version "2.7.1"
 
@@ -14917,6 +16072,7 @@ sharp@^0.34.3:
     "@img/sharp-win32-ia32" "0.34.3"
     "@img/sharp-win32-x64" "0.34.3"
 
+<<<<<<< HEAD
 shebang-command@^1.2.0:
   version "1.2.0"
 <<<<<<< HEAD
@@ -14927,17 +16083,23 @@ shebang-command@^1.2.0:
   dependencies:
     shebang-regex "^1.0.0"
 
+=======
+>>>>>>> origin/main
 shebang-command@^2.0.0:
   version "2.0.0"
   dependencies:
     shebang-regex "^3.0.0"
 
+<<<<<<< HEAD
 shebang-regex@^1.0.0:
   version "1.0.0"
 
+=======
+>>>>>>> origin/main
 shebang-regex@^3.0.0:
   version "3.0.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 shimmer@^1.2.0, shimmer@^1.2.1:
 =======
@@ -14947,6 +16109,9 @@ shimmer@^1.2.0:
 shimmer@^1.2.0, shimmer@^1.2.1:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+shimmer@^1.2.0:
+>>>>>>> origin/main
   version "1.2.1"
 
 side-channel-list@^1.0.0:
@@ -14981,6 +16146,7 @@ side-channel@^1.1.0:
     side-channel-map "^1.0.1"
     side-channel-weakmap "^1.0.2"
 
+<<<<<<< HEAD
 signal-exit@^3.0.0:
   version "3.0.7"
 <<<<<<< HEAD
@@ -14992,13 +16158,19 @@ signal-exit@^3.0.0:
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
+=======
+>>>>>>> origin/main
 signal-exit@^3.0.3:
   version "3.0.7"
 
+<<<<<<< HEAD
 signal-exit@^3.0.7:
   version "3.0.7"
 
 signal-exit@^4.0.1, signal-exit@^4.1.0:
+=======
+signal-exit@^4.0.1:
+>>>>>>> origin/main
   version "4.1.0"
 
 simple-swizzle@^0.2.2:
@@ -15018,9 +16190,12 @@ sirv@^1.0.7:
 slash@^3.0.0:
   version "3.0.0"
 
+<<<<<<< HEAD
 slash@^5.1.0:
   version "5.1.0"
 
+=======
+>>>>>>> origin/main
 smart-buffer@^4.2.0:
   version "4.2.0"
 
@@ -15037,6 +16212,7 @@ socks@^2.8.3:
     ip-address "^10.0.1"
     smart-buffer "^4.2.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -15087,6 +16263,8 @@ sort-keys@^2.0.0:
   dependencies:
     is-plain-obj "^1.0.0"
 
+=======
+>>>>>>> origin/main
 source-map-js@^1.0.2, source-map-js@^1.2.1:
   version "1.2.1"
 
@@ -15127,18 +16305,27 @@ sparse-array@^1.3.1:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 
+sparse-array@^1.3.1:
+  version "1.3.2"
+  resolved "https://registry.npmjs.org/sparse-array/-/sparse-array-1.3.2.tgz"
+  integrity sha512-ZT711fePGn3+kQyLuv1fpd3rNSkNF8vd5Kv2D+qnOANeyKs3fx6bUMGWRPvgTTcYV64QMqZKZwcuaQSP3AZ0tg==
+
 sparse-bitfield@^3.0.3:
   version "3.0.3"
   dependencies:
     memory-pager "^1.0.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 spdx-correct@^3.0.0:
   version "3.2.0"
   resolved "https://registry.npmjs.org/spdx-correct/-/spdx-correct-3.2.0.tgz"
   integrity sha512-kN9dJbvnySHULIluDHy32WHRUu3Og7B9sbY7tsFLctQkIqnMh3hErYgdMjTYuqmcXX+lK5T1lnUt3G7zNswmZA==
+<<<<<<< HEAD
   dependencies:
     spdx-expression-parse "^3.0.0"
     spdx-license-ids "^3.0.0"
@@ -15168,13 +16355,34 @@ spdx-license-ids@^3.0.0:
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 speedline-core@^1.4.3:
   version "1.4.3"
+=======
+>>>>>>> origin/main
   dependencies:
-    "@types/node" "*"
-    image-ssim "^0.2.0"
-    jpeg-js "^0.4.1"
+    spdx-expression-parse "^3.0.0"
+    spdx-license-ids "^3.0.0"
 
+<<<<<<< HEAD
 split2@^4.0.0:
   version "4.2.0"
+=======
+spdx-exceptions@^2.1.0:
+  version "2.5.0"
+  resolved "https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-2.5.0.tgz"
+  integrity sha512-PiU42r+xO4UbUS1buo3LPJkjlO7430Xn5SVAhdpzzsPHsjbYVflnnFdATgabnLude+Cqu25p6N+g2lw/PFsa4w==
+
+spdx-expression-parse@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-3.0.1.tgz"
+  integrity sha512-cbqHunsQWnJNE6KhVSMsMeH5H/L9EpymbzqTQ3uLwNCLZ1Q481oWaofqH7nO6V07xlXwY6PhQdQ2IedWx/ZK4Q==
+  dependencies:
+    spdx-exceptions "^2.1.0"
+    spdx-license-ids "^3.0.0"
+
+spdx-license-ids@^3.0.0:
+  version "3.0.22"
+  resolved "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.22.tgz"
+  integrity sha512-4PRT4nh1EImPbt2jASOKHX7PB7I+e4IWNLvkKFDxNhJlfjbYlleYQh285Z/3mPTHSAK/AvdMmw5BNNuYH8ShgQ==
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 =======
@@ -15228,10 +16436,14 @@ stream-shift@^1.0.2:
   integrity sha512-76ORR0DO1o1hlKwTbi/DM3EXWGf3ZJYO8cXX5RJwnul2DEg2oyoZyjLNoQM8WsvZiFKCRfC1O0J7iCvie3RZmQ==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 stream-to-it@^0.2.2, stream-to-it@^0.2.3:
   version "0.2.4"
   resolved "https://registry.npmjs.org/stream-to-it/-/stream-to-it-0.2.4.tgz"
   integrity sha512-4vEbkSs83OahpmBybNJXlJd7d6/RxzkkSdT3I0mnGt79Xd2Kk+e1JqbvAvsQfCeKj3aKb0QIWkyK3/n0j506vQ==
+<<<<<<< HEAD
   dependencies:
     get-iterator "^1.0.2"
 
@@ -15249,9 +16461,23 @@ streamx@^2.15.0:
   optionalDependencies:
     bare-events "^2.2.0"
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+  dependencies:
+    get-iterator "^1.0.2"
+>>>>>>> origin/main
 
-strict-uri-encode@^1.0.0:
+streaming-iterables@^6.0.0, streaming-iterables@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.npmjs.org/streaming-iterables/-/streaming-iterables-6.2.0.tgz"
+  integrity sha512-3AYC8oB60WyD1ic7uHmN/vm2oRGzRnQ3XFBl/bFMDi1q1+nc5/vjMmiE4vroIya3jG59t87VpyAj/iXYxyw9AA==
+
+streamsearch@^1.1.0:
   version "1.1.0"
+<<<<<<< HEAD
+=======
+  resolved "https://registry.npmjs.org/streamsearch/-/streamsearch-1.1.0.tgz"
+  integrity sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==
+>>>>>>> origin/main
 
 string_decoder@^1.1.1:
   version "1.3.0"
@@ -15379,6 +16605,7 @@ strip-bom@^3.0.0:
 strip-bom@^4.0.0:
   version "4.0.0"
 
+<<<<<<< HEAD
 strip-dirs@^2.0.0:
   version "2.1.0"
   dependencies:
@@ -15387,12 +16614,17 @@ strip-dirs@^2.0.0:
 strip-eof@^1.0.0:
   version "1.0.0"
 
+=======
+>>>>>>> origin/main
 strip-final-newline@^2.0.0:
   version "2.0.0"
 
+<<<<<<< HEAD
 strip-final-newline@^3.0.0:
   version "3.0.0"
 
+=======
+>>>>>>> origin/main
 strip-indent@^3.0.0:
   version "3.0.0"
   dependencies:
@@ -15401,6 +16633,7 @@ strip-indent@^3.0.0:
 strip-json-comments@^3.1.1:
   version "3.1.1"
 
+<<<<<<< HEAD
 strip-outer@^1.0.0:
   version "1.0.1"
   dependencies:
@@ -15424,9 +16657,12 @@ stubborn-fs@^1.2.5:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 stubs@^3.0.0:
   version "3.0.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -15460,10 +16696,13 @@ styled-jsx@5.1.6:
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 styled-jsx@5.1.1:
   version "5.1.1"
   resolved "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.1.tgz"
   integrity sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==
+<<<<<<< HEAD
 >>>>>>> origin/resolved-all-conflicts-clean
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -15474,6 +16713,8 @@ styled-jsx@5.1.1:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
   dependencies:
     client-only "0.0.1"
 
@@ -15488,12 +16729,15 @@ sucrase@^3.35.0:
     pirates "^4.0.1"
     ts-interface-checker "^0.1.9"
 
+<<<<<<< HEAD
 super-regex@^1.0.0:
   version "1.0.0"
   dependencies:
     function-timeout "^1.0.1"
     time-span "^5.1.0"
 
+=======
+>>>>>>> origin/main
 supports-color@^10.0.0:
   version "10.2.0"
   resolved "https://registry.npmjs.org/supports-color/-/supports-color-10.2.0.tgz"
@@ -15512,6 +16756,7 @@ supports-color@^8.1.1:
 supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -15556,6 +16801,8 @@ swr@^2.3.6:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 symbol-tree@^3.2.4:
   version "3.2.4"
 
@@ -15599,6 +16846,7 @@ tailwindcss@^3.3.5:
     resolve "^1.22.8"
     sucrase "^3.35.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 tailwindcss@4.1.12:
@@ -15670,6 +16918,8 @@ tcp-port-used@^1.0.2:
     is2 "^2.0.6"
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 teeny-request@^10.0.0:
   version "10.1.0"
   dependencies:
@@ -15678,6 +16928,7 @@ teeny-request@^10.0.0:
     node-fetch "^3.3.2"
     stream-events "^1.0.5"
 
+<<<<<<< HEAD
 temp-dir@^1.0.0:
   version "1.0.0"
 
@@ -15687,6 +16938,8 @@ tempfile@^2.0.0:
     temp-dir "^1.0.0"
     uuid "^3.0.1"
 
+=======
+>>>>>>> origin/main
 terser@^5.43.1:
   version "5.44.0"
   dependencies:
@@ -15703,6 +16956,7 @@ test-exclude@^6.0.0:
     minimatch "^3.0.4"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -15718,6 +16972,8 @@ text-segmentation@^1.0.3:
   dependencies:
     utrie "^1.0.2"
 
+=======
+>>>>>>> origin/main
 thenify-all@^1.0.0:
   version "1.6.0"
   dependencies:
@@ -15728,6 +16984,7 @@ thenify-all@^1.0.0:
   dependencies:
     any-promise "^1.0.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15772,11 +17029,42 @@ through@^2.3.8:
 
 time-span@^5.1.0:
   version "5.1.0"
-  dependencies:
-    convert-hrtime "^5.0.0"
+=======
+throttled-queue@^2.1.2:
+  version "2.1.4"
+  resolved "https://registry.npmjs.org/throttled-queue/-/throttled-queue-2.1.4.tgz"
+  integrity sha512-YGdk8sdmr4ge3g+doFj/7RLF5kLM+Mi7DEciu9PHxnMJZMeVuZeTj31g4VE7ekUffx/IdbvrtOCiz62afg0mkg==
 
+throttled-queue@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/throttled-queue/-/throttled-queue-3.0.0.tgz"
+  integrity sha512-8X5YUdgDHaqy9DmJzoRWK45o2vzBZ7Rt4bT1Mody4TUuYOXSb7paRwDPVspCZiiW4rxZopgZQAwnhI2LU0QwFQ==
+
+timeout-abort-controller@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/timeout-abort-controller/-/timeout-abort-controller-1.1.1.tgz"
+  integrity sha512-BsF9i3NAJag6T0ZEjki9j654zoafI2X6ayuNd6Tp8+Ul6Tr5s4jo973qFeiWrRSweqvskC+AHDKUmIW4b7pdhQ==
+  dependencies:
+    abort-controller "^3.0.0"
+    retimer "^2.0.0"
+
+timeout-abort-controller@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/timeout-abort-controller/-/timeout-abort-controller-3.0.0.tgz"
+  integrity sha512-O3e+2B8BKrQxU2YRyEjC/2yFdb33slI22WRdUaDx6rvysfi9anloNZyR2q0l6LnePo5qH7gSM7uZtvvwZbc2yA==
+>>>>>>> origin/main
+  dependencies:
+    retimer "^3.0.0"
+
+<<<<<<< HEAD
 timed-out@^4.0.0, timed-out@^4.0.1:
   version "4.0.1"
+=======
+timestamp-nano@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/timestamp-nano/-/timestamp-nano-1.0.1.tgz"
+  integrity sha512-4oGOVZWTu5sl89PtCDnhQBSt7/vL1zVEwAfxH1p49JhTosxzVQWYBYFRFZ8nJmo0G6f824iyP/44BFAwIoKvIA==
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 =======
@@ -15858,6 +17146,7 @@ tldts@^6.1.32:
 tmpl@1.0.5:
   version "1.0.5"
 
+<<<<<<< HEAD
 to-buffer@^1.1.1:
   version "1.2.1"
   dependencies:
@@ -15865,6 +17154,8 @@ to-buffer@^1.1.1:
     safe-buffer "^5.2.1"
     typed-array-buffer "^1.0.3"
 
+=======
+>>>>>>> origin/main
 to-regex-range@^5.0.1:
   version "5.0.1"
   dependencies:
@@ -15892,6 +17183,7 @@ totalist@^3.0.0:
 toad-cache@^3.7.0:
   version "3.7.0"
 
+<<<<<<< HEAD
 token-types@^6.0.0:
   version "6.1.1"
   dependencies:
@@ -15899,6 +17191,8 @@ token-types@^6.0.0:
     "@tokenizer/token" "^0.3.0"
     ieee754 "^1.2.1"
 
+=======
+>>>>>>> origin/main
 totalist@^1.0.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/totalist/-/totalist-1.1.0.tgz"
@@ -15926,12 +17220,16 @@ tr46@~0.0.3:
   version "0.0.3"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 trim-newlines@^3.0.0:
   version "3.0.1"
   resolved "https://registry.npmjs.org/trim-newlines/-/trim-newlines-3.0.1.tgz"
   integrity sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
@@ -15940,6 +17238,8 @@ trim-repeated@^1.0.0:
   version "1.0.0"
   dependencies:
     escape-string-regexp "^1.0.2"
+=======
+>>>>>>> origin/main
 
 ts-api-utils@^2.1.0:
   version "2.1.0"
@@ -15986,6 +17286,7 @@ tsconfig-paths@^3.15.0:
     strip-bom "^3.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16006,30 +17307,42 @@ tslib@^1.11.1:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 tslib@^2.0.0, tslib@^2.0.1, tslib@^2.1.0, tslib@^2.4.0, tslib@^2.8.0:
+=======
+tslib@^2.0.0, tslib@^2.0.1, tslib@^2.1.0, tslib@^2.4.0:
+>>>>>>> origin/main
   version "2.8.1"
 
 tslib@1.9.3:
   version "1.9.3"
 
+<<<<<<< HEAD
 tunnel-agent@^0.6.0:
   version "0.6.0"
   dependencies:
     safe-buffer "^5.0.1"
 
+=======
+>>>>>>> origin/main
 tv4@^1.3.0:
   version "1.3.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 tweetnacl@^1.0.3:
   version "1.0.3"
   resolved "https://registry.npmjs.org/tweetnacl/-/tweetnacl-1.0.3.tgz"
   integrity sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
   dependencies:
@@ -16052,12 +17365,16 @@ type-fest@^0.21.3:
   version "0.21.3"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 type-fest@^0.6.0:
   version "0.6.0"
   resolved "https://registry.npmjs.org/type-fest/-/type-fest-0.6.0.tgz"
   integrity sha512-q+MB8nYR1KDLrgr4G5yemftpMC7/QLqVndBmEEdqzmNj5dcFOO4Oo8qlwZE3ULT3+Zim1F8Kq4cBnikNhlCMlg==
+<<<<<<< HEAD
 
 type-fest@^0.8.1:
   version "0.8.1"
@@ -16072,6 +17389,15 @@ type-fest@^3.8.0:
 
 <<<<<<< HEAD
 type-fest@^4.18.2:
+=======
+
+type-fest@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.npmjs.org/type-fest/-/type-fest-0.8.1.tgz"
+  integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
+
+type-fest@^4.3.2:
+>>>>>>> origin/main
   version "4.41.0"
 =======
 <<<<<<< HEAD
@@ -16125,6 +17451,7 @@ typed-array-length@^1.0.7:
     reflect.getprototypeof "^1.0.6"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -16136,12 +17463,17 @@ typed-query-selector@^2.12.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 typescript@^5.9.2:
   version "5.9.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 uint8-varint@^2.0.1, uint8-varint@^2.0.2:
   version "2.0.4"
   resolved "https://registry.npmjs.org/uint8-varint/-/uint8-varint-2.0.4.tgz"
@@ -16150,11 +17482,55 @@ uint8-varint@^2.0.1, uint8-varint@^2.0.2:
     uint8arraylist "^2.0.0"
     uint8arrays "^5.0.0"
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 uint8array-extras@^1.1.0, uint8array-extras@^1.3.0:
   version "1.5.0"
+=======
+uint8arraylist@^2.0.0, uint8arraylist@^2.1.2, uint8arraylist@^2.4.3, uint8arraylist@^2.4.8:
+  version "2.4.8"
+  resolved "https://registry.npmjs.org/uint8arraylist/-/uint8arraylist-2.4.8.tgz"
+  integrity sha512-vc1PlGOzglLF0eae1M8mLRTBivsvrGsdmJ5RbK3e+QRvRLOZfZhQROTwH/OfyF3+ZVUg9/8hE8bmKP2CvP9quQ==
+  dependencies:
+    uint8arrays "^5.0.1"
+
+uint8arrays@^3.0.0:
+  version "3.1.1"
+  resolved "https://registry.npmjs.org/uint8arrays/-/uint8arrays-3.1.1.tgz"
+  integrity sha512-+QJa8QRnbdXVpHYjLoTpJIdCTiw9Ir62nocClWuXIq2JIh4Uta0cQsTSpFL678p2CN8B+XSApwcU+pQEqVpKWg==
+  dependencies:
+    multiformats "^9.4.2"
+
+uint8arrays@^4.0.2:
+  version "4.0.10"
+  resolved "https://registry.npmjs.org/uint8arrays/-/uint8arrays-4.0.10.tgz"
+  integrity sha512-AnJNUGGDJAgFw/eWu/Xb9zrVKEGlwJJCaeInlf3BkecE/zcTobk5YXYIPNQJO1q5Hh1QZrQQHf0JvcHqz2hqoA==
+  dependencies:
+    multiformats "^12.0.1"
+
+uint8arrays@^5.0.0, uint8arrays@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.npmjs.org/uint8arrays/-/uint8arrays-5.1.0.tgz"
+  integrity sha512-vA6nFepEmlSKkMBnLBaUMVvAC4G3CTmO58C12y4sq6WPDOR7mOFYOi7GlrQ4djeSbP6JG9Pv9tJDM97PedRSww==
+  dependencies:
+    multiformats "^13.0.0"
+
+uint8arrays@^5.0.1:
+  version "5.1.0"
+  resolved "https://registry.npmjs.org/uint8arrays/-/uint8arrays-5.1.0.tgz"
+  integrity sha512-vA6nFepEmlSKkMBnLBaUMVvAC4G3CTmO58C12y4sq6WPDOR7mOFYOi7GlrQ4djeSbP6JG9Pv9tJDM97PedRSww==
+  dependencies:
+    multiformats "^13.0.0"
+
+uint8arrays@^5.0.2:
+  version "5.1.0"
+  resolved "https://registry.npmjs.org/uint8arrays/-/uint8arrays-5.1.0.tgz"
+  integrity sha512-vA6nFepEmlSKkMBnLBaUMVvAC4G3CTmO58C12y4sq6WPDOR7mOFYOi7GlrQ4djeSbP6JG9Pv9tJDM97PedRSww==
+  dependencies:
+    multiformats "^13.0.0"
+>>>>>>> origin/main
 
 <<<<<<< HEAD
 =======
@@ -16212,20 +17588,26 @@ unbox-primitive@^1.1.0:
     has-symbols "^1.1.0"
     which-boxed-primitive "^1.1.1"
 
+<<<<<<< HEAD
 unbzip2-stream@^1.0.9:
   version "1.4.3"
   dependencies:
     buffer "^5.2.1"
     through "^2.3.8"
 
+=======
+>>>>>>> origin/main
 undici-types@~5.26.4:
   version "5.26.5"
   resolved "https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz"
   integrity sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 undici@^5.12.0:
   version "5.29.0"
   resolved "https://registry.npmjs.org/undici/-/undici-5.29.0.tgz"
@@ -16233,9 +17615,12 @@ undici@^5.12.0:
   dependencies:
     "@fastify/busboy" "^2.0.0"
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 undici@^7.12.0:
   version "7.15.0"
 
@@ -16254,9 +17639,12 @@ unicode-match-property-value-ecmascript@^2.1.0:
 unicode-property-aliases-ecmascript@^2.0.0:
   version "2.1.0"
 
+<<<<<<< HEAD
 unicorn-magic@^0.3.0:
   version "0.3.0"
 
+=======
+>>>>>>> origin/main
 universalify@^0.2.0:
   version "0.2.0"
 
@@ -16299,6 +17687,7 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
+<<<<<<< HEAD
 url-parse-lax@^1.0.0:
   version "1.0.0"
   dependencies:
@@ -16309,12 +17698,15 @@ url-parse-lax@^3.0.0:
   dependencies:
     prepend-http "^2.0.0"
 
+=======
+>>>>>>> origin/main
 url-parse@^1.5.3:
   version "1.5.10"
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16349,6 +17741,8 @@ url@0.10.3:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 use-callback-ref@^1.3.3:
   version "1.3.3"
   dependencies:
@@ -16380,6 +17774,7 @@ util@^0.10.3:
     inherits "2.0.3"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16406,6 +17801,9 @@ util@^0.12.3, util@^0.12.4:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 util@^0.12.4:
+=======
+util@^0.12.3:
+>>>>>>> origin/main
   version "0.12.5"
   resolved "https://registry.npmjs.org/util/-/util-0.12.5.tgz"
   integrity sha512-kZf/K6hEIrWHI6XqOFUiiMa+79wE/D8Q+NCNAWclkyg3b4d2k7s0QGepNjiABc+aR3N1PAyHL7p6UcLY6LmrnA==
@@ -16416,6 +17814,7 @@ util@^0.12.4:
     is-typed-array "^1.1.3"
     which-typed-array "^1.1.2"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -16431,9 +17830,12 @@ utrie@^1.0.2:
   dependencies:
     base64-arraybuffer "^1.0.2"
 
+=======
+>>>>>>> origin/main
 uuid@^11.1.0:
   version "11.1.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -16476,6 +17878,8 @@ uuid@8.0.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 v8-compile-cache-lib@^3.0.1:
   version "3.0.1"
 
@@ -16671,6 +18075,7 @@ whatwg-url@^5.0.0:
     webidl-conversions "^3.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -16682,6 +18087,8 @@ when-exit@^2.1.1:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 which-boxed-primitive@^1.1.0, which-boxed-primitive@^1.1.1:
   version "1.1.1"
   dependencies:
@@ -16727,6 +18134,7 @@ which-typed-array@^1.1.16, which-typed-array@^1.1.19, which-typed-array@^1.1.2:
     gopd "^1.2.0"
     has-tostringtag "^1.0.2"
 
+<<<<<<< HEAD
 which@^1.2.9:
   version "1.3.1"
 <<<<<<< HEAD
@@ -16737,6 +18145,8 @@ which@^1.2.9:
   dependencies:
     isexe "^2.0.0"
 
+=======
+>>>>>>> origin/main
 which@^2.0.1:
   version "2.0.2"
   dependencies:
@@ -16787,6 +18197,7 @@ ws@^7.3.1:
   integrity sha512-+dbF1tHwZpXcbOJdVOkzLDxZP1ailvSxM6ZweXTegylPny803bFhA+vqBYw4s31NSAk4S2Qz+AKXK9a4wkdjcQ==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ws@^8.18.0, ws@^8.18.2, ws@^8.18.3, ws@>=8.16.0:
 =======
 <<<<<<< HEAD
@@ -16795,11 +18206,15 @@ ws@^8.18.0, ws@^8.18.2:
 ws@^8.18.0, ws@^8.18.2, ws@^8.18.3, ws@>=8.16.0:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+ws@^8.18.0, ws@^8.18.2:
+>>>>>>> origin/main
   version "8.18.3"
 
 ws@~7.5.10:
   version "7.5.10"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -16812,34 +18227,29 @@ xdg-basedir@^5.1.0:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 xml-name-validator@^5.0.0:
   version "5.0.0"
-
-xml2js@0.6.2:
-  version "0.6.2"
-  resolved "https://registry.npmjs.org/xml2js/-/xml2js-0.6.2.tgz"
-  integrity sha512-T4rieHaC1EXcES0Kxxj4JWgaUQHDk+qwHcYOCFHfiwKz7tOVPLq7Hjq9dM1WCMhylqMEfP7hMcOIChvotiZegA==
-  dependencies:
-    sax ">=0.6.0"
-    xmlbuilder "~11.0.0"
-
-xmlbuilder@~11.0.0:
-  version "11.0.1"
-  resolved "https://registry.npmjs.org/xmlbuilder/-/xmlbuilder-11.0.1.tgz"
-  integrity sha512-fDlsI/kFEx7gLvbecc0/ohLG50fugQp8ryHzMTuW9vSa1GJ0XYWKnhsUx7oie3G98+r56aTQIUB4kht42R3JvA==
 
 xmlchars@^2.2.0:
   version "2.2.0"
 
+<<<<<<< HEAD
 xtend@^4.0.0:
   version "4.0.2"
 
+=======
+>>>>>>> origin/main
 y18n@^5.0.5:
   version "5.0.8"
 
+<<<<<<< HEAD
 yallist@^2.1.2:
   version "2.1.2"
 
+=======
+>>>>>>> origin/main
 yallist@^3.0.2:
   version "3.1.1"
 
@@ -16847,28 +18257,37 @@ yallist@^4.0.0:
   version "4.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 yallist@^5.0.0:
   version "5.0.0"
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+=======
+>>>>>>> origin/main
 yaml@^2.3.4:
   version "2.8.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 yargs-parser@^21.0.0, yargs-parser@^21.1.1:
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 yargs-parser@^20.2.3:
   version "20.2.9"
   resolved "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.9.tgz"
   integrity sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==
 
 yargs-parser@^21.1.1:
+<<<<<<< HEAD
 =======
 yargs-parser@^21.0.0, yargs-parser@^21.1.1:
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
   version "21.1.1"
 
 yargs@^17.7.2:
@@ -16883,6 +18302,7 @@ yargs@^17.7.2:
     yargs-parser "^21.1.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 yauzl@^2.10.0, yauzl@^2.4.2:
 =======
 <<<<<<< HEAD
@@ -16896,6 +18316,8 @@ yauzl@^2.10.0, yauzl@^2.4.2:
     buffer-crc32 "~0.2.3"
     fd-slicer "~1.1.0"
 
+=======
+>>>>>>> origin/main
 yn@3.1.1:
   version "3.1.1"
 
@@ -16908,6 +18330,7 @@ zod@^3.24.1:
 =======
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -16923,3 +18346,5 @@ zod@^3.24.1:
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main

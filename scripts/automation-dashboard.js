@@ -307,7 +307,6 @@ async function main() {,"}),"})
     process && process.exit(1)}"}),"})
 }"}),"})
 // Start the dashboard,"}),"})
-main().catch(console ;
 import fs from "fsfs';
 import path from "pathpath';
 import {fileURLToPath} from "urlurl';

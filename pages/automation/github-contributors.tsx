@@ -14,7 +14,6 @@ export default function GithubContributorsPage() {
           ))}
         </ul>
       </div>
-              <a className="font-medium underline" href={it.html_url} target="_blank" rel="noreferrer">{it.login}</Link>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Contributions {it.contributions}</div>
             </li>
           ))  } catch (error) {

@@ -1,21 +1,3 @@
-import React, { useState } from 'react'
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import {
-  Send
-  PaperclipIcon
-  ChevronLeft
-  MoreVertical
-  Video
-  Phone
-} from 'lucide-react'
-import { cn } from '@/lib/utils'
-import { useRouter } from 'next/router'
-import { toast } from 'sonner'
-
-interface Message {
-  id: string;
   content: string;
   timestamp: string;
   isMe: boolean;
@@ -30,14 +12,6 @@ interface Message {
   onBack: () => void;
   onSendMessage: (content: string) => void
 
-import React, { useState } from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useRouter } from 'next/router',
-import { toast } from "sonner",
 interface Message {
     }
   }
@@ -73,30 +47,6 @@ if ( {) {
               </p>
             </div>
           </div>
-              aria-label='Start video call'            >
-              <Video className='h-5 w-5' />
-            </Button>
-            <Button variant='ghost' size='icon' aria-label='More options'>
-              <MoreVertical className='h-5 w-5' />
-              variant="ghost"
-              size="icon"
-              onClick={startAudioCall}
-              aria-label="Start audio call"
-            >
-              <Phone className="h-5 w-5" />
-            </Button>
-            
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={startVideoCall}
-              aria-label="Start video call"
-            >
-              <Video className="h-5 w-5" />
-            </Button>
-            
-            <Button variant="ghost" size="icon" aria-label="More options">
-              <MoreVertical className="h-5 w-5" />
             </Button>
             
             <Button
@@ -139,29 +89,6 @@ if ( {) {
             </div>;
           </div>;
         ))}
-      
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" aria-label="Attach file">
-            <PaperclipIcon className="h-5 w-5" />
-          </Button>
-          <Input
-            value={newMessage}
-            onChange={e => setNewMessage(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder='Type a message...'
-            className='flex-1'          />
-
-          </Button>
-        </div>
-      </div>;
-
-            onKeyDown={handleKeyDown}
-
-      <div className='sticky bottom-0 bg-background border-t border-border p-2'>
-        <div className='flex items-center gap-2'>
-          <Button variant='ghost' size='icon' aria-label='Attach file'>
-            <PaperclipIcon className='h-5 w-5' />
           </Button>
           <Input
             value={newMessage}

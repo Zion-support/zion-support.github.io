@@ -21,6 +21,15 @@ interface Integration {
   logo_url?: string;
   status: "connected" | "warning" | "disconnected";
 
+
+
+export function IntegrationConnectionModal(): any ({;
+  isOpen,;
+  onClose,;
+  integration,;
+}: IntegrationConnectionModalProps) {;
+  const [isConnecting, setIsConnecting] = useState(false);
+
 export function IntegrationConnectionModal({
   isOpen
   onClose
@@ -32,8 +41,6 @@ export function IntegrationConnectionModal({
     pushNotes: false
     syncJobDetails: true
     syncApplicantData: true
-  integration: Integration
-}
 
 
 interface IntegrationConnectionModalProps {;
@@ -72,12 +79,10 @@ export function IntegrationConnectionModal(): any ({;
   const handleSaveSettings = () => {;
     // In a real application, this would save the sync settings;
     toast && toast.success("Integration settings saved");
-  });
   const handleConnectOAuth = () => {
     setIsConnecting(true);
     // Simulate OAuth flow
     setTimeout(() => {
-      setIsConnecting(false);
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md">;
@@ -93,6 +98,7 @@ export function IntegrationConnectionModal(): any ({;
             </DialogDescription>
           </div>
         </DialogHeader>
+        integration.status === "warning" ? (
         
         {(integration.status === "connected" || integration.status === "warning") ? (
           <>
@@ -101,6 +107,11 @@ export function IntegrationConnectionModal(): any ({;
                 <h3 className="text-sm font-medium">Sync Settings</h3>
                 
                 <div className="flex items-center space-x-2">
+                  <Checkbox 
+                    id="autoCreateContacts" 
+                    checked={syncSettings.autoCreateContacts} 
+                    onCheckedChange={(checked) => 
+                      setSyncSettings({...syncSettings, autoCreateContacts: checked as boolean})
                     }
                   />
                   <Label htmlFor="autoCreateContacts">
@@ -109,23 +120,130 @@ export function IntegrationConnectionModal(): any ({;
                 </div>
                 
                 <div className="flex items-center space-x-2">
+                  <Checkbox 
+                    id="pushNotes" 
+                    checked={syncSettings.pushNotes} 
+                    onCheckedChange={(checked) => 
+                      setSyncSettings({...syncSettings, pushNotes: checked as boolean})
                     }
                   />
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
                 </div>
                 
                 <div className="flex items-center space-x-2">
+                  <Checkbox 
+                    id="syncJobDetails" 
+                    checked={syncSettings.syncJobDetails} 
+                    onCheckedChange={(checked) => 
+                      setSyncSettings({...syncSettings, syncJobDetails: checked as boolean})
                     }
                   />
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
                 </div>
                 
                 <div className="flex items-center space-x-2">
+                  <Checkbox 
+                    id="syncApplicantData" 
+                    checked={syncSettings.syncApplicantData} 
+                    onCheckedChange={(checked) => 
+                      setSyncSettings({...syncSettings, syncApplicantData: checked as boolean})
                     }
                   />
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
                 </div>
               </div>
+              <div className="space-y-2">
+                <h3 className="text-sm font-medium">API Details</h3>
+                <p className="text-xs text-muted-foreground">
+          />;
+          <div>;
+            <DialogTitle>{integration && integration.name} Integration</DialogTitle>;
+            <DialogDescription>;
+              {integration && integration.status === "connected" ||;
+              integration && integration.status === "warning";
+                ? "Manage your connection settings";
+                : `Connect your ${integration && integration.name} account`}
+            </DialogDescription>;
+          </div>;
+        </DialogHeader>;
+
+        {integration && integration.status === "connected" ||;
+        integration && integration.status === "warning" ? (;
+          <>;
+            <div className="grid gap-4 py-4">;
+              <div className="space-y-4">;
+                <h3 className="text-sm font-medium">Sync Settings</h3>;
+
+                <div className="flex items-center space-x-2">;
+                  <Checkbox
+                    id="autoCreateContacts"
+                    checked={syncSettings && syncSettings.autoCreateContacts}
+                    onCheckedChange={(checked) =>;
+                      setSyncSettings({;
+                        ...syncSettings,;
+                        autoCreateContacts: checked as boolean,;
+                      });
+                    }
+                  />;
+                  <Label htmlFor="autoCreateContacts">;
+                    Auto-create contacts in {integration && integration.name}
+                  </Label>;
+                </div>;
+
+                <div className="flex items-center space-x-2">;
+                  <Checkbox
+                    id="pushNotes"
+                    checked={syncSettings && syncSettings.pushNotes}
+                    onCheckedChange={(checked) =>;
+                      setSyncSettings({;
+                        ...syncSettings,;
+                        pushNotes: checked as boolean,;
+                      });
+                    }
+                  />;
+                  <Label htmlFor="pushNotes">Push notes and comments</Label>;
+                </div>;
+
+                <div className="flex items-center space-x-2">;
+                  <Checkbox
+                    id="syncJobDetails"
+                    checked={syncSettings && syncSettings.syncJobDetails}
+                    onCheckedChange={(checked) =>;
+                      setSyncSettings({;
+                        ...syncSettings,;
+                        syncJobDetails: checked as boolean,;
+                      });
+                    }
+                  />;
+                  <Label htmlFor="syncJobDetails">Sync job details</Label>;
+                </div>;
+
+                <div className="flex items-center space-x-2">;
+                  <Checkbox
+                    id="syncApplicantData"
+                    checked={syncSettings && syncSettings.syncApplicantData}
+                    onCheckedChange={(checked) =>;
+                      setSyncSettings({;
+                        ...syncSettings,;
+                        syncApplicantData: checked as boolean,;
+                      });
+                    }
+                  />;
+                  <Label htmlFor="syncApplicantData">Sync applicant data</Label>;
+                </div>;
+              </div>;
+
+              <div className="space-y-2">;
+                <h3 className="text-sm font-medium">API Details</h3>;
+                <p className="text-xs text-muted-foreground">;
+                  Last synced:{" "}
+                  {integration && integration.lastSync;
+                    ? new Date(integration && integration.lastSync).toLocaleString();
+                    : "Never"}
+                </p>
+              </div>
+            </div>
+            
             <DialogFooter className="flex items-center justify-between">
               <Button
                 variant="outline"
@@ -178,6 +296,11 @@ export function IntegrationConnectionModal(): any ({;
               </Button>
             </DialogFooter>
           </>
+        )}
+      </DialogContent>;
+    </Dialog>;
+  );
+
   last_sync?: string;
 }
 interface IntegrationConnectionModalProps {

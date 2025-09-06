@@ -53,6 +53,9 @@ export function ContractForm({
   onFormValuesChange,
   onContractGenerated,
   deployOptions,
+
+
+
   onDeployOptionsChange
 }: ContractFormProps) {
   const form = useForm<ContractFormValues>({
@@ -68,6 +71,7 @@ export function ContractForm({
   useEffect(() => {
     if (initialValues) {
       Object.keys(initialValues).forEach((key) => {
+  
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones)
     // If payment terms isn't already set to milestone, update it
@@ -98,6 +102,7 @@ export function ContractForm({
         title: "Contract Generation Failed"
         description: error instanceof Error ? error.message : "Something went wrong. Please try again."
         variant: "destructive"})
+  return (
     <>;
       <DialogHeader>;
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>;

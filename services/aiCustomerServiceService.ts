@@ -13,16 +13,6 @@
   attachments: string[],
   conversation_history: CustomerMessage[];
 }
-export interface CustomerMessage {
-  id: string;
-  ticket_id: string;
-  sender_id: string;
-  sender_type: 'customer' | 'agent' | 'ai';
-
-  attachments: string[]
-
-  conversationHistory: CustomerMessage[]
-}
   id: string;
   ticket_id: string;
   sender_id: string;
@@ -34,10 +24,6 @@ export interface CustomerMessage {
   intent: string,
   confidence: number;
 }
-export interface CustomerProfile {
-
-
-export interface CustomerProfile {;
   id: string;
   email: string;
   name: string;
@@ -52,9 +38,6 @@ export interface CustomerProfile {;
   ticket_id: string;
   response: string;
   confidence: number;
-  totalTickets: number;
-  openTickets: number;
-  resolvedTickets: number;
   averageResolutionTime: number;
   customerSatisfaction: number;
 
@@ -66,16 +49,6 @@ export interface CustomerProfile {;
 
     customerSatisfaction: number
   }>
-  customer_satisfaction: number;
-  firstResponseTime: number,
-  ticketVolumeByCategory: Record < string, number>;
-  agent_performance: Record < string, {
-    tickets_resolved: number;
-    averageResolutionTime: number,
-    customer_satisfaction: number;
-  }>;
-}
-  customerId: string;
   subject: string;
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
@@ -83,8 +56,6 @@ export interface CustomerProfile {;
   attachments?: string[],
   preferred_channel?: 'email' | 'chat' | 'phone';
 }
-export interface CustomerServiceResponse {
-  ticket_id: string;
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   ai_response?: AIResponse;
   estimatedResolutionTime: string;
@@ -224,12 +195,6 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
   tags: string[],;
   attachments: string[],;
   conversationHistory: CustomerMessage[];
-
-export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
-
-export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
-  next_steps: string[],
-  assigned_agent?: string;
 }
 export class AICustomerServiceService {
   private api_key: string;
@@ -470,108 +435,3 @@ export const aiCustomerServiceService = new AICustomerServiceService (process.en
 
 export interface CustomerTicket {;
 
-export interface CustomerTicket {;
-  id:string,;
-  customerId:string,;
-  subject:string,;
-  description:string,;
-  priority:'low' | 'medium' | 'high' | 'urgent',;
-  status:'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
-  category:string,;
-  assignedTo?:string,;
-  createdAt:Date,;
-  updatedAt:Date,;
-  resolvedAt?:Date,;
-  customerSatisfaction?:number,;
-  tags:string[],;
-  attachments:string[],;
-  conversationHistory:CustomerMessage[];
-}
-;
-export interface CustomerMessage {;
-  id:string,;
-  ticketId:string,;
-  senderId:string,;
-  senderType:'customer' | 'agent' | 'ai',;
-  message:string,;
-  timestamp:Date,;
-  attachments?:string[],;
-  sentiment:'positive' | 'neutral' | 'negative',;
-  intent:string,;
-  confidence:number;
-}
-;
-export interface CustomerProfile {;
-  id:string,;
-  email:string,;
-  name:string,;
-  phone?:string,;
-  company?:string,;
-  plan:string,;
-  totalTickets:number,;
-  resolvedTickets:number,;
-  averageResolutionTime:number,;
-  customerSatisfaction:number,;
-  lastContact:Date,;
-  preferences:{;
-    communicationChannel:'email' | 'chat' | 'phone',;
-    language:string,;
-    timezone:string;
-  },;
-  tags:string[];
-}
-;
-export interface AIResponse {;
-  id:string,;
-  ticketId:string,;
-  response:string,;
-  confidence:number,;
-  suggestedActions:string[],;
-  nextSteps:string[],;
-  requiresHumanReview:boolean,;
-  generatedAt:Date;
-}
-;
-export interface CustomerServiceMetrics {;
-  totalTickets:number,;
-  openTickets:number,;
-  resolvedTickets:number,;
-  averageResolutionTime:number,;
-  customerSatisfaction:number,;
-  firstResponseTime:number,;
-  ticketVolumeByCategory:Record<string number>,;
-  agentPerformance:Record<string {;
-    ticketsResolved:number,;
-    averageResolutionTime:number,;
-    customerSatisfaction:number;
-  }>,;}
-;
-export interface CustomerServiceRequest {;
-  customerId:string,;
-  subject:string,;
-  description:string,;
-  priority:'low' | 'medium' | 'high' | 'urgent',;
-  category:string,;
-  attachments?:string[],;
-  preferredChannel?:'email' | 'chat' | 'phone';
-}
-;
-export interface CustomerServiceResponse {;
-  ticketId:string,;
-  status:'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated',;
-  aiResponse?:AIResponse,;
-  estimatedResolutionTime:string,;
-  nextSteps:string[],;
-  assignedAgent?:string;
-}
-;
-export class AICustomerServiceService {;
-  private apiKey:string,;
-  private baseUrl:string,;
-;
-  constructor(apiKey:string, baseUrl:string = 'https://api.ziontechgroup.com') {;
-}
-      throw error;
-    }
-  }
-}

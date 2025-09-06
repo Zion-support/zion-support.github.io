@@ -36,7 +36,6 @@ export const MobileAppHero: React.FC = () => {
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
-
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, Phone } from "lucide-react",;

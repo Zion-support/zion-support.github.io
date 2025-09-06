@@ -38,25 +38,6 @@ export function useFetchResume() {;
           setResume(null);
           setIsLoading(false);
           return null
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {Resume} from '@/types / resume';
-import {use_auth} from '@/hooks / use_auth';
-export /**
- * useFetchResume - Function description
- */
-function useFetchResume() {
-  const { user } = use_auth ();
-  const [is_loading, setIsLoading] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-  const [resume, set_resume] = useState < Resume | null>(null);
-;
-  const fetch_resume = async (resume_id?: string) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ('You must be logged in to access resumes');
       return null;
     }
     setIsLoading (true);
@@ -74,6 +55,14 @@ if ( {) {
         }
         throw resumeError
       }
+        }
+        throw resume_error;
+      }
+
+
+      
+
+
       // Fetch work experience
       const { data: workData, error: workError } = await supabase
         .from('work_history')

@@ -1,3 +1,5 @@
+
+export default function CodeQualityCheckerPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [codeInput, setCodeInput] = useState('');
@@ -181,6 +183,144 @@
             </Button>;
             <Button
               Schedule Demo
+
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Features Section */}
+      <section className='section-padding bg-gradient-cursor-accent'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+              Powerful Analysis Features;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+        <meta;
+          name='description';
+          content='Analyze and improve your code quality with our comprehensive checker. Support for multiple languages, security scanning, and detailed improvement recommendations.';
+        />;
+        <meta;
+          property='og:title';
+          content='Code Quality Checker - Zion Tech Group';
+        />;
+        <meta;
+          property='og:description';
+          content='Professional code quality analysis tool with multi - language support and security scanning.';
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;
+      {/* Hero Section */}
+      <section className='relative section - padding bg - gradient - cursor overflow - hidden'>;
+        <div className='absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (20, 184, 166, 0.08), transparent_50%)]' />;
+        <div className='absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (20, 184, 166, 0.06), transparent_50%)]' />;
+        <div className='absolute inset - 0 bg - grid opacity - 10' />;
+        <div className='relative z - 10 container - cursor text - center'>;
+          <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - teal - 500 / 10 border border - teal - 500 / 20 text - teal - 400 text - sm font - medium mb - 6'>;
+            <Code className='w - 4 h - 4 mr - 2' />;
+            Professional Code Analysis;
+          </div>;
+          <h1 className='text - responsive - xl font - black mb - 8 gradient - text text - shadow - lg'>;
+            Code Quality Checker;
+          </h1>;
+          <p className='text - responsive - md text - gray - 300 max - w-5xl mx - auto leading - relaxed mb - 12'>;
+            Analyze and improve your code quality with our comprehensive;
+            checker. Support for multiple programming languages, security;
+            scanning, and detailed improvement recommendations. Write better,
+            safer, and more maintainable code.;
+          </p>;
+          {/* Code Input Form */}
+          <div className='max - w-4xl mx - auto mb - 8'>;
+            <textarea;
+              placeholder='Paste your code here for analysis... (Supports JavaScript, TypeScript, Python, Java, C++, Go, PHP, and more)';
+              value={code_input}
+              on_change={e => setCodeInput (e.target.value)}
+              className='w - full h - 32 px - 6 py - 4 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - teal - 500 focus:border - transparent font - mono text - sm';
+            />;
+            <Button;
+              on_click={handleAnalyzeCode}
+              size='lg';
+              className='w - full mt - 4 bg - gradient - to - r from - teal - 500 to - cyan - 600 hover:from - teal - 600 hover:to - cyan - 700 text - white shadow - 2xl hover - glow'              disabled={is_analyzing || !code_input.trim ()}
+            >;
+              {is_analyzing ? (
+                <>;
+                  <div className='animate - spin rounded - full h - 5 w - 5 border - b-2 border - white mr - 2' />                  Analyzing Code...;
+                </>) : (
+                <>;
+                  <Play className='w - 5 h - 5 mr - 2' />                  Analyze Code Quality      </Head>;
+      {/* Hero Section */}
+      <section className="relative section - padding bg - gradient - cursor overflow - hidden">;
+        <div className="absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (20, 184, 166, 0.08), transparent_50%)]" />;
+        <div className="absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (20, 184, 166, 0.06), transparent_50%)]" />;
+        <div className="absolute inset - 0 bg - grid opacity - 10" />;
+        <div className="relative z - 10 container - cursor text - center">;
+          <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - teal - 500 / 10 border border - teal - 500 / 20 text - teal - 400 text - sm font - medium mb - 6">;
+            <Code className="w - 4 h - 4 mr - 2" />;
+            Professional Code Analysis;
+          </div>;
+          <h1 className="text - responsive - xl font - black mb - 8 gradient - text text - shadow - lg">;
+            Code Quality Checker;
+          </h1>;
+          <p className="text - responsive - md text - gray - 300 max - w-5xl mx - auto leading - relaxed mb - 12">;
+            Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages, security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.;
+          </p>;
+          {/* Code Input Form */}
+          <div className="max - w-4xl mx - auto mb - 8">;
+            <textarea;
+              placeholder="Paste your code here for analysis... (Supports JavaScript, TypeScript, Python, Java, C++, Go, PHP, and more)";
+              value={code_input}
+              on_change={(e) => setCodeInput (e.target.value)}
+              className="w - full h - 32 px - 6 py - 4 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - teal - 500 focus:border - transparent font - mono text - sm";
+            />;
+            <Button;
+              on_click={handleAnalyzeCode}
+              size="lg";
+              className="w - full mt - 4 bg - gradient - to - r from - teal - 500 to - cyan - 600 hover:from - teal - 600 hover:to - cyan - 700 text - white shadow - 2xl hover - glow";
+              disabled={is_analyzing || !code_input.trim ()}
+            >;
+              {is_analyzing ? (
+                <>;
+                  <div className='animate - spin rounded - full h - 5 w - 5 border - b-2 border - white mr - 2' />                  <div className="animate - spin rounded - full h - 5 w - 5 border - b-2 border - white mr - 2" />;
+                  Analyzing Code...;
+                </>) : (
+                <>;
+                  <Play className='w - 5 h - 5 mr - 2' />                  <Play className="w - 5 h - 5 mr - 2" />;
+                  Analyze Code Quality;
+                </>)}
+            </Button>;
+          </div>;
+          <div className='flex flex - col sm:flex - row gap - 6 justify - center'>;
+            <Button;
+              href='#pricing';
+              variant='outline';
+              size='lg';
+              className='border - teal - 500 text - teal - 400 hover:bg - teal - 500 hover:text - white shadow - 2xl'            >;
+              View Pricing;
+            </Button>;
+            <Button;
+              href='/contact';
+              variant='outline';
+              size='lg';
+              className='border - gray - 500 text - gray - 400 hover:bg - gray - 500 hover:text - white shadow - 2xl'            >              href="#pricing";
+              variant="outline";
+              size="lg";
+              className="border - teal - 500 text - teal - 400 hover:bg - teal - 500 hover:text - white shadow - 2xl";
+              View Pricing;
+            </Button>;
+            <Button;
+              href='/contact';
+              variant='outline';
+              size='lg';
+              className='border - gray - 500 text - gray - 400 hover:bg - gray - 500 hover:text - white shadow - 2xl'              href="/contact";
+              variant="outline";
+              size="lg";
+              className="border - gray - 500 text - gray - 400 hover:bg - gray - 500 hover:text - white shadow - 2xl";
+              Schedule Demo;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+              Schedule Demo
             </Button>
           </div>
         </div>
@@ -216,6 +356,21 @@
               <Card
                 key={index}
                 className="card-hover group border-gradient-teal"
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Supported Languages Section */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
               Multi-Language Support
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -260,11 +415,109 @@
                 key={index}
                 className="card-hover border-gradient-teal"
                       {feature}
-                    </li>;
+                    </li>
                   ))}
-                </ul>;
-              </Card>;
+                </ul>
+              </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Analysis Results */}
+      {analysisResults && (
+
+          </div>;
+        </div>;
+      </section>;
+      {/* Demo Analysis Results */}
+      {analysisResults && (;
+        <section className='section-padding bg-gradient-cursor-accent'>;
+          <div className='container-cursor'>;
+            <div className='text-center mb-12'>;
+              <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+                Code Quality Analysis Results;
+              </h2>;
+              <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+                    </p>;
+                  </div>;
+                </div>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Supported Languages Section */}
+      <section className='section - padding bg - gradient - cursor'>;
+        <div className='container - cursor'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+              Multi - Language Support;
+            </h2>;
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+              We support a wide range of programming languages with;
+              language - specific analysis rules and best practices.;
+            </p>;
+          </div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
+            {supported_languages.map ((language, index) => (
+              <Card;
+                key={index}
+                className='card - hover border - gradient - teal';
+                style={{ animation_delay: `${index * 0.1}s` }}
+              >;
+                <div className='text - center mb - 4'>;
+                  <div className='text - 4xl mb - 3'>{language.icon}</div>;
+                  <h3 className='text - xl font - bold text - white mb - 3'>;
+                    {language.name}
+                  </h3>;
+                </div>;
+                <ul className='space - y-2'>;
+                  {language.features.map ((feature, feature_index) => (
+                    <li;
+                      key={feature_index}
+                      className='flex items - center text - gray - 300 text - sm';
+                    >;
+                      <CheckCircle className='w - 4 h - 4 text - teal - 400 mr - 3 flex - shrink - 0' />                      {feature}              Multi - Language Support;
+            </h2>;
+            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+              We support a wide range of programming languages with language - specific analysis rules and best practices.;
+            </p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+            {supported_languages.map ((language, index) => (
+              <Card;
+                key={index}
+                className="card - hover border - gradient - teal";
+                style={{ animation_delay: `${index * 0.1}s` }}
+              >;
+                <div className="text - center mb - 4">;
+                  <div className="text - 4xl mb - 3">{language.icon}</div>;
+                  <h3 className="text - xl font - bold text - white mb - 3">{language.name}</h3>;
+                </div>;
+                <ul className="space - y-2">;
+                  {language.features.map ((feature, feature_index) => (
+                    <li key={feature_index} className="flex items - center text - gray - 300 text - sm">;
+                      <CheckCircle className="w - 4 h - 4 text - teal - 400 mr - 3 flex - shrink - 0" />;
+                      {feature}
+                    </li>))}
+                </ul>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+          </div>
+        </div>
+      </section>
+      {/* Demo Analysis Results */}
+      {analysis_results && (
+        <section className='section - padding bg - gradient - cursor - accent'>;
+          <div className='container - cursor'>;
+            <div className='text - center mb - 12'>;
+              <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+                Code Quality Analysis Results;
+              </h2>;
+              <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+
                 Here's a sample code quality analysis. Get comprehensive;
                 insights for your own code.;
               </p>;
@@ -328,6 +581,18 @@
                       ) : (;
                         <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
                       )}
+              {/* Quality Metrics */}
+              <Card className='border-gradient-teal'>
+                <h3 className='text-2xl font-bold mb-6 text-white'>
+                  Quality Metrics
+                </h3>
+                <div className='space-y-4'>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-gray-400'>Complexity</span>
+                    <span className='text-orange-400 font-bold'>
+                      {analysisResults.metrics.complexity}
+                    </span>
+
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Maintainability</span>
@@ -370,12 +635,23 @@
                 {analysisResults.recommendations.map((rec, index) => (
                   <div key={index} className='flex items-start space-x-3'>
                     <CheckCircle className='w-5 h-5 text-teal-400 mt-1 flex-shrink-0' />
-
                     <span className='text-gray-300'>{rec}</span>                  </div>
 
                   </div>
 
                 ))}
+              </div>
+            </Card>
+          </div>
+        </section>
+      )}
+
+      {/* Pricing Section */}
+      <section id='pricing' className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -588,6 +864,20 @@
                   <div className='mb - 6'>;
                     <span className='text - 4xl font - bold text - white'>;
                       {plan.price}
+
+
+                <div className='text-center mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-4'>;
+                    {plan && plan.name}
+                  </h3>;
+                  <div className='mb-6'>;
+                    <span className='text-4xl font-bold text-white'>;
+                      {plan && plan.price}
+                    </span>;
+                    <span className='text-gray-400'>{plan && plan.period}</span>;
+                  </div>;
+                  <p className='text-gray-400'>{plan && plan.description}</p>;
+                </div>;
                     </span>
                     <span className='text-gray-400'>{plan.period}</span>
                   </div>
@@ -595,30 +885,65 @@
                 </div>
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
-                      className='flex items-center text-gray-300'
-                    >
-                      <CheckCircle className='w-5 h-5 text-teal-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
-                  <p className="text-gray-400">{plan.description}</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />
+                      className='flex items-center text-gray-300'>;
+                      <CheckCircle className='w-5 h-5 text-teal-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
+                  <p className="text-gray-400">{plan && plan.description}</p>;
+                </div>;
+                <ul className="space-y-4 mb-8">;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li key={featureIndex} className="flex items-center text-gray-300">;
+                      <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />;
+
+                      {feature}
+                    </li>
+                  ))}
+
+                </ul>;
+
+
+                <Button
+                  href='/contact'
+                  size='lg'
+
+                      {feature}
+                      {feature}
+
+                    </li>
+                  ))}
+                </ul>
               </Card>
             ))}
           </div>
         </div>
       </section>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+              </Card>
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
+
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
-
-
-            Ready to Improve Your Code Quality?
           </h2>
           <p className='text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers using our code quality checker to write
@@ -642,7 +967,17 @@
         </div>
       </section>
     </>
+              Schedule Demo;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+
   );
 }
+}
   );
+}
+    </>);
 }

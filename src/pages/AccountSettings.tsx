@@ -1,10 +1,3 @@
-import { useState  } from 'react';
-import { useLocalStorage  } from '@/hooks';
-import { Header  } from '@/components/Header';
-import { SEO  } from '@/components/SEO';
-import { useAuth  } from '@/hooks/useAuth';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
 import { Wallet, Database, Save } from 'lucide-react'
 
 import {
@@ -52,10 +45,12 @@ export default function AccountSettings() {
       toast.success(
         `Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`
       )
-        `Wallet connected: ${address.slice (0, 6)}...${address.slice (-4)}`);
     } catch (error: any) {
       toast.error (error.message || 'Failed to connect wallet');
     }
+
+    }
+  },
 
 import { useState } from 'react',;
 import { useLocalStorage } from '@/hooks',;
@@ -129,6 +124,11 @@ export default function AccountSettings() {;
       toast.error(error.message || 'Failed to connect wallet');
     }
   },
+
+
+
+
+
 
   return (
     <>
@@ -207,11 +207,6 @@ export default function AccountSettings() {;
                 onClick={handleSave}
                 disabled={isSubmitting}
                 className='w-full'>;
-                {isSubmitting ? 'Saving...' : 'Save Settings'}
-                {!isSubmitting && <Save className='ml-2 h-4 w-4' />}
-
-
-          
           <Card>
               <CardTitle>Web3 Features</CardTitle>
               <CardDescription>Manage your Web3 connections and features</CardDescription>
@@ -234,44 +229,13 @@ export default function AccountSettings() {;
                       {enableBackup ? 'Backed up' : 'Not backed up'}
                     </p>;
                   </div>;
-                  <div className='bg-gray-100 p-3 rounded-md'>;
-                    <p className='text-sm font-medium'>Resume Data</p>;
-                    <p className='text-xs text-gray-500'>;
-                      {enableBackup ? 'Backed up' : 'Not backed up'}
-                    </p>;
-                  </div>;
-                  <div className='bg-gray-100 p-3 rounded-md'>;
-                    <p className='text-sm font-medium'>Project History</p>;
-                    <p className='text-xs text-gray-500'>;
-                      {enableBackup ? 'Backed up' : 'Not backed up'}
-                    </p>;
-                  </div>;
-                  <div className='bg-gray-100 p-3 rounded-md'>;
-                    <p className='text-sm font-medium'>Reviews</p>;
-                    <p className='text-xs text-gray-500'>;
-                      {enableBackup ? 'Backed up' : 'Not backed up'}
-                    </p>;
-                  </div>;
                 </div>;
               </div>;
 
                     : 'Enable backup first to use this feature'}
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </main>
-    </>
-  )
-}
                 </p>;
               </div>;
             </CardContent>;
           </Card>;
         </div>;
       </main>;
-
-    </>);
-}
-;

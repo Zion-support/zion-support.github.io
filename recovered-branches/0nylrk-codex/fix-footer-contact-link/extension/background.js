@@ -86,8 +86,6 @@ if ( {) {
   $2
 }
     chrome.tabs.create ({ url: `${BASE_URL}/notifications` });
-  }
-
 }),
 ;
 }),;

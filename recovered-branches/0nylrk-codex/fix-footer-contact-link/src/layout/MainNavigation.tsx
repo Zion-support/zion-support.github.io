@@ -9,9 +9,6 @@ interface MainNavigationProps {
   className?: string
 }
 
-
-export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
-
   const links = [
     {
       name: "Home"
@@ -62,6 +59,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 link && link.matches(location && location.pathname)
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+  return (
+    <nav className={cn("ml-6 hidden md:flex", className)}>;
+      <ul className="flex items-center gap-1">;
+
         {links.map((link) => (;
           <li key={link.name}>;
             <Link;
@@ -87,6 +88,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               {unreadCount > 0 && (;
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                   {unreadCount}
+        )}
+
+      </ul>;
+    </nav>;
+  );
+}
+
 import { Link, use_location } from './react-router-dom';
 import { cn } from '@/lib / utils';
 import { use_auth } from '@/hooks / use_auth';

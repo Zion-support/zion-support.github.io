@@ -114,6 +114,22 @@ function ProjectDetailsContent() {
           description: "The requested project could not be found."
           variant: "destructive"})
         navigate("/dashboard")
+    try {
+      const { data, error } = await supabase;
+        .from ("project_notes");
+        .select (`;
+          *;
+
+          created_by_profile:profiles ! user_id (display_name, avatar_url);
+        `);
+        .eq ("project_id", project_id);
+        .order ("created_at", { ascending: false }),
+      // Check condition
+if (throw error) {
+  $2
+}
+      set_notes (data || []);
+
     } catch (err) {
       console.error ("Error fetching project notes:", err);
     }
@@ -208,9 +224,38 @@ function ProjectDetailsContent() {
         return <Badge variant="outline">{status}</Badge>;
     }
   }
+              Return to Dashboard;
+            </Button>;
+          </CardContent>;
+        </Card>;
+
+  if (!project) {
+    return (
+      <div className="container mx-auto py-8">
+        <Card>
+          <CardContent className="flex flex-col items-center justify-center py-10">
+            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />
+            <h2 className="text-xl font-bold mb-2">Project Not Found</h2>
+            <p className="text-muted-foreground mb-4">
+              The project you're looking for doesn't exist or you don't have access to it.
+            </p>
+            <Button onClick={() => navigate("/dashboard")}>
+              Return to Dashboard
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    )
+  }
+  // Check if user is either the client or the talent
+  const isClient = user?.id === project.client_id;
+  const isTalent = user?.id === project.talent_id;
+  const isClient = user?.id === project.client_id,
+  const isTalent = user?.id === project.talent_id,
+  
   if (!isClient && !isTalent) {
-    navigate("/unauthorized");
-    return null;
+    navigate("/unauthorized"),
+    return null
   }
   const isOfferPending = project.status === "offer_sent";
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
@@ -673,15 +718,35 @@ if ( {) {
                           variant="outline"
                           size="sm"
                           className="mt-2"
+                        <img
+                          src={project && project.talent_profile.profile_picture_url}
+                          alt={project && project.talent_profile.full_name}
+                        />;
+                      ) : (;
+                        <User className="h-6 w-6" />;
+                      )}
+
+                    </Avatar>;
+                    <div>;
+                      <h3 className="font-semibold">;
+                        {project && project.talent_profile?.full_name || "Talent"}
+                      </h3>;
+                      <p className="text-sm text-muted-foreground">;
+                        {project && project.talent_profile?.professional_title || "Professional"}
+                      </p>;
+                      {isClient && (;
+
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="mt-2"
+                          onClick={() => navigate(`/messages?talentId=${project && project.talent_id}`)}
                         >;
                           <MessageSquare className="mr-1 h-3 w-3" /> Message;
                         </Button>;
                       )}
                     </div>;
                   </div>;
-                </div>;
-              </CardContent>;
-            </Card>;
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -732,21 +797,58 @@ if ( {) {
                   <p className="text-sm text-amber-600 flex items-center gap-1">;
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.;
                   </p>;
+                  <Button
+                    variant="outline"
+                    onClick={() => navigate(`/messages?talentId=${project && project.talent_id}`)}
+                    className="w-full";
+                  >;
+                    <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes;
+                  </Button>;
+                </CardFooter>;
+              )}
+
+
+              {project && project.status === "offer_sent" && isClient && (;
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
+                  <p className="text-sm text-muted-foreground">;
+                    Waiting for the talent to accept your offer.;
+                  </p>;
+                </CardFooter>;
+              )}
+              {project.status === "completed" && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-green-600 flex items-center gap-1">
+                    <CheckCircle2 className="h-4 w-4" /> This project has been completed.
+                  </p>
+                </CardFooter>
+              )}
+              {project.status === "canceled" && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-red-600 flex items-center gap-1">
+                    <XCircle className="h-4 w-4" /> This project has been canceled.
+                  </p>
+                </CardFooter>
+              )}
+            </Card>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
+}
+export default function ProjectDetails() {
+  return (
+    <ProtectedRoute>
+      <ProjectDetailsContent />
+    </ProtectedRoute>
+  )
+};
+;
             </Card>;
           </div>;
         </div>;
       </main>;
       <Footer />;
-    </>);
-}
-export default /**
- * ProjectDetails - Function description
- */
-function ProjectDetails() {
-  return (
-    <ProtectedRoute>;
-      <ProjectDetailsContent />;
-    </ProtectedRoute>);
 }
 ;
-

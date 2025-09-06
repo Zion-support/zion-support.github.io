@@ -1,45 +1,12 @@
-import { CalendarIcon } from 'lucide-react'
-
-import { UseFormReturn, ControllerRenderProps } from 'react-hook-form'
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormDescription
-  FormMessage
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Button } from '@/components/ui/button'
-  Popover
-  PopoverContent
-  PopoverTrigger
-} from '@/components/ui/popover'
-import { Calendar } from '@/components/ui/calendar'
-import { ContractFormValues } from './ContractForm'
-import { format } from "date-fns"
-import { UseFormReturn, ControllerRenderProps } from "react-hook-form"
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
 }
 export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
   return (
     <>;
       <FormField
-interface ProjectDetailsFieldsProps {
-  form: UseFormReturn<ContractFormValues>;
 
-import { format } from "date-fns",
-import { CalendarIcon } from 'lucide-react'
-import { UseFormReturn, ControllerRenderProps } from "react-hook-form",
-import { 
-  FormField,
-  FormItem, 
-  FormLabel, 
-  FormControl, 
-  FormDescription, 
-  FormMessage 
-} from "@/components/ui/form",
+
+
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Button } from "@/components/ui/button",
@@ -113,21 +80,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
       <FormField;
         control={form.control}
           <FormItem>;
-            <FormLabel>Project Name</FormLabel>;
-            <FormControl>;
-              <Input placeholder="AI Website Development" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
-        )}
-      />;
-      <FormField;
-        control={form.control}
-        name="scopeSummary"
-        render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> }) => (
-          <FormItem>
-            <FormLabel>Scope Summary</FormLabel>
-            <FormControl>
               <Textarea
                 placeholder='Describe the project scope, deliverables, and expectations...'
                 className='min-h-[120px]'                placeholder="Describe the project scope, deliverables, and expectations..."
@@ -204,10 +156,12 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
               Be specific about what is included and any limitations;
             </FormDescription>;
             <FormMessage />;
-          name="startDate"
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate"> }) => (
-            <FormItem className="flex flex-col">
-              <FormLabel>Start Date</FormLabel>
+        )}
+      />
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <FormField
+          control={form.control}
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
@@ -298,22 +252,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
               <FormMessage />
             </FormItem>
           )}
-          name='endDate'
-          render={({
-            field
-          }: {
-            field: ControllerRenderProps<ContractFormValues, 'endDate'>
-          }) => (
-            <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>
-        <FormField
-          control = {form.control,}
-          name="endDate"
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> },) => (
-            <FormItem className="flex flex-col">
-          name="endDate"
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (
-            <FormItem className="flex flex-col">
-              <FormLabel>End Date (Optional)</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>

@@ -6,7 +6,7 @@
   reason?: string;
   createdAt: string;
 }
-
+export interface ModerationFlag {
 
 export interface ModerationFlag {;
   id: string;

@@ -11,3 +11,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ status, insights });  res && res.status(200).json({ status, insights })
 }
 
+}
+
+

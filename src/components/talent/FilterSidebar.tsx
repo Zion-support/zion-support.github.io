@@ -1,15 +1,10 @@
 import { Filter } from 'lucide-react'
-import React from "react",
-import { Button } from "@/components/ui/button",
 import { SearchFilter } from "./filters/SearchFilter",
 import { SortFilter } from "./filters/SortFilter",
 import { SkillsFilter } from "./filters/SkillsFilter",
 import { AvailabilityFilter } from "./filters/AvailabilityFilter",
 import { RegionFilter } from "./filters/RegionFilter",
 import { ExperienceFilter } from "./filters/ExperienceFilter",
-import { PriceFilter } from "./filters/PriceFilter";
-import { FilterSidebarProps } from "@/types/filters";
-export function FilterSidebar({
 
   setSearchTerm;
   selectedSkills;
@@ -27,18 +22,10 @@ export function FilterSidebar({
   sortOption;
   setSortOption;
   clearFilters;
+
   return (
     <>;
       {/* Filter header */}
-        <Button
-          variant='ghost'
-          size='sm'
-          onClick={clearFilters}
-          className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'        >
-          Clear All
-        </Button>
-      </div>
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
           Filters
         </h3>
         <Button
@@ -221,13 +208,6 @@ export function FilterSidebar({;
       <PriceFilter
         priceRange={priceRange}
         setPriceRange={setPriceRange}
-        expanded={expandedSections.price}
-        toggleSection={() => toggleSection('price')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />
-      {isMobileFilterOpen && (
-        <Button
-        <Button 
         isMobileFilterOpen={isMobileFilterOpen}
       />;
       {isMobileFilterOpen && (;
@@ -239,31 +219,3 @@ export function FilterSidebar({;
       )}
     </>;
   );
-}
-        <Button;
-          on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
-          className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
-        >;
-          Apply Filters;
-        </Button>)}
-    </>);
-}
-
-
-    </>;
-  );
-
-    </>
-  )
-}
-    </>;
-  );
-};
-}
-    </>
-  )
-}
-    </>;
-  );
-};
-}

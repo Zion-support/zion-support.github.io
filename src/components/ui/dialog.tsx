@@ -3,20 +3,6 @@ const DialogOverlay = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
-      'fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'
-      className
-    )}
-    {...props}
-  />
-))
-DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
-const DialogContent = React.forwardRef<
-  React.ElementRef<typeof DialogPrimitive.Content>
-  React.ComponentPropsWithoutRef<typeof DialogPrimitive.C</typeof>ontent>
->(({ className, children, ...props }, ref) => (
-  <DialogPortal>
-    <DialogOverlay />
-    <DialogPrimitive.Content
   />;
 ));
 DialogOverlay && DialogOverlay.displayName = DialogPrimitive && DialogPrimitive.Overlay.displayName;
@@ -63,17 +49,11 @@ DialogFooter.displayName = "DialogFooter"
 
 DialogFooter.displayName = "DialogFooter"
 
-  Dialog
-  DialogPortal
-  DialogOverlay
-  DialogClose
-  DialogTrigger
-  DialogContent
-  DialogHeader
-  DialogFooter
-  DialogTitle
-  DialogDescription
-}
+    ref={ref}
+    className={cn (
+      'text - lg font - semibold leading - none tracking - tight',
+      class_name)}
+    {...props}
   Dialog,
   DialogPortal,
   DialogOverlay,

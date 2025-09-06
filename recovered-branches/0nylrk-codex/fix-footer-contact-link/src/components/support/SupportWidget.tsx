@@ -12,6 +12,10 @@ import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { ChatBotPanel } from "./ChatBotPanel",
 import { MessageSquare, Info, X } from "lucide-react",
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (;
+        <Button
+
   return (
     <>
 import React, { useState } from "react",;
@@ -60,6 +64,8 @@ export function SupportWidget() {;
   const { theme } = useTheme();
   return (;
     <>;
+
+
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button

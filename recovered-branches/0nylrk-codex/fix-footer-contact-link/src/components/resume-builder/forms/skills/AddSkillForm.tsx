@@ -56,6 +56,12 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       setSkillName('');
       setProficiency(3);
     }
+  
+  const handleEnhanceSkill = (enhancedCategory: string) => {
+    setSkillCategory(enhancedCategory)
+  },
+  
+  return (
     <form onSubmit={handleSubmit} className="space-y-4">;
       <div className="flex flex-col gap-4 md:flex-row">;
         <div className="flex-1">;
@@ -82,5 +88,8 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
           </div>;
         </div>;
       </div>;
-};
-},
+
+    </form>);
+}
+;
+

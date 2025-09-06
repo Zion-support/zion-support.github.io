@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+
 const p = path.join(
   process.cwd()
   'data'
@@ -18,10 +19,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
   }
-// Check condition
-if ( {) {
-  $2
-}
     try {
       const report = {
         broken: broken |[]
@@ -45,6 +42,21 @@ export default function handler(req, res) {
     res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
   } catch (error) {
     res.status(500).json({ error: e?.message || 'Failed to read links report' });
+
+
+  res && res.setHeader('Allow', 'GET, POST');
+  res && res.status(405).end('Method Not Allowed');
+
+;
+      const report = {
+        broken: broken || [],
+        external: external || [],
+        internal: internal || [],
+        generated_at: new Date ().toISOString ();
+      }
+;
+      fs.writeFileSync (p, JSON.stringify (report, null, 2));
+      return res.status (201).json (report);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -53,21 +65,5 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+

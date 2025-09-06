@@ -45,4 +45,9 @@ let totalMetrics = 0;
   if (score >= 90) return 'Excellent';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
+}
+export default PerformanceMonitor;
 
+
+
+}

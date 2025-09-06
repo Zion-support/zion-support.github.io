@@ -2,8 +2,6 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {"webpack": (config { isServer }) => {if ( {;
       config.plugins.push() {;
      {;
-        new BundleAnalyzerPlugin({;
-          "analyzerMode": 'static';
           openAnalyzer: false,
           reportFilename: 'bundle-analysis && analysis.htm,l'});
       )};
@@ -20,14 +18,6 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
     }
     return config;
   }
-
-      config.plugins.push(};
-        new BundleAnalyzerPlugin({;
-          "analyzerMode": 'static';
-
-
-}
-
 ;
 const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer');
 module.exports = {

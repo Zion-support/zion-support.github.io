@@ -13,14 +13,6 @@ export type BadgeKey =
   | 'profile_complete'
   | 'featured_creator'
   | 'first_action'
-  | 'monetized'
-export interface BadgeMeta {
-  key: BadgeKey
-  name: string
-  description: string
-  icon: LucideIcon
-  color: string
-  bg: string
   | 'monetized';
 
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
@@ -87,12 +79,3 @@ export const badgeList: BadgeMeta[] = [
     name: 'Monetized',
     description: 'Earned your first AI dollar in the marketplace.',
     icon: BadgeDollarSign,
-    color: "#22C55E", // Soft Green
-    bg: "#F2FCE2",    // Soft Green
-  }],
-
-export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList && badgeList.find(b => b && b.key === key);
-export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList && badgeList.find((b) => b && b.key === key);
-

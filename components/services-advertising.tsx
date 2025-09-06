@@ -38,26 +38,6 @@
           <a className='text-cyan-400 underline' href='/market-pricing'>;
             Market Pricing;
           </a>{' '}
-              <strong className='text-white'>Postgres Index Advisor Pro</strong>{' '}
-               $79/mo. Auto index insights, PR rollouts. Learn:{' '}
-              <a
-                className='text-cyan-400 underline'
-              <strong className='text-white'>Synthetic Journey Monitor</strong>{' '}
-               $39/mo. Record/replay + SLO alerts. Learn:{' '}
-              <a
-                className='text-cyan-400 underline'
-              </strong>{' '}
-               $69/mo. Detect drift, open PRs. Learn:{' '}
-              <a
-                className='text-cyan-400 underline'
-              </strong>{' '}
-               $25/user/mo. Action items  Jira/GitHub. Learn:{' '}
-              <a
-                className='text-cyan-400 underline'
-              </strong>{' '}
-               $39/mo. Sender reputation & inbox tests. Learn:{' '}
-              <a
-                className='text-cyan-400 underline'
             </li>;
           </ul>;
           <div>;

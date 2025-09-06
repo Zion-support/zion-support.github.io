@@ -1,9 +1,3 @@
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
-import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-
-
-
-
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
@@ -11,6 +5,8 @@ const corsHeaders = {;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
+
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
@@ -32,6 +28,7 @@ serve(async (req) => {;
       throw new Error('OPENAI_API_KEY is not set');
     }
     // Parse request body
+    
     // Create prompt for OpenAI
     const prompt = `
     You are an expert project manager who specializes in breaking down projects into clear milestones.
@@ -50,61 +47,10 @@ serve(async (req) => {;
     "title", "description", "dueDate", "estimatedHours"
     Ensure your response is ONLY the JSON array with no additional text.
     `;
-            role: 'system'
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
-import "https://deno.land / x/xhr@0.1.0 / mod.ts",
-const cors_headers = {
-  'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
-;
-serve (async (req) => {
-  // Handle CORS preflight requests;
-  // Check condition
-if ( {) {
-  $2
-}
-    return new Response (null, { headers: cors_headers });
-  }
-  try {
-    // Get the OpenAI API key from environment variables;
-    const api_key = Deno.env.get ('OPENAI_API_KEY');
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error ('OPENAI_API_KEY is not set');
-    }
-    // Parse request body;
-    const { scope, start_date, end_date, project_type } = await req.json ();
-;
-    // Create prompt for OpenAI;
-    const prompt = `;
-    You are an expert project manager who specializes in breaking down projects into clear milestones.;
-    Based on the following project details:;
-    - Project Scope: "${scope}";
-    - Project Timeline: ${start_date} to ${end_date}
-    - Project Type: ${project_type}
-    Generate a logical, phased milestone breakdown with 3 - 7 milestones that would be appropriate for this project.;
-    Include realistic due dates, estimated hours of effort, and clear deliverable descriptions.;
-    Each milestone should have:;
-    1. Title: A concise title;
-    2. Description: A clear description of deliverables;
-    3. Due Date: A specific date within the project timeline;
-    4. Estimated Hours: Reasonable effort estimate;
-    Format the response as a valid JSON array of milestone objects with these fields:;
-    "title", "description", "due_date", "estimated_hours";
-    Ensure your response is ONLY the JSON array with no additional text.;
-    `;
-;
-    // Call OpenAI API;
-    const response = await fetch ('https://api.openai.com / v1 / chat / completions', {
-      method: 'POST',
-      headers: {
-        'Content - Type': 'application / json_authorization': `Bearer ${api_key}`}
-      body: JSON.stringify ({
-        model: 'gpt - 4o - mini';
-        messages: [;
+        model: 'gpt-4o-mini';
+        messages: [
           {
-            role: 'system',
+            role: 'system'
             content: 'You are a project management expert that breaks work into appropriate milestones.'}
           {
             role: 'user'
@@ -123,7 +69,6 @@ if ( {) {
   } catch (error) {
     console && console.error('Error generating milestones:', error);
     return new Response(
-
             role: 'system',
             content: 'You are a project management expert that breaks work into appropriate milestones.'},
           {
@@ -153,5 +98,8 @@ if ( {) {
   } catch (error) {;
     console.error('Error generating milestones:', error),;
     return new Response(;
-}
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+    )
+  }
 });
+

@@ -17,9 +17,26 @@ import {
   Star,
   TrendingUp,
   Award,
+} from "lucide-react";
   Clock
 } from 'lucide-react';
-  Clock,
+origin/automation-improvements-final
+
+  ArrowRight
+  Users
+  Calendar
+  FileText
+  Video
+  Globe
+  Shield
+  Zap
+  CheckCircle
+  Mail
+  Send
+  Star
+  TrendingUp
+  Award
+  Clock
 } from "lucide-react";
 const benefits = [
   {
@@ -62,8 +79,6 @@ const benefits = [;
     description: 'Stay updated with the latest trends and developments in technology.',
     icon: TrendingUp
   }
-
-
       "Stay updated with the latest trends and developments in technology."
     icon: TrendingUp
   }
@@ -85,10 +100,6 @@ const benefits = [;
     icon: TrendingUp,
   },
 ];
-
-
-    name: "Sarah Johnson"
-    role: "CTO, TechCorp"
 
     content:
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable."
@@ -130,8 +141,6 @@ export default function NewsletterPage() {
   }
 ];
 
-export default function NewsletterPage() {
-  const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
@@ -165,6 +174,12 @@ export default function NewsletterPage() {
                 Get exclusive insights, industry trends, and early access to new
                 features delivered directly to your inbox.
               </p>
+
+                Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
+              </p>
+              
+
+
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -405,6 +420,7 @@ function NewsletterPage() {
             </div>;
           </div>;
         </section>;
+
         {/* Stats Section */}
         <section className="py-16 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -465,6 +481,7 @@ function NewsletterPage() {
             </div>;
           </div>;
         </section>;
+
         {/* Testimonials Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -564,6 +581,7 @@ function NewsletterPage() {
                 to say.;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               {testimonials && testimonials.map((testimonial, index) => (;
                 <motion&& motion.div
@@ -602,6 +620,12 @@ function NewsletterPage() {
                 Subscribe now and start receiving valuable insights delivered to
                 your inbox every week.
               </p>
+
+                Subscribe now and start receiving valuable insights delivered to your inbox every week.
+              </p>
+              
+
+
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -644,13 +668,6 @@ function NewsletterPage() {
                   </div>;
                 </form>;
               )}
-}
-}
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>);
 }
 }
 }

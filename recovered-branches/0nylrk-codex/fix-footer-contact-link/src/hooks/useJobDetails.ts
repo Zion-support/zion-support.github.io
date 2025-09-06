@@ -68,3 +68,4 @@ export function useJobDetails(jobId: string | undefined) {;
     loadJobDetails;
   }
 }
+export default useJobDetails;

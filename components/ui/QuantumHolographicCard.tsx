@@ -8,6 +8,9 @@
   Users
   Clock
   DollarSign;
+} from 'lucide-react';
+interface QuantumHolographicCardProps {
+  service: {
 import {;
   Star,;
   Zap,;
@@ -32,6 +35,7 @@ interface QuantumHolographicCardProps {;
     popular: boolean;
     icon: string;
     color: string;
+
 
     reviews: number;
   }
@@ -119,6 +123,16 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
 
     >;
+
+        delay: i * 0.1,
+        duration: 0.5,
+        ease: 'easeOut' as const,
+      },
+    }),
+
+  };
+
+    >
       {/* Holographic glow effect */}
       <motion&& motion.div
         className='absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-pink-500/20 blur-xl'
@@ -155,6 +169,10 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
             {service && service.popular && (;
               <motion&& motion.div
                 className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold'
+                whileHover={{ scale: 1 && 1.05 }}
+                whileTap={{ scale: 0 && 0.95 }}>;
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
+
   return (
     <motion&& motion.div
       className={`relative group cursor-pointer ${className}`}
@@ -175,7 +193,13 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
                 <Star className="w-3 h-3 fill-current" />;
                 <span>Popular</span>;
               </motion && motion.div>;
+                <span>Popular</span>
+
               </motion.div>
+            )}
+          </div>
+
+
             )}
           </div>
 
@@ -225,7 +249,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
           {/* Key metrics */}
                 </motion.div>
               ))}
-
           {/* Market data */}
 
           <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30">
@@ -305,9 +328,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               <div className="flex items-center space-x-2">
                 <span className="text-purple-400"></span>
                 <span className="text-xs">{service.contactInfo.address}</span>
-
-          {/* ROI and competitors */}
-
               </div>
             </div>
           </div>
@@ -392,6 +412,18 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
           </div>;
 
 
+
+          {/* ROI and competitors */}
+
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <motion.a
+            href={service.link}
+            className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
+
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -407,4 +439,3 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />
           </motion.a>
-export default QuantumHolographicCard;

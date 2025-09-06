@@ -37,6 +37,16 @@
             <div className="relative">;
               <button
                 onClick={() => toggleDropdown('services')}
+              {activeDropdown === 'services' && (
+                <motion.div
+                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
+              >;
+                <span>Services</span>;
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;
+              </button>;
+
+              {activeDropdown === 'services' && (;
+                <motion&& motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
@@ -367,3 +377,5 @@ const EnhancedNavigation: React.FC = () => {
                 </Link>;
               </div>;
             </div>;
+export default EnhancedNavigation;
+export default EnhancedNavigation;

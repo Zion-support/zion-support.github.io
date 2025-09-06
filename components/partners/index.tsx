@@ -10,6 +10,7 @@ export default function Partners() {
     pocName: "",
     pocEmail: "",
     useCaseType: "Education Partnership"}),
+
     name: ''
     entityType: ''
     pocName: ''
@@ -188,8 +189,12 @@ export default function Partners() {;
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>
             <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
 
-}
+        )}
+
+      </div>;
+    </div>;
   );
+}
 }
     <div className="min - h-screen bg - gray - 50 text - gray - 900">;
       <Head>;

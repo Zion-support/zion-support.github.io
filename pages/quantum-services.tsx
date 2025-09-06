@@ -1,15 +1,9 @@
-export default /**
- * QuantumServicesPage - Function description
- */
-function QuantumServicesPage() {
-  const features = [;
-    'Quantum - inspired optimization & annealing strategies',
-    'Hybrid quantum - classical pipelines (QAOA, VQE) where applicable',
-    'Quantum - safe cryptography assessments and roadmaps',
-    'R & D ideation for quantum - ready workloads',
-import React from 'react',
-import Head from 'next/head',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import React from 'react';
+import Head from 'next / head';
+import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
+import Button from '../components / ui / Button';
+import {Atom, CheckCircle, Shield, Sparkles} from 'lucide-react';
+
   ];
 ;
   const solutions = [;
@@ -23,7 +17,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
       href: '/quantum - cloud - infrastructure',
     },
   ];
-;
   return (
           <section>;
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>;
@@ -48,6 +41,10 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
               <span>
                 Post-quantum readiness assessments and migration planning
               </span>            </div>
+              ))}
+
+
+
           </section>
         </div>
       </div>
@@ -130,6 +127,5 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
           </section>;
         </div>;
       </div>;
-  )
-}
+
 

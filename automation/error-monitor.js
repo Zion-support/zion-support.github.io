@@ -37,7 +37,6 @@ class ErrorMonitor {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 
-
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -151,9 +150,6 @@ class ErrorMonitor {
   parseTypeScriptErrors(output) {
     const errors = [];
     const lines = output.split('\n');
-            timestamp: new Date().toISOString(),
-          });
-
     );
         }
       }
@@ -163,18 +159,10 @@ class ErrorMonitor {
   parseESLintErrors(output) {
     const errors = [];
     const lines = output.split('\n');
-    );
-      }
-    }
-    );
-      }
-    }
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
           timestamp: new Date().toISOString(),
         });
       }
     }
-
 
     return errors;
   }
@@ -239,7 +227,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
-
 
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;

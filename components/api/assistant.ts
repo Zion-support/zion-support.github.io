@@ -10,6 +10,12 @@ const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Y
 Context about Zion AI Marketplace:
 - Zion is a marketplace to discover, evaluate, and integrate AI models, agents, and services
 - Users can browse categories, view product pages, compare features, and connect via APIs
+}
+
+
+
+  }
+
 ;
     const prepared_messages = [;
       { role: 'system' as const, content: SYSTEM_PROMPT },

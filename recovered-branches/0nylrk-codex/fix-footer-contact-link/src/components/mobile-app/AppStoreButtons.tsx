@@ -1,3 +1,16 @@
+import React from "react";
+import {Apple, GithubIcon} from "lucide-react";
+import {cn} from "@/lib/utils";
+import React from "react",
+import { Apple, GithubIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Apple, GithubIcon } from "lucide-react",
+import { cn } from "@/lib/utils",
+import React from "react";
+import {Apple, GithubIcon} from "lucide-react";
+import {cn} from "@/lib/utils";
+interface AppStoreButtonsProps {;
+
   className?: string;
 import React from './react';
 import { Apple, GithubIcon } from './lucide-react';
@@ -11,16 +24,11 @@ interface AppStoreButtonsProps {
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void;
 }
-
-import React from "react";
-import {Apple, GithubIcon} from "lucide-react";
-import {cn} from "@/lib/utils";
   className;
 
   appStoreUrl = "#";
   googlePlayUrl = "#";
       </Link>
-
 
       <a 
         href={googlePlayUrl} 
@@ -62,5 +70,3 @@ interface AppStoreButtonsProps {;
 }
 
 export default AppStoreButtons;
-
-

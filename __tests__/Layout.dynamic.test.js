@@ -7,11 +7,4 @@ describe('Layoutdynamic', () => {
     render(<Layoutdynamic />);
     expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument();
   });
-  test ('displays correct content', () => {
-    // Test content display;
-  test ('handles user interactions', () => {
-    // Test user interactions;
-  test ('applies correct styling', () => {
-    // Test styling;
-});
 });

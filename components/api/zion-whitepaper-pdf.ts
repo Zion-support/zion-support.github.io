@@ -31,7 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.info.Author = 'Zion Protocol';
   doc.pipe(res);
 
-  doc.end()
+
 }
 ;
 export default async /**

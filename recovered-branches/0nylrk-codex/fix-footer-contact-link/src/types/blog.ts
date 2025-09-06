@@ -1,4 +1,3 @@
-  name: string;
 
   title: string
 

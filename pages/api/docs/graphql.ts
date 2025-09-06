@@ -1,4 +1,3 @@
-function toSDL() {
 
   const typedefs = [
     `schema { query: Query, mutation: Mutation }`
@@ -61,3 +60,5 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

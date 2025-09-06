@@ -12,6 +12,14 @@ interface NoJobsCardProps {;
           AI - matched jobs.;
         </p>;
         {onUpdateProfile && (
+}
+
+
+
+
+
+    </Card>;
+
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 interface NoJobsCardProps {

@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react',
-import { useNavigate } from 'react-router-dom',
 import { toast } from "sonner",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Button } from "@/components/ui/button",
+interface JobPostingFormProps {
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm && JobPostingForm.tsx;
+
+:recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / jobs / job - posting / JobPostingForm.tsx;
 import React, { useState, useEffect, useCallback } from 'react';
 import {use_navigate} from 'react-router-dom';
 import { toast } from './sonner';
@@ -36,6 +38,59 @@ interface JobPostingFormProps {
     setIsRemote;
       setIsFormLoading(true);
 
+
+  const navigate = useNavigate();
+  const { createJob, updateJob, getJobById } = useJobs();
+  const [isFormLoading, setIsFormLoading] = useState(false);
+  const [editorContent, setEditorContent] = useState("");
+  const navigate = useNavigate(),
+  const { createJob, updateJob, getJobById } = useJobs(),
+  const [isFormLoading, setIsFormLoading] = useState(false),
+  const [editorContent, setEditorContent] = useState(""),
+  
+  const {
+    form,
+    isLoading,
+    startDate,
+    setStartDate,
+    endDate,
+    setEndDate,
+    isRemote,
+    setIsRemote,
+    submitJob
+  } = useJobForm({ jobId, onSuccess });
+  const { handleSubmit, setValue, formState } = form;
+  const { isSubmitting } = formState;
+  } = useJobForm({ jobId, onSuccess }),
+
+  const { handleSubmit, setValue, formState } = form,
+  const { isSubmitting } = formState,
+
+  useEffect(() => {
+    if (jobId) {
+      setIsFormLoading(true),
+      getJobById(jobId)
+        .then((job) => {
+          if (job) {
+            // Set form values
+            Object.entries(job).forEach(([key, value]) => {
+              if (key === 'published_date' && value) {
+                setStartDate(new Date(value as string)),
+                setValue('published_date', value as string)
+              } else if (key === 'expiry_date' && value) {
+                setEndDate(new Date(value as string)),
+                setValue('expiry_date', value as string)
+              } else if (key === 'is_remote') {
+                setIsRemote(value as boolean)
+              } else if (key === 'description') {
+                setEditorContent(value as string),
+                setValue('description', value as string)
+              } else {
+                try {
+                  // @ts-ignore - We know these fields exist in our form
+                  setValue(key, value as any)
+                } catch (e) {
+                  // Skip fields that don't exist in our form
 import React, { useState, useEffect, useCallback } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { toast } from "sonner",;
@@ -175,6 +230,13 @@ if ( {) {
     }
   }
   if (isLoading |isFormLoading) {
+
+
+  if (isLoading || isFormLoading) {;
+    return <div className="flex items-center justify-center p-8">Loading...</div>;
+
+  }
+  return (
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
@@ -193,6 +255,9 @@ if ( {) {
             Remote
           </Label>
         </div>
+              className="mr-2"
+
+
         <DescriptionFields 
           control={form.control} 
           handleEditorChange={handleEditorChange}

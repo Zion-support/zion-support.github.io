@@ -7,7 +7,19 @@ import type { KycProfile } from '../../utils/kyc',;
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
+
+
+
+
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+import type { KycProfile } from '../../utils/kyc';
 export default function AdminKycPage() {
+
+    if (data.ok) load()
+  }
+
+}
   return (
     <>
       <Head>
@@ -46,25 +58,13 @@ export default function AdminKycPage() {
                       <div>Filename: {d.filename}</div>
                       <div>Uploaded: {new Date(d.uploadedAt).toLocaleString()}</div>
                     </div>
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                  ))}
                 </div>
               </div>
             </div>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+          ))}
         </div>
       </main>
     </>
-  ),
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+

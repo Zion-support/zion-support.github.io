@@ -234,6 +234,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
   },;
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 
+
+      'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
     id: 'web3 - social - media - platform',
@@ -312,6 +314,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     popular: true;
     launch_date: '2024 - 01 - 01';
     customers: 25000;
+;
   id: string,;
   name: string,;
   tagline: string,;
@@ -572,6 +575,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     launchDate: '2024-01-01',;
     customers: 25000,;
     rating: 4.6,;
+    reviews: 18000;
+    rating: 4.6,
     reviews: 18000;
   }
 ];

@@ -165,12 +165,6 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React.useState(false),;
   const [imagePreview, setImagePreview] = React.useState(null as string | null),;
   const [activeTab, setActiveTab] = React.useState("manual"),;
-
-      },
-      reader.readAsDataURL(file)
-    }
-  },
-
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
@@ -192,49 +186,6 @@ export function ProductSubmissionForm() {;
         variant: "destructive"})
       return
     }
-    try {
-      // Create the product listing
-      const productData = {
-        title: values.title
-        description: values.description
-        price: parseFloat(values.price)
-        category: values.category
-        currency: "USD", // Default currency
-        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [];
-        author: {
-          name: user.displayName |"Anonymous Creator"
-          id: user.id}
-        createdAt: new Date().toISOString()}
-      const { data: productRecord, error: productError } = await supabase
-        .from('product_listings')
-        .insert([productData])
-        .select('id')
-        .single();
-      if (productError) {
-        throw new Error(productError.message)
-      }
-      // If we have an image, upload it
-      if (values.image) {
-        const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
-        const { error: uploadError } = await supabase.storage
-          .from('products')
-          .upload(imagePath, values.image);
-        if (uploadError) {
-          throw new Error(uploadError.message)
-        }
-        // Get the public URL for the image
-        const { data: publicUrlData } = supabase.storage
-          .from('products')
-          .getPublicUrl(imagePath);
-        // Update the product with the image URL
-        const { error: updateError } = await supabase
-          .from('product_listings')
-          .update({
-            images: [publicUrlData.publicUrl]
-          })
-          .eq('id', productRecord.id);
-        if (updateError) {
-          throw new Error(updateError.message)
   },;
   // Apply AI-generated content to the form;
   const handleApplyGenerated = (content: any) => {;
@@ -324,6 +275,9 @@ export function ProductSubmissionForm() {;
           .eq('id', productRecord.id),;
         if (updateError) {;
           throw new Error(updateError.message);
+        }
+      }
+      
       // Show success message
       toast({
         title: "Product Published!"
@@ -538,6 +492,13 @@ if ( {) {
                     Create a compelling title that describes your product;
                   </FormDescription>;
                   <FormMessage />;
+              )}
+
+            />;
+
+
+            <FormField
+              control={form && form.control}
               name="description"
               render={({ field }) => (
                 <FormItem>
@@ -599,8 +560,6 @@ if ( {) {
         <AIListingGenerator
           onApplyGenerated={handleApplyGenerated}
           initialValues={{
-            title: form && form.getValues("title"),
-            category: form && form.getValues("category")
           }}
         />;
       </TabsContent>;

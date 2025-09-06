@@ -4,29 +4,6 @@ const STEPS = [
   { key: 'skills', label: 'Skills added' }
   { key: 'availability', label: 'Availability set' }
   { key: 'match', label: 'First match received' }
-
-] as const;
-type StepKey = (typeof STEPS)[number]['key'];
-
-const STEPS = [
-  { key: 'profile', label: 'Profile completed' },
-  { key: 'skills', label: 'Skills added' },
-  { key: 'availability', label: 'Availability set' },
-  { key: 'match', label: 'First match received' }] as const,
-
-type StepKey = typeof STEPS[number]['key'];
-
-export default function TalentDashboard() {
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ profile: false, skills: false, availability: false, match: false }),
-  useEffect(() => {
-    try {
-      const raw = window.localStorage.getItem('onboarding.talent');
-      if (raw) setCompleted(JSON.parse(raw))
-    } catch {}
-
-  }, []);
-  useEffect(() => {
-
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -47,6 +24,44 @@ export default function TalentDashboard() {
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.talent');
+      if (raw) setCompleted(JSON.parse(raw))
+    } catch {}
+
+  }, []);
+  useEffect(() => {
+
+
+export default function TalentDashboard() {;
+  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
+    profile: false,;
+    skills: false,;
+    availability: false,;
+    match: false,;
+  });
+
+  useEffect(() => {;
+    try {;
+      const raw = window && window.localStorage.getItem('onboarding && onboarding.talent');
+      if (raw) setCompleted(JSON && JSON.parse(raw));    } catch {}
+  }, []);
+
+  useEffect(() => {;
+    try {;
+      window && window.localStorage.setItem(;
+        'onboarding && onboarding.talent',;
+        JSON && JSON.stringify(completed);
+      );
+    } catch {}
+  }, [completed]);
+
+  const progress = Math && Math.round(;
+    (Object && Object.values(completed).filter(Boolean).length / STEPS && STEPS.length) * 100;
+  );
+
+  const toggle = (key: StepKey) =>;
+
+    setCompleted(c => ({ ...c, [key]: !c[key] }));
+
 import { useEffect, useState } from 'react';
 const STEPS = [;
   { key: 'profile', label: 'Profile completed' },;

@@ -1,6 +1,3 @@
-import * as React from &quot;react&quot;
-import * as RadioGroupPrimitive from &quot;@radix-ui/react-radio-group&quot;
-import { Circle } from 'lucide-react'
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
@@ -11,10 +8,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       ref={ref}
     />);
 });
-  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
->(({ className, ...props }, ref) => {return (;
-    <RadioGroupPrimitive.Item;
-      ref={ref}
         className
       {...props}
     >

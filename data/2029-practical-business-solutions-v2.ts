@@ -49,6 +49,18 @@
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
+      mobile: '+1 302 464 0950';
+
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com'
+    };
+    realImplementation: true,
+    implementationDetails: 'Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.';
+    launchDate: '2024-07-01';
+    customers: 95;
+    rating: 4 && 4.8,
+
     reviews: 167
   }
 
@@ -485,6 +497,16 @@
   }
 ];
 export const getPopularPracticalBusinessSolutions2029 = () => {
+
+};
+
+export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
+  return practicalBusinessSolutions2029.filter(service => service.category === category);
+};
+
+export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
+  return practicalBusinessSolutions2029.filter(service => {;
+    const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
 }
@@ -503,6 +525,29 @@ export const getPopularPracticalBusinessSolutions2029 = () => {
     rating: 4.8
     reviews: 167
   }
+;
+export const getPopularPracticalBusinessSolutions2029 = () =>: any {
+  return practicalBusinessSolutions2029.filter (service => service.popular);
+  return practicalBusinessSolutions2029.filter(service => service.popular);
+}
+;
+export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>: any {
+  return practicalBusinessSolutions2029.filter (service => service.category === category);
+}
+;
+export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number, max_price: number) =>: any {
+  return practicalBusinessSolutions2029.filter (service => {
+    const price = parse_int (service.price.replace (/[^0 - 9]/g, ''));
+    return price >= min_price && price <= max_price;
+  });
+}
+    roi: 'Average customer sees 350% ROI through improved decision making and business optimization.',
+    competitors: ['Tableau, Power BI, Qlik, Looker, Domo'],
+    market_size: '$18B market',
+    growth_rate: '280% annual growth',
+    variant: 'ai - futuristic',
+    contact_info: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -690,6 +735,13 @@ export const getPopularPracticalBusinessSolutions2029 = () => {
     reviews: 198,
   },
 ];
+  return practicalBusinessSolutions2029.filter(service => service.popular);
+}
+  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular);
+};
+export const getPracticalBusinessSolutions2029ByCategory = (
+  category: string
+) => {
   );
 }
 export const getPracticalBusinessSolutions2029ByPriceRange = (
@@ -700,9 +752,9 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
   });
 };export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
   // AI-Powered Business Intelligence;
-
-  {;
-    id: "ai-business-intelligence-suite",
+;
+export const getPopularPracticalBusinessSolutions2029 = () =>: any {
+  return practicalBusinessSolutions2029.filter (service => service.popular);
 import { ServiceVariant } from '../types/service-variants',;
 export interface PracticalBusinessSolution2029 {;
   id: string,;

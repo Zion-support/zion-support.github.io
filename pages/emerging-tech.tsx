@@ -1,3 +1,35 @@
+
+
+  return (
+    <Layout>
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',;
+;
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',
+
+
+export default function EmergingTechPage() {
+  const features = [
+    'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
+  const solutions = [
+    { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
+    { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
+    { name: '5G Private Networks', href: '/5g-private-network-solutions' },
+    { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }],
+export default function EmergingTechPage() {_const _features = [
+    'Blockchain, _tokenization, _and smart contract audits', _'IoT and edge orchestration with zero-trust patterns', _'5G private networks and campus connectivity', _'Metaverse and spatial computing experimentation'];
+  const _solutions = [
+    { name: 'Blockchain Infrastructure', _href: '/blockchain-infrastructure-platform'},
+    {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration'},
+    {_name: '5G Private Networks', _href: '/5g-private-network-solutions'},
+    {_name: 'Metaverse AI Platform', _href: '/metaverse-ai-development-platform'}];
+ursor/fix-lint-push-and-merge-to-main-ce13
+  return (_<Layout>
       <Head>
         <title>Emerging Tech | Zion Tech Group</title>
         <meta name="description" content="Blockchain, IoT/edge, 5G, and metaverse initiatives with secure, scalable architectures." />
@@ -98,4 +130,3 @@ function EmergingTechPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}

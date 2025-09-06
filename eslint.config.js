@@ -1,3 +1,26 @@
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+
+
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -7,9 +30,19 @@ import tsparser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 
-import js from '@eslint/js';
+export default [
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    ignores: [
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
+      'node_modules/**',
+      '.eslintrc.js',
       'coverage/**',
-
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
@@ -24,7 +57,6 @@ import js from '@eslint/js';
       '**/*.temp.*',
       '**/*.test.*',
       '**/*.spec.*',
-
       '**/performance-*.txt'
       '**/zion-os/**',
       '**/zion-website/**',
@@ -35,7 +67,6 @@ import js from '@eslint/js';
       '**/*.bundle.js',
       '**/public/**',
       '**/static/**',
-
     ],
     languageOptions: {
       parser: typescriptParser,
@@ -48,7 +79,6 @@ import js from '@eslint/js';
       },
       globals: {
         // Browser globals
-
         window: "readonly",
         document: "readonly",
         console: "readonly",
@@ -93,10 +123,6 @@ import js from '@eslint/js';
         LayoutShift: "readonly",
         IntersectionObserver: "readonly",
         IntersectionObserverEntry: "readonly",
-
-        // React
-        React: 'readonly',
-        // Jest/Testing globals
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -149,6 +175,12 @@ export default [
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
       react,
       "react-hooks": reactHooks
     },
@@ -290,8 +322,6 @@ export default [
       }
     },
     plugins: {
-
-
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks
@@ -386,5 +416,4 @@ export default [
 
 
   }
-];
 ];

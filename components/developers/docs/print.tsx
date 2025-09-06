@@ -1,3 +1,26 @@
+  return {
+    props: {
+      docs: content as DocsContent,
+    },
+  }}import React, { useEffect } from 'react';
+import type { GetStaticProps } from 'next';
+import content from '../../../data / docs / content.json';
+export type Section = {
+  id: string,
+  title: string,
+  html?: string;
+  code?: { language?: string, content: string }[];
+}
+;
+type DocsContent = {
+  title: string,
+  sections: Section[];
+}
+;
+type PageProps = {
+  docs: DocsContent
+};
+
   docs: DocsContent;
 }
 ;
@@ -102,6 +125,7 @@ export default function PrintDocs(): any ({ docs }: PageProps) {;
                   {c && c.content}
                 </pre>;
               ))}          </section>  }, []);
+};
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
@@ -118,3 +142,14 @@ export default function PrintDocs({ docs }: PageProps) {
             {s && s.code && s && s.code.map((c, i) => (;
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
             ))}
+            ))}
+          </section>
+        ))}
+      </div>
+    </div>
+
+  );
+}
+
+
+

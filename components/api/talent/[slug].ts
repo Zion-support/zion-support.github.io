@@ -16,6 +16,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({ item, translated })
   } catch (e: any) {
-    return res.status(500).json({ error: e.message })
+
+
+
+import {supabase, as, supabase_client} from '@/utils / supabase / client';
+import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
+import type { TalentProfile } from '@/utils / types / talent';
+;
+const has_supabase =;
+  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&;
+  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;const has_supabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+;
+/**
+ * apply_translations - Function description
+ */
+function apply_translations() {
+  // Check condition
+if (return { item, translated: false }) {
+  $2
 }
+  }
+
 }

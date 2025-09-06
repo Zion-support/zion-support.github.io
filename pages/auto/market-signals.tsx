@@ -14,3 +14,14 @@ const MarketSignals: NextPage = () => {
       </main>
     </div>
   )
+
+},
+export default MarketSignals,
+
+},
+export default MarketSignals,
+},
+
+export default MarketSignals,;
+export default MarketSignals,
+

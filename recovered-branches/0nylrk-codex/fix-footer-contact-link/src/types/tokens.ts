@@ -23,4 +23,3 @@ export interface TokenTransaction {;
   amount: number,;
   transaction_type: TransactionType,;
   reason: string | null;
-;

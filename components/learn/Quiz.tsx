@@ -35,6 +35,10 @@ type Props = {
                 <input
   function submit() {
     setSubmitted(true);
+  function submit() {
+
+    setSubmitted(true)
+
     onComplete(score)
   }
   return (
@@ -62,11 +66,18 @@ type Props = {
         Submit Quiz;
       </button>;
       {submitted && (
-        <div className='text-sm'>
           Score: {score} / {questions.length}
+        </div>)}
+    </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Submit Quiz</button>;
+      {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
+    </div>);
+                <span>{opt}</span>
+              </label>
+            ))}
+          </div>
+          {submitted && (
+              )}
+            </div>
+          )}
         </div>
-      )}
-    </div>
-  );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
-      {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
-    </div>
+      ))}

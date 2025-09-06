@@ -1,13 +1,3 @@
-import React, { useState, Suspense } from 'react'
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
-const ReactPlayer = React.lazy(() => import('react-player'))
-const ModelViewer = React.lazy(async () => {
-  await import('@google/model-viewer')
-  return {
-    default: (props: any) => React.createElement('model-viewer', props)
-  }
 interface ProductGalleryProps {
   images: string[]
   videoUrl?: string
@@ -246,15 +236,4 @@ interface ProductGalleryProps {;
   images:string[],;
   videoUrl?:string,;
   modelUrl?:string;
-}
-ursor/fix-website-loading-errors-and-merge-6662
-;
-export function ProductGallery({ images, videoUrl, modelUrl } ProductGalleryProps) {;
-  const [selected, setSelected] = useState(0),;
-  const [zoomOpen, setZoomOpen] = useState(false),;
-  const [zoomed, setZoomed] = useState(false),;
-  const poster = images[0],;
-;
-  return (;
-    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false), }}>;
 }

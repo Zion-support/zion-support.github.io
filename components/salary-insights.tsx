@@ -1,4 +1,3 @@
-} from '../components/salary/InsightCharts';
 type InsightResponse = {
 import {;
   LineChart,;
@@ -16,16 +15,23 @@ type InsightResponse = {;
   minHourlyUsd: number;
   maxHourlyUsd: number;
   confidence: number;
+
+import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
+type InsightResponse = {
+  recommendedHourlyUsd: number,
+  gpt_recommendation?: string;}  recommendedHourlyUsd: number,
+
   recommendedMonthlyUsd: number,
   medianHourlyUsd: number,
   minHourlyUsd: number,
   maxHourlyUsd: number,
   confidence: number,
-  >('Senior');
-  const [remote, setRemote] = useState(true);
-  const [employmentType, setEmploymentType] = useState<;
-    'contract' | 'freelance' | 'full-time';
-  >('contract');  const [loading, setLoading] = useState(false);  const [experienceLevel, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
+  const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
+  const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
+  const [region, setRegion] = useState('Remote, Global');
+
+  const [experienceLevel, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
+
   const [remote, setRemote] = useState(true);
   const [employmentType, setEmploymentType] = useState<'contract' | 'freelance' | 'full-time'>('contract');
   const [loading, setLoading] = useState(false);
@@ -45,6 +51,21 @@ type InsightResponse = {;
   }
 
   useEffect(() => {;
+
+      setLoading(false);    }
+
+    }
+  }
+
+  useEffect(() => {
+    fetchInsights();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+
+  function saveInsight() {
+    const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data },
+
     (async () => {
       try {
         const { supabase } = await import('../utils/supabase/client');
@@ -146,6 +167,14 @@ if ( {) {
       } catch {;
         // fall back;
       }
+
+
+
+
+      } catch {}
+    })();
+  }
+
   const donutData = useMemo(() => {
     if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
     })()
@@ -368,7 +397,6 @@ if (return [] as { label: string, value: number }[], ) {
                   </div>
                 </div>
               ) : (
-
             </div>
           </div>
           {data?.gptRecommendation && (
@@ -378,7 +406,18 @@ if (return [] as { label: string, value: number }[], ) {
                 {data.gptRecommendation}
               </p>            </div>
           )}
-          {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              )}
+
+
+
+
+
+            </div>
+          </div>
+          {data?.gptRecommendation && (
+
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
             </div>
@@ -396,6 +435,13 @@ if (return [] as { label: string, value: number }[], ) {
                   <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>;
               </div>;
             </div>;
+          )}
+
+        </div>;
+      </div>;
+    </div>;
+  );
+}
                       donut_data.map ((d, i) => ({
                         label: d.label,
                         value: d.value,
@@ -433,27 +479,3 @@ if (return [] as { label: string, value: number }[], ) {
               <p className="text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap">{data.gpt_recommendation}</p>;
             </div>)}
           {data && (
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-              <h3 className='font - medium mb - 3'>Signals</h3>;
-              <div className='flex gap - 2 flex - wrap'>;
-                <span className='rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs'>;
-                  Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr;
-                </span>;
-                {data.tags.map (t => (
-                  <span;
-                    key={t}
-                    className='rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs';
-                  >;
-                    {t}
-                  </span>                ))}            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
-              <h3 className="font - medium mb - 3">Signals</h3>;
-              <div className="flex gap - 2 flex - wrap">;
-                <span className="rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>;
-                {data.tags.map ((t) => (
-                  <span key={t} className="rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs">{t}</span>;
-              </div>;
-            </div>)}
-        </div>;
-      </div>;
-    </div>);
-}

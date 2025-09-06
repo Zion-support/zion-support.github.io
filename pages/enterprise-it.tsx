@@ -1,3 +1,35 @@
+
+
+  return (
+    <Layout>
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { Server, CheckCircle, Database, Cloud } from 'lucide-react',;
+;
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
+
+
+export default function EnterpriseITPage() {
+  const features = [
+    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
+  const solutions = [
+    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
+    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
+    { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' },
+    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }],
+export default function EnterpriseITPage() {_const _features = [
+    'Cloud migration and landing zones with cost governance', _'DevOps automation, _CI/CD, _and platform engineering', _'Data platforms, _lineage, _and quality monitoring', _'Observability, _SLOs, _and incident automation'];
+  const _solutions = [
+    { name: 'Cloud Landing Zone', _href: '/cloud-landing-zone'},
+    {_name: 'Cloud Cost Optimizer', _href: '/cloud-cost-optimizer'},
+    {_name: 'Data Pipeline Observability', _href: '/data-pipeline-observability'},
+    {_name: 'Uptime & SLO Monitor', _href: '/uptime-slo-monitor'}];
+ursor/fix-lint-push-and-merge-to-main-ce13
+  return (_<Layout>
       <Head>
         <title>Enterprise IT | Zion Tech Group</title>
         <meta name="description" content="Cloud, DevOps, data platforms, and SRE with cost, performance, and reliability in focus." />
@@ -98,4 +130,3 @@ function EnterpriseITPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}

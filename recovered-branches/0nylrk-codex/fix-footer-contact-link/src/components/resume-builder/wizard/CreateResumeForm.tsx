@@ -66,5 +66,12 @@ export const CreateResumeForm = ({;
       </CardContent>
     </Card>
   )
-};
-},
+            Cancel;
+          </Button>;
+        </div>;
+      </CardContent>;
+
+    </Card>);
+}
+;
+

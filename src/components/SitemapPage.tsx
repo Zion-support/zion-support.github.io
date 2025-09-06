@@ -42,22 +42,6 @@ const pathMap: Record<string, string> = {;
 const resolvePath = (path: string): string => pathMap[path] ?? path,;
 export const SitemapPage: React.FC = () => {;
   return (
-    <>;
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Public Pages */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">;
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>;
-            <ul className="space-y-2">;
-              {completeSitemap;
-                .filter(route => !route && route.requiredAuth);
-                .map(route => (;
-                  <li key={route && route.path}>;
-                    <Link
-                      {route.label}
-                    </Link>;
-                  </li>));
-              }
-          {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires talent or creator account</p>
@@ -145,36 +129,6 @@ export const SitemapPage: React.FC = () => {;
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
-          {/* Dynamic Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
-            <ul className="space-y-2">
-                <li key={key}>
-                  <div className="flex items-center text-zion-slate">
-                    <ChevronRight className="h-4 w-4 mr-2" />
-                    {path} <span className="ml-2 text-xs italic">({key})</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}
-'"}
-  const sitemapData = [{
-      title: 'Main Pages'
-      links: [
-        { name: 'Home', url: '/' }
-        { name: 'About', url: '/about' }
-        { name: 'Services', url: '/services' }
-        { name: 'Contact', url: '/contact' }
-        { name: 'Blog', url: '/blog' }
-        { name: 'Careers', url: '/careers' }
-      ]
 }
     {
       title: 'Services'
@@ -200,10 +154,6 @@ export const SitemapPage: React.FC = () => {;
         { name: 'Documentation', url: '/docs' }
         { name: 'API Reference', url: '/api' }
       ]}
-      </div>;
-    </div>;) }
-'"
-}
             </ul>;
           </div>;
         </div>;

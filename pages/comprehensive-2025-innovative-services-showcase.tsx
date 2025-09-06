@@ -40,7 +40,6 @@ import {;
   Search, Grid, List, Star as StarIcon,;
   Phone, Mail, MapPin;
 } from 'lucide-react',;
-
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';
@@ -68,15 +67,27 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
       opacity: 1
       y: 0
       transition: {
-        duration: 0.5
+
+        duration: 0.5;
       }
     }
-  }
-  },
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
+
+
+  };
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
+
+    website: 'https://ziontechgroup.com'
+  }
+  },
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -92,6 +103,12 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+      <section className="relative py-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
       <section className="relative py - 20 px - 6">;
         <div className="max - w-7xl mx - auto text - center">;
           <motion.div;
@@ -100,6 +117,17 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
             transition={{ duration: 0.8 }}
 
 
+              quantum technologies, and revolutionary IT services that are transforming industries worldwide.
+            </p>
+            {/* Contact Information */}
+              Discover our extensive collection of cutting-edge micro SAAS services, AI solutions,
+              quantum technologies, and revolutionary IT services that are transforming industries worldwide.
+            </p>
+            {/* Contact Information */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/70">
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
@@ -135,51 +163,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
           </motion.div>
         </div>
       </section>
-          >;
-            <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent">;
-              2025 Comprehensive Services Showcase;
-            </h1>;
-            <p className="text - xl md:text - 2xl text - white / 80 max - w-4xl mx - auto leading - relaxed mb - 8">;
-              Discover our extensive collection of cutting - edge micro SAAS services, AI solutions,
-              quantum technologies, and revolutionary IT services that are transforming industries worldwide.;
-            </p>;
-            {/* Contact Information */}
-            <div className="flex flex - wrap justify - center gap - 6 mb - 8 text - white / 70">;
-              <div className="flex items - center gap - 2">;
-                <Phone className="w - 5 h - 5" />;
-                <span>{contact_info.mobile}</span>;
-              </div>;
-              <div className="flex items - center gap - 2">;
-                <Mail className="w - 5 h - 5" />;
-                <span>{contact_info.email}</span>;
-              </div>;
-              <div className="flex items - center gap - 2">;
-                <MapPin className="w - 5 h - 5" />;
-                <span>{contact_info.address}</span>;
-              </div>;
-            </div>;
-            {/* Stats */}
-            <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto">;
-              <div className="text - center">;
-                <div className="text - 3xl font - bold text - cyan - 400">{all_services.length}+</div>;
-                <div className="text - white / 60">Services Available</div>;
-              </div>;
-              <div className="text - center">;
-                <div className="text - 3xl font - bold text - purple - 400">{all_services.filter (string => s.popular).length}</div>;
-                <div className="text - white / 60">Popular Services</div>;
-              </div>;
-              <div className="text - center">;
-                <div className="text - 3xl font - bold text - green - 400">{all_services.filter (string => s.real_service).length}</div>;
-                <div className="text - white / 60">Real Services</div>;
-              </div>;
-              <div className="text - center">;
-                <div className="text - 3xl font - bold text - orange - 400">{all_services.filter (string => s.rating >= 4.5).length}</div>;
-                <div className="text - white / 60">Top Rated</div>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
       {/* Search and Filters */}
             transition={{ duration: 0.6 }}
             className="bg - white / 5 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 10";
@@ -367,10 +350,36 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
   }
 }
                           {service.features.length > 3 && (
-                            <div className="text-xs text-white/40">
-                              +{service.features.length - 3} more features
-                            </div>
-                          )}
+
+
+                          {service.price}
+
+                          <span className="text - sm text - white / 60">{service.period}</span>;
+                        </div>;
+                        <div className="flex items - center gap - 1">;
+                          <StarIcon className="w - 4 h - 4 text - yellow - 400 fill - current" />;
+                          <span className="text - sm text - white / 70">{service.rating}</span>;
+                          <span className="text - xs text - white / 50">({service.reviews})</span>;
+                        </div>;
+                      </div>;
+                      {/* Price and Rating */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-2xl font-bold text-cyan-400">
+                          {service.price  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          <span className="text-sm text-white/60">{service.period}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <StarIcon className="w-4 h-4 text-yellow-400 fill-current" />
+                          <span className="text-sm text-white/70">{service.rating}</span>
+                          <span className="text-xs text-white/50">({service.reviews})</span>
                         </div>
                       </div>
                       {/* Price and Rating */}
@@ -388,10 +397,19 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                           <span className="text-xs text-white/50">({service.reviews})</span>
                         </div>
                       </div>
-
-                      {/* Action Buttons */}
+                          href={service.link}
+                      {/* Action Buttons */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       <div className="flex gap-2">
                         <a
+                          href={service.link  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105"
@@ -514,3 +532,5 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+

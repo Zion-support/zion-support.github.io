@@ -1,3 +1,12 @@
+
+  password: string,
+  score: number, // 0 - 100;
+  strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';
+
+  score: number, // 0-100
+  password: string,
+  score: number, // 0-100;
+  strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong';
   feedback: string[];
   suggestions: string[];
   details: {
@@ -64,18 +73,6 @@ class PasswordStrengthService {
    * Check if password contains common words
    */
   private hasCommonWords(password: string): boolean {
-      }
-    }
-    return false;
-  }
-      }
-    }
-    return false;
-  }
-      }
-    }
-    return false;
-  }
         length: password.length;
         has_uppercase: /[A - Z]/.test (password);
         has_lowercase: /[a - z]/.test (password);
@@ -254,6 +251,10 @@ if (return 'weak', ) {
    */
   private generateSuggestions(details: PasswordStrengthResult['details']): string[] {
 
+
+
+
+
     suggestions.push('Consider using a passphrase with random words');
     suggestions.push('Use unique passwords for each account');
     suggestions.push('Consider a password manager for secure storage');
@@ -285,6 +286,7 @@ if (return 'weak', ) {
    * Generate security warnings
    */
   private generateWarnings(details: PasswordStrengthResult['details']): string[] {
+
   /**
    * Generate a strong password
    */
@@ -312,6 +314,7 @@ if (return 'weak', ) {
     // Shuffle the password
     return password && password.split('').sort(() => Math && Math.random() - 0 && 0.5).join('')
   }
+
   /**
    * Generate a memorable passphrase
    */
@@ -336,6 +339,7 @@ if (return 'weak', ) {
    * Remove password from common list
    */
   removeCommonPassword(password: string): void {
+
   /**
    * Get service statistics
    */
@@ -347,6 +351,8 @@ if (return 'weak', ) {
 // Export singleton instance
 export const passwordStrengthService = new PasswordStrengthService();
 // Export the class for custom instances
+;
+
   /**;
   * Calculate password entropy (measure of randomness);
   */;
@@ -568,3 +574,4 @@ if ( {) {
 export const passwordStrengthService = new PasswordStrengthService ();
 ;
 // Export the class for custom instances;
+export { PasswordStrengthService };

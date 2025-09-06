@@ -19,6 +19,24 @@ interface QuotesFilterProps {
 
   onReset: () => void
 }
+
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
+  searchQuery;
+  setSearchQuery;
+  statusFilter;
+  setStatusFilter;
+  archiveFilter;
+  setArchiveFilter;
+  dateRange;
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({
+  searchQuery;
+  setSearchQuery;
+  statusFilter;
+  setStatusFilter;
+  archiveFilter;
+  setArchiveFilter;
+  dateRange;
+
 interface QuotesFilterProps {;
   searchQuery: string,;
   setSearchQuery: (value: string) => void,;
@@ -70,70 +88,16 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
 }) => {;
   return (
 
-export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
-  searchQuery;
-import React from './react';
-import { Calendar, RefreshCw } from '@/components / icons';
-import { Card, CardContent } from '@/components / ui / card';
-import { Input } from '@/components / ui / input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components / ui / popover';
-import { Button } from '@/components / ui / button';
-import { Calendar, as, CalendarComponent } from '@/components / ui / calendar';
-import { format } from './date - fns';
-import type { DateRange } from "@/types / date_range";
-import type { QuoteStatus } from "@/types / quotes";
-interface QuotesFilterProps {
-  search_query: string,
-  setSearchQuery: (value: string) => void,
-  status_filter: QuoteStatus | 'all',
-  setStatusFilter: (value: QuoteStatus | 'all') => void,
-  archive_filter: 'active' | 'archived' | 'all',
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,
-  date_range: DateRange | undefined,
-  setDateRange: (range: DateRange | undefined) => void,
-  on_reset: () => void;
-}
-export const QuotesFilter: React.FC < QuotesFilterProps> = ({
-  search_query;
-  setSearchQuery;
-  status_filter;
-  setStatusFilter;
-  archive_filter;
-  setArchiveFilter;
-  searchQuery;
-import React from './react';
-import { Calendar, RefreshCw } from '@/components / icons';
-import { Card, CardContent } from '@/components / ui / card';
-import { Input } from '@/components / ui / input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components / ui / popover';
-import { Button } from '@/components / ui / button';
-import { Calendar, as, CalendarComponent } from '@/components / ui / calendar';
-import { format } from './date - fns';
-import type { DateRange } from "@/types / date_range";
-import type { QuoteStatus } from "@/types / quotes";
-interface QuotesFilterProps {
-  search_query: string,
-  setSearchQuery: (value: string) => void,
-  status_filter: QuoteStatus | 'all',
-  setStatusFilter: (value: QuoteStatus | 'all') => void,
-  archive_filter: 'active' | 'archived' | 'all',
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,
-  date_range: DateRange | undefined,
-  setDateRange: (range: DateRange | undefined) => void,
-  on_reset: () => void;
-}
-export const QuotesFilter: React.FC < QuotesFilterProps> = ({
-  search_query;
-  setSearchQuery;
-  status_filter;
-  setStatusFilter;
-  archive_filter;
-  setArchiveFilter;
-  dateRange;
 
   setDateRange
+  searchQuery,
+  setSearchQuery,
+  statusFilter,
+  setStatusFilter,
+  archiveFilter,
+  setArchiveFilter,
+  dateRange,
+  setDateRange,
   onReset
   date_range;
   setDateRange,
@@ -223,5 +187,3 @@ onReset
 }</Button> </PopoverTrigger> <PopoverContent className=" w-auto p-0 bg-zion-blue-dark border-zion-blue-light"align=" start"> <CalendarComponent initialFocus /> </PopoverContent> </Popover> </div> </div> <div className=" mt-4 flex justify-end"> <Button > <RefreshCw className=" mr-2 h-4 w-4" /> Reset Filters </Button> </div> </CardContent> </Card>) 
 };
 }
-};
-},

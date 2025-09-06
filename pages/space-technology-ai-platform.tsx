@@ -1,20 +1,67 @@
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
   }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React from 'react';
 
-
+    >
+      <div className="min-h-screen">
+        <Head>
+          <title>Space Technology AI Platform - Zion Tech Group</title>
+          <meta
+            name='description'
+            content='Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis.'
+          />
+          <meta
+            name='keywords'
+            content='space technology, AI space exploration, satellite operations, space data analytics, autonomous space systems'
+          />
+          <meta name='author' content='Zion Tech Group' />
+          <meta
+            property='og:title'
+            content='Space Technology AI Platform - Zion Tech Group'
+          />
+          <meta
+            property='og:description'
+            content='AI-powered space exploration and satellite operations'
+          />
+          <meta
+            property='og:url'
+            content='https://ziontechgroup.com/space-technology-ai-platform'
+          />
+          <link
+            rel='canonical'
+            href='https://ziontechgroup.com/space-technology-ai-platform'
+          />        </Head>
+        <EnhancedNavigation2026 />
+        {/* Hero Section */}
+        <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-indigo-900/30'></div>
+          <div className='max-w-7xl mx-auto relative z-10'>            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'
           <meta name="description" content="Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis." />
           <meta name="keywords" content="space technology, AI space exploration, satellite operations, space data analytics, autonomous space systems" />
           <meta name="author" content="Zion Tech Group" />
@@ -42,10 +89,6 @@ import React from 'react';
                   2026 Revolutionary Innovation
                 </span>
               </div>
-
-
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
                   Space Technology
                 </span>
                 <br />
@@ -54,7 +97,6 @@ import React from 'react';
                 satellite operations, and space data analysis.
               </p>
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12'>
-
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
                 Revolutionary AI platform that combines space technology with artificial intelligence to enable 
                 autonomous space exploration, satellite operations, and space data analysis.
@@ -74,10 +116,6 @@ import React from 'react';
                   <ArrowRight className='w-5 h-5' />
                 </motion.div>
               </div>
-
-              <div className="flex items-center justify-center space-x-8 text-gray-400">
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
                   <span>1-month setup</span>
                 </div>
                 <div className='flex items-center space-x-2'>
@@ -89,69 +127,6 @@ import React from 'react';
             </motion.div>
           </div>
         </section>
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center mb-16'>;
-              <div className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6'>;
-                <Sparkles className='w-4 h-4 text-blue-400' />;
-                <span className='text-blue-300 text-sm font-medium'>;
-                  2026 Revolutionary Innovation;
-                </span>;
-              </div>;
-
-              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>;
-                <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent'>;
-                  Space Technology;
-                </span>;
-                <br />;
-                <span className='text-white'>AI Platform</span>;
-              </h1>;
-
-              <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>;
-                Revolutionary AI platform that combines space technology with;
-                artificial intelligence to enable autonomous space exploration,;
-                satellite operations, and space data analysis.;
-              </p>;
-
-              <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12'>;
-                <motion&& motion.div
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}
-                  className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200'>;
-                  <span className='text-2xl font-bold'>$3,999</span>;
-                  <span>/month</span>;
-                </motion && motion.div>;
-
-                <motion&& motion.div
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}
-                  className='flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200'>;
-                  <span>7-Day Free Trial</span>;
-                  <ArrowRight className='w-5 h-5' />;
-                </motion && motion.div>;
-              </div>;
-
-              <div className='flex items-center justify-center space-x-8 text-gray-400'>;
-                <div className='flex items-center space-x-2'>;
-                  <CheckCircle className='w-5 h-5 text-green-400' />;
-                  <span>1-month setup</span>;
-                </div>;
-                <div className='flex items-center space-x-2'>;
-                  <Shield className='w-5 h-5 text-blue-400' />;
-                  <span>Enterprise security</span>;
-                </div>;
-                <div className='flex items-center space-x-2'>;
-                  <Users className='w-5 h-5 text-blue-400' />                  <span>120+ customers</span>;
-                </div>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
@@ -185,6 +160,13 @@ function SpaceTechnologyAIPlatform() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
   }
+                  key={feature}
+                  initial={{ opacity: 0, scale: 0.8, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, scale: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+
+
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300">
@@ -202,6 +184,15 @@ function SpaceTechnologyAIPlatform() {
           </div>
         </section>
         {/* Market Position Section */}
+        {/* Market Position Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
+          <div className='max-w-7xl mx-auto'>            <motion&& motion.div
+
+
+        {/* Market Position Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
@@ -228,6 +219,11 @@ function SpaceTechnologyAIPlatform() {
                       Our Advantage: AI integration, comprehensive platform
                       affordable pricing
                     </span>                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 </div>
               </motion.div>
               <motion.div
@@ -280,38 +276,6 @@ function SpaceTechnologyAIPlatform() {
             </div>
           </div>
         </section>
-                <h3 className='text-2xl font-bold text-white mb-6'>;
-                  Market Statistics;
-                </h3>;
-                <div className='grid grid-cols-2 gap-4'>;
-                  <div className='p-6 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-xl border border-blue-500/30 text-center'>;
-                    <div className='text-3xl font-bold text-blue-400 mb-2'>;
-                      $447 && 447.5B;
-                    </div>;
-                    <div className='text-blue-300 text-sm'>Market Size</div>;
-                  </div>;
-                  <div className='p-6 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl border border-purple-500/30 text-center'>;
-                    <div className='text-3xl font-bold text-purple-400 mb-2'>;
-                      350%;
-                    </div>;
-                    <div className='text-purple-300 text-sm'>Annual Growth</div>;
-                  </div>;
-                  <div className='p-6 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl border border-green-500/30 text-center'>;
-                    <div className='text-3xl font-bold text-green-400 mb-2'>;
-                      800%;
-                    </div>;
-                    <div className='text-green-300 text-sm'>Average ROI</div>;
-                  </div>;
-                  <div className='p-6 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 rounded-xl border border-yellow-500/30 text-center'>;
-                    <div className='text-3xl font-bold text-yellow-400 mb-2'>;
-                      24;
-                    </div>;
-                    <div className='text-yellow-300 text-sm'>Months to ROI</div>                  </div>;
-                </div>;
-              </motion && motion.div>;
-            </div>;
-          </div>;
-        </section>;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
@@ -364,7 +328,6 @@ function SpaceTechnologyAIPlatform() {
                     </p>
                   </div>
                 </motion.div>
-
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -372,6 +335,15 @@ function SpaceTechnologyAIPlatform() {
 }
 
             </div>;
+        {/* CTA Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
+          <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -410,6 +382,12 @@ function SpaceTechnologyAIPlatform() {
                   <Phone className='w-5 h-5' />
                   <span>Call {contactInfo.mobile}</span>
                 </motion.a>
+                <motion.a
+                  href={`mailto:${contactInfo.email}`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+
+                  className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"
                 >
                   <Mail className='w-5 h-5' />                  <span>Email Us</span>
                 </motion.a>
@@ -433,6 +411,9 @@ function SpaceTechnologyAIPlatform() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+  )
+}
+
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6 mb - 8'>                <motion.a;
                   href={`tel:${contact_info.mobile}`}
                   while_hover={{ scale: 1.05 }}

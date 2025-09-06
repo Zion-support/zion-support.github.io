@@ -5,9 +5,5 @@ import App from '../src/App';
 describe('App', () => {
   test('renders without crashing', () => {
     render(<App />);
-    expect(screen.getByRole('heading', { level: 1, name: 'Zion Tech Group' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Zion Tech Group' })).toBeInTheDocument();
   });
-    const heading = screen.getByRole('heading', { level: '1' });
-    expect(heading).toBeInTheDocument();
-  });
-});

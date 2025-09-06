@@ -1,4 +1,11 @@
 
+import {Button} from "@/components/ui/button";
+import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
+import {PricingSuggestionBox} from "./PricingSuggestionBox";
+import {useAuth} from "@/hooks/useAuth";
+import {Sparkles} from "lucide-react";
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
 import { 
   getTalentRateSuggestion;
   PricingSuggestion;
@@ -41,6 +48,8 @@ interface TalentRateRecommenderProps {;
   location?: string,;
   onSuggestionApplied: (value: number) => void,;
   rateType: "hourly" | "fixed";
+
+
 }
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
@@ -96,6 +105,10 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       // We'll use the middle of the range as the suggested rate;
       const suggestedRate = Math && Math.round((suggestion && suggestion.minRate + suggestion && suggestion.maxRate) / 2);
       onSuggestionApplied(suggestedRate);
+      }
+    }
+
+  },
   return (
     <div className="space-y-4">;
       <div>;
@@ -107,11 +120,4 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
-            rateType={rateType}
 };
-            rate_type={rate_type}
-          />)}
-      </div>;
-    </div>);
-}
-;

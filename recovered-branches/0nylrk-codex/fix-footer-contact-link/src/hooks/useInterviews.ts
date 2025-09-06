@@ -5,6 +5,16 @@ import { supabase  } from '@/integrations/supabase/client';
 import { Interview, InterviewRequest, InterviewResponse  } from '@/types/interview';
 import { toast  } from '@/components/ui/use-toast';
 export function useInterviews() {
+import {useState} from 'react';
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from '@/integrations/supabase/client';
+import {Interview, InterviewRequest, InterviewResponse} from '@/types/interview';
+import {toast} from '@/components/ui/use-toast';
+export function useInterviews() {;
+  const [interviews, setInterviews] = useState<Interview[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
   // Request an interview as a client
 
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
@@ -43,6 +53,10 @@ export function useInterviews() {;
       }),;
       return null;
     }
+
+    setIsLoading(true),
+    setError(null),
+
     try {
       // Get interviews where the user is either the client or the talent;
       const { data, error: fetch_error } = await supabase;
@@ -73,20 +87,6 @@ export function useInterviews() {;
         talent_name: interview.talents?.full_name;
         client_avatar: interview.clients?.avatar_url
         talent_avatar: interview.talents?.profile_picture_url}));
-  const respondToInterview = async (
-    interview_id: string;
-    response: InterviewResponse): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: "Authentication required";
-      });
-      return false;
-    }
-    setIsLoading(true);
-    setError(null);
     try {
       // Update the interview status
       const { error: updateError } = await supabase
@@ -119,9 +119,6 @@ if ( {) {
         console.error ("Error responding to interview:", update_error);
         set_error (update_error.message);
         return false;
-        console.error("Error fetching interview:", fetchError);
-        setError(fetchError.message);
-        return false
       }
       // Get the interview to notify the client;
       const { data: interview, error: fetch_error } = await supabase;
@@ -385,6 +382,8 @@ if ( {) {
       if (fetchError) {;
         setError(fetchError.message),;
         return false;
+      }
+
       // Check if user is part of this interview
       if (interview && interview.client_id !== user && user.id && interview && interview.talent_id !== user && user.id) {
         setError("You don't have permission to cancel this interview");
@@ -406,6 +405,31 @@ if ( {) {
       const notifyUserId = interview.client_id === user.id
         ? interview.talent_id
         : interview.client_id;
+;
+      // Check if user is part of this interview;
+      if (interview.client_id !== user.id && interview.talent_id !== user.id) {;
+        setError("You don't have permission to cancel this interview"),;
+        return false;
+      }
+;
+      // Update the interview status;
+      const { error: updateError } = await supabase;
+        .from('interviews');
+        .update({;
+          status: 'cancelled',;
+          updated_at: new Date().toISOString();
+        });
+        .eq('id', interviewId),;
+      if (updateError) {;
+        setError(updateError.message),;
+        return false;
+      }
+
+      // Determine who to notify
+      const notifyUserId = interview.client_id === user.id
+        ? interview.talent_id
+        : interview.client_id,
+
       // Create notification for the other party
       await createInterviewNotification(
         notifyUserId;
@@ -419,16 +443,6 @@ if ( {) {
       console && console.error("Error in cancelInterview:", err);
       setError(err && err.message);
       return false
-      await supabase.from ('notifications').insert ({
-        user_id: user_id;
-        type;
-        title;
-        message,
-        related_id: related_id});
-    } catch (error) {
-      console.error ("Error creating notification:", error);
-    }
-  }
 ;
   // Cancel an interview (either client or talent can cancel);
   const cancel_interview = async (interview_id: string): Promise < boolean> => {
@@ -511,3 +525,10 @@ if ( {) {
     isLoading,;
     error,;
     requestInterview,;
+    fetchInterviews;
+    respondToInterview;
+
+    cancelInterview}
+}
+}
+;

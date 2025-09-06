@@ -17,26 +17,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
   {
-    id: 'quantum - agriculture - optimization',
-    name: 'Quantum Agriculture Optimization',
-    tagline:;
-      'Quantum - powered agriculture optimization for crop planning and resource allocation',
-    price: '$4, 999',
-    period: '/month',
-    description:;
-      'Revolutionary agriculture optimization platform that uses quantum computing to optimize crop planning, resource allocation, and maximize agricultural efficiency.',
-    features: [;
-      'Quantum optimization algorithms',
-      'Crop planning optimization',
-      'Resource allocation',
-      'Real - time adaptation',
-      'Performance analytics',
-      'Cost optimization',
-      'Efficiency analysis',
-      'Regulatory compliance',
-      'Multi - crop support',
-    ],
-    popular: false,
       'Quantum agriculture optimization platform with advanced algorithms and resource allocation capabilities.',
     launch_date: '2025 - 01 - 15',
     customers: 34,
@@ -98,20 +78,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     ],
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
     competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
-    link: 'https://ziontechgroup.com/ai-powered-vertical-farming';
-    marketPosition: 'Leading AI-powered vertical farming platform for climate control and crop optimization.'
-    targetAudience: 'Vertical farming companies, Urban agriculture, Controlled environment agriculture, Food producers';
-    trialDays: 30;
-    setupTime: '1 month';
-    category: 'Agriculture & Food Technology';
-    realService: true
-    id: 'ai-powered-precision-agriculture', name: 'AI-Powered Precision Agriculture',
-    tagline: 'Intelligent farming with AI-powered crop monitoring and optimization',
-    price: '$1,899',
-    period: '/month',
-    description: 'Advanced precision agriculture platform that uses AI to monitor crops, optimize irrigation, and maximize yields for agricultural businesses.',
-    features: [
-      'AI-powered crop monitoringIrrigation optimizationYield predictionReal-time monitoringPerformance analyticsIntegration capabilitiesCustom monitoring modelsMulti-field support';
+];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
+
       'Compliance management'
     ];
     popular: true, icon: '',
@@ -245,6 +213,39 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     implementationDetails: 'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.';
     launchDate: '2025-02-02';
     customers: 123;
+];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';
+      'Compliance management';
+    ];
+    popular: true;
+    icon: '🏗️';
+    color: 'from - orange - 600 to - red - 700';
+    text_color: 'text - orange - 400';
+    link: 'https://ziontechgroup.com / ai - powered - vertical - farming';
+    market_position: 'Leading AI - powered vertical farming platform for climate control and crop optimization.',
+    target_audience: 'Vertical farming companies, Urban agriculture, Controlled environment agriculture, Food producers';
+    trial_days: 30;
+    setup_time: '1 month';
+    category: 'Agriculture & Food Technology';
+    real_service: true,
+    technology: ['AI / ML, Vertical farming, Climate control, IoT sensors, Machine learning'];
+    integrations: ['Climate control systems, IoT devices, Lighting systems, Analytics platforms'];
+    use_cases: ['Climate control, Crop monitoring, Environmental optimization, Yield maximization'];
+    roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
+    competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'];
+    market_size: '$9.3B+ vertical farming market';
+    growth_rate: '280% YoY';
+    variant: 'ai - futuristic';
+    contact_info: contact;
+    real_implementation: true;
+    implementation_details: 'AI - powered vertical farming platform with intelligent climate control and crop optimization capabilities.';
+    launch_date: '2025 - 02 - 02';
+    customers: 123;
+    rating: 4.6,
+    reviews: 89;
+  }
+];
+;
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAgricultureService {;
   id: string,;
@@ -304,3 +305,5 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     features: [;
       'AI-powered crop monitoringIrrigation optimizationYield predictionReal-time monitoringPerformance analyticsIntegration capabilitiesCustom monitoring modelsMulti-field support',;
       'Compliance management';
+  }
+];

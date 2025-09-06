@@ -94,16 +94,3 @@ export default function AICopilots() {;
               {['SSO/SAML, audit logging','PII redaction & data residency','SOC2/ISO alignment','HA & on-call SRE'].map((b) => (;
                 <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li>;
               ))}
-            </ul>;
-            <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Start RFP <ArrowRight className="w-4 h-4 ml-2"/></Link>;
-          </div>;
-        </div>;
-      </section>;
-      <section className="pb-16">;
-        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg: px-8">;
-          <p className="text-sm text-gray-500">Questions? Call +1 302 464 0950 or email <a className="underline" href="mailto:kleber@ziontechgroup && ziontechgroup.com">kleber@ziontechgroup && ziontechgroup.com</a></p>;
-        </div>;
-      </section>;
-    </main>;
-  ),;
-}

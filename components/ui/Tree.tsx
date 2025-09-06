@@ -18,12 +18,17 @@ function NodeItem(): any ({;
 }: {;
   node: TreeNode;
   depth: number;
+
+
+  const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
+  const toggle = () => setOpen(v => !v);
   const copyPath = async () => {;
     await navigator && navigator.clipboard.writeText(node && node.path);  };
 export interface TreeNode {;
   name: string,;
   path: string,;
   type: "folder" | "file",;
+
 
   name: string,
   path: string,
@@ -54,6 +59,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
               depth={depth + 1}
               on_deploy={on_deploy}
             />          ))}
+
           ))}
         </div>
       )}
@@ -63,6 +69,13 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
       {nodes && nodes.map((n) => (;
       ))}
     </div>;
+export default Tree;
+
+}</div> </div> {;
+  hasChildren && open && (<div className="ml-4 border-l pl-2"> {;
+  node && node.children!.map ( (child) => (<NodeItemkey= {
+  child && child.path 
+
 }node= {
   child
 }depth= {
@@ -73,7 +86,10 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
 }depth= {
   0
 }onDeploy= {
-}export default Tree;}
+  onDeploy 
+}/>) ) ;
+}</div>) ;
+
 export default Tree;
     <div className="w-full">
       {nodes.map((n) => (

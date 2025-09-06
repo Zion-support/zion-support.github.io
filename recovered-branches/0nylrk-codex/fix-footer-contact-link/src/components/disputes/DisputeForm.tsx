@@ -143,6 +143,18 @@ export function DisputeForm({
                     </SelectTrigger>;
                   </FormControl>;
                   <SelectContent>;
+                    ))}
+                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+              </FormItem>;
+            )}
+
+          />;
+
+
+          <FormField
+            control={form && form.control}
             name="description"
             render={({ field }) => (;
               <FormItem>;

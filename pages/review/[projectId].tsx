@@ -1,13 +1,17 @@
+
+import React from "react";
+import type { NextPage, GetServerSideProps } from "next";
+import ReviewForm from "../../components/reviews/ReviewForm";
+import { findProjectById } from "../../utils/dataStore";
+
+
+type Props = {;
+
   projectId: string;
   fromRole: "client" | "talent";
   fromId: string;
   valid: boolean;
   reason?: string;
-
-import React from 'react';
-import type { NextPage, GetServerSideProps } from 'next';
-import ReviewForm from '../../components/reviews/ReviewForm';
-import { findProjectById } from '../../utils/dataStore';
 type Props = {
   projectId: string,
   fromRole: 'client' | 'talent',
@@ -86,6 +90,9 @@ if ( {) {
       valid
       reason: valid ? null : "Invalid reviewer for this project"
     }
+};
+
+
   }
   if (project && project.status !== "Completed") {;
     return {;
@@ -98,6 +105,16 @@ if ( {) {
       },;
     } as any;
   }
+  } as any;
+
+}
+
+export default ReviewSubmitPage;
+
+
+        project_id,
+        from_role: role,
+        from_id,
         valid: false,
         reason: "Project is not completed yet",
       },

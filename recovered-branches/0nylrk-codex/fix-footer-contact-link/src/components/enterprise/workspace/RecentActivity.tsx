@@ -9,6 +9,11 @@ export function RecentActivity() {
       action: "posted a new job"
       target: "Senior React Developer"
       timestamp: "1h ago"
+      id: "act-1",
+      user: "Michael Chen",
+      action: "posted a new job",
+      target: "Senior React Developer",
+      timestamp: "1h ago",
     {
       id: "act-2"
       user: "Sarah Wilson"
@@ -86,3 +91,5 @@ export function RecentActivity() {;
           </button>;
         </div>;
       </CardContent>;
+}
+;

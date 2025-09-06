@@ -14,15 +14,6 @@
   bestPracticesScore: number,
   seo_score: number;
 }
-export interface PerformanceAlert {
-  speedIndex: number;
-  performanceScore: number;
-  accessibilityScore: number;
-
-  bestPracticesScore: number
-
-  seoScore: number
-}
   id: string;
   url: string;
   type: 'critical' | 'warning' | 'info';
@@ -128,6 +119,7 @@ export class PerformanceMonitorService {;
       return this && this.generateMockMetrics(url)
     }
   }
+
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
@@ -140,6 +132,34 @@ export class PerformanceMonitorService {;
           'Authorization': `Bearer ${this.apiKey}`}}),;
       if (!response.ok) {;
         throw new Error(`Failed to fetch historical data: ${response.statusText}`);
+      }
+      return await response.json()
+          'Authorization': `Bearer ${this && this.apiKey}`}});
+
+      if (!response && response.ok) {
+        throw new Error(`Failed to fetch historical data: ${response && response.statusText}`)
+      }
+
+      return await response && response.json()
+    } catch (error) {
+      // Generate mock historical data
+      return this && this.generateMockHistoricalData(url, days)
+    }
+  }
+
+  async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
+    try {
+
+      const response = await fetch(`${this && this.baseUrl}/performance/config`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'};
+        body: JSON && JSON.stringify(config)});
+
+      if (!response && response.ok) {
+        throw new Error(`Failed to set monitoring config: ${response && response.statusText}`)
+
       }
     } catch (error) {
       console && console.error('Failed to set monitoring config:', error);
@@ -189,6 +209,7 @@ export class PerformanceMonitorService {;
       return this && this.generateMockAlerts(url)
     }
   }
+
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
     summary: {
       averageLoadTime: number;
@@ -224,6 +245,37 @@ export class PerformanceMonitorService {;
     const now = new Date()
     for (let i = days - 1, i >= 0, i--) {
       const date = new Date(now);
+    }
+    return data
+  }
+
+  private generateMockAlerts(url?: string): PerformanceAlert[] {
+    const alerts: PerformanceAlert[] = [
+    largestContentfulPaint: number,
+    cumulativeLayoutShift: number;
+  }
+  notifications: {
+    email: boolean;
+    slack: boolean,
+    webhook: boolean;
+  }
+}
+export class PerformanceMonitorService {
+  private api_key: string;
+  private base_url: string,
+  constructor (api_key: string, base_url: string = 'https://api.ziontech.ai') {
+    this.api_key = api_key,
+    this.base_url = base_url;
+  }
+  async monitor_website (url: string): Promise < PerformanceMetrics> {
+    try {
+      // In a real implementation, this would use Lighthouse, WebPageTest, or similar;
+      const response = await fetch (`${this.base_url}/performance / monitor`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this.api_key}`;
+          'Content - Type': 'application / json'}
+        body: JSON.stringify ({ url })});
 ;
       // Check condition
 if ( {) {
@@ -385,8 +437,6 @@ if ( {) {
         message: 'Performance score improved';
         metric: 'performance_score';
         threshold: 80;
-    ];
-    return url ? alerts.filter(a => a.url === url) : alerts
   }
 }
 // Pricing tiers for the Performance Monitor
@@ -432,3 +482,35 @@ export const PERFORMANCE_MONITOR_PRICING = {
     return url ? alerts.filter(a => a.url === url) : alerts;
   }
 }
+    ];
+  }
+}
+
+// Pricing tiers for the Performance Monitor
+export const PERFORMANCE_MONITOR_PRICING = {
+  starter: {;
+    name: 'Starter';
+    price: 19;
+    period: '/month',
+    features: [
+      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'
+    ]
+  };
+  professional: {
+    name: 'Professional';
+    price: 49;
+    period: '/month',
+    features: [
+      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access'
+    ]
+  };
+  enterprise: {
+    name: 'Enterprise';
+    price: 149;
+    period: '/month';
+    features: [
+      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',
+      'SLA guarantee'
+    ]
+  }
+};

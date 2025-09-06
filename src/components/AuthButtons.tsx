@@ -1,13 +1,3 @@
-import { Facebook } from 'lucide-react'
-
-import { signIn } from 'next-auth/react'
-type Provider = 'google' | 'github' | 'facebook' | 'credentials'
-interface AuthButtonsProps {
-  providers?: Provider[]
-export function AuthButtons({
-  providers = ['google', 'github', 'facebook', 'credentials']
-}: AuthButtonsProps) {
-  const [loadingProvider, setLoadingProvider] = useState<string | null>(null)
   const handleSignIn = async (provider: Provider) => {
     setLoadingProvider (provider);
     await sign_in (provider);
@@ -159,6 +149,8 @@ export function AuthButtons({
           )}
         </Button>;
       )}
+
+
     </div>;
   );
 }

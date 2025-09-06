@@ -21,6 +21,11 @@ async function main() {
   }
 }
 main().catch((e) => {
+
+  console && console.error(e);
+  process && process.exit(1)
+});
+
 ;
 async function post_json (url: string, body: any): Promise < any> {
   return new Promise ((resolve, reject) => {

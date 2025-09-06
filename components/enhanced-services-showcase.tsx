@@ -1,3 +1,10 @@
+
+//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+ //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+ //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+
+//Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
 ...cuttingEdgeITServices;
 ...innovativeMicroSaasV2Services;
 ...enhancedRealMicroSaasServices;
@@ -71,14 +78,6 @@ const Button = ({
 if ( {) {
   $2
 }
-    return (
-      <a href={href} className={classes}>;
-        {children}
-      </a>);
-  }
-  return (
-    <button on_click={on_click} className={classes}>;
-      {children}
-    </button>);
-}
-;
+
+};
+

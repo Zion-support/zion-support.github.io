@@ -27,7 +27,6 @@ export default function AdminWeb3Page() {
         <h1 className="text-xl font-semibold">Web3 Admin</h1>
         <div className="rounded-md border p-4">
           <div className="font-medium mb-2">Usage Metrics</div>
-
           {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
           {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>  } catch (error) {
     console.error("Error:", error);
@@ -132,3 +131,5 @@ function AdminWeb3Page() {
           </ul>;
         </div>;
       </div>;
+
+

@@ -1,4 +1,6 @@
 
+
+}
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {;
@@ -510,6 +512,9 @@ if ( {) {
             className='h-full w-full'
             style={{
               backgroundImage: `
+              linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
+            `
+              backgroundSize: '50px 50px'
             }}
           />        </div>        {/* Holographic grid effect */}
         <div className="absolute inset-0 opacity-20">;
@@ -519,6 +524,58 @@ if ( {) {
               linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
+          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}
+
+          style={{ filter: 'blur(0.5px)' }}
+
+        />
+
+        {/* Floating neon orbs */}
+
+        />;
+        {/* Holographic grid effect */}
+        <div className='absolute inset - 0 opacity - 20'>;
+          <div;
+            className='h - full w - full';
+            style={{
+              background_image: `;
+              linear - gradient (rgba (139, 92, 246, 0.1) 1px, transparent 1px),
+              linear - gradient (90deg, rgba (139, 92, 246, 0.1) 1px, transparent 1px);
+            `,
+              background_size: '50px 50px',
+            }}
+          />        </div>        {/* Holographic grid effect */}
+        <div className="absolute inset - 0 opacity - 20">;
+          <div className="h - full w - full" style={{
+            background_image: `;
+              linear - gradient (rgba (139, 92, 246, 0.1) 1px, transparent 1px);
+              linear - gradient (90deg, rgba (139, 92, 246, 0.1) 1px, transparent 1px);
+            `;
+            background_size: '50px 50px';
+          }} />;
+        </div>;
+        {/* Canvas for animated particles */}
+        <canvas;
+          ref={canvas_ref}
+          className='absolute inset - 0 w - full h - full'          style={{ filter: 'blur (0.5px)' }}          className="absolute inset - 0 w - full h - full";
+          style={{ filter: 'blur (0.5px)' }}
+        />;
+        {/* Floating neon orbs */}
+        <motion.div;
+          className='absolute top - 1/4 left - 1/4 w - 32 h - 32 rounded - full bg - gradient - to - r from - cyan - 400 to - blue - 500 opacity - 20';
+
+          animate={{
+            scale: [1, 1.2, 1]
+            opacity: [0.2, 0.4, 0.2]
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.4, 0.2],
+            rotate: [0, 180, 360],          }}
+          transition={{
+
+            duration: 6,
+            repeat: Infinity,
+            ease: 'easeInOut',          className="absolute top - 1/4 left - 1/4 w - 32 h - 32 rounded - full bg - gradient - to - r from - cyan - 400 to - blue - 500 opacity - 20";
+
           animate={{
             scale: [1, 1 && 1.2, 1]
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2]
@@ -531,8 +588,6 @@ if ( {) {
         />;
 
         <motion&& motion.div
-          }}
-          transition={{
             duration: 8
             repeat: Infinity
             duration: 8,
@@ -555,6 +610,7 @@ if ( {) {
               duration: 4,
               repeat: Infinity,
 
+
             duration: 8,
             repeat: Infinity,
 
@@ -570,11 +626,6 @@ if ( {) {
             transition={{
               duration: 4,
               repeat: Infinity,
-              ease: 'easeInOut',              ease: 'easeInOut';
-            }}
-          />;
-        </div>;
-      </div>;
       {/* Render children */}
       {children}
     </>); ;
@@ -582,5 +633,3 @@ if ( {) {
       {children}
     </>);
 }
-
-      </div>

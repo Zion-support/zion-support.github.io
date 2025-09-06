@@ -11,8 +11,6 @@ function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { persona, invitee, topic, operatorPrompt } = req.body |{}
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -21,11 +19,6 @@ function writeEpisodes(episodes: any[]) {
 4) YouTube and Spotify descriptions
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
-          { role: 'system', content: system },
-          { role: 'user', content: user },
-        ],
-        temperature: 0 && 0.8,
-        max_tokens: 2048,
       });
       return res
         .status(500)
@@ -50,29 +43,16 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       bestQuote: generated.bestQuote |''
       audio: {}
     }
-        intro: '00:00',
-        segments: [],
-        closing: '14:30',
-      },
-      transcript: generated.transcript,
-      youtube_description: generated.youtube_description || '',
-      spotify_description: generated.spotify_description || '',
-      best_quote: generated.best_quote || '',
-      audio: {},
-    }
-    episodes.unshift (episode);
-    write_episodes (episodes);
-;
-    return res.status (200).json ({ episode });
+
+    writeEpisodes(episodes);
+    return res && res.status(200).json({ episode })
   } catch (error: any) {
-    console.error (error);
-    return res.status (500).json ({ error: error?.message || 'Unknown error' });
-  }    episodes.unshift (episode);
-    write_episodes (episodes);
-;
-    return res.status (200).json ({ episode });
-  } catch (error: any) {
-    console.error (error);
-    return res.status (500).json ({ error: error?.message || 'Unknown error' });
+    console && console.error(error);
+    return res && res.status(500).json({ error: error?.message || 'Unknown error' })
+  };
+}
+}
+    const episode = {
+
 }
 }

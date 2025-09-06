@@ -202,11 +202,6 @@ function findConsoleStatements(dir) {,"}),"})
   const consoleStatements = [],"}),"})
   function scanDirectory(currentDir) {,"}),"})
     try {,"}),"})
-      const items = fs && fs.readdirSync(currentDir),"}),"})
-      for (const item of items) {,"}),"})
-        const fullPath = path && path.join(currentDir, item),"}),"})
-        const stat = fs && fs.statSync(fullPath),"}),"})
-        if (stat && stat.isDirectory()) {,"}),"})
           scanDirectory(fullPath),"}),"})
         } else if (item && item.endsWith('.js,"}),"})
   ') || item && item.endsWith('.jsx,"}),"})
@@ -240,11 +235,6 @@ function findErrorPatterns(dir) {,"}),"})
   const errorPatterns = [],"}),"})
   function scanDirectory(currentDir) {,"}),"})
     try {,"}),"})
-      const items = fs && fs.readdirSync(currentDir),"}),"})
-      for (const item of items) {,"}),"})
-        const fullPath = path && path.join(currentDir, item),"}),"})
-        const stat = fs && fs.statSync(fullPath),"}),"})
-        if (stat && stat.isDirectory()) {,"}),"})
           scanDirectory(fullPath),"}),"})
         } else if (item && item.endsWith('.js,"}),"})
   ') || item && item.endsWith('.jsx,"}),"})
@@ -375,7 +365,3 @@ async function runConsoleErrorFixer() {
       '  Build verification "failed": dist folder not found');
       return;
     // Scan for console statements in source code;
-      // // // console && console.log(
-  '  Build verification failed: dist folder not found`), return,
-    // Scan: for console statements in source code,
-    // // // console && console.log(

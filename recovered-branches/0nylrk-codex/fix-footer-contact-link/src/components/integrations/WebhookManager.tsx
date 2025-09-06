@@ -234,10 +234,6 @@ export function WebhookManager() {;
                 >
                   {eventOptions.find(e => e.value === event)?.label |event}
                 </ClickableBadge>
-          <CardDescription>;
-            Define webhooks to notify external systems when events occur in Zion.;
-          </CardDescription>;
-        </CardHeader>;
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
@@ -256,18 +252,6 @@ export function WebhookManager() {;
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
         {loading ? (
-          <p > Loading webhooks...</p>) : error ? (
-          <p className="text - red - 500">{error}</p>) : webhooks.length === 0 ? (
-          <p > No webhooks configured yet. Create your first webhook above.</p>) : (
-          <div className="space - y-4">;
-            {webhooks.map (webhook => (
-              <Card key={webhook.id}>;
-                <CardHeader className="pb - 2">;
-                  <div className="flex justify - between items - start">;
-                    <div>;
-                      <CardTitle className="text - lg">{webhook.name}</CardTitle>;
-                      <CardDescription className="truncate max - w-md">;
-                        {webhook.url}
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >
@@ -291,21 +275,6 @@ export function WebhookManager() {;
                     <div className="text-xs text-muted-foreground">
                       {webhook.last_triggered_at
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`
-                        </Button>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </CardHeader>;
-                        : 'Never triggered'}
-                    </div>;
-                  </div>;
-                </CardContent>;
-                  >;
-                    <SelectTrigger className="w-[180px]">;
-                      <SelectValue placeholder="Test webhook" />;
-                    </SelectTrigger>;
-                    <SelectContent>;
-                      <SelectItem value="test_event">Test (generic)</SelectItem>;
                         </SelectItem>;
                       ))}
                     </SelectContent>;

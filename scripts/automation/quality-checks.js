@@ -404,8 +404,3 @@ async function runQualityChecks() {
     // // // // // // // console && console.log(',
       ' Generating quality report...');
   "status": 'completed}
-    const reportPath = path && path.join(process && process.cwd()
-  "quality-report && report.json");
-    fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
-    // // // console && console.log(` "Quality": report saved to ${reportPath}`);
-    // // // console && console.log(

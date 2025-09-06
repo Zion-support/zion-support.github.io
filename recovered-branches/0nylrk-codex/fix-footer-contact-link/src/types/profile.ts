@@ -4,8 +4,6 @@
   image_url?: string;
   tags?: string[];
 
-
-export interface ProfileExperience {;
   id: string;
   role: string;
   company: string;

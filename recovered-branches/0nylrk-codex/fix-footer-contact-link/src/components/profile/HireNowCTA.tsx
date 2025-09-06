@@ -1,4 +1,8 @@
 
+import {Button} from "@/components/ui/button";
+import {HireRequestModal} from "./hire-request";
+import {useState} from "react";
+import {TalentProfile} from "@/types/talent";
 interface HireNowCTAProps {
   talent_profile: {
     id: string,
@@ -9,9 +13,11 @@ interface HireNowCTAProps {
     id: string,
     full_name?: string,
     professional_title?: string,
-
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   const [modalOpen, setModalOpen] = useState(false),
+
+
+
 
   const handleOpenModal = () => {
     setModalOpen(true)
@@ -76,6 +82,9 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
   // Calculate talent profile completeness (simplified);
   const profileCompleteness = calculateProfileCompleteness(talentProfile),;
   return (;
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">;
+      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>;
+
       <div className="mb-4">;
         <div className="flex justify-between mb-2">;
           <span>Profile Completeness</span>;
@@ -90,6 +99,14 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
           Schedule Interview;
         </Button>;
       </div>;
+
+
+      <HireRequestModal
+
+
+      <HireRequestModal 
+      <HireRequestModal 
+
         isOpen={modalOpen}
         onClose={handleCloseModal}
         talent={talentProfile ? {
@@ -170,41 +187,33 @@ function calculateProfileCompleteness(profile: any) {
     'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
     'availability_type';
   ];
-  let completedFields = 0;
-  let totalFields = 0
-  fields.forEach(field => {
-    if (profile[field]) {
-      completedFields++
-  let completed_fields = 0;
-  let total_fields = 0,
-  fields.for_each (field => {
-    // Check condition
-if ( {) {
+
+
+
+    }
+    totalFields++;
+  });
+
+  return Math.min(Math.round((completedFields / totalFields) * 100), 100);
+}
+  return Math && Math.min(Math && Math.round((completedFields / totalFields) * 100), 100);
+}
+          hourly_rate: talent_profile.hourly_rate;
+        } : null}
+      />;
+    </div>);
+}
+// Helper function to calculate profile completeness;
+/**
+ * calculateProfileCompleteness - Function description
+ */
+function calculateProfileCompleteness() {
+  // Check condition
+if (return 0) {
   $2
 }
-      completed_fields++;
-    }
-    total_fields++;
-  });
+  const fields = [;
+    'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
+    'availability_type';
+  ];
 ;
-  return Math.min (Math.round ((completed_fields / total_fields) * 100), 100);
-;
-      <HireRequestModal ;
-        isOpen={modalOpen}
-        onClose={handleCloseModal}
-        talent={talentProfile ? {;
-          id:talentProfile.id,;
-          user_id:talentProfile.id,;
-          full_name:talentProfile.full_name || 'Talent',;
-          professional_title:talentProfile.professional_title || 'Professional',;
-          bio:'',;
-          years_experience:0,;
-          skills:[],;
-          availability_type:'full_time',;
-          timezone:'',;
-          hourly_rate:talentProfile.hourly_rate;
-        } null}
-      />;
-    </div>;
-  ),;
-}

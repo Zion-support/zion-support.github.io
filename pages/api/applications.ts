@@ -25,11 +25,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       existing.status = action === 'apply' ? 'applied' : 'skipped'
       writeJsonFile<Application[]>(FILE, apps)
       res.status(200).json({ application: existing })
-    const { jobId, talentSlug, action } = req.body || {};
-    if (!jobId || !talentSlug || !['applyskip'].includes(action)) {
-      res.status(400).json({ error: 'Invalid request' });
-      return
-    }
       return
     }
     const app: Application = {
@@ -46,5 +41,4 @@ createdAtIso: now}
   res.setHeader('AllowGET, POST')
   res.status(405).end('Method Not Allowed')
 }
-
 

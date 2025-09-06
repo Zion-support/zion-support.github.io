@@ -14,3 +14,14 @@ const CustomerSupportChatbot: NextPage = () => {
       </main>
     </div>
   )
+
+},
+export default CustomerSupportChatbot,
+
+},
+export default CustomerSupportChatbot,
+},
+
+export default CustomerSupportChatbot,;
+export default CustomerSupportChatbot,
+

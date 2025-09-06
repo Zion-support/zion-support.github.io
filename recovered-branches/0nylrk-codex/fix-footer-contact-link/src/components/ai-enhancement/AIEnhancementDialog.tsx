@@ -37,7 +37,6 @@ interface AIEnhancementDialogProps {;
   initialContent?: string;
 }
 
-
   title: string
   isOpen: boolean
   onClose: () => void

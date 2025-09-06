@@ -1,26 +1,29 @@
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import { useAuth } from "@/context/auth/AuthProvider"
-import { AlertCircle } from 'lucide-react'import { useRouter } from 'next/router'
 import React from 'react';
 
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {;
 
-  const [formData, setFormData] = useState({
-    email: ""
-    password: ""
-    name: ""})
-  const [isLoading, setIsLoading] = useState(false)
-  const [signupMode, setSignupMode] = useState(true)
-  const [error, setError] = useState("")
-  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({})
-  const [showVerificationMessage, setShowVerificationMessage] = useState(false)
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
-    setError("");    setFieldErrors(prev => ({ ...prev, [name]: "" }))
+    }
+    if (!formData.email.trim()) {
+      errors.email = 'Email is required'
+    } else if (!emailRegex.test(formData.email)) {
+      errors.email = 'Invalid email address'
+    }
+    if (!formData.password) {
+      errors.password = 'Password is required'
+    } else if (!strongPasswordRegex.test(formData.password)) {
+      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
+    }
+  const [is_loading, setIsLoading] = useState (false);
+  const [signup_mode, setSignupMode] = useState (true);
+  const [error, set_error] = useState ("");
+  const [field_errors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({});
+  const [showVerificationMessage, setShowVerificationMessage] = useState (false);
+  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+    const { name, value } = e.target;
+    setFormData (prev => ({ ...prev, [name]: value }));
+    set_error ("");    setFieldErrors (prev => ({ ...prev, [name]: "" }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -47,25 +50,7 @@ export function SignUpForm() {
     if (signupMode && !formData.name.trim()) {
       errors.name = 'Full name is required'
   
-    email: "",
-    password: "",
-    name: ""}),
-  const [isLoading, setIsLoading] = useState(false)
-  const [signupMode, setSignupMode] = useState(true)
-  const [error, setError] = useState("")
-  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({})
-  const [showVerificationMessage, setShowVerificationMessage] = useState(false);
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
-    if (!formData.email.trim()) {
-      errors.email = 'Email is required'
-    } else if (!emailRegex.test(formData.email)) {
-      errors.email = 'Invalid email address'
-    }
-    if (!formData.password) {
-      errors.password = 'Password is required'
-    } else if (!strongPasswordRegex.test(formData.password)) {
-      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
-    }
+    if (Object.keys(errors).length > 0) {
       setFieldErrors(errors)
       setIsLoading(false)
       return;
@@ -103,10 +88,6 @@ export function SignUpForm() {
       setError(err.message);
     }
 
-  return (
-
-
-      
       <div className="space-y-2">
           variant="outline"
           className="w-full py-6 relative"
@@ -133,23 +114,6 @@ export function SignUpForm() {
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
       </div>
-      {/* Verification Message */}
-      {showVerificationMessage && (
-        <Alert className="mb-4 border-blue-500 bg-blue-50">
-          <AlertCircle className="h-4 w-4" />
-          <AlertDescription>
-            Please check your email and click the verification link before signing in.
-          </AlertDescription>
-        </Alert>
-      {/* Verification Message */}
-      {showVerificationMessage && (;
-        <Alert className="mb-4 border-blue-500 bg-blue-50">;
-          <AlertCircle className="h-4 w-4" />;
-          <AlertDescription>;
-            Please check your email and click the verification link before signing in.;
-          </AlertDescription>;
-        </Alert>;
-      )}
       <form onSubmit={handleSubmit} className="space-y-4">
 ursor/fix-website-loading-errors-and-merge-6662
         {signupMode && (
@@ -167,12 +131,14 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
           </div>
         )}
+
+
               placeholder="Enter your full name"
-            />;
-            {fieldErrors && fieldErrors.name && (;
-              <p className="text-red-500 text-sm">{fieldErrors && fieldErrors.name}</p>;
+            />
+            {fieldErrors.name && (
+              <p className="text-red-500 text-sm">{fieldErrors.name}</p>
             )}
-          </div>;
+          </div>
         )}
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>

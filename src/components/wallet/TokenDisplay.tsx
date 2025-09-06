@@ -1,3 +1,7 @@
+
+
+
+
   return (
     <Card>
       <CardHeader className='flex flex-row items-center justify-between pb-2'>
@@ -20,11 +24,6 @@
               </Button>
             </div>
           </div>
-        )}
-      </CardContent>
-    </Card>
-  )
-}
 import React from "react",;
 import { BadgeDollarSign } from 'lucide-react';
 import { useWallet } from "@/hooks/useWallet",;

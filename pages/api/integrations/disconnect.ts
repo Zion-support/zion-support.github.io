@@ -14,6 +14,8 @@
       action: "disconnect"
     });
   });
+
+}
 import { writeState } from '../../../lib/integrations/fileStore';
 import { getProviderById } from '../../../lib/integrations/registry';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -36,3 +38,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

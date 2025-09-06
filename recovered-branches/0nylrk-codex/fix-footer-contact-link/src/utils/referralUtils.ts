@@ -1,4 +1,3 @@
-import {format} from 'date-fns';
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -13,8 +12,6 @@ export function formatDate(date: Date | string | undefined): string {
     url && url.searchParams.delete('ref');
     window && window.history.replaceState({}, document && document.title, url && url.toString());
     return refCode
- * Track referral when a user signs up
-    console.error ('Error formatting date:', e);
     return '-';
   }
 }

@@ -1,51 +1,3 @@
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useDebounce } from '@/hooks/useDebounce'
-import { GradientHeading } from '@/components/GradientHeading'
-import { SEO } from '@/components/SEO'
-import { Card, CardContent, CardFooter } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import {
-  Select
-  SelectValue
-  SelectTrigger
-  SelectContent
-  SelectItem
-} from '@/components/ui/select'
-import { BlogPost } from '@/types/blog'
-import { generateRandomBlogPost } from '@/utils/generateRandomBlogPost'
-import { BLOG_POSTS } from '@/data/blog-posts'
-
-import { Search } from 'lucide-react'
-import { useState, useEffect } from "react",
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { useDebounce } from "@/hooks/useDebounce",
-import { GradientHeading } from "@/components/GradientHeading",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-import { BlogPost } from "@/types/blog",
-import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",
-import { BLOG_POSTS } from "@/data/blog-posts",
-import { Search } from 'lucide-react'
-import { fetchWithRetry } from '@/utils/fetchWithRetry',
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-
-  'All Categories'
-  'Trends'
-  'Marketing'
-  'Sustainability'
-  'Ethics'
-  'Recruitment'
-  'Infrastructure'
-]
-export interface BlogProps {
-  posts?: BlogPost[]
 export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),
   const [searchQuery, setSearchQuery] = useState(""),
@@ -55,12 +7,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const [isLoading, setIsLoading] = useState(false),
   const router = useRouter(),
 
-  // Reset state when navigating away to avoid cross-page leakage
-  useEffect(() => {
-    return () => {
-      setSearchQuery ('');
-      setSelectedCategory ('All Categories');
-      set_posts ([...initial_posts]);
     }
   }, [router.as_path, initial_posts]);
   // useEffect (() => {
@@ -121,57 +67,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <GradientHeading>AI & Tech Insights</GradientHeading>
-          {/* Featured Post Section - Only show if there are featured posts */}
-          {featuredPosts.length > 0 &&
-            (() => {
-              const featuredPost = featuredPosts[0]
-              if (!featuredPost) return null
-          
-          {/* Featured Post Section - Only show if there are featured posts */}
-          {featuredPosts.length > 0 && (() => {
-            const featuredPost = featuredPosts[0],
-            if (!featuredPost) return null,
-            
-            return (
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="aspect-video overflow-hidden rounded-lg">
-                  <img
-                    src={featuredPost.featuredImage}
-                    alt={featuredPost.featuredImageAlt || featuredPost.title}
-                    className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
-                    onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement,
-                      target.src = "/images/blog-placeholder.svg"
-                    }}
-                  />
-                </div>
-                <div className="flex flex-col justify-center">
-                  <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">
-                    {featuredPost.category}
-                  </span>
-                  <h3 className="text-3xl font-bold text-white mb-4">
-                    {featuredPost.title}
-                  </h3>
-                  <p className="text-zion-slate-light mb-6">
-                    {featuredPost.excerpt}
-                  </p>
-                  <div className="flex items-center mb-6">
-                    <img
-                      src={featuredPost.author.avatarUrl}
-                      alt={featuredPost.author.name}
-                      className="w-10 h-10 rounded-full mr-3"
-                      onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement,
-                        target.src = "/images/blog-placeholder.svg"
-                      }}
-                    />
-                    <div>
-                      <p className="text-white font-medium">{featuredPost.author.name}</p>
-                      <p className="text-sm text-zion-slate-light">
-                        {featuredPost.publishedDate} • {featuredPost.readTime}
-                      </p>
                   </div>
                   <Button 
                     asChild
@@ -214,8 +109,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       className='text-white'
                     >                      {category}
                     </SelectItem>
-                </SelectContent>
-              </Select>
             </div>
             )
 import { useState, useEffect } from "react",;
@@ -427,14 +320,6 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                     className="px - 4 py - 2 bg - blue - 600 / 20 border border - blue - 400 / 30 rounded - full text - blue - 300 text - sm">;
                   >;
                     {category.name}
-      id: 2
-      title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot
-      excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot
-      author: &quot,Prof. Michael Rodriguez&quot
-      date: &quot,2025-01-12&quot
-      readTime: &quot,12 min read&quot
-      category: &quot,Quantum Computing&quot
-      tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot]
       id: 2,
       title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot,
       excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,
@@ -521,187 +406,6 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
   const regular_posts = blog_posts.filter ();
 }
   return (
-                            {post.category === "Cloud Computing" && <Code  />}
-                          </div>
-                        </div>;"
-                        <div className="flex-1">;"
-                          <div className="flex items-center gap-4 mb-3">;"
-                            <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">
-                              {post.category}
-                            </span>
-                          </div>;"
-                          <h3 className = "{"text-xl" font-bold text-white mb-3 hover: text-blue-400 transition-colors">,"
-                            <Link to="{"/blog/${post.id}"}">{post.title}</Link>
-                          </h3>;"
-                          <p className=""text-gray-300" mb-4"}>{post.excerpt}</p>;"
-                          <div className="flex items-center justify-between">;"
-                            <div className="flex items-center gap-4 text-sm text-gray-400">;"
-                              <span className="flex items-center">;"
-                                <User className="w-4 h-4 mr-1"  />
-                                {post.author}
-                              </span>;"
-                              <span className="flex items-center">;"
-                                <Calendar className="w-4 h-4 mr-1"  />
-                                {new Date(post.date).toLocaleDateString()}
-                              </span>;"
-                              <span className="flex items-center">;"
-                                <Clock className="{"w-4" h-4 mr-1"  />
-                                {post.readTime}
-                              </span>
-                            </div>
-                            <Link;"
-                              to = "{"/blog/${post.id}"}
-                              className=""flex" items-center text-blue-400 hover:text-blue-300 transition-colors"}>
-                            >
-                              Read More;"
-                              <ArrowRight className="w-4 h-4 ml-1"  />
-                            </Link>
-                          </div>
-                    </motion.article>;"
-                      className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300&quot
-                    >&quot,"
-                      <div className="&quot;flex" flex-col md: flex-row gap-6&quot,>&quot
-                        <div className="&quot,m,d: " w-48 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0&quot;>&quot
-                          <div className="&quot,text-4xl" opacity-20&quot,>"
-                            {post.category === &quot,AI & Machine Learning&quot, &&"}&quot <Brain  />}"
-                            {post.category === &quot;Quantum Computing&quot; &&"}&quot <Atom  />}"
-                            {post.category === &quot;Micro SaaS&quot; &&"}&quot <Rocket  />}"
-                            {post.category === &quot;Cybersecurity&quot; &&"}&quot <Shield  />}"
-                            {post.category === &quot;Digital Transformation&quot; &&"}&quot <Globe  />}"
-                            {post.category === &quot;Cloud Computing&quot; &&"}&quot <Code  />}
-                          </div>
-                        </div>"
-                        <div className="&quot;flex-1&quot;">&quot
-                          <div className="&quot;flex" items-center gap-4 mb-3&quot;>&quot
-                            <span className="&quot;px-3" py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs&quot;>
-                              {post.category}&quot
-                            </span>
-                          </div>"
-                          <h3 className="&quot;text-xl" font-bold text-white mb-3 hover: text-blue-400 transition-colors&quot,>&quot
-                            <Link to = "{"/blog/${post.id}"}">{post.title}</Link>
-                          </h3>"
-                          <p className="&quot;text-gray-300" mb-4&quot;>{post.excerpt}&quot </p>"
-                          <div className="&quot;flex" items-center justify-between&quot;>&quot
-                            <div className="&quot;flex" items-center gap-4 text-sm text-gray-400&quot;>&quot
-                              <span className="&quot;flex" items-center&quot;>&quot
-                                <User className="&quot;w-4" h-4 mr-1&quot;       />
-                                {post.author}&quot
-                              </span>"
-                              <span className="&quot;flex" items-center&quot;>&quot
-                                <Calendar className="&quot;w-4" h-4 mr-1&quot;       />
-                                {new Date(post.date).toLocaleDateString()}&quot
-                              </span>"
-                              <span className="&quot;flex" items-center&quot;>&quot
-                                <Clock className="&quot;w-4" h-4 mr-1&quot;       />
-                                {post.readTime}&quot
-                              </span>
-                            </div>"
-                            <Link to = "{"/blog/${post.id}"}"">
-                              className="&quot;flex" items-center text-blue-400 hover: text-blue-300 transition-colors&quot,"
-                              className = ""flex" items-center text-blue-400 hover: text-blue-300 transition-colors">
-                              Read More&quot,"
-                              <ArrowRight className="&quot;w-4" h-4 ml-1&quot,       />&quot
-                            </Link>
-                          </div>
-                    </motion.article>
-                  ))}
-                </div>
-              </section>
-            </div>
-            {/* comment */}"
-            <div className="lg: col-span-1">;"
-              <div className="sticky top-8 space-y-8">;"
-            <div className="&quot,lg:col-span-1&quot,">&quot,"
-              <div className = "&quot,sticky" top-8 space-y-8&quot,>
-                {/* comment */}&quot;"
-                <div className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50&quot;>&quot
-                  <h3 className="&quot;text-xl" font-bold text-white mb-4&quot;>Categories&quot </h3>"
-                  <div className="&quot;space-y-3&quot;">
-                    {categories.map((category, index) => (&quot}"
-                      <Link key = "{category.name}"">
-                        to="{"/blog/category/${category.name.toLowerCase().replace(/\s+/g," &apos;-&apos)}"}"
-                        className="&quot;flex" items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group&quot>
-                      >&quot;&apos;"
-                        <div className="&quot,flex" items-center&quot,>&quot,"
-                          <category.icon className="&quot;w-5" h-5 text-blue-400 mr-3 group-hover: text-blue-300&quot, />&quot,"
-                          <span className="&quot,text-gray-300" group-hove,r: text-white&quot,>{category.name}&quot </span>"
-            <div className = "lg: col-span-1">"
-              <div className="sticky top-8 space-y-8">
-                {/* comment */}"
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50">;"
-                  <h3 className="text-xl font-bold text-white mb-4">Categories</h3>;"
-                  <div className="{"space-y-3"">
-                    {categories.map((category, index) => (
-                      <Link;"
-                        key = "{category.name}
-                      Subscribe;
-                    </button>;
-                  </div>;
-    </>";
-                <divclassName="&quotbg-gradient-to-br" from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30&quot>&quot;
-                  <h3className="&quottext-xl" font-bold text-white mb-4&quot>Stay Updated&quot;</h3>";
-                  <p className="&quot,text-gray-300" mb-4&quot,>;
-                    Get the latest technology insights delivered to your inbox.&quot,;
-                  </p>",;
-                  <divclassName="&quotspace-y-3&quot">&quot,;
-                    <inputtype="&quotemail&quot
-                      placeholder="&quotEnter" your email&quot"
-                      className="&quotw-full" px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500&quot,>;
-                   />&quot,";
-                    <button className = "&quot,w-full" px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hove,r: to-purple-700 transition-all duration-200&quot,>;
-                      Subscribe&quot,";
-                      type="email;
-                      placeholder="Enter your email;
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500" />";
-                    <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">;
-                      Subscribe,;
-                    </button>;
-                  </div>;
-</>;
-  ),;
-  )})))))))));
-}
-
-                <div className="&quot;bg - gradient - to - br" from - blue - 600 / 20 to - purple - 600 / 20 rounded - xl p - 6 border border - blue - 400 / 30 & quot;>&quot;
-                  <h3 className="&quot;text - xl" font - bold text - white mb - 4&quot;>Stay Updated & quot </h3>";
-                  <p className="&quot, text - gray - 300" mb - 4&quot, >;
-                    Get the latest technology insights delivered to your inbox.&quot,
-                  </p>",
-                  <div className="&quot;space - y-3 & quot;">&quot,
-                    <input type="&quot;email & quot;
-                      placeholder="&quot;Enter" your email & quot;";
-                      className="&quot;w - full" px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus: outline - none focus:ring - 2 focus:ring - blue - 500 & quot, >;
-                  />&quot, ";
-                    <button class_name = "&quot, w - full" px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hove, r: to - purple - 700 transition - all duration - 200 & quot, >;
-                      Subscribe & quot, ";
-                      type="email;
-                      placeholder="Enter your email;
-                      className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus: outline - none focus:ring - 2 focus:ring - blue - 500" />";
-                    <button className="w - full px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 200">;
-                      Subscribe,
-                    </button>;
-                  </div>;
-</>),
-  )})))))))));
-}
-
-                variant="outline"
-;
-                variant="outline"
-                onClick={() => {
-                  setSearchQuery(""),
-                  setSelectedCategory("All Categories")
-          {!isLoading && filteredPosts.length === 0 && (;
-            <div className="text-center py-16">;
-              <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>;
-              <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>;
-              <Button;
-                variant="outline";
-                onClick={() => {;
-                  setSearchQuery("");
-                  setSelectedCategory("All Categories");
-                }}
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
               >;
                 Clear all filters;
               </Button>;
@@ -711,4 +415,3 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
       </div>;
     </>;
   );
-}

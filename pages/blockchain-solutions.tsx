@@ -19,6 +19,9 @@ const BlockchainSolutions: NextPage = () => {
     </div>;
   ),;
 };
+export default BlockchainSolutions;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > BlockchainSolutions</h1>;
@@ -29,3 +32,5 @@ import Head from 'next / head';
 ;
 export default BlockchainSolutions;
 ;
+
+

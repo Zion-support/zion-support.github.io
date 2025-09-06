@@ -8,14 +8,6 @@ export interface UserDetails {;
   headline?: string;
   profileComplete?: boolean;
   role?: string;
-  id?: string;
-  name?: string;
-  email?: string;
-  user_type?: string;
-  display_name?: string;
-  avatar_url?: string;
-  headline?: string;
-  profile_complete?: boolean;
   role?: string;
   permissions?: string[],
   companyId?: string;
@@ -23,6 +15,26 @@ export interface UserDetails {;
   createdAt?: string;
 }
 export interface AuthContextType {
+}
+;
+export interface AuthContextType {;
+  user: UserDetails | null,;
+  isAuthenticated: boolean,;
+  isLoading: boolean,;
+  signIn: (email: string, password: string) => Promise<{ error: any }>,;
+  signOut: () => Promise<void>,;
+  signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
+  // Aliases for compatibility with other components;
+  login: (email: string, password: string) => Promise<{ error: any }>,;
+  logout: () => Promise<void>,;
+  signup: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,;
+  resetPassword: (email: string) => Promise<{ error: any }>,;
+  updateProfile: (data: Partial<UserDetails>) => Promise<{ error: any }>,;
+  loginWithGoogle: () => Promise<void>,;
+  loginWithFacebook: () => Promise<void>,;
+  loginWithTwitter: () => Promise<void>,;
+  loginWithWeb3: () => Promise<void>;
+}
 
   user: UserDetails | null
   isAuthenticated: boolean
@@ -47,10 +59,6 @@ export interface AuthContextType {
 
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth
-      permissions: ["billing_access", "admin_access", "team_management"];
-      companyId: "company-123";
-    });
-    return { error: null }
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth
     console.log("Sign up attempted with:", email, userData);
@@ -104,8 +112,6 @@ export interface AuthContextType {
       setUser({ ...user, ...data })
     }
     return { error: null }
-  const loginWithGoogle = async () => {
-    console.log("Google login requested");
   }
   },
 
@@ -119,8 +125,6 @@ export interface AuthContextType {
       name: "Google User"
       profileComplete: true
     })
-  const loginWithFacebook = async () => {
-    console.log("Facebook login requested");
   }
   },
 
@@ -134,8 +138,6 @@ export interface AuthContextType {
       name: "Facebook User"
       profileComplete: true
     })
-  const loginWithTwitter = async () => {
-    console.log("Twitter login requested");
   }
   },
 
@@ -418,13 +420,4 @@ export function useAuth(): any (): AuthContextType {;
   }
   return context;
 }
-// Custom hook to use the auth context;
-export function use_auth (): AuthContextType {
-  const context = useContext (AuthContext);
-  // Check condition
-if ( {) {
-  $2
-}
-    throw new Error ("use_auth must be used within an AuthProvider");
-  }
-  return context;
+;

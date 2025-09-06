@@ -33,7 +33,6 @@ export function HireRequestModal({
     onClose()
   },
 
-
   if (!talent) return null,
 
 import React from './react';
@@ -82,6 +81,20 @@ import {UserProfile} from "@/types/auth";
           </DialogTitle>
         </DialogHeader>
         <HireRequestForm
+            Hire {talent.full_name}
+          </DialogTitle>
+        </DialogHeader>
+        <HireRequestForm 
+          talent={talent}
+          onClose={handleClose}
+          userDetails={userDetails}
+
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+
           </DialogTitle>;
         </DialogHeader>;
         <HireRequestForm;

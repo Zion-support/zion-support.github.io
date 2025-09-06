@@ -19,6 +19,9 @@ const DataAnalyticsImplementation: NextPage = () => {
     </div>;
   ),;
 };
+export default DataAnalyticsImplementation;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > DataAnalyticsImplementation</h1>;
@@ -29,3 +32,5 @@ import Head from 'next / head';
 ;
 export default DataAnalyticsImplementation;
 ;
+
+

@@ -8,6 +8,10 @@ interface Report {
   largestFiles: { file: string, bytes: number }[],
   stalePages: { file: string, lastCommitAt: string }[]
 }
+
+
+
+
 }
 type Props = { report: Report | null }
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -28,6 +32,14 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
   } catch {;
     return { props: { report: null }, revalidate: 3600 }
   }
+export default function RepoHealth(): any ({ report }: Props) {;
+
+
+};
+
+
+export default function RepoHealth({ report }: Props) {
+export default function RepoHealth({ report }: Props) {;
   if (!report) return <div>No report yet. Check back soon.</div>;
 
   return (
@@ -77,3 +89,7 @@ if (return <div > No report yet. Check back soon.</div>) {
         </ul>;
       </section>;
     </div>);
+
+  );
+}
+

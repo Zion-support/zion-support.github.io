@@ -7,7 +7,6 @@ import {Eye, ChevronDown, Loader2} from "lucide-react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import { useState } from "react",
 import { Link } from "react-router-dom",
-
 import { 
   DropdownMenu;
   DropdownMenuContent;
@@ -24,6 +23,7 @@ interface ApplicationActionsProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 
+
 export function ApplicationActions({;
   application;
   processingId;
@@ -32,11 +32,8 @@ export function ApplicationActions({
   application,
   processingId,
   onViewApplication,
-  application;
-  processingId;
-  onViewApplication;
-  onStatusChange;
-}: ApplicationActionsProps) {;
+  onStatusChange
+}: ApplicationActionsProps) {
   return (
     <div className="flex items-center justify-end gap-2">
       <Button
@@ -58,8 +55,6 @@ export function ApplicationActions({
             ) : (;
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
-      <Button 
-        variant="default" 
         size="sm"
         asChild
       >

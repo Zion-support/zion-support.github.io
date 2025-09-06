@@ -14,71 +14,6 @@ export function useTalentDirectory() {
 ;
   // Fetch talent data;
   const {
-    talents,
-    is_loading;
-  } = useTalentData ();
-;
-  // Apply filters and sorting;
-  const {
-    filtered_talents;
-    search_term;
-    setSearchTerm;
-    selected_skills;
-    selected_availability;
-    selected_regions;
-    price_range;
-    setPriceRange;
-    experience_range;
-    setExperienceRange;
-    sort_option;
-    setSortOption;
-    toggleSkill;
-    toggleAvailability;
-    toggleRegion;
-    clearFilters
-  } = useFilterTalents(talents);
-  // Manage UI state
-  const {
-    isMobileFilterOpen;
-    setIsMobileFilterOpen;
-    isHireModalOpen;
-    setIsHireModalOpen;
-    selected_talent;
-    setSelectedTalent;
-    expandedSections;
-    toggleSection
-  } = useUIState();
-  return {
-    // Talents and loading state;
-    talents;
-    filteredTalents;
-    isLoading;
-    // Search and filter state
-    searchTerm;
-    setSearchTerm;
-    selected_skills;
-    selected_availability;
-    selected_regions;
-    price_range;
-    setPriceRange;
-    experience_range;
-    setExperienceRange;
-    sort_option;
-    setSortOption;
-    // UI state
-    isMobileFilterOpen;
-    setIsMobileFilterOpen;
-    isHireModalOpen;
-    setIsHireModalOpen;
-    selected_talent;
-    setSelectedTalent;
-    // Actions
-    toggleSkill,
-    toggleAvailability,
-    toggleRegion,
-    clearFilters,
-    toggleSection,
-    handleToggleSave
 import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
@@ -165,16 +100,3 @@ export function useTalentDirectory() {;
   }
 }
 ;
-    // Auth and user state;
-    is_authenticated;
-    user_details;
-    saved_talents;
-;
-    // Actions;
-    toggle_skill;
-    toggle_availability;
-    toggle_region;
-    clear_filters;
-    toggle_section;
-    handleToggleSave;
-  }

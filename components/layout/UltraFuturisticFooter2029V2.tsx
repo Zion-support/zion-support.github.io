@@ -55,7 +55,6 @@ import {
   Phone, Mail, MapPin, Globe, ArrowRight
   Brain, Rocket, Target, Shield, Cpu
 
-import {
   Phone,
   Mail,
   MapPin,
@@ -120,6 +119,69 @@ import {
       { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
     ]
   }
+const mainNavigation = [
+
+  }, ];      { name: 'AI Business Intelligence', href: '/services / ai - business - intelligence - suite' },
+      { name: 'Smart Supply Chain', href: '/services / smart - supply - chain - optimization' },
+      { name: 'Intelligent HR Management', href: '/services / intelligent - hr - management - system' },
+      { name: 'Smart Financial Management', href: '/services / smart - financial - management - platform' }
+    ];
+  }
+const main_navigation = [;
+
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'AI Solutions', href: '/ai - solutions', icon: Brain },
+  { name: 'Quantum Tech', href: '/quantum - tech', icon: Globe },
+  { name: 'Enterprise IT', href: '/enterprise - it', icon: Cpu },
+  { name: 'Space Tech', href: '/space - tech', icon: Rocket },
+  { name: 'Micro SAAS', href: '/micro - saas', icon: Target },
+  { name: 'Innovations', href: '/innovations', icon: Sparkles },
+  { name: 'About', href: '/about', icon: Users },
+
+
+
+const quickLinks = [
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
+
+  { name: 'Blog', href: '/blog', icon: BookOpen },
+  { name: 'News', href: '/news', icon: TrendingUp },
+  { name: 'Careers', href: '/careers', icon: GraduationCap },
+
+
+
+const resources = [
+  { name: 'Support', href: '/support', icon: MessageCircle }, ];  { name: 'Support', href: '/support', icon: MessageCircle }
+];
+;
+const resources = [;
+  { name: 'Documentation', href: '/docs', icon: BookOpen },
+  { name: 'API Reference', href: '/api', icon: Code },
+  { name: 'Case Studies', href: '/case - studies', icon: BookOpen },
+  { name: 'White Papers', href: '/white - papers', icon: BookOpen },
+  { name: 'Blog', href: '/blog', icon: BookOpen },
+  { name: 'News', href: '/news', icon: TrendingUp },
+  { name: 'Events', href: '/events', icon: Calendar },
+
+
+
+const company = [
+  { name: 'Webinars', href: '/webinars', icon: Video }, ];  { name: 'Webinars', href: '/webinars', icon: Video }
+];
+;
+const company = [;
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Our Team', href: '/team', icon: Users },
+  { name: 'Careers', href: '/careers', icon: GraduationCap },
+  { name: 'Partners', href: '/partners', icon: Users },
+  { name: 'Investors', href: '/investors', icon: Star },
+  { name: 'Press', href: '/press', icon: BookOpen },
+  { name: 'Legal', href: '/legal', icon: Shield },
+
+
+
+];
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
@@ -320,16 +382,22 @@ export default function UltraFuturisticFooter2029V2() {
               </div>;
             </motion && motion.div>;
           </div>;
+
+
           {/* Service Categories */}
           {footerSections && footerSections.map((section, index) => (;
             <motion&& motion.div
               key={section && section.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+        {/* Service Showcase */}
+        <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
           viewport={{ once: true }}
+
+        >
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Featured 2029 Services
           </h3>
@@ -375,7 +443,6 @@ export default function UltraFuturisticFooter2029V2() {
                           className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 text - xs block";
                         >;
                           {service.name}
-
           </div>;
         </motion && motion.div>;
       </div>;
@@ -402,15 +469,17 @@ export default function UltraFuturisticFooter2029V2() {
                2025 Zion Tech Group. All rights reserved.
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Terms of Service</Link>
-
               </Link>            </motion.div>
 
             </motion.div>
 
+            {/* Social Links */}
+            <motion&& motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
+
             >
               {socialLinks.map(social => (
                 <Link
@@ -425,15 +494,23 @@ export default function UltraFuturisticFooter2029V2() {
                   rel="noopener noreferrer"
                   className={`p-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/20 text-gray-400 ${social.color} transition-all duration-300 hover:scale-110`}
                 >
-
                   <social.icon className='w-4 h-4' />                </Link>
 
                 </Link>
 
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* Newsletter Signup */}
+      <motion&& motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
         viewport={{ once: true }}
+
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='text-center'>
@@ -463,3 +540,30 @@ export default function UltraFuturisticFooter2029V2() {
         </div>
   );
 }
+      </motion.div>;
+    </footer>);
+              <input
+                type=&quot;email&quot;
+                placeholder=&quot;Enter your email&quot;
+                className=&quot;flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50&quot;
+              />
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+}
+}
+    </footer>
+  );
+}
+
+  );
+
+}
+
+    </footer>
+  );
+}
+

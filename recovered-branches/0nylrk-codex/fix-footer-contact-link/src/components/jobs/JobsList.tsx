@@ -21,6 +21,7 @@ interface JobsListProps {
   filter?: JobStatus,
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
+
   useEffect(() => {
 
     const fetchJobs = async () => {
@@ -42,16 +43,6 @@ interface JobsListProps {
     );
   }
           }
-        </p>;
-        <Button asChild className="mt-4">;
-          <Link to="/post-job">Post Your First Job</Link>;
-        </Button>;
-      </div>;
-      case "new": return "bg-blue-100 text-blue-800";
-      case "in_progress":;
-        return "bg-yellow-100 text-yellow-800";
-      case "filled":;
-        return "bg-green-100 text-green-800";
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
@@ -115,32 +106,6 @@ interface JobsListProps {
           <CardContent className="p-4 pt-0">
             <p className="line-clamp-3 text-sm text-muted-foreground mb-2">
               {job.description}
-            </p>;
-            <div className="flex flex-wrap gap-1 mt-2">;
-              {job.skills.slice(0, 3).map((skill, index) => (;
-              <Link to={`/jobs/${job.id}`}>;
-                <Eye className="h-4 w-4 mr-1" /> View Details;
-              </Link>;
-            </Button>;
-            <div className="flex gap-2">;
-              <Button variant="outline" size="sm" asChild>;
-                <Link to={`/jobs/${job.id}/edit`}>;
-                  <Edit className="h-4 w-4" />;
-                </Link>;
-              </Button>;
-              <Button variant="outline" size="sm">;
-                <X className="h-4 w-4" />;
-              </Button>;
-            </div>;
-          </CardFooter>;
-        </Card>;
-      ))}
-    </div>;
-  useEffect (() => {
-    const fetch_jobs = async () => {
-      // Check condition
-if (return) {
-  $2
 }
       try {
         let query = supabase;
@@ -372,6 +337,19 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
     </div>
   )
 }
+import { useState, useEffect } from './react';
+import { use_auth } from '@/hooks / use_auth';
+import { supabase } from '@/integrations / supabase / client';
+import { Job, JobStatus } from '@/types / jobs';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Loader2, Edit, X, Eye } from './lucide-react';
+import { format } from './date - fns';
+import { Link } from './react-router-dom';
+interface JobsListProps {
+  filter?: JobStatus;
+  onSelectJob?: (job_id: string, job_title: string) => void;
 }
 export /**
  * JobsList - Function description

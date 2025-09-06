@@ -52,6 +52,25 @@ export function DynamicListingPage({
   title;
   description;
   categorySlug;
+interface PriceRange {;
+  min: number,;
+  max: number;
+}
+
+interface DynamicListingPageProps {;
+  title: string,;
+  description: string,;
+  categorySlug: string,;
+  listings: ProductListing[],;
+  categoryFilters: { label: string, value: string }[],;
+  initialPrice?: PriceRange;
+}
+
+export function DynamicListingPage(): any ({;
+  title;
+  description;
+  categorySlug;
+  listings: allListings,;
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate(),
@@ -63,8 +82,6 @@ export function DynamicListingPage({
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
 
-
-  useEffect(() => {
       setPriceRange({ min, max })
     }
   }, [allListings]);
@@ -216,24 +233,37 @@ if ( {) {
           }
         });
       }
+  return (
     <div className="min-h-screen bg-zion-blue py-12 px-4">;
       <div className="container mx-auto">;
         <div className="text-center mb-12">;
           <GradientHeading>{title}</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
             {description}
-          </p>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          <div className="lg:col-span-1">
-            <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">
-              <h3 className="text-lg font-medium text-white mb-4 flex items-center">
-                <Filter className="mr-2 h-5 w-5" /> Filters
-              </h3>
-              <div className="mb-6">
-                <label className="text-sm font-medium text-zion-slate-light block mb-2">
-                  Category
-                </label>
+
+                  }}
+                >
+                  <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
+                    <SelectValue placeholder="Select Category" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
+                    <SelectItem value="all" className="text-white">All Categories</SelectItem>
+                    {categoryFilters.map((filter) => (
+                      <SelectItem key={filter.value} value={filter.value} className="text-white">
+          </p>;
+        </div>;
+
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
+          <div className="lg:col-span-1">;
+            <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">;
+              <h3 className="text-lg font-medium text-white mb-4 flex items-center">;
+                <Filter className="mr-2 h-5 w-5" /> Filters;
+              </h3>;
+
+              <div className="mb-6">;
+                <label className="text-sm font-medium text-zion-slate-light block mb-2">;
+                  Category;
+                </label>;
                 <Select
                   value={selectedCategory}
                   onValueChange={(value: string) => {
@@ -407,6 +437,80 @@ value={selectedCategory}
                       key={rating === null ? 'any' : rating}
                       variant="outline"
                       size="sm"
+                    <Button
+                      key={rating === null ? 'any' : rating}
+                      variant="outline"
+                      size="sm"
+                      onClick={() => {;
+                        console && console.log("Rating selected:", rating);
+                        setSelectedRating(rating);
+    }, 500);
+  }
+;
+  return (
+    <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
+      <div className="container mx - auto">;
+        <div className="text - center mb - 12">;
+          <GradientHeading>{title}</GradientHeading>;
+          <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto">;
+            {description}
+          </p>;
+        </div>;
+        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6">;
+          <div className="lg:col - span - 1">;
+            <div className="bg - zion - blue - dark rounded - lg border border - zion - blue - light p - 4 sticky top - 6">;
+              <h3 className="text - lg font - medium text - white mb - 4 flex items - center">;
+                <Filter className="mr - 2 h - 5 w - 5" /> Filters;
+              </h3>;
+              <div className="mb - 6">;
+                <label className="text - sm font - medium text - zion - slate - light block mb - 2">;
+                  Category;
+                </label>;
+                <Select;
+                  value={selected_category}
+                  onValueChange={(value: string) => {
+                    console.log ("Category selected:", value);
+                    setSelectedCategory (value);
+                  }}
+                >;
+                  <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white">;
+                    <SelectValue placeholder="Select Category" />;
+                  </SelectTrigger>;
+                  <SelectContent className="bg - zion - blue - dark border border - zion - blue - light">;
+                    <SelectItem value="all" className="text - white">All Categories</SelectItem>;
+                    {category_filters.map ((filter) => (
+                      <SelectItem key={filter.value} value={filter.value} className="text - white">;
+                        {filter.label}
+                      </SelectItem>))}
+                  </SelectContent>;
+                </Select>;
+              </div>;
+              <div className="mb - 6">;
+                <label className="text - sm font - medium text - zion - slate - light block mb - 2">;
+                  Price Range;
+                </label>;
+                <div className="mt - 6 px - 2">;
+                  <Slider;
+                    default_value={[price_range.min, price_range.max]}
+                    min={price_range.min}
+                    max={price_range.max}
+                    step={(price_range.max - price_range.min) / 100}
+                    value={currentPriceFilter}
+                    onValueChange={handleSliderChange}
+                    className="mb - 4";
+                  />;
+                  <div className="flex justify - between text - sm text - zion - slate - light">;
+                    <span>${currentPriceFilter[0].toLocaleString ()}</span>;
+                    <span>${currentPriceFilter[1].toLocaleString ()}</span>;
+                  </div>;
+                </div>;
+              </div>;
+              <div className="mb - 6">;
+                <label className="text - sm font - medium text - zion - slate - light block mb - 2">;
+                  Minimum Rating;
+                </label>;
+                <div className="flex flex - wrap gap - 2">;
+                  {[null, 3, 4, 5].map ((rating) => (
                     <Button;
                       key={rating === null ? 'any' : rating}
                       variant="outline";
@@ -422,10 +526,26 @@ value={selectedCategory}
                             <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />;
                           ))}
                           <span className="ml-1">& Up</span>;
+                      )}
+                    </Button>;
+                  ))}
+
+                </div>;
+              </div>;
+
+              <Button
+                variant="outline" 
+
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {;
                   console && console.log("Resetting filters");
                   setSearchQuery("");
+                className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
+                onClick={() => {
+                  console.log("Resetting filters");
+                  setSearchQuery("");
+                  setSelectedCategory("all")
+                  setCurrentPriceFilter([priceRange.min, priceRange.max]);
                   // // // console.log("Resetting filters"),
                   setSearchQuery(""),
                   setSelectedCategory("all"),
@@ -502,6 +622,9 @@ value={selectedCategory}
                   </div>;
                 ))}
               </div>;
+
+                  <ProductListingCard 
+
                     key={listing.id}
                     listing={listing}
                     view={view}
@@ -527,4 +650,14 @@ value={selectedCategory}
                 </Button>;
               </div>;
             )}
+                  }}
+                  className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
+                >;
+                  Clear all filters;
+                </Button>;
+              </div>)}
+          </div>;
+        </div>;
+      </div>;
+    </div>);
 }

@@ -1,17 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { burnTokens, burnForFeature } from "../../../utils/token/service";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
 
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const { userId, amount, reason, feature, metadata } = req.body |{}
   if (!userId) return res.status(400).json({ error: "userId required" })
   try {
-}
-
-}
-;
   } catch (err: any) {
-    return res.status(400).json({ error: err.message })
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -69,3 +62,6 @@ export default function handler(req, res) {
 }
   }
 }
+    return res.status(400).json({ error: err.message })
+
+

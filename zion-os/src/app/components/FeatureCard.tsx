@@ -8,3 +8,14 @@ export default function FeatureCard({
   gradient
   className = ''
 }: FeatureCardProps) {
+  className?: string;
+}
+export default /**
+ * FeatureCard - Function description
+ */
+function FeatureCard() {
+
+  return (
+      </ul>;
+    </div>);
+}

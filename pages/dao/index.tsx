@@ -44,11 +44,7 @@ export default function DaoMetrics(req, res) {
                   <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
                 </div>
               </div>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+            ))}
           </div>
         </div>
         <div className="border rounded p-4">
@@ -66,11 +62,7 @@ export default function DaoMetrics(req, res) {
                   <td className="py-1 pr-2 truncate max-w-[10rem]">{h.address}</td>
                   <td className="py-1">{h.amount}</td>
                 </tr>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              ))}
             </tbody>
           </table>
         </div>
@@ -82,11 +74,7 @@ export default function DaoMetrics(req, res) {
             <ul className="list-disc pl-5 text-sm">
               {data.activeProposals.map((p, i) => (
                 <li key={i}>{JSON.stringify(p)}</li>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              ))}
             </ul>
           ) : (
           )  } catch (error) {
@@ -109,3 +97,5 @@ export default function DaoMetrics(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+

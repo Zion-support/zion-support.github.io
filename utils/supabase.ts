@@ -23,3 +23,13 @@ export const supabase = {
     }),
     insert: (data: any) => ({
       select: (columns: string) => ({
+        single: () => null;
+      });
+    });
+  });
+        single: () => null
+      })
+    })
+}
+  });
+};

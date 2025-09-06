@@ -1,4 +1,3 @@
-;
 declare module 'aria-query',;
 declare module '@babel/core',;
 declare module '@babel/generator',;

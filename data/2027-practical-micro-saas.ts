@@ -36,9 +36,6 @@
     }
   }
 ];
-  }
-}
-
 export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
   {
     id: "2027-practical-micro-saas", name: "2027 Practical Micro SAAS Platform",
@@ -54,6 +51,11 @@ export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
     link: "/services/2027-practical-micro-saas", category: "Practical Micro SAAS 2027",
     realImplementation: true,
     contactInfo: {
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

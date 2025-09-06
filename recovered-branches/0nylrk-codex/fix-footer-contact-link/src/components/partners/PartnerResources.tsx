@@ -54,6 +54,9 @@ export function PartnerResources() {
       title: "Download started"
       description: `Downloading ${resource.title}`
       variant: "default"})
+  return (
+    <div className="space - y-6">;
+      <Card className="bg - zion - blue - dark border - zion - blue - light">;
         <CardHeader>;
           <CardTitle > Marketing Resources</CardTitle>;
           <CardDescription>;
@@ -61,6 +64,7 @@ export function PartnerResources() {
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+                  <Button
                     onClick={() => handleDownload(resource)}
                     size="sm";
                     variant="outline";
@@ -124,6 +128,33 @@ export function PartnerResources() {
       </Card>
     </div>
   )
+          </div>;
+        </CardContent>;
+      </Card>;
+
+      <Card className="bg-zion-blue-dark border-zion-blue-light">;
+        <CardHeader>;
+          <CardTitle>Promotion Guidelines</CardTitle>;
+                  </div>;
+                  <h3 className="font - semibold text - white mb - 1">{resource.title}</h3>;
+                  <p className="text - xs text - zion - slate - light mb - 4">{resource.description}</p>;
+                  <Button;
+                    on_click={() => handle_download (resource)}
+                    size="sm";
+                    variant="outline";
+                    className="w - full flex items - center gap - 2";
+                  >;
+                    <Download className="h - 4 w - 4" />;
+                    {resource.type === 'link' ? 'Visit Link' : 'Download'}
+                  </Button>;
+                </CardContent>;
+              </Card>))}
+          </div>;
+        </CardContent>;
+      </Card>;
+      <Card className="bg - zion - blue - dark border - zion - blue - light">;
+        <CardHeader>;
+          <CardTitle > Promotion Guidelines</CardTitle>;
           <CardDescription>;
             Best practices for promoting the Zion AI Marketplace;
           </CardDescription>;

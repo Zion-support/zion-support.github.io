@@ -30,36 +30,6 @@ import { AuthButtons } from '@/components/AuthButtons';
 import { fireEvent } from '@/lib/analytics';
 import { logInfo } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
-
-import React, { useEffect } from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import SignupForm from '@/components / auth / SignupForm',
-import { AuthButtons } from '@/components / AuthButtons',
-import { fire_event } from '@/lib / analytics',
-import { log_info } from '@/utils / production_logger',
-import { use_router } from 'next / router',
-const RegisterPage = () =>: any {
-  const router = use_router (),
-  useEffect (() => {
-    fire_event ('signup_page_view');
-import React, { useEffect } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import SignupForm from '@/components/auth/SignupForm',;
-import { AuthButtons } from '@/components/AuthButtons',;
-import { fireEvent } from '@/lib/analytics',;
-import { logInfo } from '@/utils/productionLogger',;
-import { useRouter } from 'next/router',;
-const RegisterPage = () => {
-  const router = useRouter(),
-
-  useEffect(() => {
-    fireEvent('signup_page_view')
-  }, []),
-  const handle_success = ({ email, emailVerificationRequired }: {
-    email: string,
-
 const RegisterPage = () => {;
   const router = useRouter();
   useEffect(() => {;
@@ -68,12 +38,50 @@ const RegisterPage = () => {;
   const handleSuccess = ({ email, emailVerificationRequired }: {;
     email: string;
 
+  },
+  return (
+    <>
+      <Head>
+        <title>Create Account - Zion Tech Marketplace</title>
+        <meta name="description" content="Create your Zion Tech Marketplace account" />
+      </Head>
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md w-full space-y-8">
+          <div>
+            <img
+              className="mx-auto h-12 w-auto"
+              src="/logos/zion-logo.png"
+              alt="Zion Tech"
+              width={48}
+              height={48}
+              on_error={(e) => {
+                const target = e.current_target as HTMLImageElement,
+                target.style.display = 'none';
+
               }}
-            />;
-            <h2 className="mt - 6 text - center text - 3xl font - extrabold text - gray - 900">;
-              Create your account;
-            </h2>;
-            <p className="mt - 2 text - center text - sm text - gray - 600">;
+              width={48  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              height={48  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              onError={(e) => {;
+                const target = e.currentTarget as HTMLImageElement;
+                target.style.display = 'none';
+              }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            />
+            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+              Create your account
+            </h2>
+            <p className="mt-2 text-center text-sm text-gray-600">
               Or{' '}
               Or{' '  } catch (error) {
     console.error("Error:", error);
@@ -107,7 +115,6 @@ const RegisterPage = () => {;
                 Terms of Service;
               </Link>{' '}
               and{' '}
-
               By creating an account, you agree to our{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -196,3 +203,6 @@ export default RegisterPage,
           </div>;
         </div>;
       </div>;
+
+},
+

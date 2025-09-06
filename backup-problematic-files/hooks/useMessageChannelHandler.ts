@@ -1,11 +1,11 @@
-import { useEffect, useCallback  } from './react';
-;
-// Define MessageEvent if not available;
 interface Event {
   type: string;
   target: EventTarget | null;
 }
 type EventListener = (event: Event) => void;
+
+;
+
 interface EventTarget {
   addEventListener (type: string, listener: EventListener): void;
   removeEventListener (type: string, listener: EventListener): void;

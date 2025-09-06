@@ -1,4 +1,14 @@
 
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {
+  ArrowRight, Check, Star, Users, Zap, Shield, Globe
+  TrendingUp, Award, Clock, CheckCircle, ExternalLink
+} from 'lucide-react'
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -126,21 +136,41 @@ export default function Pricing2025(req, res) {
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"2025 Pricing & Services  Zion Tech Group","url":"https://ziontechgroup.com/pricing-2025","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
       <EnhancedNavigation />
       {/* Hero Section */}
-      <section className="relative py - 20 px - 6">;
-        <div className="max - w-7xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
+      <section className="relative py-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
+              2025 Pricing & Services
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
               AI solutions, quantum technologies, and revolutionary IT services.
             </p>
-          >;
-            <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent">;
-              2025 Pricing & Services;
-            </h1>;
-            <p className="text - xl md:text - 2xl text - white / 80 max - w-4xl mx - auto leading - relaxed mb - 8">;
+            {/* Billing Toggle */}
               Transparent pricing for our comprehensive collection of innovative micro SAAS services,
 
+              AI solutions, quantum technologies, and revolutionary IT services.
+            </p>
+            {/* Billing Toggle */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="flex items-center justify-center gap-4 mb-12">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-white/60'}`}>
                 Monthly
@@ -174,38 +204,6 @@ export default function Pricing2025(req, res) {
         </div>
       </section>
       {/* Category Filter */}
-      <section className="py - 8 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;
-        <div className="max - w-7xl mx - auto">;
-          <div className="flex flex - wrap justify - center gap - 4">;
-            {categories.map ((category) => (
-              <button;
-                key={category.id}
-                on_click={() => setSelectedCategory (category.id)}
-                className={`px - 6 py - 3 rounded - lg text - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
-                  selected_category === category.id;
-                    ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
-                    : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
-                }`}
-              >;
-                <span>{category.icon}</span>;
-                {category.name}
-      {/* Pricing Grid */}
-      <section className="py - 16 px - 6">;
-        <div className="max - w-7xl mx - auto">;
-          <motion.div;
-            variants={container_variants}
-            initial="hidden";
-            animate="visible";
-            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
-          >;
-            {filtered_services.map ((service, index) => (
-              <motion.div;
-                key={service.id}
-                variants={item_variants}
-                className={`group relative p - 8 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl ${
-                  service.popular ? 'ring - 2 ring - cyan - 400 / 50' : '';
-                }`}
-
       {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -216,7 +214,6 @@ export default function Pricing2025(req, res) {
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <button
-
                 key={category.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -291,14 +288,44 @@ export default function Pricing2025(req, res) {
               >;
                 {/* Popular Badge */}
                 {service.popular && (
-                {/* Service Header */}
-                <div className="text - center mb - 8">;
-                  <div className={`w - 20 h - 20 rounded - 2xl bg - gradient - to - br ${service.color} p - 5 mx - auto mb - 4 flex items - center justify - center text - 3xl`}>;
-                    {service.icon}
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+                <div className="text-center mb-8">
+                  <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} p-5 mx-auto mb-4 flex items-center justify-center text-3xl`}>
+                    {service.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">{service.tagline}</p>
+                </div>
+                {/* Pricing */}
+                <div className="text-center mb-8">
+                  <div className="mb-2">
+                    <span className="text-4xl font-bold text-cyan-400">
+                      {billingCycle === 'monthly' ? service.price : getAnnualPrice(service.price)}
+                    </span>
+                    <span className="text-white/60 ml-2">
+                      {billingCycle === 'monthly' ? service.period : '/year'}
+                {/* Pricing */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                <div className="text-center mb-8">
+                  <div className="mb-2">
+                    <span className="text-4xl font-bold text-cyan-400">
+                      {billingCycle === 'monthly' ? service.price : getAnnualPrice(service.price)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </span>
+                    <span className="text-white/60 ml-2">
                       {billingCycle === 'monthly' ? service.period : '/year'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -310,25 +337,34 @@ export default function Pricing2025(req, res) {
                     <p className="text-green-400 text-sm">
                       Save ${Math.round(parseFloat(service.price.replace('$', '')) * 12 * 0.2)} annually
                     </p>
-                {/* Rating */}
-                <div className="flex items - center justify - center gap - 2 mb - 6">;
-                  <div className="flex items - center gap - 1">;
-                    {[...Array (5)].map ((_, i) => (
-                      <Star;
-                        key={i}
-                        className={`w - 4 h - 4 ${
-                          i < Math.floor (service.rating) ? 'text - yellow - 400 fill - current' : 'text - white / 20';
-                        }`}
+                <div className="flex items-center justify-center gap-2 mb-6">
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        className={`w-4 h-4 ${;
+                          i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-white/20';
+                        }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      />;
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </div>
+                  <span className="text-white/60 text-sm">
+                    {service.rating} ({service.reviews} reviews)
+                  </span>
+                </div>
                 {/* Features */}
-                <div className="mb - 8">;
-                  <h4 className="text - white font - semibold mb - 4 text - center">Key Features:</h4>;
-                  <div className="space - y-3">;
-                    {service.features.slice (0, 5).map ((feature, idx) => (
-                      <div key={idx} className="flex items - center gap - 3 text - sm text - white / 80">;
-                        <CheckCircle className="w - 4 h - 4 text - cyan - 400 flex - shrink - 0" />;
-                        <span>{feature}</span>;
-                      </div>))}
-
                 {/* Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -348,8 +384,6 @@ export default function Pricing2025(req, res) {
   }
 }
                     {service.features.length > 5 && (
-
-
                 {/* ROI and Setup */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -373,7 +407,22 @@ export default function Pricing2025(req, res) {
                 <div className="space - y-3">;
                   <a;
                     href={service.link}
-
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg font-semibold text-white text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                  >
+                    Get Started
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                  <a
+                    href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}&body=Hi, I'm interested in learning more about your ${service.name} service. Please provide more information about pricing, features, and implementation.`}
+                  </Link>
+                  <a
+                    href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}&body=Hi, I'm interested in learning more about your ${service.name} service. Please provide more information about pricing, features, and implementation.`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="w-full px-6 py-3 border border-white/20 hover:border-cyan-400/30 rounded-lg font-semibold text-white text-center transition-all duration-300 hover:bg-white/5"
                   >
                     Contact Sales
@@ -405,14 +454,34 @@ export default function Pricing2025(req, res) {
                 View All Services
               </button>
             </div>
-      {/* Enterprise Solutions */}
-      <section className="py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              Need Enterprise Solutions?
+            </h2>
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               for organizations requiring multiple services or specialized implementations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -527,4 +596,3 @@ export default function Pricing2025(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}

@@ -9,7 +9,6 @@ import {supabase} from '@/integrations/supabase/client';
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
-export function useMessagingRealtime(;
   user: UserWithProfile;
   active_conversation: Conversation | null;
   setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
@@ -44,16 +43,6 @@ export function useMessagingRealtime(;
       .subscribe();
 
     return () => {
-      supabase && supabase.removeChannel(subscription)
-    }
-  }, [user, activeConversation, fetchConversations, setActiveMessages])
-  fetch_conversations: () => Promise < void>) {
-  // Setup real - time subscription when user is logged in;
-  useEffect (() => {
-    // Check condition
-if (return, ) {
-  $2
-}
     // Subscribe to new messages;
     const subscription = supabase;
       .channel ('messages');
@@ -83,3 +72,6 @@ if ( {) {
           });
         }
       );
+    }
+  }, [user, active_conversation, fetch_conversations, setActiveMessages]);
+}

@@ -1,39 +1,3 @@
-import React, { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import {
-  Form
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-  Select
-  SelectTrigger
-  SelectValue
-  SelectContent
-  SelectItem
-} from '@/components/ui/select'
-import { Calendar } from '@/components/ui/calendar'
-  Popover
-  PopoverTrigger
-  PopoverContent
-} from '@/components/ui/popover'
-import { TalentProfile } from '@/types/talent'
-import type { UserProfile } from '@/types/auth'
-import { cn } from '@/lib/utils'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm, ControllerRenderProps } from 'react-hook-form'
-import { z } from 'zod'
-import { format, addDays } from 'date-fns'
-
-import { CalendarIcon } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast";
-import { useInterviews } from "@/hooks/useInterviews";
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface InterviewRequestFormProps {
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -201,19 +165,9 @@ const formSchema = z.object({
   duration: z.string().min(1, "Please select the interview duration."),
   platform: z.string().min(1, "Please select a meeting platform."),
   meetingLink: z.string().optional(),
-  title: z.string().min(3, "Please provide a brief title for the interview."),
-  notes: z.string().optional()}),
-
-
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
-      title: `Interview with ${talent.full_name}`
-      duration: '30'
-      platform: 'zoom'
-      notes: ''
-      meetingLink: ''
-    }
   })
   async function onSubmit(values: z.infer<typeof formSchema>) {
     if (!userDetails?.id) {
@@ -254,6 +208,14 @@ const formSchema = z.object({
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration),
 
+
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema)
+    defaultValues: {
+
+      title: `Interview with ${talent.full_name}`,
+
       await requestInterview({
         talent_id: talent.id,
         client_id: user_details.id,
@@ -261,16 +223,6 @@ const formSchema = z.object({
         duration_minutes: duration_minutes,
         notes: values.notes,
         meeting_platform: values.platform as any,
-        meeting_link: values.meetingLink,
-      })
-      onClose()
-    } catch (error) {
-      logErrorToProduction('Failed to schedule interview:', { data: error })
-      toast({
-        interview_type: "video",
-        title: values.title
-      }),
-
     } finally {
       setIsSubmitting (false);
     }
@@ -363,21 +315,6 @@ const formSchema = z.object({
             </FormItem>
           )}
         />
-            name='date'
-            render={({
-              field
-            }: {
-              field: ControllerRenderProps<z.infer<typeof formSchema>, 'date'>
-            }) => (
-              <FormItem className='flex flex-col'>                <FormLabel>Date</FormLabel>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
-            name="date"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (
-              <FormItem className="flex flex-col">
-                <FormLabel>Date</FormLabel>
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
@@ -392,13 +329,6 @@ const formSchema = z.object({
                           format(field.value, "PPP")
                         ) : (
                           <span>Pick a date</span>
-                        )}
-                        <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />;
-                      </Button>;
-                    </FormControl>;
-                  </PopoverTrigger>;
-                  <PopoverContent className='w-auto p-0' align='start'>;
-                    <Calendar
                     />
                   </PopoverContent>
                 </Popover>
@@ -453,9 +383,6 @@ const formSchema = z.object({
                       <SelectValue placeholder="Select time" />
                     </SelectTrigger>
                   </FormControl>
-                  <SelectContent className='max-h-[300px]'>
-                    {timeSlots.map(time => (                      <SelectItem key={time} value={time}>
-                        {time}
                   <SelectContent className='max-h-[300px]'>
                     {timeSlots.map(time => (                      <SelectItem key={time} value={time}>
                   <SelectContent className="max-h-[300px]">
@@ -573,21 +500,6 @@ const formSchema = z.object({
             render={({
               field
             }: {
-              field: ControllerRenderProps<
-                z.infer<typeof formSchema>
-                'meetingLink'
-              >
-            }) => (              <FormItem>
-            render={({
-              field
-            }: {
-              field: ControllerRenderProps<
-                z.infer<typeof formSchema>
-                'meetingLink'
-              >
-            }) => (              <FormItem>
-                <FormLabel>Meeting Link (Optional)</FormLabel>
-                <FormControl>
                   <Input
                     placeholder={`Add your ${form && form.watch('platform')} link here`}
               field: ControllerRenderProps<;
@@ -653,9 +565,6 @@ const formSchema = z.object({
             </FormItem>;
           )}
         />
-          </Button>
-          <Button type='submit' disabled={isSubmitting}>
-            {isSubmitting ? 'Scheduling...' : 'Schedule Interview'}
         <div className='flex justify-end gap-4 pt-4'>
           <Button variant='outline' onClick={onClose} type='button'>
 
@@ -670,15 +579,6 @@ const formSchema = z.object({
       </form>
     </Form>
   )
-}setIsSubmitting (true)
-}catch (error) {
-  logErrorToProduction ('Failed to schedule interview:', {
-  data: error
-})
-toast ({
-}finally {
-  setIsSubmitting (false)
-}"
 }const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"
 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";"
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";"

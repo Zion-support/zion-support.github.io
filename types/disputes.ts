@@ -57,4 +57,6 @@ export type DisputeListItem = Pick<
 export type UserSummary = {
   id: string;
   name: string;
+
+
   role: 'admin' | 'client' | 'talent';

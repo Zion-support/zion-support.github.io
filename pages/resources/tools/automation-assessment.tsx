@@ -120,6 +120,12 @@ function ToolPage() {
   }
 }
   },
+  const resetAssessment = () => {
+    setCurrentQuestion(0)
+    setAnswers({})
+    setShowResults(false)
+  }
+  },
   if (showResults) {
     const result = calculateScore()
     return (
@@ -160,7 +166,10 @@ function ToolPage() {
         </div>
       </>
     )
-    } catch (error) {
+              </div>
+            </div>
+
+
             <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
               <h2 className="text-2xl font-bold mb-6 text-white">{currentQ.question}</h2>
               <div className="space-y-4 mb-8">
@@ -168,7 +177,6 @@ function ToolPage() {
                   <label key={index} className="flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer">
                     <input
                       type="radio"
-
   },;
   const resetAssessment = () => {;
     setCurrentQuestion(0);
@@ -297,11 +305,7 @@ function ToolPage() {
                     />
                     <span className="text-white/90">{option}</span>
                   </label>
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                ))}
               </div>
 
                   className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
@@ -320,54 +324,23 @@ function ToolPage() {
         </main>
       </div>
     </>
-    const result = calculate_score (),
-    return (
-      <>;
-        <Head>;
-          <title > Automation Readiness Assessment - Results | Zion Tech Group</title>;
-          <meta name="description" content="View your automation readiness assessment results and get personalized recommendations." />;
-        </Head>;
-        <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
-          <main className="container mx - auto px - 6 py - 12">;
-            <div className="max - w-4xl mx - auto">;
-              <nav className="mb - 8">;
-                <Link href="/resources" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
-                   Back to Resources;
-                </Link>;
-              </nav>;
-              <div className="text - center mb - 12">;
-                <h1 className="text - 4xl font - bold text - white mb - 4">Assessment Results</h1>;
-                <p className="text - white / 80 text - lg">Your automation readiness evaluation is complete</p>;
-              </div>;
-              <div className="bg - gradient - to - r from - cyan - 500 / 10 to - fuchsia - 500 / 10 rounded - 2xl p - 8 border border - cyan - 500 / 20 mb - 8">;
-                <h2 className={`text - 3xl font - bold mb - 4 ${result.color}`}>Level: {result.level}</h2>;
-                <p className="text - white / 90 text - lg mb - 6">{result.description}</p>;
-                <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb - 8">;
-                  {questions.map ((q, index) => (
-                    <div key={q.id} className="bg - white / 10 rounded - lg p - 4 border border - white / 20">;
-                      <h3 className="font - semibold text - cyan - 400 mb - 2">{q.question}</h3>;
-                      <p className="text - white / 80 text - sm">Score: {answers[q.id] || 0}/5</p>;
-                    </div>))}
-                </div>;
-                <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                  <button;
-                    on_click={reset_assessment}
-                    className="bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
-                  >;
-                    Retake Assessment;
-                  </button>;
-                  <Link;
-                    href="/contact";
-                    className="px - 8 py - 4 border border - white / 20 rounded - lg text - white hover:border - cyan - 400 / 50 transition - all duration - 300";
-                  >;
-                    Get Personalized Recommendations;
-                  </Link>;
-                </div>;
-              </div>;
-            </div>;
-          </main>;
-        </div>;
-      </>);
+}
+
+  },
+  const reset_assessment = () =>: any {
+    setCurrentQuestion (0),
+    set_answers ({}),
+    setShowResults (false);
+  },
+  // Check condition
+if ( {) {
+  $2
+}
+                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
   const current_q = questions[current_question],
   return (

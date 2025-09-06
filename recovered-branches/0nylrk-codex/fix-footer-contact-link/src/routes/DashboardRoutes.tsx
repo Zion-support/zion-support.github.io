@@ -44,6 +44,32 @@ import Referrals from "@/pages/Referrals",;
 import DeveloperPortal from "@/pages/DeveloperPortal",;
 import WalletPage from "@/pages/Wallet",;
 import ContractBuilder from "@/pages/ContractBuilder",;
+const DashboardRoutes = () => {
+const DashboardRoutes = () => {;
+  return (
+    <Routes>;
+      {/* Dashboard Routes */}
+      <Route
+
+        path="/dashboard" 
+        element={
+          <ProtectedRoute>;
+            <Dashboard />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
+        path="/client-dashboard" 
+        element={
+          <ProtectedRoute>;
+            <ClientDashboard />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
+        path="/talent-dashboard" 
+
+        element={
           <ProtectedRoute>;
             <TalentDashboard />;
           </ProtectedRoute>;
@@ -72,11 +98,3 @@ import ContractBuilder from "@/pages/ContractBuilder",;
             <ContractBuilder />;
           </ProtectedRoute>;
 export default DashboardRoutes;
-
-        }
-      />;
-    </Routes>);
-}
-;
-export default DashboardRoutes;
-;

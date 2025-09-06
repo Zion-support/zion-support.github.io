@@ -8,8 +8,6 @@
     min: number
 
     max: number
-
-export interface TalentProfile {;
   id: string;
   full_name: string;
   professional_title: string;
@@ -17,13 +15,13 @@ export interface TalentProfile {;
   skills: string[];
   years_experience: number;
 
-
-export interface TalentMatch {;
   talent_id: string;
   job_id: string;
   match_score: number;
 
   talentId: string;
+export interface MatchResult {
+  talent_id: string;
   score: number;
 
   matchedSkills: string[]
@@ -66,4 +64,3 @@ export interface MatchResult {;
   talentId: string,;
   score: number,;
   matchedSkills: string[];
-;

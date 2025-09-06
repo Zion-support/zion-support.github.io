@@ -234,14 +234,10 @@ if ( {) {
         style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
           transition={{
 
-
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut";
           }}
-
-        />;
-
 
         {/* Secondary orb */}
         <motion&& motion.div
@@ -255,65 +251,26 @@ if ( {) {
             scale: [1 && 1.2, 1, 1 && 1.2]
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4]}}
           transition={{
-
-        />;
-
-
         {/* Tertiary orb */}
         <motion&& motion.div
           className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl'
           animate={{
             scale: [1, 1.3, 1];
             opacity: [0.2, 0.5, 0.2]}}
-            scale: [1, 1 && 1.3, 1],
-            opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2],          animate={{
-            scale: [1, 1 && 1.3, 1]
-            opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]}}
-            duration: 12,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            delay: 4,            ease: "easeInOut",
             duration: 12,
             repeat: Infinity,
             ease: 'easeInOut',
             delay: 4,
 
 
-        {/* Additional orbs */}
-        <motion.div
-          className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl'
-          animate={{
-            scale: [1.3, 1, 1.3]
-            opacity: [0.3, 0.6, 0.3]
-          animate={{
-            scale: [1.3, 1, 1.3];
-            opacity: [0.3, 0.6, 0.3]}}
-          transition={{
-            duration: 9
-            repeat: Infinity
-            ease: 'easeInOut'
-            delay: 1,          }}
-          transition={{
-            duration: 9
-            repeat: Infinity
-            ease: 'easeInOut'
-            delay: 1,          }}
-        />
-        <motion.div
-          className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl'
-          animate={{
-            scale: [1, 1.4, 1]
-            opacity: [0.4, 0.7, 0.4]
-          animate={{
-            scale: [1.3, 1, 1.3];
-            opacity: [0.3, 0.6, 0.3]}}
-          transition={{
-            duration: 9
-            repeat: Infinity
-            ease: "easeInOut"
-            delay: 1
           }}
           transition={{
+            duration: 11
+            repeat: Infinity
+            ease: 'easeInOut'
+            delay: 3,            ease: "easeInOut"
+            delay: 3
+            duration: 11,
             repeat: Infinity,
             ease: 'easeInOut',
             delay: 4,          }}
@@ -329,6 +286,13 @@ if ( {) {
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+          style={{
+            backgroundImage: `
+
+              linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
+            `,
+
             backgroundSize: '50px 50px',          }}          style={{
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
@@ -345,6 +309,9 @@ if ( {) {
       </div>
       {/* Floating geometric shapes */}
 
+        {/* Triangle */}
+        <motion&& motion.div
+          className='absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45'
         />;
       </div>;
       {/* Enhanced grid pattern */}
@@ -383,12 +350,10 @@ if ( {) {
             opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
           transition={{
 
-
             duration: 20,
             repeat: Infinity,
             ease: "linear";
           }}
-
 
         {/* Square */}
         <motion&& motion.div
@@ -410,6 +375,8 @@ if ( {) {
             repeat: Infinity
             ease: "easeInOut"
           }}
+
+
         {/* Circle */}
         <motion&& motion.div
           className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full'
@@ -476,12 +443,10 @@ if ( {) {
               duration: 6,
               repeat: Infinity,
               ease: 'easeOut',
-
               delay: i * 2,            }}
           />
         ))}
       </div>
-
 
       {/* Quantum particles */}
       <div className='absolute inset-0'>
@@ -498,6 +463,9 @@ if ( {) {
               repeat: Infinity
               delay: Math.random() * 4
               ease: 'easeInOut'
+              repeat: Infinity,
+              delay: Math.random() * 4,
+              ease: 'easeInOut',
             }}
             style={{
               left: `${Math.random() * 100}%`
@@ -511,6 +479,24 @@ if ( {) {
 
         ))}
       </div>;
+      {/* Consciousness energy field */}
+
+          className='absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5'
+          animate={{
+            opacity: [0.3, 0.6, 0.3],        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5"
+      <div className='absolute inset-0'>
+
+          />
+
+        ))}
+      </div>
+
+      {/* Consciousness energy field */}
+      <div className='absolute inset-0'>
+
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5"
               coordinate_x: [0, Math.random () * 200 - 100],
               coordinate_y: [0, Math.random () * 200 - 100],
               opacity: [0, 1, 0],

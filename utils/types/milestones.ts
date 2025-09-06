@@ -23,8 +23,10 @@ export type Project = {  id: string;
   size: number;
   title: string;
   description?: string;
-  dueDate: string;
-  amountUsd: number;
+
+  attachments?: MilestoneAttachment[]
+
+}
   title?: string;
   description?: string;
   due_date?: string;
@@ -32,6 +34,7 @@ export type Project = {  id: string;
   status?: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
 }
+
 
 export function getDaysUntilDue(milestone: Milestone): number | null {
   if (!milestone.dueDate) return null;
@@ -41,3 +44,4 @@ export function getDaysUntilDue(milestone: Milestone): number | null {
   return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 }
 
+}

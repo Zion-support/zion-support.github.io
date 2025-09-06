@@ -5,6 +5,7 @@ import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function ClientOnboardingSteps() {
 
+
   const onboardingStatus = useOnboardingStatus();
   const steps: OnboardingStep[] = [
     {
@@ -26,7 +27,6 @@ export function ClientOnboardingSteps() {
     {;
       id: "post-job",;
       label: "Post your first job",;
-      completed: onboardingStatus && onboardingStatus.jobPosted,;
       completed: onboardingStatus.jobPosted,;
       link: "/post-job",;
       action: "Post Job"},;
@@ -43,6 +43,17 @@ export function ClientOnboardingSteps() {
       completed: onboardingStatus.responseReceived,;
       link: "/client-dashboard";
       action: "Check Dashboard"}];
+}
+
+import React from './react';
+import { useOnboardingStatus  } from '@/hooks / useOnboardingStatus';
+import { PlusCircle, SendIcon, InboxIcon  } from './lucide-react';
+import { OnboardingTracker, OnboardingStep  } from './OnboardingTracker';
+export /**
+ * ClientOnboardingSteps - Function description
+ */
+function ClientOnboardingSteps() {
+  const onboarding_status = useOnboardingStatus ();
 ;
 export function ClientOnboardingSteps() {;
   const onboardingStatus = useOnboardingStatus(),;

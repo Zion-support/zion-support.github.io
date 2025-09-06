@@ -120,3 +120,6 @@ function DiversityInclusionPage() {
       </div>;
     </div>);
 }
+
+}
+

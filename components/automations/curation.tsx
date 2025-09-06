@@ -1,3 +1,44 @@
+
+
+
+
+
+type Experiment = {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import fs from 'fs';
+import path from 'path';
+type Experiment = {;
+  title: string;
+hypothesis?: string;
+metric?: string;
+effort?: number;
+
+impact?: number;
+}
+type Props = {
+  updated_at: string | null;
+items: Experiment[] }
+export default function CurationPage({ updatedAt, items }: Props) {
+  return (type Experiment = {
+  title: string
   title: string
 import React from "react";
 import fs from "fs";
@@ -6,6 +47,29 @@ type Experiment = {
   title: string,
 
   title: string,;
+
+  hypothesis?: string;
+  metric?: string;
+  effort?: number;
+
+impact?: number ;
+};
+type Props = {;
+  updatedAt: string | null;
+items: Experiment[] };
+export default function CurationPage(): any ({ updatedAt, items }: Props) {;
+  return (type Experiment = {;
+  title: string,;
+  hypothesis?: string;
+  metric?: string;
+  effort?: number;
+  impact?: number;
+};
+
+type Props = {;
+  updatedAt: string | null,;
+  items: Experiment[];
+};
   return (
     <main className='mx-auto max-w-4xl px-4 py-12'>;
       <h1 className='text-2xl font-bold text-gray-900'>;
@@ -31,6 +95,7 @@ type Experiment = {
               <div className='mt-2 text-sm text-gray-700'>;
                 {exp && exp.hypothesis && (;
                   <div>;
+
                     <span className='font-medium'>Hypothesis:</span>{' '}
                     {exp && exp.hypothesis}
                   </div>;
@@ -73,6 +138,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? " · " : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
 
               </div>
             )}
@@ -83,13 +149,14 @@ export default function CurationPage({ updatedAt, items }: Props) {
 
             Nothing to show yet.
 
+    const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
+    const raw = fs.readFileSync(filePath, "utf8");
 
-
-          </div>
-        )}
-      </div>;
-    </main>;
-  );
+    const parsed = JSON.parse(raw);
+    );
+    const raw = fs.readFileSync(filePath, 'utf8');    const parsed = JSON.parse(raw);
+    return {
+      props: {
             {(exp.hypothesis || exp.metric) && (
               <div className='mt - 2 text - sm text - gray - 700'>;
                 {exp.hypothesis && (
@@ -133,7 +200,6 @@ function getStaticProps() {
         items: parsed.items || [],
       },
       revalidate: 300,
-    }  } catch {
     return {
       props: {
         updated_at: null, }
@@ -155,6 +221,58 @@ function getStaticProps() {
   } catch {
     return {
       props: {
+
+
+
+
+export async function getStaticProps() {;
+  try {;
+    const filePath = path && path.join(;
+      process && process.cwd(),;
+      'data',;
+      'ai-curation',;
+      'growth-experiments && experiments.json';
+    );
+    const raw = fs && fs.readFileSync(filePath, 'utf8');    const parsed = JSON && JSON.parse(raw);
+    return {;
+      props: {;
+        updatedAt: parsed && parsed.updatedAt || null,;
+        items: parsed && parsed.items || [],;
+      },;
+      revalidate: 300,;
+    };  } catch {;
+    return {;
+      props: {;
+        updatedAt: null,}
+export async function getStaticProps() {;
+  try {;
+    const filePath = path && path.join(process && process.cwd(), "data", "ai-curation", "growth-experiments && experiments.json");
+    const raw = fs && fs.readFileSync(filePath, "utf8");
+    return {;
+      props: {;
+        updatedAt: parsed && parsed.updatedAt || null,;
+        items: parsed && parsed.items || [],;
+      },;
+      revalidate: 300,;
+    };        items: parsed && parsed.items || []},;
+      revalidate: 300}
+  } catch {;
+    return {;
+      props: {;
+        updatedAt: null,;
+        items: [],;
+      },;
+      revalidate: 300,;
+    };
+  }        items: []},;
+
+
+        updatedAt: null,
+        items: []},
+      revalidate: 300}
+}
+
+
         updatedAt: null
         items: []
       }
@@ -168,3 +286,19 @@ function getStaticProps() {
       revalidate: 300,
     };
   }        items: []},
+        updated_at: null,
+        items: [],
+      },
+      revalidate: 300,
+    }
+  }        items: []}
+
+        updatedAt: null,
+        items: [],
+      },
+      revalidate: 300,
+    };
+  }        items: []},
+      revalidate: 300}
+}
+}

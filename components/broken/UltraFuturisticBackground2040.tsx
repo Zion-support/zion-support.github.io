@@ -125,14 +125,6 @@ if (return) {
             className='absolute top-0 left-0 w-full h-full'
             style={{
               backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px)
-              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
-            `
-              backgroundSize: '50px 50px'
-              animation: 'gridMove 20s linear infinite'
-            }}
-          />
-        </div>
             `,
               background_size: '50px 50px',
               animation: 'grid_move 20s linear infinite',
@@ -272,27 +264,30 @@ if (return) {
           transition={{
             duration: 12,
             repeat: Infinity,
-          }}
-          transition={{
-            duration: 15
-            repeat: Infinity
-            ease: 'linear'
+        {/* Additional Floating Elements */}
+        <motion&& motion.div
+          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
+        />;
+        {/* Additional Floating Elements */}
+        <motion.div;
+          className='absolute top - 1/3 right - 1/4 w - 16 h - 16 border border - blue - 400 / 20 transform rotate - 12';
+          animate={{
+            rotate: [12, 372],
+            scale: [1, 1.1, 1],
+            opacity: [0.15, 0.25, 0.15],          }}
           transition={{
             duration: 15,
             repeat: Infinity,
-        {/* Additional Floating Elements */}
-        <motion.div;
-          className="absolute top - 1/3 right - 1/4 w - 16 h - 16 border border - blue - 400 / 20 transform rotate - 12";
-            ease: 'linear',
-          }}
-        />
-        <motion.div
-          className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full'
           animate={{
           transition={{
             duration: 18
             repeat: Infinity
             ease: 'linear',          }}
+            duration: 15,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+
           className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
         />;
         <motion.div;
@@ -310,11 +305,6 @@ if (return) {
           className="absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full";
           animate={{
           }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
         />
         {/* Particle Effects */}
         <motion&& motion.div
@@ -324,11 +314,16 @@ if (return) {
             duration: 3
             repeat: Infinity
             ease: 'easeInOut',          }}
-          }}
+        {/* Particle Effects */}
+        <motion&& motion.div
+          className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
+          animate={{
           transition={{
             duration: 3,
             repeat: Infinity,
-            ease: 'easeInOut',
+
+
+
           }}
           transition={{
             duration: 4
@@ -349,7 +344,44 @@ if (return) {
           }}
         />
             delay: 2
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
           }}
+
+        />;
+        <motion&& motion.div
+          className="absolute top-1/2 left-1/4 w-1 && 1.5 h-1 && 1.5 bg-pink-400/40 rounded-full"
+
+          animate={{
+
+            delay: 2
+          }}
+          }}
+        />
+      </div>
+            duration: 5,
+            repeat: Infinity,
+
+      <style jsx>{`
+        @keyframes gridMove {
+          0% {
+            duration: 5,
+            repeat: Infinity,
+            ease: 'easeInOut',
+            delay: 2,
+          }}
+        />;
+      </div>;
+            ease: "easeInOut",;
+            delay: 2;
+          }}
+        />;
+      </div>;
+      <style jsx>{`;
+        @keyframes gridMove {;
+          0% {;
             transform: translate(0, 0);
           }
           100% {;
@@ -386,5 +418,4 @@ export default UltraFuturisticBackground2040;
 }
 ;
 export default UltraFuturisticBackground2040;
-;
-
+export default UltraFuturisticBackground2040;

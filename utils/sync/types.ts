@@ -1,6 +1,3 @@
-  baseUrl: string, // e.g., https: //zion-latam.example.org;
-  scope?: SyncScope;
-  paused?: boolean;
 }
 export interface InstanceConfig {instanceId: string;
   optIn: boolean;
@@ -9,29 +6,25 @@ export interface InstanceConfig {instanceId: string;
   peers: Peer[];
   secretConfigured: boolean;
 }
-export type SyncScope = "full" | "dao" | "marketplace";
-export interface Peer {;
-  id: string;
-  baseUrl: string, // e.g., https: //zion-latam.example.org;
-  scope?: SyncScope,;
+
+export type SyncScope = "full" | "dao" | "marketplace",
+export interface Peer {
+  id: string,
+  base_url: string, // e.g., https: //zion - latam.example.org;
+  scope?: SyncScope,
   paused?: boolean;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
-;
-export interface InstanceConfig {;
-  instanceId: string;
-  optIn: boolean;
-  paused: boolean;
-  scope: SyncScope,;
-  peers: Peer[];
-  secretConfigured: boolean;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+export interface InstanceConfig {
+  instance_id: string,
+  opt_in: boolean,
+  paused: boolean,
+  scope: SyncScope,
+  peers: Peer[],
+  secret_configured: boolean;
+
+
+
+}
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
@@ -81,6 +74,19 @@ export interface TokenTransferPayload extends BaseEventPayload {;
   }
 }
 ;
+export interface DaoEndorsementPayload extends BaseEventPayload {;
+  fromDAO: string;
+  toDAO: string;
+  resolutionId: string;
+  decision: "endorse" | "reject",;
+  timestamp: number;
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
   subjectId: string, // userId or teamId;
   score: number;
@@ -91,14 +97,13 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+;
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
   | TalentMobilityPayload;
   | DaoEndorsementPayload;
-  eventId: string;
-  type: SyncEventType,;
-  payload: SyncEventPayload,;
   originInstanceId: string;
   version: number;
   timestamp: number;
@@ -108,6 +113,15 @@ export type SyncEventPayload =;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export interface MultiverseState {;
+  config: InstanceConfig,;
   lastSyncedAt: number;
   seenEventIds: Record<string, true>,;
   latestVersionByEntityId: Record<string, number>,;

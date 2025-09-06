@@ -28,3 +28,6 @@ for (const size of sizes) {
   // eslint - disable - next - line no - console;
   console.log ('generated', out);
 }
+  console.log('generated', out)
+}
+}

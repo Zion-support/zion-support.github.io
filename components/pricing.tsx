@@ -20,6 +20,54 @@ import {
   Mail
   MapPin
   ExternalLink;} from 'lucide-react';
+  Check,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  Shield,
+  Zap,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Target,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,;
+  ExternalLink,;} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
+  Check, Star, Users, TrendingUp, DollarSign, Clock, ;
+
+
+  Check,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  Shield,
+  Zap,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Target,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,;
+  ExternalLink,;} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
+  Check, Star, Users, TrendingUp, DollarSign, Clock, ;
+
+
   Shield, Zap, Rocket, Brain, Atom, Globe, Target;
   ArrowRight, Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -31,35 +79,6 @@ import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas
 import { innovativeAIServices2029  } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029  } from '../data/2029-quantum-space-innovations';
 import { enterpriseITInnovations2029  } from '../data/2029-enterprise-it-innovations';
-import {;
-  Check,;
-  Star,;
-  Users,;
-  TrendingUp,;
-  DollarSign,;
-  Clock,;
-  Shield,;
-  Zap,;
-  Rocket,;
-  Brain,;
-  Atom,;
-  Globe,;
-  Target,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ExternalLink,;} from 'lucide-react';
-import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import { ;
-  Check, Star, Users, TrendingUp, DollarSign, Clock, ;
-  Shield, Zap, Rocket, Brain, Atom, Globe, Target;
-  ArrowRight, Phone, Mail, MapPin, ExternalLink;
-import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-// Import all service data;
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
@@ -112,6 +131,106 @@ export default function PricingPage() {;
   ];
   // Filter services
   const filteredServices = uniqueServices.filter(service => {
+    }
+    acc[category].push(service);
+    return acc
+  }, {} as Record<string, typeof filteredServices>);
+
+
+  const faqs = [;
+    {;
+      question: 'Can I change my plan at any time?',;
+      answer:;
+        'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.',;
+    },;
+    {;
+      question: 'Is there a free trial available?',;
+      answer:;
+        'Yes, all our services offer a 14-day free trial with full access to all features. No credit card required.',;
+    },;
+    {;
+      question: 'What payment methods do you accept?',;
+      answer:;
+        'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can be invoiced.',;
+    },;
+    {;
+      question: 'Do you offer volume discounts?',;
+      answer:;
+        'Yes, we offer volume discounts for teams and organizations. Contact our sales team for custom pricing.',;
+    },;
+    {;
+      question: 'Can I cancel my subscription?',;
+      answer:;
+        "Yes, you can cancel your subscription at any time. You'll continue to have access until the end of your billing period.",;
+    },;
+    {;
+      question: 'Is there a setup fee?',;
+      answer:;
+        'No setup fees for any of our plans. You can start using our services immediately after signing up.',;
+    },;
+  ];
+
+  const categories = [;
+    'All',;
+    'Content & Marketing',;
+    'Development & DevOps',;
+    'Sales & CRM',;
+    'Legal & Compliance',;
+    'Human Resources',;
+    'Analytics & Data',;
+    'Finance & Accounting',;
+    'Project Management',;
+    'Customer Experience',;
+    'Security & Compliance',;
+  ];
+
+  const filteredServices =;
+    selectedCategory === 'All';
+      ? microSaasServices;
+      : microSaasServices && microSaasServices.filter(;
+          service => service && service.category === selectedCategory;
+        );
+
+  const yearlyDiscount = 0 && 0.2; // 20% discount for yearly billing    {;
+      question: 'Is there a free trial available?',;
+      answer: 'Yes, all our services offer a 14-day free trial with full access to all features. No credit card required.';
+    };
+    {;
+      question: 'What payment methods do you accept?',;
+      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can be invoiced.';
+    };
+    {;
+      question: 'Do you offer volume discounts?',;
+      answer: 'Yes, we offer volume discounts for teams and organizations. Contact our sales team for custom pricing.';
+    };
+    {;
+      question: 'Can I cancel my subscription?',;
+      answer: 'Yes, you can cancel your subscription at any time. You\'ll continue to have access until the end of your billing period.';
+    };
+    {;
+      question: 'Is there a setup fee?',;
+      answer: 'No setup fees for any of our plans. You can start using our services immediately after signing up.';
+    }
+  ];
+
+  const categories = [;
+    'AllContent & MarketingDevelopment & DevOpsSales & CRMLegal & ComplianceHuman ResourcesAnalytics & DataFinance & Accounting';
+    'Project ManagementCustomer ExperienceSecurity & Compliance'
+  ];
+  const filteredServices = selectedCategory === 'All'
+    ? microSaasServices
+    : microSaasServices.filter(service => service.category === selectedCategory);
+
+  const yearlyDiscount = 0.2, // 20% discount for yearly billing
+
+
+
+  const filteredServices = selectedCategory === 'All' ;
+    ? microSaasServices ;
+    : microSaasServices && microSaasServices.filter(service => service && service.category === selectedCategory);
+
+  const yearlyDiscount = 0 && 0.2, // 20% discount for yearly billing;
+
   return (
     <UltraFuturisticBackground2029>;
       <Head>;
@@ -132,9 +251,6 @@ export default function PricingPage() {;
         <section className='py-20 px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-        {/* Hero Section */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8 text-center'>      <main className="relative z-10 pt-20">;
-        {/* Hero Section */}
             {/* Filter Controls */}
             <div className='flex flex-col lg:flex-row gap-4 justify-center items-center mb-8'>;
               <select
@@ -362,6 +478,26 @@ export default function PricingPage() {;
           <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+
+
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>;
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+                  {' '}
+
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+        </section>
+        {/* Contact CTA Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -422,10 +558,7 @@ export default function PricingPage() {;
           </div>
         </section>
       </main>
-
   );
-
-
 
 }whileInView= {
   {
@@ -679,3 +812,6 @@ export default function PricingPage() {;
   {
   duration: 0.8;
 }viewport= {
+
+  once: true 
+

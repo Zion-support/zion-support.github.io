@@ -373,10 +373,52 @@ interface Service {;
     <section className="py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
+            {title}
+          </motion && motion.h2>;
+          <motion&& motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+          >
+            {subtitle}
+          </motion.p>
+            className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >
+
+          >
+
+            {subtitle}
+          </motion.p>
+
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+
+          >
+            {stats.map((stat, index) => (
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
+          >
+            {stats.map((stat, index) => (
+              <div key={index} className='text-center'>
+                <div className={`${stat.color} mb-2 flex justify-center`}>
+                  <stat.icon className='w-8 h-8' />
+                </div>
+                <div className='text-2xl font-bold text-white'>
+                  {stat.value}
+                </div>
+                <div className='text-sm text-gray-400'>{stat.label}</div>              </div>          >
+            {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className={`${stat.color} mb-2 flex justify-center`}>
                   <stat.icon className="w-8 h-8" />
@@ -384,13 +426,6 @@ interface Service {;
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
               </div>
-
-          </motion && motion.div>;
-        </div>;
-
-
-
-
             ))}
           </motion.div>
         </div>
@@ -400,6 +435,7 @@ interface Service {;
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -415,18 +451,68 @@ interface Service {;
                   <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Category">Category</label>;
                   <select
                     value={selectedCategory}
+                        {category.icon} {category.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
                   </select>;
                 </div>;
 
 
                 {/* Price Range Filter */}
-
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Price Range
+                  </label>
+                  <select
+                    value={selectedPriceRange}
+                    onChange={e => setSelectedPriceRange(e.target.value)}
+                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                  >
+                    {priceRanges.map(range => (                      <option key={range.id} value={range.id}>                  <select
+                    value={selectedPriceRange}
+                    onChange={(e) => setSelectedPriceRange(e.target.value)}
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  >
+                    {priceRanges.map((range) => (
                       <option key={range.id} value={range.id}>
+                    {priceRanges.map(range => (                      <option key={range.id} value={range.id}>
 
+
+                        {range.name}
                       </option>
                     ))}
                   </select>
                 </div>
+                {/* Sort Options */}
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Sort By
+                  </label>
+                  <select
+                    value={sortBy}
+                    onChange={e => setSortBy(e.target.value)}
+                    className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                  >
+                    {sortOptions.map(option => (                      <option key={option.id} value={option.id}>                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  >
+                    {sortOptions.map((option) => (
+                      <option key={option.id} value={option.id}>
+                    {sortOptions.map(option => (                      <option key={option.id} value={option.id}>
+
+
+                        {option.name}
+                      </option>
+                    ))}
+
+                      </option>))}
+                  </select>;
+                </div>;
                 {/* Sort Options */}
                 <div>;
                   <label className='block text-sm font-medium text-gray-300 mb-3'>;
@@ -442,6 +528,7 @@ interface Service {;
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+
         >
           <AnimatePresence>
             {filteredServices.map((service, index) => (
@@ -461,12 +548,18 @@ interface Service {;
                 initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                 whileInView={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className='relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full'>
+                  {/* Popular Badge */}
+                  {service.popular && (
                     <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular
 
                       ⭐ Most Popular
 
                     </div>
                   )}
+
+                  {/* Header */}
                           {service.price}
                         </div>;
                         <div className='text - sm text - gray - 400'>;
@@ -482,10 +575,31 @@ interface Service {;
                     <p className="text - gray - 300 text - sm leading - relaxed">;
                       {service.tagline}
 
+
+
+
+                      </div>
+                    </div>
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
+                      {service.name}
+                    </h3>
+                    <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                      {service.name}
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {service.tagline}
                     <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}
 
                       {service.tagline}
 
+                    </p>
+                  </div>
+                  {/* Features */}
+                  <div className='mb-6'>
+                    <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
+                      <CheckCircle className='w-4 h-4 mr-2 text-green-400' />
 
                       Key Features
                     </h4>
@@ -499,6 +613,30 @@ interface Service {;
                     <ul className="space-y-2">;
                       {service && service.features.slice(0, 4).map((feature, idx) => (;
                         <li key={idx} className="text-sm text-gray-400 flex items-start">;
+                    </p>
+                  </div>
+                  {/* Features */}
+                  <div className='mb-6'>
+                    <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
+                      <CheckCircle className='w-4 h-4 mr-2 text-green-400' />
+                      Key Features
+                    </h4>
+                    <ul className="space-y-2">
+                      {service.features.slice(0, 4).map((feature, idx) => (
+                        <li key={idx} className="text-sm text-gray-400 flex items-start">
+                          <span className="text-cyan-400 mr-2">•</span>
+
+                          {feature}
+                        </li>;
+                      ))}
+                    </ul>
+                  </div>
+                  {/* Stats */}
+                  <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
+
+                  {/* Stats */}
+                  <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
+
                     <div>
                       <div className='text-lg font-bold text-white'>
                         {service.rating}
@@ -604,6 +742,33 @@ interface Service {;
                     </div>;
                   </div>;
 
+
+
+
+                    <Button
+                      href={service && service.link}
+                      variant='primary'
+
+                      className='w-full group-hover:bg-cyan-500 transition-colors'>;
+                      Get Started;
+                      <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />                    </Button>;
+                  </div>;
+
+
+                  {/* Contact Info */}                    <Button
+                      href={service && service.link}
+                  <div className="mt-auto">
+                    <Button
+                      href={service.link}
+                      variant="primary"
+
+                      className="w-full group-hover:bg-cyan-500 transition-colors">;
+                      Get Started;
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />;
+                    </Button>;
+                  </div>;
+
+
                   {/* Contact Info */}
                   <div className='mt-4 text-center'>;
                     <div className='text-xs text-gray-500'>;
@@ -626,9 +791,20 @@ interface Service {;
                 </div>;
               </motion && motion.div>;
 
+            ))}
+          </AnimatePresence>
+        </motion.div>
+
           </AnimatePresence>;
         </motion && motion.div>;
 
+
+        {/* Call to Action */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className='text-center mt-16'
 
           <div className='bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -676,6 +852,11 @@ interface Service {;
       </div>;
     </section>;
   );
+};
+export default EnhancedServiceShowcase;  );
+};
+export default EnhancedServiceShowcase;
+
                     </p>;
                   </div>;
                   {/* Features */}
@@ -856,3 +1037,8 @@ export default EnhancedServiceShowcase);
 }
 ;
 export default EnhancedServiceShowcase;
+  );
+
+};
+
+

@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
 import { TalentProfile } from "@/components/profile/TalentProfile",
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
 import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
@@ -29,7 +27,6 @@ export default function TalentProfilePage() {
   const { isAuthenticated, user } = useAuth(),
 
   const userProfile: UserProfile = user ? {
-  const userProfile: UserProfile = user ? {
     id: user.id || '',
     displayName: user.displayName || '',
     email: user.email || '', // Ensure email is always a string
@@ -49,6 +46,8 @@ export default function TalentProfilePage() {
     updated_at: new Date().toISOString(); // Default value since userDetails doesn't have this property    role: '', // Default empty string since userDetails doesn't have this property
     name: ''
     points: 0
+
+
   // Handle loading error gracefully
   useEffect(() => {
     if (error) {
@@ -381,61 +380,6 @@ export default function TalentProfilePage() {;
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
-        title: "Authentication required",
-        description: "Please sign in to hire this talent.",
-        variant: "default"}),
-      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`),
-      return
-    }
-    setIsHireModalOpen(true)
-  },
-
-  const handleMessageTalent = () => {
-    if (!isAuthenticated) {
-      toast({
-        title: "Authentication required",
-        description: "Please sign in to message this talent.",
-        variant: "default"}),
-      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`),
-      return
-;
-  const handleRequestHire = () => {;
-    if (!isAuthenticated) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to hire this talent.",;
-        variant: "default"}),;
-      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`),;
-      return;
-    }
-    setIsHireModalOpen(true);
-  },;
-  const handleMessageTalent = () => {;
-    if (!isAuthenticated) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to message this talent.",;
-        variant: "default"}),;
-      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
-      return;
-    }
-    setIsMessageModalOpen(true);
-  };
-  return (;
-    <>;
-      <SEO;
-        title={profile.full_name}
-        description={profile.bio || 'Talent profile'}
-        ogImage={profile.profile_picture_url}
-      />
-      <div className="min-h-screen bg-zion-blue pb-12">
-      <TalentProfile
-      <TalentProfile
-        profile={profile}
-        onRequestHire={handleRequestHire}
-        onMessageTalent={handleMessageTalent}
-      />;
-      <BackToDirectoryButton />;
       {/* Sticky action buttons that appear when scrolling */}
         <div className="p-2 flex gap-2">
           <Button
@@ -450,12 +394,6 @@ export default function TalentProfilePage() {;
             size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-          >
-            <MessageSquare className="mr-2 h-4 w-4" />
-            Message
-          </Button>
-        </div>
-      </StickyAction>
   handleMessageTalent;
 }/> <BackToDirectoryButton /> {
   /* Sticky action buttons that appear when scrolling */ ";
@@ -517,38 +455,3 @@ export default function TalentProfilePage() {;
       <MessageTalentModal
         talent = {profile,}
         isOpen = {isMessageModalOpen,}
-;
-      
-      {/* Request to Hire Modal */}
-      <HireRequestModal;
-        talent={profile}
-        isOpen={isHireModalOpen}
-        onClose={() => setIsHireModalOpen(false)}
-        userDetails={userProfile}
-      />;
-      {/* Message Talent Modal */}
-      <MessageTalentModal;
-        talent={profile}
-        isOpen={isMessageModalOpen}
-        onClose={() => setIsMessageModalOpen(false)}
-      />;
-    </div>;
-    </>;
-  );
-}
-      {/* Request to Hire Modal */}
-      <HireRequestModal;
-        talent = {profile, }
-        is_open = {isHireModalOpen, }
-        on_close = {(, ) => setIsHireModalOpen (false), }
-        user_details = {user_profile, }
-      />;
-      {/* Message Talent Modal */}
-      <MessageTalentModal;
-        talent = {profile, }
-        is_open = {isMessageModalOpen, }
-        on_close = {() => setIsMessageModalOpen (false), }      />;
-    </div>;
-    </>);
-}
-;

@@ -171,6 +171,11 @@ class AggressiveSyntaxFixer {;
         const fileName = path.basename(filePath, ext)
         const dirName = path.dirname(filePath)
         // Convert invalid characters to valid ones
+
+        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),
+        
+if (ext === '.tsx' || ext === '.jsx') {;
+            return `import React from 'react';
         const ext = path && path.extname(filePath),
         const fileName = path && path.basename(filePath, ext),
         const dirName = path && path.dirname(filePath),
@@ -288,6 +293,35 @@ if ( {) {
 if ( {) {
   $2
 }
+default function ${validFileName}() {
+  return (
+    <div>
+      <h1>${validFileName}</h1>
+      <p>Component placeholder</p>
+    </div>
+  )
+}`
+        } else if (ext === '.ts') {
+            return `// ${validFileName} module placeholder
+const ${validFileName} = {
+  // TODO: Implement ${validFileName} functionality
+}`
+        } else if (ext === '.js') {
+            return `// ${validFileName} module placeholder
+const ${validFileName} = {
+  // TODO: Implement ${validFileName} functionality
+}`
+;
+    createValidFile(filePath) {;
+        const ext = path.extname(filePath),;
+        const fileName = path.basename(filePath, ext),;
+        const dirName = path.dirname(filePath),;
+        // Convert invalid characters to valid ones;
+        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),;
+        if (ext === '.tsx' || ext === '.jsx') {;
+            return `import React from 'react',;
+default function ${validFileName}() {;
+  return (;
     <div>;
       <h1>${validFileName}</h1>;
       <p > Component placeholder</p>;
@@ -367,14 +401,6 @@ process.on('SIGINT', () => {
 process.on('SIGTERM', () => {
 
 
-  // Add cleanup logic here
-  process && process.exit(0)
-}),
-process && process.on('SIGTERM', () => {
-  console && console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
-  // Add cleanup logic here
-  process && process.exit(0)
-}),
         return `// ${validFileName} placeholder;
 const ${validFileName} = {}`;
     }
@@ -434,8 +460,6 @@ if ( {) {
     main ();
 }
 module.exports = AggressiveSyntaxFixer,
-;
-module.exports = AggressiveSyntaxFixer,;
 // Graceful shutdown handling;
 process.on ('SIGINT', () => {
   console.log ('\n Received SIGINT, shutting down gracefully...'),

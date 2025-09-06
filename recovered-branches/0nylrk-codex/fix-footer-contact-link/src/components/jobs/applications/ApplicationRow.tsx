@@ -1,4 +1,23 @@
 
+interface ApplicationRowProps {
+
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+
+  onViewScore: (application: JobApplication) => void
+
+import {formatDistanceToNow} from "date-fns";
+import {Link} from "react-router-dom";
+import {Calendar, User, FileText, BarChart} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Avatar} from "@/components/ui/avatar";
+import {TableRow, TableCell} from "@/components/ui/table";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
+import {StatusBadge} from "./StatusBadge";
+import {ScoreBadge} from "./ScoreBadge";
+import {ApplicationActions} from "./ApplicationActions";
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { Calendar, User, FileText, BarChart } from "lucide-react",
@@ -15,16 +34,79 @@ interface ApplicationRowProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 
   onViewScore: (application: JobApplication) => void
+import { formatDistanceToNow } from "date-fns",
+import { Link } from "react-router-dom",
+import { Calendar, User, FileText, BarChart } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Avatar } from "@/components/ui/avatar",
+import { TableRow, TableCell } from "@/components/ui/table",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { StatusBadge } from "./StatusBadge",
+interface ApplicationRowProps {
+
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+
+  onViewScore: (application: JobApplication) => void
+}
+interface ApplicationRowProps {;
+  application: JobApplication,;
+  processingId: string | null,;
+  onViewApplication: (applicationId: string) => Promise<void>,;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,;
+  onViewScore: (application: JobApplication) => void;
+}
+
+export function ApplicationRow(): any ({;
+
+export function ApplicationRow({;
   application;
   processingId;
   onViewApplication;
   onStatusChange;
+  onViewScore
+}: ApplicationRowProps) {
   return (
-    <TableRow key={application.id}>
-      <TableCell>
-        <div className="flex items-center gap-3">
-          <Avatar className="h-9 w-9">
-            {application.talent_profile?.profile_picture_url ? (
+
+    <TableRow key={application && application.id}>;
+        )}
+      </TableCell>
+      <TableCell className="text-right">
+        <ApplicationActions
+import { formatDistanceToNow } from "date-fns",;
+import { Link } from "react-router-dom",;
+import { Calendar, User, FileText, BarChart } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { Avatar } from "@/components/ui/avatar",;
+import { TableRow, TableCell } from "@/components/ui/table",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { StatusBadge } from "./StatusBadge",;
+import { ScoreBadge } from "./ScoreBadge",;
+import { ApplicationActions } from "./ApplicationActions",;
+interface ApplicationRowProps {;
+  application: JobApplication,;
+  processingId: string | null,;
+  onViewApplication: (applicationId: string) => Promise<void>,;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,;
+  onViewScore: (application: JobApplication) => void;
+}
+;
+export function ApplicationRow({;
+  application,;
+  processingId,;
+  onViewApplication;
+  onStatusChange;
+  onViewScore;
+}: ApplicationRowProps) {;
+  return (;
+    <TableRow key={application.id}>;
+
+      <TableCell>;
+        <div className="flex items-center gap-3">;
+          <Avatar className="h-9 w-9">;
+            {application && application.talent_profile?.profile_picture_url ? (;
               <img
                 src={application.talent_profile.profile_picture_url}
                 alt={application.talent_profile.full_name}

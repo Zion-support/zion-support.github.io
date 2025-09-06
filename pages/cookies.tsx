@@ -17,6 +17,10 @@ export default function CookiePolicyPage() {
     analytics: false
     marketing: false
     functional: false
+    necessary: true,
+    analytics: false,
+    marketing: false,
+    functional: false;
   });
   const cookieTypes = [
     {
@@ -63,16 +67,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -89,6 +97,7 @@ import {;
   XCircle,;
   AlertTriangle;
 } from 'lucide-react';
+
 export default function CookiePolicyPage() {;
   const [cookiePreferences, setCookiePreferences] = useState({;
     necessary: true,;
@@ -207,8 +216,6 @@ export default function CookiePolicyPage() {;
                       </div>
                     </motion.div>
                   ))}
-                </div>
-                <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-end">
                   <button
                     })}
                     className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors";
@@ -299,13 +306,6 @@ export default function CookiePolicyPage() {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-                  </p>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -315,7 +315,6 @@ import Layout from '../components/Layout';
 
 
 export default function CookiesPage() {
-export default function CookiesPage() {;
   return (
     <UltraAdvancedFuturisticBackground>;
       <SEO
@@ -336,15 +335,26 @@ origin/automation-improvements-final
             <li>Retention: session or shortterm</li>
             <li>Optout: browser settings and extensions</li>
           </ul>
-            </a>;
-          </p>;
-        </div>;
-      </Layout>;
-  );
+ <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
+          <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+}
+}
+}
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
-
-
- <li>Purpose: performance and security</li> <li>Retention: session or shortterm</li> <li>Optout: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup && ziontechgroup.com" >kleber@ziontechgroup && ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground> ;
+    </>);
+;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );

@@ -12,8 +12,6 @@ function updateIconImportsInFile(filePath) {
     // Only write if changes were made
     if (content !== updatedContent) {
       fs.writeFileSync(filePath, updatedContent, 'utf8')
-      console.log(` Updated imports in ${filePath}`)
-
 /**;
  * Helper script to update icon imports across the codebase;
  *;

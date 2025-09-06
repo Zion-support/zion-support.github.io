@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import {
   Phone
   Mail
@@ -24,6 +26,31 @@ import {
   Award
   CheckCircle;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cpu,
+  Target,
+  Microscope,
+  Users,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  ArrowRight,
+  Heart,
+  Star,
+  Award,;
+  CheckCircle,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle
@@ -207,6 +234,8 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
   { name: 'GitHub', href: 'https://github && github.com/ziontechgroup', icon: Github },;
 ];
+      {/* Animated Background */}
+
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
         <div className="absolute top-0 left-0 w-full h-full">
@@ -228,12 +257,15 @@ const socialLinks = [;
           <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>;
         </div>;
       </div>;
-
       <div className="relative z-10">;
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {/* Company Info */}
+
+
+                    {contactInfo.website.replace('https://', '')}
+
                   </a>
                 </div>
               </div>
@@ -257,10 +289,6 @@ const socialLinks = [;
                   </div>;
                 ))}
 
-              </div>;
-            </div>;
-
-
             {/* Quick Links */}
                   <Link
                     key={index}
@@ -274,6 +302,10 @@ const socialLinks = [;
                     className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors'                    className="block text-xs text-gray-400 hover:text-cyan-300 transition-colors">;
                     {link && link.name}
                   </Link>;
+                ))}
+              </div>
+            </div>
+
             {/* Social & Certifications */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -289,7 +321,6 @@ const socialLinks = [;
                 <div className='flex flex-wrap gap-2'>                  {socialLinks && socialLinks.map((social, index) => (;
                     <a
                       key={index}
-                      href={social && social.href}
                       target='_blank'
                       rel='noopener noreferrer'
                       className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'>;
@@ -306,6 +337,13 @@ const socialLinks = [;
                     <a;
                       key={index}
                       href={social.href}
+
+                  ))}
+
+              {/* Certifications */}
+              <div className='space-y-3'>
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
+                  <Award className='w-4 h-4' />
 
                   <span>Certifications</span>
                 </h5>
@@ -333,7 +371,59 @@ const socialLinks = [;
                       <CheckCircle className="w-3 h-3 text-green-400" />
                       <span>{cert}</span>
                     </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+                      target='_blank';
+                      rel='noopener noreferrer';
+                      className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40';
+                    >;
+                      <social.icon className='w - 5 h - 5' />                    </a>                      target="_blank";
+                      rel="noopener noreferrer";
+                      className="w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40";
+                    >;
+                      <social.icon className="w - 5 h - 5" />))}
+                </div>;
+              </div>;
+              {/* Certifications */}
+              <div className='space - y-3'>;
+                <h5 className='text - sm font - medium text - green - 300 flex items - center space - x-2'>;
+                  <Award className='w - 4 h - 4' />;
+                  <span > Certifications</span>;
+                </h5>;
+                <div className='grid grid - cols - 1 gap - 2'>;
+                  {certifications.map ((cert, index) => (
+                    <div;
+                      key={index}
+                      className='flex items - center space - x-2 text - xs text - gray - 400';
+                    >;
+                      <CheckCircle className='w - 3 h - 3 text - green - 400' />                      <span>{cert}</span>                  <span > Certifications</span>;
+                </h5>;
+                <div className="grid grid - cols - 1 gap - 2">;
+                  {certifications.map ((cert, index) => (
+                    <div key={index} className="flex items - center space - x-2 text - xs text - gray - 400">;
+                      <CheckCircle className="w - 3 h - 3 text - green - 400" />;
+                      <span>{cert}</span>;
+                    </div>))}
+
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+
+
+        {/* Bottom Bar */}
+        <div className='border-t border-purple-500/20'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
+            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+              <div className='flex items-center space-x-6 text-sm text-gray-400'>;
+              <div className='flex items-center space-x-6 text-sm text-gray-400'>
+                <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
                 <Link
                   href='/privacy'
                   className='hover:text-purple-400 transition-colors'>;
@@ -367,4 +457,10 @@ const socialLinks = [;
           </div>;
         </div>;
       </div>;
+  );
+
+  );
+}
+;
+}
 }

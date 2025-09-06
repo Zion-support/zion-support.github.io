@@ -200,13 +200,12 @@ if ( {) {
             background_position: ['0px 0px50px 50px']}}
           transition={{
 
-        />;
-
-
         {/* Floating Neon Shapes */}
         <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
           animate={{
+        />
+            opacity: [0.3, 0.6, 0.3],          animate={{
             rotate: [0, 360];
             scale: [1, 1.1, 1];
             opacity: [0.3, 0.6, 0.3]}}
@@ -295,9 +294,9 @@ if ( {) {
             scale: [1, 1.15, 1];
             opacity: [0.3, 0.5, 0.3]}}
           transition={{
+            ease: 'easeInOut',          }}
+          transition={{
             duration: 10,
-            repeat: Infinity,
-
             repeat: Infinity,
             ease: 'easeInOut',          }}
           transition={{
@@ -346,6 +345,18 @@ if ( {) {
             ease: 'easeInOut',          }}
         />;
         <motion.div;
+      {/* Gradient Overlays */}
+
+        />;
+      </div>;
+      {/* Gradient Overlays */}
+      <div className='fixed inset-0 pointer-events-none z-20'>;
+        <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10' />;
+        <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5' />;
+      {/* Content */}
+      <div className='relative z-30'>{children}</div>;
+
+
       {/* Animated Border Effects */}
       <div className='fixed inset-0 pointer-events-none z-40'>;
         <motion&& motion.div
@@ -393,10 +404,6 @@ if ( {) {
       </div>;
     </div>;
   );
-      <div className="fixed inset-0 pointer-events-none z-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10" />
-        <div className="absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5" />
-      </div>
 export default UltraFuturisticBackground2045;
 
 }

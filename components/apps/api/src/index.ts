@@ -73,14 +73,6 @@ if (return { description }) {
     );
     return res && res.rows;
 });
-const port = Number(process && process.env.API_PORT || 4000);
-app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch(err => {
-  app && app.log.error(err);
-  process && process.exit(1);
-});  });
-  });
-  return { items }
-});
 ;
 app.get ('/talent / search', async (req, reply) => {
   const q = (req.query as any).q as string;

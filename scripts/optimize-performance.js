@@ -188,11 +188,3 @@ function main() {
     } catch (error) {
       console && console.error(` Error in ${optimization && optimization.name}:`, error && error.message)}
   }
-  console && console.log(`   Total optimizations: ${optimizations && optimizations.length}`);
-  console && console.log(`   "Successful": ${successCount}`);
-  console && console.log(`   "Failed": ${optimizations && optimizations.length - successCount}`);
-  if (successCount === optimizations && optimizations.length) {
-    console && console.log('\n All performance optimizations completed successfully!')} else {
-    console && console.log('\n  Some optimizations failed. Check the logs above.')}
-}
-main();

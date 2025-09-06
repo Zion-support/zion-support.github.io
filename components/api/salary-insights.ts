@@ -1,3 +1,6 @@
+}const completion = await client.chat.completions.create ({
+  model: 'gpt-4o-mini', messages: [ {
+  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
 type InsightResponse = {
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
@@ -88,6 +91,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
+  // Tags
+
+  const undersupplied = (skills || []).some(s =>
+    scarceSkills && scarceSkills.some(t => s && s.toLowerCase().includes(t && t.toLowerCase()))
+  );
+  if (remote) tags && tags.push('Remote Premium');
+  if (undersupplied) tags && tags.push('Undersupplied Skill'),
+
+
   const gptRecommendation = await maybeGetGptRecommendation(body, {
     median: baseMedian
     min
@@ -119,7 +131,6 @@ if ( {  } catch {) {
     return undefined;
   }
 }
-
 }
     return res.status (405).json ({ error: 'Method not allowed' });
   }

@@ -36,6 +36,177 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         if (selectedCategory === 'ai') {
+        }
+
+        return true;
+      });
+
+    }
+
+        const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
+        if (selectedPriceRange === 'low') return price < 1000;
+        if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000;
+        if (selectedPriceRange === 'high') return price >= 5000 && price < 20000;
+        if (selectedPriceRange === 'premium') return price >= 20000;
+
+        return true
+      })
+    }
+    // Sort services
+    filtered.sort((a, b) => {
+      if (sortBy === 'price-low') {
+
+        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0;
+        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0;
+        return priceA - priceB
+      }
+      if (sortBy === 'price-high') {
+        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0;
+        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0;
+        return priceB - priceA
+      }
+      if (sortBy === 'rating') return b.rating - a.rating;
+      if (sortBy === 'popularity') return b.customers - a.customers;
+      if (sortBy === 'name') return a.name.localeCompare(b.name);
+
+      return 0
+    })
+    return filtered
+  }, [selectedCategory, selectedPriceRange, sortBy, all2026Services])
+  const categories = [
+    { id: 'all', name: 'All Services', icon: '🚀', count: all2026Services.length }
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s => s.category.includes('AI')).length }
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: all2026Services.filter(s => s.category.includes('Quantum') |s.category.includes('Space')).length }
+    { id: 'emerging', name: 'Emerging Technologies', icon: '✨', count: all2026Services.filter(s => s.category.includes('Emerging') |s.category.includes('Technology')).length }
+    { id: 'enterprise', name: 'Enterprise Solutions', icon: '🏢', count: all2026Services.filter(s => s.category.includes('Enterprise') |s.category.includes('Business')).length }
+  ]
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' }
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' }
+    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' }
+    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' }
+    { id: 'premium', name: '$20K+/month', range: '$20K+' }
+  ]
+  const sortOptions = [
+    { id: 'price-low', name: 'Price Low to High' }
+    { id: 'price-high', name: 'Price High to Low' }
+    { id: 'rating', name: 'Highest Rated' }
+    { id: 'popularity', name: 'Most Popular' }
+    { id: 'name', name: 'Name A-Z' }
+  ]
+export default function Revolutionary2026Pricing(req, res) {
+  try {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('price-low');
+  // Combine all 2026 services;
+  const all2026Services = [;
+    ...innovative2026MicroSaasServicesV2;
+    ...emergingTech2026ServicesV2;
+  ];
+  // Filter services based on category and price;
+  const filteredServices = useMemo(() => {;
+    let filtered = all2026Services;
+    // Category filter;
+    if (selectedCategory !== 'all') {;
+      filtered = filtered.filter(service => {;
+        if (selectedCategory === 'ai') {;
+          return service.category.includes('AI') || service.category.includes('Machine Learning');
+        } else if (selectedCategory === 'quantum') {;
+          return service.category.includes('Quantum') || service.category.includes('Space');
+        } else if (selectedCategory === 'emerging') {;
+          return service.category.includes('Emerging') || service.category.includes('Technology');
+        } else if (selectedCategory === 'enterprise') {;
+          return service.category.includes('Enterprise') || service.category.includes('Business');
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        return true;
+      });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    // Price filter;
+    if (selectedPriceRange !== 'all') {;
+      filtered = filtered.filter(service => {;
+        const price = parseFloat(service.price.replace(/[^0-9.]/g, '')),;
+        if (selectedPriceRange === 'low') return price < 1000,;
+        if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000,;
+        if (selectedPriceRange === 'high') return price >= 5000 && price < 20000,;
+        if (selectedPriceRange === 'premium') return price >= 20000,;
+        return true;
+      });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    // Sort services;
+    filtered.sort((a, b) => {;
+      if (sortBy === 'price-low') {;
+        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0,;
+        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0,;
+        return priceA - priceB;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      if (sortBy === 'price-high') {;
+        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0,;
+        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0,;
+        return priceB - priceA;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      if (sortBy === 'rating') return b.rating - a.rating,;
+      if (sortBy === 'popularity') return b.customers - a.customers,;
+      if (sortBy === 'name') return a.name.localeCompare(b.name);
+      return 0;
+    }),;
+    return filtered;
+  }, [selectedCategory, selectedPriceRange, sortBy, all2026Services]),;
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: '🚀', count: all2026Services.length },;
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s => s.category.includes('AI')).length },;
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Space')).length },;
+    { id: 'emerging', name: 'Emerging Technologies', icon: '✨', count: all2026Services.filter(s => s.category.includes('Emerging') || s.category.includes('Technology')).length },;
+    { id: 'enterprise', name: 'Enterprise Solutions', icon: '🏢', count: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('Business')).length   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },;
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },;
+    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },;
+    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },;
+    { id: 'premium', name: '$20K+/month', range: '$20K+'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const sortOptions = [;
+    { id: 'price-low', name: 'Price Low to High' },;
+    { id: 'price-high', name: 'Price High to Low' },;
+    { id: 'rating', name: 'Highest Rated' },;
+    { id: 'popularity', name: 'Most Popular' },;
+    { id: 'name', name: 'Name A-Z'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -93,6 +264,42 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2026-pricing" />
         </Head>
         {/* Enhanced Navigation */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20"></div>
+          <div className="max-w-7xl mx-auto relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="text-center mb-16"
+            >
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                  Revolutionary 2026 Pricing
+                </span>
+              </h1>
+              <p className="text-gray-300 text-xl max-w-4xl mx-auto leading-relaxed mb-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
                   <div className="text-2xl font-bold text-purple-400">{pricingStats.totalServices}+</div>
@@ -112,37 +319,6 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                 </div>
               </div>
             </motion.div>
-              className="text - center mb - 16";
-            >;
-              <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">;
-                <span className="bg - gradient - to - r from - purple - 400 via - pink - 400 to - cyan - 400 bg - clip - text text - transparent">;
-                  Revolutionary 2026 Pricing;
-                </span>;
-              </h1>;
-              <p className="text - gray - 300 text - xl max - w-4xl mx - auto leading - relaxed mb - 8">;
-                Transparent, competitive pricing for our cutting - edge AI, quantum computing, and emerging technology solutions.;
-                Get maximum ROI with our revolutionary services.;
-              </p>;
-              {/* Pricing Statistics */}
-              <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto">;
-                <div className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - xl p - 4">;
-                  <div className="text - 2xl font - bold text - purple - 400">{pricing_stats.total_services}+</div>;
-                  <div className="text - gray - 400 text - sm">Total Services</div>;
-                </div>;
-                <div className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - xl p - 4">;
-                  <div className="text - 2xl font - bold text - green - 400">${Math.round (pricing_stats.average_price).toLocaleString ()}</div>;
-                  <div className="text - gray - 400 text - sm">Average Price</div>;
-                </div>;
-                <div className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - xl p - 4">;
-                  <div className="text - 2xl font - bold text - blue - 400">${pricing_stats.lowest_price}</div>;
-                  <div className="text - gray - 400 text - sm">Starting Price</div>;
-                </div>;
-                <div className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - xl p - 4">;
-                  <div className="text - 2xl font - bold text - yellow - 400">{pricing_stats.popular_services}</div>;
-                  <div className="text - gray - 400 text - sm">Popular Services</div>;
-                </div>;
-              </div>;
-            </motion.div>;
             {/* Contact Information */}
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
@@ -178,20 +354,6 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
           <div className="max-w-7xl mx-auto">
             <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6">
               <div className="flex flex-col lg:flex-row gap-6">
-                      }`}
-                {/* Price Range Filter */}
-                <div className="flex flex - wrap gap - 2">;
-                  {price_ranges.map ((range) => (
-                    <button;
-                      key={range.id}
-                      on_click={() => setSelectedPriceRange (range.id)}
-                      className={`px - 3 py - 2 rounded - lg text - sm font - medium transition - all duration - 200 ${
-                        selectedPriceRange === range.id;
-                          ? 'bg - blue - 600 text - white';
-                          : 'bg - black / 40 text - gray - 300 hover:bg - black / 60 hover:text - white';
-                      }`}
-                    >
-                      {range.name}
                     value={sortBy  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -227,6 +389,65 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+        <section className="py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold text-white mb-2">
+                {filteredServices.length} Services Available
+              </h2>
+              <p className="text-gray-400">
+                Compare pricing and features to find the perfect solution for your business
+              </p>
+            </div>
+            <AnimatePresence mode="wait">
+              {filteredServices.length === 0 ? (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  initial={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  exit={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="text-center py-20"
+                >
+                  <div className="text-gray-400 text-xl">
+                    No services found matching your criteria.
+                    <br />
+                    Try adjusting your filters.
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  initial={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  exit={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                 >
                   {filteredServices.map((service, index) => (
@@ -235,8 +456,18 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                       initial={{ opacity: 0, coordinate_y: 20 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
-                          </h3>;
-                          <p className="text - purple - 300 text - sm mb - 4">{service.tagline}</p>;
+                      className="group relative"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                      <div className="relative bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 hover:border-purple-500/40 transition-all duration-300">
+                        {/* Service Header */}
+                        <div className="text - center mb - 6">;
+                          <div className="w - 16 h - 16 bg - gradient - to - br from - purple - 600 to - pink - 600 rounded - 2xl flex items - center justify - center text - 3xl mx - auto mb - 4">;
+                            {service.icon}
+                          </div>;
+                          <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors">;
+                            {service.name}
+
                           {/* Pricing */}
                           <div className="mb - 6">;
                             <div className="text - 4xl font - bold text - white mb - 2">;
@@ -299,8 +530,6 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                           </a>
                         </div>
                         <div className="absolute top-4 right-4 flex flex-col gap-2">
-                        {/* Badges */}
-                        <div className="absolute top - 4 right - 4 flex flex - col gap - 2">;
                           {service.popular && (
                             <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                               POPULAR
@@ -340,6 +569,33 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <DollarSign className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Unmatched Value</h3>
+                <p className="text-gray-300">
+                  making them the smartest investment for your business.
+                </p>
+              </motion.div>
+                className="text - center";
+              >;
+                <div className="w - 16 h - 16 bg - gradient - to - br from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 6">;
+                  <DollarSign className="w - 8 h - 8 text - white" />;
+                </div>;
+                <h3 className="text - xl font - bold text - white mb - 4">Unmatched Value</h3>;
+                <p className="text - gray - 300">;
+                  Get enterprise - grade technology at competitive prices. Our services deliver 1000%+ ROI,
+                  making them the smartest investment for your business.;
+                </p>;
+              </motion.div>;
+              {/* Technology */}
+              <motion.div;
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -394,13 +650,6 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
           </div>
         </section>
         {/* Call to Action */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
               className="bg-gradient-to-r from-purple-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-12"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -437,3 +686,5 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+

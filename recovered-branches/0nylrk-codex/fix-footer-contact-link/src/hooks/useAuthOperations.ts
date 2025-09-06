@@ -13,16 +13,65 @@ export function useAuthOperations(
 ) {
   // Check for referral code in URL when the hook is first used
   useEffect(() => {
+  const login = async ({ email, password }: { email: string, password: string }) => {
+    setIsLoading (true);
+    try {
+      // Clean up any stale auth state before login
+      cleanupAuthState();
+      const { data, error } = await supabase.auth.signInWithPassword({
         email;
         password});
       if (error) {
         toast({
+      }
+      toast({
+        title: "Login successful!"
+        description: `Welcome back, ${email}!`});
 ;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
+
+      return { data, error: null }
+    } catch (error) {
+      toast ({
+        variant: "destructive";
+        title: "Oh no! Something went wrong."
+        description: "Failed to sign in. Please check your credentials."});
+        title: "Login successful!",
+        description: `Welcome back, ${email}!`}),
+
+      return { data, error: null }
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Oh no! Something went wrong.",
+        description: "Failed to sign in. Please check your credentials."}),
+      return { data: null, error: "Failed to sign in." }
+    } finally {
+      setIsLoading (false);
+    }
+  }
+  },
+
+  const signup = async ({ email, password, display_name }) => {
+    setIsLoading (true);
+    try {
+
+      const { data, error } = await supabase.auth.sign_up ({
+
+        email;
+        password;
+        options: {
+          data: {
+            display_name: display_name}}});
+      if (error) {
+        toast({
+          variant: "destructive";
+          title: "Error during signup"
+            display_name: display_name}}}),
+
+      if (error) {
+        toast({
+          variant: "destructive",
+          title: "Error during signup",
           description: error.message}),
         return { data: null, error: error.message }
           variant: "destructive",
@@ -53,44 +102,20 @@ if ( {) {
           description: "You have been successfully logged out."})
       }
     } catch (error) {
-        variant: "destructive";
-        title: "Logout failed"
-        description: "There was an issue logging you out. Please try again."})
-      const { error } = await supabase.auth.sign_out ();
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          variant: "destructive";
-          title: "Oh no! Something went wrong.",
-          description: error.message});
-      } else {
-        set_user (null), // Clear the user state upon successful logout;
-        toast ({
-          title: "Logout successful!",
-          description: "You have been successfully logged out."});
-      }
-    } catch (error) {
-      console.error ("Logout failed:", error);
-      toast ({
-        variant: "destructive";
-        title: "Logout failed",
-        description: "There was an issue logging you out. Please try again."});
-    } finally {
-      setIsLoading (false);
-    }
-  }
   const resetPassword = async (email: string) => {
     setIsLoading(true)
     try {
       const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
           variant: "destructive";
           title: "Oh no! Something went wrong.",
-          description: error && error.message});
-        return { data: null, error: error && error.message }
+          description: error.message}),
+        return { data: null, error: error.message }
       }
+      toast({
+        title: "Password reset email sent!"
+        description: `Please check your email (${email}) for instructions on how to reset your password.`});
+;
+
       return { data, error: null }
     } catch (error) {
       toast ({
@@ -107,28 +132,6 @@ if ( {) {
           profile_complete: profileData.profileComplete;
           bio: profileData.bio;
           avatar_url: profileData.avatarUrl
-          variant: "destructive";
-          title: "Failed to update profile",
-          description: error && error.message});
-        return { error: error && error.message }
-      }
-      // Optimistically update the local user state;
-      set_user ((prev_user) => {
-        // Check condition
-if ( {) {
-  $2
-}
-          return { ...prev_user, ...profile_data }
-        }
-          headline: profileData.headline})
-        .eq("id", profileData.id),
-
-      if (error) {
-        toast({
-          variant: "destructive",
-          title: "Failed to update profile",
-          description: error.message}),
-        return { error: error.message }
         .eq("id", profileData.id);
       if (error) {
         toast({
@@ -152,26 +155,10 @@ if ( {) {
 }
           return { ...prev_user, ...profile_data }
         }
-      const { data, error } = await supabase.auth.signInWithOAuth ({
-        provider: "google"});
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          variant: "destructive";
-          title: "Oh no! Something went wrong.",
-          description: error.message});
-      }
     } finally {
       setIsLoading (false);
     }
   }
-
-  },
-
-
   const loginWithGoogle = async () => {
     setIsLoading(true),
     try {
@@ -219,6 +206,7 @@ if ( {) {
   const loginWithFacebook = async () => {
     setIsLoading (true);
     try {
+      const { data, error } = await supabase.auth.signInWithOAuth({
         provider: "facebook"});
       if (error) {
         toast({
@@ -282,19 +270,13 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
-;
 
-  }
-;
   const loginWithWeb3 = async () => {
     setIsLoading (true);
     try {
-      const ethereum = (window as any).ethereum;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error ("Web3 wallet not found");
+      const ethereum = (window as any).ethereum,
+      if (!ethereum) {
+        throw new Error("Web3 wallet not found")
       }
         params: [address, address]
       });
@@ -317,21 +299,6 @@ if ( {) {
     login;
     signup;
     logout;
-
-  },
-  };
-  },
-
-
-  const loginWithWeb3 = async () => {
-    setIsLoading(true),
-    try {
-      const ethereum = (window as any).ethereum,
-      if (!ethereum) {
-        throw new Error("Web3 wallet not found")
-
-    resetPassword;
-    updateProfile;
     loginWithGoogle;
   },;
   const loginWithWeb3 = async () => {;

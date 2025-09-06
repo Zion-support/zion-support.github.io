@@ -20,9 +20,14 @@ export function ApiDocsHub() {
       icon: Webhook
       path: "/developers/docs/webhooks"
       color: "from-green-500 to-emerald-500"}
+    {
+
+
+      title: "Sample Code",;
+      description: "Examples in JavaScript, Python, and Node.js";
+
       title: "Sample Code",
       description: "Examples in JavaScript, Python, and Node.js",
-
       icon: Zap,
       path: "/developers/docs/samples",
       color: "from-yellow-500 to-orange-500"},

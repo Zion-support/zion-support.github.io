@@ -31,47 +31,6 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
-    <Card className="h-full hover:shadow-lg transition-shadow">
-      <CardHeader className="pb-3">
-        <div className="flex items-start justify-between">
-          <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-lg truncate">{equipment.title}</h3>
-            <p className="text-sm text-muted-foreground">{equipment.category}</p>
-            <div className="flex items-center gap-2 mt-2">
-              <Badge variant="secondary" className="text-xs">{equipment.brand}</Badge>
-            </div>
-          </div>
-          <div className="text-right">
-            <div className="text-xl font-bold text-blue-600">{formatPrice(equipment.price ?? 0)}</div>
-            <Badge variant={equipment.availability === "In Stock" ? "default" : "outline"} className="text-xs">
-              {equipment.availability}
-            </Badge>
-          </div>
-        </div>
-      </CardHeader>
-      <CardContent className="pt-0">
-        <div className="flex items-center gap-4 mb-3">
-          <div className="flex items-center gap-1">
-            <Star className="h-4 w-4 text-yellow-500 fill-current" />
-            <span className="text-sm font-medium">{equipment.rating?.toFixed(1)}</span>
-            <span className="text-xs text-muted-foreground">({equipment.reviewCount} reviews)</span>
-          </div>
-        </div>
-        <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{equipment.description}</p>
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-medium">{equipment.category}</span>
-          <Button size="sm" onClick={onViewDetails}>
-            <ShoppingCart className="h-4 w-4 mr-1" />
-            View Details
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  )
-},
-
-
-
   // Loading state
   if (loading && equipment.length === 0) {
     return (
@@ -87,17 +46,3 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
     )
   }
 
-
-;
-}
-// Main export with error boundary;
-export default /**
- * EquipmentPage - Function description
- */
-function EquipmentPage() {
-  return (
-    <EquipmentErrorBoundary>;
-      <EquipmentPageContent />;
-    </EquipmentErrorBoundary>);
-}
-;

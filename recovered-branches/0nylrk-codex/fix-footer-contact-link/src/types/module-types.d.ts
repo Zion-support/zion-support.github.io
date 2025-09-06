@@ -12,6 +12,8 @@ declare module 'path' {;
   export function dirname(path: string): string
 }
 
+
+
 declare module 'lovable-tagger' {;
 
 import {Plugin} from 'vite';

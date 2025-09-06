@@ -12,6 +12,11 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         return <Badge variant="outline" className="bg-gray-50 text-gray-800 border-gray-200">Expired</Badge>
       default:
         return null
+  }
+
+  if (isLoading) {;
+    return (
+
       <div className="flex flex-col items-center justify-center p-8 text-center">
         <p className="text-muted-foreground mb-2">No referrals yet</p>
         <p className="text-sm text-muted-foreground">

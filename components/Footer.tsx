@@ -1,5 +1,31 @@
-import React from "react";
-import Link from "next/link";
+  Phone
+  Mail
+  MapPin
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  ArrowRight
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+} from "lucide-react";
+
+import React from 'react;';
+import Link from 'next/link';
+
+export default function Footer() {
+export default function Footer() {;
+  const currentYear = new Date().getFullYear();
+  const footerLinks = {
+    services: [
+
+import React from './react';
+import Link from './next / link';
 import {
   Phone
   Mail
@@ -9,6 +35,23 @@ import {
   Linkedin
   Instagram
   ArrowRight
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  ArrowRight,;
+} from "lucide-react";
+origin/main
+import React from 'react;';
+import Link from 'next/link';
+import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
+origin/automation-improvements-final
+
+export default function Footer() {
+export default function Footer() {;
   const currentYear = new Date().getFullYear();
   const footerLinks = {
     services: [
@@ -43,6 +86,7 @@ import {
       { name: "White Papers", href: "/white - papers" },
       { name: "Support", href: "/support" },
     ],
+  const currentYear = new Date().getFullYear();
   const footerLinks = {;
     services: [;
       { name: "AI Services", href: "/ai-services" },;
@@ -76,6 +120,7 @@ import {
       { name: "White Papers", href: "/white-papers" },;
       { name: "Support", href: "/support" },;
     ],;
+  };
       { name: "Blog", href: "/blog" }
       { name: "Documentation", href: "/docs" }
       { name: "API Reference", href: "/api" }
@@ -228,6 +273,9 @@ const Footer: React.FC = () => {
                     {link.name}
                   </Link>
                 </li>
+
+
+
             <h3 className="text-lg font-semibold mb-6>Services</h3>
             <div className="space-y-4">
               {Object.entries(services).map(([category, links]) => (
@@ -246,16 +294,58 @@ const Footer: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
+            <div className="space-y-3">;
+              <div className="flex items-center text-gray-300">;
+                <Phone className="w-4 h-4 mr-3" />;
+                <span>+1 302 464 0950</span>;
+              </div>;
+              <div className="flex items-center text-gray-300">;
+                <Mail className="w-4 h-4 mr-3" />;
+                <span>kleber@ziontechgroup && ziontechgroup.com</span>;
+              </div>;
+              <div className="flex items-start text-gray-300">;
+                <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />;
+                <span>;
+                  364 E Main St STE 1008;
+                  <br />;
+                  Middletown DE 19709;
+                </span>;
+              </div>;
+            </div>;
+          </div>;
+          {/* Services */}
+          <div>;
+            <h3 className="text-lg font-semibold mb-4">Services</h3>;
+            <ul className="space-y-2">;
+              {footerLinks && footerLinks.services.map((link) => (;
+                <li key={link && link.name}>;
+                  <Link
+                    href={link && link.href}
+                    className="text-gray-300 hover:text-white transition-colors">;
+                    {link && link.name}
+                  </Link>;
+                </li>;
               ))}
-            </ul>
-          </div>
+            </ul>;
+          </div>;
+
+          {/* Solutions */}
+          <div>;
+            <h3 className="text-lg font-semibold mb-4">Solutions</h3>;
+            <ul className="space-y-2">;
+              {footerLinks && footerLinks.solutions.map((link) => (;
+                <li key={link && link.name}>;
+
+
           {/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
             <ul className="space-y-2">
               {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
           {/* Company */}
           <div>
             <h3 className=text-lg font-semibold mb-6">Company</h3>
@@ -265,9 +355,6 @@ const Footer: React.FC = () => {
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
-
-
-
                   >
                     {link.name}
                   </Link>
@@ -284,6 +371,17 @@ const Footer: React.FC = () => {
               ))}
             </ul>;
           </div>;
+
+
+          {/* Company & Resources */}
+          <div>;
+            <h3 className="text-lg font-semibold mb-4">Company</h3>;
+            <ul className="space-y-2 mb-6">;
+              {footerLinks && footerLinks.company.map((link) => (;
+                <li key={link && link.name}>;
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
           {/* Resources */}
           <div>
             <h3 className=text-lg font-semibold mb-6">Resources</h3>
@@ -293,15 +391,15 @@ const Footer: React.FC = () => {
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
-
-
-
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
+
+
+
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
@@ -319,43 +417,17 @@ const Footer: React.FC = () => {
               {footerLinks && footerLinks.resources.map((link) => (;
                 <li key={link && link.name}>;
                   <Link
-                    href={link && link.href}
-                    className="text-gray-300 hover:text-white transition-colors">;
-                    {link && link.name}
-                  </Link>;
-                </li>;
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
               ))}
             </ul>;
           </div>;
         </div>;
       </div>;
-            {/* Social Links */}
-            <div className="flex space-x-4 mb-4 md:mb-0">;
-              <a
-                href="https://linkedin && linkedin.com/company/zion-tech-group"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors">;
-                <Linkedin className="w-5 h-5" />;
-              </a>;
-              <a
-                href="https://twitter && twitter.com/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors">;
-                <Twitter className="w-5 h-5" />;
-              </a>;
-              <a
-                href="https://facebook && facebook.com/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors">;
-                <Facebook className="w-5 h-5" />;
-              </a>;
-              <a
-                href="https://instagram && instagram.com/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
               <Link
                 href="/privacy"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -413,7 +485,6 @@ const Footer: React.FC = () => {
                 Terms of Service;
               </Link>;
               <Link
-}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final

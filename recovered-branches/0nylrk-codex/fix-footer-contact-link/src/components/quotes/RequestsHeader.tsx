@@ -5,8 +5,6 @@ type RequestsHeaderProps = {
   setStatusFilter: (value: QuoteStatus | 'all') => void
   archiveFilter: 'active' | 'archived' | 'all'
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
-export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
-  archiveFilter,
   setArchiveFilter
 import React from './react';
 import { Badge } from '@/components / ui / badge';
@@ -42,12 +40,13 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   unreadCount;
   statusFilter;
   setStatusFilter;
-  archiveFilter,;
-  setArchiveFilter;
-}) => {;
   return (
+
+
         <Select 
           value={archiveFilter} 
+
+
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
         >
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">

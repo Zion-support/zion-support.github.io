@@ -22,3 +22,7 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   rateLimitMap.set (key, current);
   return true;
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+

@@ -1,11 +1,3 @@
-  var webpackChunk_N_E: any[];
-  var __webpack_require__: any;
-  var __webpack_exports__: any;
-  var __non_webpack_require__: any;
-  var __extends: any;
-  var __assign: any;
-  var __rest: any;
-  var __decorate: any;
   var webpackChunk_N_E: any[]
   var __webpack_require__: any
   var __webpack_exports__: any
@@ -77,13 +69,6 @@ if (typeof webpackChunk_N_E === 'undefined') {
       }
     }
     return t
-  __decorate: function (
-    decorators: any[]
-    target: any
-    key?: string | symbol
-    desc?: any
-  ) {
-    let c = arguments.length
       r =
         c < 3
           ? target
@@ -101,8 +86,6 @@ if (typeof webpackChunk_N_E === 'undefined') {
     else
       for (let i = decorators && decorators.length - 1; i >= 0; i--)
         if ((d = decorators[i]))
-          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) |r
-    return (c > 3 && r && key && Object.defineProperty(target, key, r), r)
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
     function adopt(value: any) {
       return value instanceof P
@@ -114,41 +97,10 @@ if (typeof webpackChunk_N_E === 'undefined') {
     return new (P |(P = Promise))(function (resolve: any, reject: any) {
       function fulfilled(value: any) {
         try {
-    function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
-    return new (P || (P = Promise))(function (resolve: any, reject: any) {
-      function fulfilled(value: any) { try { step(generator.next(value)) } catch (e) { reject(e) } }
-      function rejected(value: any) { try { step(generator["throw"](value)) } catch (e) { reject(e) } }
-      function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected) }
-      step((generator = generator.apply(thisArg, _arguments || [])).next())
-    })
-  }(),;
-  __rest: function (s: any, e: string[]) {;
-    let t: any = {},;
-    for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0);
-      t[p] = s[p],;
-    if (s != null && typeof Object.getOwnPropertySymbols === "function") {;
-      const symbols = Object.getOwnPropertySymbols(s),;
-      for (let i = 0, i < symbols.length, i++) {;
-        const symbol = symbols[i],;
-        if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol));
           t[symbol] = s[symbol];
       }
     }
     return t;
-  },;
-  __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {;
-    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,;
-    if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),;
-    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,;
-    return c > 3 && r && key && Object.defineProperty(target, key, r), r;
-  },;
-  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {;
-    function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
-    return new (P || (P = Promise))(function (resolve: any, reject: any) {;
-      function fulfilled(value: any) { try { step(generator.next(value)) } catch (e) { reject(e) } }
-      function rejected(value: any) { try { step(generator["throw"](value)) } catch (e) { reject(e) } }
-      function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected) }
-      step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 }
       ) {
@@ -240,60 +192,3 @@ if (process && process.env.NODE_ENV === 'development') {
 }
 
 export default {}, // Ensure this can be imported as a module
-}
-;
-// Node.js environment polyfills (for SSR/build time);
-if (typeof global !== 'undefined' && typeof window === 'undefined') {;
-  // Ensure Node.js global has necessary polyfills;
-  if (typeof global.self === 'undefined') {;
-    global.self = global;
-  }
-;
-  if (typeof global.webpackChunk_N_E === 'undefined') {;
-    global.webpackChunk_N_E = [];
-  }
-;
-  // TypeScript helpers for Node.js;
-  Object.keys(tsHelpers).forEach(helper => {;
-    if (typeof (global as any)[helper] === 'undefined') {;
-      (global as any)[helper] = (tsHelpers as any)[helper];
-    }
-  });
-}
-//Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
-  //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
-export default {}; // Ensure this can be imported as a module
-  
-}, // Ensure this can be imported as a module'"
-// Auto-verify in development
-if (process.env.NODE_ENV === 'development') {
-  setTimeout((,) => verifyPolyfills(), 100)
-    webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
-    tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
-    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
-  },
-  
-  // // // console.log('Serverless polyfill verification:', checks),
-  return Object.values(checks).every(Boolean)
-},
-
-// Auto-verify in development
-if (process.env.NODE_ENV === 'development') {
-  setTimeout(() => verifyPolyfills(), 100)
-;
-// Export a verification function for testing;
-export const verifyPolyfills = () => {;
-  const checks = {;
-    selfDefined: typeof self !== 'undefined',;
-    webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),;
-    tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',;
-    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null;
-  },;
-  // // // console.log('Serverless polyfill verification:', checks),;
-  return Object.values(checks).every(Boolean);
-};
-// Auto-verify in development;
-if (process.env.NODE_ENV === 'development') {;
-  setTimeout(() => verifyPolyfills(), 100);
-}
-export default {}, // Ensure this can be imported as a module;

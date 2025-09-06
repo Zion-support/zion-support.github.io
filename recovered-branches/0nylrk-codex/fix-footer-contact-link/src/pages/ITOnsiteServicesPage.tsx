@@ -60,6 +60,11 @@ import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceP
     setTimeout(() => {
       document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
     }, 100)
+
+  return (
+    <AppLayout>;
+      <section className="py-16 bg-zion-blue">;
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
           {/* Hero Section with Features */}
           <PageHero />
           {/* Country Selection Tabs */}
@@ -74,35 +79,6 @@ import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceP
           <ServiceDetailsSection
             selectedCountry={selectedCountry}
             setSelectedCountry={setSelectedCountry}
-import { useState, useEffect } from './react';
-import { useSearchParams } from './react-router-dom';
-import { AppLayout } from '@/layout / AppLayout';
-import { ITServicePricingTable } from '@/components / services / ITServicePricingTable';
-import { GlobalServiceSection } from '@/components / GlobalServiceSection';
-import { QuoteFormSection } from '@/components / QuoteFormSection';
-import { TrustedBySection } from '@/components / TrustedBySection';
-import { CountryPricing, onsiteServicePricing } from '@/data / onsiteServicePricing';
-import { toast } from '@/hooks / use - toast';
-import { PageHero } from '@/components / services / PageSections / PageHero';
-import { CountryTabs } from '@/components / services / PageSections / CountryTabs';
-import { ServiceDetailsSection } from '@/components / services / PageSections / ServiceDetailsSection';
-import { ServiceProcessSteps } from '@/components / services / PageSections / ServiceProcessSteps';
-import { ServiceIncludes } from '@/components / services / PageSections / ServiceIncludes';
-import { EnterpriseCallToAction } from '@/components / services / PageSections / EnterpriseCallToAction';
-export default /**
- * ITOnsiteServicesPage - Function description
- */
-function ITOnsiteServicesPage() {
-  const [search_params] = useSearchParams ();
-  const [selected_country, setSelectedCountry] = useState < CountryPricing | null>(null);
-  const [search_query, setSearchQuery] = useState ("");
-;
-  // Check for success parameter in URL;
-  const success = search_params.get ("success");
-;
-  // Show success toast if redirected from successful payment;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
+
 }
+

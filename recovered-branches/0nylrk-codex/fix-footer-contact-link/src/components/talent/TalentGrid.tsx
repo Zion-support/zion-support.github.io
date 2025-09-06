@@ -3,9 +3,6 @@
 
 
 
-import { TalentCard } from "@/components/talent/TalentCard";
-import { TalentProfile } from "@/types/talent";
-export interface TalentGridProps {
 
   talents: TalentProfile[]
   isLoading: boolean
@@ -28,8 +25,6 @@ export interface TalentGridProps {
   savedTalentIds: string[],
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean,
-  viewProfile?: (id: string) => void,
-  clearFilters?: () => void,
   handleRequestHire?: (talent: TalentProfile) => void
 }
 export function TalentGrid({
@@ -45,41 +40,12 @@ export function TalentGrid({
   const handleRequestHireInternal = (talent: TalentProfile) => {
     if (handleRequestHire) {
       handleRequestHire(talent)
-import { TalentCard } from '@/components / talent / TalentCard';
-import { TalentProfile } from '@/types / talent';
-export interface TalentGridProps {
-  talents: TalentProfile[],
-  is_loading: boolean,
-  onTalentClick: (id: string) => void,
-  savedTalentIds: string[],
-  onToggleSave: (id: string, is_saved: boolean) => void,
-  is_authenticated: boolean,
-  view_profile?: (id: string) => void,
-  clear_filters?: () => void;
-  handleRequestHire?: (talent: TalentProfile) => void;
-}
-export /**
- * TalentGrid - Function description
- */
-function TalentGrid() {
-  const handleRequestHireInternal = (talent: TalentProfile) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-    } else {
-      // Default implementation;
-      console.log ("Request to hire:", talent.id);
     }
   }
   const handleViewProfile = (id: string) => {
     if (viewProfile) {
       viewProfile(id)
     } else {
-      onTalentClick (id);
-    }
-  }
-
       // // // console.log("Request to hire:", talent.id)
 import { TalentCard } from "@/components/talent/TalentCard",;
 import { TalentProfile } from "@/types/talent",;
@@ -121,6 +87,7 @@ export function TalentGrid({;
       onTalentClick(id);
     }
   },
+  
   if (isLoading) {
     return <div className="py-8 text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>
@@ -135,7 +102,6 @@ export function TalentGrid({;
         >
           Clear Filters
         </button>
-
   };
   const handleViewProfile = (id: string) => {;
     if (viewProfile) {;
@@ -157,6 +123,13 @@ export function TalentGrid({;
           Clear Filters
         </button>
       )}
+    </div>;
+  }
+
+
+
+
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
       {talents && talents.map((talent) => (;
@@ -173,4 +146,5 @@ export function TalentGrid({;
     </div>
   )
 }
+  }
 ;

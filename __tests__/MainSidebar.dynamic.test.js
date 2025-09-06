@@ -22,26 +22,9 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import MainSidebar from '../components/MainSidebar.dynamic';
-
 describe('MainSidebar', () => {
   test('renders without crashing', () => {
     render(<MainSidebar />);
     expect(screen.getByTestId('main-sidebar')).toBeInTheDocument();
   });
-  
-  test('displays navigation items', () => {
-    render(<MainSidebar />);
-    // Test navigation items
-  });
-});
-import { render, screen } from '@testing - library / react';
-import '@testing - library / jest - dom';
-import MainSidebar from '../components / MainSidebar.dynamic';
-describe ('MainSidebar', () => {
-  test ('renders without crashing', () => {
-    render (<MainSidebar />);
-    expect (screen.getByTestId ('main - sidebar')).toBeInTheDocument ();
-  });
-  test ('displays navigation items', () => {
-    // Test navigation items;
 });

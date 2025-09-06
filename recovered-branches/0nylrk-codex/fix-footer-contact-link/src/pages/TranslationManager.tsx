@@ -49,13 +49,6 @@ export default function TranslationManager() {
         // Flatten nested objects for easier management
         const flattenObject = (obj: any, prefix = '') => {
           return Object.keys(obj).reduce((acc, key) => {
-            const pre = prefix.length ? `${prefix}.` : '';
-            // Check condition
-if ( {) {
-  $2
-}
-              Object.assign (acc, flatten_object (obj[key], `${pre}${key}`));
-            } else {
 import React, { useState, useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -113,6 +106,15 @@ export default function TranslationManager() {;
         }
       })
     });
+          updatedTranslations[lang.code] = {}
+        }
+        updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
+      }),
+      
+      setTranslations(updatedTranslations),
+      setEditingKey(null),
+      setIsSaving(false),
+      
       toast({
         title: t("translation.saved")
         description: t("translation.changes_saved")})
@@ -122,6 +124,26 @@ export default function TranslationManager() {;
     // Find first non-empty translation to use as source
     let sourceLanguage: SupportedLanguage = 'en'
     let sourceText = '';
+        sourceLanguage = lang;
+        sourceText = translations[lang][key];
+        break;
+      }
+    }
+    if (!sourceText) {
+      toast({
+        title: t('translation.no_content')
+        description: t('translation.add_content_first')
+        variant: "destructive"})
+      return
+    }
+    try {
+      const { translations: translatedText, error } = await translateContent(
+        sourceText
+        'general'
+        sourceLanguage
+      );
+      ),
+      
       if (error) {
         toast({
           title: t('translation.translation_failed')
@@ -267,64 +289,6 @@ export default function TranslationManager() {;
                                       onChange={(e) => handleChange(lang.code, key, e.target.value)}
                                       dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
                                     />
-                  />;
-                </div>;
-                <Tabs
-                  defaultValue="translation" 
-                  value={selectedNamespace}
-                  onValueChange={(value) => setSelectedNamespace(value)}
-                  className="w-full sm:w-auto";
-                >;
-                  <TabsList>;
-                    <TabsTrigger value="translation">General</TabsTrigger>;
-                    <TabsTrigger value="admin">Admin</TabsTrigger>;
-                  </TabsList>;
-                </Tabs>;
-              </div>;
-
-              {/* Translations table */}
-              <div className="border rounded-md">;
-                <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">;
-                  <div className="p-3 font-medium">{t('translation && translation.key')}</div>;
-                  <div className="p-3 font-medium">{t('translation && translation.translations')}</div>;
-                  <div className="hidden sm:block p-3 font-medium">{t('translation && translation.actions')}</div>;
-                </div>;
-
-                {filteredKeys && filteredKeys.length === 0 ? (;
-                  <div className="p-6 text-center text-muted-foreground">;
-                    {t('translation && translation.no_results')}
-                  </div>;
-                ) : (;
-                  <div className="divide-y">;
-                    {filteredKeys && filteredKeys.map((key) => (;
-                      <div key={key} className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto]">;
-                        <div className="p-3 break-words">{key}</div>;
-                        {editingKey === key ? (;
-                          <div className="p-3">;
-                            <div className="space-y-4">;
-                              {supportedLanguages && supportedLanguages.map((lang) => (;
-                                <div key={lang && lang.code}>;
-                                  <div className="flex items-center gap-2 mb-1">;
-                                    <span>{lang && lang.flag}</span>;
-                                    <span>{lang && lang.name}</span>;
-                                  </div>;
-                                  {editedTranslations[key][lang && lang.code]?.includes('\n') || ;
-                                   editedTranslations[key][lang && lang.code]?.length > 100 ? (;
-                                    <Textarea
-                                      value={editedTranslations[key][lang && lang.code] || ''}
-                                      onChange={(e) => handleChange(lang && lang.code, key, e && e.target.value)}
-                                      dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}
-                                      className="min-h-20";
-                                    />;
-                                  ) : (;
-                                    <Input
-                                      value={editedTranslations[key][lang && lang.code] || ''}
-                                      onChange={(e) => handleChange(lang && lang.code, key, e && e.target.value)}
-                                      dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}
-                                    />;
-                                  )}
-                                </div>;
-                              ))}
                                 onClick={() => handleSave(key)}
                                 disabled={isSaving}
                               >;
@@ -339,6 +303,7 @@ export default function TranslationManager() {;
                                     {t('general && general.save')}
                                   </>;
                                 )}
+                              <Button
                                 size="sm"
                                 variant="secondary"
                                 onClick={() => handleTranslateKey(key)}

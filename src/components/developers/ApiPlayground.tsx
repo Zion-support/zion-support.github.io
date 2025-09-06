@@ -1,87 +1,3 @@
-interface Param {
-
-  name: string
-type: string
-required?: boolean
-}interface ApiPlaygroundProps {
-  method: string
-  path: string
-  params?: Param[]
-export function ApiPlayground({
-  method
-  path
-  params = []
-}: ApiPlaygroundProps) {
-  const [apiKey, setApiKey] = useState('demo_key_123')
-  const [paramValues, setParamValues] = useState<Record<string, string>>({})
-  const [body, setBody] = useState('{}')
-  const [response, setResponse] = useState<string | null>(null)
-  const [loading, setLoading] = useState(false)
-  const handleParamChange = (name: string, value: string) => {
-    setParamValues(prev => ({ ...prev, [name]: value }))
-  }
-  const sendRequest = async () => {
-    // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
-      (typeof window !== 'undefined' ? window.location.origin : '')
-    let url = `${baseUrl}${path}`
-    const searchParams = new URLSearchParams()
-    if (method === 'GET' |method === 'DELETE') {
-      params.forEach(p => {
-        const val = paramValues[p.name]
-        if (val) searchParams.append(p.name, val)
-      })
-      const query = searchParams.toString()
-      if (query) url += `?${query}` }
-import { Button } from "@/components/ui/button",
-import CodeBlock from "./CodeBlock",
-interface Param {
-  name: string,
-  type: string,
-  required?: boolean
-import { useState } from "react",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Button } from "@/components/ui/button",;
-import CodeBlock from "./CodeBlock",;
-interface Param {;
-  name: string,;
-  type: string,;
-  required?: boolean;
-}
-;
-interface ApiPlaygroundProps {;
-  method: string,;
-  path: string,;
-  params?: Param[];
-}
-
-export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {
-  const [apiKey, setApiKey] = useState("demo_key_123"),
-  const [paramValues, setParamValues] = useState<Record<string string>>({}),
-  const [body, setBody] = useState("{}"),
-  const [response, setResponse] = useState<string | null>(null),
-  const [loading, setLoading] = useState(false),
-
-  const handleParamChange = (name: string, value: string) => {
-    setParamValues((prev) => ({ ...prev, [name]: value }))
-  },
-
-  const sendRequest = async () => {
-    // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? window.location.origin : ''),
-    let url = `${baseUrl}${path}`,
-
-    const searchParams = new URLSearchParams(),
-    if (method === "GET" || method === "DELETE") {
-      params.forEach((p) => {
-        const val = paramValues[p.name],
-        if (val) searchParams.append(p.name, val)
-      }),
-      const query = searchParams.toString(),
-      if (query) url += `?${query}`
-    }
-
-    const options: RequestInit = {
       method
       headers: {
         Authorization: `Bearer ${apiKey}`
@@ -170,7 +86,6 @@ export function ApiPlayground(): any ({;
     <div className='space-y-4'>;
       <Input
         value={apiKey}
-          value={paramValues[p.name] || ''}
           onChange={e => handleParamChange(p.name, e.target.value)}        />
       ))}
       {method !== 'GET' && method !== 'DELETE' && (;
@@ -180,11 +95,6 @@ export function ApiPlayground(): any ({;
           className='font-mono'        />;
       )}
       <Button onClick={sendRequest} disabled={loading}>;
-  p.name
-}</div>)
-}export default ApiPlayground
-'"
-
   p.name 
 }</div>) ;
 }export default ApiPlayground;

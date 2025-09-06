@@ -1,4 +1,3 @@
-
 tagline: string;
 price: string;
 period: string;
@@ -2257,5 +2256,3 @@ export const serviceCategories = [
   'Robotics & AutomationAgriculture & Food Tech'
 ];
 
-// Combined all services
-export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;

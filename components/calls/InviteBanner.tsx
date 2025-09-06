@@ -22,7 +22,6 @@ export default function InviteBanner({
   onJoin?: () => void;
   canJoin?: boolean;
 };
-
 export default function InviteBanner(): any ({ message, onJoin, canJoin = true }: Props) {;
   return (
 import React from 'react';

@@ -1,11 +1,50 @@
+
+
+
+
+
+type Tx = {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+type Tx = {;
+type Tx = {
+  id: string;
+  type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
+  amount: number;
+  reason: string;
+
+};
+type Summary = {;
+  wallet: { userId: string; balance: number };
+  transactions: Tx[];
+  config: { usdPerToken: number; symbol: string };
+};
+function getUserId(): any (): string {;
+
   if (typeof window === 'undefined') return 'demo-user';
   const fromStorage = window && window.localStorage.getItem('zion_user_id');
   if (fromStorage) return fromStorage;
   const generated = 'demo-user';
   window && window.localStorage.setItem('zion_user_id', generated);
   return generated;
-
-export default function WalletPanel() {;
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
@@ -36,12 +75,6 @@ type Summary = {;
   config: { usdPerToken: number, symbol: string }
 };
   if (typeof window === "undefined") return "demo-user";
-  const fromStorage = window && window.localStorage.getItem("zion_user_id");
-  if (fromStorage) return fromStorage;
-  const generated = "demo-user";
-  window && window.localStorage.setItem("zion_user_id", generated);
-  return generated;
-}
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
@@ -285,11 +318,12 @@ if ( {) {
                 Redeem 500;
               </button>;
             </div>;
-    </div>;
-  );
+    } catch (e) {
+      console.error(e)
+    }
+  }
 }
-  );
-}
+
             <div className='text - xs text - gray - 500'>;
               Coming soon: Redeem for branded perks and courses.;
             </div>          </div>            <div className="text - xs text - gray - 500">Coming soon: Redeem for branded perks and courses.</div>;
@@ -298,3 +332,13 @@ if ( {) {
     </div>);
 }
 
+          </div>
+
+        )}
+      </div>
+    </div>
+);
+}
+
+}
+}

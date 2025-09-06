@@ -110,17 +110,6 @@ import { motion } from 'framer-motion';
 } from 'lucide-react'
 import { ultimate2026Services } from '../data/ultimate-2026-services';
 import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
-import React, { useState, useMemo } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import {
-  Search, Star, DollarSign, CheckCircle,
-  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,
-  ChevronDown, Sparkles
-} from 'lucide-react',;
-import { ultimate2026Services } from '../data/ultimate-2026-services',;
-import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations',;
 export default function Ultimate2026ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
@@ -263,21 +252,9 @@ export default function Ultimate2026ServicesShowcase(req, res) {
         </div>
         <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Ultimate 2026
@@ -374,11 +351,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                           <Star className="w-3 h-3 mr-1" />
                           Popular
                         </div>
-                      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      )}
                     </div>
                         <span className="text-sm text-gray-400">{service.period}</span>
                       </div>
@@ -425,10 +398,52 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                 onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all"
               />
             </div>
+                  onChange={(e) => setSelectedCategory(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
+                  {categories.map((category) => (
+                    <option key={category.id} value={category.id}>
+                      {category.name} ({category.count})
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
+              </div>
               {/* Price Filter */}
               <div className="relative">;
                 <select;
                   value={selectedPriceRange}
+                  onChange={(e) => setSelectedPriceRange(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
+                  {priceRanges.map((range) => (
+                    <option key={range.id} value={range.id}>
+                      {range.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </option>;
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </select>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
+              </div>
+              {/* Sort */}
+              <div className="relative">
+                <select
+                  value={sortBy}
+              {/* Sort */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div className="relative">
+                <select
+                  value={sortBy  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   onChange={(e) => setSortBy(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
@@ -465,11 +480,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                             <Star className="w-3 h-3 mr-1" />
                             Popular
                           </div>
-                        )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                        )}
                       </div>
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                         {service.name}
@@ -505,7 +516,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
                         <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-
                           {service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -528,23 +538,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">
-                          {service.name}
-                        </h3>;
-                        {service.popular && (
-                          <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white px - 3 py - 1 rounded - full text - xs font - semibold flex items - center">;
-                            <Star className="w - 3 h - 3 mr - 1" />;
-                            Popular;
-                          </div>)}
-                      </div>;
-                      <p className="text - gray - 400 mb - 3">{service.description}</p>;
-                      <div className="flex items - center space - x-6 text - sm text - gray - 500">;
-                        <span > Category: {service.category}</span>;
-                        <span>{service.customers.toLocaleString ()} customers</span>;
-                        <span > Rating: {service.rating}/5</span>;
-                      </div>;
-                    </div>;
-                    <div className="text - right">;
-                      <div className="text - 2xl font - bold text - cyan - 400 mb - 2">;
                         {service.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -579,6 +572,29 @@ export default function Ultimate2026ServicesShowcase(req, res) {
       <section className="py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Business with 2026 Innovations?
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing
+
+              Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing,
               and emerging technology solutions to gain competitive advantages and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -608,7 +624,6 @@ export default function Ultimate2026ServicesShowcase(req, res) {
           </motion.div>
         </div>
       </section>
-
       {/* Footer Contact */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -643,3 +658,5 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+

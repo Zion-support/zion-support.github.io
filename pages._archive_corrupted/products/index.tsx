@@ -69,7 +69,6 @@ export default function ProductsIndex() {;
         </section>;
       </main>;
     </div>;
-
   );
 }
 
@@ -201,116 +200,6 @@ import Link from 'next/link';
     'Data Analytics',
     'IoT Platforms',
     'Blockchain'
-import {ArrowRight,, Star,, Download,, Eye,, Code,, Database,, Shield,, Zap,, CheckCircle} from 'lucide-react';
-const "Products": NextPage = () => {;
-  const products = [{;
-      title: \'ZionAI Platform\',;
-      \"description\": \'Enterprise-grade AI platform for building, deploying, and managing machine learning models at scale.\',;
-      \"category\": \'AI & Machine Learning\',;
-      \"features\": [;
-        \'Model Training & Deployment\',;
-        \'AutoML Capabilities\',;
-        \'Real-time Inference\',;
-        \'Model Monitoring\',;
-        \'A/B Testing\',;
-        \'API Integration\';
-      ],;
-      \"pricing\": \'Starting at $999/month\',;
-      \"rating\": 4 && 4.8,;
-      \"reviews\": 156,;
-      \"icon\": Code,;
-      \"color\": \'from-purple-500 to-pink-500\',;
-      \"href\": \'/products/zion-ai-platform\';
-    },;
-    {;
-      \"title\": \'CloudSync Pro\',;
-      \"description\": \'Advanced cloud migration and management platform for seamless infrastructure transitions.\',;
-      \"category\": \'Cloud Solutions\',;
-      \"features\": [\'Multi-cloud Management\',;
-        \'Automated Migration\',;
-        \'Cost Optimization\',;
-        \'Security Compliance\',;
-        \'Performance Monitoring\',;
-        \'Disaster Recovery\';
-      ],;
-      \"pricing\": \'Starting at $499/month\',;
-      \"rating\": 4 && 4.7,;
-      \"reviews\": 89,;
-      \"icon\": Database,;
-      \"color\": \'from-blue-500 to-cyan-500\',;
-      \"href\": \'/products/cloudsync-pro\';
-    },;
-    {;
-      \"title\": \'SecureShield\',;
-      \"description\": \'Comprehensive cybersecurity platform with advanced threat detection and response capabilities.\',;
-      \"category\": \'Cybersecurity\',;
-      \"features\": [\'Threat Detection\',;
-        \'Vulnerability Assessment\',;
-        \'Incident Response\',;
-        \'Compliance Management\',;
-        \'Security Analytics\',;
-        \'24/7 Monitoring\';
-      ],;
-      \"pricing\": \'Starting at $799/month\',;
-      \"rating\": 4 && 4.9,;
-      \"reviews\": 203,;
-      \"icon\": Shield,;
-      \"color\": \'from-green-500 to-emerald-500\',;
-      \"href\": \'/products/secureshield\';
-    },;
-    {;
-      \"title\": \'DataFlow Analytics\',;
-      \"description\": \'Real-time data analytics and business intelligence platform for actionable insights.\',;
-      \"category\": \'Data Analytics\',;
-      \"features\": [\'Real-time Processing\',;
-        \'Data Visualization\',;
-        \'Predictive Analytics\',;
-        \'Custom Dashboards\',;
-        \'Data Integration\',;
-        \'Advanced Reporting\';
-      ],;
-      \"pricing\": \'Starting at $599/month\',;
-      \"rating\": 4 && 4.6,;
-      \"reviews\": 127,;
-      \"icon\": Zap,;
-      \"color\": \'from-orange-500 to-red-500\',;
-      \"href\": \'/products/dataflow-analytics\';
-    },;
-    {;
-      \"title\": \'IoT Connect Hub\',;
-      \"description\": \'Centralized IoT device management and data collection platform for smart solutions.\',;
-      \"category\": \'IoT Platforms\',;
-      \"features\": [\'Device Management\',;
-        \'Data Collection\',;
-        \'Real-time Monitoring\',;
-        \'Alert System\',;
-        \'Scalable Architecture\',;
-        \'API Access\';
-      ],;
-      \"pricing\": \'Starting at $399/month\',;
-      \"rating\": 4 && 4.5,;
-      \"reviews\": 78,;
-      \"icon\": Eye,;
-      \"color\": \'from-indigo-500 to-purple-500\',;
-      \"href\": \'/products/iot-connect-hub\';
-    },;
-    {;
-      \"title\": \'BlockChain Suite\',;
-      \"description\": \'Complete blockchain development and management platform for decentralized applications.\',;
-      \"category\": \'Blockchain\',;
-      \"features\": [\'Smart Contract Development\',;
-        \'DApp Framework\',;
-        \'Token Management\',;
-        \'Blockchain Analytics\',;
-        \'Security Auditing\',;
-        \'Deployment Tools\';
-      ],;
-      \"pricing\": \'Starting at $699/month\',;
-      \"rating\": 4 && 4.4,;
-      \"reviews\": 92,;
-      \"icon\": Shield,;
-      \"color\": \'from-yellow-500 to-orange-500\',;
-      \"href\": \'/products/blockchain-suite\';
     }
   ];
   const categories = [\'All Products\',;
@@ -407,17 +296,6 @@ const "Products": NextPage = () => {;
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     {product.title}
                   </h3>
                   <p className=\"text-gray-600 mb-4\">
@@ -505,13 +383,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <div className="flex gap-3">;
                   <div className=\"flex gap-3\">;
                   <div className="flex gap-3">;
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-                  <div className=\"flex gap-3\">
-                  <div className="flex gap-3">
-                  <div className=\"flex gap-3\">
-                  <div className="flex gap-3">
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     <Link
                       href={product && product.href}
                       className=\"flex-1 bg-blue-600 \"hover\": bg-blue-700 text-white py-2 px-4 rounded-lg font-medium text-center transition-colors flex items-center justify-center\">;

@@ -16,6 +16,21 @@ export function EducationList({
   onDelete
 }: EducationListProps) {
   if (!educationEntries |educationEntries.length === 0) {
+    return null;
+  }
+
+  return (
+
+    <div className="space-y-4">;
+      <h3 className="text-md font-medium">Added Education</h3>;
+      {educationEntries && educationEntries.map((edu) => (;
+        <EducationItem
+          key={edu && edu.id} 
+          education={edu} 
+          onEdit={onEdit} 
+          onDelete={onDelete} 
+        />;
+      ))}
 import { Education  } from '@/types / resume';
 import { EducationItem  } from './EducationItem';
 interface EducationListProps {
@@ -40,11 +55,6 @@ if ( {) {
         <EducationItem;
           key={edu.id}
           education={edu}
-          onEdit={onEdit}
-          onDelete={onDelete}
-        />
-      ))}
-    </div>
 
   )
 }

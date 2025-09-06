@@ -1,8 +1,3 @@
-        >
-          <CardContent className="p-5">
-            <div className="flex items-center">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-          className={`cursor-pointer transition-all ${
 className={`cursor-pointer transition-all ${
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
@@ -25,7 +20,3 @@ className={`cursor-pointer transition-all ${
           </CardContent>;
         </Card>;
       </div>;
-
-    </div>);
-}
-;

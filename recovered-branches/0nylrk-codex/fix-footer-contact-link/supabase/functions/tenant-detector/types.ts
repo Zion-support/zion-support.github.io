@@ -26,5 +26,7 @@
     cta: string;
   }
   is_active: boolean;
+  error?: string;
 }
-;
+}
+

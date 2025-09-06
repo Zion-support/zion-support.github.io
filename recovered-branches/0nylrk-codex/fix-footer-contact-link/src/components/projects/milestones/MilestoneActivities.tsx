@@ -16,9 +16,6 @@ interface Activity {
 
     display_name: string
 
-    avatar_url: string | null
-  }
-}
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     async function fetchActivities() {
@@ -38,23 +35,54 @@ interface Activity {
         setActivities(data |[])
 
       } catch (err) {
-        console.error ('Error fetching milestone activities:', err);
-      } finally {
-        setIsLoading (false);
       }
+    }
+    if (projectId) {
+      fetchActivities()
     }
   }, [projectId]);
   function getActivityDescription(activity: Activity): string {
     switch (activity.action) {
       case 'created':
 
-        return 'created a new milestone'
+  }, [projectId]),;
+  function getActivityDescription(activity: Activity): string {;
+    switch (activity.action) {;
 
+      case 'created':;
+        return 'created a new milestone',;
+      case 'status_changed':;
+        return `changed status from ${activity && activity.previous_status || 'none'} to ${activity && activity.new_status}`;
       case 'updated':;
         return 'updated milestone details';
       case 'deliverable_added':;
         return 'added a deliverable';
       default:;
+    }
+  }
+
+  if (isLoading) {
+    return (
+      <div className="space-y-4">
+        {[1, 2, 3].map((i) => (
+          <Card key={i}>
+            <CardContent className="p-6">
+              <div className="flex items-center space-x-4">
+                <Skeleton className="h-10 w-10 rounded-full" />
+                <div className="space-y-2">
+                  <Skeleton className="h-4 w-40" />
+                  <Skeleton className="h-4 w-60" />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    )
+  }
+
+  if (activities.length === 0) {
+    return (
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
           <Card key={i}>;
@@ -96,6 +124,9 @@ interface Activity {
     </div>
   )
 }
+    // Check condition
+if ( {) {
+  $2
 }
       fetch_activities ();
     }

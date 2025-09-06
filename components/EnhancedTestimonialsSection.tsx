@@ -71,6 +71,27 @@ interface Testimonial {;
                     </div>;
                     <div className='text - xs text - blue - 400'>;
                       {testimonial.company}
+                  "{testimonial.content}"
+                </p>
+                {/* Author Info */}
+                    {testimonial.avatar}
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-sm text-white/70">{testimonial.title}</div>
+                    <div className="text-xs text-blue-400">{testimonial.company}</div>
+                  </div>
+
+                </div>
+                {/* Category Badge */}
+
+                <div className="mt-4">
+
+                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
+                    {testimonial.category}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {testimonials.map(testimonial => (
+
             <div
               key={testimonial.id}
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -88,7 +109,6 @@ interface Testimonial {;
                 <p className='text-white/80 text-sm leading-relaxed mb-6'>                  "{testimonial.content}"
                 </p>
 
-
                 {/* Author Info */}
 
                   {renderStars(testimonial.rating)}
@@ -99,10 +119,39 @@ interface Testimonial {;
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
-
+                <div className='flex items-center gap-4'>
+                  <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm'>
+                    {testimonial.avatar}
+                  </div>
+                  <div className='flex-1'>
+                    <div className='font-semibold text-white'>
+                      {testimonial.name}
+                    </div>
+                    <div className='text-sm text-white/70'>
+                      {testimonial.title}
+                    </div>
+                    <div className='text-xs text-blue-400'>
+                      {testimonial.company}
+                    </div>                  </div>
+                </div>
+                {/* Category Badge */}
+                <div className='mt-4'>
+                  <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                    {testimonial.category}                  <div className="flex-1">
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-sm text-white/70">{testimonial.title}</div>
+                    <div className="text-xs text-blue-400">{testimonial.company}</div>
+                </div>
+                {/* Category Badge */}
+                <div className='mt-4'>
+                  <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                <div className="mt-4">
+                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
+                    {testimonial.category}
 
                     {testimonial.category}
 
+                  </span>
+                </div>
+              </div>
         {/* CTA Section */}
         <div className='text-center mt-16'>;
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>;
@@ -117,7 +166,6 @@ interface Testimonial {;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />            </div>              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
             </div>
-
 
           ))}
         </div>
@@ -174,6 +222,9 @@ interface Testimonial {;
           </div>;
         </div>;
       </div>;
+export default EnhancedTestimonialsSection;
+
+
     </section>);
 }
 ;
@@ -187,4 +238,3 @@ export default EnhancedTestimonialsSection;  )
 }
 export default EnhancedTestimonialsSection;
 
-export default EnhancedTestimonialsSection;

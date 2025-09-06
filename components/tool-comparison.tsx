@@ -2,15 +2,6 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-  Search;
-  Filter, ;
-  TrendingUp, ;
-  DollarSign, ;
-  Users, ;
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
   Search,
   Filter,
   TrendingUp,
@@ -39,7 +30,6 @@ import {
   Zap;
   Brain;
   Globe;
-
 
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
@@ -528,6 +518,42 @@ function ToolComparisonPage() {
         return a && a.name.localeCompare(b && b.name);
       default: return 0;
   });
+
+  return (
+
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+
+      {/* Hero Section */}
+      <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>;
+        <div className='absolute inset-0'>;
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0 && 0.08),transparent_50%)]' />;
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0 && 0.06),transparent_50%)]' />;
+        </div>;
+
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
+
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
+          <div className='mb-20 animate-fade-in'>;
+            <div className='mb-8'>;
+              <div className='inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6 animate-scale-in'>;
+                <Search className='w-4 h-4 mr-2' />;
+                Smart Tool Selection;
+              </div>;
+            </div>;
+
+            <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>;
+              Tool Comparison;
+            </h1>;
+            <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>;
+              Compare SaaS tools, AI services, and business solutions. Make;
+              informed decisions with our comprehensive analysis and expert;
+              insights.;
+            </p>;
+
+            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
+
               <Button
                 href='#comparison'
                 size='lg'
@@ -599,6 +625,9 @@ function ToolComparisonPage() {
                 className='w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />
             </div>
             {/* Category Filter */}
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+
               <input
                 type="text"
                 placeholder="Search tools, categories, or use cases..."
@@ -607,8 +636,7 @@ function ToolComparisonPage() {
             <div className='flex flex-wrap gap-2'>;
               {categories && categories.map(category => (            <div className="flex flex-wrap gap-2">;
               {categories && categories.map((category) => (;
-            <div className='flex flex-wrap gap-2'>
-
+                <button
               {categories.map(category => (                <button
 
               />
@@ -767,6 +795,56 @@ function ToolComparisonPage() {
                     </td>;
                   </tr>;
                 ))}
+          )}
+        </div>
+      </section>
+
+      {/* Detailed Comparison Cards */}
+      <section className='py-24 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+
+              Detailed Analysis
+            </h2>
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Deep dive into each tool's pros, cons, and use cases to make the
+              best decision for your business.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {sortedTools.slice(0, 6).map((tool, index) => (
+              </tbody>;
+            </table>;
+          </div>;
+          {sortedTools && sortedTools.length === 0 && (;
+            <div className='text-center py-20'>;
+              <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />;
+              <h3 className='text-xl font-semibold text-gray-400 mb-2'>;
+                No tools found;
+              </h3>;
+              <p className='text-gray-500'>;
+                Try adjusting your search criteria or category filter.;
+              </p>            </div>            <div className="text-center py-20">;
+              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />;
+              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>;
+              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>;
+          )}
+        </div>;
+      </section>;
+      {/* Detailed Comparison Cards */}
+      <section className='py-24 bg-gray-900'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
+            </h2>;
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+              Deep dive into each tool's pros, cons, and use cases to make the;
+              best decision for your business.;
+            </p>;
+          </div>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+            {sortedTools && sortedTools.slice(0, 6).map((tool, index) => (;
               </tbody>
             </table>
           </div>
@@ -821,10 +899,28 @@ function ToolComparisonPage() {
                       <span className="px-2 py-1 bg-gray-800 rounded-full">{tool.category}</span>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <ul className="space-y-1">
+                      {tool.cons.slice(0, 3).map((con, conIndex) => (
+                        <li key={conIndex} className="text-xs text-gray-400 flex items-start">
+                          <span className="w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0" />
+
+                          {con}
+                        </li>;
+                      ))}
+
+                    </ul>;
+                  </div>;
+                </div>;
+                <div className='flex items-center justify-between'>;
+
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool && tool.pricing)}`}>                    {tool && tool.pricing}
                   </span>;
                   <Button
+                <div className="flex items-center justify-between">
+                  <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
+
+
 
 
                 <div className='flex items-center justify-between'>
@@ -833,17 +929,23 @@ function ToolComparisonPage() {
                   >                    {tool.pricing}
                   </span>
                   <Button
-
-                    href={tool.website}
-
                     {tool.pricing}
                   </span>
                   <Button
                     href={tool.website}
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+          </div>;
+        </div>;
+      </section>;
 
 
-
-                  </Button>
+      {/* CTA Section */}
 
 
       {/* CTA Section */}
@@ -851,9 +953,6 @@ function ToolComparisonPage() {
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-
-
-            Need Help Choosing?
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the
@@ -869,5 +968,30 @@ function ToolComparisonPage() {
               variant='outline'
               size='lg'
 
+
+              Explore All Tools;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+
   );
+}
+    </>);
+}
+              className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'            >              href="/saas-marketplace"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
+              Explore All Tools
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+}
+
+  );
+}
 }

@@ -21,12 +21,17 @@ export interface PartnerProfile {;
   status: 'pending' | 'approved' | 'rejected';
   created_at: string;
 
-}
-
+export interface PartnerSettings {
 
 export interface PartnerSettings {;
-}
+  id: string;
+  commission_rate: number;
 
+  fraud_threshold: number,
+  is_payouts_enabled: boolean;
+
+}
+export interface PartnerReferralLink {
 
 export interface PartnerReferralLink {;
   id: string;
@@ -36,8 +41,7 @@ export interface PartnerReferralLink {;
   source?: string;
   clicks: number;
 
-}
-
+export interface PartnerPayout {
 
 export interface PartnerPayout {;
   id: string;

@@ -1,4 +1,3 @@
-import { NextApiRequest, NextApiResponse } from 'next';
 
 import { getUserFromRequest } from '../../../utils/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -6,3 +5,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!user) return res.status(200).json({ user: null })
 
   res.status(200).json({ user })
+
+

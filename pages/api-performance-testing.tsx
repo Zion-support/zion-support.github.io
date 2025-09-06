@@ -1,5 +1,3 @@
-    'Synthetic traffic for staging',;
-  ];
 
   const features = [
     'k6/Gatling-compatible test runner'
@@ -117,29 +115,50 @@
             </div>;
             <p className='mt-4 text-sm text-gray-400'>;
               Market references:{' '}
-              <a
-                className='underline hover:text-cyan-300'
-                target='_blank'
-                rel='noreferrer'
-              >
-                BlazeMeter
-              </a>
-              .
-            </p>
-          </div>
-<div className='mt-14 flex flex-wrap items-center gap-4'>
-            <a
-              href='mailto:kleber@ziontechgroup.com'
-              className='px-5 py-3 rounded-lg border border-white/20'
-            >
-              Email: kleber@ziontechgroup.com
-            </a>
-            <span className='text-gray-400'>Call: +1 302 464 0950</span>
-          </div>
-        </div>
-      </section>
-    </div>
+              <a;
+                className='underline hover:text - cyan - 300';
+                href='https://k6.io / pricing/';
+                target='_blank';
+                rel='noreferrer';
+              >;
+                Grafana k6;
+              </a>;
+              , {' '}
+              <a;
+                className='underline hover:text - cyan - 300';
+                href='https://www.loadmill.com / pricing';
+                target='_blank';
+                rel='noreferrer';
+              >;
+                Loadmill;
+              </a>;
+              , {' '}
+              <a;
+                className='underline hover:text - cyan - 300';
+                href='https://www.blazemeter.com / pricing';
+                target='_blank';
+                rel='noreferrer';
+              >;
+
+                BlazeMeter;
+              </a>;
+              .;
+            </p>;
+          </div>;
+
+              href='mailto:kleber@ziontechgroup && ziontechgroup.com'
+              className='px-5 py-3 rounded-lg border border-white/20'>;
+              Email: kleber@ziontechgroup && ziontechgroup.com;
+            </a>;
+            <span className='text-gray-400'>Call: +1 302 464 0950</span>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
+
+}
+import React from 'react',
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
 export default function ApiPerformanceTestingPage() {
@@ -184,8 +203,5 @@ export default function ApiPerformanceTestingPage() {
 			</section>
 		</div>
 	)
-            </a>;
-            <span className='text-gray-400'>Call: +1 302 464 0950</span>;
-          </div>;
-        </div>;
-      </section>;
+
+

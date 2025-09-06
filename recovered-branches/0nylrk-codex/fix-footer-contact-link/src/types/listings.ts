@@ -1,13 +1,9 @@
-  id: string;
-  name: string;
 
   id: string;
   name: string;
 
   icon: string
 }
-
-export interface ProductListing {;
   id: string;
   title: string;
   description: string;
@@ -66,3 +62,4 @@ export interface ListingItem {;
   description?: string;
 }
 ;
+export type ListingView = 'grid' | 'list';

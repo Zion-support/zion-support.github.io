@@ -15,6 +15,12 @@
                 className={`p-3 rounded-full ${isSelected ? 'bg-zion-purple' : 'bg-zion-blue'}`}>;
                 <Icon
                   className={`h-6 w-6 ${isSelected ? 'text-white' : 'text-zion-slate-light'}`}
+      id: 'client',
+      name: 'Client',
+      description: 'I want to discover and hire talent or services',
+      icon: User,
+    },
+  return (
     <div className='space - y-6'>;
       <div className='text - center mb - 6'>;
         <h3 className='text - 2xl font - bold text - white'>Choose your role</h3>;

@@ -177,9 +177,6 @@ export default function CloudMigrationPage() {;
                   key={service && service.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  </div>;
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service && service.description}</p>";
-                  <div>;
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
                           {feature}
                         </li>,;

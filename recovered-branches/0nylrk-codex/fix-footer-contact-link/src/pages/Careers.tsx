@@ -12,6 +12,10 @@ export default function Careers() {
         location: "Remote"
         type: "Full-time"
         department: "Engineering"
+        title: "Senior Frontend Engineer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Engineering",
         description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
       }
       {
@@ -108,9 +112,6 @@ export default function Careers() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
         </svg>
       )
-        description: "Create intuitive and engaging user experiences that make complex technology accessible to all users.";
-      }
-    ];
     marketing: [;
       {;
         title: "Growth Marketing Manager",;
@@ -164,6 +165,13 @@ export default function Careers() {
       </main>
     </AppLayout>
   )
+                  ))}
+                </TabsContent>;
+              ))}
+
+
+
+
             </Tabs>;
           </div>;
           ;
@@ -187,3 +195,5 @@ export default function Careers() {
           </div>;
         </div>;
       </main>;
+}
+;

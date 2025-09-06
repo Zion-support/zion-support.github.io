@@ -16,13 +16,26 @@ export function writeState(updater: (state: IntegrationState) => void): Integrat
 }
 export function resetState(): void {
   state = {
-    connections: []
-    logs: []
-    overrides: []
+
+  connections: [],
+  logs: [],
+  overrides: [];
+  connections: []
+  logs: []
+  overrides: []
+}
+;
+export function get_state (): IntegrationState {
+  return { ...state }
+}
+  updater(state);
+  return { ...state }
+}
+export function reset_state (): void {
+  state = {
   }
 
     connections: [],
     logs: [],
     overrides: [];
   };
-}

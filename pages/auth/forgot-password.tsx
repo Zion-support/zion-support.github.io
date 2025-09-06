@@ -19,6 +19,9 @@ const ForgotPassword: NextPage = () => {
     </div>;
   ),;
 };
+export default ForgotPassword;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > ForgotPassword</h1>;
@@ -29,3 +32,5 @@ import Head from 'next / head';
 ;
 export default ForgotPassword;
 ;
+
+

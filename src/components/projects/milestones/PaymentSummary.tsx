@@ -5,13 +5,6 @@ interface PaymentSummaryProps {
 
   milestones: Milestone[]
   paymentTerms: string | null
-    (sum, m) => sum + parseFloat(m.amount.toString());    0
-  ).toFixed(2)
-  const paidAmount = milestones
-    .filter(m => m.status === 'paid')
-    .reduce(
-      (sum, m) => sum + parseFloat(m.amount.toString());      0
-    ).toFixed(2)
   return (
     <Card className="mb-8 bg-muted/30">;
       <CardHeader className="pb-3">;
@@ -34,14 +27,6 @@ interface PaymentSummaryProps {
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">
               ${paidAmount}
-            </p>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-'"
             </p>;
           </div>;
         </div>;

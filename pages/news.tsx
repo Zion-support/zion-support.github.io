@@ -1,7 +1,21 @@
+import { 
+  Newspaper;
   Calendar, 
   User, 
   Tag, 
   ArrowRight, 
+  Zap
+} from 'lucide-react'
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import React from 'react',
+import Head from 'next / head',
+import { motion } from 'framer-motion',
+import {
+  Newspaper,
+  Calendar,
+  User,
+  Tag,
+  ArrowRight,
   ExternalLink,
   TrendingUp,
   Award,
@@ -147,12 +161,18 @@ export default function NewsPage() {
           <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>
           <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />
         </Head>
+        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.h1 
+              className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.h1
@@ -170,6 +190,185 @@ export default function NewsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+              className="text-center"
+            >
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
+                Latest News & Updates
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent mb-6">
+                News & Press
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+        {/* Category Filter */}
+        <section className="py - 10 px - 4">;
+          <div className="container mx - auto max - w-6xl">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex flex-wrap justify-center gap-4"
+            >
+              {categories.map((category, index) => (
+                <button
+                  key={category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                    category === "All News"
+                      ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+export default function NewsPage() {
+  const newsItems = [
+    {
+      title: "Zion Tech Group Named Top AI Innovation Company 2025"
+      category: "Awards & Recognition"
+      date: "January 15, 2025"
+      excerpt: "Zion Tech Group has been recognized as one of the top AI innovation companies of 2025 by TechCrunch, highlighting our breakthrough work in autonomous AI systems and quantum computing integration."
+      image: "/api/placeholder/600/400"
+      source: "TechCrunch"
+      url: "#"
+      featured: true
+      icon: Award
+      color: "from-yellow-500 to-orange-500"
+    }
+    {
+      title: "Revolutionary Quantum AI Breakthrough Announced"
+      category: "Technology Innovation"
+      date: "January 10, 2025"
+      excerpt: "Zion Tech Group announces a major breakthrough in quantum AI integration, achieving unprecedented performance improvements in machine learning algorithms through quantum-enhanced neural networks."
+      image: "/api/placeholder/600/400"
+      source: "MIT Technology Review"
+      url: "#"
+      featured: false
+      icon: Brain
+      color: "from-purple-500 to-pink-500"
+    }
+    {
+      title: "Partnership with Fortune 500 Financial Institution"
+      category: "Business Development"
+      date: "January 5, 2025"
+      excerpt: "Zion Tech Group announces strategic partnership with leading financial institution to deploy AI-powered risk assessment and fraud detection systems across their global operations."
+      image: "/api/placeholder/600/400"
+      source: "Business Insider"
+      url: "#"
+      featured: false
+      icon: Users
+      color: "from-blue-500 to-cyan-500"
+    }
+    {
+      title: "New Cybersecurity Division Launch"
+      category: "Company News"
+      date: "December 28, 2024"
+      excerpt: "Zion Tech Group expands its service portfolio with the launch of a dedicated cybersecurity division, offering quantum-resistant encryption and AI-powered threat detection solutions."
+      image: "/api/placeholder/600/400"
+      source: "Security Weekly"
+      url: "#"
+      featured: false
+      icon: Rocket
+      color: "from-red-500 to-orange-500"
+    }
+    {
+      title: "Record-Breaking AI Model Performance"
+      category: "Research & Development"
+      date: "December 20, 2024"
+      excerpt: "Our research team achieves record-breaking performance in natural language processing, with our latest AI model outperforming industry benchmarks by 40% in accuracy and 60% in speed."
+      image: "/api/placeholder/600/400"
+      source: "AI Research Journal"
+      url: "#"
+      featured: false
+      icon: Brain
+      color: "from-emerald-500 to-teal-500"
+    }
+    {
+      title: "Global Expansion: New Office in Singapore"
+      category: "Company News"
+      date: "December 15, 2024"
+      excerpt: "Zion Tech Group announces the opening of its new Asia-Pacific headquarters in Singapore, expanding our global reach and strengthening partnerships in the region."
+      image: "/api/placeholder/600/400"
+      source: "Singapore Business Times"
+      url: "#"
+      featured: false
+      icon: Globe
+      color: "from-indigo-500 to-purple-500"
+    }
+  ]
+  const categories = ["All", "Awards & Recognition", "Technology Innovation", "Business Development", "Company News", "Research & Development"]
+  const [selectedCategory, setSelectedCategory] = React.useState("All")
+  const filteredNews = selectedCategory === "All"
+    ? newsItems
+    : newsItems.filter(item => item.category === selectedCategory)
+  const featuredNews = newsItems.filter(item => item.featured)
+      title: "Zion Tech Group Named Top AI Innovation Company 2025",
+      category: "Awards & Recognition",
+      date: "January 15, 2025",
+      excerpt: "Zion Tech Group has been recognized as one of the top AI innovation companies of 2025 by TechCrunch, highlighting our breakthrough work in autonomous AI systems and quantum computing integration.",
+      image: "/api/placeholder/600/400",
+      source: "TechCrunch",
+      url: "#",
+      featured: true,
+      icon: Award,
+      color: "from-yellow-500 to-orange-500"
+    },
+    {
+      title: "Revolutionary Quantum AI Breakthrough Announced",
+      category: "Technology Innovation",
+      date: "January 10, 2025",
+      excerpt: "Zion Tech Group announces a major breakthrough in quantum AI integration, achieving unprecedented performance improvements in machine learning algorithms through quantum-enhanced neural networks.",
+      image: "/api/placeholder/600/400",
+      source: "MIT Technology Review",
+      url: "#",
+      featured: false,
+      icon: Brain,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Partnership with Fortune 500 Financial Institution",
+      category: "Business Development",
+      date: "January 5, 2025",
+      excerpt: "Zion Tech Group announces strategic partnership with leading financial institution to deploy AI-powered risk assessment and fraud detection systems across their global operations.",
+      image: "/api/placeholder/600/400",
+      source: "Business Insider",
+      url: "#",
+      featured: false,
+      icon: Users,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "New Cybersecurity Division Launch",
+      category: "Company News",
+      date: "December 28, 2024",
+      excerpt: "Zion Tech Group expands its service portfolio with the launch of a dedicated cybersecurity division, offering quantum-resistant encryption and AI-powered threat detection solutions.",
+      image: "/api/placeholder/600/400",
+      source: "Security Weekly",
+      url: "#",
+      featured: false,
+      icon: Rocket,
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      title: "Record-Breaking AI Model Performance",
+      category: "Research & Development",
+      date: "December 20, 2024",
+      excerpt: "Our research team achieves record-breaking performance in natural language processing, with our latest AI model outperforming industry benchmarks by 40% in accuracy and 60% in speed.",
+      image: "/api/placeholder/600/400",
+      source: "AI Research Journal",
+      url: "#",
+      featured: false,
+      icon: Brain,
+      color: "from-emerald-500 to-teal-500"
+    },
+    {
+      title: "Global Expansion: New Office in Singapore",
+      category: "Company News",
+      date: "December 15, 2024",
+      excerpt: "Zion Tech Group announces the opening of its new Asia-Pacific headquarters in Singapore, expanding our global reach and strengthening partnerships in the region.",
+      image: "/api/placeholder/600/400",
+      source: "Singapore Business Times",
+      url: "#",
+      featured: false,
+      icon: Globe,
+      color: "from-indigo-500 to-purple-500"
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -178,7 +377,6 @@ export default function NewsPage() {
   ],
     : newsItems.filter(item => item.category === selectedCategory),
   const featuredNews = newsItems.filter(item => item.featured),
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -196,6 +394,20 @@ export default function NewsPage() {
             initial={{ opacity: 0, coordinate_y: 30 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+              News & Press
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Stay updated with our latest innovations, awards, and media coverage
+            </p>
+          </motion.div>
+          <motion.div
+            className="mb-12"
+          >
+            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+              Discover the latest developments in AI, quantum computing, and technology 
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -211,7 +423,6 @@ export default function NewsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
@@ -225,7 +436,6 @@ export default function NewsPage() {
         <section className="py-16 px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
-
   ],;
   const filteredNews = [...featuredNews, ...latestNews].filter(news => {;
     const categoryMatch = selectedCategory === 'all' || news.category === selectedCategory;
@@ -414,20 +624,28 @@ const NewsPage: React.FC = () => {;
         <section className="py - 16 px - 6">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-white mb-4">Featured News</h2>
+              <p className="text-white/70">Latest headlines and major announcements</p>
+            </motion.div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {featuredNews.map((item, index) => (
+                <motion.div
                   key={item.title}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 backdrop - blur - xl border border - white / 10 rounded - 2xl overflow - hidden hover:border - blue - 500 / 30 transition - all duration - 300";
-                >;
-                  <div className="p - 8">;
-                    <div className="flex items - center gap - 3 mb - 4">;
-                      <div className={`w - 12 h - 12 bg - gradient - to - br ${item.color} rounded - xl flex items - center justify - center`}>;
-                        <item.icon className="w - 6 h - 6 text - white" />;
-                      </div>;
-                      <div className="flex items - center gap - 2">;
-                        <span className="text - sm text - white / 60 bg - white / 5 px - 3 py - 1 rounded - full">;
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
+                >
+                  <div className="p-8">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
+                        <item.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full">
                           {item.category}
                           {item.category  } catch (error) {
     console.error("Error:", error);
@@ -458,27 +676,31 @@ const NewsPage: React.FC = () => {;
                     </button>
                   </div>
                 </motion.div>
-      {/* Category Filter */}
-      <section className="py - 8 px - 6">;
-        <div className="max - w-7xl mx - auto">;
-          <div className="flex flex - wrap justify - center gap - 4">;
-            {categories.map ((category) => (
-              <button;
+      <section className="py-8 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
                 key={category}
-                on_click={() => setSelectedCategory (category)}
-                className={`px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 ${
-                  selected_category === category;
-                    ? 'bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white';
-                    : 'bg - white / 5 text - white / 70 hover:bg - white / 10 hover:text - white';
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                  selectedCategory === category
+                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
+                    : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
                 }`}
-              >;
+              >
                 {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* News Grid */}
-      <section className="py - 20 px - 6">;
-        <div className="max - w-7xl mx - auto">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
                 key={category  } catch (error) {
@@ -558,14 +780,14 @@ const NewsPage: React.FC = () => {;
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 backdrop - blur - xl border border - white / 10 rounded - 2xl overflow - hidden hover:border - blue - 500 / 30 transition - all duration - 300";
-              >;
-                <div className="p - 6">;
-                  <div className="flex items - center gap - 3 mb - 4">;
-                    <div className={`w - 10 h - 10 bg - gradient - to - br ${item.color} rounded - xl flex items - center justify - center`}>;
-                      <item.icon className="w - 5 h - 5 text - white" />;
-                    </div>;
-                    <span className="text - xs text - white / 60 bg - white / 5 px - 2 py - 1 rounded - full">;
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
+              >
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className={`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
+                      <item.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-xs text-white/60 bg-white/5 px-2 py-1 rounded-full">
                       {item.category}
                       {item.category  } catch (error) {
     console.error("Error:", error);
@@ -591,11 +813,10 @@ const NewsPage: React.FC = () => {;
                   </button>
                 </div>
               </motion.div>
-      {/* Press Kit CTA */}
-      <section className="py - 20 px - 6">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <motion.div;
-                    <a;
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+                    <a
                       href={`/news/${news.id}`}
                       href={`/news/${news.id}`  } catch (error) {
     console.error("Error:", error);
@@ -632,10 +853,10 @@ const NewsPage: React.FC = () => {;
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 * index }}
-                  className="bg - gray - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300";
-                >;
-                  <div className="flex items - center gap - 4 mb - 4">;
-                    <span className="px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - sm font - medium rounded - full border border - cyan - 500 / 30">;
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-full border border-cyan-500/30">
                       {article.category}
                       {article.category  } catch (error) {
     console.error("Error:", error);
@@ -660,36 +881,58 @@ const NewsPage: React.FC = () => {;
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </motion.article>
-        {/* Newsletter Signup */}
-              <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6">;
-                Stay Updated;
-              </h2>;
-              <p className="text - xl text - gray - 400 max - w-2xl mx - auto mb - 8">;
-                Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing.;
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gray - 800 / 30">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                Stay Updated
+              </h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+                Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing.
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6, delay: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >
+              <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
+              <p className="text-xl text-gray-400 mb-8">
+                Subscribe to our newsletter for the latest news, insights, and technology updates
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50"
+                />
+                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                  Subscribe
+                </button>
+              </div>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pressReleases.map((release, index) => (
+                <motion.article
                   key={release.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 p - 6 rounded - 2xl border border - gray - 700 / 30 hover:border - purple - 500 / 50 transition - all duration - 300 group";
-                >;
-                  <div className="flex items - center gap - 2 mb - 3">;
-                    <span className="px - 3 py - 1 bg - purple - 500 / 20 text - purple - 300 rounded - full text - xs font - medium">;
+                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
+                >
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
                       {release.category}
-                    </span>;
-                    <span className="text - gray - 400 text - sm">{release.read_time}</span>;
-                  </div>;
-                  <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - purple - 400 transition - colors duration - 300">;
-                    {release.title}
-                  </h3>;
-                  <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
-                    {release.excerpt}
                       {release.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -699,7 +942,6 @@ const NewsPage: React.FC = () => {;
                     <span className="text-gray-400 text-sm">{release.readTime}</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
-
                     {release.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -726,26 +968,45 @@ const NewsPage: React.FC = () => {;
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                News Categories
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Explore news by category to find updates in your areas of interest.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {newsCategories.map((category, index) => (
+                <motion.div
                   key={category.name}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text - center group cursor - pointer";
-                >;
-                  <div className="w - 16 h - 16 bg - white / 10 backdrop - blur - lg rounded - 2xl flex items - center justify - center mx - auto mb - 3 group - hover:bg - purple - 500 / 20 transition - all duration - 300 border border - white / 20">;
-                    <div className="text - purple - 400 group - hover:text - purple - 300 transition - colors duration - 300">;
+                  className="text-center group cursor-pointer"
+                >
+                  <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/20 transition-all duration-300 border border-white/20">
+                    <div className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300">
                       {category.icon}
-                    </div>;
-                  </div>;
-                  <h3 className="text - sm font - semibold text - white mb - 1">;
+                    </div>
+                  </div>
+                  <h3 className="text-sm font-semibold text-white mb-1">
                     {category.name}
+                  </h3>
+                  <p className="text-gray-400 text-xs">{category.count} articles</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
         {/* Recent News */}
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - black / 20">;
-          <div className="max - w-7xl mx - auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
                       {category.icon  } catch (error) {
@@ -817,19 +1078,11 @@ const NewsPage: React.FC = () => {;
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 p - 6 rounded - 2xl border border - gray - 700 / 30 hover:border - purple - 500 / 50 transition - all duration - 300 group";
-                >;
-                  <div className="flex items - center gap - 2 mb - 3">;
-                    <span className="px - 3 py - 1 bg - purple - 500 / 20 text - purple - 300 rounded - full text - xs font - medium">;
+                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
+                >
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
                       {news.category}
-                    </span>;
-                    <span className="text - gray - 400 text - sm">{news.read_time}</span>;
-                  </div>;
-                  <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - purple - 400 transition - colors duration - 300">;
-                    {news.title}
-                  </h3>;
-                  <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
-                    {news.excerpt}
                       {news.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -839,7 +1092,6 @@ const NewsPage: React.FC = () => {;
                     <span className="text-gray-400 text-sm">{news.readTime}</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
-
                     {news.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -864,16 +1116,36 @@ const NewsPage: React.FC = () => {;
                     </div>
                   </div>
                 </motion.article>
-        {/* Media Contact */}
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Media Inquiries
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                For press inquiries, media interviews, or additional information, 
                 For press inquiries, media interviews, or additional information,
-
                 please contact our communications team.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -895,13 +1167,6 @@ const NewsPage: React.FC = () => {;
         </section>
       </div>
       {/* CTA Section */}
-      <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -1188,6 +1453,40 @@ const NewsPage: React.FC = () => {;
           </div>
         </section>
         {/* CTA Section */}
+        {/* CTA Section */}
+        <section className="py - 20 bg - gradient - to - r from - cyan - 500 / 10 via - purple - 500 / 10 to - pink - 500 / 10">;
+          <div className="container mx - auto px - 4 text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >;
+              <h2 className="text - 4xl font - bold text - white mb - 6">;
+                Stay Updated;
+              </h2>;
+              <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
+                Get the latest news, product updates, and industry insights delivered to your inbox. Never miss a breakthrough announcement.;
+              </p>;
+              <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
+                <a;
+                  href="/contact";
+                  className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - bold rounded - xl hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300 transform hover:scale - 105";
+                >;
+                  Subscribe to Updates;
+                </a>;
+                <a;
+                  href="/contact";
+                  className="px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - bold rounded - xl hover:bg - cyan - 500 hover:text - white transition - all duration - 300";
+                >;
+                  Media Inquiries;
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>);
 }
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="container mx-auto px-4 text-center">
@@ -1254,4 +1553,14 @@ const NewsPage: React.FC = () => {;
     </div>
   )
 }
+    <div className="min - h-[60vh] px - 6 py - 24">;
+      <SEO title="News | Zion Tech Group" description="News and press from Zion Tech Group" />;
+      <div className="max - w-3xl mx - auto">;
+        <h1 className="text - 4xl font - bold text - white mb - 4">News & Press</h1>;
+        <p className="text - gray - 300">Press releases and announcements will appear here.</p>;
+      </div>;
+      <EnhancedFooter />;
+    </div>);
+}
+
 ;

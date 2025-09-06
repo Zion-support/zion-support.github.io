@@ -56,6 +56,7 @@ if (return) {
             duration: 7
             repeat: Infinity
             ease: 'easeInOut',          }}          }}
+
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
         />;
         <motion.div;
@@ -72,12 +73,23 @@ if (return) {
         <motion.div;
           className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20";
           animate={{
+            duration: 7
+            repeat: Infinity
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+          transition={{
             duration: 7,
             repeat: Infinity,
 
 
           }}
 
+            duration: 7,
+            repeat: Infinity,
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+
+          }}
 
         />
       </div>
@@ -113,8 +125,23 @@ if (return) {
               opacity: [0, 1, 0]
               scale: [0, 1, 0]
             }}
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              ease: "easeInOut"
 
             }}
+          />;
+        ))}
+      </div>
+
+
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
 
           />
         ))}
@@ -155,14 +182,33 @@ if (return) {
                 opacity: [0.1, 0.3, 0.1];
                 strokeDasharray: [0, 100, 0]
 
+              transition={{
+                duration: 4 + Math.random() * 2
+                repeat: Infinity
+                delay: Math.random() * 2
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+                ease: 'easeInOut',              }}
+
+              }}
+
+
             />
           ))}
 
-        </svg>;
-      </div>;
+      {/* Content */}
 
 
+};
 
+export default UltraAdvancedFuturisticBackgroundV2;
+      {/* Content */}
+      <div className='relative z-40'>{children}</div>
+    </div>
+  );
                 delay: Math.random () * 2,
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}
@@ -181,9 +227,4 @@ export default UltraAdvancedFuturisticBackgroundV2;
 ;
 
 };
-
-export default UltraAdvancedFuturisticBackgroundV2;    </div>
-  )
-}
-export default UltraAdvancedFuturisticBackgroundV2;
 

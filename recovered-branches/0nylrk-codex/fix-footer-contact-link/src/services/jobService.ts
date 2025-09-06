@@ -1,7 +1,3 @@
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "sonner",
-
-
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "sonner";
 import { supabase } from "@/integrations/supabase/client",
@@ -31,13 +27,6 @@ export async function getJobById(jobId: string) {
     console && console.error("Error fetching job:", error);
     toast && toast.error("Failed to load job details");
     return null
-import { supabase } from '@/integrations / supabase / client';
-import { toast } from './sonner';
-export async /**
- * create_job - Function description
- */
-function create_job() {
-  try {
     const { data, error } = await supabase;
       .from ('jobs');
       .insert ([job_data]);

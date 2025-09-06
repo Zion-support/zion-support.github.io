@@ -23,6 +23,13 @@ import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
 
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 
+export function MobileResumeBuilder() {;
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
+export function MobileResumeBuilder() {
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),
+  
+  const renderStepContent = () => {
+    switch (currentStep) {
   return (
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
@@ -167,20 +174,6 @@ import {;
 import { Label } from "@/components/ui/label",;
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",;
 type ResumeStep = "basics" | "experience" | "education" | "skills",;
-
-
-
-
-type ResumeStep = "basics" | "experience" | "education" | "skills",
-
-
-export function MobileResumeBuilder() {
-  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),
-
-  
-  const renderStepContent = () => {
-    switch (currentStep) {
-
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
 
@@ -299,58 +292,50 @@ function MobileResumeBuilder() {
   );
 }
 
-          <Textarea 
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
-
-
-
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
     const newId = (experiences.length + 1).toString();
     setExperiences([...experiences, { id: newId }])
+  return (
+    <div className="space - y-4">;
+      {experiences.map ((exp, index) => (
+        <Card key={exp.id}>;
+          <CardContent className="p - 4 space - y-4">;
+            <div className="flex justify - between items - center">;
+              <h3 className="font - medium">Work Experience {index + 1}</h3>;
+              {experiences.length > 1 && (
+
+
+function ExperienceStep() {;
+  const [experiences, setExperiences] = useState([{ id: '1' }]),;
+
+  const addExperience = () => {;
+    const newId = (experiences && experiences.length + 1).toString();
+    setExperiences([...experiences, { id: newId }]);
+  };
+
+  const removeExperience = (id: string) => {;
+    setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id));
+  };
+
+  return (
+    <div className="space-y-4">;
+      {experiences && experiences.map((exp, index) => (;
+        <Card key={exp && exp.id}>;
+          <CardContent className="p-4 space-y-4">;
+            <div className="flex justify-between items-center">;
+              <h3 className="font-medium">Work Experience {index + 1}</h3>;
+              {experiences && experiences.length > 1 && (;
+                <Button
+                  variant="ghost" 
+
                   size="icon"
                   onClick={() => removeExperience(exp && exp.id)}
                 >;
                   <Trash2 className="h-5 w-5 text-destructive" />;
                 </Button>;
               )}
-                <Button;
-                  variant="ghost";
-                  size="icon";
-                  on_click={() => remove_experience (exp.id)}
-                >;
-                  <Trash2 className="h - 5 w - 5 text - destructive" />;
-                </Button>)}
-            </div>;
-            <div className="space - y-2">;
-              <Label html_for={`title-${exp.id}`}>Job Title</Label>;
-              <Input id={`title-${exp.id}`} placeholder="e.g. Frontend Developer" />;
-            </div>;
-            <div className="space - y-2">;
-              <Label html_for={`company-${exp.id}`}>Company</Label>;
-              <Input id={`company-${exp.id}`} placeholder="Company name" />;
-            </div>;
-            <div className="grid grid - cols - 2 gap - 3">;
-              <div className="space - y-2">;
-                <Label html_for={`start_date-${exp.id}`}>Start Date</Label>;
-                <Input id={`start_date-${exp.id}`} type="month" />;
-              </div>;
-              <div className="space - y-2">;
-                <Label html_for={`end_date-${exp.id}`}>End Date</Label>;
-                <Input id={`end_date-${exp.id}`} type="month" placeholder="Present" />;
-              </div>;
-            </div>;
-            <div className="space - y-2">;
-              <Label html_for={`description-${exp.id}`}>Description</Label>;
-              <Textarea;
-                id={`description-${exp.id}`}
-                placeholder="Describe your responsibilities and achievements";
-                rows={3}
-              />;
-            </div>;
-          </CardContent>;
         onClick={addExperience}
       >
         <Plus className="h-4 w-4" /> Add Another Experience
@@ -363,16 +348,6 @@ function EducationStep() {
   const addEducation = () => {
     const newId = (educations.length + 1).toString(),
     setEducations([...educations, { id: newId }])
-  return (
-    <div className="space - y-4">;
-      {educations.map ((edu, index) => (
-        <Card key={edu.id}>;
-          <CardContent className="p - 4 space - y-4">;
-            <div className="flex justify - between items - center">;
-              <h3 className="font - medium">Education {index + 1}</h3>;
-              {educations.length > 1 && (
-  const addSkill = () => {
-    const newId = (skills.length + 1).toString();
     setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }])
   }
   const removeSkill = (id: string) => {
@@ -382,6 +357,8 @@ function EducationStep() {
     setSkills(skills.map(skill =>
       skill.id === id ? { ...skill, [field]: value } : skill
     ))
+
+  return (
     <div className="space-y-4">;
       <Card>;
         <CardContent className="p-4">;
@@ -422,6 +399,20 @@ function EducationStep() {
                 <Input;
                   placeholder="Skill (e.g. JavaScript, Figma)";
                   value={skill.name}
+                >;
+                  <SelectTrigger className="w-[130px]">;
+                    <SelectValue placeholder="Level" />;
+                  </SelectTrigger>;
+                  <SelectContent>;
+                    <SelectItem value="beginner">Beginner</SelectItem>;
+                    <SelectItem value="intermediate">Intermediate</SelectItem>;
+                    <SelectItem value="advanced">Advanced</SelectItem>;
+                    <SelectItem value="expert">Expert</SelectItem>;
+                  </SelectContent>;
+                </Select>;
+
+
+
                 )}
               </div>;
             ))}
@@ -452,13 +443,3 @@ function EducationStep() {
       </Card>
     </div>
   )
-            </Button>;
-          </div>;
-        </CardContent>;
-      </Card>;
-      ;
-      <Card>;
-            </div>;
-          </div>;
-        </CardContent>;
-      </Card>;

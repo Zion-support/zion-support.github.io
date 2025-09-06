@@ -11,6 +11,10 @@ export default function AutomationInsightsPage() {
       readTime: '8 min read'
       featured: true
     }
+        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
+      readTime: '8 min read',
+      featured: true;
+    };
     {
       id: 'autonomous-systems'
       title: 'Building Autonomous Systems'
@@ -116,6 +120,8 @@ export default function AutomationInsightsPage() {
             </p>;
           </section>;
 
+                ))}
+
             {/* Automation Trends */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -161,25 +167,20 @@ export default function AutomationInsightsPage() {
                 ))}
               </div>
             </div>
-                      href={`/blog/${trend && trend.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
-                      Read More <span className='ml-1'></span>                    </Link>                {automationTrends && automationTrends.map((trend, index) => (;
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
-                    <div className="flex items-center justify-between mb-4">;
-                      <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend && trend.category}</span>;
-                      <span className="text-white/60 text-sm">{trend && trend.readTime}</span>;
-                    </div>;
-                    <h3 className="text-xl font-bold mb-3 text-white">{trend && trend.title}</h3>;
-                    <p className="text-white/70 mb-4">{trend && trend.description}</p>;
-                    <Link
-                      href={`/blog/${trend && trend.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">;
-                      Read More <span className="ml-1"></span>;
-                    </Link>;
-                  </div>;
+
+
+
+            {/* Automation Tools & Frameworks */}
+
+
                 ))}
+
               </div>;
             </div>;
+
+
+            {/* Call to Action */}
+
 
             {/* Call to Action */}
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
@@ -190,6 +191,8 @@ export default function AutomationInsightsPage() {
                 Let our experts help you build the automation systems of the
                 future
 
+              </p>
+              <div className='flex flex-wrap justify-center gap-4'>
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'>;
@@ -205,3 +208,18 @@ export default function AutomationInsightsPage() {
                 </Link>
                 <Link
                   href="/case-studies"
+
+                  View Case Studies;
+                </Link>;
+              </div>;
+            </div>;
+          </section>;
+        </main>;
+      </div>;
+
+
+  );
+}
+}
+    </>);
+}

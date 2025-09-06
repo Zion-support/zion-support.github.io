@@ -65,14 +65,5 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
         </AnimatePresence>;
       </div>;
     </ToastContext.Provider>);
-}
-export /**
- * use_toast - Function description
- */
-function use_toast() {
-  const ctx = useContext (ToastContext);
-  if (throw new Error ('use_toast must be used within ToastProvider')) {
-  $2
-}
   return ctx;
 }

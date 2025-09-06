@@ -9,14 +9,7 @@ const securityStats = [
   { number: '100%', label: 'Data Encryption' }
 ];
 export default function SecurityPage() {
-  return (
-    <Layout
-      title="Security - Zion Tech Group"
-      description="Learn about our comprehensive security measures and how we protect your data and systems."
-      keywords="security, data protection, encryption, compliance, cybersecurity"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
+
   return (
     <Layout
       title="Security - Zion Tech Group"
@@ -46,7 +39,51 @@ export default function SecurityPage() {
             </motion.div>
           </div>
         </section>
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
+          <div className="absolute inset-0">;
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
+          </div>;
+
+          <div className="container mx-auto px-4 relative z-10">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                Security & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Protection</span>;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+                Your security is our top priority. Learn about our comprehensive security measures and how we protect your data.;
+              </p>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
         {/* Security Stats */}
+                  key={measure.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
@@ -120,6 +157,61 @@ export default function SecurityPage() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lock className="w-8 h-8 text-blue-600" />
                 </div>
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+import Head from 'next/head';
+import {motion} from 'framer-motion';
+import {Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin,} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+export default function Security() {
+  const securityMeasures = [
+    {
+      id: 'data-protection',
+      title: 'Data Protection',
+      icon: Database,
+      features: [
+        'End-to-end encryption for all data in transit',
+        'AES-256 encryption for data at rest',
+        'Regular automated backups with encryption',
+        'Secure data centers with 24/7 monitoring',
+        'Data residency compliance for global clients',
+      ],
+    },    {
+      id: 'access-control',
+      title: 'Access Control',
+      icon: Key,
+      features: [
+        'Multi-factor authentication (MFA) required',
+        'Role-based access control (RBAC)',
+        'Principle of least privilege implementation',
+        'Regular access reviews and deprovisioning',
+        'Single sign-on (SSO) integration',
+      ],
+    },    {
+      id: 'infrastructure',
+      title: 'Infrastructure Security',
+      icon: Server,
+      features: [
+        'Network segmentation and firewalls',
+        'Intrusion detection and prevention systems',
+        'Regular vulnerability assessments',
+        'Automated security patching',
+        'DDoS protection and rate limiting',
+      ],
+    },    {
+      id: 'monitoring',
+      title: 'Security Monitoring',
+      icon: Eye,
+      features: [
+        '24/7 security operations center (SOC)',
+        'Real-time threat detection and response',
+        'Comprehensive audit logging',
+        'Security incident response team',
+        'Continuous security monitoring tools',
+      ],
+    },  ];
+
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -278,6 +370,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 </Link>
                   </div>
                 </div>
+</Link>
               </div>
             </motion.div>
           </div>
@@ -291,49 +384,22 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         </section>;
       </div>;
     </Layout>;
-  );
-}
-  );
-  );
-}  )
-}
+
+
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
   )
 }
-        {/* CTA Section */}
-        <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
-          <div className="container mx - auto px - 4 text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
-                Questions About Our Security?;
-              </h2>;
-              <p className="text - xl mb - 8 max - w-2xl mx - auto">;
-                Our security team is available to answer any questions about our security measures and compliance.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Link;
-                  href="/contact";
-                  className="px - 8 py - 4 bg - white text - blue - 600 rounded - lg hover:bg - gray - 100 transition - all duration - 300 font - semibold inline - flex items - center justify - center";
-                >;
-                  Contact Security Team;
-                </Link>;
-                <Link;
-                  href="/compliance";
-                  className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - blue - 600 transition - all duration - 300 font - semibold";
-                >;
-                  View Compliance Details;
-</Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>);
-}  );
+ursor/integrate-build-improve-and-re-verify-b76c
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+origin/cursor/integrate-build-improve-and-re-verify-242d
+)
 }
-);
+origin/main
+  )
 }
+ursor/fix-lint-push-and-merge-to-main-ae4e

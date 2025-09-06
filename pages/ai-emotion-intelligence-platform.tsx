@@ -186,7 +186,13 @@ export default function AIEmotionIntelligencePlatform() {
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-
+                transition={{ duration: 0.8, delay: 0.2 }} className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6">
+                <Sparkles className="w-4 h-4 mr-2" />
+                AI & Customer Experience
+              </motion.div>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -203,8 +209,6 @@ export default function AIEmotionIntelligencePlatform() {
                 </span>
               </motion.h1>
               <motion.p
-
-
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -219,8 +223,6 @@ export default function AIEmotionIntelligencePlatform() {
                 Real-time emotion analysis and response for customer interactions
               </motion.p>
               <motion.p
-
-
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -235,8 +237,6 @@ export default function AIEmotionIntelligencePlatform() {
                 Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights for better customer experience.
               </motion.p>
             </motion.div>
-
-
             {/* CTA Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -285,9 +285,21 @@ export default function AIEmotionIntelligencePlatform() {
             </motion.div>
           </div>
         </section>
-              viewport={{ once: true }} className="text - center mb - 16">;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
-
+              viewport={{ once: true }} className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Powerful Features for Emotion Intelligence
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Our platform provides comprehensive emotion analysis capabilities to transform your customer interactions
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
               transition={{ duration: 0.8, delay: 1.2 }} className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">;
               <div className="text-center">;
                 <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">27</div>;
@@ -350,16 +362,6 @@ export default function AIEmotionIntelligencePlatform() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
                 </motion.div>
-                  viewport={{ once: true }} className="group p - 8 rounded - 2xl bg - gradient - to - br from - white / 5 to - white / 10 border border - white / 10 hover:border - pink - 500 / 30 transition - all duration - 300 transform hover:scale - 105 hover:bg - white / 10">;
-                  <div className="w - 16 h - 16 bg - gradient - to - r from - pink - 500 to - purple - 500 rounded - 2xl flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300">;
-                    <feature.icon className="w - 8 h - 8 text - white" />;
-                  </div>;
-                  <h3 className="text - xl font - semibold text - white mb - 4">{feature.title}</h3>;
-                  <p className="text - gray - 400">{feature.description}</p>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Business with Emotion AI
@@ -371,17 +373,6 @@ export default function AIEmotionIntelligencePlatform() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
                 <motion.div
-              viewport={{ once: true }} className="text - center mb - 16">;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
-                Transform Your Business with Emotion AI;
-              </h2>;
-              <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
-                Discover how emotion intelligence can revolutionize your customer experience and business outcomes;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
-              {use_cases.map ((use_case, index) => (
-                <motion.div;
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -393,16 +384,6 @@ export default function AIEmotionIntelligencePlatform() {
                   <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-400 text-lg">{useCase.description}</p>
                 </motion.div>
-                  viewport={{ once: true }} className="p - 8 rounded - 2xl bg - gradient - to - br from - white / 5 to - white / 10 border border - white / 10 hover:border - pink - 500 / 30 transition - all duration - 300">;
-                  <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - 2xl flex items - center justify - center mb - 6">;
-                    <use_case.icon className="w - 8 h - 8 text - white" />;
-                  </div>;
-                  <h3 className="text - 2xl font - semibold text - white mb - 4">{use_case.title}</h3>;
-                  <p className="text - gray - 400 text - lg">{use_case.description}</p>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Choose Your Plan
@@ -457,27 +438,6 @@ export default function AIEmotionIntelligencePlatform() {
                         <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </li>
-                    <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
-                      <span className="px - 4 py - 2 bg - gradient - to - r from - pink - 500 to - purple - 500 text - white text - sm font - semibold rounded - full">;
-                        Most Popular;
-                      </span>;
-                    </div>)}
-                  <div className="text - center mb - 8">;
-                    <h3 className="text - 2xl font - bold text - white mb - 2">{plan.name}</h3>;
-                    <div className="mb - 4">;
-                      <span className="text - 4xl font - bold text - white">{plan.price}</span>;
-                      <span className="text - gray - 400">{plan.period}</span>;
-                    </div>;
-                    <p className="text - gray - 400">{plan.description}</p>;
-                  </div>;
-                  <ul className="space - y-4 mb - 8">;
-                    {plan.features.map ((feature, feature_index) => (
-                      <li key={feature_index} className="flex items - center space - x-3">;
-                        <CheckCircle className="w - 5 h - 5 text - pink - 400 flex - shrink - 0" />;
-                        <span className="text - gray - 300">{feature}</span>;
-                      </li>))}
-                  </ul>;
-                  <Link;
                     href={plan.name === 'Enterprise' ? '/contact' : '/contact'}
                     className={`block w - full text - center py - 3 px - 6 rounded - xl font - semibold transition - all duration - 300 ${
                       plan.popular;
@@ -558,3 +518,5 @@ export default function AIEmotionIntelligencePlatform() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+

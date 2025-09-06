@@ -7,20 +7,15 @@ export default function App({ Component, pageProps }: AppProps) {
 
 import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
-import '../src/styles/globals.css';
-
 return <Component {...pageProps} />;
 import '../styles/globals.css';
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-import Layout from '../components/layout/Layout';
-import '../styles/globals.css';
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+import EnhancedFooter from '../components/layout/EnhancedFooter';
 
-export default function App({ Component, pageProps }: AppProps) {
+function Header(): any {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
 import '../src/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -42,9 +37,4 @@ export default /**
  */
 function App() {
   return <Component {...page_props} />;
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }

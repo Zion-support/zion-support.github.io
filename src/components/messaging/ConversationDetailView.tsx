@@ -1,51 +1,8 @@
-
-import React, { useState, useEffect, useRef } from 'react';
-import { format  } from 'date-fns';
-import { MessageSquare } from 'lucide-react'
-import { useMessaging  } from '@/context/MessagingContext';
-import { Button  } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
-import { AspectRatio  } from '@/components/ui/aspect-ratio';
-import { useAuth  } from '@/hooks/useAuth';
-import { MessageBubble  } from './MessageBubble';
-import { DateDivider } from './DateDivider';
-export function ConversationDetailView() {
-
-            </div>;
 </div>;
           </div>;
         </div>;
       </div>;
 
-    loadMessages
-  } = useMessaging();
-  const [messageText, setMessageText] = useState('');
-  const messagesEndRef = null;
-  return (
-    <div className="flex-1 flex flex-col h-full">
-      {/* Header */}
-        <div className="flex items-center gap-3">
-          <Avatar className="h-10 w-10 border border-zion-purple/20">
-            <AvatarImage
-              src = {activeConversation.other_user.avatar_url,}
-              alt = {activeConversation.other_user.name,}
-            />
-            <AvatarFallback className="bg-zion-blue-dark text-white">
-              {activeConversation.other_user.name.charAt(0).toUpperCase()}
-            </AvatarFallback>
-          </Avatar>
-          <div>
-            <div className="font-medium text-white">
-              {activeConversation.other_user.name}
-            </div>
-            <div className="text-xs text-zion-slate">
-              {activeConversation.other_user.user_type === 'talent' ? 'Talent' :
-               activeConversation.other_user.user_type === 'employer' ? 'Employer' :
-               activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
-            </div>
-          </div>
-        </div>
-      </div>
                     className="object-cover"
                     loading="lazy"
       {/* Context information (if available) */}
@@ -60,32 +17,6 @@ export function ConversationDetailView() {
                     alt = {active_conversation.context_data.title || "Context", }
                     className="object - cover";
                     loading="lazy";
-      <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
-        <div className="flex items-center gap-3">
-          <Avatar className="h-10 w-10 border border-zion-purple/20">
-            />
-            <AvatarFallback className="bg-zion-blue-dark text-white">
-              {activeConversation.other_user.name.charAt(0).toUpperCase()}
-            </AvatarFallback>
-          </Avatar>
-          <div>
-            <div className="font-medium text-white">
-              {activeConversation.other_user.name}
-            </div>
-            <div className="text-xs text-zion-slate">
-               activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Context information (if available) */}
-      {hasContextData && (
-        <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/10">
-          <div className="text-sm text-zion-slate flex items-start gap-3">
-            {activeConversation.context_data && activeConversation.context_data.image_url && (
-              <div className="w-16 h-16 flex-shrink-0">
-                <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
-                  <img
                     alt = {activeConversation.context_data.title || "Context",}
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
@@ -203,11 +134,6 @@ export function ConversationDetailView() {
             </div>)))}
         <div ref={messagesEndRef} />;
       </div>;
-    </div>;
-  );
-};
-      <div className="p-3 border-t border-zion-purple/20">;
-        <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea;
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}

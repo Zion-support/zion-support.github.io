@@ -1,14 +1,3 @@
-      })
-      return
-    }
-    setIsLoading(true)
-    try {
-      const { data, error } = await supabase.functions.invoke(
-        'ai-listing-generator'
-        {
-          body: { title, category, keyFeatures, targetAudience }
-        }
-      );
       // Check condition
 if ( {) {
   $2
@@ -21,56 +10,6 @@ if ( {) {
         description: 'AI has created optimized listing content for you.',
       });
     } catch (error) {
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import Skeleton from "@/components/ui/skeleton",
-import { Sparkles, ArrowRight } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { Badge } from "@/components/ui/badge",
-import {logErrorToProduction} from '@/utils/productionLogger',
-interface GeneratedContent {
-  description: string,
-  tags: string[],
-  suggestedPrice: {
-    min: number,
-    max: number
-  },
-  keyPoints: string[]
-import React, { useState } from "react",;
-import { useToast } from "@/hooks/use-toast",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import Skeleton from "@/components/ui/skeleton",;
-import { Sparkles, ArrowRight } from 'lucide-react';
-import { supabase } from "@/integrations/supabase/client",;
-import { Badge } from "@/components/ui/badge",;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-interface GeneratedContent {;
-  description: string,;
-  tags: string[],;
-  suggestedPrice: {;
-    min: number,;
-    max: number;
-  },;
-  keyPoints: string[];
-}
-;
-interface AIListingGeneratorProps {;
-  onApplyGenerated?: (content: GeneratedContent) => void,;
-  initialValues?: {;
-    title?: string,;
-    category?: string,;
-    keyFeatures?: string,;
-    targetAudience?: string;
-  }
-}
-
       logErrorToProduction('Error generating content:', { data: error }),
       toast({
         title: "Generation Failed",
@@ -80,110 +19,6 @@ interface AIListingGeneratorProps {;
     } finally {
       setIsLoading (false);
     }
-import React, { useState, useMemo } from 'react';
-import { useToast } from '@/hooks/use-toast';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {;
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import Skeleton from '@/components/ui/skeleton';
-import { Sparkles, ArrowRight } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
-import { Badge } from '@/components/ui/badge';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
-interface GeneratedContent {;
-  description: string;
-tags: string[];
-suggestedPrice: {;
-  min: number;
-max: number ;
-};
-keyPoints: string[] ;
-}interface AIListingGeneratorProps {;
-  onApplyGenerated?: (content: GeneratedContent) => void;
-initialValues?: {;
-  title?: string;
-category?: string;
-keyFeatures?: string;
-targetAudience?: string ;
-
-export function AIListingGenerator(): any ({;
-  onApplyGenerated,;
-  initialValues = {},;
-}: AIListingGeneratorProps) {;
-  const { toast } = useToast();
-  const [title, setTitle] = useState(initialValues && initialValues.title || '');
-  const [category, setCategory] = useState(initialValues && initialValues.category || '');
-  const [keyFeatures, setKeyFeatures] = useState(;
-    initialValues && initialValues.keyFeatures || '';
-  );
-  const [targetAudience, setTargetAudience] = useState(;
-    initialValues && initialValues.targetAudience || '';
-  );
-  const [isLoading, setIsLoading] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState(;
-    null as GeneratedContent | null;
-  );
-
-  const handleInputChange = (;
-    e: { target: { value: string } },;
-    field: string;
-  ) => {;
-    switch (field) {      case 'title':;
-        setTitle(e && e.target.value);
-        break;
-      case 'category':;
-        setCategory(e && e.target.value);
-        break;
-      case 'keyFeatures':;
-        setKeyFeatures(e && e.target.value);
-        break;
-      case 'targetAudience':;
-        setTargetAudience(e && e.target.value);
-        break;
-    }
-  const handle_apply = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      onApplyGenerated (generated_content);
-      toast ({
-        title: 'Content Applied',
-        description: 'The generated content has been applied to your listing.',
-      });
-    }
-  };
-
-  const handleGenerate = async () => {;
-    if (!title || !category) {;
-  },
-
-  const handleApply = () => {
-    if (generatedContent && onApplyGenerated) {
-      onApplyGenerated(generatedContent),
-      toast({
-        title: "Content Applied",
-        description: "The generated content has been applied to your listing."
-      })
-    }
-  },
-
-  return (
-    <div className="space-y-6">
-
-
-  }
-}
-
-export function AIListingGenerator({ onApplyGenerated, initialValues;
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -192,9 +27,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
             AI Listing Optimizer
           </CardTitle>
-          <p className='text-sm text-zion-slate-light'>
-            Provide basic information and let AI generate optimized
-            SEO-friendly content for your listing
           <p className='text-sm text-zion-slate-light'>
             Provide basic information and let AI generate optimized
             SEO-friendly content for your listing
@@ -223,7 +55,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
           <div className="space-y-2">
             <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>
             <Input
-
               id="category"
               value={category}
               onChange={(e) => handleInputChange(e, 'category')}
@@ -235,7 +66,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
           <div className="space-y-2">
             <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
             <Textarea
-
               id="keyFeatures"
               value={keyFeatures}
               onChange={(e) => handleInputChange(e, 'keyFeatures')}
@@ -247,7 +77,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
           <div className="space-y-2">
             <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
             <Input
-
               id="targetAudience"
               value={targetAudience}
               onChange={(e) => handleInputChange(e, 'targetAudience')}
@@ -445,21 +274,12 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
           <CardHeader>
             <CardTitle className='text-white'>Generated Content</CardTitle>
           </CardHeader>
-          <CardContent className='space-y-4'>
             <div>
               <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
                 Description
               </h3>
               <p className='text-white'>{generatedContent.description}</p>
             </div>
-            <div>
-              <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
-                Tags
-              </h3>
-              <div className='flex flex-wrap gap-2'>
-                {generatedContent.tags.map((tag, index) => (                  <Badge key={index}>{tag}</Badge>
-                ))}
-              </div>
             </div>
             <div>
               <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
@@ -517,10 +337,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
           </CardFooter>
         </Card>
       )}
-  value: string
-}, field: string) => {
-  switch (field) {
-  case 'title': setTitle (e.target.value)
 break;'
 case 'category': setCategory (e.target.value)
 break;'
@@ -549,8 +365,4 @@ toast ({
 }</ul> </div> </CardContent> <CardFooter> <Button > Apply to My Listing <ArrowRight className="ml - 2 h - 4 w - 4" /> </Button> </CardFooter> </Card>);
 }</div>);
 }'"  );
-}
-}
-    </div>;
-  );
 }

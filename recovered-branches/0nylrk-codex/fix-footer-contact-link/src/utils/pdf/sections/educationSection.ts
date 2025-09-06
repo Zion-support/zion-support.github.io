@@ -9,8 +9,6 @@ export function addEducationSection(
   colors: PdfThemeColors;
   startY: number
 ): number {
-  if (education && education.length === 0) return startY;
-  
 
   let yPos = startY;
   // Check if we need to add a new page

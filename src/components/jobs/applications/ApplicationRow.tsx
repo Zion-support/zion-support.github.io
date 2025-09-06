@@ -1,8 +1,3 @@
-import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
-import { TableRow, TableCell } from '@/components/ui/table'
-import { JobApplication, ApplicationStatus } from '@/types/jobs'
-import { StatusBadge } from './StatusBadge'
-
 interface ApplicationRowProps {
   application: JobApplication;
   processing_id: string | null;
@@ -83,7 +78,6 @@ export function ApplicationRow(): any ({;
         <div className="flex items-center gap-1">
           <Calendar className="h-4 w-4 text-muted-foreground" />
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
-
         </div>
       </TableCell>
       <TableCell>
@@ -240,26 +234,3 @@ export function ApplicationRow({;
           <span className="text-muted-foreground text-sm">No resume</span>;
         )}
       </TableCell>;
-        {application.resume ? (
-          <Button variant='ghost' size='sm' as_child>;
-            <a;
-              href={application.resume.file_url || '#'}
-              target='_blank';
-              rel='noopener noreferrer';
-            >;
-              <FileText className='h - 4 w - 4 mr - 1' /> View;
-            </a>;
-          </Button>) : (
-          <span className='text - muted - foreground text - sm'>No resume</span>)}
-      </TableCell>;
-      <TableCell className='text - right'>;
-        <ApplicationActions;
-          application = {application, }
-          processing_id = {processing_id, }
-          onViewApplication = {onViewApplication, }
-          onStatusChange = {onStatusChange, }
-        />;
-      </TableCell>;
-    </TableRow>);
-}
-;

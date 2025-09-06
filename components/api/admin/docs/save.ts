@@ -1,5 +1,3 @@
-const ts = new Date () .toISOString () 
- const ts = new Date () .toISOString () 
 
 const ts = new Date () .toISOString ()
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

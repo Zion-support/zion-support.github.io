@@ -17,6 +17,7 @@ export function useMarketplaceSearch() {
     [];
   );
 
+
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions();
     [];
@@ -63,6 +64,11 @@ const matchesSearch = !searchQuery ||
         matchesProductType && 
         matchesLocation && 
         matchesAvailability && 
+        matchesRating
+    })
+  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
+  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
+  
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {
@@ -244,3 +250,6 @@ export function useMarketplaceSearch() {;
     handleFilterChange;
     clearAllFilters;
     filterOptions;
+  }
+}
+;

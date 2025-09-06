@@ -1,5 +1,7 @@
-export type AmlCheckResult = {
+}
+;
 
+export type AmlCheckResult = {
 };
 
 export type AmlCheckResult = {;

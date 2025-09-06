@@ -1,5 +1,3 @@
-import type {;
-  GrantApplication,;
   GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
@@ -25,9 +23,6 @@ export default function GrantsPage() {;
     region?: string;
     program?: string;
   }>({});
-  const [items, setItems] = useState<GrantApplication[]>([]);
-  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
-  useEffect(() => {
 
   useEffect(() => {
 
@@ -87,11 +82,6 @@ export default function GrantsPage() {;
           </Link>;
       </div>;
 
-      <div className='grid md:grid-cols-4 gap-4 mb-6'>;
-        <select
-          className='border rounded p-2'
-          value={filters && filters.sector || ''}
-          onChange={e =>;
           }
         >
           <option value=''>All Stages</option>
@@ -147,4 +137,6 @@ export default function GrantsPage() {;
                   </span>;
 
   }, [filters]);
+
+
 

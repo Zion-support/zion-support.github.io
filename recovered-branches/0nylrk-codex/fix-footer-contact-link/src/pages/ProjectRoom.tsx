@@ -1,7 +1,4 @@
 
-
-  const { projectId } = useParams() as { projectId: string }
-  const { projectId } = useParams() as { projectId: string },;
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
@@ -23,9 +20,6 @@
       isMuted: false
     }
   ]);
-import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'lucide-react';
-import {VideoCallRoom} from '@/components / video / VideoCallRoom';
-import {toast} from 'sonner';
   
   const startVideoCall = () => {
     setIsInCall(true),
@@ -36,8 +30,6 @@ import {toast} from 'sonner';
     if (activeTab !== 'video') {
       setActiveTab('video')
     }
-  const endVideoCall = () => {
-    setIsInCall(false);
   }
   },
   
@@ -69,6 +61,8 @@ import {toast} from 'sonner';
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+  
+  return (
     <>;
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;
       <Header />;
@@ -102,14 +96,8 @@ import {toast} from 'sonner';
                     </div>;
                   </div>;
                 )}
-          <TabsContent value="team" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Team Members</CardTitle>;
-                <CardDescription>Manage project participants</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items-center justify-center h-full">;
+}
+;
                 </div>;
               </CardContent>;
             </Card>;
@@ -130,4 +118,3 @@ import {toast} from 'sonner';
         </Tabs>;
       </main>;
       <Footer />;
-    </>;

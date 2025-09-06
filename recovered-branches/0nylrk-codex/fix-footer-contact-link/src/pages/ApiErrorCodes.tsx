@@ -1,17 +1,30 @@
 
-      "error": "Title is required";
-    };
-    {;
-      "field": "budget && budget.min";
-      "error": "Budget minimum must be greater than 0";
+export function ApiErrorCodes() {
+
+  const errorExample = `{
+  "error": "validation_error",
+  "message": "The request was invalid",
+  "details": [
+    {
+      "field": "title",
+      "error": "Title is required"
     }
-  ];
+    },
+    {
+      "field": "budget.min";
+      "error": "Budget minimum must be greater than 0"
+    }
+  ]
 }`;
-  const rateLimitExample = `{;
-  "error": "rate_limit_exceeded";
-  "message": "Rate limit exceeded. Try again in 30 seconds";
-  "retry_after": 30;
+}`,
+
+  const rateLimitExample = `{
+  "error": "rate_limit_exceeded",
+  "message": "Rate limit exceeded. Try again in 30 seconds",
+  "retry_after": 30
 }`;
+}`,
+
   const errorCodes = [
     {
       status: 400
@@ -94,6 +107,36 @@
     </ApiDocsLayout>
   )
         <p>;
+          To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.;
+          The limits are based on the number of requests per minute per API key.;
+        </p>;
+
+;
+
+
+export default ApiErrorCodes;
+
+        <div className="overflow - x-auto mb - 8">;
+          <table className="w - full border - collapse">;
+            <thead>;
+              <tr className="border - b border - zinc - 800">;
+                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Endpoint</th>;
+                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Limit</th>;
+                <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Notes</th>;
+              </tr>;
+            </thead>;
+            <tbody>;
+              {rate_limits.map ((limit, index) => (
+                <tr key={index} className={index < rate_limits.length - 1 ? "border - b border - zinc - 800" : ""}>;
+                  <td className="py - 2 px - 4 text - white font - mono">{limit.endpoint}</td>;
+                  <td className="py - 2 px - 4 text - zinc - 300">{limit.limit}</td>;
+                  <td className="py - 2 px - 4 text - zinc - 400 text - sm">{limit.notes}</td>;
+                </tr>))}
+            </tbody>;
+          </table>;
+        </div>;
+        <h3 > Rate Limit Headers</h3>;
+        <p>;
           All API responses include headers to help you track your rate limit usage:;
         </p>;
 
@@ -116,3 +159,4 @@
           If you're encountering persistent errors or need higher rate limits, please ;
           <a href="#" className="text-zion-cyan"> contact our support team</a>.;
         </p>;
+export default ApiErrorCodes;

@@ -213,6 +213,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   },;
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
+
+      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
     id: 'ai - powered - vulnerability - assessment',
@@ -291,6 +293,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     popular: true;
     launch_date: '2024 - 02 - 15';
     customers: 2500;
+;
   id: string,;
   name: string,;
   tagline: string,;
@@ -551,6 +554,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     launchDate: '2024-02-15',;
     customers: 2500,;
     rating: 4.8,;
+    reviews: 1900;
+    rating: 4.8,
     reviews: 1900;
   }
 ];

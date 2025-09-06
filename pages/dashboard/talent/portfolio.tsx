@@ -1,7 +1,32 @@
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+import {GetServerSideProps} from 'next';
+import React, { useRef, useState } from 'react';
+import PdfExportButton from '../../../components/ui/PdfExportButton';
+import ResumePreview, {;
+  ResumeData,;
+
+  const data: ResumeData = {
+    name: 'Your Name',
+    contact: {
+       email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country' 
+    },
+    summary: 'AI talent focused on LLM apps and marketplaces.',
+    skills: ['AITypeScriptNext.js'],
+    technologies: ['OpenAISupabase'],
+    experience: [{ title: 'AI Engineer', company: 'Zion', start: '2023', end: 'Present', bullets: ['Built resume exporter.'] }],
+    education: [{ institution: 'University of Example', degree: 'B.Sc.', start: '2016', end: '2020' }],
+    certifications: ['AWS SAA-C03'],
+    portfolio: [{ title: 'Top Project', description: 'Showcase' }]},
   return (
-    <div className='relative'>;
-      <div className='flex items-center gap-3 mb-4'>;
-        <label className='text-sm'>Theme</label>;
+    <div className="relative">
+      <div className="flex items-center gap-3 mb-4">
+        <label className="text-sm">Theme</label>
         <select
           value={theme}
         >
@@ -10,11 +35,11 @@
         </select>
       </div>
 
+
 return { props: {} };
 };
 
 }
-
       <PdfExportButton targetRef={ref} fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
       <ResumePreview ref={ref} data={data} theme={theme} />
     </div>
@@ -23,10 +48,10 @@ return { props: {} };
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const supabase = createServerClient();
-  const user = await (supabase as any).auth.getUser?.()
   if (!user) {
     return { redirect: { destination: '/auth', permanent: false } } as any;
   }
+};
 import ResumePreview, {
   ResumeData,
 } from '../../../components / ui / ResumePreview';

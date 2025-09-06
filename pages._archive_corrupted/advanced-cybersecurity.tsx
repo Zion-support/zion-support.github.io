@@ -139,22 +139,3 @@ export default function AdvancedCybersecurityServices() {;
               </a>;
             </div>;
           ))}
-        </div>;
-        <div className="text-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-12 border border-blue-400/30">;
-          <h2 className="text-3xl font-bold text-white mb-4">Secure Your Digital Future Today</h2>;
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
-            Contact us to discuss how our advanced cybersecurity solutions can protect your organization.;
-          </p>;
-          <div className="flex flex-col "sm": flex-row gap-4 justify-center">;
-            <a href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg">;
-              Get Security Assessment;
-            </a>;
-            <a href="tel: +13024640950" className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20">;
-               Call +1 (302) 464-0950;
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  ),;
-}

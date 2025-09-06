@@ -1,5 +1,10 @@
 
 export function ApiGettingStarted() {
+  const authExample = `curl -X GET \\
+  https: //api.zionai.com/v1/jobs \\
+  -H "Authorization: Bearer YOUR_API_KEY"`,;
+const quickStartJs = `import axios from 'axios';
+export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
@@ -71,8 +76,11 @@ console.log(response.data),`;
       </div>
     </ApiDocsLayout>
   )
-          >;
             Download Postman Collection;
           </a>;
         </div>;
       </div>;
+}
+
+;
+export default ApiGettingStarted;

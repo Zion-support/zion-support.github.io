@@ -28,12 +28,13 @@ export default function Onboarding() {
 
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
+
   // Convert our user types to match what's expected in the database
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
     switch (type) {
-      case "serviceProvider": return "creator";
-      case "talent":;
-        return "jobSeeker";
+      case "serviceProvider": return "creator",
+      case "talent":
+        return "jobSeeker",
       case "client":
         return "employer"
       default:
@@ -77,7 +78,6 @@ export default function Onboarding() {
     { label: "Select Role", description: "Choose how you'll use the platform" }
     { label: "Create Profile", description: "Tell us about yourself" }]
   if (!user) {
-
     return null
 
     const dbUserType = mapUserTypeToDatabase(userType);
@@ -114,6 +114,10 @@ export default function Onboarding() {
     return null;
   }
   return (
+                <Step
+                  key={index}
+                  status={
+                    currentStep> index;
                       ? "complete";
             </Steps>;
           </div>;
@@ -129,7 +133,13 @@ export default function Onboarding() {
                   variant="outline"
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
                   onClick={() => setCurrentStep(0)}
+                >;
+                  Back to Role Selection;
+                </Button>;
+              </div>)}
           </div>;
         </div>;
       </div>;
       <Footer />;
+}
+;

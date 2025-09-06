@@ -46,6 +46,21 @@ export type ResumeData = {
     technologies?: string[];
   }>;
 };
+
+    {children}
+
+export type ResumePreviewProps = {;
+  data: ResumeData;
+  theme?: 'light' | 'dark';
+  maxPortfolioItems?: number;
+}
+const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
+  children
+}) => (
+  <h2 className='text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1'>    {children}  }>;
+  education?: Array<{
+    institution: string
+};
 export type ResumePreviewProps = {;
   data: ResumeData;
   theme?: 'light' | 'dark';
@@ -66,7 +81,6 @@ export type ResumePreviewProps = {;
     title: string,
     description?: string;
     link?: string;
-  data: ResumeData,;
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number
 }
@@ -84,6 +98,7 @@ export type ResumePreviewProps = {
 ;
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     );
+
       >
         <div className='p-8'>
 export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(;
@@ -129,6 +144,41 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
     return (
       <div;
         ref={ref}
+                  {data.contact.website}
+                </a>)}
+              {data.contact?.linkedin && (
+                <a
+                  className='underline'
+                  href={data.contact.linkedin}
+                  target='_blank'
+                  rel='noreferrer'
+                >                  LinkedIn
+                </a>
+              )}
+              {data.contact?.github && (                <a className="underline" href={data.contact.linkedin} target="_blank" rel="noreferrer">
+                  LinkedIn
+                </a>
+              )}
+              {data.contact?.github && (
+                <a
+                  className='underline'
+                  href={data.contact.github}
+                  target='_blank'
+                  rel='noreferrer'
+                >                  GitHub                <a className="underline" href={data.contact.github} target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+              )}
+            </div>
+          </header>
+
+          {/* Summary */}
+
+          {data.summary && (
+            <section className="mb-5">
+              <SectionTitle>Professional Summary</SectionTitle>
+              <p className="mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{data.summary}</p>
+            </section>
           {data && data.summary && (;
             <section className='mb-5'>;
               <SectionTitle>Professional Summary</SectionTitle>;
@@ -140,6 +190,11 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
             </section>;
           )}
           {/* Skills & Technologies */}
+
+
+
+
+
           )}
 
           {/* Skills & Technologies */}
@@ -156,6 +211,71 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                 {data && data.technologies?.map((t, idx) => (;
                   <span
                     key={`tech-${idx}`}
+              <div className="mt-2 text-sm flex flex-wrap gap-2">
+                {data.skills?.map((s, idx) => (
+                  <span key={`skill-${idx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
+                    {s}
+                  </span>
+                ))}
+                {data.technologies?.map((t, idx) => (
+                  <span key={`tech-${idx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
+                    {t}
+                  </span>
+
+                ))}
+                <a;
+                  className='underline';
+                  href={data.contact.linkedin}
+                  target='_blank';
+                  rel='noreferrer';
+                >                  LinkedIn;
+                </a>)}
+              {data.contact?.github && (                <a className="underline" href={data.contact.linkedin} target="_blank" rel="noreferrer">;
+                  LinkedIn;
+                </a>)}
+              {data.contact?.github && (
+                <a;
+                  className='underline';
+                  href={data.contact.github}
+                  target='_blank';
+                  rel='noreferrer';
+                >                  GitHub                <a className="underline" href={data.contact.github} target="_blank" rel="noreferrer">;
+                  GitHub;
+                </a>)}
+            </div>;
+          </header>;
+          {/* Summary */}
+          {data.summary && (
+            <section className='mb - 5'>;
+              <SectionTitle > Professional Summary</SectionTitle>;
+              <p className='mt - 2 text - sm leading - relaxed text - gray - 800 dark:text - gray - 200'>;
+                {data.summary}
+              </p>            </section>            <section className="mb - 5">;
+              <SectionTitle > Professional Summary</SectionTitle>;
+              <p className="mt - 2 text - sm leading - relaxed text - gray - 800 dark:text - gray - 200">{data.summary}</p>;
+            </section>)}
+          {/* Skills & Technologies */}
+          {(data.skills?.length || data.technologies?.length) && (
+            <section className='mb - 5'>;
+              <SectionTitle > Skills & Technologies</SectionTitle>;
+              <div className='mt - 2 text - sm flex flex - wrap gap - 2'>;
+                {data.skills?.map ((s, idx) => (
+                  <span;
+                    key={`skill-${idx}`}
+                    className='px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700';
+                  >                    {s}
+                  </span>))}
+                {data.technologies?.map ((t, idx) => (
+                  <span;
+                    key={`tech-${idx}`}
+                    className='px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700';
+                  >                    {t}              <SectionTitle > Skills & Technologies</SectionTitle>;
+              <div className="mt - 2 text - sm flex flex - wrap gap - 2">;
+                {data.skills?.map ((s, idx) => (
+                  <span key={`skill-${idx}`} className="px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700">;
+                    className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700'
+
+
                   >                    {t}
 
                     {s}
@@ -166,9 +286,6 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                     className='px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700';
                   >                  <span key={`tech-${idx}`} className="px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700">;
                     {t}
-              </div>
-            </section>
-          )}
 
           {/* Experience */}
           {data.experience?.length ? (
@@ -181,6 +298,9 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                         {role.company ? `  ${role.company}` : ''}
                       </h3>
                       <div className="text-xs text-gray-600 dark:text-gray-300">
+                          <span>
+                            {role.start |''}
+                            {role.end ? ` – ${role.end}` : ''}
                           </span>
           {data && data.experience?.length ? (;
             <section className='mb-5'>;
@@ -220,6 +340,8 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
 
                         {(role.start || role.end) && (
 
+                          <span>
+                            {role.start || ''}
                             {role.end ? ` – ${role.end}` : ''}
                           </span>
                         )}
@@ -239,17 +361,40 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
             </section>
           ) : null}
 
-
-          {/* Education */}
-
-
-
                         .join(' • ')}
                     </div>
                   </div>
                 ))}
               </div>
             </section>
+                      <p className='text - gray - 700 dark:text - gray - 300'>;
+                        {p.description}
+                      </p>)}
+                    {p.technologies?.length ? (
+                      <div className='mt - 1 text - xs flex flex - wrap gap - 2'>;
+                        {p.technologies.map ((t, t_idx) => (
+                          <span;
+                            key={`proj-${idx}-t-${t_idx}`}
+                            className='px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700';
+                          >                            {t}                    )}
+                    {p.technologies?.length ? (
+                      <div className="mt - 1 text - xs flex flex - wrap gap - 2">;
+                        {p.technologies.map ((t, t_idx) => (
+                          <span key={`proj-${idx}-t-${t_idx}`} className="px - 2 py - 0.5 rounded border border - gray - 200 dark: border - gray - 700">;
+                            {t}
+                          </span>))}
+                      </div>) : null}
+                  </div>))}
+              </div>;
+            </section>) : null}
+        </div>;
+      </div>);
+  }
+);
+;
+ResumePreview.display_name = 'ResumePreview';
+;
+export default ResumePreview;
 export default ResumePreview;
 
 }

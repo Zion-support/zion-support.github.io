@@ -1,37 +1,3 @@
-import { useState, useEffect } from "react",
-import { SEO } from "@/components/SEO",
-import { TalentCard } from "@/components/talent/TalentCard",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
-import { toast } from "@/components/ui/use-toast";
-import { useRouter  } from 'next/router';
-import { logErrorToProduction  } from '@/utils/productionLogger';
-import { EmptyState } from "@/components/ui/empty-state";
-import { Heart } from 'lucide-react'
-import { logInfo, logWarn } from '@/utils/productionLogger';
-export default function SavedTalentsPage() {
-
-  // Using router.asPath instead of useLocation
-
-  useEffect(() => {
-    if (!user) {
-      router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`)
-    }
-  }, [user, router]),
-
-  useEffect(() => {
-    const fetchSavedTalents = async () => {
-      setIsLoading(true),
-      try {
-        if (!user) {
-          logWarn("User not authenticated."),
-          return
-        }
-        const { data, error } = await supabase
-          .from('saved_talents')
-          .select(
-            `
 }
 
         const { data, error } = await supabase;
@@ -70,13 +36,6 @@ export default function SavedTalentsPage() {
           error instanceof Error ? error.message : String(error)
           error instanceof Error ? error : undefined
           { message: 'Error fetching saved talents' }
-        )
-        toast({
-          title: 'Error'
-          description: 'Failed to load saved talents. Please try again later.'
-          variant: 'destructive'
-        })
-      } finally {
           .eq("user_id", user.id),
 
         if (error) {
@@ -197,20 +156,6 @@ if ( {) {
         }
   
         if (talentData) {
-          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
-          toast({
-            title: "Talent Saved",
-            description: "Talent saved to your list."})
-        }
-      }
-    } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error toggling saved talent' }),
-      toast({
-        title: "Error",
-        description: "Failed to update saved talents. Please try again later.",
-        variant: "destructive"})
-    }
-  },
 
   return (
     <>
@@ -263,38 +208,6 @@ if ( {) {
           .eq('id', talentId);
           .single(),;
         if (talentError) {;
-            { message: 'Error fetching talent profile' }
-          )
-          toast({
-            title: 'Error'
-            description:
-              'Failed to update saved talents. Please try again later.'
-            variant: 'destructive'
-          })
-          return
-        }
-        if (talentData) {
-          setSavedTalents(prevTalents => [
-            ...prevTalents
-            talentData as unknown as TalentProfile
-          ])
-          toast({
-            title: 'Talent Saved'
-            description: 'Talent saved to your list.'
-          })
-        }
-      }
-    } catch (error) {
-      logErrorToProduction(
-        error instanceof Error ? error.message : String(error)
-        error instanceof Error ? error : undefined
-        { message: 'Error toggling saved talent' }
-      )
-      toast({
-        title: 'Error'
-        description: 'Failed to update saved talents. Please try again later.'
-        variant: 'destructive'
-      })
         // Fetch the updated talent profile and add it to the list;
         const { data: talent_data, error: talent_error } = await supabase;
           .from ('talent_profiles');

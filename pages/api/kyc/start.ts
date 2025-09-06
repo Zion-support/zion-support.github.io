@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
@@ -32,6 +31,7 @@ function save(db: Record<string, KycProfile>) {
     fullLegalName,
     business_name,
     businessRegistrationNumber,
+    userId?: string;
   } = req.body as {
     user_id?: string;
     role?: KycRole;
@@ -68,6 +68,18 @@ function save(db: Record<string, KycProfile>) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+  profile.role = role;
+  if (fullLegalName) profile.fullLegalName = fullLegalName;
+  if (businessName) profile.businessName = businessName;
+  if (businessRegistrationNumber) profile.businessRegistrationNumber = businessRegistrationNumber;
+  profile.lastUpdatedAt = now;
+  db[userId] = profile;
+  save(db);
 
-
+  res.status(200).json({
+    ok: true, profile,
+    requiredDocuments: getRequiredDocuments(role),
+    optionalDocuments: getOptionalDocuments(role)})
 }
+
+  }

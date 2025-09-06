@@ -1,7 +1,3 @@
-      currency: 'USD',
-      value: 160000,
-      unit_text: 'YEAR'},
-    hiring_organization: {
       name: 'Zion Tech Solutions',
       same_as: 'https://ziontechgroup.netlify.app',
       logo: 'https://ziontechgroup.netlify.app / logo.png'},
@@ -48,6 +44,11 @@
 }
       />;
       <main>;
+        <h1 > Jobs</h1>;
+        <p>{job.title}</p>;
+        <p>{job.description}</p>;
+      </main>;
+
     </div>;
   );
 },;

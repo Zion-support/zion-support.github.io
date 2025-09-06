@@ -3,10 +3,35 @@ interface SkillsSectionProps {
 }
 export function SkillsSection({ skills }: SkillsSectionProps) {
   // Group skills by category
+
+
+import { Skill  } from '@/types / resume';
+interface SkillsSectionProps {
+  skills: Skill[];
+}
+export /**
+ * SkillsSection - Function description
+ */
+function SkillsSection() {
+  // Group skills by category;
+  const skillsByCategory = skills.reduce (
+    (acc, skill) => {
+      const category = skill.category || "Other";
+      // Check condition
+if ( {) {
+  $2
+}
+
         acc[category] = [];
       }
       acc[category].push (skill);
       return acc;
+  const skillsByCategory = skills.reduce((acc, skill) => {;
+    const category = skill.category || 'Other';
+    if (!acc[category]) {
+      acc[category] = []
+    }
+    acc[category].push(skill);
 import { Skill } from '@/types/resume',;
 interface SkillsSectionProps {;
   skills: Skill[];

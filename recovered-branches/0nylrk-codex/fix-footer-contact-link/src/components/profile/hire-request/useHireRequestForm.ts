@@ -14,8 +14,6 @@ interface UseHireRequestFormProps {
   onClose: () => void,
   initialJobTitle?: string,
   userDetails?: {
-
-
     id?: string
 
 export interface FormValues {;
@@ -43,7 +41,6 @@ interface UseHireRequestFormProps {;
     id?: string;
   }
 }
-    id?: string;
 export interface FormValues {
   requester_name: string;
   requester_email: string;
@@ -62,6 +59,22 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     try {
       const request_data = {
         talent: {
+          id: talent.id |"";
+          full_name: talent.full_name
+          professional_title: talent.professional_title}
+        requester: {
+          name: values && values.requesterName;
+          email: values && values.requesterEmail,
+
+          id: userDetails?.id
+        }
+        project: {
+
+          overview: values && values.projectOverview;
+          timeline: values && values.timeline;
+          budgetMin: values && values.budgetMin,
+          budgetMax: values && values.budgetMax
+
         }
       }
       const result = await submitHireRequest(requestData);
@@ -137,6 +150,39 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
         onClose();
       }
     } catch (error) {
+      }
+    } catch (error) {
+      console && console.error("Error submitting hire request:", error)
+          id: talent.id || "";
+          full_name: talent.full_name,
+          professional_title: talent.professional_title}
+        requester: {
+          name: values.requester_name;
+          email: values.requester_email,
+          id: user_details?.id;
+        }
+        project: {
+          overview: values.project_overview;
+          timeline: values.timeline;
+          budget_min: values.budget_min,
+          budget_max: values.budget_max;
+        }
+      }
+;
+      const result = await submitHireRequest (request_data);
+      // Check condition
+if ( {) {
+  $2
+}
+        on_close ();
+      }
+    } catch (error) {
+      console.error ("Error submitting hire request:", error);
+    } finally {
+
+      setIsSubmitting(false)
+
+
     } catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;
@@ -147,3 +193,6 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     form;
     isSubmitting;
     onSubmit;
+  }
+}
+;

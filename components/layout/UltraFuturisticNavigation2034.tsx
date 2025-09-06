@@ -109,7 +109,6 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
-import {
   Menu,
   X,
   ChevronDown,
@@ -252,10 +251,6 @@ import {
         price: '$599 / month',
       },
       {
-        name: 'AI Climate Modeling',
-        href: '/ai - climate - modeling - platform',
-        description: 'Predict climate change with AI',
-        price: '$1, 299 / month',
       },
     ],
   },  {      { name: 'Quantum Machine Learning', href: '/quantum - machine - learning - platform', description: 'Harness quantum computing for ML', price: '$1, 999 / month' }
@@ -288,8 +283,6 @@ const quickLinks = [
   { name: 'Support', href: '/support', icon: LifeBuoy },
   { name: 'Status', href: '/status', icon: Activity }
 ];
-
-export default function UltraFuturisticNavigation2034() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -405,6 +398,7 @@ export default function UltraFuturisticNavigation2034() {;
             <div className='flex items-center space-x-2'>
               <Phone className='w-4 h-4 text-cyan-400' />
               <span className='hover:text-cyan-400 transition-colors'>
+
                 {contactInfo.mobile}
               </span>
             </div>
@@ -442,6 +436,7 @@ export default function UltraFuturisticNavigation2034() {;
             <div className="flex items-center space-x-2">
               <Users className="w-4 h-4 text-green-400" />
               <span className="text-green-400 font-semibold">50K+ Customers</span>
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
           <div className='flex items-center space-x-6'>;
             <div className='flex items-center space-x-2'>;
@@ -497,6 +492,25 @@ export default function UltraFuturisticNavigation2034() {;
           </div>;
         </div>;
       </div>;
+
+      {/* Main Navigation */}
+
+        }`}>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='flex items-center justify-between h-20'>            {/* Logo */}      <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+
+        isScrolled 
+          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' 
+          : 'bg-transparent'
+      }`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className='flex items-center space-x-3'
 
             >
               <div className='relative'>
@@ -558,8 +572,6 @@ export default function UltraFuturisticNavigation2034() {;
                 <p className="text-xs text-gray-400">Future Technology Solutions</p>;
               </div>;
             </motion && motion.div>;
-
-            {/* Desktop Navigation */}
                 <Link
                   key={link && link.name}
                   href={link && link.href}
@@ -567,13 +579,15 @@ export default function UltraFuturisticNavigation2034() {;
                   {link && link.name}
                 </Link>;
               ))}
-                  key={link.name}
-                  href={link.href}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
                   {link.name}
                 </Link>
               ))}
 
+                >
+                  {link.name}
+                </Link>
+              ))}
+              
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
@@ -816,6 +830,33 @@ function UltraFuturisticNavigation2034() {
                         <p className='text-xs text-gray-400 mb-2'>;
                           {category && category.description}
                         </p>;
+                              className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}
+              <div className="relative group">;
+                <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
+                  <span > Services</span>;
+                  <ChevronDown className="w - 4 h - 4" />;
+                </button>;
+                <div className="absolute top - full left - 0 w - 96 bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl p - 4 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group - hover:translate - y-0">;
+                  <div className="grid grid - cols - 2 gap - 4">;
+                    {service_categories.slice (0, 4).map ((category) => (
+                      <div key={category.title} className="p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - colors">;
+                        <div className="flex items - center space - x-2 mb - 2">;
+                          <category.icon className="w - 5 h - 5 text - cyan - 400" />;
+                          <h3 className="text - sm font - semibold text - white">{category.title.split (' ')[0]}</h3>;
+                        </div>;
+                        <p className="text - xs text - gray - 400 mb - 2">{category.description}</p>;
+                        <div className="space - y-1">;
+                          {category.services.slice (0, 2).map ((service) => (
+                            <Link;
+
+                              key={service.name}
+                              href={service.href}
+                              className="block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors";
+                            >;
+                              {service.name}
+
+
+                            >
                               {service.name}
                             </Link>
                           ))}
@@ -861,6 +902,8 @@ function UltraFuturisticNavigation2034() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
+
+
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (
@@ -976,11 +1019,35 @@ function UltraFuturisticNavigation2034() {
                   Get Started;
                 </Link>;
               </div>;
+                <Link
+                  href='/contact'
+                  onClick={() => setIsOpen(false)}
+                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center"
+                >
+                  Get Started
+                </Link>
+              </div>
+            </motion.div>
+
+          )}
+        </AnimatePresence>
+      </nav>
+      {/* Spacer for fixed navigation */}
+      <div className='h-20'></div>
+    </>
+        </AnimatePresence>;
+      </nav>;
+
+
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>;
     </>;
   );      <div className="h-20"></div>;
     </>;
+  );
             </motion.div>)}
         </AnimatePresence>;
       </nav>;
@@ -989,3 +1056,4 @@ function UltraFuturisticNavigation2034() {
     </>);      <div className="h - 20"></div>;
     </>);
 }
+

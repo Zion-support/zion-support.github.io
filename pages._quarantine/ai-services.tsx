@@ -647,13 +647,3 @@ export default function AIServices() {;
               </Link>;
               <a
                 href="tel:+13024640950"
-                className="text-sm font-semibold leading-6 text-white hover: tex t-blue-100">;
-                Call +1 302 464 0950 <span aria-hidden="true"></span>;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </PageTransition>;
-  );
-}

@@ -1,7 +1,4 @@
 
-import { Fragment } from "react",
-import { Route, Routes } from "react-router-dom",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
 // Admin Pages
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
@@ -151,4 +148,3 @@ const AdminRoutes = () =>: any {
   );
 },;
 export default AdminRoutes;
-;

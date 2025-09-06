@@ -1,4 +1,11 @@
 
+interface ApplicationsTableProps {
+
+  applications: JobApplication[]
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
+  onViewScore: (application: JobApplication) => void
 import {format} from "date-fns";
 import {JobApplication} from "@/types/jobs";
 import {Avatar} from "@/components/ui/avatar";
@@ -69,11 +76,58 @@ export function ApplicationsTable({
             </TableRow>;
           </TableHeader>;
           <TableBody>;
+                    <ClickableBadge
+                      variant="outline"
+                      className="cursor-pointer"
+                      onClick={() => onViewScore(application)}
+                    >;
+                      {application && application.match_score}%;
+                    </ClickableBadge>;
+                  ) : (;
+                    <span className="text-muted-foreground text-sm">Not scored</span>;
+                  )}
+
+                </TableCell>;
+                <TableCell className="text-right">;
+                  <div className="flex items-center justify-end gap-2">;
+                    <ClickableBadge
+                      variant="outline" 
+
+                      className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700"
+                      onClick={() => handleHireClick(application)}
+                    >;
+                      <Briefcase className="h-3 w-3 mr-1" /> Hire;
+                    </ClickableBadge>;
+
+                        <img;
+                          src={application.talent_profile.profile_picture_url}
+                          alt={application.talent_profile.full_name || "Candidate"}
+                        />) : (
+                        <User className="h - 4 w - 4" />)}
+                    </Avatar>;
+                    <div>;
+                      <div className="font - medium">;
+                        {application.talent_profile?.full_name || "Candidate"}
+                      </div>;
+                      <div className="text - xs text - muted - foreground mt - 0.5">;
                         {application.talent_profile?.professional_title || "Applicant"}
                       </div>;
                     </div>;
                   </div>;
                 </TableCell>;
+                      application={application}
+                      processing_id={processing_id}
+                      onViewApplication={onViewApplication}
+                      onStatusChange={onStatusChange}
+                    />;
+                  </div>;
+                </TableCell>;
+
+          </TableBody>;
+        </Table>;
+      </div>;
+
+
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         isOpen={hireModalOpen}

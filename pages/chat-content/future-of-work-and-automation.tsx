@@ -19,6 +19,9 @@ const FutureOfWorkAndAutomation: NextPage = () => {
     </div>;
   ),;
 };
+export default FutureOfWorkAndAutomation;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > FutureOfWorkAndAutomation</h1>;
@@ -29,3 +32,5 @@ import Head from 'next / head';
 ;
 export default FutureOfWorkAndAutomation;
 ;
+
+

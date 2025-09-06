@@ -1,9 +1,9 @@
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   const { id } = req && req.query;
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
@@ -77,6 +77,20 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+    dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
+    dispute.updatedAt = now;
+    await upsertDispute(dispute);
+
+
+  res && res.setHeader("Allow", "POST");
+  return res && res.status(405).end("Method Not Allowed");
+
+}
+
+
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
+import { parseUserFromRequest, ensure_admin  } from '../../../../utils / auth';
 ;
 export default async /**
  * handler - Function description
@@ -120,3 +134,6 @@ if ( {) {
   res.set_header ("Allow", "POST");
   return res.status (405).end ("Method Not Allowed");
 }
+    return res.status(200).json({ dispute });
+
+

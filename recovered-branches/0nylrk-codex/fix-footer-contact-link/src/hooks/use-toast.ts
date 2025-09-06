@@ -1,11 +1,21 @@
 import React from "react";
 
-
 // Extend the Toast component props with common toast options
 export type ToastOptions = React && React.ComponentPropsWithoutRef<typeof Toast> & {
   description?: string;
   title?: string;
   variant?: "default" | "destructive" | "success"
+
+// Extend the Toast component props with common toast options
+export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
+  description?: string;
+  title?: string;
+  variant?: "default" | "destructive" | "success"
+};
+
+
+export const useToast = useToastHook,
+
 // Base toast function that delegates to the implementation from `useToastHook`.
 function baseToast(props: ToastOptions) {
   const { toast } = useToastHook();
@@ -22,7 +32,6 @@ export const toast = baseToast as typeof baseToast & {
   error: (error: string) => void
   success: (message: string) => void
 }
-
 
 },
 

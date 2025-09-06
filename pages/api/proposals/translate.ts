@@ -1,8 +1,4 @@
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { OpenAI } from 'openai';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status($1).json({$2});
+  if (req.method !== "POST") return res.status($1).json({ $2 });
   try {
     const { markdown, targetLanguage = "en" } = req.body |{}
     if (!markdown) return res.status($1).json({ $2 });
@@ -37,6 +33,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ]
       temperature: 0.2
     });
+  try {
+
+
+    const { markdown, targetLanguage = "en" } = req && req.body || {};
+    if (!markdown) return res && res.status($1).json({ $2 });
+    const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
+    const completion = await openai && openai.chat.completions && completions.create({
+      model: process && process.env.OPENAI_MODEL || "gpt-4o-mini",
+
+
+      messages: [
 }
   } catch (error) {
     console.error("Error:", error);

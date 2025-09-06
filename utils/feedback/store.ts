@@ -11,3 +11,7 @@ export function writeAll(rows: any[]): void {;
 
 }
 }
+export function write_all (rows: any[]): void {
+  console.log ('Writing feedback rows:', rows.length);
+  // Implementation would write to database or file;
+}

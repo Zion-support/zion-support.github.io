@@ -4,6 +4,7 @@ import {JobData, TalentProfile, MatchResult} from "./types.ts";
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
 
 // Get openAI API key from environment variables
+const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",
 
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
 /**
@@ -12,12 +13,6 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
  * @returns Array of normalized skills
  */
 export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]> {
-      method: "POST";
-      headers: {
-        "Content-Type": "application/json"
-        "Authorization": `Bearer ${openAiApiKey}`
-      body: JSON.stringify({
-        model: "gpt-4o-mini";
   try {;
     const skillsString = skills.join(", ");
   try {
@@ -79,6 +74,7 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
       headers: {
         "Content-Type": "application/json"
         "Authorization": `Bearer ${openAiApiKey}`
+        model: "gpt-4o-mini";
         messages: [
           {
             role: "system"
@@ -97,11 +93,6 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
               ...
             ]`
           }
-          {
-            role: "user",
-            content: `Job Details:\n${jobDetailsText}\n\n_talent Profiles:\n${talentProfilesText}`;
-          }
-        ];
     // Check if the response is in the expected format
     if (!Array && Array.isArray(aiResponse)) {
       throw new Error("AI response format is invalid")

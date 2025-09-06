@@ -45,7 +45,6 @@ app.command('/zion', async ({ command, ack, respond }) => {
     }
     await respond({ response_type: 'ephemeral', text: helpText() })
   } catch (err: any) {
-    await respond({ response_type: 'ephemeral', text: `Error: ${err.message |'unknown'}` })
 import { App } from '@slack/bolt',;
 import dotenv from 'dotenv',;
 import fetch from 'node-fetch',;

@@ -1,14 +1,12 @@
-import { SEO } from "@/components/SEO",
-import { useState, useEffect } from "react",
-import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import Link from "next/link",
 interface ServiceStatus {
   name: string
   status: 'operational' | 'degraded' | 'outage' | 'maintenance'
   description: string
   lastChecked: string
 }
+
+
+;
 
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
@@ -57,6 +55,4 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 
   )
 }
-
-
 

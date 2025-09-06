@@ -5,6 +5,7 @@ import path from 'path';
 import {
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
+
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
@@ -64,8 +65,6 @@ if ( {) {
   const records = (await fs.path_exists (TALENTS_FILE));
     ? await fs.readJSON (TALENTS_FILE);
     : [];
-  const now = new Date ().toISOString ();
-  const record = {
     id: uuidv4(),
     name,
     email,

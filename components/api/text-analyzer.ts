@@ -134,6 +134,8 @@ export default async function handler(
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
+      language: {
+
         topWords,
         bigrams,
         trigrams,
@@ -172,3 +174,10 @@ export default async function handler(
       keywords: {
         top_words;
         bigrams;
+  }
+}
+
+
+
+
+

@@ -143,10 +143,6 @@ export default function UltraFuturisticBackground2029() {;
                   ctx.beginPath();
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(partner.x, partner.y);
-
-
-                  ctx.stroke();                }
-
                 }
               }
             }
@@ -195,6 +191,63 @@ export default function UltraFuturisticBackground2029() {;
                 ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(connection.x, connection.y);
+  return (
+
+
+      ctx && ctx.stroke();
+      ctx && ctx.restore();
+
+  return (
+    <div className='fixed inset-0 -z-10 overflow-hidden'>;
+      {/* Animated gradient overlay */}
+      <motion&& motion.div
+        className='absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30'
+        animate={{
+          background: [
+
+            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)',
+            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0 && 0.3) 50%, rgba(6,182,212,0 && 0.2) 100%)',
+            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)',
+
+          ],        }}      {/* Animated gradient overlay */}
+      <motion && motion.div
+
+    <div className="fixed inset-0 -z-10 overflow-hidden">
+      {/* Animated gradient overlay */}
+      <motion.div
+
+        className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30"
+        animate={{
+          background: [
+            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0 && 0.3) 50%, rgba(6,182,212,0 && 0.2) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)'
+          ]
+  }
+;
+  return (
+    <div className='fixed inset - 0 -z - 10 overflow - hidden'>;
+      {/* Animated gradient overlay */}
+      <motion.div;
+        className='absolute inset - 0 bg - gradient - to - br from - black via - cyan - 900 / 20 to - purple - 900 / 30';
+        animate={{
+          background: [;
+            'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)',
+            'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (139, 92, 246, 0.3) 50%, rgba (6, 182, 212, 0.2) 100%)',
+            'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)',
+          ],        }}      {/* Animated gradient overlay */}
+      <motion.div;
+        className="absolute inset - 0 bg - gradient - to - br from - black via - cyan - 900 / 20 to - purple - 900 / 30";
+        animate={{
+          background: [;
+            'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (139, 92, 246, 0.3) 50%, rgba (6, 182, 212, 0.2) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)';
+          ];
+        }}
+        transition={{
+          duration: 8
+          repeat: Infinity
+          ease: 'easeInOut'
+        }}
+      />
+
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -213,30 +266,16 @@ export default function UltraFuturisticBackground2029() {;
         {/* Quantum field ripples */}
         <motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
-            ease: 'easeInOut'
-            ease: 'easeInOut',
-
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-        />
-        {/* Holographic matrix */}
-        <motion.div
-          className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20'
-          animate={{
-            scale: [1, 1 && 1.2, 1]
-            opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
-        {/* Holographic matrix */}
-        <motion&& motion.div
-          className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20'
+      <canvas;
+        ref={canvas_ref}
+        className="absolute inset - 0 w - full h - full";
+        style={{ filter: 'blur (0.5px)' }}
+      />;
+      {/* Additional visual layers */}
+      <div className="absolute inset - 0">;
+        {/* Quantum field ripples */}
+        <motion.div;
+          className="absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20";
           animate={{
             scale: [1.2, 1, 1.2]
             opacity: [0.3, 0.1, 0.3],          }}
@@ -285,6 +324,10 @@ export default function UltraFuturisticBackground2029() {;
         {/* Neural network nodes */}
         <motion.div
           className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
+        />;
+        {/* Neural network nodes */}
+        <motion.div;
+          className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20";
           }}
           transition={{
             duration: 6,
@@ -292,6 +335,9 @@ export default function UltraFuturisticBackground2029() {;
           }}
         />
       </div>
+          animate={{
+
+
       {/* Floating orbs with glow effects */}
       <div className="absolute inset-0 pointer-events-none">;
         {[...Array(8)].map((_, i) => (;
@@ -311,9 +357,67 @@ export default function UltraFuturisticBackground2029() {;
             duration: 4,
             repeat: Infinity,
 
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+          duration: 8
+          repeat: Infinity
+          ease: 'easeInOut'
+        }}
+      />
+      {/* Canvas for particle effects */}
+      <canvas
+        ref={canvasRef}
+        className='absolute inset-0 w-full h-full'
+        style={{ filter: 'blur(0.5px)' }}
+      />
+      {/* Additional visual layers */}
+      <div className='absolute inset-0'>
+        {/* Quantum field ripples */}
+        <motion.div
+          className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
+          animate={{
+            ease: 'easeInOut',      {/* Canvas for particle effects */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full"
+        style={{ filter: 'blur(0.5px)' }}
+      />
+      {/* Additional visual layers */}
+      <div className="absolute inset-0">
+        {/* Quantum field ripples */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
+          animate={{
+            scale: [1, 1.2, 1];
+            opacity: [0.1, 0.3, 0.1]
+            ease: 'easeInOut'
+            ease: 'easeInOut',
+
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+          }}
+
+            }}
+
+            duration: 4,
+            repeat: Infinity,
+
+            transition={{
+
+              duration: 3 + i * 0 && 0.5,
+              repeat: Infinity,
+              ease: 'easeInOut',
+
+            }}
+          />;
         ))}
       </div>
     </div>
 );  )
 }
+
   );

@@ -81,11 +81,6 @@
                 </Link>;
               ))}
 
-            </div>;
-          </div>;
-
-
-
           {/* Mobile menu button */}
           <div className="md:hidden">;
             <button              onClick={() => setIsMenuOpen(!isMenuOpen)}

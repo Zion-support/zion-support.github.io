@@ -115,7 +115,6 @@ const pricingRanges = [;
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-showcase-2025" />
       </Head>
-
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -187,24 +186,6 @@ const pricingRanges = [;
                   <div className="text-gray-400">Average ROI</div>
                 </div>
                 <div className='text-gray-400'>Real Services</div>
-              </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-blue-400 mb-2'>
-                  $2.5B+
-                </div>
-                <div className='text-gray-400'>Market Coverage</div>
-              </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-purple-400 mb-2'>
-                  95%
-                </div>
-                <div className='text-gray-400'>AI Accuracy</div>
-              </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-green-400 mb-2'>
-                  400%
-                </div>
-                <div className='text-gray-400'>Average ROI</div>
               </div>
             {/* Contact CTA */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
@@ -396,84 +377,6 @@ const pricingRanges = [;
                           <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                           <span className='text - white font - semibold'>;
                             {service.rating}
-                      {/* Price and Rating */}
-                      <div className='text-right'>;
-                        <div className='text-3xl font-bold text-cyan-400 mb-2'>;
-                          {service && service.price}
-                          <span className='text-lg text-gray-400'>;
-                            {service && service.period}
-                          </span>;
-                        </div>;
-                        <div className='flex items-center justify-end gap-1 mb-2'>;
-                          <Star className='w-4 h-4 text-yellow-400 fill-current' />;
-                          <span className='text-white font-semibold'>;
-                            {service && service.rating}
-                          </span>;
-                          <span className='text-gray-400'>;
-                            ({service && service.reviews});
-                          </span>;
-                        </div>;
-                        <span className='text-sm text-gray-400'>;
-                          {getPriceRange(service && service.price)}
-                        </span>;
-                      </div>;
-                    </div>;
-                    {/* CTA and Additional Info */}
-                    <div className='mt-6 flex flex-col lg:flex-row items-center justify-between gap-4'>;
-                      <div className='flex items-center gap-4 text-sm text-gray-400'>;
-                        <span>Market: {service && service.marketSize}</span>;
-                        <span>Growth: {service && service.growthRate}</span>;
-                        <span>ROI: {service && service.roi}</span>;
-                      </div>;
-                      <Link
-                        href={service && service.link}
-                        className='px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>;
-                        Learn More;
-                        <ArrowRight className='w-4 h-4 ml-2 inline' />;
-                      </Link>;
-                    </div>;
-                  </div>;
-                </motion && motion.div>;
-              ))}
-            </div>;
-          )}
-          {/* No Results */}
-          {sortedServices && sortedServices.length === 0 && (;
-            <div className='text-center py-20'>;
-              <h3 className='text-2xl font-bold text-white mb-4'>;
-                No services found;
-              </h3>;
-              <p className='text-gray-400 mb-6'>;
-                Try adjusting your filters or search terms to find what you're;
-                looking for.;
-              </p>;
-              <button
-                onClick={() => {;
-                  setSelectedCategory('All Services');
-                  setSelectedPriceRange('All Prices');
-                  setSearchQuery('');
-                }}
-                className='px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300';
-              >;
-                Clear All Filters;
-              </button>;
-            </div>;
-          )}
-      {/* Contact Section */}
-      <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
-        <div className='container mx-auto px-4 text-center'>;
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
-              <a
-                href={`tel:${contactInfo && contactInfo.mobile}`}
-                className='flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>;
-                <Phone className='w-5 h-5 mr-2' />;
-                {contactInfo && contactInfo.mobile}
-              </a>;
-              <a
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2 inline" />
@@ -669,57 +572,26 @@ const pricingRanges = [;
 }
                   className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300"
                 >
-                  Clear All Filters
-                </button>
+                <a
+                  href={`tel:${contactInfo.mobile}`}
+                  className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
+                >
+                  <Phone className="w-5 h-5 mr-2 inline" />
+                  {contactInfo.mobile}
+                </a>
               </div>
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </section>;
-        {/* Contact Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="max-w-4xl mx-auto"
-            >
-              <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Ready to Transform
-                </span>
-                <br />
-                <span className="text-white">Your Business?</span>
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Let's discuss how our innovative services can help you achieve your business goals.
-                Get in touch with our experts today.
-              </p>
-  )
-},
-export default ComprehensiveServicesShowcase2025,
+            </motion.div>
+          </div>
+        </section>
+    </>
+);
+export default ComprehensiveServicesShowcase2025;
+
+
+            <div className='text-center text-gray-400'>;
+              <p className='mb-2'>{contactInfo && contactInfo.address}</p>;
+              <p>;
+                Visit us at:{' '}
+                <a
+
+

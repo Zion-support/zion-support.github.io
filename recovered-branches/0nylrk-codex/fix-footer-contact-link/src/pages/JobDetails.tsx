@@ -17,11 +17,27 @@ import { useWhitelabel  } from '@/context/WhitelabelContext';
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped
   const { jobId } = useParams() as { jobId?: string }
+
+
+
+import {ApplyToJobModal} from '@/components/messaging/job-application';
+import {SEO} from '@/components/SEO';
+import {useWhitelabel} from '@/context/WhitelabelContext';
+export default function JobDetails() {;
+  // Cast to specify the expected route param type since useParams may be untyped;
+  const { jobId } = useParams() as { jobId?: string };
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
+  const { job, isLoading, error } = useJobDetails(jobId);
+  const { user, isAuthenticated } = useAuth();
+
+  const navigate = useNavigate();
+  const { isWhitelabel, brandName } = useWhitelabel();
+
+
 import React, { useState, useEffect } from 'react',
 import { useParams, useNavigate } from 'react-router-dom',
 import { Header } from '@/components/Header',
@@ -47,28 +63,6 @@ export default function JobDetails() {
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
-  
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
-
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">;
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
-      </div>;
-    );
-  }
-    return (
-      <>;
-        <Header />;
-        <div className="container mx-auto px-4 py-16 text-center">;
-          <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>;
-          <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>;
-          <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>;
-        </div>;
-        <Footer />;
-      </>;
-    );
-  }
   const handleApplySuccess = async (appliedJobId: string) => {
     toast.success("Application submitted successfully!")
     setIsApplyModalOpen(false)
@@ -122,8 +116,6 @@ export default function JobDetails() {
                   <div className="flex flex-wrap gap-2">
                     {job.skills?.map((skill: string, i: number) => (
                       <Badge key={i} variant="secondary">
-
-
 import React, { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;

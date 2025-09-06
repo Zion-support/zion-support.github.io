@@ -1,6 +1,3 @@
-import * as React from &quot;react&quot;
-import * as ContextMenuPrimitive from &quot;@radix-ui/react-context-menu&quot;
-import { Check, ChevronRight, Circle } from 'lucide-react'
 const ContextMenu = ContextMenuPrimitive.Root
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger
 const ContextMenuGroup = ContextMenuPrimitive.Group
@@ -45,8 +42,6 @@ const ContextMenuContent = React.forwardRef<;
 ));
 ContextMenuContent.displayName = ContextMenuPrimitive.Content.displayName;
 const ContextMenuItem = React.forwardRef<;
-  React.ElementRef<typeof ContextMenuPrimitive.Item>,;
-
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {;
     inset?: boolean;
   }
@@ -78,8 +73,6 @@ const ContextMenuCheckboxItem = React.forwardRef<;
 >(({ className, children, ...props }, ref) => (;
   <ContextMenuPrimitive.RadioItem;
     ref={ref}
-      className
-    )}
     {...props}
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
@@ -88,8 +81,6 @@ const ContextMenuCheckboxItem = React.forwardRef<;
       </ContextMenuPrimitive.ItemIndicator>
     </span>
     {children}
-  React.ElementRef<typeof ContextMenuPrimitive.Label>,;
-
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
     inset?: boolean;
   }
@@ -102,12 +93,6 @@ const ContextMenuCheckboxItem = React.forwardRef<;
 ));
 ContextMenuLabel.displayName = ContextMenuPrimitive.Label.displayName;
 const ContextMenuSeparator = React.forwardRef<;
-        "ml-auto text-xs tracking-widest text-muted-foreground",
-        className
-      )}
-      {...props}
-    />);
-}
   ContextMenu,
   ContextMenuTrigger,
   ContextMenuContent,

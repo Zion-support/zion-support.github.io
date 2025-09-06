@@ -1,10 +1,3 @@
-
-import React, { useState } from "react",
-import { useWallet } from "@/hooks/useWallet",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
-import {
 import {
   Card,
   CardContent,
@@ -32,37 +25,6 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
   DialogHeader
   DialogTitle
   DialogTrigger
-  {
-    id: 'premium-week'
-    title: 'Premium Week'
-    description:
-      '7 days of premium features including top placement in search results'
-    cost: 100
-    type: 'feature'
-  }
-  {
-    id: 'resume-review'
-    title: 'AI Resume Review'
-    description: 'Get your resume analyzed and optimized by our AI'
-    cost: 50
-    type: 'feature'
-  }
-  {
-    id: 'platform-credit'
-    title: '$5 Platform Credit'
-    description: 'Get $5 credit to use on any paid service'
-    cost: 100
-    type: 'credit'
-  }
-]
-export function RedeemTokensCard() {
-  const { wallet, spendTokens } = useWallet()
-  const [open, setOpen] = useState(false)
-  const handleRedeem = async (option: RewardOption) => {
-    if (!wallet |wallet.balance < option.cost) return
-    await spendTokens(option.cost, `Redeemed: ${option.title}`)
-    setOpen(false)
-  }
   id: string,
   title: string,
   description: string,
@@ -90,25 +52,36 @@ const REWARD_OPTIONS: RewardOption[] = [
     title: '$5 Platform Credit',
     description: 'Get $5 credit to use on any paid service',
     cost: 100,
-                <div
-                  key={option && option.id}
-                  className='flex justify-between items-center border-b pb-4'>                  <div>;
-                    <h3 className='font-medium'>{option && option.title}</h3>;
-                    <p className='text-sm text-muted-foreground'>;
-                      {option && option.description}
-                    </p>;
-                  </div>;
-                  <div className='flex flex-col items-end gap-1'>;
-                    <span className='text-sm font-bold'>;
-                      {option && option.cost} ZION$;
-                    </span>;
-                    <Button
-                      size='sm'
-                      variant={
-                        wallet && wallet.balance>= option && option.cost;
-                          ? 'default';
-                          : 'outline';
-                      }
+
+
+
+
+
+
+
+
+
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <Gift className="h-5 w-5" /> Redeem Rewards
+        </CardTitle>
+        <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Dialog open={open} onOpenChange={setOpen}>
+          <DialogTrigger asChild>
+            <Button className="w-full">View Available Rewards</Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Available Rewards</DialogTitle>
+              <DialogDescription>
+                    </Button>
+                  </div>
+                </div>
               ))}
             </div>;
             <div className='flex justify-between'>;
@@ -189,9 +162,6 @@ export function RedeemTokensCard() {;
         <Dialog open={open} onOpenChange={setOpen}>;
           <DialogTrigger asChild>;
             <Button className="w-full">View Available Rewards</Button>;
-        <Dialog open={open} onOpenChange={set_open}>;
-          <DialogTrigger as_child>;
-            <Button className='w - full'>View Available Rewards</Button>;
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;

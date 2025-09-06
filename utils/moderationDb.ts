@@ -34,6 +34,11 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
   flag && flag.updatedAt = new Date().toISOString();
 
 }
+
+
+
+
+// Mock data storage - replace with actual database
 let flags: ModerationFlag[] = [];
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find(flag => flag.id === id) |null;
@@ -71,33 +76,6 @@ export async function updateFlagStatus(
   return flag;
 
 
-
-
-export async function getActionsForFlag(flagId: string): Promise<ModerationAction[]> {
-  return actions.filter(action => action.flagId === flagId);
-}
-    id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    content_id: data.content_id || '',
-    content_type: data.content_type || 'post',
-    reason: data.reason || '',
-    user_email: data.user_email || '',
-    status: 'pending',
-    created_at: new Date ().toISOString (),
-    ...data;
-  }
-;
-  flags.push (flag);
-  return flag;
-}
-export async function updateFlagStatus (
-  id: string,
-  status: ModerationFlag['status'],
-  admin_notes?: string): Promise < FlaggedContent | undefined> {
-  const flag = await getFlagById (id);
-  // Check condition
-if (return undefined) {
-  $2
-}
 
 
   flag.status = status;

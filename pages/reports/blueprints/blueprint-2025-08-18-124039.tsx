@@ -1,11 +1,7 @@
 import React from 'react';
 
-import Head from 'next / head';
-import Link from 'next / link';
-;
-const Blueprint20250818124039: React.FC = () => {
-  const blueprint_details = {
-    id: 'blueprint - 2025 - 08 - 18 - 124039',
+
+
 const Blueprint20250818124039: React.FC = () => {
   const blueprintDetails = {
     id: 'blueprint-2025-08-18-124039'
@@ -30,6 +26,26 @@ const Blueprint20250818124039: React.FC = () => {
       health: 'excellent'
     }
     {
+
+  const quantumComponents = [
+
+    {
+      name: 'Quantum Simulator',
+      description: 'Classical simulation of quantum algorithms',
+      status: 'active',
+      health: 'excellent';
+    },
+    {
+      name: 'Quantum Algorithm Library',
+      description: 'Collection of quantum algorithms and implementations',
+      status: 'active',
+      health: 'excellent';
+    },
+    {
+      name: 'Hybrid Classical - Quantum Interface',
+      description: 'Bridge between classical and quantum computing',
+      status: 'development',
+      health: 'good';
     },
     {
       name: 'Quantum Error Correction',
@@ -57,7 +73,6 @@ const Blueprint20250818124039: React.FC = () => {
       description: 'Simulation of quantum systems and materials',
       benefit: 'Advanced scientific research capabilities',
 
-  ];
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
@@ -71,6 +86,16 @@ const Blueprint20250818124039: React.FC = () => {
   }
 }
   };
+  const getHealthColor = (health: string) => {
+;
+  const getHealthColor = (health: string) =>: any {
+    switch (health) {
+
+      case 'excellent': return 'bg-green-500/20 text-green-400';
+      case 'good': return 'bg-yellow-500/20 text-yellow-400';
+      case 'warning': return 'bg-orange-500/20 text-orange-400';
+      case 'critical': return 'bg-red-500/20 text-red-400';
+      default: return 'bg-gray-500/20 text-gray-400';
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -119,30 +144,15 @@ const Blueprint20250818124039: React.FC = () => {
           </div>
         </div>
         {/* Quantum Components */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Quantum Computing Components</h2>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
-            {quantum_components.map ((component, index) => (
-              <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <div className="flex justify - between items - start mb - 4">;
-                  <h3 className="text - lg font - semibold text - white">{component.name}</h3>;
-                  <span className={`px - 2 py - 1 text - xs rounded - full ${getHealthColor (component.health)}`}>;
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Quantum Computing Components</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {quantumComponents.map((component, index) => (
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-white">{component.name}</h3>
+                  <span className={`px-2 py-1 text-xs rounded-full ${getHealthColor(component.health)}`}>
                     {component.health}
-                  </span>;
-                </div>;
-                <p className="text - gray - 300 text - sm mb - 4">{component.description}</p>;
-                <div className="flex justify - between items - center">;
-                  <span className={`text - xs ${getStatusColor (component.status)}`}>;
-        {/* Features */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Key Features</h2>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">;
-            {features.map ((feature, index) => (
-              <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <div className="flex justify - between items - start mb - 4">;
-                  <h3 className="text - lg font - semibold text - white">{feature.feature}</h3>;
-                  <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (feature.status)}`}>;
-                    {feature.status}
                     {component.health  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -153,7 +163,6 @@ const Blueprint20250818124039: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-4">{component.description}</p>
                 <div className="flex justify-between items-center">
                   <span className={`text-xs ${getStatusColor(component.status)}`}>
-
                     ● {component.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -182,7 +191,6 @@ const Blueprint20250818124039: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(feature.status)}`}>
-
                     {feature.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -290,9 +298,6 @@ const Blueprint20250818124039: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >

@@ -24,6 +24,20 @@ import { Card } from "@/components/ui/card",
 import { toast } from "@/components/ui/use-toast",
 import z from "zod",
 import { ChatAssistant } from "@/components/ChatAssistant",
+export default function Contact() {;
+  const [formData, setFormData] = useState({;
+    name: "",;
+    email: "",;
+    subject: "",;
+    message: "";
+
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
+
+
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -33,9 +47,6 @@ export default function Contact() {
   }),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isChatOpen, setIsChatOpen] = useState(false),
-
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     try {
@@ -234,11 +245,22 @@ export default function Contact() {
           </div>;
         </div>;
       </main>;
+      {/* Chat Assistant Modal */}
+      {isChatOpen && (;
+        <ChatAssistant
+          isOpen={isChatOpen}
+          onClose={() => setIsChatOpen(false)}
+
+          recipient={{;
+            id: 'ai-assistant',;
+            name: 'AI Assistant',;
+            avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
+            role: 'Support Bot';
+
           }}
           onSendMessage={handleSendMessage}
         />;
       )}
-}
       {/* Chat Assistant Modal */}
       {isChatOpen && (
         <ChatAssistant;
@@ -254,25 +276,3 @@ export default function Contact() {
         />)}
     </AppLayout>);
 ;
-      {/* Chat Assistant Modal */}
-      {isChatOpen && (;
-        <ChatAssistant;
-          isOpen={isChatOpen}
-          onClose={() => setIsChatOpen(false)}
-          recipient={{;
-            id:'ai-assistant',;
-            name:'AI Assistant',;
-            avatarUrl:'https://placehold.co/64x64?text=AI',;
-            role:'Support Bot';
-          }}          onSendMessage={handleSendMessage}
-        />;
-      )}
-    </AppLayout>;
-  ),; const [isSubmitting, setIsSubmitting] = useState (false);
-const [isChatOpen, setIsChatOpen] = useState (false);
-}catch (error) {
-  if (error instanceof z.ZodError) {
-  toast ({
-  title: "Form Validation Error";
-description: error.errors[0].message;
-}

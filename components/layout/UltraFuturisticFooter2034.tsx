@@ -56,7 +56,6 @@ import {
   CpuIcon;} from 'lucide-react';import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield
 
-import {
   Rocket,
   Brain,
   Atom,
@@ -107,9 +106,6 @@ import {
   Palette,
   Video,
   LockIcon,
-  GlobeIcon,;
-  CpuIcon,;} from 'lucide-react';import {
-  Rocket, Brain, Atom, Zap, Sparkles, Shield, ;
   Phone, Mail, MapPin, Globe, ArrowRight;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
   CheckCircle, Award, Star, Crown, Gem, Infinity;
@@ -173,6 +169,15 @@ const stats = [;
   { label: 'Services Delivered', value: '200+', icon: Rocket },;
   { label: 'Countries Served', value: '45+', icon: Globe },;
   { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },];
+      {/* Animated Background Elements */}
+
+      <div className='absolute inset-0 overflow-hidden'>;
+        <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>;
+        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>;
+      </div>;
+      <div className='relative z-10'>;
+
         {/* Main Footer Content */}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
           <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>;
@@ -189,6 +194,8 @@ const stats = [;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
             {/* Company Info */}
+
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
@@ -346,6 +353,7 @@ const stats = [;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
                 viewport={{ once: true }}
+
               >
                 {/* Quick Links */}
                 <div>;
@@ -353,6 +361,65 @@ const stats = [;
                   <div className="space-y-2">;
                     {quickLinks && quickLinks.map((link) => (;
                       <Link
+                {/* Company Links */}
+                <div>
+                  <h4 className='text-lg font-semibold text-white mb-4'>
+                    Company
+                  </h4>
+                  <div className='space-y-2'>
+                    {companyLinks.map(link => (
+                      <Link
+                        key={link.name}
+                        href={link.href}
+                        className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'
+                      >
+                        <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
+                        <span className='text-sm'>{link.name}</span>                      </Link>                      <Link
+                        key={link.name}
+                        href={link.href}
+                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"
+                      >
+                        <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                        <span className="text-sm">{link.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                        <span className='text-sm'>{link.name}</span>                      </Link>
+
+                      </Link>
+
+                    ))}
+                  </div>
+                </div>
+
+                {/* Social Links */}
+
+
+                        className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'
+                      >
+                        <social.icon className='w-5 h-5' />                      </Link>                      <Link
+                        key={social.name}
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110"
+                      >
+                        <social.icon className="w-5 h-5" />
+                      </Link>
+                        <social.icon className='w-5 h-5' />                      </Link>
+
+                      </Link>
+
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Certifications */}
+          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
@@ -367,13 +434,25 @@ const stats = [;
 
                 </motion.div>
 
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+              ))}
+
+            </div>;
+          </motion && motion.div>;
+        </div>;
+
+
+        {/* Bottom Bar */}
+
+
         {/* Bottom Bar */}
         <div className='border-t border-white/10 bg-black/50 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
-
-              <div className='flex items-center space-x-6 text-sm text-gray-400'>
-
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
                 <Link
                   href='/privacy'
@@ -393,3 +472,8 @@ export default function UltraFuturisticFooter2034() {;
     <footer className = "py-8 text-center text-sm text-gray-400">;
       <span>© {new Date().getFullYear()} Zion Tech Group</span>;
     </footer>;
+  )}"';
+  );
+}
+
+

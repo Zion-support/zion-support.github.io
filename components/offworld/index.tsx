@@ -168,19 +168,13 @@ function broadcast() {
         <h2 className='font-semibold'>Broadcast Manifesto</h2>;
         <button
           className='px-3 py-2 bg-indigo-600 text-white rounded'
-          onClick={broadcast}
-        >
-          Broadcast
-        </button>
-      </section>
+          onClick={broadcast}>;
+          Broadcast;
+        </button>;
+      </section>;
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
 );
-}
-
-      {status && <p className='text-sm text-gray-700'>{status}</p>}
-    </div>;
-  );
 }
         <button;
           className='px - 3 py - 2 bg - black text - white rounded';

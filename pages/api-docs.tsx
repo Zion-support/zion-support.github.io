@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {
@@ -7,6 +8,12 @@ import {
   Lock
   Brain
   Cloud
+import { 
+  ArrowRight,
+  Server,
+  Lock,
+  Brain,
+  Cloud;
 } from 'lucide-react';
 const apiEndpoints = [
   {
@@ -36,6 +43,42 @@ const apiEndpoints = [
     icon: Server
     methods: ['POST', 'GET', 'PUT']
     endpoint: '/api/it-services'
+import { ;
+  ArrowRight,;
+  Server,;
+  Lock,;
+  Brain,;
+  Cloud;
+} from 'lucide-react';
+
+const apiEndpoints = [;
+  {;
+    title: 'Authentication API',;
+    description: 'Secure authentication and authorization endpoints',;
+    icon: Lock,;
+    methods: ['POST', 'GET', 'PUT', 'DELETE'],;
+    endpoint: '/api/auth';
+  },;
+  {;
+    title: 'AI Services API',;
+    description: 'Access to all AI-powered services and models',;
+    icon: Brain,;
+    methods: ['POST', 'GET'],;
+    endpoint: '/api/ai';
+  },;
+  {;
+    title: 'Micro SaaS API',;
+    description: 'Manage micro SaaS applications and subscriptions',;
+    icon: Cloud,;
+    methods: ['POST', 'GET', 'PUT', 'DELETE'],;
+    endpoint: '/api/micro-saas';
+  },;
+  {;
+    title: 'IT Services API',;
+    description: 'Infrastructure and IT service management',;
+    icon: Server,;
+    methods: ['POST', 'GET', 'PUT'],;
+    endpoint: '/api/it-services';
   }
 ];
 
@@ -44,6 +87,33 @@ export default function ApiDocsPage() {
   return (
     <>
       <Head>
+
+      {/* Hero Section */}
+
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
+        <div className="absolute inset-0">;
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
+        </div>;
+
+        <div className="container mx-auto px-4 relative z-10">;
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            className="text-center">;
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+              API Documentation;
+            </h1>;
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">;
+              Comprehensive API documentation for integrating with Zion Tech Group services. ;
+              Build powerful applications with our RESTful APIs.;
+            </p>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+
       {/* API Endpoints Section */}
       <section className="py-20 bg-white">;
         <div className="container mx-auto px-4">;
@@ -51,7 +121,6 @@ export default function ApiDocsPage() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-              const IconComponent = endpoint.icon;
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className="text-4xl font-bold text-gray-900 mb-4">API Endpoints</h2>;
@@ -94,8 +163,6 @@ export default function ApiDocsPage() {
 }
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
-import React from 'react',
-import Head from 'next/head',
 export default function ApiDocsPage() {
   return (
     <>
@@ -105,9 +172,6 @@ export default function ApiDocsPage() {
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
-
-
-
   );
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
@@ -119,7 +183,6 @@ export default function ApiDocsPage() {
 );
     </>
   )
-
     </>
   )
 import React from 'react';
@@ -136,3 +199,4 @@ export default function ApiDocsPage(req, res) {
       <div className="container mx-auto px-4 py-16 text-gray-200">;
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>;
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>;
+

@@ -3,17 +3,6 @@ const ScrollArea = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
   <ScrollAreaPrimitive.Root
-import * as React from &quot;react & quot;
-import * as ScrollAreaPrimitive from &quot;@radix - ui / react - scroll - area & quot;
-;
-import { cn } from &quot;@/lib / utils & quot;
-;
-const ScrollArea = React.forward_ref<;
-  React.ElementRef < typeof ScrollAreaPrimitive.Root>,
-  React.ComponentPropsWithoutRef < typeof ScrollAreaPrimitive.Root>;
->(({ class_name, children, ...props }, ref) => (
-  <ScrollAreaPrimitive.Root;
-    ref={ref}
   >
     <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
       {children}
@@ -44,3 +33,9 @@ const ScrollBar = React.forwardRef<
   </ScrollAreaPrimitive.ScrollAreaScrollbar>
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
+export { ScrollArea, ScrollBar }
+
+
+export { ScrollArea, ScrollBar }
+;
+;

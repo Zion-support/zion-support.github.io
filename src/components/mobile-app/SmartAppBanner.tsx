@@ -4,10 +4,6 @@ interface SmartAppBannerProps {;
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
-  const [isVisible, setIsVisible] = useState(false),
-  const isMobile = useIsMobile(),
-  
-  useEffect(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
@@ -49,21 +45,10 @@ interface SmartAppBannerProps {;
             <div className="text-zion-cyan font-bold text-lg">Z</div>
           )}
         </div>
-          <h4 className="font-semibold text-white">{appName}</h4>
-          <p className="text-xs text-gray-300">Get our app for the best experience</p>
-        </div>
-        
-        
         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
-        
-        <div className="flex items-center gap-3">
-          <Link
-        
-
-        
         <div className="flex items-center gap-3">
           <Link
             href="/open-app"
@@ -72,8 +57,6 @@ interface SmartAppBannerProps {;
             View
             <ArrowRight className="w-3 h-3 ml-1" />
           </Link>
-          <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
-          
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
             <X className="h-5 w-5" />
           </button>

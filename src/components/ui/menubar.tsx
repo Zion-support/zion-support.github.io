@@ -1,6 +1,3 @@
-import * as React from &quot;react&quot;
-import * as MenubarPrimitive from &quot;@radix-ui/react-menubar&quot;
-import { Check, ChevronRight, Circle } from 'lucide-react'
 const MenubarMenu = MenubarPrimitive.Menu
 const MenubarGroup = MenubarPrimitive.Group
 const MenubarPortal = MenubarPrimitive.Portal
@@ -29,8 +26,6 @@ const MenubarTrigger = React.forwardRef<;
 ));
 MenubarTrigger.displayName = MenubarPrimitive.Trigger.displayName;
 const MenubarSubTrigger = React.forwardRef<;
-  React.ElementRef<typeof MenubarPrimitive.SubTrigger>,;
-
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubTrigger> & {;
     inset?: boolean;
   }
@@ -78,8 +73,6 @@ const MenubarContent = React.forwardRef<
 );
 MenubarContent.displayName = MenubarPrimitive.Content.displayName;
 const MenubarItem = React.forwardRef<;
-  React.ElementRef<typeof MenubarPrimitive.Item>,;
-
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Item> & {;
     inset?: boolean;
   }
@@ -111,8 +104,6 @@ const MenubarCheckboxItem = React.forwardRef<;
 >(({ className, children, ...props }, ref) => (;
   <MenubarPrimitive.RadioItem;
     ref={ref}
-      className
-    )}
     {...props}
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
@@ -121,8 +112,6 @@ const MenubarCheckboxItem = React.forwardRef<;
       </MenubarPrimitive.ItemIndicator>
     </span>
     {children}
-  React.ElementRef<typeof MenubarPrimitive.Label>,;
-
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {;
     inset?: boolean;
   }
@@ -135,12 +124,6 @@ const MenubarCheckboxItem = React.forwardRef<;
 ));
 MenubarLabel.displayName = MenubarPrimitive.Label.displayName;
 const MenubarSeparator = React.forwardRef<;
-        "ml-auto text-xs tracking-widest text-muted-foreground",
-        className
-      )}
-      {...props}
-    />);
-}
   Menubar,
   MenubarMenu,
   MenubarTrigger,

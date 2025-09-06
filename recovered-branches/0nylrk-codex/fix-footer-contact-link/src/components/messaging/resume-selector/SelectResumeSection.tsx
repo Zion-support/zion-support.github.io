@@ -29,7 +29,6 @@ interface SelectResumeSectionProps {;
   isLoading: boolean;
 }
 
-
   resumeOptions: ResumeOption[]
   selectedResume: ResumeOption | null
   handleResumeSelect: (resumeId: string) => void

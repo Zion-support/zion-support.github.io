@@ -1,11 +1,9 @@
-import { Job } from "@/types/jobs";
-export const JOB_POSTS: Job[] = [
-  {
 
-created at: "2024 - 05 - 05";
-updated at: "2024 - 05 - 05";
+
+];
+
+updated at: "2024-05-05"
 }];
-;
 
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [

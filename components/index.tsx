@@ -2,6 +2,8 @@ import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+
+
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
  } from 'lucide-react';
@@ -52,7 +54,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
                 <ArrowRight className="w-5 h-5" />;
               </a>;
               <a
-            animate={{ y: [0, -20, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60"
           />;
@@ -66,12 +67,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
             className="absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60"
       {/* Features Section */}
-      <section className='py-20 px-6'>;
-        <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-20 px-6">;
-        <div className="max-w-7xl mx-auto">;
-          <motion&& motion.div
-          />
-
             className='absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60'          />
 
           />
@@ -157,6 +152,39 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
                     <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />;
                 </div>;
               </motion && motion.div>;
+                <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
+                <div className='relative z-10'>
+                  <div
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-6 flex items-center justify-center`}
+                  >
+                    <service.icon className='w-8 h-8 text-white' />
+                  </div>
+                  <h3 className='text-xl font-bold mb-4 text-white'>
+                    {service.title}
+                  </h3>
+                  <p className='text-white/70 leading-relaxed'>
+                    {service.description}
+                  </p>
+                  <div className='mt-6 flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300'>
+                    <span className='text-sm font-medium'>Learn More</span>
+                    <ChevronRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300' />                  </div>                  <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
+                  <p className="text-white/70 leading-relaxed">{service.description}</p>
+                  <div className="mt-6 flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
+                    <span className="text-sm font-medium">Learn More</span>
+                    <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Stats Section */}
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+      {/* Stats Section */}
+
             {stats.map((stat, index) => (
               <motion.div
 import {
@@ -482,7 +510,16 @@ function HomePage() {
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-
+              >
+                className='text-center'
+              >
+                <div className='w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center'>
+                  <stat.icon className='w-8 h-8 text-white' />
+                </div>
+                <div className='text-3xl md:text-4xl font-bold text-white mb-2'>
+                  {stat.number}
+                </div>
+                <div className='text-white/70'>{stat.label}</div>              </motion.div>              >
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
@@ -490,20 +527,16 @@ function HomePage() {
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
 
-
-
-
-
             ))}
           </div>
         </div>
       </section>
+
       {/* Enhanced Services Showcase */}
-      <div id='services'>        <EnhancedServicesShowcase />      <div id="services">
-        <EnhancedServicesShowcase />
-      </div>
-      {/* Enhanced Testimonials Section */}
-      <EnhancedTestimonialsSection />
+      <div id='services'>        <EnhancedServicesShowcase />
+
+
+
         <EnhancedServicesShowcase />
       </div>
 
@@ -559,24 +592,9 @@ function HomePage() {
             </a>;
             <a
               href='/reports/updates/update-2025-08-15-0457'
-              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105'
-            >
-              <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
-              <h3 className='text-lg font-semibold text-white'>
-                Autonomous Update  2025: 08: 15: 0457
-              </h3>
-              <p className='mt-1 text-sm text-white/75'>
-                Freshly published by autonomous agents.
-              </p>
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold text-white">Autonomous Update  2025: 08: 15: 0457</h3>
-              <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300">
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -600,6 +618,26 @@ function HomePage() {
       </section>
       <EnhancedFooter />
     </div>
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
+              Ready to Get Started?;
+            </h2>;
+            <p className='text-xl text-white/70 max-w-3xl mx-auto'>;
+              Let's discuss your project and explore how our cutting-edge;
+              technology solutions can transform your business            </p>          >;
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
+              Ready to Get Started?;
+            </h2>;
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">;
+              Let's discuss your project and explore how our cutting-edge technology solutions can transform your business;
+            </p>;
+          </motion && motion.div>;
+
+  );
+  );
+
 
           <EnhancedContactForm />;
         </div>;

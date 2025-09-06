@@ -28,7 +28,6 @@ export function useCompanyWorkspace(companySlug?: string) {
           teamSize: 5;
           teamLimit: 10;
           billingCycle: "Monthly"
-          workspaceUrl: `${companySlug}.zion-ai.com`});
         setError(null)
       }
       setIsLoading(false)
@@ -93,6 +92,7 @@ if ( {) {
   }, [company_slug]);
 ;
   return { company, is_loading, error }
+
             primaryColor: "#4f46e5",
             backgroundColor: "#ffffff",
             textColor: "#1f2937"},

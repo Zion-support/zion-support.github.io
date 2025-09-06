@@ -2,11 +2,6 @@
 import React from 'react'
 import Link from 'next/link'
 import {
-  AlertTriangle
-  ExternalLink
-  RefreshCw
-  Settings
-  CheckCircle
 } from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
@@ -16,27 +11,16 @@ import { Button  } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 interface AuthConfigurationErrorProps {;
   onRetry?: () => void;
-  showSetupButton?: boolean;
-    }
-  };
 
-  return (
-        <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
-          <div className="text-center mb-6">
-            <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">
-              <AlertTriangle className="h-8 w-8 text-red-600" />
-            </div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">
-              Authentication Service Unavailable
-            </h1>
-            <p className="text-gray-600">
-              The sign-up system needs to be configured before users can create accounts
-            </p>
-          </div>
+
+
+
+
+
           <Alert variant="destructive" className="mb-6">
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
-              <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured.
+              <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured. 
               New users cannot sign up until this is resolved.
             </AlertDescription>
           </Alert>
@@ -76,7 +60,6 @@ interface AuthConfigurationErrorProps {;
                 <Settings className="w-4 h-4 mr-2" />
                 Setup Guide
               </Button>
-
   };
   return (;
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">;
@@ -313,36 +296,11 @@ interface AuthConfigurationErrorProps {;
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>System Status</span>
-              <ExternalLink className='w-4 h-4' />
-            </Link>
-            <Link
-              href='/talent'
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
-            >
-              <span>View Talent Pool</span>
-              <ExternalLink className='w-4 h-4' />
-            </Link>
-            <Link
-              href='/help'
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
-            >
-              <span>Contact Support</span>
-              <ExternalLink className='w-4 h-4' />
-            </Link>
-            <Link
-              href='/status'
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
-            >
-              <span>System Status</span>
-              <ExternalLink className='w-4 h-4' />            </Link>              <ExternalLink className="w-4 h-4" />
-            </Link>
           </div>
         </div>
 
         {/* Setup Script Info */}
         {showSetupButton && (
-
-
           <div className="mt-6 text-center">
             <div className="bg-green-50 rounded-lg border border-green-200 p-4">
               <div className="flex items-center justify-center gap-2 text-green-700 mb-2">
@@ -471,6 +429,9 @@ interface AuthConfigurationErrorProps {;
         </div>
       </div>
     </div>
+
+              onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
+
 export default AuthConfigurationError };
 ;
 export default AuthConfigurationError;
@@ -636,8 +597,5 @@ export default AuthConfigurationError,
 '"
     </div>;
   );
-}
-;
-export default AuthConfigurationError;
 }
 ;

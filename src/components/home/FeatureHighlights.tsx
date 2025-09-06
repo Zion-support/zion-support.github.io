@@ -1,59 +1,3 @@
-  style?: React && React.CSSProperties;
-
-export function FeatureHighlights(): any ({;
-  className,;
-  style,;
-}: FeatureHighlightsProps) {;
-  const highlightsData = [;
-    {;
-      title: 'For Talent Seekers',;
-      features: [;
-        'AI-powered talent matching based on your specific project requirements',;
-        'Verified profiles with skills validation and credential checking',;
-        'Transparent pricing and no hidden fees',;
-        'Direct communication with potential candidates',;
-        'Secure payment protection and dispute resolution',;
-        'Post jobs and receive AI-matched applicants',;
-      ],;
-    },;
-    {;
-      title: 'For Talent & Service Providers',;
-      features: [;
-        'Create a professional profile showcasing your skills and experience',;
-        'Get matched with relevant projects that fit your expertise',;
-        'Secure payment processing with on-time disbursements',;
-        'Build your reputation through client reviews and ratings',;
-        'Access to enterprise clients and high-value projects',;
-        'Professional development resources and community support',;
-      ],;
-    },;
-    {;
-      title: 'For Enterprise Clients',;
-      features: [;
-        'White-labeled talent portal with your company branding',;
-        'Dedicated account management and priority support',;
-        'Custom talent pools and preferred provider networks',;
-        'Advanced analytics and reporting capabilities',;
-        'API access for seamless integration with your HR systems',;
-        'Customizable workflow and approval processes',;
-      ],;
-    },;
-  ];
-
-  return (
-
-import React from 'react';
-import { Card, CardContent } from '@/components / ui / card';
-import { Check } from 'lucide-react';
-import { cn } from '@/lib / utils';
-interface FeatureHighlightsProps {
-  class_name?: string;
-  style?: React.CSSProperties;
-export /**
- * FeatureHighlights - Function description
- */
-function FeatureHighlights() {
-  const highlights_data = [;
   const highlightsData = [
     {
       title: 'For Talent Seekers'
@@ -95,57 +39,6 @@ interface FeatureHighlightsProps {
   style?: React.CSSProperties
 }
 
-export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
-  const highlightsData = [
-    {
-      title: "For Talent Seekers",
-      features: [
-        "AI-powered talent matching based on your specific project requirements",
-        "Verified profiles with skills validation and credential checking",
-        "Transparent pricing and no hidden fees",
-        "Direct communication with potential candidates",
-        "Secure payment protection and dispute resolution",
-        "Post jobs and receive AI-matched applicants"
-      ]
-    },
-    {
-      title: "For Talent & Service Providers",
-      features: [
-        "Create a professional profile showcasing your skills and experience",
-        "Get matched with relevant projects that fit your expertise",
-        "Secure payment processing with on-time disbursements",
-        "Build your reputation through client reviews and ratings",
-        "Access to enterprise clients and high-value projects",
-        "Professional development resources and community support"
-      ]
-    },
-    {
-
-    {
-      title: "For Talent Seekers",
-      features: [
-        "AI-powered talent matching based on your specific project requirements",
-        "Verified profiles with skills validation and credential checking",
-        "Transparent pricing and no hidden fees",
-        "Direct communication with potential candidates",
-        "Secure payment protection and dispute resolution",
-        "Post jobs and receive AI-matched applicants"
-      ]
-    },
-    {
-      title: "For Talent & Service Providers",
-      features: [
-        "Create a professional profile showcasing your skills and experience",
-        "Get matched with relevant projects that fit your expertise",
-        "Secure payment processing with on-time disbursements",
-        "Build your reputation through client reviews and ratings",
-        "Access to enterprise clients and high-value projects",
-        "Professional development resources and community support"
-      ]
-    },
-    {
-      title: "For Enterprise Clients",
-      features: [
         "White-labeled talent portal with your company branding",
         "Dedicated account management and priority support",
         "Custom talent pools and preferred provider networks",
@@ -156,6 +49,12 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
     }
   ],
 
+
+
+
+
+
+
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -165,20 +64,6 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
           </p>
         </div>
-                    <li key={idx} className="flex items-start">
-                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-zion-slate-light">{feature}</span>
-                  ))}
-    visible: {
-      opacity: 1
-      scale: 1
-      transition: { duration: 0.5 }
-}
-}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition = {
 
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -271,25 +156,3 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
               <p className="text - gray - 400 text - sm leading - relaxed">;
                 {feature.description}
         </div>;
-
-              </p>;
-            </motion.div>))}
-        </div>;
-        <motion.div          className="mt - 16 text - center";
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          viewport={{ once: true }}
-          transition = {
-  { duration: 0.6,
-  delay: 0.4;
-}}
-        >";
-          <div className="inline - flex items - center gap - 4 px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full text - white font - semibold">;
-            <span > Experience the difference</span>";
-            <span className="text - 2xl"></span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>)}
-'"`);
-;

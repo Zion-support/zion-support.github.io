@@ -1,3 +1,6 @@
+import React from 'react';
+
+
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
@@ -92,6 +95,17 @@ const stats = [
   { number: "99.9%", label: "Success Rate" }
   { number: "24/7", label: "Support Available" }
 ];
+
+
+        <section className="relative bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white py-20 overflow-hidden">;
+          <div className="absolute inset-0">;
+            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
+            <div className="absolute top-40 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
+          </div>;
+
+          <div className="container mx-auto px-4 relative z-10">;
+            <motion&& motion.div
+
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -231,6 +245,18 @@ export default function CaseStudiesPage() {
   );
 
  </Head> </section> </Layout>
+
+
+import Head from 'next/head';
+
+
+import Head from 'next/head';
+
+
+
+
+  );
+ </Head> </section> </Layout>
 import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
@@ -248,6 +274,20 @@ export default function CaseStudiesPage() {
 			</section>
 		</Layout>
 	)
+		<Layout>;
+			<Head>;
+				<title>Case Studies | Zion Tech Group</title>;
+				<link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/case-studies" />;
+				<meta name="description" content="Proven outcomes across AI, IT, and micro SaaS deployments." />;
+			</Head>;
+			<section className="container mx-auto px-4 py-24">;
+				<h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Case Studies</h1>;
+				<p className="text-gray-300">Proven outcomes and detailed success stories. Coming soon.</p>;
+			</section>;
+		</Layout>;
+	);
+}
+
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
           <div className="container mx - auto px - 4">;
@@ -288,3 +328,5 @@ export default function CaseStudiesPage() {
 import Link from 'next / link';
 import Layout from '../components / Layout';
 ;
+
+

@@ -59,7 +59,6 @@ serve(async (req) => {
             .eq('subdomain', subdomain)
             .eq('is_active', true)
             .single();
-  logo_url: string | null,
   theme_preset: string;
 }
 const cors_headers = {
@@ -145,6 +144,7 @@ if ( {) {
         tenant_info = data as TenantInfo;
       }
     }
+
     return new Response(
       JSON.stringify({
         tenant: tenantInfo

@@ -1,3 +1,8 @@
+
+      if (stored === 'talent' || stored === 'client') {
+        setRoleState(stored);      }        setRoleState(stored)
+        setRoleState(stored);      }
+
       if (stored === 'talent' || stored === 'client') {
 
         setRoleState(stored);      }
@@ -14,6 +19,16 @@
   return (    try {
       window.localStorage.setItem('userRole', r);
       document.cookie = `userRole=${r}, path=/, max-age=${60 * 60 * 24 * 365}`
+      }
+    } catch {}
+  }, []);
+  const setRole = (r: UserRole) => {;
+    setRoleState(r);
+
+
+    } catch {}
+  }
+
     } catch {}
   }
 ;
@@ -25,12 +40,7 @@ export function useAuth() {;
       {children}
     </AuthContext.Provider>
   );
-export /**
- * use_auth - Function description
- */
-function use_auth() {
-return useContext (AuthContext);
-}
+
 
 export function useAuth() {;
   return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>

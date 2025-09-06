@@ -68,5 +68,6 @@
         </div>)}
     </>);
 }
+    "data-walkthrough-target": id;
     id}
 }

@@ -1,3 +1,7 @@
+
+
+
+
 export const innovativeITInfrastructureServices2025 = [
   {
     id: 'quantum-edge-computing-orchestrator',
@@ -310,12 +314,14 @@ export const innovativeITInfrastructureServices2025 = [
       'Compliance tools'
     ]
     compliance: [
-      'SOC2'
-      'ISO 27001'
-      'Uptime Institute'
-      'Energy Star'
-      'Industry-specific regulations'
-    ]
+
+      'SOC2',
+      'ISO 27001',
+      'Uptime Institute',
+      'Energy Star',
+      'Industry-specific regulations',
+    ],;
+  },];
     id: 'quantum-edge-computing-orchestrator', name: 'Quantum Edge Computing Orchestrator',
     description: 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.',
     features: [
@@ -345,6 +351,8 @@ export const innovativeITInfrastructureServices2025 = [
       'ISO 27001',
       'Uptime Institute',
       'Energy Star',
+      'Industry-specific regulations',
+    ],;
   },];
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
     ];
@@ -555,3 +563,5 @@ export const innovativeITInfrastructureServices2025 = [;
     ],;
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'],;
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations'];
+  }
+];

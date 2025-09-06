@@ -1,3 +1,21 @@
+const generateId = () => Math.random().toString(36).slice(2, 10);
+import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types / enterprise',
+const generate_id = () =>: any Math.random ().to_string (36).slice (2, 10),
+const seed_company: CompanyRecord = {
+  id: 'cmp_acme',
+  name: 'Acme Corporation',
+  slug: 'acme',
+  logo_url: '/logo - acme.svg',
+  brand_color: '#4F46E5',
+  plan: {
+    tier: 'business',
+    seats_purchased: 25,
+    seats_used: 3,
+    usage_limits: {
+      monthlyJobPosts: 50,
+      budgetCapUsd: 10000}},
+
+
   slug: 'acme',;
   logoUrl: '/logo-acme.svg',;
   brandColor: '#4F46E5',;

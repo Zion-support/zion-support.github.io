@@ -49,7 +49,28 @@ function Button() {
 );
 }
 
+
+
+
     >
       {children}
     </button>
   );
+
+    </button>);
+  
+  return (
+    <button
+      type={_type}
+      className={_classes}
+      onClick={_onClick}
+      disabled={_disabled}
+    >
+      {_children}
+    </button>
+  )
+
+}
+
+
+

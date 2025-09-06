@@ -12,6 +12,7 @@ import { Message } from '@/types/messaging',;
 interface MessageBubbleProps {;
   message: Message,;
   isUserMessage: boolean;
+}
 
   message: Message
 
@@ -21,6 +22,9 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
     <div className={cn(
       "flex",
+
+
+
       isUserMessage ? "justify-end" : "justify-start"
     )}>
       <div className={cn(

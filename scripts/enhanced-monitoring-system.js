@@ -175,13 +175,6 @@ class EnhancedMonitoringSystem {
   getDirectorySize(dir) {
     let size = 0;
     try {
-      const items = fs && fs.readdirSync(dir);
-      for (const item of items) {
-        const fullPath = path && path.join(dir, item);
-        const stat = fs && fs.statSync(fullPath);
-        if (stat && stat.isDirectory()) {
-          size += this && this.getDirectorySize(fullPath)} else {
-          size += stat && stat.size}
       }
     } catch (error) {
       // Skip directories that can't be read

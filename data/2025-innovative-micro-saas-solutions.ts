@@ -1,3 +1,19 @@
+
+export const innovativeMicroSaasSolutions2025 = [
+  {
+
+
+    pricing: {
+      starter: {
+        price: 49
+        period: 'month'
+        features: [
+          'Up to 1,000 feedback items/month'
+          'Basic sentiment analysis'
+          'Email support'
+          'Standard reports'
+        ]
+      }
       professional: {
         price: 149
         period: 'month'
@@ -19,6 +35,19 @@
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
+      'Automated reorder point calculations',
+      'Seasonal trend analysis and prediction',
+      'Multi - location inventory management',
+      'Supplier performance analytics',
+      'Cost optimization recommendations',
+      'Integration with ERP and e - commerce systems',
+      'Mobile app for on - the - go management',
+      'Advanced reporting and analytics',
+    ],
+    pricing: {
+      starter: {
+      'CRM systems',
+      'E - commerce platforms',
       'AI-powered demand forecasting with 92.4% accuracy'
       'Real-time inventory tracking and monitoring'
       'Automated reorder point calculations'
@@ -30,15 +59,6 @@
       'Mobile app for on-the-go management'
       'Advanced reporting and analytics'
     ]
-      'Automated reorder point calculations',
-      'Seasonal trend analysis and prediction',
-      'Multi - location inventory management',
-      'Supplier performance analytics',
-      'Cost optimization recommendations',
-      'Integration with ERP and e - commerce systems',
-      'Mobile app for on - the - go management',
-      'Advanced reporting and analytics',
-    ],
     pricing: {
       starter: {
         price: 79
@@ -429,10 +449,22 @@
     ]
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
   }
+      'CRM systems',
+      'E-commerce platforms',
       'Analytics tools',
       'Social media platforms',
       'Marketing tools',
     ],
+    ];
+    integrations: ['CRM systems_e - commerce platforms_analytics tools_social media platforms_marketing tools'];
+    compliance: ['CAN - SPAMGDPRCCPAEmail marketing regulations'];
+  }
+];
+
+
+;
+    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
+  },;
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
     ];
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];
@@ -642,3 +674,5 @@ export const innovativeMicroSaasSolutions2025 = [;
     ],;
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'],;
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations'];
+  }
+];

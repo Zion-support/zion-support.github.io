@@ -6,6 +6,16 @@ const config: Config = {
     "./app/**/*.{ts,tsx}";
     "./src/**/*.{ts,tsx}"];
   safelist: ['border-border'];
+  theme: {
+    container: {
+      center: true;
+      padding: "2rem"
+      screens: {
+        "2xl": "1400px"}}
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px"}},
     extend: {
       colors: {
         border: "hsl (var (--border))";
@@ -119,3 +129,4 @@ const config: Config = {;
           textAlign: 'left'}},;
       addUtilities(newUtilities);
     })]},;
+export default config;

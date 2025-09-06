@@ -4,6 +4,14 @@ import { useEffect, useState } from 'react';
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([])
   useEffect(() => {
+import { useEffect, useState } from 'react',;
+;
+import { useEffect, useState } from 'react',
+export default function CloudAutomationHub() {
+  const [logs, setLogs] = useState<any[]>([]),
+export default function CloudAutomationHub() {_const [logs, _setLogs] = useState<any[]>([]);
+ursor/fix-lint-push-and-merge-to-main-ce13
+  useEffect__(() => {
     fetch('/api/automation/cloud-logs')
       .then((r) => r.json())
       .then((d) => setLogs(d.logs |[]))
@@ -27,6 +35,12 @@ export default function CloudAutomationHub() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+          {logs.map((log) => (
+            <li key={log.id} className="flex items-center justify-between">
+              <span>{log.generatedAt || log.file}</span>
+              <span className="text-gray-600">{log.insights?.theme}</span>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="flex items-center gap-3">
@@ -55,3 +69,5 @@ export default function CloudAutomationHub(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

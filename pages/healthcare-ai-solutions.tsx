@@ -10,6 +10,8 @@
 				"Capacity forecasting and staffing optimization"
 				"HIPAA-compliant data pipelines and audit"
 
+
+
 			pricePerMonthUSD={2999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

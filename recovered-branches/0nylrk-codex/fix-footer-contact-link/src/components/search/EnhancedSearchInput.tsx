@@ -1,4 +1,9 @@
 
+import React, { useState, useEffect, useRef } from "react";
+import {Search, X} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
+import {SearchSuggestion} from "@/types/search";
 import React, { useState, useEffect, useRef } from "react",
 import { Search, X } from "lucide-react",
 import { Input } from "@/components/ui/input",
@@ -30,10 +35,6 @@ interface EnhancedSearchInputProps {
   searchSuggestions: SearchSuggestion[]
 }
 
-
-export function EnhancedSearchInput({ 
-  value,
-
 export function EnhancedSearchInput({ ;
   value;
 export function EnhancedSearchInput({ 
@@ -46,7 +47,6 @@ export function EnhancedSearchInput({
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),
   const inputRef = useRef<HTMLInputElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
-
 
   // Filter suggestions based on input value
   useEffect(() => {
@@ -122,6 +122,27 @@ export function EnhancedSearchInput({;
   useEffect(() => {;
     if (!value) {;
       // Show recent searches when input is empty;
+        <Input
+          ref={inputRef}
+          type="text"
+;
+    document.addEventListener("mousedown", handleClickOutside),;
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []),;
+  const handleSelectSuggestion = (suggestion: string) => {;
+    onChange(suggestion),;
+    setIsFocused(false);
+    inputRef.current?.blur();
+  };
+  return (;
+    <div className="relative w-full" ref={containerRef}>;
+      <div className="relative">;
+        <Search;
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate";
+        />;
+        <Input;
+          ref={inputRef}
+          type="text";
           value={value}
           onChange={(e) => onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}

@@ -68,26 +68,3 @@ export default /**
 function EnterpriseBilling() {
   const { user } = use_auth ();
 ;
-  // Check if user has billing permissions;
-  const hasBillingAccess = user?.role === "enterprise_admin" ||;
-                          (user?.permissions && user.permissions.includes ('billing_access'));
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return <Navigate to="/unauthorized" />;
-  }
-  return (
-    <ProtectedRoute>;
-      <SEO;
-        title="Enterprise Billing - Zion AI Marketplace";
-        description="Manage your subscription, view invoice history, and download billing statements.";
-      />;
-      <Header />;
-      <main className="min - h-screen bg - background">;
-        <BillingDashboard />;
-      </main>;
-      <Footer />;
-    </ProtectedRoute>);
-}

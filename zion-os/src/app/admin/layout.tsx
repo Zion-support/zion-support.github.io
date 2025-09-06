@@ -37,6 +37,3 @@
         {children}
       </div>;
 
-};
-
-export default Layout;

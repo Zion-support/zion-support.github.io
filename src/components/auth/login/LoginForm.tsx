@@ -11,26 +11,6 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form'
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import Link from 'next/link';
-import { Checkbox } from '@/components/ui/checkbox';// Form validation schema
-const loginSchema = z.object({
-  email: z
-    .string()
-    .email('Please enter a valid email')
-    .min(1, 'Email is required')
-  password: z.string().min(6, 'Password must be at least 6 characters')
-  rememberMe: z.boolean()
-})
-type LoginFormValues = z.infer<typeof loginSchema>
-export function LoginForm() {
-  const { isLoading, login } = useAuth()
-  const [showPassword, setShowPassword] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isResending, setIsResending] = useState(false)
-  const [verificationMessage, setVerificationMessage] = useState('')
-  const router = useRouter()
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any
     defaultValues: {
@@ -77,7 +57,6 @@ export function LoginForm() {
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any
     defaultValues: {
-
       email: "",
       password: "",
       rememberMe: false}}),
@@ -122,35 +101,6 @@ import {;
     } finally {;
       setIsResending(false);
     }
-          }        })}
-        className='space-y-6';
-      >;
-        <FormField
-          control={form && form.control}
-          name='email'
-      {form.form_state.errors.root && (
-        <Alert variant='destructive' className='mb - 4'>;
-          <AlertDescription>;
-            {form.form_state.errors.root.message}
-          </AlertDescription>;
-        </Alert>)}
-      <form;
-        on_submit={form.handle_submit (on_submit, errors => {
-          const first_error = Object.keys (errors)[0] as keyof LoginFormValues;
-          // Check condition
-if ( {) {
-  $2
-}
-            form.set_focus (first_error);
-          }        })}
-        className='space - y-6';
-      >;
-        <FormField;
-          control={form.control}
-          name='email';
-          render={({
-            field
-          }: {
   return (
     <Form {...form}>
       {form.formState.errors.root && (
@@ -566,19 +516,6 @@ export function LoginForm() {;
       </form>
     </Form>
   )
-}else {
-  fireEvent ('login', {'
-  method: 'email'
-})
-}finally {
-  setIsSubmitting (false)
-}
-const handleResendEmail = async () => {'
-  const email = form.getValues ('email')
-if (!email) {'
-  form.setError ('root', {'
-  message: 'Please enter your email address.'
-})
 }setIsResending (true);'
 setVerificationMessage ('')
 try {'
@@ -738,6 +675,4 @@ return;
 }'"}
 }'"
   );
-}
-;
 }

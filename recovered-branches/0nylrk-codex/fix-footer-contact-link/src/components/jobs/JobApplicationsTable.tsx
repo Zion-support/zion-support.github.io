@@ -4,6 +4,13 @@ import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} from "./applications";
 
+export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
+
+  const {
+    applications
+    isLoading
+    error
+    updateApplicationStatus
   const { 
     applications, 
     isLoading, 
@@ -24,8 +31,6 @@ import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} fr
     } finally {;
       setProcessingId(null);
     }
-  };
-
   const handleViewScore = (application: JobApplication) => {
     setSelectedApplication(application)
     setShowScoreDialog(true)
@@ -36,7 +41,9 @@ import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} fr
   const handleScoreUpdated = (updatedApplication: JobApplication) => {
     refetch()
   }
-  };
+
+  if (isLoading) {;
+    return <LoadingState />;
   }
   if (error) {
     return <ErrorState error={error} />
@@ -44,9 +51,6 @@ import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} fr
   if (applications.length === 0) {
     return <EmptyState />
   }
-
-
-
 
   }
         applications={applications}

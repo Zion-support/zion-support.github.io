@@ -2,7 +2,6 @@ export default function AISEOAuditor() {; return (; <Article; title=\"AI SEO Aud
 import React from 'react';
 interface AiseoauditorProps {
   // Add props here as needed
-
 export default function Aiseoauditor({ }: AiseoauditorProps) {
   return (
     <div>

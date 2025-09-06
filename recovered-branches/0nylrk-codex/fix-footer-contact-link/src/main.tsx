@@ -64,3 +64,4 @@ ReactDOM && ReactDOM.createRoot(document && document.getElementById('root')!).re
         </Router>;
       </WhitelabelProvider>;
     </HelmetProvider>;
+  </React.StrictMode>);

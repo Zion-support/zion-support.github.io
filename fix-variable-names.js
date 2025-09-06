@@ -1,4 +1,3 @@
-
 ;
       return numberWords[match] || match});
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase());
@@ -173,10 +172,6 @@ function fixedCount = 0
         fixedCount++}
     }
   }
-
-
-
-
 function fixedCount = 0,
   for (const filePath = path && path.join(dir, file),
     const stat = fs && fs.statSync(filePath),

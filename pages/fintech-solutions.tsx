@@ -10,6 +10,8 @@
 				"Collections optimization and next-best-action"
 				"Realtime rules with feature store integration"
 
+
+
 			pricePerMonthUSD={2799  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

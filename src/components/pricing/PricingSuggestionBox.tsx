@@ -1,13 +1,3 @@
-import React from 'react'
-import { Button } from '@/components/ui/button'
-import {
-  TooltipProvider
-  Tooltip
-  TooltipTrigger
-  TooltipContent
-} from '@/components/ui/tooltip'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -49,6 +39,7 @@ interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null,
   isLoading: boolean,
   onApplySuggestion: () => void,
+export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion;
   isLoading;
   onApplySuggestion;
@@ -101,6 +92,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             </Tooltip>
           </TooltipProvider>
         </div>
+  )
+
+
   );
 };
 "  );

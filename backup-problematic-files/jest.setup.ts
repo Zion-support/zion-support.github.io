@@ -29,6 +29,18 @@ Object.define_property (window, 'match_media', {
     dispatch_event: jest.fn (),
   })),
 });
+
+global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() => ({
+  observe: jest && jest.fn(),
+  unobserve: jest && jest.fn(),
+  disconnect: jest && jest.fn(),
+
+}));
+
+const originalConsoleError = console && console.error;
+const originalConsoleWarn = console && console.warn;
+
+
 beforeAll(() => {
   console && console.error = (...args: any[]) => {
     if (

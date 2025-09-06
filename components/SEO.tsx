@@ -1,10 +1,3 @@
-
-import React from "react";
-import Head from "next/head";
-
-import React from './react';
-import Head from './next / head';
-;
 interface SEOProps {
 interface SEOProps {;
   title?: string;
@@ -23,15 +16,8 @@ const SEO: React.FC<SEOProps> = ({;
   keywords = "AI services, IT solutions, micro SaaS, technology consulting",;
 }) => {;
   return (
-    <Head>;
-      <title>{title}</title>;
-      <meta name="description" content={description} />;
-      <meta name="keywords" content={keywords} />;
-      <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
-    </Head>;
 }
 
-  );
 }
   image?: string;
   url?: string;
@@ -72,4 +58,3 @@ export default function SEO({
 }
 ;
 export default SEO;
-;

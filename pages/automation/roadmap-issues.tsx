@@ -14,8 +14,6 @@ export default function RoadmapIssuesPage() {
           ))}
         </ul>
       </div>
-              <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">#{it.number} — {it.title}</Link>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
             </li>
           ))  } catch (error) {
     console.error("Error:", error);

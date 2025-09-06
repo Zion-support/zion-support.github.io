@@ -13,6 +13,8 @@ import React from 'react';
   Clock
   Shield
   Zap;
+} from 'lucide-react';
+
 interface EnhancedServiceCardProps {
   service: {
 import {;
@@ -42,7 +44,6 @@ interface EnhancedServiceCardProps {;
       coordinate_y: -8,
       scale: 1.02,
       transition: {
-        duration: 0.3,
         ease: 'ease_out' as const,
       },
     },  }
@@ -77,6 +78,7 @@ interface EnhancedServiceCardProps {;
         }}
       />;
       {/* Popular Badge */}
+
       {/* Card Content */}
       <div className='relative p-6'>
 
@@ -107,6 +109,12 @@ interface EnhancedServiceCardProps {;
         {/* Description */}
         <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>          {service.description}
         </p>
+          <div className="text-right">
+            <div className="text-2xl font-bold text-white">{service.price}</div>
+            <div className="text-sm text-gray-400">{service.period}</div>
+          </div>
+        </div>
+        {/* Title & Tagline */}
         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
           {service.name}
         </h3>
@@ -192,6 +200,27 @@ interface EnhancedServiceCardProps {;
                 className="flex items-center gap-2 text-sm text-gray-300"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
+                {feature}
+              </motion && motion.div>;
+            ))}
+
+            {service.features.length > 3 && (
+              <div className="text-xs text-gray-500 mt-2">
+                +{service.features.length - 3} more features
+              </div>
+
+            )}
+          </div>
+        </div>
+
+        {/* Market Info */}
+        <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
+          <div className='flex items-center justify-between mb-2'>
+            <span className='text-xs font-semibold text-white'>
+              Market Size
+            </span>
+            <span className='text-xs text-cyan-400'>{service.marketSize}</span>
+
           </div>
           <div className='flex items-center justify-between mb-2'>
             <span className='text-xs font-semibold text-white'>
@@ -281,6 +310,25 @@ interface EnhancedServiceCardProps {;
         {/* Action Buttons */}
         <div className='flex gap-3'>
 
+          <motion.a
+            href={service.link}
+            className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
+
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }}>;
+            <ExternalLink className='w-4 h-4' />;
+            Learn More;
+          </motion && motion.a>;
+
+          <motion&& motion.a
+            href={`mailto:${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}
+            className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center'
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }}>;
+            <ArrowRight className='w-4 h-4' />          </motion && motion.a>;
+        </div>;
+
+
         {/* Contact Info */}
         <div className='mt-4 pt-4 border-t border-white/10'>;
           <div className='text-xs text-gray-500 text-center'>            Contact: {service && service.contactInfo.email}          <motion&& motion.a
@@ -289,8 +337,6 @@ interface EnhancedServiceCardProps {;
           <motion.a
             href={service.link}
             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-
-            Contact: {service.contactInfo.email}
 
           </div>
         </div>
@@ -537,12 +583,7 @@ export default EnhancedServiceCard;    </motion.div>);
 ;
 export default EnhancedServiceCard;
 ;
-export default EnhancedServiceCard;    </motion.div>
-  )
-}
-export default EnhancedServiceCard;
 
 };
 
-export default EnhancedServiceCard;
-export default EnhancedServiceCard;
+

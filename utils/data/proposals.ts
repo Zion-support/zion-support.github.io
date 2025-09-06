@@ -55,6 +55,35 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {;
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const markdownPath = path.join(publicProposalDir, 'proposal.md');
   const jsonPath = path.join(proposalDir, 'proposal.json');
+  const metaPath = path.join(dataDir, id, 'meta.json');
+  if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
+  const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+  const next = updater({ ...current, updatedAt: new Date().toISOString() });
+  fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8');
+  return next;
+}
+
+
+    const metaPath = path.join(dataDir, id, 'meta.json');
+    return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
+  });
+  return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
+}
+
+
+    const metaPath = path.join(dataDir, id, 'meta.json');
+    if (!fs.existsSync(metaPath)) return null;
+    return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
+  } catch {return null;
+  }
+}
+export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
+    markdownPath?: string,;
+    jsonPath?: string,;
+    pdfPath?: string,;
+    ipfsCid?: string,;
+    ensRecordHash?: string,;
+    signature?: string;
   const meta: ProposalMeta = {;
     id;
     createdAt;
@@ -225,7 +254,6 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {;
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
-;
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {;
   return updateProposalMeta(id, (meta) => ({;
     ...meta;

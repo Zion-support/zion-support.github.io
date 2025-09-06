@@ -120,8 +120,6 @@ import { useRouter } from 'next/router';
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
-
-
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -297,6 +295,8 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  ],
+  const tool = tools.find(t => t.id === id),
   if (!tool) {
     return (
       <>
@@ -320,9 +320,6 @@ export default function ToolResourcePage(req, res) {
         </div>
       </>
     )
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
   return (
     <>
@@ -359,6 +356,11 @@ export default function ToolResourcePage(req, res) {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
               <div className="lg:col-span-2">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+                  />
+                </div>
+              </div>
+
+
               <div className="space-y-6">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
@@ -488,6 +490,18 @@ export default function ToolResourcePage(req, res) {
         </main>
       </div>
     </>
+                  </ul>;
+                </div>;
+                <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 20">;
+                  <h3 className="font - semibold text - blue - 400 text - lg mb - 4">Tool Details</h3>;
+                  <div className="space - y-3">;
+                    <div>;
+                      <span className="text - white / 60 text - sm">Type:</span>;
+                      <p className="text - white font - medium">{tool.type}</p>;
+                    </div>;
+                    <div>;
+                      <span className="text - white / 60 text - sm">Time Required:</span>;
+                      <p className="text - white font - medium">{tool.estimated_time}</p>;
                     </div>;
                   </div>;
                 </div>;
@@ -499,4 +513,5 @@ export default function ToolResourcePage(req, res) {
             </div>;
           </div>;
         </main>;
-}
+
+

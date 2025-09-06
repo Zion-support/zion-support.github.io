@@ -44,11 +44,3 @@ echo "Pre-commit checks completed"
         'Run git push origin main to push changes'
       ]
     }
-    fs && fs.writeFileSync('git-workflow-report && report.json', JSON && JSON.stringify(report, null, 2));
-    console && console.log('Git workflow report generated')}
-}
-if (require && require.main === module) {
-  const workflow = new GitWorkflow();
-  workflow && workflow.createGitHooks();
-  workflow && workflow.generateReport()}
-module && module.exports = GitWorkflow;

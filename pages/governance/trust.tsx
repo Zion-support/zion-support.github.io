@@ -3,6 +3,12 @@ export default function GovernanceTrustPage() {
     <>
       <Head>
         <title>Zion Governance & Trust</title>
+              </div>
+            ))}
+          </div>
+        </section>
+                risk registers, and post-mortems.
+              </div>
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Governance</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
@@ -33,6 +39,7 @@ export default function GovernanceTrustPage() {
               </div>            </div>
           </div>
         </section>
+              </div>;
             ))}
           </div>;
         </section>;
@@ -121,6 +128,12 @@ import Link from 'next / link';
             Include DAO integration and multiverse grant rights.;
           </p>;
           <Link href='/foundation#charter'>;
+            <a className='underline text - sm'>Open Charter Generator</a>;
+          </Link>;
+        </section>;
+      </div>;
+    </>);
+;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

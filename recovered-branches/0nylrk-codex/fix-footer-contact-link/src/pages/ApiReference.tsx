@@ -6,6 +6,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
 
+export function ApiReference() {
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
+
   // Sample endpoint data
 
   const endpoints = [
@@ -135,7 +138,6 @@ export function ApiReference() {;
       "category": "development",;
       "budget": {;
         "min": 5000,;
-
         "max": 10000,;
         "currency": "USD";
       };
@@ -206,6 +208,41 @@ export function ApiReference() {;
   https://api.zionai.com / v1 / api / jobs \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content - Type: application / json" \\;
+  -d '{
+
+      };
+      requestExample: `curl -X POST \\;
+  https://api && api.zionai.com/v1/api/jobs \\;
+  -H "Authorization: Bearer YOUR_API_KEY" \\;
+  -H "Content-Type: application/json" \\;
+  -d '{;
+
+    "title": "UX Designer";
+    "description": "Looking for a UX designer with 3+ years experience...";
+    "category": "design";
+    "budget": {;
+      "min": 3000;
+
+    "title": "UX Designer",
+    "description": "Looking for a UX designer with 3+ years experience...",
+    "category": "design",
+    "budget": {
+      "min": 3000;
+      "max": 5000
+      "currency": "USD"
+    }
+    "skills": ["Figma", "User Research", "Prototyping"];
+    "deadline": "2023-07-01T00:00:00Z"
+  }'`
+    }
+      "min": 3000,
+      "max": 5000,
+      "currency": "USD"
+    },
+    "skills": ["Figma", "User Research", "Prototyping"],
+    "deadline": "2023-07-01T00:00:00Z"
+  }'`
+    },
     {
       id: "get-talent"
       method: "GET"
@@ -216,32 +253,6 @@ export function ApiReference() {;
         "200": {
           description: "A list of talent profiles"
           example: `{
-      "max": 5000,;
-      "currency": "USD";
-    };
-    "skills": ["Figma", "User Research", "Prototyping"];
-    "deadline": "2023-07-01T00:00:00Z";
-  }'`;
-    };
-    {;
-      id: "get-talent",;
-      method: "GET",;
-      path: "/api/talent",;
-      description: "Search for talent profiles with optional filtering",;
-      parameters: [;
-        { name: "skills", type: "string", description: "Comma-separated list of skills" },;
-        { name: "category", type: "string", description: "Filter by talent category" },;
-        { name: "rate_min", type: "integer", description: "Minimum hourly rate" },;
-        { name: "rate_max", type: "integer", description: "Maximum hourly rate" },;
-        { name: "availability", type: "string", description: "Availability type (full-time, part-time)" };
-        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },;
-        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],;
-      responses: {;
-        "200": {;
-          description: "A list of talent profiles",;
-          example: `{;
-  "talent": [;
-    {;
       "id": "talent-123";
       "full_name": "Jane Smith";
       "professional_title": "Full Stack Developer",;
@@ -250,15 +261,6 @@ export function ApiReference() {;
       "availability": "full - time";
       "years_experience": 5;
       "location": "Remote, US";
-      "bio": "Experienced full stack developer with a focus on React and Node.js...";
-    }
-    // More talent profiles...;
-  ];
-  "count": 38;
-  "limit": 20;
-  "offset": 0;
-}`;
-        }
       requestExample: `curl -X GET \\
   https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
@@ -323,8 +325,34 @@ export function ApiReference() {;
                             'bg-red-950 text-red-500'
                           }`}>;
                             {status}
+                        <CodeBlock 
+                          code={response.example} 
                           language="json"
                           showLineNumbers={true}
                         />;
                       </div>;
                     ))}
+                    </div>;
+                  </div>;
+                </TabsContent>;
+              </Tabs>;
+
+
+
+;
+
+
+export default ApiReference;
+
+            </div>) : (
+            <div className="p - 8 border border - zinc - 800 rounded - lg text - center">;
+              <p className="text - zinc - 400">Select an endpoint from the list to view details</p>;
+            </div>)}
+        </div>;
+      </div>;
+    </ApiDocsLayout>);
+}
+export default ApiReference;
+
+;
+export default ApiReference;

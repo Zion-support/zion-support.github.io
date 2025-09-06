@@ -13,12 +13,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ user })
 }
 
-export default function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  const { name, role } = req.body as { name: string, role: UserRole };
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  ensureDemoUsers();
-  const user = generateUser(name, role);
-  upsertUser(user);
-  setUserCookie(res, user);
+
+

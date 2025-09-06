@@ -1,7 +1,6 @@
 
 import React from "react";
 
-
 import React from "react",
 import { HelpCategory } from "./types",
 import { 
@@ -11,7 +10,6 @@ import {
   Calendar, 
   Briefcase 
 } from "lucide-react",
-
 
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
@@ -83,27 +81,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         lastUpdated: "2023-12-05",
         tags: ["offer", "contract", "negotiation"]
       }
-  {
-    id: "profile - setup",
-    name: "Profile Setup",
-    description: "Optimize your profile for better visibility",
-    icon: <Users className="h - 6 w - 6 text - zion - purple" />,
-    articles: [;
-      {
-  {
-    id: "payments",
-    name: "Payments",
-    description: "Everything about payments and billing",
-    icon: <CreditCard className="h - 6 w - 6 text - zion - cyan" />,
-    articles: [;
-      {
-  {
-    id: "disputes",
-    name: "Disputes",
-    description: "How to handle and resolve contract disputes",
-    icon: <Calendar className="h - 6 w - 6 text - zion - purple" />,
-    articles: [;
-      {
 
         id: "file-dispute",
         title: "How to file a dispute",
@@ -285,3 +262,5 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         tags: ["prevention", "best practices", "communication"];
       }
     ];
+  }
+];

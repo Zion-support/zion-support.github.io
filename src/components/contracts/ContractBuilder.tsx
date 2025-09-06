@@ -1,19 +1,3 @@
-
-  isOpen: boolean
-  onClose: () => void
-  talent: TalentProfile
-  clientName: string
-  onContractGenerated?: (contractContent: string,) => void
-
-import { useState } from "react",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
-  isOpen;
 isOpen;
   onClose;
   talent;
@@ -36,9 +20,20 @@ isOpen;
   }
 
   return (
-
-
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle>Contract Builder</DialogTitle>
+        </DialogHeader>
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">
+          <div className="flex justify-between items-center">
+            <TabsList className="grid grid-cols-2">
+              <TabsTrigger value="form">Contract Details</TabsTrigger>
+              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
+            </TabsList>
             
+
+
             <div className="flex gap-2">
               <Button
                 variant="outline"
@@ -61,35 +56,3 @@ isOpen;
 
 
               
-              talent = {talent,}
-              clientName = {clientName,}
-              initialValues = {formValues,}
-              onFormValuesChange = {setFormValues,}
-              onContractGenerated = {handleContractGenerated,}
-              <ContractPreview
-                contractContent = {generatedContract,}
-              <ContractPreview
-ursor/fix-website-loading-errors-and-merge-6662
-                talent = {talent,}
-                onClose = {onClose,}
-                status="ready"
-              />;
-            )}
-
-          </TabsContent>;
-        </Tabs>;
-
-
-              <ContractPreview
-              <ContractPreview 
-                contractContent = {generatedContract,}
-                talent = {talent,}
-                onClose = {onClose,}
-                status="ready"
-              />;
-            )}
-        <TemplateManager
-          isOpen = {templateManagerOpen,}
-          onClose = {() => setTemplateManagerOpen(false),}
-          onSelectTemplate = {handleLoadTemplate,}
-          currentValues = {formValues,}

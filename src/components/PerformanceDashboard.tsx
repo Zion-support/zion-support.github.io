@@ -168,18 +168,6 @@ class ErrorBoundary extends React.Component {
             <CardTitle className="text-sm font-medium text-gray-600">Load Time</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{metrics.loadTime}s</div>
-            <p className="text-xs text-gray-500">Average page load</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Health Status</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span className="text-sm font-semibold text-green-600">Healthy</span>
           </CardContent>
         </Card>
       </div>
@@ -336,9 +324,6 @@ const PerformanceDashboard: React.FC = () => {;
       </div>
     </div>
   )
-export default PerformanceDashboard
-export default PerformanceDashboard
-export default PerformanceDashboard
 
           variant='outline';
         >;

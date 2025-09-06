@@ -1,4 +1,3 @@
-  isAuthenticated: boolean;
   roles: DevRole[];
   user_id?: string;
 }
@@ -23,6 +22,22 @@ export function getGitStatus (): { connected: boolean; branch?: string } {
     return { connected: false };
   }
 }
+  // TODO: integrate real auth; for now, check a header and env var for dev
+
+  const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
+  const adminToken = process && process.env.ADMIN_TOKEN;
+
+  if (token && adminToken && token === adminToken) {
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+  if (token && adminToken && token === adminToken) {
+
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+
 export function requireRoles(
   req: ApiRequest,
   res: ApiResponse,

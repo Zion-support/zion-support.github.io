@@ -3,6 +3,7 @@
 // Placeholder functionality
 class MCPClientIntegration {
   constructor() {
+
 // Placeholder functionality
 class MCPClientIntegration {
   constructor() {
@@ -45,7 +46,6 @@ console.log ('This system is not yet implemented but will provide MCP client int
 class MCPClientIntegration {
   constructor () {
     this.status = 'placeholder';
-    this.status = 'placeholder'
   }
   connect () {
     console.log ('MCP client would connect here');
@@ -79,3 +79,5 @@ module.exports = MCPClientIntegration,
 if ( {) {
   $2
 }
+
+

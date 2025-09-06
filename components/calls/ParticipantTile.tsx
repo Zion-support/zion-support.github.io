@@ -2,23 +2,30 @@
   LocalParticipant
   TrackPublication
   Track;
+
+import type {;
+  RemoteParticipant,;
+  LocalParticipant,;
+  TrackPublication,;
+  Track,;
+} from 'livekit-client';
+
 type Props = {;
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
-}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
-import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
-
-type Props = {
-  participant: RemoteParticipant | LocalParticipant,
-
-  isLocal?: boolean;
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
     const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
       if (track.kind === 'video' && videoRef.current) {
         track.attach(videoRef.current);
+  isLocal?: boolean;
+  displayName?: string;
+};
+
+
+
       }
       }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
@@ -176,5 +183,8 @@ if ( {) {
 }
       </div>
     </div>
-
+      </div>
+    </div>
+);
+}
   );

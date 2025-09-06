@@ -1,6 +1,5 @@
+import {supabase} from "@/integrations/supabase/client";
 import { supabase } from "@/integrations/supabase/client",
-
-
 /**
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
@@ -46,37 +45,6 @@ if ( {) {
       DO $$
       BEGIN
         IF NOT EXISTS (
-        headline TEXT);
-;
-      -- Create RLS policies;
-      ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
-;
-      -- Create policies;
-      DO $$;
-      BEGIN;
-        IF NOT EXISTS (
-          SELECT FROM pg_catalog.pg_policies;
-          WHERE policyname = 'Users can view their own profile';
-          AND tablename = 'profiles') THEN;
-          CREATE POLICY "Users can view their own profile";
-            ON public.profiles FOR SELECT;
-            USING (auth.uid () = id);
-        END IF;
-      END;
-      $$;
-;
-      DO $$;
-      BEGIN;
-        IF NOT EXISTS (
-          SELECT FROM pg_catalog.pg_policies;
-          WHERE policyname = 'Users can update their own profile';
-          AND tablename = 'profiles') THEN;
-          CREATE POLICY "Users can update their own profile";
-            ON public.profiles FOR UPDATE;
-            USING (auth.uid () = id);
-        END IF;
-      END;
-      $$;
                 new.raw_user_meta_data->>'bio';
                 new.raw_user_meta_data->>'headline');
         INSERT INTO public && public.profiles (id, display_name, bio, headline)
@@ -216,5 +184,6 @@ export const ensureProfilesTableExists = async () => {;
 };
 // Call this when the app starts to ensure the table exists;
 export const initializeDatabase = async () => {;
+
   await ensureProfilesTableExists();
 };

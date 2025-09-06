@@ -173,77 +173,6 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {;
           </p>;
         </div>;
 
-    {
-      key: 'talent_directory',
-      descriptionKey: 'talent_directory_desc',
-      detailsKey: 'talent_directory_details',
-    {
-      key: 'services_marketplace',
-      descriptionKey: 'services_marketplace_desc',
-      detailsKey: 'services_marketplace_details',
-      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
-      link: '/services',
-      badge: 'new'
-    },
-    {
-      key: 'equipment_catalog',
-      descriptionKey: 'equipment_catalog_desc',
-      detailsKey: 'equipment_catalog_details',
-    {
-      key: 'community_hub',
-      descriptionKey: 'community_hub_desc',
-      detailsKey: 'community_hub_details',
-    {
-      key: 'mobile_app',
-      descriptionKey: 'mobile_app_desc',
-      detailsKey: 'mobile_app_details',
-      icon: <Smartphone className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />,
-      link: '/mobile-launch',
-      badge: 'featured'
-    },
-    {
-      key: 'enterprise_solutions',
-      descriptionKey: 'enterprise_solutions_desc',
-      detailsKey: 'enterprise_solutions_details',
-    {
-      key: 'developer_tools',
-      descriptionKey: 'developer_tools_desc',
-      detailsKey: 'developer_tools_details',
-    {
-      key: 'learning_resources',
-      descriptionKey: 'learning_resources_desc',
-      detailsKey: 'learning_resources_details',
-    {
-      key: 'project_management',
-      descriptionKey: 'project_management_desc',
-      detailsKey: 'project_management_details',
-    {
-      key: 'zion_hire_ai',
-      descriptionKey: 'zion_hire_ai_desc',
-      detailsKey: 'zion_hire_ai_details',
-      icon: <Clock className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,
-      link: '/zion-hire-ai',
-      badge: 'premium'
-    }
-  ],
-
-  return (
-    <section
-      className={cn(
-        "py-16 bg-gradient-to-b from-background to-background/90",
-        className
-      )}
-      style={style}
-    >
-      <div className="container mx-auto px-4">
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold tracking-tight mb-3">
-            {t('home.features_heading')}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            {t('home.features_subheading')}
-          </p>
-        </div>
             <Card
               key={index}
               className='overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50'>;
@@ -264,26 +193,10 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {;
 
         className
       )}
-                  {feature.icon}
-                  {feature.badge && (;
-                    <Badge variant="secondary" className="bg-primary/20 text-primary">;
-                      {t(`badges.${feature.badge}`)}
-                    </Badge>
-                  )}
-                </div>
                 )}
               </CardHeader>
               <CardContent>
                 {feature.detailsKey && (
-                    <span>
-                      {t('general.explore')} {t(`features.${feature.key}`)}
-                    </span>
-                    <ArrowRight className='h-4 w-4' />                  </Link>                  <Link
-                    href={feature.link}
-                    aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
-                    className="cursor-pointer"
-                    {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}
-                  >
                     <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
                     <ArrowRight className="h-4 w-4" />
                   </Link>

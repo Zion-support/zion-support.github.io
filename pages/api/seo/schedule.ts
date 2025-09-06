@@ -11,6 +11,9 @@ import path from 'path';
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method !== 'POST') {
+    res && res.setHeader('Allow', 'POST');
+    return res && res.status(405).json({ error: 'Method not allowed' });
   }
   try {
     const seedTopics = [
@@ -33,9 +36,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     }
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
 
     return res.status(200).json({ ok: true, count: 4 })
   } catch (e) {
@@ -43,3 +43,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(500).json({ error: 'Failed to schedule landing pages' })
   }
 };
+import fs from 'fs';
+import path from 'path';
+import OpenAI from 'openai';
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
+
+

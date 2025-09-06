@@ -49,10 +49,6 @@ if (return null) {
   }
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
 interface VerifiedBadgeProps {
-  return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
           </span>
         </TooltipTrigger>
@@ -87,10 +83,3 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
           <p>{label}</p>;
         </TooltipContent>;
       </Tooltip>;
-    </TooltipProvider>;
-  );
-}
-  );
-}
-    </TooltipProvider>);
-}

@@ -257,11 +257,6 @@ const service_pricing: ServicePricing[] = [;
           {categories.map (category => (
             <button;
               key={category}
-              on_click={() => setSelectedCategory (category)}
-              className={`px - 4 py - 2 rounded - md text - sm font - medium transition - colors ${
-                selected_category === category;
-                  ? 'bg - blue - 600 text - white';
-                  : 'text - gray - 300 hover:text - white hover:bg - zinc - 700';
               }`}
             >;
               {category}
@@ -303,11 +298,6 @@ const service_pricing: ServicePricing[] = [;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
               {service.tiers.map ((tier, tier_index) => (
                 <div;
-                  key={tier_index}
-                  className={`relative border rounded - lg p - 6 ${
-                    tier.popular;
-                      ? 'border - blue - 500 bg - blue - 500 / 10';
-                      : 'border - white / 10';
                   }`}
                 >;
                   {tier.popular && (
@@ -330,11 +320,6 @@ const service_pricing: ServicePricing[] = [;
                   </ul>;
                   <div className="mt - 6">;
                     <a;
-                      href={tier.cta_link}
-                      className={`block w - full text - center py - 3 px - 4 rounded - lg font - medium transition - colors ${
-                        tier.popular;
-                          ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
-                          : 'bg - zinc - 700 hover:bg - zinc - 600 text - white';
                       }`}
                     >;
                       {tier.cta}

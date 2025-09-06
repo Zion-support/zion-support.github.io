@@ -1,4 +1,3 @@
-  private readonly RETRY_DELAY = 1000; // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = 2
   constructor() {
     this.initializeGlobalHandlers()
@@ -33,21 +32,6 @@
         } catch (e) {
           // Ignore local_storage errors;
         }
-    const errorDiv = document.createElement('div')
-    errorDiv.style.cssText = `
-      position: fixed
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      background: rgba(0, 0, 0, 0.8)
-      color: white
-      display: flex
-      align-items: center
-      justify-content: center
-      z-index: 999999
-      font-family: system-ui, -apple-system, sans-serif
-    `
   }
   private showFatalErrorMessage (): void {
     // Create a user - friendly error message;
@@ -75,6 +59,8 @@
       font-family: system-ui, -apple-system, sans-serif,
     `,
 
+
+
     errorDiv.innerHTML = `
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
@@ -83,25 +69,6 @@
           This might be due to a poor network connection or a temporary server issue.
         </p>
         <button onclick="window.location.reload()" style="
-          background: #0070f3,
-          color: white,
-          border: none,
-          padding: 0.75rem 1.5rem,
-          border-radius: 0.5rem,
-          font-size: 1rem,
-          cursor: pointer,
-          margin-right: 1rem,
-        ">
-          Try Again
-        </button>
-        <button onclick="window.location.href='/'" style="
-          background: #666,
-          color: white,
-          border: none,
-          padding: 0.75rem 1.5rem,
-          border-radius: 0.5rem,
-          font-size: 1rem,
-          cursor: pointer,
         ">
           Go Home
         </button>
@@ -112,8 +79,6 @@
   }
   private getSessionKey(): string {
 
-    const sessionKey = this && this.getSessionKey();
-    this && this.errorStats.delete(sessionKey);
 
   }
 
@@ -249,4 +214,3 @@ export default chunkErrorHandler
 // Create and export singleton instance;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
-export default chunkErrorHandler;

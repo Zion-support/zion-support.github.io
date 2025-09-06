@@ -1,6 +1,3 @@
-import * as React from &quot;react&quot;
-import * as SelectPrimitive from &quot;@radix-ui/react-select&quot;
-import { Check, ChevronDown, ChevronUp } from 'lucide-react'
 const Select = SelectPrimitive.Root
 const SelectGroup = SelectPrimitive.Group
 const SelectValue = SelectPrimitive.Value
@@ -67,10 +64,6 @@ const SelectContent = React.forwardRef<
       </SelectPrimitive.Viewport>;
       <SelectScrollDownButton />;
     </SelectPrimitive.Content>;
-
-  React.ElementRef<typeof SelectPrimitive.Label>,;
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>;
->(({ className, ...props }, ref) => (;
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>;
 >(({ className, children, ...props }, ref) => (;
   <SelectPrimitive.Item;

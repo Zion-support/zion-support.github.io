@@ -15,6 +15,7 @@ import {;
   Users,;
 } from 'lucide-react';
 
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react';
@@ -27,10 +28,20 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
+  return (
+    <div className="space-y-6">
+      {/* Stats Overview */}
+
+
+export function PartnerDashboard() {
+  // Placeholder data - would come from API in real implementation
+  const stats = {
+    totalReferrals: 42,
+    pendingReferrals: 8,
+    completedReferrals: 34,
+    conversionRate: 18.5,
     totalRevenue: 850.00,
     pendingRevenue: 200.00
-  },
-  
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -54,15 +65,6 @@ export function PartnerDashboard() {
             </p>
           </CardContent>
         </Card>
-        <Card className='bg-zion-blue-dark border-zion-blue-light'>
-          <CardHeader className='flex flex-row items-center justify-between pb-2'>
-            <CardTitle className='text-sm font-medium'>
-              Total Earnings
-            </CardTitle>
-            <DollarSign className='h-4 w-4 text-green-500' />
-          </CardHeader>
-          <CardContent>
-            <div className='text-2xl font-bold'>${stats.totalRevenue}</div>
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        
         
         <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -112,19 +114,3 @@ export function PartnerDashboard() {
             <CardTitle>Recent Referrals</CardTitle>
             <CardDescription>Your latest partner referrals</CardDescription>
           </div>
-          </div>;
-          <Button variant='outline' size='sm'>;
-            View All;
-          </Button>;
-        </CardHeader>;
-        <CardContent>;
-            </p>;
-          </div>;
-        </CardContent>;
-      </Card>;
-    </div>;
-  );
-}
-    </div>);
-}
-;

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
@@ -38,20 +37,45 @@ interface QuickAction {;
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
         data: error
       })
+import {
+  Zap,
+  Download,
+  Trash2,
+  RefreshCw,
+  Settings,
+  Activity,
+  Package,
+  Monitor,
+} from 'lucide-react';
+interface QuickAction {
+  id: string;
+  label: string;
+  description: string;
+  icon: React.ReactNode;
+  action: () => void;
+  category: 'performance' | 'development' | 'maintenance';
+  dangerous?: boolean;
+export /**
+ * QuickActions - Function description
+ */
+function QuickActions() {
+  const { user } = use_auth ();
+  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
+  const is_allowed = process.env.NODE_ENV !== 'production' || is_admin;
+  // Check condition
+if ( {) {
+  $2
+}
+    return null;
+  }
+    } catch (error) {
+      logErrorToProduction (`Failed to execute action ${action_id}:`, {
+        data: error,
+      });
     } finally {
       setIsProcessing (null);
     }
   }
-    {
-      id: 'enable-performance-monitor'
-      label: 'Enable Performance Monitor'
-      description: 'Show real-time performance metrics'
-      icon: <Activity className='w-4 h-4' />
-      category: 'performance'
-      action: () => {
-        localStorage.setItem('performance-monitoring', 'true')
-        window.location.reload()
-      }
 import React, { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
@@ -90,17 +114,11 @@ export function QuickActions() {;
     }
   },
 
-      id: 'enable - bundle - analyzer',
       label: 'Enable Bundle Analyzer',
       description: 'Monitor bundle size and chunks',
       icon: <Package className='w - 4 h - 4' />,
       category: 'performance',
       action: () => {
-
-
-
-
-    {
       action: () => {
         // Check condition
 if ( {) {
@@ -118,65 +136,6 @@ if ( {) {
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
-        ]
-        criticalFonts.forEach(font => {
-          const link = document.createElement('link')
-          link.rel = 'preload'
-          link.as = 'font'
-          link.type = 'font/woff2'
-          link.crossOrigin = 'anonymous'
-          link.href = font
-          document.head.appendChild(link)
-        })
-        // Preload critical images
-        const criticalImages = ['/logos/zion-logo.png', '/images/hero-bg.webp']
-        criticalImages.forEach(img => {
-          const link = document.createElement('link')
-          link.rel = 'preload'
-          link.as = 'image'
-          link.href = img
-          document.head.appendChild(link)
-        })
-    {
-      id: 'download-performance-report'
-      label: 'Download Performance Report'
-      description: 'Export current performance metrics'
-      icon: <Download className='w-4 h-4' />
-      category: 'development'
-      action: () => {
-        const metrics = {
-          timestamp: new Date().toISOString()
-          performance: performance.getEntriesByType('navigation')[0]
-          resources: performance.getEntriesByType('resource').slice(0, 20)
-          memory: (performance as any).memory |{}
-          userAgent: navigator.userAgent
-          screen: {
-        })
-        const url = URL.createObjectURL(blob)
-        const a = document.createElement('a')
-        a.href = url
-        a.download = `performance-report-${Date.now()}.json`
-        document.body.appendChild(a)
-        a.click()
-        document.body.removeChild(a)
-        URL.revokeObjectURL(url)
-    {
-      id: 'test-error-boundary'
-      label: 'Test Error Boundary'
-      description: 'Trigger an error to test Sentry integration'
-      icon: <Monitor className='w-4 h-4' />
-      category: 'development'
-      dangerous: true
-      action: () => {
-    {
-      id: 'refresh-app'
-      label: 'Hard Refresh'
-      description: 'Force reload with cache bypass'
-      icon: <RefreshCw className='w-4 h-4' />
-      category: 'maintenance'
-      action: () => {
-        window.location.reload()
-
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
@@ -184,9 +143,6 @@ if ( {) {
           variant='outline'
           size='sm'
           onClick={() => setIsVisible(true)}
-          className="bg-background/80 backdrop-blur-sm"
-        >
-          <Settings className="w-4 h-4 mr-2" />
           Quick Actions
       </div>
     )
@@ -194,10 +150,6 @@ if ( {) {
             </Button>
           </div>
         </CardHeader>
-                  <Badge
-                    className={
-                      categoryColors[category as keyof typeof categoryColors]
-                    }
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>

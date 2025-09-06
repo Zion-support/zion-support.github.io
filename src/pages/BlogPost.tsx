@@ -1,64 +1,7 @@
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import { SEO } from '@/components/SEO'
-import JsonLd from '@/components/JsonLd'
-import { Button } from '@/components/ui/button'
-import ImageWithRetry from '@/components/ui/ImageWithRetry'
-import {
-  ArrowLeft
-  Calendar
-  Clock
-  ChevronLeft
-  ChevronRight
-  Share2
-  Facebook
-  Twitter
-  Linkedin
-} from 'lucide-react'
-import type { BlogPost as BlogPostType } from '@/types/blog'
-import { Separator } from '@/components/ui/separator'
-import ReactMarkdown from 'react-markdown'
-import { logErrorToProduction } from '@/utils/productionLogger'
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from '@/data/blog-posts'
-import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout'
-import { fetchWithRetry } from '@/utils/fetchWithRetry'
-export default function BlogPost() {
-  const router = useRouter()
-  const { slug } = router.query as { slug: string }
-  const [post, setPost] = useState<BlogPostType | null>(null)
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
-  const [showShareMenu, setShowShareMenu] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const timedOut = useSkeletonTimeout(20000)
-  useEffect(() => {import { useRouter } from 'next/router'
-import { SEO } from "@/components/SEO"
-import JsonLd from "@/components/JsonLd"
-import { Button } from "@/components/ui/button"
-
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import Link from 'next/link',
-import { SEO } from "@/components/SEO",
-import JsonLd from "@/components/JsonLd",
-import { Button } from "@/components/ui/button",
-import ImageWithRetry from '@/components/ui/ImageWithRetry',
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog",
-import { Separator } from "@/components/ui/separator",
-import ReactMarkdown from 'react-markdown',
-import {logErrorToProduction} from '@/utils/productionLogger',
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts",
-import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
-import { fetchWithRetry } from '@/utils/fetchWithRetry',
-  const router = useRouter()
   const { slug } = router.query as { slug: string }
   const [post, setPost] = useState<BlogPostType | null>(null)
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
@@ -193,23 +136,6 @@ export default function BlogPost() {;
   $2
 }
     return (
-      <div className='min - h-screen bg - zion - blue text - white p - 8 flex justify - center items - center'>;
-        <div className='animate - pulse'>Loading article...</div>;
-      </div>);
-  }
-  if (!post && (error |timedOut)) {
-    return (
-      <div className='min - h-screen bg - zion - blue text - white p - 8 flex flex - col justify - center items - center space - y-4'>;
-        <p > Failed to load article.</p>;
-        <Button on_click={(, ) => router.reload ()}>Retry</Button>;
-      </div>);
-  }
-  // If post is still null after loading, show not found
-  if (!post) {
-    return (
-      <div className="min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4">
-        <p>Article not found.</p>
-        <Button onClick={() => router.push('/blog')}>Back to Blog</Button>
       </div>
     )
   }
@@ -221,13 +147,6 @@ export default function BlogPost() {;
     switch (platform) {
       case 'facebook':        return `https://www.facebook.com / sharer / sharer.php?u=${url}`;
     switch (platform) {
-  const articleLd = {
-    '@context': 'https://schema.org'
-    '@type': 'BlogPosting'
-    headline: post.title
-    description: post.excerpt
-    image: post.featuredImage
-    datePublished: post.publishedDate
     author: {
       '@type': 'Person'
       name: post.author.name
@@ -308,13 +227,6 @@ export default function BlogPost() {;
   }
 
 
-  return (
-    <>
-      <SEO
-        title={post.title}
-        description={post.excerpt}
-        keywords={post.tags.join(', ')}
-        ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
 ;
   // Helper function to get share URL;
   const getShareUrl = (platform: string) => {;
@@ -336,31 +248,6 @@ export default function BlogPost() {;
     image: post.featuredImage,
     datePublished: post.publishedDate,
     author: {
-      "@type": "Person",
-      name: post.author.name}},
-  
-  return (
-    <>
-      <SEO
-  },;
-  const articleLd = {;
-    "@context": "https://schema.org",;
-    "@type": "BlogPosting",;
-    headline: post.title,;
-    description: post.excerpt,;
-    image: post.featuredImage,;
-    datePublished: post.publishedDate,;
-    author: {;
-      "@type": "Person";
-      name: post.author.name}};
-  return (;
-    <>;
-      <SEO;
-        title={post.title}
-        description={post.excerpt}
-        keywords={post.tags.join(", ")}
-        ogImage={post.featuredImage}
-        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
       />
       <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
@@ -416,9 +303,6 @@ export default function BlogPost() {;
                   key={tag} 
                   className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
                 >
-                  #{tag}
-                </span>;
-              ))}
             {/* Related articles */}
             {relatedPosts && relatedPosts.length > 0 && (;
               <div className='mt-12'>;
@@ -469,32 +353,6 @@ export default function BlogPost() {;
                       <div className="p-4">
                         <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
-            <div className="mt-12 text-center">
-              <p className="text-zion-slate-light">
-                Ready to put these ideas into action? Explore our{' '}
-                <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
-                or browse expert{' '}
-
-                <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
-              </p>
-            </div>
-            {/* Excerpt */}
-            <p className="text - xl text - gray - 300 mb - 8 leading -relaxed">;
-              {blog_post.excerpt}
-            </p>;
-            {/* Article Meta */}
-            <div className="flex flex - wrap items - center justify - between gap - 4 py - 6 border - t border - b border - slate -700 / 50">;
-              <div className="flex items - center space - x - 6">;
-                <div className="flex items - center space - x - 2">;
-                  <User className="w - 5 h - 5 text - cyan -400" />;
-                  <div>;
-                    <span className="text - white font -medium">;
-                      {blog_post.author}
-                    </span>;
-                    <span className="text - gray - 400 text - sm block">;
-                      {blog_post.author_role}
-                    </span>;
-                  </div>;
                 </div>;
                 <div className="flex items - center space - x - 2">;
                   <Calendar className="w - 5 h - 5 text - cyan -400" />;
@@ -539,123 +397,3 @@ export default function BlogPost() {;
               </div>;
             </div>;
           </div>;
-        </div>;
-      </section>;
-      {/* Author Bio */}
-              className="bg - slate - 800 / 50 p - 8 rounded - 2xl border border - slate -700 / 50">;
-              <h3 className="text - 2xl font - bold text - white mb - 4">;
-                About the Author;
-              </h3>;
-              <div className="flex items - start space - x - 4">;
-                <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - full flex items - center justify - center flex - shrink -0">;
-                  <User className="w - 8 h - 8 text - white" />;
-                </div>;
-                <div>;
-                  <h4 className="text - xl font - semibold text - white mb - 2">;
-                    {blog_post.author}
-                  </h4>;
-                  <p className="text - cyan - 400 mb - 2">{blog_post.author_role}</p>;
-                  <p className="text - gray -300">{blog_post.author_bio}</p>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Related Posts */}
-      <section className="py - 20 bg - slate -800 / 50">;
-        <div className="container mx - auto px - 4">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text - center mb - 16">;
-            <h2 className="text - 4xl font - bold text - white mb - 4">;
-              Related Articles;
-            </h2>;
-            <p className="text - xl text - gray - 300 max - w - 3xl mx -auto">;
-              Continue exploring insights and analysis on related topics;
-            </p>;
-          </motion.div>;
-          <div className="grid md:grid - cols - 3 gap - 8 max - w - 6xl mx -auto">;
-            {blog_post.related_posts.map ((post, index) => (<motion.article;
-                key={post.id}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg - slate - 700 / 50 rounded - xl border border - slate - 600 / 50 overflow - hidden hover:border - cyan - 400 / 50 transition - all duration -300 group">;
-                <div className="h - 48 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 flex items - center justify -center">;
-                  <BookOpen className="w - 16 h - 16 text - cyan -400" />;
-                </div>;
-                <div className="p -6">;
-                  <div className="flex items - center space - x - 2 mb - 3">;
-                    <span className="px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs rounded - full font -medium">;
-                      {getCategoryName (post.category) }
-                    </span>;
-                  </div>;
-                  <h3 className="text - lg font - bold text - white mb - 3 group - hover:text - cyan - 400 transition - colors duration -200">;
-                    {post.title}
-                  </h3>;
-                  <p className="text - gray - 300 mb - 4 line - clamp -3">;
-                    {post.excerpt}
-                  </p>;
-                  <div className="flex items - center justify - between text - sm text - gray -400">;
-                    <div className="flex items - center space - x - 2">;
-                      <Calendar className="w - 4 h - 4" />;
-                      <span>{format_date (post.date) }</span>;
-                    </div>;
-                    <div className="flex items - center space - x - 2">;
-                      <Clock className="w - 4 h - 4" />;
-                      <span>{post.read_time}</span>;
-                    </div>;
-                  </div>;
-                </div>;
-              </motion.article>) ) }
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className="py - 20">;
-        <div className="container mx - auto px - 4">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text - center max - w - 4xl mx -auto">;
-            <h2 className="text - 4xl font - bold text - white mb - 6">;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text - xl text - gray - 300 mb - 8">;
-              Let's discuss how our AI - powered solutions can drive innovation;
-              and growth for your organization.</p>;
-            <div className="flex flex - wrap justify - center gap - 4">;
-              <Link;
-                to="/contact";
-                className="px - 8 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration -300">;
-                Get Started Today;
-              </Link>;
-              <Link;
-                to="/services";
-                className="px - 8 py - 3 border border - cyan - 400 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 hover:text - white transition - all duration -300">;
-                Explore Our Services;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>);
-}
-export default /**
- * BlogPost - Function description
- */
-function BlogPost() {return (";
-    <div class_name = "min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950">";
-      <SEO title="BlogPost - Zion Tech Group" description="Professional BlogPost services by Zion Tech Group"  />";
-      <div className="container mx - auto px - 4 py - 20">";
-        <h1 className="text - 4xl font - bold text - white mb - 8">BlogPost</h1>";
-        <p className="text - gray - 300 text - lg">;
-          Professional BlogPost services to help your business grow.;
-        </p>;
-      </div>);
-}
-}

@@ -21,13 +21,6 @@ export const ats = {
     return mockProviderCall(connection, "update_status", { status });
   }
 }
-
-  async pushApplicant($2) {
-    return simulateAction($3);
-  },
-}
-// CRM actions
-export const crm = {
   async syncContact(
     connection: ProviderConnection
     contact: Record<string, any>
@@ -70,4 +63,3 @@ export const ats = {
     return executeProviderAction(connection, 'createCandidate', { candidate });
   },
 };
-

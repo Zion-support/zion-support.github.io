@@ -131,17 +131,8 @@ const report = {
   recommendations: [];
 };
 if (performanceScore < 80) {
-  report && report.recommendations.push('Consider optimizing build size');
-  report && report.recommendations.push('Review bundle composition');
-  report && report.recommendations.push('Implement code splitting');
-}
-module && module.exports = PerformanceMonitor;
   "timestamp": new Date().toISOString(),
   "score": performanceScore,
   "checks": performanceChecks,
   "recommendations": []};
 if (performanceScore < 80) {
-  report && report.recommendations.push('Consider optimizing build size');
-  report && report.recommendations.push('Review bundle composition');
-  report && report.recommendations.push('Implement code splitting')}
-module && module.exports = PerformanceMonitor;

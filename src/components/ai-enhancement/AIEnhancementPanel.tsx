@@ -1,12 +1,3 @@
-} from '@/components/ui/card'; import React, { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
-import { Textarea } from '@/components/ui/textarea'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
-  useAIContentEnhancer
-  AIEnhancementOptions
-} from '@/hooks/useAIContentEnhancer'
 import React, { useState } from 'react';
 import {;
   Card,;
@@ -78,28 +69,8 @@ interface AIEnhancementPanelProps {;
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
-    })
-  }
-  const handleApply = () => {
-    onApply(generatedContent)
-    if (onClose) onClose()
-  }
-  const handleCopy = () => {
-    navigator.clipboard.writeText(generatedContent)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-      [field]: e.target.value})
-  },
 
       ...options,
-
-  const handleApply = () => {
-    onApply(generatedContent),
-    if (onClose) onClose()
-  },
-
-
 
   return (
     <Card className="w-full max-w-2xl mx-auto">

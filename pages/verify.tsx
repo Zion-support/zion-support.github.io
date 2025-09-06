@@ -8,26 +8,9 @@
     setBusy(true);
     setMessage('');
     const res = await fetch('/api/kyc/start', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({
-        userId
-        role
-        fullLegalName
-        businessName
-        businessRegistrationNumber: businessReg
-      })
-    });    const data = await res.json();
-    if (data.ok) {
-      setProfile(data.profile);
-      setRequiredDocs(data.requiredDocuments);
-      setOptionalDocs(data.optionalDocuments);
-    } else {
-      setMessage(data.error |'Failed to start');
-    }
-    setBusy(false);  }
-  async function upload(kind: KycDocumentMeta['kind']) {
-    const filename = prompt(`Enter filename for ${kind}`) |'';
+
+  async function upload(): any (kind: KycDocumentMeta['kind']) {;
+    const filename = prompt(`Enter filename for ${kind}`) || '';
     if (!filename) return;
     setBusy(true);
     const res = await fetch('/api/kyc/upload', {;
@@ -65,11 +48,19 @@
         <p className='text-sm text-gray-600 mb-6'>
           Guided step-by-step KYC/AML verification with progress tracking.
         </p>
+            >;
+              <option value='client'>Client</option>;
+              <option value='talent'>Talent</option>;
+              <option value='enterprise'>Enterprise</option>;
+            </select>;
+          </div>;
+
+          )}
+
         {labels.length > 0 && (
           <div className="mb-4">
             <VerifiedBadge labels={labels} />
           </div>
-
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -99,29 +90,85 @@
                 <input className="mt-1 w-full border rounded px-3 py-2" value={businessName} onChange={(e) => setBusinessName(e.target.value)} />
               </div>
               <div>
-
-
                 <label className="block text-sm font-medium">Registration number</label>
                 <input className="mt-1 w-full border rounded px-3 py-2" value={businessReg} onChange={(e) => setBusinessReg(e.target.value)} />
               </div>
             </>
+          )}
+        </div>
+
+        <div className="mb-6">
+          <button disabled={busy} onClick={start} className="rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50">Start/Update</button>
+        </div>
+
         {profile && (
           <div className="space-y-6">
             <div>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm text-gray-600">Progress</span>
-                          {hasIt ? 'Uploaded' : 'Missing'}
-                        </div>;
-                      </div>;
-                      <button
-                        disabled={busy}
-                        onClick={() => upload(k)}
-                        className='text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50';
+              </div>
+            </div>
+            <section>
+              <h2 className='font-semibold mb-2'>Required documents</h2>
+              <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
+                {requiredDocs.map(k => {
+                  const hasIt = (profile.documents |[]).some(
+                    d => d.kind === k
+                  );
+                    >
+              <h2 className="font-semibold mb-2">Required documents</h2>
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
+                {requiredDocs.map((k) => {
+                  const hasIt = (profile.documents || []).some((d) => d.kind === k);
+                  return (
+                    <div key={k} className="flex items-center justify-between border rounded p-3">
+                      <div>
+                        <div className="text-sm font-medium">{k}</div>
+                        <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Missing'}</div>
+                      </div>
+                      <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled: opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
+                    </div>
+                  )
+                })}
+              </div>
+            </section>
+            {optionalDocs.length > 0 && (
+              <section>
+                <h2 className='font-semibold mb-2'>Optional documents</h2>
+                <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
+                  {optionalDocs.map(k => {
+                    const hasIt = (profile.documents |[]).some(
+                      d => d.kind === k
+                    );
+
                       >;
-                        {hasIt ? 'Replace' : 'Upload'}
-                      </button>;
-                    </div>;
-                  );                })}
+                        <div>;
+                          <div className='text-sm font-medium'>{k}</div>;
+                          <div className='text-xs text-gray-500'>;
+
+                            {hasIt ? 'Uploaded' : 'Optional'}
+                          </div>;
+                        </div>;
+                        <button
+                          disabled={busy}
+                          onClick={() => upload(k)}
+                          className='text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50';
+                        >;
+                          {hasIt ? 'Replace' : 'Upload'}
+                        </button>;
+                      </div>;
+                    );                  })}
+                </div>;
+              </section>;
+            )}
+
+
+                <h2 className="font-semibold mb-2">Optional documents</h2>
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
+                  {optionalDocs.map((k) => {
+                    const hasIt = (profile.documents || []).some((d) => d.kind === k),
+                    return (
+                      <div key={k} className="flex items-center justify-between border rounded p-3">
                         <div>
                           <div className="text-sm font-medium">{k}</div>
                           <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>
@@ -205,43 +252,65 @@
                     const hasIt = (profile.documents || []).some((d) => d.kind === k);
                     return (
                       <div key={k} className="flex items-center justify-between border rounded p-3">
-                      <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
-                    </div>
-                  )
-                })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </div>
-            </section>
-            {optionalDocs.length > 0 && (
-              <section>
-                <h2 className='font-semibold mb-2'>Optional documents</h2>
-                <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
-                  {optionalDocs.map(k => {
-                    const hasIt = (profile.documents |[]).some(
-                      d => d.kind === k
-                    );
-                      >
-
-                <h2 className="font-semibold mb-2">Optional documents</h2>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
-                  {optionalDocs.map((k) => {
-                    const hasIt = (profile.documents || []).some((d) => d.kind === k),
-                    return (
-                      <div key={k} className="flex items-center justify-between border rounded p-3">
                         <div>
                           <div className="text-sm font-medium">{k}</div>
                           <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>
                         </div>
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
-                    );                  })}
-                </div>
-              </section>
-            )}
-            <div>
+                />              </div>;
+            </div>;
+            <section>;
+              <h2 className='font - semibold mb - 2'>Required documents</h2>;
+              <div className='grid grid - cols - 1 md: grid - cols - 2 gap - 2'>;
+                {required_docs.map (key => {
+                  const has_it = (profile.documents || []).some (
+                    d => d.kind === k);
+;
+                    >;
+                      <div>;
+                        <div className='text - sm font - medium'>{k}</div>;
+                        <div className='text - xs text - gray - 500'>;
+                          {has_it ? 'Uploaded' : 'Missing'}
+                        </div>;
+                      </div>;
+                      <button;
+                        disabled={busy}
+                        on_click={() => upload (k)}
+                        className='text - sm px - 3 py - 1 rounded bg - gray - 900 text - white disabled:opacity - 50';
+                      >;
+                        {has_it ? 'Replace' : 'Upload'}
+                      </button>;
+                    </div>);                })}
+              </div>;
+            </section>;
+            {optional_docs.length > 0 && (
+              <section>;
+                <h2 className='font - semibold mb - 2'>Optional documents</h2>;
+                <div className='grid grid - cols - 1 md: grid - cols - 2 gap - 2'>;
+                  {optional_docs.map (key => {
+                    const has_it = (profile.documents || []).some (
+                      d => d.kind === k);
+;
+                      >;
+                        <div>;
+                          <div className='text - sm font - medium'>{k}</div>;
+                          <div className='text - xs text - gray - 500'>;
+                            {has_it ? 'Uploaded' : 'Optional'}
+                          </div>;
+                        </div>;
+                        <button;
+                          disabled={busy}
+                          on_click={() => upload (k)}
+                          className='text - sm px - 3 py - 1 rounded bg - gray - 900 text - white disabled:opacity - 50';
+                        >;
+                          {has_it ? 'Replace' : 'Upload'}
+                        </button>;
+                      </div>);                  })}
+                </div>;
+              </section>)}
+            <div>;
+              <button;
                 disabled={
                   busy ||;
                   profile.status === 'submitted' ||;

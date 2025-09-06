@@ -1,4 +1,28 @@
 
+export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
+;
+export type JobCategory =;
+  | 'development';
+  | 'design';
+  | 'marketing';
+  | 'content';
+  | 'data';
+  | 'business';
+  | 'other';
+;
+export interface JobBudget {
+export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
+
+export type JobCategory = 
+  | 'development' 
+  | 'design' 
+  | 'marketing' 
+  | 'content' 
+  | 'data' 
+  | 'business' ;
+  | 'other';
+
+export interface JobBudget {;
   min: number;
   max: number
   currency: string
@@ -12,8 +36,10 @@
   budget: JobBudget;
   deadline: string;
   status: JobStatus;
+  created_at: string
+  updated_at: string
 }
-
+export interface JobFormData {
 
 export interface JobFormData {;
   title: string;
@@ -47,7 +73,6 @@ export interface JobFormData {;
   file_url?: string;
   resume_id?: string;
 
-export interface JobApplication {;
   id: string;
   job_id: string;
   talent_id: string;
@@ -179,3 +204,5 @@ export interface JobApplication {;
       score: number,;
       matching: string[],;
 
+}
+;

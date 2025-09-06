@@ -47,7 +47,4 @@ if ( {) {
     return res.status (200).json ({ abi, tx });
   } catch (e: any) {
     return res.status (400).json ({ error: e?.message || 'Failed to prepare deployment tx' });
-
-
   }
-

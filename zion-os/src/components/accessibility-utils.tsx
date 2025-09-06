@@ -49,6 +49,8 @@
       </div>;
     </div>);
 }
+  return (;
+    <div className="border border-[var(--border)] rounded-lg">;
       <button;
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
         on_click={() => setIsExpanded (!is_expanded)}
@@ -70,6 +72,8 @@
       </div>;
     </div>);
 }
+  return (;
+    <div className="relative inline-block">;
       <div;
         onMouseEnter={() => setIsVisible (true)}
         onMouseLeave={() => setIsVisible (false)}

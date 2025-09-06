@@ -1,9 +1,3 @@
-import React, { useState } from "react",
-import { useForm, useFieldArray } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod";
-import { useRouter  } from 'next/router';
-import { logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form
   FormControl
@@ -117,51 +111,6 @@ import { supabase } from "@/integrations/supabase/client",
     resolver: zodResolver(talentSchema)
     defaultValues: {
       basicInfo: {
-        fullName: user?.displayName |''
-        professionalTitle: ''
-        profilePicture: undefined
-      }
-      experience: {
-        bio: ''
-        keyProjects: [{ title: '', description: '' }]
-        yearsOfExperience: ''
-      }
-      skills: {
-        skillsList: ''
-        toolsUsed: ''
-      }
-      availability: {
-        availabilityType: ''
-        timezone: ''
-        hourlyRate: ''
-        portfolioLinks: [{ url: '' }]
-        cv: undefined
-      }
-    }
-    mode: 'onChange'
-  })
-  const {
-    fields: projectFields
-    append: appendProject
-    remove: removeProject
-  } = useFieldArray({
-    name: 'experience.keyProjects'
-    control: form.control
-  })
-  const {
-    fields: linkFields
-    append: appendLink
-    remove: removeLink
-  } = useFieldArray({
-    name: 'availability.portfolioLinks'
-    control: form.control
-  })
-  // Handle profile picture upload
-  const handleProfilePictureUpload = async (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const file = e.target.files?.[0]
-    if (!file) return
         availabilityType: "",
         timezone: "",
         hourlyRate: "",
@@ -188,29 +137,6 @@ import { supabase } from "@/integrations/supabase/client",
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
-    }
-    // Get the public URL
-    const {
-      data: { publicUrl }
-    } = supabase.storage.from('resumes').getPublicUrl(fileName)
-    return publicUrl
-  }
-
-  // Rest of the file remains unchanged...
-  // [Previous implementation continues...]
-  return null
-  //Step 1: Basic Info basicInfo: z.object ({
-  ) .optional () .default ([])
-cv: z.any () .optional ()
-})
-})
-type TalentFormValues = z.infer<typeof talentSchema>
-const form = useForm<TalentFormValues> ({
-  resolver: zodResolver (talentSchema), defaultValues: {
-  basicInfo: {
-  cv: undefined
-}= supabase.storage.from ('resumes') .getPublicUrl (file_name);
-return public_url;
 }
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 }'}

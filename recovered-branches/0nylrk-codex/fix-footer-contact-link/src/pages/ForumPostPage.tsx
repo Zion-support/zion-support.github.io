@@ -14,6 +14,25 @@ import { formatDistanceToNow, format } from "date-fns",
 import { ForumPost, ForumReply } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
 import ReplyCard from "@/components/community/ReplyCard",
+// Mock data for a forum post
+const mockPost: ForumPost = {
+  id: "1",
+  title: "Best practices for AI model fine-tuning",
+  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
+  authorId: "user1",
+  authorName: "Alex Johnson",
+  authorAvatar: "https://i.pravatar.cc/150?img=3",
+  authorRole: "Verified Talent",
+  categoryId: "ai-tools",
+  tags: ["machine-learning", "fine-tuning", "gpt"],
+  createdAt: "2025-04-01T12:00:00Z",
+  updatedAt: "2025-04-01T12:00:00Z",
+  upvotes: 48,
+  downvotes: 2,
+  replyCount: 4,
+  isAnswered: true,
+  isFeatured: true
+},
 
 const mockPost: ForumPost = {
   id: "1"
@@ -86,28 +105,6 @@ const mockReplies: ForumReply[] = [
   const { toast } = useToast();
   const [post, setPost] = useState(mockPost);
   const [replies, setReplies] = useState(mockReplies);
-  // For this demo, we'll assume the post is found
-  if (!post) {
-
-  // Check if this is the user's own post;
-  const isAuthor = user?.id === post?.authorId;
-
-  // Check if user is admin/mod;
-  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
-
-  // For this demo, we'll assume the post is found;
-  if (!post) {;
-    return (
-      <AppLayout>;
-        <div className="container py-8">;
-          <h1>Post not found</h1>;
-          <Button asChild className="mt-4">;
-            <Link to="/community">Back to Community</Link>;
-          </Button>;
-        </div>;
-      </AppLayout>;
-    );
-  }
   const handleDownvote = () => {
     if (!user) {
       toast({
@@ -152,6 +149,28 @@ const mockReplies: ForumReply[] = [
         title: "Permission denied"
         description: "Only the original poster or moderators can mark answers"
         variant: "destructive"
+      });
+      return;
+    }
+
+
+    // Update the replies;
+    const updatedReplies = replies && replies.map(reply => ({;
+
+      ...reply;
+      isAnswer: reply && reply.id === replyId;
+    }));
+
+      ...reply,
+      isAnswer: reply.id === replyId
+    }));
+    setReplies(updatedReplies);
+    setPost({ ...post, isAnswered: true })
+    })),
+    
+    setReplies(updatedReplies),
+    setPost({ ...post, isAnswered: true }),
+    
     toast({
       title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})
@@ -313,12 +332,6 @@ const mockReplies: ForumReply[] = [
                     </Button>;
                   </>;
                 )}
-                  Report;
-                </Button>;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
           {!post.isLocked && (
             <div className="mb-8">
               <h3 className="text-lg font-medium mb-4">Your Response</h3>
@@ -330,19 +343,6 @@ const mockReplies: ForumReply[] = [
                     Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.
                   </AlertDescription>
                 </Alert>
-
-          {!post && post.isLocked && (;
-            <div className="mb-8">;
-              <h3 className="text-lg font-medium mb-4">Your Response</h3>;
-              {user ? (;
-                <ReplyForm onSubmit={handleSubmitReply} />;
-                <Alert>;
-                  <AlertDescription>;
-                    Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.;
-                  </AlertDescription>;
-              )}
-            </div>;
-          )}
           {post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
@@ -355,23 +355,6 @@ const mockReplies: ForumReply[] = [
             {replies
               .filter(reply => !reply.isAnswer)
               .map(reply => (
-
-          {post && post.isLocked && (;
-            <Alert className="mb-8">;
-              <AlertDescription className="flex items-center">;
-                <Lock className="h-4 w-4 mr-2" />;
-                This thread has been locked and is no longer open for responses.;
-              </AlertDescription>;
-            </Alert>;
-          )}
-
-          <div className="space-y-6">;
-            {replies;
-              .filter(reply => !reply && reply.isAnswer);
-              .map(reply => (;
-                <ReplyCard
-                  key={reply && reply.id}
-                  reply={reply}
         <div className="mt - 8">;
           <h2 className="text - xl font - bold mb - 6">Responses ({post.reply_count})</h2>;
           {post.is_answered && (

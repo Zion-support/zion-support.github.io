@@ -15,6 +15,8 @@ export function MessageTab({
   proposalLink
   setProposalLink
 }: MessageTabProps) {
+      <div>
+        <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
         <Input
           id="proposalLink"
           type="url"

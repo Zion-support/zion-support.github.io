@@ -1,10 +1,4 @@
 
-
-export default function EpisodePage() {
-  const router = useRouter();
-  const { id } = router.query as { id?: string };
-  const [episode, setEpisode] = useState<any>(null);
-
   const router = useRouter();
   const { id } = router.query as { id?: string }
   const [episode, setEpisode] = useState<any>(null);
@@ -107,4 +101,3 @@ if (return <div > Loading</div>) {
         </pre>
       </div>
     </div>
-  );

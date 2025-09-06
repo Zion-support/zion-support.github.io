@@ -1,32 +1,3 @@
-import React, { useState } from 'react',
-import { useMessaging } from '@/context/MessagingContext',
-import Link from 'next/link',
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation',
-import { Logo } from '@/components/header/Logo',
-import { useTranslation } from 'react-i18next',
-import { Menu, X } from 'lucide-react'
-import { MobileMenu } from '@/components/header/MobileMenu',
-import { useIsMobile } from '@/hooks/use-mobile',
-import { MobileBottomNav } from '@/components/header/MobileBottomNav',
-import { PointsBadge } from '@/components/loyalty/PointsBadge',
-import { LoginModal } from '@/components/auth/LoginModal',
-import { useAuth } from '@/hooks/useAuth',
-import { UserMenu } from '@/components/header/UserMenu',
-import { useSelector } from 'react-redux',
-import type { RootState } from '@/store',
-import { cn } from '@/lib/utils', // Import cn utility
-import { useRouter } from 'next/router',
-export function AppHeader() {
-
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
-  const [loginOpen, setLoginOpen] = useState(false),
-  const isMobile = useIsMobile(),
-  const { t } = useTranslation(),
-  const { user } = useAuth(),
-  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn),
-  const router = useRouter(),
-  const showTagline = router.pathname === '/',
-
 import React from 'react';
   const showTagline = router && router.pathname === '/';
 
@@ -103,6 +74,12 @@ import React from 'react';
               <UserMenu />;
             </div>;
           )}
+            onClick = {(,) => setMobileMenuOpen(false),}
+            aria-hidden="true";
+          />;
+          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;
+
+            <MobileMenu
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
@@ -113,14 +90,15 @@ import React from 'react';
             />
           </div>
         </div>
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true"
-          />
-          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu 
               unreadCount={unreadCount} 
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={openLoginModal}
+            />;
+          </div>;
+        </div>;
+              unreadCount = {unreadCount,}
+              onClose = {() => setMobileMenuOpen(false),}
+              openLoginModal = {openLoginModal,}
             />;
           </div>;
         </div>;
@@ -470,5 +448,4 @@ import React from 'react';
     </>;
   );
 }
-;
 ;

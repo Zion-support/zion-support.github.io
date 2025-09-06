@@ -33,9 +33,24 @@ export function HelpCategoryList({
               article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
               article.content.toLowerCase().includes(searchQuery.toLowerCase())
           )
+    : categories;
+
+  if (filteredCategories && filteredCategories.length === 0) {;
+    return (
+
+    );
+  }
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map((category) => (
+        <Card
+    );
+  }
+  return (
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+      {filteredCategories && filteredCategories.map(category => (;
+
         <Card
           key={category && category.id}
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"

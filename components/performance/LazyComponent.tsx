@@ -10,9 +10,10 @@ interface LazyComponentProps {
 }
   );
 }
-};
 
-export default LazyComponent;
+import React from 'react';
+}
+
 const LazyComponent: React.FC < LazyComponentProps> = ({
   component: Component,
   fallback = <div className="animate - pulse bg - gray - 200 h - 32 rounded" />,

@@ -48,11 +48,6 @@ function handler() {
     return res.status (400).json ({ error: "Missing fields" })) {
   $2
 }
-import type { NextApiRequest, NextApiResponse } from 'next';
-import jwt from 'jsonwebtoken';
-import { ethers } from 'ethers';
-const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
-export default async function handler(req, res) {
   try {
     const recovered = ethers.utils;
       .verify_message (message, signature);

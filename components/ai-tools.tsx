@@ -28,6 +28,12 @@
         'Code generation & debugging'
         'Professional writing assistance'
       ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
+        'Advanced reasoning & analysis',
+        'Web browsing & real-time info',
+        'Plugin ecosystem access',
+        'Code generation & debugging',
+        'Professional writing assistance',
+      ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
       ];
       pricing: '$20/month'
       marketPrice: '$20/month'
@@ -178,6 +184,24 @@
         'Code generation',
         'Creative writing',
         'Research assistance',
+                  <h3 className="text-lg font-semibold text-white mb-3">{stat.title}</h3>
+                  <div className="text-2xl font-bold text-cursor-blue mb-2">{stat.value}</div>
+                  <div className="text-sm text-green-400 mb-3">{stat.growth}</div>
+                  <p className="text-sm text-gray-400">{stat.description}</p>
+                </div>
+              </Card>
+
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Tools Grid */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
               Curated AI Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -271,12 +295,130 @@
                   </div>
                 </div>
               </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* AI Categories Overview */}
-
-
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
               AI Tool Categories
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Understanding the different types of AI tools helps you build a
+              comprehensive toolkit for your needs.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {aiCategories.map((category, index) => (
+          </div>;
+        </div>;
+      </section>;
+      {/* AI Categories Overview */}
+      <section className='section-padding bg-gradient-cursor-accent'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+                      </span>;
+                    </div>;
+                    <p className="text - gray - 400 leading - relaxed mb - 6">;
+                      {tool.description}
+                    </p>;
+                    <div className="mb - 6">;
+                      <div className="flex items - center justify - between mb - 3">;
+                        <span className="text - sm text - gray - 500">Service Price:</span>;
+                        <span className="text - lg font - semibold text - cursor - blue">{tool.pricing}</span>;
+                      </div>;
+                      <div className="flex items - center justify - between mb - 3">;
+                        <span className="text - sm text - gray - 500">Market Average:</span>;
+                        <span className="text - sm text - gray - 400">{tool.market_price}</span>;
+                      </div>;
+                    </div>;
+                    <ul className="space - y-2 mb - 6">;
+                      {tool.features.map ((feature, feature_index) => (
+                        <li key={feature_index} className="flex items - center text - gray - 300">;
+                          <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 3 flex - shrink - 0" />;
+                          {feature}
+                        </li>))}
+                    </ul>;
+                    <div className='flex items - center justify - between'>;
+                      <Button;
+                        href={tool.website}
+                        variant='primary';
+                        size='sm';
+                        className='bg - cursor - blue hover:bg - cursor - blue - dark';
+                      >;
+                        Try Tool;
+                        <ExternalLink className='w - 4 h - 4 ml - 2' />;
+                      </Button>;
+                      <div className='text - right'>;
+                        <div className='text - xs text - gray - 500'>Direct Link</div>;
+                        <div className='text - xs text - cursor - blue font - mono'>;
+                          {tool.website}
+                        </div>                      </div>                      <Button;
+                        href={tool.website}
+                        variant="primary";
+                        size="sm";
+                        className="bg - cursor - blue hover:bg - cursor - blue - dark";
+                      >;
+                        Try Tool;
+                        <ExternalLink className="w - 4 h - 4 ml - 2" />;
+                      </Button>;
+                      <div className="text - right">;
+                        <div className="text - xs text - gray - 500">Direct Link</div>;
+                        <div className="text - xs text - cursor - blue font - mono">{tool.website}</div>;
+                      </div>;
+                    </div>;
+                  </div>;
+                </div>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* AI Categories Overview */}
+      <section className='section - padding bg - gradient - cursor - accent'>;
+        <div className='container - cursor'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+            </h2>;
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+              Understanding the different types of AI tools helps you build a;
+              comprehensive toolkit for your needs.;
+            </p>;
+          </div>;
+
+      <section className="section-padding bg-gradient-cursor-accent">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+              AI Tool Categories
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Understanding the different types of AI tools helps you build a comprehensive toolkit for your needs.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {aiCategories.map((category, index) => (
+              <Card
+                key={index}
+                className="card-hover border-gradient-blue"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="p-6">
+          </div>
+        </div>
+      </section>
+      {/* AI Categories Overview */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of AI tools helps you build a
@@ -297,6 +439,26 @@
                   <div className='flex items-center justify-between text-sm'>;
                     <span className='text-gray-500'>;
                       Tools Available:{' '}
+                  <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
+                  <p className="text-gray-400 mb-4">{category.description}</p>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-500">Tools Available: <span className="text-white">{category.tools}</span></span>
+                    <span className="text-cursor-blue font-semibold">{category.avgPrice}</span>
+                  </div>
+                </div>
+              </Card>
+
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Implementation Guide */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
               Getting Started with AI Tools
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>

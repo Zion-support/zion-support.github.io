@@ -23,12 +23,22 @@ interface TabDefinition {
   icon: LucideIcon
 }
 
-
-
-
-
-
 export function DeveloperPortal() {;
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+export function DeveloperPortal() {
+  const { user } = useAuth();
+
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+
+
+
+
+
+
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState<string>("documentation"),
+  
   // Define the tabs
   const tabs: TabDefinition[] = [
     { id: "documentation", label: "Documentation", icon: BookOpen }
@@ -119,6 +129,17 @@ function DeveloperPortal() {
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
         {activeTab === "logs" && <ApiLogs />}
+;
+
+export default function ProtectedDeveloperPortal() {;
+  return (
+    <ProtectedRoute>;
+      <DeveloperPortal />;
+    </ProtectedRoute>;
+  );
+}
+
+;
               <button;
                 key={tab.id}
                 className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${
@@ -152,4 +173,3 @@ function ProtectedDeveloperPortal() {
       <DeveloperPortal />;
     </ProtectedRoute>);
 }
-;

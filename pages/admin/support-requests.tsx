@@ -1,4 +1,7 @@
 
+import { GetServerSideProps } from 'next';
+import { useState } from 'react';
+import { readJson } from '../../utils/fsDb';
 
 import { GetServerSideProps } from 'next',;
 import { useState } from 'react',;
@@ -11,15 +14,6 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
   const [requests, setRequests] = useState(initialRequests)
   async function resolve(id: string) {
     await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) })
-import { GetServerSideProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
-export const getServerSideProps: GetServerSideProps = async () => {;
-  const requests = readJson<any[]>('support/requests.json', []),;
-  return { props: { initialRequests: requests }   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -50,7 +44,6 @@ export default function SupportRequests(req, res) {
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Support Requests</h1>
       <div className="grid gap-3">
-
         {requests.length === 0 && <div className="opacity-70">No requests found.</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -85,4 +78,3 @@ export default function SupportRequests(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}

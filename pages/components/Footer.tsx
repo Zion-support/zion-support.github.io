@@ -1,3 +1,63 @@
+} from "lucide-react";
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+import React from 'react';
+import Link from 'next/link';
+ursor/integrate-build-improve-and-re-verify-8f7d
+import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  ArrowRight,
+  Brain,
+  Network,
+  Cloud,
+  Shield,
+  BarChart3,
+  Users,
+  Settings,
+  FileText,
+  MessageSquare,
+  Calendar,
+  ShoppingCart,
+  BookOpen,
+  Building,
+  Heart,
+  DollarSign,
+  Target,
+  Zap,
+  Award,
+  Star,
+  CheckCircle,
+  Clock,
+  TrendingUp,
+  Eye,
+  Lock,
+  Code,
+  Home,
+  Camera,
+  Music,
+  Gamepad2,
+  Truck,
+  Calculator,
+  CreditCard,
+  Paintbrush,
+  HardDrive,
+  Activity,
+  Lightbulb,
+  Wrench,
+  PieChart,
+  ClipboardList,
+  Layers;
+} from 'lucide-react';
+ursor/integrate-build-improve-and-re-verify-8f7d
+
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -105,7 +165,6 @@ const microSaasCategories = [
   { title: 'Development', icon: Code, count: 14 }
 ];
 
-
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -154,56 +213,6 @@ const microSaasCategories = [
     { name: "LinkedIn", href: "#", icon: Linkedin }
     { name: "Instagram", href: "#", icon: Instagram }
     { name: "GitHub", href: "#", icon: Github }
-  const footerLinks = {;
-    services: [;
-      { name: "AI Services", href: "/ai-services" },;
-      { name: "IT Services", href: "/it-services" },;
-      { name: "Micro SaaS", href: "/micro-saas" },;
-      { name: "Cloud Solutions", href: "/cloud-solutions" },;
-      { name: "Cybersecurity", href: "/cybersecurity" },;
-      { name: "Database Solutions", href: "/database-solutions" },;
-    ],;
-    solutions: [;
-      { name: "Enterprise Solutions", href: "/enterprise-solutions" },;
-      { name: "Startup Solutions", href: "/startup-solutions" },;
-      { name: "Industries", href: "/industries" },;
-      { name: "Custom Development", href: "/custom-development" },;
-      { name: "Digital Transformation", href: "/digital-transformation" },;
-      { name: "Consulting", href: "/consulting" },;
-    ],;
-    company: [;
-      { name: "About Us", href: "/about" },;
-      { name: "Our Team", href: "/team" },;
-      { name: "Careers", href: "/careers" },;
-      { name: "Case Studies", href: "/case-studies" },;
-      { name: "News", href: "/news" },;
-      { name: "Partners", href: "/partners" },;
-    ],;
-    resources: [;
-      { name: "Blog", href: "/blog" },;
-      { name: "Documentation", href: "/docs" },;
-      { name: "API Documentation", href: "/docs/api" },;
-      { name: "Tutorials", href: "/tutorials" },;
-      { name: "White Papers", href: "/white-papers" },;
-      { name: "Webinars", href: "/webinars" },;
-    ],;
-    legal: [;
-      { name: "Privacy Policy", href: "/privacy" },;
-      { name: "Terms of Service", href: "/terms" },;
-      { name: "Cookie Policy", href: "/cookies" },;
-      { name: "Security", href: "/security" },;
-      { name: "Compliance", href: "/compliance" },;
-      { name: "Accessibility", href: "/accessibility" },;
-    ],;
-  };
-
-  const socialLinks = [;
-    { name: "Facebook", href: "#", icon: Facebook },;
-    { name: "Twitter", href: "#", icon: Twitter },;
-    { name: "LinkedIn", href: "#", icon: Linkedin },;
-    { name: "Instagram", href: "#", icon: Instagram },;
-    { name: "GitHub", href: "#", icon: Github },;
-  ];
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -366,20 +375,6 @@ const microSaasCategories = [
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
-            
-            <div className="flex items-center space-x-6">
-              <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Sitemap
-              </Link>
-              <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Accessibility
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Cookie Policy
-              </Link>
-            </div>
-
-            
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
             

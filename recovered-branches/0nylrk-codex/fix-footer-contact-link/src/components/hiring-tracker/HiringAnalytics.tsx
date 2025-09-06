@@ -1,10 +1,4 @@
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
-interface HiringAnalyticsProps {
-  job_id?: string;
-}
-export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
 import {useState, useEffect} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -69,13 +63,6 @@ import { useState, useEffect } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',;
-interface HiringAnalyticsProps {
-  job_id?: string;
-}
-import {useState, useEffect} from "react";
-import {useJobApplications} from "@/hooks/useJobApplications";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
 interface HiringAnalyticsProps {;
   jobId?: string;
 }
@@ -116,19 +103,6 @@ interface HiringAnalyticsProps {;
       </Card>
     )
   }
-  ;
-  const COLORS = ['#0088FE#00C49F', '#FFBB28#FF8042', '#8884d8'],;
-  ;
-  return (;
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-      {/* Status Distribution */}
-      <Card>;
-        <CardHeader>;
-          <CardTitle>Application Status Distribution</CardTitle>;
-        </CardHeader>;
-        <CardContent className="h-64">;
-          <ResponsiveContainer width="100%" height="100%">;
-            <PieChart>;
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
 
   

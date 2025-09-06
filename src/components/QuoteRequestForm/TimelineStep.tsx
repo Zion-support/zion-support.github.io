@@ -1,23 +1,3 @@
-import { CalendarIcon } from 'lucide-react'
-<div
-
-import {
-  Popover
-  PopoverContent
-  PopoverTrigger
-} from '@/components/ui/popover'
-import { cn } from '@/lib/utils'
-import { QuoteFormData } from '@/types/quotes'
-interface TimelineStepProps {
-  formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void
-
-
-        <h3 className='text-xl font-semibold text-white mb-4'>
-          When do you need this?
-        </h3>
-        <div className='space-y-4'>
-          <div className='flex items-center space-x-4'>
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.timeline === 'fixed'
                   ? 'bg-zion-purple/20 border-zion-purple'
@@ -28,7 +8,6 @@ interface TimelineStepProps {
                   ? 'bg-zion-purple/20 border-zion-purple'
                   : 'bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50'
               }`}
-              onClick={() => updateFormData({ timeline: 'flexible' })}
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
                   Start Date
@@ -63,21 +42,6 @@ interface TimelineStepProps {
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
-                      variant='outline'
-                      className={cn(
-                        'w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark'
-                        !formData.endDate && 'text-zion-slate-light'
-                      )}                    >
-                      <CalendarIcon className='mr-2 h-4 w-4' />
-                      {formData.endDate ? (
-                        format(formData.endDate, 'PPP')
-                      ) : (
-                        <span>Pick a date</span>
-
-                      selected={formData.endDate}
-                      onSelect={date => updateFormData({ endDate: date })}
-                      initialFocus
-
                       className="p-3 pointer-events-auto"
 import { format } from "date-fns",;
 import { Calendar } from "@/components/ui/calendar",;

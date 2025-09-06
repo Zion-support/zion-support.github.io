@@ -1,20 +1,19 @@
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
-interface AnalyticsContainerProps {
-  children: React.ReactNode
-}
 
 
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
+  const { isAuthenticated, isLoading, user } = useAuth();
+  // Check if user is admin (using either role or userType)
+
+  const isAdmin = user?.role === "admin" |user?.userType === "admin";
 
   const { isAuthenticated, isLoading, user } = useAuth(),
   
-
   // Check if user is admin (using either role or userType)
   const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
   
-
   // If still loading auth status, show loading
   if (isLoading) {
     return (

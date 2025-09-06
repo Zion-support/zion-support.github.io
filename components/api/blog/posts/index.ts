@@ -85,8 +85,6 @@ if ( {) {
       tags: body.tags || [],
       topics: body.topics || [],
       seo: {
-        meta_title: body.seo?.meta_title || body.title!,
-        meta_description: body.seo?.meta_description || '',
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
       },
       body: body.body || '',

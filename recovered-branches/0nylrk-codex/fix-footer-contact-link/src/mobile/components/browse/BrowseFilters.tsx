@@ -7,10 +7,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { X, Filter } from "lucide-react",
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
-interface BrowseFiltersProps {
-  type: "jobs" | "talents";
-}
 
+import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
   type: "jobs" | "talents";
 }
@@ -25,6 +23,8 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
   
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
+  },
+  
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">

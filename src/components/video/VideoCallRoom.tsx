@@ -3,49 +3,9 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
-
-import './video-call.css';interface Participant {
-  id: string,
-  name: string,
-  avatar?: string
-  isMuted?: boolean
-  isVideoEnabled?: boolean
-  isScreenSharing?: boolean
-  isHost?: boolean
-}
-
-interface VideoCallRoomProps {
-  roomId: string,
-  participants?: Participant[]
-  onLeave?: () => void
-  onToggleMute?: (isMuted: boolean) => void,
-  onToggleVideo?: (isEnabled: boolean) => void,
-  onToggleScreenShare?: (isSharing: boolean) => void,  className?: string
-import React, { useState } from 'react',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 
 
-  roomId: string
-  participants?: Participant[]
-  onLeave?: () => void
-  onToggleMute?: (isMuted: boolean) => void
-  onToggleVideo?: (isEnabled: boolean) => void
-  onToggleScreenShare?: (isSharing: boolean) => void,  className?: string
-}
-export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
-  roomId
-  participants = []
-    const secs = seconds % 60
-};  onLeave
-  onToggleMute
-  onToggleVideo
-  onToggleScreenShare
-  className
 },) => {
   const [isMuted, setIsMuted] = useState(false)
   const [isVideoEnabled, setIsVideoEnabled] = useState(true)
@@ -110,9 +70,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
         <div className="flex items-center space-x-2">
           <CardTitle className="text-white">Video Call</CardTitle>
           <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">
-            Room: {roomId}
-          </Badge>;
-        </div>;
         <div className="flex items-center space-x-2">;
           <Badge variant="secondary" className="bg-zion-blue-light text-white">;
             {formatDuration(callDuration)}

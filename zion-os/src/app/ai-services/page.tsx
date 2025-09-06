@@ -11,11 +11,6 @@ function AIServicesPage() {
   return (
     <div className="min - h-screen">;
       {/* Hero Section */}
-      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto text - center">;
-          <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
-            AI & <span className="gradient - text">Machine Learning</span>;
-          </h1>;
           </p>;
         </div>;
       </section>;

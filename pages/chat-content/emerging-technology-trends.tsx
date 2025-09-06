@@ -19,6 +19,9 @@ const EmergingTechnologyTrends: NextPage = () => {
     </div>;
   ),;
 };
+export default EmergingTechnologyTrends;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > EmergingTechnologyTrends</h1>;
@@ -29,3 +32,5 @@ import Head from 'next / head';
 ;
 export default EmergingTechnologyTrends;
 ;
+
+

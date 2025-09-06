@@ -111,16 +111,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 try {,"}),"})
   analyzeWebsite(),"}),"})
 } catch (error) {,"}),"})
-  console && console.error(,"}),"})
-  ' Error analyzing "website": ', error && error.message),"}),"})
-  process ;
-  const srcDir = path && path.join(__dirname, ';..', ';src');
-  const pagesDir = path && path.join(srcDir, ';pages');
-  const componentsDir = path && path.join(srcDir, ';components');
-  // Read App && App.tsx to extract all routes;
-  const appTsxPath = path && path.join(srcDir, ';App && App.tsx');
-  const appContent = fs && fs.readFileSync(appTsxPath, ';utf8');
-    // Extract route paths from App && App.tsx;
   const routeRegex = /path='([^']+)"/g;
   const routes = [];
   let match;
@@ -182,6 +172,3 @@ try {,"}),"})
 // Run the analysis;
 try {
   analyzeWebsite()} catch (error) {
-  console && console.error("
-  ' Error analyzing "website": ', error && error.message);
-  process && process.exit(1)}

@@ -1,14 +1,3 @@
-import { useRouter } from 'next/router'; // Changed from useParams, useNavigate
-import { Header } from '@/components/Header';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import {
-  Calendar
-  Clock
-  DollarSign
-  Tag
-  Users
   Clock,
   DollarSign,
   Tag,;
@@ -82,15 +71,6 @@ interface Job {;
 
   deadline?: string;
 export default function JobDetails() {
-  const router = useRouter(), // Init router
-  const { jobId: rawJobId } = router.query, // Get jobId from query
-  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined,
-  const { job, isLoading, error } = useJobDetails(jobId) as { job: Job | undefined, isLoading: boolean, error: any },
-  const { user, isAuthenticated } = useAuth(),
-  // navigate is now router
-  const { isWhitelabel, brandName } = useWhitelabel(),
-  
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
   const formatBudget = (budget: any) => {
   if (isLoading) {
@@ -113,12 +93,6 @@ export default function JobDetails() {
       </>;
     );
   }
-  const handleApply = () => {
-    if (!isAuthenticated) {
-      toast.error('Please log in to apply for this job');
-      router.push(
-        `/login?redirect=${encodeURIComponent(`/jobs/${jobId |''}`)}`
-      ); // Added null check for jobId
       return;
     }
     if (
@@ -130,14 +104,6 @@ export default function JobDetails() {
       return;
     }
     setIsApplyModalOpen(true);
-  }
-  const handleApplySuccess = async (appliedJobId: string) => {
-    toast.success('Application submitted successfully!');
-    setIsApplyModalOpen(false);
-  }
-  const isOwnJob = user?.id === job.client_id;
-
-  const isOwnJob = user?.id === job.client_id,
 
   return (
     <>
@@ -147,41 +113,6 @@ export default function JobDetails() {
       />
       <Header />
 
-            <Card>
-              <CardHeader>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <CardTitle className='text-2xl mb-2'>{job.title}</CardTitle>
-                    <div className='flex items-center text-muted-foreground'>
-                      <Calendar className='mr-2 h-4 w-4' />
-                      <span>
-                        Posted{' '}
-                        {formatDistanceToNow(new Date(job.created_at), {
-                          addSuffix: true
-                        })}
-                      </span>
-                    </div>
-                  </div>
-                  <Badge>{job.category}</Badge>
-                </div>
-              </CardHeader>
-                <div>
-                  <h3 className='font-semibold text-lg mb-3'>
-                    Required Skills
-                  </h3>
-                    ))}
-
-
-          
-          <div>
-              <CardContent className='pt-6 space-y-4'>
-                <div className='flex items-start'>
-                  <DollarSign className='mt-1 h-5 w-5 text-muted-foreground' />
-                  <div className='ml-3'>
-                    <p className='text-sm text-muted-foreground'>Budget</p>
-                    <p className='font-medium'>{formatBudget(job.budget)}</p>
-                  </div>
-                </div>
 
                 
                 <div className="flex items-start">
@@ -225,12 +156,6 @@ export default function JobDetails() {
       {job && (;
         <ApplyToJobModal
           job={{
-            id: job.id
-            title: job.title
-            description: job.description
-            company_name: job.company_name ?? 'Company'
-            budget: formatBudget(job.budget)
-            client_id: job.client_id
           }}
 
           isOpen={isApplyModalOpen}
@@ -247,12 +172,3 @@ export default function JobDetails() {
 }'";
 }
 }
-            client_id: job.client_id}}
-          isOpen={isApplyModalOpen}
-          onClose={() => setIsApplyModalOpen(false)}
-        />;
-      )}
-    </>;
-  );
-}
-;

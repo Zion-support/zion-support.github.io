@@ -30,16 +30,6 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-import { Check, Trash2, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { formatDistanceToNow } from 'date-fns';
-import { cn } from '@/lib/utils';
-
-interface NotificationItemProps {;
-  notification: Notification,;
-  onMarkAsRead: (id: string,) => Promise<void>,;
-  onDismiss: (id: string,) => Promise<void>;
 }
 
 export const NotificationItem: React.FC<NotificationItemProps> = ({;
@@ -56,7 +46,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     if (notification && notification.action_url) {;
       router && router.push(notification && notification.action_url), // Changed to router && router.push;
     }
-  }
   return (<div
       className = {cn(
         'p-3 border-b border-zion-blue-light relative group'
@@ -97,8 +86,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
-                onClick={(e,) => {
-                  e.stopPropagation()
                   onMarkAsRead(notification.id)
                 }}
                 aria-label="Mark as read"
@@ -118,8 +105,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
-                onClick={(e,) => {
-                  e.stopPropagation()
                   onDismiss(notification.id)
                 }}
                 aria-label="Dismiss notification"
@@ -147,28 +132,3 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
 },
 ;
 
-const getNotificationIcon = (type: NotificationType) => {
-  switch (type) {
-    case 'success':
-      return <span className="text-green-500">✅</span>;
-    case 'error':
-      return <span className="text-red-500">❌</span>;
-    case 'warning':
-      return <span className="text-yellow-500">⚠️</span>;
-    case 'info':
-      return <span className="text-blue-500">ℹ️</span>;
-    case 'message':
-      return <span className="text-blue-500">💬</span>;
-    case 'project':
-      return <span className="text-orange-500">📦</span>;
-    default:
-      return <span className="text-gray-500">📣</span>;
-  }
-  TooltipTrigger} from '@/components/ui/tooltip',
-import { useRouter } from 'next/router',
-import { Notification, NotificationType } from '@/context/notifications',
-
-            )}
-          </div>
-        </div>
-      </div>

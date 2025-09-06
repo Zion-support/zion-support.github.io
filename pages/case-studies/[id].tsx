@@ -34,6 +34,22 @@ import { useRouter } from 'next/router';
           <li>Real-time production optimization</li>
           <li>Automated quality control systems</li>
           <li>Intelligent scheduling and resource allocation</li>
+        <h2>Background</h2>
+        <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
+        Their infrastructure was not scaling efficiently with their business growth.</p>
+        <h2>Challenge</h2>
+        <p>The platform needed to optimize their cloud infrastructure for cost, performance, and reliability.
+        They required a solution that could automatically adapt to traffic patterns and prevent outages.</p>
+        <h2>Solution</h2>
+        <p>We designed and implemented a comprehensive cloud optimization system: </p>
+
+
+        <ul>
+          <li>Auto-scaling infrastructure with intelligent resource allocation</li>
+          <li>Self-healing systems with automatic failure recovery</li>
+          <li>Cost optimization algorithms</li>
+          <li>Performance monitoring and alerting</li>
+        </ul>
         <h2>Results</h2>
         <p>The optimization delivered outstanding results:</p>
         <ul>
@@ -45,8 +61,6 @@ import { useRouter } from 'next/router';
         The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
       `
     }
-
-
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -174,6 +188,8 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  ],
+  const caseStudy = caseStudies.find(study => study.id === id),
   if (!caseStudy) {
     return (
       <>
@@ -197,9 +213,6 @@ export default function CaseStudyPage(req, res) {
         </div>
       </>
     )
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
   return (
     <>
@@ -219,8 +232,6 @@ export default function CaseStudyPage(req, res) {
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-
-
                   {caseStudy.industry  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -397,6 +408,37 @@ export default function CaseStudyPage(req, res) {
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>;
                   <div className="space-y-3">;
                     <div>;
+                      <h3 className="font - semibold text - cyan - 400 text - lg mb - 2">Challenge</h3>;
+                      <p className="text - white / 80">{case_study.challenge}</p>;
+                    </div>;
+                    <div>;
+                      <h3 className="font - semibold text - fuchsia - 400 text - lg mb - 2">Solution</h3>;
+                      <p className="text - white / 80">{case_study.solution}</p>;
+                    </div>;
+                  </div>;
+                </div>;
+              </div>;
+              <div className="space - y-6">;
+                <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 20">;
+                  <h3 className="font - semibold text - green - 400 text - lg mb - 4">Key Results</h3>;
+                  <ul className="space - y-3">;
+                    {case_study.results.map ((result, index) => (
+                      <li key={index} className="text - white / 80 flex items - center gap - 3">;
+                        <div className="w - 2 h - 2 bg - green - 400 rounded - full"></div>;
+                        {result}
+                      </li>))}
+                  </ul>;
+                </div>;
+                <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 20">;
+                  <h3 className="font - semibold text - blue - 400 text - lg mb - 4">Project Details</h3>;
+                  <div className="space - y-3">;
+                    <div>;
+                      <span className="text - white / 60 text - sm">Duration:</span>;
+                      <p className="text - white font - medium">{case_study.duration}</p>;
+                    </div>;
+                    <div>;
+                      <span className="text - white / 60 text - sm">Industry:</span>;
+                      <p className="text - white font - medium">{case_study.industry}</p>;
                     </div>;
                   </div>;
                 </div>;
@@ -408,3 +450,5 @@ export default function CaseStudyPage(req, res) {
             </div>;
           </div>;
         </main>;
+
+

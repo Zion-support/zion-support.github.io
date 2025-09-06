@@ -36,9 +36,6 @@
     }
   }
 ];
-  }
-}
-
 export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
   {
     id: "2028-practical-business-solution", name: "2028 Practical Business Solution Platform",
@@ -54,6 +51,11 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
     link: "/services/2028-practical-business-solution", category: "Practical Business Solutions 2028",
     realImplementation: true,
     contactInfo: {
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

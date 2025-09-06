@@ -3,7 +3,6 @@ interface ActionButtonsProps {
   flag_id: string;
   status: string;
 
-
 interface ActionButtonsProps {
   flagId: string,
   status: string,
@@ -206,3 +205,4 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
     </div>);
 }
 ;
+};

@@ -7,13 +7,19 @@ interface SuggestedTalentsProps {
   jobId: string,
   jobTitle?: string
 }
-  const fetchSuggestedTalents = async () => {;
-    setIsLoading(true);
-    try {;
-      const { data, error } = await supabase;
-        .from("suggested_talents");
-        .select(;
-          `;
+
+export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
+  const [talents, setTalents] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isProcessing, setIsProcessing] = useState(false);
+
+  const fetchSuggestedTalents = async () => {
+    setIsLoading(true),
+    try {
+      const { data, error } = await supabase
+        .from("suggested_talents")
+        .select(
+          `
           *;
           talent_profile: talent_id(;
 import { useEffect, useState  } from './react';
@@ -54,9 +60,6 @@ function SuggestedTalents() {
             key_projects;
             skills;
             location;
-    } catch (error) {
-      console.error("Error fetching suggested talents:", error);
-      toast({
   const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile
     // // // console.log("View talent profile:", talentId),
@@ -187,8 +190,6 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
   useEffect(() => {
     if (jobId) {
 
-
-  return (
 
   return (
     <Card className="border-zion-blue-light bg-zion-blue">

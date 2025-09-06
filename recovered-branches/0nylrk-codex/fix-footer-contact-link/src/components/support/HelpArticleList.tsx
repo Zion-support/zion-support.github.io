@@ -6,10 +6,6 @@ import {
   CardTitle
 } from "@/components/ui/card";
 
-import { HELP_CATEGORIES } from "./help-content";
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { HELP_CATEGORIES } from "./help-content",
 interface HelpArticleListProps {
   categoryId: string;
   onArticleSelect: (articleId: string) => void;
@@ -27,6 +23,8 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
   if (!category) {;
     return <div>Category not found</div>;
+  }
+  
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
@@ -132,3 +130,7 @@ function format_date (date: string): string {
     </div>;
   ),;
 }
+
+  })
+  })
+

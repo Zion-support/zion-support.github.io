@@ -1,3 +1,5 @@
+
+
   Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin
 } from 'lucide-react'
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
@@ -11,6 +13,43 @@ import {
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations',;
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services',;
 const contactInfo = {
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
+  website: 'https://ziontechgroup.com'
+}
+export default function Pricing2033Page() {
+
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+
+  // Enhanced service categories with pricing
+  const serviceCategories = [
+import React, { useState } from 'react',
+import Head from 'next / head',
+import { motion } from 'framer-motion',
+import {
+  Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin;
+} from 'lucide-react',
+import { cuttingEdge2033Services } from '../data / 2033 - cutting - edge - innovations',
+import { innovativeITServices2033 } from '../data / 2033 - innovative - it - services',
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com';
+},
+export default /**
+ * Pricing2033Page - Function description
+ */
+function Pricing2033Page() {
+  const [billing_cycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+  const [selected_plan, setSelectedPlan] = useState < string | null>(null),
+  // Enhanced service categories with pricing;
+  const service_categories = [;
+
     {
       name: 'Revolutionary AI Services'
       description: 'AI consciousness evolution and emotional intelligence'
@@ -291,6 +330,7 @@ export default function Pricing2033Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  ],
   return (
     <>
       <Head>
@@ -364,15 +404,6 @@ export default function Pricing2033Page(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <motion.div
-                  key={tier.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`relative ${
-                    tier.popular ? 'scale - 105' : '';
-                  }`}
-                >;
-                  {tier.popular && (
                   <div className={`relative bg-gray-900/50 border border-purple-500/30 rounded-2xl p-8 h-full backdrop-blur-sm ${
                     tier.popular ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25' : ''
                   }`}>
@@ -392,7 +423,6 @@ export default function Pricing2033Page(req, res) {
                           <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                           <span className="text-gray-300">{feature}</span>
                         </li>
-
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -446,7 +476,6 @@ export default function Pricing2033Page(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {serviceCategories.map((category, index) => (
                 <motion.div
-
                   key={category.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -482,11 +511,7 @@ export default function Pricing2033Page(req, res) {
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{service}</span>
                       </li>
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                    ))}
                   </ul>
                   <a
                     href="/services" className="inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium">
@@ -519,7 +544,6 @@ export default function Pricing2033Page(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {popularServices.map((service, index) => (
                 <motion.div
-
                   key={service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -541,15 +565,6 @@ export default function Pricing2033Page(req, res) {
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                       <div className="inline-flex items-center px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
-                  key={service.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }} className="bg - gray - 900 / 50 border border - purple - 500 / 30 rounded - 2xl p - 6 backdrop - blur - sm hover:border - purple - 500 / 50 transition - all duration - 300">;
-                  <div className="flex items - start justify - between mb - 4">;
-                    <div className="flex - 1">;
-                      <h3 className="text - xl font - bold text - white mb - 2">{service.name}</h3>;
-                      <p className="text - gray - 400 text - sm mb - 3">{service.description}</p>;
-                      <div className="inline - flex items - center px - 3 py - 1 bg - purple - 500 / 20 text - purple - 300 text - xs rounded - full">;
                         {service.category}
                         {service.category  } catch (error) {
     console.error("Error:", error);
@@ -569,11 +584,7 @@ export default function Pricing2033Page(req, res) {
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{feature}</span>
                       </li>
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                    ))}
                   </ul>
                   <div className="flex space-x-3">
                     <a
@@ -586,7 +597,6 @@ export default function Pricing2033Page(req, res) {
                     </a>
                   </div>
                 </motion.div>
-
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -608,7 +618,6 @@ export default function Pricing2033Page(req, res) {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join the future of technology with our revolutionary AI, quantum computing, and cutting-edge solutions.
                 Get in touch with our experts to discuss your transformation journey and pricing options.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -647,3 +656,5 @@ export default function Pricing2033Page(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+

@@ -5,6 +5,16 @@ import {supabase} from '@/integrations/supabase/client';
 import {toast} from 'sonner';
 export interface MilestoneInput {;
   scope: string;
+  start_date: string;
+  end_date: string | null,
+  project_type: string;
+
+}
+  title: string;
+  description: string;
+
+      setIsGenerating(true),
+
   const [isGenerating, setIsGenerating] = useState(false);
 
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);

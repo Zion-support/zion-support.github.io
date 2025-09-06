@@ -1,9 +1,6 @@
-import SEO from '../components/SEO';
-import Link from 'next/link';
-export default function RAGEvaluationLabPage() {
 
   return (
-    <>
+    <>;
       <SEO
         title='RAG Evaluation Lab'
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
@@ -47,3 +44,5 @@ export default function RAGEvaluationLabPage() {
 		</>
 	)
 }
+
+

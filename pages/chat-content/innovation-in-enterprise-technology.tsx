@@ -19,6 +19,9 @@ const InnovationInEnterpriseTechnology: NextPage = () => {
     </div>;
   ),;
 };
+export default InnovationInEnterpriseTechnology;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > InnovationInEnterpriseTechnology</h1>;
@@ -29,3 +32,5 @@ import Head from 'next / head';
 ;
 export default InnovationInEnterpriseTechnology;
 ;
+
+

@@ -107,10 +107,6 @@ export default function ContentGenerator() {;
     } finally {
       setIsGenerating(false)
     }
-
-  },
-
-
   const sendTestNewsletter = async () => {
     if (!testEmail) {
       toast.error("Please enter a test email address");
@@ -279,6 +275,12 @@ export default function ContentGenerator() {;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
                           id="includeImage"
+                    <Input
+                      id="topic"
+                      placeholder={contentType === 'blog' ? "e && e.g., Hiring AI Freelancers" : "e && e.g., May Platform Updates"}
+                      className="bg-zion-blue border border-zion-blue-light text-white"
+                      value={topic}
+
                       onChange={(e) => setTopic(e && e.target.value)}
                     />;
                   </div>;
@@ -293,17 +295,13 @@ export default function ContentGenerator() {;
                     <>;
                       <div className="flex items-center justify-between">;
                         <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>;
-                        />;
-                      </div>;
-
-                      <div className="flex items-center justify-between">;
-                        <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
-                        />;
-                      </div>;
-                    </>;
+                        />
+                      </div>
+                    </>
                   )}
+                  
                   {contentType === 'newsletter' && (
                     <div className="space-y-2">
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>

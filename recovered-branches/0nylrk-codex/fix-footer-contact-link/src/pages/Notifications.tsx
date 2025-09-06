@@ -1,4 +1,7 @@
 
+
+
+
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -50,15 +53,6 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     default:
       return <Bell className={cn(className, "text-gray-500")} />
   }
-      return <Badge className="bg-blue-500">Message</Badge>;
-    case 'quote_request':;
-      return <Badge className="bg-purple-500">Quote Request</Badge>;
-    case 'booking_confirmation':;
-      return <Badge className="bg-green-500">Booking</Badge>;
-    case 'hire_request':;
-      return <Badge className="bg-zion-purple">Hire Request</Badge>;
-    case 'onboarding':;
-      return <Badge className="bg-zion-cyan">Onboarding</Badge>;
   const handleAction = () => {;
 
     if (!notification.read) {;
@@ -67,6 +61,9 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     if (notification.action_url) {
       navigate(notification.action_url)
     }
+  },
+
+
   },
   };
   },

@@ -60,6 +60,7 @@ import CoachWidget from '../../components/learn/CoachWidget';
     });
     const data = await resp && resp.json();
     setProgress(data && data.progress);  }
+
   function onModuleQuizComplete(): any (score: number) {;
     // For demo, simply mark as completed when quiz attempted;
     if (currentLessonId) markLessonComplete(currentLessonId);  }
@@ -75,38 +76,13 @@ import CoachWidget from '../../components/learn/CoachWidget';
                   >                    {l && l.title}
                   </button>;
                 </li>;
-                    <Quiz
-                      questions={currentLesson && currentLesson.quiz.questions}
-                      onComplete={onModuleQuizComplete}
-                    />;
-                  </div>;
-                ) : (;
-                  <button
-                    className='mt-3 px-4 py-2 bg-green-600 text-white rounded'
-                    onClick={() => markLessonComplete(currentLesson && currentLesson.id)}
-                  >;
-                    Mark Complete;
-                  </button>;
-                )}
-              </div>;
-            ) : (;
-              <div className='text-sm text-gray-500'>Select a lesson</div>;
-            )}
-                <Quiz
-                  questions={course && course.finalQuiz.questions}
-                  onComplete={onFinalQuizComplete}
-                />;
-                {finalPassed && (;
-                  <div className='mt-3 text-green-700'>;
-                    Passed! You can download your certificate below.;
-                  </div>                )}
-              </div>;
-            ) : null}
-          >;
-            Enable Boost;
-          </button>;
-        </div>;
-      </div>;
+import { useEffect, useMemo, useState } from 'react';
+import { useRouter } from 'next/router';
+
+import ProgressBar from '../../components/learn/ProgressBar';
+import Quiz from '../../components/learn/Quiz';
+import CertificatePreview from '../../components/learn/CertificatePreview';
+import CoachWidget from '../../components/learn/CoachWidget';
 export default function CourseView(req, res) {
   try {
   const router = useRouter();
@@ -190,6 +166,32 @@ export default function CourseView(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+            </ul>;
+          </aside>;
+
+          <section className='lg:col-span-3 space-y-4'>;
+            {currentLesson ? (;
+              <div className='border rounded p-4'>;
+                <div className='font-medium'>{currentLesson && currentLesson.title}</div>;
+                <div className='mt-2 text-sm whitespace-pre-line'>;
+                  {currentLesson && currentLesson.content}
+                </div>;
+                {currentLesson && currentLesson.quiz?.questions?.length ? (;
+                  <div className='mt-4'>;
+
+                    <Quiz
+                      questions={currentLesson && currentLesson.quiz.questions}
+                      onComplete={onModuleQuizComplete}
+                    />;
+                  </div>;
+                ) : (;
+                  <button
+                    className='mt-3 px-4 py-2 bg-green-600 text-white rounded'
+                    onClick={() => markLessonComplete(currentLesson && currentLesson.id)}
+                  >;
+                    Mark Complete;
                   </button>;
                 </li>;
               ))  } catch (error) {
@@ -228,3 +230,5 @@ export default function CourseView(req, res) {
         </div>
       </div>
     </div>
+
+

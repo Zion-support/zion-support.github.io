@@ -21,7 +21,6 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
         {selectedCountry.country}
       </h4>
       <p className="text-2xl font-bold text-zion-cyan mb-6">
-
 import { MapPin } from "lucide-react",;
 import { PaymentButton } from "@/components/transactions/PaymentButton",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
@@ -73,7 +72,6 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6"
         redirectUrl="/it-onsite-services?success=true"
         onPaymentInitiated={handlePaymentInitiated}
-}
 export /**
  * PaymentSection - Function description
  */

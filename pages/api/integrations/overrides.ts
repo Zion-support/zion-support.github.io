@@ -1,3 +1,6 @@
+
+  if (req && req.method === "GET") {
+
     const state = readState();
     return res && res.status(200).json({ overrides: state && state.overrides });
   }
@@ -59,9 +62,3 @@ if (state.overrides[idx] = entry) {
 
 
   }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}

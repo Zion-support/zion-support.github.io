@@ -1,60 +1,3 @@
-        ...cat
-import { GradientHeading } from "./GradientHeading"
-import Link from "next/link"
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
-import { cn } from "@/lib/utils"
-import { useTranslation } from "react-i18next"
-// This is the type definition copied from Categories.tsx for consistency.
-// Ideally, this would be in a shared types file.
-interface CategoryType {
-  id: string
-  name: string
-  description?: string
-
-import { GradientHeading } from "./GradientHeading",
-import Link from "next/link",
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
-import { cn } from "@/lib/utils",
-import { useTranslation } from "react-i18next",
-// This is the type definition copied from Categories.tsx for consistency.
-// Ideally, this would be in a shared types file.
-interface CategoryType {
-  id: string,
-  name: string,
-  iconName?: string, // Example field if categories have icons
-  itemCount?: number, // Example field for number of items in a category
-  // Add a 'link' property if your API provides it, or construct it.
-  link?: string
- * CategoriesSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-    link: "/ai - services"
-    color: "from - purple - 500 to - indigo - 600",
-}
-  {
-    title: "Micro SAAS"
-    description: "Cloud - based software solutions for modern businesses"
-    link: "/micro - saas"
-    color: "from - cyan - 500 to - blue - 600",
-}
-  {
-    title: "IT Services"
-    description: "Infrastructure, security, and technical consulting"
-    link: "/all - services"
-    color: "from - amber - 500 to - orange - 600",
-}
-  {
-    title: "Digital Transformation"
-    description: "Business modernization and digital strategy"
-    link: "/all - services"
-    color: "from - emerald - 500 to - green - 600",
-}
-]
-const specialServices = [{
-    title: "IT Onsite Services"
-    link: "/it - onsite - services"
 }
   {
     title: "Comprehensive Services"
@@ -98,11 +41,6 @@ const getDefaultCategories = (t: any,) => [
 // Helper to get icon component from name
 const getIcon = (iconName?: string) => {
   switch (iconName) {
-  categories?: CategoryType[], // Accept categories as a prop;
-}
-  const { t } = useTranslation(),
-  const defaultCategories = getDefaultCategories(t),
-  
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
     ? fetchedCategories.map(cat => ({
@@ -128,11 +66,13 @@ const getIcon = (iconName?: string) => {
           </p>
           <p className="text-zion-slate-light text-md">
             {t('home.no_categories_support')}
-          </p>
-        </div>
-      </section>
-    )
   }
+
+
+
+
+  }
+
   return (
 ;
 export function CategoriesSection({;
@@ -206,33 +146,6 @@ export function CategoriesSection({;
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
             {t('home.view_all_categories')}
-          </Link>
-        </div>
-      </div>
-    </section>
-  )
-  switch (iconName) {
-}
-const getSpecialServices = (t: any) => [ {
-  title: t ('categories.it onsite services')
-link: "/it-onsite-services"
-}]
-interface CategoriesSectionProps {
-  showTitle?: boolean
-className?: string
-style?: React.CSSProperties
-categories?: CategoryType[], //Accept categories as a prop
-}export function CategoriesSection ({
-  showTitle = true
-className
-style
-categories: fetchedCategories, //Rename prop for clarity
-}: CategoriesSectionProps) {
-  const {
-  t
-}= useTranslation ()
-const defaultCategories = getDefaultCategories (t)
-//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({
   id: cat.id;"
 title: cat.name,  //Map name to title description: cat.description |"No description available."
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
@@ -455,6 +368,4 @@ icon: getIcon (cat.iconName) ;
 }</Link> </div> </div> </section>) ;
 }'"
   );
-}
-;
 }

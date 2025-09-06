@@ -1,124 +1,9 @@
-import { useState, useEffect } from "react";
-import { useRouter  } from 'next/router';
-import { GradientHeading } from "@/components/GradientHeading",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-import {
-
-  Select
-  SelectValue
-  SelectTrigger
-  SelectContent
-  SelectItem
-} from '@/components/ui/select'
-import { Checkbox } from '@/components/ui/checkbox'
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
-import { Slider } from '@/components/ui/slider'
-import { ProductListing, ListingView } from '@/types/listings'
-
-import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
-import { toast } from "@/hooks/use-toast";
-import { captureException } from "@/utils/sentry";
-interface PriceRange {
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { GradientHeading } from "@/components/GradientHeading",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-import {
-  Select,
-  SelectValue,
-  SelectTrigger,
-  SelectContent,
-  SelectItem} from "@/components/ui/select",
-import { Checkbox } from "@/components/ui/checkbox",
-import Skeleton from "react-loading-skeleton",
-import "react-loading-skeleton/dist/skeleton.css",
-import { Slider } from "@/components/ui/slider",
-import { ProductListing, ListingView } from "@/types/listings",
-import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { captureException } from "@/utils/sentry",
-interface PriceRange {
-  min: number,
-  max: number
-import { useState, useEffect } from "react",;
-import { useRouter } from 'next/router',;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { ProductListingCard } from "@/components/ProductListingCard",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
-import {;
-  Select,;
-  SelectValue,;
-  SelectTrigger,;
-  SelectContent,;
-  SelectItem} from "@/components/ui/select",;
-import { Checkbox } from "@/components/ui/checkbox",;
-import Skeleton from "react-loading-skeleton",;
-import "react-loading-skeleton/dist/skeleton.css",;
-import { Slider } from "@/components/ui/slider",;
-import { ProductListing, ListingView } from "@/types/listings",;
-import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react';
-import { toast } from "@/hooks/use-toast",;
-import { captureException } from "@/utils/sentry",;
-interface PriceRange {;
-  min: number,;
-  max: number;
-}
-;
-interface DynamicListingPageProps {;
-  title: string,;
-  description: string,;
-  categorySlug: string,;
-  listings: ProductListing[],;
-  categoryFilters: { label: string, value: string }[],;
-  initialPrice?: PriceRange,;
-  /**;
-   * Base path for listing detail pages. Defaults to `/marketplace/listing`.;
-   */;
-  detailBasePath?: string;
-}
-
-  min: number
-max: number
-}interface DynamicListingPageProps {
-  title: string
-description: string
-categorySlug: string
-listings: ProductListing[]
-categoryFilters: {
-  label: string, value: string
-}[]
-initialPrice?: PriceRange
-}const toggleCategory = (category: string) => {
-  setSelectedCategories (prev => prev.includes (category) ? prev.filter (c => c !== category) : [...prev, category] min: 0
-max: 10000
-})
-export function DynamicListingPage({
   title,
   description,
   categorySlug,
   listings: allListings,
   categoryFilters,
   initialPrice = { min: 0, max: 10000 },
-}: DynamicListingPageProps) {
-  const router = useRouter()
-  const [searchQuery, setSearchQuery] = useState('')
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([])
-  const toggleCategory = (category: string) => {    setSelectedCategories(prev =>
-  detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {
-  const router = useRouter(),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]),
-  const toggleCategory = (category: string) => {
-    setSelectedCategories(prev =>
       prev.includes(category)
         ? prev.filter(c => c !== category)
         : [...prev, category]
@@ -126,188 +11,6 @@ export function DynamicListingPage({
   // Swap icons to match action
     <List className='h-4 w-4' />
   ) : (
-    <LayoutGrid className='h-4 w-4' />
-  )
-  const [isLoading, setIsLoading] = useState(false)
-  const [priceRange, setPriceRange] = useState<PriceRange>({
-    min: 0
-    max: 10000
-  })
-  const [selectedRating, setSelectedRating] = useState<number | null>(null)
-  const [selectedBrand, setSelectedBrand] = useState('all')
-  const [specQuery, setSpecQuery] = useState('')
-  const [selectedAvailability, setSelectedAvailability] = useState('all')
-  const [sortOption, setSortOption] = useState('newest')
-  const brandOptions = Array.from(
-    new Set(allListings.map(l => l.brand).filter(Boolean))
-  )
-  const availabilityOptions = Array.from(
-    new Set(allListings.map(l => l.availability).filter(Boolean))
-  )
-  useEffect(() => {
-    const listingsWithPrice = allListings.filter(l => l.price !== null)
-    if (listingsWithPrice.length > 0) {
-      const max = Math.max(...listingsWithPrice.map(l => l.price |0))
-      setPriceRange({ min: 0, max })
-      setCurrentPriceFilter([0, max]) }
-  }, [allListings])
-  const [currentPriceFilter, setCurrentPriceFilter] = useState<
-    [number, number]
-  >([0, initialPrice.max])
-  const handleSliderChange = (values: number[]) => {
-    const [min, max] = values.map(Number)
-    setCurrentPriceFilter([min, max])
-import { useState, useEffect } from 'react';
-import { use_router } from 'next / router';
-import { GradientHeading } from '@/components / GradientHeading';
-import { ProductListingCard } from '@/components / ProductListingCard';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input'; import { use_router } from 'next / router';
-import { GradientHeading  } from '@/components / GradientHeading';
-import { ProductListingCard  } from '@/components / ProductListingCard';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-import { log_info, logErrorToProduction } from '@/utils / production_logger';
-import {
-  Select,
-  SelectValue,
-  SelectTrigger,
-  SelectContent,
-  SelectItem,
-} from '@/components / ui / select';
-import { Checkbox } from '@/components / ui / checkbox';
-import Skeleton from 'react - loading - skeleton';
-import 'react - loading - skeleton / dist / skeleton.css';
-import { Slider } from '@/components / ui / slider';
-import { ProductListing, ListingView } from '@/types / listings';
-import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react';
-import { toast } from '@/hooks / use - toast';
-import { capture_exception } from '@/utils / sentry';
-interface PriceRange {
-  min: number;
-max: number;
-}interface DynamicListingPageProps {
-  title: string;
-description: string;
-category_slug: string;
-listings: ProductListing[];
-category_filters: {
-  label: string, value: string;
-}[];
-initial_price?: PriceRange;
-}const toggle_category = (category: string) =>: any {
-  setSelectedCategories (prev => prev.includes (category) ? prev.filter (c => c !== category) : [...prev, category] min: 0;
-max: 10000;
-});
-export /**
- * DynamicListingPage - Function description
- */
-function DynamicListingPage() {
-  const router = use_router ();
-  const [search_query, setSearchQuery] = useState ('');
-  const [selected_categories, setSelectedCategories] = useState < string[]>([]);
-  const toggle_category = (category: string) =>: any {    setSelectedCategories (prev =>;
-      prev.includes (category);
-        ? prev.filter (c => c !== category);
-        : [...prev, category]);
-  }
-  const clear_categories = () =>: any setSelectedCategories ([]);
-  const [view, set_view] = useState < ListingView>('grid');
-  const is_grid = view === 'grid';
-  // Swap icons to match action;
-  const ToggleViewIcon = is_grid ? (
-    <List className='h - 4 w - 4' />) : (
-    <LayoutGrid className='h - 4 w - 4' />);
-  const [is_loading, setIsLoading] = useState (false);
-  const [price_range, setPriceRange] = useState < PriceRange>({
-    min: 0,
-    max: 10000,
-  });
-  const [selected_rating, setSelectedRating] = useState < number | null>(null);
-  const [selected_brand, setSelectedBrand] = useState ('all');
-  const [spec_query, setSpecQuery] = useState ('');
-  const [selected_availability, setSelectedAvailability] = useState ('all');
-  const [sort_option, setSortOption] = useState ('newest');
-  const brand_options = Array.from (
-    new Set (all_listings.map (l => l.brand).filter (Boolean)));
-  const availability_options = Array.from (
-    new Set (all_listings.map (l => l.availability).filter (Boolean)));
-  useEffect (() => {
-    const listingsWithPrice = all_listings.filter (l => l.price !== null);
-    // Check condition
-if ( {) {
-  $2
-}
-      const max = Math.max (...listingsWithPrice.map (l => l.price || 0));
-      setPriceRange ({ min: 0, max });
-      setCurrentPriceFilter ([0, max]) }
-  }, [all_listings]);
-  const [currentPriceFilter, setCurrentPriceFilter] = useState<;
-    [number, number];
-  >([0, initial_price.max]);
-  const handleSliderChange = (values: number[]) =>: any {
-    const [min, max] = values.map (Number);
-    if (|| isNaN (max)) return) {
-  $2
-}
-    setCurrentPriceFilter ([min, max]);
-  }
-  let filtered_listings: ProductListing[] = [];
-  try {
-    filteredListings = allListings.filter(listing => {      const matchesSearch =
-        !searchQuery |
-        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
-        (listing.tags &&
-          listing.tags.some((tag: string) =>
-            tag.toLowerCase().includes(searchQuery.toLowerCase())
-          ))
-      const matchesBrand =
-        selectedBrand === 'all' |
-        (listing.brand && listing.brand === selectedBrand)
-    filteredListings = allListings.filter(listing => {      const matchesSearch = null;
-    filteredListings = allListings.filter(listing => {      const matchesSearch = null;
-    <LayoutGrid className="h-4 w-4" />
-  ),
-  const [isLoading, setIsLoading] = useState(false),
-  const [priceRange, setPriceRange] = useState<PriceRange>({
-    min: 0,
-    max: 10000}),
-
-  const [selectedRating, setSelectedRating] = useState<number | null>(null),
-  const [selectedBrand, setSelectedBrand] = useState("all"),
-  const [specQuery, setSpecQuery] = useState(""),
-  const [selectedAvailability, setSelectedAvailability] = useState("all"),
-  const [sortOption, setSortOption] = useState("newest"),
-
-  const brandOptions = Array.from(
-    new Set(allListings.map((l) => l.brand).filter(Boolean))),
-  const availabilityOptions = Array.from(
-    new Set(allListings.map((l) => l.availability).filter(Boolean))),
-
-  useEffect(() => {
-    const listingsWithPrice = allListings.filter((l) => l.price !== null),
-    if (listingsWithPrice.length > 0) {
-      const max = Math.max(...listingsWithPrice.map((l) => l.price || 0)),
-      setPriceRange({ min: 0, max }),
-      setCurrentPriceFilter([0, max])
-    }
-  }, [allListings]),
-
-  const [currentPriceFilter, setCurrentPriceFilter] = useState<
-    [number, number]
-  >([0, initialPrice.max]),
-
-  const handleSliderChange = (values: number[]) => {
-    const [min, max] = values.map(Number),
-    if (min == null || max == null || isNaN(min) || isNaN(max)) return,
-    setCurrentPriceFilter([min, max])
-  },
-
-  let filteredListings: ProductListing[] = [],
-  try {
-    filteredListings = allListings.filter((listing) => {
-      const matchesSearch =
         !searchQuery ||
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -330,10 +33,6 @@ if ( {) {
       const matchesCategory =
         selectedCategories.length === 0 |
         selectedCategories.includes(listing.category)
-      const matchesRating =
-        selectedRating === null |
-        (listing.rating !== undefined && listing.rating >= selectedRating)
-      const matchesRating =
         selectedRating === null ||
         (listing.rating !== undefined && listing.rating >= selectedRating),
 
@@ -354,10 +53,6 @@ if ( {) {
     capture_exception (error);
     logErrorToProduction ('Listing filter error:', { data: error });
   }
-  const handleRequestQuote = (listingId: string) => {
-    setIsLoading(true)
-    const listing = allListings.find(item => item.id === listingId)
-    setTimeout(() => {
       setIsLoading(false);      if (listing) {
         toast({
           title: 'Quote Requested'
@@ -372,18 +67,6 @@ if ( {) {
             category: listing.category
             image: listing.images?.[0]
           }
-        router.push('/request-quote')
-      }
-    }, 500)
-  }
-        router.push("/request-quote")
-      }
-    }, 500)
-  },
-
-  return (
-
-
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="lg:col-span-1">
@@ -410,11 +93,6 @@ if ( {) {
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer"
                       >
-                        className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'                      />
-                        htmlFor={`cat-${filter.value}`}
-                        className="ml-2 text-sm text-zion-slate-light cursor-pointer"
-                      >
-ursor/fix-website-loading-errors-and-merge-6662
           </p>;
         </div>;
 
@@ -526,28 +204,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     setSpecQuery(e && e.target.value);
                   }
               </div>
-                <div className='mb-6'>
-                  <label className='text-sm font-medium text-zion-slate-light block mb-2'>
-
-              <div className="mb-6">
-                <label className="text-sm font-medium text-zion-slate-light block mb-2">
-                  Specifications
-                </label>
-                <Input
-                  type="text"
-                  placeholder="Search specifications..."
-                  type='text'
-                  placeholder='Search specifications...'
-                  type="text"
-                  placeholder="Search specifications..."
-                  value={specQuery}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setSpecQuery(e.target.value)
-                  }
-                  className='bg-zion-blue border border-zion-blue-light text-white'                />
-                  className="bg-zion-blue border border-zion-blue-light text-white"
-                />
-              </div>
               {availabilityOptions.length > 0 && (
                 <div className="mb-6">
                   <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -623,9 +279,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                               key={i}
                               className="h-3 w-3 fill-zion-cyan text-zion-cyan"
                             />
-                      )}
-                    </Button>;
-                  ))}
                   logInfo("Clearing filters"),
                   setSearchQuery(""),
                   clearCategories(),
@@ -681,14 +334,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     title={isGrid ? "List view" : "Grid view"}
                     className="border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple"
                   >
-                    {ToggleViewIcon}
-                    <span className='sr-only'>;
-                      {isGrid ? 'List view' : 'Grid view'}
-
-
-
-            <div className="mb-6">
-              <p className="text-zion-slate-light">
                 Showing {filteredListings.length} results
                 {selectedCategories.length > 0 &&
                   ` in ${selectedCategories.join(', ')}`}
@@ -774,18 +419,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             ) : filteredListings && filteredListings.length > 0 ? (;
               <div
                 className={
-                ))}
-              </div>;
-            ) : (;
-              <div className='text-center py-20'>;
-                <h3 className='text-xl font-bold text-white mb-2'>;
-                  No listings found;
-                </h3>;
-                <p className='text-zion-slate-light mb-6'>;
-                  Try adjusting your filters or search query;
-                </p>;
-                <Button
-
                   variant="outline"
                   onClick={() => {
                     setSearchQuery(""),

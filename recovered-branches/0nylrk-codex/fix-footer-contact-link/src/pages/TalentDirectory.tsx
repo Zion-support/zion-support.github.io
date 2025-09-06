@@ -21,6 +21,10 @@ import { TalentResults } from "@/components/talent/TalentResults",
 import { useTalentDirectory } from "@/hooks/useTalentDirectory",
 import { SORT_OPTIONS } from "@/data/sortOptions",
 import { X } from "lucide-react",
+
+  const navigate = useNavigate();
+  // Use our custom hook to manage state
+  const {
     filteredTalents;
     isLoading;
     searchTerm;
@@ -216,11 +220,6 @@ export default function TalentDirectory() {;
             <div className="lg:hidden mb-4">;
               <Button
                 onClick={() => setIsMobileFilterOpen(true)}
-              >;
-                Filter & Sort;
-              </Button>;
-            </div>;
-
             {/* Results */}
             <TalentResults;
               filtered_talents={filtered_talents}
@@ -239,7 +238,19 @@ export default function TalentDirectory() {;
                 toggleRegion,;
                 priceRange,;
                 setPriceRange,;
+                experienceRange;
+                setExperienceRange;
 
+                selectedSkills
+                toggleSkill
+                selectedAvailability
+                toggleAvailability
+                selectedRegions
+                toggleRegion
+                priceRange
+                setPriceRange
+                experienceRange
+                setExperienceRange
                 clearFilters}}
             />
             {/* Mobile filter sidebar */}
@@ -260,40 +271,3 @@ export default function TalentDirectory() {;
                   </div>;
                   <FilterSidebar
                     searchTerm={searchTerm}
-                clear_filters}}
-            />;
-            {/* Mobile filter sidebar */}
-            {isMobileFilterOpen && (
-              <div className="fixed inset - 0 bg - black bg - opacity - 50 z - 50 lg:hidden flex">;
-                <div className="w - 80 h - full bg - zion - blue - dark overflow - y-auto p - 4 ml - auto">;
-                  <div className="flex justify - between items - center mb - 4">;
-                    <h3 className="font - bold text - white">Filter & Sort</h3>;
-                    <Button;
-                      variant="ghost";
-                      size="sm";
-                      on_click={() => setIsMobileFilterOpen (false)}
-                      className="text - zion - slate - light h - 8 w - 8 p - 0";
-                    >;
-                      <X className="h - 4 w - 4" />;
-                      <span className="sr - only">Close</span>;
-                    </Button>;
-                  </div>;
-                  <FilterSidebar;
-                    search_term={search_term}
-                    setSearchTerm={setSearchTerm}
-                    selected_skills={selected_skills}
-                    toggle_skill={toggle_skill}
-                    selected_availability={selected_availability}
-                    toggle_availability={toggle_availability}
-                    selected_regions={selected_regions}
-                    toggle_region={toggle_region}
-                    price_range={price_range}
-                    setPriceRange={setPriceRange}
-                    experience_range={experience_range}
-                    setExperienceRange={setExperienceRange}
-                    expanded_sections={expanded_sections}
-                    toggle_section={toggle_section}
-                    sort_option={sort_option}
-                    setSortOption={setSortOption}
-                    clear_filters={clear_filters}
-                    isMobileFilterOpen={isMobileFilterOpen}

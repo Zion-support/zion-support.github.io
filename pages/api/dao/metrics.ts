@@ -1,6 +1,13 @@
+
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
+const configPath = path.join(process.cwd(), "data", "dao", "config.json");
+const cachePath = path.join(process.cwd(), "data", "dao", "metrics.json");
+async function fetchJson(url: string) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
 
 
 const configPath = path && path.join(process && process.cwd(), "data", "dao", "config && config.json");
@@ -13,6 +20,9 @@ const cachePath = path && path.join(process && process.cwd(), "data", "dao", "me
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+function readJson(p: string) {
+  return JSON.parse(fs.readFileSync(p, "utf-8"));
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -20,15 +30,40 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+function writeJson(p: string, v: any) {
+  fs.writeFileSync(p, JSON.stringify(v, null, 2));
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
+
+;
+export default async function handler(req, res) {
+
+  try {;
+;
+export default async function handler(req, res) {
   try {
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
+    // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
+    const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
+    const transfersJson = await fetchJson(transfersUrl);
+
+    const txs = transfersJson?.result || [];
+
+    const holderToDelta: Record<string, bigint> = {};
+
+
     const entries = Object && Object.entries(holderToDelta)
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
@@ -48,9 +83,6 @@ export default async function handler(
       governanceParticipationRate: participationRate
     }
     writeJson(cachePath, result);
-import { NextApiRequest, NextApiResponse  } from './next';
-import fs from './fs';
-import path from './path';
 ;
 const config_path = path.join (process.cwd (), "data", "dao", "config.json");
 const cache_path = path.join (process.cwd (), "data", "dao", "metrics.json");
@@ -151,3 +183,6 @@ if ( {) {
     write_json (cache_path, result);
     return res.status (200).json (result);
   } catch (e: any) {
+  }
+}
+}

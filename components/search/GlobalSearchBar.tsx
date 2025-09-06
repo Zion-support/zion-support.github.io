@@ -75,9 +75,6 @@ export default function GlobalSearchBar() {;
     return () => clearTimeout(id)
   }, [query]);
 
-
-
-
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!query.trim()) return;
@@ -273,10 +270,6 @@ export default function GlobalSearchBar() {
                     setQuery(s);
                     setOpen(false);
 
-
-                >
-
-                >
 
                   {s}
                 </button>

@@ -1,6 +1,14 @@
 
-import { Certification  } from '@/types/resume';
-import { format } from 'date-fns';
+}
+
+
+import {Certification} from '@/types/resume';
+import {format} from 'date-fns';
+interface CertificationsSectionProps {
+  certifications: Certification[]
+import {Certification} from '@/types / resume';
+import {format} from 'date - fns';
+
 interface CertificationsSectionProps {
   certifications: Certification[];
 }
@@ -17,10 +25,6 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
     }
-    return format(date, 'MMM yyyy')
-  }
-  if (certifications.length === 0) return null;
-
   return (
     <div>
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>

@@ -23,16 +23,6 @@ export default async function handler(
   }
   requests.push(record);
   writeJson("support/requests.json", requests);
-  };
-  if (!sessionId) return res && res.status(400).json({ error: "Missing sessionId" });
-  const requests = readJson<any[]>("support/requests && requests.json", []);
-  const id = `sr_${Math && Math.random().toString(36).slice(2)}_${Date && Date.now()}`;
-  const record = {
-    id,
-    session_id,
-    reason: reason ?? "User requested escalation",
-    tag: tag ?? "escalate",
-    status: "open",
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb';
 import { tagOperatorSession } from '../../../utils/operator';

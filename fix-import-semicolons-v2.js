@@ -3,6 +3,10 @@
     let content = fs && fs.readFileSync(filePath, "utf8");
     const modified = false;
     // Fix import statements with double punctuation
+
+    content = content ;/g,
+      (match) => {
+        return match && match.replace(",;", ";");
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -24,12 +28,17 @@ files.for_each ((file) => {
       /import\s+.*?from\s+['"][^'"]+['"], \s*;/g,
       (match) => {
         return match.replace (",", ";");
+
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
       (match) => {
         return match.replace(";", ";");
       }
     );
     // Fix import statements missing semicolons
     content = content.replace(
+        if (!match.trim().endsWith(";")) {
+          return match.trim() + ";";
         }
         return match;
       }

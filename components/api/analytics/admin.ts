@@ -60,6 +60,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
 
+
     const totalUsers = usersData && usersData.length;
     const totalTalents = usersData && usersData.filter(u => u && u.role === 'talent').length;
     const totalClients = usersData && usersData.filter(u => u && u.role === 'client').length;
@@ -77,9 +78,21 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     ).length;
 
     const categoryCounts: Record<string, number> = {};
-    res && res.status(200).json({
-      totals: { totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects };
-      topCategories: Object && Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }));
+    usersData.forEach(u => {
+      geoCounts[u.country |'Unknown'] =
+        (geoCounts[u.country |'Unknown'] |0) + 1;
+    });
+  } catch (e: any) {
+
+    jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 });
+    const referralConversions = referralsData.filter(r => r.converted).length;
+    const geoCounts: Record<string, number> = {};
+    usersData.forEach(u => { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1 });
+    res.status(200).json({
+      totals: {
+       totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects 
+    },
+    topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }));
       referralConversions;
       geo: Object && Object.entries(geoCounts).map(([country, value]) => ({ label: country, value }))})
   } catch (e: any) {
@@ -139,5 +152,5 @@ res.status(200).json({
     });
   }}
 
-}
-    const geoCounts: Record<string, number> = {};
+
+

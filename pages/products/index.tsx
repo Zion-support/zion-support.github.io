@@ -1,3 +1,10 @@
+import React from 'react';
+import { NextPage } from 'next';
+import Head from 'next/head';
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+origin/main
+origin/automation-improvements-final
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -11,67 +18,12 @@ import Layout from '../../components/Layout';
           </div>;
         </section>;
                       </div>;
-                      <div>;
-                        <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">;
-                          {product && product.category}
-                        </span>;
-                        {product && product.popular && (;
-                          <span className="ml-2 px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">;
-                            Popular;
-                          </span>;
-                        )}
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                      {product.name}
-                    </h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      {product.description}
-                    </p>
-                    <div className="space-y-2 mb-4">
-                      <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
-                      <ul className="space-y-1">
-                        {product.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-600">
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                             {feature}
                           </li>
                         ))}
-                      </ul>
-                    </div>
-                    <div className="space-y-2 mb-6">
-                      <h4 className="font-semibold text-gray-900 text-sm">Benefits:</h4>
-                      <ul className="space-y-1">
-                        {product.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-600">
-                            <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" />
                             {benefit}
                           </li>
                         ))}
-                      </ul>
-                    </div>
-                    <div className="space-y-2 mb-6">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-gray-900">Pricing:</span>
-                        <span className="text-lg font-bold text-blue-600">{product.pricing}</span>
-                      </div>
-                    </div>
-                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-            {filteredProducts.length === 0 && (
-              <div className="text-center py-12">
-                <div className="text-gray-400 mb-4">
-                  <Search className="w-16 h-16 mx-auto" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">No products found</h3>
-                <p className="text-gray-600">Try adjusting your search or filter criteria.</p>
-              </div>
             )}
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
@@ -93,38 +45,26 @@ import Layout from '../../components/Layout';
                 </button>;
                 <Link
                   href="/contact"
-
-
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
+        <meta name='description' content='Index page' />
+      </Head>
+ursor/integrate-build-improve-and-re-verify-8f7d
 
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
-                  Contact Sales;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-  );
+export default ProductsIndex;
+import type { NextPage } from 'next';
+import Head from 'next/head';
       <main>
         <h1>Index</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
   );
+ursor/integrate-build-improve-and-re-verify-8f7d
 };
 
 export default Index;
-  );
-};
-
-  )
-  );
-}
-export default ProductsIndex;
         {/* Products Grid */}
         <section className="py - 16">;
           <div className="container mx - auto px - 4">;

@@ -64,22 +64,6 @@ export interface JobPostingProps {
       }
       return jobData
     } catch (error: any) {
-    }
-  }
-  return {
-    form;
-    isLoading;
-    startDate;
-    setStartDate;
-    endDate
-    setEndDate;
-    isRemote;
-    setIsRemote;
-    initialValues;
-    setInitialValues;
-    submitJob
-  }
-}
 
       title: '',
       company: '',
@@ -175,6 +159,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
       toast.error (error.message || "Failed to process form");
       throw error;
     } finally {
+
   return {
     form;
     is_loading;
@@ -207,3 +192,5 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
     initialValues,;
     setInitialValues;
     submitJob;
+  }
+};

@@ -1,26 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { Progress  } from '@/components/ui/progress';
-import { AlertTriangle, Package, Zap } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface BundleInfo {
-  totalSize: number;
-  gzippedSize: number;
-  chunkCount: number;
-  loadTime: number;
-  cacheHitRate: number
 totalSize: number;
   gzippedSize: number;
   chunkCount: number;
   loadTime: number;
-
-
-    const show = null;
-      process.env.NODE_ENV === 'development' ||
-
 
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
@@ -298,14 +279,6 @@ export function BundleAnalyzer() {;
                 </div>;
               </div>;
 
-          )}
-        </CardContent>
-      </Card>
-    </div>
-  )
-} 
-
-}
 }
         </CardContent>;
       </Card>;

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe;
@@ -83,6 +84,12 @@ const socialLinks = [
 export default function EnhancedFooter() {
   const currentYear = new Date().getFullYear()
   const services = [
+    { name: 'AI Services', href: '/ai-services' }
+    { name: 'IT Services', href: '/it-services' }
+    { name: 'Blockchain Solutions', href: '/blockchain-solutions' }
+    { name: 'Micro SaaS', href: '/micro-saas' }
+    { name: 'Security', href: '/security' }
+    { name: 'Case Studies', href: '/case-studies' }
   ];
   const company = [
     { name: 'About Us', href: '/about' }
@@ -102,6 +109,7 @@ export default function EnhancedFooter() {
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github }
   ];
+
 
   return (
     <footer className;
@@ -135,68 +143,3 @@ export default function EnhancedFooter() {
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
               Get exclusive insights into the latest AI, quantum computing, and IT innovations. 
               Be the first to know about new services and breakthrough technologies.
-            </p>
-            <div className="flex space-x-4">
-                  Web Development;
-                </Link>;
-              </li>;
-              <li>;
-                  Mobile Apps;
-                </Link>;
-              </li>;
-              <li>;
-                  AI Solutions;
-                </Link>;
-              </li>;
-              <li>;
-                  Cloud Services;
-                </Link>;
-              </li>;
-            </ul>;
-          </div>;
-          {/* Company */}
-                  About Us;
-                </Link>;
-              </li>;
-              <li>;
-                  Careers;
-                </Link>;
-              </li>;
-              <li>;
-                  Blog;
-                </Link>;
-              </li>;
-              <li>;
-                  Contact;
-                </Link>;
-              </li>;
-            </ul>;
-          </div>;
-          {/* Contact Info */}
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-            </p>;
-            <div className="flex space - x-6 mt - 4 md:mt - 0">;
-              <Link;
-                href="/privacy";
-                className="text - gray - 400 hover:text - white text - sm transition - colors";
-              >;
-                Privacy Policy;
-              </Link>;
-              <Link;
-                href="/terms";
-                className="text - gray - 400 hover:text - white text - sm transition - colors";
-              >;
-                Terms of Service;
-              </Link>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </footer>);
-}
-;
-export default EnhancedFooter;
-;

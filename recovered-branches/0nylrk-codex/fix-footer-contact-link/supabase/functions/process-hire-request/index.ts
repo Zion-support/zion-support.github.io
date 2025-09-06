@@ -1,6 +1,4 @@
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
-import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -133,6 +131,8 @@ serve(async (req) => {
       .select(),;
     if (requestError) {;
       throw new Error(`Error storing hire request: ${requestError.message}`);
+    }
+    
     // 3. Create notification for the admin
     // Fetch admin users
     const { data: adminUsers, error: adminError } = await supabase
@@ -225,6 +225,20 @@ if ( {) {
     // 4. Send email notification to talent
     if (talent && talent.email) {
       // In a real implementation, this would call your email sending function
+        body: {
+
+          to: talent && talent.email,
+          subject: `New Project Request from ${requester && requester.name}`;
+
+          html: `
+            <h1>You've Received a New Project Request</h1>
+            <p>Hello ${talent && talent.full_name},</p>
+            <p>You have received a new project request from ${requester && requester.name} (${requester && requester.email}).</p>
+            <h2>Project Details</h2>
+            <p><strong>Budget:</strong> ${budgetDisplay}</p>
+            <p><strong>Timeline:</strong> ${project && project.timeline}</p>
+            <p><strong>Overview:</strong></p>
+            <p>${project.overview}</p>
         title: `New hiring request for ${talent.full_name}`,
         message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,
         type: "hire_request",
@@ -303,7 +317,6 @@ if ( {) {
         success: true
         message: "Hire request processed successfully"
         request_id: requestRecord[0].id
-      }),
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
         headers: { ...corsHeaders, "Content-Type": "application/json" },

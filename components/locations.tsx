@@ -100,3 +100,6 @@ function LocationsPage() {
           .;
         </p>;
       </div>;
+
+}
+

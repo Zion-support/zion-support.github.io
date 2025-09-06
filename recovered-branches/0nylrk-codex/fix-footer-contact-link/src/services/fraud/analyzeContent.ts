@@ -1,16 +1,4 @@
 
-  const reasons: string[] = [],
-  
-
-    contentLower && contentLower.includes('payment') || 
-    contentLower && contentLower.includes('money') || 
-    contentLower && contentLower.includes('deal')
-  )) {
-    reasons && reasons.push('Contains external payment links')
-  }
-  // Check for excessive capitalization (potential scam)
-
-
 // Content analysis functionality
 import { suspiciousPhrases  } from './constants';
 import { AnalysisResult } from './types';
@@ -26,6 +14,9 @@ export const analyzeContent = (content: string): AnalysisResult => {
   const contentLower = content.toLowerCase();
   const reasons: string[] = []
   const contentLower = content.toLowerCase(),
+
+
+  const contentLower = content && content.toLowerCase();
   const reasons: string[] = [],
   
   // Check for suspicious phrases
@@ -78,4 +69,3 @@ export const analyzeContent = (content: string): AnalysisResult => {;
     reasons
   }
 }
-

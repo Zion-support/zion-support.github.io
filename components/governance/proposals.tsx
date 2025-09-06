@@ -17,8 +17,8 @@ export default function Proposals({
           </li>;
         ))}
         )}
-      </ul>;
-    </div>;
+      </ul>
+    </div>
   );
 export async function getStaticProps() {;
   try{;
@@ -27,19 +27,8 @@ export async function getStaticProps() {;
     return { props: { data: JSON && JSON.parse(raw) } }
   }catch{;
   try{
-    const p = path.join (process.cwd (), 'datagovernanceproposals.json');
-    const raw = fs.readFileSync (p, 'utf8');
-    return { props: { data: JSON.parse (raw) } }
-  }catch{
-}
-    return { props: { data: { updated_at: null, proposals: [] } } }
-  }
-}
-
+    </div>;
   );
 }
 
-
-    </div>
-  );
 }

@@ -62,9 +62,36 @@ export function TransactionHistory() {;
           </TabsList>;
           <TabsContent value="earned">;
             <ScrollArea className="h-64">;
-            </ScrollArea>;
-          </TabsContent>;
-        </Tabs>;
-      </CardContent>;
-    </Card>;
+                  ))}
+                </div>
+              )}
+            </ScrollArea>
+          </TabsContent>
+          <TabsContent value="spent">
+            <ScrollArea className="h-64">
+              {burnTransactions.length === 0 ? (
+                <p className="text-center py-8 text-muted-foreground">No tokens spent yet</p>
+              ) : (
+                <div className="space-y-2 mt-2">
+                  {burnTransactions.map(tx => (
+                    <div key={tx.id} className="flex items-center justify-between py-2 border-b">
+                      <div>
+                        <p className="font-medium">{tx.reason |"Feature purchase"}</p>
+                        <p className="text-xs text-muted-foreground">
+                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
+                        </p>
+                      </div>
+                      <Badge variant="outline" className="bg-red-100 text-red-800">
+                        -{tx.amount} ZION$
+                      </Badge>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </ScrollArea>
+          </TabsContent>
+        </Tabs>
+      </CardContent>
+    </Card>
+  )
 }

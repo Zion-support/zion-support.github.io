@@ -1,16 +1,3 @@
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
   contactInfo: {
     },
     realImplementation: boolean, implementationDetails: string,
@@ -350,6 +337,17 @@
     launchDate: '2025-06-20';
     customers: 1900;
     rating: 4.8
+
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true,
+    implementation_details: 'Enterprise - grade sales intelligence platform with AI - powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';
+    launch_date: '2025 - 06 - 20';
+    customers: 1900;
+    rating: 4.8,
+    reviews: 950;
 
 ];
 import { ServiceVariant } from '../types/service-variants',;

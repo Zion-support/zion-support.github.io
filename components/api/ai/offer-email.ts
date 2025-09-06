@@ -24,6 +24,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const auth = authenticateRequest(req, false);
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
 
+  const prompt = `Draft a professional, friendly job offer email.\n` +
+
 }
 import { authenticate_request } from '@/utils / auth';
 import { generate_text } from '@/utils / ai';

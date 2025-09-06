@@ -1,4 +1,10 @@
 
+import React, { useState } from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from "lucide-react";
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -12,18 +18,43 @@ interface BrowseItem {
   location?: string;
   badges: string[]
 
-  location?: string;
-  badges: string[],;
-  price?: string;
-  image?: string;
-  match?: number;
+
+interface BrowseItem {;
+  id: string,;
+  title: string,;
+  subtitle: string,;
+  description: string,;
+import React, { useState } from './react';
+import { Card, CardContent } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from './lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
+
+interface BrowseItem {
+  id: string,
+  title: string,
+  subtitle: string,
+  description: string,
+  location?: string,
+  badges: string[],
+  price?: string,
+  image?: string,
+  match?: number,
+  timePosted?: string
+}
+interface BrowseCardsProps {
+
+
+
+  const [savedItems, setSavedItems] = useState<string[]>([]),
+  
   const toggleSaved = (id: string) => {
     setSavedItems(prev =>
       prev.includes(id)
         ? prev.filter(itemId => itemId !== id)
         : [...prev, id]
     )
-
   return (
     <div className="space-y-4 pb-24">;
       {items && items.map((item) => (;
@@ -50,7 +81,6 @@ interface BrowseItem {
                   ) : (;
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
-
 import React, { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -128,6 +158,49 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     variant="outline";
                     className="text-xs font-normal";
                   >;
+                    {badge}
+                  </Badge>;
+                ))}
+
+              </div>;
+
+              <p className="mt-3 text-sm line-clamp-2">{item && item.description}</p>;
+
+              <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">;
+                {item && item.location && (;
+                  <div className="flex items-center gap-1">;
+                    <MapPin className="h-3 w-3" />;
+                    <span>{item && item.location}</span>;
+                  </div>;
+                )}
+
+                {item && item.price && (;
+                  <div className="flex items-center gap-1">;
+                    <DollarSign className="h-3 w-3" />;
+                    <span>{item && item.price}</span>;
+                  </div>;
+                )}
+
+                {item && item.timePosted && (;
+                  <div className="flex items-center gap-1">;
+                    <Clock className="h-3 w-3" />;
+                    <span>{item && item.timePosted}</span>;
+                  </div>;
+                )}
+
+                {item && item.match && (;
+                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0 && 0.5">;
+                    {item && item.match}% match;
+                  </div>;
+                )}
+              </div>;
+            </div>;
+
+            <div className="border-t border-border p-3 flex justify-end">;
+
+              <Button
+                size="sm"
+                onClick={() => onViewDetails(item && item.id)}
                 className="gap-1";
               >;
                 View Details <ChevronRight className="h-4 w-4" />;

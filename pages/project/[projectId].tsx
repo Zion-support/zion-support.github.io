@@ -1,4 +1,20 @@
 
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import FeedbackModal from "../../components/ui/FeedbackModal";
+export default function ProjectPage() {
+  const router = useRouter()
+  const { projectId } = router.query as { projectId?: string }
+  const [project, setProject] = useState<any | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [note, setNote] = useState("")
+  const headers = {
+    "x-demo-user-role": "client"
+    "x-demo-user-id": "client-1"
+    // For talent view demo, swap role and provide slug
+    // "x-demo-user-role": "talent"
+    // "x-demo-talent-slug": "ava-chen"} as Record<string, string>
 export default function ProjectPage() {
   const router = useRouter(),
   const { projectId } = router.query as { projectId?: string },
@@ -6,6 +22,7 @@ export default function ProjectPage() {
   const [loading, setLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
   const [note, setNote] = useState(""),
+
   const headers = {
     "x-demo-user-role": "client",
     "x-demo-user-id": "client-1",
@@ -16,31 +33,64 @@ export default function ProjectPage() {
     async function load() {
       if (!projectId) return
       try {
-    if (json.ok) {
-      setProject(json.project)
-      setNote("")
-      setShowFeedback(true)
+      } catch (e: any) {
+        set_error (e.message);
+      } finally {
+
+        setLoading(false)
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+    load()
+  }, [projectId])
+  const [showFeedback, setShowFeedback] = useState(false)
+  async function addNote() {
+    const res = await fetch(`/api/marketplace/projects`, {
+      method: "PATCH"
+      headers: { "Content-Type": "application/json", ...headers }
+      body: JSON.stringify({ id: projectId, action: "add_note", content: note })})
+    const json = await res.json()
+  }, [projectId]),
+  const [showFeedback, setShowFeedback] = useState(false),
+  async function addNote() {
+    const res = await fetch(`/api/marketplace/projects`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json", ...headers },
+      body: JSON.stringify({ id: projectId, action: "add_note", content: note })}),
+    const json = await res.json(),
+    if (json.ok) {
+      setProject(json.project)
+      setNote("")
+      setShowFeedback(true)
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   async function markCompleted() {
     const res = await fetch(`/api/marketplace/projects`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json", ...headers },
+      body: JSON.stringify({ id: projectId, action: "mark_completed" })}),
+    const json = await res.json(),
     if (json.ok) {
       setProject(json.project)
 
       setShowFeedback(true)
-  }
-}
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
       {project && (
         <div className="space-y-6">
           <div className="flex items-center gap-3">
             <h1 className="text-2xl font-semibold">Project Kickoff</h1>
             <span className={`px-2 py-0.5 rounded text-xs ${project.status === "ACTIVE" ? "bg-emerald-100 text-emerald-700" : "bg-gray-200"}`}>
-
               {project.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -48,7 +98,6 @@ export default function ProjectPage() {
 }
             </span>
           </div>
-
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Project Summary</h2>
             <div className="text-sm">
@@ -58,7 +107,6 @@ export default function ProjectPage() {
               <div className="mt-2">{project.summary}</div>
             </div>
           </section>
-
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Timeline</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
@@ -108,9 +156,6 @@ export default function ProjectPage() {
             <h2 className="font-medium mb-2">Documents</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
               {project.documents?.length ? (
-                project.documents.map ((d: any) => (
-                  <li key={d.id}>;
-                    {d.url ? (
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -121,11 +166,7 @@ export default function ProjectPage() {
                 ))
               ) : (
                 <li>No documents</li>
-              )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              )}
             </ul>
           </section>
           <section className="rounded border p-4 space-y-3">
@@ -169,6 +210,10 @@ export default function ProjectPage() {
 
   );
 };
+
+  );
+};
+
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -209,4 +254,3 @@ export default function ProjectPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}

@@ -21,6 +21,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+
+
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';

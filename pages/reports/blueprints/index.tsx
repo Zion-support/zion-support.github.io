@@ -1,4 +1,118 @@
 import React from 'react';
+const BlueprintsIndexPage: React.FC = () => {
+  const blueprint_categories = [;
+    {
+      category: 'System Architecture'
+      blueprints: [
+        {
+          id: 'comprehensive - redundancy',
+          name: 'Comprehensive Redundancy System',
+          description: 'Multi - layer redundancy architecture for maximum uptime',
+          status: 'active',
+          complexity: 'high',
+          last_updated: '2025 - 01 - 17';
+        },
+        {
+          id: 'ultimate-redundancy'
+          name: 'Ultimate Redundancy System'
+          description: 'Advanced redundancy with automated failover'
+          status: 'active'
+          complexity: 'critical'
+          lastUpdated: '2025-01-16'
+        }
+        {
+          id: 'github-actions-automation'
+          name: 'GitHub Actions Automation'
+          description: 'Complete CI/CD automation with self-healing'
+          status: 'active'
+          complexity: 'high'
+          lastUpdated: '2025-01-15'
+        }
+      ]
+    }
+    {
+      category: 'Deployment Patterns'
+      blueprints: [
+        {
+          id: 'zero-downtime-deployment'
+          name: 'Zero-Downtime Deployment'
+          description: 'Blue-green deployment with health checks'
+          status: 'active'
+          complexity: 'medium'
+          lastUpdated: '2025-01-14'
+        }
+        {
+          id: 'canary-deployment'
+          name: 'Canary Deployment'
+          description: 'Gradual rollout with traffic splitting'
+          status: 'active'
+          complexity: 'high'
+          lastUpdated: '2025-01-13'
+        }
+        {
+          id: 'rolling-update'
+          name: 'Rolling Update Strategy'
+          description: 'Sequential instance updates with health monitoring'
+          status: 'active'
+          complexity: 'medium'
+          lastUpdated: '2025-01-12'
+        }
+      ]
+    }
+    {
+      category: 'Monitoring & Observability'
+      blueprints: [
+        {
+          id: 'health-check-system'
+          name: 'Health Check System'
+          description: 'Comprehensive health monitoring and alerting'
+          status: 'active'
+          complexity: 'medium'
+          lastUpdated: '2025-01-11'
+        }
+        {
+          id: 'performance-monitoring'
+          name: 'Performance Monitoring'
+          description: 'Real-time performance metrics and alerting'
+          status: 'active'
+          complexity: 'medium'
+          lastUpdated: '2025-01-10'
+        }
+        {
+          id: 'logging-aggregation'
+          name: 'Logging Aggregation'
+          description: 'Centralized logging with search and analytics'
+          status: 'active'
+          complexity: 'low'
+          lastUpdated: '2025-01-09'
+        }
+      ]
+    }
+  ];
+  const recentBlueprints = [
+    {
+      id: 'blueprint-2025-01-17-130835'
+      name: 'AI Content Factory Blueprint'
+      description: 'Automated content generation system architecture'
+      date: '2025-01-17'
+      status: 'deployed'
+    }
+    {
+      id: 'blueprint-2025-01-17-130857'
+      name: 'Edge Computing Network Blueprint'
+      description: 'Distributed computing architecture for global performance'
+      date: '2025-01-17'
+      status: 'development'
+    }
+    {
+      id: 'blueprint-2025-01-17-130921'
+      name: 'Quantum Integration Blueprint'
+      description: 'Quantum computing integration framework'
+      date: '2025-01-17'
+      status: 'research'
+    }
+      category: 'System Architecture',
+      blueprints: [
           id: 'comprehensive-redundancy',
           name: 'Comprehensive Redundancy System',
           description: 'Multi-layer redundancy architecture for maximum uptime',
@@ -37,35 +151,33 @@ import React from 'react';
           lastUpdated: '2025-01-14'
         },
           id: 'canary-deployment',
+
           name: 'Canary Deployment',
           description: 'Gradual rollout with traffic splitting',
           status: 'active',
           complexity: 'high',
-          lastUpdated: '2025-01-13'
-        },
           id: 'rolling-update',
+
           name: 'Rolling Update Strategy',
           description: 'Sequential instance updates with health monitoring',
           status: 'active',
           complexity: 'medium',
-          lastUpdated: '2025-01-12'
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
       ]
-    }
+    },
     {
-      category: 'Monitoring & Observability'
+      category: 'Monitoring & Observability',
       blueprints: [
           id: 'health-check-system',
+
           name: 'Health Check System',
           description: 'Comprehensive health monitoring and alerting',
           status: 'active',
           complexity: 'medium',
-          lastUpdated: '2025-01-11'
-        },
           id: 'performance-monitoring',
           name: 'Performance Monitoring',
           description: 'Real-time performance metrics and alerting',
@@ -74,11 +186,11 @@ import React from 'react';
           lastUpdated: '2025-01-10'
         },
           id: 'logging-aggregation',
+
           name: 'Logging Aggregation',
           description: 'Centralized logging with search and analytics',
           status: 'active',
           complexity: 'low',
-          lastUpdated: '2025-01-09'
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -92,6 +204,28 @@ import React from 'react';
 }
   ];
   const recentBlueprints = [
+
+    {
+      id: 'blueprint - 2025 - 01 - 17 - 130835',
+      name: 'AI Content Factory Blueprint',
+      description: 'Automated content generation system architecture',
+      date: '2025 - 01 - 17',
+      status: 'deployed';
+    },
+    {
+      id: 'blueprint - 2025 - 01 - 17 - 130857',
+      name: 'Edge Computing Network Blueprint',
+      description: 'Distributed computing architecture for global performance',
+      date: '2025 - 01 - 17',
+      status: 'development';
+    },
+    {
+      id: 'blueprint - 2025 - 01 - 17 - 130921',
+      name: 'Quantum Integration Blueprint',
+      description: 'Quantum computing integration framework',
+
+      date: '2025-01-17',
+      status: 'research'
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
@@ -172,13 +306,16 @@ import React from 'react';
                   {category.blueprints.map((blueprint, blueprintIndex) => (
                     <div key={blueprintIndex} className="border-l-2 border-indigo-400/30 pl-4">
                       <div className="flex justify-between items-start mb-2">
-                          href={`/reports/blueprints/${blueprint.id}`}
-                          className="text-white font-medium hover:text-indigo-300 transition-colors"
-                        >
                           {blueprint.name}
                         </Link>;
                         <span className={`px - 2 py - 1 text - xs rounded - full ${getComplexityColor (blueprint.complexity)}`}>;
                           {blueprint.complexity}
+                        </span>
+                      </div>
+                      <p className="text-gray-300 text-sm mb-2">{blueprint.description}</p>
+                      <div className="flex justify-between items-center text-xs">
+                        <span className={`${getStatusColor(blueprint.status)}`}>
+                          ● {blueprint.status}
                           ● {blueprint.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -188,15 +325,14 @@ import React from 'react';
                         <span className="text-gray-400">{blueprint.lastUpdated}</span>
                       </div>
                     </div>
-        {/* Recent Blueprints */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Recent Blueprints</h2>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
-            {recent_blueprints.map ((blueprint) => (
-              <div key={blueprint.id} className="bg - white / 10 rounded - xl p - 6 border border - white / 20 hover:border - indigo - 400 / 30 transition - all duration - 300">;
-                <div className="flex justify - between items - start mb - 4">;
-                  <h3 className="text - lg font - semibold text - white">{blueprint.name}</h3>;
-                  <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (blueprint.status)}`}>;
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Recent Blueprints</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {recentBlueprints.map((blueprint) => (
+              <div key={blueprint.id} className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-indigo-400/30 transition-all duration-300">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-white">{blueprint.name}</h3>
+                  <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(blueprint.status)}`}>
                     {blueprint.status}
                     {blueprint.status  } catch (error) {
     console.error("Error:", error);
@@ -274,3 +410,4 @@ import React from 'react';
     </div>
   );
 }
+export default BlueprintsIndexPage;

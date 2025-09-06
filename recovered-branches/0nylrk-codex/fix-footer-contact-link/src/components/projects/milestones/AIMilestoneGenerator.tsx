@@ -1,6 +1,7 @@
 
 
 
+
 export function AIMilestoneGenerator({;
   scope;
   startDate;
@@ -48,6 +49,9 @@ export function AIMilestoneGenerator({;
     }
 ;
     const input: MilestoneInput = {;
+    }
+
+  },
   return (
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
@@ -63,32 +67,38 @@ export function AIMilestoneGenerator({;
                         id={`milestone-${index}`}
                         checked={selectedMilestones[index] |false}
                         onChange={() => toggleMilestoneSelection(index)}
+                            AI Suggested;
+                          </Badge>;
+                        </div>;
+                      </AccordionTrigger>;
+                    </div>;
+
+                      onClick={(e) => {
+                        e.stopPropagation();
+
+                        e.stopPropagation(),
                         handleAddSingleMilestone(milestone)
-                      onClick={(e) => {;
-                        e && e.stopPropagation();
-                        handleAddSingleMilestone(milestone);
                       }}
-                      className="mr-2";
+                      className="mr - 2";
                     >;
-                      <Plus className="h-4 w-4" />;
+                      <Plus className="h - 4 w - 4" />;
                     </Button>;
                   </div>;
                   <AccordionContent>;
-                    <div className="pl-6 space-y-2">;
-                      <p className="text-sm">{milestone && milestone.description}</p>;
-                      <div className="flex items-center text-sm text-muted-foreground">;
-                        <Calendar className="w-4 h-4 mr-1" />;
-                        Due: {formatDate(milestone && milestone.dueDate)}
+                    <div className="pl - 6 space - y-2">;
+                      <p className="text - sm">{milestone.description}</p>;
+                      <div className="flex items - center text - sm text - muted - foreground">;
+                        <Calendar className="w - 4 h - 4 mr - 1" />;
+                        Due: {format_date (milestone.due_date)}
                       </div>;
-                      <div className="text-sm text-muted-foreground">;
-                        Estimated effort: {milestone && milestone.estimatedHours} hours;
+                      <div className="text - sm text - muted - foreground">;
+                        Estimated effort: {milestone.estimated_hours} hours;
                       </div>;
                     </div>;
                   </AccordionContent>;
-                </AccordionItem>;
-              ))}
+                </AccordionItem>))}
             </Accordion>;
           </CardContent>;
-        </Card>;
-      )}
+        </Card>)}
+    </div>);
 }

@@ -8,6 +8,7 @@ interface SlackAck {
 interface SlackRespond {
   (text: string): Promise < void>;
 }
+
 // Declare available globals
 declare const globalThis: {
   console?: SafeConsole;
@@ -35,7 +36,6 @@ class MockApp {
 
 
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
-
 
 ;
 // Declare available globals;
@@ -135,6 +135,23 @@ case 'suggest-talent': {
   
 }case 'help': default: await respond ('Commands:\n' + '`/zion post-job` - post a new job\n' + '`/zion suggest-talent [skills]` - AI talent suggestions\n' + '`/zion track-project [name]` - project status\n' + '`/zion help` - show this list') 
 }
+app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
+  await ack();
+  const [action, ...args] = command.text.split(/\s+/);
+  switch (action) {
+    case 'post-job':
+      await respond('Please provide job details via the web interface.');
+      break;
+    case 'suggest-talent': {
+      const query = args.join(' ');
+      const answer = await askZionGPT(`Suggest talent for ${query}`);
+      await respond(answer);
+      break
+    }
+    case 'track-project': {
+      const project = args.join(' ');
+      await respond(`Tracking project **${project}** - feature coming soon.`);
+      break
 ;
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {;
   await ack(),;
@@ -149,12 +166,20 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       await respond(answer),;
       break;
     }
-    case 'track-project': {;
-      const project = args.join(' '),;
-      await respond(`Tracking project **${project}** - feature coming soon.`),;
-      break;
-    }
   }
+});
+// Mock startup with safer environment access
+(async () => {
+  // Get PORT from environment or use default
+  const env = typeof globalThis !== 'undefined' && globalThis.process ?
+    globalThis.process.env : {}
+  const port = env.PORT ? Number(env.PORT) : 3000;
+  await app.start(port)
+})();
+export default app;
+
+}),;
 // Mock startup with safer environment access;
 (async () => {;
   // Get PORT from environment or use default;
+export default app;

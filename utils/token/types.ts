@@ -11,7 +11,6 @@ export interface TokenTransaction {id: string;
   reason: string;
   metadata?: Record<string, any>;
   createdAt: string, // ISO timestamp;
-export interface TokenConfig {symbol: TokenSymbol;
   usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
   earn_rules: Record < string number>, // action -> tokens;
   burn_rules: Record < string number>, // feature -> tokens;

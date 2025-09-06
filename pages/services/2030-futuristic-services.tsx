@@ -40,43 +40,6 @@ import { enterpriseITSolutions2030 } from '../../data/2030-enterprise-it-solutio
 import { spaceMetaverseTechServices2030 } from '../../data/2030-space-metaverse-tech';
 import { innovativeMicroSaasServices2030 } from '../../data/2030-innovative-micro-saas';
 import { researchDevelopmentServices2030 } from '../../data/2030-research-development';
-    {
-      title: ' Futuristic AI Services 2030'
-      icon: Brain
-      color: 'from-cyan-500 to-blue-500'
-      services: futuristicAIServices2030
-      description: 'Next-generation AI consciousness and autonomous systems'
-    }
-    {
-      title: ' Quantum & Emerging Tech 2030'
-      icon: Atom
-      color: 'from-purple-500 to-indigo-500'
-      services: quantumEmergingTechServices2030
-      description: 'Quantum computing and breakthrough technologies'
-    }
-    {
-      title: ' Enterprise IT Solutions 2030'
-      icon: Globe
-      color: 'from-blue-500 to-cyan-500'
-      services: enterpriseITSolutions2030
-      description: 'Autonomous enterprise infrastructure and operations'
-    }
-    {
-      title: ' Space & Metaverse Tech 2030'
-      icon: Rocket
-      color: 'from-emerald-500 to-green-500'
-      services: spaceMetaverseTechServices2030
-      description: 'Space exploration and digital reality platforms'
-    }
-    {
-      title: ' Innovative Micro SAAS 2030'
-      icon: Target
-      color: 'from-yellow-500 to-orange-500'
-      services: innovativeMicroSaasServices2030
-      description: 'Cutting-edge micro solutions and platforms'
-    }
-    {
-      title: ' Research & Development 2030'
       icon: Microscope
       color: 'from-red-500 to-pink-500'
       services: researchDevelopmentServices2030
@@ -114,12 +77,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
       color: 'from - red - 500 to - pink - 500',
       services: researchDevelopmentServices2030,
       description: 'Breakthrough research and development solutions';
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
   return (
     <>
       <Head>
@@ -269,6 +226,13 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                </p>
+              </motion.div>
+
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {category.services.map((service, serviceIndex) => (
+                  <motion.div
                     key={service.id}
                     initial={{ opacity: 0, coordinate_y: 30 }}
                     whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -342,7 +306,61 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                 </span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact our team of technology experts to discuss how our revolutionary 2030 services
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+                    while_hover={{ coordinate_y: -5 }} className="group cursor - pointer">;
+                    <div className="p - 6 rounded - 2xl bg - gradient - to - br from - gray - 900 / 60 to - gray - 800 / 60 border border - cyan - 500 / 30 hover:border - cyan - 400 / 50 transition - all duration - 300 backdrop - blur - sm">;
+                      <div className="text - 4xl mb - 4">{service.icon}</div>;
+                      <h3 className="text - xl font - semibold text - white mb - 3">{service.name}</h3>;
+                      <p className="text - gray - 300 text - sm mb - 4">{service.description}</p>;
+                      <div className="space - y-3 mb - 4">;
+                        <div className="flex items - center justify - between">;
+                          <span className="text - cyan - 400 font - semibold">{service.price}{service.period}</span>;
+                          <span className="text - xs text - purple - 400 bg - purple - 400 / 10 px - 2 py - 1 rounded - full">;
+                            {service.innovation_level}
+                          </span>;
+                        </div>;
+                        <div className="flex items - center space - x-4 text - xs text - gray - 400">;
+                          <div className="flex items - center space - x-1">;
+                            <Clock className="w - 3 h - 3" />;
+                            <span>{service.setup_time}</span>;
+                          </div>;
+                          <div className="flex items - center space - x-1">;
+                            <Users className="w - 3 h - 3" />;
+                            <span>{service.customers}+</span>;
+                          </div>;
+                          <div className="flex items - center space - x-1">;
+                            <Star className="w - 3 h - 3 text - yellow - 400" />;
+                            <span>{service.rating}</span>;
+                          </div>;
+                        </div>;
+                      </div>;
+                      <div className="flex items - center justify - between">;
+                        <span className="text - xs text - gray - 400">Trial: {service.trial_days} days</span>;
+                        <ArrowRight className="w - 5 h - 5 text - cyan - 400 group - hover:translate - x-1 transition - transform" />;
+                      </div>;
+                    </div>;
+                  </motion.div>))}
+              </div>;
+            </div>;
+          </section>))}
+        {/* Contact CTA Section */}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-4xl mx - auto text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+
+
+
+
                 can transform your business and propel you into the future.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">

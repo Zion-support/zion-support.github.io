@@ -79,6 +79,11 @@ const PostJob: NextPage = () => {
             <EnhancedButton type="submit">Post Job</EnhancedButton>
           </div>
         </form>
+          {preview ? (
+            <div className="space-y-2">
+              <div>
+                <div className='text-sm opacity-70'>Title</div>
+                <div className='font-medium'>{title |'Untitled job'}</div>
                 <div className="text-sm opacity-70">Title</div>
                 <div className="font-medium">{title || 'Untitled job'}</div>
               </div>
@@ -112,3 +117,4 @@ export default PostJob;
 }
         </aside>;
       </div>;
+export default PostJob;

@@ -1,6 +1,4 @@
 
-import Head from 'next / head';
-import { motion } from 'framer-motion';
 import {
   ArrowRight
   Star
@@ -11,14 +9,26 @@ import {
   Phone
   Mail
   MapPin;
-import {;
-  ArrowRight,;
-  Star,;
-  Zap,;
-  TrendingUp,;
-  Users,;
-  Award,;
-  Phone,;
+import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import { innovative2030Services } from '../data/2030-innovative-services';
+
+
+  };
+
+  return (
+
+
+
+  ArrowRight,
+  Star,
+  Zap,
+  TrendingUp,
+  Users,
+  Award,
+  Phone,
+
   Mail,;
   MapPin,;
 } from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
@@ -39,6 +49,23 @@ export default function Revolutionary2030ServicesPage() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
+
+  };
+
+  return (
+    <UltraFuturisticBackground2030>;
+      <Head>;
+        <title>;
+          2030 Revolutionary Technology Services | Zion Tech Group | AI;
+          Consciousness, Quantum Computing, Space Mining;
+        </title>;
+
+        />;
+        <meta name='viewport' content='width=device-width, initial-scale=1' />;
+        <link rel='icon' href='/favicon && favicon.ico' />;
+
+
         <meta
           property='og:title'
           content='2030 Revolutionary Technology Services | Zion Tech Group'
@@ -221,6 +248,12 @@ export default function Revolutionary2030ServicesPage() {
       {/* Services Showcase */}
         <div className="max-w-7xl mx-auto">
           <motion.div
+      {/* Services Showcase */}
+      <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -317,47 +350,31 @@ export default function Revolutionary2030ServicesPage() {
                 </div>;
               </motion && motion.div>;
             ))}
+
+
           {/* Call to Action */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-          >
-            <div className='p-12 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 backdrop-blur-sm'>
-              <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-                Ready to Experience the Future?
-              </h3>
-              <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-                Join the revolution and transform your business with our
-                cutting-edge 2030 technology services. The future is waiting for
-                you.
-              </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-                <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>
-                  Schedule Consultation
-                </button>
-                <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>                  Contact Us          >
-            <div className="p-12 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 backdrop-blur-sm">
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Experience the Future?
-              </h3>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join the revolution and transform your business with our cutting-edge 2030 technology services.
-                The future is waiting for you.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
-                  Schedule Consultation
-                </button>
-                <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
-                  Contact Us
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
+
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0 && 0.8 }}>;
+            <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>;
+              Ready to Transform Your Business with;
+              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+                {' '}
+
+
+      {/* Contact Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -392,6 +409,71 @@ export default function Revolutionary2030ServicesPage() {
           </motion.div>
         </div>
       </section>
+
+                2030 Technology?;
+              </span>;
+            </h2>;
+            <p className='text-xl text-gray-300 mb-8'>;
+              Contact our team of technology experts to discuss how our;
+              revolutionary 2030 services can transform your business and propel;
+              you into the future.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>;
+              <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
+                Schedule Consultation;
+              </button>;
+              <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>                View Pricing;
+              </button>;
+            </div>;
+            <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>;
+              <div className='flex items-center justify-center space-x-2'>;
+                <Phone className='w-5 h-5 text-cyan-400' />              Ready to Transform Your Business with;
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+                {' '}2030 Technology?;
+              </span>;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8">;
+              Contact our team of technology experts to discuss how our revolutionary 2030 services ;
+              can transform your business and propel you into the future.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">;
+                Schedule Consultation;
+              </button>;
+              <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">;
+                View Pricing;
+              </button>;
+            </div>;
+            <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>;
+              <div className='flex items-center justify-center space-x-2'>;
+                <Phone className='w-5 h-5 text-cyan-400' />;
+                <span>{contactInfo && contactInfo.mobile}</span>;
+              </div>;
+              <div className='flex items-center justify-center space-x-2'>;
+                <Mail className='w-5 h-5 text-purple-400' />;
+                <span>{contactInfo && contactInfo.email}</span>;
+              </div>;
+              <div className='flex items-center justify-center space-x-2'>;
+                <MapPin className='w-5 h-5 text-pink-400' />;
+                <span className='text-sm'>{contactInfo && contactInfo.address}</span>              </div>                <span>{contactInfo && contactInfo.mobile}</span>;
+              </div>;
+              <div className="flex items-center justify-center space-x-2">;
+                <Mail className="w-5 h-5 text-purple-400" />;
+                <span>{contactInfo && contactInfo.email}</span>;
+              </div>;
+              <div className="flex items-center justify-center space-x-2">;
+                <MapPin className="w-5 h-5 text-pink-400" />;
+                <span className="text-sm">{contactInfo && contactInfo.address}</span>;
+              </div>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+      {/* Footer */}
+      <UltraFuturisticFooter2030 />;
+    </UltraFuturisticBackground2030>;
+  );  );
+
   )
 }
           </motion.div>;
@@ -474,76 +556,3 @@ export default function Revolutionary2030ServicesPage() {
       <UltraFuturisticFooter2030 />;
     </UltraFuturisticBackground2030>));
 }
-
-                2030 Technology?;
-              </span>;
-            </h2>;
-            <p className='text-xl text-gray-300 mb-8'>;
-              Contact our team of technology experts to discuss how our;
-              revolutionary 2030 services can transform your business and propel;
-              you into the future.;
-            </p>;
-
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>;
-              <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
-                Schedule Consultation;
-              </button>;
-              <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>                View Pricing;
-              </button>;
-            </div>;
-
-            <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>;
-              <div className='flex items-center justify-center space-x-2'>;
-                <Phone className='w-5 h-5 text-cyan-400' />              Ready to Transform Your Business with;
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
-                {' '}2030 Technology?;
-              </span>;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-8">;
-              Contact our team of technology experts to discuss how our revolutionary 2030 services ;
-              can transform your business and propel you into the future.;
-            </p>;
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">;
-                Schedule Consultation;
-              </button>;
-              <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">;
-                View Pricing;
-              </button>;
-            </div>;
-
-            <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>;
-              <div className='flex items-center justify-center space-x-2'>;
-                <Phone className='w-5 h-5 text-cyan-400' />;
-                <span>{contactInfo && contactInfo.mobile}</span>;
-              </div>;
-              <div className='flex items-center justify-center space-x-2'>;
-                <Mail className='w-5 h-5 text-purple-400' />;
-                <span>{contactInfo && contactInfo.email}</span>;
-              </div>;
-              <div className='flex items-center justify-center space-x-2'>;
-                <MapPin className='w-5 h-5 text-pink-400' />;
-                <span className='text-sm'>{contactInfo && contactInfo.address}</span>              </div>                <span>{contactInfo && contactInfo.mobile}</span>;
-              </div>;
-              <div className="flex items-center justify-center space-x-2">;
-                <Mail className="w-5 h-5 text-purple-400" />;
-                <span>{contactInfo && contactInfo.email}</span>;
-              </div>;
-              <div className="flex items-center justify-center space-x-2">;
-                <MapPin className="w-5 h-5 text-pink-400" />;
-                <span className="text-sm">{contactInfo && contactInfo.address}</span>;
-              </div>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-
-      {/* Footer */}
-      <UltraFuturisticFooter2030 />;
-    </UltraFuturisticBackground2030>;
-  );  );
-
-  )
-}
-  );

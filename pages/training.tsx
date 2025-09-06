@@ -1,3 +1,38 @@
+
+origin/automation-improvements-final
+
+import React from 'react';
+import Layout from '../components/Layout';
+import React from 'react';
+import Layout from '../components/Layout';
+
+export default function Training() {
+
+
+
+import React from 'react';
+
+export default function Training() {
+  return (
+    <Layout
+      title="Training & Education - Zion Tech Group"
+      description="Professional training and education services for technology professionals."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Training & Education</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional training and education services for technology professionals.
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-600">Training page is under construction.</p>
+          </div>
+        </div>
+export default function Training() {
+
+
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -194,6 +229,25 @@ export default function TrainingPage() {
       title: 'Enterprise AI Integration',
       description: 'Integrate AI solutions into existing enterprise infrastructure and systems.',
       category: 'enterprise-it',
+      'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
+    };
+    return colors[category as keyof typeof colors] || 'gray'
+  };
+
+  const toggleProgram = (id: number) => {
+    setExpandedProgram(expandedProgram === id ? null : id)
+
+  },
+  return (
+
+    <Layout>
+      <SEO 
+        title="Training & Certification - Zion Tech Group"
+        description="Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career."
+      />
+      
+      <div className="min-h-screen">
+        {/* Hero Section */}
         <section className="relative py-20 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
           <div className="relative z-10 container mx-auto px-4 text-center">
@@ -268,6 +322,18 @@ export default function TrainingPage() {
             </motion.div>
           </div>
         </section>
+
+  {
+  opacity: 0, y: 20 
+
+}animate= {
+  {
+  opacity: 1, y: 0 
+
+}transition= {
+  {
+  duration: 0.8 
+
 }> <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6" > Training & Certification </h1> </p> <div className="flex flex-wrap justify-center gap-4 text-gray-400" > <div className="flex items-center gap-2" > <GraduationCap className="w-5 h-5" /> <span>Expert-Led Training</span> </div> <div className="flex items-center gap-2" > <Award className="w-5 h-5" /> <span>Industry Certifications</span> </div> <div className="flex items-center gap-2" > <Users className="w-5 h-5" /> <span>Global Community</span> </div> </div> </motion.div> </div> </section> key= {
   category.id 
 }onClick= {
@@ -292,6 +358,18 @@ export default function TrainingPage() {
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
+};
+
+export default Training;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+
+}  )
+ursor/fix-lint-push-and-merge-to-main-ae4e
+};
+
+export default Training;
+};export default Training;
 },
 export default Training,
             >;

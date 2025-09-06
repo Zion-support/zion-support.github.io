@@ -14,7 +14,6 @@ export default function HfDatasetsPage() {
           ))}
         </ul>
       </div>
-              <a className="font-medium underline" href={`https://huggingface.co/datasets/${it.id}`} target="_blank" rel="noreferrer">{it.id}</Link>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Downloads {it.downloads} · Likes {it.likes}</div>
             </li>
           ))  } catch (error) {

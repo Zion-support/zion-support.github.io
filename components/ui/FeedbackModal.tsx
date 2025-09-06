@@ -1,5 +1,14 @@
 import { useState } from 'react';
 
+  isOpen: boolean;
+  onClose: (submitted: boolean) => void;
+  defaultContext?: FeedbackContext;
+  defaultKind?: 'general' | 'bug' | 'feature';
+  userHeaders?: Record<string, string>;}) {export default function FeedbackModal(): any ({;
+
+export type FeedbackContext = { actionType?: string, metadata?: any };
+export default function FeedbackModal({
+
   isOpen;
   onClose;
   defaultContext;
@@ -10,6 +19,10 @@ import { useState } from 'react';
   const [comment, setComment] = useState('');
   const [loading, setLoading] = useState(false);
   if (!isOpen) return null;
+
+
+
+
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
         body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
@@ -23,10 +36,6 @@ import { useState } from 'react';
         <div className="text-lg font-medium">Was this helpful?</div>
         <div className="flex gap-2">
           {[1,2,3,4,5].map(n => (
-
-
-
-            <button
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
@@ -189,6 +198,15 @@ function submit() {
             </label>;
           </div>;
         </div>;
+  );
+}
+        <div className='flex justify - end gap - 2'>;
+          <button;
+            on_click={() => on_close (false)}
+            className='px - 3 py - 2 rounded border';
+          >;
+            Later;
+          </button>;
           <button;
             on_click={submit}
             disabled={loading || rating < 1}
@@ -215,3 +233,6 @@ function submit() {
           <button on_click={()=>on_close (false)} className="px - 3 py - 2 rounded border">Later</button>;
 
 }
+
+}
+  );

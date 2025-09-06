@@ -35,173 +35,23 @@ import api from '@/services/apiClient'
   publisherName: string
   publisherEmail?: string
   productId?: string
-    }
-    const values = form.get_values ();
-    setIsSubmitting (true);
-    set_error (null);
-    try {
-    } finally {
-      setIsSubmitting (false);
-    }
-  }
 import api from '@/services/apiClient';
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 
-  isOpen: boolean;
-  onClose: () => void;
-  publisherName: string;
-  publisherEmail?: string;
-  productId?: string;
-
-type FormValues = {;
-  subject: string;
-  message: string;};
-  subject: string,;
-  message: string;
-interface ContactPublisherModalProps {;
-  isOpen: boolean,;
-  onClose: () => void,;
-  publisherName: string,;
   publisherEmail?: string;
   productId?: string;
 }
 
-type FormValues = {;
-  subject: string,;
-  message: string;
-};
-
-const schema: yup && yup.ObjectSchema<FormValues> = yup;
-  .object({;
-    subject: yup;
-      .string();
-      .min(5, 'Subject must be at least 5 characters');
-      .required('Subject is required'),;
-      .string();
-      .min(20, 'Message must be at least 20 characters');
-      .required('Message is required'),;
-  });
-  .required();
-
-export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
-  onClose,;
-  publisherName,;
-  publisherEmail,;
-  productId,;
-}: ContactPublisherModalProps) {;
-  const [isSubmitting, setIsSubmitting] = React && React.useState(false);
-  const [error, setError] = React && React.useState<string | null>(null);
-  const [loginOpen, setLoginOpen] = React && React.useState(false);
-  const form = useForm<FormValues>({;
-    resolver: yupResolver(schema) as Resolver<FormValues>,;
-    mode: 'onChange',;
-    defaultValues: { subject: '', message: '' },;
-  });
-
-  const handleSend = async () => {;
-    if (!user) {;
-      setLoginOpen(true);
-      return;    }    defaultValues: { subject: '', message: '' }}),;
-  const handleSend = async () => {;
-    if (!user) {;
-      setLoginOpen(true);
-      return;
     }
     const values = form && form.getValues();
     setIsSubmitting(true);
     setError(null);
-    try {;
-      await api && api.post('/api/messages', {;
-        productId,;
-        body: values && values.message,;
-        fromUser: user && user.id,;
-      });
-      toast && toast.success('Message sent');
-      form && form.reset();
-      onClose();    } finally {      onClose();
-    } finally {;
       setIsSubmitting(false);
     }
   };
 
-  const handleKeyDown = (e: React && React.KeyboardEvent,) => {;
-    if (e && e.key === 'Escape') {;
-      e && e.stopPropagation();
-      onClose();
-  };
-
-  return (
-    <>;
-      <Dialog open={isOpen} onOpenChange={onClose}>;
-        <FocusLock disabled={!isOpen} returnFocus>;
-          <DialogContent
-            className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'
-            onKeyDown={handleKeyDown}
-            aria-modal='true'
-            aria-labelledby='contact-publisher-title'>;
-            <DialogHeader>;
-              <DialogTitle
-                id='contact-publisher-title'
-                className='text-xl font-bold text-white flex items-center gap-2'>;
-                <Mail className='h-5 w-5 text-zion-cyan' />;
-                Contact Publisher;
-              </DialogTitle>;
-            </DialogHeader>;
-            {error && <p className='text-red-500 mb-2'>{error}</p>}
-            {publisherEmail && (;
-              <div className='mb-4 text-zion-slate-light'>;
-                <span className='block'>Email:</span>;
-                <a
-                  href={`mailto:${publisherEmail}`}
-                  className='text-zion-cyan hover:underline truncate block'>;
-                  {publisherEmail}
-                </a>;
-              </div>;
-            )}
-            <Form {...form}>;
-              <form onSubmit={e => e && e.preventDefault()} className='space-y-4'>;
-                <FormField
-                  control={form && form.control}
-                  name='subject'
-                  render={({ field }: { field: any }) => (;
-                    <FormItem>;
-                      <FormLabel>Subject</FormLabel>;
-                      <FormControl>;
-                        <Input
-                          placeholder='Subject'
-                          className='bg-zion-blue border-zion-blue-light text-white'
-                          {...field}
-                        />;
-                      </FormControl>;
-                      <FormMessage className='text-red-500' />;
-                    </FormItem>;
-                  )}
-                />;
-                <FormField
-                  control={form && form.control}
-                  name='message'
-                  render={({ field }: { field: any }) => (;
-                    <FormItem>;
-                      <FormLabel>Message</FormLabel>;
-                      <FormControl>;
-                        <Textarea
-                          placeholder={`Message to ${publisherName}...`}
-                          className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]'
-                          {...field}
-                        />;
-                      </FormControl>;
-                      <FormMessage className='text-red-500' />;
-                    </FormItem>;
-                  )}
-                />;
-                <Button
-                  onClick={handleSend}
-                  className='w-full'
-                  disabled={!form.formState.isValid |isSubmitting}
-                >
-                  <SendIcon className='mr-2' />
                   {isSubmitting ? 'Sending...' : 'Send Message'}
       <Dialog open={is_open} onOpenChange={on_close}>;
         <FocusLock disabled={!is_open} return_focus>;
@@ -321,10 +171,6 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
                   <FormMessage className="text-red-500" />;
                 </FormItem>;
               )}
-    </>
-  ) </>
-  )
-}
     </>;
   ) </>;
   );
@@ -394,7 +240,3 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
         </DialogContent>;
       </FocusLock>;
     </Dialog>;
-    <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>) </>);
-}
-;

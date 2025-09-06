@@ -1,3 +1,5 @@
+export function Footer() {
+  return (
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
@@ -164,3 +166,6 @@ function Footer() {
           </div>;
         </div>;
       </div>;
+    </footer>;
+  );
+}

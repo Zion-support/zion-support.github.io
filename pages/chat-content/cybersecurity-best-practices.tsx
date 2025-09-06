@@ -19,6 +19,9 @@ const CybersecurityBestPractices: NextPage = () => {
     </div>;
   ),;
 };
+export default CybersecurityBestPractices;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > CybersecurityBestPractices</h1>;
@@ -29,3 +32,5 @@ import Head from 'next / head';
 ;
 export default CybersecurityBestPractices;
 ;
+
+

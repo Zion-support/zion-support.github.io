@@ -1,5 +1,11 @@
 
+export type ReviewStatus = 'pending' | 'approved' | 'rejected';
+;
 
+export interface Review {
+export type ReviewStatus = 'pending' | 'approved' | 'rejected';
+
+export interface Review {;
   id: string;
   project_id: string;
   reviewer_id: string;

@@ -9,6 +9,10 @@ import { requireUser } from "../../../utils/auth";
 import { sendMessage } from "../../../utils/messaging/storage";
 import { ConversationContext } from "../../../utils/messaging/types";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
   const user = requireUser(req, res);
   if (!user) return;
   const {
@@ -18,6 +22,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     attachmentBase64
     attachmentName
     context
+    body,
+    link_url,
+    attachmentBase64,
+
+
+    context,
+  });
+
 }
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });

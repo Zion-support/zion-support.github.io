@@ -7,7 +7,6 @@ function useCounter(target: number, durationMs: number) {
     let start: number | null = null,
     let raf: number,
     const step = (ts: number) => {
-      if (start === null) start = ts;
       if (progress < 1) raf = requestAnimationFrame(step);
     }
     raf = requestAnimationFrame(step);
@@ -27,6 +26,8 @@ function useCounter(target: number, durationMs: number) {
   }, [target, durationMs]);
   return value
 }
+
+export default function InteractiveStats() {;
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);

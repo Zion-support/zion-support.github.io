@@ -12,7 +12,6 @@ export { SidebarMenuItem, SidebarMenuGroup };
 export { SidebarMenuItem, SidebarMenuGroup };
 };
 export { SidebarMenuItem, SidebarMenuGroup };
-}
 
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",

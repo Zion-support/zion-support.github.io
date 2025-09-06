@@ -192,7 +192,6 @@ if ( {) {
               </Link>
             )}
             {isLoggedIn && <UserMenu />}
-          </div>;
           {/* Mobile menu button */}
           <button
             className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
@@ -269,3 +268,22 @@ setLoginOpen (true)
               openLoginModal={(returnToPath) => setLoginOpen(true)}
             />;
           </div>;
+        </div>;
+      </header>;
+      {mobileMenuOpen && (
+        <div className='lg:hidden fixed inset - 0 z - 60 pt - 16'>;
+          <div;
+            className='absolute inset - 0 bg - black / 50 backdrop - blur - sm';
+            on_click={() => setMobileMenuOpen (false)}
+            aria - hidden='true'          />;
+          <div className='relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem)] overflow - y-auto'>;
+            <MobileMenu;
+              unread_count={unread_count}
+              on_close={() => setMobileMenuOpen (false)}
+              openLoginModal={returnToPath => setLoginOpen (true)}            />;
+          </div>;
+        </div>)}
+      {is_mobile && <MobileBottomNav unread_count={unread_count} />}
+      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
+    </>);
+}

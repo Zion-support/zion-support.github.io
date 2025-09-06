@@ -120,19 +120,10 @@ function FavoritesPage() {
           {profiles.map (t => (
             <div;
               key={t.slug}
-              className='rounded - xl border border - gray - 200 dark:border - gray - 800 p - 5 bg - white / 70 dark:bg - black / 40';
-            >;
-              <div className='flex items - center justify - between'>;
-                <div>;
-                  <div className='font - medium'>{t.name}</div>;
-                  <div className='text - sm text - gray - 600 dark:text - gray - 300'>;
-                    {t.title}
-                  </div>;
-                </div>;
-                <button;
-                  on_click={() => remove (t.slug)}
-                  className='text - xs text - pink - 600 border border - pink - 600 rounded px - 2 py - 1';
-                >;
-                  Remove;
-                </button>;
-              </div>;
+
+
+    </div>;
+  );
+}
+
+    </div>

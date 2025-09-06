@@ -45,6 +45,27 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps } from 'next';
 import { requireAdminRole } from '../../utils/auth';
 import DatePicker from 'react-datepicker';
+}
+
+function LineChart({ data, width = 360, height = 140 }: { data: { date: string, value: number }[], width?: number, height?: number }) {
+  const max = Math.max(1, ...data.map((d) => d.value));
+  const points = data.map((d, i) => {
+    const x = (i / Math.max(1, data.length - 1)) * width;
+    const y = height - (d.value / max) * height;
+    return `${x},${y}`
+  }).join(' ');
+  return (
+    <svg width={width} height={height} className="border rounded bg-white/40 dark:bg-gray-900/40">
+      <polyline fill="none" stroke="#3b82f6" strokeWidth="2" points={points} />
+    </svg>
+  )
+}
+
+function Funnel({ data }: { data: Datum[] }) {
+  return (
+    <div className="flex flex-col gap-2">
+      {data.map((d, i) => (
+        <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
           {d.label}: {d.value}
         </div>
       ))}
@@ -127,33 +148,6 @@ export default function UsageAnalytics() {
       setPagesMostUsed(json.pagesMostUsed || []);
       setEvents(json.events || []);
       setLine(json.line || []);
-      setFunnel(json.funnel || [])
-export default /**
- * UsageAnalytics - Function description
- */
-function UsageAnalytics() {
-  const [start, set_start] = useState < Date>(new Date (Date.now () - 29 * 24 * 3600 * 1000)),
-  const [end, set_end] = useState < Date>(new Date ()),
-  const [user_type, setUserType] = useState < string>('all'),
-  const [loading, set_loading] = useState (false),
-  const [pagesMostUsed, setPagesMostUsed] = useState < Datum[]>([]),
-  const [events, set_events] = useState < Datum[]>([]),
-  const [line, set_line] = useState<{ date: string, value: number }[]>([]),
-  const [funnel, set_funnel] = useState < Datum[]>([]),
-  const refresh = useCallback (async () => {
-    set_loading (true),
-    try {
-      const params = new URLSearchParams ({ start: start.toISOString (), end: end.toISOString (), user_type }),
-      const res = await fetch (`/api / admin / analytics / summary?${params.to_string ()}`),
-      const json = await res.json (),
-      setPagesMostUsed (json.pagesMostUsed || []),
-      set_events (json.events || []),
-      set_line (json.line || []),
-      set_funnel (json.funnel || []);
-    } finally {
-      set_loading (false);
-    }
-
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -171,11 +165,7 @@ function UsageAnalytics() {
                   <span>{e.label}</span>
                   <span className="text-gray-500">{e.value}</span>
                 </div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              ))}
             </div>
           </div>
         </div>
@@ -192,3 +182,5 @@ function UsageAnalytics() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+

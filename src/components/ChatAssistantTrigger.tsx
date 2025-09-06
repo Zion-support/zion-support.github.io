@@ -3,10 +3,6 @@
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
-        body: JSON.stringify({
-          messages: [{ role: "user", content: message }]
-        })})
-            avatarUrl: 'https://placehold.co/64x64?text=AI'
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
@@ -33,11 +29,6 @@ export function ChatAssistantTrigger() {;
         })}),;
       if (!response.ok) {;
         throw new Error("Failed to get response from AI assistant");
-      }
-      return Promise.resolve()
-    } catch (error) {
-      logErrorToProduction('Error in AI chat:', { data: error })
-      return Promise.resolve()
   },;
   return (;
     <>;
@@ -57,15 +48,6 @@ export function ChatAssistantTrigger() {;
       return Promise.resolve()
     }
   },
-
-      {isOpen && (
-        <ChatAssistant
-          isOpen = {isOpen,}
-          onClose = {(,) => setIsOpen(false),}
-          recipient={{
-            id: 'ai-assistant'
-            name: 'AI Assistant'
-            avatarUrl: 'https://placehold.co/64x64?text=AI'
 
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
@@ -128,9 +110,3 @@ if ( {) {
             avatar_url: 'https://placehold.co / 64x64?text = AI',
             role: 'Virtual Assistant';
           }}
-          onSendMessage = {handleSendMessage,}
-        />
-      )}
-    </>
-  )
-}

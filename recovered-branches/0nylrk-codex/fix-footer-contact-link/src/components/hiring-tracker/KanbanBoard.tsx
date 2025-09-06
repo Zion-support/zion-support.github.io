@@ -15,7 +15,6 @@ interface DropResult {;
   destination?: DnDLocation | null;
 }
 
-
   droppableId: string
 
   index: number
@@ -75,6 +74,8 @@ interface KanbanBoardProps {
          destination.index === source.index)) {
       return
     }
+;
+
 // Define the kanban board columns based on application statuses;
 const COLUMNS = [;
   {;
@@ -132,35 +133,12 @@ interface KanbanBoardProps {;
         description: "Please try again"
         variant: "destructive"})
     }
-
   }
 
   },
   
   if (isLoading) {
     return (
-      <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
-        {Array && Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
-      const groupedApplications = COLUMNS.reduce((acc, column) => {;
-        acc[column.id] = applications.filter(app => app.status === column.id),;
-        return acc,;
-      }, {} as Record<string JobApplication[]>),;
-      ;
-      setColumns(groupedApplications),;
-    }
-  }, [applications]),;
-  ;
-  // Handle drag end event to update the application status;
-  const handleDragEnd = async (result:DropResult) => {;
-    const { destination, source, draggableId } = result,;
-    ;
-    // If there's no destination or the item is dropped in the same place, do nothing;
-    if (!destination || ;
-        (destination.droppableId === source.droppableId && ;
-         destination.index === source.index)) {;
-      return,;
-    }
-    ;
     // Get the application that was dragged;
     const application = applications.find(app => app.id === draggableId),;
     if (!application) return,;
@@ -209,6 +187,15 @@ interface KanbanBoardProps {;
               <Skeleton className="h-[400px] w-full" />;
             </CardContent>;
           </Card>;
+        ))}
+      </div>;
+    );
+  }
+  if (!applications |applications.length === 0) {
+  
+  if (!applications || applications.length === 0) {
+    return (
+      <Card className="text-center py-16">;
         <CardContent>;
           <h3 className="text-lg font-semibold mb-2">No applications yet</h3>;
           <p className="text-muted-foreground mb-6">;

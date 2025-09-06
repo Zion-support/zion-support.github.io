@@ -1,3 +1,9 @@
+interface EmailValidationResult {
+  email: string;
+  is_valid: boolean;
+interface EmailValidationResult {
+  email: string;
+  isValid: boolean;
   score: number;
   suggestions: string[];
   details: {

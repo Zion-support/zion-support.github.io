@@ -30,6 +30,11 @@
   }
   set("userId", role === "guest" ? "" : "test-user");
 
+}
+
+
+
+  export default /**
  * handler - Function description
  */
 function handler() {
@@ -82,3 +87,4 @@ if ( {) {
   headers["Set - Cookie"] = cookies.join ();
   res.write_head (302, { ...headers, Location: "/" });
   res.end ();
+

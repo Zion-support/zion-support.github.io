@@ -1,4 +1,12 @@
 
+import {format} from "date-fns";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
+import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
+import type { QuoteRequest } from "@/types/quotes";
+import React from "react",
+import { format } from "date-fns",
 import { 
   Card;
   CardContent;
@@ -12,16 +20,18 @@ type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded?: (id: string) => void,
-  onMarkAsResponded,
   onToggleArchive
 }) => {
-  // Format date for display;
-  const format_date = (date_string: string) =>: any {
+  // Format date for display
+  const formatDate = (dateString: string) => {
     try {
-      return format (new Date (date_string), 'PP');
+      return format(new Date(dateString), 'PP')
     } catch (e) {
       return dateString
     }
+  }
+  },
+
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -165,6 +175,3 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
         </div>;
       </CardContent>;
 };
-    </Card>);
-}
-;

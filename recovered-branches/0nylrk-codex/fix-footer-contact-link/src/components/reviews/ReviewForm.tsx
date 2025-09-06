@@ -34,6 +34,19 @@ interface ReviewFormValues {
   timeliness_rating?: number,
   would_work_again?: boolean,
   is_anonymous?: boolean
+
+interface ReviewFormProps {;
+  projectId: string,;
+  revieweeId: string,;
+  revieweeName: string,;
+  onSubmit: (data: any) => Promise<boolean>, ;
+  defaultValues?: Review;
+  isSubmitting: boolean;
+}
+
+
+export function ReviewForm(): any ({;
+
   projectId;
   revieweeId;
   revieweeName;
@@ -75,7 +88,6 @@ interface ReviewFormProps {;
   isSubmitting: boolean;
 }
 
-
 export function ReviewForm({
   projectId,
   revieweeId,
@@ -83,10 +95,6 @@ export function ReviewForm({
   onSubmit,
   defaultValues,
   isSubmitting}: ReviewFormProps) {
-
-  const [hoveredStar, setHoveredStar] = useState<number>(0),
-  
-
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
       rating: defaultValues.rating
@@ -103,6 +111,17 @@ export function ReviewForm({
       project_id: projectId
       reviewee_id: revieweeId}
     const success = await onSubmit(formattedData);
+  const handleSubmit = async (values: ReviewFormValues) => {;
+    const formattedData = {;
+      ...values,;
+      project_id: projectId,;
+      reviewee_id: revieweeId},;
+
+
+    const success = await onSubmit(formattedData);
+    if (success) {;
+      form && form.reset();
+    }
         {/* Main Rating */}
         <FormField
           control={form && form.control}
@@ -228,25 +247,80 @@ export function ReviewForm({;
               </div>;
             </FormItem>;
           )}
-        {/* Review Text */}
-        <FormField;
-          control={form.control}
-          name="review_text";
-          rules={{;
-            required:"Please provide feedback",;
-            minLength:{;
-              value:20,;
-              message:"Review must be at least 20 characters"}}}
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Your Review</FormLabel>;
-              <FormControl>;
     }
   },
   
   const watchRating = form.watch("rating"),
   
   return (
+        {/* Review Text */}
+        <FormField
+          control={form && form.control}
+          name="review_text"
+          rules={{
+            required: "Please provide feedback"
+            minLength: {
+              value: 20
+
+              message: "Review must be at least 20 characters"}}}
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Your Review</FormLabel>;
+              <FormControl>;
+                <Textarea
+                  placeholder="Share your experience and feedback..."
+                  className="min-h-24 resize-none"
+interface ReviewFormProps {
+  project_id: string,
+  reviewee_id: string,
+  reviewee_name: string,
+  on_submit: (data: any) => Promise < boolean>,
+  default_values?: Review;
+  is_submitting: boolean;
+}
+export /**
+ * ReviewForm - Function description
+ */
+function ReviewForm() {
+  const [hovered_star, setHoveredStar] = useState < number>(0);
+;
+  const form = use_form < ReviewFormValues>({
+    default_values: default_values ? {
+      rating: default_values.rating,
+      review_text: default_values.review_text,
+      communication_rating: default_values.communication_rating,
+      quality_rating: default_values.quality_rating,
+      timeliness_rating: default_values.timeliness_rating,
+      would_work_again: default_values.would_work_again,
+      is_anonymous: default_values.is_anonymous} : {
+      rating: 0,
+      review_text: "",
+      communication_rating: undefined,
+      quality_rating: undefined,
+      timeliness_rating: undefined,
+      would_work_again: undefined,
+      is_anonymous: false}
+  });
+;
+  const handle_submit = async (values: ReviewFormValues) => {
+    const formatted_data = {
+      ...values,
+      project_id: project_id,
+      reviewee_id: reviewee_id},
+    const success = await on_submit (formatted_data);
+    // Check condition
+if ( {) {
+  $2
+}
+      form.reset ();
+    }
+  }
+;
+  const watch_rating = form.watch ("rating");
+;
+  return (
+    <Form {...form}>;
+      <form on_submit={form.handle_submit (handle_submit)} className="space - y-6">;
         {/* Main Rating */}
         <FormField;
           control={form.control}
@@ -520,91 +594,3 @@ export function ReviewForm({;
               <FormMessage />;
             </FormItem>;
           )}
-                </FormItem>)}
-            />;
-          </div>)}
-        {/* Anonymous Review */}
-        <FormField;
-          control={form.control}
-          name="is_anonymous";
-          render={({ field }) => (
-            <FormItem>;
-              <div className="flex items - center gap - 2">;
-                <FormControl>;
-                  <Switch;
-                    checked={field.value}
-                    onCheckedChange={field.on_change}
-                  />;
-                </FormControl>;
-                <FormLabel className="cursor - pointer font - normal">;
-                  Submit anonymously;
-                </FormLabel>;
-              </div>;
-              <p className="text - xs text - muted - foreground mt - 1">;
-                Anonymous reviews won't display your name but will still be linked to your account.;
-              </p>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        <Button;
-          type="submit";
-          className="w - full";
-          disabled={is_submitting || !form.form_state.is_valid}
-        >;
-          {is_submitting ? "Submitting..." : default_values ? "Save Changes" : "Submit Review"}
-        </Button>;
-      </form>;
-    </Form>);
-        ;
-        <Button;
-          type="submit";
-          className="w-full";
-          disabled={isSubmitting || !form.formState.isValid}
-        >;
-          {isSubmitting ? "Submitting..." :defaultValues ? "Save Changes" :"Submit Review"}
-        </Button>;
-      </form>;
-    </Form>;
-  ),; import {
-  Form;
-FormControl;
-FormField;
-FormItem;
-FormLabel;
-interface ReviewFormValues {
-  rating?: number;
-review text?: string;
-communication rating?: number;
-quality rating?: number;
-timeliness rating?: number;
-would work again?: boolean;
-is anonymous?: boolean 
-}interface ReviewFormProps {
-  projectId: string;
-revieweeId: string;
-revieweeName: string;
-onSubmit: (data: any) => Promise<boolean>;
-defaultValues?: Review;
-isSubmitting: boolean 
-}export function ReviewForm ({
-  projectId;
-revieweeId;
-revieweeName;
-onSubmit;
-defaultValues;
-isSubmitting 
-}: ReviewFormProps) {
-  const [hoveredStar, setHoveredStar] = useState<number> (0);
-defaultValues: defaultValues ? {
-  return (<Form {
-  ...form 
-}> <form onSubmit= {
-  form.handleSubmit (handleSubmit) 
-}className="space-y-6" > {
-  /* Main Rating */ 
-}<FormField control= {
-  form.control 
-}name="rating" rules= {
-  {
-  required: "Rating is required" 
-}

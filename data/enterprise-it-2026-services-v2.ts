@@ -1,3 +1,7 @@
+export interface EnterpriseIt2026ServiceV2 {
+
+export interface EnterpriseIt2026ServiceV2 {;
+
   id: string;
   name: string;
   tagline: string;
@@ -690,6 +694,17 @@ export interface EnterpriseIT2026ServiceV2 {
     launchDate: '2026-05-01';
     customers: 280;
     rating: 4.9
+
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true,
+    implementation_details: 'Production - ready quantum security platform with post - quantum algorithms, monitoring, and enterprise deployment.';
+    launch_date: '2026 - 05 - 01';
+    customers: 280;
+    rating: 4.9,
+    reviews: 180;
 
 ];
 import { ServiceVariant } from '../types/service-variants',;

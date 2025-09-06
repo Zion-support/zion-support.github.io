@@ -52,11 +52,6 @@ const generateSitemap = () => {
 },
 generateSitemap(),
 
-const fs = require('fs');
-const path = require('path');
-// Base URL for the site
-const BASE_URL = 'https://zion.app';
-
   console.log('Sitemap generated successfully at:', sitemapPath)
 },
 
@@ -106,3 +101,5 @@ generateSitemap();
 ,
 generateSitemap(),
 
+console && console.log('🗺️  Generating sitemap...');
+console && console.log('✅ Sitemap generation completed');

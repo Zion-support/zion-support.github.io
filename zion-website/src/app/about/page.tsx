@@ -19,6 +19,11 @@ const values = [
     description: 'We maintain the highest standards of security and ethical AI development.'
     icon: ShieldCheckIcon}
   {
+
+    name: 'Research Excellence',
+    description: 'Our team of world - class researchers drives breakthrough discoveries and innovations.',
+    icon: AcademicCapIcon}];
+const team = [;
   {
     name: 'Dr. Sarah Chen'
     role: 'Chief Executive Officer'
@@ -35,12 +40,27 @@ const values = [
     bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.'
     image: '/images/team/elena-petrov.jpg'}
   {
+  return (
+    <div className="bg-black">
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               About{' '}
+export default function AboutPage() {
+  return (
+    <div className="bg-black">
+      {/* Hero section */}
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              About{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                Zion Tech Group
+              </span>
+            </h1>
               dedicated to transforming industries and advancing human potential through technology.
             </p>
           </div>
@@ -93,7 +113,6 @@ const values = [
         </div>;
       </div>;
       {/* Leadership Team */}
-
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
@@ -122,11 +141,20 @@ const values = [
               <div className="max-w-xl">
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    {person.name}
+                  </h3>;
+                  <p className=&quot;mt - 2 text - sm text - blue - 400 & quot;>{person.role}</p>;
+                  <p className=&quot;mt - 5 line - clamp - 3 text - sm leading - 6 text - gray - 300 & quot;>{person.bio}</p>;
+                </div>;
+              </div>;
+            </article>))}
+        </div>;
+      </div>;
+      {/* CTA section */}
             Join us in shaping the future
           </h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+            Ready to be part of the AI revolution? Let's discuss how we can work together to 
             transform your organization.
           </p>
           <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>

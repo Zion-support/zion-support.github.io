@@ -7,6 +7,11 @@
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
+
+}: {;
+  serviceId?: string;
+  defaultType?: RedemptionType;
+}) {;
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -21,6 +26,9 @@
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
+      />
+    </>
+
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -35,18 +43,6 @@
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
-      />;
-    </>;
-  );
-}
-import React, { useState } from './react';
-import UseTokensModal, { RedemptionType } from "./UseTokensModal";
-;
-export default /**
- * UseTokensButton - Function description
- */
-function UseTokensButton() {
-  const [open, set_open] = useState (false);
   return (
     <>;
       <button;

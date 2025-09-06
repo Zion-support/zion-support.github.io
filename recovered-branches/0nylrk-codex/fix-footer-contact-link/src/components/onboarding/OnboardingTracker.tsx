@@ -1,4 +1,9 @@
 
+import React from "react";
+import {CheckCircle, Circle, ArrowRight} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
 import React from "react",
 import { CheckCircle, Circle, ArrowRight } from "lucide-react",
 import { cn } from "@/lib/utils",
@@ -34,9 +39,6 @@ import { CheckCircle, Circle, ArrowRight } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
-
-
-
 export interface OnboardingStep {;
   id: string,;
   label: string,;
@@ -70,6 +72,9 @@ export function OnboardingTracker({;
         <h3 className="text-lg font-medium text-white">{title}</h3>;
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
       </div>;
+          style={{ width: `${progress}%` }}
+        ></div>
+      </div>
       {/* Steps list */}
       <div className="space-y-3">;
         {steps && steps.map((step) => (;
@@ -87,6 +92,17 @@ export function OnboardingTracker({;
     </div>
   )
 }
+import React from './react';
+import { CheckCircle, Circle, ArrowRight } from './lucide-react';
+import { cn } from '@/lib / utils';
+import { Button } from '@/components / ui / button';
+import { Link } from './react-router-dom';
+export interface OnboardingStep {
+  id: string,
+  label: string,
+  completed: boolean,
+  link: string,
+  action?: string;
 }
 interface OnboardingTrackerProps {
   steps: OnboardingStep[],

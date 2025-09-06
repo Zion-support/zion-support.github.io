@@ -154,7 +154,3 @@ export function ServiceIncludes() {;
           </div>;
         </div>;
       </div>;
-  )
-
-}
-;

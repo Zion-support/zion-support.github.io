@@ -39,14 +39,12 @@ class FileWatcher {
         issues.push('Merge conflict markers found');
       }
 
-
       // Check for unmatched braces (simple check)
       const openBraces = (content.match(/{/g) || []).length;
       const closeBraces = (content.match(/}/g) || []).length;
       if (openBraces !== closeBraces) {
         issues.push('Unmatched braces detected');
       }
-
 
       // Check for unmatched parentheses
       const openParens = (content.match(/\(/g) || []).length;
@@ -75,7 +73,6 @@ class FileWatcher {
       return [];
     }
 
-
     try {
       execSync(`npx tsc --noEmit --skipLibCheck ${filePath}`, { 
         stdio: 'pipe',
@@ -88,12 +85,10 @@ class FileWatcher {
     }
   }
 
-
   async autoFixFile(filePath) {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
-
 
       // Auto-fix common issues
       const fixes = [
@@ -263,15 +258,10 @@ try {
 } catch (error) {
   console.log('Installing chokidar...');
   execSync('yarn add chokidar', { stdio: 'inherit' });
-
 // Main execution
 if (require.main === module) {
   const watcher = new FileWatcher();
   watcher.run().catch(console.error);
-}
-module.exports = FileWatcher;
-
-
   require('chokidar')} catch (error) {
   console.log('Installing chokidar...');
   execSync('yarn add chokidar', { "stdio": 'inherit' })}

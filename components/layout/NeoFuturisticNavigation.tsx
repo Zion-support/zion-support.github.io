@@ -415,6 +415,58 @@ export default function NeoFuturisticNavigation() {
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
+                  />;
+                </button>;
+                {activeDropdown === 'mobile-services' && (;
+                  <div className='ml-4 space-y-3'>;
+                    {serviceCategories && serviceCategories.map((category, index) => (;
+                      <div
+                        key={index}
+                        className='border-l-2 border-gray-700 pl-4'>;
+                        <div className='text-cyan-400 font-medium mb-2'>;
+                          {category && category.name}
+                        </div>;
+                        <div className='text-gray-400 text-sm mb-2'>;
+                          {category && category.description}
+                        </div>;
+                        <div className='space-y-1'>;
+                          {category && category.services;
+                            .slice(0, 2);
+                            .map((service, serviceIndex) => (;
+                              <div
+                                key={serviceIndex}
+                                className='text-xs text-gray-500'>;
+                                • {service && service.name} - {service && service.price}
+                              </div>;
+                            ))}
+                        </div>;
+                      </div>;
+                    ))}
+                    <div className='pt-3'>;
+          >
+            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+          </button>
+        </div>
+      </div>
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-gray-700/50'>
+          <div className='max-w-7xl mx-auto px-4 py-6'>
+            <div className='space-y-6'>
+              {/* Services Section */}
+              <div>
+                <button
+                  className='flex items-center justify-between w-full text-left text-white font-semibold mb-4'
+                  onClick={() => toggleDropdown('mobile-services')}
+                >
+                  <span>Services</span>
+                  <ChevronRight
+                    className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
+                  />
+                </button>
+                {activeDropdown === 'mobile-services' && (
+                  <div className='ml-4 space-y-3'>
+                    {serviceCategories.map((category, index) => (
                       <div
                         key={index}
                       <Button
@@ -802,9 +854,6 @@ export default function NeoFuturisticNavigation() {
               </div>;
             </div>;
           </div>;
-      )}
-    </nav>;
-  );
   `w-4 h-4 transition-transform duration-300 $ {
   activeDropdown === 'services' ? 'rotate-180' : ''
 }`
@@ -852,59 +901,4 @@ export default function NeoFuturisticNavigation() {
 				</div>
 			)}
 		</nav>
-        </div>)}
-    </nav>);
-;
-  `w - 4 h - 4 transition - transform duration - 300 $ {
-  active_dropdown === 'services' ? 'rotate - 180' : '';
-}`;
-}/> </button> </div>) );
-}</div> </div>) );
-}</div> <div className="mt - 6 pt - 6 border - t border - gray - 700 / 50" > <div className="flex items - center justify - between" > <div className="text - gray - 400 text - sm" > <span className="text - cyan - 400 font - semibold" >500+</span> Revolutionary Services Available </div> <Button href="/services" variant="quantum" size="sm" > View All Services <ArrowRight className="w - 4 h - 4 ml - 2" /> </Button> </div> </div> </div>);
-}</div> > <span > Popular</span> <ChevronDown className= {
-  `w - 4 h - 4 transition - transform duration - 300 $ {
-  active_dropdown === 'popular'? 'rotate - 180': '';
-}`;
-}/> </button>) );
-}</div> </div>);
-}</div>) );
-}</div> </div>);
-}</div> </div> </button> </div> </div> <span > Services</span> <ChevronRight className= {
-  `w - 5 h - 5 transition - transform duration - 300 $ {
-  active_dropdown === 'mobile - services'? 'rotate - 90': '';
-}`;
-}/> </button>) );
-}</div> </div>) );
-}<div className="pt - 3" > <Button href="/services" variant="quantum" size="sm" className="w - full" > View All Services <ArrowRight className="w - 4 h - 4 ml - 2" /> </Button> </div> </div>);
-}</div> {
-  /* Company Section */;
-}<div> <span > Company</span> <ChevronRight className= {
-  `w - 5 h - 5 transition - transform duration - 300 $ {
-  active_dropdown === 'mobile - company'? 'rotate - 90': '';
-}`;
-}/> </button>) );
-}</div>);
-}</div> {
-  /* Resources Section */;
-}<div> <span > Resources</span> <ChevronRight className= {
-  `w - 5 h - 5 transition - transform duration - 300 $ {
-  active_dropdown === 'mobile - resources'? 'rotate - 90': '';
-}`;
-}/> </button>) );
-}</div>);
-}</div> </div> </div> <div className="mt - 6 space - y-3" > <Button href="/services" variant="quantum" size="lg" className="w - full" > Explore Services <ArrowRight className="w - 5 h - 5 ml - 2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w - full" > Contact Us </Button> </div> </div> </div> </div> </div>);
-}</nav>) 								<div className="mt - 6 space - y-3">;
-        <Button href="/services" variant="quantum" size="lg" className="w - full">;
-          Explore Services;
-          <ArrowRight className="w - 5 h - 5 ml - 2" />;
-        </Button>;
-        <Button href="/contact" variant="secondary" size="lg" className="w - full">;
-          Contact Us;
-        </Button>;
-        </div>;
-      </div>;
-      </div>;
-    </div>;
-    </div>)}
-  </nav>);
 }

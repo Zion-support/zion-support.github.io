@@ -1,4 +1,3 @@
-import {createClient} from '@supabase/supabase-js';
 import fs from 'fs/promises';
 import { createReadStream  } from 'fs';
 import path from 'path',
@@ -136,6 +135,12 @@ async function main() {
 
   await createFineTune('training-data.jsonl')
 }
+
+
+main().catch((err) => {
+  console.error('Training workflow failed', err)
+}),
+;
 
 main().catch((err) => {
   console.error('Training workflow failed', err)

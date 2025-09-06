@@ -2,33 +2,6 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import {;
-  Code,;
-  GitBranch,;
-  Database,;
-  Cloud,;
-  Shield,;
-  Zap,;
-  Star,;
-  ExternalLink,;
-  CheckCircle,;
-  TrendingUp,;
-  Cpu,;
-  Globe,;} from 'lucide-react';import { ;
-  Code;
-  GitBranch, ;
-  Database, ;
-  Cloud, ;
-  Shield, ;
-  Zap, ;
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
   Code,
   GitBranch,
   Database,
@@ -39,6 +12,9 @@ import {
   ExternalLink,
   CheckCircle,
   TrendingUp,
+
+
+
   Code;
   GitBranch,
   Database,
@@ -59,13 +35,6 @@ export default function DeveloperToolsPage() {
       description:
         'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.'
       features: [
-      pricing: '$20 / month',
-      market_price: '$20 / month',
-      website: 'https://vercel.com / pricing',
-      color: 'bg - gradient - to - br from - black to - gray - 600',
-      text_color: 'text - gray - 400',
-      gradient: 'from - black to - gray - 500',
-      popular: false,
       ];
       pricing: '$12 / month',
       market_price: '$12 - 99 / month',
@@ -116,6 +85,24 @@ export default function DeveloperToolsPage() {
               <Card
                 key={index}
                 className='card-hover border-gradient-blue text-center'
+                  <h3 className="text-lg font-semibold text-white mb-3">{stat.title}</h3>
+                  <div className="text-2xl font-bold text-cursor-blue mb-2">{stat.value}</div>
+                  <div className="text-sm text-green-400 mb-3">{stat.growth}</div>
+                  <p className="text-sm text-gray-400">{stat.description}</p>
+                </div>
+              </Card>
+
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Developer Tools Grid */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
               Curated Developer Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -190,6 +177,33 @@ export default function DeveloperToolsPage() {
                   </div>;
                 </div>;
               </Card>;
+                        variant="primary"
+                        size="sm"
+                        className="bg-cursor-blue hover:bg-cursor-blue-dark"
+                      >
+                        Try Tool
+                        <ExternalLink className="w-4 h-4 ml-2" />
+                      </Button>
+                      <div className="text-right">
+                        <div className="text-xs text-gray-500">Direct Link</div>
+                        <div className="text-xs text-cursor-blue font-mono">{tool.website}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Developer Workflow */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
               Complete Developer Workflow
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -212,6 +226,17 @@ export default function DeveloperToolsPage() {
               Build a complete development pipeline with these essential tools that work together seamlessly.;
             </p>;
           </div>;
+                        {tool}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Tool Categories */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -236,6 +261,58 @@ export default function DeveloperToolsPage() {
             {devCategories && devCategories.map((category, index) => (;
               <Card
                 key={index}
+      {/* Tool Categories */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Understanding the different types of developer tools helps you
+              build a comprehensive development stack.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {devCategories.map((category, index) => (
+              <Card
+                key={index}
+                className='card-hover border-gradient-blue'
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className='p-6'>
+                  <h3 className='text-xl font-semibold text-white mb-3'>
+                    {category.name}
+                  </h3>
+                  <p className='text-gray-400 mb-4'>{category.description}</p>
+                  <div className='flex items-center justify-between text-sm'>
+                    <span className='text-gray-500'>
+                      Tools Available:{' '}
+                      <span className='text-white'>{category.tools}</span>
+                    </span>
+                    <span className='text-cursor-blue font-semibold'>
+                      {category.avgPrice}
+                    </span>                  </div>                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
+                  <p className="text-gray-400 mb-4">{category.description}</p>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-500">Tools Available: <span className="text-white">{category.tools}</span></span>
+                    <span className="text-cursor-blue font-semibold">{category.avgPrice}</span>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
+
             Start with one tool or build a complete development stack. Each tool;
             is designed to work independently and integrate seamlessly with your;
             existing workflow.;
@@ -244,9 +321,6 @@ export default function DeveloperToolsPage() {
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>
           <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-
-            Ready to Level Up Your Development?
           </h2>
           <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>
             Start with one tool or build a complete development stack. Each tool

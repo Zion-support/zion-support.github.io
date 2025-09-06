@@ -1,3 +1,17 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
   Check
   Star
   Zap
@@ -108,6 +122,88 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
+        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
+        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
+        return bRoi - aRoi;
+      default: return a.name.localeCompare(b.name)
+;
+  // Filter and sort services;
+  let filtered_services = all_services;
+;
+  // Category filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    filtered_services = filtered_services.filter (
+      service => service.category === selected_category);  }
+  // Price range filter;
+  if ( {    filtered_services = filtered_services.filter (service => service.category === selected_category)) {
+  $2
+}
+  }
+  // Price range filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    const [min, max] = price_range;
+      .split ('-');
+      .map (p => (p === '+' ? Infinity : parse_int (p)));
+    filtered_services = filtered_services.filter (service => {
+      const price = parse_float (service.price.replace ('$', '').replace (', ', ''));
+      return price >= min && (max === Infinity || price <= max);
+    });  }
+  // Search filter;
+  if ( {    const [min, max] = price_range.split ('-').map (p => p === '+' ? Infinity : parse_int (p))) {
+  $2
+}
+    filtered_services = filtered_services.filter (service => {
+      const price = parse_float (service.price.replace ('$', '').replace (, ''));
+      return price >= min && (max === Infinity || price <= max);
+    });
+  // Search filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    filtered_services = filtered_services.filter (
+      service =>;
+        service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        service.category.toLowerCase ().includes (search_query.toLowerCase ())    );    filtered_services = filtered_services.filter (service =>;
+      service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      service.category.toLowerCase ().includes (search_query.toLowerCase ());
+  }
+  // Sort services;
+  filtered_services.sort ((a, b) => {
+    switch (sort_by) {
+      case 'price':;
+        return (
+          parse_float (a.price.replace ('$', '').replace (', ', '')) -;
+          parse_float (b.price.replace ('$', '').replace (', ', '')));      case 'popularity':        return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, ''));
+      case 'popularity':;
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+      case 'category':;
+        return a.category.locale_compare (b.category);
+      case 'roi':;
+        const a_roi = parse_float (a.roi.match (/\d+/)?.[0] || '0');
+        const b_roi = parse_float (b.roi.match (/\d+/)?.[0] || '0');
+        return b_roi - a_roi;
+      default:;
+        return a.name.locale_compare (b.name);    }      default: return a.name.locale_compare (b.name);
+    }
+  });
+;
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
+
       popular: false
     },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ];
@@ -197,48 +293,66 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
     },      icon: <Shield className="w-6 h-6" />
     }
     {
-      name: 'Professional',
-      price: '$199',
-      period: '/month',
-      description: 'Ideal for growing businesses and teams',
-      features: [
-        'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations'
-      ];
-      icon: <Gem className="w-6 h-6" />,
-      color: 'from-purple-500 to-pink-600',
-      popular: true
-    };
-    {
-      name: 'Enterprise',
-      price: '$499',
-      period: '/month',
-      description: 'For large organizations and enterprises',
-      features: [
-        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees'
-      ];
-      icon: <Crown className="w - 6 h - 6" />,
-      color: 'from - yellow - 500 to - orange - 600',
-      popular: false;
-    }
-  ];
+      metric: '2000%+',
+      label: 'Average ROI',
+      description: 'Proven business value',
 
-  // Market statistics
-  const marketStats = [
-    {
-      metric: '$15.2B',
-      label: 'Total Market Size',
-      description: 'Combined market value of all services',
-      icon: <ChartBar className="w-6 h-6" />
-    };
-    {
-      metric: '400+',
-      label: 'Services Available',
-      description: 'Comprehensive micro SaaS portfolio',
-      icon: <Database className="w-6 h-6" />
-    };
-    {
-      metric: '99.99%',
-      label: 'Uptime Guarantee',
+
+
+        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
+      ];
+      icon: <Star className="w-6 h-6" />,
+      color: 'from-blue-500 to-cyan-600',
+      popular: false
+    },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
+      ];
+      icon: <Star className="w-6 h-6" />
+      color: 'from-blue-500 to-cyan-600'
+      popular: false
+    }
+      name: 'Professional'
+      price: '$199'
+      period: '/month'
+      description: 'Ideal for growing businesses and teams'
+      features: [
+        'Advanced service access'
+        'Priority support'
+        'Advanced features'
+        'API access'
+        'Advanced analytics'
+        'Custom integrations'
+      ]
+      icon: <Gem className="w-6 h-6" />
+      color: 'from-purple-500 to-pink-600'
+      popular: true
+    },    {        'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations'
+      ];
+      icon: <Gem className="w-6 h-6" />
+      color: 'from-purple-500 to-pink-600'
+      popular: true
+    }
+      name: 'Enterprise'
+      price: '$499'
+      period: '/month'
+      description: 'For large organizations and enterprises'
+      features: [
+        'Full service access'
+        '24/7 dedicated support'
+        'All features'
+        'Custom development'
+        'Enterprise analytics'
+        'White-label options'
+        'SLA guarantees'
+      ]
+      icon: <Crown className="w-6 h-6" />
+      color: 'from-yellow-500 to-orange-600'
+      popular: false
+    },  ];        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees'
+      ];
+      icon: <Crown className="w-6 h-6" />
+      color: 'from-yellow-500 to-orange-600'
+      popular: false
+    }
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -256,180 +370,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
       y: 0
       opacity: 1
       transition: {
-
-  const contactInfo = {;
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup && ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
-  };
-
-  // Pricing tiers;
-  const pricingTiers = [;
-    {;
-      name: 'Starter',;
-      price: '$49',;
-      period: '/month',;
-      description: 'Perfect for small businesses and startups',;
-      features: [;
-        'Basic service access',;
-        'Email support',;
-        'Standard features',;
-        'Community forum access',;
-        'Basic analytics',;
-      ],;
-      icon: <Star className="w-6 h-6" />,;
-      color: 'from-blue-500 to-cyan-600',;
-      popular: false,;
-    },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics';
-      ];
-      icon: <Star className="w-6 h-6" />,;
-      color: 'from-blue-500 to-cyan-600',;
-      popular: false;
-    };
-      name: 'Professional',;
-      price: '$199',;
-      period: '/month',;
-      description: 'Ideal for growing businesses and teams',;
-      features: [;
-        'Advanced service access',;
-        'Priority support',;
-        'Advanced features',;
-        'API access',;
-        'Advanced analytics',;
-        'Custom integrations',;
-      ],;
-      icon: <Gem className="w-6 h-6" />,;
-      color: 'from-purple-500 to-pink-600',;
-      popular: true,;
-    },    {        'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations';
-      ];
-      icon: <Gem className="w-6 h-6" />,;
-      color: 'from-purple-500 to-pink-600',;
-      popular: true;
-    };
-      name: 'Enterprise',;
-      price: '$499',;
-      period: '/month',;
-      description: 'For large organizations and enterprises',;
-      features: [;
-        'Full service access',;
-        '24/7 dedicated support',;
-        'All features',;
-        'Custom development',;
-        'Enterprise analytics',;
-        'White-label options',;
-        'SLA guarantees',;
-      ],;
-      icon: <Crown className="w-6 h-6" />,;
-      color: 'from-yellow-500 to-orange-600',;
-      popular: false,;
-    },  ];        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees';
-      ];
-      icon: <Crown className="w-6 h-6" />,;
-      color: 'from-yellow-500 to-orange-600',;
-      popular: false;
-    }
-
-  // Market statistics;
-  const marketStats = [;
-    {;
-      metric: '$15 && 15.2B',;
-      label: 'Total Market Size',;
-      description: 'Combined market value of all services',;
-      icon: <ChartBar className='w-6 h-6' />,;
-    },    {;
-      metric: '400+',;
-      label: 'Services Available',;
-      description: 'Comprehensive micro SaaS portfolio',;
-      icon: <Database className='w-6 h-6' />,;
-    },    {;
-      metric: '99 && 99.99%',;
-      label: 'Uptime Guarantee',;
-      description: 'Enterprise-grade reliability',;
-      icon: <Shield className='w-6 h-6' />,;
-    },    {;
-      metric: '2000%+',;
-      label: 'Average ROI',;
-      description: 'Proven business value',;
-      icon: <TrendingUp className='w-6 h-6' />,;
-    },  ];      icon: <ChartBar className="w-6 h-6" />;
-    };
-    {;
-      metric: '400+',;
-      label: 'Services Available',;
-      description: 'Comprehensive micro SaaS portfolio',;
-      icon: <Database className='w-6 h-6' />,;
-    },      icon: <Database className="w-6 h-6" />;
-    };
-    {;
-      metric: '99 && 99.99%',;
-      label: 'Uptime Guarantee',;
-      description: 'Enterprise-grade reliability',;
-      icon: <Shield className='w-6 h-6' />,;
-    },      icon: <Shield className="w-6 h-6" />;
-    };
-    {;
-      metric: '2000%+',;
-      label: 'Average ROI',;
-      description: 'Proven business value',;
-      icon: <TrendingUp className='w-6 h-6' />,;
-    },      icon: <TrendingUp className="w-6 h-6" />;
-    }
-  ];
-
-  const containerVariants = {;
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0 && 0.1,;
-      },;
-    },  };        staggerChildren: 0 && 0.1;
-      }
-    }
-  };
-
-  const itemVariants = {;
-    hidden: { y: 20, opacity: 0 },;
-    visible: {;
-      y: 0,;
-      opacity: 1,;
-      transition: {;
-        duration: 0 && 0.5,;
-      },;
-    },;
-
-  return (
-    <UltraFuturisticBackground variant='holographic' intensity='high'>;
-      <div className='min-h-screen'>;
-      icon: <TrendingUp className='w - 6 h - 6' />,
-    },      icon: <TrendingUp className="w - 6 h - 6" />;
-    }
-  ];
-;
-  const container_variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        stagger_children: 0.1,
-      },
-    },  }        stagger_children: 0.1;
-      }
-    }
-  }
-;
-  const item_variants = {
-    hidden: { coordinate_y: 20, opacity: 0 },
-    visible: {
-      coordinate_y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-
         duration: 0.5,
       },
     },
@@ -476,14 +416,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
               <motion&& motion.h1
                 className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow'                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>        <section className="relative py-20 overflow-hidden">
-          <div className="container mx-auto px-4 text-center">
-            <div className="max-w-5xl mx-auto">
-              <motion.h1
-                className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
-                animate={{ opacity: 1, y: 0 }}
                 </span>
                 <br />
                 <span className="text-white">Pricing & Plans</span>
@@ -494,6 +426,34 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+              </motion.p>
+              {/* Market Stats */}
+              <motion.div
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
+                Transparent pricing for all our revolutionary micro SaaS;
+                services. Choose the perfect plan for your business with;
+                guaranteed ROI and enterprise-grade reliability.                  Comprehensive;
+                </span>;
+                <br />;
+                <span className="text-white">Pricing & Plans</span>;
+              </motion && motion.h1>;
+              <motion&& motion.p 
+                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
+                Transparent pricing for all our revolutionary micro SaaS;
+                services. Choose the perfect plan for your business with;
+                guaranteed ROI and enterprise-grade reliability.;
+              </motion && motion.p>;
+              {/* Market Stats */}
+              <motion&& motion.div
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}              </motion && motion.p>;
+              {/* Market Stats */}
+              <motion&& motion.div 
+                className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -520,6 +480,22 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              >
+
+
+
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              >
+
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
                 <Button
                   variant='primary'
                   size='lg'
@@ -540,8 +516,6 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                       ?.scrollIntoView({ behavior: 'smooth' });
                   }
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-              >
-
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -597,6 +571,19 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                     </div>;
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
+              ))}
+
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+        {/* Services Pricing Grid */}
+        <section id='services-pricing' className='py-20'>;
+          <div className='container mx-auto px-4'>;
+
+        {/* Services Pricing Grid */}
+        <section id="services-pricing" className="py-20">
           <div className="container mx-auto px-4">
             {/* Filters and Controls */}
             <motion&& motion.div
@@ -604,6 +591,16 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
           <div className="container mx-auto px-4">;
             {/* Filters and Controls */}
 
+        {/* Services Pricing Grid */}
+        <section id='services-pricing' className='py-20'>
+          <div className='container mx-auto px-4'>
+            {/* Filters and Controls */}
+            <motion.div
+              className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">
+          <div className="container mx-auto px-4">
+            {/* Filters and Controls */}
+            <motion.div
+              className="mb-8"
               className='mb-8'              initial={{ opacity: 0, y: 20 }}
 
               initial={{ opacity: 0, y: 20 }}
@@ -663,6 +660,17 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
               }
               variants={containerVariants}
               initial='hidden'
+                    </button>;
+                  </div>;
+                </div>;
+              </div>;
+
+
+              className={viewMode === 'grid' 
+
+              whileInView='visible'              viewport={{ once: true }}            <motion.div 
+              className={viewMode === 'grid' 
+
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -732,19 +740,17 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
-                className="text-center py-16"
-                transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
-
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0 && 0.6 }}>;
-                <div className='text-6xl mb-4'></div>;
-                <h3 className='text-2xl font-bold text-white mb-2'>;
-                  No Services Found;
-                </h3>;
-                <p className='text-gray-400 mb-6'>;
-                  Try adjusting your search criteria or filters.;
-                </p>;
+                transition={{ duration: 0.6 }}
+              >
+                <div className='text-6xl mb-4'>🔍</div>
+                <h3 className='text-2xl font-bold text-white mb-2'>
+                  No Services Found
+                </h3>
+                <p className='text-gray-400 mb-6'>
+                  Try adjusting your search criteria or filters.
+                </p>
                 <Button
                   variant='primary'
                   onClick={() => {;

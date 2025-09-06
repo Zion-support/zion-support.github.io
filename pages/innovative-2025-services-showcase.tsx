@@ -1,6 +1,63 @@
+  ],
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from - purple - 500 to - pink - 500', count: allInnovativeServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from - cyan - 500 to - blue - 500', count: allInnovativeServices.filter (string => s.category.includes ('AI') || s.category.includes ('Machine Learning')).length },
+    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from - yellow - 500 to - orange - 500', count: allInnovativeServices.filter (string => s.category.includes ('IT') || s.category.includes ('Infrastructure')).length },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from - red - 500 to - orange - 500', count: allInnovativeServices.filter (string => s.category.includes ('Security')).length },
+    { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from - blue - 500 to - indigo - 500', count: allInnovativeServices.filter (string => s.category.includes ('Cloud') || s.category.includes ('FinOps')).length },
+    { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from - green - 500 to - teal - 500', count: allInnovativeServices.filter (string => s.category.includes ('Developer')).length }
+  ],
+  const filtered_services = allInnovativeServices.filter (service => {
+    const matches_category = selected_category === 'all' ||;
+      service.category.toLowerCase ().includes (selected_category) ||;
+      (selected_category === 'ai' && (service.category.includes ('AI') || service.category.includes ('Machine Learning'))) ||;
+      (selected_category === 'it' && (service.category.includes ('IT') || service.category.includes ('Infrastructure'))) ||;
+      (selected_category === 'cybersecurity' && service.category.includes ('Security')) ||;
+      (selected_category === 'cloud' && (service.category.includes ('Cloud') || service.category.includes ('FinOps'))) ||;
+      (selected_category === 'developer' && service.category.includes ('Developer')),
+    const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+      service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+      (service as any).tagline?.toLowerCase ().includes (search_term.toLowerCase ()),
+    return matches_category && matches_search;
+  }),
+  const stats = [;
+    { number: "15+", label: "Innovative Services", icon: Star },
+    { number: "99.9%", label: "Uptime Guarantee", icon: CheckCircle },
+    { number: "24 / 7", label: "AI Support Available", icon: Brain },
+    { number: "200+", label: "Countries Served", icon: Globe }
+  ],
+
+
+  const fadeInUp = {
+    initial: { opacity: 0, y: 30 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6, ease: "easeOut"   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },
+
+
+
   const staggerContainer = {
     animate: {
       transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },
   return (
     <>
       <Head>
@@ -21,8 +78,6 @@
             {[...Array (20)].map ((_, i) => (
               <div;
                 key={i}
-                className="absolute w - 1 h - 1 bg - white rounded - full opacity - 20 animate - pulse";
-
           {/* Floating Particles */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -36,6 +91,162 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+                className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
+                style={{
+                  left: `${Math.random() * 100}%`
+                  top: `${Math.random() * 100}%`
+                  animationDelay: `${Math.random() * 2}s`
+                  animationDuration: `${2 + Math.random() * 3}s`
+                }}
+              />))}
+          </div>;
+        </div>;
+
+        {/* Content */}
+        <div className="relative z - 10">;
+          {/* Header */}
+          <motion.header
+            className="relative z-20 py-8 px-4 sm:px-6 lg:px-8"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+  ],;
+  const filteredServices = allInnovativeServices.filter(service => {;
+    const matchesCategory = selectedCategory === 'all' ||;
+      service.category.toLowerCase().includes(selectedCategory) ||;
+      (selectedCategory === 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning'))) ||;
+      (selectedCategory === 'it' && (service.category.includes('IT') || service.category.includes('Infrastructure'))) ||;
+      (selectedCategory === 'cybersecurity' && service.category.includes('Security')) ||;
+      (selectedCategory === 'cloud' && (service.category.includes('Cloud') || service.category.includes('FinOps'))) ||;
+      (selectedCategory === 'developer' && service.category.includes('Developer'));
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+      (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+  const stats = [;
+    { number: "15+", label: "Innovative Services", icon: Star },;
+    { number: "99.9%", label: "Uptime Guarantee", icon: CheckCircle },;
+    { number: "24/7", label: "AI Support Available", icon: Brain },;
+    { number: "200+", label: "Countries Served", icon: Globe   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const fadeInUp = {;
+    initial: { opacity: 0, y: 30 },;
+    animate: { opacity: 1, y: 0 },;
+    transition: { duration: 0.6, ease: "easeOut"   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },;
+  const staggerContainer = {;
+    animate: {;
+      transition: {;
+        staggerChildren: 0.1;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  };
+  return (;
+    <>;
+      <Head>;
+        <title>Innovative 2025 Services Showcase - Zion Tech Group</title>;
+        <meta name="description" content="Discover Zion Tech Group's innovative 2025 services including AI-powered solutions, advanced IT infrastructure, and cutting-edge micro SAAS platforms. Transform your business with our revolutionary technology solutions." />;
+        <meta name="keywords" content="innovative services 2025, AI services, IT infrastructure, micro SAAS, cybersecurity, cloud solutions, Zion Tech Group" />;
+        <meta name="viewport" content="width=device-width, initial-scale=1" />;
+        <link rel="canonical" href="https://ziontechgroup.com/innovative-2025-services-showcase" />;
+      </Head>;
+      <div className="min-h-screen bg-black text-white overflow-hidden">;
+        {/* Animated Background */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="fixed inset-0 z-0">;
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>;
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>;
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3),transparent_50%)]"></div>;
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(120,219,255,0.3),transparent_50%)]"></div>;
+          {/* Floating Particles */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="absolute inset-0 overflow-hidden">;
+            {[...Array(20)].map((_, i) => (;
+              <div;
+                key={i  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse";
+                style={{;
+                  left: `${Math.random() * 100}%`,;
+                  top: `${Math.random() * 100}%`,;
+                  animationDelay: `${Math.random() * 2}s`,;
+                  animationDuration: `${2 + Math.random() * 3}s`;
+                }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              />;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+        {/* Content */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="relative z-10">
+          {/* Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <motion.header
+            className="relative z-20 py-8 px-4 sm:px-6 lg:px-8"
+            initial={{ opacity: 0, y: -20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Innovative 2025
+            </span>
+            <br />
+            <span className="text-white">Services Showcase</span>
+          </motion.h1>
+          <motion.p
+            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -52,6 +263,7 @@
   }
 }
           >
+            Experience the future of technology with our revolutionary AI platforms, quantum computing solutions,
             autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
           </motion.p>
           <motion.div
@@ -60,27 +272,66 @@
           >;
             <div className="max - w-7xl mx - auto">;
               {/* Search Bar */}
+              <div className="mb-8">
+                <div className="relative max-w-2xl mx-auto">
+                  <input
+                    type="text"
+                    placeholder="Search innovative services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    value={searchTerm  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                   <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
                 </div>
               </div>
               {/* Category Filters */}
-              <div className="flex flex - wrap justify - center gap - 4 mb - 8">;
-                {categories.map ((category) => (
-                  <button;
-                    key={category.id}
-                    on_click={() => setSelectedCategory (category.id)}
-                    className={`flex items - center space - x-2 px - 6 py - 3 rounded - xl border transition - all duration - 300 ${
-                      selected_category === category.id;
-                        ? 'border - purple - 500 bg - purple - 500 / 20 text - purple - 300';
-                        : 'border - gray - 700 text - gray - 300 hover:border - gray - 600 hover:text - white';
-                    }`}
-                  >;
-                    <category.icon className="w - 5 h - 5" />;
-                    <span>{category.name}</span>;
-                    <span className="bg - gray - 700 px - 2 py - 1 rounded - full text - xs">;
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                {categories.map((category) => (
+                  <button
+                    key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onClick={() => setSelectedCategory(category.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className={`flex items-center space-x-2 px-6 py-3 rounded-xl border transition-all duration-300 ${;
+                      selectedCategory === category.id;
+                        ? 'border-purple-500 bg-purple-500/20 text-purple-300';
+                        : 'border-gray-700 text-gray-300 hover:border-gray-600 hover:text-white';
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  >
+                    <category.icon className="w-5 h-5" />
+                    <span>{category.name}</span>
+                    <span className="bg-gray-700 px-2 py-1 rounded-full text-xs">
                       {category.count}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </motion.section>
+          {/* Services Grid */}
+          <motion.section
+            className="relative z-20 py-16 px-4 sm:px-6 lg:px-8"
+            variants={staggerContainer}
                       {category.count  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -153,6 +404,12 @@
 }
                       <div className="p-8">
                         <div className="flex items-center justify-between mb-6">
+                          <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${(service as any).color || 'from-blue-500 to-purple-500'} flex items-center justify-center text-3xl`}>
+                            {(service as any).icon || '🚀'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                           </div>
                                                       {(service as any).popular && (
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
@@ -216,6 +473,20 @@
   }
 }
                           {service.features.length > 5 && (
+                        <div className="grid grid-cols-3 gap-4 mb-6 text-center">
+                          <div>
+                            <div className="text-lg font-bold text-white">{(service as any).customers |'1000'}+</div>
+                            <div className="text-xs text-gray-400">Customers</div>
+                          </div>
+                          <div>
+                            <div className="text-lg font-bold text-white">{(service as any).rating |'4.8'}</div>
+                            <div className="text-xs text-gray-400">Rating</div>
+                          </div>
+                          <div>
+                            <div className="text-lg font-bold text-white">{(service as any).reviews |'500'}</div>
+                            <div className="text-xs text-gray-400">Reviews</div>
+                          </div>
+                        </div>
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -229,15 +500,15 @@
 }
                         <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                           <div>
-                            <div className="text-lg font-bold text-white">{(service as any).customers |'1000'}+</div>
+                            <div className="text-lg font-bold text-white">{(service as any).customers || '1000'}+</div>
                             <div className="text-xs text-gray-400">Customers</div>
                           </div>
                           <div>
-                            <div className="text-lg font-bold text-white">{(service as any).rating |'4.8'}</div>
+                            <div className="text-lg font-bold text-white">{(service as any).rating || '4.8'}</div>
                             <div className="text-xs text-gray-400">Rating</div>
                           </div>
                           <div>
-                            <div className="text-lg font-bold text-white">{(service as any).reviews |'500'}</div>
+                            <div className="text-lg font-bold text-white">{(service as any).reviews || '500'}</div>
                             <div className="text-xs text-gray-400">Reviews</div>
                           </div>
                         </div>
@@ -289,7 +560,6 @@
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-12">
-                Get in touch with our team to learn more about our innovative 2025 services
                 and how they can revolutionize your operations.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -435,8 +705,6 @@
             </div>;
           </motion.section>;
           {/* Contact Section */}
-},
-export default Innovative2025ServicesShowcase,
           <motion.section;
             className="relative z - 20 py - 20 px - 4 sm:px - 6 lg:px - 8";
             initial={{ opacity: 0, coordinate_y: 30 }}
@@ -549,3 +817,6 @@ export default Innovative2025ServicesShowcase,
 },
 export default Innovative2025ServicesShowcase,
 ;
+
+},
+

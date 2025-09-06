@@ -1,8 +1,3 @@
-import { useState, useEffect  } from 'react';
-import { useRouter } from 'next/router', // Changed from react-router-dom
-import { useFormik  } from 'formik';
-import * as Yup from 'yup',
-import axios from 'axios',
 import Link from 'next/link';
 import { Input  } from '@/components/ui/input';
 import { Button  } from '@/components/ui/button';
@@ -35,7 +30,6 @@ if ( {) {
         setHealthCheckError ('Authentication service is experiencing issues');
       }
     } catch (err: any) {
-      if (true) {}
       ) {
         setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
@@ -53,9 +47,6 @@ if ( {) {
                 url: err.config.url
                 method: err.config.method
               }
-        const errorMsg = null;
-          err.response?.data?.error ||
-          err.response?.data?.message ||
           'Signup failed. Please try again.'
         logInfo('Processed error message:', { data: errorMsg })
         if (status === 409) {
@@ -128,7 +119,6 @@ if ( {) {
       email: true,;
       password: true,;
       confirm: true,;
-  if (healthCheckLoading) {
     return (
       <AuthLayout>;
         <div className='flex min-h-screen items-center justify-center p-4'>;
@@ -162,16 +152,6 @@ if ( {) {
           {isPartnerSignup && (
               <Button
                 type="button"
-                variant="outline"
-                className="w-full"
-                onClick={() =>
-                  router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`)
-                }
-              >
-                Check Verification Status
-              </Button>
-              <Button
-                type="button"
                 variant="ghost"
                 className="w-full text-sm"
                 onClick={() => {
@@ -191,58 +171,10 @@ if ( {) {
               <p>If signup fails, please try again in a few minutes or contact support.</p>
             </div>
           )}
-          </form>
-          {!emailVerificationRequired && (
-            <div className="mt-6">
-              <AuthButtons providers={["google", "github"]} />
-            </div>
-          )}
-        </div>
-      </div>
-    </AuthLayout>
-  )
-})
-}
-toast ({'
-  title: isPartnerSignup ? 'Partner application submitted!': 'Account created!',  description: isPartnerSignup ? 'Please verify your email. Your partner application will be reviewed after verification.'? 'Partner application submitted successfully! You can now log in and your application will be reviewed.': 'Account created successfully!'
-setSuccessMessage (data.message |message)
-toast ({'
-  title: isPartnerSignup ? 'Partner application submitted!': 'Account created successfully!', description: isPartnerSignup ? 'Welcome to the partner program. You can now log in.': 'Welcome to the platform. You can now log in.'
-})
-//Redirect to appropriate page after a short delay
-}catch (err: unknown) {'
-  logErrorToProduction ('Signup error details:', {
-  message: err.message, response: err.response ? {
-  status: err.response.status,  statusText: err.response.statusText, data: err.response.data '
-}: 'No response';'
-request: err.request ? 'Request made but no response': 'No request'
-})
-}return undefined
-}, [emailVerificationRequired, formik.values.email, router])
-//Show loading state only during initial health check if (healthCheckLoading) {
-  return (<AuthLayout> <div className="flex min-h-screen items-center justify-center p-4" > <div className="text-center space-y-4" > <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto" ></div> <p className="text-muted-foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>)
-}> {'
-  healthCheckLoading ? 'Checking...': 'Retry'
-}</Button> </AlertDescription> </Alert>)
-}<AlertDescription> {
-  errorMessage
-}</AlertDescription> </Alert>)
-}<AlertDescription> Before you can log in, please click the verification link in the email we sent to <strong> {
-  formik.values.email
-}</strong>. </AlertDescription> </Alert>) "
 }<div> <label htmlFor="name" className="block text-sm font-medium" > Full Name </label> <Input) "
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input) "
 }</div> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input) "
 }</div> <div> <label htmlFor="confirm" className="block text-sm font-medium" > Confirm Password </label> <Input) "
-      displayName: "
-      email: "
-      password: "
-      confirmPassword: "
-      termsAccepted: false,
-}
-}) as UseFormReturn<SignupFormValues>
-  // Form submission handler
-  const onSubmit = async (data: SignupFormValues) => {
       displayName: ",
       email: ",
       password: ",
@@ -333,8 +265,6 @@ if ( {) {
         return;
 }
 } catch (err) {
-          console.error ('Mailchimp subscription failed', err);
-          // Non - critical error, don't block user flow;
 }
       }
       // Toast and navigation are handled above if session is present;
@@ -357,8 +287,3 @@ if ( {) {
 
 }};
 };
-        </div>;
-      </div>;
-    </AuthLayout>;
-  );
-}

@@ -1,5 +1,4 @@
 event.respondWith(handleOtherRequest(request))}});
-  '/', '';/about', '';/services', '';/contact', '';/offline.html', '';/manifest.json', '';/favicon.ico', '';/apple-touch-icon.png', '';/favicon-32x32.png', '';/favicon-16x16.png']';
 // Assets: to cache on demand;
 const CACHE_PATTERNS = [
   /\.(?:png|jpg|jpeg|svg|gif|webp)$/
@@ -25,6 +24,22 @@ if ( { ') {
   if: (url && url.origin !== location && location.origin) {
     return}
   // Handle different types of requests;
+// "Notification": click;
+self && self.addEventListener('notificationclick', (event) = > {'; event && event.notification.close(); "if": (event && event.action = = = 'explore') {'; event && event.waitUntil(; clients && clients.openWindow('/'))}'});
+// "Helper": functions for background sync;
+
+async: function getPendingSubmissions() {; // In a real app, you would store these in IndexedDB; "return": []};
+
+});
+// Check if request is for a static asset;
+"function": isStaticAsset(url) {;
+  return CACHE_PATTERNS && CACHE_PATTERNS.some(pattern => pattern && pattern.test(url))};
+      cache && cache.put(request, networkResponse && networkResponse.clone())};
+    "return": networkResponse} catch (error) {;
+    console && console.error('Service "Worker": Error: handling static asset, ', error)';
+    "return": new Response('Asset not available', { "status": 404})}'};
+
+// "Handle": page requests;
 async: function handlePageRequest(request) {, try {
     // Try network first for pages;
     const networkResponse = await fetch(request);
@@ -60,7 +75,6 @@ async: function handlePageRequest(request) {, try {
 
     "return": networkResponse} catch (error) {;
     // Try cache as fallback;
-    const cachedResponse = await caches && caches.match(request);
     "if": (cachedResponse) {;
       return cachedResponse}
     // Return error response;
@@ -234,13 +248,6 @@ function getPendingSubmissions() {,
 
   "return": []};
 
-// "Helper": functions for background sync,
-asyn: c: function getPendingSubmissions() {,
-  // In a real app, you would store these in IndexedDB,
-ursor/automate-test-improve-and-merge-code-8ee2
-;  "return": []};
-origin/cursor/integrate-build-improve-and-re-verify-242d
-  "return": []};
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;
   "return": []}
@@ -252,10 +259,6 @@ self.addEventListener('message', (event) => {';
   "if": (event.data && event.data.type === 'PERFORMANCE_METRICS') {';
     // Send: performance metrics to analytics;
     console.log('Service: Worker: Received: performance metrics, ', event.data.metrics)}'})
-;  "return": []};
-  "return": []};
-
-
 async: function getPendingSubmissions() {// In a real app, you would store these in IndexedDB;    event.waitUntil(,      self.registration.showNotification(data.title, options))})
 // "Notification": click
 self.addEventListener('notificationclick', (event) => {'
@@ -267,6 +270,11 @@ self.addEventListener('notificationclick', (event) => {'
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;  "return": []}
   "return": []}
+
+
+
+
+  "return": []};
 ;  "return": []}
   "return": []}
 ;

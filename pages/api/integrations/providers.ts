@@ -1,4 +1,5 @@
 
+
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import { PROVIDERS  } from '../../../lib / integrations / registry';
@@ -12,6 +13,7 @@ function handler() {
 }
   res.status (200).json ({ providers: PROVIDERS });
 }
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';

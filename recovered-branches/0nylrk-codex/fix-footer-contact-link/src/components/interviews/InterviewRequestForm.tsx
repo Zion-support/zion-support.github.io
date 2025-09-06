@@ -1,4 +1,28 @@
 
+interface InterviewRequestFormProps {
+
+  talent: TalentProfile
+  onClose: () => void
+  userDetails?: UserProfile
+
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Select, SelectTrigger, SelectValue, SelectContent, SelectItem} from "@/components/ui/select";
+import {Calendar} from "@/components/ui/calendar";
+import {Popover, PopoverTrigger, PopoverContent} from "@/components/ui/popover";
+import {TalentProfile} from "@/types/talent";
+import {UserProfile} from "@/types/auth";
+import {cn} from "@/lib/utils";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {useForm} from "react-hook-form";
+import {z} from "zod";
+import {format, addDays} from "date-fns";
+import {CalendarIcon, Check, Clock} from "lucide-react";
+import {toast} from "@/components/ui/use-toast";
+import {useInterviews} from "@/hooks/useInterviews";
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -15,7 +39,6 @@ import { useForm } from "react-hook-form",
 import { z } from "zod",
 import { format, addDays } from "date-fns",
 import { CalendarIcon, Check, Clock } from "lucide-react",
-interface InterviewRequestFormProps {
 
 }
 const formSchema = z.object({
@@ -343,6 +366,9 @@ if ( {) {
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
+            )}
+          />;
+
           <FormField
             control={form && form.control}
             name="time"
@@ -375,59 +401,3 @@ if ( {) {
             )}
           />;
         )}
-        <FormField
-          control={form && form.control}
-          name="notes"
-                  placeholder="Share what you'd like to discuss in this interview"
-                  className="h-20"
-              </FormItem>)}
-          />)}
-        <FormField;
-          control={form.control}
-          name="notes";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Notes (Optional)</FormLabel>;
-              <FormControl>;
-                <Textarea;
-                  placeholder="Share what you'd like to discuss in this interview";
-                  className="h - 20";
-                  {...field}
-            </FormItem>)}
-        />;
-        <div className="flex justify - end gap - 4 pt - 4">;
-          <Button variant="outline" on_click={on_close} type="button">;
-            Cancel;
-          </Button>;
-          <Button type="submit" disabled={is_submitting}>;
-            {is_submitting ? "Scheduling..." : "Schedule Interview"}
-          </Button>;
-        </div>;
-      </form>;
-    </Form>);
-  ),; interface InterviewRequestFormProps {
-  talent: TalentProfile;
-onClose: () => void;
-userDetails?: UserProfile 
-}const formSchema = z.object ({
-  date: z.date ({
-  required error: "Please select a date for the interview." 
-}) .refine (date => date > new Date (), {
-  message: "Interview date must be in the future" 
-});
-time: z.string () .min (1, "Please select a time for the interview.");
-duration: z.string () .min (1, "Please select the interview duration.");
-platform: z.string () .min (1, "Please select a meeting platform.");
-const form = useForm<z.infer<typeof formSchema>> ({
-  resolver: zodResolver (formSchema), defaultValues: {
-  title: `Interview with $ {
-  talent.full name 
-}`;
-async function onSubmit (values: z.infer<typeof formSchema>) {
-  if (!userDetails?.id) {
-  toast ({
-  return;
-}setIsSubmitting (true);
-}finally {
-  setIsSubmitting (false) 
-}

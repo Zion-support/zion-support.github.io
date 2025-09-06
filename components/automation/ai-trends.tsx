@@ -12,6 +12,45 @@ export async function getServerSideProps() {
 </div> </div>) ) 
  </div> </div>) ) 
 }</div> </div>) import fs from 'fs';
+import fs from 'fs';
+import path from 'path';
+export type Trend = {
+
+  id: string,
+  date: string,
+  title: string,
+  highlights: string[],
+  summary: string,
+  tags: string[];
+}
+;
+export async /**
+ * getServerSideProps - Function description
+ */
+function getServerSideProps() {
+  const file = path.join (process.cwd (), 'dataai - trends.json');
+
+  let items: Trend[] = [];  try {
+    const raw = fs.readFileSync (file, 'utf - 8');
+    items = JSON.parse (raw);
+  } catch {}
+
+
+ </div> </div>) ) ;
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+export type Trend = {
+  id: string
+  date: string
+  title: string
+  highlights: string[]
+  summary: string
+  tags: string[]
+}
+export async function getServerSideProps() {
+</div> </div>) ) 
+ </div> </div>) ) 
+}</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {;
   id: string,;
@@ -19,6 +58,33 @@ export type Trend = {;
   title: string,;
   highlights: string[],;
   summary: string,;
+  tags: string[];
+};
+  const file = path && path.join(process && process.cwd(), 'dataai-trends && trends.json');
+  let items: Trend[] = [];  try {;
+    const raw = fs && fs.readFileSync(file, 'utf-8');
+    items = JSON && JSON.parse(raw);
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+export type Trend = {
+  id: string
+  date: string
+  title: string
+  highlights: string[]
+  summary: string
+  tags: string[]
+}
+export async function getServerSideProps() {
+</div> </div>) ) 
+ </div> </div>) ) 
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+export type Trend = {
+  id: string,
+  date: string,
+  title: string,
+  highlights: string[],
+  summary: string,
   tags: string[];
 };
 
@@ -31,6 +97,12 @@ export async function getServerSideProps() {;
   items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
   return { props: { items } }
 }
+);
+}
+  );
+}
+
+
   items.sort ((a, b) => (a.date < b.date ? 1 : -1));
   return { props: { items } }
 }

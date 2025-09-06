@@ -57,6 +57,10 @@ const defaultContext: MessagingContextType = {
 // value instead of passing a generic type parameter directly.
 const MessagingContext = createContext(
   defaultContext as MessagingContextType
+  }
+  return context;
+}
+
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
   const { user } = useAuth();
@@ -74,6 +78,7 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     send_message;
     create_conversation;
     markAsRead;
+      setUnreadCount(0);
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
   // Create context value with all the methods and states
@@ -140,18 +145,3 @@ if ( {) {
     load_messages;
   }
 ;
-  return (
-    <MessagingContext.Provider value={context_value}>;
-      {children}
-    </MessagingContext.Provider>);
-),;
-;
-// Hook for using the messaging context;
-export function useMessaging():MessagingContextType {;
-  // Cast to avoid type errors when React type definitions are missing;
-  const context = useContext(MessagingContext) as MessagingContextType,;
-  if (context === undefined) {;
-    throw new Error('useMessaging must be used within a MessagingProvider'),;
-  }
-  return context,;
-}

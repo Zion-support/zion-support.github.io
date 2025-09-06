@@ -21,7 +21,6 @@
         <AIAssistant
           buttonLabel="Generate Pitch Based on Profile & Job"
           title="Generate Proposal"
-
           defaultPrompt={pitchPrompt  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -42,3 +41,14 @@
       <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
     </div>
   )
+
+},
+export default NewProposal,
+
+},
+export default NewProposal,
+},
+
+export default NewProposal,;
+export default NewProposal,
+

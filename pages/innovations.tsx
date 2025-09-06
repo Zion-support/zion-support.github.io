@@ -1,3 +1,5 @@
+
+
 import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
 import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
@@ -45,7 +47,6 @@ export default function InnovationsPage() {
           <meta name="twitter:description" content="Discover our groundbreaking 2029 innovations in AI consciousness, quantum computing, space technology, and enterprise solutions." />
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         </Head>
-
         {/* Enhanced Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -92,6 +93,15 @@ export default function InnovationsPage() {
                   Breakthrough
                 </span>
               </motion.h1>
+                className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
+              >
+                Experience the future today with our revolutionary innovations in AI consciousness
+                className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
+              >
+                Experience the future today with our revolutionary innovations in AI consciousness
+              <motion.p
+
+
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -139,8 +149,6 @@ export default function InnovationsPage() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
-
         {/* Innovation Categories Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -175,7 +183,6 @@ export default function InnovationsPage() {
                 Innovation <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Categories</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our innovations span across four revolutionary domains, each pushing the boundaries
                 of what's possible in technology and business transformation.
               </p>
             </motion.div>
@@ -242,28 +249,14 @@ export default function InnovationsPage() {
                 Innovation <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Impact</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our innovations are already transforming industries and creating unprecedented value
                 for businesses worldwide.
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                }
                 {
-                  icon: Zap
-                  title: 'ROI Performance'
-                  description: 'Exceptional return on investment with our breakthrough solutions'
-                  description: 'First-to-market solutions in AI consciousness, quantum-AI fusion, and space technology',
-    stats: '15+ First-to-market innovations'
-                };
-                  description: 'First - to - market solutions in AI consciousness, quantum - AI fusion, and space technology',
-                  stats: '15+ First - to - market innovations';
-                },
-                {
-                  icon: Zap,
-                  title: 'ROI Performance',
-                  description: 'Exceptional return on investment with our breakthrough solutions',
-                  stats: 'Up to 1500% ROI'
+
+                  stats: '2029+ Future-ready'
                 }
                 {
                   icon: Shield
@@ -310,7 +303,6 @@ export default function InnovationsPage() {
                   Ready to Lead the <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Future?</span>
                 </h2>
                 <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-                  Partner with Zion Tech Group to access the most advanced innovations of 2029.
                   Transform your business and lead your industry into the future.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -342,5 +334,3 @@ export default function InnovationsPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}

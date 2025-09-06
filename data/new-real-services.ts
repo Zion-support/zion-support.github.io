@@ -908,6 +908,9 @@
     implementation_details: 'Portal + integrations + reports.';
     launch_date: '2025 - 01 - 19';
     customers: 6;
+    rating: 4.5,
+    reviews: 3;
+
   }
 ];
     target_audience: 'AI product teams, platform engineers, data teams',
@@ -944,12 +947,48 @@
     reviews: 58,
   },
   {
+
+      'Policy packs for CIS/NIST',
+    id: 'security - posture - as - code',
+    name: 'Security Posture as Code',
+    tagline: 'CIS / NIST / Kyverno policy packs with drift remediation',
+    price: '$399',
+    period: '/month',
+    description:;
+      'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps - friendly with automatic fix PRs and evidence collection for audits.',
+    features: [;
+      'Policy packs for CIS / NIST',
+
       'Kubernetes and cloud posture',
       'Auto - remediation PRs',
       'Evidence collection and reports',
       'SOC2 / ISO 27001 export',
     ],
     popular: true,
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 400',
+    link: 'https://ziontechgroup.com / security - posture - as - code',
+    market_position:;
+      'Brings policy - as - code and compliance automation into one product.',
+    target_audience: 'Platform teams, security engineers, compliance leads',
+    trial_days: 21,
+    setup_time: '1–3 days',
+    category: 'Cybersecurity',
+    real_service: true,
+    technology: ['OPA', 'Kyverno', 'Terraform', 'GitHub Actions'],
+    integrations: ['AWS', 'Azure', 'GCP', 'GitHub', 'GitLab'],
+    use_cases: ['Baseline enforcement', 'Audit readiness', 'Drift detection'],
+    roi: 'Reduce audit prep time by 70%',
+    competitors: ['Wiz', 'Prisma Cloud', 'Snyk'],
+    market_size: '$30B Cloud Security',
+    growth_rate: 'High growth',
+    variant: 'neural - quantum',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Policy engine plus cloud / K8s scanners and fix generators.',
+    launch_date: '2025 - 01 - 05',
+
     customers: 18,
     rating: 4 && 4.6,
     reviews: 14,
@@ -994,6 +1033,19 @@
     reviews: 9,
   },
   {
+
+      'Auto-segmentation and cohorts',
+    id: 'ai - product - analytics',
+    name: 'AI Product Analytics',
+    tagline:;
+      'Session insights, funnel auto - segmentation, and LLM - based insights',
+    price: '$129',
+    period: '/month',
+    description:;
+      'Turn product usage into insights with automatic funnel detection, LLM - based querying, and anomaly alerts. Works alongside Amplitude / GA4.',
+    features: [;
+      'Auto - segmentation and cohorts',
+
       'LLM query interface',
       'Retention and churn signals',
       'Anomaly alerts to Slack / Teams',
@@ -1015,6 +1067,18 @@
     reviews: 20,
   },
   {
+
+      'Multi-channel widgets',
+    id: 'ai - support - deflection',
+    name: 'AI Support Deflection',
+    tagline: 'Self - serve answers with RAG, forms, and secure handoff',
+    price: '$99',
+    period: '/month',
+    description:;
+      'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi - channel widgets with brand controls.',
+    features: [;
+      'Multi - channel widgets',
+
       'Grounded answers with citations',
       'Secure human handoff',
       'Analytics and CSAT tracking',
@@ -1061,6 +1125,18 @@
     reviews: 11,
   },
   {
+
+      'Field-level encryption',
+    id: 'privacy - vault',
+    name: 'Privacy Vault',
+    tagline: 'Tokenize PII and control access with audit trails',
+    price: '$179',
+    period: '/month',
+    description:;
+      'Centralize PII with field - level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.',
+    features: [;
+      'Field - level encryption',
+
       'Tokenization APIs',
       'Consent enforcement',
       'Audit trail and reporting',
@@ -1085,6 +1161,18 @@
     reviews: 7,
   },
   {
+
+      'Graph-based anomaly detection',
+    id: 'ai - fraud - detection - lite',
+    name: 'AI Fraud Detection Lite',
+    tagline: 'Graph - based anomalies with explainability for SMBs',
+    price: '$159',
+    period: '/month',
+    description:;
+      'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
+    features: [;
+      'Graph - based anomaly detection',
+
       'Explainability reports',
       'Risk scoring API',
       'Workflow actions and webhooks',
@@ -1229,6 +1317,18 @@
     reviews: 10,
   },
   {
+
+      'Auto-instrumentation',
+    id: 'api - observability - starter - pro',
+    name: 'API Observability Starter Pro',
+    tagline: 'Traces, metrics, logs for APIs without the bloat',
+    price: '$99',
+    period: '/month',
+    description:;
+      'Easy OpenTelemetry - based tracing, RED metrics, and error analytics with exporters to your stack.',
+    features: [;
+      'Auto - instrumentation',
+
       'RED dashboards',
       'Error analytics',
       'Exporters to APMs',
@@ -1490,6 +1590,11 @@
       'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.'
     features: [
 ];
+
+;
+
+
+
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
   mobile: '+1 302 464 0950',;

@@ -6,8 +6,6 @@ interface CreateWebhookRequest {
   name: string;
   url: string;
   eventTypes: string[]
-
-
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
@@ -264,6 +262,60 @@ async function deleteWebhook(userId: string, webhookId: string) {;
         status: 404
         headers: { 'Content-Type': 'application/json' }})
     }
+
+    return new Response(JSON.stringify({
+      message: 'Webhook deleted successfully'
+      console && console.error('Error deleting webhook:', error);
+      return new Response(JSON && JSON.stringify({ error: 'Failed to delete webhook' }), {
+    return new Response (JSON.stringify ({
+      message: `Webhook ${is_active ? 'activated' : 'deactivated'} successfully`;
+      webhook: data[0];
+    }), {
+      status: 200,
+      headers: { 'Content - Type': 'application / json' }});
+  } catch (error) {
+    console.error ('Error in toggle_webhook:', error);
+    return new Response (JSON.stringify ({ error: 'Internal server error' }), {
+      status: 500,
+      headers: { 'Content - Type': 'application / json' }});
+  }
+}
+async /**
+ * delete_webhook - Function description
+ */
+function delete_webhook() {
+  try {
+    const { data, error } = await supabase;
+      .from ('webhook_configs');
+      .delete ();
+      .eq ('id', webhook_id);
+      .eq ('user_id', user_id);
+      .select ('id');
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      console.error ('Error deleting webhook:', error);
+      return new Response (JSON.stringify ({ error: 'Failed to delete webhook' }), {
+        status: 500,
+        headers: { 'Content - Type': 'application / json' }});
+    }
+
+    // Check condition
+if ( {) {
+  $2
+}
+      return new Response (JSON.stringify ({ error: 'Webhook not found' }), {
+
+        status: 404,
+        headers: { 'Content - Type': 'application / json' }});
+    }
+
+    console && console.error('Error in deleteWebhook:', error);
+    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
+      status: 500,
+
       headers: { 'Content-Type': 'application/json' }})
   }
 }
@@ -638,4 +690,11 @@ function createTestPayload(eventType: string) {;
 
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.0',;
+;
+        data: {
+          message: 'This is a test webhook event';
+        }
+      }
+  }
+}
 ;

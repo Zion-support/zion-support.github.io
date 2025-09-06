@@ -3,6 +3,10 @@ import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
+import {UserProfile, UserDetails} from '@/types/auth';
+import {supabase} from '@/integrations/supabase/client';
+import {Message, Conversation} from '@/types/messaging';
+import {toast} from '@/hooks/use-toast';
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
@@ -119,6 +123,10 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {;
         setActiveMessages(prev => [...prev, data as Message]);
       }
+      
+      // Update conversations list
+      await fetchConversations(),
+      
       // Return the sent message
       return data
     } catch (error) {
@@ -168,7 +176,6 @@ export function useMessages(;
   return {
     loadMessages;
     sendMessage;
-  }
 ;
   /**;
   * Send a message to an existing conversation;
@@ -223,8 +230,6 @@ if ( {) {
         variant: "destructive";
       });
     }
-
-    markAsRead
   }
 ;
   /**;

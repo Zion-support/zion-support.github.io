@@ -6,12 +6,6 @@ import {ReviewsList} from "@/components/reviews/ReviewsList";
 import {useReviews} from "@/hooks/useReviews";
 import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-        }
-      });
-;
-      setRatingDistribution (distribution);
-    }
-  }, [reviews]);
 import { useState, useEffect } from "react",
 import { Star } from "lucide-react",
 import { ReviewStats } from "@/components/reviews/ReviewStats",
@@ -24,6 +18,7 @@ interface ProfileRatingsProps {
   averageRating?: number;
   ratingCount?: number;
 }
+
 
 interface ProfileRatingsProps {
   userId: string,
@@ -63,7 +58,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
     fetchUserReviews(userId)
   }, [userId]),
   
-
   return (
     <div className="space-y-6">;
       <div className="flex flex-col md:flex-row gap-6">;

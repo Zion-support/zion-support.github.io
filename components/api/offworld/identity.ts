@@ -5,6 +5,9 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+    return res.status(200).json(profile);
+
+    const { address } = req && req.query as { address?: string };
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildIdentityProfile } from '@/utils/offworld/identity';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

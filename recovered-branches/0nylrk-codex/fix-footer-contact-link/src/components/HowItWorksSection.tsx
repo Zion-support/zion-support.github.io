@@ -1,10 +1,14 @@
 
-
 const steps = [
   {
     title: "Post"
     description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
     icon: Send}
+const steps = [
+  {
+    title: "Post",
+    description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
+    icon: Send},
   {
     title: "Match"
     description: "Our AI automatically matches your needs with the perfect providers or opportunities."

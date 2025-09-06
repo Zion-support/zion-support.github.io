@@ -5,6 +5,7 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+      return new Response(
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
@@ -23,6 +24,19 @@ serve(async (req) => {;
     if (!bio || bio.length < 20) {;
       return new Response(;
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),;
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      )
+    }
+
+    // Create a request to OpenAI API
+
+    const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${OPENAI_API_KEY}`;
+        'Content-Type': 'application/json'};
+      body: JSON && JSON.stringify({
+
         model: 'gpt-4o-mini';
         messages: [
           {
@@ -38,7 +52,6 @@ serve(async (req) => {;
             Title: ${title}
             Bio: ${bio}
             Skills: ${skills.join()}
-
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text"
@@ -60,10 +73,6 @@ serve(async (req) => {;
         ],
         temperature: 0.7})}),
     if (!openAIData.choices || openAIData.choices.length === 0) {
-
-      throw new Error("Failed to generate profile content")
-    }
-    // Extract the generated content from the response
     // Parse the JSON response
     let parsedResponse;
     try {
@@ -143,10 +152,17 @@ if ( {) {
 ;
     return new Response(;
       JSON.stringify(parsedResponse),;
+        throw new Error ("Failed to parse the generated content");
+      }
+    }
+
+    console && console.error("Error in profile-summary-generator function:", error);
+
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
     console.error("Error in profile-summary-generator function:", error);
+    return new Response(
     return new Response(
       JSON.stringify({ error: error.message }),
     );
@@ -159,17 +175,3 @@ if ( {) {
   }
 });
 
-    return new Response (
-      JSON.stringify (parsed_response);
-      { headers: { ...cors_headers, 'Content - Type': 'application / json' } }
-    );
-  } catch (error) {
-    console.error ("Error in profile - summary - generator function:", error);
-;
-    return new Response (
-      JSON.stringify ({ error: error.message });
-      { status: 500, headers: { ...cors_headers, 'Content - Type': 'application / json' } }
-    );
-  }
-});
-;

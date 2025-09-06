@@ -1,8 +1,24 @@
 
+
+    const filtered = flags.filter(f =>
+
+      (!status || f.status === status) &&
+      (!reason || f.reason.toLowerCase().includes(reason.toLowerCase())) &&
+      (!userEmail || f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
+      (!contentType || f.contentType === contentType)
+    );
+    return res.status(200).json({ flags: filtered });
+  }
+
   if (req.method === 'GET') {
     const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>
     const flags = await readAllFlags()
     const filtered = flags.filter(f =>
+
+  }
+  if (req.method === 'POST') {
+
+    const init = req.body || {};
     try {
       const flag = await createFlag(init)
       return res.status(201).json({ flag })
@@ -26,3 +42,5 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

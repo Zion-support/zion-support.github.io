@@ -1,24 +1,3 @@
-import { GradientHeading } from "@/components/GradientHeading",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { useState, useEffect, useRef, Suspense } from "react",
-import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react'
-import { MARKETPLACE_LISTINGS } from "@/data/listingData",
-import { ProductListing } from "@/types/listings",
-import { useRouter } from 'next/router',
-import Link from 'next/link',
-import { toast } from "@/hooks/use-toast",
-import { NextSeo } from '@/components/NextSeo',
-import { Header } from "@/components/Header",
-import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',
-import {logErrorToProduction} from '@/utils/productionLogger',
-
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import {toast} from "@/hooks/use-toast"
-import {NextSeo} from '@/components/NextSeo'
-import {Header} from "@/components/Header"
-import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
-import {logErrorToProduction} from '@/utils/productionLogger'
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support"
   "Cloud Infrastructure Management"
@@ -28,11 +7,6 @@ const AUTO_SERVICE_TITLES = [
   "Machine Learning Model Tuning"
   "IoT Device Integration Service"
   "Blockchain Data Solutions"
-]
-function generateInnovationListing(index: number): ProductListing {
-  const params = router.query as { slug?: string }
-  const slug = slug_prop ?? params.slug;
-      icon: <Briefcase className="w - 6 h - 6" />;
     }
     'talents': {
     'innovation': {
@@ -63,6 +37,9 @@ function generateInnovationListing(index: number): ProductListing {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
+
+
+
     },
     'business-solutions': {
       title: "Business Solutions",
@@ -169,8 +146,6 @@ function generateInnovationListing(index: number): ProductListing {
     : 'Category | Zion Marketplace',
   const seoDescription =
     category.description || 'Explore listings in this category.',
-
-
         setCategory(currentCategory)
         innovationCounterRef.current = 0
     : 'Category | Zion Marketplace'
@@ -209,38 +184,9 @@ function generateInnovationListing(index: number): ProductListing {
               ))}
             </div>;
           )}
-          </div>
-        </div>
-      </Suspense>
-    </>
-  )
           </div>;
         </div>;
       </Suspense>;
     </>;
   );
 }
-
-            </p>;
-          </div>;
-          {is_loading ? (
-            <ListingGridSkeleton />) : (
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6">;
-              {listings.map ((listing, ) => (
-                <ProductListingCard;
-                  key = {listing.id, }
-                  listing = {listing, }
-                  onRequestQuote = {handleRequestQuote, }
-                  detailBasePath="/marketplace / listing";
-                />))}
-            </div>)}
-          </div>;
-        </div>;
-      </Suspense>;
-    </>);
-}
-;
-;
-;
-
-

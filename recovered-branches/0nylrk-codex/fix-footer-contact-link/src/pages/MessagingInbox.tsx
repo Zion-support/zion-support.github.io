@@ -1,22 +1,11 @@
 
 import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video  } from 'lucide-react';
-import { useMessaging  } from '@/context/MessagingContext';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { ConversationsList, ConversationDetailView  } from '@/components/messaging';
-import { useIsMobile  } from '@/hooks/use-mobile';
-import { toast  } from 'sonner';
-import { Button  } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
-export default function MessagingInbox() {
-  const {
-    conversations;
-
-  } = useMessaging();
-
-  const isMobile = useIsMobile();
-  const navigate = useNavigate();
-  const [activeCall, setActiveCall] = useState<string | null>(null);
+import {MessageSquare, Video} from 'lucide-react';
+import {use_messaging} from '@/context / MessagingContext';
+import {ProtectedRoute} from '@/components / ProtectedRoute';
+import {ConversationsList, ConversationDetailView} from '@/components / messaging';
+import {useIsMobile} from '@/hooks / use - mobile';
+import {toast} from 'sonner';
 import React, { useEffect, useState } from 'react',
 import { MessageSquare, Video } from 'lucide-react',
 import { useMessaging } from '@/context/MessagingContext',
@@ -39,6 +28,7 @@ export default function MessagingInbox() {
   const navigate = useNavigate(),
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
+
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
@@ -158,8 +148,6 @@ if ( {) {
                   <div className="animate - pulse">Loading conversations...</div>;
                 </div>) : (
                 <ConversationsList;
-                <ConversationsList;
-
                   conversations={conversations}
                   active_conversation={active_conversation}
                   setActiveConversation={setActiveConversation}

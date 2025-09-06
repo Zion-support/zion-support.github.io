@@ -1,6 +1,3 @@
-  const quotesHtml = visuals.quoteCallouts;
-    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
-    .join('\n');
   const chapterHtml = chapters;
     .map(;
       (c) => `;
@@ -132,17 +129,11 @@
 </body>;
 </html>`;
 }
-function paragraphize(text: string): string {if (!text) return '';
-  return text;
-    .split(/\n\n+/);
-    .map((p) => `<p>${escapeHtml(p)}</p>`);
-    .join('\n');
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,');
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

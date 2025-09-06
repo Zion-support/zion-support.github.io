@@ -54,3 +54,10 @@ import { useAuth } from "@/hooks/useAuth",;
         <Route path="/projects" element={<MobileProjects />} />;
         <Route path="/inbox" element={<MobileMessages />} />;
         <Route path="/resume" element={<MobileResumeBuilder />} />;
+}
+        <Route path="/post - job" element={<MobileJobPost />} />;
+        <Route path="/profile" element={<div > Profile page</div>} />;
+        <Route path="*" element={<Navigate to="/" replace />} />;
+      </Routes>;
+}
+;

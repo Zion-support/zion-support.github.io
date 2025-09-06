@@ -19,6 +19,27 @@ const AdminReviewsPage: NextPage = () => {
         'Content-Type': 'application/jsonx-admin-key': adminKey |'dev-admin-key'}
       body: JSON.stringify({ action, reviewId })})
   }
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  useEffect(() => { refresh() }, []),;
+  async function moderate(action: 'approve' | 'remove', reviewId: string) {;
+    const res = await fetch('/api/reviews/moderate', {;
+      method: 'POST',;
+      headers: {;
+        'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'},;
+      body: JSON.stringify({ action, reviewId })}),;
+    if (res.ok) refresh();
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold">Review Moderation</h1>
@@ -38,16 +59,8 @@ const AdminReviewsPage: NextPage = () => {
                 <button className="enhanced-button enhanced-button-secondary" onClick={() => moderate('remove', r.id)}>Remove</button>
               </div>
             </div>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          {!pending.length && <div>No pending reviews.</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+          ))}
+          {!pending.length && <div>No pending reviews.</div>}
         </div>
       </section>
       <section className="enhanced-card">
@@ -56,3 +69,14 @@ const AdminReviewsPage: NextPage = () => {
       </section>
     </main>
   )
+
+},
+export default AdminReviewsPage,
+
+},
+export default AdminReviewsPage,
+},
+
+export default AdminReviewsPage,;
+export default AdminReviewsPage,
+

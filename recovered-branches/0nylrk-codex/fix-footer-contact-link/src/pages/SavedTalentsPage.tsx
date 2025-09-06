@@ -50,10 +50,26 @@ export default function SavedTalentsPage() {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
             item => item.talent_profile as unknown as TalentProfile
-        toast({
-          title: "Error"
-          description: "Failed to load saved talents. Please try again later."
-          variant: "destructive"})
+        if (error) {;
+          throw error;
+              is_verified);
+          `);
+          .eq ("user_id", user.id);
+;
+        // Check condition
+if ( {) {
+  $2
+}
+          throw error;
+        }
+      } catch (error) {
+
+        console.error ("Error fetching saved talents:", error);
+        toast ({
+          title: "Error",
+          description: "Failed to load saved talents. Please try again later.",
+          variant: "destructive"});
+
       } finally {
         setIsLoading (false);
       }
@@ -110,6 +126,8 @@ export default function SavedTalentsPage() {
           .eq('talent_id', talentId),;
         if (error) {;
           throw error;
+        }
+  
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         );
@@ -134,8 +152,6 @@ export default function SavedTalentsPage() {
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
-        if (talentError) {
-          console.error("Error fetching talent profile:", talentError);
           .single();
           .single(),
   

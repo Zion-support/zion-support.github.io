@@ -12,6 +12,30 @@ export default async function handler(
   if (!conn) return res && res.status(404).json({ error: "Connection not found" });
   const now = Date && Date.now();
   writeState((s) => {
+
+    s && s.logs.push({
+      id: `${now}-${providerId}-resync`,
+import type { NextApiRequest, NextApiResponse } from './next';
+import { read_state, write_state  } from '../../../lib / integrations / file_store';
+import { getProviderById  } from '../../../lib / integrations / registry';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+
+    });
+
+}
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../lib/integrations/fileStore';
 import { getProviderById } from '../../../lib/integrations/registry';

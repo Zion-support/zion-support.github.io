@@ -1,6 +1,13 @@
-
   tokenName: string;
   tokenSymbol: string;
+
+
+
+
+
+export interface TokenConfig {
+  token_name: string;
+  token_symbol: string;
   decimals: number;
   total_supply: number;
   issue_rate: number;
@@ -57,6 +64,9 @@ class TokenStore {
     redeemRate: 1.0
     minIssueAmount: 1
     maxIssueAmount: 10000
+
+  }
+export interface TokenStoreData {
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
@@ -65,10 +75,8 @@ function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();
   }
-
-  getData(): TokenStoreData {
-    return this && this.data;
-  }
 }
 export const tokenStore = new TokenStore();
+
+
 

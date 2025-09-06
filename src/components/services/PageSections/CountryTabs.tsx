@@ -1,18 +1,3 @@
-import { Search } from 'lucide-react'
-
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import {
-  Pagination
-  PaginationContent
-  PaginationItem
-  PaginationButton
-  PaginationNext
-  PaginationPrevious
-} from '@/components/ui/pagination'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { CountryServiceCard } from '@/components/services/CountryServiceCard'
-import { CountryPricing } from '@/data/onsiteServicePricing'
 import {;
   Pagination,;
   PaginationContent,;
@@ -30,15 +15,6 @@ export function CountryTabs(): any ({;
   const [currentPage, setCurrentPage] = useState(1);
   const countriesPerPage = 50;
 
-
-
-}: CountryTabsProps) {
-  const [currentPage, setCurrentPage] = useState(1)
-  const countriesPerPage = 50
-  useEffect(() => {
-    setCurrentPage(1)
-  }, [searchQuery])
-  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage)
   popularCountries,
   filteredCountries,
   handleCountrySelect,
@@ -134,9 +110,6 @@ export function CountryTabs(): any ({;
                 <PaginationItem>
                   <PaginationPrevious
                     href={`?page=${currentPage - 1}`}
-                    onClick={(e) => {;
-                      e.preventDefault(),;
-                      setCurrentPage(Math.max(1, currentPage - 1));
                     }}
                   />;
                 </PaginationItem>;
@@ -146,28 +119,3 @@ export function CountryTabs(): any ({;
                       <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
-                        onClick={(e) => {;
-                          e.preventDefault();
-                          setCurrentPage(page);
-                        }}
-                      />;
-                    </PaginationItem>;
-                  );
-                )}
-                <PaginationItem>;
-                  <PaginationNext;
-                  />
-                </PaginationItem>
-              </PaginationContent>
-            </Pagination>
-          </div>
-        )}
-                  />;
-                </PaginationItem>;
-              </PaginationContent>;
-            </Pagination>;
-      </TabsContent>;
-    </Tabs>;
-  );
-}
-;

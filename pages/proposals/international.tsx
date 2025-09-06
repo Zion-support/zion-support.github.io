@@ -6,8 +6,6 @@ type ProposalListItem = {
   type: string
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   createdAt: string
-  const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
-
   return (
     <EnhancedLayout>
       <div className="space-y-4">
@@ -92,8 +90,5 @@ function InternationalProposalsPage() {
         <div className="text - sm text - gray - 600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>;
       </div>;
     </EnhancedLayout>);
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
+

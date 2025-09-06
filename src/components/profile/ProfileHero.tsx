@@ -1,25 +1,8 @@
-
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { Badge } from "@/components/ui/badge";
-import { Star } from 'lucide-react'
-
-  name: string
-  title: string;  avatarUrl?: string;  name: string
-  title: string
-  avatarUrl?: string
-  coverImageUrl?: string
-  location?: string
-  rating?: number
-  reviewCount?: number
-  aiScore?: number
-  profileType: 'service' | 'talent'
             <img
               src={coverImageUrl}
               alt={`${name} cover`}
               className='w-full h-full object-cover'
               loading='lazy'
-export function ProfileHero({
   name
   title
   avatarUrl
@@ -67,9 +50,6 @@ export function ProfileHero({
                 >;
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
 
-                {location && (
-                  <span className="text-sm text-zion-slate-light">{location}</span>
-                )}
                 {rating && (
 
 
@@ -82,11 +62,3 @@ export function ProfileHero({
                       <span className='text-zion-slate-light text-sm'>
                         ({reviewCount})
                       </span>
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  );
-;

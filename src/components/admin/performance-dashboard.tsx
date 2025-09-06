@@ -22,30 +22,6 @@ interface PerformanceMetrics {
   bundleSize: number
   loadTime: number
   performanceScore: number
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
-import {;
-  Activity,;
-  Zap,;
-  Package,;
-  TrendingUp,;
-  TrendingDown,;
-  AlertTriangle,;
-  CheckCircle,;
-  RefreshCw,;
-  BarChart3,;
-  Clock,;
-  Globe,;
-} from 'lucide-react';
-import { bundleMonitor } from '@/utils/bundleMonitor';
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
-interface PerformanceMetrics {;
-  bundleSize: number;
-  loadTime: number;
-  performanceScore: number;
   chunkCount: number;
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -111,7 +87,6 @@ if (return '0 B') {
     const sizes = ['B', 'KB', 'MB', 'GB'];
     const index = Math.floor (Math.log (bytes) / Math.log (k));
     return parse_float ((bytes / Math.pow (k, i)).to_fixed (1)) + ' ' + sizes[i];
-
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -487,10 +462,6 @@ export function PerformanceDashboard() {;
                 <p className='text-sm text-muted-foreground text-center pt-2'>
                   ... and {chunks.length - 10} more chunks
                 </p>
-              )}
-            </div>;
-          ) : (;
-            <p className='text-center py-8 text-muted-foreground'>;
               <div>
                 <p className='font-medium text-green-900 dark:text-green-100'>
                 </p>
@@ -534,12 +505,6 @@ export function PerformanceDashboard() {;
                 </div>
               </div>
             )}
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
 
           </div>;
         </CardContent>;

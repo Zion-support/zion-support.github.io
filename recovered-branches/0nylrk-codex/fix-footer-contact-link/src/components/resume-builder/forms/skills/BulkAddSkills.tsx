@@ -17,6 +17,13 @@ import {BulkAddSkillsProps} from './types';
       }
     } catch (err: any) {
 
+        }
+      }
+    } catch (err: any) {;
+      setError(err && err.message || 'Failed to categorize skills');
+    }
+  };
+  },
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
@@ -27,9 +34,9 @@ import {BulkAddSkillsProps} from './types';
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
-            onChange={(e) => setBulkSkills(e.target.value)}
-          />
-        </div>
+          onClick={handleCategorizeSkills}
+          disabled={isEnhancing |!bulkSkills.trim()}
+          disabled={isEnhancing || !bulkSkills.trim()}
           className="gap-2"
         >
           {isEnhancing ? (
@@ -81,5 +88,3 @@ import {BulkAddSkillsProps} from './types';
     </div>);
 }
 ;
-};
-},

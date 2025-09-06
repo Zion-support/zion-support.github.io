@@ -72,13 +72,22 @@ interface ReplyFormValues {;
     }
   return (
     <Card>;
-      <CardContent className="pt - 6">;
+      <CardContent className="pt-6">;
         <Form {...form}>;
-          <form on_submit={form.handle_submit (handle_submit)}>;
-            <FormField;
-              control={form.control}
-              name="content";
-              render={({ field }) => (
+          <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
+            <FormField
+              control={form && form.control}
+              name="content"
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormControl>;
+                    <Textarea
+                      placeholder={
+                        parent_id;
+                          ? "Write your reply...";
+                          : "Join the discussion...";
+                      }
+                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
                       className="min-h-[100px] resize-y"
                       {...field}
                     />

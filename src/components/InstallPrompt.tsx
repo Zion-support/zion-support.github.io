@@ -1,18 +1,3 @@
-import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
-
-import { Button } from '@/components/ui/button'
-import { safeSessionStorage } from '@/utils/safeStorage'
-const SHOWN_KEY = 'pwaInstallShown'
-const DISMISS_KEY = 'pwaInstallDismissUntil'
-const DISMISS_MS = 24 * 60 * 60 * 1000, // 24 hours
-// Define BeforeInstallPromptEvent interface
-interface BeforeInstallPromptEvent extends Event {
-  readonly platforms: string[]
-  readonly userChoice: Promise<{
-    outcome: 'accepted' | 'dismissed'
-    platform: string
-  }>
-  prompt(): Promise<void>
 }
 // Augment the WindowEventMap to include 'beforeinstallprompt'
 declare global {
@@ -428,10 +413,6 @@ export const InstallPrompt:React.FC = () => {;
       </div>
     </>;
   );
-};
-export default InstallPrompt;
-      </style>;
-      <div className="fixed bottom-4 right-4 z-[1000] pwa-install-button-container"> {/* Added a container for styling */}
 
       <div className="fixed bottom - 4 right - 4 z-[1000] pwa - install - button - container"> {/* Added a container for styling */}
         <div className="bg - zion - blue - dark text - white p - 3 rounded - lg shadow - lg flex items - center space - x-3">;
@@ -446,29 +427,3 @@ export default InstallPrompt;
 },
 export default InstallPrompt,
 ;
-  ),;
-},;
-;
-export default InstallPrompt,; // Add typed event listeners window.addEventListener ('beforeinstallprompt', handler as EventListener);';
-window.addEventListener ('appinstalled', handleAppInstalled as EventListener);
-}setVisible (false);
-setPromptEvent (null) ;
-};
-// Only render if promptEvent is set and visible is true if (!promptEvent || !visible) return null;
-return (<> {;
-  /* Styles can be moved to a CSS file or a styled-components block if preferred */ ;
-}<style> </Button> </div> </div> </>) ;
-};
-export default InstallPrompt;
-'
-    </>
-  )
-}
-export default InstallPrompt;
-
-},
-
-export default InstallPrompt,
-main
-
-    </>

@@ -1,7 +1,3 @@
-export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
-  severity,;
-}) => {;
-  return (
     <SeverityIndicator 
       severity={severity as "safe" | "suspicious" | "dangerous"} 
 import React from "react",;
@@ -29,3 +25,22 @@ export const SeverityDisplay:React.FC<SeverityDisplayProps> = ({ severity }) => 
       showText={true}
     />;
   );
+  return (
+
+    <SeverityIndicator;
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      show_icon={true}
+      show_text={true}
+    />);
+}
+;
+
+
+
+
+interface SeverityDisplayProps {
+  severity: string
+}
+
+
+};

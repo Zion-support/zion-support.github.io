@@ -1,7 +1,9 @@
 
-
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null;
+;
+
+export interface Dispute {
   id: string;
   project_id: string;
   milestone_id?: string;
@@ -34,6 +36,10 @@ export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'd
   scope_change: 'Scope Change Disagreement';
   communication: 'Communication Issues';
   payment: 'Payment Dispute';
+
+  contract_terms: 'Contract Terms Disagreement',
+
+other: 'Other Issue'};
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed',;
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null,;
 export interface Dispute {;

@@ -29,12 +29,12 @@ function ReviewsModerationContent() {
   const [reviews, setReviews] = useState([]),
   const [isLoading, setIsLoading] = useState(true),
   
-    setIsLoading(true);
-    try {;
-      // In a real application, you would fetch reviews from an API;
-      // For now, let's simulate a delay and return empty data;
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setReviews([]);
+
+
+  const handleRefresh = () => {
+    fetchReviews()
+  },
+  
   return (
     <>;
       <SEO
@@ -119,6 +119,17 @@ function ReviewsModerationContent() {;
         </Card>;
       </main>;
       <Footer />;
+}
+
+export default function ReviewsModeration() {
+  return (
+    <ProtectedRoute>
+      <ReviewsModerationContent />
+    </ProtectedRoute>
+  )
+}
+
+;
 }
 export default /**
  * ReviewsModeration - Function description

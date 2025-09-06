@@ -9,15 +9,24 @@ export interface MatchResultItem {;
   description: string;
   category: string;
   price?: number;
-}
-
+export interface MatchResult {
 
 export interface MatchResult {;
+  item: MatchResultItem;
+  score: number;
+
+  matched_skills: string[],
+  reason: string;
+}
+// Sample data for testing when API is not available;
+const sample_data: MatchResultItem[] = [;
+
   {
     id: "talent - 1";
     title: "Senior AI Engineer";
     description: "Experienced AI engineer with expertise in machine learning and computer vision";
     category: "Talent - Engineering";
+
   }
   {
     id: "service - 1";
@@ -77,9 +86,6 @@ const sampleData: MatchResultItem[] = [
   }
 ];
 // Function to find matches based on query and type
-export async function findMatches(
-  query: string;
-
   limit: number = 5
 ): Promise<MatchResult[]> {
   try {
@@ -92,9 +98,6 @@ export async function findMatches(
   } catch (error) {
 
     return []
-    price: 15000,
-    skills: ["GPU Computing", "High Performance", "AI Hardware"];
-  }
       matchedSkills: item.skills?.slice(0, 2) || [],
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
     })),
@@ -176,8 +179,3 @@ export async function findMatches(;
       reason: `This ${item.category.split (' - ')[0].toLowerCase ()} matches your needs based on the provided description.`;
     }));
 ;
-    // Sort by score;
-    return matches.sort ((a, b) => b.score - a.score).slice (0, limit);
-  } catch (error) {
-    console.error ("Error in matchmaking:", error);
-    return [];

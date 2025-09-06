@@ -15,6 +15,24 @@ import { Button } from '@/components / ui / button';
   Link,
 } from 'lucide-react';
 import { toast } from '@/hooks / use - toast';
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+  Download
+  FileImage
+  FileText
+  FileType
+  FileVideo
+  Link
+} from 'lucide-react'
+import { toast } from '@/hooks/use-toast'
+
 interface ResourceItem {
   id: string;
   title: string;
@@ -84,6 +102,70 @@ interface ResourceItem {
     toast({
       title: "Download started",
       description: `Downloading ${resource.title}`,
+
+
+
+
+
+
+
+  return (
+    <div className="space-y-6">
+      <Card className="bg-zion-blue-dark border-zion-blue-light">
+        <CardHeader>
+          <CardTitle>Marketing Resources</CardTitle>
+          <CardDescription>
+            Download brand assets and marketing materials to promote Zion AI
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            {resources.map(resource => (
+              <Card
+                key={resource.id}
+                className='bg-zion-blue border-zion-blue-light overflow-hidden'
+              >
+                <CardContent className='p-6 flex flex-col items-center text-center'>
+                  <div className='mb-4'>{resource.icon}</div>
+                  <h3 className='font-semibold text-white mb-1'>
+                    {resource.title}
+                  </h3>
+                  <p className='text-xs text-zion-slate-light mb-4'>
+                    {resource.description}
+                  </p>
+                  <Button
+                    onClick={() => handleDownload(resource)}
+                    size='sm'
+                    variant='outline'
+                    className='w-full flex items-center gap-2'                  >
+                    <Download className='h-4 w-4' />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {resources.map((resource) => (
+              <Card key={resource.id} className="bg-zion-blue border-zion-blue-light overflow-hidden">
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <div className="mb-4">
+                    {resource.icon}
+                  </div>
+                  <h3 className="font-semibold text-white mb-1">{resource.title}</h3>
+                  <p className="text-xs text-zion-slate-light mb-4">{resource.description}</p>
+                  <Button 
+                    onClick={() => handleDownload(resource)}
+                    size="sm"
+                    variant="outline"
+                    className="w-full flex items-center gap-2"
+                  >
+                    <Download className="h-4 w-4" />
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react';
+import { toast } from "@/hooks/use-toast",;
+interface ResourceItem {;
+  id: string,;
+  title: string,;
+  description: string,;
+  type: 'image' | 'video' | 'document' | 'link',;
+  icon: JSX.Element,;
+  url: string;
 
   return (
     <div className="space-y-6">

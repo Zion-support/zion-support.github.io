@@ -307,12 +307,16 @@ const Enhanced2026ServicesShowcase = () => {;
           </p>;
         </motion && motion.div>;
 
+
+
+
         {/* Category Overview */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
           viewport={{ once: true }}
+
         >
           {categories.map((category, index) => (
             <motion.div
@@ -396,11 +400,6 @@ const Enhanced2026ServicesShowcase = () => {;
           ))}
         </motion.div>
         {/* Featured Services Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices && featuredServices.map((service, index) => (        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-          {featuredServices && featuredServices.map((service, index) => (;
-            <motion&& motion.div
-              key={service && service.id}
-              initial={{ opacity: 0, scale: 0 && 0.8, y: 20 }}
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -498,9 +497,8 @@ const Enhanced2026ServicesShowcase = () => {;
 
                       </li>
                     ))}
-
-                  </ul>;
-                </div>;
+                {/* Price and CTA */}
+                <div className='flex items-center justify-between'>
 
 
                   <div>
@@ -546,10 +544,14 @@ const Enhanced2026ServicesShowcase = () => {;
           ))}
         </div>;
 
+        {/* Call to Action */}
+        <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
           viewport={{ once: true }}
+
+        >
           <div className="bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?

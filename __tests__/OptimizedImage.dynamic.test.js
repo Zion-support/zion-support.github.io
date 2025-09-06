@@ -7,11 +7,4 @@ describe('OptimizedImagedynamic', () => {
     render(<OptimizedImagedynamic />);
     expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument();
   });
-  test ('displays correct content', () => {
-    // Test content display;
-  test ('handles user interactions', () => {
-    // Test user interactions;
-  test ('applies correct styling', () => {
-    // Test styling;
-});
 });

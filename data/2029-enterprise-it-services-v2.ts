@@ -1,3 +1,8 @@
+    maintenance: 'Fully autonomous, continuous optimization',
+    training: 'IT operations training, certification',
+    documentation: 'Operations guides, best practices',
+
+
   id: string;
   name: string;
   description: string;

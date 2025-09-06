@@ -150,15 +150,6 @@ const main_navigation = [;
 const quickLinks = [
   { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
-;
-const quick_links = [;
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Case Studies', href: '/case - studies', icon: BookOpen },
-  { name: 'Blog', href: '/blog', icon: BookOpen },
-  { name: 'News', href: '/news', icon: TrendingUp },
-  { name: 'Careers', href: '/careers', icon: GraduationCap },
-export default function UltraFuturisticNavigation2029V2() {
-export default function UltraFuturisticNavigation2029V2() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -218,10 +209,31 @@ export default function UltraFuturisticNavigation2029V2() {;
                 key={item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
+                  <span>{item.name}</span>
+                </Link>
+                {/* Hover effect */}
+                <div className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300' />              </motion.div>                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
+              </motion.div>
+            ))}
+          </div>
+          {/* Right side - Contact & Search */}
+          <div className='hidden lg:flex items-center space-x-4'>
+
+              </motion.div>
+
+            ))}
+          </div>
+          {/* Right side - Contact & Search */}
+            {/* Search */}
+            <div className='relative'>
+              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
               <input
                 type='text'
                 placeholder='Search services...'
                 value={searchQuery}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+
               <input
                 type="text"
                 placeholder="Search services..."
@@ -243,7 +255,6 @@ export default function UltraFuturisticNavigation2029V2() {;
               onClick={toggleMenu}
               className="p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -251,6 +262,7 @@ export default function UltraFuturisticNavigation2029V2() {;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+
           >
             <div className='px-4 py-6 space-y-4'>
                 <input
@@ -272,9 +284,43 @@ export default function UltraFuturisticNavigation2029V2() {;
                     key={item && item.name}
                     href={item && item.href}
                     onClick={closeMenu}
+              {/* Quick Links */}
+              <div className='pt-4 border-t border-gray-700'>
+                <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
+                  Quick Links
+                </h3>
+                <div className='space-y-2'>
+                  {quickLinks.map(item => (                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={closeMenu}
+                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
+                    >
+                      <item.icon className='w-4 h-4' />
+                      <span className='text-sm'>{item.name}</span>                    </Link>              <div className="pt-4 border-t border-gray-700">
+                <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Quick Links</h3>
+                <div className="space-y-2">
+                  {quickLinks.map((item) => (
+                      key={item.name}
+                      href={item.href}
+                      onClick={closeMenu}
+                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
+                    >
+                      <item.icon className='w-4 h-4' />
+                      <span className='text-sm'>{item.name}</span>                      className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
+                    >
+                      <item.icon className="w-4 h-4" />
+                      <span className="text-sm">{item.name}</span>
                   ))}
                 </div>
               </div>
+
+                  ))}
+                </div>
+              </div>
+
+
+
 
               {/* Contact Info */}
               <div className='pt-4 border-t border-gray-700'>
@@ -301,6 +347,17 @@ export default function UltraFuturisticNavigation2029V2() {;
       <AnimatePresence>;
         {activeCategory && (;
           <motion&& motion.div
+      {/* Service Categories Dropdown */}
+      <AnimatePresence>
+        {activeCategory && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40'
+
+
           >
             <div className='max-w-7xl mx-auto px-4 py-8'>
               <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
@@ -359,6 +416,7 @@ export default function UltraFuturisticNavigation2029V2() {;
                             <span className="text-sm font-semibold text-cyan-400">{service && service.price}</span>;
                           </div>;
                         </Link>;
+
                         </Link>
                       ))}
                     </div>;
@@ -368,3 +426,72 @@ export default function UltraFuturisticNavigation2029V2() {;
             </div>;
           </motion && motion.div>;
         )}
+
+      </AnimatePresence>;
+    </nav>;
+  );
+
+  );
+
+}
+}
+  );
+}
+                        </p>;
+                      </div>;
+                    </div>;
+                    <div className='space - y-3'>                      {category.services.map ((service, index) => (
+                        <Link;
+                          key={service.name}
+                          href={service.href}
+                          className='block p - 3 rounded - lg bg - gray - 800 / 50 hover:bg - gray - 800 / 70 transition - colors duration - 300 group'          >;
+            <div className="max - w-7xl mx - auto px - 4 py - 8">;
+              <div className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8">;
+                {service_categories.map ((category) => (
+                  <div key={category.title} className="space - y-4">;
+                    <div className="flex items - center space - x-3">;
+                      <div className={`p - 2 rounded - lg bg - gradient - to - r ${category.color}`}>;
+                        <category.icon className="w - 5 h - 5 text - white" />;
+                      </div>;
+                      <div>;
+                        <h3 className="text - lg font - semibold text - white">{category.title}</h3>;
+                        <p className="text - sm text - gray - 400">{category.description}</p>;
+                      </div>;
+                    </div>;
+                    <div className="space - y-3">;
+                      {category.services.map ((service, index) => (
+                        <Link;
+                          key={service.name}
+                          href={service.href}
+                          className='block p - 3 rounded - lg bg - gray - 800 / 50 hover:bg - gray - 800 / 70 transition - colors duration - 300 group';
+                        >;
+                          <div className='flex justify - between items - start'>;
+                            <div>;
+                              <h4 className='font - medium text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
+                                {service.name}
+                              </h4>;
+                              <p className='text - sm text - gray - 400 mt - 1'>;
+                                {service.description}
+                              </p>;
+                            </div>;
+                            <span className='text - sm font - semibold text - cyan - 400'>;
+                              {service.price}
+                            </span>                          </div>                        >;
+                          <div className="flex justify - between items - start">;
+                            <div>;
+                              <h4 className="font - medium text - white group - hover:text - cyan - 400 transition - colors duration - 300">;
+                                {service.name}
+                              </h4>;
+                              <p className="text - sm text - gray - 400 mt - 1">{service.description}</p>;
+                            </div>;
+                            <span className="text - sm font - semibold text - cyan - 400">{service.price}</span>;
+                          </div>;
+                        </Link>))}
+                    </div>;
+                  </div>))}
+              </div>;
+            </div>;
+          </motion.div>)}
+      </AnimatePresence>;
+    </nav>);
+}

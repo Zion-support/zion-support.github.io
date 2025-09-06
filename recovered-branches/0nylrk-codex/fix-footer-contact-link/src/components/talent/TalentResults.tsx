@@ -9,7 +9,6 @@ interface TalentResultsProps {
   handleToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
   activeFiltersProps: {
-
     selectedSkills: string[],
     toggleSkill: (skill: string) => void,
     selectedAvailability: string[],
@@ -80,51 +79,15 @@ interface TalentResultsProps {;
         isLoading={isLoading}
         onTalentClick={viewProfile}
         viewProfile={viewProfile}
-        is_authenticated={is_authenticated}
-        clear_filters={activeFiltersProps.clear_filters}
-      />;
-    </div>);
+        handleRequestHire={handleRequestHire}
+        savedTalentIds={saved_talents}
+        onToggleSave={handleToggleSave}
+
+        clearFilters={activeFiltersProps && activeFiltersProps.clearFilters}
         isAuthenticated={isAuthenticated}
         clearFilters={activeFiltersProps.clearFilters}
       />;
     </div>;
-  ),;}
-}export function TalentResults ({
-  filteredTalents;
-isLoading;
-viewProfile;
-handleRequestHire;
-savedTalents;
-handleToggleSave;
-isAuthenticated;
-activeFiltersProps 
-}: TalentResultsProps) {
-  return (
-    <div className=&quot;flex-1&quot;>
-import React from "react";
-
-interface TalentResultsProps {_filteredTalents: TalentProfile[];
-  isLoading: boolean;
-  viewProfile: (_id: string) => void;
-  handleRequestHire: (_talent: TalentProfile) => void;
-  savedTalents: string[];
-  handleToggleSave: (_id: string, _isSaved: boolean) => void;
-  isAuthenticated: boolean;
-  activeFiltersProps: {
-    selectedSkills: string[];
-    toggleSkill: (_skill: string) => void;
-    selectedAvailability: string[];
-    toggleAvailability: (_availability: string) => void;
-    selectedRegions: string[];
-    toggleRegion: (_region: string) => void;
-    priceRange: [number, _number];
-    setPriceRange: (_range: [number, _number]) => void;
-    experienceRange: [number, _number];
-    setExperienceRange: (_range: [number, _number]) => void;
-    clearFilters: () => void;}
+  );
 }
 ;
-
-
-;
-

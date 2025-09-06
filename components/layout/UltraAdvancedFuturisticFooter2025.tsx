@@ -30,6 +30,21 @@
   Shield,
   Users,
   BookOpen,
+
+
+} from 'lucide-react';
+import Link from 'next / link';
+import { AnimatePresence } from 'framer-motion';
+;
+interface FooterLink {
+interface FooterLink {;
+  label: string;
+  href: string;
+  description?: string;
+
+  external?: boolean;
+;
+
 interface FooterSection {
 interface FooterSection {;
   title: string;
@@ -97,6 +112,11 @@ interface FooterSection {;
     {
       title: 'Services'
       items: [
+      items: [
+        { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
+        { label: 'Micro SAAS', href: '/micro-saas' },
+        { label: 'IT Services', href: '/it-services' },
+        { label: 'Innovation Lab', href: '/innovation-lab' },
         { label: 'About Us', href: '/about' },
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
@@ -105,6 +125,18 @@ interface FooterSection {;
     <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
+  return (
+    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 -z-10">
+
+
+
+  return (
+    <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>;
+      {/* Animated Background Elements */}
+
+
         {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (;
           <motion&& motion.div
@@ -128,10 +160,6 @@ interface FooterSection {;
               delay: Math.random() * 8
               ease: 'easeInOut'
             }}
-            style={{
-              left: `${Math.random() * 100}%`
-              top: `${Math.random() * 100}%`
-            }}
           />;
         ))}
         {/* Gradient Overlays */}
@@ -150,10 +178,13 @@ interface FooterSection {;
                         className="text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block";
                       >;
                         {item.label}
+          {/* Social Links & Newsletter */}
+          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
+
           >
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
               {/* Social Links */}
@@ -219,6 +250,9 @@ interface FooterSection {;
             </div>;
           </motion && motion.div>;
         </div>;
+
+
+
 
         {/* Bottom Bar */}
         <motion&& motion.div
@@ -308,6 +342,7 @@ interface FooterSection {;
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
+
         >
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
@@ -410,9 +445,6 @@ interface FooterSection {;
             </div>;
           </div>;
 
-      {/* Scroll to Top Button */}
-      <motion.button
-        onClick={scrollToTop}
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}

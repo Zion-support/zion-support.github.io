@@ -1,3 +1,22 @@
+
+
+
+      <main>;
+        <h1>SystemAdministrationChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  );
+}
+export default SystemAdministrationChat;
+
+
+
+
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';

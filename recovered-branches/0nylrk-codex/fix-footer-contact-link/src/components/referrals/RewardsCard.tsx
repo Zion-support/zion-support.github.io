@@ -16,6 +16,9 @@ import { ReferralReward } from "@/types/referrals",
 import { formatDate } from "@/utils/referralUtils",
 import { BadgeDollarSign, Badge } from "lucide-react",
 
+interface RewardsCardProps {
+  rewards: ReferralReward[];
+  isLoading: boolean
 }
     return (
       <Card>;
@@ -55,33 +58,6 @@ import { BadgeDollarSign, Badge } from "lucide-react",
               key={reward.id}
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? "border-b pb-3" : ""
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReferralReward } from "@/types/referrals",;
-import { formatDate } from "@/utils/referralUtils",;
-import { BadgeDollarSign, Badge } from "lucide-react",;
-
-interface RewardsCardProps {;
-  rewards: ReferralReward[],;
-  isLoading: boolean;
-}
-export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
-  if (isLoading) {;
-    return (
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReferralReward } from "@/types/referrals",;
-import { formatDate } from "@/utils/referralUtils",;
-import { BadgeDollarSign, Badge } from "lucide-react",;
-;
-interface RewardsCardProps {;
-  rewards:ReferralReward[],;
-  isLoading:boolean;
-}
-;
-export function RewardsCard({ rewards, isLoading } RewardsCardProps) {;
-  if (isLoading) {;
-    return (;
-}`}
               }`}
             >
               <div>
@@ -229,5 +205,3 @@ if ( {) {
               </div>;
             </div>;
           ))}
-}
-;

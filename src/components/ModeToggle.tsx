@@ -1,18 +1,3 @@
-import { Button } from '@/components/ui/button'
-import {
-  Tooltip
-  TooltipContent
-  TooltipProvider
-  TooltipTrigger
-} from '@/components/ui/tooltip'
-import { toast } from '@/hooks/use-toast'
-  darkModeMessages
-  lightModeMessages
-} from '@/utils/themeToggleMessages'
-// Use the ThemeProvider hook directly to ensure no conflicts
-import { useTheme } from '@/components/ThemeProvider'
-import { logIssue } from '@/utils/logIssue'
-import { useEffect, useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
@@ -23,15 +8,6 @@ import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
 export function ModeToggle() {
 
-  const { theme, toggleTheme } = useTheme();
-  const [isClient, setIsClient] = useState(false);
-  // Ensure we're on the client side to avoid hydration mismatches
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
-  // Determine the actual resolved theme for display purposes
-
-  const resolvedTheme = (() => {
     if (!isClient) return 'light'; // Default for SSR
     if (theme === 'system') {
       return window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -333,6 +309,4 @@ if (!isClient) {";
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
 }'"
   );
-}
-;
 }

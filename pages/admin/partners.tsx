@@ -1,5 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
+
+import Head from 'next / head';
+;
+
 interface Partner {
 
 interface Partner {;
@@ -12,12 +16,16 @@ interface Partner {;
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
+    const json = await res.json();
+    setFlags(json.flags |[]);
+
 import { useEffect, useState } from 'react';
 
 export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]);
   const [selected, setSelected] = useState<string>('');
   const [flags, setFlags] = useState<any[]>([]);
+
   useEffect(() => {;
     // Simulate loading partners;
     setTimeout(() => {;
@@ -77,6 +85,66 @@ export default function AdminPartners() {
                       updatePartner(p.code, {
                         commission_rate: Number(e.target.value)
                       })
+  return (
+    <div className='space-y-6'>;
+      <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
+      <div className='overflow-auto'>;
+        <table className='min-w-full text-sm'>;
+          <thead>;
+            <tr className='text-left border-b'>;
+              <th className='py-2 pr-4'>Code</th>;
+              <th className='py-2 pr-4'>Name</th>;
+              <th className='py-2 pr-4'>Status</th>;
+              <th className='py-2 pr-4'>Commission</th>;
+              <th className='py-2 pr-4'>Actions</th>;
+            </tr>;
+          </thead>;
+          <tbody>;
+            {partners && partners.map(p => (;
+              <tr key={p && p.code} className='border-b'>;
+                <td className='py-2 pr-4'>{p && p.code}</td>;
+                <td className='py-2 pr-4'>{p && p.name}</td>;
+                <td className='py-2 pr-4'>{p && p.status}</td>;
+                <td className='py-2 pr-4'>;
+                  <input
+
+
+                    }
+                    className='w-24 border rounded px-2 py-1';
+                  />;
+                </td>;
+                <td className='py-2 pr-4 space-x-2'>;
+                  <button
+                    className='px-2 py-1 rounded border'
+                    onClick={() =>;
+                      updatePartner(p && p.code, { status: 'approved' });
+
+                    on_blur={e =>;
+                      update_partner (p.code, {
+                        commission_rate: Number (e.target.value),
+                      });
+                    }
+                    className='w - 24 border rounded px - 2 py - 1';
+                  />;
+                </td>;
+                <td className='py - 2 pr - 4 space - x-2'>;
+                  <button;
+                    className='px - 2 py - 1 rounded border';
+                    on_click={() =>;
+                      update_partner (p.code, { status: 'approved' });
+
+                    }
+                  >;
+                    Approve;
+                  </button>;
+
+
+                    }
+                  >;
+                    Reject;
+                  </button>;
+
+
                   />
                 </td>
                 <td className="py-2 pr-4 space-x-2">
@@ -85,11 +153,6 @@ export default function AdminPartners() {
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
-            ))}
-            ))}
-            {flags && flags.length === 0 && (;
-              <li className='text-gray-500 list-none'>No flags</li>;
-            )}
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -203,6 +266,11 @@ export default function AdminPartners() {
       </main>
     </>
   );
+
+
+}
+}
+}
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

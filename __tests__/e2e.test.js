@@ -1,6 +1,3 @@
-
-
-
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"E2E"
   test('"homepage"

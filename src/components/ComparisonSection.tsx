@@ -1,13 +1,3 @@
-import { CheckCircle2 } from 'lucide-react'
-
-import {
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
-} from './ui/table'
 export function ComparisonSection() {
   return (
     <section className='py-20 bg-zion-blue-dark'>
@@ -106,7 +96,6 @@ export function ComparisonSection() {
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
-                  </TableRow>
                   </TableRow>
                 ))}
               </TableBody>

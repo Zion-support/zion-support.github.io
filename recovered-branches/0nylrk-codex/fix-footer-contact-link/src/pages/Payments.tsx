@@ -62,8 +62,6 @@ export default function Payments() {
                     <div className="space-y-2">
                       <div className="flex items-center space-x-2">
                         <Checkbox id="notify-email" defaultChecked />
-
-// Import UI components for Payment Settings tab;
 import {Button} from "@/components/ui/button";
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
@@ -169,3 +167,5 @@ import { Switch } from '@/components / ui / switch';
 import { Label } from '@/components / ui / label';
 import { Checkbox } from '@/components / ui / checkbox';
 ;
+
+

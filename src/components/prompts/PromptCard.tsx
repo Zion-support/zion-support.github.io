@@ -18,24 +18,10 @@ export function PromptCard({ prompt }: PromptCardProps) {
           variant='outline'
           size='sm'
           onClick={handleCopy}
-          aria-label='Copy prompt'>;
-          {copied ? 'Copied' : <Copy className='w-4 h-4' />}
-        <Button
-          variant='secondary'
-          size='sm'
-          onClick={handleSend}
-          aria-label='Send to ZionGPT'
-        >
-          <Send className='w-4 h-4' />        </Button>
-      </div>
-    </div>
-  )
-}        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
-import { useState } from 'react',;
+}
+
 import { useState } from 'react';
 import { Copy, Send } from 'lucide-react';
-import { Button } from '@/components/ui/button',;
-import type { Prompt } from '@/types/prompts',;
-interface PromptCardProps {;
-  prompt: Prompt;
 }
+
+;

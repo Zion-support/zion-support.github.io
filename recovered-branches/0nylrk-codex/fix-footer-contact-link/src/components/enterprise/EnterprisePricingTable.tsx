@@ -31,6 +31,8 @@ export function EnterprisePricingTable() {
         { name: "Custom integrations", included: false }
         { name: "Dedicated success manager", included: false }]}
     {
+      name: "Business",
+      price: "$1,999",
       billing: "/month",
       description: "Ideal for growing companies",
       users: "Up to 50 users",
@@ -82,7 +84,6 @@ export function EnterprisePricingTable() {
                     <div className="flex flex-col items-center">
                       {plan.popular && (
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>
-
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Check, X } from "lucide-react",;

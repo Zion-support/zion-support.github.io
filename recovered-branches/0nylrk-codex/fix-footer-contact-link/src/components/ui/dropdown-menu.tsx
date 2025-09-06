@@ -32,9 +32,6 @@ const DropdownMenuSubTrigger = React.forward_ref<;
 >(({ class_name, inset, children, ...props }, ref) => (
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
-    className={cn(
-      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
-      inset && "pl-8",
       className
     )}
     {...props}
@@ -77,9 +74,6 @@ const DropdownMenuItem = React.forwardRef<;
 >(({ class_name, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Item;
     ref={ref}
-    className={cn(
-      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-      inset && "pl-8",
       className
     )}
     {...props}
@@ -117,33 +111,27 @@ className={cn (
     ref={ref}
       className
     )}
-  </DropdownMenuPrimitive.CheckboxItem>));
-DropdownMenuCheckboxItem.display_name =;
-  DropdownMenuPrimitive.CheckboxItem.display_name;
-const DropdownMenuRadioItem = React.forward_ref<;
-  React.ElementRef < typeof DropdownMenuPrimitive.RadioItem>,
-  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.RadioItem>;
->(({ class_name, children, ...props }, ref) => (
-  <DropdownMenuPrimitive.RadioItem;
-    ref={ref}
-className={cn (
-      &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
-      class_name)}
     {...props}
-  >;
-    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
-      <DropdownMenuPrimitive.ItemIndicator>;
-        <Circle className=&quot;h - 2 w - 2 fill - current & quot; />;
-      </DropdownMenuPrimitive.ItemIndicator>;
-    </span>;
+  >
+    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+      <DropdownMenuPrimitive.ItemIndicator>
+        <Circle className="h-2 w-2 fill-current" />
+      </DropdownMenuPrimitive.ItemIndicator>
+    </span>
     {children}
+  </DropdownMenuPrimitive.RadioItem>;
+));
+DropdownMenuRadioItem.displayName = DropdownMenuPrimitive.RadioItem.displayName;
+const DropdownMenuLabel = React.forwardRef<;
+  React.ElementRef<typeof DropdownMenuPrimitive.Label>;
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {inset?: boolean;
+  React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
+    inset?: boolean;
   }
 >(({ class_name, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Label;
     ref={ref}
-    className={cn(
-      "px-2 py-1.5 text-sm font-semibold",
-      inset && "pl-8",
       className
     )}
     {...props}

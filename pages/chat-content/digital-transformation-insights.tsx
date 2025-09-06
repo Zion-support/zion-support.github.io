@@ -19,6 +19,9 @@ const DigitalTransformationInsights: NextPage = () => {
     </div>;
   ),;
 };
+export default DigitalTransformationInsights;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > DigitalTransformationInsights</h1>;
@@ -29,3 +32,5 @@ import Head from 'next / head';
 ;
 export default DigitalTransformationInsights;
 ;
+
+

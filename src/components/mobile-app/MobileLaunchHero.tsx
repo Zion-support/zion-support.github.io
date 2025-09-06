@@ -1,15 +1,3 @@
-
-import { Button } from '@/components/ui/button'
-import { AppStoreButtons } from './AppStoreButtons'
-import { Card, CardContent } from '@/components/ui/card'
-export const MobileLaunchHero: React.FC = () => {
-  // App store links - these would come from environment variables in production
-  const appStoreUrl = '#'; // Replace with actual App Store URL
-  const googlePlayUrl = '#'; // Replace with actual Google Play URL
-export const MobileLaunchHero: React.FC = () => {
-  // App store links - these would come from environment variables in production
-  const appStoreUrl = "#", // Replace with actual App Store URL
-  const googlePlayUrl = "#", // Replace with actual Google Play URL
     <section className='relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24'>
       <div className='container mx-auto px-4 lg:px-8'>
         <div className='flex flex-col md:flex-row items-center gap-8 md:gap-16'>
@@ -53,26 +41,6 @@ export const MobileLaunchHero: React.FC = () => {
                   size='lg'
                   className='text-white hover:bg-white/10'
 
-            
-            <p className="text-lg md:text-xl opacity-90 mb-8">
-              Find top AI talent or global IT jobs on the go. Track projects, message candidates, and get AI-powered matches instantly with our mobile app.
-            </p>
-            
-            <div className="mb-8">
-              <AppStoreButtons 
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-              />
-            </div>
-            
-            <div className="flex flex-wrap gap-4">
-              <Link href="/open-app">
-                <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
-                  Open App
-                  <ArrowRight size={20} />
-                </Button>
-              </Link>
-              
               <Link href="#features">
                   See Features
                 </Button>

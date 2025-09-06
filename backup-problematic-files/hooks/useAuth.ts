@@ -9,7 +9,6 @@ interface User {
     // Simulate auth check
     setLoading(false);
   }, []);
-;
   return {
     user
     loading

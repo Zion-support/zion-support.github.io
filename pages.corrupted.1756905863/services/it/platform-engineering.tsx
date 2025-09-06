@@ -2,7 +2,6 @@ export default function PlatformEngineering() {; return (; <Article; title=\"Pla
 import React from 'react';
 interface PlatformengineeringProps {
   // Add props here as needed
-
 export default function Platformengineering({ }: PlatformengineeringProps) {
   return (
     <div>

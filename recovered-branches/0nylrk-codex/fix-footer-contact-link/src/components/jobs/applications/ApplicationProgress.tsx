@@ -6,35 +6,6 @@ interface ApplicationProgressProps {
 
   const getProgressValue = () => {
     switch (status) {
-import { ApplicationStatus  } from '@/types / jobs';
-import { Progress  } from '@/components / ui / progress';
-import { CheckCircle2, Circle, CircleDot  } from './lucide-react';
-import { cn  } from '@/lib / utils';
-interface ApplicationProgressProps {
-  status: ApplicationStatus;
-  class_name?: string;
-}
-export /**
- * ApplicationProgress - Function description
- */
-function ApplicationProgress() {
-  // Define the progress value based on status;
-  const getProgressValue = () =>: any {
-    switch (status) {
-      case "new":;
-        return 20;
-      case "viewed":;
-        return 40;
-      case "shortlisted":;
-        return 60;
-      case "interview":;
-        return 80;
-      case "hired":;
-        return 100;
-      case "rejected":;
-        return 100;
-      default:;
-        return 0;
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -63,6 +34,21 @@ function ApplicationProgress() {
 
   )
 }
+  const currentRank = statusRank[current];
+  const statusRank_ = statusRank[status];
+
+  if (currentRank < statusRank_) {;
+    // This step is complete;
+    return <CheckCircle2 className="h-4 w-4 text-green-500" />;
+  } else if (currentRank === statusRank_) {;
+    // This is the current step;
+    return <CircleDot className="h-4 w-4 text-blue-500" />;
+  } else {;
+    // This step is upcoming;
+    return <Circle className="h-4 w-4 text-muted-foreground/50" />;
+  }
+
+;
   const progress_value = getProgressValue ();
 ;
   return (

@@ -1,3 +1,10 @@
+import { 
+  X, 
+  Building2, 
+  Code, 
+  Smartphone, 
+  Cloud, 
+  Shield, 
   Zap,
   ShoppingCart,
   Heart,

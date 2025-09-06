@@ -37,10 +37,6 @@ interface ListingScoreCardProps {
   className?: string
 }
 
-
-export function ListingScoreCard({ 
-  title,
-
 export function ListingScoreCard({ ;
   title;
 export function ListingScoreCard({ 
@@ -166,9 +162,6 @@ export function ListingScoreCard({;
             </span>;
           </div>;
         )}
-              </Badge>;
-            ))}
-          </div>;
         )}
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
           Request Quote

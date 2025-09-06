@@ -1,6 +1,4 @@
-import { Project } from "@/types/projects";
-export const PROJECTS: Project[] = [
-  {
+
 
     talent_profile: {
       full_name: 'Alexandra Chen'
@@ -57,3 +55,6 @@ export const PROJECTS: Project[] = [;
     talent_profile: {;
       full_name: "Alexandra Chen";
       professional_title: "Senior AI Engineer";
+    }
+  }
+];

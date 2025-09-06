@@ -43,11 +43,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-    title: 'The Complete Guide to Autonomous Systems',
-    description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.',
-    category: 'Technology',
-    pages: '45',
-    author: 'Zion Tech Group Research Team',
         'Understanding Autonomous SystemsImplementation StrategiesBest Practices & Case StudiesFuture Trends & Predictions'
       ]
       targetAudience: 'Technology leaders, engineers, and business professionals interested in implementing autonomous systems.'
@@ -81,11 +76,19 @@ import { useRouter } from 'next/router';
 export default function WhitepaperPage() {
   const router = useRouter();
   const { id } = router.query;
-  // Check condition
-if ( {) {
-  $2
-}
 
+  if (!whitepaper) {
+
+  }
+},
+export default /**
+ * WhitepaperPage - Function description
+ */
+function WhitepaperPage() {
+  const router = use_router (),
+  const { id } = router.query,
+  const whitepaper = whitepapers[id as keyof typeof whitepapers],
+  if (!whitepaper) {
     return (
       <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
         <main className="container mx - auto px - 6 py - 12">;
@@ -103,48 +106,20 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-}
-
-  return (
-
-
           {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
           <nav className="mb-8">
             <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               ← Back to Resources
             </Link>
           </nav>
-
-  return (
-          <nav className="mb-8">
-            <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-               Back to Resources
-            </Link>
-          </nav>
-
           {/* Header */}
           <header className="text-center mb-16">
             <div className="mb-6">
               <span className="px-4 py-2 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full border border-fuchsia-400/30">
-          {/* Header */}
-          <header className="text - center mb - 16">;
-            <div className="mb - 6">;
-              <span className="px - 4 py - 2 bg - fuchsia - 400 / 20 text - fuchsia - 400 text - sm rounded - full border border - fuchsia - 400 / 30">;
-                {whitepaper.category}
-              </span>;
-            </div>;
-            <h1 className="text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent">;
-              {whitepaper.title}
-            </h1>;
-            <p className="text - xl text - white / 80 max - w-3xl mx - auto mb - 6">;
-              {whitepaper.description}
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
               <span>By {whitepaper.author}</span>
@@ -169,17 +144,10 @@ if ( {) {
                       <span className="text-white/90">{topic}</span>
                     </div>
                   </div>
-                ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              </div>
-            </section>
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-green-400">Target Audience</h2>
-              <p className="text-lg text-white/80">{whitepaper.content.targetAudience}</p>
-            </section>
             <section className="mb-12">
               <div className="bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 rounded-2xl p-8 border border-fuchsia-500/20 text-center">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Download?</h2>
@@ -195,6 +163,16 @@ if ( {) {
 }
                 </button>
                 <p className="text-white/60 text-sm mt-4">
+                  PDF format • {whitepaper.pages} pages • Free download
+                </p>
+              </div>
+            </section>
+            {/* Related Whitepapers */}
+            {/* Related Whitepapers */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -471,3 +449,5 @@ export default function WhitepaperPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

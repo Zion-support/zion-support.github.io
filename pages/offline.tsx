@@ -155,7 +155,6 @@ export default function OfflinePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  ]
   return (
     <>
       <Head>
@@ -163,6 +162,10 @@ export default function OfflinePage(req, res) {
         <meta name="description" content="You're currently offline. Some features may not be available." />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
+      <div className='min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900'>
+        <div className='container mx-auto px-4 py-8'>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900">
+        <div className="container mx-auto px-4 py-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -188,6 +191,35 @@ export default function OfflinePage(req, res) {
 }
             <div className="mb-6">
               <motion.div
+                animate={
+                  isOnline
+                    ? { scale: [1, 1.1, 1] }
+                    : { rotate: [0, -10, 10, -10, 0] }
+                }
+                transition={{
+                  duration: isOnline ? 0.6 : 2
+                  repeat: isOnline ? 1 : Infinity
+                }}
+                className={`mx-auto w-24 h-24 rounded-full flex items-center justify-center mb-4 ${
+                  isOnline
+                    ? 'bg-green-100 dark:bg-green-900/20'
+                    : 'bg-orange-100 dark:bg-orange-900/20'
+                }`}
+                animate={isOnline ? { scale: [1, 1.1, 1] } : { rotate: [0, -10, 10, -10, 0] }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: isOnline ? 0.6 : 2, repeat: isOnline ? 1 : Infinity }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={`mx-auto w-24 h-24 rounded-full flex items-center justify-center mb-4 ${;
+                  isOnline;
+                    ? 'bg-green-100 dark:bg-green-900/20';
+                    : 'bg-orange-100 dark:bg-orange-900/20';
+                }`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -198,24 +230,29 @@ export default function OfflinePage(req, res) {
                 }`} />
               </motion.div>
               <Badge
-                variant={isOnline ? 'default' : 'secondary'}
-                className='text-sm px-3 py-1'>;
-                {isOnline ? 'Connection Restored' : 'Offline Mode'}
               </Badge>
             </div>
             <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
               {isOnline ? "You're Back Online!" : "You're Offline"}
             </h1>
-              {isOnline
-                ? 'Your internet connection has been restored. You can now access all features.'
-                : 'No internet connection detected. Don\'t worry - you can still access cached content and use offline features.'
-                } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+              {isOnline
+                ? 'Your internet connection has been restored. You can now access all features.'
+                : "No internet connection detected. Don't worry - you can still access cached content and use offline features."}
             </p>
             {lastUpdate && (
+              <p className='text-sm text-muted-foreground flex items-center justify-center gap-2'>
+                <Clock className='w-4 h-4' />
+                Last updated: {lastUpdate}
+              </p>;
+            )}
+
+          </motion && motion.div>;
+
+
           {/* Action Buttons */}
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-12'>;
             <Button
@@ -229,7 +266,6 @@ export default function OfflinePage(req, res) {
   }
 }
             </Button>
-
           <Button
             asChild
             variant="outline"
@@ -331,7 +367,6 @@ export default function OfflinePage(req, res) {
                         <Button disabled size="sm" className="w-full">
                           Requires Internet
                         </Button>
-
                       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -410,50 +445,65 @@ export default function OfflinePage(req, res) {
           </motion.div>;
           {/* Tips Section */}
           <motion.div;
-                    <span>;
-                      Recently viewed pages are cached and available offline;
-                    </span>;
-                  </div>;
-                    <span>;
-                      Your bookmarks and saved items can be accessed anytime;
-                    </span>;
-                  </div>;
-                    <span>;
-                      Form submissions will be synced when you reconnect;
-                    </span>;
-                  </div>;
-                    <span>;
-                      Check your internet connection and try refreshing the page;
-                    </span>;
-                  </div>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </motion.div>;
-          {/* Auto - refresh when online */}
-          {is_online && (
-            <motion.div;
+          >
+            <Card className='max-w-2xl mx-auto'>
+              <CardHeader>
+                <CardTitle className='text-center'>💡 Offline Tips</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className='space-y-3 text-sm'>
+                  <div className='flex items-start gap-2'>
+                    <span className='text-blue-600 font-semibold'>•</span>
+                    <span>
+                      Recently viewed pages are cached and available offline
+                    </span>
+                  </div>
+                  <div className='flex items-start gap-2'>
+                    <span className='text-blue-600 font-semibold'>•</span>
+                    <span>
+                      Your bookmarks and saved items can be accessed anytime
+                    </span>
+                  </div>
+                  <div className='flex items-start gap-2'>
+                    <span className='text-blue-600 font-semibold'>•</span>
+                    <span>
+                      Form submissions will be synced when you reconnect
+                    </span>
+                  </div>
+                  <div className='flex items-start gap-2'>
+                    <span className='text-blue-600 font-semibold'>•</span>
+                    <span>
+                      Check your internet connection and try refreshing the page
+                    </span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+          {/* Auto-refresh when online */}
+          {isOnline && (
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              className='fixed bottom - 6 right - 6 z - 50';
-            >;
-              <Card className='bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green - 800'>;
-                <CardContent className='p - 4'>;
-                  <div className='flex items - center gap - 3'>;
-                    <div className='w - 2 h - 2 bg - green - 500 rounded - full animate - pulse' />;
-                    <span className='text - sm font - medium text - green - 700 dark:text - green - 300'>;
-                      Connection restored;
-                    </span>;
-                    <Button;
-                      size='sm';
-                      on_click={() => window.location.reload ()}
-                      className='bg - green - 600 hover:bg - green - 700';
-                    >;
-                      Refresh;
-                    </Button>;
-                  </div>;
-                </CardContent>;
-              </Card>;
+              className='fixed bottom-6 right-6 z-50'
+          {/* Auto-refresh when online */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          {isOnline && (;
+            <motion.div;
+              initial={{ opacity: 0, scale: 0.9 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, scale: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="fixed bottom-6 right-6 z-50"
             >
               <Card className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800">
                 <CardContent className="p-4">

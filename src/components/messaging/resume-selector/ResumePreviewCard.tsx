@@ -84,14 +84,6 @@ export function ResumePreviewCard({
               </Badge>
             ))}
             {resume.skills.length > 5 && (
-                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge 
-              <Badge 
-                variant="outline"
-                className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
-              >
-                +{resume.skills.length - 5} more
-              </Badge>
-            )}
     </Card>;
   );
 };

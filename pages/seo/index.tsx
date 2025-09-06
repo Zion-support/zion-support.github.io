@@ -9,6 +9,10 @@
             <li key={s}><a className="text - cyan - 600" href={`/seo/${s}`}>{s}</a></li>))}
         </ul>)}
     </div>);
+
+  );
+};
+
             <li key={s}><a className="text-cyan-600" href={`/seo/${s}`}>{s}</Link></li>
           ))  } catch (error) {
     console.error("Error:", error);
@@ -27,5 +31,3 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}

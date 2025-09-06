@@ -12,8 +12,6 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-
-
 import {;
   Search, Filter, Star, TrendingUp, Zap, Brain, Shield,;
   Globe, Database, Cloud, Lock, Palette, Target, Layers,;
@@ -36,6 +34,27 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
     })
   const containerVariants = {
     hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+
+        stagger_children: 0.1;
+      }
+    }
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 }
+    visible: {
+
+      y: 0
+      opacity: 1
+  },
+  const item_variants = {
+    hidden: { coordinate_y: 20, opacity: 0 },
+    visible: {
+      coordinate_y: 0,
+      opacity: 1,
+
       transition: {
         duration: 0.5;
       }
@@ -142,6 +161,47 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                 <span className="text-6xl md:text-8xl">Services Showcase</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+
+
+
+      <div className="min-h-screen relative z-10">
+  },
+  return (
+    <UltraAdvancedFuturisticBackground;
+      intensity="extreme";
+      color_scheme="quantum - fusion";
+      particle_count={500}
+      animation_speed={2.5}
+    >;
+      <Head>;
+        <title > Comprehensive 2026 Services Showcase | Zion Tech Group</title>;
+        <meta name="description" content="Discover our comprehensive collection of cutting - edge AI, IT infrastructure, and micro SaaS services for 2026. Transform your business with innovative technology solutions." />;
+        <meta name="keywords" content="AI services, IT infrastructure, micro SaaS, quantum computing, blockchain, 2026 technology, Zion Tech Group" />;
+        <meta property="og:title" content="Comprehensive 2026 Services Showcase | Zion Tech Group" />;
+        <meta property="og:description" content="Discover our comprehensive collection of cutting - edge AI, IT infrastructure, and micro SaaS services for 2026." />;
+        <meta property="og:url" content="https://ziontechgroup.com / comprehensive - 2026 - services - showcase" />;
+        <meta property="og:type" content="website" />;
+        <link rel="canonical" href="https://ziontechgroup.com / comprehensive - 2026 - services - showcase" />;
+      </Head>;
+      <UltraAdvancedNavigation />;
+      <div className="min - h-screen relative z - 10">;
+        {/* Hero Section */}
+        <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+
+
+
+
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
@@ -196,6 +256,28 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                 <div className="flex flex-wrap gap-3">
                   {categories.map((category) => (
                     <button
+                      key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      onClick={() => setSelectedCategory(category.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      className={`flex items-center gap-2 px-4 py-2 rounded-xl border transition-all duration-300 ${;
+                        selectedCategory === category.id;
+                          ? 'bg-cyan-600 border-cyan-500 text-white';
+                          : 'bg-gray-800/50 border-gray-600/30 text-gray-300 hover:border-cyan-500/50';
+                      }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    >
+                      <category.icon className="w-4 h-4" />
+                      {category.name}
                       <span className="bg-gray-700/50 px-2 py-1 rounded-lg text-xs">
                         {category.count}
                       </span>
@@ -215,21 +297,15 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                   </select>
                   <div className="flex bg-gray-800/50 rounded-xl p-1 border border-gray-600/30">
                     <button
-                      }`}
-                    >;
-                      <svg className="w - 5 h - 5" fill="current_color" view_box="0 0 20 20">;
-                        <path d="M5 3a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2V5a2 2 0 00 - 2-2H5zM5 11a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2v - 2a2 2 0 00 - 2-2H5zM11 5a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2V5zM11 13a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h - 2a2 2 0 01 - 2-2v - 2z" />;
-                      </svg>;
-                    </button>;
-                    <button;
-                      on_click={() => setViewMode ('list')}
-                      className={`p - 2 rounded - lg transition - all duration - 300 ${
-                        view_mode === 'list' ? 'bg - cyan - 600 text - white' : 'text - gray - 400 hover:text - white';
-                      }`}
+                    key={service.id}
+                    variants={item_variants}
                     layout;
-                    className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl border border-gray-600/30 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-cyan-500/50 group ${;
-                      viewMode === 'list' ? 'flex flex-col lg:flex-row' : '';
-                    }`  } catch (error) {
+                    className={`bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl rounded - 3xl border border - gray - 600 / 30 overflow - hidden transition - all duration - 500 hover:scale - 105 hover:border - cyan - 500 / 50 group ${
+                      view_mode === 'list' ? 'flex flex - col lg:flex - row' : '';
+                    }`}
+                  >;
+
+                    {/* Service Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -268,19 +344,14 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                           {service.features.slice(0, 3).map((feature, index) => (
                             <div key={index} className="flex items-center gap-2 text-sm text-gray-300">
                               <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      </p>
-                      {/* Key Features */}
-                      <div className="mb - 4">;
-                        <h4 className="text - sm font - semibold text - gray - 400 mb - 2 uppercase tracking - wider">;
-                          Key Features;
-                        </h4>;
-                        <div className="grid grid - cols - 1 gap - 2">;
-                          {service.features.slice (0, 3).map ((feature, index) => (
-                            <div key={index} className="flex items - center gap - 2 text - sm text - gray - 300">;
-                              <CheckCircle className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
-                              {feature}
-                            </div>))}
                           {service.features.length > 3 && (
+                            <div className="text-sm text-cyan-400">
+                              +{service.features.length - 3} more features
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      {/* Market Info */}
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -369,6 +440,57 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+                          className="flex - 1 bg - gradient - to - r from - cyan - 600 to - blue - 600 hover:from - cyan - 700 hover:to - blue - 700 text - white font - semibold py - 3 px - 6 rounded - xl transition - all duration - 300 flex items - center justify - center gap - 2 group - hover:scale - 105";
+                        >;
+                          Learn More;
+                          <ArrowRight className="w - 4 h - 4 group - hover:translate - x-1 transition - transform" />;
+                        </Link>;
+                        <button className="bg - gray - 800 / 50 hover:bg - gray - 700 / 50 text - white font - semibold py - 3 px - 6 rounded - xl border border - gray - 600 / 30 transition - all duration - 300 flex items - center justify - center gap - 2">;
+                          <Phone className="w - 4 h - 4" />;
+                          Contact;
+                        </button>;
+                      </div>;
+                    </div>;
+                  </motion.div>))}
+              </AnimatePresence>;
+            </motion.div>;
+            {/* No Results */}
+            {filtered_services.length === 0 && (
+              <div className="text - center py - 20">;
+                <div className="text - 6xl mb - 4">🔍</div>;
+                <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;
+                <p className="text - gray - 400 mb - 6">Try adjusting your search terms or filters</p>;
+                <button;
+                  on_click={() => {
+                    setSearchTerm (''),
+                    setSelectedCategory ('all');
+                  }}
+                  className="bg - cyan - 600 hover:bg - cyan - 700 text - white font - semibold py - 3 px - 6 rounded - xl transition - colors";
+                >;
+                  Clear Filters;
+                </button>;
+              </div>)}
+          </div>;
+        </section>;
+        {/* CTA Section */}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-4xl mx - auto text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+
+
+
+
                 for your business needs. Get started today with a free consultation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -394,3 +516,5 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+

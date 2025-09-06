@@ -18,6 +18,9 @@
   Zap,
   Globe,
 
+
+
+
   Menu
   X
   ChevronDown
@@ -41,6 +44,7 @@
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
+export default function Navigation() {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -406,9 +410,9 @@ import SearchModal from "./SearchModal";
                     </motion && motion.div>;
                   )}
 
+
                 </AnimatePresence>;
               </div>;
-ursor/integrate-build-improve-and-re-verify-8f7d
 
 
             {/* Search and CTA Buttons */}
@@ -421,9 +425,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               <Link
                 href=/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
-
-
-
               >
                 Get Started
               </Link>

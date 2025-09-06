@@ -1,8 +1,3 @@
-  Gift,
-  Star,
-  Users,
-  ShoppingBag,
-  MessageSquare,
 } from 'lucide-react';
 import { use_auth } from '@/hooks / use_auth';
 import { use_points } from '@/hooks / use_points';
@@ -72,7 +67,6 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
     try {
       await fetch('/api/points/redeem', {
 
-      });
       await fetch_ledger ();
     } finally {
 
@@ -136,6 +130,24 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
       action: "Browse Marketplace"
+    },
+    {
+    },  ];
+
+  const upcomingRewards = [
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
+      icon: <MessageSquare className="h-5 w-5" />,
+      title: "Community Engagement",
+      description: "Post in the community or comment on discussions",
+      points: "25 pts per post",
+      action: "Join Community"
+    },
+    {
+      icon: <ShoppingBag className="h-5 w-5" />,
+      title: "First Purchase",
+      description: "Make your first purchase on the marketplace",
+      points: "100 pts",
+      action: "Browse Marketplace"
     },  ];
 
   const upcomingRewards = [;
@@ -166,15 +178,6 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
       category: 'Discount',;
     },;
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },;
-      icon: <MessageSquare className="h-5 w-5" />,
-      title: "Community Engagement",
-      description: "Post in the community or comment on discussions",
-      points: "25 pts per post",
-      action: "Join Community"
-    },
-    {
-      icon: <Users className="h-5 w-5" />,
-      title: "Refer Friends",
       description: "Invite friends to join Zion marketplace",
       points: "200 pts per referral",
       action: "Share Referral Link"
@@ -185,30 +188,14 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
 
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
-  ],;
-  const upcomingRewards = [;
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },;
-    { id: 'premium1', title: 'Premium Features (1 month)', cost: 1000, category: 'Subscription' },;
-    { id: 'swag', title: 'Zion Swag Pack', cost: 1500, category: 'Merchandise' },;
-    { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' };
-    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
-  ],
 
   if (!isAuthenticated) {
     return (
       <>
-        <div className='container py-10 max-w-4xl'>
-          <div className='text-center mb-8'>
-            <Gift className='h-16 w-16 text-primary mx-auto mb-4' />
-            <h1 className='text-4xl font-bold mb-4'>Zion Rewards Program</h1>
-            <p className='text-xl text-muted-foreground mb-6'>
-              Earn points for every action you take and redeem them for
-              exclusive rewards!
             <Button onClick={() => setLoginOpen(true)} size="lg">
               Join Now to Start Earning
             </Button>
           </div>
-                  How to Earn Points
                 </CardTitle>
                   Multiple ways to accumulate rewards
                 </CardDescription>
@@ -448,10 +435,6 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                   <h4 className='font - medium'>{opportunity.title}</h4>;
                   <p className='text - sm text - muted - foreground'>;
                     {opportunity.description}
-                    {opportunity.points}
-                  </Badge>;
-                  <p className='text - xs text - muted - foreground'>;
-                    {opportunity.action}
 
           <CardContent className="space-y-4">
             {earningOpportunities.map((opportunity, index) => (
@@ -571,10 +554,6 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                 <div>
                   <h4 className="font-medium">{reward.title}</h4>
                   <p className="text-sm text-muted-foreground">{reward.category}</p>
-                </div>
-                <div className="text-right space-y-1">
-                  <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
-                  {balance >= reward.cost ? (
                       disabled={redeeming}
                     >                      {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
@@ -595,14 +574,6 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
                   {balance >= reward.cost ? (
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
                       {redeeming ? 'Processing...' : 'Redeem'}
-                    </Button>
-                  ) : (
-                    <p className="text-xs text-muted-foreground">Need more points</p>
-                  )}
-                </div>
-              </div>
-                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
-                      {redeeming ? 'Processing...' : 'Redeem'}
             <History className="h-5 w-5" />
             Points History
           </CardTitle>
@@ -610,7 +581,6 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
         </CardHeader>
         <CardContent>
           {ledger.length === 0 ? (
-                  </div>;
                 ))}
               </div>;
             </ScrollArea>;
@@ -621,7 +591,6 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
           <h3 className="text-2xl font-bold mb-2">Full Rewards System Coming Soon</h3>
           <p className="text-muted-foreground mb-4">
             We're finalizing the redemption system. Keep earning points - they'll be ready to spend soon!
-          </p>
               <Link href="/community">Join Community</Link>
             </Button>
           </div>
@@ -641,5 +610,3 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
 }
 
 ;
-  )
-}

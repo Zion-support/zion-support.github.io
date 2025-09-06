@@ -21,7 +21,6 @@ const "services": Service[] = [// Existing-style Micro SaaS (kept) + new
   { "title": 'RAG Search & Knowledge Agents', "href": '/ai-services', "price": 'Project: $6k$35k', "bullets": ['Hybrid search', 'Eval harness', 'Observability'], "category": 'AI Services' },
   { "title": 'Vision QA for Manufacturing', "href": '/ai-services', "price": 'Project: $8k$50k', "bullets": ['Defect detect', 'Edge deploy', 'Dashboards'], "category": 'AI Services' },
   // IT Services (existing concepts retained) + new
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -71,54 +70,6 @@ const "services": Service[] = [// Existing-style Micro SaaS (kept) + new;
   { "title": 'RAG Search & Knowledge Agents', "href": '/ai-services', "price": 'Project: $6k$35k', "bullets": ['Hybrid search', 'Eval harness', 'Observability'], "category": 'AI Services' },;
   { "title": 'Vision QA for Manufacturing', "href": '/ai-services', "price": 'Project: $8k$50k', "bullets": ['Defect detect', 'Edge deploy', 'Dashboards'], "category": 'AI Services' },;
   // IT Services (existing concepts retained) + new;
-  { "title": 'Cloud Platforms & SRE', "href": '/cloud-platforms', "price": 'Project: $8k$60k', "bullets": ['Kubernetes', 'Serverless', 'IaC'], "category": 'IT Services' },;
-  { "title": 'Cybersecurity & Zero Trust', "href": '/cybersecurity', "price": 'Project: $6k$40k', "bullets": ['ZTA', 'SOC2/GDPR', 'IR plan'], "category": 'IT Services' },;
-  { "title": 'Data Platform & MLOps', "href": '/data-analytics', "price": 'Project: $12k$80k', "bullets": ['Data mesh', 'Feature store', 'ML pipelines'], "category": 'IT Services' },;
-  { "title": 'Observability & Reliability', "href": '/cloud-devops', "price": 'Project: $8k$45k', "bullets": ['Tracing', 'SLO/SLI', 'Chaos drills'], "category": 'IT Services' }
-];
-const groups = [{ "name": 'Micro SaaS', "description": 'Lightweight, high-impact products delivered fast.', "color": 'text-orange-600' },;
-  { "name": 'AI Services', "description": 'Applied AI that moves business metrics.', "color": 'text-blue-600' },;
-  { "name": 'IT Services', "description": 'Reliable platforms, security, and operations.', "color": 'text-green-600' }
-];
-export default function Services() {;
-  const title = 'Services  Zion Tech Group';
-  const description = 'AI, Micro SaaS, and IT services with transparent pricing and clear outcomes.';
-  return (
-    <>;
-      <Head>;
-        <title>{title}</title>;
-        <meta name="description" content={description} />;
-        <link rel="canonical" href=""https": //ziontechgroup && ziontechgroup.com/services" />;
-      </Head>;
-      <main className="min-h-screen bg-white">;
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">;
-          <h1 className="text-3xl md:text-4xl font-bold mb-3">Our Services</h1>;
-          <p className="text-gray-600 mb-8">Real, production-grade solutions. No mockups.</p>;
-          {groups && groups.map((g) => (;
-            <div key={g && g.name} className="mb-10">;
-              <div className="flex items-baseline justify-between mb-3">;
-                <h2 className={`text-2xl font-semibold ${g && g.color}`}>{g && g.name}</h2>;
-                <span className="text-sm text-gray-500">{g && g.description}</span>;
-              </div>;
-              <div className="grid gap-6 "md": grid-cols-2">;
-                {services;
-                  .filter((s) => s && s.category === (g && g.name as Service['category']));
-                  .map((s) => (;
-                    <Link key={`${g && g.name}-${s && s.title}`} href={s && s.href} className="block border rounded-lg p-6 "hover": shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-200">;
-                      <div className="flex items-center justify-between mb-2">;
-                        <h3 className="text-lg font-semibold text-gray-900">{s && s.title}</h3>;
-                        <span className="text-sm text-gray-500 whitespace-nowrap">{s && s.price}</span>;
-                      </div>;
-                      <ul className="text-gray-600 list-disc pl-5 space-y-1">;
-                        {s && s.bullets.map((b) => (;
-                          <li key={`${s && s.title}-${b}`}>{b}</li>;
-                        ))}
-                      </ul>;
-                    </Link>;
-                  ))}
-              </div>;
-            </div>;
-          ))}
           <div className="mt-12 border-t pt-6">;
             <h2 className="text-xl font-semibold mb-2">Contact</h2>;
             <p className="text-gray-700 mb-1">;

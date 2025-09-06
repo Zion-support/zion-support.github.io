@@ -36,9 +36,6 @@
     }
   }
 ];
-  }
-}
-
 export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
   {
     id: "2026-innovative-ai-v3", name: "2026 Innovative AI Platform V3",
@@ -54,6 +51,11 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
     link: "/services/2026-innovative-ai-v3", category: "Innovative 2026 AI V3",
     realImplementation: true,
     contactInfo: {
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

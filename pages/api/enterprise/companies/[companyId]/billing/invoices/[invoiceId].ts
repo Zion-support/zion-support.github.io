@@ -10,11 +10,14 @@ export const config = {
   ) {
     return res && res.status(400).json({ error: "companyId and invoiceId required" });
   }
+    responseLimit: false}};
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { companyId, invoiceId } = req.query;
   if (!companyId || typeof companyId !== 'string' || !invoiceId || typeof invoiceId !== 'string') {
     return res.status(400).json({ error: 'companyId and invoiceId required' })
   }
+
   if (req.method !== 'GET') return res.status(405).json({ error: 'method_not_allowed' });
   // Minimal PDF bytes (single-page PDF saying Invoice). This is a static placeholder.
   const pdfBase64 =

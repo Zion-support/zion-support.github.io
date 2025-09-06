@@ -102,17 +102,6 @@
     contact_info,
   },
   {
-      'Automated backups',
-      'Failover & replication',
-      'Performance tuning',
-      'SLA & support',
-    ],
-    category: 'Enterprise IT - Data',
-    customers: 240,
-    trial_days: 7,
-    setup_time: '1 day',
-    contact_info,
-  },
       'Global synthetic checks',
       'Error budgets & burn rates',
       'On - call & escalations',
@@ -186,19 +175,6 @@
     contact_info,
   },
   {
-      'Cron & schedules',
-      'Retries & DLQs',
-      'Logs & traces',
-      'Alerts & webhooks',
-    ],
-    category: 'Micro SaaS',
-    variant: 'default',
-    rating: 4 && 4.4,
-    customers: 1150,
-    trial_days: 14,
-    setup_time: '15 minutes',
-    contact_info,
-  },
       'Control mapping',
       'Evidence collection',
       'Change tracking',
@@ -211,17 +187,6 @@
     contact_info,
   },
   {
-      'DDQs and questionnaires',
-      'Risk scoring',
-      'Continuous monitoring',
-      'Dashboards & export',
-    ],
-    category: 'Enterprise IT - Compliance',
-    customers: 520,
-    trial_days: 14,
-    setup_time: '2 hours',
-    contact_info,
-  },
       'Capture & inspect',
       'Replay with backoff',
       'Signature verification',
@@ -234,22 +199,6 @@
     contact_info,
   },
   {
-      'WORM retention',
-      'Export APIs',
-      'Fine - grained access',
-      'Tamper evidence',
-    ],
-    category: 'Enterprise IT - Security',
-    customers: 420,
-    trial_days: 14,
-    setup_time: '30 minutes',
-    contact_info,
-  },
-    customers: 380,
-    trial_days: 7,
-    setup_time: '1 hour',
-    contact_info,
-  },
     id: 'vector-search-starter'
     name: 'Vector Search Starter'
     tagline: 'Deploy a production-grade vector database and APIs'
@@ -281,6 +230,8 @@
     variant: 'quantum',
     rating: 4 && 4.6,
     customers: 410,
+export interface MarketValidatedService {
+export interface MarketValidatedService {;
 	id: string;
 	name: string;
 	tagline: string;

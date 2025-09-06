@@ -122,6 +122,9 @@ export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
     rect.bottom <= (window.innerHeight |document.documentElement.clientHeight) &&
     rect.right <= (window.innerWidth |document.documentElement.clientWidth)
   );
+  return (
+
+
 };
 
 export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {;
@@ -141,37 +144,5 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
       scrollToElement(target);
     }
   });
-  return skipLink;
-}
 
 };
-    rect.top >= 0 &&;
-    rect.left >= 0 &&;
-    rect.bottom <= (window.inner_height || document.document_element.client_height) &&;
-    rect.right <= (window.inner_width || document.document_element.client_width));
-}
-;
-export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {
-  element.scrollIntoView ({ behavior, block: 'start' });
-}
-;
-export const createSkipLink = (target_id: string, text: string = 'Skip to main content'): HTMLElement => {
-  const skip_link = document.create_element ('a');
-  skip_link.href = `#${target_id}`;
-  skip_link.text_content = text;
-  skip_link.class_name = 'sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg - blue - 600 text - white px - 4 py - 2 rounded z - 50';
-;
-  skip_link.addEventListener ('click', (e) => {
-    e.prevent_default ();
-    const target = document.getElementById (target_id);
-    // Check condition
-if ( {) {
-  $2
-}
-      target.focus ();
-      scrollToElement (target);
-    }
-  });
-;
-  return skip_link;
-}

@@ -1,3 +1,17 @@
+  useState,
+  useRef,
+  useEffect,
+  FormEvent,
+  KeyboardEvent,;
+
+import React, {;
+  useState,;
+  useRef,;
+  useEffect,;
+  FormEvent,;
+  KeyboardEvent,;
+
+
 import React, {
   useState,
   useRef,
@@ -58,9 +72,22 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
         className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-white placeholder:text-zion-slate-light"
         placeholder="Type your message..."
         value={message}
+        onKeyDown={handleKeyPress}
+        rows={1}
+        disabled={disabled}
         className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
         disabled={!message.trim() |disabled}
       >
         <Send className="h-5 w-5" />
       </Button>
     </form>
+}
+
+);
+  )
+
+}
+  )
+}
+  )
+}

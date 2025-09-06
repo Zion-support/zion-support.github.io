@@ -90,6 +90,101 @@ import React, { useState } from 'react';
   Microscope as MicroscopeIcon
   GraduationCap as GraduationCapIcon
   ShieldCheck as ShieldCheckIcon;
+} from 'lucide-react';
+import Button from '../components/ui/Button';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+} from '../data/revolutionary-micro-saas-services';
+import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
+
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+import Button from '../components/ui/Button';
+
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Zap, Star, Calendar } from 'lucide-react';
+
+
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [priceRange, setPriceRange] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('name');
+  const [showFilters, setShowFilters] = useState(false);
+
+
+  const [selectedService, setSelectedService] = useState<any>(null);
+
+    { value: 'popularity', label: 'Most Popular' },
+    { value: 'category', label: 'Category' },
+    { value: 'roi', label: 'Highest ROI' }
+  ];
+
+
+
+  const priceRanges = [;
+    { value: 'All', label: 'All Prices' },;
+    { value: '0-1000', label: '$0 - $1,000' },;
+    { value: '1001-2500', label: '$1,001 - $2,500' },;
+    { value: '2501-5000', label: '$2,501 - $5,000' },;
+    { value: '5001+', label: '$5,001+' },  ];    { value: '0-1000', label: '$0 - $1,000' };
+    { value: '1001-2500', label: '$1,001 - $2,500' };
+    { value: '2501-5000', label: '$2,501 - $5,000' };
+    { value: '5001+', label: '$5,001+' }
+  const sortOptions = [;
+    { value: 'name', label: 'Name A-Z' },;
+    { value: 'price', label: 'Price Low-High' },;
+    { value: 'popularity', label: 'Most Popular' },;
+    { value: 'category', label: 'Category' },;
+    { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
+  ];
+  // Filter and sort services;
+  let filteredServices = revolutionaryMicroSaasServices;
+  // Category filter;
+  if (selectedCategory !== 'All') {;
+    filteredServices = getRevolutionaryServicesByCategory(selectedCategory);  }
+  // Price range filter;
+  if (priceRange !== 'All') {;
+    const [min, max] = priceRange;
+      .split('-');
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max);  }
+  // Search filter;
+  if (searchQuery) {    filteredServices = getRevolutionaryServicesByCategory(selectedCategory);
+    filteredServices = getRevolutionaryServicesByCategory(selectedCategory)
+  }
+  // Price range filter
+  if (priceRange !== 'All') {
+    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max)
+  }
+  // Price range filter;
+  if (priceRange !== 'All') {;
+    const [min, max] = priceRange;
+      .split('-');
+      .map(p => (p === '+' ? Infinity : parseInt(p)));
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max);    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+    filteredServices = getRevolutionaryServicesByPriceRange(min, max);
+  }
+
+    filteredServices = filteredServices.filter(service =>
+      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service.category.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  }
+
+
+  // Sort services
+  filteredServices.sort((a, b) => {
+    switch (sortBy) {
+      case 'price':
+
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
@@ -227,11 +322,11 @@ import React, { useState } from 'react';
       y: 0
       opacity: 1
       transition: {
-
-
         duration: 0.5,
       },
     },
+
+
 
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
@@ -288,8 +383,6 @@ import React, { useState } from 'react';
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                transition={{ duration: 0.8 }}
-              >
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -398,6 +491,44 @@ import React, { useState } from 'react';
               {enhancedCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <UltraFuturisticCard
+                    variant='quantum-advanced'
+                    size='small'
+                    className='text-center cursor-pointer h-full'
+                    onClick={() =>
+                      setSelectedCategory(
+                        category.name === selectedCategory
+                          ? 'All'
+                          : category.name
+                      )
+                    }
+                    <div
+                      className={`w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br ${category.color} flex items-center justify-center text-white`}
+                    >
+                      {category.icon}
+                    </div>
+                    <h3 className='text-lg font-semibold text-white mb-2'>
+                      {category.name}
+                    </h3>
+                    <p className='text-sm text-gray-400 mb-3'>
+                      {category.description}
+                    </p>
+                    <div className='text-2xl font-bold text-cyan-400'>
+                      {category.count}
+                    </div>
+                    <div className='text-xs text-gray-500'>Services</div>                  </UltraFuturisticCard>                    <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
+                    <p className="text-sm text-gray-400 mb-3">{category.description}</p>
+                    <div className="text-2xl font-bold text-cyan-400">{category.count}</div>
+                    <div className="text-xs text-gray-500">Services</div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
 
         {/* Popular Services Showcase */}
         <section className='py-16'>
@@ -425,6 +556,13 @@ import React, { useState } from 'react';
               initial="hidden"
               whileInView="visible"
 
+                    onClick={() => setSelectedService(service)}
+
+                  variants={item_variants}
+                  while_hover={{ coordinate_y: -10 }}
+                >;
+                  <UltraFuturisticCard;
+                    variant={service.variant as any}
                       <Button
                         variant='primary'
                         size='md'
@@ -443,6 +581,21 @@ import React, { useState } from 'react';
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-grid" className="py-16">;
           <div className="container mx-auto px-4">;
             {/* Filters and Controls */}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0 && 0.6 }}>;
+              <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
+                <div className='flex flex-wrap gap-4'>;
+                  <select
+                    value={selectedCategory}
+                    onChange={e => setSelectedCategory(e && e.target.value)}
+                    className='px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400';
+                  >;
+                    <option value='All'>All Categories</option>;
+                    {revolutionaryServiceCategories && revolutionaryServiceCategories.map(category => (;
+                      <option key={category} value={category}>;
+                        {category}
+                      </option>;
                     ))}
                   </select>
                   <select
@@ -473,6 +626,17 @@ import React, { useState } from 'react';
               }
               variants={containerVariants}
               initial='hidden'
+                    </button>;
+                  </div>;
+                </div>;
+              </div>;
+
+
+              className={viewMode === 'grid' 
+
+              whileInView='visible'              viewport={{ once: true }}            <motion.div 
+              className={viewMode === 'grid' 
+
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -520,6 +684,39 @@ import React, { useState } from 'react';
               <motion.div
                 className='text-center py-16'                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+
+                                         <Button
+                           variant="primary"
+                           onClick={() => {;
+                             setSearchQuery('');
+                             setSelectedCategory('All');
+
+                             setPriceRange('All');
+
+                           }}
+
+
+            )}
+
+          </div>;
+        </section>;
+
+
+        {/* Service Details Modal */}
+        <AnimatePresence>;
+          {selectedService && (;
+            <motion&& motion.div
+              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+
+
+        {/* Service Details Modal */}
+        <AnimatePresence>
+          {selectedService && (
+            <motion.div
+              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+
+
+
 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

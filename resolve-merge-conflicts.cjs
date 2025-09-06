@@ -184,7 +184,9 @@ function resolveConflicts(filePath) {
 <<<<<<< HEAD
 // Resolve conflicts for each file
 conflictFiles.forEach(resolveConflicts);
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -195,6 +197,13 @@ conflictFiles.forEach(resolveConflicts);
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+// Resolve conflicts for each file
+conflictFiles.forEach(resolveConflicts);
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/main
 
 // Run linter to check if issues are resolved
 console.log('\n🔍 Running linter to check if issues are resolved...');

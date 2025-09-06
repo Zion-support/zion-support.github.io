@@ -1,5 +1,4 @@
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -21,34 +20,6 @@ serve(async (req) => {
         {
           status: 400
           headers: { ...corsHeaders, "Content-Type": "application/json" }
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
-import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
-const cors_headers = {
-  "Access - Control - Allow - Origin": "*",
-  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
-serve (async (req) => {
-  // Check condition
-if ( {) {
-  $2
-}
-    return new Response (null, { headers: cors_headers });
-  }
-  try {
-    const { title, key_features, target_audience } = await req.json ();
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      return new Response (
-        JSON.stringify ({
-          error: "Missing required field: title";
-        });
-        {
-          status: 400,
-          headers: { ...cors_headers, "Content - Type": "application / json" }
-
     const { title, keyFeatures, targetAudience } = await req.json(),
 
     if (!title) {
@@ -62,6 +33,11 @@ if ( {) {
         }
       );
     }
+
+
+
+
+
     const configuration = new Configuration({
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
@@ -71,6 +47,10 @@ if ( {) {
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
     const prompt = `Create a professional and detailed service description for the following service:;
+Title: ${title}
+Key Features: ${keyFeatures || "Not specified"}
+Target Audience: ${targetAudience || "General users"}
+
 The description should: 1. Be approximately 200-300 words
 2. Highlight the key benefits and unique selling points
 3. Use professional language suitable for a marketplace listing
@@ -79,8 +59,6 @@ The description should: 1. Be approximately 200-300 words
       {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
-      }
-    );
 
 5. Include a compelling opening and closing statement`,
 
@@ -139,3 +117,5 @@ The description should: 1. Be approximately 200-300 words;
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
+  }
+});

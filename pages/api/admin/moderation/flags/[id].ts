@@ -21,9 +21,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' })
   if (req.method === 'GET') {
   }
-  res.setHeader('AllowGET')
-  return res.status(405).end('Method Not Allowed');
-}
     if (req.method === 'GET') {
       const flag = await getFlagById(id);
       if (!flag) return res.status(404).json({ error: 'Not found' });

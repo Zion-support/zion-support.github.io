@@ -6,7 +6,6 @@ export default function OsvWatchPage() {
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">OSV Vulnerability Watch</h1>
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |''}</p>
         {results.length === 0 ? (
           <p className="mt-6 text-sm">No known vulnerabilities found.</p>
         ) : (
@@ -24,6 +23,10 @@ export default function OsvWatchPage() {
         )}
       </div>
     </EnhancedLayout>
+
+  );
+};
+
                     <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</Link> — {v.summary || ''}</li>
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -50,5 +53,3 @@ export default function OsvWatchPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}

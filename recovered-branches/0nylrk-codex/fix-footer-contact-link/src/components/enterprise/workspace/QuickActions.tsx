@@ -7,6 +7,10 @@ export function QuickActions() {
       label: "Post New Job"
       icon: <FileText className="h-5 w-5 mr-2" />
       description: "Create a new job posting"
+      id: "post-job",
+      label: "Post New Job",
+      icon: <FileText className="h-5 w-5 mr-2" />,
+      description: "Create a new job posting",
     {
       id: "add-member"
       label: "Add Team Member"
@@ -25,6 +29,28 @@ export function QuickActions() {
       icon: <Calendar className="h-5 w-5 mr-2" />
       description: "Set up candidate interviews"
       color: "bg-amber-100 dark:bg-amber-900/20"
+    <Card>;
+      <CardHeader>;
+        <CardTitle > Quick Actions</CardTitle>;
+        <CardDescription > Fast access to common tasks</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 4">;
+          {actions.map (action => (
+            <Button;
+              key={action.id}
+              variant="outline";
+              className={`h - auto justify - start p - 4 ${action.color}`}
+            >;
+              <div className="flex flex - col items - start text - left">;
+                <div className="flex items - center">;
+                  {action.icon}
+
+                  <span>{action.label}</span>
+                </div>
+                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
+              </div>
+            </Button>
           ))}
         </div>
       </CardContent>

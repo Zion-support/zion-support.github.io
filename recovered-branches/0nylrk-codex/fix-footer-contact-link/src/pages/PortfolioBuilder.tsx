@@ -23,6 +23,9 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard',
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder',
+function PortfolioBuilderContent() {
+  const [activeTab, setActiveTab] = useState('resume'),
+  
   return (
     <>
       <SEO
@@ -49,7 +52,6 @@ import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builde
     </>
   )
 }
-
 ;
 
 export default function PortfolioBuilder() {;

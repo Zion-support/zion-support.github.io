@@ -14,3 +14,14 @@ const InstagramContentScheduler: NextPage = () => {
       </main>
     </div>
   )
+
+},
+export default InstagramContentScheduler,
+
+},
+export default InstagramContentScheduler,
+},
+
+export default InstagramContentScheduler,;
+export default InstagramContentScheduler,
+

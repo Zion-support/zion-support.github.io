@@ -66,6 +66,10 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
           <Button
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+          <Button
+            type="submit"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            disabled={isSubmitting}>;
             {isSubmitting ? (;
               <>;
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
@@ -73,6 +77,15 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
               </>;
             ) :(;
               'Submit Request';
+            )}
+
+          </Button>;
+        </DialogFooter>;
+      </form>;
+    </Form>;
+  );
+}
+
 import React from './react';
 import { useHireRequestForm, FormValues } from './useHireRequestForm';
 import { Button } from '@/components / ui / button';

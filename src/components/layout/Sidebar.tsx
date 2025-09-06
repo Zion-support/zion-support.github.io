@@ -1,21 +1,3 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import {
-  Home,
-  Users,
-  Settings,
-  DollarSign,
-  const navigation = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Users },
-    { name: 'Services', href: '/services', icon: Settings },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign },
-    { name: 'Contact', href: '/contact', icon: Phone }
-  ]
-export default Sidebar
-import React from 'react';
-import { Link } from 'react-router-dom';
-
   };
 ,
   const navigationSections = [,

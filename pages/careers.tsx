@@ -13,6 +13,21 @@
   GraduationCap
   Globe
   CheckCircle
+  Users,
+  MapPin,
+  Clock,
+  DollarSign,
+  ArrowRight,
+  Heart,
+  Star,
+  Award,
+  Coffee,
+  Zap,
+  Shield,
+  Briefcase,
+  GraduationCap,
+  Globe,
+  CheckCircle,;
 } from "lucide-react";
 const jobOpenings = [
   {
@@ -140,16 +155,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -172,75 +191,6 @@ import {;
   GraduationCap,;
   Globe,;
   CheckCircle,;
-const jobOpenings = [;
-  {;
-    id: 1,;
-    title: "Senior AI Engineer",;
-    department: "AI & Machine Learning",;
-    location: "Remote",;
-    type: "Full-time",;
-    experience: "5+ years",;
-    description:;
-      "Lead the development of cutting-edge AI solutions and machine learning models for our clients.",;
-    requirements: [;
-      "Master's degree in Computer Science or related field",;
-      "5+ years experience in AI/ML development",;
-      "Proficiency in Python, TensorFlow, PyTorch",;
-      "Experience with cloud platforms (AWS, Azure, GCP)",;
-      "Strong problem-solving and communication skills",;
-    ],;
-    benefits: [;
-      "Competitive salary",;
-      "Health insurance",;
-      "Remote work",;
-      "Professional development",;
-    ],;
-  },;
-  {;
-    id: 2,;
-    title: "Full-Stack Developer",;
-    department: "Micro SaaS",;
-    location: "New York, NY",;
-    type: "Full-time",;
-    experience: "3+ years",;
-    description:;
-      "Build scalable web applications and microservices for our SaaS solutions.",;
-    requirements: [;
-      "3+ years experience in full-stack development",;
-      "Proficiency in React, Node && Node.js, TypeScript",;
-      "Experience with databases (PostgreSQL, MongoDB)",;
-      "Knowledge of cloud deployment and DevOps",;
-    ],;
-    benefits: [;
-      "Competitive salary",;
-      "Health insurance",;
-      "Flexible hours",;
-      "Stock options",;
-    ],;
-  },;
-  {;
-    id: 3,;
-    title: "Cloud Solutions Architect",;
-    department: "IT Services",;
-    location: "Remote",;
-    type: "Full-time",;
-    experience: "7+ years",;
-    description:;
-      "Design and implement cloud infrastructure solutions for enterprise clients.",;
-    requirements: [;
-      "7+ years experience in cloud architecture",;
-      "Certifications in AWS, Azure, or GCP",;
-      "Experience with containerization (Docker, Kubernetes)",;
-      "Strong understanding of security best practices",;
-    ],;
-    benefits: [;
-      "Competitive salary",;
-      "Health insurance",;
-      "Remote work",;
-      "Certification support",;
-    ],;
-  },;
-];
 
 const benefits = [;
   {;
@@ -280,28 +230,6 @@ const benefits = [;
   },;
 ];
 
-const values = [;
-  {;
-    title: "Innovation",;
-    description:;
-      "We encourage creative thinking and embrace new technologies to solve complex problems.",;
-  },;
-  {;
-    title: "Collaboration",;
-    description:;
-      "We believe in the power of teamwork and open communication across all levels.",;
-  },;
-  {;
-    title: "Excellence",;
-    description:;
-      "We strive for the highest quality in everything we do and continuously improve.",;
-  },;
-  {;
-    title: "Integrity",;
-    description:;
-      "We conduct business with honesty, transparency, and ethical practices.",;
-  },;
-];
   return (
     <MainLayout
       title="Careers - Zion Tech Group"
@@ -319,11 +247,6 @@ export default function CareersPage() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <div className="text-center text-white">
-
-
-
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -639,3 +562,4 @@ function CareersPage() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+}

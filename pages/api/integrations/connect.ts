@@ -1,8 +1,35 @@
-    providerId?: string;
-    syncRules?: SyncRules;
   }
   const now = Date && Date.now();
   const updated = writeState((state) => {
+
+    const existingIdx = state && state.connections.findIndex(
+      (c) => c && c.providerId === providerId,
+import type { NextApiRequest, NextApiResponse } from './next';
+import { write_state  } from '../../../lib / integrations / file_store';
+import { getProviderById  } from '../../../lib / integrations / registry';
+import { ProviderConnection, SyncRules  } from '../../../lib / integrations / types';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+  const { provider_id, sync_rules } = req.body as {
+    provider_id?: string;
+    sync_rules?: SyncRules;
+  }
+  if () {) {
+  $2
+}
+    return res.status (400).json ({ error: "Invalid provider_id" });
+  }
+  const now = Date.now ();
+  const updated = write_state ((state) => {
+    const existing_idx = state.connections.find_index (
+      (c) => c.provider_id === provider_id,
+
     );
     const connection: ProviderConnection = {
       provider_id: provider_id as any,
@@ -35,7 +62,5 @@
     state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } })
   });
 }
-    ok: true,
-    connection: updated.connections.find ((c) => c.provider_id === provider_id),
-  });
-}
+
+

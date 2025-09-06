@@ -1,3 +1,10 @@
+interface CategorizedSkills {
+  programming: string[]
+  devops: string[]
+  platforms: string[]
+  softSkills: string[]
+  other: string[]
+
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -37,6 +44,33 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
 import { supabase } from "@/integrations/supabase/client",
+
+const talentProfileSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters long"),
+  title: z.string().min(5, "Professional title is required"),
+  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
+  location: z.string().min(2, "Location is required"),
+  skills: z.string().min(2, "Enter at least one skill"),
+  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
+    message: "Hourly rate must be a number"})
+  availability: z.enum(["available", "limited", "unavailable"]);
+  enhancedProfile: z.boolean().default(true)})
+type TalentFormValues = z.infer<typeof talentProfileSchema>;
+type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
+    message: "Hourly rate must be a number"}),
+  availability: z.enum(["available", "limited", "unavailable"]),
+  enhancedProfile: z.boolean().default(true)}),
+
+type TalentFormValues = z.infer<typeof talentProfileSchema>,
+
+type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
+
+interface CategorizedSkills {
+  programming: string[]
+  devops: string[]
+  platforms: string[]
+  softSkills: string[]
+  other: string[]
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -128,16 +162,45 @@ export function TalentRegistrationForm() {;
       hourlyRate: "",;
       availability: "available",;
       enhancedProfile: true}}),;
+      setSkillTags([...skillTags, skillInput]);
+      form && form.setValue("skills", "");
+    }
+
+  },;
+  // Handle removing skill tags;
+  const handleRemoveSkill = (skill: string) => {;
+    setSkillTags(skillTags.filter((s) => s !== skill));
+  },;
+  // Handle key press in skills input (add on enter);
+  const handleSkillKeyPress = (e: React.KeyboardEvent) => {;
+    if (e.key === "Enter") {;
+      e.preventDefault(),;
+      handleAddSkill();
+    }
+  },;
+  // Handle avatar upload;
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
+    const file = e.target.files?.[0],;
+    if (file) {;
+      const reader = new FileReader(),;
+      reader.onloadend = () => {;
+        setUploadedAvatar(reader.result as string);
+      },;
+      reader.readAsDataURL(file);
+    }
+  },
+
+
+
+
+  // Generate enhanced profile with AI
+  const generateEnhancedProfile = async () => {
+    const formData = form.getValues(),
+    if (!formData.bio || formData.bio.length < 20) {
       toast({
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
-  },;
-
-  // Generate enhanced profile with AI;
-  const generateEnhancedProfile = async () => {;
-    const formData = form && form.getValues();
-    if (!formData && formData.bio || formData && formData.bio.length < 20) {;
       setIsGenerating(true);
       // Call the Supabase Edge Function
       const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
@@ -150,15 +213,38 @@ export function TalentRegistrationForm() {;
             location: formData.location
           }
         }
+  },;
+
+  // Generate enhanced profile with AI;
+  const generateEnhancedProfile = async () => {;
+    const formData = form && form.getValues();
+    if (!formData && formData.bio || formData && formData.bio.length < 20) {;
+      toast({;
+        title: "More information needed",;
+        description: "Please provide at least a detailed bio before generating enhanced content."}),;
+      return;
+    }
+
+    try {;
+      setIsGenerating(true);
+
+      // Call the Supabase Edge Function;
+      const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {;
+        body: {;
+          talentData: {;
+            name: formData && formData.name,;
+            title: formData && formData.title,;
+            bio: formData && formData.bio,;
+            skills: skillTags,;
+            location: formData && formData.location;
+          }
+        }
+
       }),;
       if (error) {;
         throw new Error(error.message);
       }
 
-      if (error) {;
-        throw new Error(error && error.message);
-      }
-      setGeneratedContent(data as EnhancedProfile);
 ;
   // Apply generated content to form;
   const applyGeneratedContent = () =>: any {
@@ -199,7 +285,158 @@ if ( {) {
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
     }
   },
+  // Send notification email
+  const sendEnhancementNotification = async (userId: string, email: string) => {
+    try {
+      await supabase.functions.invoke('send-email', {
+        body: {
+          to: email
+          subject: "Your Zion Talent Profile Has Been Enhanced"
+          html: `
+          <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">
+            <h2 style="color: #6D28D9,">Profile Enhancement Complete</h2>
+            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>
+            <p>We've added a professional summary and categorized your skills to help you stand out.</p>
+            <p>You can review and edit these enhancements in your profile dashboard.</p>
+            <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">
+              <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
+            </div>
+          </div>
+          `
+        }
+      })
+    } catch (error) {
+      console.error("Failed to send notification email:", error)
+    }
+  }
+  },
 
+  // Handle form submission
+  const onSubmit = async (values: TalentFormValues) => {
+    if (skillTags.length === 0) {
+      toast({
+        title: "Skills required"
+        description: "Please add at least one skill to your profile."
+        variant: "destructive"})
+      return
+    }
+    setIsSubmitting(true);
+
+    setIsSubmitting(true),
+
+    try {
+      // For actual implementation with Supabase
+      if (!user?.id) {
+        throw new Error("User not authenticated")
+      }
+      // Enhance profile if not already done
+      let finalSummary = "";
+      let finalSkills = skillTags;
+      let finalSummary = "",
+      let finalSkills = skillTags,
+      
+      if (values.enhancedProfile && !generatedContent) {
+        try {
+          const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
+            body: {
+              talentData: {
+                name: values.name
+                title: values.title
+                bio: values.bio
+                skills: skillTags
+                location: values.location
+              }
+            }
+          });
+          if (aiData) {
+            finalSummary = (aiData as EnhancedProfile).summary;
+            // Safely merge AI suggested skills with user-provided skills
+            const categorizedSkills = (aiData as EnhancedProfile).categorizedSkills;
+            const aiSkills: string[] = []
+            // Extract skills from each category and ensure they're strings
+            Object.values(categorizedSkills).forEach(categorySkills => {
+              if (Array.isArray(categorySkills)) {
+                categorySkills.forEach(skill => {
+                  if (typeof skill === 'string' && skill) {
+                    aiSkills.push(skill)
+  },;
+  // Send notification email;
+  const sendEnhancementNotification = async (user_id: string, email: string) => {
+    try {
+      await supabase.functions.invoke ('send - email', {
+        body: {
+
+      case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500',;
+      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
+    }
+
+        }
+      });
+    } catch (error) {;
+      console && console.error("Failed to send notification email:", error);
+    }
+
+  };
+
+  // Handle form submission;
+  const onSubmit = async (values: TalentFormValues) => {;
+    if (skillTags && skillTags.length === 0) {;
+      toast({;
+        title: "Skills required",;
+        description: "Please add at least one skill to your profile.",;
+        variant: "destructive"}),;
+      return;
+
+    }
+    setIsSubmitting(true);
+
+          to: email,
+          subject: "Your Zion Talent Profile Has Been Enhanced",
+          html: `;
+          <div style="font - family: Arial, sans - serif, max - width: 600px, margin: 0 auto, ">;
+            <h2 style="color: #6D28D9, ">Profile Enhancement Complete</h2>;
+            <p > Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
+            <p > We've added a professional summary and categorized your skills to help you stand out.</p>;
+            <p > You can review and edit these enhancements in your profile dashboard.</p>;
+            <div style="margin - top: 30px, padding - top: 20px, border - top: 1px solid #eee, ">;
+              <p style="color: #666, font - size: 12px, ">© ${new Date ().getFullYear ()} Zion Marketplace</p>;
+            </div>;
+          </div>;
+          `;
+        }
+      });
+    } catch (error) {
+      console.error ("Failed to send notification email:", error);
+    }
+  }
+;
+  // Handle form submission;
+  const on_submit = async (values: TalentFormValues) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Skills required",
+        description: "Please add at least one skill to your profile.",
+        variant: "destructive"}),
+      return;
+    }
+    setIsSubmitting (true);
+;
+
+    try {
+      // For actual implementation with Supabase;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error ("User not authenticated");
+      }
+
+      // Enhance profile if not already done;
+      let final_summary = "";
+      let final_skills = skill_tags;
 ;
       // Check condition
 if ( {) {
@@ -797,16 +1034,50 @@ if (throw error) {
                                 type="radio";
                                 id="unavailable";
                                 value="unavailable";
-                      Let clients know about your working hours, time zone, or availability for calls.;
-                    </FormDescription>;
-                  </div>;
-                </div>;
-              </div>;
-            </CardContent>;
-                </Button>;
-              </div>;
-            </CardFooter>;
-          </form>;
-        </Form>;
-      </Card>;
-    </div>;
+                                Currently Unavailable;
+                              </label>;
+                            </div>;
+                          </div>;
+                        </FormControl>;
+
+                  />;
+
+                  <div className="pt-2">;
+                    <FormLabel className="text-zion-slate-light">Availability Message</FormLabel>;
+                    <Textarea
+                      placeholder="Describe your availability, working hours, or when you'll be available next..."
+                      className="mt-1.5 bg-zion-blue border-zion-blue-light text-white"
+                    />
+                    <FormDescription className="text-zion-slate mt-1.5 text-sm">
+                      Let clients know about your working hours, time zone, or availability for calls.
+                    </FormDescription>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+            <CardFooter className="border-t border-zion-blue-light pt-6">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+                >
+                  Save as Draft
+                </Button>
+                <Button
+                  type="submit"
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Creating Profile..." : "Create Profile"}
+                </Button>
+              </div>
+            </CardFooter>
+          </form>
+        </Form>
+      </Card>
+    </div>
+  )
+}
+}
+;

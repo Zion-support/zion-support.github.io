@@ -19,3 +19,13 @@ export const SidebarTrigger = React.forwardRef<
       on_click={(event) => {
         props.on_click?.(event);
         toggle_sidebar ();
+      }}
+      {...props}
+    >
+      <PanelLeft />
+      <span className="sr-only">Toggle Sidebar</span>
+    </Button>
+  )
+})
+SidebarTrigger.displayName = &quot;SidebarTrigger&quot;
+SidebarTrigger.displayName = "SidebarTrigger"

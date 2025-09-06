@@ -24,6 +24,14 @@ export default function BlogPost() {
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
   const [showShareMenu, setShowShareMenu] = useState(false);
+// Importing the sample blog posts - in a real app, you would fetch this from an API
+import { BLOG_POSTS } from "@/data/blog-posts",
+export default function BlogPost() {
+  const { slug } = useParams() as { slug: string },;
+  const navigate = useNavigate();
+  const [post, setPost] = useState<BlogPostType | null>(null);
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
+  const [showShareMenu, setShowShareMenu] = useState(false);
   const { slug } = useParams() as { slug: string },
   const navigate = useNavigate(),
   const [post, setPost] = useState<BlogPostType | null>(null),
@@ -46,6 +54,8 @@ export default function BlogPost() {
     }
     // Scroll to top when post changes
     window.scrollTo(0, 0)
+    return (
+
       <AppLayout>
         <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
           <div className="animate-pulse">Loading article...</div>
@@ -130,6 +140,7 @@ export default function BlogPost() {;
       </AppLayout>;
     );
   }
+  
   return (
     <AppLayout>
       <SEO
@@ -178,6 +189,8 @@ export default function BlogPost() {;
                       >
                         <Twitter className="h-4 w-4 mr-2" />
                         <span>Twitter</span>
+                        rel="noopener noreferrer"
+                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white">;
                         <Linkedin className="h-4 w-4 mr-2" />;
                         <span>LinkedIn</span>;
                       </a>;
@@ -249,6 +262,12 @@ export default function BlogPost() {;
                           alt={relatedPost.title}
                           className="object-cover w-full h-full"
                           onError={(e) => {
+                          }}
+                        />;
+                      </div>;
+                      <div className="p-4">;
+                        <span className="text-xs text-zion-cyan">{relatedPost && relatedPost.category}</span>;
+                        <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost && relatedPost.title}</h4>;
                       </div>;
                     </Link>;
                   ))}

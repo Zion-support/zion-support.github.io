@@ -1,5 +1,3 @@
-import React from 'react',
-import { useRouter } from 'next/router',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
@@ -42,19 +40,17 @@ onst TalentCardComponent = ({
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
+
+
+
+
+  const handleRequestHire = (e: React.MouseEvent,) => {
     e.preventDefault()
     e.stopPropagation()
     if (onRequestHire) {
       onRequestHire(talent)
     }
   }
-  // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) |[]
-      onClick={handleViewProfile}
-      tabIndex={0}
-    >
-      onClick = {handleViewProfile,}
-      tabIndex = {0,}
       <div className="p-6">
         <div className="flex items-start">
           {/* Avatar */}
@@ -64,6 +60,8 @@ onst TalentCardComponent = ({
                 <img
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
+
+
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -106,17 +104,6 @@ onst TalentCardComponent = ({
         {skills.length > 0 && (
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill, index) => (
-                <span 
-                  key={index}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
-                >
-                  {skill}
-              ))}
-              {(talent.skills?.length |0) > 5 && (
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
-                  +{(talent.skills?.length |0) - 5} more
-                </span>
                 onClick={handleRequestHire}
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
                 onClick = {handleRequestHire,}
@@ -139,33 +126,6 @@ onst TalentCardComponent = ({
       </div>
     </Card>
   )
-        <div className="mt-5 flex items-center justify-between">;
-          <div>;
-            {talent.hourly_rate ? (;
-              <div className="text-white font-bold">;
-                ${talent.hourly_rate}
-                <span className="text-zion-slate-light font-normal">/hr</span>;
-              </div>;
-            ) : (;
-              <div className="text-zion-slate-light">Rate not specified</div>;
-            )}
-          </div>;
-          <div className="flex items-center gap-2">;
-            {isAuthenticated && (;
-              <Button;
-                size="sm";
-                variant="secondary";
-                onClick={handleRequestHire}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white";
-              >;
-                Hire;
-              </Button>;
-            )}
-            <Button;
-              size="sm";
-              variant="ghost";
-              onClick={(e) => {;
-                e.stopPropagation(),;
                 handleViewProfile();
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
@@ -189,10 +149,6 @@ export interface TalentCardProps {
   onRequestHire: (talent: TalentProfile, ) => void,
   is_authenticated: boolean;
 }
-export const TalentCard = React.memo(TalentCardComponent)
-TalentCard.displayName = 'TalentCard'
-export const TalentCard = React.memo(TalentCardComponent)
-TalentCard.displayName = 'TalentCard'
 
             </Button>;
           </div>;

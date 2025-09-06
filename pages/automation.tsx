@@ -9,6 +9,7 @@ import {
   BarChart3,;
 } from 'lucide-react';
 import React from 'react',
+
 } from 'lucide-react';
 export default /**
  * AutomationPage - Function description
@@ -35,7 +36,6 @@ function AutomationPage() {
     }
   ];
   const benefits = [
-
 
 export default function AutomationPage() {
   const features = [
@@ -65,47 +65,6 @@ export default function AutomationPage() {
   }
 }
   ],
-
-  const benefits = [
-
-    'Reduce manual tasks by 80%Improve process accuracyScale operations efficiently24/7 automated operationsReal-time monitoringCustom integration support'
-  ];
-
-  const benefits = [;
-    'Reduce manual tasks by 80%',;
-    'Improve process accuracy',;
-    'Scale operations efficiently',;
-    '24/7 automated operations',;
-    'Real-time monitoring',;
-      icon: <Workflow className='w - 8 h - 8 text - white' />,
-      title: 'Workflow Automation',
-      description: 'Create complex workflows with drag - and - drop interface',
-    },
-    {
-      icon: <Bot className='w - 8 h - 8 text - white' />,
-      title: 'AI - Powered Bots',
-      description: 'Intelligent automation agents that learn and adapt',
-    },
-    {
-      icon: <BarChart3 className='w - 8 h - 8 text - white' />,
-      title: 'Process Analytics',
-      description: 'Real - time insights into your automation performance',
-    },
-    {
-      icon: <Zap className='w - 8 h - 8 text - white' />,
-      title: 'Smart Triggers',
-      description: 'Automated responses based on events and conditions',
-    },
-  ];
-;
-  const benefits = [;
-    'Reduce manual tasks by 80%',
-    'Improve process accuracy',
-    'Scale operations efficiently',
-    '24 / 7 automated operations',
-    'Real - time monitoring',
-    'Custom integration support',  ];
-;
               Automation Hub
             </h1>
             <p className='text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>
@@ -113,38 +72,28 @@ export default function AutomationPage() {
               business processes and increases efficiency.
             </p>
               <a
-                href='/contact'
-                className='border-white/20 hover:border-white/40'
-              >                View Demo
+                href="/contact" className="shadow-2xl shadow-blue-500/25">
+                Start Automating
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
+              <a
+                href="/contact" className="border-white/20 hover:border-white/40">
+                View Demo
               </a>
             </div>
           </div>
         </section>
         {/* Features Section */}
-                <div
-                  key={index}
-                  className='p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
-                  <div className='w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center'>;
-                    {feature && feature.icon}
-                  </div>;
-                  <h3 className='text-xl font-bold text-white mb-4'>;
-                    {feature && feature.title}
-                  </h3>;
-                  <p className='text-gray-400 leading-relaxed'>                    {feature && feature.description}
-                  </p>;
-                </div>;
                 Automation Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Powerful tools to automate any business process
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
                   <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-
                   <p className="text-gray-400 leading-relaxed">
                     {feature.description  } catch (error) {
     console.error("Error:", error);
@@ -195,11 +144,6 @@ export default function AutomationPage() {
                       </div>
                       <span className="text-gray-300 text-lg">{benefit}</span>
                     </div>
-                  ))}
-
-              
-
-
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
                   <div className="text-center">
@@ -218,7 +162,6 @@ export default function AutomationPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700'>
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
@@ -395,6 +338,23 @@ export default function AutomationPage() {
           </div>;
         </section>;
 
+              <a
+                href='/contact'
+                className='bg-white text-blue-600 hover:bg-gray-100'>;
+                Start Free Trial;
+              </a>;
+              <a
+
+
+              </a>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+
+
+    </>);
+;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

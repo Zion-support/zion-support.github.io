@@ -1,4 +1,9 @@
 
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+
+
 type Note = {
   id: string
   targetType: string
@@ -27,6 +32,13 @@ export default function AdminNotesConsole() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+      } finally {
+        set_loading (false);
+      }
+    }
+
+
+
 type Note = {
   id: string;
   targetType: string;
@@ -95,3 +107,5 @@ export default function AdminNotesConsole(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+

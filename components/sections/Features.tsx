@@ -45,6 +45,10 @@ import { Zap } from 'lucide-react';
           </h2>;
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
 
+            {subtitle}
+          </p>
+        </div>
+
           </p>;
         </div>;
 

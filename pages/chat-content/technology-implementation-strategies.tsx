@@ -19,6 +19,9 @@ const TechnologyImplementationStrategies: NextPage = () => {
     </div>;
   ),;
 };
+export default TechnologyImplementationStrategies;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > TechnologyImplementationStrategies</h1>;
@@ -29,3 +32,5 @@ import Head from 'next / head';
 ;
 export default TechnologyImplementationStrategies;
 ;
+
+

@@ -19,8 +19,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 export default SitemapStatus;
 
 
-    const raw = fs.readFileSync(p, 'utf8'),
-    urlCount = (raw.match(/<url>/g) || []).length
+
     const raw = fs.readFileSync(p, 'utf8'),
     urlCount = (raw.match(/<url>/g) || []).length
     const raw = fs.readFileSync(p, 'utf8'),

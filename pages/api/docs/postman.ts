@@ -17,6 +17,15 @@
         },
       })),
     ),
+      schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
+    },
+    item: [
+      {
+        name: 'Health Check',
+        request: {
+          method: 'GET',
+          header: [],
+          url: {
   res.status(200).json(postmanCollection);
   } catch (error) {
     console.error("Error:", error);

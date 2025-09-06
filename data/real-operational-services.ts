@@ -36,9 +36,6 @@
     }
   }
 ];
-  }
-}
-
 export const realOperationalServices: RealOperationalService[] = [
   {
     id: "operational-intelligence", name: "Operational Intelligence Platform",
@@ -54,6 +51,11 @@ export const realOperationalServices: RealOperationalService[] = [
     link: "/services/operational-intelligence", category: "Operational Services",
     realImplementation: true,
     contactInfo: {
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

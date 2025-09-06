@@ -94,9 +94,6 @@ interface SmartContractDeploymentProps {;
               <div className="space-y-2">
                 <Label>Select blockchain network</Label>
                 <RadioGroup
-                  defaultValue={deploymentOptions.network}
-                  onValueChange={(value) => setDeploymentOptions({
-                    ...deploymentOptions;
                   })}
                   className="flex flex-col space-y-1"
                 >
@@ -122,6 +119,10 @@ interface SmartContractDeploymentProps {;
                   id="wallet-address" 
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}
+                  })}
+                />
+              </div>
+              <div className="flex items-center space-x-2">
                 <Switch
                   id="use-escrow"
                   checked={deploymentOptions && deploymentOptions.useEscrow}
@@ -213,10 +214,5 @@ interface SmartContractDeploymentProps {;
             <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Deploying...;
-            </>;
-          ) :(;
-            'Deploy Contract';
-          )}
-        </Button>;
-      </CardFooter>;
-    </Card>;
+}
+;

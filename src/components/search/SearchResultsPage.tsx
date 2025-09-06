@@ -56,8 +56,6 @@ import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data/marketplaceData';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 interface SearchResult {;
-import React, { useState, useEffect, useMemo } from 'react'
-import { useRouter } from 'next/router'
 import {
   Search,
   Filter,
@@ -234,9 +232,6 @@ const SearchResultCard: React.FC<{;
           <div className="flex gap-2 flex-wrap">;
             {result.category && (;
               <Badge variant="outline" className="text-xs">;
-}
-// Filter Sidebar Component;
-const FilterSidebar: React.FC<{
           {result.rating && (
             <div className="flex items-center gap-1">
               <span className="text-yellow-500">★</span>
@@ -277,27 +272,6 @@ const FilterSidebar: React.FC<{
                 {option.label}
               </label>
             </div>
-          ))}
-        </div>;
-      </div>;
-
-      <Separator />;
-
-      <div>;
-        <h3 className='font-semibold mb-3'>Content Type</h3>;
-        <div className='space-y-2'>;
-          {typeOptions && typeOptions.map(option => (;
-            <div key={option && option.id} className='flex items-center space-x-2'>;
-              <Checkbox
-                id={option && option.id}
-                checked={filters && filters.types.includes(option && option.id)}
-                onCheckedChange={checked =>;
-                  handleTypeChange(option && option.id, !!checked);
-                }              />;
-              <label htmlFor={option && option.id} className='text-sm'>;
-                {option && option.label}
-              </label>;
-            </div>;
           ))}
     <div className='space - y-6'>;
       <div>;
@@ -459,11 +433,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 size="sm";
                 onClick={() => onNewSearch(suggestion)}
               >;
-                {suggestion}
-              </Button>;
-            ))}
-
-
 
         <div className="text-sm text-muted-foreground">
           <p>Tips for better results: </p>
@@ -496,17 +465,10 @@ export const SearchResultsPage: React.FC = () => {
     minPrice: 0,
     maxPrice: 10000,
     minRating: 0,
-    const categories = new Set<string>();    results.forEach(result => {
-      if (result.category) categories.add(result.category)
-    })
-    return Array.from(categories).sort()
-  }, [results])
-    sort: 'relevance'
-  }),
-
-    if (router.isReady && router.query.q) {
-      const urlTerm = router.query.q as string
-      setSearchTerm(urlTerm)
+    sort: 'relevance',
+  });
+  const suggestions = generateSearchSuggestions ();
+  // Extract available categories from results for filter;
     }
   }, [router.isReady, router.query.q])
   // Search function
@@ -519,17 +481,6 @@ export const SearchResultsPage: React.FC = () => {
       setTotalCount(0)
       return
     }
-    setLoading(true)
-    try {
-      const searchFilters = newFilters |filters
-      const params = new URLSearchParams({
-        query: term
-        page: page.toString()
-        limit: '20'
-      })
-      if (searchFilters.types.length > 0) {
-        params.append('type', searchFilters.types.join(','))
-      }
   const activeFiltersCount = null;
     filters.types.length +
     (filters.category ? 1 : 0) +
@@ -677,6 +628,13 @@ export const SearchResultsPage: React.FC = () => {
                 filters = {filters,}
                 onFiltersChange = {handleFiltersChange,}
                 availableCategories = {availableCategories,}
+          <div className="flex-1">
+
+            {loading && results.length === 0 ? (
+              <div className="flex justify-center py-12">
+                <Loader2 className="h-8 w-8 animate-spin" />
+              </div>
+            ) : results.length === 0 && searchTerm ? (
               <NoResultsState
                 searchTerm={searchTerm}
                 onNewSearch={handleSearch}              />;
@@ -716,7 +674,6 @@ export const SearchResultsPage: React.FC = () => {
                 </div>
                 {/* Load More Button */}
                 {hasMore && (
-
                   <div className="text-center">
                     <Button 
                       onClick={loadMore} 
@@ -739,12 +696,6 @@ export const SearchResultsPage: React.FC = () => {
           </div>;
         </div>;
       )}
-    </div>
-  )
-}
-export default SearchResultsPage
-  suggestion
-}</Button>) )
 }> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
   /* Mobile Filter Toggle */
 }<Sheet open= {

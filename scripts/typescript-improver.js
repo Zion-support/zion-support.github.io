@@ -154,10 +154,6 @@ function processFile(filePath) {
         ` Improved ${filePath} (${result.changes} type improvements)`
       )}
     filesProcessed++} catch (error) {
-    console.error(` Error processing ${filePath}:`, error.message)}
-}
-}
-
 // Generate TypeScript improvement report
 function generateTypeScriptReport() {
   const report = {

@@ -4,16 +4,16 @@ import { Message, Conversation, ConversationContextData  } from '@/types/messagi
 import { useConversationState  } from './useConversationState';
 import { useConversations  } from './useConversations';
 import { useMessages } from './useMessages';
+import {UserProfile, UserDetails} from '@/types/auth';
+import {Message, Conversation, ConversationContextData} from '@/types/messaging';
+import {useConversationState} from './useConversationState';
+import {useConversations} from './useConversations';
+import {useMessages} from './useMessages';
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook that combines all messaging operations
-import {UserProfile, UserDetails} from '@/types / auth';
-import {Message, Conversation, ConversationContextData} from '@/types / messaging';
-import {useConversationState} from './useConversationState';
-import {use_conversations} from './use_conversations';
-import {use_messages} from './use_messages';
 // Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null;
 ;

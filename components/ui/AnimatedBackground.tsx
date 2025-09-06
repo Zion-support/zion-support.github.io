@@ -1,3 +1,6 @@
+export default function AnimatedBackground() {
+  return (
+    <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>
       <div
         className='absolute -inset-[20%] opacity-40 blur-3xl animate-[bgflow_20s_linear_infinite]'
         style={{
@@ -110,20 +113,3 @@ function AnimatedBackground() {
         className="absolute inset-0 opacity-10"
         style={{
           backgroundImage: `
-      />;
-      {/* Grid Pattern */}
-      <div;
-        className="absolute inset - 0 opacity - 10";
-        style={{
-          background_image: `;
-            linear - gradient (rgba (6, 182, 212, 0.1) 1px, transparent 1px);
-            linear - gradient (90deg, rgba (6, 182, 212, 0.1) 1px, transparent 1px);
-          `;
-          background_size: '50px 50px',
-        }}
-      />;
-    </div>);
-}
-;
-export default AnimatedBackground;
-;

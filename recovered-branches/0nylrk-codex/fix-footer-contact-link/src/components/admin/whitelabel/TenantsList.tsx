@@ -20,7 +20,6 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
-  useEffect(() => {
     loadTenants();
   }, []);
 
@@ -36,6 +35,46 @@ import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
     } finally {;
       setIsLoading(false);
     }
+import {
+  Edit,
+  MoreHorizontal,
+  ExternalLink,
+  Power,
+  PowerOff,
+  Users,
+  RefreshCcw,;
+} from "@/components/icons";
+import { format } from "date-fns";
+export function TenantsList() {;
+  const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    loadTenants();
+  }, []);
+
+  const loadTenants = async () => {
+    try {
+      setIsLoading(true);
+      const { data, error } = await supabase
+        .from("whitelabel_tenants")
+        .select("*")
+        .order("created_at", { ascending: false });
+
+      if (error) throw error;
+      setTenants(data as WhitelabelTenant[]);
+    } catch (error: any) {
+      console.error("Error loading tenants:", error);
+      toast({
+        variant: "destructive",
+        title: "Failed to load tenants",
+        description: error.message,
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
     try {
       const { error } = await supabase

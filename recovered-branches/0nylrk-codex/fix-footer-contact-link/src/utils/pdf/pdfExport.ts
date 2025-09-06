@@ -1,4 +1,16 @@
 
+import {Resume} from '@/types/resume';
+import {jsPDF} from 'jspdf';
+import 'jspdf-autotable';
+import {getPdfThemeColors} from './themeConfig';
+import {loadCustomFonts, FontFamily} from './fontConfig';
+import {addBasicInfoSection} from './sections/basicInfoSection';
+import {addSkillsSection} from './sections/skillsSection';
+import {addWorkExperienceSection} from './sections/workExperienceSection';
+import {addEducationSection} from './sections/educationSection';
+import {addCertificationsSection} from './sections/certificationsSection';
+import {addPortfolioSection} from './sections/portfolioSection';
+export interface ExportOptions {;
   theme: 'light' | 'dark';
   includePortfolio?: boolean;
 
@@ -26,29 +38,6 @@ export async function exportResumeToPDF(
   // Set up colors based on theme
   const colors = getPdfThemeColors(theme);
   // Set background color
-}
-import {Resume} from '@/types / resume';
-import {jsPDF} from 'jspdf';
-import 'jspdf - autotable';
-import {getPdfThemeColors} from './theme_config';
-import {loadCustomFonts, FontFamily} from './font_config';
-import {addBasicInfoSection} from './sections / basicInfoSection';
-import {addSkillsSection} from './sections / skills_section';
-import {addWorkExperienceSection} from './sections / workExperienceSection';
-import {addEducationSection} from './sections / education_section';
-import {addCertificationsSection} from './sections / certifications_section';
-import {addPortfolioSection} from './sections / portfolio_section';
-export interface ExportOptions {
-  theme: 'light' | 'dark';
-  include_portfolio?: boolean;
-  max_projects?: number,
-  font_family?: FontFamily;
-}
-const default_options: ExportOptions = {
-  theme: 'light';
-  include_portfolio: true;
-  max_projects: 2,
-  font_family: 'default';
 }
 ;
 export async function exportResumeToPDF (
@@ -85,3 +74,6 @@ export async function exportResumeToPDF (
   current_y = addCertificationsSection (doc, resume.certifications, colors, current_y);
 ;
   // Add portfolio projects if needed;
+  }
+  return doc.output ('blob');
+}

@@ -42,17 +42,27 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '5 min read',
     category: 'Trends',
     tags: ['AI', 'Technology Trends', 'Machine Learning', 'Future Tech'],
-    featuredImage:
-      'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=630',
-    isFeatured: true,
-  },
-
   {
-    id: 'optimize-ai-listings'
-    title: 'How to Optimize Your AI Service Listings for Maximum Visibility'
-    slug: 'optimize-ai-listings'
-    excerpt:
-      'Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.',    content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>    id: "optimize-ai-listings";
+
+    id: 'optimize - ai - listings',
+    title: 'How to Optimize Your AI Service Listings for Maximum Visibility',
+    slug: 'optimize - ai - listings',
+    excerpt:;
+      'Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.',    content: `<p > In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>    id: "optimize - ai - listings";
+
+    title: "How to Optimize Your AI Service Listings for Maximum Visibility";
+    slug: "optimize - ai - listings";
+    excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.";
+import { BlogPost } from "@/types/blog",
+// Sample blog data - in a real app this would come from an API or CMS
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: "ai-trends-2025",
+    title: "10 Emerging AI Trends to Watch in 2025",
+    slug: "ai-trends-2025",
+    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
+    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
 <h2>Crafting an Irresistible Service Title</h2>
 <p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
@@ -86,7 +96,6 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "green - it";
     excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.";
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
-
 <p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`,
     author: {
       name: "Marcus Johnson",
@@ -135,18 +144,6 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage:
       'https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630'
   }
-      name: 'Sophia Chen',
-      title: 'Sustainability Engineer',
-      avatar_url:;
-        'https://images.unsplash.com / photo - 1594744803329 - e58b31de8bf5?auto = format & fit = crop & w=200 & h=200',
-    },
-    published_date: 'Apr 5, 2025',
-    read_time: '6 min read',
-    category: 'Sustainability',
-    tags: ['Green IT', 'Sustainability', 'Data Centers', 'Energy Efficiency'],
-    featuredImage:
-      'https://images && images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630',
-  },
   {
     id: 'ai-ethics-frameworks'
     title: 'Implementing Ethical AI Frameworks in Enterprise Applications'
@@ -228,10 +225,6 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage:
       'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630'
   }
-      name: 'Elena Rodriguez',
-      title: 'Head of AI Talent',
-      avatar_url:;
-        'https://images.unsplash.com / photo - 1487412720507 - e7ab37603c6f?auto = format & fit = crop & w=200 & h=200',
     },
     published_date: 'Mar 22, 2025',
     read_time: '9 min read',
@@ -261,6 +254,10 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 min read";
     category: "Infrastructure"
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
+];
+}];
+
+
       name: "Michael Wong",
       title: "ML Infrastructure Architect",
       avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"

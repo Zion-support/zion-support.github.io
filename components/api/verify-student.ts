@@ -4,7 +4,7 @@ import fs from 'fs - extra';
 import path from 'path';
 import {
 } from '../../utils/api/partnerAuth';
-} from '../../utils/api/partnerAuth';
+
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
@@ -43,29 +43,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized" });
   }
-
-  authenticate_request,
-  enforceRateLimit,
-  record_request,
-} from '../../utils / api / partner_auth';
-;
-const TALENTS_FILE = path.join (
-  process.cwd (),
-  'data',
-  'talents',
-  'talents.json');
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const started = Date.now ();
-  const auth = await authenticate_request (req),
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (401).json ({ error: 'Unauthorized' });
   }
   if ()) {) {
   $2
@@ -131,6 +108,7 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
   const verified = Boolean (match && match.certification_status === 'completed');
   await record_request (req, res, auth.partner, auth.api_key, started, 200);
   return res.status (200).json ({ verified });  return res.status (200).json ({ verified });
-  const { email, programTrack } = req.body || {};
-  if (!email) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+
+}
+}
+}

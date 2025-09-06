@@ -8,6 +8,11 @@ import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
 import React, { useState } from 'react',
 import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
   DialogFooter} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
@@ -22,17 +27,18 @@ export interface MessageTalentModalProps {
 
   jobTitle?: string
 }
-
 export function MessageTalentModal({
   talent,
   isOpen,
   onClose,
+
+
+
   jobTitle
 }: MessageTalentModalProps) {
 
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
-
   const [message, setMessage] = useState(
     jobTitle
       ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`
@@ -47,18 +53,6 @@ export function MessageTalentModal({
       return;
     }
     try {
-    try {;
-      setIsSubmitting(true);
-      // Create context data for the conversation;
-      const contextData = {;
-        title: jobTitle || `Discussion with ${talent && talent.full_name}`,;
-        description: talent && talent.bio || talent && talent.professional_title || "",;
-        image_url: talent && talent.profile_picture_url || "";
-      };
-      // Create conversation with this talent;
-      await createConversation(;
-        talent && talent.user_id;
-        message;
       // Navigate to messages inbox
       navigate("/messages")
     } catch (error) {
@@ -70,6 +64,10 @@ export function MessageTalentModal({
       })
     } finally {
       setIsSubmitting(false)
+    }
+  }
+
+  return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20">;
         <DialogHeader>;
@@ -97,25 +95,6 @@ export function MessageTalentModal({
               value={message}
               onChange={(e) => setMessage(e && e.target.value)}
               rows={5}
-              placeholder="Write your message here...";
-            />;
-          </div>;
-        </div>;
-          <Button;
-            type="button";
-            variant="outline";
-            onClick={onClose}
-            className="border-zion-purple/30 text-white";
-          >;
-            Cancel;
-          </Button>;
-          <Button;
-            type="button" ;
-            onClick={handleSendMessage}
-            disabled={isSubmitting}
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white";
-          >;
-            {isSubmitting ? 'Sending...' :'Send Message'}
           </Button>;
         </DialogFooter>;
       </DialogContent>;

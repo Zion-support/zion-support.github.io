@@ -50,10 +50,53 @@ import {
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
 import { toast } from "@/hooks/use-toast",
 import { HireConfirmationModal } from "./HireConfirmationModal",
+interface CandidateCardProps {
+  application: JobApplication,
+  index: number
+}
+
+export function CandidateCard({ application, index }: CandidateCardProps) {;
+  const [showNotes, setShowNotes] = useState(false);
+  const [notes, setNotes] = useState(application.notes || "");
+  const [showHireModal, setShowHireModal] = useState(false);
+
+export function CandidateCard({ application, index }: CandidateCardProps) {
+  const [showNotes, setShowNotes] = useState(false);
+  const [notes, setNotes] = useState(application.notes |"");
+  const [showHireModal, setShowHireModal] = useState(false);
+  // Check if application is stalled (no activity for 7 days)
+
+
+
+
+
+  const isStalled =
+    application.updated_at &&
+    new Date(application.updated_at).getTime() <
+      Date.now() - 7 * 24 * 60 * 60 * 1000;
+  const [showNotes, setShowNotes] = useState(false),
+  const [notes, setNotes] = useState(application.notes || ""),
+  const [showHireModal, setShowHireModal] = useState(false),
+  
+  // Check if application is stalled (no activity for 7 days)
+  const isStalled = application.updated_at && 
+    new Date(application.updated_at).getTime() < 
+    (Date.now() - 7 * 24 * 60 * 60 * 1000),
+  
   const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
+    });
+  }
+
+  return (
+    <>;
+      <Draggable draggableId={application && application.id} index={index}>;
+        {(provided) => (;
+
+          <Card;
+            className="mb-2 p-0 shadow-sm border";
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
@@ -90,11 +133,6 @@ import { HireConfirmationModal } from "./HireConfirmationModal",
           >;
             <CardContent className="p-3">;
               {/* Candidate Header */}
-
-              {/* Candidate Header */}
-                      />;
-                    ) : (;
-                      <User className="h-4 w-4" />;
                     )}
                   </Avatar>
                   <div>
@@ -128,6 +166,32 @@ import { HireConfirmationModal } from "./HireConfirmationModal",
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
+
+              {/* Application Info */}
+              <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">;
+                <div className="flex items-center">;
+                  <Calendar className="h-3 w-3 mr-1" />;
+                  {formatDistanceToNow(new Date(application && application.created_at), {;
+                    addSuffix: true,;
+                  })}
+                </div>;
+
+                {isStalled && (;
+                  <div className="flex items-center text-amber-500">;
+                    <AlertTriangle className="h-3 w-3 mr-1" />;
+                    Stalled;
+                  </div>;
+                )}
+              </div>;
+
+              {/* Match Score */}
+
+              {application.match_score !== null && application.match_score !== undefined && (;
+                <div className="mb-2">;
+                  <ScoreBadge application={application} />;
+                </div>;
+              )}
+;
               {/* Notes Section */}
               {showNotes && (;
                 <div className="mt-2">;
@@ -144,6 +208,10 @@ import { HireConfirmationModal } from "./HireConfirmationModal",
                   </div>;
                 </div>;
               )}
+
+              {/* Action Buttons */}
+              <div className="flex justify-between mt-2 gap-1">
+                <Button variant="outline" size="sm" className="flex-1" asChild>
 ;
               {/* Action Buttons */}
               <div className="flex justify-between mt-2 gap-1">
@@ -157,7 +225,6 @@ import { HireConfirmationModal } from "./HireConfirmationModal",
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
                 </Button>
-
                 
                 <Button 
                   variant="outline" 
@@ -165,6 +232,31 @@ import { HireConfirmationModal } from "./HireConfirmationModal",
                   className="flex-1"
                   asChild
                 >
+                  {application.resume?.file_url ? (
+              <div className="flex justify-between mt-2 gap-1">;
+                <Button variant="outline" size="sm" className="flex-1" asChild>;
+                  <Link to={`/messages?talentId=${application && application.talent_id}`}>;
+                    <MessageSquare className="h-3 w-3 mr-1" /> Message;
+                  </Link>;
+                </Button>;
+
+                <Button variant="outline" size="sm" className="flex-1" asChild>;
+                  {application && application.resume?.file_url ? (;
+                    <a
+                      href={application && application.resume.file_url}
+                      target="_blank"
+                      rel="noopener noreferrer">;
+                      <FileText className="h-3 w-3 mr-1" /> Resume;
+                    </a>;
+                  ) : (;
+                    <span>;
+                      <FileText className="h-3 w-3 mr-1" /> No Resume;
+                    </span>;
+                  )}
+                </Button>
+                <Button
+                  variant="default"
+                  size="sm"
                 
                 <Button 
                   variant="default" 
@@ -183,3 +275,8 @@ import { HireConfirmationModal } from "./HireConfirmationModal",
         is_open={showHireModal}
         on_close={() => setShowHireModal (false)}
         application={application}
+  );
+        on_confirm={handleHireConfirmed}
+      />;
+    </>);
+}

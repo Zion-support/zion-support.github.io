@@ -1,4 +1,11 @@
 
+  return (
+    <EnhancedLayout>
+      <div className="max-w-4xl mx-auto">
+        <div className="flex items-center justify-between mb-4">
+          <h1 className="text-2xl font-semibold">My Disputes</h1>
+          <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</a></Link>
+          <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</Link></Link>
         </div>
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
@@ -38,3 +45,5 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

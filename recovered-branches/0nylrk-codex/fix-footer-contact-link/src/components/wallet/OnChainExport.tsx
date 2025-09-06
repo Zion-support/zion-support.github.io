@@ -63,9 +63,6 @@ export function OnChainExport() {
         variant: "destructive"
       })
     } finally {
-      setIsExporting (false);
-    }
-  }
   return (
     <Card>;
       <CardHeader>;

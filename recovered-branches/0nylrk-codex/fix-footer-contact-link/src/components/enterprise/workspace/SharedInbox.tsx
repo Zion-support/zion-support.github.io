@@ -9,6 +9,11 @@ export function SharedInbox() {
       subject: "Interview Scheduled"
       preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm."
       timestamp: "2h ago"
+      id: "msg-1",
+      from: "John Smith",
+      subject: "Interview Scheduled",
+      preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.",
+      timestamp: "2h ago",
     {
       id: "msg-2"
       from: "Talent Support"
@@ -24,19 +29,6 @@ export function SharedInbox() {
       timestamp: "2d ago"
       unread: false
   return (
-    <Card>
-      <CardHeader>
-        <div className="flex items-center justify-between">
-          <div>
-            <CardTitle>Shared Inbox</CardTitle>
-            <CardDescription>Team messages and notifications</CardDescription>
-          </div>
-          <Badge className="bg-blue-500">{messages.filter(m => m.unread).length} New</Badge>
-        </div>
-      </CardHeader>
-      <CardContent className="p-0">
-        <div className="divide-y divide-border">
-          {messages.map((message) => (
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -84,3 +76,5 @@ export function SharedInbox() {;
           </button>;
         </div>;
       </CardContent>;
+}
+;

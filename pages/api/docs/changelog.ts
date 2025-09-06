@@ -28,6 +28,13 @@
     }
     return;
   }
+
+
+  res && res.setHeader("Allow", "GET, POST");
+  res && res.status(405).end("Method Not Allowed");
+
+}
+
 export default /**
  * handler - Function description
  */

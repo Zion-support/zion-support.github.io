@@ -1,3 +1,11 @@
+import {Button} from "./ui/button";
+import {Input} from "./ui/input";
+import {GradientHeading} from "./GradientHeading";
+import {useState} from "react";
+export function QuoteFormSection() {;
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -7,9 +15,6 @@ export function QuoteFormSection() {
     
     // Simulate form submission
     setTimeout(() => {
-      (setIsSubmitting(false), setIsSubmitted(true));
-    }, 1000);
-  }
 
   return (
     <section className="py-20 bg-zion-blue">
@@ -238,9 +243,11 @@ export function QuoteFormSection() {;
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">;
                   {["AI Products/Services", "IT Equipment", "Server Solutions", "Storage Solutions", "Networking", "24/7 Support", "Recycling Services"].map((item, index) => (;
                     <div key={index} className="flex items-center">;
+                      <input
+                        id={`interest-${index}`}
+                        type="checkbox"
+                        className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
-
-
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
                         {item}
                       </label>;

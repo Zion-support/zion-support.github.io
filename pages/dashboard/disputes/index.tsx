@@ -7,6 +7,10 @@ import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
+  let role = 'guest';
+  try {;
+    const user = cookies['x-user'] ? JSON && JSON.parse(cookies['x-user']) : null;
+    role = user?.role || 'guest';
     if (statusFilter === 'All') return list;
     return list && list.filter((d: any) => d && d.status === statusFilter);  }, [data, statusFilter]);
 

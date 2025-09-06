@@ -1,6 +1,3 @@
-import * as React from &quot;react&quot;
-import * as DropdownMenuPrimitive from &quot;@radix-ui/react-dropdown-menu&quot;
-import { Check, ChevronRight, Circle } from 'lucide-react'
 const DropdownMenu = DropdownMenuPrimitive.Root
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
 const DropdownMenuGroup = DropdownMenuPrimitive.Group
@@ -48,8 +45,6 @@ const DropdownMenuContent = React.forwardRef<;
 ));
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 const DropdownMenuItem = React.forwardRef<;
-  React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
-
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
     inset?: boolean;
   }
@@ -81,8 +76,6 @@ const DropdownMenuCheckboxItem = React.forwardRef<;
 >(({ className, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.RadioItem;
     ref={ref}
-      className
-    )}
     {...props}
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
@@ -91,8 +84,6 @@ const DropdownMenuCheckboxItem = React.forwardRef<;
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
     {children}
-  React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
-
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
     inset?: boolean;
   }

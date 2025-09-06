@@ -24,14 +24,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
   
   const clientId = userId || user?.id,
 
-
-      setIsLoading(true),
-      
-
-
-  
-  const clientId = userId || user?.id,
-
   const fetchJobs = async () => {
     if (!clientId) {
       setIsLoading(false),
@@ -43,10 +35,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
         .from("jobs")
         .select("*")
         .eq("client_id", clientId)
-    } finally {
-      setIsLoading (false);
-    }
-  }
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
     try {
       const { error: updateError } = await supabase
@@ -177,3 +165,5 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     createJob,;
     updateJob;
     getJobById;
+  }
+};

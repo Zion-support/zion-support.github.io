@@ -1,10 +1,43 @@
 
-  );
-  const contactInfo = {;
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup && ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-  };
+    <UltraAdvancedFuturisticBackground>;
+      <NextHead>;
+        <title>;
+          {service?.name || 'AI Financial Risk Management'} - Zion Tech Group;
+        </title>;
+
+          href='https://ziontechgroup && ziontechgroup.com/ai-financial-risk'
+        />;
+      </NextHead>;
+      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
+        <div className='max-w-6xl mx-auto'>;
+          <div className='text-center mb-10'>;
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>;
+              <DollarSign className='w-10 h-10' />;
+              {service?.name || 'AI Financial Risk Management'}
+            </h1>;
+            <p className='mt-4 text-xl text-slate-300 max-w-3xl mx-auto'>;
+              {service?.tagline ||;
+                'Real-time risk scoring, fraud detection, and stress scenarios with explainable AI.'}
+            </p>;
+          </div>;
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12'>;
+            <div className='lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6'>;
+              <h2 className='text-2xl font-semibold mb-4'>Capabilities</h2>;
+              <p className='text-slate-300 mb-6'>;
+                {service?.description ||;
+                  'Credit risk, market risk, model validation, and anti-fraud analytics powered by ML.'}
+              </p>;
+              <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>;
+                {(;
+                  service?.features?.slice(0, 12) || [;
+                    'Credit/market risk',;
+                    'Anomaly detection',;
+                    'Explainable AI',;
+                    'Stress testing',;
+                    'Model governance',;
+                    'Real-time alerts',;
+                  ];
+                ).map((feat, i) => (;
 
 const AIFinancialRisk: React.FC = () => {;
   return (
@@ -100,6 +133,10 @@ export default function AIFinancialRiskPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+
+
+}
+}
   )
 import NextHead from 'next/head';
 import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
@@ -152,6 +189,14 @@ export default function AIFinancialRiskPage(req, res) {
                 <div>;
                   <div className="text-3xl font-bold text-white">{service?.price || 'Custom pricing'}<span className="text-slate-400 text-base">{service?.period || ''}</span></div>;
                 </div>;
+                <div className='flex items - center space - x-2'>;
+                  <Mail className='w - 4 h - 4 text - purple - 400' />;
+                  <span>{contact_info.email}</span>;
+                </div>;
+                <div className='flex items - center space - x-2'>;
+                  <MapPin className='w - 4 h - 4 text - green - 400' />;
+                  <span className='text - xs'>{contact_info.address}</span>;
+                </div>              </div>;
             </div>;
           </div>;
         </div>;

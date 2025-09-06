@@ -7,9 +7,19 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const items = readAll();
-  const idx = items && items.findIndex((r: any) => r && r.id === id),
-  if (idx === -1) return res && res.status(404).json({ error: 'Not found' });
-  items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() };
+  const idx = items.findIndex((r: any) => r.id === id)
+if (idx === -1) return res.status(404).json({ error: 'Not found' });
+  items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() }
+  writeAll(items);
+}
+
+
+
+
+;
+const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
+;
+const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
   try {
     return JSON.parse (fs.readFileSync (REQUESTS_PATH, 'utf - 8'));
   } catch {

@@ -3,5 +3,3 @@ import React from 'react';
 interface GreenitProps {
   // Add props here as needed
 }
-export default function Greenit({ }: GreenitProps) {
-

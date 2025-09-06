@@ -1,4 +1,5 @@
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,6 +29,13 @@ export type PdfExportButtonProps = {;
       html2canvas: { scale: 2, useCORS: true },;
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },;
     } as any;
+      >
+      Download as PDF
+    </button>
+  };
+      >;
+      Download as PDF;
+    </button>;
   );
 }  return (
     <button
@@ -50,5 +58,8 @@ export type PdfExportButtonProps = {;
     </button>);
       Download as PDF
     </button>
-
+      Download as PDF
+    </button>
+);
+}
   );

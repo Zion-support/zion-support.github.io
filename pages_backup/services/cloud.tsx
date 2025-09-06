@@ -37,30 +37,12 @@ export default function CloudServicesPage() {;
       features: ["Cost Analysis", "Performance Tuning", "Resource Management"]";
     }
 ;  ];
-    >
-      <div className="min-h-screen bg-gray-50">
-      description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services.">;
-      <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              </p>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-              className="text-center";
-            >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-                Cloud Solutions;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-                Transform your business with our comprehensive cloud solutions.;
-                From migration to optimization, we help you leverage the power of the cloud.;
-              </p>;
-            </motion && motion.div>;
           </div>;
         </section>;
               className="text-center"
@@ -75,9 +57,6 @@ export default function CloudServicesPage() {;
             </motion.div>
           </div>
         </section>
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
-          <div className="container mx-auto px-4 text-center">";
             </h2>;
             <p className="text-xl mb-8 max-w-2xl mx-auto">";
               Let our cloud experts help you transform your infrastructure and unlock new possibilities.;

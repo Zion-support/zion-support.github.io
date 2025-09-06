@@ -15,6 +15,8 @@
 } from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap } from 'lucide-react';
+
+
 export default function MarketResearchPage() {
 
   const marketSegments = [
@@ -114,7 +116,6 @@ export default function MarketResearchPage() {
       color: 'from-teal-500 to-cyan-600'
       icon: <Users className="w-8 h-8 text-white" />
     }
-
         'AI content generation tools',
         'Predictive analytics platforms',
         'Automated customer service',
@@ -398,6 +399,17 @@ import { Zap } from 'lucide-react';
       color: 'from-teal-500 to-cyan-600',;
       icon: <Users className="w-8 h-8 text-white" />;
     }
+    }
+  ];
+;
+  return (
+
+
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Market Segments */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -459,6 +471,21 @@ import { Zap } from 'lucide-react';
                 <div className="p-8">;
                   <div className="flex flex-col lg:flex-row gap-8">;
                     {/* Segment Header */}
+                          <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                            <TrendingUp className="w-5 h-5 mr-2 text-green-400" />
+                            Key Trends
+                          </h4>
+                          <ul className="space-y-2">
+                            {segment.keyTrends.map((trend, trendIndex) => (
+                              <li key={trendIndex} className="flex items-start text-gray-300 text-sm">
+                                <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
+
+                                {trend}
+                              </li>;
+                            ))}
+                          </ul>
+                        </div>
+
                         {/* Top Players */}
                         <div>;
                           <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;
@@ -480,31 +507,48 @@ import { Zap } from 'lucide-react';
                               </li>;
                             ))}
                       {/* Opportunities */}
-                      <div className='mt-8 pt-6 border-t border-gray-700'>;
-                        <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;
-                          <Target className='w-5 h-5 mr-2 text-blue-400' />;
-                          Market Opportunities;
-                        </h4>;
-                        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-                          {segment && segment.opportunities.map(;
-                            (opportunity, oppIndex) => (;
+                      <div className='mt-8 pt-6 border-t border-gray-700'>
+                        <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
+                          <Target className='w-5 h-5 mr-2 text-blue-400' />
+                          Market Opportunities
+                        </h4>
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                          {segment.opportunities.map(
+                            (opportunity, oppIndex) => (
                               <div
                                 key={oppIndex}
-                                className='flex items-start text-gray-300 text-sm'>;
-                                <span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />;
+                                className='flex items-start text-gray-300 text-sm'
+                              >
+                                <span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />
                                 {opportunity}
+                              </div>
+                            )
+                          )}                        </div>                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {segment.opportunities.map((opportunity, oppIndex) => (
+                            <div key={oppIndex} className="flex items-start text-gray-300 text-sm">
+                              <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
                               {opportunity}
                             </div>
                           ))}
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
+
+                        </div>
+
                       </div>
                     </div>
                   </div>
                 </div>
               </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Competitive Analysis */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
               Competitive Landscape Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -648,16 +692,10 @@ import { Zap } from 'lucide-react';
                       {analysis.strengths.map((strength, strengthIndex) => (
                         <li key={strengthIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
-                          {strength}
-
-
-
                         </li>
                       ))}
 
-                    </ul>;
-                  </div>;
-
+                  {/* Weaknesses */}
 
 
                       ))}
@@ -666,6 +704,12 @@ import { Zap } from 'lucide-react';
                 </div>;
               </Card>;
             ))}
+      {/* Market Trends */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
               Emerging Market Trends
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -683,6 +727,51 @@ import { Zap } from 'lucide-react';
                         {trend && trend.impact} Impact;
                       </span>;
                       <span className='px-2 py-1 rounded text-xs font-medium bg-blue-500/20 text-blue-400'>                        {trend && trend.timeline}
+                      </span>;
+                    </div>;
+                  </div>              Emerging Market Trends;
+            </h2>;
+
+
+              <Card
+                key={index}
+                className="card-hover border-gradient-blue"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <h3 className="text-xl font-bold text-white">{trend.trend}</h3>
+                    <div className="flex items-center space-x-2">
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${
+                        trend.impact === 'High' ? 'bg-red-500/20 text-red-400' :
+                        trend.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                        'bg-green-500/20 text-green-400'
+                      }`}>
+                        {trend.impact} Impact
+                      </span>
+                      <span className="px-2 py-1 rounded text-xs font-medium bg-blue-500/20 text-blue-400">
+                        {trend.timeline}
+                      </span>
+                    </div>
+                  </div>
+                  <p className='text-gray-300 mb-4'>{trend.description}</p>
+                  <div className='mb-4'>
+                    <h4 className='text-sm font-semibold text-gray-400 mb-2'>
+                      Examples:
+                    </h4>
+                    <ul className='space-y-1 text-xs text-gray-300'>
+                      {trend.examples.map((example, exampleIndex) => (
+                        <li key={exampleIndex} className='flex items-start'>
+                          <span className='w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {example}
+                  <p className="text-gray-300 mb-4">{trend.description}</p>
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
+                    <ul className="space-y-1 text-xs text-gray-300">
+                      {trend.examples.map((example, exampleIndex) => (
+                        <li key={exampleIndex} className="flex items-start">
+                          <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0" />
+
+
                         </li>
                       ))}
                     </ul>
@@ -783,6 +872,25 @@ import { Zap } from 'lucide-react';
                   </div>;
                 </div>;
               </Card>;
+                  {/* Cons */}
+                  <div className='mb-4'>
+                    <h4 className='text-sm font-semibold text-red-400 mb-2'>
+                      Cons:
+                    </h4>
+                    <ul className='space-y-1 text-xs text-gray-300'>
+                      {strategy.cons.map((con, conIndex) => (
+                        <li key={conIndex} className='flex items-start'>
+                          <span className='w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {con}                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-red-400 mb-2">Cons:</h4>
+                    <ul className="space-y-1 text-xs text-gray-300">
+                      {strategy.cons.map((con, conIndex) => (
+                        <li key={conIndex} className="flex items-start">
+                          <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
                   {/* Best For */}
                   <div>
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
@@ -791,9 +899,6 @@ import { Zap } from 'lucide-react';
                 </div>
               </Card>
             ))}
-          </div>;
-        </div>;
-      </section>;
 
       {/* Pricing Strategies */}
       <section className='section-padding bg-gradient-cursor-accent'>;
@@ -905,6 +1010,18 @@ import { Zap } from 'lucide-react';
               href='/services'
               variant='outline'
               size='lg'
+          <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Use our market research and competitive analysis to inform your business strategy, pricing decisions, and market positioning.
+          </p>
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">
+            <Button
+              href="/contact"
+              size="lg"
+              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
+            >
+              Get Strategic Consultation
+            </Button>
+            <Button
               href='/services'
               variant='outline'
               size='lg'

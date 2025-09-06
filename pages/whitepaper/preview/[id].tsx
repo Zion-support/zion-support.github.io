@@ -1,5 +1,7 @@
+
 import {useRouter} from 'next/router';
 import {useEffect, useState} from 'react';
+
 export default function WhitepaperPreview() {;
 import { useRouter } from 'next/router',
 import { useEffect, useState } from 'react',
@@ -33,6 +35,11 @@ export default function WhitepaperPreview(req, res) {
   const { id } = router.query;
   const [markdown, setMarkdown] = useState<string>('');
   const [notFound, setNotFound] = useState(false);
+  const router = useRouter();
+  const { id } = router.query;
+  const [markdown, setMarkdown] = useState<string>('');
+  const [notFound, setNotFound] = useState(false);
+
   useEffect(() => {
     if (!id |Array.isArray(id)) return;
     // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query)

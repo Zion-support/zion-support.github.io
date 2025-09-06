@@ -1,6 +1,6 @@
+
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-video-editing'));
   if (!service) return null;
-
 
 
 import React from 'react',;
@@ -15,6 +15,7 @@ import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 export default function AIVideoEditingPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-video-editing'))
+  if (!service) return null,
   return (
     <Layout>
       <Head>
@@ -59,3 +60,5 @@ export default function AIVideoEditingPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+

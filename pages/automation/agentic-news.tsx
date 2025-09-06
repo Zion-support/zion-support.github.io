@@ -14,7 +14,6 @@ export default function AgenticNewsPage() {
           ))}
         </ul>
       </div>
-              <a className="font-medium underline" href={it.url} target="_blank" rel="noreferrer">{it.title}</Link>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">{it.source}</div>
             </li>
           ))  } catch (error) {

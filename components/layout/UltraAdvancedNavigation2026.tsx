@@ -265,14 +265,18 @@ const serviceCategories = [
         price: '$2,999/month'
       }
       {
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
+        name: 'AI Business Intelligence',
+        href: '/autonomous-business-intelligence-network',
+        description: 'Self-evolving BI',
+        price: '$1,299/month',
+      },
+    ],
+  },];      { name: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-optimization-ai', description: 'AI supply chain optimization', price: '$899/month' },
+      { name: 'Autonomous Marketing AI', href: '/autonomous-marketing-ai-platform', description: 'Self-optimizing marketing', price: '$1,499/month' };
+      { name: 'AI Cybersecurity', href: '/ai-cybersecurity-platform', description: 'Next-gen security', price: '$2,999/month' };
+      { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
+    ]
   }
 
 const companyLinks = [
@@ -473,44 +477,117 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'Digital Reality', href: '/services?category=digital-reality', description: 'Immersive experiences' },;
         { name: 'Holographic Tech', href: '/services?category=holographic', description: '3D holographic systems' },;
         { name: 'Consciousness Interface', href: '/services?category=consciousness-interface', description: 'Brain-computer interfaces' }
+        { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ];
-    };
-      name: 'Enterprise IT',;
-      href: '/services?category=enterprise',;
-      icon: Zap,;
-      color: 'from-green-500 to-emerald-500',;
-      description: 'Enterprise solutions and infrastructure',;
-      subItems: [;
-        {;
-          name: 'Cloud Solutions',;
-          href: '/services?category=cloud',;
-          description: 'Cloud infrastructure and services',;
-        },;
-        {;
-          name: 'Cybersecurity',;
-          href: '/services?category=security',;
-          description: 'Advanced security solutions',;
-        },;
-        {;
-          name: 'Data Analytics',;
-          href: '/services?category=analytics',;
-          description: 'Business intelligence and analytics',;
-        },;
-        {;
-          name: 'DevOps',;
-          href: '/services?category=devops',;
-          description: 'Development and operations',;
-        },;
-      ],;
-    },  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' },;
-        { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' },;
-        { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },;
+    }
+  const contactInfo = {
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
+  }
+
+  const contactInfo = {;
+    phone: '+1 302 464 0950',;
+    email: 'kleber@ziontechgroup && ziontechgroup.com',;
+    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
+
 
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
   }
+const company_links = [;
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: '2026 Services', href: '/2026 - services - showcase', icon: Rocket },
+  {
+    name: 'Innovative 2026',
+    href: '/2026 - innovative - services - showcase',
+    icon: Zap,
+  },
+  {
+    name: 'Ultimate 2026',
+    href: '/ultimate - 2026 - services - showcase',
+    icon: Sparkles,
+  },
+  {
+    name: '2026 Pricing',
+    href: '/revolutionary - 2026 - pricing',
+    icon: DollarSign,
+  },
+  { name: 'Case Studies', href: '/case - studies', icon: Briefcase },
+  { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
+  { name: 'Careers', href: '/careers', icon: Users },
+  { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Innovative 2026', href: '/2026 - innovative - services - showcase', icon: Zap },
+  { name: 'Ultimate 2026', href: '/ultimate - 2026 - services - showcase', icon: Sparkles },
+  { name: '2026 Pricing', href: '/revolutionary - 2026 - pricing', icon: DollarSign },
+  { name: 'Case Studies', href: '/case - studies', icon: Briefcase },
+  { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
+  { name: 'Careers', href: '/careers', icon: Users },
+  { name: 'Contact', href: '/contact', icon: MessageCircle }
+const UltraAdvancedNavigation2026 = () =>: any {
+  const [is_open, setIsOpen] = useState (false);
+  const [is_scrolled, setIsScrolled] = useState (false);
+  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
+;
+  useEffect (() => {
+    const handle_scroll = () =>: any {
+      setIsScrolled (window.scroll_y > 20);
+    }
+    window.addEventListener ('scroll', handle_scroll);
+    return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      setIsScrolled (window.scroll_y > 20);
+    }
+    window.addEventListener ('scroll', handle_scroll);
+    return () => window.removeEventListener ('scroll', handle_scroll);
+  const navigation_items = [;
+    {
+      name: 'AI Services',
+      href: '/services?category = ai',
+      icon: Brain,
+      color: 'from - blue - 500 to - cyan - 500',
+      description: 'Autonomous AI systems and consciousness interfaces',
+      sub_items: [;
+        {
+          name: 'AI Autonomous Agents',
+          href: '/services?category = ai - autonomous',
+          description: 'Fully autonomous AI systems',
+        },
+        {
+          name: 'AI Consciousness',
+          href: '/services?category = ai - consciousness',
+          description: 'Consciousness simulation and interfaces',
+        },
+        {
+          name: 'AI Healthcare',
+          href: '/services?category = ai - healthcare',
+          description: 'Medical AI and diagnostics',
+        },
+        {
+          name: 'AI Education',
+          href: '/services?category = ai - education',
+          description: 'Educational AI systems',
+        },
+        {
+          name: 'AI Legal',
+          href: '/services?category = ai - legal',
+          description: 'Legal AI and compliance',
+        },
+        {
+          name: 'AI Creative',
+          href: '/services?category = ai - creative',
+          description: 'Creative AI and content generation',
+        },
+      ],
+    },    {        { name: 'AI Autonomous Agents', href: '/services?category = ai - autonomous', description: 'Fully autonomous AI systems' },
+        { name: 'AI Consciousness', href: '/services?category = ai - consciousness', description: 'Consciousness simulation and interfaces' },
+        { name: 'AI Healthcare', href: '/services?category = ai - healthcare', description: 'Medical AI and diagnostics' },
+        { name: 'AI Education', href: '/services?category = ai - education', description: 'Educational AI systems' },
+        { name: 'AI Legal', href: '/services?category = ai - legal', description: 'Legal AI and compliance' },
+        { name: 'AI Creative', href: '/services?category = ai - creative', description: 'Creative AI and content generation' }
+      ];
+    }
+
       name: 'Quantum Tech',
       href: '/services?category = quantum',
       icon: Atom,
@@ -526,6 +603,8 @@ const UltraAdvancedNavigation2026 = () => {;
       icon: Zap,
       color: 'from - green - 500 to - emerald - 500',
       description: 'Enterprise solutions and infrastructure',
+            {/* Logo */}
+
       sub_items: [;
         {
           name: 'Cloud Solutions',
@@ -598,14 +677,6 @@ const UltraAdvancedNavigation2026 = () => {;
                   Revolutionary Technology Solutions;
                 </div>              </div>;
             </Link>;
-
-            {/* Desktop Navigation */}
-
-              </div>
-            </Link>
-
-            {/* Desktop Navigation */}
-
                                   {subItem.description}
                                 </div>
                               </Link>
@@ -615,23 +686,6 @@ const UltraAdvancedNavigation2026 = () => {;
                           </div>
                           <Link
                             href={item.href}
-
-                          <Link
-                            href={item && item.href}
-                            className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                            onClick={() => setActiveDropdown(null)}                          ;
-                          <Link
-                            href={item && item.href}
-                            className="block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200">;
-                            View All {item && item.name}
-                          </Link>;
-                        </div>;
-                      </motion && motion.div>;
-                    )}
-                  </AnimatePresence>;
-                </div>;
-              ))}
-                  All Services
-                </Link>
                 <Link
                   href='/pricing'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'>;
@@ -736,17 +790,27 @@ const UltraAdvancedNavigation2026 = () => {;
               </div>;
             </div>;
 
+                Get Started
+              </Link>
+            </div>
+
+              </Link>;
+            </div>;
+              </Link>
+            </div>
+
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200';
-            >;
-              {isOpen ? (;
-                <X className='w-6 h-6' />;
-              ) : (;
-                <Menu className='w-6 h-6' />;
-              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200";
-            >;
+              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200'
+            >
+              {isOpen ? (
+                <X className='w-6 h-6' />
+              ) : (
+                <Menu className='w-6 h-6' />
+              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
+            >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -775,6 +839,16 @@ const UltraAdvancedNavigation2026 = () => {;
       <AnimatePresence>;
         {is_open && (
           <motion.div;
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
+            onClick={() => setIsOpen(false)}
+            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
+
+            onClick={() => setIsOpen(false)}
+
           >
             <motion.div
               initial={{ x: '100%' }}
@@ -865,6 +939,25 @@ const UltraAdvancedNavigation2026 = () => {;
                   </Link>;
                 </div>;
               </div>;
+
+  );
+}
+export default UltraAdvancedNavigation2026;
+
+
+            </motion.div>;
+          </motion.div>)}
+      </AnimatePresence>;
+      {/* Spacer for fixed navigation */}
+      <div className='h - 20'></div>;
+    </>);
+}
+;
+export default UltraAdvancedNavigation2026;    </>);
+}
+export default UltraAdvancedNavigation2026;
+;
+
 
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>

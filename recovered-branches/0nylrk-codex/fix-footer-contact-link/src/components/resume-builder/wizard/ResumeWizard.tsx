@@ -35,7 +35,6 @@ import {ResumeStepContent} from './ResumeStepContent';
 import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
 import {RESUME_STEPS} from './constants';
-export function ResumeWizard() {;
   const { user } = useAuth();
   const { ;
     isLoading;
@@ -77,6 +76,10 @@ export function ResumeWizard() {;
   } = useResume(),;
   const [activeTab, setActiveTab] = useState('basic-info'),;
   const [showNewResumeForm, setShowNewResumeForm] = useState(false),;
+  },
+
+  },
+  
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">;
@@ -125,4 +128,16 @@ export function ResumeWizard() {;
     </div>
   )
 }
+export /**
+ * ResumeWizard - Function description
+ */
+function ResumeWizard() {
+  const { user } = use_auth ();
+  const {
+    is_loading;
+    error,
+    resume,
+    fetch_resume;
+    create_resume;
+  } = use_resume ();
 ;

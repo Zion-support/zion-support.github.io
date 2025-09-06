@@ -78,6 +78,11 @@ function toOpenApi() {
       version: '1.0.0',
       description: 'API documentation for Zion Tech Group services'
     },
+}
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+
+}
+
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
 res.setHeader("Content-Type", "application/json");
   res.status(200).json(toOpenApi());
@@ -192,15 +197,10 @@ export default function handler(req, res) {
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(toOpenApi())
 }
-        bearer_auth: { type: "http", scheme: "bearer", bearer_format: "JWT" },
-      },
-    },
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
-export default /**
- * handler - Function description
- */
-function handler() {
-  res.set_header ("Content - Type", "application / json");
-  res.status (200).json (toOpenApi ());
-}
+
+

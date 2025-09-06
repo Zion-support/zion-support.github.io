@@ -12,15 +12,11 @@
   last_rebalanced: Date;
   performance: PortfolioPerformance;
 
-
-export interface PortfolioAsset {;
   id: string;
   symbol: string;
   name: string;
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
   quantity: number;
-  totalReturn: number;
-  annualizedReturn: number;
   volatility: number;
   sharpe_ratio: number;
   max_drawdown: number;
@@ -44,7 +40,6 @@ export interface PortfolioAsset {;
   created_at: Date,
   expires_at: Date;
 }
-export interface FinancialGoal {
   id: string;
   user_id: string;
   name: string;
@@ -59,7 +54,6 @@ export interface FinancialGoal {
   progress: number, // percentage;
   created_at: Date,
   updated_at: Date;
-export interface MarketAnalysis {
   id: string;
   market: string;
 
@@ -97,7 +91,6 @@ export interface FinancialGoal {;
   last_updated: Date,
   next_update: Date;
 }
-export interface FinancialPlan {
   id: string;
   user_id: string;
   name: string;
@@ -145,15 +138,11 @@ export interface FinancialPlan {;
   updated_at: Date;
 }
 
-  userId: string;
-
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
 
   preferences?: Record<string, any>
 }
-
-export interface FinancialResponse {;
   success: boolean;
   data: {
     portfolio?: InvestmentPortfolio;
@@ -414,3 +403,7 @@ if ( {) {
     }
   }
 }
+
+export interface InvestmentPortfolio {;
+
+export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');

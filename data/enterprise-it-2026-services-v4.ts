@@ -1,37 +1,3 @@
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Quantum - safe cloud storage platform with quantum - resistant encryption and distributed storage.',
-    launch_date: '2026 - 05 - 01',
-    customers: 40,
-    rating: 4 && 4.9,
-    reviews: 32,
-  },
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true;
-    implementation_details: 'Quantum - safe cloud storage platform with quantum - resistant encryption and distributed storage.';
-    launch_date: '2026 - 05 - 01';
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
   contactInfo: {
     },
     realImplementation: boolean, implementationDetails: string,
@@ -236,6 +202,16 @@
     competitors: ['AWS S3Azure BlobGoogle Cloud Storage'], marketSize: '$80B cloud storage market',
     growthRate: '65% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
+    },
+    realImplementation: true, implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.',
+    launchDate: '2026-05-01', customers: 40,
+    rating: 4.9,
+
+    realImplementation: true;
+    implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.';
+    launchDate: '2026-05-01';
+    customers: 40;
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV4 {;
   id: string,;
@@ -630,3 +606,5 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
     customers: 40,;
     rating: 4.9;
     reviews: 32;
+  }
+];

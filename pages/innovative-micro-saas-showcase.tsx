@@ -259,33 +259,30 @@ export default function InnovativeMicroSaasShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+            <div className="flex flex - wrap gap - 2">;
+              {categories.map ((category) => (
+                <button;
+                  key={category.value}
+                  on_click={() => setSelectedCategory (category.value)}
+                  className={`flex items - center space - x-2 px - 4 py - 2 rounded - lg border transition - all duration - 300 ${
+                    selected_category === category.value;
+                      ? `bg - gradient - to - r ${category.color} border - transparent text - white`;
+                      : 'bg - white / 10 border - white / 20 text - gray - 300 hover:bg - white / 20';
+                  }`}
+
+
             <div className="flex items-center space-x-4">
               <div className="flex bg-white/10 rounded-lg p-1">
                 <button
-                  onClick={() => setViewMode('grid')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}
                 >
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                 >
                   <List className="w-5 h-5" />
                 </button>
@@ -317,18 +314,74 @@ export default function InnovativeMicroSaasShowcase(req, res) {
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  animate={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors">;
+                  className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
+                >
+                  {/* Popular Badge */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  {service.popular && (
+                    <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                      Popular
+                    </div>
+                  )}
+                  {/* Service Icon */}
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  {/* Service Info */}
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
                     {service.name}
-                  </h3>;
-                  <p className="text - gray - 400 text - sm mb - 4 line - clamp - 2">;
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-4 line-clamp-2">
                     {service.tagline}
+                  </p>
                   {/* Price */}
-                  <div className="flex items - center justify - between mb - 4">;
-                    <div className="text - 2xl font - bold text - purple - 400">;
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-2xl font-bold text-purple-400">
                       {service.price}
+                  )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+                  {/* Service Icon */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  {/* Service Info */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                    {service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+                    {service.tagline  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </p>;
+                  {/* Price */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-2xl font-bold text-purple-400">
+                      {service.price  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       <span className="text-sm text-gray-400 font-normal">{service.period}</span>
                     </div>
                     <div className="flex items-center space-x-1">
@@ -389,17 +442,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                   animate={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                     {/* Service Details */}
-                    <div className="flex - 1">;
-                      <div className="flex items - start justify - between mb - 3">;
-                        <div>;
-                          <h3 className="text - xl font - bold text - white group - hover:text - purple - 400 transition - colors">;
-                            {service.name}
-                          </h3>;
-                          <p className="text - gray - 400 text - sm">{service.tagline}</p>;
-                        </div>;
-                        <div className="text - right">;
-                          <div className="text - 2xl font - bold text - purple - 400">;
-                            {service.price}
                   key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -485,13 +527,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                     </div>
                   </div>
                 </motion.div>
-      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -545,6 +580,69 @@ export default function InnovativeMicroSaasShowcase(req, res) {
         </div>
       </section>
     </Layout>
+      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+                            <span className="text - sm text - gray - 400 font - normal">{service.period}</span>;
+                          </div>;
+                          <div className="flex items - center justify - end space - x-1 mt - 1">;
+                            <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;
+                            <span className="text - sm text - gray - 300">{service.rating}</span>;
+                            <span className="text - xs text - gray - 500">({service.reviews})</span>;
+                          </div>;
+                        </div>;
+                      </div>;
+                      <p className="text - gray - 300 text - sm mb - 4 line - clamp - 2">{service.description}</p>;
+                      <div className="flex items - center justify - between">;
+                        <div className="flex items - center space - x-4 text - xs text - gray - 500">;
+                          <span className="bg - white / 10 px - 2 py - 1 rounded">{service.category}</span>;
+                          <span > Setup: {service.setup_time}</span>;
+                          <span > Trial: {service.trial_days} days</span>;
+                        </div>;
+                        <div className="flex space - x-2">;
+                          <Link;
+                            href={service.link}
+                            className="bg - gradient - to - r from - purple - 600 to - pink - 600 text - white px - 4 py - 2 rounded - lg hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 300 font - medium";
+                          >;
+                            Learn More;
+                          </Link>;
+                          <button className="p - 2 bg - white / 10 border border - white / 20 rounded - lg text - gray - 400 hover:text - white hover:bg - white / 20 transition - all duration - 300">;
+                            <Heart className="w - 4 h - 4" />;
+                          </button>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </div>;
+                </motion.div>))}
+            </div>)}
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 20 via - pink - 900 / 20 to - red - 900 / 20">;
+        <div className="container mx - auto px - 4 text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+
+}
+
+          >;
+            <h2 className="text - 4xl font - bold text - white mb - 6">;
+              Ready to Transform Your Business?;
+            </h2>;
+            <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
+              Join thousands of companies already using our innovative services to gain competitive advantages and drive growth.;
+            </p>;
+            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
+              <Link;
+                href="/contact";
+                className="bg - gradient - to - r from - purple - 600 to - pink - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 300 hover:scale - 105";
               >;
                 Get Started Today;
               </Link>;
@@ -564,3 +662,5 @@ export default function InnovativeMicroSaasShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

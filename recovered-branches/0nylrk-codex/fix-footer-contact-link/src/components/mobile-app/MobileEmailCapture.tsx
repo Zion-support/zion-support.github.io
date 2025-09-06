@@ -93,10 +93,6 @@ export const MobileEmailCapture: React.FC = () => {;
     }
   };
   return (;
-
-  },
-
-
   return (
 
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">;
@@ -113,6 +109,3 @@ export const MobileEmailCapture: React.FC = () => {;
         </div>;
       </div>;
 };
-    </section>);
-}
-;

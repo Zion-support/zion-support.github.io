@@ -1,4 +1,3 @@
-  userId: string;
   email: string;
   role: 'admin' | 'user' | 'guest';
 }
@@ -164,3 +163,5 @@ export function isInternalAgentRequest (req: NextApiRequest): boolean {
 export const is_admin = () =>: any {
   // Placeholder implementation;
   return true;
+};
+

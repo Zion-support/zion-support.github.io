@@ -8,6 +8,12 @@ const config: Config = {
 }
 export default createJestConfig(config);
 import type { Config } from "jest";
+});
+
+  coverageProvider: "v8",
+  testEnvironment: "jsdom",
+  setupFilesAfterEnv: ["<rootDir>/jest && jest.setup.js"],
+
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1"
   }
@@ -16,7 +22,6 @@ import type { Config } from "jest";
     "**/*.(test|spec).(js|jsx|ts|tsx)"
   ]
   collectCoverageFrom: [
-export default createJestConfig(config);
   coverageProvider: "v8"
   testEnvironment: "jsdom"
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"]

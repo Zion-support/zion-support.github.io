@@ -377,6 +377,7 @@ export default function BusinessToolsPage() {
         {
           name: 'Google Analytics',
 
+
   const businessInsights = [
     {
       title: 'Remote Work Tools'
@@ -425,25 +426,6 @@ export default function BusinessToolsPage() {
       color: 'text-orange-400'
     },      color: 'text-orange-400'
     }
-    {
-      title: 'AI - Powered Solutions',
-      description: 'Business tools leveraging AI for automation and intelligent insights.',
-      trend: ' High Growth',
-      color: 'text - blue - 400';
-    }
-    {
-      title: 'Cloud - Native Platforms',
-      description: 'Business applications built for scalability and global accessibility.',
-      trend: ' Mainstream',
-      color: 'text-cyan-400'
-    };
-    {
-      title: 'Security & Compliance',
-      description: 'Tools ensuring data protection and regulatory compliance.',
-      trend: ' Critical',
-      color: 'text-orange-400'
-    }
-  ];
   const productivityTips = [
     {
     }
@@ -519,6 +501,11 @@ export default function BusinessToolsPage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Business Tools */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -572,10 +559,22 @@ export default function BusinessToolsPage() {
                         {tool.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                             <Check className="w-4 h-4 text-cursor-blue mr-3 flex-shrink-0" />
+                            {feature}
+                          </li>;
+                        ))}
+                      </ul>
+                    </div>
+
+                    <Button
+
+
                 ))}
-              </div>;
-            </div>;
+              </div>
+            </div>
           ))}
+        </div>
+      </section>
+
       {/* Productivity Tips */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -606,32 +605,109 @@ export default function BusinessToolsPage() {
                 <p className="text-gray-400 text-sm leading-relaxed">{tip.description}</p>
 
 
-
               </Card>
+
+            ))}
+          </div>
+        </div>
+      </section>
+
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
 
             These business tools can streamline your operations, improve team;
             collaboration, and drive growth. Start with the essentials and build;
             your tech stack strategically.;
           </p>;
-              variant="secondary";
-              size="lg";
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl";
+      {/* CTA Section */}
+      <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='container-cursor text-center relative z-10'>
+          <h2 className='text-responsive-lg font-bold text-white mb-8'>
+
+            Ready to Transform Your Business Operations?
+          </h2>
+          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            These business tools can streamline your operations, improve team
+            collaboration, and drive growth. Start with the essentials and build
+            your tech stack strategically.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+            <Button
+              href='/micro-saas'
+              variant='secondary'
+              size='lg'
+              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl'>;
               Explore Micro SaaS;
             </Button>;
             <Button
               href='/contact'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'              href="/contact"
+
+      <section className="section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="container-cursor text-center relative z-10">
+          <h2 className="text-responsive-lg font-bold text-white mb-8">
+            Ready to Transform Your Business Operations?
+          </h2>
+          <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+            These business tools can streamline your operations, improve team collaboration, and drive growth. 
+            Start with the essentials and build your tech stack strategically.
+          </p>
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">
+<Button
+              href="/micro-saas"
+              variant="secondary"
+              size="lg"
+              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
+            <Button
+              href=&quot;/micro-saas&quot;
+              variant=&quot;secondary&quot;
+              size=&quot;lg&quot;
+              className=&quot;bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl&quot;
+
+            >
+              Explore Micro SaaS
+            </Button>
+            <Button
+href="/contact"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
+            >
+
               Get Business Consultation
+
+          <div className='flex flex - col sm:flex - row gap - 6 justify - center'>;
+            <Button;
+              href='/micro - saas';
+              variant='secondary';
+              size='lg';
+              className='bg - white text - cursor - blue hover:bg - gray - 100 shadow - 2xl'            >;
+              Explore Micro SaaS;
+            </Button>;
+            <Button;
+              href='/contact';
+              variant='outline';
+              size='lg';
+              className='border - white text - white hover:bg - white hover:text - cursor - blue shadow - 2xl'            >              href="/micro - saas";
+              variant="secondary";
+              size="lg";
+              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl";
+              Explore Micro SaaS;
+            </Button>;
+              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'            >              href="/micro-saas"
+              variant="secondary"
+              size="lg"
+              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
+              Explore Micro SaaS
             </Button>
-          </div>
-        </div>
-      </section>
-    </>
-);
-}
             <Button

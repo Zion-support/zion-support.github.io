@@ -1,4 +1,22 @@
 
+interface ApplyFormProps {
+
+  job: Job
+  onClose: () => void
+
+  onApplySuccess?: (jobId: string) => Promise<void>
+
+import React, { useState } from 'react';
+import {Button} from "@/components/ui/button";
+import {Loader2} from "lucide-react";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {useMessaging} from "@/context/MessagingContext";
+import {toast} from "@/hooks/use-toast";
+import {ResumeSelector, ResumeOption} from "../resume-selector";
+import {MessageTab} from "./MessageTab";
+import {ResumeTab} from "./ResumeTab";
+import {Job} from "./types";
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
@@ -14,13 +32,33 @@ interface ApplyFormProps {
   onClose: () => void
 
   onApplySuccess?: (jobId: string) => Promise<void>
+import React, { useState } from 'react',
+import { Button } from "@/components/ui/button",
+import { Loader2 } from "lucide-react",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { useMessaging } from "@/context/MessagingContext",
+import { toast } from "@/hooks/use-toast",
+import { ResumeSelector, ResumeOption } from "../resume-selector",
+import { MessageTab } from "./MessageTab",
+interface ApplyFormProps {
+
+  job: Job
+  onClose: () => void
+
+  onApplySuccess?: (jobId: string) => Promise<void>
+}
+interface ApplyFormProps {;
+  job: Job,;
+  onClose: () => void,;
+  onApplySuccess?: (jobId: string) => Promise<void>;
+}
+
+export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormProps) {;
+
+export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
   const { createConversation } = useMessaging();
   const { applyToJob } = useJobApplications();
-export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
-  const { createConversation } = useMessaging(),
-  const { applyToJob } = useJobApplications(),
-  const [message, setMessage] = useState(
-    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
   );
   const [proposalLink, setProposalLink] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -170,6 +208,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       // Call onApplySuccess to update job status in the UI;
       if (onApplySuccess) {;
         await onApplySuccess(job.id);
+      }
+      
       toast({
         title: "Application sent"
         description: `Your application for "${job.title}" has been sent.`})
@@ -184,18 +224,44 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
     } finally {
       setIsSubmitting(false)
 
+      toast({;
+        title: "Application sent",;
+        description: `Your application for "${job && job.title}" has been sent.`}),;
+
+      onClose();
+    } catch (error) {;
+      console && console.error("Failed to send application:", error);
+      toast({;
+        title: "Application failed",;
+        description: "There was an error sending your application. Please try again.",;
+        variant: "destructive";
+      });
+    } finally {;
+      setIsSubmitting(false);
+
+    }
+  }
+    }
+
+  },
+
+
   return (
-    <>
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="w-full mb-4 bg-zion-blue-dark/30">
-          <TabsTrigger value="message" className="flex-1">
-            Message
-          </TabsTrigger>
-          <TabsTrigger value="resume" className="flex-1">
-            Resume
-          </TabsTrigger>
-        </TabsList>
-        <TabsContent value="message">
+
+    <>;
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
+        <TabsList className="w-full mb-4 bg-zion-blue-dark/30">;
+          <TabsTrigger value="message" className="flex-1">;
+            Message;
+          </TabsTrigger>;
+          <TabsTrigger value="resume" className="flex-1">;
+            Resume;
+          </TabsTrigger>;
+        </TabsList>;
+
+        <TabsContent value="message">;
+
+          <MessageTab
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Loader2 } from './lucide-react';
@@ -328,6 +394,9 @@ if ( {) {
         </TabsList>;
         <TabsContent value="message">;
           <MessageTab;
+
+          <MessageTab 
+
             message={message}
             set_message={set_message}
             proposal_link={proposal_link}

@@ -6,23 +6,6 @@ export const checkSignupPatterns = async (;
   email: string;
   ip_address?: string): Promise < SignupCheckResult> => {
   const reasons: string[] = [];
-  const emailCheck = analyzeEmail(email),
-  if (emailCheck && emailCheck.isSuspicious) {
-    reasons && reasons.push(...emailCheck && emailCheck.reasons)
-
-// Signup checking functionality
-import { supabase  } from '@/integrations/supabase/client';
-import { analyzeEmail  } from './analyzeEmail';
-import { SignupCheckResult } from './types';
-/**
- * Check for suspicious signup patterns
- */
-
-export const checkSignupPatterns = async (
-export const checkSignupPatterns = async (;
-  email: string;
-  ip_address?: string): Promise < SignupCheckResult> => {
-  const reasons: string[] = [];
   // Check email against suspicious patterns
   const emailCheck = analyzeEmail(email)
   if (emailCheck.isSuspicious) {
@@ -74,12 +57,6 @@ export const checkSignupPatterns = async (;
     }
   }
   return {
-;
-  // Check email against suspicious patterns;
-  const email_check = analyze_email (email),
-  // Check condition
-if ( {) {
-  $2
 }
     reasons.push (...email_check.reasons);
   }

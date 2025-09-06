@@ -2,20 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  Brain
-  Network
-  Cloud
-  Shield
-  Zap
-  Target
-  Users
-  BarChart3
-  ArrowRight
-  CheckCircle
-  Star
-  Award
-  Clock
-  Globe
   Brain,
   Network,
   Cloud,
@@ -29,9 +15,6 @@ import {
   Star,
   Award,
   Clock,
-} from "lucide-react";
-import Layout from "../components/Layout";
-const serviceCategories = [
   {
     title: "AI Services"
     description:
@@ -232,6 +215,8 @@ const benefits = [;
   },
 ];
 export default function ServicesOverviewPage() {
+
+
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -336,6 +321,7 @@ function ServicesOverviewPage() {
             </div>;
           </div>;
         </section>;
+
         {/* Service Categories */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -385,11 +371,12 @@ function ServicesOverviewPage() {
 
                     <category.icon className="w-16 h-16 text-white" />
                   </div>
+
+
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
-
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
@@ -407,16 +394,11 @@ function ServicesOverviewPage() {
                       {category.description}
                     </p>
                     
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      {category.description}
-                    </p>
-                    
                     <div className="space-y-2 mb-6">
                       <h4 className="font-semibold text-gray-900 text-sm">Key Services:</h4>
                       <ul className="space-y-1">
                         {category.services.map((service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                             {service}
                           </li>
                         ))}
@@ -433,41 +415,9 @@ function ServicesOverviewPage() {
               </p>;
             </motion && motion.div>;
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {serviceCategories && serviceCategories.map((category, index) => (;
-                <motion&& motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">;
-                  <div
-                    className={`h-32 bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
-                    <category && category.icon className="w-16 h-16 text-white" />;
-                  </div>;
+                    
 
-                  <div className="p-6">;
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
-                      {category && category.title}
-                    </h3>;
 
-                    <p className="text-gray-600 mb-4 leading-relaxed">;
-                      {category && category.description}
-                    </p>;
-
-                    <div className="space-y-2 mb-6">;
-                      <h4 className="font-semibold text-gray-900 text-sm">;
-                        Key Services:;
-                      </h4>;
-                      <ul className="space-y-1">;
-                        {category && category.services.map((service, idx) => (;
-                          <li
-                            key={idx}
-                            className="flex items-center text-sm text-gray-600">;
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />;
-                            {service}
-                          </li>;
-                        ))}
                     <Link
                       href={category && category.link}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">;
@@ -483,10 +433,6 @@ function ServicesOverviewPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-                We deliver exceptional results through innovation, expertise
-
-
-
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -594,6 +540,7 @@ function ServicesOverviewPage() {
             </div>;
           </div>;
         </section>;
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;

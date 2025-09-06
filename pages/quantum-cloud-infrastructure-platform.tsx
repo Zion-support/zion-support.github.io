@@ -1,16 +1,31 @@
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
-import React from 'react';
-import Head from 'next / head';
-import ServiceLanding from '../components / sections / ServiceLanding';
-export default /**
- * QuantumCloudInfrastructurePlatformPage - Function description
- */
-function QuantumCloudInfrastructurePlatformPage() {
-import Head from 'next/head',
-import ServiceLanding from '../components/sections/ServiceLanding',
 export default function QuantumCloudInfrastructurePlatformPage() {
 	return (
 		<>
@@ -40,3 +55,5 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 		</>
 	)
 }
+
+

@@ -3,5 +3,3 @@ import React from 'react';
 interface ResearchdevelopmentProps {
   // Add props here as needed
 }
-export default function Researchdevelopment({ }: ResearchdevelopmentProps) {
-

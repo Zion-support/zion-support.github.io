@@ -1,17 +1,8 @@
-
-import Link from "next/link",
-import { Button } from "@/components/ui/button",
-import { Header } from "@/components/Header";
-import { ShieldAlert } from 'lucide-react'
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
             >
               {t('errors.return_home')}
             </Link>
             <Link
-      </div>
-    </>
-  )
-}
       </div>;
     </>;
   );
@@ -22,11 +13,6 @@ import { ShieldAlert } from 'lucide-react'
 import Link from "next/link",;
 import { Button } from "@/components/ui/button",;
 import { Header } from "@/components/Header",;
-
-
-import Link from 'next / link';
-import { Button } from '@/components / ui / button';
-import { Header } from '@/components / Header';
 import { ShieldAlert } from 'lucide-react';
             </Link>;
           </div>;

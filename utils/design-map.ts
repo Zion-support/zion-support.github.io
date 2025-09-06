@@ -3,55 +3,18 @@
   spacing: Record<string, number>;
 }
   components: Record<string, any>;
+
+
   tokens: TokenSet;
 }
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
   return {
-    colors: {
-      primary: '#007AFF'
-      secondary: '#5856D6'
-      success: '#34C759'
-      warning: '#FF9500'
-      error: '#FF3B30'
-    }
-    typography: {
-      heading1: { fontSize: 32, fontWeight: 'bold' }
-      heading2: { fontSize: 24, fontWeight: 'bold' }
-      body: { fontSize: 16, fontWeight: 'normal' }
-    }
-    spacing: {
-      xs: 4
-      sm: 8
-      md: 16
-      lg: 24
-      xl: 32
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
 }
-// Mock design map utility
-export function getDesignMap() {
-  return {
     components: [],
     pages: [],
     styles: []
@@ -190,11 +153,32 @@ export interface FigmaNode {
 }
 
   const tokens = await buildTokenSet(fileId);
-    }
-    tokens
-  }
+    };
+  };
 }
+  const tokens = await buildTokenSet(fileId);
+export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < UIKit> {
+  const tokens = await buildTokenSet (file_id);
+;
+  return {
+
+    id,
+    type,
+    name,
+    properties,
+    children: []
+
+
+
+
+  };
+}
+
+          background_color: tokens.colors.primary,
+          padding: tokens.spacing.md;
         }
       }
     }
     tokens
+  }
+}

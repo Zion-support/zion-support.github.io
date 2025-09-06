@@ -1,140 +1,26 @@
 export const metadata = { 
-  title: 'Data Analytics Services | Zion Tech Group',
-  description: 'Advanced data analytics solutions including business intelligence, data visualization, machine learning, and data engineering.'
 };
 
 export default function DataAnalyticsPage() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Data Analytics Services</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your data into actionable insights with our comprehensive analytics solutions. 
-          From data engineering to advanced visualization, we help you make data-driven decisions.
-        </p>
-      </div>
-
-          />
-          <ServiceCard
-            title="Data Pipeline Development"
-            description="Automated data processing and ETL pipelines for your business"
-            price="Starting at $20k"
-            features={["ETL/ELT pipelines", "Data validation", "Error handling", "Monitoring"]
-          />
-          <ServiceCard
-            title="Predictive Analytics"
-            description="Machine learning models for forecasting and prediction"
-            price="Starting at $25k"
-            features={["Model development", "Data preprocessing", "Model training", "Deployment"]
-          />
-        </div>
-      </div>
-
-      <Pricing />
-    </section>
-  );
-}
-
-function Item({ title, details }: { title: string; details: string[] }) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2">
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
 
-function ServiceCard({ title, description, price, features }: { 
   title: string; 
   description: string; 
+  features: string[]; 
   price: string; 
-  features: string[] 
+  icon: string; 
 }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-200">
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
-      <ul className="space-y-1">
-        {features.map((feature, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="text-green-500 mr-2"></span>
+    <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
             {feature}
           </li>
         ))}
       </ul>
-    </div>
-  );
-}
-
-function Pricing() {
-  return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Data Analytics Service Packages</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Analytics Discovery" 
-          price="$8k–$15k" 
-          duration="2–4 weeks"
-          features={[
-            "Data assessment",
-            "Requirements analysis",
-            "Technology selection",
-            "Architecture design",
-            "Proof of concept",
-            "Implementation roadmap"
-          ]} 
-        />
-        <Plan 
-          name="Analytics Implementation" 
-          price="$20k–$50k" 
-          duration="6–12 weeks"
-          features={[
-            "Dashboard development",
-            "Data pipeline setup",
-            "Model development",
-            "Testing & validation",
-            "User training",
-            "Documentation"
-          ]} 
-        />
-        <Plan 
-          name="Analytics Platform" 
-          price="$50k+" 
-          duration="12+ weeks"
-          features={[
-            "Full platform development",
-            "Advanced analytics",
-            "Machine learning models",
-            "Real-time processing",
-            "Scalable architecture",
-            "Ongoing support"
-          ]} 
-        />
-      </div>
-      
-      <div className="text-center mt-8">
-        <p className="text-gray-600 mb-4">
-          Ready to unlock insights from your data? Let's discuss your analytics needs.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
-      </div>
     </div>
   );
 }
@@ -143,19 +29,108 @@ function Plan({ name, price, duration, features }: {
   name: string; 
   price: string; 
   duration: string;
-  features: string[] 
-}) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-blue-600 mb-1">{price}</div>
-      <div className="text-sm text-gray-500 mb-6">{duration}</div>
-      <ul className="space-y-2">
         {features.map((feature, index) => (
             {feature}
           </li>
         ))}
       </ul>
+      >
+        Get Started
+      </a>
+    </div>
+  );
+}
+
+  return (
+    <div className="text-center p-6">
+      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+        {step}
+      </div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function DataAnalyticsTechStack({ title, technologies }: { 
+  title: string; 
+  technologies: string[]; 
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <div className="flex flex-wrap gap-2">
+        {technologies.map((tech) => (
+          <span key={tech} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+            {tech}
+          </span>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function IndustryAnalytics({ title, description, solutions, icon }: { 
+  title: string; 
+  description: string; 
+  solutions: string[]; 
+  icon: string; 
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="text-gray-600 space-y-2">
+        {solutions.map((solution) => (
+          <li key={solution} className="flex items-center">
+            <span className="text-blue-500 mr-2">•</span> {solution}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function DataAnalyticsBenefitCard({ title, description, icon }: { 
+  title: string; 
+  description: string; 
+  icon: string; 
+}) {
+  return (
+    <div className="text-center p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function Pricing() {
+  return (
+    <section className="mb-16">
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Data Analytics Service Pricing</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan 
+          name="Analytics Assessment" 
+          price="$5k–$15k" 
+          features={["2–3 weeks", "Data audit", "Requirements analysis", "Strategy roadmap", "Tool recommendations"]} 
+          popular={false}
+        />
+        <Plan 
+          name="Dashboard Development" 
+          price="$10k–$35k" 
+          features={["4–8 weeks", "Custom dashboards", "Data integration", "User training", "Documentation"]} 
+          popular={true}
+        />
+        <Plan 
+          name="Advanced Analytics" 
+          price="$20k–$75k" 
+          features={["8–16 weeks", "ML models", "Predictive analytics", "Real-time processing", "Ongoing support"]} 
+          popular={false}
+        />
+      </div>
+    </section>
     </div>
   );
 }

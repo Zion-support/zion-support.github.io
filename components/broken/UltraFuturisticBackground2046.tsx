@@ -50,18 +50,41 @@ if (return) {
           case 'energy':;
             this && this.color = `hsl(${40 + Math && Math.random() * 60}, 100%, 70%)`;
             break;        }            break;
-            break;
-          case 'neural':;
-            this.color = `hsl (${280 + Math.random () * 40}, 80%, 70%)`;
-            break;
-          case 'data':;
-            this.color = `hsl (${200 + Math.random () * 40}, 90%, 80%)`;
-            break;
             break;        }
 
         }
 
       }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life--;
+        // Bounce off edges
+        if (this.x <= 0 |this.x >= canvas.width) this.vx *= -1;
+        if (this.y <= 0 |this.y >= canvas.height) this.vy *= -1;
+        // Add some quantum randomness
+        if (Math.random() < 0.01) {
+          this.vx += (Math.random() - 0.5) * 0.5;
+
+          this.vy += (Math.random() - 0.5) * 0.5
+        }
+
+        // Limit velocity
+        this.vx = Math.max(-3, Math.min(3, this.vx));
+        this.vy = Math.max(-3, Math.min(3, this.vy))
+
+      }
+      draw() {
+        if (!ctx) return;
+
+        
+        const alpha = this.life / this.maxLife;
+        ctx.save();
+        ctx.globalAlpha = alpha;
+        
+        switch (this.type) {
+
           case 'quantum':
             // Quantum particles with wave function
             ctx.beginPath();
@@ -451,8 +474,6 @@ if ( {) {
         {[...Array (8)].map ((_, i) => (
           <motion.div;
             key={i}
-            className='absolute w - 32 h - 32 border border - cyan - 500 / 20 rounded - full';
-            style={{
             }}
             animate={{
               rotate: [0, 360],
@@ -509,8 +530,6 @@ if ( {) {
         {[...Array (5)].map ((_, i) => (
           <motion.div;
             key={`interference-${i}`}
-            className='absolute inset - 0 opacity - 5';
-            style={{
             }}
             animate={{
               scale: [1, 1.5, 1]
@@ -521,7 +540,26 @@ if ( {) {
       </div>;
     </div>;
   );
-      </div>;
-    </div>;
   );
 };
+              duration: Math.random () * 6 + 4,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: i * 0.8,
+            }}          />))}
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2046;              ease: "easeInOut",
+              delay: i * 0.8}}
+          />))}
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2046);
+}
+;
+export default UltraFuturisticBackground2046;
+;

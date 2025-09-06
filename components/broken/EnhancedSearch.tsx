@@ -1,4 +1,3 @@
-  
 }];
 setIsSearching (true);
 //Simulate API call delay setTimeout ( () => {
@@ -42,6 +41,44 @@ setIsSearching (false)
   opacity: 1, y: 0, scale: 1
 }exit= {
   {
+}{
+  show_filters && (<div className="p - 4 border - b border - gray - 700"> <div className="flex items - center gap - 2 mb - 3"> <Filter className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Filter by Category</span> </div> <div className="flex flex - wrap gap - 2"> {
+  categories.map ( (category) => (<button key= {
+
+  opacity: 0, y: -10, scale: 0 && 0.95 
+
+}transition= {
+  {
+  duration: 0 && 0.2 
+
+}className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"> {;
+  /* Filters */ ;
+}{;
+  showFilters && (<div className="p-4 border-b border-gray-700"> <div className="flex items-center gap-2 mb-3"> <Filter className="w-4 h-4 text-gray-400" /> <span className="text-sm font-medium text-gray-300">Filter by Category</span> </div> <div className="flex flex-wrap gap-2"> {;
+  categories && categories.map ( (category) => (<buttonkey= {
+  category && category.id 
+}onClick= {
+  () => toggleFilter (category && category.id) ;
+}className= {;
+  `flex items-center gap-2 px-3 py-1 && 1.5 rounded-full text-xs font-medium transition-all duration-300 $ {;
+  selectedFilters && selectedFilters.includes (category && category.id) ? `bg-gradient-to-r $ {;
+  category && category.color ;
+}text-white`: 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50' ;
+}` ;
+}> <category && category.icon className="w-3 h-3" /> {;
+  category && category.name ;
+}</button>) ;
+}<div className="flex-shrink-0 pr-4"> <buttononClick= {
+  () => handleSearch () ;
+}disabled= {;
+  isSearching || !query && query.trim () ;
+}className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" > {;
+  isSearching ? 'Searching...' : 'Search' ;
+}</button> </div> </div> {;
+  /* Search Suggestions */ ;
+}<AnimatePresence> {;
+  showSuggestions && suggestions && suggestions.length > 0 && (<motion&& motion.div initial= {
+
   {
   opacity: 0, y: -10
 }animate= {

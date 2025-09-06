@@ -1,6 +1,3 @@
-  requestsPerMinute: number;
-  requestsPerHour: number;
-  requestsPerDay: number;
 
   burstLimit: number
 
@@ -15,23 +12,6 @@
   created_at: Date,
   updated_at: Date;
 }
-export interface RateLimitStats {
-  endpoint: string;
-  method: string;
-  total_requests: number;
-  blocked_requests: number;
-  averageResponseTime: number;
-  last_request: Date;
-  current_usage: {
-    minute: number;
-    hour: number,
-    day: number;
-  }
-}
-export interface APIKey {
-
-
-export interface RateLimitStats {;
   endpoint: string;
   method: string;
   total_requests: number;
@@ -405,6 +385,9 @@ export class APIRateLimiterService {;
       ];
     }
   }
+
+      const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
+        method: 'PATCH',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`;
           'Content-Type': 'application/json'}
@@ -475,6 +458,15 @@ if ( {) {
       if (!response.ok) {
         throw new Error(`Failed to fetch rate limit stats: ${response.statusText}`)
       }
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (`Failed to delete rate limit rule: ${response.status_text}`);
+      }
+    } catch (error) {
+      console.error ('Failed to delete rate limit rule:', error);
       throw error;
     }
   }
@@ -495,11 +487,19 @@ if ( {) {
     } catch (error) {
       // Mock stats for demo;
       return [;
+        }
+      ];
+    }
+  }
+
+
+
           }
         }
       ]
     }
   }
+
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/api-keys`, {
@@ -542,6 +542,8 @@ if ( {) {
             requestsPerMinute: 50;
             requestsPerHour: 500;
             requestsPerDay: 5000;
+
+
         }
       ];
     }
@@ -586,6 +588,7 @@ if ( {) {
       ];
     }
   }
+
   async generateReport(): Promise<{
     overview: {
       totalRequests: number;
@@ -615,11 +618,6 @@ if ( {) {
         .sort((a, b) => b && b.totalRequests - a && a.totalRequests)
         .slice(0, 5)
         .map(stat => ({
-  async generate_report (): Promise<{
-    overview: {
-      total_requests: number;
-      blocked_requests: number;
-      active_rules: number,
       activeAPIKeys: number;
     }
     top_endpoints: {
@@ -666,6 +664,7 @@ if ( {) {
     }
   }
 }
+
 // Pricing tiers for the API Rate Limiter service
 // Pricing tiers for the API Rate Limiter service;
 export const API_RATE_LIMITER_PRICING = {
@@ -690,3 +689,5 @@ export const API_RATE_LIMITER_PRICING = {;
     price: 25,;
     period: '/month',;
 
+  }
+};

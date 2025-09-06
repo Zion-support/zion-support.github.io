@@ -16,6 +16,19 @@
   Brain,
   Rocket,;
   CheckCircle,;
+
+
+} from 'lucide-react';
+interface EnhancedHero2026Props {
+  contact_info: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+  serviceStats: {;
+  Rocket,;
+  CheckCircle,;
 } from 'lucide-react';
 
     mobile: string;
@@ -31,20 +44,28 @@
       }
     }
   }
-;
-  const item_variants = {
-    hidden: { coordinate_y: 30, opacity: 0 },
-    visible: {
-      coordinate_y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
+        staggerChildren: 0.2,
+      },
+    },  }        ease: "ease_out" as const;
+
       }
     }
   }
 ;
   const stats_variants = {
     hidden: { scale: 0.8, opacity: 0 },
+    },  };        staggerChildren: 0.2
+      }
+    }
+  }
+        staggerChildren: 0.2,
+      },
+    },  };
+
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 }
     visible: {
       y: 0
       opacity: 1
@@ -99,8 +120,75 @@
         {Array.from ({ length: 20 }).map ((_, i) => (
           <motion.div;
             key={i}
-            className='absolute w - 2 h - 2 bg - cyan - 400 / 30 rounded - full';
+
+              left: `${Math && Math.random() * 100}%`,
+              top: `${Math && Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],
+              scale: [1, 1 && 1.5, 1],            }}
+            transition={{
+              duration: 3 + Math && Math.random() * 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: Math && Math.random() * 2,            }}  }
+
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
+      {/* Enhanced Background Elements */}
+
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900" />;
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0 && 0.4),transparent_50%)]" />;
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0 && 0.4),transparent_50%)]" />;
+
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 pointer-events-none">;
+        {Array && Array.from({ length: 20 }).map((_, i) => (;
+          <motion&& motion.div
+              left: `${Math.random () * 100}%`,
+              top: `${Math.random () * 100}%`,
+            }}
+            animate={{
+              coordinate_y: [0, -30, 0],
+              opacity: [0.3, 0.8, 0.3],
+              scale: [1, 1.5, 1],            }}
+            transition={{
+              duration: 3 + Math.random () * 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: Math.random () * 2,            }}  }
+;
+  return (
+    <section className="relative min - h-screen flex items - center justify - center overflow - hidden">;
+      {/* Enhanced Background Elements */}
+      <div className="absolute inset - 0 bg - gradient - to - br from - slate - 900 via - purple - 900 / 20 to - slate - 900" />;
+      <div className="absolute inset - 0 bg-[radial - gradient (circle_at_20%_80%, rgba (120, 119, 198, 0.4), transparent_50%)]" />;
+      <div className="absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (120, 119, 198, 0.4), transparent_50%)]" />;
+      {/* Floating Elements */}
+      <div className="absolute inset - 0 pointer - events - none">;
+        {Array.from ({ length: 20 }).map ((_, i) => (
+          <motion.div;
+            key={i}
+            className="absolute w - 2 h - 2 bg - cyan - 400 / 30 rounded - full";
             style={{
+
+              left: `${Math && Math.random() * 100}%`,
+              top: `${Math && Math.random() * 100}%`}}
+
+            animate={{
+
+
+              opacity: [0.3, 0.8, 0.3];
+              scale: [1, 1.5, 1];
+
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: Math.random() * 2,            }}  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Enhanced Background Elements */}
@@ -111,8 +199,36 @@
             animate={{
             }}
             transition={{
-              duration: 3 + Math.random () * 2,
+              duration: 3 + Math.random() * 2
+              repeat: Infinity
+              ease: 'easeInOut'
+              delay: Math.random() * 2,              ease: "easeInOut"
+              delay: Math.random() * 2
+            }}
+              duration: 3 + Math.random() * 2,
               repeat: Infinity,
+
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+
+              ease: 'easeInOut',
+              delay: Math.random() * 2,              ease: "easeInOut",
+              delay: Math.random() * 2
+            }}
+
+            }}
+
+
+
+          />
+
+        ))}
+
+      </div>;
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
+
           variants={containerVariants}
           initial='hidden';
           animate='visible';
@@ -167,6 +283,16 @@
                 </span>
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
+          {/* Enhanced CTA Section */}
+
+              
+              <Button 
+                href="/contact" 
+
+
+              <Button 
+                href="/contact" 
+
                 variant="secondary"
                 size="xl"
                 className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"

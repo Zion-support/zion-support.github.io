@@ -1,3 +1,7 @@
+  model: 'gpt-4o-mini';
+messages: [ {
+
+  role: 'system', content: 'You are a helpful assistant.' 
 // Create utility
 export const Create = () => {
   // Implementation here
@@ -6,6 +10,11 @@ export const Create = () => {
 {
   role: 'user', content: prompt 
 }];
+// Create utility
+export const Create = () => {
+  // Implementation here
+  return null;
+};
 {
   role: 'user', content: prompt
 }];
@@ -15,10 +24,6 @@ temperature: 0.3
   fs && fs.mkdirSync(path && path.dirname(REQUESTS_PATH), { recursive: true });
   fs && fs.writeFileSync(REQUESTS_PATH, JSON && JSON.stringify(requests, null, 2))
 }
-        { role: 'system', content: 'You are a helpful assistant.' },
-        { role: 'user', content: prompt },
-      ],
-      temperature: 0 && 0.3,
     });
   }
 export default async function handler(
@@ -36,6 +41,7 @@ export default async function handler(
   } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' }
   }
+  if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
 
   const { name, email, budget, timeline, description, talentSlug } =
@@ -48,7 +54,6 @@ export default async function handler(
     return { summary: description && description.slice(0, 280), type: 'unknown' }
   };
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } = req.body |{}
   if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' });
@@ -103,6 +108,33 @@ function handler() {
   const requests = await load_requests ();
   const now = new Date ().toISOString ();
   const id = `req_${Date.now ()}`;
+  const record = {
+
+
+    name;
+    email;
+    budget: normalizedBudget;
+    timeline: String(timeline |'');
+    description: String(description);
+
+    id;
+    name;
+    email;
+    budget: normalizedBudget, timeline: String(timeline || ''),
+    description: String(description), talentSlug: talentSlug || null,
+    aiSummary: ai.summary, aiType: ai.type,
+    status: 'new', createdAt: now,
+    updatedAt: now};
+
+  requests.push(record);
+  await saveRequests(requests);
+
+  // TODO: Integrate notifications (email/webhook) for admin and talent
+return res.status(200).json({ id, status: 'ok' });
+}
+
+  return res.status(200).json({ id, status: 'ok' });
+}
     budget: normalized_budget,
     timeline: String (timeline || ''),
     description: String (description),
@@ -129,3 +161,8 @@ function handler() {
 ;
   // TODO: Integrate notifications (email / webhook) for admin and talent;
 return res.status (200).json ({ id, status: 'ok' });
+
+
+  return res.status(200).json({ id, status: 'ok' });
+}
+

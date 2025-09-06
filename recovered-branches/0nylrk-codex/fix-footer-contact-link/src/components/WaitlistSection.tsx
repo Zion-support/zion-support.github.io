@@ -70,9 +70,6 @@ export function WaitlistSection() {
               />;
               <Label
                 htmlFor="terms"
-            <Button 
-              type="submit" 
-              disabled={isSubmitting} 
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -120,3 +117,5 @@ export function WaitlistSection() {
           </form>;
         </div>;
       </div>;
+}
+;

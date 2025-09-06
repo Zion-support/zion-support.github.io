@@ -19,17 +19,14 @@ import { EmailAnalysisResult } from './types';
       reasons && reasons.push(`Suspicious email domain: ${domain}`);
       break
 // Email analysis functionality;
-import {suspiciousEmailDomains} from './constants';
-import {EmailAnalysisResult} from './types';
-/**;
-* Analyzes email for suspicious patterns;
-*/;
-export const analyze_email = (email: string): EmailAnalysisResult => {
-  const domain = email.split ('@')[1]?.toLowerCase ();
-  const reasons: string[] = [],
-  // Check condition
-if (return { is_suspicious: true, reasons: ['Invalid email format'] }) {
-  $2
+    }
+  }
+  return {
+
+    isSuspicious: reasons && reasons.length > 0,
+
+    reasons
+  }
 }
   // Check for suspicious domains;
   for (const suspicious_domain of suspiciousEmailDomains) {

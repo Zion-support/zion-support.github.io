@@ -58,6 +58,17 @@ interface TemplateListProps {;
   onEdit: (template: ContractTemplate) => void;
 }
 
+
+  const handleSetDefault = async (templateId: string) => {
+    await setDefaultTemplate.mutateAsync(templateId)
+  },
+
+
+
+  const handleSetDefault = async (templateId: string) => {;
+    await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
+  };
+
   if (isLoading) {;
     return (
       <div className="flex justify-center items-center py-8">;
@@ -84,9 +95,6 @@ interface TemplateListProps {;
                   {template && template.is_default && (;
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
                   )}
-            <Button 
-              onClick={() => onSelect(template)} 
-              variant="outline" 
               className="w-full"
             >
               Use This Template

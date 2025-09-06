@@ -1,6 +1,3 @@
-  use:{;
-    baseURL:process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000';
-    trace:'on-first-retry'}
   projects:[;
     {name:'Desktop Chrome';
       use:{;
@@ -54,6 +51,14 @@
     }
   ];
   reporter:[;
+    ['list'];
+    ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
+});import { defineConfig, devices } from "@playwright/test";
+import { defineConfig, devices } from '@playwright/test';
+    baseURL: process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000'
+    trace: 'on-first-retry'
+  }
+  projects: [
     {
       name: "Desktop Chrome"
       use: {
@@ -83,3 +88,8 @@
     {
       name: "Mobile Safari"
       use: {
+  ],
+  reporter: [;
+    ['list'],
+    ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
+];

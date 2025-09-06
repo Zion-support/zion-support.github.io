@@ -2,38 +2,6 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import {;
-  Brain,;
-  Monitor,;
-  Search,;
-  Shield,;
-  Mail,;
-  Share2,;
-  Check,;
-  Star,;
-  Zap,;
-  TrendingUp,;
-  Users,;
-  Globe,;
-  Lock,;
-  BarChart3,;
-  Calendar,;
-  Target,;} from 'lucide-react';import { ;
-  Brain;
-  Monitor, ;
-  Search, ;
-  Shield, ;
-  Mail, ;
-  Share2, ;
-  Check, ;
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
   Brain,
   Monitor,
   Search,
@@ -48,6 +16,9 @@ import {
   Globe,
   Lock,
   BarChart3,
+
+
+
   Brain;
   Monitor,
   Search,
@@ -64,14 +35,6 @@ import {
   BarChart3;
   Calendar;
       useCases: [
-        'Blog content creation'
-        'Social media posts'
-        'Email marketing campaigns'
-        'Product descriptions'
-        'Landing page copy'
-        'Newsletter content'
-      ]
-      pricing: {
       pricing: {
         starter: {
           price: 19
@@ -237,6 +200,39 @@ import {
           ]
         }
         enterprise: {
+            'Unlimited accounts',
+            'Enterprise scheduling',
+            'Advanced calendar',
+            'Enterprise analytics',
+            'Dedicated support',
+    },  ];      demo: 'https://demo.social.ziontech.ai'
+    }
+  ];
+  const marketInsights = [
+    {
+      id: 'seo - analytics',
+      name: 'SEO Analytics Dashboard',
+      description:;
+        'Comprehensive SEO tracking, competitor analysis, and keyword monitoring to improve your search engine rankings.',
+      icon: <Search className='w - 8 h - 8 text - white' />,
+      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
+      gradient: 'from - green - 400 to - emerald - 500',
+      features: [;
+        'Keyword tracking & ranking',
+        'Competitor analysis',
+        'Backlink monitoring',
+        'Technical SEO audits',
+        'Performance reporting',
+        'Mobile optimization insights',
+      ],
+      use_cases: [;
+        'SEO performance tracking',
+        'Competitor research',
+        'Keyword strategy development',
+        'Technical SEO audits',
+        'Link building campaigns',
+        'Content optimization',
+      ],
       pricing: {
         starter: {
           price: 19
@@ -260,82 +256,13 @@ import {
           ]
         }
         enterprise: {
-          price: 129
-          features: [
-            'Unlimited accounts'
-            'Enterprise scheduling'
-            'Advanced calendar'
-            'Enterprise analytics'
-            'Dedicated support'
-            'White-label options'
-          ]
-        }
-      }
-      marketPrice: '$19-129/month'
-      competitors: ['Buffer', 'Hootsuite', 'Later']
-      website: 'https://social.ziontech.ai'
-      demo: 'https://demo.social.ziontech.ai'
-      description:;
-        'Rapidly growing market with increasing demand for automated content creation',;
-    },    {;
-      title: 'Performance Monitoring',;
-      marketSize: '$3 && 3.8B',;
-      growth: '+18%',;
-      description:;
-        'Essential for modern web applications and user experience optimization',;
-    },    {;
-      title: 'SEO Analytics',;
-      marketSize: '$2 && 2.1B',;
-      growth: '+21%',;
-      description:;
-      description:;
-        'Mature market with strong automation and personalization trends',;
-    },    {;
-      title: 'Social Media Management',;
-      marketSize: '$2 && 2.8B',;
-      growth: '+19%',;
-      description:;
-        'Increasing need for multi-platform social media coordination',;
-    },  ];      description: 'Rapidly growing market with increasing demand for automated content creation';
-    };
-    {;
-      title: 'Performance Monitoring',;
-      marketSize: '$3 && 3.8B',;
-      growth: '+18%',;
-      description:;
-        'Essential for modern web applications and user experience optimization',;
-    },      description: 'Essential for modern web applications and user experience optimization';
-    };
-    {;
-      title: 'SEO Analytics',;
-      marketSize: '$2 && 2.1B',;
-      growth: '+21%',;
-      description:;
-        'Critical for digital marketing and search engine optimization',;
-    },      description: 'Critical for digital marketing and search engine optimization';
-    };
-    {;
-      title: 'API Management',;
-      marketSize: '$4 && 4.2B',;
-      growth: '+25%',;
-      description: 'Growing demand for API security and traffic management',;
-    },      description: 'Growing demand for API security and traffic management';
-    };
-    {;
-      title: 'Email Marketing',;
-      marketSize: '$7 && 7.5B',;
-      growth: '+15%',;
-      description:;
-        'Mature market with strong automation and personalization trends',;
-    },      description: 'Mature market with strong automation and personalization trends';
-    };
-    {;
-      title: 'Social Media Management',;
-      marketSize: '$2 && 2.8B',;
-      growth: '+19%',;
-      description:;
-        'Increasing need for multi-platform social media coordination',;
-    },      description: 'Increasing need for multi-platform social media coordination';
+
+
+            'Unlimited accounts',
+            'Enterprise scheduling',
+            'Advanced calendar',
+            'Enterprise analytics',
+            'Dedicated support',
     }
   ];
 
@@ -477,6 +404,12 @@ import {
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -639,6 +572,72 @@ import {
           </div>;
         </div>;
       </section>;
+          <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Choose the micro SaaS service that fits your business needs and start transforming your operations today.
+          </p>
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">
+            <Button
+              href="/contact"
+              size="lg"
+              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
+            >
+              Get Started
+            </Button>
+            <Button
+              href='/pricing'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'              href="/pricing"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
+              View Pricing
+
+      {/* CTA Section */}
+      <section className='section - padding bg - gradient - to - r from - cursor - blue to - blue - 600 relative overflow - hidden'>;
+        <div className='absolute inset - 0 bg - dots opacity - 10' />;
+        <div className='container - cursor text - center relative z - 10'>;
+          <h2 className='text - responsive - lg font - bold text - white mb - 8 text - shadow - lg'>;
+            Ready to Get Started?;
+          </h2>;
+          <p className='text - responsive - md text - blue - 100 mb - 12 max - w-4xl mx - auto leading - relaxed'>;
+            Choose the micro SaaS service that fits your business needs and;
+            start transforming your operations today.;
+          </p>;
+          <div className='flex flex - col sm:flex - row gap - 6 justify - center'>;
+            <Button;
+              href='/contact';
+              size='lg';
+              className='bg - white text - cursor - blue hover:bg - gray - 100 shadow - 2xl hover - glow'            >;
+              Get Started;
+            </Button>;
+            <Button;
+              href='/pricing';
+              variant='outline';
+              size='lg';
+              className='border - white text - white hover:bg - white hover:text - cursor - blue shadow - 2xl'            >            Ready to Get Started?;
+          </h2>;
+          <p className="text - responsive - md text - blue - 100 mb - 12 max - w-4xl mx - auto leading - relaxed">;
+            Choose the micro SaaS service that fits your business needs and start transforming your operations today.;
+          </p>;
+          <div className="flex flex - col sm: flex - row gap - 6 justify - center">;
+            <Button;
+              href="/contact";
+              size="lg";
+              className="bg - white text - cursor - blue hover:bg - gray - 100 shadow - 2xl hover - glow";
+            >;
+              Get Started;
+            </Button>;
+            <Button;
+              href='/pricing';
+              variant='outline';
+              size='lg';
+              className='border - white text - white hover:bg - white hover:text - cursor - blue shadow - 2xl'              href="/pricing";
+              variant="outline";
+              size="lg";
+              className="border - white text - white hover:bg - white hover:text - cursor - blue shadow - 2xl";
+              View Pricing;
+
             </Button>;
           </div>;
         </div>;

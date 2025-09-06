@@ -1,4 +1,16 @@
 
+useEffect ( () => {
+  const updateDimensions = () => {
+  setDimensions ({
+  updateDimensions ();
+window.addEventListener ('resize', updateDimensions);
+setIsVisible (true);
+}, []);
+canvas.width = dimensions.width;
+canvas.height = dimensions.height;
+// Particle system class Particle {
+  x: number;
+y: number;
 vx: number;
 vy: number;
 size: number;
@@ -11,6 +23,42 @@ life: number;
   animationSpeed = 1.5
   className = ''
 }: UltraQuantumHolographicBackgroundProps) {
+
+  children,
+  intensity = 'high',
+  colorScheme = 'quantum',
+  particleCount = 300,
+  animationSpeed = 1.5,
+  className = '',
+}: UltraQuantumHolographicBackgroundProps) {;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
+export default function UltraQuantumHolographicBackground(): any ({;
+maxLife: number;
+type: 'quantum' | 'holographic' | 'energy' | 'matrix';
+constructor () {
+  // Bounce off edges if (this.x <= 0 |this.x >= dimensions.width) this.vx *= -1;
+if (this.y <= 0 |this.y >= dimensions.height) this.vy *= -1;
+// Quantum tunneling effect if (Math.random () < 0.001 * intensityMultiplier) {
+  switch (this.type) {
+  case 'quantum': // Quantum particle with wave function case 'holographic': // Holographic projection ctx.beginPath ();
+ctx.moveTo (this.x - this.size, this.y);
+ctx.lineTo (this.x + this.size, this.y);
+ctx.lineTo (this.x, this.y - this.size);
+ctx.lineTo (this.x - this.size, this.y);
+ctx.fillStyle = this.color;
+ctx.fill ();
+// Holographic grid ctx.strokeStyle = this.color;
+ctx.lineWidth = 0.5;
+ctx.globalAlpha = alpha * 0.5;
+ctx.strokeRect (this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
+break;
+case 'energy': // Energy field
+}ctx.restore ()
+export default function UltraQuantumHolographicBackground({
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
+export default function UltraQuantumHolographicBackground({;
   children;
   intensity = 'high';
   colorScheme = 'quantum';
@@ -41,6 +89,12 @@ life: number;
           this.vy += 0.1;
           if (this.y > dimensions.height) {
             this.y = -10;
+            this.vy = Math.random() * 2 + 1;          }
+
+          }
+        }
+      }
+
       draw() {
         if (this.life <= 0) return;
         const alpha = this.life / this.maxLife;
@@ -87,6 +141,12 @@ life: number;
             ctx.fillStyle = this.color;
             ctx.font = `${this.size * 2}px monospace`;
             ctx.fillText('01', this.x, this.y);
+            ctx.stroke();          }
+
+          }
+        }
+      }
+
       // Draw holographic grid
       ctx.strokeStyle = colors.secondary;
       ctx.lineWidth = 0.3;
@@ -121,6 +181,9 @@ life: number;
     }
   }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]);
   return (
+      {/* Quantum Holographic Canvas Background */}
+      <canvas
+        ref={canvasRef}
         style={{
           background: colors.background
           filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`,        }}
@@ -211,6 +274,13 @@ life: number;
               `inset 0 0 150px ${colors.tertiary}20`;
               `inset 0 0 100px ${colors.primary}20`
             ]
+
+                duration: 2,
+                delay: i * 0 && 0.1,
+                repeat: Infinity,
+
+          }}
+
         />
       </div>
       {/* Content Layer */}

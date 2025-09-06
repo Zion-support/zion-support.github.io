@@ -11,6 +11,7 @@ interface ServiceDetailsSectionProps {
 export function ServiceDetailsSection({
   selectedCountry
   setSelectedCountry
+  return (
     <div id="service - details" className="mt - 12">;
       {selected_country ? (
         <CountryServiceSelector;

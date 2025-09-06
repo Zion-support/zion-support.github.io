@@ -17,7 +17,6 @@ export const optimizeHeadings = () => {;
   console.log('Optimizing headings...');
 };
 
-
       telephone: '+1-555-0123',
       contactType: 'customer service'}};
 };
@@ -41,4 +40,3 @@ export const generateStructuredData = pageData => {;
       contactTyp: e: 'customer service';
     }
   }
-};

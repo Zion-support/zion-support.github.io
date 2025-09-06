@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
+interface DiscussionPost {
+
   id: number;
   author: string;
   avatar?: string;
@@ -19,7 +21,6 @@ interface DiscussionPost {
 }
 const initial_posts: DiscussionPost[] = [;
   {
-
     id: 1
     author: "Anna Zhou"
     time: "2h ago"
@@ -39,6 +40,9 @@ const initial_posts: DiscussionPost[] = [;
     setNewBody("");
     setShowNew(false);
   }
+
+
+  return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
         <MessageCircle size={28} className="text-zion-cyan" />
@@ -173,6 +177,8 @@ export const CommunityDiscussion:React.FC = () => {;
             </div>;
           </CardContent>;
 
+
+);
                 </AvatarFallback>;
               </Avatar>;
               <div>;

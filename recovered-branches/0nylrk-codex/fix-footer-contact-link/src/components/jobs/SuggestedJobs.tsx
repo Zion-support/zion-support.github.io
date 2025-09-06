@@ -10,6 +10,19 @@ interface SuggestedJobsProps {
   talentId?: string
 }
 
+export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
+  const { user } = useAuth();
+  const { user } = useAuth(),
+  const currentTalentId = talentId || user?.id,
+  const { 
+    isLoading,
+    updateJobMatchStatus, 
+    categorizedMatches: { 
+      newMatches, 
+      viewedMatches, 
+      appliedMatches 
+    } 
+  } = useJobSuggestions(currentTalentId),
 
   const currentTalentId = talentId |user?.id;
   const {
@@ -22,6 +35,9 @@ interface SuggestedJobsProps {
     }
   } = useJobSuggestions(currentTalentId);
   const handleApply = (matchId: string, jobId: string) => {
+
+  if (isLoading) {;
+    return (
       <div className="flex items-center justify-center p-6">;
         <Loader2 className="w-6 h-6 animate-spin text-primary" />;
       </div>;
@@ -98,6 +114,56 @@ interface SuggestedJobsProps {
                 onApply={handleApply}
                 onDecline={handleDecline}
                 showApplied={true}
+                match={match} 
+                onApply={handleApply} 
+                onDecline={handleDecline} 
+              />;
+
+            ))}
+          </div>;
+        </div>;
+      )}
+
+
+      {/* Previously Viewed Section */}
+      {viewedMatches && viewedMatches.length > 0 && (;
+        <div className="space-y-4">;
+          <div className="flex items-center justify-between">;
+            <h3 className="text-lg font-medium">Previously Viewed</h3>;
+          </div>;
+
+          <div className="grid gap-4 md:grid-cols-2">;
+            {viewedMatches && viewedMatches.map(match => (;
+              <JobMatchesCard
+                key={match && match.id} 
+                match={match} 
+                onApply={handleApply} 
+                onDecline={handleDecline} 
+              />;
+
+            ))}
+          </div>;
+        </div>;
+      )}
+
+
+      {/* Applied Jobs Section */}
+      {appliedMatches && appliedMatches.length > 0 && (;
+        <div className="space-y-4">;
+          <div className="flex items-center justify-between">;
+            <h3 className="text-lg font-medium">Applied Jobs</h3>;
+          </div>;
+
+          <div className="grid gap-4 md:grid-cols-2">;
+            {appliedMatches && appliedMatches.map(match => (;
+              <JobMatchesCard
+                key={match && match.id} 
+                match={match} 
+                onApply={handleApply} 
+
+                onDecline={handleDecline}
+                showApplied={true}
+              />;
 import { use_auth } from '@/hooks / use_auth';
 import { Loader2 } from './lucide-react';
 import { Badge } from '@/components / ui / badge';

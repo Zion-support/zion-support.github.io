@@ -18,6 +18,8 @@ function InterviewsContent() {
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
+
+
   
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
@@ -118,10 +120,6 @@ function InterviewsContent() {;
       }
       grouped[dateKey].push(interview);
     }),;
-
-      }
-      grouped[dateKey].push(interview);
-    });
     return grouped;
   };
   const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
@@ -457,6 +455,14 @@ if ( {) {
         </Tabs>;
       </main>;
       <Footer />;
+}
+
+
+
+          </TabsContent>;
+        </Tabs>;
+      </main>;
+      <Footer />;
     </>;
   );
 }
@@ -471,4 +477,3 @@ function Interviews() {
       <InterviewsContent />;
     </ProtectedRoute>);
 }
-;

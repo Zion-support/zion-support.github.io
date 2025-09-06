@@ -7,6 +7,26 @@ interface PostFormValues {
 
   tags: string
 }
+
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [searchParams] = useSearchParams();
+  // Get category from URL query params if available
+  const initialCategory = searchParams.get("category") as ForumCategory | null;
+  const initialValues: Partial<PostFormValues> = {
+    categoryId: initialCategory |"project-help"
+  }
+  const navigate = useNavigate(),
+  const { toast } = useToast(),
+  const [searchParams] = useSearchParams(),
+  
+  // Get category from URL query params if available
+  const initialCategory = searchParams.get("category") as ForumCategory | null,
+  
+  const initialValues: Partial<PostFormValues> = {
+    categoryId: initialCategory || "project-help"
+  },
+
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database

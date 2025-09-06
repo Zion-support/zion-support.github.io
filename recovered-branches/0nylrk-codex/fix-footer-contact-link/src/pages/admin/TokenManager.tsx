@@ -143,8 +143,6 @@ export default function TokenManager() {;
         variant: 'destructive';
       });
     }
-  },
-
   return (
     <ProtectedRoute adminOnly>
       <div>

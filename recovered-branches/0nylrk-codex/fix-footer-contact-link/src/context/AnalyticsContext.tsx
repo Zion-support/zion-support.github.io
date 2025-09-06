@@ -5,19 +5,6 @@ import { useAuth  } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 // Analytics event types
 
-export type AnalyticsEventType =
-  | 'page_view'
-  | 'button_click'
-  | 'form_submit'
-  | 'form_error'
-  | 'search'
-  | 'filter'
-  | 'conversion'
-  | 'listing_view'
-  | 'listing_contact'
-  | 'payment_initiated'
-  | 'payment_completed'
-  type: AnalyticsEventType,;
   path?: string;
   component?: string;
   elementId?: string;
@@ -88,12 +75,12 @@ export type AnalyticsEventType = ;
   clearEvents: () => void;
 }
 
+
   // Track page views when location changes
   useEffect(() => {
     trackEvent('page_view', { path: location.pathname })
     setPageViews((prev) => prev + 1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.pathname]);
   // Function to track general analytics events
   const trackEvent = async (type: AnalyticsEventType, metadata: Record<string any> = {}) => {
     const event: AnalyticsEvent = {
@@ -172,16 +159,10 @@ function AnalyticsProvider() {
         user_id: user?.id,
         metadata: metadata;
       }]);
-  return (
-    <AnalyticsContext&& AnalyticsContext.Provider
-      value={{
-        trackEvent
-        trackConversion
-        pageViews
-        lastEvent
-        events
-        clearEvents
-      }}>;
+
+
+
+
       }}
     >
       {children}
@@ -195,53 +176,11 @@ function AnalyticsProvider() {
   // Cast is used here because the context default is undefined until provided
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.
   return context as AnalyticsContextType
+;
+export const useAnalytics = (): AnalyticsContextType => {;
   const context = useContext(AnalyticsContext);
   if (!context) {;
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
 
 };
-  }
-;
-  // Function to track conversion events;
-  const track_conversion = (conversion_type: string, value?: number, metadata: Record < string, any> = {}) =>: any {
-    track_event ('conversion', {
-      conversion_type,
-      value,
-      ...metadata;
-    });
-  }
-;
-  // Clear events (for development or testing);
-  const clear_events = () =>: any {
-    set_events ([]);
-    setLastEvent (null);
-  }
-;
-  return (
-    <AnalyticsContext.Provider;
-      value={{
-        track_event;
-        track_conversion;
-        page_views;
-        last_event;
-        events;
-        clear_events;
-      }}
-    >;
-      {children}
-    </AnalyticsContext.Provider>);
-}
-export const use_analytics = (): AnalyticsContextType => {
-  const context = useContext (AnalyticsContext);
-  // Check condition
-if ( {) {
-  $2
-}
-    throw new Error ('use_analytics must be used within an AnalyticsProvider');
-  }
-  // Cast is used here because the context default is undefined until provided;
-  // by `AnalyticsProvider`. The runtime check above ensures it's defined.;
-  return context as AnalyticsContextType;
-}
-;

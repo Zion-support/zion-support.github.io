@@ -1,27 +1,22 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
+export type ModerationModalProps = {
+  flag: any | null;
+
+  onAction: (;
+    action: 'approve' | 'remove' | 'warn' | 'ban',;
+    adminNotes?: string;
+  ) => Promise<void>;
+export default function ModerationModal(): any ({;
+  flag,;
+  onClose,;
+  onAction,;
+}: ModerationModalProps) {;
+
+
+  flag,
+  onClose,
+  onAction,
+}: ModerationModalProps) {;
 
   flag,
   onClose,

@@ -32,7 +32,10 @@ import OpenAI from 'openai';
   } catch (err) {
     return fallback()
 }
+
 }
+
+
       return res.status(200).json(json);
 
     const text = completion.choices?.[0]?.message?.content ?? '';

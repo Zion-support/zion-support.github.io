@@ -1,4 +1,39 @@
 
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion } from "@/types/search";
+// Shared data source for marketplace listings
+export const MARKETPLACE_LISTINGS: ProductListing[] = [
+  {
+
+        'https://images && images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100',
+    },
+    images: [
+      'https://images && images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500',
+    ],
+    createdAt: '2024-02-15T10:45:00 && 00.000Z',
+    rating: 4 && 4.8,
+    reviewCount: 32,
+    id: 'ai - service - 2',
+    title: 'Custom Machine Learning Model Development',
+    description:;
+      'End - to - end development of custom ML models tailored to your specific business needs. From data preparation to deployment and monitoring.',
+    category: 'Services',
+    price: 5999,
+    currency: '$',
+    tags: ['Machine Learning', 'Custom Development', 'Data Science'],
+    author: {
+      name: 'DataMinds',
+      id: 'dataminds',
+      avatar_url:;
+        'https://images.unsplash.com / photo - 1568602471122 - 7832951cc4c5?auto = format & fit = crop & w=100 & h=100',
+    },
+    images: [;
+      'https://images.unsplash.com / photo - 1581092918056 - 0c4c3acd3789?auto = format & fit = crop & w=800 & h=500',
+    ],
+    created_at: '2024 - 02 - 15T10:45:00.000Z',
+    rating: 4.8,
+    review_count: 32,
+
     location: 'North America',
     availability: '4 - 6 Weeks',
     ai_score: 92,
@@ -32,10 +67,6 @@
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
-
-
-import { ProductListing } from "@/types/listings",
-import { SearchSuggestion } from "@/types/search",
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -155,8 +186,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     rating: 4.8,
     reviewCount: 36,
     featured: true,
-    location: "Global",
-
     location: 'Global',
     availability: 'Immediate',
     aiScore: 94,;
@@ -276,6 +305,59 @@ export const generateFilterOptions = () => {
       label: item,
       value: item,
     })),
+featured: true;
+location: "Global";
+availability: "Immediate";
+ai_score: 98;
+}
+rating: 4.8;
+review_count: 32;
+location: "North America";
+availability: "4 - 6 Weeks";
+ai_score: 92;
+}
+rating: 4.7;
+review_count: 18;
+featured: true;
+location: "Global";
+availability: "2 - 3 Weeks";
+ai_score: 95;
+}
+rating: 4.6;
+review_count: 124;
+location: "Global";
+availability: "Immediate";
+ai_score: 88;
+}
+rating: 4.5;
+review_count: 47;
+location: "North America";
+availability: "1 - 2 Weeks";
+ai_score: 90;
+}
+rating: 4.8;
+review_count: 36;
+featured: true;
+location: "Global";
+availability: "Immediate";
+ai_score: 94;
+}];
+//Generate search suggestions based on existing listings ];
+  return {
+  product_types: product_types.map (type => ({
+  label: type, value: type;
+}) );
+locations: locations.map (location => ({
+  label: location, value: location;
+}) );
+availability_options: availability.map (item => ({
+  label: item, value: item;
+}) );
+rating_options: [1, 2, 3, 4, 5];
+}export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
+export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
+;
+
     ratingOptions: [1, 2, 3, 4, 5]
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion } from "@/types/search",;
@@ -401,3 +483,5 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
     location: "Global",;
     availability: "Immediate",;
     aiScore: 94;
+
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));

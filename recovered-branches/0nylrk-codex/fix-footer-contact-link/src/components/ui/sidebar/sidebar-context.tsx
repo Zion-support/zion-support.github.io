@@ -17,6 +17,12 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }
+
+export const SidebarProvider = React.forwardRef<;
+  HTMLDivElement;
+export const SidebarProvider = React.forwardRef<
+  HTMLDivElement,
+
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 const SIDEBAR_KEYBOARD_SHORTCUT = "b";
@@ -34,9 +40,6 @@ export interface SidebarProviderProps extends React && React.ComponentProps<"div
   onOpenChange?: (open: boolean) => void;
 }
 export const SidebarProvider = React && React.forwardRef<;
-  HTMLDivElement;
-export const SidebarProvider = React.forwardRef<
-  HTMLDivElement,
   SidebarProviderProps
 >(
   (
@@ -58,27 +61,6 @@ export const SidebarProvider = React.forwardRef<
     const open = openProp ?? _open
     const setOpen = React.useCallback(
       (value: boolean | ((value: boolean) => boolean)) => {
-        const open_state = typeof value === "function" ? value (open) : value;
-        // Check condition
-if ( {) {
-  $2
-}
-          setOpenProp (open_state);
-        } else {
-          _setOpen (open_state);
-        }
-      (value: boolean | ((value: boolean) => boolean)) => {
-        const open_state = typeof value === "function" ? value (open) : value;
-        // Check condition
-if ( {) {
-  $2
-}
-          setOpenProp (open_state);
-        } else {
-          _setOpen (open_state);
-        }
-
-
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
       }
@@ -120,6 +102,9 @@ if ( {) {
         ) {;
           event.preventDefault();
           toggleSidebar();
+        }
+      }
+
       window.addEventListener("keydown", handleKeyDown)
       return () => window.removeEventListener("keydown", handleKeyDown)
     }, [toggleSidebar])

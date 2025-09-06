@@ -52,12 +52,14 @@ export const realMarketServices: RealMarketService[] = [
       'Spend caps, rate limits, and usage alerts',
       'PII redaction and secrets filtering',
       'Prompt templates and versioning',
-      'Comparable to OpenRouter (usage-based) and EdenAI; adds enterprise guardrails and governance.',
-    targetAudience: 'Product teams, platform engineering, data/AI teams',
-    trialDays: 14,
-    setupTime: '1 day',
-    category: 'AI & Data',
-    realService: true,
+      'Latency and cost - aware routing',
+      'Batch and streaming inference',
+      'Audit logs and RBAC',
+      'LangChain / LlamaIndex SDK support',
+      'Export to data warehouse',
+    ],
+    popular: true,
+    icon: '🧠',
     integrations: [
       'OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI'
     ]
@@ -71,6 +73,26 @@ export const realMarketServices: RealMarketService[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+  {
+    id: 'api-observability-starter'
+    name: 'API Observability Starter'
+    tagline: 'Trace, log, and profile your APIs in hours, not weeks'
+    price: '$149'
+    period: '/month'
+    description:
+      'Turn-key instrumentation templates, dashboards, and SLOs for Node/Next.js, with error budgets, golden signals, and alerts integrated out of the box.'
+    features: [
+      'OpenTelemetry auto-instrumentation',
+    id: 'api - observability - starter',
+    name: 'API Observability Starter',
+    tagline: 'Trace, log, and profile your APIs in hours, not weeks',
+    price: '$149',
+    period: '/month',
+    description:;
+      'Turn - key instrumentation templates, dashboards, and SLOs for Node / Next.js, with error budgets, golden signals, and alerts integrated out of the box.',
+    features: [;
+      'OpenTelemetry auto - instrumentation',
+
       'Golden signals dashboards',
       'Error budgets and SLO templates',
       'Jaeger / Tempo tracing ready',
@@ -256,6 +278,29 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'data-futuristic'
     contactInfo: contact
     realImplementation: true
+      'Provider selection guide',
+      'Schema and index templates',
+      'ETL/ingestion pipelines',
+      'Embeddings and chunking best practices',
+      'Latency and cost tuning',
+      'Sample RAG app integration',
+    ],
+    popular: false,
+    icon: '🧭',
+
+    color: 'from-sky-600 to-indigo-700',
+    textColor: 'text-sky-400',
+    link: 'https://ziontechgroup.com/vector-search-starter',
+    marketPosition:;
+      'Accelerator vs DIY; complements vendor docs with turnkey wiring.',
+    targetAudience: 'Data engineers, ML engineers, startups',
+    trialDays: 7,
+    setupTime: '1–2 days',
+    category: 'AI & Data',
+    realService: true,
+    technology: ['Pinecone, Weaviate, Elastic, OpenAI'],
+    integrations: ['Airbyte, Fivetran, Kafka'],
+    useCases: ['RAG prototypes, Semantic search, Personalization'],
     roi: 'Ship POCs 3–5x faster.',
     competitors: ['Native vendor setup, Consultants'],
     marketSize: '$5B vector DB',
@@ -264,12 +309,12 @@ export const realMarketServices: RealMarketService[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails:
-      'Terraform and IaC modules, ETL pipelines, sample notebooks.',
-    launch_date: '2024 - 08 - 20',
-    customers: 58,
-    rating: 4 && 4.6,
-    reviews: 41,
-  },
+      'Terraform and IaC modules, ETL pipelines, sample notebooks.'
+    launchDate: '2024-08-20'
+    customers: 58
+    rating: 4.6
+    reviews: 41
+  }
   {
       'Public status pages',
       'Weekly compliance reports',
@@ -1015,6 +1060,31 @@ export const realMarketServices: RealMarketService[] = [
       'Section templates and styles',
       'Evidence citations',
       'Gap coverage tracking',
+    contactInfo: {
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails:
+      'Document loaders, chunking, topic maps, structured draft generator.'
+    launchDate: '2025-02-20'
+    customers: 14
+    rating: 4.6
+    reviews: 9
+  }
+  {
+
+    id: 'gpt - eval - harness',
+    name: 'LLM Evaluation Harness',
+    tagline: 'Automated evals with golden sets, judges, and regression gates',
+    price: '$79',
+    period: '/month',
+    description:;
+      'Define tasks and datasets, run multi - model evaluations with judge prompts, track metrics and drift, and block risky deployments with CI gates.',
+    features: [;
+
       'Golden sets and prompts',
       'Judge model scoring',
       'Multi - model matrix',
@@ -1228,6 +1298,35 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: true,
     icon: '📇',
+    contactInfo: {
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails:
+      'Minimal CRM with reminders and basic pipeline views.'
+    launchDate: '2025-02-03'
+    customers: 320
+    rating: 4.5
+    reviews: 77
+  }
+      'Contacts and notes',
+      'Reminders and tasks',
+      'Simple pipeline stages',
+      'Email/SMS nudges',
+      'Import/export and tags',
+      'Mobile‑friendly UI',
+    ],
+    popular: true,
+    icon: '📇',
+
+    color: 'from - amber - 600 to - orange - 700',
+    text_color: 'text - amber - 300',
+    link: 'https://ziontechgroup.com / local - micro - crm',
+    market_position:;
+
       'Tooled for simplicity; avoids enterprise CRM bloat and costs.',
     target_audience: 'Local service businesses',
     trial_days: 14,
@@ -1252,6 +1351,33 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 77,
   },
   {
+      'AI suggestions and variants',
+      'Tone and length tuning',
+      'Performance benchmarks',
+      'ESP export and A/B tests',
+      'Spam words and preview',
+      'Team review workflow',
+    ],
+    popular: false,
+    icon: '🧪',
+    color: 'from-cyan-600 to-blue-700',
+    textColor: 'text-cyan-300',
+    link: 'https://ziontechgroup.com/subjectline-optimizer-ai',
+    marketPosition:;
+      'Focused assistant vs. general copy tools; fast iteration for marketers.',
+    targetAudience: 'Growth and lifecycle marketers',
+    trialDays: 7,
+    setupTime: 'Same day',
+    category: 'AI & Marketing',
+    realService: true,
+    technology: ['NLP/LLM', 'ESP APIs'],
+    integrations: ['Mailchimp', 'Klaviyo', 'SendGrid'],
+    useCases: ['Boost open rates', 'Faster copy iteration'],
+    roi: 'Improve opens by 5–15% and reduce time‑to‑send.',
+    competitors: ['Copy.ai', 'Jasper', 'Headline analyzers'],
+    marketSize: '$3B marketing AI',
+    growthRate: '24% YoY',
+    variant: 'ai-futuristic' as any,
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -1360,6 +1486,179 @@ export const realMarketServices: RealMarketService[] = [
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+
+    reviews: 36
+
+import { ServiceVariant } from '../types/service-variants',;
+export interface RealMarketService {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+;
+const contact = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com';
+},;
+export const realMarketServices: RealMarketService[] = [;
+  {;
+    id: 'llm-gateway-cost-control',;
+    name: 'LLM Gateway & Cost Control',;
+    tagline: 'Centralize model access, control spend, add observability and guardrails',;
+    price: '$299',;
+    period: '/month',;
+    description: 'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.',;
+    features: [;
+      'Unified API for multiple LLM providersSpend caps, rate limits, and usage alertsPII redaction and secrets filteringPrompt templates and versioningLatency and cost-aware routingBatch and streaming inferenceAudit logs and RBACLangChain/LlamaIndex SDK support',;
+      'Export to data warehouse';
+    ],;
+    popular: true,;
+    icon: '🧠',;
+    color: 'from-cyan-600 to-blue-700',;
+    textColor: 'text-cyan-400',;
+    link: 'https://ziontechgroup.com/llm-gateway',;
+    marketPosition: 'Comparable to OpenRouter (usage-based) and EdenAI, adds enterprise guardrails and governance.',;
+    targetAudience: 'Product teams, platform engineering, data/AI teams',;
+    trialDays: 14,;
+    setupTime: '1 day',;
+    category: 'AI & Data',;
+    realService: true,;
+    technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'],;
+    integrations: ['OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI'],;
+    useCases: ['Centralized LLM access, Governance and compliance, Cost optimization'],;
+    roi: 'Reduce AI spend by 20–40% with routing and caps.',;
+    competitors: ['OpenRouter, EdenAI, Helicone, PromptLayer'],;
+    marketSize: '$40B+ GenAI platform market',;
+    growthRate: '100% YoY',;
+    variant: 'ai-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Multi-tenant gateway with policy engine, provider adapters, and per-project metering.',;
+    launchDate: '2024-12-01',;
+    customers: 85,;
+    rating: 4.8,;
+    reviews: 61;
+  },;
+  {;
+    id: 'api-observability-starter',;
+    name: 'API Observability Starter',;
+    tagline: 'Trace, log, and profile your APIs in hours, not weeks',;
+    price: '$149',;
+    period: '/month',;
+    description: 'Turn-key instrumentation templates, dashboards, and SLOs for Node/Next.js, with error budgets, golden signals, and alerts integrated out of the box.',;
+    features: [;
+      'OpenTelemetry auto-instrumentationGolden signals dashboardsError budgets and SLO templatesJaeger/Tempo tracing readyGrafana dashboards and alertsLatency heatmaps and p95/p99Service map and dependency view';
+    ],;
+    popular: true,;
+    icon: '📈',;
+    color: 'from-emerald-600 to-teal-700',;
+    textColor: 'text-emerald-400',;
+    link: 'https://ziontechgroup.com/api-observability-starter',;
+    marketPosition: 'Alternative to building in-house, complements Datadog and Grafana Cloud.',;
+    targetAudience: 'Backend engineers, SREs, platform teams',;
+    trialDays: 7,;
+    setupTime: '1 day',;
+    category: 'Observability',;
+    realService: true,;
+    technology: ['OpenTelemetry, Grafana, Prometheus, Tempo, Loki'],;
+    integrations: ['Datadog, Grafana Cloud, New Relic'],;
+    useCases: ['Reduce MTTR, Reliability baselines, Capacity planning'],;
+    roi: 'Cut incident time by 30–60%.',;
+    competitors: ['Datadog APM, New Relic APM, Grafana Cloud Traces'],;
+    marketSize: '$18B observability',;
+    growthRate: '25% YoY',;
+    variant: 'monitoring-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Ready-made Terraform/Grafana dashboards, alerts, and OpenTelemetry setup.',;
+    launchDate: '2024-11-10',;
+    customers: 120,;
+    rating: 4.7,;
+    reviews: 73;
+  },;
+  {;
+    id: 'email-deliverability-warmup',;
+    name: 'Email Deliverability & Warmup Monitor',;
+    tagline: 'Inbox placement, warmup, and sender reputation monitoring',;
+    price: '$79',;
+    period: '/month',;
+    description: 'Improve inbox placement with domain alignment checks (SPF/DKIM/DMARC), seed-list tests, warmup automation, and blacklist monitoring with alerts and remediation playbooks.',;
+    features: [;
+      'SPF/DKIM/DMARC configuration checksSeed-list deliverability testsAutomated sending warmup schedulesBlocklist and reputation monitoringBIMI and TLS validationAlerts to Slack/Email with remediation steps';
+    ],;
+    popular: true,;
+    icon: '📧',;
+    color: 'from-cyan-600 to-blue-700',;
+    textColor: 'text-cyan-400',;
+    link: 'https://ziontechgroup.com/email-deliverability-monitor',;
+    marketPosition: 'Complements ESPs with vendor-agnostic monitoring and playbooks, alternatives include Mailgun, SendGrid add-ons.',;
+    targetAudience: 'Growth, marketing ops, and platform teams',;
+    trialDays: 7,;
+    setupTime: '30 minutes',;
+    category: 'Quality & Monitoring',;
+    realService: true,;
+    technology: ['Next.js, DNS, TLS'],;
+    integrations: ['SendGrid, Mailgun, Postmark'],;
+    useCases: ['Improve inbox placement, Maintain domain reputation, Accelerate pre-launch warmup'],;
+    roi: 'Lift email open rate by 10–30% and reduce spam placement.',;
+    competitors: ['SendForensics, Mailgun Deliverability, Folderly'],;
+    marketSize: '$1B+ deliverability tooling',;
+    growthRate: '15% YoY',;
+    variant: 'monitoring-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true,
+    implementation_details: 'Region rules, consent logging, banner / prefs widgets.';
+    launch_date: '2025 - 02 - 01';
+    customers: 88;
+  }
+];
+;
+    rating: 4.6
+    reviews: 36
 import { ServiceVariant } from '../types/service-variants',;
 export interface RealMarketService {;
   id: string,;

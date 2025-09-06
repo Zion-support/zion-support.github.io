@@ -1,4 +1,13 @@
 import React from 'react';
+const GitHubActionsAutomationBlueprint: React.FC = () => {
+  const automation_workflows = [;
+    {
+      name: 'Continuous Integration'
+      description: 'Automated testing, building, and quality checks'
+      status: 'active'
+      frequency: 'on-push'
+      health: 'excellent'
+    }
     {
       name: 'Continuous Deployment'
       description: 'Automated deployment to staging and production'
@@ -27,6 +36,36 @@ import React from 'react';
   }
 }
   ];
+  const automationFeatures = [
+
+    {
+      feature: 'Self - Healing CI / CD',
+      description: 'Automatic detection and resolution of pipeline failures',
+      benefit: 'Reduced manual intervention and faster deployments',
+      status: 'implemented';
+    },
+    {
+      feature: 'Intelligent Branch Management',
+      description: 'Automated branch synchronization and conflict resolution',
+      benefit: 'Maintained code consistency across branches',
+      status: 'implemented';
+    },
+    {
+      feature: 'Automated Code Review',
+      description: 'AI - powered code quality analysis and suggestions',
+      benefit: 'Improved code quality and reduced review time',
+      status: 'implemented';
+    },
+    {
+      feature: 'Smart Testing Strategy',
+      description: 'Intelligent test selection based on code changes',
+      benefit: 'Faster feedback and reduced test execution time',
+      status: 'implemented';
+    },
+    {
+      feature: 'Deployment Automation',
+      description: 'Zero - downtime deployments with health checks',
+      benefit: 'Seamless updates and improved user experience',
   const performanceMetrics = [
 
     { metric: 'Build Time', value: '2.3 min', target: '5 min', status: 'exceeded' },
@@ -34,7 +73,6 @@ import React from 'react';
     { metric: 'Deployment Frequency', value: '12 / day', target: '5 / day', status: 'exceeded' },
     { metric: 'Lead Time', value: '1.2 hours', target: '4 hours', status: 'exceeded' },
     { metric: 'MTTR', value: '15 min', target: '30 min', status: 'exceeded' },
-  ];
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
@@ -48,6 +86,17 @@ import React from 'react';
   }
 }
   };
+  const getFrequencyColor = (frequency: string) => {
+;
+  const getFrequencyColor = (frequency: string) =>: any {
+    switch (frequency) {
+
+      case 'on-push': return 'bg-blue-500/20 text-blue-400';
+      case 'on-merge': return 'bg-green-500/20 text-green-400';
+      case 'daily': return 'bg-yellow-500/20 text-yellow-400';
+      case 'weekly': return 'bg-purple-500/20 text-purple-400';
+      case 'hourly': return 'bg-orange-500/20 text-orange-400';
+      default: return 'bg-gray-500/20 text-gray-400';
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -96,20 +145,15 @@ import React from 'react';
           </div>
         </div>
         {/* Automation Workflows */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Automation Workflows</h2>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-            {automation_workflows.map ((workflow, index) => (
-              <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <div className="flex justify - between items - start mb - 4">;
-                  <h3 className="text - lg font - semibold text - white">{workflow.name}</h3>;
-                  <span className={`px - 2 py - 1 text - xs rounded - full ${getFrequencyColor (workflow.frequency)}`}>;
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Automation Workflows</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {automationWorkflows.map((workflow, index) => (
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-white">{workflow.name}</h3>
+                  <span className={`px-2 py-1 text-xs rounded-full ${getFrequencyColor(workflow.frequency)}`}>
                     {workflow.frequency}
-                  </span>;
-                </div>;
-                <p className="text - gray - 300 text - sm mb - 4">{workflow.description}</p>;
-                <div className="flex justify - between items - center">;
-                  <span className={`text - xs ${getStatusColor (workflow.status)}`}>;
                     {workflow.frequency  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -120,7 +164,6 @@ import React from 'react';
                 <p className="text-gray-300 text-sm mb-4">{workflow.description}</p>
                 <div className="flex justify-between items-center">
                   <span className={`text-xs ${getStatusColor(workflow.status)}`}>
-
                     ● {workflow.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -130,15 +173,14 @@ import React from 'react';
                   <span className="text-xs text-green-400">● {workflow.health}</span>
                 </div>
               </div>
-        {/* Automation Features */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Automation Features</h2>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">;
-            {automation_features.map ((feature, index) => (
-              <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <div className="flex justify - between items - start mb - 4">;
-                  <h3 className="text - lg font - semibold text - white">{feature.feature}</h3>;
-                  <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (feature.status)}`}>;
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Automation Features</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {automationFeatures.map((feature, index) => (
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>
+                  <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(feature.status)}`}>
                     {feature.status}
                     {feature.status  } catch (error) {
     console.error("Error:", error);
@@ -150,29 +192,32 @@ import React from 'react';
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
                 <p className="text-green-400 text-sm font-medium">Benefit: {feature.benefit}</p>
               </div>
-        {/* Performance Metrics */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Performance Metrics</h2>;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <div className="overflow - x-auto">;
-              <table className="w - full">;
-                <thead>;
-                  <tr className="border - b border - white / 20">;
-                    <th className="text - left py - 3 px - 4 text - green - 400">Metric</th>;
-                    <th className="text - left py - 3 px - 4 text - green - 400">Current Value</th>;
-                    <th className="text - left py - 3 px - 4 text - green - 400">Target</th>;
-                    <th className="text - left py - 3 px - 4 text - green - 400">Status</th>;
-                  </tr>;
-                </thead>;
-                <tbody>;
-                  {performance_metrics.map ((metric, index) => (
-                    <tr key={index} className="border - b border - white / 10">;
-                      <td className="py - 3 px - 4 text - white">{metric.metric}</td>;
-                      <td className="py - 3 px - 4 text - green - 400 font - semibold">{metric.value}</td>;
-                      <td className="py - 3 px - 4 text - gray - 300">{metric.target}</td>;
-                      <td className="py - 3 px - 4">;
-                        <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (metric.status)}`}>;
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-white/20">
+                    <th className="text-left py-3 px-4 text-green-400">Metric</th>
+                    <th className="text-left py-3 px-4 text-green-400">Current Value</th>
+                    <th className="text-left py-3 px-4 text-green-400">Target</th>
+                    <th className="text-left py-3 px-4 text-green-400">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {performanceMetrics.map((metric, index) => (
+                    <tr key={index} className="border-b border-white/10">
+                      <td className="py-3 px-4 text-white">{metric.metric}</td>
+                      <td className="py-3 px-4 text-green-400 font-semibold">{metric.value}</td>
+                      <td className="py-3 px-4 text-gray-300">{metric.target}</td>
+                      <td className="py-3 px-4">
+                        <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
                           {metric.status}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
                           {metric.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -257,9 +302,6 @@ import React from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50"
           >
@@ -279,3 +321,4 @@ import React from 'react';
       </div>
     </div>
   );
+export default GitHubActionsAutomationBlueprint;

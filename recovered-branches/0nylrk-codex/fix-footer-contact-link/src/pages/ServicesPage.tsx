@@ -17,6 +17,13 @@ import { Globe } from "lucide-react",
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
+    id: "service-1",
+    title: "AI Development & Integration",
+    description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems.",
+    category: "Development",
+    price: 5000,
+    currency: "$",
+    tags: ["AI Integration", "Machine Learning", "Enterprise"],
     author: {
       name: "TechSolutions Inc."
       id: "tech-solutions"
@@ -201,3 +208,9 @@ reviewCount: 85
   {
   min: 3000, max: 10000 
 }
+
+      <DynamicListingPage 
+        title="IT & AI Services"
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
+        categorySlug="services"
+

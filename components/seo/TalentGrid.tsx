@@ -128,7 +128,6 @@ if ( {) {
               </span>))}
           </div>;
           <div className="mt - 3 text - sm">;
-            ${p.hourlyRateUsd}/hr  {p.availability}
           </div>;
         </div>))}
     </div>);

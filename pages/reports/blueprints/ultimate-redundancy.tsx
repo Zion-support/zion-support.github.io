@@ -2,20 +2,12 @@ import React from 'react';
 const UltimateRedundancyBlueprint: React.FC = () => {
   const system_features = [;
     {
-
-      name: 'Quantum - Level Redundancy',
-      description: 'Advanced redundancy patterns with quantum - inspired algorithms',
-
-      name: 'Quantum-Level Redundancy',
-      description: 'Advanced redundancy patterns with quantum-inspired algorithms',
-
-      status: 'active',
-      priority: 'critical',
-    },
-    {
-      name: 'Predictive Maintenance',
-      description: 'Proactive system maintenance using predictive analytics',
-      status: 'active',
+      name: 'Quantum-Level Redundancy'
+      description: 'Advanced redundancy patterns with quantum-inspired algorithms'
+      status: 'active'
+      priority: 'critical'
+      health: 'excellent'
+    }
     {
       name: 'AI-Powered Failover'
       description: 'Intelligent failover decisions using machine learning'
@@ -44,6 +36,36 @@ const UltimateRedundancyBlueprint: React.FC = () => {
   }
 }
   ];
+  const advancedCapabilities = [
+
+    {
+      capability: 'Neural Network Monitoring',
+      description: 'Deep learning - based anomaly detection',
+      benefit: 'Early threat detection and prevention',
+      status: 'implemented';
+    },
+    {
+      capability: 'Quantum Encryption',
+      description: 'Post - quantum cryptography for data security',
+      benefit: 'Future - proof security standards',
+      status: 'implemented';
+    },
+    {
+      capability: 'Adaptive Scaling',
+      description: 'Dynamic resource allocation based on AI predictions',
+      benefit: 'Optimal performance and cost efficiency',
+      status: 'implemented';
+    },
+    {
+      capability: 'Cross - Region Synchronization',
+      description: 'Real - time data synchronization across continents',
+      benefit: 'Global consistency and availability',
+      status: 'implemented';
+    },
+    {
+      capability: 'Automated Disaster Recovery',
+      description: 'Intelligent disaster recovery orchestration',
+      benefit: 'Minimal downtime during major incidents',
   const performanceMetrics = [
 
     { metric: 'Uptime', value: '99.99%', target: '99.95%', status: 'exceeded' },
@@ -51,7 +73,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
     { metric: 'Throughput', value: '5.2k req / s', target: '2k req / s', status: 'exceeded' },
     { metric: 'Failover Time', value: '0.8s', target: '2s', status: 'exceeded' },
     { metric: 'Recovery Time', value: '5.2s', target: '15s', status: 'exceeded' },
-  ];
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
@@ -65,6 +86,16 @@ const UltimateRedundancyBlueprint: React.FC = () => {
   }
 }
   };
+  const getPriorityColor = (priority: string) => {
+;
+  const getPriorityColor = (priority: string) =>: any {
+    switch (priority) {
+
+      case 'critical': return 'bg-red-500/20 text-red-400';
+      case 'high': return 'bg-orange-500/20 text-orange-400';
+      case 'medium': return 'bg-yellow-500/20 text-yellow-400';
+      case 'low': return 'bg-green-500/20 text-green-400';
+      default: return 'bg-gray-500/20 text-gray-400';
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -113,20 +144,15 @@ const UltimateRedundancyBlueprint: React.FC = () => {
           </div>
         </div>
         {/* System Features */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Advanced System Features</h2>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-            {system_features.map ((feature, index) => (
-              <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <div className="flex justify - between items - start mb - 4">;
-                  <h3 className="text - lg font - semibold text - white">{feature.name}</h3>;
-                  <span className={`px - 2 py - 1 text - xs rounded - full ${getPriorityColor (feature.priority)}`}>;
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Advanced System Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {systemFeatures.map((feature, index) => (
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-white">{feature.name}</h3>
+                  <span className={`px-2 py-1 text-xs rounded-full ${getPriorityColor(feature.priority)}`}>
                     {feature.priority}
-                  </span>;
-                </div>;
-                <p className="text - gray - 300 text - sm mb - 4">{feature.description}</p>;
-                <div className="flex justify - between items - center">;
-                  <span className={`text - xs ${getStatusColor (feature.status)}`}>;
                     {feature.priority  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -137,7 +163,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
                 <div className="flex justify-between items-center">
                   <span className={`text-xs ${getStatusColor(feature.status)}`}>
-
                     ● {feature.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -147,15 +172,14 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                   <span className="text-xs text-green-400">● {feature.health}</span>
                 </div>
               </div>
-        {/* Advanced Capabilities */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Advanced Capabilities</h2>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">;
-            {advanced_capabilities.map ((capability, index) => (
-              <div key={index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <div className="flex justify - between items - start mb - 4">;
-                  <h3 className="text - lg font - semibold text - white">{capability.capability}</h3>;
-                  <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (capability.status)}`}>;
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Advanced Capabilities</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {advancedCapabilities.map((capability, index) => (
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-white">{capability.capability}</h3>
+                  <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(capability.status)}`}>
                     {capability.status}
                     {capability.status  } catch (error) {
     console.error("Error:", error);
@@ -167,29 +191,32 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-2">{capability.description}</p>
                 <p className="text-red-400 text-sm font-medium">Benefit: {capability.benefit}</p>
               </div>
-        {/* Performance Metrics */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Performance Metrics</h2>;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <div className="overflow - x-auto">;
-              <table className="w - full">;
-                <thead>;
-                  <tr className="border - b border - white / 20">;
-                    <th className="text - left py - 3 px - 4 text - red - 400">Metric</th>;
-                    <th className="text - left py - 3 px - 4 text - red - 400">Current Value</th>;
-                    <th className="text - left py - 3 px - 4 text - red - 400">Target</th>;
-                    <th className="text - left py - 3 px - 4 text - red - 400">Status</th>;
-                  </tr>;
-                </thead>;
-                <tbody>;
-                  {performance_metrics.map ((metric, index) => (
-                    <tr key={index} className="border - b border - white / 10">;
-                      <td className="py - 3 px - 4 text - white">{metric.metric}</td>;
-                      <td className="py - 3 px - 4 text - green - 400 font - semibold">{metric.value}</td>;
-                      <td className="py - 3 px - 4 text - gray - 300">{metric.target}</td>;
-                      <td className="py - 3 px - 4">;
-                        <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (metric.status)}`}>;
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-white/20">
+                    <th className="text-left py-3 px-4 text-red-400">Metric</th>
+                    <th className="text-left py-3 px-4 text-red-400">Current Value</th>
+                    <th className="text-left py-3 px-4 text-red-400">Target</th>
+                    <th className="text-left py-3 px-4 text-red-400">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {performanceMetrics.map((metric, index) => (
+                    <tr key={index} className="border-b border-white/10">
+                      <td className="py-3 px-4 text-white">{metric.metric}</td>
+                      <td className="py-3 px-4 text-green-400 font-semibold">{metric.value}</td>
+                      <td className="py-3 px-4 text-gray-300">{metric.target}</td>
+                      <td className="py-3 px-4">
+                        <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
                           {metric.status}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
                           {metric.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -274,9 +301,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-red-400/50"
           >

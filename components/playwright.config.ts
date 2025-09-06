@@ -1,3 +1,4 @@
+};
 reporter: [ ['list'], ['json', {
   outputFile: playwright-logs/test-results.json'
 }], ['html', {

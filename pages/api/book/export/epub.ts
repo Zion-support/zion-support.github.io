@@ -1,3 +1,4 @@
+
 import { NextApiRequest, NextApiResponse } from "next";
 import { randomUUID } from "crypto";
 import { promises as fs } from "fs";
@@ -92,7 +93,11 @@ export default async function handler(req, res) {
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Failed to build EPUB" });
   } finally {
-
+    try {
+      await fs.unlink(tmpPath);
+    } catch {}
+  }
+}
 ;
   const tmpPath = `/tmp/${randomUUID()}.epub`;
   const options = {;
@@ -112,6 +117,7 @@ export default async function handler(req, res) {
     try { await fs.unlink(tmpPath) } catch {}
   }
 }
+
 function chapterToHtml(text: string): string {
   if (!text) return '';
   return text
@@ -119,6 +125,7 @@ function chapterToHtml(text: string): string {
     .map((p) => `<p>${escapeHtml(p)}</p>`)
     .join('\n')
 }
+
 function escapeHtml(s: string): string {
   return s
     .replace(/&/g, '&amp,')
@@ -138,18 +145,6 @@ export const config = {
       size_limit: "10mb",
     },
   },
-      sizeLimit: "10mb",
-    },
-  },;
-};
-
-function escapeHtml(s: string): string {
-  return s
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
 }
 ;
 function escape_html (string: string): string {

@@ -4,6 +4,26 @@ import { useNavigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+import {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {useAuth} from '@/hooks/useAuth';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
+import Rocket from 'lucide-react/dist/esm/icons/rocket';
+
+import {useState, useEffect} from 'react';
+import {use_navigate} from 'react-router-dom';
+import {use_auth} from '@/hooks / use_auth';
+import {Button} from '@/components / ui / button';
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components / ui / card';
+import Rocket from 'lucide-react / dist / esm / icons / rocket';
+import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
+import {cn} from '@/lib / utils';
+
+interface WizardStep {
+  title: string,
+  description: string,
+  icon: React.ReactNode,
   action: {
     text: string
 
@@ -50,6 +70,8 @@ interface OnboardingWizardProps {;
   className?: string;
 
   className?: string
+
+
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
 
@@ -58,7 +80,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const { user } = useAuth(),
 
   
-
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -157,6 +178,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       onSkip();
     }
   },
+  
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>

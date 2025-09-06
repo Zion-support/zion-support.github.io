@@ -2,7 +2,9 @@
 import {GradientHeading} from "./GradientHeading";
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
 import {Button} from "./ui/button";
-
+import { GradientHeading } from "./GradientHeading",
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
+import { Button } from "./ui/button",
 const services = [
   {
     title: "Servers"
@@ -12,19 +14,6 @@ const services = [
     title: "Storage"
     description: "Scalable storage solutions from SSDs to large-scale enterprise storage systems"
     icon: <HardDrive className="h-10 w-10" />}
-import { GradientHeading } from './GradientHeading';
-import { Server, HardDrive, Network, Clock, Recycle, Truck } from '@/components / icons';
-import { Button } from './ui / button';
-const services = [;
-  {
-    title: "Servers",
-    description: "Enterprise - grade servers for any workload with 24 / 7 maintenance and support",
-    icon: <Server className="h - 10 w - 10" />},
-  {
-    title: "Storage",
-    description: "Scalable storage solutions from SSDs to large - scale enterprise storage systems",
-    icon: <HardDrive className="h - 10 w - 10" />},
-  {
   {
     title: "24x7x365 Support"
     description: "Around-the-clock technical support with rapid response times guaranteed"
@@ -38,11 +27,6 @@ const services = [;
     description: "Flexible rental options for temporary projects and scaling requirements"
     icon: <Truck className="h-10 w-10" />}]
 
-export function GlobalServiceSection() {;
-  return (
-
-export function GlobalServiceSection() {;
-  return (
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
 import { Button } from "./ui/button",;

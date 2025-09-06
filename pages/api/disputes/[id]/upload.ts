@@ -12,10 +12,6 @@ import {
   if (typeof id !== "string")
     return res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
-  if (req.method === "POST") {
-    const dispute = await getDisputeById(id);
-    if (!dispute) return res.status(404).json({ error: "Dispute not found" });
-  const user = parseUserFromRequest(req);
 
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
@@ -73,6 +69,101 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+}
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] },;
+    if (!Array.isArray(files) || files.length === 0) return res.status( error: 'No files' ).json({$2});
+    const now = new Date().toISOString();
+    const dir = await ensureDisputeUploadDir(dispute.id);
+    for (const f of files) {;
+      const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
+      const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64'),;
+      const filePath = path.join(dir, safeName);
+      await fsPromisesWrite(filePath, buffer);
+      dispute.attachments.push({;
+        id: `${Date.now()}-${safeName}`,;
+        fileName: safeName,;
+        fileSize: buffer.length,;
+        mimeType: f.mimeType || 'application/octet-stream',;
+        path: filePath,;
+        uploadedAt: now,;
+        uploadedByUserId: user.id});
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    dispute.updatedAt = now;
+    await upsertDispute(dispute);
+    return res.status(201).json({ dispute });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  res.setHeader('Allow', 'POST');
+  return res.status(405).end('Method Not Allowed');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
+  const fs = await import('fs');
+  await new Promise<void>((resolve, reject) => {;
+    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {;
+      if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()));
+    });
+  });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }

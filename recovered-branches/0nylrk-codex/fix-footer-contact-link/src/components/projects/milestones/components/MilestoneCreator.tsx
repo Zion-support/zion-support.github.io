@@ -5,16 +5,13 @@
 }
 
 
-
-export function MilestoneCreator({;
-
-export function MilestoneCreator(): any ({;
-
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string | null;
   projectType?: string;
 }
+
+
 
 export function MilestoneCreator({;
   onSubmit;

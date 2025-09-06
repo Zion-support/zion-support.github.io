@@ -28,6 +28,12 @@ export function ChatAssistantTrigger() {
     }
   }
   return (
+    }
+  }
+  return (
+    <>;
+
+      <Button;
         onClick={() => setIsOpen(true)}
         size="icon"
         variant="outline"
@@ -53,4 +59,13 @@ export function ChatAssistantTrigger() {
     </>
   )
 }
+import { useState } from './react';
+import { MessageSquare } from './lucide-react';
+import { Button } from '@/components / ui / button';
+import { ChatAssistant } from '@/components / ChatAssistant';
+export /**
+ * ChatAssistantTrigger - Function description
+ */
+function ChatAssistantTrigger() {
+  const [is_open, setIsOpen] = useState (false);
 ;

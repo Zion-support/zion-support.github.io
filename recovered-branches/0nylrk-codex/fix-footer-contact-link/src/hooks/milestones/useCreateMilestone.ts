@@ -32,6 +32,10 @@ export const useCreateMilestone = (project_id?: string) =>: any {
     // Check condition
 if (return null) {
   $2
+    } finally {
+      setIsSubmitting (false);
+    }
+
 export const useCreateMilestone = (projectId?: string) => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -117,8 +121,5 @@ export const useCreateMilestone = (projectId?: string) => {;
   return {;
     createMilestone;
     isSubmitting;
-  return {
-    createMilestone;
-    isSubmitting
   }
-}
+};

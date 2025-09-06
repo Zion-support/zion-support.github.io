@@ -3,5 +3,3 @@ import React from 'react';
 interface ContractaiProps {
   // Add props here as needed
 }
-export default function Contractai({ }: ContractaiProps) {
-

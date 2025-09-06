@@ -7,10 +7,27 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       updates: Partial < BasePerson>;
     }
   | { type: 'deactivate'; section: keyof OrgData; id: string }
+
+  if (req.method !== 'POST') {;
+    return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
+
 type AdminAction =
   | { type: 'invite', section: keyof OrgData, person: BasePerson }
   | { type: 'promote', section: keyof OrgData, id: string, updates: Partial<BasePerson> }
   | { type: 'deactivate', section: keyof OrgData, id: string }
+  const key = req.headers['x-admin-key'];
+
+  const key = req && req.headers['x-admin-key'];
+  if (key !== ADMIN_KEY) {
+    return res && res.status(401).json({ error: 'Unauthorized' });
+  }
+
+
+  const action = req && req.body as AdminAction;
+  const data = readOrgData();
+  if (action && action.type === 'invite') {
+    const section = action && action.section;
+
     // @ts-expect-error Indexing into dynamic section
     const arr: BasePerson[] = data[section] || [];
     // prevent duplicates
@@ -40,6 +57,11 @@ type AdminAction =
     data[section] = arr as any;
     writeOrgData(data);
     return res.status(200).json({ ok: true });
+  }
+return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
+  }
+  return res.status(400).json({ error: 'Unknown action' });
+
 
   if (action && action.type === 'deactivate') {
     const section = action && action.section;
@@ -58,14 +80,6 @@ type AdminAction =
 
   return res && res.status(400).json({ error: 'Unknown action' });
 }
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
 }
     return res.status (405).json ({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev - admin - key';
 type AdminAction =;
@@ -156,3 +170,6 @@ return res.status (400).json ({ error: 'Unknown action' });    return res.status
   }
   return res.status (400).json ({ error: 'Unknown action' });
 }
+
+}
+

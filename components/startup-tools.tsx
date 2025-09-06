@@ -2,23 +2,6 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-  Rocket
-  DollarSign
-  Users
-  BarChart3
-  Mail
-  Calendar
-  Shield
-  Globe
-  ArrowRight
-  Star
-  Check
-  ExternalLink
-  TrendingUp
-  Zap
-  Target
-  Lightbulb
-  BookOpen;} from 'lucide-react';import {
   Rocket,
   DollarSign,
   Users,
@@ -34,6 +17,8 @@ import {
   TrendingUp,
   Zap,
   Target,
+  Lightbulb,
+  BookOpen,} from 'lucide-react';import {
   Rocket;
   DollarSign,
   Users,
@@ -244,10 +229,6 @@ export default function StartupToolsPage() {
           </div>
         </div>
       </section>
-                size='sm'>                Start Learning;
-              </Button>;
-            </Card>;
-
             <Card className='text-center'>;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>;
                 <TrendingUp className='w-8 h-8 text-white' />              </div>;
@@ -278,6 +259,11 @@ export default function StartupToolsPage() {
         </div>;
       </section>;
 
+}
+    </>);
+);
+
+import React from 'react';
 }
 
  export default function StartupToolsPage () {

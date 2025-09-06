@@ -36,7 +36,6 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
 
-
   projectName: string
   scopeSummary: string
   startDate: Date
@@ -93,6 +92,7 @@ export function MilestoneSuggestions({;
       }
     }
 
+
   return (
     <div className="space-y-4">;
       {!showSuggestions && (;
@@ -136,7 +136,3 @@ export function MilestoneSuggestions({;
           </CardContent>
         </Card>
       )}
-                These milestones will be added to your contract;
-              </div>;
-            </div>;
-          </CardContent>;

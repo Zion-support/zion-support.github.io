@@ -16,13 +16,14 @@ import {
   getDefaultAssets,
   buildPressRelease,;
   buildTimeline,;
-} from '../../utils/mediaKit';
 import { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import DatePicker from 'react-datepicker';
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
 const KitPage = () => {;
+
+
   const [bundle, setBundle] = useState<MediaBundle>('general');
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [companyName, setCompanyName] = useState('Zion');
@@ -70,7 +71,6 @@ const KitPage = () => {;
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
-    let y = 760;
     drawText('Zion Media Kit', 50, y, 18);
 import {useCallback, useMemo, useState} from 'react';
 import Head from 'next / head';
@@ -184,6 +184,13 @@ if ( {) {
   }: {;
     type: PressReleaseType;
     title: string;
+    return (
+      <div className="p-4 border rounded-lg space-y-2">
+        <div className="flex items-center justify-between">
+          <h4 className="font-semibold">{title}</h4>
+          <button className="text-sm px-3 py-1 rounded bg-gray-100 hover:bg-gray-200" onClick={onCopy}>Copy</button>
+        </div>
+        <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
       </div>
     );  }
 
@@ -202,13 +209,6 @@ if ( {) {
         <header className='flex items-center justify-between'>
           <h1 className='text-2xl font-bold'>Media Kit</h1>
           <div className='flex gap-2'>
-        />;
-      </Head>;
-
-      <div className='space-y-8'>;
-        <header className='flex items-center justify-between'>;
-          <h1 className='text-2xl font-bold'>Media Kit</h1>;
-          <div className='flex gap-2'>;
             <button
               onClick={onDownloadZip}
               className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700'>;
@@ -225,6 +225,12 @@ if ( {) {
                     key={b}
                     onClick={() => setBundle(b)}
                     className={`px-3 py-1 rounded border ${bundle === b ? 'bg-blue-600 text-white border-blue-600' : 'bg-white'}`}
+                placeholder='Token name';
+              />;
+            </div>;
+          </div>;
+
+
             </div>
             <p className="text-xs text-gray-500 mt-2">Toggle to tailor assets and legal docs.</p>
           </div>
@@ -244,17 +250,6 @@ if ( {) {
             </div>
             {timeline.length>0 && (
               <ul className="mt-3 text-sm list-disc list-inside space-y-1">
-              <li
-                key={a && a.filename}
-                className='flex items-center justify-between border rounded p-2'>;
-                <span className='text-sm'>{a && a.filename}</span>;
-                {a && a.path ? (;
-                  <a href={a && a.path} download className='text-blue-600 text-sm'>;
-                    Download;
-                  </a>;
-                ) : (;
-                  <span className='text-gray-400 text-xs'>generated</span>;
-                )}              </li>;
             {assets.map(a => (
               <li key={a.filename} className="flex items-center justify-between border rounded p-2">
                 <span className="text-sm">{a.filename}</span>
@@ -275,6 +270,13 @@ if ( {) {
             {bundle === 'web3' && (
               <PressReleaseCard type='token-sale' title='Token sale' />
             )}          </div>
+            ))}
+
+          </ul>;
+        </section>;
+
+};
+
         <section className="p-4 border rounded-lg space-y-4">
           <h3 className="font-semibold">Prewritten Press Releases</h3>
           <div className="grid md:grid-cols-3 gap-4">
@@ -284,7 +286,19 @@ if ( {) {
         </section>
       </div>
     </div>
+
+        <section className='p-4 border rounded-lg space-y-4'>;
+          <h3 className='font-semibold'>Prewritten Press Releases</h3>;
+          <div className='grid md:grid-cols-3 gap-4'>;
+            <PressReleaseCard type='seed-round' title='Seed round' />;
+            <PressReleaseCard type='launch' title='Launch' />;
+            {bundle === 'web3' && (;
+              <PressReleaseCard type='token-sale' title='Token sale' />;
+            )}          </div>;
         </section>;
       </div>;
     </div>;
   );
+
+},;
+export default KitPage;

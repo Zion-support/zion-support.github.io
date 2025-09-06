@@ -99,14 +99,25 @@ export function PortfolioBuilder() {;
         <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
-            <ProjectForm 
+
+              {editingProject ? 'Edit Project' : 'Add New Project'}
+            </h2>;
+
+            <ProjectForm
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-
               onCancel={() => {;
                 setShowAddProject(false);
                 setEditingProject(null);
-
+            <ProjectForm 
+              project={editingProject || undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+              onCancel={() => {
+                setShowAddProject(false);
+                setEditingProject(null)
+              onCancel={() => {;
+                setShowAddProject(false);
+                setEditingProject(null);
               }}
             />;
           </CardContent>;

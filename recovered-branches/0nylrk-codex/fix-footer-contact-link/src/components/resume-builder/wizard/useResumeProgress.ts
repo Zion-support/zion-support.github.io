@@ -27,13 +27,30 @@ if ( {) {
     // Work experience (1 point if at least one entry);
     if (resume.work_experience && resume.work_experience.length > 0) {;
       completed += 1;
+    }
+;
+    // Education (1 point if at least one entry);
+    }
+
+    // Skills (1 point if at least one entry);
+    // Check condition
+if ( {) {
+  $2
+}
+
+      completed += 1;
+    if (resume && resume.skills && resume && resume.skills.length > 0) {
+      completed += 1
+    }
+
+    // Certifications (1 point if at least one entry);
+    // Check condition
+if ( {) {
+  $2
+}
+
       completed += 1;
     if (resume && resume.certifications && resume && resume.certifications.length > 0) {
       completed += 1
     }
-    const progressPercentage = (completed / 5) * 100;
-    setProgress(progressPercentage);
-  }, [resume]);
-  return progress;
-}
-
+};

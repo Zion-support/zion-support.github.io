@@ -7,7 +7,6 @@ import {format} from 'date - fns';
 import {EducationFormProps} from './types';
 import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
-export function EducationForm({ ;
   resumeId;
   educationEntries
   onComplete
@@ -40,7 +39,12 @@ export function EducationForm({ ;
     if (success) {
       setEditingId(null)
     }
+    }
+
+
   };
+
+
 
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!)
@@ -91,6 +95,13 @@ export function EducationForm({ ;
       </div>
       <EducationList 
         educationEntries={educationEntries} 
+
+  return (
+
+
+      <EducationList 
+        educationEntries={educationEntries} 
+
         onEdit={handleEdit}
         onDelete={handleDelete}
       />

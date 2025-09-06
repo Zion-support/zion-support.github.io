@@ -19,6 +19,9 @@ const ResetPassword: NextPage = () => {
     </div>;
   ),;
 };
+export default ResetPassword;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > ResetPassword</h1>;
@@ -29,3 +32,5 @@ import Head from 'next / head';
 ;
 export default ResetPassword;
 ;
+
+

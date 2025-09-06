@@ -58,7 +58,6 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Briefcase
 
-import {
   Menu,
   X,
   ChevronDown,
@@ -133,10 +132,6 @@ import {
         price: '$75, 999 / month',
       },
       {
-        name: 'Space Mining Automation Platform',
-        href: '/space - mining - automation - platform',
-        description: 'Automate asteroid and lunar mining',
-        price: '$65, 999 / month',
       },
     ],
   },  {      { name: 'Mars Colonization Automation Platform', href: '/mars - colonization - automation - platform', description: 'Automate Mars colonization process', price: '$99, 999 / month' }
@@ -144,6 +139,7 @@ import {
       { name: 'Space Mining Automation Platform', href: '/space - mining - automation - platform', description: 'Automate asteroid and lunar mining', price: '$65, 999 / month' }
     ];
   }
+
 const mainNavItems = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -226,6 +222,33 @@ export default function UltraFuturisticNavigation2029() {;
   return (
     <>;
       {/* Top Contact Bar */}
+
+              <Phone size={14} />
+              <span>{contactInfo.mobile}</span>
+            </a>
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>
+        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
+          <div className='flex items-center space-x-6'>
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
+            >
+              <Phone size={14} />
+              <span>{contactInfo.mobile}</span>
+            </a>
+            <a
+              href={`mailto:${contactInfo.email}`}
+              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
+            >
+              <Mail size={14} />
+              <span>{contactInfo.email}</span>
+            </a>
+            <div className='flex items-center space-x-2'>              <MapPin size={14} />
+              <span>{contactInfo.address}</span>
+            </div>
+          </div>              <Phone size={14} />
+              <span>{contactInfo.mobile}</span>
+            </a>
             <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-300 transition-colors">
               <Mail size={14} />
               <span>{contactInfo.email}</span>
@@ -235,11 +258,6 @@ export default function UltraFuturisticNavigation2029() {;
               <span>{contactInfo.address}</span>
             </div>
           </div>
-
-
-
-              {contactInfo.website.replace('https://', '')}
-
             </a>
           </div>
         </div>
@@ -344,6 +362,21 @@ export default function UltraFuturisticNavigation2029() {;
 
                 </Link>
 
+              ))}
+              {/* Services Dropdown */}
+              <div className='relative group'>
+                <button className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>
+                  <Briefcase
+                    size={16}
+                    className='group-hover:text-cyan-400 transition-colors'
+                  />
+                  <ChevronDown
+                    size={14}
+                    className='group-hover:rotate-180 transition-transform duration-200'
+                  />
+                </button>
+                {/* Mega Menu */}
+
               </div>
             </motion.div>
 
@@ -356,6 +389,7 @@ export default function UltraFuturisticNavigation2029() {;
               {/* Services Dropdown */}
 
 
+
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
@@ -364,7 +398,7 @@ export default function UltraFuturisticNavigation2029() {;
                         transition={{ delay: index * 0.1 }}
                         className='group'
 
-
+                      >
                         <div
                           className={`p-4 rounded-lg bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>;
                           <div className='flex items-center space-x-3 mb-3'>;
@@ -444,6 +478,47 @@ export default function UltraFuturisticNavigation2029() {;
         </div>
       </nav>
 
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+
+                                  </span>;
+                                </div>;
+                                <p className="text - xs text - gray - 500 mt - 1">{service.description}</p>;
+                              </Link>))}
+                          </div>;
+                        </div>;
+                      </motion.div>))}
+                  </div>;
+                </div>;
+              </div>;
+              {/* CTA Button */}
+              <motion.button;
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}
+                className='px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 40'              >                className="px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 40";
+              >;
+                Get Started;
+              </motion.button>;
+            </div>;
+            {/* Mobile Menu Button */}
+            <div className='lg:hidden'>;
+              <button;
+                on_click={toggle_menu}
+                className='text - gray - 300 hover:text - white transition - colors'              >            <div className="lg:hidden">;
+              <button;
+                on_click={toggle_menu}
+                className="text - gray - 300 hover:text - white transition - colors";
+                {is_open ? <X size={24} /> : <Menu size={24} />}
+
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+      </nav>;
+
+
+
+
+
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -503,16 +578,59 @@ export default function UltraFuturisticNavigation2029() {;
                       key={item && item.name}
                       href={item && item.href}
                       onClick={closeMenu}
+                {/* Mobile Services */}
+                <div className='mt-8'>
+                  <h3 className='text-lg font-semibold text-white mb-4'>
+                    Our Services
+                  </h3>
+                  <div className='space-y-3'>
+                    {serviceCategories.slice(0, 6).map(category => (
+                      <div
+                        key={category.title}
+                        className='p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20'
+                      >
+                        <h4 className='font-medium text-white mb-2'>
+                          {category.title}
+                        </h4>
+                        <p className='text-sm text-gray-400 mb-3'>
+                          {category.description}
+                        </p>
+                        <div className='space-y-2'>
+                          {category.services.slice(0, 2).map(service => (                            <Link
+                              key={service.name}
+                              href={service.href}
+                              onClick={closeMenu}                <div className="mt-8">
+                  <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>
+                  <div className="space-y-3">
+                    {serviceCategories.slice(0, 6).map((category) => (
+                      <div key={category.title} className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
+                        <h4 className="font-medium text-white mb-2">{category.title}</h4>
+                        <p className="text-sm text-gray-400 mb-3">{category.description}</p>
+                        <div className="space-y-2">
+                          {category.services.slice(0, 2).map((service) => (
+                              key={service.name}
+                              href={service.href}
+                              onClick={closeMenu}
+                              className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200'
+                            >
+                              <div className='flex items-center justify-between'>
+                                <span className='text-sm text-gray-300'>
+                                  {service.name}
+                                </span>
+                                <span className='text-xs text-cyan-400 font-mono'>
+                                  {service.price}
+                                </span>                              </div>                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200"
+                            >
+                              <div className="flex items-center justify-between">
+                                <span className="text-sm text-gray-300">{service.name}</span>
+                                <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
+
+
                             </Link>
                           ))}
                         </div>;
                       </div>;
                     ))}
-
-                  </div>;
-                </div>;
-
-
 
                 {/* Mobile CTA */}
                 <div className='mt-8'>;
@@ -531,14 +649,31 @@ export default function UltraFuturisticNavigation2029() {;
             </div>;
           </motion && motion.div>;
         )}
+                {/* Mobile CTA */}
+                <div className="mt-8">
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                  >
+                    Get Started
+                  </motion.button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {/* Spacer for fixed navigation */}
+      <div className='h-20' />
     </>
       </AnimatePresence>;
-
       {/* Spacer for fixed navigation */}
       <div className='h-20' />;
     </>;
   );      <div className="h-20" />;
     </>;
+  );
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -676,3 +811,4 @@ export default function UltraFuturisticNavigation2029() {;
     </>);      <div className="h - 20" />;
     </>);
 }
+

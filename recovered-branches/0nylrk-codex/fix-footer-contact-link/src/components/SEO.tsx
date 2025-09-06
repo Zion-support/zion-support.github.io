@@ -1,7 +1,15 @@
-  title;
-  description;
-  keywords;
+interface SEOProps {
 
+  title: string
+  description: string
+
+  keywords?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  canonical?: string;
+import { Helmet } from "react-helmet-async",
+import {Helmet} from "react-helmet-async";
+import { Helmet } from "react-helmet-async",
 interface SEOProps {
   title: string,
   description: string,
@@ -15,6 +23,23 @@ export function SEO({
   title,
   description,
   keywords,
+  // Default to the Google Drive image URL
+
+  ogImage = "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
+  ogUrl;
+  canonical
+  noindex}: SEOProps) {
+  const siteTitle = "Zion - The Future of Tech & AI Marketplace";
+  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+
+  ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
+  ogUrl,
+  canonical,
+  noindex}: SEOProps) {
+  const siteTitle = "Zion - The Future of Tech & AI Marketplace",
+  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,
+  
+  return (
     <Helmet>;
       <title>{fullTitle}</title>;
       <meta name="description" content={description} />;
@@ -74,3 +99,5 @@ export function SEO({;
       {noindex && <meta name="robots" content="noindex" />}
     </Helmet>;
   );
+}
+;

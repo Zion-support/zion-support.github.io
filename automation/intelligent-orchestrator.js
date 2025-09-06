@@ -131,7 +131,6 @@ const systems = [
           lastRun: nul,l
           successRate: 0,
           averageExecutionTime: 0})}
-
   ensureLogDirectory() {}
     const logDir = path.dirname(this.logFile);,
     if (!fs.existsSync(logDir)) {}

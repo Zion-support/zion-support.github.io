@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -379,9 +378,6 @@ interface HealthData {
                 ) : (;
                   <p className='text-gray-600 text-sm'>No recurring errors</p>;
 
-
-        <TabsContent value="metrics" className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Card>
               <CardHeader className='pb-2'>
                 <CardTitle className='text-sm'>Error Rate</CardTitle>
@@ -479,22 +475,9 @@ interface HealthData {
                   No specific recommendations at this time;
                 </p>;
               )}
-                <ul className="space-y-3">
-                  {healthData.health.recommendations.map((rec, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
-                      <span className="text-sm">{rec}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-gray-600">No specific recommendations at this time</p>
-              )}
-            </CardContent>;
-          </Card>;
-        </TabsContent>;
-      </Tabs>;
-    </div>);
+
+      const response = await fetch ('/api / admin / health');
+      // Check condition
+if ( {) {
+  $2
 }
-export default HealthDashboard;
-export default HealthDashboard,

@@ -4,6 +4,19 @@
 ;
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+
+
+import {;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Send,;
+  CheckCircle,;
+  AlertCircle,;
+'use client';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
   Mail
   Phone
   MapPin
@@ -77,6 +90,62 @@ const ContactForm: React.FC = () => {;
       setSubmitStatus('error');
     } finally {;
       setIsSubmitting(false);    }
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+  const services = [
+    'AI Development'
+    'Cloud Architecture'
+    'Digital Transformation'
+    'IoT Platforms'
+    'Blockchain Solutions'
+    'Data Analytics'
+    'Other',  ];    'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther'
+  ];
+
+  const contactInfo = [;
+    {;
+      icon: Mail,;
+      title: 'Email Us',;
+      content: 'contact@ziontechgroup && ziontechgroup.com',;
+      href: 'mailto:contact@ziontechgroup && ziontechgroup.com',;
+    },    {;
+      icon: Phone,;
+      title: 'Call Us',;
+      content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup && ziontechgroup.com';
+    };
+    {;
+      icon: Phone,;
+      title: 'Call Us',;
+      content: '+1 (555) 123-4567',;
+      href: 'tel:+15551234567',;
+    },    {;
+      icon: MapPin,;
+      title: 'Visit Us',;
+      content: '123 Tech Street, Innovation City, IC 12345',;
+      href: '#',;
+    },;
+
+
+  return (
+    <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
+      {/* Background Elements */}
+
+      <div className='absolute inset-0'>;
+        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
+        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0 && 0.1),transparent_50%)]' />;
+      </div>;
+
+      <div className='relative container mx-auto px-4'>        {/* Section Header */}      <div className="relative container mx-auto px-4">;
+
+  ];
+;
+  const contact_info = [;
+    {
+      icon: Mail
+      title: 'Email Us'
+      content: 'contact@ziontechgroup.com'
       href: 'mailto:contact@ziontechgroup.com'
     };
     {
@@ -92,6 +161,7 @@ const ContactForm: React.FC = () => {;
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]" />
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]" />
       </div>
+
 
         >
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
@@ -118,6 +188,7 @@ const ContactForm: React.FC = () => {;
           </p>
         </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+          {/* Contact Information */}
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}
 
@@ -136,6 +207,8 @@ const ContactForm: React.FC = () => {;
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
+
+                >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <info.icon className="w-6 h-6 text-white" />
                   </div>
@@ -146,18 +219,22 @@ const ContactForm: React.FC = () => {;
                     </p>
                   </div>
                 </motion.a>
+              ))}
+            </div>
 
-            </div>;
-
-
+            {/* Additional Info */}
+            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
               viewport={{ once: true }}
+          {/* Contact Form */}
+          <motion&& motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
+
           >
             {submitStatus === 'success' ? (
               <motion.div
@@ -247,6 +324,9 @@ const ContactForm: React.FC = () => {;
                 </button>;
               </form>;
             )}
+export default ContactForm;
+
+
                 <div>;
                   <label;
                     html_for='service';
@@ -364,4 +444,3 @@ export default ContactForm;  )
 }
 export default ContactForm;
 
-export default ContactForm;

@@ -44,3 +44,5 @@ export function useIsMobile() {;
     return undefined;
   }, []);
   return isMobile;
+}
+;

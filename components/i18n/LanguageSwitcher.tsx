@@ -1,3 +1,12 @@
+
+
+const localeToFlag: Record<string, string> = {
+
+  en: 'us',
+  pt: 'br',
+  es: 'es',
+  ar: 'sa'},
+const localeLabelKey: Record<string, string> = {
   en: 'lang.english'
   pt: 'lang.portuguese'
   es: 'lang.spanish'
@@ -69,6 +78,8 @@ export default function LanguageSwitcher() {;
         </ul>;
       )}
     </div>
+);
+}
   );
 }
 import {use_translation} from 'react - i18next';
@@ -166,3 +177,14 @@ function LanguageSwitcher() {
             </li>))}
         </ul>)}
     </div>);
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+    </div>
+
+  );
+}
+

@@ -36,9 +36,6 @@
     }
   }
 ];
-  }
-}
-
 export const enterpriseITServices: EnterpriseItService[] = [
   {
     id: "enterprise-architecture", name: "Enterprise Architecture Consulting",
@@ -54,6 +51,11 @@ export const enterpriseITServices: EnterpriseItService[] = [
     link: "/services/enterprise-architecture", category: "Enterprise IT",
     realImplementation: true,
     contactInfo: {
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

@@ -2,11 +2,23 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 export interface Message {
+import {ChatMessage} from './ChatMessage';
+import {ChatInput} from './ChatInput';
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {X} from "lucide-react";
+import React, { useState, useEffect, useRef, ReactNode } from 'react',
+import { ChatMessage } from './ChatMessage',
+import { ChatInput } from './ChatInput',
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { X } from "lucide-react",
+export interface Message {
+  id: string,
+  role: 'user' | 'assistant',
+  message: string,
+  timestamp: Date,
   read?: boolean
-    id: string,
-    name: string,;
-
-
 }
 
   id: string
@@ -75,6 +87,18 @@ export function ChatAssistant({;
   onSendMessage,;
   contextHeader;
 }: ChatAssistantProps) {;
+
+  const [messages, setMessages] = useState<Message[]>(initialMessages),;
+  const messagesEndRef = useRef<HTMLDivElement | null>(null),;
+  useEffect(() => {;
+    if (initialMessages.length > 0) {;
+      setMessages(initialMessages);
+    }
+  }, [initialMessages]),
+
+
+
+
   useEffect(() => {
     scrollToBottom()
   }, [messages]),

@@ -307,6 +307,37 @@ function collectAllServices(): Svc[] {
     realMarketServices as Svc[]
     realVerifiedServices as unknown as Svc[]
   );
+
+function normalizeSlug(): any (value: string): string {;
+  return value;
+    .toLowerCase();
+    .replace(/[^a-z0-9]+/g, '-');
+    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(): any (link?: string): string | null {;
+
+
+  if (!link) return null;
+  try {;
+    const url = new URL(link);
+
+    const path = url && url.pathname.replace(/^\/+|\/+$/g, '');
+    // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/...";
+    if (path && !path && path.includes('/')) return path;
+    return null;
+  } catch {;
+    return null;
+
+
+  };
+}
+
+
+
+  const services = collectAllServices();
+
+  const candidateSlugs = new Set<string>(),;
+  // Gather existing root-level page slugs to avoid conflicts;
+  const pagesDir = path && path.join(process && process.cwd(), 'pages');
+
   const staticSlugs = new Set<string>();
   try {;
     const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true });
@@ -366,6 +397,27 @@ export const getStaticPaths: GetStaticPaths = async () => {
           }
     }
   } catch {}
+      const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
+    for (const entry of entries) {
+      if (&& /\.tsx?$/.test (entry.name)) {) {
+  $2
+}
+        const base = entry.name.replace (/\.(tsx | ts | jsx | js)$/i, '');
+        if () {) {
+  $2
+}
+          static_slugs.add (base.toLowerCase ());
+        }
+
+
+
+
+
+  // Exclude any slug that conflicts with an existing root page file
+  const uniqueNonConflicting = Array.from(candidateSlugs).filter(
+    slug => !staticSlugs.has(slug)
+  );
+  return {
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
     fallback: true,
   };
@@ -394,6 +446,32 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
+
+
+      const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
+    for (const entry of entries) {;
+      if (entry && entry.isFile() && /\.tsx?$/.test(entry && entry.name)) {;
+        const base = entry && entry.name.replace(/\.(tsx|ts|jsx|js)$/i, '');
+        if (base !== 'index' && base !== '[slug]' && !base && base.startsWith('_')) {;
+          staticSlugs && staticSlugs.add(base && base.toLowerCase());
+        }
+    }
+  } catch {}
+  // Exclude any slug that conflicts with an existing root page file;
+  const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter(;
+    slug => !staticSlugs && staticSlugs.has(slug);
+  );
+  return {;
+    paths: uniqueNonConflicting && uniqueNonConflicting.map(slug => ({ params: { slug } })),;
+    fallback: true,;
+  };
+};
+export const getStaticProps: GetStaticProps = async ({ params }) => {;
+  // No dynamic fetching needed; the component resolves the service client-side.;
+  return { props: {} };};
+  // Exclude any slug that conflicts with an existing root page file;
+  const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter((slug) => !staticSlugs && staticSlugs.has(slug));
+
 
   return {;
     paths: uniqueNonConflicting && uniqueNonConflicting.map((slug) => ({ params: { slug } })),;
@@ -430,7 +508,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client - side.;
   return { props: {} }
 }
-;
   return { props: {} };
 };
 

@@ -1,4 +1,3 @@
-
   id: string;
   name: string;
   tagline: string;
@@ -368,3 +367,5 @@ const contact = {
     market_advantage: 'Advanced AI energy platform with comprehensive sustainability features';
   }
 ];
+export default comprehensiveInnovativeServices;
+export default comprehensiveInnovativeServices;

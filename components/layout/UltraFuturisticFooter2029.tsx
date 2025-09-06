@@ -227,6 +227,23 @@ const footerSections = [
                 </a>
               ))}
 
+];
+
+
+              ))}
+
+            </div>;
+          </div>;
+
+
+          {/* Service Categories */}
+          <div className='lg:col-span-1'>
+            <h4 className='text-lg font-semibold text-white mb-6'>
+              Our Services
+            </h4>
+            <div className='space-y-4'>
+
+
               {serviceCategories.map((category, index) => (
                 <div key={index}>
                   <h5 className='text-sm font-medium text-gray-300 mb-3'>
@@ -239,12 +256,24 @@ const footerSections = [
                   </ul>;
                 </div>;
               ))}
+            </div>;
+          </div>;
+
+
+          {/* Quick Links */}
+          <div className='lg:col-span-1'>
+            <h4 className='text-lg font-semibold text-white mb-6'>
+              Quick Links
+            </h4>
+            <div className='grid grid-cols-2 gap-2'>
+              {quickLinks.map(link => (
+
+
                 <Link
                   key={link.name}
                   href={link.href}
                   className='flex items-center space-x-2 text-sm text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-slate-800/50'
                 >
-
                   <link.icon className='w-4 h-4' />                  <span>{link.name}</span>
 
                   <span>{link.name}</span>
@@ -268,6 +297,7 @@ const footerSections = [
                       </li>;
 
 
+          {/* Footer Sections */}
           {/* Footer Sections */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>
@@ -440,6 +470,17 @@ const UltraFuturisticFooter2029 = () =>: any {
                         </Link>
                       </li>
                     ))}
+      {/* Bottom Footer */}
+      <div className='border-t border-slate-700/50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
+          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
+            <div className='text-sm text-gray-400'>
+
+              © 2025 Zion Tech Group. All rights reserved.
+            </div>
+            <div className='flex items-center space-x-6 text-sm text-gray-400'>
+                        </Link>;
+                      </li>))}
                   </ul>;
                 </div>;
               ))}
@@ -537,6 +578,3 @@ export default UltraFuturisticFooter2029;  )
 }
 export default UltraFuturisticFooter2029;
 
-
-}
-export default UltraFuturisticFooter2029;

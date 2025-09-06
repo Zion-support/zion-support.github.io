@@ -17,3 +17,6 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }

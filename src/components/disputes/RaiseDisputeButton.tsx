@@ -20,32 +20,10 @@ interface RaiseDisputeButtonProps {
   className?: string
 
 export function RaiseDisputeButton({
-  projectId
-  milestoneId
-  variant = 'outline'
-  size
-  className
-}: RaiseDisputeButtonProps) {
-  const [isDialogOpen, setIsDialogOpen] = useState(false)
-  const router = useRouter()
-  const handleDisputeCreated = (disputeId: string) => {
-    setIsDialogOpen(false)
-    router.push(`/dashboard/disputes/${disputeId}`)
-  }
-      <Button
-        variant={variant}
-        size={size}
-        className={className}
-        onClick={() => setIsDialogOpen(true)}      >
-        <ShieldAlert className='h-4 w-4 mr-2' />
-        Raise Dispute
-      </Button>
 Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-return (
-    <>;
 
   projectId: string,
   milestoneId?: string,
@@ -61,26 +39,6 @@ export function RaiseDisputeButton({
   size,
   className 
 }: RaiseDisputeButtonProps) {
-  const [isDialogOpen, setIsDialogOpen] = useState(false),
-  const router = useRouter(),
-  
-  const handleDisputeCreated = (disputeId: string) => {
-    setIsDialogOpen(false),
-    router.push(`/dashboard/disputes/${disputeId}`)
-  },
-  
-  return (
-    <>
-      <Button 
-        variant={variant} 
-        size={size} 
-        className={className} 
-        onClick={() => setIsDialogOpen(true)}
-      >
-        <ShieldAlert className="h-4 w-4 mr-2" />
-        Raise Dispute
-      </Button>
-      
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>
             <DialogTitle>Raise a Dispute</DialogTitle>

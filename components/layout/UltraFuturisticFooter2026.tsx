@@ -23,6 +23,27 @@ import {
   Youtube
   Github;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Star,
+  Shield,
+  Brain,
+  DollarSign,
+  Dna,
+  Rocket,
+  Users,
+  Award,
+  Zap,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,;
+  Github,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, ;
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
 const contactInfo = {
@@ -490,6 +511,14 @@ const resource_links = [;
                   Zion Tech Group;
                 </h3>;
               </div>;
+
+              </p>
+              {/* Contact Info */}
+
+
+
+
+
           {/* Service Categories */}
           {serviceCategories && serviceCategories.map((category, index) => (;
             <motion&& motion.div
@@ -505,6 +534,11 @@ const resource_links = [;
               </ul>;
             </motion && motion.div>;
           ))}
+        {/* Additional Links */}
+
+
+          {/* Company Links */}
+          <motion&& motion.div
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}
 
           {/* Company Links */}
@@ -603,24 +637,17 @@ const resource_links = [;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
               ))}
+            </div>
+          </motion.div>
+        </div>
 
-            </div>;
-          </motion && motion.div>;
-        </div>;
+        {/* Newsletter Signup */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12'
 
-
-
-        >
-          <div className='text-center'>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Stay Updated with Latest Innovations
-            </h3>
-            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
-              Get exclusive access to our latest AI, quantum computing, and
-              emerging technology insights. Be the first to know about
-              breakthrough solutions and industry trends.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
               <input
                 type='email'
                 placeholder='Enter your email'
@@ -666,6 +693,33 @@ const resource_links = [;
         <motion.div;
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+
+        >
+          <div className='flex flex-col md:flex-row justify-between items-center'>
+            <div className='text-gray-400 text-sm mb-4 md:mb-0'>
+              © 2026 Zion Tech Group. All rights reserved.
+          transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
+          className='border-t border-gray-800 pt-8'>;
+          <div className='flex flex-col md:flex-row justify-between items-center'>;
+            <div className='text-gray-400 text-sm mb-4 md:mb-0'>;
+              © 2026 Zion Tech Group. All rights reserved. |;
+              />
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </motion.div>
+        {/* Bottom Bar */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className='border-t border-gray-800 pt-8'
+        >
+          <div className='flex flex-col md:flex-row justify-between items-center'>
+            <div className='text-gray-400 text-sm mb-4 md:mb-0'>
+              © 2026 Zion Tech Group. All rights reserved.
               <Link
                 href='/privacy'
                 className='hover:text-cyan-400 transition-colors duration-300 ml-2'>;
@@ -698,6 +752,10 @@ const resource_links = [;
           </div>
         </motion.div>
       </div>
+    </footer>;
+  );
+}
+
   );
 }
           className='border - t border - gray - 800 pt - 8';
@@ -750,3 +808,4 @@ const resource_links = [;
           </div>;
         </motion.div>;
       </div>;
+}

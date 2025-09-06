@@ -27,3 +27,5 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
     avatarUrl: profile.avatar_url |undefined, // Add for compatibility
 
     role: profile.user_type // Map user_type to role for backward compatibility
+  }
+}

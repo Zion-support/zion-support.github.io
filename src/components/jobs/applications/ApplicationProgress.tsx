@@ -51,10 +51,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     // This is the current step
     return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
-import { ApplicationStatus } from "@/types/jobs",;
-import { Progress } from "@/components/ui/progress",;
-import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
-import { cn } from "@/lib/utils",;
 interface ApplicationProgressProps {;
   status: ApplicationStatus,;
   className?: string;

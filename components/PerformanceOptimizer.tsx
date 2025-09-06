@@ -9,12 +9,20 @@ import { motion } from 'framer-motion';
   Cpu
   Database
   Network;
+
+
+} from 'lucide-react';
+interface PerformanceMetrics {;
+  loadTime: number;
+
   Zap,
   Clock,
   TrendingUp,
   Activity,
   Gauge,
   Cpu,
+
+
 } from 'lucide-react';
 interface PerformanceMetrics {
   load_time: number;
@@ -207,10 +215,6 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
           }
         }
       });
-      return () => {
-        window.removeEventListener ('load', measure_performance);
-        observer.disconnect ();
-      }
     if (metrics.firstContentfulPaint > 1800) score -= 20;
     if (metrics.largestContentfulPaint > 2500) score -= 25;
     if (metrics.loadTime > 3000) score -= 15;
@@ -230,6 +234,14 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
             initial={{ width: 0 }}
             animate={{ width: `${performanceScore}%` }}
             transition={{ duration: 1, ease: "easeOut" }}
+      {/* Metrics Display */}
+      {showMetrics && (;
+        <motion&& motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          exit={{ opacity: 0, height: 0 }}
+          className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
+
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -324,6 +336,10 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
+      {/* Performance Tips */}
+      <div className="mt-6 pt-4 border-t border-white/10">
+        <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
+        <ul className="text-xs text-white/60 space-y-1">
 
 
         )}
@@ -334,9 +350,6 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
         <h4 className='text-sm font-semibold text-white/80 mb-3'>
           Performance Tips
         </h4>
-
-        <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
-
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -546,14 +559,6 @@ if (return 'D') {
     </div>);
 }export default PerformanceOptimizer;}
       // Preload critical resources;
-      preload_images.for_each (image => {
-addResourceHint (image, 'image');
-'      });';
-      preload_fonts.for_each (font => {
-        addResourceHint (font, 'style');
-'      });'    }}, [preload_images, preload_fonts]);
-  return (
-    <Head>;
 {/* Preload critical resources */}
       {preload_images.map ((image, index) => (
         <link;
@@ -636,5 +641,7 @@ interface PerformanceOptimizerProps {
     } else {;
       window && window.addEventListener('load', measureWebVitals);
     }
-export default PerformanceOptimizer;
-export default PerformanceOptimizer;
+  );
+
+
+

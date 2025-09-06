@@ -15,6 +15,8 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+export function WebhooksManager() {
+
   const {;
     webhooks;
     loading;
@@ -50,7 +52,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-
 
 export function WebhooksManager() {
   const {
@@ -183,6 +184,138 @@ export function WebhooksManager() {
                   <div className="grid gap-2 pt-2">
                     {eventOptions.map((event) => (
                       <div key={event.value} className="flex items-center space-x-2">
+  const handleCreateWebhook = async () => {;
+    if (webhookName && webhookName.trim() === "" || webhookUrl && webhookUrl.trim() === "" || selectedEvents && selectedEvents.length === 0) return;
+
+    await createWebhook(;
+      webhookName, ;
+      webhookUrl, ;
+      selectedEvents, ;
+      webhookSecret && webhookSecret.trim() === "" ? undefined : webhookSecret;
+    );
+
+    setShowCreateDialog(false);
+    resetWebhookForm();
+  };
+
+  const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {;
+    await toggleWebhook(webhookId, !currentStatus);
+  };
+
+  const handleDeleteWebhook = async (webhookId: string) => {;
+    await deleteWebhook(webhookId),;
+    setShowDeleteConfirm(null);
+  };
+
+  const handleTestWebhook = async (webhookId: string) => {;
+    await testWebhook(webhookId, testEventType);
+    setShowTestResult(true);
+  };
+
+  const resetWebhookForm = () => {;
+    setWebhookName("");
+    setWebhookUrl("");
+    setWebhookSecret("");
+    setSelectedEvents([]);
+  };
+
+  // Event type options;
+  const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [;
+    { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },;
+    { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' },;
+    { value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved' },;
+    { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' }],;
+
+  // Toggle an event selection;
+  const toggleEvent = (event: WebhookEventType) => {;
+    setSelectedEvents(prev => ;
+      prev && prev.includes(event) ;
+        ? prev && prev.filter(e => e !== event) ;
+        : [...prev, event];
+    );
+  };
+
+  return (
+    <Card className="bg-zinc-900 border-zinc-800 text-white">;
+      <CardHeader>;
+        <CardTitle className="text-xl flex items-center">;
+          <Webhook className="mr-2" size={20} /> Webhooks;
+        </CardTitle>;
+        <CardDescription className="text-zinc-400">;
+          Set up webhooks to get notified when events happen in your Zion account.;
+        </CardDescription>;
+      </CardHeader>;
+
+      <CardContent>;
+        <div className="flex justify-between items-center mb-6">;
+          <p className="text-sm text-zinc-400">;
+            You have {webhooks && webhooks.length} {webhooks && webhooks.length === 1 ? 'webhook' : 'webhooks'}
+          </p>;
+
+          <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>;
+            <DialogTrigger asChild>;
+              <Button variant="default">;
+                <Plus size={16} className="mr-1" /> Add Webhook;
+              </Button>;
+            </DialogTrigger>;
+            <DialogContent className="bg-zinc-900 border-zinc-800 text-white">;
+              <DialogHeader>;
+                <DialogTitle>Create Webhook</DialogTitle>;
+                <DialogDescription className="text-zinc-400">;
+                  Add a webhook endpoint to receive event notifications.;
+                </DialogDescription>;
+              </DialogHeader>;
+
+              <div className="space-y-4 py-4">;
+                <div className="space-y-2">;
+                  <Label htmlFor="webhook-name">Webhook Name</Label>;
+                  <Input
+                    id="webhook-name"
+                    value={webhookName}
+                    onChange={(e) => setWebhookName(e && e.target.value)}
+                    placeholder="e && e.g. Application Notifications";
+                    className="bg-zinc-800 border-zinc-700";
+                  />;
+                </div>;
+
+                <div className="space-y-2">;
+                  <Label htmlFor="webhook-url">Endpoint URL</Label>;
+                  <Input
+                    id="webhook-url"
+                    value={webhookUrl}
+                    onChange={(e) => setWebhookUrl(e && e.target.value)}
+                    placeholder="https://example && example.com/webhook";
+                    className="bg-zinc-800 border-zinc-700";
+                  />;
+                  <p className="text-xs text-zinc-500">;
+                    The URL where webhook payloads will be sent when events occur.;
+                  </p>;
+                </div>;
+
+                <div className="space-y-2">;
+                  <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>;
+
+                  <Input
+                    id="webhook-secret"
+                    type="password"
+                    value={webhookSecret}
+
+
+                    onChange={(e) => setWebhookSecret(e.target.value)}
+                    placeholder="••••••••••••••••"
+                    className="bg-zinc-800 border-zinc-700"
+                  />
+                  <p className="text-xs text-zinc-500">
+                    Used to verify webhook payload signatures. Keep it secret and secure.
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <Label>Event Types</Label>
+                  <div className="grid gap-2 pt-2">
+                    {eventOptions.map((event) => (
+                      <div key={event.value} className="flex items-center space-x-2">
+
+                    onChange={(e) => setWebhookSecret(e && e.target.value)}
                     placeholder="••••••••••••••••";
                     className="bg-zinc-800 border-zinc-700";
                   />;
@@ -190,11 +323,41 @@ export function WebhooksManager() {
                     Used to verify webhook payload signatures. Keep it secret and secure.;
                   </p>;
                 </div>;
+                          checked={selectedEvents.includes(event.value)}
+                          onCheckedChange={() => toggleEvent(event.value)}
+                        />
                         <Label
-                          htmlFor={event && event.value}
-                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">;
-                          {event && event.label}
-                          <span className="block text-xs text-zinc-400 mt-1">{event && event.description}</span>;
+                          htmlFor={event.value}
+                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        >
+                          {event.label}
+                          <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
+                        </Label>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <DialogFooter>
+                <Button variant="outline" onClick={() => {
+                  setShowCreateDialog(false),
+                  resetWebhookForm()
+                }}>
+                  Cancel
+                </Button>
+                <Button onClick={handleCreateWebhook} disabled={
+                  webhookName.trim() === "" |
+                  webhookUrl.trim() === "" |
+                  selectedEvents.length === 0
+                }>
+                  Create Webhook
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+        </div>
+        
+                          <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>;
                         </Label>;
                       </div>;
                     ))}
@@ -464,14 +627,13 @@ function WebhooksManager() {
               </div>;
             ));
           )}
-      <CardFooter className="justify-between border-t border-zinc-800 py-4">;
-        <div className="text-xs text-zinc-500">;
-          Webhooks will be sent with HTTPS POST requests to your endpoint.;
-        </div>;
-        <Button variant="outline" size="sm" onClick={fetchWebhooks}>;
-          <RefreshCw size={14} className="mr-1" /> Refresh;
-        </Button>;
-      </CardFooter>;
+        onOpenChange={(open) => {
+          if (!open) {
+            setShowTestDialog(null);
+            setTestEventType('new_application');
+            if (showTestResult) {
+              setShowTestResult(false);
+              clearTestResult()
 
               clearTestResult();
             }
@@ -562,11 +724,6 @@ function WebhooksManager() {
             </AlertDialogCancel>
             <AlertDialogAction
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
-              This action will permanently remove this webhook.;
-              You will no longer receive events at this endpoint.;
-            </AlertDialogDescription>;
-          </AlertDialogHeader>;
-          <AlertDialogFooter>;
             >;
               Delete;
             </AlertDialogAction>;

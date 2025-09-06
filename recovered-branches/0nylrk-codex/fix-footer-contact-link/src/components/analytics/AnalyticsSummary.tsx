@@ -183,6 +183,13 @@ if (throw lastEventError) {
       />;
     </div>;
   );
+}
+;
+interface StatCardProps {;
+  title: string;
+  value: React.ReactNode;
+  icon: React.ReactNode;
+}
 
   icon: React.ReactNode
 }

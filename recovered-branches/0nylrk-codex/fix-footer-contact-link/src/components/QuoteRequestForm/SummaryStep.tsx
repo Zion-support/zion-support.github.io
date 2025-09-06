@@ -29,6 +29,27 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
     const runMatching = async () => {
       if (!formData.projectDescription) return;
       setIsMatching(true);
+interface SummaryStepProps {;
+  formData: QuoteFormData,;
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+}
+
+export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepProps) {;
+
+  const [isMatching, setIsMatching] = useState(false);
+
+  const [matches, setMatches] = useState<MatchResult[]>([]);
+
+
+  // Run AI matching when the component mounts;
+  useEffect(() => {;
+    const runMatching = async () => {;
+      if (!formData && formData.projectDescription) return;
+
+      setIsMatching(true);
+      try {;
+        // Create a query string from the form data;
+        const queryString = `;
         
         // Get AI matches
         const results = await findMatches(

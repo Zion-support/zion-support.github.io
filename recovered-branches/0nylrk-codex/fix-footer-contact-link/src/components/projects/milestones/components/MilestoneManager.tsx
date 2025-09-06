@@ -2,11 +2,42 @@ import { MilestonesList  } from '../MilestonesList';
 import { PaymentSummary  } from '../PaymentSummary';
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
 import { toast } from "sonner";
+
+  projectId: string
+  milestones: Milestone[]
+  activities: Record<string, MilestoneActivity[]>;
+  isLoading: boolean
+  isClient: boolean
+  isTalent: boolean
+  paymentTerms?: string;
+  isSubmitting: boolean
+  onCreateMilestone: (data: any) => Promise<Milestone | null>
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
+  onDeleteMilestone: (id: string) => Promise<boolean>
+  onUploadDeliverable: (id: string, file: File) => Promise<any>
+
+import {MilestonesList} from '../MilestonesList';
+import {PaymentSummary} from '../PaymentSummary';
 import React from 'react',
 import { MilestonesList } from '../MilestonesList',
 import { PaymentSummary } from '../PaymentSummary',
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',
 import { toast } from "sonner",
+interface MilestoneManagerProps {
+  projectId: string,
+  milestones: Milestone[],
+  activities: Record<string MilestoneActivity[]>,
+  isLoading: boolean,
+  isClient: boolean,
+  isTalent: boolean,
+  paymentTerms?: string,
+  isSubmitting: boolean,
+  onCreateMilestone: (data: any) => Promise<Milestone | null>,
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,
+  onDeleteMilestone: (id: string) => Promise<boolean>,
+  onUploadDeliverable: (id: string, file: File) => Promise<any>,
+  refetch: () => Promise<void>
+}
   projectId;
   milestones;
   activities;
@@ -54,12 +85,9 @@ export function MilestoneManager({
       toast.error("Failed to reject milestone")
     }
 
-
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2">
-
-        <MilestonesList 
 import React from 'react',;
 import { MilestonesList } from '../MilestonesList',;
 import { PaymentSummary } from '../PaymentSummary',;

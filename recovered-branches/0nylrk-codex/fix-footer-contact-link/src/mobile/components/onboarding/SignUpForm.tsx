@@ -9,6 +9,7 @@ import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 export function SignUpForm() {
 
+
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
   const [formData, setFormData] = useState({
@@ -36,7 +37,6 @@ export function SignUpForm() {
         }
         navigate("/mobile")
       } else {
-
 import React, { useState } from "react",;
 import { Label } from "@/components/ui/label",;
 import { Input } from "@/components/ui/input",;
@@ -80,8 +80,6 @@ export function SignUpForm() {;
     <div className="space-y-4 px-4">;
       <h2 className="text-xl font-medium text-center">;
         {signupMode ? "Create your account" : "Welcome back"}
-        <Button 
-          variant="outline" 
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -161,8 +159,6 @@ export function SignUpForm() {;
             id="password"
             name="password"
             type="password"
-        <Button 
-          type="submit" 
           className="w-full py-6"
           disabled={isLoading}
         >
@@ -203,3 +199,4 @@ export function SignUpForm() {;
           onClick={() => setSignupMode(!signupMode)}
         >;
           {signupMode ? "Sign In" : "Sign Up"}
+;

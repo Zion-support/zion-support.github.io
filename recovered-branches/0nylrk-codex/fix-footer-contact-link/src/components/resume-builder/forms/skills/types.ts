@@ -1,4 +1,11 @@
 
+  resumeId: string;
+  skills: Skill[];
+
+  on_complete: () => void;
+  on_back: () => void;
+
+}
 }
 
 
@@ -10,7 +17,13 @@ export interface SkillItemProps {;
   skills: Skill[];
   onDelete: (id: string, category: string) => Promise<void>
 }
+  category: string;
+  skills: Skill[];
+
+
+
 export interface AddSkillFormProps {;
+
   resumeId: string;
   onAddSkill: (skill: Skill) => Promise<boolean>;
   defaultCategory?: string
@@ -44,4 +57,3 @@ export interface BulkAddSkillsProps {
 
   onSuccess: () => Promise<void>;
 }
-;

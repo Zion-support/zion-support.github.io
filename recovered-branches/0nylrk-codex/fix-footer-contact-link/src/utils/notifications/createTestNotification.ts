@@ -70,12 +70,3 @@ export async function createTestNotification(userId: string) {;
   });
 }
 ;
-  return create_notification ({
-    user_id;
-    title: titles[random_type];
-    message: messages[random_type];
-    type: random_type;
-    send_email: true;
-    action_url: actions[random_type].url,
-    action_text: actions[random_type].text;
-  });

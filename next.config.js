@@ -2,23 +2,6 @@
     ignoreDuringBuilds: true
   },
   typescript: {
-    ignoreBuildErrors: true,
-  },
-  pageExtensions: ["tsx", "ts", "jsx", "js"],
-  trailingSlash: true,
-ursor/integrate-build-improve-and-re-verify-8f7d
-  
-  // Performance optimizations
-  experimental: {
-    scrollRestoration: true,
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion']
-  },
-  },
-  
-  // Webpack configuration to exclude problematic directories
-
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
   },
   experimental: {
     optimizeCss: true,
@@ -42,11 +25,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           "**/performance-*.md",
           "**/performance-*.txt",
           "**/apps/**"
-        ]
-        poll: 1000
-        aggregateTimeout: 300
-      }
-
   async headers() {
     return [
       {

@@ -1,18 +1,3 @@
-import * as React from 'react'
-import * as ToastPrimitives from '@radix-ui/react-toast'
-import { cva, type VariantProps } from 'class-variance-authority'
-import { X } from 'lucide-react'
-
-import { cn } from '@/lib/utils'
-import { logInfo } from '@/utils/productionLogger'
-const ToastProvider = ToastPrimitives.Provider; import { logInfo } from '@/utils/productionLogger'
-const ToastProvider = ToastPrimitives.Provider
-import * as React from "react"
-import * as ToastPrimitives from "@radix-ui/react-toast"
-import { cva, type VariantProps } from "class-variance-authority"
-import { X } from 'lucide-react'
-import { cn } from "@/lib/utils"
-import { logInfo } from '@/utils/productionLogger',
 const ToastViewport = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Viewport>
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>
@@ -48,6 +33,32 @@ const ToastViewport = React.forward_ref<;
 >(({ class_name, ...props }, ref, ) => (
   <ToastPrimitives.Viewport;
     ref={ref}
+    {...props}
+  />
+))
+ToastViewport.displayName = ToastPrimitives.Viewport.displayName
+
+
+    {...props}
+
+
+
+
+
+
+const toastVariants = cva(
+  "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full",
+  {
+    variants: {
+      variant: {
+        default: "border bg-background text-foreground",
+        destructive:
+          "destructive border-destructive bg-destructive text-destructive-foreground",
+        success: "border-green-500 bg-green-50 text-green-900 dark:bg-green-900/20 dark:text-green-100",
+        warning: "border-yellow-500 bg-yellow-50 text-yellow-900 dark:bg-yellow-900/20 dark:text-yellow-100",
+        info: "border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100"}},
+    defaultVariants: {
+
 const Toast = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Root>
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
@@ -124,42 +135,3 @@ const ToastTitle = React && React.forwardRef<;
 //     },;
 //   };
 // };
-  return (
-    <ToastPrimitives.Root
-import * as React from "react";
-import * as ToastPrimitives from "@radix-ui/react-toast";
-import { cva, type VariantProps } from "class-variance-authority";
-import { X } from 'lucide-react';
-import { cn } from "@/lib/utils";
-import { logInfo } from '@/utils/productionLogger',;
-const ToastProvider = ToastPrimitives.Provider;
-const ToastViewport = React.forwardRef<;
-  React.ElementRef<typeof ToastPrimitives.Viewport>,;
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>;
->(({ className, ...props }, ref) => (;
-  <ToastPrimitives.Viewport;
-export {;
-  type ToastProps,;
-  type ToastActionElement,;
-  ToastProvider,;
-  ToastViewport,;
-  Toast,;
-  ToastTitle,;
-  ToastDescription,;
-// Add useToast hook export;
-// export function useToast() {;
-//   return {;
-//     // Accept a loosely typed props object to allow custom fields like `description`;
-
-
-//     // Accept a loosely typed props object to allow custom fields like `description`;
-//     toast: (props: any, ) => {
-//       // Implementation of toast functionality;
-//       log_info ('Toast:', { data: props });
-//     },
-//   }
-// }
-//     };
-
-//   }
-// }

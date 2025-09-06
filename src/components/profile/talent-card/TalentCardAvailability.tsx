@@ -19,10 +19,6 @@ function TalentCardAvailability() {
 
     }
   } return 'bg - gray - 500 / 20 text - gray - 400';
-import React from "react",
-import { Clock } from 'lucide-react'
-interface TalentCardAvailabilityProps {
-  availabilityType: string
 
         return 'bg-blue-500/20 text-blue-400',;
       default:;
@@ -40,14 +36,6 @@ interface TalentCardAvailabilityProps {
         return 'Project'
       default:
         return status
-  }
-    >
-      <Clock className='h-3 w-3' />
-
-      <span>{getAvailabilityLabel(availabilityType)}</span>
-    </div>
-  )
-}
       case 'project-based':;
         return 'bg-blue-500/20 text-blue-400',;
       default:;

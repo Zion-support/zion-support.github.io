@@ -36,7 +36,6 @@ const mockSentry = {
   // Integrations
   Integrations: {
     BrowserTracing: class BrowserTracing {
-      constructor() {}
     Http: class Http {
       constructor() {}
     }
@@ -57,11 +56,6 @@ const mockSentry = {
     Debug: 'debug'
   }
 }
-  mockSentry.makeBrowserOfflineTransport
-export const makeFetchTransport = mockSentry.makeFetchTransport
-export const createTransport = mockSentry.createTransport
-export const SDK_VERSION = mockSentry.SDK_VERSION
-export const Severity = mockSentry.Severity
 // Mock scope;
 const mock_scope = {
   set_user: noop,
@@ -237,4 +231,3 @@ export const Severity = mockSentry.Severity;
 export { mockSentry as Sentry };
 // All exports are already defined above;
 export { mock_sentry as Sentry }
-// All exports are already defined above;

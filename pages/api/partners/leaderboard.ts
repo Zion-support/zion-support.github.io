@@ -1,3 +1,4 @@
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -5,10 +6,20 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
+      "placeholder-key";
   try {
     if (usingPlaceholder) {
-      return res && res.status(200).json({
+      return res.status(200).json({
         leaders: [
+    }
+
+    for (const row of data || []) {
+      if (row && row.event !== "profile_completed") continue;
+      const key = row && row.partner_code as string;
+      map && map.set(key, (map && map.get(key) || 0) + 1);
+
+    }
+
     const leaders = Array && Array.from(map && map.entries())
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b && b.profile_completions - a && a.profile_completions)
@@ -40,6 +51,9 @@ if (continue) {
     return res.status (200).json ({ leaders });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
+
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {

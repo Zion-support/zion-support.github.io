@@ -1,3 +1,25 @@
+  logEvent: (event: any) => null,
+  getArticles: () => [],
+  getArticleById: (id: string) => null;
+};
+
+export const logSupportEventToOperator = (event: any) => {
+  // Add support event logging functionality here
+  return null;
+
+
+export interface IntentMatch {
+  intentMatched: boolean;
+  matchedArticleIds: string[];
+  confidence: number;
+}
+
+export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch {
+  const queryLower = query && query.toLowerCase();
+  const matchedArticles: string[] = [];
+  let confidence = 0;
+
+
 
     if (titleMatch || contentMatch || tagMatch) {
       matchedArticles && matchedArticles.push(article && article.id);
@@ -35,4 +57,5 @@ export function searchArticles(articles: HelpArticle[], query: string): HelpArti
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
+}
 }

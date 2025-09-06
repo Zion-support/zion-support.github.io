@@ -36,9 +36,6 @@
     }
   }
 ];
-  }
-}
-
 export const aiAutonomousEcosystemServices2029: AiAutonomousEcosystem2029[] = [
   {
     id: "2029-ai-autonomous-ecosystem", name: "2029 AI Autonomous Ecosystem Platform",
@@ -54,6 +51,11 @@ export const aiAutonomousEcosystemServices2029: AiAutonomousEcosystem2029[] = [
     link: "/services/2029-ai-autonomous-ecosystem", category: "AI Autonomous Ecosystem 2029",
     realImplementation: true,
     contactInfo: {
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

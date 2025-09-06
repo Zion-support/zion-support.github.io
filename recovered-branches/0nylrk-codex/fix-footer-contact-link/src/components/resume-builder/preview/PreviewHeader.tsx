@@ -85,6 +85,16 @@ function PreviewHeader() {
     window.print();
     // Remove the temporary style element after printing
     setTimeout(() => {
+    
+    // Trigger print dialog
+    window.print(),
+    
+    // Remove the temporary style element after printing
+    setTimeout(() => {
+      document.head.removeChild(style),
+      setIsPrinting(false)
+    }, 1000)
+  },
 
   return (
     <div
@@ -111,16 +121,5 @@ function PreviewHeader() {
         </Button>
       </div>
     </div>
-    // Remove the temporary style element after printing;
-    set_timeout (() => {
-      document.head.remove_child (style);
-      setIsPrinting (false);
-    }, 1000);
-  return (
-    <div;
-      className={`flex ${is_mobile ? "flex - col" : "justify - between"} items-${is_mobile ? "stretch" : "center"} gap - 3`}
-    >;
-      <Button variant="outline" on_click={on_back} className="gap - 2 no - print">;
-        <ArrowLeft className="h - 4 w - 4" />;
-        Back;
-      </Button>;
+    document.head.append_child (style);
+;

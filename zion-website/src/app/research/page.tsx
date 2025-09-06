@@ -140,11 +140,44 @@ const researchImpact = [
         </div>;
       </div>;
       {/* Recent Publications */}
-
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Recent Research
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Our latest research contributions to the field of artificial intelligence and technology.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+            {recentPublications.map((publication) => (
+              <div key={publication.title} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center gap-x-2 mb-4">
+                  <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
+                    publication.impact === 'High Impact' ? 'bg-blue-600/20 text-blue-400' :
+                    publication.impact === 'Industry Leading' ? 'bg-green-600/20 text-green-400' :
+                    publication.impact === 'Breakthrough' ? 'bg-purple-600/20 text-purple-400' :
+                    'bg-gray-600/20 text-gray-400'
+                  }`}>
+                    {publication.impact}
+                  </span>;
+                  <span className=&quot;text - sm text - gray - 400 & quot;>{publication.year}</span>;
+                </div>;
+                <h3 className=&quot;text - lg font - semibold text - white mb - 2&quot;>{publication.title}</h3>;
+                <p className=&quot;text - sm text - blue - 400 mb - 3&quot;>{publication.authors}</p>;
+                <p className=&quot;text - sm text - gray - 400 mb - 3&quot;>{publication.journal}</p>;
+                <p className=&quot;text - sm text - gray - 300 mb - 4&quot;>{publication.abstract}</p>;
+                <a;
+                  href={`https://doi.org/${publication.doi}`}
+                  target=&quot;_blank & quot;
+                  rel=&quot;noopener noreferrer & quot;
+                  className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
+                >;
+                  View Publication <span aria - hidden=&quot;true & quot;>→</span>;
+                </Link>;
+              </div>))}
             Recent Research
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -186,6 +219,47 @@ const researchImpact = [
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Research Influence
           </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Our research has made significant contributions to the field, 
+            influencing both academia and industry.
+          </p>
+        </div>
+        <div className=&quot;mx-auto mt-16 max-w-2xl lg:max-w-none&quot;>
+          <dl className=&quot;grid max-w-xl grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4&quot;>
+            {researchImpact.map((item) => (
+              <div key={item.metric} className=&quot;flex flex-col bg-white/5 p-8 backdrop-blur-sm&quot;>
+                <dt className=&quot;text-sm font-semibold leading-6 text-gray-300&quot;>{item.metric}</dt>
+                <dd className=&quot;order-first text-3xl font-bold tracking-tight text-white&quot;>{item.value}</dd>
+                <p className=&quot;mt-2 text-sm text-gray-400&quot;>{item.description}</p>
+              </div>
+            ))}
+<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
+        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
+          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Impact</h2>;
+          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
+            Research Influence;
+          </p>;
+          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
+            Our research has made significant contributions to the field,
+            influencing both academia and industry.;
+          </p>;
+        </div>;
+        <div className=&quot;mx - auto mt - 16 max - w-2xl lg:max - w-none & quot;>;
+          <dl className=&quot;grid max - w-xl grid - cols - 1 gap - 0.5 overflow - hidden rounded - 2xl text - center sm:grid - cols - 2 lg:grid - cols - 4&quot;>;
+            {research_impact.map ((item) => (
+              <div key={item.metric} className=&quot;flex flex - col bg - white / 5 p - 8 backdrop - blur - sm & quot;>;
+                <dt className=&quot;text - sm font - semibold leading - 6 text - gray - 300 & quot;>{item.metric}</dt>;
+                <dd className=&quot;order - first text - 3xl font - bold tracking - tight text - white & quot;>{item.value}</dd>;
+                <p className=&quot;mt - 2 text - sm text - gray - 400 & quot;>{item.description}</p>;
+              </div>))}
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Research Influence
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Our research has made significant contributions to the field, 
             influencing both academia and industry.
           </p>
         </div>
@@ -206,6 +280,10 @@ const researchImpact = [
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Academic Partnerships
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            We collaborate with leading academic institutions worldwide to advance 
             the frontiers of AI research and innovation.
           </p>
         </div>
@@ -236,11 +314,10 @@ const researchImpact = [
         </div>;
       </div>;
       {/* CTA section */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Join our research community
           </h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+            Interested in collaborating on cutting-edge AI research? 
             Let's explore opportunities to work together.
           </p>
           <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>

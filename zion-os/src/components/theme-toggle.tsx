@@ -31,11 +31,6 @@ function ThemeToggle() {
           <Sun className="h - 4 w - 4" />;
         </button>;
         <button;
-          on_click={() => set_theme ("system")}
-          className={`rounded px - 2 py - 1 text - sm transition - colors ${
-            theme === "system";
-              ? "bg - zion - blue text - white";
-              : "text - zinc - 400 hover:text - zinc - 100";
           }`}
           aria - label="Switch to system theme";
           aria - pressed={theme === "system"}
@@ -43,11 +38,6 @@ function ThemeToggle() {
           <Monitor className="h - 4 w - 4" />;
         </button>;
         <button;
-          on_click={() => set_theme ("dark")}
-          className={`rounded px - 2 py - 1 text - sm transition - colors ${
-            theme === "dark";
-              ? "bg - zion - blue text - white";
-              : "text - zinc - 400 hover:text - zinc - 100";
           }`}
           aria - label="Switch to dark theme";
           aria - pressed={theme === "dark"}

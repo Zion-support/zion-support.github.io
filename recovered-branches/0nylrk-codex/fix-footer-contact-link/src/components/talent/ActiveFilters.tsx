@@ -3,6 +3,7 @@ import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
+
   priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void;
   experienceRange: [number, number],
@@ -60,6 +61,10 @@ export function ActiveFilters({
         <ClickableBadge
           key={skill}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+        <ClickableBadge
+          key={skill}
+
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
           onClick={() => toggleSkill(skill)}
         >;
           {skill}
@@ -164,65 +169,3 @@ function ActiveFilters() {
     price_range[0] !== 50 ||;
     price_range[1] !== 200;
 ;
-  // Check condition
-if (return null) {
-  $2
-}
-  return (
-    <div className="mb - 6 flex flex - wrap gap - 2 items - center">;
-      <span className="text - zion - slate - light text - sm">Active filters:</span>;
-      {selected_skills.map (skill => (
-        <ClickableBadge;
-          key={skill}
-          className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2";
-          on_click={() => toggle_skill (skill)}
-        >;
-          {skill}
-          <X className="h - 3 w - 3" />;
-        </ClickableBadge>))}
-      {selected_availability.map (status => (
-        <ClickableBadge;
-          key={status}
-          className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2";
-          on_click={() => toggle_availability (status)}
-        >;
-          {status === 'full - time' ? 'Full - time' :;
-          status === 'part - time' ? 'Part - time' :;
-          'Project - based'}
-          <X className="h - 3 w - 3" />;
-        </ClickableBadge>))}
-      {selected_regions.map (region => (
-        <ClickableBadge;
-          key={region}
-          className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2";
-          on_click={() => toggle_region (region)}
-        >;
-          {region}
-          <X className="h - 3 w - 3" />;
-        </ClickableBadge>))}
-      {(price_range[0] !== 50 || price_range[1] !== 200) && (
-        <ClickableBadge;
-          className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2";
-          on_click={() => setPriceRange ([50, 200])}
-        >;
-          ${price_range[0]}-${price_range[1]}/hr;
-          <X className="h - 3 w - 3" />;
-        </ClickableBadge>)}
-      {(experience_range[0] !== 0 || experience_range[1] !== 15) && (
-        <ClickableBadge;
-          className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2";
-          on_click={() => setExperienceRange ([0, 15])}
-        >;
-          {experience_range[0]}-{experience_range[1]} years;
-          <X className="h - 3 w - 3" />;
-        </ClickableBadge>)}
-      <Button;
-        variant="ghost";
-        size="sm";
-        on_click={clear_filters}
-        className="h - 7 text - xs text - zion - purple hover: text - zion - purple - light hover:bg - transparent";
-      >;
-        Clear All;
-      </Button>;
-    </div>);
-}

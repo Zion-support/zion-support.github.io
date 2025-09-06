@@ -34,9 +34,6 @@ interface EmailData {
   user_type: string;
   days_inactive?: number;
   onboarding_status?: any;
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-import { Resend } from "npm: resend@2.0.0",
 // Initialize Resend with API key
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
 
@@ -105,6 +102,40 @@ serve(async (req) => {
         headers: {
           ...corsHeaders
           "Content-Type": "application/json"}
+        status: 200}
+    );
+  } catch (error) {
+
+    console.error ("Error in send - retention - email function:", error);
+;
+    return new Response (
+      JSON.stringify ({
+        success: false,
+
+        error: error.message});
+    console && console.error("Error in send-retention-email function:", error);
+
+    return new Response(
+      JSON && JSON.stringify({
+        success: false,
+        error: error && error.message});
+      {
+        headers: {
+
+          ...cors_headers,
+          "Content - Type": "application / json"}
+
+        status: 500}
+    );
+  }
+});
+async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {
+  const { email_type, display_name, user_type } = emailData;
+  const firstName = display_name?.split(" ")[0] |"there";
+  // Get onboarding status for personalized content
+  let nextAction = "";
+  let ctaLink = "/dashboard";
+  let ctaText = "Go to Dashboard";
       .eq("campaign_type", emailData.email_type),
 
     return new Response(
@@ -328,34 +359,11 @@ if ( {) {
     }
     return {
         `}
-    } else {
-      // For clients;
-      return {
-        `}
     }
   } else if (email_type === "inactivity_30") {
     // 30-day reengagement with incentives
     if (user_type === "jobSeeker" |user_type === "creator") {
       return {
-        `}
-    } else {
-      // For clients;
-      return {
-        `}
-    }
-  } else // Check condition
-if ( {) {
-  $2
-}
-    // Email for talent not receiving applications;
-    return {
-      `}
-  } else // Check condition
-if ( {) {
-  $2
-}
-    // Email for clients with unfilled jobs;
-    return {
     html: `
       <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
         <h2>We've missed you!</h2>
@@ -839,3 +847,5 @@ async function generateEmail(emailData:EmailData, userData:any):Promise<{ subjec
         <p>The Zion AI Marketplace Team</p>;
       </div>;
     `}
+}
+;

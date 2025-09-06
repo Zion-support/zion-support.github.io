@@ -15,6 +15,8 @@
 
 import SEO from '../components/SEO';
 
+
+
 const QuantumAINeuralNetworkPlatform: React.FC = () => {
   const features = [
     'Quantum-enhanced neural network architecture'
@@ -309,9 +311,14 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             {features && features.map((feature, index) => (;
               <motion&& motion.div
                 key={index}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                viewport={{ once: true }}
+
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <Check className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{feature}</h3>
+              </motion.div>
+
             ))}
           </div>
         </div>
@@ -321,6 +328,58 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+      {/* Benefits Section */}
+      <section className='py-20'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+                className='bg - gray - 800 / 50 border border - blue - 500 / 20 rounded - xl p - 6 hover:border - blue - 500 / 40 transition - all duration - 300';
+              >;
+                <div className='w - 12 h - 12 bg - gradient - to - br from - blue - 500 to - cyan - 500 rounded - lg flex items - center justify - center mb - 4'>;
+                  <Check className='w - 6 h - 6 text - white' />;
+                </div>;
+                <h3 className='text - lg font - semibold mb - 2'>{feature}</h3>              </motion.div>              >;
+                <div className="w - 12 h - 12 bg - gradient - to - br from - blue - 500 to - cyan - 500 rounded - lg flex items - center justify - center mb - 4">;
+                  <Check className="w - 6 h - 6 text - white" />;
+                </div>;
+                <h3 className="text - lg font - semibold mb - 2">{feature}</h3>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Benefits Section */}
+      <section className='py - 20'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            viewport={{ once: true }}
+
+
+              >
+                <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4'>
+                  <Check className='w-6 h-6 text-white' />
+                </div>
+                <h3 className='text-lg font-semibold mb-2'>{feature}</h3>              </motion.div>              >
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <Check className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{feature}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -352,6 +411,12 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+
+              >
+                <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>
+                  <Star className='w-8 h-8 text-white' />
+                </div>
+                <h3 className='text-xl font-semibold mb-2'>{benefit}</h3>              </motion.div>              >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="w-8 h-8 text-white" />
                 </div>
@@ -372,6 +437,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className='text-center mb-16'
 
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
@@ -483,6 +550,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
+
+
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

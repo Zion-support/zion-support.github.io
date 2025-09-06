@@ -1,10 +1,9 @@
 interface ApiResponse {
 
-  nodes: TreeNode[]
-status: {
-  gitConnected: boolean, gitBranch?: string
-import React, { useEffect, useState } from 'react';
-import Tree, { TreeNode } from '../../components/ui/Tree';
+interface ApiResponse {
+  nodes: TreeNode[],
+  status: { gitConnected: boolean, gitBranch?: string }
+}
 
 interface ApiResponse {;
   nodes: TreeNode[],;
@@ -51,6 +50,20 @@ export default function DevTreePage() {
       }
       await fetchTree(adminToken);
     } catch (e: any) {
+      {nodes ? (
+        <div className="rounded border p-3 bg-white">
+          <Tree nodes={nodes} onDeploy={onDeploy} />
+        </div>
+      ) : (
+        <div>Loading...</div>
+
+
+            onClick={handleSaveToken}>            Save Token;
+
+
+}
+}
+}
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 interface ApiResponse {;
@@ -163,6 +176,22 @@ export default function DevTreePage(req, res) {
           />;
           <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded" onClick={handleSaveToken}>;
             Save Token;
+          </button>;
+        </div>;
+      </div>;
+
+      {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
+
+      {nodes ? (;
+        <div className='rounded border p-3 bg-white'>          <Tree nodes={nodes} onDeploy={onDeploy} />;
+        </div>;
+      ) : (;
+        <div>Loading...</div>;
+      )}
+    </div>;
+  );
+
+
   )
 }
       set_error (e.message || 'Failed to load');    }

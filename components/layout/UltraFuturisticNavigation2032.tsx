@@ -83,7 +83,6 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
-import {
   Menu,
   X,
   ChevronDown,
@@ -179,6 +178,7 @@ const serviceCategories = [
     color: 'from-violet-600 via-purple-600 to-indigo-600'
     description: 'Next-generation AI consciousness and emotional intelligence'
     services: [
+
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -187,50 +187,6 @@ const mainNavigation = [
   { name: 'Resources', href: '/resources', icon: BookOpen }
   { name: 'Case Studies', href: '/case-studies', icon: TrendingUp }
   { name: 'Blog', href: '/blog', icon: MessageCircle }
-];
-
-const mainNavigation = [
-    services: [;
-      {
-        name: 'Swarm Robotics Orchestration',
-        href: '/swarm - robotics - orchestration',
-        description: 'Coordinate robot swarms',
-        price: '$449 / month',
-      },
-      {
-        name: 'Brain - Computer Interface Platform',
-        href: '/brain - computer - interface - platform',
-        description: 'Direct neural interface',
-        price: '$1, 299 / month',
-      },
-      {
-        name: 'Quantum Machine Learning Platform',
-        href: '/quantum - machine - learning - platform',
-        description: 'Quantum - enhanced ML',
-        price: '$2, 999 / month',
-      },
-      {
-        name: 'Synthetic Biology Automation Platform',
-        href: '/synthetic - biology - automation - platform',
-        description: 'Automate biology research',
-        price: '$3, 999 / month',
-      },
-    ],
-  }, ];      { name: 'Swarm Robotics Orchestration', href: '/swarm - robotics - orchestration', description: 'Coordinate robot swarms', price: '$449 / month' },
-      { name: 'Brain - Computer Interface Platform', href: '/brain - computer - interface - platform', description: 'Direct neural interface', price: '$1, 299 / month' }
-      { name: 'Quantum Machine Learning Platform', href: '/quantum - machine - learning - platform', description: 'Quantum - enhanced ML', price: '$2, 999 / month' }
-      { name: 'Synthetic Biology Automation Platform', href: '/synthetic - biology - automation - platform', description: 'Automate biology research', price: '$3, 999 / month' }
-    ];
-  }
-const main_navigation = [;
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'Solutions', href: '/solutions', icon: Layers },
-  { name: 'Pricing', href: '/pricing', icon: DollarSign },
-  { name: 'Resources', href: '/resources', icon: BookOpen },
-  { name: 'Case Studies', href: '/case - studies', icon: TrendingUp },
-  { name: 'Blog', href: '/blog', icon: MessageCircle },
-];
 const companyLinks = [
   { name: 'About Us', href: '/about' }
   { name: 'Careers', href: '/careers' }
@@ -243,8 +199,6 @@ const companyLinks = [
   { name: 'News', href: '/news' },
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
-  { name: 'Status', href: '/status' }
-];
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -313,6 +267,20 @@ const companyLinks = [;
                   2030 Future Technology;
                 </div>              </div>;
             </Link>;
+
+
+
+
+              {/* Services Dropdown */}
+
+              <div className='relative group'>;
+                <button className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group'>;
+                  <Briefcase className='w-4 h-4 group-hover:scale-110 transition-transform' />;
+                  <span>Services</span>;
+                  <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform' />;
+                </button>;
+
+
                 {/* Mega Menu */}
                 <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4'>;
                   <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20'>;
@@ -375,11 +343,6 @@ const companyLinks = [;
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
-
-
-
-                                </div>
-
                               </Link>
                             ))}
                           </div>;
@@ -550,6 +513,19 @@ const companyLinks = [;
             </div>;
 
 
+
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleMenu}
+              className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors'
+            >
+              {isOpen ? (
+                <X className='w-6 h-6' />
+              ) : (
+                <Menu className='w-6 h-6' />
+              )}            </button>              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors"
+            >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -562,6 +538,7 @@ const companyLinks = [;
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
+
           >
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-xl'
@@ -636,13 +613,20 @@ const companyLinks = [;
                       key={item && item.name}
                       href={item && item.href}
                       onClick={closeMenu}
-                      className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors p-3 rounded-lg hover:bg-gray-800/50'>;
-                      <item && item.icon className='w-5 h-5' />                      className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors p-3 rounded-lg hover:bg-gray-800/50";
+                    <button
+                      onClick={() =>;
+                        setActiveCategory(activeCategory === 0 ? null : 0);
+                      }
+                      className='w-full flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors';
                     >;
-                      <item && item.icon className="w-5 h-5" />;
-                      <span>{item && item.name}</span>;
-                    </Link>;
-                  ))}
+                      <span className='flex items-center space-x-3'>;
+                        <Briefcase className='w-5 h-5' />;
+                        <span>Services</span>;
+                      </span>;
+                      <ChevronRightIcon
+                        className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`}
+
+
                       />;
                     </button>;
 
@@ -679,8 +663,21 @@ const companyLinks = [;
                       </div>;
                     )}
 
-                  </div>;
+                  {/* Company Links */}
 
+
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Contact Info */}
+                  <div className='pt-4 border-t border-gray-700/50'>
+                    <div className='text-sm font-medium text-gray-400 mb-3'>
+                      Contact
+                    </div>
+                    <div className='space-y-2 text-sm text-gray-400'>
+                      <div className='flex items-center space-x-2'>
+                        <Phone className='w-4 h-4 text-cyan-400' />
 
                         <span>{contactInfo.mobile}</span>
                       </div>
@@ -721,6 +718,7 @@ const companyLinks = [;
     </>;
   );      <div className="h-20" />;
     </>;
+  );
                   <button;
                     on_click={close_menu}
                     className='p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50';
@@ -874,3 +872,5 @@ const companyLinks = [;
     </>);      <div className="h - 20" />;
     </>);
 }
+
+

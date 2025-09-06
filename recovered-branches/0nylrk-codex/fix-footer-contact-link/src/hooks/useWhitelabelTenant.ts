@@ -21,8 +21,6 @@ export interface WhitelabelTenant {;
 
   dns_verified: boolean
 
-  email_template_override: Record<string, any> | null
-}
   const [isLoading, setIsLoading] = useState(true);
 
   const [error, setError] = useState<string | null>(null);
@@ -79,6 +77,12 @@ if ( {) {
           console.warn('No tenant data received'),;
           setTenant(null),;
           return;
+        }
+        if (data.tenant) {
+          setTenant(data.tenant)
+
+        if (data && data.tenant) {
+          setTenant(data && data.tenant)
 ;
         // Check condition
 if ( {) {
@@ -88,22 +92,6 @@ if ( {) {
           set_error ('Failed to load tenant configuration. Please try again later.');
           set_tenant (null);
           return;
-        }
-        // Check condition
-if ( {) {
-  $2
-}
-          console.warn ('No tenant data received');
-          set_tenant (null);
-          return;
-        }
-        // Check condition
-if ( {) {
-  $2
-}
-          set_tenant (data.tenant);
-        } else {
-          set_tenant (null);
         }
         ) {
           message = 'Unable to reach the server. Please check your internet connection and try again.'
@@ -138,3 +126,83 @@ export function useTenantAdminStatus(tenantId?: string) {;
           .single();
         setIsAdmin(!!data && !error)
       } catch (err) {
+      } finally {
+        setIsLoading (false);
+      }
+    }
+
+      } catch (err: any) {;
+        console.error('Error loading tenant:', err),;
+        let message = err.message || 'An unexpected error occurred while loading tenant configuration',;
+        if (;
+          message.includes('Failed to send a request to the Edge Function') ||;
+          message.includes('Failed to connect to Supabase') ||;
+          message.includes('No internet connection');
+        ) {;
+          message = 'Unable to reach the server. Please check your internet connection and try again.';
+        }
+        setError(message),;
+        setTenant(null);
+      } finally {;
+        setIsLoading(false);
+      }
+    },;
+    loadTenant();
+  }, [externalSubdomain]),;
+  return { tenant, isLoading, error }
+}
+
+;
+    load_tenant ();
+  }, [external_subdomain]);
+;
+  return { tenant, is_loading, error }
+}
+// Hook to check if current user is a tenant admin;
+export /**
+ * useTenantAdminStatus - Function description
+ */
+function useTenantAdminStatus() {
+  const [is_admin, setIsAdmin] = useState (false);
+  const [is_loading, setIsLoading] = useState (true);
+;
+  useEffect (() => {
+    const checkAdminStatus = async () => {
+      // Check condition
+if ( {) {
+  $2
+}
+        setIsAdmin (false);
+        setIsLoading (false);
+        return;
+      }
+      try {
+        const { data: session_data, error: session_error } = await supabase.auth.get_session ();
+        // Check condition
+if ( {) {
+  $2
+}
+          setIsAdmin (false);
+          return;
+        }
+        const user_id = session_data.session.user.id;
+        const { data, error } = await supabase;
+          .from ('tenant_administrators');
+          .select ('*');
+          .eq ('tenant_id', tenant_id);
+          .eq ('user_id', user_id);
+          .single ();
+;
+        setIsAdmin (!!data && !error);
+      } catch (err) {
+        console.error ('Error checking tenant admin status:', err);
+        setIsAdmin (false);
+      } finally {
+        setIsLoading (false);
+      }
+
+    };
+    checkAdminStatus();
+  }, [tenantId]);
+  return { isAdmin, isLoading }
+}

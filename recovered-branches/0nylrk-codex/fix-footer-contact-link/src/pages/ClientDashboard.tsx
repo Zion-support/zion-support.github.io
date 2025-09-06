@@ -47,20 +47,12 @@ function ClientDashboardContent() {
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
   const isMobile = useIsMobile(),
 
-
   // Set the first job as selected when jobs are loaded (if any)
   useEffect(() => {
     if (jobs.length > 0 && !selectedJobId) {
       setSelectedJobId(jobs[0].id),
       setSelectedJobTitle(jobs[0].title)
     }
-
-  }, [jobs, selectedJobId]),
-
-
-  const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId)
-    setSelectedJobTitle(jobTitle)
 
   return (
     <>
@@ -276,4 +268,3 @@ function ClientDashboard() {
       <ClientDashboardContent />;
     </ProtectedRoute>);
 }
-;

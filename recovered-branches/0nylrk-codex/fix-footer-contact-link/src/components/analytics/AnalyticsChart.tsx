@@ -3,6 +3,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend  } from 'recharts';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState } from "react";
+
+
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {useState} from "react";
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+import { useState } from './react';
 interface AnalyticsChartProps {
 
   title: string
@@ -32,10 +44,6 @@ interface AnalyticsChartProps {
   timeRange?: string,
   onTimeRangeChange?: (range: string) => void
 }
-
-
-export function AnalyticsChart({ 
-  title,
 
 export function AnalyticsChart({ ;
   title;
@@ -147,14 +155,6 @@ function AnalyticsChart() {
     </Card>
   )
 }
-          </ResponsiveContainer>;
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
-                  />))}
-              </BarChart>)}
           </ResponsiveContainer>;
         </div>;
       </CardContent>;

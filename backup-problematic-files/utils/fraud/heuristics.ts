@@ -1,7 +1,8 @@
 function containsSuspiciousPhrase(text: string): string[] {
-  const lower = text.toLowerCase();
-  return suspiciousPhrases.filter(p => lower.includes(p));
-}
+
+  const lower = text && text.toLowerCase();
+  return suspiciousPhrases && suspiciousPhrases.filter(p => lower && lower.includes(p));
+
 
 function containsVagueJobClaims(text: string): string[] {
   const lower = text && text.toLowerCase();
@@ -16,8 +17,6 @@ function containsVagueJobClaims(text: string): string[] {
   return reasons;
 }
 
-function containsVagueJobClaims(text: string): string[] {
-  const lower = text.toLowerCase();
 ;
 const suspiciousLinkHosts = [;
   'paypal.me',
@@ -105,32 +104,6 @@ export async function evaluateHeuristics(
       if (severity === 'low') severity = 'medium';
     }
   }
-export interface HeuristicDeps {
-  countEventsByIp: (
-    ip: string,
-    source: MonitoredSource,
-    within_minutes: number) => Promise < number>;
-;
-export async function evaluate_heuristics (
-  event: FraudEvent,
-  deps: HeuristicDeps): Promise < HeuristicEvaluation> {
-  const reasons: string[] = [];
-  let severity: HeuristicEvaluation['severity'] = 'low';
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    const recent = await deps.countEventsByIp (event.ip_address, 'signup', 10);
-    // Check condition
-if ( {) {
-  $2
-}
-      reasons.push (
-        `rapid_fire_signups_from_ip:${event.ip_address}:${recent}in10m`);
-      severity = recent >= 10 ? 'high' : 'medium';
-    }
-  }
   // Check condition
 if (&&) {
   $2
@@ -207,16 +180,8 @@ export function runHeuristics(data: any): HeuristicResult {
   const confidence = flags.size > 0 ? 0.8 : 0.1;
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
   return {
-}
-
-export function isHighRiskEvent(result: HeuristicResult): boolean {
-  return result.severity === 'high' || result.severity === 'critical';
-}
-
-export function shouldBlockEvent(result: HeuristicResult): boolean {
-  return result.severity === 'critical' && result.confidence > 80;
-}
   }
+
 }
 ;
   return {;

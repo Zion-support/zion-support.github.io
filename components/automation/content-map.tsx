@@ -11,6 +11,17 @@ export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
 
+ 
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+
+
+export default function ContentMap({ report }: Props) {
+  if (!report) return <div>No content map yet. Check back later.</div>;
+  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
+
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -49,13 +60,13 @@ export default function ContentMap(): any ({ report }: Props) {;
           {sections && sections.map(([sec, n]) => (;
             <li key={sec} className="flex justify-between"><span>{sec || 'root'}</span><span className="text-gray-500">{n}</span></li>;
           ))}
-        </ul>;
-      </section>;
-      <section>;
-        <h2 className="font-semibold mb-2">All Pages</h2>;
-        <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">;
-          {report && report.pages.map((p, i) => (;
-            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.route}</span><span className="text-gray-500 truncate">{p && p.file}</span></li>;
+        </ul>
+      </section>
+      <section>
+        <h2 className="font-semibold mb-2">All Pages</h2>
+        <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
+          {report.pages.map((p, i) => (
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.route}</span><span className="text-gray-500 truncate">{p.file}</span></li>
           ))}
 }
 ) );
@@ -95,3 +106,15 @@ if (return <div > No content map yet. Check back later.</div>) {
         </ul>;
       </section>;
     </div>);
+          ))}
+        </ul>
+      </section>
+      <section>
+          ))}
+        </ul>
+      </section>
+    </div>
+
+  );
+}
+

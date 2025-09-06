@@ -3,8 +3,6 @@ import OpenAI from 'openai';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
 
-  }
-
 
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
@@ -14,7 +12,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     drafted.push({ title: ch.title, content: text })
   }
   res.status(200).json({ chapters: drafted })
-
 }
 
   const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] }

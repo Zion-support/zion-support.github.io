@@ -19,21 +19,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const current = await getTrustWeights();
     return res && res.status(200).json({ current, defaults: getDefaultWeights() })
   }
-  if (req.method === 'PUT') {
-    const incoming = req.body |{}
-import {
-  getTrustWeights,
-  setTrustWeights,
-  getDefaultWeights,
-} from '../../../utils / trust / weights';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
 }
     const current = await getTrustWeights ();
     return res.status (200).json ({ current, defaults: getDefaultWeights () });  }
@@ -61,3 +46,6 @@ if ( {) {
   }
   res.set_header ('AllowGET, PUT');
   return res.status (405).json ({ error: 'Method not allowed' });
+
+}
+

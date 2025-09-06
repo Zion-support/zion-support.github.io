@@ -22,16 +22,18 @@ import {BulkAddSkills} from './BulkAddSkills';
 
   const [error, setError] = useState<string | null>(null);
   const [localSkills, setLocalSkills] = useState<Skill[]>(skills);
-      if (success) {;
-        // Refresh the skills list;
-        await refreshSkills();
       }
       return success
     } catch (err: any) {
       setError(err.message |'An error occurred')
       return false
     }
+      }
+
+
   };
+
+
 
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {
     if (confirm('Are you sure you want to delete this skill?')) {
@@ -44,7 +46,18 @@ import {BulkAddSkills} from './BulkAddSkills';
   }
   const refreshSkills = async () => {
     try {
+      const resumeData = await fetchResume(resumeId);
+      if (resumeData && resumeData.skills) {;
+        setLocalSkills(resumeData.skills);
       }
+
+    } catch (err: any) {;
+      setError(err && err.message || 'Failed to refresh skills');
+
+    }
+  };
+  },
+
 
   return (
     <div className="space-y-6">

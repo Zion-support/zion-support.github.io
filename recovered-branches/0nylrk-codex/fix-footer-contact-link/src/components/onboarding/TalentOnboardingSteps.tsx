@@ -9,6 +9,7 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function TalentOnboardingSteps() {
+
   const { user } = useAuth();
 
   const onboardingStatus = useOnboardingStatus();
@@ -79,6 +80,8 @@ export function TalentOnboardingSteps() {;
       completed: onboardingStatus.matchReceived,;
       link: "/talent-dashboard";
       action: "View Matches"}];
+}
+
 import React from './react';
 import { use_auth  } from '@/hooks / use_auth';
 import { useOnboardingStatus  } from '@/hooks / useOnboardingStatus';

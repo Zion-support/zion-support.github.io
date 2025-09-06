@@ -48,79 +48,6 @@ export default function FrontLanding() {
             </Link>          </div>
         </nav>
       </header>
-          <div className='hidden gap - 6 md:flex'>;
-            <Link href='/'>;
-              <a className='text - white / 80 hover:text - white'>Home</a>;
-            </Link>;
-            <Link href='/automation'>;
-              <a className='text - white / 80 hover:text - white'>Automations</a>;
-            </Link>;
-            <Link href='/newsroom'>;
-              <a className='text - white / 80 hover:text - white'>Newsroom</a>;
-            </Link>;
-            <Link href='/contact'>;
-              <a className='text - white / 80 hover:text - white'>Contact</a>;
-            </Link>          </div>;
-        </nav>;
-      </header>;
-      {/* Hero */}
-      <main className='relative z - 10'>;
-        <section className='mx - auto max - w-7xl px - 6 pt - 10 pb - 16 md:pt - 16 md:pb - 24'>;
-          <div className='text - center'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 10 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6 }}
-              className='mx - auto inline - flex items - center gap - 2 rounded - full border border - white / 15 bg - white / 5 px - 3 py - 1 text - xs text - white / 70 backdrop - blur - md';
-            >;
-              <span className='h - 2 w - 2 animate - pulse rounded - full bg - emerald - 400 shadow-[0_0_12px_rgba (52, 211, 153, 0.9)]' />              Autonomous agents running continuous improvements;
-            </motion.div>;
-            <motion.h1;
-              initial={{ opacity: 0, coordinate_y: 8 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.7, delay: 0.05 }}
-              className='mt - 6 text - 5xl font - extrabold leading-[1.05] tracking - tight md:text - 6xl';
-            >;
-              <span className='gradient - text'>;
-                Autonomous Cloud Automations;
-              </span>            </motion.h1>;
-            <motion.p;
-              initial={{ opacity: 0, coordinate_y: 8 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className='mx - auto mt - 5 max - w-3xl text - lg text - white / 80';
-            >;
-              Self - improving, cloud - native agents that invent, generate, and run;
-              new automation factoriesfixing, optimizing, and syncing changes;
-              to the repository continuously.            </motion.p>;
-            <motion.div;
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className='mt - 8 flex flex - wrap justify - center gap - 3';
-            >;
-              <Link href='/automation'>;
-                <a className='rounded - xl bg - gradient - to - r from - fuchsia - 500 to - cyan - 500 px - 6 py - 3 font - semibold shadow-[0_0_30px_rgba (34, 211, 238, 0.35)] hover:shadow-[0_0_40px_rgba (34, 211, 238, 0.6)] transition - shadow'>;
-                  Explore Automations;
-                </a>;
-              </Link>;
-              <a;
-                href='https://github.com / Zion - Holdings / zion.app / actions / workflows / autonomous - meta.yml';
-                target='_blank';
-                rel='noopener';
-                className='rounded - xl border border - white / 20 bg - white / 5 px - 6 py - 3 font - semibold backdrop - blur - md hover:bg - white / 10';
-              >;
-                Live Meta Factory;
-              </a>;
-            </motion.div>;
-            {/* Quick stats */}
-            <div className='mt - 8 grid grid - cols - 2 gap - 3 sm:grid - cols - 4'>;
-              {[;
-                ['24 / 7', 'Autonomous'],
-                ['Main', 'Direct Sync'],
-                ['0 Ops', 'CloudNative'],
-                ['Safety', 'Guardrails'],
-              ].map (([k, v]) => (                <motion.div;
-
       {/* Hero */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -176,6 +103,13 @@ export default function FrontLanding() {
                 title: 'Observability'
                 desc: 'Dashboards, reports, and GitHub Actions artifacts.'
               }
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                title: 'Observability',
+                desc: 'Dashboards, reports, and GitHub Actions artifacts.',
+              },
+            ].map (function => (              <motion.article;
+
                 title: 'Self‑Improving',
                 desc: 'Agents continuously analyze, invent, and evolve automations.',
               },
@@ -578,6 +512,8 @@ export default function FrontLanding(req, res) {
         </section>;
 
         {/* Capabilities */}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 title: 'Content & SEO',
                 desc: 'Curates content, updates promotions, and tunes metadata for reach.',
               },
@@ -590,11 +526,25 @@ export default function FrontLanding(req, res) {
                 initial={{ opacity: 0, coordinate_y: 6 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
-                className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md"
-              >
-                <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
-                <span className="text-sm text-white/80">{b}</span>
-              </motion.div>
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+
+
+        {/* CTA */}
+        <section className="mx-auto max-w-7xl px-6 pb-24">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
+          >
+            <h3 className="text-2xl font-bold">Ready to build with autonomous cloud agents?</h3>
+            <p className="mx-auto mt-2 max-w-2xl text-white/80">Scale development with a tireless fleet of self‑improving automations.</p>
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
+              <Link href="/services"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
+              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</a></Link>
+            </div>
           </motion.div>
         </section>
         {/* Explore more */}
@@ -653,6 +603,10 @@ export default function FrontLanding(req, res) {
             </Link>          </div>
         </section>
       </main>
+    </div>;
+  );
+
+}
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

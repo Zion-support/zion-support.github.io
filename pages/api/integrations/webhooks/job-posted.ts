@@ -1,3 +1,4 @@
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -72,6 +73,7 @@ export default async function handler(req, res) {
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } });
 
   });
+
   res.status(200).json({ ok: true, results })
 }
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
@@ -86,3 +88,4 @@ export default async function handler(req, res) {
     write_state ((s) => s.logs.push (log));
     results.push ({ provider_id: conn.provider_id, ok: true });
   }
+}

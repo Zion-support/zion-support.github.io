@@ -19,6 +19,9 @@ const Verify: NextPage = () => {
     </div>;
   ),;
 };
+export default Verify;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > Verify</h1>;
@@ -29,3 +32,5 @@ import Head from 'next / head';
 ;
 export default Verify;
 ;
+
+

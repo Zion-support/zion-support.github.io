@@ -68,7 +68,7 @@ interface LeaveReviewModalProps {;
       return success;
     }
 
-
+  };
   },
   };
   },
@@ -91,6 +91,18 @@ interface LeaveReviewModalProps {;
     </Dialog>
   )
 }
+import { useState, useEffect } from './react';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
+import { Button } from '@/components / ui / button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { ReviewForm } from './ReviewForm';
+import { use_reviews } from '@/hooks / use_reviews';
+interface LeaveReviewModalProps {
+  project_id: string,
+  reviewee_id: string,
+  reviewee_name: string,
+  is_open: boolean,
+  on_close: () => void;
 }
 export /**
  * LeaveReviewModal - Function description

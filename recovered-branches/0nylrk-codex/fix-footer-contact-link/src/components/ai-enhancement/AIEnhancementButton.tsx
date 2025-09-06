@@ -5,14 +5,17 @@ import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIConten
 import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
 
-  options: AIEnhancementOptions
-  onEnhanced: (enhancedContent: string) => void
+
 
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
 import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
 import {toast} from '@/hooks/use-toast';
+
+  options: AIEnhancementOptions
+  onEnhanced: (enhancedContent: string) => void
+
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
@@ -78,6 +81,20 @@ export function AIEnhancementButton({;
         title: "Not enough content",;
         description: `Please enter at least ${contentLength} characters before enhancing.`,;
         variant: "destructive";
+      });
+      return;
+    }
+
+
+    const enhancedContent = await enhanceContent(options);
+
+    if (enhancedContent) {;
+
+      setGeneratedContent(enhancedContent);
+      setShowActions(true);
+    }
+
+  },
   
   const handleAccept = () => {
     if (generatedContent) {
@@ -108,6 +125,7 @@ export function AIEnhancementButton({;
   const handleRegenerate = async () => {
     await handleEnhance()
   }
+    return (
       <div className="flex gap-2 items-center">;
         <Button
           type="button"
@@ -292,21 +310,10 @@ export function AIEnhancementButton({;
           <X className="h-4 w-4 mr-1" />;
           Cancel;
         </Button>;
-}
-      className={`gap - 1 ${class_name}`}
-      on_click={handle_enhance}
-      disabled={is_enhancing}
-    >;
-      {is_enhancing ? (
-        <Loader2 className="h - 4 w - 4 animate - spin" />) : (
-        <Sparkles className="h - 4 w - 4" />)}
-      <span className="text - xs">{button_text}</span>;
-    </Button>);
-  }
-  ;
-  return (;
+  return (
     <Button;
-      type="button";      variant={variant}
+      type="button";
+      variant={variant}
       size={size}
       className={`gap-1 ${className}`}
       onClick={handleEnhance}

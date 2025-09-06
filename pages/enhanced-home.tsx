@@ -19,6 +19,9 @@ const EnhancedHome: NextPage = () => {
     </div>;
   ),;
 };
+export default EnhancedHome;
+
+
 import Head from 'next / head';
       <main>;
         <h1 > EnhancedHome</h1>;
@@ -29,3 +32,5 @@ import Head from 'next / head';
 ;
 export default EnhancedHome;
 ;
+
+

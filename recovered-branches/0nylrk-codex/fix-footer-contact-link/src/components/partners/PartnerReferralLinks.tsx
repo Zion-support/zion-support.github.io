@@ -25,14 +25,11 @@ export function PartnerReferralLinks() {
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
   const [customParam, setCustomParam] = useState<string>("");
 
-export function PartnerReferralLinks() {
-  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
-  const [isDialogOpen, setIsDialogOpen] = useState(false),
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),
-  const [customParam, setCustomParam] = useState<string>(""),
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
   
   // Get the base referral link
+  const baseLink = getReferralLink(),
+  
   const handleCopyLink = (link: string) => {
     navigator.clipboard.writeText(link)
     toast({
@@ -136,6 +133,8 @@ export function PartnerReferralLinks() {;
     document.body.appendChild(link),;
     link.click();
     document.body.removeChild(link);
+  };
+
   return (
 import { useRef, useState } from "react",;
 import { Button } from "@/components/ui/button",;

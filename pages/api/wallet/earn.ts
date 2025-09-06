@@ -4,6 +4,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId, amount, reason, metadata } = req.body |{}
   if (!userId |typeof amount !== "number" |!reason) {
     return res.status(400).json({ error: "userId, amount, reason required" })
+
+  };
+};
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { earnTokens } from "../../../utils/token/service";
 export default function handler(req, res) {
@@ -18,8 +22,5 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
   }
 }

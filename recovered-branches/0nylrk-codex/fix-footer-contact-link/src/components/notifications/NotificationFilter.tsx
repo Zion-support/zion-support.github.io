@@ -53,6 +53,10 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
         </TabsList>
       </Tabs>
     </div>
+}
+
+  )
+},
 export const NotificationFilter: React.FC < NotificationFilterProps> = ({
   filter,
   onFilterChange,
@@ -84,6 +88,3 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
     </div>);
 }
 ;
-};
-  )
-},

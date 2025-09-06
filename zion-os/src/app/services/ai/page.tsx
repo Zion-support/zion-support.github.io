@@ -67,6 +67,7 @@
               </a>;
             </div>;
             {/* AI Content Generation */}
+                SEO-optimized content for blogs, social media, and marketing materials.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;
@@ -179,6 +180,7 @@
               </a>;
             </div>;
             {/* AI Process Automation */}
+                document processing, and AI-powered business process optimization.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - blue - 400">Key Features:</h3>;

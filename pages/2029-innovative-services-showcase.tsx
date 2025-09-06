@@ -93,8 +93,6 @@ function InnovativeServicesShowcase2029() {
   }
 }
   ],
-  const service_categories = [;
-    {
   return (
     <>
       <Head>
@@ -128,6 +126,36 @@ function InnovativeServicesShowcase2029() {
                 2029 Innovative Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+        <section className="py-32 bg-gradient-to-br from-black via-purple-900/20 to-black">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+  ],
+  return (
+    <>;
+      <Head>;
+        <title > 2029 Innovative Services Showcase - Zion Tech Group</title>;
+        <meta name="description" content="Discover our cutting - edge 2029 innovative services including AI autonomous ecosystems, emerging tech breakthroughs, and practical business solutions. Transform your business with next - generation technology." />;
+        <meta name="keywords" content="2029 services, AI autonomous, emerging technology, business solutions, Zion Tech Group" />;
+        <link rel="canonical" href="https://ziontechgroup.com / 2029 - innovative - services - showcase" />;
+      </Head>;
+      <div className="min - h-screen bg - black text - white">;
+        <UltraFuturisticNavigation2029 />;
+        {/* Hero Section */}
+        <section className="py - 32 bg - gradient - to - br from - black via - purple - 900 / 20 to - black">;
+          <div className="container mx - auto px - 4 text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+
+
+                Experience the future of technology with our revolutionary AI autonomous ecosystems,
+
+                Experience the future of technology with our revolutionary AI autonomous ecosystems, 
+                Experience the future of technology with our revolutionary AI autonomous ecosystems,
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -143,11 +171,6 @@ function InnovativeServicesShowcase2029() {
           </div>
         </section>
         {/* Services Overview */}
-        <section id="services" className="py - 20 bg - gradient - to - b from - black to - gray - 900">;
-          <div className="container mx - auto px - 4">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
         {/* Services Overview */  } catch (error) {
     console.error("Error:", error);
@@ -202,12 +225,6 @@ function InnovativeServicesShowcase2029() {
                     </div>
                   </div>
                 </motion.div>
-        {/* Featured Services */}
-        <section className="py - 20 bg - black">;
-          <div className="container mx - auto px - 4">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               ))  } catch (error) {
     console.error("Error:", error);
@@ -272,6 +289,9 @@ function InnovativeServicesShowcase2029() {
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
                         key={catIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">
+                  </div>
+
+
                   <div className="flex gap-4">
                     <Link
                       href={`/services/${service.id}`} className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
@@ -284,7 +304,6 @@ function InnovativeServicesShowcase2029() {
                     </Link>
                   </div>
                 </motion.div>
-
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -316,7 +335,6 @@ function InnovativeServicesShowcase2029() {
             </motion.div>
           </div>
         </section>
-
         <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -324,35 +342,18 @@ function InnovativeServicesShowcase2029() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-        <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            >
-              <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-                Join the future of technology with our innovative 2029 services.
+        {/* Contact CTA */}
+        <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;
+          <div className="container mx - auto px - 4 text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+
+
+
+
                 Contact us today to discover how we can revolutionize your business operations.
               </p>
               <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -386,6 +387,36 @@ function InnovativeServicesShowcase2029() {
         <UltraFuturisticFooter2029 />
       </div>
     </>
+            >;
+              <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className="text - xl text - gray - 300 mb - 12 max - w-3xl mx - auto">;
+                Join the future of technology with our innovative 2029 services.;
+                Contact us today to discover how we can revolutionize your business operations.;
+              </p>;
+              <div className="grid md:grid - cols - 3 gap - 8 mb - 12">;
+                <div className="flex items - center justify - center gap - 4 text - gray - 300">;
+                  <Phone className="w - 6 h - 6 text - purple - 400" />;
+                  <span>{contact_info.mobile}</span>;
+                </div>;
+                <div className="flex items - center justify - center gap - 4 text - gray - 300">;
+                  <Mail className="w - 6 h - 6 text - blue - 400" />;
+                  <span>{contact_info.email}</span>;
+                </div>;
+                <div className="flex items - center justify - center gap - 4 text - gray - 300">;
+                  <MapPin className="w - 6 h - 6 text - green - 400" />;
+                  <span>{contact_info.address}</span>;
+                </div>;
+              </div>;
+              <div className="flex flex - wrap justify - center gap - 4">;
+                <Link;
+                  href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white font - semibold rounded - full hover: from - purple - 700 hover:to - blue - 700 transition - all duration - 300 text - lg">;
+                  Contact Us Now;
+                  <ArrowRight className="ml - 2 h - 5 w - 5" />;
+                </Link>;
+                <Link;
+                  href="/pricing" className="inline - flex items - center px - 8 py - 4 border - 2 border - purple - 500 text - purple - 400 font - semibold rounded - full hover:bg - purple - 500 hover:text - white transition - all duration - 300 text - lg">;
                   View Pricing;
                 </Link>;
               </div>;
@@ -393,4 +424,5 @@ function InnovativeServicesShowcase2029() {
           </div>;
         </section>;
         <UltraFuturisticFooter2029 />;
-}
+
+

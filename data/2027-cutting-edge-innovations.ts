@@ -36,9 +36,6 @@
     }
   }
 ];
-  }
-}
-
 export const cuttingEdge2027Innovations: CuttingEdgeInnovation2027[] = [
   {
     id: "2027-cutting-edge-innovation", name: "2027 Cutting-Edge Innovation Platform",
@@ -54,6 +51,11 @@ export const cuttingEdge2027Innovations: CuttingEdgeInnovation2027[] = [
     link: "/services/2027-cutting-edge-innovation", category: "Cutting-Edge Innovations 2027",
     realImplementation: true,
     contactInfo: {
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

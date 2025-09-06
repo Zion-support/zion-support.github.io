@@ -1,10 +1,49 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
+}
+
+
+function ensureStorage() {
+
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(EPISODES_PATH))
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
+const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml');
+function ensureStorage() {
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(EPISODES_PATH))
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+  ensureStorage();
+  const siteUrl = process.env.SITE_URL |'http://localhost:3000';
+
+  const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+
+  const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';
+  const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const items = episodes
-    .filter(e => e && e.audio?.mp3Url)
-    .map(e => {      const pubDate = new Date(e && e.createdAt).toUTCString();    .filter((e) => e && e.audio?.mp3Url)
+    .filter(e => e.audio?.mp3Url)
+    .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
     .map((e) => {
+
+      const pubDate = new Date(e.createdAt).toUTCString();
+      const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
+
+      return `
+    <item>
+
+      <title><![CDATA[${e && e.title}]]></title>
+      <description><![CDATA[${e && e.youtubeDescription || e && e.spotifyDescription || ''}]]></description>
+      <link>${siteUrl}/media/podcast/${e && e.id}</link>
+      <guid isPermaLink="false">${e && e.id}</guid>
+
       <pubDate>${pubDate}</pubDate>
       <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />
     </item>`;

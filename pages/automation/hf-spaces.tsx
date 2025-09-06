@@ -14,7 +14,6 @@ export default function HfSpacesPage() {
           ))}
         </ul>
       </div>
-              <a className="font-medium underline" href={`https://huggingface.co/spaces/${it.spaceId}`} target="_blank" rel="noreferrer">{it.spaceId}</Link>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Likes {it.likes} · {it.runtime}</div>
             </li>
           ))  } catch (error) {

@@ -14,7 +14,6 @@ export default function HfModelsPage() {
           ))}
         </ul>
       </div>
-              <a className="font-medium underline" href={`https://huggingface.co/${it.modelId}`} target="_blank" rel="noreferrer">{it.modelId}</Link>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Downloads {it.downloads} · Likes {it.likes} · {it.pipeline_tag}</div>
             </li>
           ))  } catch (error) {

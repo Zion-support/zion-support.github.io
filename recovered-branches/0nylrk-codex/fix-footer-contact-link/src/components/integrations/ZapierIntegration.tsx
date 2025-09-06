@@ -147,9 +147,6 @@ export function ZapierIntegration() {;
         </CardContent>
       </Card>
     </div>
-            <p className="text - sm text - muted - foreground mb - 4">;
-              Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
-              to set up integrations.;
             </p>;
             <div className="space - y-4">;
               <div className="space - y-2">;
@@ -189,3 +186,6 @@ export function ZapierIntegration() {;
                 Set Up Trigger;
               </Button>;
             </div>;
+  );
+}
+;

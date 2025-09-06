@@ -1,5 +1,10 @@
 
-
+export type InterviewStatus = 
+  | 'requested' 
+  | 'confirmed' 
+  | 'declined' 
+  | 'rescheduled' 
+  | 'completed' ;
   id: string;
   client_id: string;
   talent_id: string;
@@ -16,8 +21,10 @@
   interview_type: InterviewType;
   client_name?: string;
   talent_name?: string;
+  client_avatar?: string
+  talent_avatar?: string
 }
-
+export interface InterviewRequest {
 
 export interface InterviewRequest {;
   talent_id: string;
@@ -27,11 +34,19 @@ export interface InterviewRequest {;
   notes?: string;
   meeting_link?: string;
   meeting_platform?: MeetingPlatform;
+  interview_type: InterviewType
+  title?: string
 }
-
+export interface InterviewResponse {
 
 export interface InterviewResponse {;
   interview_id: string;
   status: InterviewStatus;
   alternative_date?: string
+
+  interview_id: string;
+  status: InterviewStatus;
+
+  alternative_date?: string,
+  message?: string;
 

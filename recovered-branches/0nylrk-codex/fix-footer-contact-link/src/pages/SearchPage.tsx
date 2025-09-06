@@ -22,6 +22,8 @@ export default function SearchPage() {
   const [query, setQuery] = useState(initial);
   const { results, loading, search } = useAISearch();
   const suggestions: SearchSuggestion[] = generateSearchSuggestions()
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
+
   useEffect(() => {
     if (initial) {
       search(initial)
@@ -36,15 +38,6 @@ export default function SearchPage() {
             onChange={setQuery}
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects..."
-
-          />;
-        </form>;
-
-
-
-
-          />
-        </form>
 
 import { useEffect, useState } from "react",;
 import { useNavigate, useSearchParams } from "react-router-dom",;

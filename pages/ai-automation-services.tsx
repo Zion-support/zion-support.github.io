@@ -29,11 +29,95 @@ const serviceHighlights = [
     icon: BarChart3
     color: 'text-pink-400'
   },];
+import {motion} from 'framer-motion';
+import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings, } from 'lucide-react';
+import Layout from '../components / layout / Layout';
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }
+;
+const service_highlights = [;
+  {
+    title: 'AI Code Generation',
+    description:;
+      'Generate production - ready code across multiple languages with AI intelligence',
+    icon: Code,
+    color: 'from - emerald - 500 to - teal - 600',
+    features: [;
+      'Multi - language support',
+      'Security scanning',
+      'Performance optimization',
+      'Team collaboration',
+    ],
+  },
+  {
+    title: 'DevOps Automation',
+    description:;
+      'Intelligent automation for modern DevOps workflows with predictive analytics',
+    icon: Cpu,
+    color: 'from - purple - 500 to - indigo - 600',
+    features: [;
+      'CI / CD optimization',
+      'Self - healing infrastructure',
+      'Cost optimization',
+      'Multi - cloud support',
+    ],
+  },
+  {
+    title: 'Customer Support AI',
+    description:;
+      'Transform customer support with intelligent automation and sentiment analysis',
+    icon: Users,
+    color: 'from - blue - 500 to - cyan - 600',
+    features: [;
+      'Intelligent chatbots',
+      'Multi - language support',
+      'Predictive resolution',
+      '24 / 7 availability',
+    ],
+  },
+  {
+    title: 'Marketing Automation',
+    description:;
+      'AI - powered marketing automation with predictive analytics and optimization',
+    icon: BarChart3,
+    color: 'from - pink - 500 to - rose - 600',
+    features: [;
+      'Campaign optimization',
+      'Customer personalization',
+      'ROI tracking',
+      'Multi - channel automation',
+    ],
+  },
+  {
+    title: 'Sales Intelligence',
+    description:;
+      'Boost sales performance with AI - powered insights and predictive analytics',
+    icon: TrendingUp,
+    color: 'from - yellow - 500 to - orange - 600',
+    features: [;
+      'Lead scoring',
+      'Sales forecasting',
+      'Customer insights',
+      'Performance optimization',
+    ],
+  }, ];
+;
+const benefits = [;
+
+  {
+    title: '80% Reduction in Manual Work',
+    description: 'Automate repetitive tasks and focus on high - value activities',
+    icon: Zap,
+
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',};
+
 const serviceHighlights = [;
   {;
     title: 'AI Code Generation',;
@@ -100,6 +184,7 @@ const serviceHighlights = [;
       'Performance optimization',;
     ],;
   },];
+
 const benefits = [;
   {;
     title: '80% Reduction in Manual Work',;
@@ -122,6 +207,13 @@ const benefits = [;
     title: 'Real-time Insights',;
     description: 'Instant analytics and decision-making support',;
     icon: BarChart3,;
+  return (
+    <Layout>
+      <Head>
+        <title>
+          AI Automation Services - Zion Tech Group | Advanced AI-Powered
+          Automation Solutions
+        </title>
         <meta
           name='description'
           content='Transform your business with our advanced AI automation services. From code generation to DevOps automation, customer support to marketing - automate everything with AI intelligence.'
@@ -140,6 +232,78 @@ const benefits = [;
         <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
+          >
+            <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8'>
+              <Zap className='w-5 h-5 text-emerald-400' />
+              <span className='text-emerald-400 font-medium'>
+                AI Automation Services
+              </span>
+            </div>
+
+
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text text-white">
+              <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+
+
+                AI Automation
+              </span>
+              <br />
+              <span className='text-white'>Revolution</span>
+            </h1>
+
+
+
+
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+              <Link href='#services' className='group'>
+                <button className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>
+                  <span>Explore Services</span>
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                </button>
+              </Link>
+              <Link href='/contact' className='group'>
+                <button className='border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2'>
+                  <span>Get Started</span>
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>
+    <Layout>
+      <Head>
+        <title>AI Automation Services - Zion Tech Group | Advanced AI-Powered Automation Solutions</title>
+        <meta name="description" content="Transform your business with our advanced AI automation services. From code generation to DevOps automation, customer support to marketing - automate everything with AI intelligence." />
+        <meta name="keywords" content="AI automation, code generation, DevOps automation, customer support AI, marketing automation, sales intelligence, Zion Tech Group" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="AI Automation Services - Zion Tech Group" />
+        <meta property="og:description" content="Advanced AI-powered automation solutions for modern businesses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-automation-services" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Automation Services - Zion Tech Group" />
+        <meta name="twitter:description" content="Advanced AI-powered automation solutions for modern businesses." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
+        
+        {/* Contact Information */}
+        <meta name="contact:mobile" content="+1 302 464 0950" />
+        <meta name="contact:email" content="kleber@ziontechgroup.com" />
+        <meta name="contact:address" content="364 E Main St STE 1008 Middletown DE 19709" />
+        <meta name="contact:website" content="https://ziontechgroup.com" />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg">
+        <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent"></div>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8">
               <Zap className="w-5 h-5 text-emerald-400" />
@@ -163,6 +327,7 @@ const benefits = [;
               Transform your business operations with cutting-edge AI automation. From code generation to customer support,
               automate everything with intelligent AI that learns and adapts to your needs.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="#services" className="group">
                 <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
@@ -170,7 +335,9 @@ const benefits = [;
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
-
+                  <span>Get Started</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
               </Link>
             </div>
           </motion.div>
@@ -197,10 +364,6 @@ const benefits = [;
           <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
         </div>
       </section>
-          style={{ animationDelay: '2s' }}>;
-          <div className='w-3 h-3 bg-cyan-400 rounded-full'></div>        </div>;
-      </section>;
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -214,6 +377,7 @@ const benefits = [;
               of your business operations
             </p>
           </motion.div>
+              <motion.div
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
                 Services;
               </span>;
@@ -227,17 +391,56 @@ const benefits = [;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'>;
-                      <CheckCircle className='w-5 h-5 text-emerald-400 mr-3 flex-shrink-0' />                      <span>{feature}</span>;
-                    </li>;
-
-      {/* Detailed Services */}
-      <section className='py-20 bg-black'>;
-        <div className='container mx-auto px-4'>          <motion&& motion.div
+              >
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className="w-full h-full text-white" />
+                </div>
+                <h3 className='text-2xl font-bold text-white mb-4'>
+                  {service.title}
+                </h3>
+                <p className='text-gray-300 mb-6 leading-relaxed'>
+                  {service.description}
+                </p>
+                <ul className='space-y-2'>
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </div>
+      {/* Detailed Services */}
+      <section className='py-20 bg-black'>
+        <div className='container mx-auto px-4'>          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                </ul>;
+              </motion && motion.div>;
+            ))}
+
+
+      {/* Detailed Services */}
+
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-4">
+          <motion.div
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -252,6 +455,7 @@ const benefits = [;
               designed for modern enterprises
             </p>
           </motion.div>
+              <motion.div
               Portfolio;
             </h2>;
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
@@ -281,6 +485,26 @@ const benefits = [;
   }
 }
                   </div>
+                      <span>Learn More</span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                    <Link
+                      href='/contact'
+                      className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
+                    >                      Get Started
+                    <Link href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
+                      Get Started
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Benefits Section */}
+      <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
+        <div className='container mx-auto px-4'>          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -334,6 +558,7 @@ const benefits = [;
               measurable results
             </p>
           </motion.div>
+              <motion.div
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
                 AI Automation;
               </span>;
@@ -355,10 +580,26 @@ const benefits = [;
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <benefit.icon className={`w-full h-full ${benefit.color}`} />
                 </div>
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20'>;
+        <div className='container mx-auto px-4 text-center'>          <motion&& motion.div
+
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+                  <span>Start Your Automation Journey</span>
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                </button>
+              </Link>
+
+            className="max-w-4xl mx-auto"
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?
@@ -369,6 +610,13 @@ const benefits = [;
                 <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
                   <span>Start Your Automation Journey</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <span>View All Services</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
+            </div>
+            <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
                 <div className='text-3xl font-bold text-emerald-400 mb-2'>
                   24/7
@@ -386,6 +634,30 @@ const benefits = [;
           </motion.div>
         </div>
       </section>
+            </h2>;
+            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
+                </p>              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className='py - 20 bg - gradient - to - r from - emerald - 900 / 20 via - teal - 900 / 20 to - cyan - 900 / 20'>;
+        <div className='container mx - auto px - 4 text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='max - w-4xl mx - auto';
+          >;
+            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+              Ready to{' '}
+              <span className='bg - gradient - to - r from - emerald - 400 to - teal - 400 bg - clip - text text - transparent'>;
+                Automate;
+              </span>{' '}
+              Your Business?;
+            </h2>;
+            <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
+
               Join thousands of companies already transforming their operations;
               with AI automation. Get started today and see the difference;
               intelligent automation can make.;
@@ -427,3 +699,5 @@ const benefits = [;
                   350%;
                 </div>;
                 <div className='text - gray - 300'>Average ROI</div>              </div>;
+
+

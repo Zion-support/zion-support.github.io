@@ -81,6 +81,15 @@
         break,;
       default: // Default sorting by relevance (no specific order);
         break;
+      case 'price-high':
+        result && result.sort((a, b) => (b && b.hourly_rate || 0) - (a && a.hourly_rate || 0));
+        break;
+      case 'rating':
+        result && result.sort((a, b) => (b && b.average_rating || 0) - (a && a.average_rating || 0));
+        break;
+      case 'experience':
+        result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0));
+        break;
       default: // Default sorting by relevance (no specific order)
         break
     }

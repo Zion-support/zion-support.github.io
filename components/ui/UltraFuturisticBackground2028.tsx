@@ -1,4 +1,28 @@
 
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+import React, { useEffect, useRef } from 'react';
+
+  children,;
+}: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
+
+
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2028Props {
   children: React.ReactNode
@@ -49,9 +73,11 @@ interface UltraFuturisticBackground2028Props {
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none'        style={{ zIndex: 0 }}
-      {/* Gradient Overlays */}  }, []);
-      {/* Gradient Overlays */}  }, []);
 
+      />;
+
+
+      {/* Gradient Overlays */}  }, []);
   return (
       {/* Animated Background Canvas */}
       <canvas
@@ -110,16 +136,6 @@ interface UltraFuturisticBackground2028Props {
             scale: [1, 1 && 1.15, 1],
             opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25],          }}
           transition={{
-          animate={{
-            rotate: [45, 405]
-            scale: [1, 1 && 1.15, 1]
-            opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25]
-          transition={{
-
-          }}
-
-        />
-
         {/* Floating Circles */}
         <motion&& motion.div
           className='absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full'
@@ -172,6 +188,11 @@ interface UltraFuturisticBackground2028Props {
           transition={{
             duration: 5,
             repeat: Infinity,
+
+          }}
+
+            duration: 5,
+            repeat: Infinity,
             ease: 'easeInOut',            ease: "easeInOut"
           }}
 
@@ -179,7 +200,19 @@ interface UltraFuturisticBackground2028Props {
 
         />
       </div>
+        />;
+      </div>;
       {/* Energy Waves */}
+      <div
+        className='absolute inset-0 pointer-events-none'
+        style={{ zIndex: 3 }}
+      >
+
+          className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent'
+          animate={{
+            y: [0, 1000]
+            opacity: [0, 1, 0],          }}
+
         <motion.div
           className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent"
             ease: 'easeInOut',            ease: "easeInOut";
@@ -244,56 +277,49 @@ interface UltraFuturisticBackground2028Props {
             delay: 2
             y: [0, 1000];
             opacity: [0, 1, 0]
+        />;
+        <motion.div;
+          className="absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - blue - 500 to - transparent";
+          animate={{
+            coordinate_y: [0, 1000],
+            opacity: [0, 1, 0],            coordinate_y: [0, 1000];
+            opacity: [0, 1, 0];
+          }}
+          transition={{
             delay: 4,          }}          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
           animate={{
             y: [0, 1000]
             opacity: [0, 1, 0]
           transition={{
+            duration: 8
+            repeat: Infinity
+            ease: 'linear'
+            delay: 4,            ease: "linear"
+
+            delay: 4
+          }}
             duration: 8,
             repeat: Infinity,
 
-
           }}
 
-            ease: 'linear',
-            delay: 2,            ease: "linear",
-            delay: 2;
-          }}
-        />;
-        <motion.div;
-          className='absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - blue - 500 to - transparent';
-          animate={{
-            coordinate_y: [0, 1000],
-            opacity: [0, 1, 0],          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: 'linear',
-            delay: 2,          }}
-        />;
-        <motion.div;
-          className='absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 500 to - transparent';
-          animate={{
-            coordinate_y: [0, 1000],
-            opacity: [0, 1, 0],          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: 'linear',
-            delay: 4,          }}          className="absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 500 to - transparent";
-          animate={{
-            coordinate_y: [0, 1000];
-            opacity: [0, 1, 0];
-          transition={{
             duration: 8,
             repeat: Infinity,
             ease: 'linear',
             delay: 4,            ease: "linear",
             delay: 4;
           }}
+        />
+      </div>
         />;
       </div>;
       {/* Quantum Particles */}
+      <div
+        className='absolute inset-0 pointer-events-none'
+        style={{ zIndex: 4 }}
+      >
+
+
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
@@ -328,12 +354,45 @@ interface UltraFuturisticBackground2028Props {
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 3,
+          />
+        ))}
+      </div>
 
+      {/* Content */}
+      <div className='relative' style={{ zIndex: 10 }}>        {children}
+      </div>
+      {/* Bottom Glow */}      <div className="relative" style={{ zIndex: 10 }}>
+              delay: Math.random() * 3,
+              ease: "easeInOut"
+              left: `${Math.random () * 100}%`,
+              top: `${Math.random () * 100}%`;
+            }}
+            animate={{
+              scale: [0, 1, 0];
+              opacity: [0, 1, 0];
+            }}
+            transition={{
+              duration: 3 + Math.random () * 2,
+              repeat: Infinity,
+              delay: Math.random () * 3,
+              ease: 'easeInOut',            }}              ease: "easeInOut";
+            }}
+          />))}
+      </div>;
+      {/* Content */}
+
+      </div>;
+
+            }}
+          />
+        ))}
+      </div>
       {/* Content */}
       <div className='relative' style={{ zIndex: 10 }}>        {children}
       </div>;
 
       {/* Bottom Glow */}      <div className="relative" style={{ zIndex: 10 }}>;
+}
       <div className='relative' style={{ z_index: 10 }}>        {children}
       </div>;
       {/* Bottom Glow */}      <div className="relative" style={{ z_index: 10 }}>;

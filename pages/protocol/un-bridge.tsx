@@ -1,35 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-
-    title: 'Zion DAO x Digital Labor Initiative'
-    targetInstitution: 'UN Development Programme'
-    type: 'Workforce Dev'
-    regionalScope: 'Global South'
-    budgetOrResolution: 'USD 3M over 24 months'
-    supportingMultiverses: 'Digital Labor, AI Ethics'
-    promptAssist:
   });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
@@ -47,18 +16,64 @@ import React, { useState } from 'react';
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          ...form
-          supportingMultiverses: form.supportingMultiverses
-            .split(',')
-            .map(s => s.trim())
-            .filter(Boolean)
-        })
-
+  const [form, setForm] = useState({;
+    title: 'Zion DAO x Digital Labor Initiative',;
     targetInstitution: 'UN Development Programme',;
     type: 'Workforce Dev',;
     regionalScope: 'Global South',;
     budgetOrResolution: 'USD 3M over 24 months',;
     supportingMultiverses: 'Digital Labor, AI Ethics',;
+      });
+      const data = await res && res.json();
+      setResult(data);
+    } finally {;
+      setLoading(false);
+    }  }
+
+
+    try {;
+      const res = await fetch('/api/proposals/translate', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ markdown: result && result.markdown, targetLanguage }),;
+      });
+      const data = await res && res.json();
+      setTranslated(data && data.translated);
+    } finally {;
+      setLoading(false);
+    }  }
+
+
+      });
+      // Refresh meta;
+      const list = await fetch('/api/proposals/list');
+
+      const { proposals } = await list && list.json();
+      const updated = proposals && proposals.find((p: any) => p && p.id === result && result.meta.id),;
+
+      setResult((r: any) => ({ ...r, meta: updated }));
+    } finally {;
+      setLoading(false);
+    }  }
+
+
+
+  async function submit(): any (channels: string[]) {;
+    if (!result?.meta?.id) return;
+    setLoading(true),;
+    try {;
+      const res = await fetch('/api/proposals/submit', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ id: result && result.meta.id, channels }),;
+      });
+      const data = await res && res.json();
+      setResult((r: any) => ({ ...r, meta: data && data.meta }));
+    } finally {;
+      setLoading(false);
+    }
+
+  }
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Global Outreach: UN Bridge</h1>

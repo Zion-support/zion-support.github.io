@@ -33,13 +33,6 @@ export interface FontConfig {;
   bold?: ArrayBuffer,;
   italic?: ArrayBuffer,;
   boldItalic?: ArrayBuffer;
-    doc && doc.setFont('helvetica')
-import {jsPDF} from 'jspdf';
-export interface FontConfig {
-  regular: ArrayBuffer;
-  bold?: ArrayBuffer;
-  italic?: ArrayBuffer,
-  bold_italic?: ArrayBuffer;
 }
 export type FontFamily = 'default' | 'montserrat' | 'open - sans' | 'roboto';
 ;

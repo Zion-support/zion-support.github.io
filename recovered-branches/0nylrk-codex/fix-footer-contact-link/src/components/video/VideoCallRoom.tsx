@@ -41,6 +41,17 @@ interface Participant {
   isVideoEnabled?: boolean,
   isScreenSharing?: boolean,
   isHost?: boolean
+
+
+    }
+
+
+    // If turning video back on, ensure we're not in audio-only mode;
+    if (newVideoState) {;
+      setIsAudioOnly(false);
+    }
+  };
+
 import React, { useState } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -139,7 +150,15 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     if (!isAudioOnly) {;
       setIsVideoEnabled(false);
       if (onToggleVideo) {;
-            Room:{roomId}
+  return (
+
+    <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>;
+      <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">;
+        <div className="flex items-center space-x-2">;
+          <CardTitle className="text-white">Video Call</CardTitle>;
+          <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">;
+
+            Room: {roomId}
           </Badge>;
         </div>;
         <div className="flex items-center space-x-2">;
@@ -193,32 +212,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
                     </Avatar>;
                   </div>;
                 )}
-
-
-                
-
-
-        onToggleVideo(false);
-      }
-    }
-    }
-
-  return (
-    <Card className={`w-full ${className |'max-w-5xl mx-auto'}`}>
-      <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">
-        <div className="flex items-center space-x-2">
-          <CardTitle className="text-white">Video Call</CardTitle>
-          <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">
-            Room: {roomId}
-          </Badge>;
-        </div>;
-        <div className="flex items-center space-x-2">;
-          <Badge variant="secondary" className="bg-zion-blue-light text-white">;
-            {formatDuration(callDuration)}
-          {participants.length > 0 ? (
-            participants.map ((participant) => (
-              <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow - hidden relative">;
-                {participant.isVideoEnabled && !participant.isScreenSharing ? (
                 <div className="video-metadata flex items-center space-x-2">
                   <span>{participant.name}</span>
                   {participant.isMuted && <MicOff className="h-4 w-4" />}
@@ -237,15 +230,29 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
           )}
         </div>
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
+          <Button
+            variant="outline"
+            size="icon"
+          
           <Button 
 
             variant="outline" 
             size="icon" 
+          <Button
+            variant="outline"
+          
+          <Button 
+
             variant="outline" 
             size="icon"
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleScreenShare}>;
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
+          <Button
+            variant="outline"
+          
+          <Button 
+
             variant="outline" 
             size="icon"
             className="video-button rounded-full h-10 w-10"
@@ -338,5 +345,3 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     </Card>);
 }
 ;
-};
-},

@@ -28,6 +28,7 @@ import {
     pricing: "$199/month"
     features: ["Threat detection", "Automated response", "Compliance reporting", "Security dashboard"]
     benefits: ["99.9% threat detection", "Automated response", "Compliance ready", "24/7 monitoring"]
+  return (
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -171,7 +172,6 @@ export default function MicroSaaS(req, res) {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }
   ],
@@ -207,11 +207,13 @@ export default function MicroSaaS(req, res) {
                 <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   View Demo
 </Link>;
+
+
+
+
+</Link>
+</Link>;
 import React from 'react';
-                </Link>import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
 import {
   Cloud
   Zap
@@ -260,6 +262,15 @@ import {
 import Layout from '../components/Layout';
 
 export default function MicroSaaS() {
+
+  Cloud,
+  Zap,
+  BarChart3,
+
+import { 
+  Cloud, 
+  Zap, 
+  BarChart3, 
   Leaf,
   Truck,
   FileText,
@@ -543,12 +554,13 @@ export default function MicroSaasPage() {
       : products.filter(product => product.category === selectedCategory);
 export default function MicroSaas() {
 
-    <>
       <Head>
         <title>Micro SaaS Products - Zion Tech Group</title>
         <meta
           name='description'
           content='Explore our 150+ innovative micro SaaS products including AI-powered tools, analytics dashboards, automation solutions, and security services.'
+          {/* Hero Section */}
+
 
           {/* Category Filter */}
           <section className='py-8 px-4'>;
@@ -561,6 +573,8 @@ export default function MicroSaas() {
                       selectedCategory === category && category.id;
                         ? 'bg-blue-600 text-white';
                         : 'bg-slate-800 text-slate-300 hover:bg-slate-700';
+
+
           {/* Products Grid */}
           <section className='py-16 px-4' role='main'>
             <div className='max-w-7xl mx-auto'>
@@ -631,6 +645,15 @@ export default function MicroSaas() {
                       </span>;
                       <span className='text - xs text - slate - 500 capitalize'>;
                         {product.category}
+                {filteredProducts.map((product, index) => (
+                  <div                    key={product.id}
+                    className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
+                    {product.popular && (
+                      <div className='absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
+                        Popular
+                      </div>
                     </div>
                     <button className='w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>                      Learn More
                     </button>
@@ -673,8 +696,6 @@ export default function MicroSaas() {
                     Quick setup and deployment in minutes, not months
                   </p>
                 </div>
-                <div className='text-center'>
-                  <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -692,8 +713,6 @@ export default function MicroSaas() {
                     contracts
                   </p>
                 </div>
-                <div className='text-center'>
-                  <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -711,8 +730,6 @@ export default function MicroSaas() {
                     Specialized tools that solve specific business problems
                   </p>
                 </div>
-                <div className='text-center'>
-                  <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -732,6 +749,8 @@ export default function MicroSaas() {
                 Contact our experts to discuss which micro SaaS products are
                 right for your business and get started with a free trial.
               </p>
+
+
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>;
@@ -744,15 +763,22 @@ export default function MicroSaas() {
                 >
                   Call {contact.phone}
                 </a>
+                  href={`tel:${contact && contact.phone.replace(/[^\d+]/g, '')}`}
+                  className='px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'>;
+                  Call {contact && contact.phone}
+                </a>;
                 <a
                   href={`mailto:${contact.email}`}
                   className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'                >
                   Email Us
                 </a>
               </div>
-            </motion.div>
-          </div>
-        </section>
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
+
+
                   href={`mailto:${contact && contact.email}`}
                   className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'>;
                   Email Us;
@@ -774,17 +800,6 @@ export default function MicroSaas() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
-        {/* Solutions Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-        {/* Products Grid */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
@@ -849,28 +864,11 @@ export default function MicroSaas() {
                       {product.category}
                     </span>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {product.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    {product.description}
-                  </p>
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-green-600">
                       {product.pricing}
                     </span>
                   </div>
-                  <div className="space-y-2 mb-6">
-                    {product.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-
-
-
                   <Link
                     href="/contact"
                     className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
@@ -881,6 +879,12 @@ export default function MicroSaas() {
             </div>
           </div>
         </section>
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
+
+
                   </div>;
                   <Link
                     href="/contact"
@@ -971,13 +975,35 @@ export default function MicroSaas() {
           </div>
         </section>
       </div>
-    </Layout>;
+    </Layout>
   );
+                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+}
+            </div>
+origin/automation-improvements-final
           </section>
         </main>
       </ErrorBoundary>
     </>
   )
+              </h2>;
+              <p className="text-xl mb-8 max-w-3xl mx-auto">;
+                Discover how our micro SaaS solutions can solve your specific business challenges;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">;
+                  Get Started Today;
+                </Link>;
+                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">;
+                  Schedule Demo;
+                </Link>;
+              </div>;
             </div>;
           </section>;
           {/* CTA Section */  } catch (error) {
@@ -985,4 +1011,12 @@ export default function MicroSaas() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+}
+}
+
+
+}
+ursor/fix-lint-push-and-merge-to-main-ae4e
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
 }

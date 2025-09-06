@@ -1,7 +1,4 @@
 import { useState, useEffect } from 'react',
-
-
-
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
@@ -19,6 +16,65 @@ interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed'
 
   errorMessage?: string
+  const [isLoading, setIsLoading] = useState(true);
+  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
+
+  // Fetch model data on component mount;
+  useEffect(() => {;
+    fetchModels();
+  }, []);
+
+  const fetchModels = async () => {;
+    try {;
+      setIsLoading(true);
+
+import {useState, useEffect} from 'react';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
+import { Badge } from '@/components / ui / badge';
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from './lucide-react';
+import {supabase} from '@/integrations / supabase / client';
+import {ModelConfig} from '@/utils / zion - gpt';
+interface ModelVersionData extends ModelConfig {
+  training_status: 'queued' | 'running' | 'succeeded' | 'failed',
+  error_message?: string;
+}
+export /**
+ * ZionGPTModelManager - Function description
+ */
+function ZionGPTModelManager() {
+  const [models, set_models] = useState < ModelVersionData[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+  const [active_jobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),
+  // Fetch model data on component mount;
+  useEffect (() => {
+    fetch_models ();
+  }, []);
+;
+  const fetch_models = async () => {
+    try {
+      setIsLoading (true);
+      const { data, error } = await supabase;
+        .from ('model_versions');
+        .select ('*');
+        .order ('created_at', { ascending: false }),
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Map the data to our component state;
+      set_models (data.map (model => ({
+        id: model.id,
+        version: model.version,
+        created_at: model.created_at,
+        base_model: model.base_model,
+        purpose: model.purpose,
+        active: model.active,
+        training_status: model.training_status,
+        error_message: model.error_message;
+      })));
+
     } catch (error) {
       console.error ('Error fetching models:', error);
     } finally {
@@ -174,6 +230,10 @@ export function ZionGPTModelManager() {;
           .eq('purpose', purpose);
       }
 
+    }
+
+  },
+
   return (
     <Card className="w-full">;
       <CardHeader className="flex flex-row items-center justify-between">;
@@ -265,3 +325,4 @@ export function ZionGPTModelManager() {;
             </TableBody>;
           </Table>;
         )}
+;

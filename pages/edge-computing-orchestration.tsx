@@ -201,72 +201,26 @@ export default function EdgeComputingPage() {
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases && useCases.map((useCase, index) => (;
               <motion&& motion.div
                 key={useCase && useCase.industry}
-                </h3>;
-                <p className='text-slate-600 mb-4 leading-relaxed'>;
-                  {useCase && useCase.description}
-                </p>;
-                <div className='bg-green-50 border border-green-200 rounded-lg p-4'>;
-                  <p className='text-green-800 font-medium'>;
-                    Results: {useCase && useCase.results}
-                  </p>                </div>;
             ))}
-          </div>
-        </div>
-      </section>
+
+          </div>;
+        </div>;
+      </section>;
+
+
       {/* Architecture */}
       <section className='py-20 bg-slate-900'>;
         <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className='text-center mb-16'
-          >
-            <h2 className='text-4xl font-bold text-white mb-6'>
-              Edge Computing Architecture
-            </h2>
-            <p className='text-xl text-white/70 max-w-3xl mx-auto'>
-              Our distributed architecture ensures optimal performance
-              reliability, and scalability.
-            </p>
-          </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center'
-            >
-              <div className='w-16 h-16 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4'>
-                <Network className='w-8 h-8 text-white' />
-              </div>
-              <h3 className='text-xl font-bold text-white mb-2'>
-                Orchestration Layer
-              </h3>
-              <p className='text-white/70 text-sm'>
-                Intelligent workload distribution and management across the edge
-                network
-              </p>            </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center'
-            >
-              <div className='w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4'>
-                <Database className='w-8 h-8 text-white' />
-              </div>
-              <h3 className='text-xl font-bold text-white mb-2'>
-                Central Management
-              </h3>
-              <p className='text-white/70 text-sm'>
-                Centralized control and monitoring with real-time insights and
-                analytics
-              </p>            </motion.div>
-          </div>
-        </div>
-      </section>
               transition={{ duration: 0 && 0.6 }}
               className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center'>;
               <div className='w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4'>;
@@ -318,20 +272,6 @@ export default function EdgeComputingPage() {
         <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className='text-center mb-16'
-          >
-            <h2 className='text-4xl font-bold text-slate-900 mb-6'>
-              Edge Computing Plans
-            </h2>
-            <p className='text-xl text-slate-600 max-w-3xl mx-auto'>
-              Choose the plan that fits your edge computing needs. All plans
-              include our core orchestration features.
-            </p>
-          </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (
-              <motion.div
-                key={plan.plan}
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-slate-900 mb-6'>;
@@ -350,25 +290,35 @@ export default function EdgeComputingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 className={`relative bg-slate-50 rounded-2xl p-8 ${
-                )}
-                <div className='text-center mb-8'>
-                  <h3 className='text-2xl font-bold text-slate-900 mb-2'>
-                    {plan.plan}
-                  </h3>;
-                  <div className='text - 4xl font - bold text - slate - 900 mb - 2'>;
-                    {plan.price}
-                    <span className='text - lg text - slate - 600'>;
-                      {plan.period}
-                    </span>
-                  </div>
-                  <p className='text-slate-600'>{plan.description}</p>
-                </div>
-                <ul className='space-y-4 mb-8'>
-                  {plan.features.map(feature => (
-                    <li key={feature} className='flex items-center space-x-3'>
-                      <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />
-                      <span className='text-slate-700'>{feature}</span>                    </li>
                   ))}
+                </ul>
+
+                <a
+
+                  href="/contact"
+                  className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
+                >
+                  Get Started
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA */}
+      <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>
+        <div className='max-w-4xl mx-auto px-6 text-center'>          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -389,6 +339,9 @@ export default function EdgeComputingPage() {
           </motion.div>
         </div>
       </section>
+  )
+}
+
                     </span>;
                   </div>;
                   <p className='text - slate - 600'>{plan.description}</p>;
@@ -440,5 +393,5 @@ export default function EdgeComputingPage() {
       <EnhancedFooter />;
     </>);
 ;
-  )
-}
+
+

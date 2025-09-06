@@ -1,7 +1,3 @@
-import Link from "next/link";
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface JobsListProps {
-
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -35,23 +31,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         setIsLoading (false);
       }
     }
-
-        if (filter) {
-          query = query.eq("status", filter)
-import { useState, useEffect } from "react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Job, JobStatus } from "@/types/jobs",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Loader2, Edit, X, Eye } from 'lucide-react';
-import { format } from "date-fns",;
-import Link from "next/link",;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-interface JobsListProps {;
-  filter?: JobStatus,;
-  onSelectJob?: (jobId: string, jobTitle: string) => void;
   // Check condition
 if ( {) {
   $2
@@ -67,7 +46,7 @@ if ( {) {
         </Button>;
       </div>);
   }
-}
+  if (isLoading) {
     return (
       <div className="flex justify - center items - center p - 8">;
         <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
@@ -84,16 +63,6 @@ if ( {) {
       </div>
     )
   }
-      case "new": return "bg-blue-100 text-blue-800"
-      case "in_progress":
-        return "bg-yellow-100 text-yellow-800"
-      case "filled":
-        return "bg-green-100 text-green-800"
-      case "new": return "bg-blue-100 text-blue-800",
-      case "in_progress":
-        return "bg-yellow-100 text-yellow-800",
-      case "filled":
-        return "bg-green-100 text-green-800",
       case "closed":
         return "bg-gray-100 text-gray-800"
       default:
@@ -309,28 +278,3 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
                 <X className="h-4 w-4" />
               </Button>
             </div>
-};"
-return (<div className="grid gap-6 md:grid-cols-2" > {
-  jobs.map ( (job) => (<Card key= {
-  job.id
-}className= {
-  `overflow-hidden cursor-pointer transition-shadow hover:shadow-md $ {"
-  onSelectJob ? "cursor-pointer" : ""
-}`
-}onClick={
-  () => onSelectJob?. (job.id, job.title)
-}job.description
-}</p> + {
-  job.skills.length - 3
-}more </Badge>) "
-}</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {
-  job.budget.min
-}- $ {
-  job.budget.max "
-}</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) )
-}</div>)
-}'"}
-    </div>;
-  );
-}
-;

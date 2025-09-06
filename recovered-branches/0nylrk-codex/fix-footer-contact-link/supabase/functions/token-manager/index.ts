@@ -1,10 +1,19 @@
-import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
+
 interface TokenRequest {
   userId: string;
   amount: number
   reason?: string
 }
+interface TokenRequest {
+  userId: string,
+  amount: number,
+  reason?: string
+}
+
+const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
+const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
+const supabase = createClient(supabaseUrl, serviceKey),
+
 serve(async (req) => {
   if (req && req.method === 'OPTIONS') {
     return new Response('ok', {
@@ -60,22 +69,75 @@ interface TokenRequest {;
   userId: string,;
   amount: number,;
   reason?: string;
-}
-  } else {
-    const { error } = await supabase;
-      .from ('wallets');
-      .insert ({ user_id: user_id, balance });
-    if (return new Response (JSON.stringify ({ error: error.message }), { status: 500 })) {
+  const url = new URL (req.url);
+  const action = url.pathname.split ('/').pop ();
+  const { user_id, amount, reason } = await req.json () as TokenRequest;
+;
+  // Check condition
+if ( {) {
   $2
 }
+    return new Response (JSON.stringify ({ error: 'Missing parameters' }), { status: 400 });
   }
-  const { error: tx_error } = await supabase.from ('token_transactions').insert ({
-    user_id: user_id;
-    amount: Math.abs (delta);
-    transaction_type: type,
-    reason});
-  if (return new Response (JSON.stringify ({ error: tx_error.message }), { status: 500 })) {
+  // Check condition
+if ( {) {
   $2
 }
-  return new Response (JSON.stringify ({ success: true, balance }), { status: 200 });
+    return await change_balance (user_id, amount, 'earn', reason);
+  } else // Check condition
+if ( {) {
+  $2
 }
+    return await change_balance (user_id, -Math.abs (amount), 'burn', reason);
+  }
+  return new Response (JSON.stringify ({ error: 'Invalid action' }), { status: 400 });
+});
+;
+async /**
+ * change_balance - Function description
+ */
+function change_balance() {
+  const { data: wallet, error: wallet_error } = await supabase;
+    .from ('wallets');
+    .select ('*');
+    .eq ('user_id', user_id);
+    .single ();
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return new Response (JSON.stringify ({ error: wallet_error.message }), { status: 500 });
+  }
+  let balance = wallet?.balance || 0;
+  balance += delta;
+  // Check condition
+if (balance = 0) {
+  $2
+}
+  // Check condition
+if ( {) {
+  $2
+}
+    const { error } = await supabase;
+
+      .from('wallets');
+      .update({ balance, updated_at: new Date().toISOString() });
+      .eq('user_id', userId),;
+    if (error) return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+  } else {;
+    const { error } = await supabase;
+      .from('wallets');
+      .insert({ user_id: userId, balance }),;
+    if (error) return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+  }
+;
+  const { error: txError } = await supabase.from('token_transactions').insert({;
+    user_id: userId,;
+    amount: Math.abs(delta),;
+    transaction_type: type,;
+    reason}),;
+  if (txError) return new Response(JSON.stringify({ error: txError.message }), { status: 500 });
+  return new Response(JSON.stringify({ success: true, balance }), { status: 200 });
+}
+;

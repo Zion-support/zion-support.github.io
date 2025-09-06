@@ -83,29 +83,12 @@ export default function SMBSolutionsPage() {;
   ];
     >
       <div className="min-h-screen bg-gray-50">
-      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency.">;
-      <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-                Get enterprise-level capabilities at SMB-friendly prices.;
-              </p>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-              className="text-center";
-            >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-                SMB Solutions;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-                Technology solutions designed specifically for small and medium businesses.;
-                Get enterprise-level capabilities at SMB-friendly prices.;
-              </p>;
-            </motion && motion.div>;
           </div>;
         </section>;
               className="text-center"
@@ -120,9 +103,6 @@ export default function SMBSolutionsPage() {;
             </motion.div>
           </div>
         </section>
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">";
-          <div className="container mx-auto px-4 text-center">";
             </h2>;
             <p className="text-xl mb-8 max-w-2xl mx-auto">";
               Ready to take your SMB to the next level? Let our experts help you choose the right technology solutions.;

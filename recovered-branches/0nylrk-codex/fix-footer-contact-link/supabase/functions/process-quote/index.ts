@@ -3,21 +3,6 @@ interface Service {
   id: string;
   title: string
   category: string
-import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
-import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
-import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
-const openAIApiKey = Deno.env.get ('OPENAI_API_KEY');
-const supabase_url = Deno.env.get ('SUPABASE_URL') || '';
-const supabaseServiceKey = Deno.env.get ('SUPABASE_SERVICE_ROLE_KEY') || '',
-const supabase = create_client (supabase_url, supabaseServiceKey);
-;
-const cors_headers = {
-  'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
-;
-interface Service {
-  id: string;
-  title: string,
-  category: string;
 }
 interface QuoteDetails {
   description: string;
@@ -53,6 +38,12 @@ interface RequestBody {
 }
 serve(async (req) => {
   // Handle CORS preflight requests
+
+  try {
+
+    const { service, quoteDetails } = await req && req.json() as RequestBody;
+    
+
     // Extract user identity if authenticated
     let userId = null;
     try {
@@ -122,19 +113,13 @@ serve(async (req) => {
                 1. A concise summary (max 100 words);
                 2. 3-5 relevant tags for categorization;
                 3. An estimated complexity level (Low, Medium, High);
+                Service: ${service?.title || 'Custom Service'}
+                Category: ${service?.category || 'N/A'}
                 Description: ${quoteDetails.description}
                 Budget Range: ${quoteDetails.budget}
                 Timeframe: ${quoteDetails.timeframe}
                 Start Date: ${quoteDetails.startDate |'Not specified'}
                 End Date: ${quoteDetails.endDate |'Not specified'}`
-                
-                Service: ${service?.title || 'Custom Service'}
-                Category: ${service?.category || 'N/A'}
-                Description: ${quoteDetails && quoteDetails.description}
-                Budget Range: ${quoteDetails && quoteDetails.budget}
-                Timeframe: ${quoteDetails && quoteDetails.timeframe}
-                Start Date: ${quoteDetails && quoteDetails.startDate || 'Not specified'}
-                End Date: ${quoteDetails && quoteDetails.endDate || 'Not specified'}`
             ],;
             temperature: 0.5;
           });
@@ -163,6 +148,12 @@ serve(async (req) => {
       ])
       .select();
     if (error) throw error;
+  }
+});
+
+  }
+});
+
           description: quote_details.description;
           email: quote_details.email;
           budget: quote_details.budget;
@@ -219,3 +210,5 @@ if (throw error) {
     return new Response(JSON.stringify({ success: false, error: error.message }), {;
       status: 500,;
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+  }
+});

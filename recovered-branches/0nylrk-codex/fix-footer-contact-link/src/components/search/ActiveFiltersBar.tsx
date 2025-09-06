@@ -33,6 +33,49 @@ interface ActiveFiltersBarProps {
     <div className="flex flex-wrap gap-2 items-center mb-4">
       <span className="text-sm text-zion-slate-light">Active filters:</span>
       {searchQuery && (
+interface ActiveFiltersBarProps {;
+  selectedProductTypes: string[],;
+  selectedLocations: string[],;
+  selectedAvailability: string[],;
+  selectedRating: number | null,;
+  searchQuery: string,;
+  onRemoveFilter: (filterType: string, value: string) => void,;
+  onRemoveRating: () => void,;
+  onClearSearch: () => void;
+}
+
+export function ActiveFiltersBar(): any ({;
+
+  selectedProductTypes;
+  selectedLocations;
+  selectedAvailability;
+  selectedRating;
+  searchQuery;
+  onRemoveFilter;
+  onRemoveRating;
+
+
+
+
+  onClearSearch
+}: ActiveFiltersBarProps) {
+
+  const hasActiveFilters = 
+    selectedProductTypes.length > 0 || 
+    selectedLocations.length > 0 || 
+    selectedAvailability.length > 0 || 
+    selectedRating !== null ||
+    !!searchQuery,
+    
+  if (!hasActiveFilters) return null,
+  
+
+
+  return (
+    <div className="flex flex-wrap gap-2 items-center mb-4">
+      <span className="text-sm text-zion-slate-light">Active filters:</span>
+      {searchQuery && (
+
   onClearSearch;
 }: ActiveFiltersBarProps) {;
   const hasActiveFilters = ;

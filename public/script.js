@@ -1,8 +1,65 @@
+
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)'
+        })
+    }),
+    
+    // Stats counter animation
+    const statNumbers = document.querySelectorAll('.stat-number'),
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target),
+                statsObserver.unobserve(entry.target)
+            }
+        })
+    }, { threshold: 0.5 }),
+    
+    statNumbers.forEach(stat => {
+        statsObserver.observe(stat)
+    }),
+    
+    // Back to top button
+    const backToTopBtn = document.createElement('button'),
+    backToTopBtn.innerHTML = '↑',
+    backToTopBtn.className = 'back-to-top',
+    backToTopBtn.setAttribute('aria-labelBack to top'),
+    document.body.appendChild(backToTopBtn),
+    
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }),
+    
+    // Show/hide back to top button
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('visible')
+        } else {
+            backToTopBtn.classList.remove('visible')
+        }
+    }),
+    
+    // Initialize tooltips
+    initializeTooltips(),
+    
+    // Initialize modals
+    initializeModals()
+}),
+
 // Search function
 function performSearch(query) {
     // This would typically make an API call to search your content
     // For now, we'll simulate search results
-    const searchResults = document && document.querySelector('.search-results'),
+            { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' }
+            { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' }
+            { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' }
+
+            { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
+
 // Zion Tech Group Website JavaScript;
 document.addEventListener('DOMContentLoaded', function() {;
     // Mobile Navigation Toggle;
@@ -287,6 +344,21 @@ function performSearch(query) {;
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },;
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },;
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },;
+        ].filter(item => 
+            item && item.title.toLowerCase().includes(query)
+        ),
+        
+        if (results.length > 0) {
+            searchResults.innerHTML = results.map(result =>
+                `<a href="${result.url}" class="search-result-item">${result.title}</a>`
+
+            ).join('')
+
+            searchResults.style.display = 'block'
+        } else {
+            searchResults && searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
+            searchResults && searchResults.style.display = 'block'
+
         }
     }
 }
@@ -358,6 +430,27 @@ function initializeModals() {
         }
     })
     // Close modal on escape key
+        }
+    }
+}
+// Counter animation;
+/**
+ * animate_counter - Function description
+ */
+function animate_counter() {
+    const target = parse_int (element.text_content.replace (/\D / g, '')),
+    const duration = 2000,
+    const step = target / (duration / 16),
+    let current = 0,
+    const timer = set_interval (() => {
+        current += step,
+        // Check condition
+if ( {) {
+  $2
+}
+            current = target,
+            clear_interval (timer);
+        }
         ].filter(item =>;
             item.title.toLowerCase().includes(query);
         ),;
@@ -388,20 +481,7 @@ function animateCounter(element) {;
 ;
         const suffix = element.textContent.replace(/\d/g, ''),;
         element.textContent = Math.floor(current) + suffix;
-        
-        ].filter(item => 
-            item && item.title.toLowerCase().includes(query)
-        ),
-        if (results && results.length > 0) {
-            searchResults && searchResults.innerHTML = results && results.map(result => 
-                `<a href="${result && result.url}" class="search-result-item">${result && result.title}</a>`
-            ).join(''),
-            searchResults && searchResults.style.display = 'block'
-        } else {
-            searchResults && searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
-            searchResults && searchResults.style.display = 'block'
-        }
-    }
+    }, 16);
 }
 // Tooltip initialization;
 /**
@@ -511,7 +591,6 @@ function logPerformance() {
         const perfData = window.window.window.performance.getEntriesByType('navigation')[0],
         // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),
         // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
-
     }
 }
 // Error tracking
@@ -616,7 +695,6 @@ document && document.addEventListener('click', function(e) {
 })
 // Log performance when page is fully loaded
 
-window.addEventListener('load', logPerformance)
 
     // // // console.log('Event tracked:', eventName, eventData),
     // Implement your analytics tracking here
@@ -691,3 +769,7 @@ document.addEventListener ('click', function (e) {
     }
 }),
 // Log performance when page is fully loaded;
+
+    // // // console.log('Event tracked:', eventName, eventData),
+    // Implement your analytics tracking here
+

@@ -1,12 +1,3 @@
-import React from "react",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import z from "zod",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { useToast } from "@/hooks/use-toast",
-import { useRouter } from "next/router";
-import Image from 'next/image', // Import next/image
 import {
 
   Form
@@ -71,17 +62,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema)
     defaultValues: {
-      title: ''
-      description: ''
-      price: ''
-      category: ''
-      video: undefined
-      model: undefined
-      tags: ''
-    }
-  })
-  // Handle image upload preview
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];    if (file) {
       form.setValue('image', file)
       const reader = new FileReader()
@@ -136,15 +116,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
       return;
     }
     setIsSubmitting(true)
-    try {
-      // Create the product listing
-      const productData = {
-        title: values.title
-        description: values.description
-        price: parseFloat(values.price)
-        category: values.category
-        currency: 'USD', // Default currency
-        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : []
         title: "Authentication Required",
         description: "You must be logged in to publish products",
         variant: "destructive"}),
@@ -172,6 +143,141 @@ if ( {) {
     try {
       // Create the product listing
       const productData = {
+        title: values.title,
+        description: values.description,
+        price: parse_float (values.price),
+        category: values.category,
+        currency: 'USD', // Default currency;
+        tags: values.tags ? values.tags.split (', ').map (tag => tag.trim ()) : [],
+        author: {
+      }
+      // Upload video if provided;
+      // Check condition
+if ( {) {
+  $2
+}
+        const video_path = `product_videos/${product_record.id}/${values.video.name}`;
+        const { error: upload_error } = await supabase.storage;
+          .from ('products');
+          .upload (video_path, values.video);
+        // Check condition
+if ( {) {
+  $2
+}
+          throw new Error (upload_error.message);
+        }
+        const { data: publicUrlData } = supabase.storage;
+          .from ('products');
+          .getPublicUrl (video_path);
+        const { error: update_error } = await supabase;
+          .from ('product_listings');
+          .update ({ video_url: publicUrlData.public_url });
+          .eq ('id', product_record.id);
+        // Check condition
+if ( {) {
+  $2
+}
+          throw new Error (update_error.message);
+        }
+      }
+      // Upload model if provided;
+      // Check condition
+if ( {) {
+  $2
+}
+        const model_path = `product_models/${product_record.id}/${values.model.name}`;
+        const { error: upload_error } = await supabase.storage;
+          .from ('products');
+          .upload (model_path, values.model);
+        // Check condition
+if ( {) {
+  $2
+}
+          throw new Error (upload_error.message);
+        }
+        const { data: publicUrlData } = supabase.storage;
+          .from ('products');
+          .getPublicUrl (model_path);
+        const { error: update_error } = await supabase;
+          .from ('product_listings');
+          .update ({ model_url: publicUrlData.public_url });
+          .eq ('id', product_record.id);
+        // Check condition
+if ( {) {
+  $2
+}
+          throw new Error (update_error.message);
+        }
+      }
+      // Send listing to moderation service;
+
+      try {
+        await supabase.functions.invoke ('moderate - listing', {
+          body: {
+
+            listing_id: product_record.id,
+            listing_type: 'product',
+            description: values.description,
+            images: imagePublicUrl ? [imagePublicUrl] : [],
+            seller_id: user.id,
+          },
+        });
+
+      } catch (err) {
+        logErrorToProduction ('Error invoking moderation:', { data: err });
+      }
+
+
+import React from 'react';
+import { useForm, ControllerRenderProps } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import z from 'zod';
+import { supabase } from '@/integrations/supabase/client';
+import { useAuth } from '@/hooks/useAuth';
+import { useToast } from '@/hooks/use-toast';
+import { useRouter } from 'next/router';
+import Image from 'next/image'; // Import next/image;
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+
+
+          name: user.displayName || "Anonymous Creator",
+          id: user.id},
+        createdAt: new Date().toISOString()},
+      
+      const { data: productRecord, error: productError } = await supabase
+        .from('product_listings')
+        .insert([productData])
+        .select('id')
+        .single()
+      if (productError) {
+        throw new Error(productError.message)
+      }
+      let imagePublicUrl: string | undefined
+      // If we have an image, upload it
+      if (values.image) {
+        const imagePath = `product_images/${productRecord.id}/${values.image.name}`
+        const { error: uploadError } = await supabase.storage
+          .from('products')
+          .upload(imagePath, values.image)
+        if (uploadError) {
+          throw new Error(uploadError.message)
+        }
+        // Get the public URL for the image
+        const { data: publicUrlData } = supabase.storage
+          .from('products')
+          .getPublicUrl(imagePath)
+        imagePublicUrl = publicUrlData.publicUrl
+        // Update the product with the image URL
+        const { error: updateError } = await supabase
+          .from('product_listings')
+          .update({
+            images: [imagePublicUrl]
+          })
+          .eq('id', productRecord.id)
+        if (updateError) {
+          throw new Error(updateError.message)
+        }
       }
       // Upload video if provided
       if (values.video) {
@@ -232,26 +338,6 @@ if ( {) {
         title: 'Product Published!'
         description: 'Your product has been successfully published on Zion.'
       })
-import React from 'react';
-import { useForm, ControllerRenderProps } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import z from 'zod';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { useToast } from '@/hooks/use-toast';
-import { useRouter } from 'next/router';
-import Image from 'next/image'; // Import next/image;
-import { logErrorToProduction } from '@/utils/productionLogger';
-
-          name: user.displayName || "Anonymous Creator",
-          id: user.id},
-        createdAt: new Date().toISOString()},
-      
-      const { data: productRecord, error: productError } = await supabase
-        .from('product_listings')
-        .insert([productData])
-        .select('id')
-
         .single(),
         
       if (productError) {
@@ -333,16 +419,6 @@ import {;
     }
   },
 
-  return (
-    <Tabs value={activeTab} onValueChange={setActiveTab} className='w-full'>;
-      <TabsList className='grid grid-cols-2 mb-6'>;
-        <TabsTrigger
-          value='manual'
-          className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
-          Manual Creation;
-        </TabsTrigger>;
-        <TabsTrigger
-          value='ai'
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
               control={form && form.control}
@@ -575,13 +651,6 @@ import {;
                     />
                   </FormControl>
                   <FormDescription>
-                    Add relevant tags to help users find your product (e.g., ai
-                    productivity, design)
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-                  <FormControl>;
-              )}
                   <FormLabel>Tags</FormLabel>;
                   <FormControl>;
                     <Input
@@ -597,13 +666,6 @@ import {;
                 </FormItem>;
               )}
             />;
-            <FormField;
-              control={form.control}
-              name="image"
-              render={() => (
-                <FormItem>
-                  <FormLabel>Product Image</FormLabel>
-                  <FormControl>
                     <Input
                       type='file'
                       accept='image/*'
@@ -695,62 +757,6 @@ import {;
             <FormField;
               control={form.control}
               name='video'              render={() => (
-                          alt='Product image preview'                          width={600} // Example width, adjust as needed
-                          alt="Product image preview"
-                          width={600} // Example width, adjust as needed
-                          height={400} // Example height, adjust as needed
-                          className="w-full h-full object-cover"
-                          priority={false} // Preview images are not LCP
-                          // `sizes` might not be strictly necessary for a preview of this nature
-                          // but can be added if responsive behavior is critical here.
-                          // For local object URLs, optimization via loader won't occur.
-                        />
-                      </AspectRatio>
-                    </div>
-                  )}
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='video'              render={() => (
-            />;
-            <FormField;
-              control={form.control}
-              name="video"
-              render={() => (
-                <FormItem>
-                  <FormLabel>Product Video (MP4)</FormLabel>
-                  <FormControl>
-                    <Input type="file" accept="video/mp4" onChange={handleVideoChange} className="cursor-pointer" />
-                  </FormControl>
-                  <FormDescription>
-                    Optional video demonstrating your product
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='model'              render={() => (
-            />;
-            <FormField;
-              control={form.control}
-              name="model"
-              render={() => (
-                <FormItem>
-                  <FormLabel>3D Model (glb)</FormLabel>
-                  <FormControl>
-                    <Input type="file" accept="model/gltf-binary,.glb" onChange={handleModelChange} className="cursor-pointer" />
-                  </FormControl>
-                  <FormDescription>
-                    Upload a 3D model for interactive viewing
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
                 <FormItem>;
                   <FormLabel > Product Video (MP4)</FormLabel>;
                   <FormControl>;
@@ -869,7 +875,6 @@ import {;
                   <FormMessage />
                 </FormItem>
               )}
-
             />;
             <FormField;
               control={form.control}
@@ -887,13 +892,6 @@ import {;
                 </FormItem>
               )}
             />
-            <div className="flex justify-end">
-              <Button 
-                type="submit" 
-                disabled={isSubmitting}
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-              >
-                {isSubmitting ? "Publishing..." : "Publish Product"}
               </Button>
             </div>
           </form>

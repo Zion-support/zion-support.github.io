@@ -8,10 +8,13 @@
   if (req.method === "GET") {
     return res.status(200).json(company.members);
   }
-  if (req.method === "POST") {
-    const { name, email, role } = req.body |{}
-    if (!name |!email)
-      return res.status(400).json({ error: "name and email required" });
+    const r: EnterpriseRole = role || "viewer";
+    const member = store.add_member (company_id, name, email, r);
+    return res.status (201).json (member);
+  }
+  // Check condition
+if ( {) {
+  $2
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -56,6 +59,8 @@ export default function handler(req, res) {
   if (req.method === 'GET') {
     const { name, email, role } = req.body || {};
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+
+
     const member = store.addMember(companyId, name, email, r);
     return res.status(201).json(member);
     } catch (error) {
@@ -65,7 +70,6 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 }
   } catch (error) {
     console.error("Error:", error);
@@ -124,5 +128,3 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}

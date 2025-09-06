@@ -1,3 +1,17 @@
+
+
+  Rocket, Target, TrendingUp, Users, CheckCircle,
+  ArrowRight, Star, Award, Clock, DollarSign,
+  Building2, Gauge, BarChart3, Settings, Workflow
+} from 'lucide-react',
+const AutonomousBusinessOperationsPlatform = () => {
+  const features = [
+    {
+      icon: Bot,
+      title: "AI Autonomous Management",
+      description: "Fully autonomous business operations with intelligent decision-making",
+
+
       description: "Automated production lines, quality control, and supply chain management"
     }
     {
@@ -84,11 +98,86 @@
       title: "Team Productivity"
       value: "250%"
       description: "Increase in team productivity"
+    },
+    {
+      icon: Brain,
+      title: "Cognitive Business Intelligence",
+      description: "Advanced AI that understands and optimizes your business processes",
+
+      color: "from-purple-500 to-pink-500"
+
+    },
+    {
+      icon: Workflow,
+      title: "Automated Workflows",
+      description: "Seamless automation of complex business processes and operations",
+
+      color: "from-emerald-500 to-teal-500"
+
+    },
+    {
+      icon: Shield,
+      title: "Intelligent Security",
+
+      description: "AI-powered security monitoring and threat prevention",
+      color: "from-red-500 to-orange-500"
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  ],
+  const capabilities = [
+    "24/7 autonomous operation",
+    "Real-time decision making",
+
+    "Predictive analytics",
+    "Process optimization",
+    "Resource management",
+    "Performance monitoring",
+    "Risk assessment",
+  const industries = [
+    {
+      title: "Manufacturing",
+      description: "Automated production lines, quality control, and supply chain management"
+    },
+    {
+      title: "Healthcare",
+      description: "Patient care automation, medical device management, and administrative tasks"
+    },
+    {
+      title: "Finance",
+      description: "Automated trading, risk management, and compliance monitoring"
+    },
+    {
+      title: "Retail",
+      description: "Inventory management, customer service, and sales optimization"
+  ],
+  const benefits = [
+    {
+      icon: TrendingUp,
+      title: "Increased Efficiency",
+      value: "300%",
+      description: "Boost in operational efficiency"
+    },
+    {
+      icon: DollarSign,
+      title: "Cost Reduction",
+      value: "40%",
+      description: "Reduction in operational costs"
+    },
+    {
+      icon: Clock,
+      title: "Time Savings",
+      value: "80%",
+      description: "Faster decision making"
+    },
+    {
+      icon: Users,
+      title: "Team Productivity",
+      value: "250%",
+      description: "Increase in team productivity"
+  ],
   return (
     <>
       <Head>
@@ -101,8 +190,6 @@
         <meta property="og:url" content="https://ziontechgroup.com/autonomous-business-operations-platform" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-
-
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -153,6 +240,8 @@
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
+                Transform your business with AI-powered autonomous operations that work 24/7, 
+                Transform your business with AI-powered autonomous operations that work 24/7,
                 making intelligent decisions and optimizing every aspect of your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -167,7 +256,6 @@
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -182,18 +270,6 @@
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
-                Revolutionary Features;
-              </h2>;
-              <p className="text - xl text - gray - 400 max - w-2xl mx - auto">;
-                Experience the future of business automation with our cutting - edge platform;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-              {features.map ((feature, index) => (
-                <motion.div;
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -252,18 +328,6 @@
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
-                Advanced Capabilities;
-              </h2>;
-              <p className="text - xl text - gray - 400 max - w-2xl mx - auto">;
-                Comprehensive automation capabilities that transform your business operations;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
-              {capabilities.map ((capability, index) => (
-                <motion.div;
                   key={index}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
@@ -318,18 +382,6 @@
                 See the real impact of autonomous operations on your business
               </p>
             </motion.div>
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
-                Measurable Results;
-              </h2>;
-              <p className="text - xl text - gray - 400 max - w-2xl mx - auto">;
-                See the real impact of autonomous operations on your business;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-              {benefits.map ((benefit, index) => (
-                <motion.div;
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -390,18 +442,6 @@
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              className="text - center mb - 16";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
-                Industry Applications;
-              </h2>;
-              <p className="text - xl text - gray - 400 max - w-2xl mx - auto">;
-                Transform operations across diverse industries with autonomous automation;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
-              {industries.map ((industry, index) => (
-                <motion.div;
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -428,30 +468,62 @@
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-        {/* CTA Section */}
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-export default AutonomousBusinessOperationsPlatform,
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+                Ready to Automate Your Business?
+              </h2>
+              <p className="text-xl text-gray-400 mb-8">
+                Join the autonomous business revolution and transform your operations today
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 text-lg">
+                  Start Automation
+                  <Bot className="ml-2 w-6 h-6" />
+                </Link>
+                <Link href="/services" className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200 text-lg">
+                  Explore All Services
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  )
+}
+export default AutonomousBusinessOperationsPlatform;
+
             >;
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">;
+              <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Automate Your Business?;
               </h2>;
-              <p className="text-xl text-gray-400 mb-8">;
+              <p className="text - xl text - gray - 400 mb - 8">;
                 Join the autonomous business revolution and transform your operations today;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 text-lg">;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <Link href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - cyan - 500 text - white font - semibold rounded - lg hover:from - blue - 600 hover:to - cyan - 600 transition - all duration - 200 text - lg">;
                   Start Automation;
-                  <Bot className="ml-2 w-6 h-6" />;
+                  <Bot className="ml - 2 w - 6 h - 6" />;
                 </Link>;
                   Explore All Services;
                 </Link>;
@@ -460,3 +532,6 @@ export default AutonomousBusinessOperationsPlatform,
           </div>;
         </section>;
       </div>;
+
+},
+

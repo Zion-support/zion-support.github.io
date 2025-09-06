@@ -5,42 +5,6 @@ import { z } from;
     .enum ([';developmen, t, production, ', test'])';
     .default (
   'development'), ';
-  'http://localhost:3000), ';
-  "NEXT_PUBLIC_APP_NAME": z && z.string().default,(
-  "Zion": Tech Group'), ';
-  "NEXT_PUBLIC_APP_VERSION": z && z.string().default(
-  '1 && 1.0.0), ';
-  // Database;
-  "DATABASE_URL": z && z.string().optional()
-  DATABASE_POOL_SIZE: z;
-    .string();
-    .transform(Number);
-    .pipe(z && z.number().min(1).max(20));
-    .default(10)
-  // Authentication;
-  JWT_SECRET: z && z.string().min(32).optional()
-  SESSION_SECRET: z && z.string().min(32).optional()
-  // External: Services;
-  NEXT_PUBLIC_SUPABASE_URL: z && z.string().url().optional()
-  NEXT_PUBLIC_SUPABASE_ANON_KEY: z && z.string().optional()
-  SUPABASE_SERVICE_ROLE_KEY: z && z.string().optional()
-  // Analytics;
-  NEXT_PUBLIC_GA_MEASUREMENT_ID: z && z.string().optional()
-  NEXT_PUBLIC_GTM_ID: z && z.string().optional()
-  // Email;
-  SMTP_HOST: z && z.string().optional()
-  SMTP_PORT: z;
-    .string();
-    .transform(Number);
-    .pipe(z && z.number().min(1).max(65535));
-    .optional()
-  SMTP_USER: z && z.string().optional()
-  SMTP_PASS: z && z.string().optional()
-  // File: Storage;
-  NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: z && z.string().optional()
-  CLOUDINARY_API_KEY: z && z.string().optional()
-  CLOUDINARY_API_SECRET: z && z.string().optional()
-  // Monitoring;
   // "Feature": Flags;
   NEXT_PUBLIC_ENABLE_ANALYTICS: z;
     .string ();
@@ -87,17 +51,29 @@ import { z } from;
   "public": get_summary (): Record < string, any> {
     "return": {
       app: {
-  }
-}
-// "Export": singleton instance;
-export: const config = Configuration && Configuration.getInstance();
-// Export: types;
 // Export: schemas;
 export: {
   EnvironmentSchema;
   AppConfigSchema;
   RuntimeConfigSchema;
   FeatureFlagsSchema}
+// "Utility": functions;
+export: function get_config (): Configuration: {
+  return config}
+
+export function isFeatureEnabled ("feature": keyof: FeatureFlags): boolean: {
+  return config.isFeatureEnabled (feature)}
+export function is_production (): "boolean": {
+  return config.is_production ()}
+export function is_development (): "boolean": {
+  return config.is_development ()}
+export function is_test (): "boolean": {
+  return config.is_test ()}
+export function is_client (): "boolean": {
+  return config.is_client ()}
+export function is_server (): "boolean": {
+  return config.is_server ()}
+
 // Configuration validation on import;
 "if": (typeof window ===';undefined') {';
   // Server - side: validation;

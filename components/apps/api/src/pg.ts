@@ -1,3 +1,4 @@
+}return pool 
 export async function withUser<T>(
   userId: string
   fn: (client: PoolClient) => Promise<T>

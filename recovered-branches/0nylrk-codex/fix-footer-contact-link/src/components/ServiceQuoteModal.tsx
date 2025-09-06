@@ -17,7 +17,6 @@ import {ProductListing} from "@/types/listings";
 import {toast} from '@/hooks/use-toast';
 import {supabase} from "@/integrations/supabase/client";
 import { useState } from 'react',
-
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -120,9 +119,6 @@ if (throw error) {
     if (currentStep === 'details') setCurrentStep('timeline');
     else if (currentStep === 'timeline') setCurrentStep('contact')
   }
-  const prevStep = () => {
-    if (currentStep === 'timeline') setCurrentStep('details');
-    else if (currentStep === 'contact') setCurrentStep('timeline')
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
@@ -157,11 +153,32 @@ if (throw error) {
                 <Select
                   value={formData.budget}
                   onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
+                <Textarea
+                  id="description"
+                  name="description"
+                  value={formData && formData.description}
+                  onChange={handleInputChange}
+                  placeholder="Describe your project needs in detail..."
+                  className="h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none"
+                  required
+
+                />;
+              </div>;
+
+              <div className="space-y-2">;
+                <Label htmlFor="budget" className="text-white">Estimated Budget</Label>;
+                <Select
+                  value={formData && formData.budget} 
+
+                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
                 >;
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;
                     <SelectValue placeholder="Select your budget range" />;
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
+                        {range.label}
+                      </SelectItem>
+                    ))}
                   </SelectContent>;
                 </Select>;
               </div>;
@@ -265,6 +282,8 @@ if (throw error) {
                 </div>;
               </div>;
             </div>;
+          )}
+
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
             {currentStep !== 'details' && (
               <Button

@@ -1,4 +1,7 @@
 
+
+
+
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -27,3 +30,4 @@ const AppMetadataManager: React.FC = () => {;
         description="Manage app store metadata for the Zion mobile application";
         noindex={true}
       />;
+export default AppMetadataManager;

@@ -1,5 +1,4 @@
 
-
 interface TalentCardSkillsProps {
   skills: string[] | undefined;
 }

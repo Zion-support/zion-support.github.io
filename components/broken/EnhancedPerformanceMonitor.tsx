@@ -1,5 +1,3 @@
-//FCP recommendations if (metrics.fcp > 2000) {
- //FCP recommendations if (metrics.fcp > 2000) {
   recs.push ({
 }return recs;
 }, []);
@@ -76,22 +74,3 @@ if ( {) {
   metrics.fcp > 2000 ? 'text - red - 400': 'text - green - 400';
 }`;
 }> {
-  metrics.fcp.to_fixed (0);
-}ms </span> </div> </span> </div> </div> </div>);
-}</span> </div> <div className="w - full bg - gray - 700 rounded - full h - 2" > <div width: `$ {
-  (metrics.memory_usage.usedJSHeapSize / metrics.memory_usage.totalJSHeapSize) * 100;
-}%`;
-}/> </div> </div> </div>);
-}</span> </div> </div> </div>);
-}rec.priority === 'high'? 'bg - red - 500 / 20 text - red - 400': rec.priority === 'medium'? 'bg - yellow - 500 / 20 text - yellow - 400': 'bg - green - 500 / 20 text - green - 400';
-}`;
-}> {
-  rec.priority;
-}</span> </div> </div>) );
-}</div> </div>);
-}) : (<BarChart3 className="w - 4 h - 4" />);
-}<span> {
-  is_monitoring ? 'Measuring...': 'Measure Performance';
-}</span> </button> </div> </div> </motion.div>);
-}</AnimatePresence> </>);
-}

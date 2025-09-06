@@ -3,6 +3,12 @@ import {
   DialogContent;
   DialogDescription;
   DialogHeader;
+import React, { useState } from 'react',
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
   DialogTitle} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -118,6 +124,154 @@ export function HireConfirmationModal({;
         description: 'Talent information is missing.'
         variant: 'destructive'})
       return
+    setIsLoading(true);
+
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components / ui / dialog';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Label } from '@/components / ui / label';
+import { Textarea } from '@/components / ui / textarea';
+import { toast } from '@/hooks / use - toast';
+import { supabase } from '@/integrations / supabase / client';
+import { TalentProfile } from '@/types / talent';
+import { use_auth } from '@/hooks / use_auth';
+import { JobApplication } from '@/types / jobs';
+export interface HireConfirmationModalProps {
+  is_open: boolean,
+  on_close: () => void,
+  candidate_data?: TalentProfile;
+  application?: JobApplication;
+  on_confirm: () => void,
+  is_submitting?: boolean;
+}
+export /**
+ * HireConfirmationModal - Function description
+ */
+function HireConfirmationModal() {
+  const [project_name, setProjectName] = useState ('');
+  const [project_description, setProjectDescription] = useState ('');
+  const [update_availability, setUpdateAvailability] = useState (true);
+  const [is_loading, setIsLoading] = useState (false);
+  const { user } = use_auth ();
+;
+  // Get talent information from either candidate_data or application;
+  const talent_data = candidate_data || (application?.talent_profile as TalentProfile);
+;
+  const handleHireCandidate = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: 'Required fields missing',
+        description: 'Please fill in both project name and description.',
+        variant: 'destructive'}),
+      return;
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: 'Not authenticated',
+        description: 'You must be logged in to hire a candidate.',
+        variant: 'destructive'}),
+      return;
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: 'Missing talent data',
+        description: 'Talent information is missing.',
+        variant: 'destructive'}),
+      return;
+    }
+    setIsLoading (true);
+;
+    // Create a new project;
+
+    try {
+      const { data: project_data, error: project_error } = await supabase;
+        .from ('projects');
+        .insert ([;
+          {
+
+
+    // Create a new project;
+    try {;
+      const { data: projectData, error: projectError } = await supabase;
+        .from('projects');
+        .insert([;
+          {;
+            client_id: user && user.id,;
+            talent_id: talentData && talentData.user_id,;
+            job_id: application?.job_id || null,;
+            title: projectName,;
+            description: projectDescription,;
+            status: 'active',;
+            payment_terms: 'hourly'}]);
+        .select();
+        .single();
+
+      if (projectError) {;
+        toast({;
+          title: 'Error creating project',;
+          description: projectError && projectError.message,;
+          variant: 'destructive'}),;
+
+        setIsLoading(false);
+        return;
+      }
+
+
+      // Create a new hiring record;
+      const { error: hiringError } = await supabase;
+        .from('hiring_records');
+        .insert([;
+          {;
+            client_id: user && user.id,;
+            talent_id: talentData && talentData.user_id,;
+            project_id: projectData && projectData.id,;
+            hire_date: new Date().toISOString(),;
+            status: 'active'}]),;
+
+      if (hiringError) {;
+        toast({;
+          title: 'Error creating hiring record',;
+          description: hiringError && hiringError.message,;
+          variant: 'destructive'}),;
+
+        setIsLoading(false);
+        return;
+      }
+
+
+      // Update the availability status;
+      if (updateAvailability) {;
+        try {;
+          const { error: availabilityError } = await supabase;
+            .from('talent_profiles');
+            .update({ availability_type: 'unavailable' });
+            .eq('id', talentData && talentData.id);
+
+          if (availabilityError) {;
+            toast({;
+              title: 'Error updating availability',;
+              description: availabilityError && availabilityError.message,;
+              variant: 'destructive'}),;
+
+            setIsLoading(false);
+            client_id: user.id,
+            talent_id: talent_data.user_id,
+            job_id: application?.job_id || null,
+            title: project_name,
+            description: project_description,
+            status: 'active',
+            payment_terms: 'hourly'}]);
+        .select ();
+        .single ();
 ;
       // Check condition
 if ( {) {
@@ -208,6 +362,10 @@ if ( {) {
         title: 'Candidate hired successfully',;
         description: `${talentData && talentData.full_name} has been hired for the project.`}),;
       onConfirm();
+    }
+
+  },
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px]">
@@ -250,16 +408,3 @@ if ( {) {
             />;
             <label
               htmlFor="updateAvailability"
-              Update talent availability to "Unavailable";
-            </label>;
-          </div>;
-        </div>;
-        <div className="flex justify-end gap-2">;
-          <Button type="button" variant="secondary" onClick={onClose}>;
-            Cancel;
-          </Button>;
-          <Button type="button" onClick={handleHireCandidate} disabled={isSubmitting || isLoading}>;
-          </Button>;
-        </div>;
-      </DialogContent>;
-    </Dialog>;

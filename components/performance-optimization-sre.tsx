@@ -209,8 +209,6 @@ if (return null) {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-
-    </UltraAdvancedFuturisticBackground>);
 }
-;
+}
 

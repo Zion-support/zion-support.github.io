@@ -16,6 +16,7 @@ const defaultBreakpoints: Breakpoints = {
   xl: 1280
   '2xl': 1536
 }
+<<<<<<< HEAD
 
     updateDimensions();
     window.addEventListener(,

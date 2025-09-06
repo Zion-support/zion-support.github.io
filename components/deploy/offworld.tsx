@@ -4,14 +4,14 @@
 import {useState} from 'react';
   }
   return (
-    <div className='min-h-screen p-8'>;
-      <Head>;
-        <title>Zion Offworld Deploy</title>;
-      </Head>;
-      <h1 className='text-2xl font-bold mb-4'>Zion OS Offworld Deploy</h1>;
-      <p className='mb-6'>;
-        Export the site and pin it to IPFS for disconnected/offworld use.;
-      </p>;
+    <div className='min-h-screen p-8'>
+      <Head>
+        <title>Zion Offworld Deploy</title>
+      </Head>
+      <h1 className='text-2xl font-bold mb-4'>Zion OS Offworld Deploy</h1>
+      <p className='mb-6'>
+        Export the site and pin it to IPFS for disconnected/offworld use.
+      </p>
       <button
         className='px-4 py-2 bg-black text-white rounded'
         onClick={handleDeploy}>;
@@ -67,8 +67,6 @@ function handle_deploy() {
       if (throw new Error (data?.error || 'Deploy failed')) {
   $2
 }
-
-    }
   }
   return (
 

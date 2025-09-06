@@ -1,10 +1,3 @@
-
-import Link from 'next / link';
-import Head from 'next / head';
-import type { User as SupabaseUser } from '@supabase / supabase - js';
-interface PrivatePageProps {
-  user: SupabaseUser;
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -58,8 +51,8 @@ function PrivatePage() {
             <div className="p-4 bg-muted/50 rounded-lg">
               <h4 className="font-medium mb-2">Authentication Details</h4>
               <div className="grid gap-2 text-sm">
-
                 <div>
+                  <span className="font-medium">Last Sign In: </span>
                   {user.last_sign_in_at
                     ? new Date(user.last_sign_in_at).toLocaleString()
                     : 'Never'

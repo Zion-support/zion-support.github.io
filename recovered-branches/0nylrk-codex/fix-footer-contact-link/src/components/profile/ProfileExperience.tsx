@@ -54,6 +54,12 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
             </div>;
           </div>;
         ))}
+      </div>
+    </div>
+  )
+
+}
+        ))}
       </div>;
     </div>;
   ),;}
@@ -73,4 +79,3 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
     </div>
   )
 }
-;

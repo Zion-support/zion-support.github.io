@@ -34,6 +34,16 @@ import {
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud
 
+import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
+import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
+
+
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('name');
+
 import {
 
 
@@ -348,6 +358,14 @@ export default function ServicesShowcase2027() {;
               </Link>;
               <Link
                 href="/pricing"
+
+                <span>View Pricing</span>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
                 className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2">;
                 <DollarSign className="w-5 h-5" />;
                 <span>View Pricing</span>;
@@ -358,17 +376,37 @@ export default function ServicesShowcase2027() {;
       </section>;
 
 
-                <input
-                  type='text'
-                  placeholder='Search services...'
-                  value={searchTerm}
-                  onChange={e => setSearchTerm(e && e.target.value)}
-                  className='w-full pl-12 pr-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white placeholder-cyan-300 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20'                />            {/* Search Bar */}
+      {/* Search and Filters */}
+
+      <section className="px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20">
+            {/* Search Bar */}
+            <div className="mb-6">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-cyan-400" />
+
                 <input
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
               {/* Category Filter */}
+                  ))}
+                </select>
+              </div>
+
+              {/* Price Range Filter */}
+
+
+                  ))}
+                </select>
+              </div>
+
+                </select>;
+              </div>;
+
+
+              {/* Sort By */}
               <div>;
                 <label className='block text-cyan-400 font-medium mb-2'>;
                   Category;
@@ -397,6 +435,9 @@ export default function ServicesShowcase2027() {;
                   ))}
                 </select>
               </div>
+
+
+
               {/* Sort By */}
               <div>
                 <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By">Sort By</label>
@@ -438,14 +479,17 @@ export default function ServicesShowcase2027() {;
                   initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                   animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+                    {/* Service Header */}
+                    <div className="flex items - start justify - between mb - 4">;
+                      <div className="text - 4xl">🚀</div>;
+                    </div>;
+
                     {/* Service Info */}
                     <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors duration - 300">;
                       {service.name}
                     </h3>;
                     <p className="text - cyan - 300 text - sm mb - 4 line - clamp - 3">;
                       {service.description}
-                    <div className='mb-4'>
-
                       <div className='text-2xl font-bold text-white'>                        {service.price}
 
                       {service.description}
@@ -480,6 +524,19 @@ export default function ServicesShowcase2027() {;
                           <div className="text-cyan-400 text-sm">
                             +{service.features.length - 3} more features
                           </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* ROI */}
+
+                      </div>;
+                    </div>;
+                    <div className="mb-6 text-center">
+                      <div className="text-green-400 font-semibold text-lg">ROI: {service.roi}</div>
+                      <div className="text-gray-400 text-xs">Return on Investment</div>
+                    </div>
+
 
                     {/* ROI */}
                     <div className='mb-6 text-center'>;
@@ -499,10 +556,6 @@ export default function ServicesShowcase2027() {;
                       </Link>;
                       <Link
                         href='/contact'
-                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                        href="/contact"
-
-                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                      >
-
                       >
                         Learn More
                       </Link>
@@ -517,6 +570,8 @@ export default function ServicesShowcase2027() {;
                         Contact;
                       </Link>;
                     </div>;
+
+
                     {/* Category Badge */}
                     <div className='mt-4'>;
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service && service.category}                    <div className="mt-4">;
@@ -526,6 +581,10 @@ export default function ServicesShowcase2027() {;
                     </div>;
                   </div>;
                 </motion && motion.div>;
+              ))}
+            </AnimatePresence>
+          </div>
+
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (;
             <motion&& motion.div
@@ -539,6 +598,21 @@ export default function ServicesShowcase2027() {;
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
 
                 }}
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Clear Filters
+              </button>
+            </motion.div>
+          )}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className='px-4 sm:px-6 lg:px-8 mb-20'>
+        <div className='max-w-4xl mx-auto'>
+          <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>
+            <h2 className='text-3xl font-bold text-white mb-4'>
+
               Ready to Transform Your Business?
             </h2>
             <p className='text-cyan-300 mb-8 text-lg'>
@@ -635,8 +709,5 @@ export default function ServicesShowcase2027() {;
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>
             <p className="mt-2">
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300">Privacy Policy</Link>
-
-          <div className="text-cyan-300 text-sm">;
-            <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>;
-            <p className="mt-2">;
-              <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300">Privacy Policy</Link>;
+    </UltraFuturisticMatrixBackground2027>));
+}

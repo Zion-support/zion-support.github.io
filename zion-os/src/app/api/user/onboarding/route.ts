@@ -8,6 +8,22 @@
       { status: 200 }
     );
   } catch (error) {
+    console && console.error('Onboarding completion error:', error);
+    return NextResponse && NextResponse.json(
+          id: updated_user.id,
+          name: updated_user.name,
+          email: updated_user.email,
+          role: updated_user.role,
+          onboarding_completed: updated_user.onboarding_completed,
+        },
+      },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error ('Onboarding completion error:', error);
+    return NextResponse.json (
+
+      { error: 'Internal server error' },
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;

@@ -45,6 +45,18 @@ export function ConversationDetailView() {;
     await sendMessage(activeConversation.id, messageText);
     setMessageText('')
   }
+import {MessageSquare} from 'lucide-react';
+import {use_messaging} from '@/context / MessagingContext';
+import {Button} from '@/components / ui / button';
+import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
+import {AspectRatio} from '@/components / ui / aspect - ratio';
+import {use_auth} from '@/hooks / use_auth';
+import {MessageBubble} from './MessageBubble';
+import {DateDivider} from './DateDivider';
+
+  }, [activeConversation?.id, loadMessages]),
+
+
 
   
   useEffect(() => {
@@ -62,23 +74,6 @@ export function ConversationDetailView() {;
     await sendMessage(activeConversation.id, messageText),
     setMessageText('')
   },
-  useEffect(() => {;
-    scrollToBottom();
-  }, [activeMessages]);
-
-  const scrollToBottom = () => {;
-    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleSendMessage = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    if (!messageText && messageText.trim() || !activeConversation) return,;
-
-    await sendMessage(activeConversation && activeConversation.id, messageText);
-    setMessageText('');
-  };
-
-  if (!activeConversation) {;
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">;
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />;
@@ -192,3 +187,5 @@ export function ConversationDetailView() {;
           </Button>;
         </form>;
       </div>;
+}
+;

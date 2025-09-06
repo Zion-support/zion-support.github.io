@@ -65,17 +65,30 @@ function loadConfig(): TokenConfig {
   }
 }
 
+
     name: 'ZION Token',
     symbol: 'ZION$',
 
-export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {;
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
+
+    ...transaction,
+    id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
+    timestamp: new Date().toISOString()
+  };
+  
+  transactions && transactions.push(newTransaction);
+
+  saveTransactions(transactions);
+  return newTransaction;
+}
   return loadConfig();
 }
 export function setConfig(config: TokenConfig): void {
   saveConfig(config);
 }
+
+export function getConfig(): TokenConfig {;
   return loadConfig();
 }
 export function setConfig(config: TokenConfig): void {

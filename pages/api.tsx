@@ -1,13 +1,4 @@
 import {
-  Code
-  Check
-  Globe
-  Shield
-  Zap
-  Database
-  Cpu
-  Cloud
-  XCircle
   Code,
   Check,
   Globe,
@@ -113,6 +104,10 @@ export default function APIPage() {
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\;
   -H "Content - Type: application / json" \\;
   -d '{
+  }'`,
+        },
+      ],
+    },;
   ];
 ;
   const response_examples = {
@@ -127,8 +122,6 @@ export default function APIPage() {
         code: "VALIDATION_ERROR"
         message: "Invalid request parameters"
         details: {
-    }
-  }
   return (
     <MainLayout
       title="API Documentation - Zion Tech Group"
@@ -302,7 +295,6 @@ export default function APIPage() {
         </section>
       </div>
     </Layout>
-  );
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4">;
@@ -339,8 +331,4 @@ export default function APIPage() {
         </section>;
       </div>;
     </MainLayout>);
-}
-}
-  );
-  );
 }

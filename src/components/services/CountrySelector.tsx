@@ -1,33 +1,13 @@
-import {
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'
-  CountryPricing
-  onsiteServicePricing
-} from '@/data/onsiteServicePricing'
-interface CountrySelectorProps {
-  onCountryChange: (country: CountryPricing | null) => void
-  selectedCountry: CountryPricing | null
-export function CountrySelector({
-  onCountryChange
-  selectedCountry
-}: CountrySelectorProps) {
-interface CountrySelectorProps {
-  onCountryChange: (country: CountryPricing | null) => void
-  selectedCountry: CountryPricing | null
-export function CountrySelector({;
-  onCountryChange,;
-  selectedCountry;
-}: CountrySelectorProps) {;
   onCountryChange: (country: CountryPricing | null,) => void
 
   selectedCountry: CountryPricing | null
 }
   // Set top/popular countries
   useEffect(() => {
+
+
+
+
     const popular = [
       'United States'
       'United Kingdom'
@@ -95,8 +75,6 @@ export function CountrySelector(): any ({;
       onsiteServicePricing && onsiteServicePricing.find(item => item && item.country === countryName) || null;
     onCountryChange(country);
   };
-    onCountryChange(country)
-
   return (
         </SelectTrigger>;
         <SelectContent className='bg-zion-blue-dark border-zion-blue-light max-h-80'>;
@@ -111,33 +89,10 @@ export function CountrySelector(): any ({;
                 className='text-white'>                {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
               </SelectItem>;
             ))}
-          </div>
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
-import { useState, useEffect } from 'react';
-import { Globe } from 'lucide-react';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components / ui / select';
-  CountryPricing,
-  onsiteServicePricing,
-} from '@/data / onsiteServicePricing';
-interface CountrySelectorProps {
-  onCountryChange: (country: CountryPricing | null) => void;
-  selected_country: CountryPricing | null;
-export /**
- * CountrySelector - Function description
- */
-function CountrySelector() {
-  const [top_countries, setTopCountries] = useState < CountryPricing[]>([]);interface CountrySelectorProps {
-  onCountryChange: (country: CountryPricing | null, ) => void,
-  selected_country: CountryPricing | null;
 }
           </div>;
         </SelectContent>;

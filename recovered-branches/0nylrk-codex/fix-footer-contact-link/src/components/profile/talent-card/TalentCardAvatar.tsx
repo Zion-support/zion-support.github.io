@@ -1,7 +1,4 @@
 
-import React from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-
 interface TalentCardAvatarProps {
   profilePicture?: string,
   fullName: string
@@ -22,11 +19,7 @@ export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarP
       .map(part => part[0]);
       .join('');
       .toUpperCase();
-import React from './react';
-import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
-interface TalentCardAvatarProps {
-  profile_picture?: string;
-  full_name: string;
+}
 }
 export /**
  * TalentCardAvatar - Function description

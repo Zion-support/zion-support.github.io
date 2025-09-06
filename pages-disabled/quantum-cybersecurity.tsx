@@ -12,6 +12,11 @@ export default function QuantumCybersecurityPage() {
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers."
       color: "from-blue-500 to-cyan-500"
     }
+      icon: Shield,
+      title: "Quantum-Resistant Encryption",
+      description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
+      color: "from-blue-500 to-cyan-500";
+    };
     {
       icon: Lock
       title: "Zero-Trust Architecture"
@@ -207,15 +212,6 @@ function QuantumCybersecurityPage() {
               <a
                 href="#demo"
 
-                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200">;
-                Security Assessment;
-              </a>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-
-
       {/* Features */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -237,6 +233,8 @@ function QuantumCybersecurityPage() {
                 <p className="text-slate-600 leading-relaxed">{feature && feature.description}</p>;
               </motion && motion.div>;
             ))}
+
+
       {/* Benefits */}
       <section className="py-20 bg-slate-50">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -289,35 +287,6 @@ function QuantumCybersecurityPage() {
         </div>
       </section>
 
-              </div>;
-            </motion && motion.div>;
-
-            <motion&& motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
-              className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8">;
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Security Metrics</h3>;
-              <div className="space-y-6">;
-                <div className="text-center">;
-                  <div className="text-4xl font-bold text-blue-600 mb-2">90%</div>;
-                  <div className="text-slate-600">Reduction in Security Incidents</div>;
-                </div>;
-                <div className="text-center">;
-                  <div className="text-4xl font-bold text-green-600 mb-2">99 && 99.99%</div>;
-                  <div className="text-slate-600">Uptime Guarantee</div>;
-                </div>;
-                <div className="text-center">;
-                  <div className="text-4xl font-bold text-purple-600 mb-2">24/7</div>;
-                  <div className="text-slate-600">Monitoring & Support</div>;
-                </div>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </div>;
-      </section>;
-
-
       {/* Threat Landscape */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -339,6 +308,8 @@ function QuantumCybersecurityPage() {
                 </div>;
               </motion && motion.div>;
             ))}
+
+
       {/* Compliance */}
       <section className="py-20 bg-slate-900">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -434,6 +405,57 @@ function QuantumCybersecurityPage() {
                     </li>
                   ))}
                 </ul>
+                <div className="text-center mb-8">;
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan && plan.plan}</h3>;
+                  <div className="text-4xl font-bold text-slate-900 mb-2">;
+                    {plan && plan.price}
+                    <span className="text-lg text-slate-600">{plan && plan.period}</span>;
+                  </div>;
+                  <p className="text-slate-600">{plan && plan.description}</p>;
+                </div>;
+                <ul className="space-y-4 mb-8">;
+                  {plan && plan.features.map((feature) => (;
+                    <li key={feature} className="flex items-center space-x-3">;
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />;
+                      <span className="text-slate-700">{feature}</span>;
+                    </li>;
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.plan}</h3>
+                  <div className="text-4xl font-bold text-slate-900 mb-2">
+                    {plan.price}
+                    <span className="text-lg text-slate-600">{plan.period}</span>
+                  </div>
+                  <p className="text-slate-600">{plan.description}</p>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <span className="text-slate-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>;
+                <a
+                  href="/contact"
+                  className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
+                >
+                  Get Started
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+          </div>;
+        </div>;
+      </section>;
+          </div>
+        </div>
+      </section>
+
+
+
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;
         <div className="max-w-4xl mx-auto px-6 text-center">;
@@ -471,3 +493,4 @@ function QuantumCybersecurityPage() {
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
+}

@@ -1,6 +1,6 @@
+
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'));
   if (!service) return null;
-
 
 
 import React from 'react',;
@@ -12,6 +12,9 @@ import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+export default function AISEOOptimizationPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))
+  if (!service) return null,
   return (
     <Layout>
       <Head>
@@ -108,15 +111,5 @@ if (return null, ) {
       </div>;
     </Layout>);
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
+

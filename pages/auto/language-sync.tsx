@@ -18,3 +18,14 @@ const LanguageSync: NextPage = () => {
       </main>
     </div>
   )
+
+},
+export default LanguageSync,
+
+},
+export default LanguageSync,
+},
+
+export default LanguageSync,;
+export default LanguageSync,
+

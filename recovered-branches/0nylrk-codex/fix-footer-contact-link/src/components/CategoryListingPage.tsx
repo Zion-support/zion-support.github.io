@@ -1,13 +1,12 @@
-import { useState } from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { GradientHeading } from '@/components / GradientHeading';
-import { ListingScoreCard } from '@/components / ListingScoreCard';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
-// Example listing type;
+import {useState} from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {GradientHeading} from "@/components/GradientHeading";
+import {ListingScoreCard} from "@/components/ListingScoreCard";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Select, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -51,13 +50,26 @@ interface Listing {;
   reviewCount?: number,;
   price?: number | null,;
   createdAt: string;
-
-  title: string
-  description: string
-  listings: Listing[]
-  sortOptions?: { label: string, value: string }[]
-  filterOptions?: { label: string, value: string }[]
 }
+;
+
+interface CategoryListingPageProps {;
+  title: string,;
+  description: string,;
+  listings: Listing[],;
+  sortOptions?: { label: string, value: string }[],;
+  filterOptions?: { label: string, value: string }[];
+}
+
+
+  return (
+    <>
+      <Header />
+      <div className="min-h-screen bg-zion-blue py-12 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <GradientHeading>{title}</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
 ;
 export function CategoryListingPage({;
   title,;
@@ -229,6 +241,47 @@ export function CategoryListingPage({ ;
                   type="text"
                   placeholder="Search listings..."
                   value={searchQuery}
+                    ) : null}
+                    <span>
+                      {sortOptions.find(option => option.value === selectedSort)?.label |'Sort By'}
+                    </span>
+                  </div>
+                </SelectTrigger>
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
+                  {sortOptions.map((option) => (
+                    <SelectItem key={option.value} value={option.value} className="text-white">
+                      {option.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              <Select value={selectedFilter} onValueChange={setSelectedFilter}>
+                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
+                  <div className="flex items-center">
+                    <Filter className="mr-2 h-4 w-4" />
+                    <span>
+                      {filterOptions.find(option => option.value === selectedFilter)?.label |'Filter'}
+                    </span>
+                  </div>
+                </SelectTrigger>
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
+                  {filterOptions.map((option) => (
+                    <SelectItem key={option.value} value={option.value} className="text-white">
+                      {option.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+          {/* Results Count */}
+          <div className="mb-6">
+            <p className="text-zion-slate-light">
+              Showing {processedListings.length} results
+              {searchQuery && ` for "${searchQuery}"`}
+            </p>
+          </div>
+
                 </SelectContent>;
               </Select>;
             </div>;
@@ -249,6 +302,25 @@ export function CategoryListingPage({ ;
                   author_image={listing.author_image}
                   ai_score={listing.ai_score}
                   rating={listing.rating}
+                }}
+
+                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+              >
+                Clear all filters
+              </Button>
+            </div>
+          )}
+        </div>;
+      </div>;
+      <Footer />;
+    </>;
+  );
+                  review_count={listing.review_count}
+                />))}
+            </div>) : (
+            <div className="text - center py - 20">;
+              <h3 className="text - xl font - bold text - white mb - 2">No listings found</h3>;
+              <p className="text - zion - slate - light mb - 6">Try adjusting your filters or search query</p>;
               <Button;
                 variant="outline";
                 on_click={() => {

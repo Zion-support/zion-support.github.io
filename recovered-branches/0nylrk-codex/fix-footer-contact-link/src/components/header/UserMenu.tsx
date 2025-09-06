@@ -7,6 +7,7 @@ import {
     try {
       await logout ();
     } catch (error) {
+
   if (!user) {;
     return (
       <div className="hidden md: flex items-center space-x-4">;
@@ -51,6 +52,8 @@ import {
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+  );
+
       toast ({
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",

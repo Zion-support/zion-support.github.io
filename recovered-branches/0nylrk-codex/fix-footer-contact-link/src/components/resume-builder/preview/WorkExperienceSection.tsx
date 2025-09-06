@@ -1,15 +1,13 @@
 
 
 
-import {WorkExperience} from '@/types/resume';
-import {format} from 'date-fns';
 interface WorkExperienceSectionProps {
   work_experience: WorkExperience[];
 }
-export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
-  // Sort work experience by date (newest first)
 
-  const sortedWorkExperience = [...workExperience].sort((a, b) => {
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {;
+
+
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);

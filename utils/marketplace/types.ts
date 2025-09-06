@@ -1,3 +1,5 @@
+export interface Offer {;
+
   id: string;
   createdAtIso: string;
   client_id: string;
@@ -21,3 +23,19 @@
   content: string;
   createdAtIso: string;
 }
+  id: string;
+  name: string;
+  url?: string;
+  uploadedAtIso: string;
+}
+  id: string;
+  authorId: string;
+  authorRole: string;
+  content: string;
+  createdAtIso: string;
+}
+
+
+
+
+

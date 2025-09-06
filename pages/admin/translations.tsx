@@ -13,6 +13,7 @@ export default function TranslationsAdminPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
 import dynamic from 'next/dynamic';
 const _TranslationPreview = dynamic__(() => import('../../components/admin/TranslationPreview'), {_ssr: false});
@@ -26,3 +27,5 @@ export default function TranslationsAdminPage() {_return (
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

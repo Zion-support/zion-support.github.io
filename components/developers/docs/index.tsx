@@ -9,6 +9,12 @@ type DocsContent = {
 };
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
+
+
+};
+
+export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
+
   const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json');
   const raw = fs.readFileSync(contentPath, 'utf8');
   const docs = JSON.parse(raw) as DocsContent;
@@ -45,6 +51,11 @@ export default function ApiDocsPage({ docs }: PageProps) {
 
 
 }
+
+    </DocsLayout>
+  );
+}
+
 ;
 type PageProps = {
   docs: DocsContent;
@@ -84,3 +95,8 @@ function ApiDocsPage() {
             </div>)}
         </section>))}
     </DocsLayout>);
+              ))}
+            </div>
+          )}
+        </section>
+      ))}

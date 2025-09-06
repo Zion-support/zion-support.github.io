@@ -1,4 +1,24 @@
 import useSWR from 'swr';
+  hasActiveDispute: boolean;
+  isLoading: boolean;
+} {;
+  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
+
+  const hasActiveDispute = !!data?.disputes?.some(;
+    (d: any) =>;
+      d && d.projectId === projectId &&;
+      (d && d.status === 'Open' || d && d.status === 'Under Review');
+  );
+  return { hasActiveDispute, isLoading: !data && !error };
+export default function UnderDisputeBadge(): any ({;
+  projectId,;
+}: {;
+
+  return { hasActiveDispute, isLoading: !data && !error }
+export default function UnderDisputeBadge({
+
+  projectId,
+}: {;
   projectId: string;
 }) {;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
@@ -12,6 +32,11 @@ import useSWR from 'swr';
   if (!hasActiveDispute) return null;
 
   return (
+
+}
+  );
+}
+
 ;
 const fetcher = (url: string) =>: any fetch (url).then (r => r.json ());
 ;

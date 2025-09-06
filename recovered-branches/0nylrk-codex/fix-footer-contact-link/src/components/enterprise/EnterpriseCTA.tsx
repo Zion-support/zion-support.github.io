@@ -47,6 +47,18 @@
                       <span className="text-primary text-sm font-medium">4</span>;
                     </div>;
                     <p>Free consultation on implementation</p>;
+                  </li>;
+                </ul>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+    </section>);
+
+}
+
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="gap-2">

@@ -13,8 +13,6 @@ function ApiDocumentation() {
   20 ";
 }/> API Documentation </CardTitle> <CardDescription className=" text - zinc - 400"> Reference documentation for integrating with the Zion Marketplace API. </CardDescription> </CardHeader> <CardContent> <Alert className=" bg - blue - 900 / 30 border - blue - 800 mb - 6"> <Terminal className=" h - 4 w - 4"/> <AlertDescription> Make sure to include your API key in all requests as a Bearer token in the Authorization header. </AlertDescription> </Alert> <Tabs default_value=" jobs"className=" space - y-4"> <TabsList className=" bg - zinc - 800 border - zinc - 700"> <TabsTrigger value=" jobs">Jobs</TabsTrigger> <TabsTrigger value=" talent">Talent</TabsTrigger> <TabsTrigger value=" quotes">Quotes</TabsTrigger> <TabsTrigger value=" webhooks">Webhooks</TabsTrigger> <TabsTrigger value=" errors">Errors</TabsTrigger> </TabsList> <TabsContent value=" jobs"className=" space - y-6"> <EndpointSection headers = headers) data = response.json () print (data) `;
 }response_examples= {
-  'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
-
 import { useState } from "react",
 import { BookOpen, Terminal } from 'lucide-react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -118,22 +116,6 @@ export function ApiDocumentation() {
                 { name: "category", type: "string", description: "Filter by job category" },
                 { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" },
                 { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
-              ]}
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json"`
-                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
-  method: 'GET'
-              code_examples = {{
-                curl: `curl -X GET "https://api.ziontechgroup.com / v1 / jobs?limit = 10 & category = development" \\;
-  -H "Authorization: Bearer YOUR_API_KEY" \\;
-  -H "Content - Type: application / json"`,
-                javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / jobs?limit = 10 & category = development', {
-
-  method: 'GET',
-  headers: {
-    'Content-Type': 'application/json'
-  }
-})
 }` ;
 }';
 }/> <EndpointSection deadline: '2025-06-30T23:59:59Z' ;
@@ -207,23 +189,6 @@ data = response.json ();
 print (data)`,
 
 print(data)`,
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  }
-}),;
-const data = await response.json(),;
-logInfo(data),`,;
-                python: `import requests;
-headers = {;
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
-}
-;
-response = requests.get(;
-    'https: //api.ziontechgroup.com/v1/jobs',;
-    params={'limit': 10, 'category': 'development'},;
-    headers=headers;
-);
-data = response.json();
-print(data)`;
               }}
               response_examples={{
                 success: `{
@@ -233,25 +198,38 @@ print(data)`;
     "total": 42
     "page": 1
     "limit": 10
-            <EndpointSection
-              method='GET'
-              endpoint='/api/jobs/:id'
-              description='Get detailed information about a specific job.'
-              note=''
-              params={[
-            />;
-            <EndpointSection;
-              method='GET';
-              endpoint='/api / jobs/:id';
-              description='Get detailed information about a specific job.';
-              note='';
-              params={[;
-                {
-                  name: 'id'
-                  type: 'string'
-                  description: 'The job ID'
-                  required: true
-                },              ]}
+}`
+  }
+
+}`,
+                javascript: `const jobId = 'job_abc123'
+const response = await fetch(\`https://api && api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
+              code_examples={{
+                curl: `curl -X GET "https://api.ziontechgroup.com / v1 / jobs / job_abc123" \\;
+  -H "Authorization: Bearer YOUR_API_KEY" \\;
+  -H "Content - Type: application / json"`,
+                javascript: `const job_id = 'job_abc123';
+const response = await fetch (\`https://api.ziontechgroup.com / v1 / jobs/\${job_id}\`, {
+
+  method: 'GET',
+  headers: {
+
+const data = await response && response.json ()
+logInfo (data), `
+python: `import requests headers = {'
+  'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
+}talent id '
+}'
+headers=headers) data = response && response.json () print (data) ` 
+job_id = 'job_abc123'
+response = requests && requests.get(
+    f'https://api && api.ziontechgroup.com/v1/jobs/{job_id}',
+    headers=headers
+)
+
+data = response && response.json()
+print(data)`,
+
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content - Type': 'application / json';
   }
@@ -277,33 +255,12 @@ print (data)`,
     "category": "development"
     "skills": ["react", "typescript", "node.js"]
     "budget": {
-      "min": 5000
-      "max": 10000
-      "currency": "USD"
-    }
-    "status": "active"
-    "client_id": "user_xyz789"
-    "created_at": "2025-05-15T10:30:00Z"
-    "deadline": "2025-06-30T23:59:59Z"
-    "application_count": 12
-  }
-}`;
-              }}
-            />
-            
             <EndpointSection
               method='POST'
               endpoint='/api/jobs'
               description='Create a new job listing.'
               note='Requires jobs:write scope'
               params={[
-            />;
-            <EndpointSection;
-              method='POST';
-              endpoint='/api / jobs';
-              description='Create a new job listing.';
-              note='Requires jobs:write scope';
-              params={[;
                 {
                   name: 'title'
                   type: 'string'
@@ -334,10 +291,6 @@ print (data)`,
                   type: 'string'
                   description: 'Job deadline (ISO date string)'
                 }
-}),
-
-const data = await response.json(),
-logInfo(data),`,
       min: 5000,
       max: 10000,
       currency: 'USD';
@@ -365,55 +318,16 @@ data = response.json ();
 print (data)`,
 
 print(data)`,
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-}
-;
-payload = {;
-    'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'],;
-    'budget': {;
-        'min': 5000,;
-        'max': 10000,;
-        'currency': 'USD';
-    },;
-    'deadline': '2025-06-30T23:59:59Z';
-}
-;
-response = requests.post(;
-    'https://api.ziontechgroup.com/v1/jobs',;
-    headers=headers,;
-    data=json.dumps(payload);
-);
-data = response.json();
-print(data)`;
               }}
               response_examples={{
                 success: `{
   "data": {
-              }}
-            />
-          </TabsContent>
-          <TabsContent value='talent' className='space-y-6'>
-}`;
-              }}
-            />
-          </TabsContent>
-          
-          <TabsContent value="talent" className="space-y-6">
             <EndpointSection
               method='GET'
               endpoint='/api/talent'
               description='List talent profiles with optional filtering.'
               note=''
               params={[
-            />;
-          </TabsContent>;
-          <TabsContent value='talent' className='space - y-6'>;
-            <EndpointSection;
-              method='GET';
-              endpoint='/api / talent';
-              description='List talent profiles with optional filtering.';
-              note='';
-              params={[;
                 {
                   name: 'page'
                   type: 'integer'
@@ -425,38 +339,15 @@ print(data)`;
                   type: 'string'
                   description: 'Filter by availability status'
                 }
-              ]}
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json"`
-                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/talent?skills=react,typescript', {
-  method: 'GET'
-              code_examples = {{
-                curl: `curl -X GET "https://api.ziontechgroup.com / v1 / talent?skills = react, typescript" \\;
-  -H "Authorization: Bearer YOUR_API_KEY" \\;
-  -H "Content - Type: application / json"`,
-                javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / talent?skills = react, typescript', {
-  method: 'GET',
-  headers: {
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
-    'Authorization': 'Bearer YOUR_API_KEY',
-    'Content - Type': 'application / json';
-});
-const data = await response.json ();
-log_info (data);`,
-                python: `import requests;
               }}
               response_examples={{
                 success: `{
   "data": [;
     {
-  "meta": {
-    "total": 28
-    "page": 1
-    "limit": 20
-            />
             <EndpointSection
               method='GET'
               endpoint='/api/talent/:id'
@@ -492,48 +383,6 @@ log_info (data);`,
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
-                python: `import requests
-headers = {
-    'Authorization': 'Bearer YOUR_API_KEY'
-    'Content-Type': 'application/json'
-talent_id = 'talent_abc123'
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-            />;
-            <EndpointSection;
-              method="GET";
-              endpoint="/api/talent/:id";
-              description="Get detailed information about a specific talent profile.";
-              note="";
-              params={[;
-                { name: "id", type: "string", description: "The talent ID", required: true }
-              ]}
-              codeExamples={{;
-                curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\;
-  -H "Authorization: Bearer YOUR_API_KEY" \\;
-  -H "Content-Type: application/json"`,;
-                javascript: `const talentId = 'talent_abc123',;
-const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talentId}\`, {;
-  method: 'GET',;
-  headers: {;
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
-  }
-}),;
-const data = await response.json(),;
-logInfo(data),`,;
-                python: `import requests;
-headers = {;
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
-}
-;
-talent_id = 'talent_abc123';
-response = requests.get(;
-    f'https://api.ziontechgroup.com/v1/talent/{talent_id}',;
-    headers=headers;
-);
-data = response.json();
-print(data)`;
-              }}
-              responseExamples={{
   "data": {
     "id": "talent_abc123"
     "display_name": "Jane Smith"
@@ -557,43 +406,17 @@ print(data)`;
         "name": "AWS Certified Developer"
         "issuing_organization": "Amazon Web Services"
         "issue_date": "2024-01-15"
-        "title": "E - commerce Platform",
-        "description": "Built a modern e - commerce platform using React...",
-        "technologies": ["react", "redux", "node.js"],
-        "image_url": "https://example.com / portfolio / 123.jpg";
-      , }
     ],
     "certifications": [;
       {
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
-              }}
-            />
-          </TabsContent>
-          <TabsContent value='quotes' className='space-y-6'>
-    ];
-  }
-}`;
-              }}
-            />
-          </TabsContent>
-          
-          <TabsContent value="quotes" className="space-y-6">
             <EndpointSection
               method='POST'
               endpoint='/api/quotes'
               description='Create a quote request for a talent.'
               note='Requires quotes:write scope'
               params={[
-            />;
-          </TabsContent>;
-          <TabsContent value='quotes' className='space - y-6'>;
-            <EndpointSection;
-              method='POST';
-              endpoint='/api / quotes';
-              description='Create a quote request for a talent.';
-              note='Requires quotes:write scope';
-              params={[;
                 {
                   name: 'talent_id'
                   type: 'string'
@@ -660,34 +483,10 @@ const data = await response.json ();
 log_info (data);`,
                 python: `import requests;
 headers = {
-              }}
-              response_examples = {{
-}),
-
-const data = await response.json(),
-logInfo(data),`,
                 python: `import requests
 import json
 
 headers = {
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-}
-;
-payload = {;
-    'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000,;
-    'budget_max': 12000,;
-    'requester_name': 'John Doerequester_email': 'john@example.com';
-}
-;
-response = requests.post(;
-    'https://api.ziontechgroup.com/v1/quotes',;
-    headers=headers,;
-    data=json.dumps(payload);
-);
-data = response.json();
-print(data)`;
-              }}
-              responseExamples={{
                 success: `{
   "data": {
     "id": "quote_def456"
@@ -706,7 +505,6 @@ print(data)`;
     "created_at": "2025-05-16T14:30:15Z"
   }
 }`,              }}
-            />
             <EndpointSection
               method="GET"
               endpoint="/api/quotes"
@@ -719,35 +517,10 @@ print(data)`;
                   description: 'Page number for pagination (default: 1)'
                 }
                 {
-                  name: 'limit',
-                  type: 'integer',
-                  description:;
-                    'Number of results per page (default: 20, max: 100)',
-                },
-                {
-                  name: 'status',
-                  type: 'string',
-                  description:;
-                    'Filter by status (new, viewed, replied, archived)',
-                },
-              ]}
-              code_examples = {{
-                curl: `curl -X GET "https://api.ziontechgroup.com / v1 / quotes" \\;
-  -H "Authorization: Bearer YOUR_API_KEY" \\;
-  -H "Content - Type: application / json"`,
-                javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / quotes', {
-  method: 'GET',
-  headers: {
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
-    'Authorization': 'Bearer YOUR_API_KEY',
-    'Content - Type': 'application / json';
-});
-const data = await response.json ();
-log_info (data);`,
-                python: `import requests;
               }}
               response_examples={{
                 success: `{
@@ -757,12 +530,13 @@ log_info (data);`,
     "total": 5
     "page": 1
     "limit": 20
-              }}
+}`
+  }
 
-}`;
-              }}
-  const hmac = crypto.createHmac('sha256', secret),
-  const expectedSignature = hmac.update(payload).digest('hex'),
+}`,
+
+
+
   return crypto.timingSafeEqual(
     Buffer.from(signature)
     Buffer.from(expectedSignature)
@@ -778,8 +552,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   // Process the webhook event
   const event = JSON.parse(payload)
   logInfo('Received valid webhook:', { data: event })
-  // Respond to acknowledge receipt
-  res.status(200).send('Webhook received')
                 <thead>
                   <tr className='border-b border-zinc-800'>
                     <th className='py-2 px-4 text-left'>Event Type</th>
@@ -842,25 +614,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                   </tr>
                 </tbody>
               </table>
-            />;
-          </TabsContent>;
-          <TabsContent value='webhooks' className='space-y-6'>;
-            <div className='prose prose-invert max-w-none'>;
-              <h3 className='text-lg font-semibold mb-2'>Webhook Events</h3>;
-              <p className='text-zinc-400 mb-4'>;
-                The Zion API can send webhook notifications when certain events;
-                occur in your account. You can configure webhooks in the;
-                Webhooks tab of the Developer Dashboard.;
-              </p>;
-              <h4 className='text-md font-semibold mt-6 mb-2'>;
-                Authentication;
-              </h4>;
-              <p className='text-zinc-400 mb-4'>;
-                When you create a webhook, you can optionally provide a secret;
-                key. If a secret is provided, each webhook request will include;
-                a signature in the;
-                <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
-                  X-Zion-Signature;
                 </code>{' '}
               <CodeBlock
                 code = {`{
@@ -1172,154 +925,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                 <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
                   429 Too Many Requests;
                 </code>{' '}
-;
-  // Process the webhook event;
-  const event = JSON.parse(payload),;
-  logInfo('Received valid webhook:', { data: event }),;
-  // Respond to acknowledge receipt;
-  res.status(200).send('Webhook received');
-}),`}
-                language="javascript";
-                showLineNumbers={true}
-              />;
-              <h4 className="text-md font-semibold mt-6 mb-2">Event Types</h4>;
-              <table className="w-full border-collapse mt-2">;
-                <thead>;
-                  <tr className="border-b border-zinc-800">;
-                    <th className="py-2 px-4 text-left">Event Type</th>;
-                    <th className="py-2 px-4 text-left">Description</th>;
-                  </tr>;
-                </thead>;
-                <tbody>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4 font-mono text-sm">new_application</td>;
-                    <td className="py-2 px-4">When a talent applies to one of your jobs</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4 font-mono text-sm">quote_received</td>;
-                    <td className="py-2 px-4">When you receive a quote from talent</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4 font-mono text-sm">milestone_approved</td>;
-                    <td className="py-2 px-4">When a project milestone is approved</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4 font-mono text-sm">talent_hired</td>;
-                    <td className="py-2 px-4">When you hire talent for a project</td>;
-                  </tr>;
-                </tbody>;
-              </table>;
-              <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>;
-              <p className="text-zinc-400 mb-2">;
-                Here's an example of a <code className="bg-zinc-800 px-1 py-0.5 rounded">new_application</code> webhook payload:;
-              </p>;
-              <CodeBlock;
-                code={`{;
-  "event_type": "new_application",;
-  "event_id": "evt_abc123def456",;
-  "timestamp": "2025-05-16T15:30:00Z",;
-  "data": {;
-    "application_id": "app_123456",;
-    "job_id": "job_abc123",;
-    "talent_id": "talent_xyz789",;
-    "applied_at": "2025-05-16T15:28:30Z",;
-    "status": "new",;
-    "match_score": 85;
-  }
-}`}
-                language="json";
-                showLineNumbers={true}
-              />;
-            </div>;
-          </TabsContent>;
-          <TabsContent value="errors" className="space-y-6">;
-            <div className="prose prose-invert max-w-none">;
-              <h3 className="text-lg font-semibold mb-2">Error Responses</h3>;
-              <p className="text-zinc-400 mb-4">;
-                The Zion API uses conventional HTTP status codes to indicate the success or failure of an API request.;
-                In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error with the;
-                provided information, and codes in the 5xx range indicate an error with our servers.;
-              </p>;
-              <table className="w-full border-collapse mt-4">;
-                <thead>;
-                  <tr className="border-b border-zinc-800">;
-                    <th className="py-2 px-4 text-left">Status Code</th>;
-                    <th className="py-2 px-4 text-left">Description</th>;
-                  </tr>;
-                </thead>;
-                <tbody>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">200 OK</code></td>;
-                    <td className="py-2 px-4">The request was successful.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">201 Created</code></td>;
-                    <td className="py-2 px-4">The resource was successfully created.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">400 Bad Request</code></td>;
-                    <td className="py-2 px-4">The request was invalid or cannot be otherwise served.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">401 Unauthorized</code></td>;
-                    <td className="py-2 px-4">Authentication credentials were missing or invalid.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">403 Forbidden</code></td>;
-                    <td className="py-2 px-4">The request is understood, but it has been refused or access is not allowed.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">404 Not Found</code></td>;
-                    <td className="py-2 px-4">The requested resource does not exist.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">422 Unprocessable Entity</code></td>;
-                    <td className="py-2 px-4">The request was well-formed but was unable to be followed due to semantic errors.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code></td>;
-                    <td className="py-2 px-4">The request was rejected due to rate limiting.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">500 Internal Server Error</code></td>;
-                    <td className="py-2 px-4">Something went wrong on our end.</td>;
-                  </tr>;
-                </tbody>;
-              </table>;
-              <h4 className="text-md font-semibold mt-6 mb-2">Error Response Format</h4>;
-              <p className="text-zinc-400 mb-2">;
-                Error responses include a consistent JSON object with the following format:;
-              </p>;
-              <CodeBlock;
-                code={`{;
-  "error": {;
-    "code": "invalid_request",;
-    "message": "The request was invalid",;
-    "details": [;
-      {;
-        "field": "project_name",;
-        "message": "Project name is required";
-      }
-    ];
-  }
-}`}
-                language="json"
-              />
-              
-              <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>
-              <p className="text-zinc-400 mb-4">
-                The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.
-                Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive 
-                a <code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code> response.
-              </p>
-              
-              <p className="text-zinc-400 mb-2">
-                Rate limit information is included in the response headers: </p>
-              
-              <ul className="list-disc pl-6 space-y-1 text-zinc-400">
-                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Limit</code>: Number of requests allowed in the time window</li>
-                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Remaining</code>: Number of requests remaining in the current window</li>
-                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>
               </ul>
             </div>
           </TabsContent>
@@ -1337,52 +942,6 @@ function EndpointSection({
   codeExamples
   responseExamples
 }: EndpointSectionProps) {
-  const [activeTab, setActiveTab] = useState('curl')
-
-  return (
-    <div className='border border-zinc-800 rounded-md'>
-      <div className='p-4'>
-        <div className='flex items-center'>
-          <Badge
-            variant='outline'
-            className={
-              method === 'GET'
-                ? 'border-green-500 text-green-400 font-mono'
-                : method === 'POST'
-                  ? 'border-blue-500 text-blue-400 font-mono'
-                  : method === 'PUT'
-                    ? 'border-yellow-500 text-yellow-400 font-mono'
-                    : 'border-red-500 text-red-400 font-mono'
-            }          >
-            {method}
-          </Badge>
-          <span className='ml-2 font-mono text-sm text-white'>{endpoint}</span>
-          {note && (
-            <Badge className='ml-auto bg-amber-800 text-amber-200 hover:bg-amber-800'>
-  const [activeTab, setActiveTab] = useState("curl"),
-  
-  return (
-    <div className="border border-zinc-800 rounded-md">
-      <div className="p-4">
-        <div className="flex items-center">
-          <Badge 
-            variant="outline" 
-            className={
-              method === 'GET' 
-                ? "border-green-500 text-green-400 font-mono" 
-                : method === 'POST' 
-                ? "border-blue-500 text-blue-400 font-mono"
-                : method === 'PUT'
-                ? "border-yellow-500 text-yellow-400 font-mono"
-                : "border-red-500 text-red-400 font-mono"
-                language="json";
-              />;
-              <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>;
-              <p className="text-zinc-400 mb-4">;
-                The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.;
-                Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive;
-                a <code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code> response.;
-                response.;
               </p>;
               <p className='text-zinc-400 mb-2'>;
                 Rate limit information is included in the response headers:;
@@ -2659,13 +2218,6 @@ app.post('/webhook', express.raw({type:'application/json'}), (req, res) => {;
           </TabsContent>;
         </Tabs>;
       </CardContent>;
-    </Card>;
-  );
-  method,;
-  endpoint,;
-  description,;
-  note,;
-  params = [],;
       {params.length > 0 && (
         <div className='border-t border-zinc-800 p-4'>
           <h4 className='font-medium mb-2'>Parameters</h4>
@@ -2710,12 +2262,6 @@ app.post('/webhook', express.raw({type:'application/json'}), (req, res) => {;
                     {param && param.description}
                   </td>;
                 </tr>;
-                </tr>
-              ))}
-            </tbody>;
-          </table>;
-        </div>;
-      )}
       {codeExamples && (
         <div className='border-t border-zinc-800 p-4'>
           <div className='flex items-center mb-2'>

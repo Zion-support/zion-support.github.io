@@ -1,35 +1,3 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-
-import React from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { toast } from "@/hooks/use-toast";
-import {
-
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-
-import { Sparkles } from 'lucide-react'
-import { Progress } from "@/components/ui/progress";
-export function UsageStats() {
-
-  const handleSaveChanges = () => {
-    toast({
-      title: 'Limits updated'
-      description: 'The new usage limits have been saved successfully.'
-    })
-  }
         <Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
@@ -170,11 +138,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
         <Button>Contact Us</Button>
       </div>
-import React from "react",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { toast } from "@/hooks/use-toast",;
 import {;
   Card,;
   CardContent,;
@@ -239,8 +202,3 @@ import {;
             </p>;
           </div>;
         </div>;
-
-        <Button > Contact Us</Button>;
-      </div>;
-    </div>);
-}"}

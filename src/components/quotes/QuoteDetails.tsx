@@ -1,49 +1,7 @@
-}
-import React from "react"
-import {
-  Dialog
-  DialogContent
-  DialogHeader
-  DialogTitle
-  DialogDescription
-  DialogContent, 
-  DialogHeader, 
-  DialogTitle, 
-  DialogDescription 
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'import { Card, CardContent } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { QuoteStatusBadge } from "./QuoteStatusBadge"
-import type { QuoteRequest } from "@/types/quotes"
-import {format} from "date-fns"
 interface QuoteDetailsProps {
   quote: QuoteRequest | null
   isOpen: boolean
   onClose: () => void
-}
-export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
-  if (!quote) return null
-  const formatDate = (dateString?: string) => {
-    if (!dateString) return 'Not specified';    try {
-      return format(new Date(dateString), 'PPP')
-    } catch (e) {
-      return dateString
-import React from "react",;
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogHeader,;
-  DialogTitle,;
-  DialogDescription;
-} from "@/components/ui/dialog",;
-import { Button } from "@/components/ui/button",;
-import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react';
-import { Card, CardContent } from "@/components/ui/card",;
-import { Separator } from "@/components/ui/separator",;
-import { QuoteStatusBadge } from "./QuoteStatusBadge",;
-import type { QuoteRequest } from "@/types/quotes",;
-import { format } from "date-fns",;
 interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
@@ -60,8 +18,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
       return dateString;
     }
   }
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card>
               <h3 className="text-lg font-medium mb-3">Requester Information</h3>
               <div className="space-y-2">

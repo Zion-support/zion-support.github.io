@@ -8,14 +8,14 @@ function fixUtilsFile(filePath) {
     const originalContent = content;
     // Fix common patterns in utils files
       "export interface $1 {");
-    content = content.replace(
-      /export,\s*const\s+([^=]+)\s*=\s*([^]+);/g
+    content = content && content.replace(
+      /export,\s*const\s+([^=]+)\s*=\s*([^]+);/g,
       "export const $1 = $2;");
-    content = content.replace(
-      /import\s+React\s+from\s*'rea\s*c\s*t';'/g
+    content = content && content.replace(
+      /import\s+React\s+from\s*'rea\s*c\s*t';'/g,
       "import React from 'react';");
-    content = content.replace(
-      /const\s+([^=]+)\s*=\s*([^]+);/g
+    content = content && content.replace(
+      /const\s+([^=]+)\s*=\s*([^]+);/g,
       "const $1 = $2;");
       "if (!$1) return $2;");
     // Fix string literals
@@ -43,42 +43,36 @@ function fixUtilsFile(filePath) {
     content = content && content.replace(/Even,\s*t/g, "Event");
     // Fix type annotations
       "cloud-services");
-    content = content.replace(/na,\s*m,\s*e/g, "name");
-    content = content.replace(/ai-servic,\s*e,\s*s/g, "ai-services");
-    content = content.replace(/tit,\s*l,\s*e/g, "title");
-    content = content.replace(/descripti,\s*o,\s*n/g, "description");
-    content = content.replace(/provid,\s*e,\s*r/g, "provider");
-    content = content.replace(/avat,\s*a,\s*r/g, "avatar");
-    content = content.replace(/rati,\s*n,\s*g/g, "rating");
-    content = content.replace(/prici,\s*n,\s*g/g, "pricing");
-    content = content.replace(/fr,\s*o,\s*m/g, "from");
-    content = content.replace(/curren,\s*c,\s*y/g, "currency");
-    content = content.replace(/hour,\s*l,\s*y/g, "hourly");
-    content = content.replace(/fix,\s*e,\s*d/g, "fixed");
-    content = content.replace(/month,\s*l,\s*y/g, "monthly");
-    content = content.replace(/service,\s*I,\s*d/g, "serviceId");
-    content = content.replace(/client,\s*I,\s*d/g, "clientId");
-    content = content.replace(/budg,\s*e,\s*t/g, "budget");
-    content = content.replace(/timeli,\s*n,\s*e/g, "timeline");
-    content = content.replace(/stat,\s*u,\s*s/g, "status");
-    content = content.replace(
-      /createMiddlewareClie,\s*n,\s*t/g
+    content = content && content.replace(/na,\s*m,\s*e/g, "name");
+    content = content && content.replace(/ai-servic,\s*e,\s*s/g, "ai-services");
+    content = content && content.replace(/tit,\s*l,\s*e/g, "title");
+    content = content && content.replace(/descripti,\s*o,\s*n/g, "description");
+    content = content && content.replace(/provid,\s*e,\s*r/g, "provider");
+    content = content && content.replace(/avat,\s*a,\s*r/g, "avatar");
+    content = content && content.replace(/rati,\s*n,\s*g/g, "rating");
+    content = content && content.replace(/prici,\s*n,\s*g/g, "pricing");
+    content = content && content.replace(/fr,\s*o,\s*m/g, "from");
+    content = content && content.replace(/curren,\s*c,\s*y/g, "currency");
+    content = content && content.replace(/hour,\s*l,\s*y/g, "hourly");
+    content = content && content.replace(/fix,\s*e,\s*d/g, "fixed");
+    content = content && content.replace(/month,\s*l,\s*y/g, "monthly");
+    content = content && content.replace(/service,\s*I,\s*d/g, "serviceId");
+    content = content && content.replace(/client,\s*I,\s*d/g, "clientId");
+    content = content && content.replace(/budg,\s*e,\s*t/g, "budget");
+    content = content && content.replace(/timeli,\s*n,\s*e/g, "timeline");
+    content = content && content.replace(/stat,\s*u,\s*s/g, "status");
+    content = content && content.replace(
+      /createMiddlewareClie,\s*n,\s*t/g,
       "createMiddlewareClient");
-    content = content.replace(/getSessi,\s*o,\s*n/g, "getSession");
-    content = content.replace(/createServerClient/g, "createServerClient");
-    content = content.replace(/getUs,\s*e,\s*r/g, "getUser");
-    content = content.replace(/supabaseUr,\s*l/g, "supabaseUrl");
-    content = content.replace(/proce,\s*s,\s*s/g, "process");
-    content = content.replace(/e,\s*n,\s*v/g, "env");
-    content = content.replace(
-      /NEXT_PUBLIC_SUPABASE_U,\s*R,\s*L/g
+    content = content && content.replace(/getSessi,\s*o,\s*n/g, "getSession");
+    content = content && content.replace(/createServerClient/g, "createServerClient");
+    content = content && content.replace(/getUs,\s*e,\s*r/g, "getUser");
+    content = content && content.replace(/supabaseUr,\s*l/g, "supabaseUrl");
+    content = content && content.replace(/proce,\s*s,\s*s/g, "process");
+    content = content && content.replace(/e,\s*n,\s*v/g, "env");
+    content = content && content.replace(
+      /NEXT_PUBLIC_SUPABASE_U,\s*R,\s*L/g,
       "NEXT_PUBLIC_SUPABASE_URL");
-    content = content.replace(
-      /htt,\s*p,\s*"s": \/\/placehold,\s*e,\s*r.supaba,\s*s,\s*e.co'/g
-      "'"https": //placeholder.supabase.co'");
-    content = content.replace(/supabaseAnonKe,\s*y/g, "supabaseAnonKey");
-    content = content.replace(
-      /NEXT_PUBLIC_SUPABASE_ANON_K,\s*E,\s*Y/g
       "NEXT_PUBLIC_SUPABASE_ANON_KEY");
       "'placeholder-key'");
     content = content && content.replace(/supabaseMiddleware/g, "supabaseMiddleware");

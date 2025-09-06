@@ -1,34 +1,3 @@
-import { useState } from "react",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
-import { TemplateManager } from "./templates/TemplateManager",
-import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
-import { useSmartContracts } from "@/hooks/useSmartContracts",
-interface SmartContractBuilderProps {
-
-  isOpen: boolean
-  onClose: () => void
-  talent: TalentProfile
-  clientName: string
-  onContractGenerated?: (contractContent: string,) => void
-
-}
-export function SmartContractBuilder({
-import React from 'react';
-interface SmartContractBuilderProps {;
-  isOpen: boolean,;
-  onClose: () => void,;
-  talent: TalentProfile,;
-  clientName: string,;
-  onContractGenerated?: (contractContent: string,) => void;
-}
-export function SmartContractBuilder(): any ({;
-  isOpen;
 isOpen;
   onClose;
   talent;
@@ -152,8 +121,6 @@ interface SmartContractBuilderProps {
       toast.warn ("No draft content available to download or form values missing.")}
   }
       return}
-import { toast } from "sonner",
-import {logErrorToProduction} from '@/utils/productionLogger',
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle>Smart Contract Builder</DialogTitle>;
@@ -318,28 +285,10 @@ if ( {) {
               </Button>;
             </div>;
           </div>;
-          <TabsContent value="form" className="pt-4">;
-            <ContractForm;
-              talent={talent}
-              clientName={clientName}
-              initialValues={formValues}
-              onFormValuesChange={setFormValues}
-              onContractGenerated={handleFormSubmit}
-            />
-          </TabsContent>
-          
-          <TabsContent value="preview" className="pt-4">
-            {generatedContract && (
-              <div>
-                <ContractPreview 
                   generatedContract = {generatedContract,}
                   talent = {talent,}
                   onClose = {onClose,}
                   deploymentInfo = {deploymentInfo,}
-                />
-                {!deploymentInfo && deployOptions.deployToChain && (
-                  <div className="mt-6 flex justify-center">
-                    <Button 
                       onClick = {handleDeployContract,}
                       disabled = {deployStatus === 'deploying',}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;
@@ -353,69 +302,7 @@ if ( {) {
           onClose = {() => setTemplateManagerOpen(false),}
           onSelectTemplate = {handleLoadTemplate,}
           currentValues = {formValues,}
-                      onClick={handleDeployContract}
-                      disabled={deployStatus === 'deploying'}
-                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
-                    >
-                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
-                    </Button>;
-                  </div>;
-                )}
-              </div>;
-            )}
-            {!generatedMarkdownContract && !isLoadingLegalDraft && <p>Generate a legal draft to preview and download.</p>}
-          </TabsContent>;
-        </Tabs>;
-        <TemplateManager;
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-        />
-      </DialogContent>
-    </Dialog>
-  )}
-}
-
-;
-
-
-          <TabsContent value="form" className="pt - 4">;
-            <ContractForm;
-              talent = {talent, }
-              client_name = {client_name, }
-              initial_values = {form_values, }
-              onFormValuesChange = {setFormValues, }
-              onContractGenerated = {handleFormSubmit, }
-            />;
-          </TabsContent>;
-          <TabsContent value="preview" className="pt - 4">;
-            {generated_contract && (
-              <div>;
-                <ContractPreview;
-                  generated_contract = {generated_contract, }
-                  talent = {talent, }
-                  on_close = {on_close, }
-                  deployment_info = {deployment_info, }
-                />;
-                {!deployment_info && deploy_options.deployToChain && (
-                  <div className="mt - 6 flex justify - center">;
-                    <Button;
-                      on_click = {handleDeployContract, }
-                      disabled = {deploy_status === 'deploying', }
-                      className="bg - gradient - to - r from - blue - 600 to - indigo - 600 hover:from - blue - 700 hover:to - indigo - 700";
-                    >;
-                      {deploy_status === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
-                    </Button>;
-                  </div>                )}
-              </div>)}
-          </TabsContent>;
-        </Tabs>;
-        <TemplateManager;
-          is_open = {templateManagerOpen, }
-          on_close = {() => setTemplateManagerOpen (false), }
-          onSelectTemplate = {handleLoadTemplate, }
-          current_values = {form_values, }
-      </DialogContent>;
-    </Dialog>);
-}

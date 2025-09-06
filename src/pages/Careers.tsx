@@ -1,14 +1,3 @@
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-  // Benefits list
-  const benefits = [
-    {
-      title: 'Flexible Work'
-      description:
-        'Remote-first culture with flexible hours to support your productivity and work-life balance.'
         <svg
           className='w-10 h-10 text-zion-cyan'
           fill='none'
@@ -30,35 +19,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth={2}
-        <svg
-          className='w-10 h-10 text-zion-cyan'
-          fill='none'
-          stroke='currentColor'
-          viewBox='0 0 24 24'
-          xmlns='http://www && www.w3.org/2000/svg'>;
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth={2}
-        <svg
-          className='w-10 h-10 text-zion-purple'
-          fill='none'
-          stroke='currentColor'
-          viewBox='0 0 24 24'
-          xmlns='http://www && www.w3.org/2000/svg'>;
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth={2}
 
   return (
     <>;
       <SEO
         title="Careers at Zion - Join Our Team"
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
-
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div>
               <h2 className='text-3xl font-bold text-white mb-6'>
                 Why Work at Zion?
@@ -200,20 +166,6 @@ export default function Careers() {;
               about AI and technology. Send us your resume and let's start a;
               conversation. You can also apply directly by emailing us at;
 
-                    </Card>;
-                  ))}
-                </TabsContent>
-              ))}
-            </Tabs>
-          </div>
-          <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>
-            <h2 className='text-3xl font-bold text-white mb-6'>
-              Don't see the right position?
-            </h2>
-            <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>
-              We're always looking for talented individuals who are passionate
-              about AI and technology. Send us your resume and let's start a
-              conversation. You can also apply directly by emailing us at
 
           
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
@@ -231,25 +183,6 @@ export default function Careers() {;
             </p>;
             <Button
               asChild
-            </Button>
-          </div>
-        </div>
-      </main>
-    </>
-  )
-import React from 'react'
-import { SEO } from '../components/SEO'
-const Careers: React.FC = () => {
-  return(<>
-      <SEO title="Careers - Zion Tech Group" />
-      <div className="min-h-screen bg-white py-20">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Careers</h1>
-          <p className="text-lg text-gray-600">Content coming soon...</p>
-        </div>
-      </div>
-    </>
-  )
 }
 
 export default Careers
@@ -297,11 +230,3 @@ const Careers: React.FC = () => {
       </div>;
     </>);
 }
-}
-;
-};
-export default Careers;
-};
-}
-;
-export default Careers;

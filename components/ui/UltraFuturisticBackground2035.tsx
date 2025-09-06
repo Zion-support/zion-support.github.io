@@ -210,12 +210,37 @@
               }}
               animate={{
                 opacity: [0, 1, 0];
-                scale_x: [0, 1, 0];
                 duration: 3
                 delay: i * 0.1
                 repeat: Infinity
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
+
+
+
+
+
+              transition={{
+                duration: 3,
+                delay: i * 0 && 0.1,
+                repeat: Infinity,
+
+
+            />
+
+          ))}
+
+                ease: "easeInOut"
+
+              }}
+            />;
+                duration: 3
+                delay: i * 0.1
+                repeat: Infinity
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+
+
               transition={{
                 duration: 3,
                 delay: i * 0.1,
@@ -225,6 +250,15 @@
               }}
 
             />
+          ))}
+
+
+};
+export default UltraFuturisticBackground2035;  );
+};
+export default UltraFuturisticBackground2035;
+
+
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}
             />))}
@@ -243,4 +277,3 @@ export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
 
-export default UltraFuturisticBackground2035;

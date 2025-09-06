@@ -592,6 +592,21 @@ export default function AdminDeployPage() {;
                   ? 'bg-green-900/20 border border-green-500/20 text-green-400';
                   : 'bg-red-900/20 border border-red-500/20 text-red-400';
               }`}>;
+                {message}
+              </div>;
+            )}
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+          </div>;
+        </form>;
+      </div>;
+    </div>);
+}
+
 ;
 function labelFor(key: string) {;
   switch (key) {;

@@ -90,8 +90,7 @@ function Page() {
     </div>);
 }
 
-export default function Page() {
-  return (
+
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Case Study — Techcrunch Pebble</title>

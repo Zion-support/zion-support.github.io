@@ -16,8 +16,6 @@ export const DownloadSection: React.FC = () => {
                 Download the Zion app now and take your tech career or hiring
                 needs to the next level. Available on iOS and Android.
               </p>
-              <AppStoreButtons
-                className="mb-8"
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => console.log ("App Store button clicked")}
@@ -25,8 +23,6 @@ export const DownloadSection: React.FC = () => {
                   console.log ("Google Play button clicked");
                 }
               
-              <AppStoreButtons 
-                className="mb-8" 
               <AppStoreButtons 
                 className="mb-8" 
 import React from "react",;

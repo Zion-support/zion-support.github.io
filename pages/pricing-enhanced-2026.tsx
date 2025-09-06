@@ -59,6 +59,7 @@ import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-
 import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
+  ],
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -159,6 +160,17 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
+          <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
+          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
+        </Head>
+        {/* Enhanced Header Section */}
+        <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
         {/* Enhanced Header Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -187,6 +199,8 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
               Enhanced 2026 Pricing
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
+
               Achieve remarkable ROI with transparent, competitive pricing.
             </p>
             className="max - w-7xl mx - auto text - center";
@@ -199,6 +213,46 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
               Achieve remarkable ROI with transparent, competitive pricing.;
             </p>;
             {/* Billing Cycle Toggle */}
+            <div className="flex items-center justify-center space-x-4 mb-8">
+              <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
+              <button
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+                className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
+                  billingCycle === 'yearly' ? 'bg-cyan-600' : 'bg-gray-600'
+                }`}
+              >
+                <span
+                  className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
+                    billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
+                  }`}
+            <div className="flex items - center justify - center space - x-4 mb - 8">;
+              <span className={`text - lg ${billing_cycle === 'monthly' ? 'text - white' : 'text - gray - 400'}`}>Monthly</span>;
+              <button;
+                on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'yearly' : 'monthly')}
+                className={`relative inline - flex h - 8 w - 16 items - center rounded - full transition - colors ${
+                  billing_cycle === 'yearly' ? 'bg - cyan - 600' : 'bg - gray - 600';
+                }`}
+              >;
+                <span;
+                  className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${;
+                    billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1';
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                />
+              </button>
+              <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
+                Yearly <span className="text-cyan-400 text-sm">(Save 20%)</span>
+              </span>
+            </div>
+            {/* Contact Information */}
+            {/* Contact Information */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -218,33 +272,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
             </div>
           </motion.div>
         </div>
-                />;
-              </button>;
-              <span className={`text - lg ${billing_cycle === 'yearly' ? 'text - white' : 'text - gray - 400'}`}>;
-                Yearly <span className="text - cyan - 400 text - sm">(Save 20%)</span>;
-              </span>;
-            </div>;
-            {/* Contact Information */}
-            <div className="bg - gradient - to - r from - gray - 800 / 50 to - gray - 700 / 50 backdrop - blur - sm rounded - xl p - 6 border border - gray - 600 / 30 max - w-2xl mx - auto">;
-              <h3 className="text - xl font - semibold text - cyan - 400 mb - 4">Need Custom Pricing?</h3>;
-              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text - sm">;
-                <div className="flex items - center justify - center space - x-2">;
-                  <Phone className="w - 4 h - 4 text - purple - 400" />;
-                  <span>{contact_info.mobile}</span>;
-                </div>;
-                <div className="flex items - center justify - center space - x-2">;
-                  <Mail className="w - 4 h - 4 text - purple - 400" />;
-                  <span>{contact_info.email}</span>;
-                </div>;
-                <div className="flex items - center justify - center space - x-2">;
-                  <MapPin className="w - 4 h - 4 text - purple - 400" />;
-                  <span className="text - center">{contact_info.address}</span>;
-                </div>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-        {/* Enhanced Pricing Tiers */}
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -269,13 +296,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
 }
                   >
                     {tier.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                          Most Popular
-                        </div>
-                      </div>
-                    )}
-                    
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -284,11 +304,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
-                          {tier.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                          {tier.icon}
                         </div>
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
@@ -305,11 +321,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                             <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                             <span className="text-gray-300">{feature}</span>
                           </li>
-                        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                        ))}
                       </ul>
                                              <Button
                                                    variant="primary"
@@ -352,6 +364,16 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCategories.map((category, index) => (
                 <motion.div
+                  key={category.name}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+
+
+                      </ul>
+
+
                       <Button
                         variant="primary"
                         size="sm"
@@ -419,6 +441,16 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {featuredServices.map((service, index) => (
                 <motion.div
+                  key={service.name}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+
+
+                      </ul>
+
+
                       <div className="flex space-x-2">
                         <Button
                           variant="primary"
@@ -489,3 +521,5 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+

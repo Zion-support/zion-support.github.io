@@ -5,6 +5,12 @@ import { supabase  } from '@/integrations/supabase/client';
 import { useAuth  } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 export function usePortfolio() {
+import {useState, useCallback} from 'react';
+import {PortfolioProject} from '@/types/resume';
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {toast} from '@/hooks/use-toast';
+export function usePortfolio() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -84,6 +90,7 @@ if (throw error) {
     
     setIsLoading(true),
     setError(null),
+    
     try {
       const { data, error } = await supabase
         .from('portfolio_projects')
@@ -103,44 +110,26 @@ if (throw error) {
         description: "Your project has been added to your portfolio"
       });
       await fetchProjects();
-          demo_url: project.demo_url,
-          pdf_url: project.pdf_url;
-        });
-        .select ('id');
-        .single ();
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      toast ({
-        title: "Project added",
-        description: "Your project has been added to your portfolio";
-      });
-;
-      await fetch_projects ();
-      return data.id;
     } catch (e: any) {
-      console.error ('Error adding portfolio project:', e);
-      set_error (e.message);
-      toast ({
-        title: "Error",
+      console && console.error('Error adding portfolio project:', e);
+      setError(e && e.message);
+      toast({
+        title: "Error"
         description: `Could not add project: ${e.message}`;
-        variant: "destructive";
-      });
-      return null;
+        title: "Error",
+
+        description: `Could not add project: ${e.message}`,
+        variant: "destructive"
+      }),
+      return null
     } finally {
-      setIsLoading (false);
+      setIsLoading(false)
     }
   }
   const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update a portfolio project')
       return false
-      }),
-      return null
-    } finally {
-      setIsLoading(false)
 ;
     setIsLoading(true),;
     setError(null),;
@@ -183,6 +172,11 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to update a portfolio project'),;
       return false;
+    }
+    
+    setIsLoading(true),
+    setError(null),
+    
     try {
       const { error } = await supabase
         .from('portfolio_projects')
@@ -197,44 +191,12 @@ if (throw error) {
         description: "Your portfolio project has been updated"
       });
       await fetchProjects();
-          demo_url: project.demo_url,
-          pdf_url: project.pdf_url;
-        });
-        .eq ('id', project_id);
-        .eq ('user_id', user.id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      toast ({
-        title: "Project updated",
-        description: "Your portfolio project has been updated";
-      });
-;
-      await fetch_projects ();
-      return true;
-    } catch (e: any) {
-      console.error ('Error updating portfolio project:', e);
-      set_error (e.message);
-      toast ({
-        title: "Error",
-        description: `Could not update project: ${e.message}`;
-        variant: "destructive";
-      });
-      return false;
-    } finally {
-      setIsLoading (false);
     }
   }
   const deleteProject = async (projectId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete a portfolio project')
       return false
-      }),
-      return false
-    } finally {
-      setIsLoading(false)
 ;
     setIsLoading(true),;
     setError(null),;
@@ -276,12 +238,16 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to delete a portfolio project'),;
       return false;
+    }
+    
+    setIsLoading(true),
+    setError(null),
+    
     try {
       const { error } = await supabase
         .from('portfolio_projects')
         .delete()
         .eq('id', projectId)
-      if (error) throw error;
       toast({
         title: "Project deleted"
         description: "Your portfolio project has been deleted"
@@ -291,14 +257,6 @@ if (throw error) {
       console && console.error('Error deleting portfolio project:', e);
       setError(e && e.message);
       toast({
-;
-  const delete_project = async (project_id: string): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ('You must be logged in to delete a portfolio project'),
-      return false;
     }
     setIsLoading (true);
     set_error (null);
@@ -338,11 +296,6 @@ if (throw error) {
   }
 }
 
-import { useState, useCallback } from 'react',;
-import { PortfolioProject } from '@/types/resume',;
-import { supabase } from '@/integrations/supabase/client',;
-import { useAuth } from '@/hooks/useAuth',;
-import { toast } from '@/hooks/use-toast',;
 ;
 export function usePortfolio() {;
   const { user } = useAuth(),;
@@ -519,83 +472,5 @@ export function usePortfolio() {;
     addProject,;
     updateProject,;
     deleteProject;
-  },;}
- setIsLoading (true);
-setError (null);
-try {
-  const {
-  data, error 
-}= await supabase .from ('portfolio projects') .select ('*') .eq ('user id', user.id) if (error) throw error;
-setIsLoading (true);
-setError (null);
-try {
-  const {
-  data, error 
-}= await supabase .from ('portfolio projects') .insert ({
-  user id: user.id, title: project.title, description: project.description, technologies: project.technologies, image url: project.image url, github url: project.github url, demo url: project.demo url, pdf url: project.pdf url 
-}) .select ('id') .single ();
-if (error) throw error;
-await fetchProjects ();
-return data.id 
-}catch (e: any) {
-  console.error ('Error adding portfolio project:', e);
-setError (e.message);
-toast ({
-  title: "Error";
-description: `Could not add project: $ {
-  e.message 
-}`;
-variant: "destructive" 
-});
-return null  variant: "destructive" 
-});
-return null;
-setIsLoading (true);
-setError (null);
-try {
-  const {
-  error 
-}= await supabase .from ('portfolio projects') .update ({
-  title: project.title, description: project.description, technologies: project.technologies, image url: project.image url, github url: project.github url, demo url: project.demo url, pdf url: project.pdf url 
-}) .eq ('id', projectId) .eq ('user id', user.id);
-if (error) throw error;
-await fetchProjects ();
-return true;
-}catch (e: any) {
-  console.error ('Error updating portfolio project:', e);
-setError (e.message);
-toast ({
-  title: "Error";
-description: `Could not update project: $ {
-  e.message 
-}`;
-variant: "destructive" 
-});
-return false  variant: "destructive" 
-});
-return false;
-setIsLoading (true);
-setError (null);
-try {
-  const {
-  error 
-}= await supabase .from ('portfolio projects') .delete () .eq ('id', projectId) .eq ('user id', user.id);
-if (error) throw error;
-setProjects (projects.filter (p => p.id !== projectId) );
-return true;
-}catch (e: any) {
-  console.error ('Error deleting portfolio project:', e);
-setError (e.message);
-toast ({
-  title: "Error";
-description: `Could not delete project: $ {
-  e.message 
-}`;
-variant: "destructive" 
-});
-return false  variant: "destructive" 
-});
-return false;
-}
   }
 }

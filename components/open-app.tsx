@@ -1,5 +1,14 @@
 import { useEffect } from 'react';
 
+    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    const now = Date.now();
+    const timeout = setTimeout(() => {
+      const elapsed = Date.now() - now;
+      if (elapsed < 2000) {
+
+        window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL
+
       }
     }, 1200);
     // Try to open the deep link
@@ -16,23 +25,3 @@ import { useEffect } from 'react';
       </div>;
     </div>;
   );  }, []);
-;
-    return () => {
-      clear_timeout (timeout);
-      clear_timeout (timer);
-      try {
-        document.body.remove_child (iframe);
-      } catch {}
-    }
-  }, []);
-;
-  return (
-    <div className='min - h-[50vh] flex items - center justify - center'>;
-      <div className='text - center'>;
-        </div>;
-      </div>;
-    </div>);  }, []);
-;
-  return (
-    <div className="min - h-[50vh] flex items - center justify - center">;
-      <div className="text - center">;

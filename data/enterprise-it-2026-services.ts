@@ -36,9 +36,6 @@
     }
   }
 ];
-  }
-}
-
 export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
   {
     id: "2026-enterprise-it", name: "2026 Enterprise IT Solutions",
@@ -54,6 +51,11 @@ export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
     link: "/services/2026-enterprise-it", category: "Enterprise IT 2026",
     realImplementation: true,
     contactInfo: {
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

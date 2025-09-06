@@ -9,7 +9,6 @@ import {Textarea} from "@/components/ui/textarea";
 import {ForumCategory} from "@/types/community";
 import { useState } from "react",
 import { useForm } from "react-hook-form",
-
 import { 
   Card;
   CardContent;
@@ -27,12 +26,25 @@ import {
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
+interface PostFormValues {
+  title: string,
+  content: string,
+  categoryId: ForumCategory,
+  tags: string
 
   title: string
   content: string
   categoryId: ForumCategory
 
   tags: string
+  initialValues?: Partial<PostFormValues>;
+  onSubmit: (values: PostFormValues) => void,
+  isEditing?: boolean
+}
+
+export const PostForm = ({;
+  initialValues;
+  onSubmit;
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import {;
@@ -67,14 +79,11 @@ interface PostFormProps {;
   isEditing?: boolean;
 }
 
-
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void
   isEditing?: boolean
 }
 export const PostForm = ({
-  initialValues;
-  onSubmit;
   initialValues,
   onSubmit,
   isEditing = false
@@ -84,14 +93,33 @@ export const PostForm = ({
     }
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  }),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
       await onSubmit(values);
     } finally {;
       setIsSubmitting(false);
+  return (
+    <Card>;
+      <CardHeader>;
+        <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <form className="space-y-6" onSubmit={form && form.handleSubmit(handleSubmit)}>;
+            <FormField
+              control={form && form.control}
+              name="title"
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Title</FormLabel>;
+      setIsSubmitting (false);
+    }
+  }
+;
+  return (
+    <Card>;
+      <CardHeader>;
         <CardTitle>{is_editing ? "Edit Post" : "Create New Post"}</CardTitle>;
       </CardHeader>;
       <CardContent>;
@@ -115,11 +143,6 @@ export const PostForm = ({
                     </select>;
                   </FormControl>;
                   <FormMessage />;
-            </Button>;
-          </form>;
-        </Form>;
-      </CardContent>;
-    </Card>);
 }
 ;
 export default PostForm;

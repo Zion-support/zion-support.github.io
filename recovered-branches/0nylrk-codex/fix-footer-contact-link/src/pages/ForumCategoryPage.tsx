@@ -32,6 +32,9 @@ import {
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
+    adminOnly: false,
+    icon: "Briefcase"
+  },
   "project-help": {
 
     id: "project-help"
@@ -77,6 +80,65 @@ const postsByCategory: Record<string, ForumPost[]> = {
       id: "6"
       title: "Portfolio pieces that clients actually care about"
       content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...";
+    }
+  ];
+  "project - help": [;
+    {
+      id: "3"
+      title: "Looking for feedback on my automated testing approach"
+      content: "I've set up a CI/CD pipeline with the following testing strategy..."
+      authorId: "user3"
+      authorName: "Michael Wong"
+      categoryId: "project-help"
+      tags: ["testing", "automation", "ci-cd"];
+      createdAt: "2025-04-10T14:30:00Z"
+      updatedAt: "2025-04-10T14:30:00Z"
+      upvotes: 5
+      downvotes: 0
+      replyCount: 2
+    }
+    {
+      id: "5"
+      title: "How to handle client scope creep?"
+      content: "I'm working on a project where the client keeps adding requirements..."
+      authorId: "user5"
+      authorName: "David Lin"
+      categoryId: "project-help"
+      tags: ["client-management", "scope", "projects"];
+      createdAt: "2025-04-08T10:20:00Z"
+      updatedAt: "2025-04-08T10:20:00Z"
+      upvotes: 24
+      downvotes: 0
+      replyCount: 7
+      id: "3",
+      title: "Looking for feedback on my automated testing approach",
+      content: "I've set up a CI / CD pipeline with the following testing strategy...",
+      author_id: "user3",
+      author_name: "Michael Wong",
+      category_id: "project - help",
+      tags: ["testing", "automation", "ci - cd"];
+      created_at: "2025 - 04 - 10T14:30:00Z",
+      updated_at: "2025 - 04 - 10T14:30:00Z",
+      upvotes: 5,
+      downvotes: 0,
+      reply_count: 2;
+    }
+    {
+      id: "5",
+      title: "How to handle client scope creep?",
+      content: "I'm working on a project where the client keeps adding requirements...",
+      author_id: "user5",
+      author_name: "David Lin",
+      category_id: "project - help",
+      tags: ["client - management", "scope", "projects"];
+      created_at: "2025 - 04 - 08T10:20:00Z",
+      updated_at: "2025 - 04 - 08T10:20:00Z",
+      upvotes: 24,
+      downvotes: 0,
+
+      replyCount: 7,
+      isAnswered: true
+
     }
   ];
   "ai - tools": [;
@@ -208,5 +270,6 @@ const postsByCategory: Record<string, ForumPost[]> = {
     </AppLayout>
   )
 }
+  "Megaphone": Megaphone;
 }
 ;

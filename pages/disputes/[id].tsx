@@ -7,8 +7,6 @@ import {useCurrentUser} from '../../utils/auth';
 
 const fetcher = (url: string) => fetch(url).then(r => r && r.json());
 export default function DisputeDetailPage() {;
-import {useCurrentUser} from '../../utils/auth';
-const fetcher = (url: string) => fetch(url).then(r => r.json());
   const router = useRouter();
   const { id } = router && router.query as { id?: string };
   const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
@@ -19,18 +17,32 @@ const fetcher = (url: string) => fetch(url).then(r => r.json());
     mutate ();  }
   return (
     <EnhancedLayout>;
-import { useRouter } from 'next/router';
-import useSWR from 'swr';
-import React, { useMemo, useState } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { useCurrentUser } from '../../utils/auth';
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-export default function DisputeDetailPage(req, res) {
-  try {
   const router = useRouter();
   const { id } = router.query as { id?: string };
   const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
   const user = useCurrentUser();
+
+
+  async function sendMessage() {
+    if (!message.trim() || !id) return;
+    await fetch(`/api/disputes/${id}/message`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ body: message }),
+    });
+    setMessage('');
+    mutate();  }
+
+  async function resolve(status?: 'Resolved' | 'Under Review' | 'Open') {
+    if (!id) return;
+    await fetch(`/api/disputes/${id}/resolve`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ resolutionSummary, status }),
+    });
+    setResolutionSummary('');
+    mutate();  }
+
   const dispute = data?.dispute;
   const [activeTab, setActiveTab] = useState<'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'>('Overview');
   const [message, setMessage] = useState('');
@@ -80,6 +92,8 @@ export default function DisputeDetailPage(req, res) {
               <div className="mt-1">{dispute.talentUserId}</div>
             </div>
           </div>
+          </div>
+
           {activeTab === 'Overview' && (
             <div className="space-y-6">
               <div className="p-4 border rounded">
@@ -103,6 +117,7 @@ export default function DisputeDetailPage(req, res) {
                       <time className="text-xs text-gray-500">{new Date(m.createdAt).toLocaleString()}</time>
                       <div className="text-sm">{m.authorRole} messaged</div>
                     </li>
+
                     <li className="mb-6 ml-4">
                       <div className="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white" />
                       <time className="text-xs text-gray-500">{new Date(dispute.resolvedAt).toLocaleString()}</time>
@@ -125,6 +140,34 @@ export default function DisputeDetailPage(req, res) {
                   />;
                   <button
                     onClick={sendMessage}
+
+                      <li key={m.id} className="text-sm">
+                        <div className="text-gray-500 text-xs">{m.authorRole} • {new Date(m.createdAt).toLocaleString()}</div>
+                        <div className="whitespace-pre-wrap">{m.body}</div>
+                      </li>
+                    ))}
+                  </ul>;
+                )}
+
+              </div>
+              {user.role !== 'guest' && (
+                <div className="flex gap-2">
+                  <input value={message} onChange={e => setMessage(e.target.value)} placeholder="Write a message" className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" />
+                  <button onClick={sendMessage} className="px-3 py-2 rounded bg-blue-600 text-white">Send</button>
+                </div>
+
+              )}
+            </div>;
+
+
+          {activeTab === 'Attachments' && (;
+            <div className='space-y-3'>;
+              {dispute && dispute.attachments.length === 0 ? (;
+                <div className='text-sm text-gray-500'>No attachments</div>;
+              ) : (;
+                <ul className='divide-y'>;
+                  {dispute && dispute.attachments.map((a: any) => (;
+
                     <li
                       key={a && a.id}
                       className='py-2 flex items-center justify-between'>;
@@ -139,6 +182,18 @@ export default function DisputeDetailPage(req, res) {
                         href={`/api/disputes/${encodeURIComponent(dispute && dispute.id)}/download?fileName=${encodeURIComponent(a && a.fileName)}`}>;
                         Download;
                       </a>                    </li>;
+          {activeTab === 'Attachments' && (
+            <div className="space-y-3">
+              {dispute.attachments.length === 0 ? (
+                <div className="text-sm text-gray-500">No attachments</div>
+              ) : (
+                <ul className="divide-y">
+                  {dispute.attachments.map((a: any) => (
+                    <li key={a.id} className="py-2 flex items-center justify-between">
+                      <div className="text-sm">
+                        <div className="font-medium">{a.fileName}</div>
+                        <div className="text-xs text-gray-500">{a.mimeType} • {(a.fileSize / 1024).toFixed(1)} KB</div>
+                      </div>
                   <textarea
                     value={resolutionSummary}
                     onChange={e => setResolutionSummary(e && e.target.value)}

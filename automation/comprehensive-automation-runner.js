@@ -17,9 +17,6 @@
 ; const quality_tests = [;
     ; { cmd:"npm run lint: check", desc: "Lint check" } { cmd:"npm run format: check", desc: "Format check" },
     { cmd:"npm run test: coverage", desc: "Test coverage" }
-  ];
-;
-export default ComprehensiveAutomationRunner;
 
 
 #!/usr/bin/env node,
@@ -472,3 +469,4 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ,;
 export default ComprehensiveAutomationRunner;
+

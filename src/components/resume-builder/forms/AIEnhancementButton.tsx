@@ -1,18 +1,4 @@
 export function AIEnhancementButton({
-
-  currentContent
-  enhancementType
-  context
-  onEnhanced
-  buttonText = 'Enhance with AI'
-  className
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useResumeEnhancer(),
-  const [error, setError] = useState<string | null>(null),
-  
-  const handleEnhance = async () => {
-    if (!currentContent || currentContent.trim().length < 10) {
-      setError('Please enter at least some basic content before enhancing'),
       return
     }
     setError(null)
@@ -52,11 +38,6 @@ if (.length < 10) {) {
 }
       on_enhanced (enhanced_content);
     }
-
-  },
-  
-  return (
-
 
       onClick={handleEnhance}
       disabled={isEnhancing}

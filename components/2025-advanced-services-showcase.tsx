@@ -1,3 +1,24 @@
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+import React, { useState, useEffect } from 'react';
+import SEO from '../components/SEO';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Search, Grid, List, Star, CheckCircle, ArrowRight, Check;
+  Brain, Atom, Shield, Building, Globe;
+  Users, TrendingUp, Award, Phone, Mail, MapPin
+} from 'lucide-react';
+
+// Import our new service data
+import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
+import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
+import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
   website: 'https://ziontechgroup.com'
 }
 const allServices = [
@@ -896,6 +917,15 @@ if ( {) {
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href={`mailto:${contactInfo && contactInfo.email}?subject=Business Transformation Consultation`}
+                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">;
+                Start Your Transformation;
+                <ArrowRight className="w-5 h-5" />;
+              </a>;
+              <a
+
+
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300">;
                 <Phone className="w-5 h-5" />;
@@ -920,15 +950,7 @@ if ( {) {
               </a>;
             </div>;
           </div>;
-}
-          <button className="px - 8 py - 4 bg - white text - blue - 600 rounded - xl font - semibold hover:bg - gray - 100 transition - all duration - 300">;
-            Get Started Today;
-          </button>;
-        </motion.div>;
-      </div>;
-    </div>);        </div>;
-      </div>;
-    </div>);
-}
+  );
 
+}
           </div>

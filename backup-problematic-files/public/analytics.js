@@ -2,12 +2,6 @@
 if ( {) {
   $2
 }
-  gtag ("config", "GA_MEASUREMENT_ID", {
-  "page_title": document.title,
-        "page_location": window.location.href,
-        "page_path": page})}
-  }
-  // Track user interactions;
   // Initialize analytics;
   "init": () => {
   // Track initial page view;

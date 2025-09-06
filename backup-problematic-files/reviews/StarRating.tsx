@@ -21,8 +21,6 @@ export const StarRating: React.FC<Props> = ({
   readOnly?: boolean
 },
 
-export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
-  const [hovered, setHovered] = useState<number | null>(null),
 
   size?: number;
   readOnly?: boolean

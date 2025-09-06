@@ -39,9 +39,10 @@
   agreementUrl?: string;
   status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
   expiresAt?: string;
+}
   id: string;
-  project_id: string;
-  talent_slug: string;
+  projectId: string;
+  talentSlug: string;
   appliedAtIso: string;
   status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN';
   coverLetter?: string;
@@ -59,6 +60,7 @@
   context?: string;
   sentAtIso: string;
   readAtIso?: string;
+}
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -444,6 +446,73 @@ if (return false) {
 export const marketplaceStore = new MarketplaceStore();
 // Main functions for external use
 export async function createProject(project: Project): Promise<Project> {
+}
+export async function getProject(id: string): Promise<Project | null> {
+
+  return marketplaceStore.getProject(id)
+
+  return marketplaceStore && marketplaceStore.getProject(id),
+}
+  return marketplaceStore.updateProject(id, updates);
+}
+export async function deleteProject(id: string): Promise<boolean> {
+
+  return marketplaceStore.deleteProject(id)
+
+  return marketplaceStore && marketplaceStore.deleteProject(id),
+}
+export async function createOffer(offer: Offer): Promise<Offer> {
+
+  return marketplaceStore.createOffer(offer)
+
+  return marketplaceStore && marketplaceStore.createOffer(offer),
+}
+export async function getOffer(id: string): Promise<Offer | null> {
+
+  return marketplaceStore.getOffer(id)
+
+  return marketplaceStore && marketplaceStore.getOffer(id),
+}
+  return marketplaceStore.updateOffer(id, updates);
+}
+export async function deleteOffer(id: string): Promise<boolean> {
+
+  return marketplaceStore.deleteOffer(id)
+
+  return marketplaceStore && marketplaceStore.deleteOffer(id),
+}
+export async function createApplication(application: Application): Promise<Application> {
+
+  return marketplaceStore.createApplication(application)
+
+  return marketplaceStore && marketplaceStore.createApplication(application),
+}
+export async function getApplication(id: string): Promise<Application | null> {
+
+  return marketplaceStore.getApplication(id)
+
+  return marketplaceStore && marketplaceStore.getApplication(id),
+}
+  return marketplaceStore.updateApplication(id, updates);
+}
+export async function deleteApplication(id: string): Promise<boolean> {
+
+  return marketplaceStore.deleteApplication(id)
+
+  return marketplaceStore && marketplaceStore.deleteApplication(id),
+}
+export async function createMessage(message: Message): Promise<Message> {
+
+  return marketplaceStore.createMessage(message)
+
+  return marketplaceStore && marketplaceStore.createMessage(message),
+}
+export async function getMessage(id: string): Promise<Message | null> {
+
+  return marketplaceStore.getMessage(id)
+
+  return marketplaceStore && marketplaceStore.getMessage(id),
+}
   return marketplaceStore.updateMessage(id, updates);
 }
 export async function deleteMessage(id: string): Promise<boolean> {
@@ -483,3 +552,61 @@ export function createMessageData(
   additionalData?: Partial<Message>
 ): Omit<Message, 'id' | 'sentAtIso'> {
   return {
+
+
+
+    conversationId,
+    senderId,
+    recipientId,
+    title,
+    summary,
+    client_id,
+    startDateIso: new Date ().toISOString (),
+    status: 'DRAFT',
+    timeline: [],
+    documents: [],
+    ...additional_data;
+  }
+}
+export function createOfferData (
+  client_id: string,
+  talent_slug: string,
+  scope_summary: string,
+  payment_terms: Offer['payment_terms'],
+  additional_data?: Partial < Offer>): Omit < Offer, 'id' | 'createdAtIso'> {
+  return {
+    client_id,
+    talent_slug,
+    startDateIso: new Date ().toISOString (),
+    scope_summary,
+    payment_terms,
+    status: 'SENT',
+    ...additional_data;
+  }
+}
+export function createApplicationData (
+  project_id: string,
+  talent_slug: string,
+  additional_data?: Partial < Application>): Omit < Application, 'id' | 'appliedAtIso'> {
+  return {
+    project_id,
+    talent_slug,
+    status: 'PENDING',
+    ...additional_data;
+  }
+}
+export function createMessageData (
+  conversation_id: string,
+  sender_id: string,
+  recipient_id: string,
+  body: string,
+  additional_data?: Partial < Message>): Omit < Message, 'id' | 'sentAtIso'> {
+  return {
+    conversation_id,
+    sender_id,
+    recipient_id,
+    body,
+    isRead: false,
+    ...additionalData;
+  };
+}

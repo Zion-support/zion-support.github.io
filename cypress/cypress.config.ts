@@ -1,3 +1,8 @@
+
+    baseUrl: 'http://localhost:3000', // Standard Next.js port;
+
+
+    baseUrl: 'http://localhost:3000', // Standard Next.js port;
     supportFile: 'cypress/support/e2e.ts';
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
@@ -54,6 +59,10 @@
   reporter: 'junit',
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml',
+    toConsole: true
+  }
+});
+
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;

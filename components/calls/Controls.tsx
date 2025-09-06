@@ -23,11 +23,39 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);  };    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);
+  };
+  const toggleCam = async () => {;
+    if (!room) return;
+
+
+    if (!room) return;
+    try {;
+      const enabled =;
+        await room && room.localParticipant.setScreenShareEnabled(!sharing);
+      setSharing(enabled);
+
+    } catch (e) {;
+      console && console.warn('Screen share failed', e);    }
+    try {
+      const enabled = await room.localParticipant.setScreenShareEnabled(!sharing);
+      setSharing(enabled)
+    } catch (e) {
+      console.warn('Screen share failed', e)
+    }
+
+  };
+
   return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
     } catch (e) {;
       console && console.warn('Screen share failed', e);
   };
+
+        className='px-4 py-2 rounded bg-red-600 text-white'>;
+        Leave;
+      </button>;
+    </div>;
+
   );
 }
 import type { Room } from 'livekit - client';

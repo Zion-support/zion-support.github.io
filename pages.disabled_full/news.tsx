@@ -3,5 +3,3 @@ import React from 'react';
 interface NewsProps {
   // Add props here as needed
 }
-export default function News({ }: NewsProps) {
-

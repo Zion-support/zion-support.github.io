@@ -8,6 +8,13 @@
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
+export default function MDMPage() {
+  const service = extraServices.find(s =>
+    s.link.endsWith('/mdm-mobile-device-management')
+
+export default function MDMPage() {;
+  const service = extraServices && extraServices.find(s =>;
+    s && s.link.endsWith('/mdm-mobile-device-management');
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
@@ -224,8 +231,6 @@ import { extraServices } from '../data/extra-services';
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-
-    </UltraAdvancedFuturisticBackground>);
 }
-;
+}
 

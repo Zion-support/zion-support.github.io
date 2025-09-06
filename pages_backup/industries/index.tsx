@@ -203,9 +203,6 @@ const stats = [;
     href: '/industries/government,',
     features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',
     color: 'from-gray-500 to-slate-500'';
-    href: '/industries/government,',;
-    features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',;
-    color: 'from-gray-500 to-slate-500'',;
   }
 ;];
 const stats = [;
@@ -280,13 +277,6 @@ export default function Industries() {;
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
-          <div className="absolute inset-0">;
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
-          </div>;
-        {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">";
           <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
@@ -303,57 +293,13 @@ export default function Industries() {;
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Industry-Specific{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Technology Solutions
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                We understand the unique challenges and requirements of different industries. Our specialized solutions 
-                are designed to address sector-specific needs while ensuring compliance, security, and scalability.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Get Industry Consultation
-                </Link>
-                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  View All Solutions
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Industries Grid */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              className="text-center""
-            >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
-                Industry-Specific{' '}',
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">";
-                  Technology Solutions;
-                </span>;
-              </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-                We understand the unique challenges and requirements of different industries. Our specialized solutions;
-                are designed to address sector-specific needs while ensuring compliance, security, and scalability.,
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">";
-                  Get Industry Consultation;
-                </Link>;
-                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">";
-                  View All Solutions;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Industries Grid */}
-        <section className="py-20 bg-gray-50">"
-          <div className="container mx-auto px-4">";
+          <div className="container mx-auto px-4 relative z-10">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Industry-Specific{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
                   Technology Solutions;
@@ -404,19 +350,64 @@ export default function Industries() {;
         {/* Industries Grid */}
         <section className="py-20 bg-gray-50">";
           <div className="container mx-auto px-4">";
-            <motion.div;
-              className="text-center mb-16"";
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Industry Solutions
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Specialized technology solutions tailored to meet the unique challenges and opportunities across different industries.
-              </p>
-            </motion.div>
-          </div>
-        </section>
+                Industry-Specific{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
+                  Technology Solutions;
+                </span>;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
+                We understand the unique challenges and requirements of different industries. Our specialized solutions ;
+                are designed to address sector-specific needs while ensuring compliance, security, and scalability.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
+                  Get Industry Consultation;
+                </Link>;
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;
+                  View All Solutions;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+        {/* Industries Grid */}
+        <section className="py-20 bg-gray-50">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
+              className="text-center mb-16"
+              className="text-center"">;
+                Industry-Specific{' '}',;
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">";
+                  Technology Solutions;
+                </span>;
+              </h1>;
+                are designed to address sector-specific needs while ensuring compliance, security, and scalability.,;
+              </p>;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">",;
+                  Get Industry Consultation;
+                </Link>;
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-gray-900 transition-all duration-300 font-semibold">", View All Solutions,;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+        {/* Industries Grid */}
+        <section className="py-20 bg-gray-50">";
+          <div className="container mx-auto px-4">";
+            <motion&& motion.div
+              className="text-center mb-16""
+              className="text-center">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                Industry Solutions;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
+                Specialized technology solutions tailored to meet the unique challenges and opportunities across different industries.;
+              </p>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
         {/* Industries Grid */}
         <section className="py-20">;
           <div className="container mx-auto px-4">;
@@ -489,9 +480,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />;
                     </Link>;
                   </motion && motion.div>;
-                );
-              })}
-            </div>,;
           </div>;
         </section>;
         {/* Why Choose Us Section */}
@@ -499,8 +487,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
-        <section className="py-20 bg-white">"
-        <section className="py-20 bg-white">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
               className="text-center mb-16""
@@ -729,8 +715,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         </section>;
       </div>;
     </Layout>;
-    </Layout>
-  );
             >;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
                 Ready to Transform Your Industry?;

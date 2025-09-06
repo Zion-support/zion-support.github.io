@@ -16,7 +16,6 @@ interface VerifiedBadgeProps {;
   size?: 'sm' | 'md' | 'lg';
 }
 
-
   verified: boolean
   size?: 'sm' | 'md' | 'lg'
 }

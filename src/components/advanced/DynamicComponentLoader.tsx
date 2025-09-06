@@ -40,10 +40,6 @@ const EnhancedLoading: React.FC<{;
   message = 'Loading component...', 
   showProgress = true 
 }) => (
-                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
-            <motion.div
-              className="absolute inset-0 rounded-full border-2 border-primary"
-              style={{
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
@@ -59,21 +55,15 @@ const EnhancedError: React.FC<{
           ) : (
             <WifiOff className='h-6 w-6 text-red-600' />
           )}
-        </div>;
-        <div className='text-center'>;
-          <h3 className='font-semibold text-red-900 dark:text-red-100'>;
+        </div>
+        <div className="text-center">
+          <h3 className="font-semibold text-red-900 dark:text-red-100">
             {isOnline ? 'Loading Failed' : 'Offline'}
           </h3>
           <p className='text-sm text-red-700 dark:text-red-200 mt-1'>
             {isOnline
               ? error.message |'Failed to load component'
               : 'Please check your internet connection'}
-          </p>;
-          {retryCount > 0 && (;
-            <p className='text-xs text-red-600 dark:text-red-300 mt-2'>;
-              Retry {retryCount}/{maxRetries}
-            </p>;
-          )}
           <Button 
             onClick={retry} 
             variant="outline" 
@@ -91,8 +81,6 @@ const EnhancedError: React.FC<{
   }, []);
   return is_online;
 }
-    };
-;
     return () => {}; // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
   // Load component
@@ -205,8 +193,6 @@ const EnhancedError: React.FC<{
 //   }
 // )
 // export const DynamicThreeComponent = createDynamicComponent(
-//   (,) => import('three').then(module => ({ default: module.WebGLRenderer }))
-
 //   {
 //     loading_component: () => (
 //       <div className="w - full h - 96 bg - muted animate - pulse rounded - lg flex items - center justify - center">;
@@ -217,14 +203,6 @@ const EnhancedError: React.FC<{
 // )
 export default DynamicComponentLoader; export default DynamicComponentLoader
 
-//   {
-//     loadingComponent: () => (
-//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
-//         <span className="text-muted-foreground">Loading 3D renderer...</span>
-//       </div>
-//     )
-//   }
-// );
 export default DynamicComponentLoader; export default DynamicComponentLoader;
 
 

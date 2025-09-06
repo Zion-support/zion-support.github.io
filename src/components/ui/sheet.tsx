@@ -1,5 +1,3 @@
-import * as SheetPrimitive from &quot;@radix-ui/react-dialog&quot;
-import { cva, type VariantProps } from &quot;class-variance-authority&quot;
 const Sheet = SheetPrimitive.Root
 onst Sheet = SheetPrimitive.Root
 const SheetTrigger = SheetPrimitive.Trigger
@@ -23,14 +21,6 @@ const sheetVariants = cva(
       side: {
         top: "inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
         bottom:
-          "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm"}},
-      side: "right"}}
-    defaultVariants: {
-      side: &quot;right&quot;}}
-          &quot;inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom&quot;
-        left: &quot;inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm&quot;
-        right:
-          &quot;inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm&quot;}}
     defaultVariants: {
       side: "right"}}
 )

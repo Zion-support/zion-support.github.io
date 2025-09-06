@@ -1,4 +1,3 @@
-import { UseFormReturn } from "react-hook-form";
 import {
   FormField
   FormItem
@@ -7,7 +6,6 @@ import {
   FormMessage
 } from "@/components/ui/form";
 
-import { Textarea } from "@/components/ui/textarea";
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Textarea} from "@/components/ui/textarea";
@@ -32,6 +30,8 @@ export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) 
     <FormField
       control={form && form.control}
       name="projectOverview"
+
   )
 }
 ;
+

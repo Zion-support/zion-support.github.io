@@ -30,7 +30,6 @@ export type WikiSection = {
 };
 export type WikiContent = {
   title: string;
-
   intro: string;
   infobox: Infobox;
   sections: WikiSection[];
@@ -244,6 +243,8 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 ;
 export function slugify(input: string): string {;
   return input;

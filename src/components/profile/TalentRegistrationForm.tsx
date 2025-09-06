@@ -1,195 +1,3 @@
-import React, { useState } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Switch } from "@/components/ui/switch",
-import { Badge } from "@/components/ui/badge",
-import { Separator } from "@/components/ui/separator";
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
-import {
-
-  Form
-  FormControl
-  FormDescription
-  FormField
-  FormItem
-  FormLabel
-  FormMessage
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-} from '@/components/ui/form'
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-  X
-  Sparkles
-  Upload
-  Clock
-  Check
-  Briefcase
-  MapPin
-  UserRound
-} from 'lucide-react'
-import { toast } from '@/components/ui/use-toast'
-import { supabase } from '@/integrations/supabase/client'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
-import { useAuth } from '@/hooks/useAuth'
-// Define form schema
-const talentProfileSchema = z.object({
-  name: z.string().min(2, "Full Name must be at least 2 characters long"),
-  title: z.string().min(5, "Professional title is required"),
-  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
-  location: z.string().min(2, "Location is required"),
-  skills: z.string().min(2, "Enter at least one skill"),
-  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-    message: "Hourly rate must be a number"}),
-  availability: z.enum(["available", "limited", "unavailable"]),
-  enhancedProfile: z.boolean().default(true)}),
-
-type TalentFormValues = z.infer<typeof talentProfileSchema>,
-
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
-
-interface CategorizedSkills {
-  programming: string[]
-  devops: string[]
-  platforms: string[]
-});"
-availability: z.enum (["available", "limited", "unavailable"])
-enhancedProfile: z.boolean () .default (true)
-})
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other'
-}
-//Handle key press in skills input (add on enter) const handleSkillKeyPress = (e: React.KeyboardEvent) => {
-export function TalentRegistrationForm() {
-  // Remove the useToast() hook since we're importing the toast function directly
-  const { user } = useAuth()
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [skillTags, setSkillTags] = useState<string[]>([])
-  const [isGenerating, setIsGenerating] = useState(false)
-  const [generatedContent, setGeneratedContent] =
-    useState<EnhancedProfile | null>(null)
-  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null)
-  FormMessage} from "@/components/ui/form",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { useAuth } from "@/hooks/useAuth",
-// Define form schema
-const talentProfileSchema = z.object({
-  name: z.string().min(2, "Full Name must be at least 2 characters long"),
-  title: z.string().min(5, "Professional title is required"),
-  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
-  location: z.string().min(2, "Location is required"),
-  skills: z.string().min(2, "Enter at least one skill"),
-  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-    message: "Hourly rate must be a number"}),
-  availability: z.enum(["available", "limited", "unavailable"]),
-  enhancedProfile: z.boolean().default(true)}),
-
-type TalentFormValues = z.infer<typeof talentProfileSchema>,
-
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
-
-interface CategorizedSkills {
-  programming: string[],
-  devops: string[],
-  platforms: string[],
-  softSkills: string[],
-  other: string[]
-import React, { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Switch } from "@/components/ui/switch",;
-import { Badge } from "@/components/ui/badge",;
-import { Separator } from "@/components/ui/separator",;
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger',;
-import {;
-  Form,;
-  FormControl,;
-  FormDescription,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from "@/components/ui/form",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 'lucide-react';
-import { toast } from "@/components/ui/use-toast",;
-import { supabase } from "@/integrations/supabase/client",;
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
-import { useAuth } from "@/hooks/useAuth",;
-// Define form schema;
-const talentProfileSchema = z.object({;
-  name: z.string().min(2, "Full Name must be at least 2 characters long"),;
-  title: z.string().min(5, "Professional title is required"),;
-  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),;
-  location: z.string().min(2, "Location is required"),;
-  skills: z.string().min(2, "Enter at least one skill"),;
-  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {;
-    message: "Hourly rate must be a number"}),;
-  availability: z.enum(["available", "limited", "unavailable"]),;
-  enhancedProfile: z.boolean().default(true)}),;
-type TalentFormValues = z.infer<typeof talentProfileSchema>,;
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',;
-interface CategorizedSkills {;
-  programming: string[],;
-  devops: string[],;
-  platforms: string[],;
-  softSkills: string[],;
-  other: string[];
-}
-//Handle removing skill tags const handleRemoveSkill = (skill: string) => {
-  setSkillTags (skillTags.filter ( (s) => s !== skill) )
-}
-
-export function TalentRegistrationForm() {
-  // Remove the useToast() hook since we're importing the toast function directly
-  const { user } = useAuth(),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [skillTags, setSkillTags] = useState<string[]>([]),
-  const [isGenerating, setIsGenerating] = useState(false),
-  const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),
-  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
-  
-  // Initialize form with default values
-  const form = useForm<TalentFormValues>({
-    resolver: zodResolver(talentProfileSchema) as any
-    defaultValues: {
-      name: user?.displayName |''
-      title: ''
-      bio: ''
-      location: ''
-      skills: ''
-      hourlyRate: ''
-      availability: 'available'
-      enhancedProfile: true
-    }
-  })
-  // Handle adding skill tags
-  const handleAddSkill = () => {
-    const skillInput = form.getValues('skills')
-    if (skillInput && !skillTags.includes(skillInput)) {
-      setSkillTags([...skillTags, skillInput])
-      form.setValue('skills', '')
-    }
       reader.onloadend = () => {
         setUploadedAvatar (reader.result as string);
       }
@@ -317,31 +125,6 @@ export function TalentRegistrationForm() {;
 
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
-        setGeneratedContent(data as EnhancedProfile),
-        
-        toast({
-          title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional skills for your profile."})
-      } else {
-        // Fallback for mock/development mode
-        logWarn('Mock AI response - using fallback content'),
-        setGeneratedContent({
-          summary: "Experienced professional with expertise in modern technologies and best practices.",
-          categorizedSkills: {
-            programming: ["JavaScript", "TypeScript", "React"],
-            devops: ["Docker", "CI/CD", "AWS"],
-            platforms: ["Node.js", "Next.js", "Vercel"],
-            softSkills: ["Communication", "Problem Solving", "Team Leadership"],
-            other: ["Project Management", "Technical Writing"]
-          }
-        }),
-        
-        toast({
-          title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional skills for your profile."})
-      }
-      
-    } catch (error: any) {
       logErrorToProduction('Error generating enhanced profile:', { data: error }),
       toast({
         title: "Generation failed",
@@ -361,10 +144,6 @@ export function TalentRegistrationForm() {;
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
           categorySkills.forEach(skill => {
-            if (
-              typeof skill === 'string' &&
-              skill &&
-              !skillTags.includes(skill)
   // Apply generated content to form;
   const applyGeneratedContent = () =>: any {
     // Check condition
@@ -402,38 +181,6 @@ if (
             <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>
             <p>We've added a professional summary and categorized your skills to help you stand out.</p>
             <p>You can review and edit these enhancements in your profile dashboard.</p>
-      })
-    } catch (error) {
-      logErrorToProduction('Failed to send notification email:', {
-        data: error
-      })
-    }
-  }
-  },;
-  // Send notification email;
-  const sendEnhancementNotification = async (userId: string, email: string) => {;
-    try {;
-      await supabase.functions.invoke('send-email', {;
-        body: {;
-          to: email,;
-          subject: "Your Zion Talent Profile Has Been Enhanced",;
-          html: `;
-          <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">;
-            <h2 style="color: #6D28D9,">Profile Enhancement Complete</h2>;
-            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
-            <p>We've added a professional summary and categorized your skills to help you stand out.</p>;
-            <p>You can review and edit these enhancements in your profile dashboard.</p>;
-            <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">;
-              <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>;
-            </div>;
-          </div>;
-          `;
-        }
-      });
-    } catch (error) {;
-      logErrorToProduction('Failed to send notification email:', { data: error });
-    }
-  },
 
   // Handle form submission
   const onSubmit = async (values: TalentFormValues) => {
@@ -463,38 +210,6 @@ if (
       // For actual implementation with Supabase
       if (!user?.id) {
         throw new Error("User not authenticated")
-      }
-      // Enhance profile if not already done
-      let finalSummary = ''
-      let finalSkills = skillTags
-      if (values.enhancedProfile && !generatedContent) {
-        try {
-          const { data: aiData } = await supabase.functions.invoke(
-            'talent-profile-enhancer'
-            {
-              body: {
-                talentData: {
-                  name: values.name
-                  title: values.title
-                  bio: values.bio
-                  skills: skillTags
-                  location: values.location
-                }
-              }
-      let finalSummary = "",
-      let finalSkills = skillTags,
-      
-      if (values.enhancedProfile && !generatedContent) {
-        try {
-          const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
-            body: {
-              talentData: {
-                name: values.name,
-                title: values.title,
-                bio: values.bio,
-                skills: skillTags,
-                location: values.location
-  },;
   // Handle form submission;
   const onSubmit = async (values: TalentFormValues) => {;
     if (skillTags.length === 0) {;
@@ -645,13 +360,13 @@ if (throw error) {
           <form on_submit={form.handle_submit (on_submit)}>;
             <CardContent className='space - y-8'>;
               {/* Basic Information */}
-              <div className='space - y-4'>;
-                <h3 className='text - lg font - medium text - white'>;
-                  Basic Information;
-                </h3>;
-                <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 6'>;
-                  <div className='col - span - 1'>;
-                    <FormField;
+              <div className='space-y-4'>
+                <h3 className='text-lg font-medium text-white'>
+                  Basic Information
+                </h3>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                  <div className='col-span-1'>
+                    <FormField
                       control={form.control}
                       name='name';
                       render={({ field }: { field: any }) => (                        <FormItem>;
@@ -660,9 +375,6 @@ if (throw error) {
                           </FormLabel>;
                           <FormControl>;
                             <div className='relative'>;
-                              <Input
-                                className='pl-10 bg-zion-blue border-zion-blue-light text-white'
-                                placeholder='Your full name'
                                 {...field}
                               />;
                             </div>;
@@ -956,12 +668,6 @@ if (throw error) {
                   control={form.control}
                   name="enhancedProfile"
                   render={({ field }: { field: any }) => (
-                    <Button
-                    <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
-                      <div className="space-y-0.5">
-                        <FormLabel className="text-white flex items-center">
-                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
-                          AI Profile Enhancement
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your profile for better visibility and engagement
@@ -969,7 +675,6 @@ if (throw error) {
                       </div>
                       <FormControl>
                         <Switch
-
                           aria-label="AI profile enhancement"
                           checked={field.value}
                           onCheckedChange={field.onChange}
@@ -979,18 +684,6 @@ if (throw error) {
                     </FormItem>
                   )}
                 />
-                      type='button'
-                      variant='outline'
-                      className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-                      onClick={generateEnhancedProfile}
-                      type="button"
-                      variant="outline"
-                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-                      onClick={generateEnhancedProfile}
-                      disabled={isGenerating}
-                    >
-                      <Sparkles className="mr-2 h-4 w-4" />
-                      {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
                     </Button>
                   </div>
                 )}
@@ -1012,11 +705,6 @@ if (throw error) {
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
                                 >
                                   {category}
-                                </Badge>;
-                                <div className='flex flex-wrap gap-1'>;
-                                  {skills && skills.map((skill: string) => (;
-                                    <Badge
-                                      key={skill}
                                       {skill}
                                     </Badge>;
                                   ))}
@@ -1029,16 +717,6 @@ if (throw error) {
                     </div>;
                   </div>;
                 )}
-              </div>
-              <Separator className='bg-zion-blue-light/50' />
-              {/* Skills and Availability */}
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
-                {/* Skills Section */}
-                <div className='space-y-4'>;
-                  <h3 className='text-lg font-medium text-white'>;
-                    Skills & Expertise;
-                  </h3>;
-                  <FormField
                     control={form.control}
                     name="skills"
                     render={({ field }: { field: any }) => (
@@ -1066,7 +744,6 @@ if (throw error) {
                       <p className='text-zion-slate text-sm italic'>;
                         No skills added yet;
                       </p>;
-                    )}
                     )}
 
                   </div>;
@@ -1284,64 +961,5 @@ if (throw error) {
       </Card>
     </div>
   )
-}//Call the Supabase Edge Function const {
-  data, error ';
-}= await supabase.functions.invoke ('talent - profile - enhancer', {
-  body: {
-}
-//Apply generated content to form const applyGeneratedContent = () => {
-  if (generatedContent) {
-  //Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generatedContent.categorizedSkills
-const newSkills: string[] = []
-if (Array.isArray (categorySkills) ) {
-  categorySkills.forEach (skill => {'
-  if (typeof skill === 'string' && skill && !skillTags.includes (skill) ) {
-})
-}
-  new Date () .getFullYear () 
 }Zion Marketplace</p>
 }
-//Handle form submission const onSubmit = async (values: TalentFormValues) => {
-  if (skillTags.length === 0) {
-  toast ({
-  return;
-}setIsSubmitting (true)
-try {
-  //For actual implementation with Supabase if (!user?.id) {
-  try {
-  const {
-  data: aiData '
-}= await supabase.functions.invoke ('talent-profile-enhancer', {
-  body: {
-  talentData: {
-  name: formData.name, title: formData.title, bio: formData.bio,  skills: skillTags, location: formData.location
-})
-}else {'
-  //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content')
-setGeneratedContent ({"
-  summary: "Experienced professional with expertise in modern technologies and best practices."
-categorizedSkills: {"
-  programming: ["JavaScript", "TypeScript", "React" ];"
-devops: ["Docker", "CI/CD", "AWS" ];"
-platforms: ["Node.js", "Next.js", "Vercel" ];"
-softSkills: ["Communication", "Problem Solving",  "Team Leadership" ];"
-other: ["Project Management", "Technical Writing" ]
-})
-toast ({
-}catch (error: any) {';
-  logErrorToProduction ('Error generating enhanced profile:', {
-  data: error
-})
-toast ({
-}finally {
-  setIsGenerating (false)
-}
-//Apply generated content to form const applyGeneratedContent = () =>: any {
-  // Check condition
-if ( {) {
-  $2
-}
-//Get category color //Send notification email const sendEnhancementNotification = async (userId: string, email: string) => {
-  try {'
-  await supabase.functions.invoke ('send-email', {
-  body: {'"

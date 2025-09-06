@@ -5,12 +5,6 @@
   duration?: number;
 }
 interface NotificationSystemProps {
-
-interface NotificationSystemProps {;
-  notifications: Notification[];
-  on_dismiss?: (id: string) => void;
-}
-
 }
 
 export function NotificationProvider({ children }: { children: ReactNode }) {
@@ -64,6 +58,9 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       setToasts((prev) => prev.filter((t) => t.id !== id))
     }, 3000)
   }, [])
+  if (notifications.length === 0) return null;
+
+  return (
         <div
           key={notification && notification.id}
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification && notification.type)}`}>;
@@ -72,8 +69,22 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
               {notification && notification.title && (;
                 <h4 className="font-medium mb-1">{notification && notification.title}</h4>;
               )}
-              <p className="text-sm">{notification && notification.message}</p>;
+              >
+                ×
+              </button>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
             </div>;
             {onDismiss && (;
               <button
 }
+
+}
+
+
+

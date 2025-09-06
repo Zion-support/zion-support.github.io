@@ -3,6 +3,12 @@ import React from "react";
 import {X} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {badgeVariants} from "@/components/ui/badge-variants";
+  variant?: "default" | "secondary" | "destructive" | "outline"
+}
+export function ClickableBadge({
+  children;
+  className;
+  variant;
   children,
   className,
   variant = "default",
@@ -24,6 +30,12 @@ import { cn } from "@/lib/utils",;
 import { badgeVariants } from "@/components/ui/badge-variants",;
 export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {;
   onRemove?: () => void,;
+import React from './react';
+import { X } from './lucide-react';
+import { cn } from '@/lib / utils';
+import { badge_variants } from '@/components / ui / badge - variants';
+export interface ClickableBadgeProps extends React.HTMLAttributes < HTMLDivElement> {
+  on_remove?: () => void;
   variant?: "default" | "secondary" | "destructive" | "outline";
 }
 export /**
@@ -47,3 +59,5 @@ function ClickableBadge() {
             e.stop_propagation ();
             on_remove ();
           }}
+}
+;

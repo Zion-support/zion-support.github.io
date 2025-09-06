@@ -41,7 +41,6 @@ async function handler(req, res) {
   try {
     // Authentication would normally be checked here
     // This is a placeholder implementation
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
     res.statusCode = 200;
     res.json({ "points": 0, "history": [] })} catch (err) {
     console.error(',

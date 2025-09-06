@@ -1,8 +1,4 @@
 import React from 'react';
-      name: 'Enterprise',
-      price: '$299',
-      period: '/month',
-      description: 'For large organizations and enterprises',
   const useCases = [
     {
       title: 'Blog Writing'
@@ -80,8 +76,6 @@ import React from 'react';
       ],
       popular: false,
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
-
-  ];
 
   return (
     <>;
@@ -461,10 +455,6 @@ import React from 'react';
               Use Cases
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            {useCases.map((useCase, index) => (
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -499,6 +489,7 @@ import React from 'react';
                       {useCase && useCase.examples.map((example, exampleIndex) => (;
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
+                          {example}
                         </div>
                       ))}
                     </div>;
@@ -564,6 +555,18 @@ import React from 'react';
                     <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">;
                       Most Popular;
                     </span>;
+
+
+                <div className='text-center mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-2'>;
+                    {plan && plan.name}
+                  </h3>;
+                  <div className='text-4xl font-bold text-white mb-2'>;
+                    {plan && plan.price}
+                    <span className='text-lg text-gray-400'>{plan && plan.period}</span>;
+                  </div>;
+                  <p className='text-gray-400'>{plan && plan.description}</p>;
+                </div>;
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
@@ -576,6 +579,9 @@ import React from 'react';
                 </div>
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300'
@@ -587,6 +593,8 @@ import React from 'react';
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+
                       {feature}
                     </li>;
                   ))}
@@ -634,10 +642,6 @@ import React from 'react';
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-            </p>
-          </div>
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
-            {integrations.map((integration, index) => (
               <Card
                 key={index}
                 className='text-center group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -660,8 +664,20 @@ import React from 'react';
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
 
+            ))}
+          </div>
+        </div>
+      </section>
 
-              </Card>
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
 
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>

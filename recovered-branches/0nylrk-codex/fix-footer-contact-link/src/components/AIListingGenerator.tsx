@@ -1,3 +1,13 @@
+import React, { useState } from "react";
+import {useToast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Sparkles, ArrowRight} from "@/components/icons";
+import {supabase} from "@/integrations/supabase/client";
+import {Badge} from "@/components/ui/badge";
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -61,22 +71,112 @@ interface AIListingGeneratorProps {;
   }
 }
 
-        break;
-      case 'category':;
-        setCategory(e && e.target.value);
-        break;
-      case 'keyFeatures':;
-        setKeyFeatures(e && e.target.value);
-        break;
-      case 'targetAudience':;
-        setTargetAudience(e && e.target.value),;
-        break;
+
+  const handleInputChange = (e: { target: { value: string } }, field: string) => {
+    switch(field) {
+      case 'title':
+        setTitle(e.target.value),
+        break,
+      case 'category':
+        setCategory(e.target.value),
+        break,
+      case 'keyFeatures':
+        setKeyFeatures(e.target.value),
+        break,
+      case 'targetAudience':
+        setTargetAudience(e.target.value)
+        break
+    }
+  }
+  },
+
   const handleGenerate = async () => {
     if (!title |!category) {
       toast({
         title: "Missing required fields"
         description: "Please provide at least a title and category."
         variant: "destructive"
+      });
+      return;
+    }
+
+import React, { useState } from './react';
+import { use_toast } from '@/hooks / use - toast';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Skeleton } from '@/components / ui / skeleton';
+import { Sparkles, ArrowRight } from '@/components / icons';
+import { supabase } from '@/integrations / supabase / client';
+import { Badge } from '@/components / ui / badge';
+interface GeneratedContent {
+  description: string,
+  tags: string[],
+  suggested_price: {
+    min: number,
+    max: number;
+  }
+  key_points: string[];
+}
+interface AIListingGeneratorProps {
+  onApplyGenerated?: (content: GeneratedContent) => void,
+  initial_values?: {
+    title?: string;
+    category?: string;
+    key_features?: string;
+    target_audience?: string;
+  }
+}
+export /**
+ * AIListingGenerator - Function description
+ */
+function AIListingGenerator() {
+  const { toast } = use_toast ();
+  const [title, set_title] = useState (initial_values.title || "");
+  const [category, set_category] = useState (initial_values.category || "");
+  const [key_features, setKeyFeatures] = useState (initial_values.key_features || "");
+  const [target_audience, setTargetAudience] = useState (initial_values.target_audience || "");
+  const [is_loading, setIsLoading] = useState (false);
+  const [generated_content, setGeneratedContent] = useState (null as GeneratedContent | null);
+;
+  const handleInputChange = (e: { target: { value: string } }, field: string) =>: any {
+    switch (field) {
+      case 'title':;
+        set_title (e.target.value);
+        break;
+      case 'category':;
+        set_category (e.target.value);
+        break;
+      case 'key_features':;
+        setKeyFeatures (e.target.value);
+        break;
+      case 'target_audience':;
+        setTargetAudience (e.target.value),
+        break;
+    }
+  }
+;
+  const handle_generate = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Missing required fields",
+        description: "Please provide at least a title and category.",
+        variant: "destructive";
+      });
+      return;
+    }
+    setIsLoading (true);
+;
+
+    try {
+      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
+        body: { title, category, key_features, target_audience }
+      });
+
 ;
     setIsLoading(true),;
     ;
@@ -85,12 +185,41 @@ interface AIListingGeneratorProps {;
         body:{ title, category, keyFeatures, targetAudience }
       }),;
       if (error) {;
-        throw new Error(error.message),;
       }
       ;
       if (data.error) {;
         throw new Error(data.error),;
       }
+;
+      setGeneratedContent(data.generated),;
+
+      toast({;
+        title: "Content Generated",;
+        description: "AI has created optimized listing content for you.";
+      });
+    } catch (error) {;
+      console && console.error("Error generating content:", error);
+      toast({;
+        title: "Generation Failed",;
+        description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
+        variant: "destructive";
+      });
+    } finally {;
+      setIsLoading(false);
+    }
+  };
+
+  const handleApply = () => {;
+    if (generatedContent && onApplyGenerated) {;
+      onApplyGenerated(generatedContent);
+      toast({;
+        title: "Content Applied",;
+        description: "The generated content has been applied to your listing.";
+      });
+    }
+  }
+
+  return (
     <div className="space-y-6">;
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
@@ -142,6 +271,8 @@ interface AIListingGeneratorProps {;
               id="targetAudience"
               value={targetAudience}
               onChange={(e) => handleInputChange(e, 'targetAudience')}
+            onClick={handleGenerate}
+            disabled={isLoading || !title || !category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
             {isLoading ? (
@@ -165,58 +296,6 @@ interface AIListingGeneratorProps {;
             <div className="flex flex-wrap gap-2">
               {[...Array(5)].map((_, i) => (
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />
-            />;
-          </div>;
-          <Button
-            onClick={handleGenerate}
-            disabled={isLoading || !title || !category}
-            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2">;
-            {isLoading ? (;
-              <>Generating Optimized Content...</>;
-            ) : (;
-              placeholder=&quot;e.g. Developers, Marketers, Startups&quot;
-              className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
-              disabled={isLoading}
-            />;
-          </div>;
-          <Button ;
-            onClick={handleGenerate}
-            disabled={isLoading || !title || !category}
-            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
-          >;
-            {isLoading ? (;
-              <>Generating Optimized Content...</>;
-            ) :(;
-              <>;
-                <Sparkles className="h-4 w-4 mr-2" />;
-                Generate Optimized Content;
-              </>;
-            )}
-          </Button>;
-        </CardContent>;
-      </Card>;
-;
-      {isLoading && (;
-        <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">;
-          <CardHeader>;
-            <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />;
-          </CardHeader>;
-          <CardContent className="space-y-4">;
-            <Skeleton className="h-32 w-full bg-zion-blue-light/20" />;
-            <div className="flex flex-wrap gap-2">;
-              {[...Array(5)].map((_, i) => (;
-                <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />;
-              ))}
-            </div>;
-            <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />;
-            <div className="space-y-2">;
-              {[...Array(3)].map((_, i) => (;
-                <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />;
-              ))}
-            </div>;
-          </CardContent>;
-        </Card>;
-      )}
       {generatedContent && !isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark">
           <CardHeader>

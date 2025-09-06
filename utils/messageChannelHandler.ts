@@ -1,3 +1,11 @@
+}}}};
+;
+;
+
+}
+}
+}
+},
 
 ,
 
@@ -11,8 +19,6 @@ export const messageChannelHandler = {
   receiveMessage: (callback: (message: string) => void) => {},
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
-},;
-,;
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void;
@@ -75,5 +81,12 @@ if ( {) {
   }
 }
 export default MessageChannelHandler;
+
+
+
+
+}}}};
+;
+
 },;
 ,;

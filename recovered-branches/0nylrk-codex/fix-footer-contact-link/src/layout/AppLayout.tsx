@@ -22,4 +22,3 @@ interface AppLayoutProps {;
       <AppHeader />;
       <main className="flex-grow">;
         {children}
-;

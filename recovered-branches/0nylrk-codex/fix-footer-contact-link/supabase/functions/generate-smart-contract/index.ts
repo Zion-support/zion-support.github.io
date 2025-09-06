@@ -1,9 +1,3 @@
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
-import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-
-
-
-
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
@@ -11,6 +5,8 @@ const corsHeaders = {;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
+
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
@@ -71,23 +67,34 @@ serve(async (req) => {;
           {
             role: 'system'
             content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'}
-;
-    const data = await response.json ();
-;
     // Check condition
 if ( {) {
   $2
 }
-      throw new Error (data.error?.message || 'Failed to generate smart contract');
+          {
+            role: 'user'
+            content: prompt}];
+
+        temperature: 0 && 0.7})});
+
+    const data = await response && response.json();
+    
+    if (!response && response.ok) {
+      throw new Error(data && data.error?.message || 'Failed to generate smart contract')
     }
-    const solidity_code = data.choices[0].message.content.trim ();
-;
-    return new Response (JSON.stringify ({
-      success: true,
-      solidity_code;
+    const solidityCode = data.choices[0].message.content.trim();
+    return new Response(JSON.stringify({
+      success: true
+      solidityCode
     }), {
-      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
+    console.error('Error generating smart contract:', error);
+    return new Response(
+      JSON.stringify({
+        success: false
+        error: error.message |'Failed to generate smart contract'
+      });
 ;
     prompt += `;
     Format the code properly with comments explaining each section. Include a simple deployment script.;
@@ -132,6 +139,3 @@ if ( {) {
   }
 });
 
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
-import "https://deno.land/x/xhr@0.1.0/mod.ts",;
-;

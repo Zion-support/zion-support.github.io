@@ -160,49 +160,52 @@ export default function RoadmapPage(): JSX.Element {
   const copyPrompt = async () => {
     try {
 
-      setTimeout(() => setCopied(false), 1500)
-      await navigator.clipboard.writeText(operatorPrompt)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 1500)
-export default function RoadmapPage (): JSX.Element {
-  const [milestones, set_milestones] = useState ('MVP live, First 50 users, First 10 paid engagements'),
-  const [keywords, set_keywords] = useState ('AI - native, trustless, talent - first, sovereign tools'),
-  const [priorities, set_priorities] = useState ('governance, scale, regional expansion'),
-  const [copied, set_copied] = useState (false),
-  const stages = useMemo (
-    () => generate_stages ({ milestones, keywords, priorities }),
-    [milestones, keywords, priorities]),
-  const operator_prompt = useMemo (() => defaultOperatorPrompt (), []),
-  const copy_prompt = async () => {
-    try {
-      await navigator.clipboard.write_text (operator_prompt),
-      set_copied (true),
-      set_timeout (() => set_copied (false), 1500);
-    } catch {
-
-      set_copied (false);
-
-    }
-                  value={milestones}
-                  on_change={(e) => set_milestones (e.target.value)}
-                  rows={3}
-                  className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
-                  placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors";
-                />;
-              </div>;
-              <div>;
-                <label className="block text - sm font - medium text - gray - 700">Vision keywords</label>;
-                <input;
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
+                  placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Vision keywords</label>
+                <input
                   value={keywords}
-                  on_change={(e) => set_keywords (e.target.value)}
-                  className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
-                  placeholder="e.g., AI - native, trustless, talent - first, sovereign tools";
-                />;
-              </div>;
-              <div>;
-                <label className="block text - sm font - medium text - gray - 700">Upcoming priorities</label>;
-                <input;
+                  onChange={(e) => setKeywords(e.target.value)}
+                  value={keywords  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setKeywords(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
+                  placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Upcoming priorities</label>
+                <input
                   value={priorities}
+                  onChange={(e) => setPriorities(e.target.value)}
+                  value={priorities  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setPriorities(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
+                  placeholder="e.g., governance, scale, regional expansion"
+                />
+              </div>
+            </div>
+          </section>
+
+
           <section className="mb-12">
             <div className="mb-3 flex items-center justify-between gap-3">
               <h2 className="text-xl font-semibold">Operator Prompt</h2>
@@ -416,11 +419,7 @@ Validation:;
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       {stage.highlights.map((h, i) => (
                         <li key={i}>{h}</li>
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      ))}
                     </ul>
                   </div>
                   <div className="mt-3">
@@ -428,11 +427,7 @@ Validation:;
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       {stage.metrics.map((m, i) => (
                         <li key={i}>{m}</li>
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      ))}
                     </ul>
                   </div>
                   <div className="mt-3">
@@ -486,6 +481,7 @@ Validation:;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
                   onChange={(e) => setMilestones(e.target.value)  } catch (error) {
     console.error("Error:", error);
@@ -537,3 +533,5 @@ Validation:;
               </div>;
             </div>;
           </section>;
+
+

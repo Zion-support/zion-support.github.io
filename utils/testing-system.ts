@@ -4,6 +4,4 @@
       case 'hover': // Handle hover;
         break;
     }
-
-}
-
+  }

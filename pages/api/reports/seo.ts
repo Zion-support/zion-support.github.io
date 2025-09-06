@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+
 const p = path.join(process.cwd(), 'data', 'reports', 'seo', 'weekly-seo.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
@@ -13,10 +14,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
   }
-// Check condition
-if ( {) {
-  $2
-}
     try {
       const report = {
         keywords: keywords |[]
@@ -67,3 +64,5 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

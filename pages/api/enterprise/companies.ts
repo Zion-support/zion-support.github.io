@@ -1,9 +1,3 @@
-}
-    return res.status (201).json (created);
-  }
-  res.set_header ("Allow", "GET, POST");
-  return res.status (405).end ("Method Not Allowed");
-}
     const companies = store.listCompanies();
     return res.status(200).json(companies);
   }
@@ -93,3 +87,10 @@ export default function handler(req, res) {
   }
 }
 }
+    return res.status (201).json (created);
+  }
+  res.set_header ("Allow", "GET, POST");
+  return res.status (405).end ("Method Not Allowed");
+}
+
+

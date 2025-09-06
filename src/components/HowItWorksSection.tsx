@@ -4,18 +4,6 @@ import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {
   className?: string;
   style?: React.CSSProperties
-
-import React from 'react',
-import { GradientHeading } from "./GradientHeading",
-import { Check, Handshake, Search, Send } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useTranslation } from "react-i18next",
-interface HowItWorksSectionProps {
-  className?: string,
-  style?: React.CSSProperties
-}
-
-const getSteps = (t: any) => [
   {
     title: t('how_it_works.post')
     description: t('how_it_works.post_desc')
@@ -213,6 +201,7 @@ const stats = [ ";
   {
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
+const stats = [ ";
   { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },";
   { icon: <Target className="w-6 h-6"  />, value: "99 && 99.9%", label: "Success Rate" },";
   { icon: <TrendingUp className="w-6 h-6"  />, value: "50%", label: "Cost Reduction" },";
@@ -267,12 +256,6 @@ export function HowItWorksSection({
 }: HowItWorksSectionProps) {
   const { t } = useTranslation()
   const steps = getSteps(t)
-    icon: Check}],
-
-export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
-  const { t } = useTranslation(),
-  const steps = getSteps(t),
-  
               <div
                 key={step && step.title}                className={`flex flex-col md:flex-row items-center ${
                   index % 2 === 0 ? 'md:flex-row-reverse' : ''
@@ -304,93 +287,3 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
                   ) : null}
-                      </p>                    </div>                    </div>) : null}
-                </div>;
-                      <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
-                      <p className="text - zion - slate - light">{step.description}</p>;
-                    </div>) : null}
-                </div>;
-                <div className="relative z - 10 flex items - center justify - center w - 12 h - 12 rounded - full bg - zion - blue - light border - 2 border - zion - purple mx - 4 md:mx - 0">;
-                  <step.icon className="w - 6 h - 6 text - zion - cyan" />;
-                </div>;
-                <div className="md:w - 1/2 md:px - 12 text - center md:text - left">;
-                  {index % 2 !== 0 ? (
-                    <div>;
-                      <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
-                      <p className="text - zion - slate - light">{step.description}</p>;
-                    </div>) : null}
-                </div>;
-              </div>))}
-          </div>;
-        </div>;
-      </div>;
-    </section>);
-}
-}
-}
-  ),;}
- interface HowItWorksSectionProps {;
-  className?: string;
-style?: React.CSSProperties ;
-}const getSteps = (t: any) => [ {;
-  title: t ('how it works.post');';
-description: t ('how it works.post desc');
-icon: Send ;
-};
-{';
-  title: t ('how it works.match');';
-description: t ('how it works.match desc');
-icon: Search ;
-};
-{';
-  title: t ('how it works.hire buy');';
-description: t ('how it works.hire buy desc');
-icon: Handshake ;
-};
-{';
-  title: t ('how it works.done');';
-description: t ('how it works.done desc');
-icon: Check ;
-}];
-export function HowItWorksSection ({;
-  className, style ;
-}: HowItWorksSectionProps) {;
-  const {;
-  t ;
-}= useTranslation ();
-const steps = getSteps (t);
-return (<section className= {;
-  cn ("py-20 bg-zion-blue", className) ;
-}style= {;
-  style ";
-}> <div className="container mx-auto px-4" > <div className="text-center mb-16" > <GradientHeading> {';
-  t ('home.how it works title') ";
-}</GradientHeading> <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto" > {';
-  t ('home.how it works subtitle') ";
-}</p> </div> <div className="relative" > {;
-  /* Timeline line */ ";
-}<div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden" ></div> <div className="space-y-12 md:space-y-0" > {;
-  steps.map ( (step, index) => (<div key= {;
-  step.title ;
-}className= {;
-  `flex flex-col md:flex-row items-center $ {";
-  index % 2 === 0 ? "md:flex-row-reverse" : "" ;
-}relative` ";
-}index % 2 === 0 ? (<div> <h3 className="text-2xl font-bold text-white mb-3"> {;
-  step.title ";
-}</h3> <p className="text-zion-slate-light"> {;
-  step.description ;
-}</p> </div>) : null ";
-}</div> <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0"> <step.icon className="w-6 h-6 text-zion-cyan"/> </div> <div className="md:w-1/2 md:px-12 text-center md:text-left"> {";
-  index % 2 !== 0 ? (<div> <h3 className="text-2xl font-bold text-white mb-3"> {;
-  step.title ";
-}</h3> <p className="text-zion-slate-light"> {;
-  step.description ;
-}</p> </div>) : null ;
-}</div> </div>) ) ;
-}</div> </div> </div> </section>) ;
-}'"
-  );
-}
-;
-;

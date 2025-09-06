@@ -1,8 +1,3 @@
-import * as React from &quot;react&quot;
-import useEmblaCarousel from &quot;embla-carousel-react&quot;
-import { ArrowLeft, ArrowRight } from 'lucide-react'
-import { cn } from &quot;@/lib/utils&quot;
-import { Button } from &quot;@/components/ui/button&quot;
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type CarouselOptions = {
   axis?: 'x' | 'y'
@@ -97,11 +92,6 @@ const Carousel = React.forwardRef<
 >(
   (
     {
-      opts
-      setApi
-      plugins
-      className
-      children
       orientation = "horizontal",
       opts,
       setApi,
@@ -141,16 +131,6 @@ const Carousel = React.forwardRef<
           event.preventDefault()
           scrollNext()
         }
-      [scrollPrev, scrollNext];
-    );
-    React.useEffect(() => {if (!api |!setApi) {;
-        return;
-      }
-      setApi(api);
-    }, [api, setApi]);
-    React.useEffect(() => {if (!api) {;
-        return;
-      }
       }
       set_api (api);
     }, [api, set_api]);
@@ -220,19 +200,9 @@ CarouselItem.displayName = &quot;CarouselItem&quot;
       variant={variant}
       size={size}
       className={cn(
-        className
-      )}
-      disabled={!canScrollPrev}
-      onClick={scrollPrev}
-      {...props}
   return (
     <Button;
       ref={ref}
       variant={variant}
       size={size}
       className={cn(
-    </Button>
-  )
-})
-CarouselNext.displayName = &quot;CarouselNext&quot;
-export {

@@ -36,9 +36,6 @@
     }
   }
 ];
-  }
-}
-
 export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
   {
     id: "2028-cutting-edge-micro-saas", name: "2028 Cutting-Edge Micro SAAS Platform",
@@ -54,6 +51,11 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
     link: "/services/2028-cutting-edge-micro-saas", category: "Cutting-Edge Micro SAAS 2028",
     realImplementation: true,
     contactInfo: {
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

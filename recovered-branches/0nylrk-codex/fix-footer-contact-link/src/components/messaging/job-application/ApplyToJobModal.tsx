@@ -60,4 +60,6 @@ function ApplyToJobModal() {
           onApplySuccess={onApplySuccess}
         />;
       </DialogContent>;
-
+  );
+    </Dialog>);
+}

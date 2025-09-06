@@ -50,3 +50,5 @@ function createSystemNotification() {
     action_url,
     action_text;
   });
+}
+;

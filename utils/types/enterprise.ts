@@ -21,7 +21,6 @@ export interface CompanyActivityEvent {;
   action: string;
 
 }
-export interface InvoiceRecord {id: string;
   companyId: string;
   number: string;
   amountUsd: number;

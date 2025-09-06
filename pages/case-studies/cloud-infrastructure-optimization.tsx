@@ -20,7 +20,11 @@
               How an E-commerce Platform achieved 50% reduction in cloud costs with self-healing, auto-scaling infrastructure
             </p>
           </header>
-
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-semibold text-blue-400 mb-4">E-commerce Platform</h3>
+                <p className="text-white/90 text-lg mb-4">
                   The company faced challenges with high cloud costs, performance issues, and manual scaling requirements.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
@@ -39,8 +43,6 @@
                 </div>
               </div>
             </section>
-
-
             {/* Challenge */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -70,8 +72,6 @@
                 </ul>
               </div>
             </section>
-
-
             {/* Solution */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -82,6 +82,9 @@
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">Self-Healing, Auto-Scaling Infrastructure</h3>
                 <p className="text-white/90 text-lg mb-6">
+                  monitors, and heals itself while optimizing costs and performance.
+                  We built a comprehensive cloud infrastructure solution that automatically scales,
+                  monitors, and heals itself while optimizing costs and window.window.window.performance.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
@@ -109,8 +112,6 @@
                 </div>
               </div>
             </section>
-
-
             {/* Results */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -165,8 +166,6 @@
                 </div>
               </div>
             </section>
-
-
             {/* Technologies */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -180,8 +179,6 @@
                     <div key={tech} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                       <span className="text-blue-400 font-semibold">{tech}</span>
                     </div>
-
-
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -445,8 +442,6 @@ export default function CaseStudyPage(req, res) {
                 </div>
               </div>
             </section>
-
-
             {/* Call to Action */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -474,120 +469,6 @@ export default function CaseStudyPage(req, res) {
       </div>
     </>
   )
-            <section className="mb - 16">;
-              <h2 className="text - 3xl font - bold text - white mb - 6">Company Overview</h2>;
-              <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20">;
-                <h3 className="text - 2xl font - semibold text - blue - 400 mb - 4">E - commerce Platform</h3>;
-                <p className="text - white / 90 text - lg mb - 4">;
-                  A growing e - commerce platform serving thousands of customers daily.;
-                  The company faced challenges with high cloud costs, performance issues, and manual scaling requirements.;
-                </p>;
-                <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mt - 6">;
-                  <div className="text - center">;
-                    <div className="text - 3xl font - bold text - blue - 400">10K+</div>;
-                    <div className="text - white / 70">Daily Users</div>;
-                  </div>;
-                  <div className="text - center">;
-                    <div className="text - 3xl font - bold text - blue - 400">100K+</div>;
-                    <div className="text - white / 70">Products</div>;
-                  </div>;
-                  <div className="text - center">;
-                    <div className="text - 3xl font - bold text - blue - 400">$5M+</div>;
-                    <div className="text - white / 70">Annual Revenue</div>;
-                  </div>;
-                </div>;
-              </div>;
-            </section>;
-            {/* Challenge */}
-            <section className="mb - 16">;
-              <h2 className="text - 3xl font - bold text - white mb - 6">The Challenge</h2>;
-              <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20">;
-                <h3 className="text - 2xl font - semibold text - red - 400 mb - 4">Critical Issues</h3>;
-                <ul className="space - y-3 text - white / 90 text - lg">;
-                  <li className="flex items - start gap - 3">;
-                    <div className="w - 2 h - 2 bg - red - 400 rounded - full mt - 3 flex - shrink - 0"></div>;
-                    <span > High cloud costs consuming 40% of operational budget</span>;
-                  </li>;
-                  <li className="flex items - start gap - 3">;
-                    <div className="w - 2 h - 2 bg - red - 400 rounded - full mt - 3 flex - shrink - 0"></div>;
-                    <span > Performance issues during peak traffic periods</span>;
-                  </li>;
-                  <li className="flex items - start gap - 3">;
-                    <div className="w - 2 h - 2 bg - red - 400 rounded - full mt - 3 flex - shrink - 0"></div>;
-                    <span > Manual scaling requirements causing service disruptions</span>;
-                  </li>;
-                  <li className="flex items - start gap - 3">;
-                    <div className="w - 2 h - 2 bg - red - 400 rounded - full mt - 3 flex - shrink - 0"></div>;
-                    <span > Lack of monitoring and alerting systems</span>;
-                  </li>;
-                </ul>;
-              </div>;
-            </section>;
-            {/* Solution */}
-            <section className="mb - 16">;
-              <h2 className="text - 3xl font - bold text - white mb - 6">Our Solution</h2>;
-              <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20">;
-                <h3 className="text - 2xl font - semibold text - green - 400 mb - 4">Self - Healing, Auto - Scaling Infrastructure</h3>;
-                <p className="text - white / 90 text - lg mb - 6">;
-                  We built a comprehensive cloud infrastructure solution that automatically scales,
-                  monitors, and heals itself while optimizing costs and performance.;
-                </p>;
-                <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-                  <div className="bg - white / 5 rounded - lg p - 6 border border - white / 10">;
-                    <h4 className="text - xl font - semibold text - blue - 400 mb - 3">Auto - scaling</h4>;
-                    <p className="text - white / 80">;
-                      Intelligent scaling algorithms automatically adjust resources based on;
-                      real - time demand and performance metrics.;
-                    </p>;
-                  </div>;
-                  <div className="bg - white / 5 rounded - lg p - 6 border border - white / 10">;
-                    <h4 className="text - xl font - semibold text - blue - 400 mb - 3">Load Balancing</h4>;
-                    <p className="text - white / 80">;
-                      Advanced load balancing distributes traffic efficiently across multiple;
-                      instances for optimal performance.;
-                    </p>;
-                  </div>;
-                  <div className="bg - white / 5 rounded - lg p - 6 border border - white / 10">;
-                    <h4 className="text - xl font - semibold text - blue - 400 mb - 3">Monitoring</h4>;
-                    <p className="text - white / 80">;
-                      Comprehensive monitoring and alerting systems provide real - time visibility;
-                      into infrastructure health and performance.;
-                    </p>;
-                  </div>;
-                  <div className="bg - white / 5 rounded - lg p - 6 border border - white / 10">;
-                    <h4 className="text - xl font - semibold text - blue - 400 mb - 3">Cost Optimization</h4>;
-                    <p className="text - white / 80">;
-                      AI - powered cost optimization algorithms automatically identify and;
-                      implement cost - saving opportunities.;
-                    </p>;
-                  </div>;
-                </div>;
-              </div>;
-            </section>;
-            {/* Results */}
-            <section className="mb - 16">;
-              <h2 className="text - 3xl font - bold text - white mb - 6">Results & Impact</h2>;
-              <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20">;
-                <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
-                  <div>;
-                    <h3 className="text - 2xl font - semibold text - green - 400 mb - 6">Quantifiable Results</h3>;
-                    <div className="space - y-4">;
-                      <div className="flex items - center justify - between">;
-                        <span className="text - white / 90">Cloud Costs</span>;
-                        <span className="text - 2xl font - bold text - green - 400">-50%</span>;
-                      </div>;
-                      <div className="flex items - center justify - between">;
-                        <span className="text - white / 90">Uptime</span>;
-                        <span className="text - 2xl font - bold text - green - 400">99.9%</span>;
-                      </div>;
-                      <div className="flex items - center justify - between">;
-                        <span className="text - white / 90">Response Times</span>;
-                        <span className="text - 2xl font - bold text - green - 400">+300%</span>;
-                      </div>;
-                      <div className="flex items - center justify - between">;
-                        <span className="text - white / 90">Manual Intervention</span>;
-                        <span className="text - 2xl font - bold text - green - 400">0%</span>;
-                      </div>;
                     </div>;
                   </div>;
                   <div>;

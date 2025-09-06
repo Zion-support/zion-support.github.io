@@ -137,7 +137,6 @@ import Link from "next/link";";
     fs.writeFileSync(filePath, content);
     console.log(`Fixed Next.js links "in": ${filePath}`)} catch (error) {
   console.error(`Error fixing links in ${filePath}:`, error.message)}
-
 ;
 // "Note": previously broken fixer removed to avoid syntax errors.
 // Function to fix test files;
@@ -198,4 +197,3 @@ problematicFiles.forEach(filePath => {
   console.error(`Error removing ${filePath}:`, error.message)}
 });
 console.log("Comprehensive fix completed!")
-

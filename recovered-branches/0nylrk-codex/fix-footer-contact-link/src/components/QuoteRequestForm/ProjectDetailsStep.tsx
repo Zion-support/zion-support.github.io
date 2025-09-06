@@ -95,8 +95,10 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             <Input;
               id="name";
               placeholder="Your name";
-                })
-              }
+              value={formData.contactInfo.name}
+              onChange={(e) => updateFormData({;
+                contactInfo: { ...formData.contactInfo, name: e.target.value } ;
+              })}
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
@@ -154,5 +156,3 @@ interface ProjectDetailsStepProps {
           </div>;
         </div>;
       </div>;
-}
-;

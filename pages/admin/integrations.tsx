@@ -1,5 +1,4 @@
-import { useEffect, useMemo, useState  } from 'react';
-import Head from 'next/head';
+
 
 interface ProviderMeta {
   id: string;
@@ -11,7 +10,8 @@ interface ProviderMeta {
       {label}
     </span>;
   );
-
+import React, { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {
     console.error("Error:", error);
@@ -36,8 +36,6 @@ export default function AdminIntegrationsPage() {
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
-  }
-  useEffect(() => {
     refresh();
   }, []);
   async function connect(providerId: string) {
@@ -136,6 +134,9 @@ export default function AdminIntegrationsPage() {
     crm: providers.filter(p => p.category === 'crm'),
     ats: providers.filter(p => p.category === 'ats')
   }), [providers]);
+
+
+
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
@@ -143,11 +144,48 @@ export default function AdminIntegrationsPage() {
               <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
               <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
             </>
-  function RulesModal() {;
-    if (!selected) return null;
-    const provider = providers && providers.find(p => p && p.id === selected)!;
-    const isCrm = provider && provider.category === 'crm';
+
+  const grouped = useMemo(;
+    () => ({;
+      crm: providers && providers.filter(p => p && p.category === 'crm'),;
+      ats: providers && providers.filter(p => p && p.category === 'ats'),;
+    }),;
+    [providers];
+  );
+
+  function Card(): any ({ p }: { p: ProviderMeta }) {;
+    const conn = connections[p && p.id] || { status: 'disconnected' };
+    const isConnected = conn && conn.status === 'connected';
     return (
+      <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
+        <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800">
+          <div className="font-semibold mb-2">Sync Rules — {provider.name}</div>
+          <div className="space-y-3 text-sm">
+            {isCrm ? (
+              <>
+                <label className='flex items-center gap-2'>
+                  <input
+                    type='checkbox'
+                    checked={!!syncRules.autoCreateContacts}
+                    onChange={e =>
+                      setSyncRules({
+                        ...syncRules
+                        autoCreateContacts: e.target.checked
+                      })
+                    }
+                  />{' '}
+                  Auto-create contacts
+                </label>
+                <div>
+                  <div className='mb-1'>Push notes:</div>
+                  <div className='flex gap-3'>
+                    <label className='flex items-center gap-2'>
+                      <input
+                        type='radio'
+                        name='pushNotes'
+                        checked={syncRules.pushNotesMode === 'auto'}
+                        onChange={() =>
+                          setSyncRules({ ...syncRules, pushNotesMode: 'auto' })
                         }
                       />{' '}
                       Auto;
@@ -164,9 +202,6 @@ export default function AdminIntegrationsPage() {
                           });
                         }
                       />{' '}
-                      Manual only;
-                    </label>                  </div>;
-                </div>;
                     }
                   />{' '}
                   Auto-sync applicants;
@@ -176,89 +211,19 @@ export default function AdminIntegrationsPage() {
                     type='checkbox'
                     }
                   />{' '}
-                  Auto-upload resumes;
-                </label>;
-              </>;
-            )}
-          </div>;
-          <div className='mt-4 flex justify-end gap-2'>;
-            <button
-              className='px-3 py-1 && 1.5 rounded border text-sm'
-              onClick={() => setSelected(null)}
-            >;
-              Close;
-            </button>;
-            <button
-              className='px-3 py-1 && 1.5 rounded bg-black text-white text-sm'
-              onClick={async () => {;
-                await connect(provider && provider.id);
-                setSelected(null);
-              </>) : (
-              <>;
-                <label className='flex items - center gap - 2'>;
-                  <input;
-                    type='checkbox';
-                    checked={!!sync_rules.autoSyncApplicants}
-                    on_change={e =>;
-                      setSyncRules ({
-                        ...sync_rules,
-                        autoSyncApplicants: e.target.checked,
-                      });
-                    }
-                  />{' '}
-                  Auto - sync applicants;
-                </label>;
-                <label className='flex items - center gap - 2'>;
-                  <input;
-                    type='checkbox';
-                    checked={!!sync_rules.autoUploadResumes}
-                    on_change={e =>;
-                      setSyncRules ({
-                        ...sync_rules,
-                        autoUploadResumes: e.target.checked,
-                      });
-                    }
-                  />{' '}
-                  Auto - upload resumes;
-                </label>;
-              </>)}
-          </div>;
-          <div className='mt - 4 flex justify - end gap - 2'>;
-            <button;
-              className='px - 3 py - 1.5 rounded border text - sm';
-              on_click={() => set_selected (null)}
-            >;
-              Close;
-            </button>;
-            <button;
-              className='px - 3 py - 1.5 rounded bg - black text - white text - sm';
-              on_click={async () => {
-                await connect (provider.id);
-                set_selected (null);
-              }}
-            >;
-              Save;
-            </button>;
-          </div>;
-        </div>;
               <code>
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
               </code>
             </li>          </ul>
         </section>
+
+        <section>
+          <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
+          <ManualOverrideForm />
+        </section>
       </main>
       <RulesModal />
     </>
-                /api/integrations/zapier/talent-matched?since=TIMESTAMP;
-              </code>;
-            </li>          </ul>;
-        </section>;
-        <section>;
-          <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />;
-        </section>;
-      </main>;
-      <RulesModal />;
-    </>;
   );
 function ManualOverrideForm() {;
   const [jobId, setJobId] = useState('');
@@ -299,6 +264,7 @@ function ManualOverrideForm() {
         </div>
       </div>
     </div>
+
       </div>);  }
   return (
     <>;
@@ -409,6 +375,8 @@ function save() {
       </div>;
     </div>);
 ;
+
+
 
 }
 }
