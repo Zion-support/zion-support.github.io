@@ -1,7 +1,6 @@
 // Performance optimization utilities
 export const optimizeImages = () => {
   const images = document.querySelectorAll('img');
-
   images.forEach(img => {
     if (!img.loading) {
       img.loading = 'lazy'

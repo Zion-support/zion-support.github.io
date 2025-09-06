@@ -9,15 +9,19 @@ import type { Tutorial as TutorialType } from "@/types/tutorial";
 interface TutorialPageProps {
   tutorial?: TutorialType
 export default function Tutorial({
-  tutorial: initialTutorial,
+  tutorial: initialTutorial
 }: TutorialPageProps) {
   const router = useRouter()
   const slug = router.query.slug as string | undefined
-  const tutorial = initialTutorial || TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
+  const tutorial = initialTutorial |TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
   tutorial?: TutorialType
 }
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
-  const router = null;
+
+  const router = useRouter()
+  const slug = router.query.slug as string | undefined
+  const tutorial = initialTutorial |TUTORIALS.find((t,) => t.slug === slug)
+
   if (!tutorial) {
     return (
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>
@@ -25,7 +29,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
       </div>
     )
   }
-
   return (
     <>
       <SEO title={tutorial.title} description={tutorial.excerpt} />
@@ -60,4 +63,3 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
     </>
   )
 }
-;

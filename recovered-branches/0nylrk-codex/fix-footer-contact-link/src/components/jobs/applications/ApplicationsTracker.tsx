@@ -9,14 +9,26 @@ import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
 export function ApplicationsTracker() {
   const { applications, isLoading, error } = useJobApplications();
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
-  
+
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(
+    "all"
+  );
+
   if (isLoading) {
     return <LoadingState />;
   }
-
   if (error) {
-    return <ErrorState error;
+
+    return <ErrorState error={error} />;
+  }
+  if (applications.length === 0) {
+    return <EmptyState />;
+  }
+  const filteredApplications =
+    statusFilter === "all"
+      ? applications
+      : applications.filter((app) => app.status === statusFilter);
+
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap gap-2">
@@ -70,13 +82,11 @@ export function ApplicationsTracker() {
           Not Selected
         </Button>
       </div>
-
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
         ))}
       </div>
-
       {filteredApplications.length === 0 && (
         <div className="text-center p-8">
           <p className="text-muted-foreground">

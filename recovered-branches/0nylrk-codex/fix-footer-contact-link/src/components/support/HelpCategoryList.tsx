@@ -1,20 +1,41 @@
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import React from "react";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+
 import { HelpCategory } from "./types";
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
   searchQuery: string
 }
-
 export function HelpCategoryList({
-  categories,
-  onCategorySelect,
-  searchQuery,
+  categories
+  onCategorySelect
+  searchQuery
 }: HelpCategoryListProps) {
   // Filter categories based on search query
-  const filteredCategories = null;
+
+  const filteredCategories = searchQuery
+    ? categories.filter(
+        (category) =>
+          category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+          category.description
+            .toLowerCase()
+            .includes(searchQuery.toLowerCase()) |
+          category.articles.some(
+            (article) =>
+              article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+              article.content.toLowerCase().includes(searchQuery.toLowerCase())
+          )
+      )
+    : categories;
+
   if (filteredCategories.length === 0) {
     return (
       <div className="text-center py-8">
@@ -25,7 +46,6 @@ export function HelpCategoryList({
       </div>
     );
   }
-
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map((category) => (

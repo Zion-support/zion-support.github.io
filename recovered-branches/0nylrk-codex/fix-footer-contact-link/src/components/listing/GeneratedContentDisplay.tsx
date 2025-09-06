@@ -3,25 +3,33 @@ import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from "lucide-react";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+
+import {
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+
 interface GeneratedContent {
   description: string;
   tags: string[];
   suggestedPrice: {
     min: number;
-    max: number
-  },
-  keyPoints: string[]
-}
 
+    max: number;
+  }
+  keyPoints: string[];
+
+}
 interface GeneratedContentDisplayProps {
   content: GeneratedContent;
   onApply: () => void
 }
-
 export function GeneratedContentDisplay({
-  content,
-  onApply,
+  content
+  onApply
 }: GeneratedContentDisplayProps) {
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -35,7 +43,6 @@ export function GeneratedContentDisplay({
           </h3>
           <p className="text-white">{content.description}</p>
         </div>
-
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Tags
@@ -51,7 +58,6 @@ export function GeneratedContentDisplay({
             ))}
           </div>
         </div>
-
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Suggested Price Range
@@ -61,7 +67,6 @@ export function GeneratedContentDisplay({
             {content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Key Selling Points

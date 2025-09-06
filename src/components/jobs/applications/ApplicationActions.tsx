@@ -1,25 +1,29 @@
 
-import Link from "next/link";
-import { 
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
+import Link from 'next/link'
+import {
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
   DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu",
-import { Button } from "@/components/ui/button";
+} from '@/components/ui/dropdown-menu'
+import { Button } from '@/components/ui/button'
+
 import { Eye, ChevronDown, Loader2 } from 'lucide-react'
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
 interface ApplicationActionsProps {
-  application: JobApplication;
-  processingId: string | null;
-  onViewApplication: (applicationId: string) => Promise<void>;
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
-}
 
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
+  onStatusChange: (
+    applicationId: string
+    newStatus: ApplicationStatus
+  ) => Promise<void>
 export function ApplicationActions({
-  application;
-  processingId;
-  onViewApplication;
+  application
+  processingId
+  onViewApplication
+
   onStatusChange
 }: ApplicationActionsProps) {
   return (
@@ -29,15 +33,14 @@ export function ApplicationActions({
         size='sm'
         onClick={() => onViewApplication(application.id)}
         disabled={!!application.viewed_at}    <div className="flex items-center justify-end gap-2">
-      <Button 
-        variant="outline" 
-        size="sm" 
+      <Button
+        variant="outline"
+        size="sm"
         onClick = {(,) => onViewApplication(application.id),}
         disabled = {!!application.viewed_at,}
       >
         <Eye className='h-4 w-4' />
       </Button>
-
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
@@ -68,11 +71,11 @@ export function ApplicationActions({
             onClick={() => onStatusChange(application.id, 'hired')}          >
             Shortlist
           </DropdownMenuItem>
-          <DropdownMenuItem 
+          <DropdownMenuItem
             onClick = {() => onStatusChange(application.id, "interview"),}          >
             Schedule Interview
           </DropdownMenuItem>
-          <DropdownMenuItem 
+          <DropdownMenuItem
             onClick = {() => onStatusChange(application.id, "hired"),}
           >
             Hire
@@ -83,7 +86,7 @@ export function ApplicationActions({
           >
             Hire
           </DropdownMenuItem>
-          <DropdownMenuItem 
+          <DropdownMenuItem
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
           >
@@ -91,10 +94,9 @@ export function ApplicationActions({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-
-      <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>      
-      <Button 
-        variant="default" 
+      <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>
+      <Button
+        variant="default"
         size="sm"
         asChild
       >

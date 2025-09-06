@@ -16,11 +16,11 @@ export function MobileApp() {
     <MobileThemeProvider>
       <Routes>
         <Route path="/onboarding" element={<MobileOnboarding />} />
-        <Route 
-          path="/" 
+        <Route
+          path="/"
           element={
             isAuthenticated ? <MobileHome /> : <Navigate to="/onboarding" />
-          } 
+          }
         />
         <Route path="/browse" element={<MobileBrowse />} />
         <Route path="/projects" element={<MobileProjects />} />

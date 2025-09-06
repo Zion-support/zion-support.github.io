@@ -1,6 +1,8 @@
 import Head from 'next/head',
 import Link from 'next/link';
-import React from 'react';
+
+import React from 'react'
+
 export default function PerformanceOptimization() {
   return (
     <>
@@ -22,7 +24,6 @@ export default function PerformanceOptimization() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
           <div className='max-w-4xl mx-auto'>
@@ -34,7 +35,6 @@ export default function PerformanceOptimization() {
                 ← Back to Blog
               </Link>
             </nav>
-
             <article className='prose prose-invert prose-lg max-w-none'>
               <header className='mb-12 text-center'>
                 <div className='flex items-center gap-3 justify-center mb-4'>
@@ -54,7 +54,6 @@ export default function PerformanceOptimization() {
                   systems run at peak efficiency.
                 </p>
               </header>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-cyan-400'>
                   Understanding Performance Metrics
@@ -91,7 +90,6 @@ export default function PerformanceOptimization() {
                   performance and help identify optimization opportunities.
                 </p>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>
                   Algorithmic Optimization
@@ -124,7 +122,6 @@ export default function PerformanceOptimization() {
                   milliseconds to microseconds.
                 </p>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-green-400'>
                   Infrastructure Optimization
@@ -157,7 +154,6 @@ export default function PerformanceOptimization() {
                   performance without over-provisioning.
                 </p>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-blue-400'>
                   Data Pipeline Optimization
@@ -191,7 +187,6 @@ export default function PerformanceOptimization() {
                   optimized data formats.
                 </p>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-purple-400'>
                   Model Optimization
@@ -222,7 +217,6 @@ export default function PerformanceOptimization() {
                   improvements with minimal accuracy loss.
                 </p>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-yellow-400'>
                   Continuous Performance Monitoring
@@ -242,7 +236,6 @@ export default function PerformanceOptimization() {
                   identified and resolved before they impact user experience.
                 </p>
               </section>
-
               <div className='mt-12 p-6 bg-white/10 rounded-xl border border-white/20'>
                 <h3 className='text-xl font-semibold mb-4 text-cyan-400'>
                   Optimize Your Autonomous Systems

@@ -2,7 +2,67 @@ import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
 export default function RequestToHirePage() {
-  const router = null;
+
+  const router = useRouter();
+  const { talent } = router.query as { talent?: string }
+  const selected = useMemo(
+    () => TALENT_PROFILES.find(t => t.slug === talent)
+    [talent]
+  );export default function RequestToHirePage() {
+  const router = useRouter();
+  const { talent } = router.query as { talent?: string }
+  const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
+  const [form, setForm] = useState({
+    name: ''
+    email: ''
+    budget: ''
+    timeline: ''
+    description: ''
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [result, setResult] = useState<null | { id: string; message: string }>(
+    null
+  );  const [error, setError] = useState<string | null>(null);    description: ''})
+  const [submitting, setSubmitting] = useState(false);
+  const [result, setResult] = useState<null | { id: string, message: string }>(null)
+  const [error, setError] = useState<string | null>(null);
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError(null)
+    if (!form.name |!form.email |!form.description) {
+      setError('Please fill in name, email, and description.');
+      return;    }      return
+    }
+    const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
+    setSubmitting(true);
+    try {
+      const res = await fetch('/api/requests/create', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          ...form
+          budget: normalizedBudget
+          talentSlug: selected?.slug |null
+        })
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error |'Failed to submit');
+      setResult({ id: data.id, message: 'Request submitted successfully.' });
+    } catch (err: any) {
+      setError(err.message |'Something went wrong');
+    } finally {
+      setSubmitting(false);    }          budget: normalizedBudget
+          talentSlug: selected?.slug |null})})
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error |'Failed to submit');
+      setResult({ id: data.id, message: 'Request submitted successfully.' })
+    } catch (err: any) {
+      setError(err.message |'Something went wrong')
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
   if (result) {
     return (
       <div className='max-w-xl mx-auto py-12'>
@@ -16,7 +76,6 @@ export default function RequestToHirePage() {
       </div>
     );
   }
-
   return (
     <div className='max-w-xl mx-auto'>
       <h1 className='text-2xl font-semibold mb-4'>
@@ -76,7 +135,6 @@ export default function RequestToHirePage() {
         >          {submitting ? 'Submitting…' : 'Submit Request'}      </div>
     )
   }
-
   return (
     <div className="max-w-xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Request to Hire{selected ? ` — ${selected.name}` : ''}</h1>

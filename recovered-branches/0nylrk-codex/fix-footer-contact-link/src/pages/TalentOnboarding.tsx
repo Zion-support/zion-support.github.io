@@ -11,7 +11,6 @@ export default function TalentOnboarding() {
   if (!isLoading && !user) {
     return <Navigate to="/login" replace />
   }
-
   return (
     <>
       <Header />
@@ -24,7 +23,6 @@ export default function TalentOnboarding() {
               to get discovered for AI and tech projects on the Zion Marketplace.
             </p>
           </div>
-          
           <TalentOnboardingForm />
         </div>
       </div>

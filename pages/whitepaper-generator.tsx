@@ -1,6 +1,10 @@
 import { useEffect  } from 'react';
 import { useRouter } from 'next/router';
 export default function WhitepaperGeneratorRedirect() {
-  const router = null;
-  return null
-}
+
+  const router = useRouter();
+  useEffect(() => {
+router.replace('/tokenomics');
+  }, [router]);
+  return null;
+

@@ -14,16 +14,37 @@ i18n
     resources: {
       en: {
         translation: enTranslation
-      };
+      }
       es: {
         translation: esTranslation
-      };
+      }
       pt: {
         translation: ptTranslation
-      };
+      }
       ar: {
         translation: arTranslation
       }
-    };
+    }
     fallbackLng: 'en', // Default language
-    debug: process.env.NODE_ENV;
+
+    debug: process.env.NODE_ENV === 'development'
+    interpolation: {
+      escapeValue: false, // React already escapes by default
+    }
+    detection: {
+      order: ['localStoragenavigator'];
+      lookupLocalStorage: 'zion_language'
+      caches: ['localStorage']
+    }});
+// For RTL language support
+document.documentElement.dir = i18n.dir();
+// Listen for language changes to update RTL/LTR direction
+i18n.on('languageChanged', (lng) => {
+  document.documentElement.dir = i18n.dir();
+  // Save language preference to localStorage
+  localStorage.setItem('zion_language', lng);
+  // If user is authenticated, save language preference to profile
+  // This will be implemented in the LanguageContext
+});
+export default i18n;
+

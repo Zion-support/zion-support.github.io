@@ -11,7 +11,6 @@ type UserRole = any;
       <p className='text-muted-foreground'>
         Choose how you want to use our platform
       </p>
-
       <div className='space-y-3 mt-6'>
         <Card
           className={`cursor-pointer transition-all ${
@@ -38,7 +37,6 @@ type UserRole = any;
             </div>
           </CardContent>
         </Card>
-
         <Card
           className={`cursor-pointer transition-all ${
             selectedRole === 'client'
@@ -68,4 +66,3 @@ type UserRole = any;
     </div>
   )
 }
-;

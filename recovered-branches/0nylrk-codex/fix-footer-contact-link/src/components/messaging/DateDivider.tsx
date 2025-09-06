@@ -4,7 +4,6 @@ import { format } from 'date-fns';
 interface DateDividerProps {
   date: Date;
 }
-
 export function DateDivider({ date }: DateDividerProps) {
   return (
     <div className="flex items-center my-4">

@@ -9,16 +9,14 @@ interface CertificationsListProps {
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
 }
-
 export function CertificationsList({
-  certifications,
-  onEdit,
-  onDelete,
+  certifications
+  onEdit
+  onDelete
 }: CertificationsListProps) {
   if (certifications.length === 0) {
     return null;
   }
-
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Certifications</h3>

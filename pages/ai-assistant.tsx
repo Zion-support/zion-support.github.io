@@ -1,7 +1,9 @@
 import React from 'react',
 import Head from 'next/head';
-import Button from '../components/ui/Button';
-export default function AIAssistantPage() {
+
+import Layout from '../components/layout/Layout';
+const AIAssistant: React.FC = () => {
+
   return (
     <Layout>
       <Head>
@@ -25,12 +27,12 @@ export default function AIAssistantPage() {
           </header>
           <section className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {[
-              'Research and summarize documents and web sources',
-              'Draft emails, posts, briefs, and reports',
-              'Auto-schedule meetings and follow-ups',
-              'Integrations: Gmail, Google Drive, Slack, Calendar',
-              'Team approvals and audit trail',
-              'Starting at $99/mo',
+              'Research and summarize documents and web sources'
+              'Draft emails, posts, briefs, and reports'
+              'Auto-schedule meetings and follow-ups'
+              'Integrations: Gmail, Google Drive, Slack, Calendar'
+              'Team approvals and audit trail'
+              'Starting at $99/mo'
             ].map(f => (
               <div
                 key={f}
@@ -49,7 +51,6 @@ export default function AIAssistantPage() {
             </Button>
           </div>
         </div>
-
         <div className="bg-blue-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-lg text-gray-700 mb-6">

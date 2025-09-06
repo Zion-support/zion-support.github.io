@@ -8,3 +8,6 @@ export interface Application {
   createdAt: string;
   updatedAt?: string;
 }
+
+export type UserRole = 'admin' | 'user' | 'guest';
+

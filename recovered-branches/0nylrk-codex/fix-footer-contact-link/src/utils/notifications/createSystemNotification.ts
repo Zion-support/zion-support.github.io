@@ -8,7 +8,19 @@ export async function createSystemNotification({
   userId;
   title;
   message;
-  actionUrl;
+
+  actionUrl = null;
+  actionText = null;
+  sendEmail = false
+}: SystemNotificationParams) {
+  return createNotification({
+    userId;
+    title;
+    message;
+    type: 'system';
+    sendEmail;
+    actionUrl
+
     actionText
   })
 }

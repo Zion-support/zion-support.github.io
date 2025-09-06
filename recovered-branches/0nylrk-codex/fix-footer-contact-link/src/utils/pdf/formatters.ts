@@ -6,7 +6,9 @@ import { format } from 'date-fns';
  * @returns Formatted date string
  */
 export function formatDate(date: Date | string | undefined): string {
-  if (!date) return '';
+
+  if (!date) return ''
+
   if (typeof date === 'string') {
     return format(new Date(date), 'MMM yyyy')
   }

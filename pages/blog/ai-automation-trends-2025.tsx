@@ -1,6 +1,8 @@
 import Head from 'next/head',
 import Link from 'next/link';
-import React from 'react';
+
+import React from 'react'
+
 export default function AIAutomationTrends2025() {
   return (
     <>
@@ -23,7 +25,6 @@ export default function AIAutomationTrends2025() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
           <div className='max-w-4xl mx-auto'>
@@ -35,7 +36,6 @@ export default function AIAutomationTrends2025() {
                 ← Back to Blog
               </Link>
             </nav>
-
             <article className='prose prose-invert prose-lg max-w-none'>
               <header className='mb-12 text-center'>
                 <div className='flex items-center gap-3 justify-center mb-4'>
@@ -58,7 +58,6 @@ export default function AIAutomationTrends2025() {
                   integrated into our daily lives.
                 </p>
               </header>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-cyan-400'>
                   The Rise of Autonomous Decision-Making
@@ -89,7 +88,6 @@ export default function AIAutomationTrends2025() {
                   <li>• Adapt to changing user preferences and behaviors</li>
                 </ul>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>
                   Edge Computing and Distributed AI
@@ -108,7 +106,6 @@ export default function AIAutomationTrends2025() {
                   infrastructure.
                 </p>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-green-400'>
                   Human-AI Collaboration
@@ -141,7 +138,6 @@ export default function AIAutomationTrends2025() {
                   </li>
                 </ul>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-blue-400'>
                   Ethical AI and Responsible Automation
@@ -158,7 +154,6 @@ export default function AIAutomationTrends2025() {
                   <li>• Accountability mechanisms for AI-driven decisions</li>
                 </ul>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-purple-400'>
                   Looking Ahead: What&apos,s Next?
@@ -178,7 +173,6 @@ export default function AIAutomationTrends2025() {
                       optimization, cryptography, and machine learning.
                     </p>
                   </div>
-
                   <div className='bg-white/10 rounded-lg p-4 border border-white/20'>
                     <h4 className='font-semibold text-fuchsia-400 mb-2'>
                       Neuromorphic Computing
@@ -191,7 +185,6 @@ export default function AIAutomationTrends2025() {
                   </div>
                 </div>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-yellow-400'>
                   Conclusion
@@ -212,7 +205,6 @@ export default function AIAutomationTrends2025() {
                 </p>
               </section>
             </article>
-
             <div className='mt-16 pt-8 border-t border-white/20'>
               <h3 className='text-xl font-semibold mb-4 text-white'>
                 Share this article

@@ -12,17 +12,29 @@ interface ModelVersionData extends ModelConfig {
   errorMessage?: string
 }
 
-export function ZionGPTModelManager() {
-  const [models, setModels] = useState<ModelVersionData[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),
 
-  // Fetch model data on component mount
-  useEffect(() => {
-    fetchModels()
-  }, []),
+        .order('createdAt', { ascending: false })
+  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
+    try {
+      // If activating, deactivate all other models with the same purpose
+      if (!currentActive) {
+        await supabase
+          .from('model_versions')
+          .update({ active: false })
+          .eq('purpose', purpose)
+      }
+      // Update this model
+      await supabase
+        .from('model_versions')
+        .update({ active: !currentActive })
+        .eq('id', modelId)
+      // Refresh the model list
+      fetchModels()
+    } catch (error) {
+      logErrorToProduction('Error toggling model active state:', { data: error })
+    }
+  }
 
-  const fetchModels = null;
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between">
@@ -75,7 +87,7 @@ export function ZionGPTModelManager() {
                   </TableCell>
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
-                    {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
+                    {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
                       <Button
                         variant="ghost"
                         size="sm"
@@ -110,7 +122,7 @@ export function ZionGPTModelManager() {
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
-                        title = {model.errorMessage || "Training failed",}
+                        title = {model.errorMessage |"Training failed",}
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
@@ -125,5 +137,4 @@ export function ZionGPTModelManager() {
     </Card>
   )
 }
-
 }

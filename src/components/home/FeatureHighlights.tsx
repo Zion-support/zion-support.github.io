@@ -6,10 +6,47 @@ import { cn } from "@/lib/utils";
 interface FeatureHighlightsProps {
   className?: string;
   style?: React.CSSProperties
-}
 
-export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
-  const highlightsData = null;
+export function FeatureHighlights({
+  className
+  style
+}: FeatureHighlightsProps) {
+  const highlightsData = [
+    {
+      title: 'For Talent Seekers'
+      features: [
+        'AI-powered talent matching based on your specific project requirements'
+        'Verified profiles with skills validation and credential checking'
+        'Transparent pricing and no hidden fees'
+        'Direct communication with potential candidates'
+        'Secure payment protection and dispute resolution'
+        'Post jobs and receive AI-matched applicants'
+      ]
+    }
+    {
+      title: 'For Talent & Service Providers'
+      features: [
+        'Create a professional profile showcasing your skills and experience'
+        'Get matched with relevant projects that fit your expertise'
+        'Secure payment processing with on-time disbursements'
+        'Build your reputation through client reviews and ratings'
+        'Access to enterprise clients and high-value projects'
+        'Professional development resources and community support'
+      ]
+    }
+    {
+      title: 'For Enterprise Clients'
+      features: [
+        'White-labeled talent portal with your company branding'
+        'Dedicated account management and priority support'
+        'Custom talent pools and preferred provider networks'
+        'Advanced analytics and reporting capabilities'
+        'API access for seamless integration with your HR systems'
+        'Customizable workflow and approval processes'
+      ]
+    }
+  ]
+
   return (
     <section className={cn('py-16 bg-zion-blue', className)} style={style}>
       <div className='container mx-auto px-4'>
@@ -22,7 +59,6 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
             features to help you succeed
           </p>
         </div>
-
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           {highlightsData.map((category, index) => (
             <Card
@@ -57,28 +93,28 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
 }
 import { motion  } from 'framer-motion'
   {
-    icon: "⚡",
-    title: "Lightning Fast Performance",
+    icon: "⚡"
+    title: "Lightning Fast Performance"
     description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"
-},
+}
   {
-    icon: "🔒",
-    title: "Enterprise Security",
+    icon: "🔒"
+    title: "Enterprise Security"
     description: "Bank-level security protocols and compliance standards to protect your valuable data"
-},
+}
   {
-    icon: "🌐",
-    title: "Global Scalability",
+    icon: "🌐"
+    title: "Global Scalability"
     description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"
-},
+}
   {
-    icon: "🤖",
-    title: "AI-Powered Intelligence",
+    icon: "🤖"
+    title: "AI-Powered Intelligence"
     description: "Smart automation and predictive analytics that adapt to your business requirements"
-},
+}
   {
-    icon: "📊",
-    title: "Real-Time Analytics",
+    icon: "📊"
+    title: "Real-Time Analytics"
     description: "Comprehensive insights and reporting to make data-driven decisions instantly"
 }
 ]
@@ -86,36 +122,36 @@ import { motion  } from 'framer-motion'
 }
 }
   const itemVariants = {
-  hidden: { opacity: 0, y: 30,
+  hidden: { opacity: 0, y: 30
   scale: 0.95
-},
+}
     visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
+      opacity: 1
+      y: 0
+      scale: 1
       transition: {
-        duration: 0.6,
+        duration: 0.6
         ease: "easeOut"
 }
 }
 }
   const achievementVariants = {
-  hidden: { opacity: 0,
+  hidden: { opacity: 0
   scale: 0.8
-},
+}
     visible: {
-      opacity: 1,
-      scale: 1,
+      opacity: 1
+      scale: 1
       transition: { duration: 0.5 }
 }
 }
   const techVariants = {
-  hidden: { opacity: 0,
+  hidden: { opacity: 0
   x: -20
-},
+}
     visible: {
-      opacity: 1,
-      x: 0,
+      opacity: 1
+      x: 0
       transition: { duration: 0.5 }
 }
 }
@@ -125,11 +161,11 @@ export function FeatureHighlights() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div          className="text-center mb-16"
           initial = {
-  { opacity: 0,
+  { opacity: 0
   y: 20
 }}
           whileInView = {
-  { opacity: 1,
+  { opacity: 1
   y: 0
 }}
           viewport={{ once: true }}
@@ -144,7 +180,7 @@ export function FeatureHighlights() {
           </h2>
 "
           <p className="text-lg md:text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Experience the next generation of talent marketplace with cutting-edge AI,
+            Experience the next generation of talent marketplace with cutting-edge AI
             global reach, and enterprise-grade security.</p>
         </motion.div>
 "
@@ -154,8 +190,8 @@ export function FeatureHighlights() {
               key={index}
               variants={itemVariants}
               whileHover={{
-                y: -5,
-                scale: 1.02,
+                y: -5
+                scale: 1.02
                 transition: { duration: 0.3 }
               }}"
               className="group"
@@ -187,7 +223,7 @@ export function FeatureHighlights() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition = {
-  { duration: 0.6,
+  { duration: 0.6
   delay: 0.4
 }}
         >"
@@ -199,6 +235,5 @@ export function FeatureHighlights() {
       </div>
     </section>
   )}
-
 '"`
 )

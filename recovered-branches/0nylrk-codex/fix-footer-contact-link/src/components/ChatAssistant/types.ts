@@ -5,10 +5,11 @@ export interface Message {
   timestamp: Date;
   read?: boolean
 }
-
 export interface Recipient {
   id: string;
   name: string;
   avatarUrl?: string;
-  role?: string
+
+  role?: string;
 }
+

@@ -5,7 +5,20 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function Ecommerce() {
-  const schema = null;
+
+  const schema = {
+    '@context': 'https://schema.org'
+    '@type': 'WebPage'
+    name: 'E-commerce Platform'
+    description:
+      'Sell or purchase AI solutions and IT equipment through our secure marketplace.'
+    url: 'https://app.ziontechgroup.com/features/e-commerce',  };    "@context": "https://schema.org"
+    "@type": "WebPage"
+    "name": "E-commerce Platform"
+    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace."
+    "url": "https://app.ziontechgroup.com/features/e-commerce"
+  }
+
   return (
     <>
       <SEO
@@ -116,4 +129,3 @@ export default function Ecommerce() {
     </>
   )
 }
-;

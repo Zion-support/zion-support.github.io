@@ -50,7 +50,6 @@ export default function QuantumCybersecurityServices() {
             >
               Unbreakable security powered by quantum computing and advanced AI
               algorithms. Protect your business from tomorrow's threats today.            </motion.p>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -68,7 +67,6 @@ export default function QuantumCybersecurityServices() {
                 Get Started
               </a>
             </motion.div>
-
             {/* Key Benefits */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -107,7 +105,6 @@ export default function QuantumCybersecurityServices() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Section */}
         <section id='services' className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -126,7 +123,6 @@ export default function QuantumCybersecurityServices() {
                 technology available, powered by quantum computing and AI.
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -144,7 +140,6 @@ export default function QuantumCybersecurityServices() {
             </div>
           </div>
         </section>
-
         {/* Why Quantum Security Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -158,7 +153,6 @@ export default function QuantumCybersecurityServices() {
                 </span>
               </h2>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -179,7 +173,6 @@ export default function QuantumCybersecurityServices() {
                   <li>• Financial systems exposed</li>
                 </ul>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -203,7 +196,6 @@ export default function QuantumCybersecurityServices() {
             </div>
           </div>
         </section>
-
         {/* Security Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -217,7 +209,6 @@ export default function QuantumCybersecurityServices() {
                 </span>
               </h2>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -232,7 +223,6 @@ export default function QuantumCybersecurityServices() {
                 <p className='text-gray-400 text-sm'>
                   Never trust, always verify approach to security.
                 </p>              </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -247,7 +237,6 @@ export default function QuantumCybersecurityServices() {
                 <p className='text-gray-400 text-sm'>
                   24/7 threat detection and response.
                 </p>              </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -262,7 +251,6 @@ export default function QuantumCybersecurityServices() {
                 <p className='text-gray-400 text-sm'>
                   Automated threat response and incident resolution.
                 </p>              </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -280,7 +268,6 @@ export default function QuantumCybersecurityServices() {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
@@ -298,7 +285,6 @@ export default function QuantumCybersecurityServices() {
                 Don't wait for quantum computers to break your security. Contact
                 us now to implement quantum-resistant protection.
               </p>
-
               <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
                 <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>
                   <div className='text-3xl mb-4'>📱</div>
@@ -335,7 +321,6 @@ export default function QuantumCybersecurityServices() {
                   </p>
                 </div>
               </div>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a
                   href='mailto:kleber@ziontechgroup.com'

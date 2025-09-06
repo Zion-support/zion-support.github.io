@@ -11,4 +11,16 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   badge?: React.ReactNode
 }
 
-const SidebarMenuItem = null;
+const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
+  ({ icon, active, children, href, target, badge, className, ...props }, ref,) => {
+    if (href) {
+      return(<a
+          href={href}
+    return(<button
+        ref={ref}
+SidebarMenuItem.displayName = "SidebarMenuItem"
+export { SidebarMenuItem, SidebarMenuGroup }
+export { SidebarMenuItem, SidebarMenuGroup }
+}
+export { SidebarMenuItem, SidebarMenuGroup }
+

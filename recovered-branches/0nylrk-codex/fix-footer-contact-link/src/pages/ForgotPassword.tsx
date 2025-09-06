@@ -18,7 +18,24 @@ import {
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 // Form validation schema
-const forgotPasswordSchema = null;
+
+const forgotPasswordSchema = z.object({
+  email: z.string().email("Please enter a valid email")})
+type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
+export default function ForgotPassword() {
+  const { resetPassword, isLoading } = useAuth();
+  const [submitted, setSubmitted] = useState(false);
+  // Initialize react-hook-form
+  const form = useForm({
+    resolver: zodResolver(forgotPasswordSchema)
+    defaultValues: {
+      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>
+  // Form submission handler
+  const onSubmit = async (data: ForgotPasswordFormValues) => {
+    await resetPassword(data.email)
+    setSubmitted(true)
+  }
+
   return (
     <>
       <Header />
@@ -33,7 +50,6 @@ const forgotPasswordSchema = null;
                 Enter your email and we'll send you a link to reset your password.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark rounded-lg p-6">
               {submitted ? (
                 <div className="text-center py-8">
@@ -76,7 +92,6 @@ const forgotPasswordSchema = null;
                         </FormItem>
                       )}
                     />
-
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -84,7 +99,6 @@ const forgotPasswordSchema = null;
                     >
                       {isLoading ? "Sending..." : "Reset Password"}
                     </Button>
-
                     <div className="text-center">
                       <Link
                         to="/login"
@@ -116,4 +130,3 @@ const forgotPasswordSchema = null;
     </>
   )
 }
-;

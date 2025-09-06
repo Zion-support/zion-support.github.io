@@ -1,13 +1,86 @@
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, Zap, Cpu, Database;
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
- } from 'lucide-react';
+
+import {
+  Shield
+  Lock
+  Eye
+  Zap
+  Cpu
+  Database
+  ArrowRight
+  CheckCircle
+  Star
+  Users
+  Clock
+  TrendingUp;
+} from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function CybersecurityServicesPage() {
-  const services = null;
+  const services = [
+    {
+      title: 'Advanced Threat Detection'
+      description: 'AI-powered threat detection and response systems'
+      features: [
+        'Real-time Monitoring'
+        'Behavioral Analysis'
+        'Automated Response'
+        '24/7 Protection'
+      ]
+      price: 'From $8,000'
+      icon: Eye
+      color: 'from-red-500 to-orange-500'
+    }
+    {
+      title: 'Quantum-Resistant Encryption'
+      description: 'Future-proof security with quantum-resistant cryptography'
+      features: [
+        'Post-Quantum Algorithms'
+        'Key Management'
+        'Compliance Ready'
+        'Future-Proof'
+      ]
+      price: 'From $12,000'
+      icon: Lock
+      color: 'from-purple-500 to-pink-500'
+    }
+    {
+      title: 'Security Auditing & Compliance'
+      description:
+        'Comprehensive security assessments and compliance solutions'
+      features: [
+        'Penetration Testing'
+        'Vulnerability Assessment'
+        'SOC2 Compliance'
+        'GDPR Ready'
+      ]
+      price: 'From $5,000'
+      icon: Shield
+      color: 'from-blue-500 to-cyan-500'
+    }
+    {
+      title: 'Zero Trust Architecture'
+      description: 'Modern security framework for distributed environments'
+      features: [
+        'Identity Verification'
+        'Access Control'
+        'Network Segmentation'
+        'Continuous Monitoring'
+      ]
+      price: 'From $15,000'
+      icon: Zap
+      color: 'from-emerald-500 to-teal-500'
+    }
+  ];
+  const stats = [
+    { number: '99.99%', label: 'Threat Detection Rate', icon: Shield }
+    { number: '24/7', label: 'Security Monitoring', icon: Eye }
+    { number: '0', label: 'Security Breaches', icon: Lock }
+    { number: '500+', label: 'Protected Systems', icon: CheckCircle }
+  ];
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
@@ -28,9 +101,7 @@ export default function CybersecurityServicesPage() {
           rel='canonical'
           href='https://ziontechgroup.com/services/cybersecurity'
         />      </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
@@ -46,7 +117,6 @@ export default function CybersecurityServicesPage() {
               Advanced security solutions that protect your digital assets and
               ensure business continuity            </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,7 +124,7 @@ export default function CybersecurityServicesPage() {
             className='mb-12'
           >
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
-              From AI-powered threat detection to quantum-resistant encryption,
+              From AI-powered threat detection to quantum-resistant encryption
               we provide comprehensive cybersecurity solutions that keep your
               business secure and compliant.
             </p>
@@ -64,7 +134,6 @@ export default function CybersecurityServicesPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -88,7 +157,6 @@ export default function CybersecurityServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -106,7 +174,6 @@ export default function CybersecurityServicesPage() {
               from evolving threats
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -147,7 +214,6 @@ export default function CybersecurityServicesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -173,26 +239,20 @@ export default function CybersecurityServicesPage() {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
-),
-
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
+)
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion.div> Get Started </button> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
   {
-  opacity: 0, y: 30 
-
+  opacity: 0, y: 30
 }whileInView= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8 
-
+  duration: 0.8
 }viewport= {
   {
-  once: true 
-
+  once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Secure Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity. </p> Security Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)

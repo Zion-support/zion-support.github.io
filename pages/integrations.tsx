@@ -1,6 +1,10 @@
-import { useEffect  } from 'react';
-import { useRouter } from 'next/router';
+
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
 export default function IntegrationsRedirect() {
-  const router = null;
-  return null
-}
+  const router = useRouter();
+  useEffect(() => {
+    router.replace('/admin/integrations');
+  }, [router]);
+  return null;
+

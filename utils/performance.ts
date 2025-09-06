@@ -1,10 +1,8 @@
 import { PerformanceMetrics } from '../types';
-
 export const measurePerformance = (): PerformanceMetrics | null => {
-  if (typeof window === 'undefined' || !('performance' in window)) {
+  if (typeof window === 'undefined' |!('performance' in window)) {
     return null;
   }
-
   try {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
@@ -14,20 +12,18 @@ export const measurePerformance = (): PerformanceMetrics | null => {
       return acc + (entry as any).value;
     }, 0);
     const fid = performance.getEntriesByType('first-input')[0] as PerformanceEventTiming;
-
     return {
-      fcp: fcp ? fcp.startTime : undefined,
-      lcp: lcp ? lcp.startTime : undefined,
-      fid: fid ? fid.processingStart - fid.startTime : undefined,
-      cls: cls,
+      fcp: fcp ? fcp.startTime : undefined
+      lcp: lcp ? lcp.startTime : undefined
+      fid: fid ? fid.processingStart - fid.startTime : undefined
+      cls: cls
       ttfb: navigation ? navigation.responseStart - navigation.requestStart : undefined
-    };
+    }
   } catch (error) {
     console.warn('Error measuring performance:', error);
     return null;
   }
-};
-
+}
 export const getPerformanceScore = (metrics: PerformanceMetrics): {
   overall: 'good' | 'needs-improvement' | 'poor';
   scores: {
@@ -36,36 +32,31 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
     fid: 'good' | 'needs-improvement' | 'poor';
     cls: 'good' | 'needs-improvement' | 'poor';
     ttfb: 'good' | 'needs-improvement' | 'poor';
-  };
+  }
 } => {
   const thresholds = {
-    fcp: { good: 1000, needsImprovement: 2000 },
-    lcp: { good: 1500, needsImprovement: 3000 },
-    fid: { good: 50, needsImprovement: 100 },
-    cls: { good: 0.05, needsImprovement: 0.1 },
+    fcp: { good: 1000, needsImprovement: 2000 }
+    lcp: { good: 1500, needsImprovement: 3000 }
+    fid: { good: 50, needsImprovement: 100 }
+    cls: { good: 0.05, needsImprovement: 0.1 }
     ttfb: { good: 200, needsImprovement: 400 }
-  };
-
+  }
   const getScore = (value: number | undefined, threshold: { good: number; needsImprovement: number }, reverse = false): 'good' | 'needs-improvement' | 'poor' => {
     if (value === undefined) return 'poor';
-    
     const compareValue = reverse ? threshold.good / value : value / threshold.good;
     if (compareValue <= 1) return 'good';
     if (compareValue <= (reverse ? threshold.needsImprovement / threshold.good : threshold.needsImprovement / threshold.good)) return 'needs-improvement';
     return 'poor';
-  };
-
+  }
   const scores = {
-    fcp: getScore(metrics.fcp, thresholds.fcp),
-    lcp: getScore(metrics.lcp, thresholds.lcp),
-    fid: getScore(metrics.fid, thresholds.fid),
-    cls: getScore(metrics.cls, thresholds.cls, true),
+    fcp: getScore(metrics.fcp, thresholds.fcp)
+    lcp: getScore(metrics.lcp, thresholds.lcp)
+    fid: getScore(metrics.fid, thresholds.fid)
+    cls: getScore(metrics.cls, thresholds.cls, true)
     ttfb: getScore(metrics.ttfb, thresholds.ttfb)
-  };
-
+  }
   const poorCount = Object.values(scores).filter(score => score === 'poor').length;
   const needsImprovementCount = Object.values(scores).filter(score => score === 'needs-improvement').length;
-
   let overall: 'good' | 'needs-improvement' | 'poor';
   if (poorCount > 0) {
     overall = 'poor';
@@ -74,10 +65,8 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
   } else {
     overall = 'good';
   }
-
-  return { overall, scores };
-};
-
+  return { overall, scores }
+}
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
   console.group(`🚀 ${label}`);
   if (metrics.fcp !== undefined) console.log('First Contentful Paint:', `${metrics.fcp.toFixed(2)}ms`);
@@ -86,4 +75,4 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
   if (metrics.cls !== undefined) console.log('Cumulative Layout Shift:', metrics.cls.toFixed(4));
   if (metrics.ttfb !== undefined) console.log('Time to First Byte:', `${metrics.ttfb.toFixed(2)}ms`);
   console.groupEnd();
-};
+}

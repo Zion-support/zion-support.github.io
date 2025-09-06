@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 interface NoJobsCardProps {
   onUpdateProfile?: () => void;
 }
-
 export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
   return (
     <Card className="bg-muted/30 border border-dashed">

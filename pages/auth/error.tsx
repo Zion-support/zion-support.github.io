@@ -4,14 +4,12 @@ import { Button } from '@/components/ui/button';
 import { AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
-const errorMessages: Record<string string> = {;
-  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+const errorMessages: Record<string string> = {OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
 }
 export default function AuthErrorPage() {
   const { query } = useRouter()
-  const message = errorMessages[query.error as string] || errorMessages.default
-
+  const message = errorMessages[query.error as string] |errorMessages.default
   return (
     <>
       <Head>
@@ -42,4 +40,3 @@ export default function AuthErrorPage() {
     </>
   )
 }
-;

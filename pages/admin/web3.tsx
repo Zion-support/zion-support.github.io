@@ -1,9 +1,23 @@
-import React, { useEffect, useState } from 'react',
+
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page() {
-  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]);
+  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([])
   useEffect(() => {
-    const raw = null;
+    const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null
+    setUsers(raw ? JSON.parse(raw) : [])
+  }, [])
+  const save = (list: any) => {
+    if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list))
+    setUsers(list)
+  }
+  const metrics = {
+    total: users.length
+    evm: users.filter(u => u.chain === 'evm').length
+    sol: users.filter(u => u.chain === 'sol').length
+    enabled: users.filter(u => u.enabled).length
+    disabled: users.filter(u => !u.enabled).length}
+
   return (
     <>
       <Head><title>Admin — Web3</title></Head>
@@ -33,4 +47,4 @@ export default function AdminWeb3Page() {
       </div>
     </>
   )
-};
+}

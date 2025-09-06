@@ -10,8 +10,58 @@ import { supabase } from "@/integrations/supabase/client",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { useForm } from "react-hook-form",
 import z from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-const formSchema = null;
+
+import {zodResolver} from "@hookform/resolvers/zod";
+const formSchema = z.object({
+  title: z.string().min(3, "Title must be at least 3 characters");
+  keyFeatures: z.string()
+  targetAudience: z.string()})
+type FormData = z.infer<typeof formSchema>;
+interface ServiceDescriptionFormProps {
+  onDescriptionGenerated: (description: string) => void
+}
+export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+  const form = useForm<FormData>({
+    resolver: zodResolver(formSchema)
+    defaultValues: {
+      title: ""
+      keyFeatures: ""
+      targetAudience: ""}})
+  const handleSubmit = async (data: FormData) => {
+    setIsLoading(true)
+    try {
+      const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
+        body: {
+          title: data.title
+          keyFeatures: data.keyFeatures
+          targetAudience: data.targetAudience
+        }
+      });
+      if (error) {
+        throw new Error(error.message)
+      }
+      if (response.error) {
+        throw new Error(response.error)
+      }
+      onDescriptionGenerated(response.description);
+      toast({
+        title: "Description Generated"
+        description: "Your professional service description has been created."
+      })
+    } catch (error) {
+      console.error("Error generating description:", error);
+      toast({
+        title: "Generation Failed"
+        description: error instanceof Error ? error.message : "Failed to generate description. Please try again."
+        variant: "destructive"
+      })
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -33,8 +83,8 @@ const formSchema = null;
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>
                   <FormControl>
-                    <Input 
-                      {...field} 
+                    <Input
+                      {...field}
                       placeholder="e.g. Professional Web Design Services"
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       disabled={isLoading}
@@ -44,7 +94,6 @@ const formSchema = null;
                 </FormItem>
               )}
             />
-            
             <FormField
               control={form.control}
               name="keyFeatures"
@@ -52,7 +101,7 @@ const formSchema = null;
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Key Features</FormLabel>
                   <FormControl>
-                    <Textarea 
+                    <Textarea
                       {...field}
                       placeholder="Enter key features, separated by commas"
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
@@ -63,7 +112,6 @@ const formSchema = null;
                 </FormItem>
               )}
             />
-            
             <FormField
               control={form.control}
               name="targetAudience"
@@ -71,8 +119,8 @@ const formSchema = null;
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>
                   <FormControl>
-                    <Input 
-                      {...field} 
+                    <Input
+                      {...field}
                       placeholder="e.g. Small businesses, Startups, E-commerce brands"
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       disabled={isLoading}
@@ -82,8 +130,7 @@ const formSchema = null;
                 </FormItem>
               )}
             />
-            
-            <Button 
+            <Button
               type="submit"
               disabled={isLoading}
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -106,4 +153,3 @@ const formSchema = null;
     </Card>
   )
 }
-;

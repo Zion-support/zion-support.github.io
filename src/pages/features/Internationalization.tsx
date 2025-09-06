@@ -5,7 +5,20 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function Internationalization() {
-  const schema = null;
+
+  const schema = {
+    '@context': 'https://schema.org'
+    '@type': 'WebPage'
+    name: 'Internationalization'
+    description:
+      'Use Zion in multiple languages and attract clients worldwide with localized listings.'
+    url: 'https://app.ziontechgroup.com/features/internationalization',  };    "@context": "https://schema.org"
+    "@type": "WebPage"
+    "name": "Internationalization"
+    "description": "Use Zion in multiple languages and attract clients worldwide with localized listings."
+    "url": "https://app.ziontechgroup.com/features/internationalization"
+  }
+
   return (
     <>
       <SEO
@@ -112,4 +125,3 @@ export default function Internationalization() {
     </>
   )
 }
-;

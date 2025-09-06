@@ -9,12 +9,10 @@ export default function Login() {
   if (isAuthenticated && user?.profileComplete) {
     return <Navigate to="/" />
   }
-  
   // Redirect to onboarding if user is authenticated but hasn't completed profile
   if (isAuthenticated && !user?.profileComplete) {
     return <Navigate to="/onboarding" />
   }
-
   return (
     <>
       <Header />

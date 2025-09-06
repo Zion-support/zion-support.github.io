@@ -16,12 +16,13 @@ import {
   AlertDialogTitle} from "@/components/ui/alert-dialog",
 import { useState } from "react";
 interface TemplateListProps {
-  templates: ContractTemplate[];
-  isLoading: boolean;
-  onSelect: (template: ContractTemplate) => void;
+
+  templates: ContractTemplate[]
+  isLoading: boolean
+  onSelect: (template: ContractTemplate) => void
+
   onEdit: (template: ContractTemplate) => void
 }
-
 export function TemplateList({
   templates;
   isLoading;
@@ -30,7 +31,20 @@ export function TemplateList({
 }: TemplateListProps) {
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),
   const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
-  const handleDeleteClick = null;
+
+  const handleDeleteClick = (templateId: string) => {
+    setTemplateToDelete(templateId)
+  }
+  const handleDeleteConfirm = async () => {
+    if (templateToDelete) {
+      await deleteTemplate.mutateAsync(templateToDelete);
+      setTemplateToDelete(null)
+    }
+  }
+  const handleSetDefault = async (templateId: string) => {
+    await setDefaultTemplate.mutateAsync(templateId)
+  }
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">
@@ -38,7 +52,6 @@ export function TemplateList({
       </div>
     )
   }
-
   if (!templates.length) {
     return (
       <div className="text-center py-8">
@@ -47,7 +60,6 @@ export function TemplateList({
       </div>
     )
   }
-
   return (
     <div className="space-y-3">
       {templates.map((template) => (
@@ -65,7 +77,6 @@ export function TemplateList({
                   Last updated: {new Date(template.updated_at).toLocaleDateString()}
                 </p>
               </div>
-              
               <div className="flex items-center gap-2">
                 <Button variant="ghost" size="icon" onClick={() => onEdit(template)}>
                   <Edit className="h-4 w-4" />
@@ -84,12 +95,10 @@ export function TemplateList({
                 </Button>
               </div>
             </div>
-            
             <Separator className="my-3" />
-            
-            <Button 
-              onClick={() => onSelect(template)} 
-              variant="outline" 
+            <Button
+              onClick={() => onSelect(template)}
+              variant="outline"
               className="w-full"
             >
               Use This Template
@@ -97,7 +106,6 @@ export function TemplateList({
           </CardContent>
         </Card>
       ))}
-      
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -108,7 +116,7 @@ export function TemplateList({
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction 
+            <AlertDialogAction
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
               onClick={handleDeleteConfirm}
             >
@@ -120,4 +128,3 @@ export function TemplateList({
     </div>
   )
 }
-;

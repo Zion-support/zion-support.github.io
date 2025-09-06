@@ -11,11 +11,32 @@ interface AIEnhancementButtonProps {
   buttonText?: string;
   className?: string
 export function AIEnhancementButton({
-  currentContent;
-  enhancementType;
-  context;
-  onEnhanced;
-  buttonText;
+
+  currentContent
+  enhancementType
+  context
+  onEnhanced
+  buttonText = 'Enhance with AI'
+  className
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useResumeEnhancer()
+  const [error, setError] = useState<string | null>(null)
+  const handleEnhance = async () => {
+    if (!currentContent |currentContent.trim().length < 10) {
+      setError('Please enter at least some basic content before enhancing')
+      return
+    }
+    setError(null)
+    const enhancedContent = await enhanceContent(
+      currentContent
+      enhancementType
+      context
+    )
+    if (enhancedContent) {
+      onEnhanced(enhancedContent)
+    }
+  }
+
   return (
     <Button
       type="button"
@@ -44,4 +65,3 @@ export function AIEnhancementButton({
     </Button>
   )
 }
-;

@@ -7,13 +7,12 @@ import {Badge} from '@/components/ui/badge'
 import {User, LogOut, LogIn} from 'lucide-react'
 import {useRouter} from 'next/navigation'
 import type {
-  User as SupabaseUser,
-  AuthChangeEvent,
-  Session,
+  User as SupabaseUser
+  AuthChangeEvent
+  Session
 } from '@supabase/supabase-js'
 interface UserProfileProps {
-  onUserChange?: (user: SupabaseUser | null) => void,
-
+  onUserChange?: (user: SupabaseUser | null) => void
 export default function UserProfile({ onUserChange }: UserProfileProps) {
   const [user, setUser] = useState<SupabaseUser | null>(null)
   const [loading, setLoading] = useState(true)
@@ -22,7 +21,7 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
     // Get initial session
     const getInitialSession = async () => {
       const {
-        data: { session },
+        data: { session }
       } = await supabase.auth.getSession()
       setUser(session?.user ?? null)
       setLoading(false)
@@ -31,12 +30,12 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
     getInitialSession()
     // Listen for auth changes
     const {
-      data: { subscription },
+      data: { subscription }
     } = supabase.auth.onAuthStateChange(
       (event: AuthChangeEvent, session: Session | null) => {
         setUser(session?.user ?? null)
         setLoading(false)
-        onUserChange?.(session?.user ?? null),
+        onUserChange?.(session?.user ?? null)
       }
     )
     return () => subscription.unsubscribe()
@@ -59,7 +58,6 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
       </Card>
     )
   }
-
   if (!user) {
     return (
       <Card className='w-full max-w-sm'>
@@ -78,7 +76,6 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
       </Card>
     )
   }
-
   return (
     <Card className='w-full max-w-sm'>
       <CardHeader>
@@ -106,7 +103,6 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
             </span>
           </div>
         </div>
-
         <Button onClick={handleSignOut} variant='outline' className='w-full'>
           <LogOut className='h-4 w-4 mr-2' />
           Sign Out

@@ -10,11 +10,9 @@ export function MobileResumeBuilder() {
         title="Resume Builder"
         showBack
       />
-      
       <main className="py-4">
         <ResumeBuilderComponent />
       </main>
-      
       <BottomNavigation />
     </div>
   )

@@ -1,10 +1,22 @@
 import React from 'react',
 import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Users  } from 'lucide-react';
+
+import {
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Star
+  Users;
+} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AIHRRecruitmentPage() {
-  const service = null;
+  const service = enhancedRealMicroSaasServices.find(s =>
+    s.link.endsWith('/ai-hr-recruitment')
+  );  if (!service) return null;
+
   return (
     <Layout>
       <Head>
@@ -82,7 +94,6 @@ export default function AIHRRecruitmentPage() {
             </div>
           </div>
         </div>
-
         <div className="bg-teal-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Find the Right Talent</h2>
           <p className="text-lg text-gray-700 mb-6">

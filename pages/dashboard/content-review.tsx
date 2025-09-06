@@ -3,9 +3,59 @@ import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
-const fetcher = null;
-    mutate()
-  }
+
+const fetcher = (url: string) => fetch(url).then(r => r.json())
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const cookies = (req.headers.cookie |'').split(';').reduce(
+    (acc: any, part: string) => {
+      const [k, v] = part.trim().split('=');
+      if (k) acc[k] = decodeURIComponent(v |'');
+      return acc;
+    }
+    {} as Record<string, string>
+  );
+  let role = 'guest';
+  try {
+    role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest';
+  } catch {}
+  if (role !== 'admin')
+    return { redirect: { destination: '/', permanent: false } }
+  return { props: {} }
+}
+export default function ContentReviewPage() {
+  const [filters, setFilters] = useState<{
+    status?: string;
+    reason?: string;
+    userEmail?: string;
+    contentType?: string;
+  }>({ status: 'pending' });  const query = useMemo(() => {
+    const p = new URLSearchParams();
+    if (filters.status) p.set('status', filters.status);
+    if (filters.reason) p.set('reason', filters.reason);
+    if (filters.userEmail) p.set('userEmail', filters.userEmail);
+    if (filters.contentType) p.set('contentType', filters.contentType);
+    return p.toString();
+  }, [filters]);
+  const { data, mutate } = useSWR(
+    `/api/admin/moderation/flags${query ? `?${query}` : ''}`
+    fetcher
+  );  const flags = data?.flags |[];
+  const [selected, setSelected] = useState<any | null>(null);
+  async function handleAction(
+    action: 'approve' | 'remove' | 'warn' | 'ban'
+    adminNotes?: string
+  ) {
+    if (!selected) return;
+    await fetch(
+      `/api/admin/moderation/flags/${encodeURIComponent(selected.id)}/action`
+      {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ action, adminNotes })
+      }
+    );
+    setSelected(null);
+    mutate();  }
 
   return (
     <EnhancedLayout>
@@ -15,9 +65,9 @@ const fetcher = null;
         </div>
         <div className='mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm'>
           <select
-            value={filters.status || ''}
+            value={filters.status |''}
             onChange={e =>
-              setFilters(f => ({ ...f, status: e.target.value || undefined }))
+              setFilters(f => ({ ...f, status: e.target.value |undefined }))
             }
             className='border rounded px-2 py-1'
           >
@@ -29,11 +79,11 @@ const fetcher = null;
             <option value='banned'>Banned</option>
           </select>
           <select
-            value={filters.contentType || ''}
+            value={filters.contentType |''}
             onChange={e =>
               setFilters(f => ({
-                ...f,
-                contentType: e.target.value || undefined,
+                ...f
+                contentType: e.target.value |undefined
               }))
             }
             className='border rounded px-2 py-1'
@@ -46,19 +96,19 @@ const fetcher = null;
           </select>
           <input
             placeholder='Reason contains...'
-            value={filters.reason || ''}
+            value={filters.reason |''}
             onChange={e =>
-              setFilters(f => ({ ...f, reason: e.target.value || undefined }))
+              setFilters(f => ({ ...f, reason: e.target.value |undefined }))
             }
             className='border rounded px-2 py-1'
           />
           <input
             placeholder='User email'
-            value={filters.userEmail || ''}
+            value={filters.userEmail |''}
             onChange={e =>
               setFilters(f => ({
-                ...f,
-                userEmail: e.target.value || undefined,
+                ...f
+                userEmail: e.target.value |undefined
               }))
             }
             className='border rounded px-2 py-1'
@@ -123,7 +173,6 @@ const fetcher = null;
           </table>
         </div>
       </div>
-
       {selected && (
         <ModerationModal
           flag={selected}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -6,7 +7,21 @@ import tseslint from "@typescript-eslint/eslint-plugin";
 import tsparser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
+<<<<<<< HEAD
+=======
+import js from '@eslint/js';
+<<<<<<< HEAD
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+>>>>>>> origin/automation-improvements-final
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default [
   {
     ignores: [
@@ -47,8 +62,8 @@ export default [
       "*.test.tsx",
       "*.spec.js",
       "*.spec.ts",
-      "*.spec.tsx",
-    ],
+      "*.spec.tsx"
+    ]
   },
   js.configs.recommended,
   {
@@ -68,17 +83,17 @@ export default [
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
-        afterAll: "readonly",
+        afterAll: "readonly"
       },
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true
+        }
+      }
     },
     plugins: {
       react,
-      "react-hooks": reactHooks,
+      "react-hooks": reactHooks
     },
     rules: {
       ...react.configs.recommended.rules,
@@ -88,8 +103,8 @@ export default [
       "prefer-const": "error",
       "no-var": "error",
       "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
-    },
+      "react/react-in-jsx-scope": "off"
+    }
   },
   {
     files: ["**/*.{ts,tsx}"],
@@ -99,6 +114,7 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
+<<<<<<< HEAD
         React: "readonly",
         jest: "readonly",
         describe: "readonly",
@@ -108,21 +124,72 @@ export default [
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
+<<<<<<< HEAD
         afterAll: "readonly",
+=======
+        React: 'readonly',
+=======
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+
+export default [
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
+      globals: {
+        React: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        performance: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+        jest: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+<<<<<<< HEAD
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly'
+>>>>>>> origin/automation-improvements-final
+=======
+        afterAll: "readonly"
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
       },
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true
+        }
+      }
     },
     plugins: {
 
-      '@typescript-eslint': tseslint,
-      'react': react,
-      'react-hooks': reactHooks,
-      'jsx-a11y': jsxA11y
+      "@typescript-eslint": tseslint,
+      react,
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+      "jsx-a11y": jsxA11y
 
     },
     rules: {
@@ -131,28 +198,63 @@ export default [
       ...reactHooks.configs.recommended.rules,
       ...jsxA11y.configs.recommended.rules,
 
-      'no-unused-vars': 'off',
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true }
+      ],
+<<<<<<< HEAD
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "react-hooks/exhaustive-deps": "warn",
+      "no-undef": "off",
+      "no-unused-vars": "off",
+      "no-console": "warn",
+      "react/prop-types": "off",
+<<<<<<< HEAD
+      "react/react-in-jsx-scope": "off",
+=======
+=======
+        describe: 'readonly',
+        it: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly'
+      }
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks
+    },
+    rules: {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/no-unescaped-entities': 'off',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-undef': 'off',
+<<<<<<< HEAD
+      'no-unused-vars': 'off',
       'no-console': 'warn',
-      'prefer-const': 'error',
-      'no-var': 'error',
       'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
-      '@typescript-eslint/no-explicit-any': 'warn'
+      'react/react-in-jsx-scope': 'off'
+>>>>>>> origin/automation-improvements-final
+=======
+      "react/react-in-jsx-scope": "off"
 
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     },
     settings: {
       react: {
-        version: "detect",
-      },
-    },
+        version: "detect"
+      }
+    }
   },
   {
     files: [
       "**/*.cjs",
       "**/scripts/**/*.js",
       "**/automation/**/*.js",
-      "**/pm2/**/*.js",
+      "**/pm2/**/*.js"
     ],
     languageOptions: {
       ecmaVersion: 2021,
@@ -167,135 +269,60 @@ export default [
         __dirname: "readonly",
         __filename: "readonly",
         Buffer: "readonly",
-        global: "readonly",
-      },
+        global: "readonly"
+      }
     },
     rules: {
+<<<<<<< HEAD
       "no-unused-vars": "warn",
       "no-console": "warn",
-      "no-undef": "error",
-    },
-  },
 
+      "no-undef": "error"
+    }
+  }
+];
+<<<<<<< HEAD
+=======
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'no-undef': 'error'
+    }
+=======
+      'no-unused-vars': 'warn'
+    }
+  },
   {
     ignores: [
-      // Node/build outputs
-      'node_modules/**',
-      '.next/**',
-      'dist/**',
-      'build/**',
-      'out/**',
-      'coverage/**',
-      // Large/legacy sources and disabled dirs
-      'src/**',
-      'src/**/src.corrupted/**',
-      'src/**/src.disabled/**',
-      'src/**/src.broken/**',
-      'src/**/src.pages.disabled/**',
-      'recovered-branches/**',
-      // Ignore most pages except the main working ones
-      'pages/**',
-      '!pages/index.tsx',
-      // Ignore most components except the main working ones
-      'components/**',
-      '!components/ErrorBoundary.tsx',
-      '!components/Header.tsx',
-      '!components/PerformanceMonitor.tsx',
-      '!components/Sidebar.tsx',
-      '!components/layout/EnhancedFooter.tsx',
-      '!components/layout/Footer.tsx',
-      '!components/layout/Header.tsx',
-      '!components/layout/Layout.tsx',
-      '!components/ui/Badge.tsx',
-      '!components/ui/Card.tsx',
-      '!components/ui/ErrorBoundary.tsx',
-      // Ignore corrupted directories
-      'apps.backup/**',
-      'apps/**',
-      'cypress/**',
-      'dao/**',
-      'hooks/**',
-      'lib/**',
-      'pages_minimal/**',
-      'src_backup/**',
-      'solutions.disabled/**',
-      'components.disabled/**',
-      'components.corrupted/**',
-      'hooks/**/hooks.disabled/**',
-      'lib.disabled/**',
-      'lib/**/lib.corrupted/**',
-      'zion-os.disabled/**',
-      'zion_academy/**',
-      'contracts.disabled/**',
-      'corrupted-files-backup/**',
-      'corrupted_files_backup_2/**',
-      'cypress.disabled/**',
-      'cypress_backup/**',
-      'data/**',
-      'e2e/**',
-      'pages.disabled/**',
-      'pages.disabled_backup/**',
-      'pages_backup/**',
-      'supabase/**',
-      'types/**',
-      'types.disabled/**',
-      'utils/**',
-      // Tests and mocks
-      '__tests__/**',
-      'tests/**',
-      'tests.disabled/**',
-      '*.test.*',
-      // Temp and backups
-      'backup/**',
-      'backup-pages/**',
-      'pages-backup/**',
-      'lib_backup/**',
-      'data_backup/**',
-      'styles_backup/**',
-      'api-backup/**',
-      'automation_backup/**',
-      'ai-optimization-backups/**',
-      'ai-analysis-reports/**',
-      'optimization-reports/**',
-      'public/reports/**',
-      'temp_backup/**',
-      'temp_broken_components/**',
-      'temp_working/**',
-      'temp_*/**',
-      'backup-merge-conflicts/**',
-      'deployments/**',
-      'deployment/**',
-      'server/**',
-      'services/**',
-      // Scripts/configs and CJS files not intended for lint
-      'scripts/**',
-      'automation/**',
-      'netlify/**',
+      'node_modules/',
+      '.next/',
+      'out/',
+      'build/',
+      'dist/',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
-      '**/*.cjs',
-      // Public assets/scripts
-      'public/**',
-      // Root-level noisy files
-      'api/**',
-      '*.js',
-      '*.ts',
-      '*.tsx',
-      '*.jsx',
-      'jest.config.*',
-      'fix-*.js',
-      'fix-*.jsx',
-      // Misc root configs that were being linted
-      '.eslintrc.js',
-      '.eslintrc.cjs',
-      '.eslintrc.disabled.js',
-      '.prettierrc.js',
-      // Page backups
-      'pages.__backup/**',
-      'pages-disabled/**',
-      'pages.disabled_auto/**'
+      'src/pages/services/',
+      'src/pages/solutions/',
+      'src/pages/talent/',
+      'src/routes/',
+      'src/services/',
+      'src/store/',
+      'src/test/',
+      'src/utils/',
+      'tests/',
+      'tests.disabled/',
+      'types.disabled/',
+      'zion-os.disabled/',
+      'zion_academy/',
+      'temp_working/',
+      'test_build/',
+      'supabase/',
+      'working-automation-suite.cjs'
     ]
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   }
 ];
+>>>>>>> origin/automation-improvements-final
+=======
 
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

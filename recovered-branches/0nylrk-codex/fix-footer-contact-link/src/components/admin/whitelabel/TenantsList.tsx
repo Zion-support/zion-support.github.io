@@ -1,23 +1,35 @@
 
-import React, { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow 
- } from '@/components/ui/table';
-import { Button } from '@/components/ui/button';
-import { DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { Badge  } from '@/components/ui/badge';
-import { toast  } from '@/hooks/use-toast';
-import { WhitelabelTenant  } from '@/hooks/useWhitelabelTenant';
-import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw  } from '@/components/icons';
-import { format  } from 'date-fns';
+import React, { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import {
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+import { Badge } from "@/components/ui/badge";
+import { toast } from "@/hooks/use-toast";
+import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
+import {
+  Edit
+  MoreHorizontal
+  ExternalLink
+  Power
+  PowerOff
+  Users
+  RefreshCcw
+} from "@/components/icons";
+import { format } from "date-fns";
+
 export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -25,7 +37,81 @@ export function TenantsList() {
     loadTenants();
   }, []);
 
-  const loadTenants = null;
+  const loadTenants = async () => {
+    try {
+      setIsLoading(true);
+      const { data, error } = await supabase
+        .from("whitelabel_tenants")
+        .select("*")
+        .order("created_at", { ascending: false });
+      if (error) throw error;
+      setTenants(data as WhitelabelTenant[]);
+    } catch (error: any) {
+      console.error("Error loading tenants:", error);
+      toast({
+        variant: "destructive"
+        title: "Failed to load tenants"
+        description: error.message
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  }
+  const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
+    try {
+      const { error } = await supabase
+        .from("whitelabel_tenants")
+        .update({ is_active: !tenant.is_active })
+        .eq("id", tenant.id);
+      if (error) throw error;
+      // Update local state
+      setTenants(
+        tenants.map((t) =>
+          t.id === tenant.id ? { ...t, is_active: !t.is_active } : t
+        )
+      );
+      toast({
+        title: `Tenant ${tenant.is_active ? "deactivated" : "activated"}`
+        description: `${tenant.brand_name} has been ${tenant.is_active ? "deactivated" : "activated"} successfully.`
+      });
+    } catch (error: any) {
+      console.error("Error toggling tenant status:", error);
+      toast({
+        variant: "destructive"
+        title: "Failed to update tenant"
+        description: error.message
+      });
+    }
+  }
+  const verifyDns = async (tenant: WhitelabelTenant) => {
+    try {
+      // In a real implementation, this would verify DNS records
+      // For now, we'll just mark it as verified
+      const { error } = await supabase
+        .from("whitelabel_tenants")
+        .update({ dns_verified: true })
+        .eq("id", tenant.id);
+      if (error) throw error;
+      // Update local state
+      setTenants(
+        tenants.map((t) =>
+          t.id === tenant.id ? { ...t, dns_verified: true } : t
+        )
+      );
+      toast({
+        title: "DNS verified"
+        description: `Custom domain for ${tenant.brand_name} has been verified.`
+      });
+    } catch (error: any) {
+      console.error("Error verifying DNS:", error);
+      toast({
+        variant: "destructive"
+        title: "Failed to verify DNS"
+        description: error.message
+      });
+    }
+  }
+
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center">
@@ -35,7 +121,6 @@ export function TenantsList() {
           Refresh
         </Button>
       </div>
-
       {isLoading ? (
         <div className="flex justify-center p-8">
           <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary"></div>

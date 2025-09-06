@@ -11,10 +11,12 @@ interface ProjectActionsProps {
   isTalent: boolean;
   onAddMilestone: () => void
 export function ProjectActions({
-  projectId;
-  isUnderDispute;
-  disputeId;
-  isTalent;
+
+  projectId
+  isUnderDispute
+  disputeId
+  isTalent
+
   onAddMilestone
 }: ProjectActionsProps) {
   return (

@@ -38,7 +38,6 @@ export default function FoundationPage() {
             ))}
           </div>
         </section>
-
         <section className='space-y-4' id='grants'>
           <h2 className='text-2xl font-semibold'>Grants Issued</h2>
           <p className='text-gray-600 dark:text-gray-300'>
@@ -53,7 +52,6 @@ export default function FoundationPage() {
             </li>            <li>Agent interoperability standards and sandbox — RFP (Open)</li>
           </ul>
         </section>
-
         <section className='space-y-4' id='mou'>
           <h2 className='text-2xl font-semibold'>Partnership MOU Archive</h2>
           <p className='text-gray-600 dark: text-gray-300'>

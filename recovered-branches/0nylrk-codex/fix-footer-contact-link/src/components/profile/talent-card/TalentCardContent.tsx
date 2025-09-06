@@ -9,7 +9,13 @@ interface TalentCardContentProps {
   skills: string[] | undefined
 }
 
-export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {
+export function TalentCardContent({
+  summary
+  bio
+  timezone
+  skills
+}: TalentCardContentProps) {
+
   const [isHovering, setIsHovering] = useState(false);
   return (
     <div>
@@ -20,7 +26,6 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
           <span>{timezone}</span>
         </div>
       )}
-
       {/* Short bio or summary - longer on hover for desktop */}
       <div
         className="overflow-hidden transition-all duration-300"
@@ -28,9 +33,8 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
-        <p className="text-zion-slate mb-4">{summary || bio}</p>
+        <p className="text-zion-slate mb-4">{summary |bio}</p>
       </div>
-
       {/* Skills */}
       <TalentCardSkills skills={skills} />
     </div>

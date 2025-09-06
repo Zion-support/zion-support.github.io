@@ -1,11 +1,19 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { IntegrationCards } from "./IntegrationCards",
-import { ZapierIntegration } from "./ZapierIntegration",
-import { Badge } from "@/components/ui/badge",
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { IntegrationCards } from "./IntegrationCards";
+import { ZapierIntegration } from "./ZapierIntegration";
+import { Badge } from "@/components/ui/badge";
+
 import { WebhookManager } from "./WebhookManager";
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
 export function IntegrationsHub() {
@@ -19,13 +27,11 @@ export function IntegrationsHub() {
             Connect your platform with the tools and services you use every day
           </p>
         </div>
-
         <div className="flex gap-2">
           <Button variant="outline">View Documentation</Button>
           <Button>Connect New Integration</Button>
         </div>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="pb-2">
@@ -55,7 +61,6 @@ export function IntegrationsHub() {
             </div>
           </CardContent>
         </Card>
-
         <Card className="md:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">Recent Activity</CardTitle>
@@ -94,23 +99,19 @@ export function IntegrationsHub() {
           </CardFooter>
         </Card>
       </div>
-
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-3 md: w-[400px]">
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
           <TabsTrigger value="zapier">Zapier</TabsTrigger>
           <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
         </TabsList>
-
         <div className="mt-6">
           <TabsContent value="marketplace" className="m-0">
             <IntegrationCards />
           </TabsContent>
-
           <TabsContent value="zapier" className="m-0">
             <ZapierIntegration />
           </TabsContent>
-
           <TabsContent value="webhooks" className="m-0">
             <Card>
               <CardHeader>
@@ -124,7 +125,6 @@ export function IntegrationsHub() {
                 <WebhookManager />
               </CardContent>
             </Card>
-
             <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Synchronization Log</CardTitle>

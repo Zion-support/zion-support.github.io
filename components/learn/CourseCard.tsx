@@ -1,5 +1,24 @@
 import Link from 'next/link';
-export type Course = any;
+
+export type Course = {
+  id: string;
+  title: string;
+  durationMinutes: number;
+  level: string;
+  isFree: boolean;
+  category: string;
+  certificationBadge: string;
+  description?: string;}
+export default function CourseCard({ course }: { course: Course }) {
+  return (  id: string
+  title: string
+  durationMinutes: number
+  level: string
+  isFree: boolean
+  category: string
+  certificationBadge: string
+  description?: string
+
 export default function CourseCard({ course }: { course: Course }) {
   return (
     <div className='border rounded-lg p-4 hover:shadow-md transition'>

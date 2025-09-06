@@ -4,7 +4,23 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 export default function HolographicAICommunicationPage() {
-  const contactInfo = null;
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  }
+  const features = [
+    'AI-powered 3D holographic projection'
+    'Real-time holographic rendering'
+    'Multi-user holographic meetings'
+    'Gesture and voice control'
+    'Cross-platform WebXR support'
+    'Enterprise-grade security',    address: '364 E Main St STE 1008 Middletown DE 19709'
+  }
+  const features = [
+    'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -88,5 +104,3 @@ export default function HolographicAICommunicationPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
-
-;

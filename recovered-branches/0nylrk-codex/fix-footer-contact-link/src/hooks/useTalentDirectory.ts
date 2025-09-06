@@ -5,16 +5,18 @@ import { useFilterTalents } from "./talent/useFilterTalents";
 import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
   // Fetch auth status and saved talents
-  const { 
+  const {
     isAuthenticated;
-    userDetails;
-    savedTalents;
-    handleToggleSave 
+
+    userDetails
+    savedTalents
+    handleToggleSave
   } = useAuthStatus();
   // Fetch talent data
-  const { 
-    talents;
-    isLoading 
+  const {
+    talents
+    isLoading
+
   } = useTalentData();
   // Apply filters and sorting
   const {
@@ -84,4 +86,3 @@ export function useTalentDirectory() {
     handleToggleSave
   }
 }
-;

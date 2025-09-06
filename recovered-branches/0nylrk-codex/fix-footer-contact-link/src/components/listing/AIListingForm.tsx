@@ -7,12 +7,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Sparkles } from "lucide-react";
 interface AIListingFormProps {
   onSubmit: (formData: {
-    title: string;
-    category: string;
-    keyFeatures: string;
+
+    title: string
+    category: string
+    keyFeatures: string
     targetAudience: string
   }) => void;
-  isLoading: boolean;
+  isLoading: boolean
+
   initialValues?: {
     title?: string;
     category?: string;
@@ -21,7 +23,29 @@ interface AIListingFormProps {
   }
 }
 
-export function AIListingForm({ onSubmit, isLoading, initialValues;
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
+  const { toast } = useToast();
+  const [title, setTitle] = useState(initialValues.title |"");
+  const [category, setCategory] = useState(initialValues.category |"");
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures |"");
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"");
+  const handleSubmit = () => {
+    if (!title |!category) {
+      toast({
+        title: "Missing required fields"
+        description: "Please provide at least a title and category."
+        variant: "destructive"
+      });
+      return
+    }
+    onSubmit({
+      title;
+      category;
+      keyFeatures;
+      targetAudience
+    })
+  }
+
   return (
     <div className="space-y-4">
       <div className="space-y-2">
@@ -68,9 +92,9 @@ export function AIListingForm({ onSubmit, isLoading, initialValues;
           disabled={isLoading}
         />
       </div>
-      <Button 
+      <Button
         onClick={handleSubmit}
-        disabled={isLoading || !title || !category}
+        disabled={isLoading |!title |!category}
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (
@@ -85,4 +109,3 @@ export function AIListingForm({ onSubmit, isLoading, initialValues;
     </div>
   )
 }
-;

@@ -1,118 +1,113 @@
-import { 
-  LightBulbIcon,
-  CpuChipIcon, 
-  AcademicCapIcon, 
-  GlobeAltIcon,
-  ChartBarIcon,
-  UserGroupIcon,
-  RocketLaunchIcon,
+import {
+  LightBulbIcon
+  CpuChipIcon
+  AcademicCapIcon
+  GlobeAltIcon
+  ChartBarIcon
+  UserGroupIcon
+  RocketLaunchIcon
   ShieldCheckIcon
 } from '@heroicons/react/24/outline'
-
 const researchAreas = [
   {
-    name: 'Artificial Intelligence & Machine Learning',
-    description: 'Advancing the frontiers of AI through novel algorithms, neural architectures, and learning paradigms.',
-    icon: LightBulbIcon,
+    name: 'Artificial Intelligence & Machine Learning'
+    description: 'Advancing the frontiers of AI through novel algorithms, neural architectures, and learning paradigms.'
+    icon: LightBulbIcon
     topics: [
       'Deep Learning & Neural NetworksNatural Language ProcessingComputer Vision & Image RecognitionReinforcement LearningFederated LearningExplainable AI'
-    ]},
+    ]}
   {
-    name: 'Quantum Computing & AI',
-    description: 'Exploring the intersection of quantum mechanics and artificial intelligence for breakthrough computational capabilities.',
-    icon: CpuChipIcon,
+    name: 'Quantum Computing & AI'
+    description: 'Exploring the intersection of quantum mechanics and artificial intelligence for breakthrough computational capabilities.'
+    icon: CpuChipIcon
     topics: [
       'Quantum Neural NetworksQuantum Machine LearningQuantum-Classical Hybrid SystemsQuantum Error CorrectionQuantum Algorithms for AIQuantum Supremacy Applications'
-    ]},
+    ]}
   {
-    name: 'Autonomous Systems & Robotics',
-    description: 'Developing intelligent systems that can operate independently and adapt to changing environments.',
-    icon: RocketLaunchIcon,
+    name: 'Autonomous Systems & Robotics'
+    description: 'Developing intelligent systems that can operate independently and adapt to changing environments.'
+    icon: RocketLaunchIcon
     topics: [
       'Autonomous Decision MakingMulti-Agent SystemsRobotic Learning & AdaptationHuman-Robot InteractionAutonomous NavigationSwarm Intelligence'
-    ]},
+    ]}
   {
-    name: 'AI Ethics & Governance',
-    description: 'Ensuring responsible AI development through ethical frameworks and governance mechanisms.',
-    icon: ShieldCheckIcon,
+    name: 'AI Ethics & Governance'
+    description: 'Ensuring responsible AI development through ethical frameworks and governance mechanisms.'
+    icon: ShieldCheckIcon
     topics: [
       'AI Bias & FairnessPrivacy-Preserving AIAI Safety & AlignmentEthical AI GuidelinesAI Regulation & PolicyHuman-AI Collaboration'
     ]}]
-
 const recentPublications = [
   {
-    title: 'Quantum Neural Networks: A New Paradigm for AI',
-    authors: 'Dr. Marcus Rodriguez, Dr. Elena Petrov, et al.',
-    journal: 'Nature Machine Intelligence',
-    year: '2024',
-    doi: '10.1038/s42256-024-00001-x',
-    abstract: 'We present a novel approach to neural network architecture that leverages quantum computing principles for unprecedented computational efficiency.',
-    impact: 'High Impact'},
+    title: 'Quantum Neural Networks: A New Paradigm for AI'
+    authors: 'Dr. Marcus Rodriguez, Dr. Elena Petrov, et al.'
+    journal: 'Nature Machine Intelligence'
+    year: '2024'
+    doi: '10.1038/s42256-024-00001-x'
+    abstract: 'We present a novel approach to neural network architecture that leverages quantum computing principles for unprecedented computational efficiency.'
+    impact: 'High Impact'}
   {
-    title: 'Autonomous Business Operations: AI-Driven Process Optimization',
-    authors: 'Dr. Sarah Chen, James Kim, et al.',
-    journal: 'Harvard Business Review',
-    year: '2024',
-    doi: '10.1000/hbr.2024.001',
-    abstract: 'This research demonstrates how autonomous AI systems can optimize business processes, reducing operational costs by 30% while improving efficiency.',
-    impact: 'Industry Leading'},
+    title: 'Autonomous Business Operations: AI-Driven Process Optimization'
+    authors: 'Dr. Sarah Chen, James Kim, et al.'
+    journal: 'Harvard Business Review'
+    year: '2024'
+    doi: '10.1000/hbr.2024.001'
+    abstract: 'This research demonstrates how autonomous AI systems can optimize business processes, reducing operational costs by 30% while improving efficiency.'
+    impact: 'Industry Leading'}
   {
-    title: 'Multi-Modal AI Research Assistant: Accelerating Scientific Discovery',
-    authors: 'Dr. Elena Petrov, Dr. Marcus Rodriguez, et al.',
-    journal: 'Science',
-    year: '2023',
-    doi: '10.1126/science.abc1234',
-    abstract: 'Our autonomous research assistant demonstrates the potential of AI to accelerate scientific discovery across multiple domains.',
-    impact: 'Breakthrough'},
+    title: 'Multi-Modal AI Research Assistant: Accelerating Scientific Discovery'
+    authors: 'Dr. Elena Petrov, Dr. Marcus Rodriguez, et al.'
+    journal: 'Science'
+    year: '2023'
+    doi: '10.1126/science.abc1234'
+    abstract: 'Our autonomous research assistant demonstrates the potential of AI to accelerate scientific discovery across multiple domains.'
+    impact: 'Breakthrough'}
   {
-    title: 'Ethical AI Development: A Framework for Responsible Innovation',
-    authors: 'Dr. Sarah Chen, Dr. Elena Petrov, et al.',
-    journal: 'AI Ethics Journal',
-    year: '2023',
-    doi: '10.1000/aie.2023.001',
-    abstract: 'We propose a comprehensive framework for developing AI systems that prioritize human values and ethical considerations.',
+    title: 'Ethical AI Development: A Framework for Responsible Innovation'
+    authors: 'Dr. Sarah Chen, Dr. Elena Petrov, et al.'
+    journal: 'AI Ethics Journal'
+    year: '2023'
+    doi: '10.1000/aie.2023.001'
+    abstract: 'We propose a comprehensive framework for developing AI systems that prioritize human values and ethical considerations.'
     impact: 'Foundational'}]
-
 const researchImpact = [
   {
-    metric: 'Research Papers Published',
-    value: '150+',
-    description: 'Peer-reviewed publications in top-tier journals and conferences'},
+    metric: 'Research Papers Published'
+    value: '150+'
+    description: 'Peer-reviewed publications in top-tier journals and conferences'}
   {
-    metric: 'Citations',
-    value: '10,000+',
-    description: 'Academic citations demonstrating research influence'},
+    metric: 'Citations'
+    value: '10,000+'
+    description: 'Academic citations demonstrating research influence'}
   {
-    metric: 'Patents Filed',
-    value: '25+',
-    description: 'Intellectual property protecting our innovations'},
+    metric: 'Patents Filed'
+    value: '25+'
+    description: 'Intellectual property protecting our innovations'}
   {
-    metric: 'Research Collaborations',
-    value: '50+',
+    metric: 'Research Collaborations'
+    value: '50+'
     description: 'Partnerships with leading academic institutions'}]
-
 const academicPartners = [
   {
-    name: 'Stanford University',
-    location: 'Stanford, CA',
-    focus: 'AI & Machine Learning',
-    collaboration: 'Joint research programs and student exchanges'},
+    name: 'Stanford University'
+    location: 'Stanford, CA'
+    focus: 'AI & Machine Learning'
+    collaboration: 'Joint research programs and student exchanges'}
   {
-    name: 'MIT',
-    location: 'Cambridge, MA',
-    focus: 'Quantum Computing & AI',
-    collaboration: 'Shared research facilities and joint publications'},
+    name: 'MIT'
+    location: 'Cambridge, MA'
+    focus: 'Quantum Computing & AI'
+    collaboration: 'Shared research facilities and joint publications'}
   {
-    name: 'University of Oxford',
-    location: 'Oxford, UK',
-    focus: 'AI Ethics & Governance',
-    collaboration: 'Policy research and ethical AI development'},
+    name: 'University of Oxford'
+    location: 'Oxford, UK'
+    focus: 'AI Ethics & Governance'
+    collaboration: 'Policy research and ethical AI development'}
   {
-    name: 'University of Tokyo',
-    location: 'Tokyo, Japan',
-    focus: 'Robotics & Autonomous Systems',
+    name: 'University of Tokyo'
+    location: 'Tokyo, Japan'
+    focus: 'Robotics & Autonomous Systems'
     collaboration: 'Robotic learning and human-robot interaction'}]
-
 export default function ResearchPage() {
   return (
     <div className=&quot;bg-black&quot;>
@@ -127,13 +122,12 @@ export default function ResearchPage() {
               </span>
             </h1>
             <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              Pushing the boundaries of artificial intelligence through groundbreaking research, 
+              Pushing the boundaries of artificial intelligence through groundbreaking research
               innovative discoveries, and academic collaboration.
             </p>
           </div>
         </div>
       </div>
-
       {/* Research Focus Areas */}
       <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -142,7 +136,7 @@ export default function ResearchPage() {
             Focus Areas
           </p>
           <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our research spans the cutting edge of AI and technology, driving innovation 
+            Our research spans the cutting edge of AI and technology, driving innovation
             and advancing the state of the art.
           </p>
         </div>
@@ -219,7 +213,7 @@ export default function ResearchPage() {
             Research Influence
           </p>
           <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our research has made significant contributions to the field, 
+            Our research has made significant contributions to the field
             influencing both academia and industry.
           </p>
         </div>
@@ -243,7 +237,7 @@ export default function ResearchPage() {
             Academic Partnerships
           </p>
           <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            We collaborate with leading academic institutions worldwide to advance 
+            We collaborate with leading academic institutions worldwide to advance
             the frontiers of AI research and innovation.
           </p>
         </div>
@@ -281,7 +275,7 @@ export default function ResearchPage() {
             Join our research community
           </h2>
           <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
-            Interested in collaborating on cutting-edge AI research? 
+            Interested in collaborating on cutting-edge AI research?
             Let's explore opportunities to work together.
           </p>
           <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>

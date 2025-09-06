@@ -8,12 +8,30 @@ import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from 'lucide-react'
 function HiringTrackerContent() {
-  const router = null;
+
+  const router = useRouter()
+  const jobId = router.query.jobId as string
+  const [activeTab, setActiveTab] = useState<string>('kanban')
   return (
     <>
-      <SEO 
-        title="Hiring Tracker | Zion AI Marketplace" 
-        description="Manage your candidate pipeline in the Zion AI Marketplace." 
+      <SEO
+        title='Hiring Tracker | Zion AI Marketplace'
+        description='Manage your candidate pipeline in the Zion AI Marketplace.'
+      />
+      <main className='container mx-auto px-4 py-8'>
+        <div className='flex justify-between items-center mb-8'>
+          <div>
+            <h1 className='text-3xl font-bold flex items-center'>
+              <Briefcase className='mr-2 h-6 w-6 text-primary' />
+              Hiring Pipeline
+            </h1>
+            <p className='text-muted-foreground mt-1'>              Track and manage your candidates through the hiring process  const [activeTab, setActiveTab] = useState<string>("kanban")
+
+  return (
+    <>
+      <SEO
+        title="Hiring Tracker | Zion AI Marketplace"
+        description="Manage your candidate pipeline in the Zion AI Marketplace."
       />
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
@@ -27,7 +45,6 @@ function HiringTrackerContent() {
             </p>
           </div>
         </div>
-
         <Tabs
           defaultValue='kanban'
           onValueChange={setActiveTab}
@@ -37,20 +54,16 @@ function HiringTrackerContent() {
             <TabsTrigger value='kanban'>Kanban Board</TabsTrigger>
             <TabsTrigger value='analytics'>Analytics</TabsTrigger>
           </TabsList>
-
           <TabsContent value='kanban' className='mt-6'>
             <KanbanBoard jobId={jobId} />
           </TabsContent>
-
           <TabsContent value='analytics' className='mt-6'>            <HiringAnalytics jobId={jobId} />          <TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
-          
           <TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId} />
           </TabsContent>
-          
           <TabsContent value="analytics" className="mt-6">
             <HiringAnalytics jobId={jobId} />
           </TabsContent>
@@ -59,7 +72,6 @@ function HiringTrackerContent() {
     </>
   )
 }
-
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
@@ -67,4 +79,3 @@ export default function HiringTracker() {
     </ProtectedRoute>
   )
 }
-;

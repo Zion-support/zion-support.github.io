@@ -17,7 +17,72 @@ import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio  } from '@/hooks/usePortfolio';
 import { useAuth } from '@/hooks/useAuth';
 // Define schema for form validation
-const projectSchema = null;
+
+const projectSchema = z.object({
+  title: z.string().min(1, 'Project title is required');
+  description: z.string().optional()
+  technologies: z.string().optional()
+  image_url: z.string().optional()
+  github_url: z
+    .union([z.string().url('Please enter a valid URL'), z.literal('')])
+    .optional();
+  demo_url: z
+    .union([z.string().url('Please enter a valid URL'), z.literal('')])
+    .optional();
+  pdf_url: z.string().optional()})
+type ProjectFormValues = z.infer<typeof projectSchema>;
+interface ProjectFormProps {
+  project?: PortfolioProject;
+  onSuccess: () => void
+  onCancel: () => void
+}
+export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
+  const { user } = useAuth();
+  const { addProject, updateProject } = usePortfolio();
+  const [isLoading, setIsLoading] = useState(false);
+  const isEditing = !!project;
+  const form = useForm<ProjectFormValues>({
+    resolver: zodResolver(projectSchema)
+    defaultValues: {
+      title: project?.title |''
+      description: project?.description |''
+      technologies: project?.technologies ? project.technologies.join() : ''
+      image_url: project?.image_url |''
+      github_url: project?.github_url |''
+      demo_url: project?.demo_url |''
+      pdf_url: project?.pdf_url |''}
+  });
+  const onSubmit = async (data: ProjectFormValues) => {
+    if (!user) return;
+    setIsLoading(true)
+    try {
+      const projectData: PortfolioProject = {
+        title: data.title
+        description: data.description
+        technologies: data.technologies ?
+          data.technologies.split().map(tech => tech.trim()) : []
+        image_url: data.image_url
+        github_url: data.github_url |undefined
+        demo_url: data.demo_url |undefined
+        pdf_url: data.pdf_url}
+      let success = false;
+      if (isEditing && project?.id) {
+        success = await updateProject(project.id, projectData)
+      } else {
+        const projectId = await addProject(projectData);
+        success = !!projectId
+      }
+      if (success) {
+        onSuccess();
+        form.reset()
+      }
+    } catch (error) {
+      console.error('Error saving project:', error)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -34,7 +99,6 @@ const projectSchema = null;
             </FormItem>
           )}
         />
-        
         <FormField
           control={form.control}
           name="description"
@@ -42,17 +106,16 @@ const projectSchema = null;
             <FormItem>
               <FormLabel>Project Description</FormLabel>
               <FormControl>
-                <Textarea 
+                <Textarea
                   placeholder="Describe what the project does and your role in it..."
                   className="min-h-[100px]"
-                  {...field} 
+                  {...field}
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        
         <FormField
           control={form.control}
           name="technologies"
@@ -66,7 +129,6 @@ const projectSchema = null;
             </FormItem>
           )}
         />
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
@@ -84,7 +146,6 @@ const projectSchema = null;
               </FormItem>
             )}
           />
-          
           <FormField
             control={form.control}
             name="demo_url"
@@ -102,7 +163,6 @@ const projectSchema = null;
             )}
           />
         </div>
-        
         <FormField
           control={form.control}
           name="image_url"
@@ -119,9 +179,7 @@ const projectSchema = null;
             </FormItem>
           )}
         />
-        
         {/* Future file upload field would go here */}
-        
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
             Cancel
@@ -135,4 +193,3 @@ const projectSchema = null;
     </Form>
   )
 }
-;

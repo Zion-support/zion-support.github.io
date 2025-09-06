@@ -1,4 +1,6 @@
-import React from 'react',
+
+import React from 'react';
+
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function KubernetesRbacAuditorPage() {
@@ -27,4 +29,3 @@ export default function KubernetesRbacAuditorPage() {
     </Layout>
   )
 }
-

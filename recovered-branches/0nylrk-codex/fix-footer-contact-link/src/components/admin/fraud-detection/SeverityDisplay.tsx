@@ -4,10 +4,16 @@ import { SeverityIndicator } from "@/components/ui/severity-indicator";
 interface SeverityDisplayProps {
   severity: string;
 }
-
 export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
-  severity,
+  severity
 }) => {
   return (
-    <SeverityIndicator 
-      severity;
+
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      showIcon={true}
+      showText={true}
+    />
+  );
+}
+

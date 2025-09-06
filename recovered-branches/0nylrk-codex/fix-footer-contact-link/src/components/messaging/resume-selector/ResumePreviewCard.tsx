@@ -10,11 +10,10 @@ interface ResumePreviewCardProps {
   onDownload: () => void;
   isLoading: boolean
 }
-
 export function ResumePreviewCard({
-  resume,
-  onDownload,
-  isLoading,
+  resume
+  onDownload
+  isLoading
 }: ResumePreviewCardProps) {
   return (
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
@@ -41,13 +40,11 @@ export function ResumePreviewCard({
             <span className="sr-only">Download Resume</span>
           </Button>
         </div>
-
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">
             {resume.basic_info.summary}
           </p>
         )}
-
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0, 5).map((skill, index) => (

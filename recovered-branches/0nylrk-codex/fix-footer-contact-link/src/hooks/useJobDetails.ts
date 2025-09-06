@@ -10,7 +10,6 @@ export function useJobDetails(jobId: string | undefined) {
       setIsLoading(false);
       return
     }
-    
     try {
       setIsLoading(true);
       const { data, error } = await supabase
@@ -28,12 +27,10 @@ export function useJobDetails(jobId: string | undefined) {
       setIsLoading(false)
     }
   }
-
   // Load job details when component mounts or jobId changes
   useEffect(() => {
     loadJobDetails()
   }, [jobId]);
-
   return {
     job;
     isLoading;
@@ -41,5 +38,4 @@ export function useJobDetails(jobId: string | undefined) {
     loadJobDetails
   }
 }
-
 export default useJobDetails;

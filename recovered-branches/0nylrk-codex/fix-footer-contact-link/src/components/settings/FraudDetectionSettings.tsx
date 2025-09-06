@@ -6,20 +6,57 @@ import { Button  } from '@/components/ui/button';
 import { Label  } from '@/components/ui/label';
 import { ShieldAlert, Info } from 'lucide-react';
 import {
-  Accordion;
-  AccordionContent;
-  AccordionItem;
-  AccordionTrigger} from "@/components/ui/accordion",
-import { toast  } from '@/hooks/use-toast';
-import { supabase  } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
+
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+import { Switch } from "@/components/ui/switch";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { ShieldAlert, Info } from "lucide-react";
+import {
+  Accordion
+  AccordionContent
+  AccordionItem
+  AccordionTrigger
+} from "@/components/ui/accordion";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
+
 export function FraudDetectionSettings() {
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
-  const handleSavePreferences = null;
+
+  const handleSavePreferences = async () => {
+    if (!user?.id) return;
+    setIsSaving(true);
+    try {
+      // In a real implementation, we would save these preferences to the database
+      // For now, we'll just simulate a successful save
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      toast({
+        title: "Settings saved"
+        description: "Your fraud detection preferences have been updated."
+      });
+    } catch (error) {
+      console.error("Error saving preferences:", error);
+      toast({
+        title: "Error"
+        description: "Failed to save your preferences. Please try again."
+        variant: "destructive"
+      });
+    } finally {
+      setIsSaving(false);
+    }
+  }
+
   return (
     <Card className="mb-8">
       <CardHeader className="space-y-1">
@@ -51,7 +88,6 @@ export function FraudDetectionSettings() {
                 onCheckedChange={setMessageScanningEnabled}
               />
             </div>
-
             <div className="flex items-center justify-between">
               <div>
                 <Label className="font-medium" htmlFor="activity-monitoring">
@@ -67,7 +103,6 @@ export function FraudDetectionSettings() {
                 onCheckedChange={setActivityMonitoringEnabled}
               />
             </div>
-
             <div className="flex items-center justify-between">
               <div>
                 <Label className="font-medium" htmlFor="ai-analysis">
@@ -84,7 +119,6 @@ export function FraudDetectionSettings() {
               />
             </div>
           </div>
-
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-sm font-medium">
@@ -112,7 +146,6 @@ export function FraudDetectionSettings() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-
           <div className="pt-2">
             <Button
               onClick={handleSavePreferences}

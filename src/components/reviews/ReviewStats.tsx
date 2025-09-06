@@ -5,9 +5,9 @@ interface ReviewStatsProps {
   totalReviews: number;
   ratingDistribution?: Record<number, number>
 export function ReviewStats({
-  averageRating,
-  totalReviews,
-  ratingDistribution,
+  averageRating
+  totalReviews
+  ratingDistribution
 }: ReviewStatsProps) {
   // Format the average rating to one decimal place
   const formattedRating = null;
@@ -44,7 +44,6 @@ export function ReviewStats({
           </div>
         </div>
       </div>
-
       {ratingDistribution && (
         <div className='space-y-2'>
           {[5, 4, 3, 2, 1].map(rating => (
@@ -52,18 +51,18 @@ export function ReviewStats({
               <div className='w-6 text-sm text-right'>{rating}</div>
               <Star className='h-3 w-3 text-yellow-400' />
               <Progress
-                value={getPercentage(ratingDistribution[rating] || 0)}
+                value={getPercentage(ratingDistribution[rating] |0)}
                 className='h-2'        <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating,) => (
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
-              <Progress 
-                value = {getPercentage(ratingDistribution[rating] || 0),}
-                className="h-2" 
+              <Progress
+                value = {getPercentage(ratingDistribution[rating] |0),}
+                className="h-2"
               />
-              <div className='w-8 text-xs text-muted-foreground'>                {ratingDistribution[rating] || 0}              <div className="w-8 text-xs text-muted-foreground">
-                {ratingDistribution[rating] || 0}
+              <div className='w-8 text-xs text-muted-foreground'>                {ratingDistribution[rating] |0}              <div className="w-8 text-xs text-muted-foreground">
+                {ratingDistribution[rating] |0}
               </div>
             </div>
           ))}
@@ -71,6 +70,6 @@ export function ReviewStats({
       )}
     </div>
   )
-}</div>) 
-}</div>) 
+}</div>)
+}</div>)
 }"}

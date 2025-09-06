@@ -1,6 +1,13 @@
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import React from "react";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface ConversionAnalysisProps {
   data: Array<Record<string, any>>;
@@ -8,8 +15,16 @@ interface ConversionAnalysisProps {
   onTimeRangeChange: (range: string) => void
 }
 
-export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {
-  const dataKeys = null;
+export function ConversionAnalysisChart({
+  data
+  timeRange
+  onTimeRangeChange
+}: ConversionAnalysisProps) {
+  const dataKeys =
+    data && data.length > 0
+      ? Object.keys(data[0]).filter((key) => key !== "date")
+      : [];
+
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
@@ -23,7 +38,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
       <CardContent>
         <AnalyticsChart
           title=""
-          data={data || []}
+          data={data |[]}
           dataKeys={dataKeys}
           type="bar"
           timeRange={timeRange}

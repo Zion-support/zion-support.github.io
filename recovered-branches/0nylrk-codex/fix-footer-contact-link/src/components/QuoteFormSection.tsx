@@ -6,7 +6,16 @@ import { useState } from "react";
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const handleSubmit = null;
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate form submission
+    setTimeout(() => {
+      (setIsSubmitting(false), setIsSubmitted(true));
+    }, 1000);
+  }
+
   return (
     <section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +26,6 @@ export function QuoteFormSection() {
             revolutionize your IT operations
           </p>
         </div>
-
         <div className="max-w-2xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-8">
           {isSubmitted ? (
             <div className="text-center py-8">
@@ -111,7 +119,6 @@ export function QuoteFormSection() {
                   />
                 </div>
               </div>
-
               <div className="mt-6">
                 <label
                   htmlFor="interest"
@@ -121,13 +128,13 @@ export function QuoteFormSection() {
                 </label>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">
                   {[
-                    "AI Products/Services",
-                    "IT Equipment",
-                    "Server Solutions",
-                    "Storage Solutions",
-                    "Networking",
-                    "24/7 Support",
-                    "Recycling Services",
+                    "AI Products/Services"
+                    "IT Equipment"
+                    "Server Solutions"
+                    "Storage Solutions"
+                    "Networking"
+                    "24/7 Support"
+                    "Recycling Services"
                   ].map((item, index) => (
                     <div key={index} className="flex items-center">
                       <input
@@ -145,7 +152,6 @@ export function QuoteFormSection() {
                   ))}
                 </div>
               </div>
-
               <div className="mt-6">
                 <label
                   htmlFor="message"
@@ -159,7 +165,6 @@ export function QuoteFormSection() {
                   className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                 ></textarea>
               </div>
-
               <div className="mt-6">
                 <Button
                   type="submit"
