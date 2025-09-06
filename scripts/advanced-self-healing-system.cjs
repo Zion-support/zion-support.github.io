@@ -1024,7 +1024,7 @@ module.exports = AdvancedSelfHealingSystem;
 
 
 // Graceful shutdown handling
-process.on('SIGINT', () => {
+process.on('SIGINT', () =></command> {
   console.log('\n🛑 Received SIGINT, shutting down gracefully...');
   // Add cleanup logic here
   process.exit(0);

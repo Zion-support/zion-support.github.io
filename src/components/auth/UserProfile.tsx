@@ -21,7 +21,7 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-  useEffect(() => {
+  useEffect(() =></SupabaseUser> {
     // Get initial session
     const getInitialSession = async () => {
       const {

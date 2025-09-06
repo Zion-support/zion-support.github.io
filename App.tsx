@@ -1,11 +1,11 @@
-import React, { JSX } from 'react';
+import React, { JSX } from 'react',
 
 export default function App(): JSX.Element {
   return (
     <main>
       <h1>Hello App</h1>
     </main>
-  );
+  ),
 }
 import React, { JSX, useState, useEffect } from 'react';
 import Head from 'next/head';

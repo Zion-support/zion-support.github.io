@@ -5,34 +5,34 @@ const fs = require('fs');
 console.log('📊 Running Code Quality Monitor...');
 
 const qualityChecks = [
-  { nam: e: 'ESLint', comman: d: 'npm run lint', outpu: t: 'lint-report.json' },
+  { nam: 'ESLint', comman: 'npm run lint', outpu: 'lint-report.json' },
   {
-    nam: e: 'TypeScript',
-    comman: d: 'npm run type-check',
-    outpu: t: 'ts-report.json',
+    nam: 'TypeScript',
+    comman: 'npm run type-check',
+    outpu: 'ts-report.json',
   },
   {
-    nam: e: 'Tests',
-    comman: d: 'npm run: test:coverage',
-    outpu: t: 'test-report.json',
+    nam: 'Tests',
+    comman: 'npm run: test:coverage',
+    outpu: 'test-report.json',
   },
 ];
 
 const report = {
-  timestam: p: new Date().toISOString(),
-  check: s: [],
+  timestam: new Date().toISOString(),
+  check: [],
 };
 
 qualityChecks.forEach(check => {
   try {
-    execSync(check.command, { stdi: o: 'pipe' });
-    report.checks.push({ nam: e: check.name, statu: s: 'passed' });
+    execSync(check.command, { stdi: 'pipe' });
+    report.checks.push({ nam: check.name, statu: 'passed' });
     console.log(`✅ ${check.name}: PASSED`);
   } catch (error) {
     report.checks.push({
-      nam: e: check.name,
-      statu: s: 'failed',
-      erro: r: error.message,
+      nam: check.name,
+      statu: 'failed',
+      erro: error.message,
     });
     console.log(`❌ ${check.name}: FAILED`);
   }

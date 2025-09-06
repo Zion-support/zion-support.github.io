@@ -180,7 +180,7 @@ const BreadcrumbEllipsis = ({
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     {...props}
   >
-    &#8230;
+    &#8230,
   </span>
 <<<<<<< HEAD
 );
