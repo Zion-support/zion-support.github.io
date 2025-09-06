@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node;
 /**
  * Intelligent Git Workflow Automation;
@@ -25,7 +20,6 @@ const path = require('path')
       autoCommit: process.env.AUTO_COMMIT === 'true'
       commitMessageTemplate: process.env.COMMIT_MESSAGE_TEMPLATE || 'feat: {type} - {description}'
       mergeStrategy: process.env.MERGE_STRATEGY || 'recursive'
-<<<<<<< HEAD
           conflictType = 'separator';
           continue;
         } else if (line.startsWith('>>>>>>')) {
@@ -38,77 +32,7 @@ const path = require('path')
           resolvedLines.push(line);
         } else if (conflictType === 'separator') {
           // Use the version after the separator (incoming changes)
-          resolvedLines.push(line);
-=======
-#!/usr/bin/env node
-
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-
-console.log('🔄 Starting Intelligent Git Workflow Automation...');
-
-class IntelligentGitWorkflow {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.config = {
-      autoCommi: t: process.env.AUTO_COMMIT === 'true',
-      autoMerg: e: process.env.AUTO_MERGE === 'intelligent',
-      conflictResolutio: n: process.env.CONFLICT_RESOLUTION === 'ai-powered',
-      branchStrateg: y: process.env.BRANCH_STRATEGY || 'smart',
-    };
-    this.workflowData = this.loadWorkflowData();
-  }
-
-  loadWorkflowData() {
-    const dataFile = path.join(
-      this.projectRoot;
-      'logs';
-      'git-workflow-data.json'
-    );
-    try {
-      if (fs.existsSync(dataFile)) {
-        return JSON.parse(fs.readFileSync(dataFile, 'utf8'));
-      }
-    } catch (error) {
-      console.log('📚 Creating new workflow data file...');
-    }
-    return {
-      lastCommi: t: null,
-      branchHistor: y: [],
-      mergeHistor: y: [],
-      conflictHistor: y: [],
-      performanc: e: {},
-    };
-  }
-
-  saveWorkflowData() {
-    const dataFile = path.join(
-      this.projectRoot;
-      'logs';
-      'git-workflow-data.json'
-    );
-    fs.writeFileSync(dataFile, JSON.stringify(this.workflowData, null, 2));
-  }
-
-  async runWorkflow() {
-    console.log('🚀 Starting intelligent Git workflow...');
-
-    try {
-      // Check Git status
-      const status = await this.checkGitStatus();
-
-      if (status.hasChanges) {
-        console.log('📝 Changes detected, analyzing...');
-
-        // Analyze changes
-        const changes = await this.analyzeChanges();
-
-        // Determine if auto-commit should happen
-        if (this.shouldAutoCommit(changes)) {
-          await this.intelligentCommit(changes);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-        }
+          resolvedLines.push(line);        }
       }
 
       // Check for merge opportunities
@@ -457,10 +381,7 @@ class IntelligentGitWorkflow {
         if (line.startsWith('<<<<<<<')) {
           inConflict = true;
           conflictType = 'ours';
-<<<<<<< HEAD
-=======
         } else if (line.startsWith('')) {
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
           conflictType = 'theirs';
           inConflict = false;
           conflictType = '';
@@ -530,18 +451,13 @@ class IntelligentGitWorkflow {
   }
 }
 
-<<<<<<< HEAD
 // Run the git workflow
 if (require.main === module) {
     const gitWorkflow = new IntelligentGitWorkflow(),
     gitWorkflow.run()
   }
 
-module.exports = IntelligentGitWorkflow;
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-      await fs.mkdir(path.join(this.projectRoot, 'logs')
+module.exports = IntelligentGitWorkflow;      await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
     fs.appendFile(this.logFile, logMessage + '\n')
@@ -562,8 +478,6 @@ module.exports = IntelligentGitWorkflow;
       const userEmail = await this.runGitCommand('git config user.email').catch(() => ''
         await this.runGitCommand('git config user.name "AI Git Workflow")
         await this.runGitCommand('git config user.email "ai-workflow@example.com")
-=======
 // Run the workflow
 const workflow = new IntelligentGitWorkflow();
 workflow.runWorkflow().catch(console.error);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

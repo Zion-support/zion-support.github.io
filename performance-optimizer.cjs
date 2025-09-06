@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+          "type"
+          "action"
+      console.error('Error optimizing "images")
+        "type"
+        "action"
+      console.error('Error optimizing "bundle")
+        "type"
+        "priority"
+        "message"
+        "type"
+        "priority"
+        "message"
+  console.log(' Performance optimization report "generated")
+<<<<<<< HEAD
+  console.error(' Optimization "failed")
+=======
+  console.error(' Optimization "failed")
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -105,3 +134,8 @@ function optimizePerformance() {
 
 // Run performance optimization
 optimizePerformance();
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

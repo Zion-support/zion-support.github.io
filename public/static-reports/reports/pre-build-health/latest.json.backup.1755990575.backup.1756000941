@@ -1,11 +1,46 @@
 {
   "summary": {
     "totalChecks": 6,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "passedChecks": 6,
     "failedChecks": 0,
     "criticalFailures": 0,
     "canBuild": true,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+    "timestamp": "2025-08-19T17:38:03.158Z"
+=======
+    "passedChecks": 5,
+    "failedChecks": 1,
+    "criticalFailures": 0,
+    "canBuild": true,
+    "timestamp": "2025-08-19T17:47:07.698Z"
+>>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-ce5e
+  },
+=======
     "timestamp": "2025-08-19T17:38:03.158Z"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "timestamp": "2025-08-19T17:38:03.158Z"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   "results": [
     {
       "name": "Page Structure Validation",
@@ -27,8 +62,30 @@
     },
     {
       "name": "Environment Variables",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "status": "PASS",
+      "result": "Environment variables check completed",
+=======
+      "status": "FAIL",
+      "error": "Missing environment variables: NODE_VERSION, NODE_OPTIONS",
+>>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-ce5e
+      "critical": false
+=======
       "status": "PASS",
       "result": "Environment variables check completed",      "critical": false
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+      "status": "PASS",
+      "result": "Environment variables check completed",      "critical": false
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     },
     {
       "name": "File Permissions",
@@ -43,4 +100,25 @@
       "critical": false
     }
   ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "recommendations": []
+=======
+  "recommendations": [
+    "Verify all required environment variables are set"
+  ]
+>>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-ce5e
+}
+=======
   "recommendations": []}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  "recommendations": []}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

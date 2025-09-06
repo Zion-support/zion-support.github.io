@@ -17,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(,
 ),
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import App from './App';
 import './index.css';
 
@@ -29,3 +30,4 @@ root.render(
     <App />
   </React.StrictMode>
 );
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

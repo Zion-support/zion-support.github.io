@@ -108,6 +108,7 @@ merge_pr() {
     fi
 }
 
+<<<<<<< HEAD
 # Function to resolve conflicts automatically
 resolve_conflicts() {
     local branch_name="$1"
@@ -121,6 +122,35 @@ resolve_conflicts() {
     
     for file in $conflicts; do
         log "Resolving conflicts in $file"
+=======
+# Main execution
+print_status "Starting systematic PR merge process..."
+
+<<<<<<< HEAD
+# Run the main function
+main "$@"
+=======
+# Get list of open PRs
+pr_list=$(gh pr list --state open --json number,title --jq '.[] | "\(.number)|\(.title)"')
+
+if [ -z "$pr_list" ]; then
+    print_warning "No open PRs found"
+    exit 0
+fi
+
+# Count total PRs
+total_prs=$(echo "$pr_list" | wc -l)
+print_status "Found $total_prs open PRs to process"
+
+# Process each PR
+success_count=0
+failed_count=0
+
+while IFS= read -r pr_line; do
+    if [ -n "$pr_line" ]; then
+        pr_number=$(echo "$pr_line" | cut -d'|' -f1)
+        pr_title=$(echo "$pr_line" | cut -d'|' -f2-)
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         
         # Use git checkout to take our version for most conflicts
         git checkout --ours "$file" || true
@@ -209,5 +239,13 @@ main() {
     success "PR merge process completed!"
 }
 
+<<<<<<< HEAD
 # Run the main function
 main "$@"
+=======
+# Final status check
+print_status "Checking final repository status..."
+git status
+git log --oneline -5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

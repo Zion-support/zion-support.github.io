@@ -339,8 +339,8 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
 
 // Run the performance optimizer
 if (require.main === module) {
-    const optimizer = new PerformanceOptimizer(),
-    optimizer.run().catch(console.error)
-  }
+  const optimizer = new PerformanceOptimizer();
+  optimizer.run().catch(console.error);
+}
 
 module.exports = PerformanceOptimizer;

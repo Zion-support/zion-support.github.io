@@ -1,8 +1,31 @@
 {
   "summary": {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "results": [],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-19T17:23:22.064Z"
+=======
+=======
+>>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
+    "totalFiles": 0,
+=======
   "results": [],
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-19T17:23:22.064Z"    "totalFiles": 0,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  "results": [],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-19T17:23:22.064Z"    "totalFiles": 0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "filesWithIssues": 0,
     "totalIssues": 0,
     "totalWarnings": 0,
@@ -11,6 +34,32 @@
   },
   "results": [],
   "buildBreakingFiles": [],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "generatedAt": "2025-08-19T15:46:17.458Z"
+=======
+  "generatedAt": "2025-08-19T16:26:24.267Z"
+>>>>>>> origin/cursor/automate-deployment-redundancy-and-clean-up-e342
+=======
+  "generatedAt": "2025-08-19T16:26:24.267Z"
+=======
+  "generatedAt": "2025-08-19T18:52:46.253Z"
+>>>>>>> origin/cursor/automate-redundancy-and-cleanup-d88b
+>>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
+=======
   "generatedAt": "2025-08-19T15:46:17.458Z"  "generatedAt": "2025-08-19T16:26:24.267Z"
   "generatedAt": "2025-08-19T18:52:46.253Z"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  "generatedAt": "2025-08-19T15:46:17.458Z"  "generatedAt": "2025-08-19T16:26:24.267Z"
+  "generatedAt": "2025-08-19T18:52:46.253Z"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 }

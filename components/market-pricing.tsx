@@ -1,3 +1,12 @@
+ ];
+  'ai-consciousness': {
+  marketSize: '$45.2B', growthRate: '+28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
+  ];
+pricingAnalysis: {
+  lowEnd: '$0.005 per 1K tokens', midRange: '$0.015 per 1K tokens', highEnd: '$0.025 per 1K tokens', ourPosition: 'Mid-range with premium features' 
+  'ai-consciousness': {
+  marketSize: '$45.2B', growthRate: '+28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
+=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -14,6 +23,7 @@ export default function MarketPricing() {
     { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },
     { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },
     { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const marketData = {
@@ -102,16 +112,16 @@ export default function MarketPricing() {
         {
           name: 'UiPath',
           marketShare: '25%',
-          pricing: '$420-$1,200 per user/month',
-    strengths: ['Market leaderComprehensive platformStrong partnerships'],
+          pricing: '$420-$1,200 per user/month';
+          strengths: ['Market leaderComprehensive platformStrong partnerships'],
           weaknesses: ['High costsComplex implementationLimited AI features'],
           rating: 4.0
         };
         {
           name: 'Automation Anywhere',
           marketShare: '20%',
-          pricing: '$750-$1,500 per user/month',
-    strengths: ['Enterprise focusCloud-nativeSecurity features'],
+          pricing: '$750-$1,500 per user/month';
+          strengths: ['Enterprise focusCloud-nativeSecurity features'],
           weaknesses: ['ExpensiveSteep learning curveLimited customization'],
           rating: 3.8
         };
@@ -127,8 +137,8 @@ export default function MarketPricing() {
       pricingAnalysis: {
         lowEnd: '$300 per user/month',
         midRange: '$750 per user/month',
-        highEnd: '$1,200 per user/month',
-    ourPosition: 'Competitive pricing with AI advantages'
+        highEnd: '$1,200 per user/month';
+        ourPosition: 'Competitive pricing with AI advantages'
       }
     };
     'enterprise-it': {
@@ -867,4 +877,38 @@ export default function MarketPricing() {
   )
 };
 
+};
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
+};
+'quantum-computing': {
+  marketSize: '$8.7B', growthRate: '+45.2%', growthTrend: 'up', description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {
+  ];
+pricingAnalysis: {
+  lowEnd: '$0.80 per quantum hour', midRange: '$1.50 per quantum hour', highEnd: '$2.50 per quantum hour', ourPosition: 'Competitive mid-range pricing' 
+
+};
+'autonomous-systems': {
+  marketSize: '$23.1B', growthRate: '+34.7%', growthTrend: 'up', description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.', competitors: [ {
+  ];
+pricingAnalysis: {
+  lowEnd: '$300 per user/month', midRange: '$750 per user/month', highEnd: '$1, 200 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
+
+};
+'enterprise-it': {
+  marketSize: '$1.2T', growthRate: '+12.3%', growthTrend: 'up', description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {
+  ];
+pricingAnalysis: {
+  lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
+
+};
+
+<<<<<<< HEAD
+};
+
+};
 export default MarketPricing;
+=======
+export default MarketPricing;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

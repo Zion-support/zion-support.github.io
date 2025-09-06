@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react';
 
 export const useMessageChannelHandler = () => {
@@ -12,7 +11,6 @@ export const useMessageChannelHandler = () => {
 };
 
 export default useMessageChannelHandler;
-=======
 import { useEffect, useCallback } from 'react';
 
 // Define MessageEvent type if not available
@@ -63,3 +61,4 @@ export function useMessageChannelHandler({
   }, [handleMessage]);
 }
 >>>>>>> 7a79ab46aa7794ec396c2388b3c38de69cb877ae
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

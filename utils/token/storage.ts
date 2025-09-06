@@ -1,49 +1,84 @@
-// Token storage utilities
-import { TokenConfig, TokenBalance } from './service';
+import fs from 'fs';
+import path from 'path';
+import { TokenConfig, TokenTransaction, Wallet } from './types';
+import { DEFAULT_TOKEN_CONFIG } from './rules';
 
-export interface TokenStorage {
-  configs: TokenConfig[];
-  balances: TokenBalance[];
-  lastUpdated: Date;
-}
+const DATA_DIR = path.join(process.cwd(), 'data');
+const STORE_FILE = path.join(DATA_DIR, 'token_store.json');
 
-export class TokenStorageManager {
-  private storage: TokenStorage = {
-    configs: [],
-    balances: [],
-    lastUpdated: new Date()
-  };
+export interface TokenStoreData {
+  wallets: Record<string, Wallet>;
+  transactions: TokenTransaction[];
+  config: TokenConfig;
 
-  async saveConfigs(configs: TokenConfig[]): Promise<void> {
-    this.storage.configs = configs;
-    this.storage.lastUpdated = new Date();
+function readFromDisk(): TokenStoreData | null {
+  try {
+    ensureDataDir();
+    if (!fs.existsSync(STORE_FILE)) return null;
+    const raw = fs.readFileSync(STORE_FILE, 'utf8');
+    const parsed = JSON.parse(raw) as TokenStoreData;
+    return parsed;
+  } catch {
+    return null;
   }
 
-  async loadConfigs(): Promise<TokenConfig[]> {
-    return this.storage.configs;
-  }
+function writeToDisk(data: TokenStoreData): void {
+  try {
+    ensureDataDir();
+    fs.writeFileSync(STORE_FILE, JSON.stringify(data, null, 2), 'utf8');
+  } catch {}
 
-  async saveBalances(balances: TokenBalance[]): Promise<void> {
-    this.storage.balances = balances;
-    this.storage.lastUpdated = new Date();
-  }
+class InMemoryTokenStore {
+  private data: TokenStoreData;
 
-  async loadBalances(): Promise<TokenBalance[]> {
-    return this.storage.balances;
-  }
-
-  async getStorage(): Promise<TokenStorage> {
-    return this.storage;
-  }
-
-  async clearStorage(): Promise<void> {
-    this.storage = {
-      configs: [],
-      balances: [],
-      lastUpdated: new Date()
+  constructor() {
+    const fromDisk = readFromDisk();
+    this.data = fromDisk ?? {
+      wallets: {},
+      transactions: [],
+      config: DEFAULT_TOKEN_CONFIG,
     };
   }
-}
 
-// Singleton instance
-export const tokenStorage = new TokenStorageManager();
+  getData(): TokenStoreData {
+    return this.data;
+  }
+
+  save(): void {
+    writeToDisk(this.data);
+  }
+
+const store = new InMemoryTokenStore();
+
+export const tokenStore = {
+  getConfig() {
+    return config;
+  },
+  setConfig(config: TokenConfig): void {
+    store.getData().config = config;
+    store.save();
+  },
+  getWallet(userId: string): Wallet {
+    const wallets = store.getData().wallets;
+    if (!wallets[userId]) {
+      wallets[userId] = { userId, balance: 0 };
+      store.save();
+    }
+    return wallets[userId];
+  },
+  setWalletBalance(userId: string, balance: number): Wallet {
+    const wallets = store.getData().wallets;
+    wallets[userId] = { userId, balance };
+    store.save();
+    return wallets[userId];
+  },
+  addTransaction(tx: TokenTransaction): void {
+    store.getData().transactions.unshift(tx);
+    store.save();
+  },
+  getTransactions(userId?: string): TokenTransaction[] {
+    const txs = store.getData().transactions;
+    if (!userId) return txs;
+    return txs.filter(t => t.userId === userId);
+  },
+};

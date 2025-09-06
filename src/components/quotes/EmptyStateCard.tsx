@@ -3,6 +3,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, ArchiveIcon } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 type EmptyStateCardProps = {
   type: 'active' | 'archived'
@@ -10,8 +11,7 @@ type EmptyStateCardProps = {
 
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === 'active';
-
-
+  
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">
       <CardContent>
@@ -34,6 +34,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
       </CardContent>
     </Card>
   )
-
 };
-
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

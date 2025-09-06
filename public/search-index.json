@@ -14,6 +14,7 @@
         "solutions",
         "automation"
       ],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 1
     },
     {
@@ -26,6 +27,7 @@
         "team",
         "mission"
       ],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 2
     },
     {
@@ -38,6 +40,7 @@
         "automation",
         "development"
       ],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 3
     },
     {
@@ -49,6 +52,7 @@
         "support",
         "help"
       ],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 4
     },
     {
@@ -61,6 +65,7 @@
         "work",
         "examples"
       ],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 5
     },
     {
@@ -75,5 +80,6 @@
       ],
       "id": 6
     }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   ]
 }

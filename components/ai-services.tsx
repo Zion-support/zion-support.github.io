@@ -1,52 +1,23 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react';
-import SEO from '../components/SEO';
-const aiServices = [
+ export default function AIServices () {
+  
+}> <Head> <title>AI Services | Zion Tech Group</title> </div>) ) 
+}</div>) ) 
+}</ul> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our AI Service Portfolio </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) ) 
+}</ul> <motion.a > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) ) 
+}</div> </div> </section> <motion.div initial= {
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   {
-    title: 'AI Consciousness Evolution',
-    description: 'Advanced AI systems with evolving consciousness and emotional intelligence',
-    icon: <Brain className="w-8 h-8 text-cyan-400" />,
-    href: '/ai-consciousness-evolution-2029',
-    features: ['Emotional IntelligenceConsciousness DevelopmentEthical AI Framework']
-  };
-  {
-    title: 'AI Autonomous Research',
-    description: 'Self-directed AI research assistants for breakthrough discoveries',
-    icon: <Target className="w-8 h-8 text-purple-400" />,
-    href: '/ai-autonomous-research-assistant',
-    features: ['Independent ResearchData AnalysisHypothesis Generation']
-  };
-  {
-    title: 'AI Predictive Maintenance',
-    description: 'Predictive analytics for industrial equipment and systems',
-    icon: <Zap className="w-8 h-8 text-yellow-400" />,
-    href: '/ai-predictive-maintenance-platform',
-    features: ['Equipment MonitoringFailure PredictionCost Optimization']
-  };
-  {
-    title: 'AI Content Personalization',
-    description: 'Dynamic content adaptation based on user behavior and preferences',
-    icon: <Users className="w-8 h-8 text-green-400" />,
-    href: '/ai-content-personalization-engine',
-    features: ['User ProfilingDynamic ContentEngagement Optimization']
-  };
-  {
-    title: 'AI Autonomous Business Operations',
-    description: 'End-to-end automation of business processes and decision-making',
-    icon: <Rocket className="w-8 h-8 text-blue-400" />,
-    href: '/autonomous-business-operations-platform',
-    features: ['Process AutomationDecision IntelligenceOperational Efficiency']
-  };
-  {
-    title: 'AI Ethics & Governance',
-    description: 'Framework for responsible AI development and deployment',
-    icon: <Shield className="w-8 h-8 text-red-400" />,
-    href: '/ai-ethics-governance-framework',
-    features: ['Ethical GuidelinesGovernance FrameworkCompliance Monitoring']
-  }
-];
+  opacity: 0, y: 20 
 
+}animate= {
+  {
+  opacity: 1, y: 0 
+
+}transition= {
+  {
+  duration: 0.8, delay: 0.4 
+
+}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-gray-400 mb-8" > Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion.button > Schedule Consultation </motion.button> <motion.button 
 export default function AIServices() {
   return (
     <QuantumHolographicMatrixBackground intensity={1.5}>
@@ -182,3 +153,5 @@ export default function AIServices() {
     </>
   );
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

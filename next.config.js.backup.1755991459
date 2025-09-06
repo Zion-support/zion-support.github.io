@@ -314,6 +314,19 @@ const nextConfig = {
         })
       );
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
     
     // Development optimizations to prevent memory leaks with 176+ pages
@@ -963,9 +976,44 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
 
   // Enable SWC minification explicitly (already default in Next 15)
   swcMinify: true,
+
+=======
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
+  async redirects() {
+    return [
+      { source: '/mobile-launch', destination: '/download', permanent: true },
+    ];
+  },
+  webpack: (config) => {
+    // Support TS path alias '@/...' by mapping it to the project root
+    config.resolve = config.resolve || {};
+    config.resolve.alias = config.resolve.alias || {};
+    config.resolve.alias['@'] = path.resolve(__dirname);
+    return config;
+  },
+>>>>>>> origin/cursor/create-mobile-launch-landing-and-support-toolkit-3ea3
+=======
+
+  // Enable SWC minification explicitly (already default in Next 15)
+  swcMinify: true,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+
+  // Enable SWC minification explicitly (already default in Next 15)
+  swcMinify: true,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 };
 
 module.exports = withSentryConfig(baseConfig);

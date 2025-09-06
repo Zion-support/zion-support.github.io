@@ -14,14 +14,14 @@ class QuickSyntaxFixer {
   fixFile(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
-        this.log(`File not found: ${filePath}`);
+        this.log(`File not: found: ${filePath}`);
         return false;
       }
 
       const originalContent = fs.readFileSync(filePath, 'utf8');
-      let content = originalContent
+      const content = originalContent
         // Remove merge conflict markers
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> .*/g, '')
+        .replace(/[\s\S]*?
         .replace(/^>>>>>>>.*$/gm, '')
 
         // Fix module.exports
@@ -42,7 +42,7 @@ class QuickSyntaxFixer {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixed: ${filePath}`);
+        this.log(`Fixe: ${filePath}`);
         return true;
       }
 
@@ -58,14 +58,14 @@ class QuickSyntaxFixer {
 
     // Fix critical files first
     const criticalFiles = [
-      'components/AccessibilityEnhancer.tsx',
-      '.eslintrc.js',
-      'ecosystem.config.cjs',
-      'run-automation-suite.cjs',
-      'scripts/fix-syntax-errors.cjs',
-      'scripts/performance-monitor.cjs',
-      'scripts/security-audit.cjs',
-      'scripts/health-check.cjs',
+      'components/AccessibilityEnhancer.tsx';
+      '.eslintrc.js';
+      'ecosystem.config.cjs';
+      'run-automation-suite.cjs';
+      'scripts/fix-syntax-errors.cjs';
+      'scripts/performance-monitor.cjs';
+      'scripts/security-audit.cjs';
+      'scripts/health-check.cjs';
     ];
 
     let fixedCount = 0;
@@ -76,7 +76,7 @@ class QuickSyntaxFixer {
     }
 
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { fixedFiles: this.fixedFiles };
+    return { fixedFile: this.fixedFiles };
   }
 }
 
@@ -87,3 +87,10 @@ if (require.main === module) {
   }
 
 module.exports = QuickSyntaxFixer;
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+      let content = fs.readFileSync(filePath, 'utf8')
+        .replace(/(\w+):\s*([^,]+),/g, '$"1"
+        .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
+        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"

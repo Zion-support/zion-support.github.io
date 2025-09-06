@@ -1,9 +1,156 @@
+<<<<<<< HEAD
+#!/usr/bin/env node;const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
 #!/usr/bin/env node
 
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+#!/usr/bin/env node
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+class AutomationImprovementSuite {}
+  constructor() {}
+    this.projectRoot = process.cwd();
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "timeout": 60000, // 1 minute timeout
+      });
+      this.log(`✅ "Completed": ${description}`);
+      return { "success": true, "output": result };
+    } catch (error) {
+      this.log(`❌ "Failed": ${description} - ${error.message}`);
+      return { "success": false, "error": error.message };
+    }
+<<<<<<< HEAD
+=======
+=======
+console.log('🚀 Starting Automation Improvement Suite...');
+
+// Function to run command and return result
+function runCommand(command, description) {
+  try {
+    console.log(`🔄 ${description}...`);
+    const result = execSync(command, { 
+      cwd: '/workspace', 
+      encoding: 'utf8',
+      stdio: 'pipe'
+    });
+    console.log(`✅ ${description} completed successfully`);
+    return { success: true, output: result };
+  } catch (error) {
+    console.log(`❌ ${description} failed: ${error.message}`);
+    return { success: false, error: error.message };
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  }
+
+  createEnhancedAutomationScripts() {
+    this.log('🔧 Creating Enhanced Automation Scripts');
+
+    // 1. Create a comprehensive error fixer
+    const errorFixerScript = "#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+class ComprehensiveErrorFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixedCount = 0}
+
+  log(message) {
+    .toISOString()}] \${message}\")}
+
+  fixSyntaxErrors(content) {
+    // Fix common syntax issues
+    content = content.replace(/import\\s*{\\s*([^}]+)\\s*}\\s*from\\s*['"]([^'"]+)['"]\\s*import\\s*{\\s*([^}]+)\\s*}\\s*from\\s*['"]([^'"]+)['"]/g, 
+      'import { $1 } from \\'$2\\';\\nimport { $3 } from \\'$4\\';');
+    
+    content = content.replace(/import\\s*{[^}]+}\\s*from\\s*['"][^'"]+['"](?!\\s*;)/g, '$&;');
+    content = content.replace(/['"]\\s*;\\s*['"]/g, '');
+    content = content.replace(/['"]\\s*;\\s*([^'"]*)\\s*['"]/g, '$1');
+    content = content.replace(/\\[\\s*['"]\\s*;\\s*([^'"]*)\\s*['"]\\s*\\]/g, '[\\'$1\\']');
+    content = content.replace(/{\\s*['"]\\s*;\\s*([^'"]*)\\s*['"]\\s*:/g, '{ \\'$1\\':');
+    content = content.replace(/className\\s*=\\s*['"]\\s*;\\s*([^'"]*)\\s*['"]/g, 'className=\\'$1\\'');
+    content = content.replace(/\\s*;\\s*;\\s*/g, ';');
+    
+    return content}
+
+  async fixFiles() {
+    const srcDir = path.join(this.projectRoot, 'src');
+    if (!fs.existsSync(srcDir)) return;
+    
+    const files = this.getAllFiles(srcDir, ['.tsx', '.ts', '.jsx', '.js']);
+    this.log(\"Found \${files.length} files to check\");
+    
+    for (const file of files.slice(0, 50)) { // Limit to first 50 files
+      try {
+        let content = fs.readFileSync(file, 'utf8');
+        const originalContent = content;
+        content = this.fixSyntaxErrors(content);
+        
+        if (content !== originalContent) {
+          fs.writeFileSync(file, content, 'utf8');
+          this.fixedCount++;
+          this.log(\"✅ "Fixed": \${path.relative(this.projectRoot, file)}\")}
+      } catch (error) {
+        this.log(\"❌ Error fixing \${file}: \${error.message}\")}
+    }
+    
+    this.log(\"🎉 Fixed \${this.fixedCount} files\")}
+
+  getAllFiles(dir, extensions) {
+    let files = [];
+    try {
+      const items = fs.readdirSync(dir);
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        if (stat.isDirectory()) {
+          files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath)}
+      }
+    } catch (error) {}
+    return files}
+}
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+const fixer = new ComprehensiveErrorFixer();
+fixer.fixFiles().catch(console.error);
+";
+
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'enhanced-error-fixer.cjs'),
+      errorFixerScript
+    );
+    this.log('✅ Created enhanced-error-fixer.cjs');
+
+    // 2. Create a performance monitor
+    const performanceMonitorScript = "#!/usr/bin/env node
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+
+=======
+=======
 console.log('🚀 Starting Automation Improvement Suite...');
 
 // Function to run command and return result
@@ -26,10 +173,160 @@ function runCommand(command, description) {
 // Function to create performance monitoring script
 function createPerformanceMonitor() {
   const script = `#!/usr/bin/env node
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+// Function to create performance monitoring script
+function createPerformanceMonitor() {
+  const script = `#!/usr/bin/env node
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+class PerformanceMonitor {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.metrics = {
+      "bundleSize": 0,
+      "fileCount": 0,
+      "errorCount": 0,
+      "performanceScore": 0
+    }}
+<<<<<<< HEAD
+=======
+=======
+console.log('📊 Performance Monitor Started...');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
+  log(message) {
+    .toISOString()}] \${message}\")}
+
+  async analyzePerformance() {
+    this.log('🔍 Analyzing Performance Metrics');
+    
+    // Count files
+    const srcDir = path.join(this.projectRoot, 'src');
+    if (fs.existsSync(srcDir)) {
+      const files = this.getAllFiles(srcDir, ['.tsx', '.ts', '.jsx', '.js']);
+      this.metrics.fileCount = files.length}
+    
+    // Check for common performance issues
+    const issues = [];
+    if (this.metrics.fileCount > 1000) {
+      issues.push('Large number of files may impact build performance')}
+    
+    this.metrics.performanceScore = Math.max(0, 100 - issues.length * 10);
+    
+<<<<<<< HEAD
+    const report = {
+      "timestamp": new Date().toISOString(),
+      "metrics": this.metrics,
+      "issues": issues,
+      "recommendations": ['Consider code splitting for large applications',
+        'Implement lazy loading for routes',
+        'Optimize bundle size with tree shaking',
+        'Use dynamic imports for heavy components'
+      ]
+=======
+    fs.writeFileSync('/workspace/performance-data.json', JSON.stringify(performanceData, null, 2));
+    
+  } catch (error) {
+    console.log(\`❌ Build failed: \${error.message}\`);
+  }
+}
+
+// Monitor file changes
+function monitorFileChanges() {
+  const chokidar = require('chokidar');
+  
+  const watcher = chokidar.watch('/workspace/src', {
+    ignored: /(^|[\/\\\\])\../, // ignore dotfiles
+    persistent: true
+  });
+  
+  watcher.on('change', (filePath) => {
+    console.log(\`📝 File changed: \${filePath}\`);
+    // Trigger rebuild or other actions
+  });
+  
+  console.log('👀 Watching for file changes...');
+}
+
+// Start monitoring
+monitorBuildPerformance();
+monitorFileChanges();
+`;
+
+  fs.writeFileSync('/workspace/performance-monitor.cjs', script);
+  console.log('✅ Performance monitor script created');
+}
+
+// Function to create security scanner
+function createSecurityScanner() {
+  const script = `#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔒 Security Scanner Started...');
+
+// Scan for security vulnerabilities
+function scanSecurity() {
+  const vulnerabilities = [];
+  
+  // Check for common security issues
+  const filesToCheck = [
+    '/workspace/package.json',
+    '/workspace/next.config.js',
+    '/workspace/tsconfig.json'
+  ];
+  
+  filesToCheck.forEach(file => {
+    if (fs.existsSync(file)) {
+      const content = fs.readFileSync(file, 'utf8');
+      
+      // Check for hardcoded secrets
+      if (content.includes('password') || content.includes('secret') || content.includes('key')) {
+        vulnerabilities.push({
+          file,
+          type: 'potential_hardcoded_secret',
+          severity: 'high'
+        });
+      }
+      
+      // Check for insecure configurations
+      if (content.includes('http://') && !content.includes('localhost')) {
+        vulnerabilities.push({
+          file,
+          type: 'insecure_http',
+          severity: 'medium'
+        });
+      }
+    }
+  });
+  
+  // Generate security report
+  const report = {
+    timestamp: new Date().toISOString(),
+    vulnerabilities,
+    totalVulnerabilities: vulnerabilities.length,
+    highSeverity: vulnerabilities.filter(v => v.severity === 'high').length,
+    mediumSeverity: vulnerabilities.filter(v => v.severity === 'medium').length,
+    lowSeverity: vulnerabilities.filter(v => v.severity === 'low').length
+  };
+<<<<<<< HEAD
+};
+// Run the improvement suite if this file is executed directly;
+if (require.main === module) {}
+  const suite = new AutomationImprovementSuite();
+  suite.run();
+};
+module.exports = AutomationImprovementSuite;
+=======
 console.log('📊 Performance Monitor Started...');
 
 // Monitor build performance
@@ -138,6 +435,8 @@ function scanSecurity() {
     mediumSeverity: vulnerabilities.filter(v => v.severity === 'medium').length,
     lowSeverity: vulnerabilities.filter(v => v.severity === 'low').length
   };
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   
   fs.writeFileSync('/workspace/security-report.json', JSON.stringify(report, null, 2));
   console.log(\`🔒 Security scan completed. Found \${vulnerabilities.length} potential issues.\`);
@@ -404,4 +703,10 @@ async function main() {
   }
 }
 
+<<<<<<< HEAD
 main();
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+main();
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

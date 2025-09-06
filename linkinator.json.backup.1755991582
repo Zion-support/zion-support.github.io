@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 {
   "links": [
     {
@@ -4780,4 +4793,31 @@
     }
   ],
   "passed": false
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 }
+=======
+file:///home/ubuntu/.npm/_npx/a07aeef48358ad48/node_modules/linkinator/build/src/options.js:33
+            throw new Error('Paths cannot be mixed between HTTP and local filesystem paths.');
+                  ^
+
+Error: Paths cannot be mixed between HTTP and local filesystem paths.
+    at processOptions (file:///home/ubuntu/.npm/_npx/a07aeef48358ad48/node_modules/linkinator/build/src/options.js:33:19)
+    at LinkChecker.check (file:///home/ubuntu/.npm/_npx/a07aeef48358ad48/node_modules/linkinator/build/src/index.js:30:31)
+    at main (file:///home/ubuntu/.npm/_npx/a07aeef48358ad48/node_modules/linkinator/build/src/cli.js:195:34)
+    at async file:///home/ubuntu/.npm/_npx/a07aeef48358ad48/node_modules/linkinator/build/src/cli.js:318:1
+
+Node.js v22.16.0
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-e67c
+=======
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

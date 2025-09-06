@@ -2,12 +2,14 @@
 import { useState, useEffect } from 'react';
 
 interface ResponsiveState {
-  isMobile: boolean, isTablet: boolean,
-  isDesktop: boolean, width: number,
-  height: number,
+  isMobile: boolean;
+  isTablet: boolean;
+  isDesktop: boolean;
+  width: number;
+  height: number;
 }
 
-export const useResponsive = (): ResponsiveState => {
+const useResponsive = (): ResponsiveState => {
   const [state, setState] = useState<ResponsiveState>({
     isMobile: false,
     isTablet: false,

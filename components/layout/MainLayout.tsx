@@ -7,6 +7,7 @@ import Footer from './Footer';
 interface MainLayoutProps {
   children: ReactNode, title?: string,
   description?: string;
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   keywords?: string;
   canonical?: string;
   noindex?: boolean;
@@ -28,6 +29,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   image = '/og-image.jpg',
   url
 
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 }) => {
   return (
     <>
@@ -36,6 +38,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <title>{title}</title>
         <meta name="description" content={description} />
 
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -44,6 +47,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         {nofollow && <meta name="robots" content="nofollow" />}
 
         
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {/* Open Graph */}
         <meta property="og:type" content={type} />
         <meta property="og:title" content={title} />
@@ -59,6 +63,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       </Head>
       
 
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <div className="min-h-screen bg-gray-50">
         <Header />
         <main className="flex-1">
@@ -70,6 +75,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 
   );
 
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 };
 
 export default MainLayout;

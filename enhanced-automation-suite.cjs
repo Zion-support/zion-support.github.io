@@ -8,6 +8,10 @@ class EnhancedAutomationSuite {
   constructor() {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     this.results = {
       codeQuality: { success: false, duration: 0, errors: [], warnings: [] },
       securityAudit: { success: false, duration: 0, errors: [], warnings: [] },
@@ -38,6 +42,11 @@ class EnhancedAutomationSuite {
       deployment: { success: false, duration: 0, errors: [], warnings: [] },
     };
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -56,6 +65,10 @@ class EnhancedAutomationSuite {
     this.log(`Running: ${description}`);
     try {
       const result = execSync(command, {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         cwd: this.projectRoot,
         stdio: 'pipe',
         encoding: 'utf8',
@@ -69,6 +82,12 @@ class EnhancedAutomationSuite {
         success: false,
         error: error.message,
         output: error.stdout || error.stderr,
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -80,6 +99,10 @@ class EnhancedAutomationSuite {
     try {
       // Remove unused imports
       const unusedImportsResult = await this.runCommand(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         'npx eslint . --fix --rule "no-unused-vars: error" --rule "no-unused-imports: error"',
         'Remove unused imports'
       );
@@ -106,12 +129,24 @@ class EnhancedAutomationSuite {
         errors: [error.message],
         warnings: [],
       };
+<<<<<<< HEAD
+=======
+=======
+
+      };
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
   }
 
   async performSecurityAudit() {
     const startTime = Date.now();
     this.log('\n🔒 PERFORMING SECURITY AUDIT');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     try {
       // Run npm audit
@@ -124,10 +159,31 @@ class EnhancedAutomationSuite {
       const vulnerabilityCheck = await this.runCommand(
         'npm audit --json',
         'Vulnerability Check'
+<<<<<<< HEAD
+=======
+=======
+;
+    try {;
+      // Run npm audit;
+      const auditResult = await this.runCommand(;
+        'npm audit --audit-level moderate',;
+        'Security Audit';
+      );
+;
+      // Check for security vulnerabilities in dependencies;
+      const vulnerabilityCheck = await this.runCommand(;
+        'npm audit --json',;
+        'Vulnerability Check';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       );
 
       // Scan for common security issues
       const securityScan = await this.runCommand(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         'npx eslint . --rule "no-eval: error" --rule "no-implied-eval: error"',
         'Security Code Scan'
       );
@@ -147,6 +203,12 @@ class EnhancedAutomationSuite {
         duration: Date.now() - startTime,
         errors: [error.message],
         warnings: [],
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -171,6 +233,10 @@ class EnhancedAutomationSuite {
 
       // Check for performance issues
       const performanceCheck = await this.runCommand(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         'npx lighthouse http://localhost:3000 --output=json',
         'Performance Check'
       );
@@ -187,6 +253,12 @@ class EnhancedAutomationSuite {
         duration: Date.now() - startTime,
         errors: [error.message],
         warnings: [],
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -198,18 +270,38 @@ class EnhancedAutomationSuite {
     try {
       // Generate sitemap
       const sitemapResult = await this.runCommand(
+<<<<<<< HEAD
         'npm run sitemap:generate',
+=======
+<<<<<<< HEAD
+        'npm run sitemap:generate',
+=======
+        'npm runsitemap:generate',
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         'Generate Sitemap'
       );
 
       // Generate search index
       const searchIndexResult = await this.runCommand(
+<<<<<<< HEAD
         'npm run search:index',
+=======
+<<<<<<< HEAD
+        'npm run search:index',
+=======
+        'npm runsearch:index',
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         'Generate Search Index'
       );
 
       // Check for SEO issues
       const seoCheck = await this.runCommand(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         'npx eslint . --rule "jsx-a11y/alt-text: error" --rule "jsx-a11y/heading-has-content: error"',
         'SEO Code Check'
       );
@@ -229,6 +321,12 @@ class EnhancedAutomationSuite {
         duration: Date.now() - startTime,
         errors: [error.message],
         warnings: [],
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -240,6 +338,10 @@ class EnhancedAutomationSuite {
     try {
       // Run accessibility checks
       const accessibilityCheck = await this.runCommand(
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         'npx eslint . --rule "jsx-a11y/alt-text: error" --rule "jsx-a11y/aria-role: error"',
         'Accessibility Check'
       );
@@ -265,6 +367,14 @@ class EnhancedAutomationSuite {
         errors: [error.message],
         warnings: [],
       };
+<<<<<<< HEAD
+=======
+=======
+
+      };
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
   }
 
@@ -278,17 +388,37 @@ class EnhancedAutomationSuite {
 
       // Production build
       const productionBuild = await this.runCommand(
+<<<<<<< HEAD
         'npm run build:production',
+=======
+<<<<<<< HEAD
+        'npm run build:production',
+=======
+        'npm runbuild:production',
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         'Production Build'
       );
 
       // Build analysis
       const buildAnalysis = await this.runCommand(
+<<<<<<< HEAD
         'npm run build:analyze',
+=======
+<<<<<<< HEAD
+        'npm run build:analyze',
+=======
+        'npm runbuild:analyze',
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         'Build Analysis'
       );
 
       this.results.buildOptimization = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         success: cleanBuild.success && productionBuild.success,
         duration: Date.now() - startTime,
         errors: [
@@ -303,6 +433,12 @@ class EnhancedAutomationSuite {
         duration: Date.now() - startTime,
         errors: [error.message],
         warnings: [],
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -316,17 +452,35 @@ class EnhancedAutomationSuite {
       await this.runCommand('git add .', 'Git Add');
 
       // Commit changes
+<<<<<<< HEAD
       const commitMessage = `Enhanced automation improvements: ${new Date().toISOString()}`;
+=======
+<<<<<<< HEAD
+      const commitMessage = `Enhanced automation improvements: ${new Date().toISOString()}`;
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       await this.runCommand(`git commit -m "${commitMessage}"`, 'Git Commit');
 
       // Push changes
       await this.runCommand('git push origin HEAD', 'Git Push');
 
       this.results.deployment = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         success: true,
         duration: Date.now() - startTime,
         errors: [],
         warnings: [],
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     } catch (error) {
       this.results.deployment = {
@@ -361,10 +515,24 @@ class EnhancedAutomationSuite {
       this.log(`${status} ${task}: ${duration}`);
 
       if (result.errors.length > 0) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         result.errors.forEach(error => this.log(`   Error: ${error}`));
       }
       if (result.warnings.length > 0) {
         result.warnings.forEach(warning => this.log(`   Warning: ${warning}`));
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       }
     });
 
@@ -423,14 +591,30 @@ class EnhancedAutomationSuite {
       await this.optimizeSEO();
       await this.improveAccessibility();
       await this.optimizeBuild();
+<<<<<<< HEAD
       await this.deployChanges();
     } catch (error) {
       this.log(`Fatal error: ${error.message}`, 'ERROR');
+=======
+<<<<<<< HEAD
+      await this.deployChanges();
+    } catch (error) {
+      this.log(`Fatal error: ${error.message}`, 'ERROR');
+=======
+
+      this.log(`Fatal: error: ${error.message}`, 'ERROR');
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     } finally {
       this.generateDetailedReport();
     }
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 // Run the enhanced automation suite
 if (require.main === module) {
@@ -438,4 +622,16 @@ if (require.main === module) {
     suite.run().catch(console.error)
   }
 
+<<<<<<< HEAD
+=======
+=======
+;
+// Run the enhanced automation suite;
+if (require.main === module) {;
+  const suite = new EnhancedAutomationSuite();
+  suite.run().catch(console.error),
+}
+;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 module.exports = EnhancedAutomationSuite;

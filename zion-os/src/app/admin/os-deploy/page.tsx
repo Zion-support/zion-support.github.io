@@ -1,10 +1,23 @@
-'use client';
-
-import React from 'react';
+"use client";
+import { useState } from 'react';
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function OSDeployPage() {
-  const onSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    
+    // Simulate deployment
+    setTimeout(() => {
+      setLoading(false);
+      window.alert('Deployment initiated! Check your instances page for updates.');
+    }, 3000);  };
+
+  return (
+    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
     // Handle form submission
   };
 
@@ -31,60 +44,69 @@ export default function OSDeployPage() {
       treasury: 'Community treasury management'
     };
     return descriptions[key] || 'Feature description';
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   };
 
   return (
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
+<<<<<<< HEAD
+      <div className="max-w-4xl mx-auto">
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">🚀 Launch Your Digital Economy</h1>
+          <h1 className="text-4xl font-bold mb-4">🚀 Deploy Zion OS Instance</h1>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Configure and deploy your sovereign AI-powered digital economy with our unified deployment protocol.
+            Create a new digital economy with AI-powered automation and blockchain integration
           </p>
         </div>
 
-        {/* Form */}
-        <form onSubmit={onSubmit} className="space-y-8">
-          {/* Basic Configuration */}
+        <form onSubmit={handleSubmit} className="space-y-8">
           <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">⚙️</span>
-              Basic Configuration
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Instance Name *</label>
-                <input
-                  name="instanceName"
-                  required
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+            <h2 className="text-2xl font-semibold mb-6">Basic Configuration</h2>
+            
+            <div className="space-y-6">
+              <div>
+                <label className="block text-white font-medium mb-2">Instance Name</label>
+                <input 
+                  name="name" 
+                  className="input-field" 
                   placeholder="My Digital Economy"
+                  required
                 />
               </div>
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Vertical</label>
-                <select
-                  name="vertical"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                >
-                  <option value="GENERAL">General</option>
-                  <option value="HEALTH">Healthcare</option>
-                  <option value="EDUCATION">Education</option>
-                  <option value="LAW">Legal</option>
-                  <option value="GOV">Government</option>
-                  <option value="FINANCE">Finance</option>
-                  <option value="TECH">Technology</option>
-                </select>
-              </div>
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Domain</label>
-                <input
-                  name="domain"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  placeholder="zion.example.com"
+              
+              <div>
+                <label className="block text-white font-medium mb-2">Description</label>
+                <textarea 
+                  name="description" 
+                  className="input-field" 
+                  rows={3}
+                  placeholder="Describe your digital economy's purpose and goals"
                 />
               </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-white font-medium mb-2">Vertical</label>
+                  <select name="vertical" className="select-field">
+                    <option value="GENERAL">General</option>
+                    <option value="HEALTH">Healthcare</option>
+                    <option value="EDUCATION">Education</option>
+                    <option value="LAW">Legal</option>
+                    <option value="GOV">Government</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label className="block text-white font-medium mb-2">Region</label>
+                  <input 
+                    name="region" 
+                    className="input-field" 
+                    placeholder="North America"
+                  />
+                </div>              </div>
+            </div>
+          </div>
+
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">Subdomain</label>
                 <input
@@ -108,162 +130,21 @@ export default function OSDeployPage() {
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="North America"
                 />
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               </div>
             </div>
           </div>
 
-          {/* Economy Settings */}
-          <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">💰</span>
-              Economy Settings
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Token System</label>
-                <select
-                  name="tokenSystem"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                >
-                  <option value="SHARED">ZION$ Shared</option>
-                  <option value="LOCAL">Local Token</option>
-                  <option value="HYBRID">Hybrid System</option>
-                </select>
-              </div>
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Governance Type</label>
-                <select
-                  name="governanceType"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                >
-                  <option value="ADMIN">Admin Control</option>
-                  <option value="DAO LITE">DAO-lite</option>
-                  <option value="DAO FULL">Full DAO</option>
-                  <option value="HYBRID">Hybrid Governance</option>
-                </select>
-              </div>
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Country</label>
-                <input
-                  name="country"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  placeholder="United States"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Payment Gateway</label>
-                <select
-                  name="paymentGateway"
-                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                >
-                  <option value="">None</option>
-                  <option value="stripe">Stripe</option>
-                  <option value="coinbase-commerce">Coinbase Commerce</option>
-                  <option value="paypal">PayPal</option>
-                  <option value="crypto">Crypto Payments</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          {/* Feature Toggles */}
-          <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">🔧</span>
-              Core Features
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {FeatureKeys.map((k) => (
-                <label
-                  key={k}
-                  className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group"
-                >
-                  <input
-                    type="checkbox"
-                    name={k}
-                    className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-                  />
-                  <div>
-                    <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                      {labelFor(k)}
-                    </div>
-                    <div className="text-sm text-white/60">{getFeatureDescription(k)}</div>
-                  </div>
-                </label>
-              ))}
-            </div>
-          </div>
-
-          {/* Add-ons */}
-          <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">🚀</span>
-              Premium Add-ons
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
-                <input
-                  type="checkbox"
-                  name="sovereignTreasury"
-                  className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-                />
-                <div>
-                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                    Sovereign DAO Treasury
-                  </div>
-                  <div className="text-sm text-white/60">Manage community funds with transparency</div>
-                </div>
-              </label>
-              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
-                <input
-                  type="checkbox"
-                  name="dualGovernance"
-                  className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-                />
-                <div>
-                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                    Dual Governance
-                  </div>
-                  <div className="text-sm text-white/60">Local + global decision making</div>
-                </div>
-              </label>
-              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
-                <input
-                  type="checkbox"
-                  name="aiModeration"
-                  className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-                />
-                <div>
-                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                    AI Moderation System
-                  </div>
-                  <div className="text-sm text-white/60">Automated content and behavior monitoring</div>
-                </div>
-              </label>
-              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">
-                <input
-                  type="checkbox"
-                  name="affiliatePanel"
-                  className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
-                />
-                <div>
-                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
-                    Government Affiliate Panel
-                  </div>
-                  <div className="text-sm text-white/60">Institutional partnership management</div>
-                </div>
-              </label>
-            </div>
-          </div>
-
-          {/* Submit Section */}
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <div className="text-center">
-            <button
+            <button 
+              type="submit"
               disabled={loading}
-              className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed hover-lift"
+              className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? '⏳ Deploying...' : '🚀 Deploy Instance'}
-            </button>
+              {loading ? "Deploying..." : "🚀 Deploy Instance"}
+            </button>          </div>
             {message && (
               <div
                 className={`mt-6 p-4 rounded-lg ${
@@ -275,9 +156,15 @@ export default function OSDeployPage() {
                 {message}
               </div>
             )}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           </div>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </form>
       </div>
     </div>
   );
 }
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

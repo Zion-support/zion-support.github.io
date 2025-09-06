@@ -1,10 +1,49 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
 exports.handler = async function(event, context) {
   console.log('🤖 Starting fast-front-promoter...');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+  
+=======
+// Clean top-level to avoid unused variable lints; use child_process within handler
+
+exports.config = {
+  // Run every 15 minutes for fast iteration
+  schedule: '*/15 * * * *',
+};
+
+exports.handler = async function() {
+  const { execSync } = require('child_process');
+>>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
+  try {
+=======
     try {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    try {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const timestamp = new Date().toISOString();
     const reportPath = path.join(process.cwd(), 'fast-front-promoter-report.md');
     

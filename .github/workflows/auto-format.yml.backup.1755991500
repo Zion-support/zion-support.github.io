@@ -1,11 +1,41 @@
 name: Auto Format
 
 on:
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  schedule:
+    - cron: '*/30 * * * *'
+=======
+  pull_request:
+    branches: [ main ]
+>>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
+  workflow_dispatch:
+
+permissions:
+  contents: write
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
   schedule:
     - cron: '*/30 * * * *'  workflow_dispatch:
 
 permissions:
   contents: write
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 jobs:
   format:
@@ -34,4 +64,39 @@ jobs:
           branch: main
           commit_user_name: zion-bot
           commit_user_email: bot@users.noreply.github.com
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
           commit_author: zion-bot <bot@users.noreply.github.com>
+=======
+  pull-requests: write
+
+jobs:
+  format:
+    # Only commit back for PRs from the same repository (not forks)
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository) }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run Prettier
+        run: npx --yes prettier@3.3.3 --write "**/*.{js,css,html,json,md,yml,yaml}"
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(format): apply Prettier"
+          branch: ${{ github.head_ref || github.ref_name }}
+>>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
+=======
+          commit_author: zion-bot <bot@users.noreply.github.com>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+          commit_author: zion-bot <bot@users.noreply.github.com>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

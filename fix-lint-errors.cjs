@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     
     // Clean up any remaining conflict markers
     content = content.replace(/^<<<<<<< .*$/gm, "");
@@ -11,6 +15,12 @@
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false}
 }
+<<<<<<< HEAD
+=======
+=======
+#!/usr/bin/env node
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 // Function to remove unused imports
 function removeUnusedImports(filePath) {
@@ -93,6 +103,10 @@ function findFilesWithIssues(dir) {
     }
   }
   
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   searchDirectory(dir);
   return files}
 
@@ -315,6 +329,11 @@ function findSourceFiles(dir) {
     }
   }
   
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   walkDir(dir);
   return files;
 }
@@ -351,4 +370,12 @@ async function main() {
   }
 }
 
+<<<<<<< HEAD
 main().catch(console.error);
+=======
+<<<<<<< HEAD
+main().catch(console.error);
+=======
+main().catch(console.error);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -44,6 +44,7 @@ declare global {
     loadEventStart: number, loadEventEnd: number,
     fetchStart: number,
   }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 }
 
 // Define Performance types if not available
@@ -80,6 +81,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       const navigation = navigationEntries[0] as PerformanceNavigationTiming;
       const paintEntries = window.performance.getEntriesByType('paint');
 
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       
       const performanceData = {
         // Navigation timing
@@ -101,6 +103,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
           total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
           limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
 
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         } : null
       },
       if (onPerformanceData) {

@@ -1,4 +1,23 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
 name: "CodeQL"
+=======
+name: CodeQL
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+
+=======
+name: "CodeQL"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+name: "CodeQL"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 on:
   push:
     branches: ["main", "develop", "cursor/**"]
@@ -43,5 +62,26 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
         with:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
           category: "/language:${{matrix.language}}"
  
+
+=======
+          category: '/language:javascript'
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+          category: "/language:${{matrix.language}}"
+ 
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+          category: "/language:${{matrix.language}}"
+ 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

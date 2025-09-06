@@ -4,12 +4,40 @@
 # This script provides immediate steps to start recovery
 
 echo "🚨 EMERGENCY RECOVERY: GitHub Actions Workflows"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+echo "================================================"
+=======
 echo "======"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+echo "======"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 echo ""
 
 # Check current status
 echo "📊 Current Status Check:"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+echo "========================"
+=======
 echo "==="
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+echo "==="
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 if [ -f "workflow-health-report.json" ]; then
     TOTAL=$(grep -o '"total_workflows": [0-9]*' workflow-health-report.json | grep -o '[0-9]*')
     BROKEN=$(grep -o '"broken_workflows": [0-9]*' workflow-health-report.json | grep -o '[0-9]*')
@@ -25,7 +53,21 @@ fi
 
 echo ""
 echo "🛠️  IMMEDIATE ACTION REQUIRED"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+echo "============================="
+=======
 echo "="
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+echo "="
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 echo ""
 
 # Check if auto-heal system is ready
@@ -43,7 +85,21 @@ fi
 
 echo ""
 echo "🚀 RECOVERY STEPS"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+echo "================="
+=======
 echo "==="
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+echo "==="
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 echo ""
 
 echo "1. 🚨 EMERGENCY STOP (Next 5 minutes):"
@@ -79,7 +135,21 @@ echo ""
 
 echo ""
 echo "🔧 QUICK FIX TEMPLATE"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+echo "====================="
+=======
 echo ""
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+echo ""
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 echo ""
 
 cat << 'EOF'
@@ -131,7 +201,21 @@ EOF
 
 echo ""
 echo "📞 GETTING HELP"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+echo "==============="
+=======
 echo "="
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+echo "="
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 echo ""
 
 echo "• Run auto-heal engine: python3 workflow-auto-heal-engine.py"
@@ -141,7 +225,21 @@ echo "• Use validation script: ./validate-workflows.sh"
 echo ""
 
 echo "⚠️  CRITICAL REMINDER"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+echo "===================="
+=======
 echo "======"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+echo "======"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 echo "Your GitHub Actions system is 100% broken."
 echo "Immediate action is required to restore functionality."
 echo "Start with the emergency stop, then begin systematic recovery."

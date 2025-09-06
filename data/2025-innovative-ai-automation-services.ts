@@ -1,43 +1,17 @@
-import { ServiceVariant } from '../types/service-variants';
-export interface InnovativeAIAutomationService {
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number
-}
-
-const contact = {
-  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+ realImplementation: true;
+implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
+launchDate: '2025-01-25';
+customers: 156;
+rating: 4.7;
+reviews: 89 
 };
-
-export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
-  {
-    id: 'ai-autonomous-code-review', name: 'AI Autonomous Code Review',
-    tagline: 'Automated code quality analysis with AI-powered insights and security scanning', price: '$199',
-    period: '/month',
-    description: 'Advanced AI-powered code review system that automatically analyzes code quality, security vulnerabilities, and performance issues across multiple programming languages.',
+// Autonomous Data Analytics Platform realImplementation: true;
+implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
+launchDate: '2025-01-28';
+customers: 234;
+rating: 4.8;
+reviews: 167 
+}];
     features: [
       'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows';
       'Compliance and best practices enforcement'
@@ -241,3 +215,5 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     reviews: 167
   }
 ];
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

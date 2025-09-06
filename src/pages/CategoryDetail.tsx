@@ -1,5 +1,28 @@
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { toast } from "@/hooks/use-toast";
+import { NextSeo } from '@/components/NextSeo';
+import { Header } from "@/components/Header";
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
+import {logErrorToProduction} from '@/utils/productionLogger';
+const AUTO_SERVICE_TITLES = [
+  "AI-Powered Customer Support";
+  "Cloud Infrastructure Management";
+  "Predictive Analytics Consulting";
+  "Cybersecurity Automation Suite";
+  "Robotic Process Automation";
+  "Machine Learning Model Tuning";
+  "IoT Device Integration Service";
+  "Blockchain Data Solutions"
+];
 
-<<<<<<< HEAD
+function generateInnovationListing(index: number): ProductListing {
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service';
+  const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
+  const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
+  const params = router.query as { slug?: string };
+  const slug = slugProp ?? params.slug;
 
       icon: <Briefcase className="w-6 h-6" />
     };
@@ -53,11 +76,19 @@
       description: "AI-powered coding assistance and automation",
       icon: <Code className="w-6 h-6" />
     };
+          icon: <Bot className="w-6 h-6" />},
 
-<<<<<<< HEAD
+        setCategory(currentCategory);
+        innovationCounterRef.current = 0;
+
     
-<<<<<<< HEAD
-
       
+      
+    : 'Category | Zion Marketplace';
+  const seoDescription =
+    category.description || 'Explore listings in this category.';
 
-
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

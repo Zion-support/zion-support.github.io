@@ -331,6 +331,7 @@ export function securityHeaders(req, res, next) {
     recommendations.push('Consider implementing authentication system'),
     recommendations.push('Add user registration and login functionality')
   }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       this.results.authenticationSecurity = {
         success: true,
@@ -400,8 +401,9 @@ export function securityHeaders(req, res, next) {
 
 // Run the security scanner
 if (require.main === module) {
-    const scanner = new SecurityScanner(),
-    scanner.run().catch(console.error)
-  }
+    const scanner = new SecurityScanner();
+    scanner.run().catch(console.error);
+}
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 module.exports = SecurityScanner;

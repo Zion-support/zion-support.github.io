@@ -23,9 +23,8 @@ function resolveConflicts() {
         // Read the file content
         let content = fs.readFileSync(file, 'utf8');
         
-        // Remove conflict markers and keep the incoming changes (after =======)
-        content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-        
+        // Remove conflict markers and keep the incoming changes (after )
+        content = content.replace(/[\s\S]*?([\s\S]*?)        
         // Write the resolved content back
         fs.writeFileSync(file, content);
         

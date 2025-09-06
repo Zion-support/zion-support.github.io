@@ -5,6 +5,19 @@ const nextConfig = {
   poweredByHeader: false,
   trailingSlash: false,
   reactStrictMode: true,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   swcMinify: true,
   
   // Disable TypeScript and ESLint during build to avoid parsing errors
@@ -55,6 +68,24 @@ const nextConfig = {
     swcTraceProfiling: false,
     
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+
+=======
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+>>>>>>> origin/cursor/website-audit-and-enhancement-ffd4
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   images: {
     domains: ["localhost"],
     unoptimized: true,

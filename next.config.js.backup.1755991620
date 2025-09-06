@@ -1,5 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   // Enable React strict mode for better development experience
   reactStrictMode: true,
   
@@ -14,6 +27,20 @@ const nextConfig = {
     optimizeCss: true,
   },
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   // Image optimization
   images: {
     formats: ['image/webp', 'image/avif'],
@@ -138,7 +165,43 @@ const nextConfig = {
   // Output configuration
   output: 'standalone',
   trailingSlash: false,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+  skipTrailingSlashRedirect: true,
+=======
+	reactStrictMode: true,
+	poweredByHeader: false,
+	trailingSlash: true,
+	output: 'export',
+	images: {
+		unoptimized: true
+	},
+	eslint: {
+		ignoreDuringBuilds: true
+	},
+	async redirects() {
+		return [
+			{ source: '/rag-evaluation-lab', destination: '/services/rag-evaluation-lab', permanent: true },
+			{ source: '/soc2-compliance-automation', destination: '/services/soc2-compliance-automation', permanent: true },
+			{ source: '/browser-automation-cloud', destination: '/services/browser-automation-cloud', permanent: true },
+			{ source: '/secrets-rotation-automation', destination: '/services/secrets-rotation-automation', permanent: true },
+			{ source: '/api-performance-testing', destination: '/services/api-performance-testing', permanent: true }
+		];
+	}
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-680f
+};
+=======
   skipTrailingSlashRedirect: true,};
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  skipTrailingSlashRedirect: true,};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   // Enhanced compress
   compress: true,

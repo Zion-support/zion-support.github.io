@@ -1,3 +1,4 @@
+ 
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
@@ -23,3 +24,5 @@ export default function QuantumSecureCloudInfrastructure() {
 		/>
 	)
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

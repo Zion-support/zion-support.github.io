@@ -20,12 +20,14 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 }
 };
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
     const item = window.localStorage.getItem(key),
     return item ? JSON.parse(item) : initialValue
   } catch (error) {
       console.error(`Error reading localStorage key "${key}":`, error);
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       return initialValue;
     }
   });
@@ -43,6 +45,7 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
       // eslint-disable-next-line no-console
       console.error(`Error setting localStorage key "${key}":`, error);
 
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
   };
 
@@ -50,3 +53,4 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 };
 
 export default useLocalStorage;
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

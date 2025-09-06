@@ -1,6 +1,5 @@
-<<<<<<< HEAD
             // Simple conflict resolution - take the incoming change
-            const resolved = content.replace(/\n<<<<<<<[\s\S]*?=======[\s\S]*?>>>>>>>\n/g, '\n');
+            const resolved = content.replace(/\n<<<<<<<[\s\S]*?[\s\S]*?>>>>>>>\n/g, '\n');
             fs.writeFileSync(file, resolved);
             execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
             this.log(`✅ Auto-resolved conflicts in: ${file}`);
@@ -114,11 +113,7 @@ if (require.main === module) {
     automator.run()
   }
 
-module.exports = GitWorkflowAutomator;
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-'
+module.exports = GitWorkflowAutomator;'
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
         "encoding"

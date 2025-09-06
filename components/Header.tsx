@@ -30,6 +30,7 @@ import {
 } from 'lucide-react';
 
 const Header: React.FC = () => {
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -73,6 +74,7 @@ const Header: React.FC = () => {
       description: 'Speed and efficiency improvements',
       href: '/services/performance',
       icon: Zap
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
   ];
 
@@ -202,6 +204,7 @@ const Header: React.FC = () => {
       {/* Main Navigation */}
       <nav className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -360,6 +363,7 @@ const Header: React.FC = () => {
       </nav>
 
       {/* Mobile Menu */}
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -383,6 +387,7 @@ const Header: React.FC = () => {
                   href="/contact"
                   onClick={() => setIsMenuOpen(false)}
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 >
                   Get Started
                 </Link>
@@ -391,6 +396,7 @@ const Header: React.FC = () => {
           )}
         </AnimatePresence>
       </nav>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     </header>
   );

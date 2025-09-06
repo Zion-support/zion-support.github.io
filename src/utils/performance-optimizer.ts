@@ -33,3 +33,4 @@ export const optimizeBundleSize = () => {
 };
     link.rel = 'preload';
     link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

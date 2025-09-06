@@ -7,14 +7,23 @@ function fixMergeConflicts(filePath) {
 
     // Check if file has merge conflict markers
     if (
+<<<<<<< HEAD
+      content.includes('') ||
+      content.includes('') ||
+=======
       content.includes('<<<<<<< HEAD') ||
       content.includes('=======') ||
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       content.includes('>>>>>>>')
     ) {
       console.log(`Fixing merge conflicts in: ${filePath}`);
 
+<<<<<<< HEAD
+      // Remove merge conflict markers and keep the content after       const lines = content.split('\n');
+=======
       // Remove merge conflict markers and keep the content after =======
       const lines = content.split('\n');
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       let fixedLines = [];
       let inConflict = false;
       let keepContent = false;
@@ -22,13 +31,21 @@ function fixMergeConflicts(filePath) {
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
 
+<<<<<<< HEAD
+        if (line.includes('')) {
+=======
         if (line.includes('<<<<<<< HEAD')) {
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           inConflict = true;
           keepContent = false;
           continue;
         }
 
+<<<<<<< HEAD
+        if (line.includes('')) {
+=======
         if (line.includes('=======')) {
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     keepContent = true,
     continue
   }

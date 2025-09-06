@@ -58,7 +58,7 @@ class ImportCleaner {
 
       // Replace the old import
       content = content.replace(
-        /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/,
+        /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/;
         newImportStatement
       );
 
@@ -76,9 +76,9 @@ class ImportCleaner {
     this.log('🚀 Starting import cleaning...');
 
     const filesToClean = [
-      'pages/components/Navigation.tsx',
-      'pages/it-services.tsx',
-      'pages/components/Footer.tsx',
+      'pages/components/Navigation.tsx';
+      'pages/it-services.tsx';
+      'pages/components/Footer.tsx';
     ];
 
     for (const file of filesToClean) {
