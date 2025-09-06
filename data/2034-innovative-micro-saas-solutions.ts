@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export type InnovativeMicroSaas = {
       'Multi-speaker diarization',
   launch_date?: string;
@@ -36,20 +39,15 @@ export type InnovativeMicroSaas = any;
   launchDate?: string;
 }
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
-=======
-<<<<<<< HEAD
 export type InnovativeMicroSaas = {
       'Multi-speaker diarization',
   launch_date?: string;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
   {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -57,6 +55,8 @@ export type InnovativeMicroSaas = {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: 'local - seo - reviews - booster',
     name: 'Local SEO Reviews Booster',
     description:;
@@ -81,12 +81,15 @@ export type InnovativeMicroSaas = {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: 'smart - invoice - reconciliation',
     name: 'Smart Invoice Reconciliation',
     description:;
@@ -102,9 +105,12 @@ export type InnovativeMicroSaas = {
     ],
     integrations: ['QuickBooks', 'Xero', 'Stripe'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'
     category: 'Human Resources'
     pricing: { starter: '$69/mo' }
@@ -115,6 +121,7 @@ export type InnovativeMicroSaas = {
     realService: true
   }
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -130,6 +137,8 @@ export type InnovativeMicroSaas = {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: 'candidate - screening - copilot',
     name: 'Candidate Screening Copilot',
     description:;
@@ -182,19 +191,25 @@ export type InnovativeMicroSaas = {
     integrations: ['Greenhouse', 'Lever'],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
     category: 'Human Resources',
     pricing: { starter: '$69 / mo' },
     features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
     integrations: ['Greenhouse', 'Lever'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
     use_cases: ['Faster hiring', 'Bias reduction'],
     link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
@@ -207,12 +222,15 @@ export type InnovativeMicroSaas = {
 	description: string, tagline?: string,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 	category:
 		| 'Content Marketing'
 		| 'Business Operations'
@@ -246,6 +264,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		link: 'https://ziontechgroup && ziontechgroup.com/services/podcast-transcription-seo-suite';
 		realService: true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -254,6 +273,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 		launchDate: '2025-12-01'
 	}
 	{
@@ -266,6 +287,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		integrations: ['Google Business ProfileYelp'];
 		useCases: ['Local rankingReputation management'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -274,6 +296,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 		realService: true
 	}
 	{
@@ -286,6 +310,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		integrations: ['QuickBooksXeroStripe'];
 		useCases: ['Accounting automationFinance ops'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -294,6 +319,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 		realService: true
 	}
 	{
@@ -305,10 +332,10 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		features: ['Resume parsingJD matchingQuestion setsATS sync'];
 		integrations: ['GreenhouseLever'];
 		useCases: ['Faster hiringBias reduction'];
-<<<<<<< HEAD
 	}
 ];
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 	}
@@ -322,10 +349,13 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 	}
 ];
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -333,6 +363,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 name: string;
 description: string;
 tagline?: string;
@@ -408,22 +440,12 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
   real_service: true;
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export type InnovativeMicroSaas = {;
 	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
-=======
 
-=======
 export type InnovativeMicroSaas = {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	id: string,;
 	name: string,;
 	description: string,;
@@ -498,13 +520,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		useCases: ['Faster hiringBias reduction'],;
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot',;
 		realService: true;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
-<<<<<<< HEAD
 ;
 
 export type InnovativeMicroSaas = {;
@@ -759,6 +776,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 }
 ];
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -770,3 +788,5 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   },
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

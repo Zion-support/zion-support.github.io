@@ -1,7 +1,10 @@
+<<<<<<< HEAD:pages_backup/security.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/security.tsx
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -22,6 +25,7 @@ const Page = () => {
 };
 
 export default Page;
+<<<<<<< HEAD:pages_backup/security.tsx
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 origin/automation-improvements-final
@@ -1370,3 +1374,5 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
     </>
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/security.tsx

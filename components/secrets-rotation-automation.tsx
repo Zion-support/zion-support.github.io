@@ -22,6 +22,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,6 +30,8 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 import React from "react";
@@ -38,7 +41,6 @@ import { Check, ExternalLink } from "lucide-react";
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
 import React from './react';
 import SEO from "../components / SEO";
 import { Check, ExternalLink  } from './lucide-react';
@@ -47,28 +49,6 @@ export default /**
  */
 function SecretsRotationAutomationPage() {
   const features = [;
-=======
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
-export default function SecretsRotationAutomationPage() {;
-  const features = [;
-    "Automated key and secret rotation",;
-    "JIT credentials with expirations",;
-    "Policy approvals and audit trails",;
-    "CI/CD integration (GitHub Actions, CircleCI)",;
-    "Cloud KMS and Vault support",;
-  ];
-import React from 'react',
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function SecretsRotationAutomationPage() {
@@ -86,12 +66,15 @@ export default function SecretsRotationAutomationPage() {
 export default function SecretsRotationAutomationPage() {
   const features = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
@@ -153,10 +136,12 @@ export default function SecretsRotationAutomationPage() {
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
-<<<<<<< HEAD
             </a>;
           </div>;
         </section>;
@@ -182,20 +167,10 @@ export default function SecretsRotationAutomationPage() {
           <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
             {features.map ((f) => (
               <div;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return (
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   return (
->>>>>>> main
-=======
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>
       <SEO
         title="Secrets Rotation Automation"
@@ -254,21 +229,16 @@ return (
         </section>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
-<<<<<<< HEAD
 }
 
 
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
     </>);
 }
@@ -444,16 +414,22 @@ return (
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
             </a>;
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -1,15 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 "use client";
 
 import React, { useState } from "react";
-=======
-<<<<<<< HEAD
 "use client";
 
 import React, { useState } from "react";
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -18,6 +20,8 @@ import React, { useState } from "react";
 import { useState } from 'react';
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export default function OSDeployPage() {
 
 export default function OSDeployPage() {;
@@ -60,12 +64,15 @@ class ErrorBoundary extends React.Component {
 }
 'use client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -87,8 +94,6 @@ ai: 'Advanced AI capabilities and automation'
 
 export default function OSDeployPage() {;
   const [loading, setLoading] = useState(false);
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -116,12 +121,15 @@ export default function OSDeployPage() {;
     }
     return labels[key] || key;
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Header */}
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
   const getFeatureDescription = (key: string) => {
     const descriptions: { [key: string]: string } = {
@@ -143,17 +151,7 @@ ai: 'Advanced AI capabilities and automation',
             configurations
           </p>
         </div>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
         {/* Header */}
-=======
-
-
-        {/* Header */}
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 
         <div className="text-center mb-12">;
           <h1 className="text-4xl font-bold mb-4">🚀 Launch Your Digital Economy</h1>;
@@ -161,10 +159,6 @@ ai: 'Advanced AI capabilities and automation',
             Deploy your custom Zion OS instance with advanced features and configurations;
           </p>;
         </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 
         <form onSubmit={handleSubmit} className="space-y-8">;
           {/* Basic Configuration */}
@@ -181,6 +175,7 @@ ai: 'Advanced AI capabilities and automation',
                 <label className="block text-sm font-medium text-white/90">
                   Instance Name *
                 </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -199,6 +194,8 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 <input
                   id="instanceName"
                   name="instanceName"
@@ -207,37 +204,23 @@ ai: 'Advanced AI capabilities and automation',
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="My Digital Economy"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Vertical
                 </label>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-
-                />;
-              </div>;
-              <div className="space-y-2">;
-                <label className="block text-sm font-medium text-white/90">Vertical</label>;
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
                 <select
                   id="vertical"
                   name="vertical"
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Domain
@@ -254,6 +237,7 @@ ai: 'Advanced AI capabilities and automation',
                 <label className="block text-sm font-medium text-white/90">
                   Subdomain
                 </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -309,6 +293,8 @@ ai: 'Advanced AI capabilities and automation',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                   <option value="GENERAL">General</option>;
                   <option value="HEALTH">Healthcare</option>;
                   <option value="EDUCATION">Education</option>;
@@ -318,6 +304,7 @@ ai: 'Advanced AI capabilities and automation',
                   <option value="TECH">Technology</option>;
                 </select>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -333,6 +320,8 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 <input
                   id="subdomain"
                   name="subdomain"
@@ -340,16 +329,20 @@ ai: 'Advanced AI capabilities and automation',
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="latam"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Default Language
                 </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -365,22 +358,28 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 <input
                   id="defaultLanguage"
                   name="defaultLanguage"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Region
                 </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -396,12 +395,15 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 <input
                   id="region"
                   name="region"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="North America"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -410,6 +412,8 @@ ai: 'Advanced AI capabilities and automation',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 />;
               </div>;
             </div>;
@@ -424,10 +428,6 @@ ai: 'Advanced AI capabilities and automation',
               Economic Configuration
             </h2>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
@@ -492,16 +492,10 @@ ai: 'Advanced AI capabilities and automation',
               Feature Selection
             </h2>
 
-<<<<<<< HEAD
-=======
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-              <div className="space-y-2">;
-                <label className="block text-sm font-medium text-white/90">Token System</label>;
-<<<<<<< HEAD
                 <select
                   id="tokenSystem"
                   name="tokenSystem"
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 <select
@@ -511,6 +505,8 @@ ai: 'Advanced AI capabilities and automation',
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 <select
                   id="tokenSystem"
                   name="tokenSystem"
@@ -572,13 +568,17 @@ ai: 'Advanced AI capabilities and automation',
                   className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";
                 >;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                   <option value="SHARED">ZION$ Shared</option>;
                   <option value="LOCAL">Local Token</option>;
                   <option value="HYBRID">Hybrid System</option>;
                 </select>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -599,10 +599,13 @@ ai: 'Advanced AI capabilities and automation',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                   <option value="DAO FULL">Full DAO</option>;
                   <option value="HYBRID">Hybrid Governance</option>;
                 </select>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -635,12 +638,15 @@ ai: 'Advanced AI capabilities and automation',
             </h2>;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">;
               {FeatureKeys && FeatureKeys.map((k) => (;
                 <label
                   key={k}
                   className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -649,6 +655,8 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                   <input
               <div className="space - y-2">;
                 <label html_for="country" className="block text - sm font - medium text - white / 90">Country</label>;
@@ -695,11 +703,14 @@ ai: 'Advanced AI capabilities and automation',
                     name="features";
                     value={k}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                     className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                   />
                   <div>
@@ -725,6 +736,7 @@ ai: 'Advanced AI capabilities and automation',
             </h2>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -745,6 +757,8 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 <input
                   id="treasury"
                   type="checkbox"
@@ -752,11 +766,14 @@ ai: 'Advanced AI capabilities and automation',
                   aria-label="Treasury Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -767,13 +784,6 @@ ai: 'Advanced AI capabilities and automation',
                   </div>
                 </div>
               </label>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 
                 />;
                 <div>;
@@ -786,6 +796,7 @@ ai: 'Advanced AI capabilities and automation',
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -793,6 +804,8 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 <input
                   id="governance"
                   type="checkbox"
@@ -800,11 +813,14 @@ ai: 'Advanced AI capabilities and automation',
                   aria-label="Governance System"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -815,13 +831,6 @@ ai: 'Advanced AI capabilities and automation',
                   </div>
                 </div>
               </label>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 
                 />;
                 <div>;
@@ -834,6 +843,7 @@ ai: 'Advanced AI capabilities and automation',
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -841,6 +851,8 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 <input
                   id="moderation"
                   type="checkbox"
@@ -848,11 +860,14 @@ ai: 'Advanced AI capabilities and automation',
                   aria-label="Content Moderation"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -863,13 +878,6 @@ ai: 'Advanced AI capabilities and automation',
                   </div>
                 </div>
               </label>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 
                 />;
                 <div>;
@@ -882,6 +890,7 @@ ai: 'Advanced AI capabilities and automation',
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -889,6 +898,8 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 <input
                   id="partnerships"
                   type="checkbox"
@@ -896,11 +907,14 @@ ai: 'Advanced AI capabilities and automation',
                   aria-label="Partnership Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -928,6 +942,7 @@ ai: 'Advanced AI capabilities and automation',
                   messageType === "success"
                     ? "bg-green-900/20 border border-green-500/20 text-green-400"
                     : "bg-red-900/20 border border-red-500/20 text-red-400"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1020,10 +1035,13 @@ ai: 'Advanced AI capabilities and automation',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 </div>;
               </label>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1034,11 +1052,14 @@ ai: 'Advanced AI capabilities and automation',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
               <div
                 className={`mt-6 p-4 rounded-lg ${
                   messageType === 'success'
                     ? 'bg-green-900/20 border border-green-500/20 text-green-400'
                     : 'bg-red-900/20 border border-red-500/20 text-red-400'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1048,9 +1069,10 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 }`}
               >
-=======
 "use client",;
 import { useState } from "react",;
 import { FeatureKeys } from "@/lib/zod",;
@@ -1439,9 +1461,12 @@ export default function AdminDeployPage() {;
                   : 'bg-red-900/20 border border-red-500/20 text-red-400';
               }`}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 {message}
               </div>;
             )}
@@ -1524,6 +1549,7 @@ export default function AdminDeployPage() {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1561,13 +1587,18 @@ export default function AdminDeployPage() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 {message}
               </div>;
             )}
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           </div>;
         </form>;
       </div>;
@@ -1616,6 +1647,7 @@ function getFeatureDescription(key: string) {;
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1628,3 +1660,5 @@ function getFeatureDescription(key: string) {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

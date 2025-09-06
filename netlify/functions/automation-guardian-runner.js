@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 =======
@@ -25,19 +28,15 @@ exports.handler = async () => {
   }
   // Generate sitemap for crawling
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
-=======
-
-
-const { spawnSync } = require('child_process');
-function runNode(relPath, args = []) {
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const abs = path && path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
@@ -52,11 +51,11 @@ exports && exports.handler = async () => {
     if (stdout) logs && logs.push(stdout),
     if (stderr) logs && logs.push(stderr),
     logs && logs.push(`exit=${status}`),
-<<<<<<< HEAD
     return status
   }
   // Generate sitemap for crawling
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap && sitemap.js')),
+<<<<<<< HEAD
 =======
 
     return status
@@ -69,6 +68,8 @@ exports && exports.handler = async () => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   // Build search index if available
   try {
     logStep('search:index', () => runNode('scripts/generate-search-index && index.js'))
@@ -78,10 +79,13 @@ exports && exports.handler = async () => {
   // Commit and push
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
 =  // Run the automation guardian
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min && 10min.cjs')),
@@ -90,6 +94,7 @@ exports && exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
 =======
 
   logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
@@ -108,6 +113,8 @@ exports && exports.handler = async () => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const { spawn_sync } = require ('child_process');
 /**
  * run_node - Function description

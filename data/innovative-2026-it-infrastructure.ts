@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -11,6 +12,8 @@
 import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026ITInfrastructureService {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
   name: string;
   tagline: string;
@@ -41,6 +44,7 @@ export interface Innovative2026ITInfrastructureService {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -76,6 +80,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Quantum machine learning acceleration',
         'Multi - cloud orchestration',
         'Auto - scaling infrastructure',
@@ -87,6 +93,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ],
       popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -95,6 +102,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       color: 'from - indigo - 600 to - purple - 700',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - enhanced - cloud',
@@ -138,18 +147,22 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       roi: 'Average customer sees 500% ROI within 12 months through improved performance and competitive advantage.',
       competitors: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'AWS',
         'Google Cloud',
         'Microsoft Azure',
         'IBM Cloud',
         'Oracle Cloud',
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -162,6 +175,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -175,6 +190,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       rating: 4 && 4.9,
       reviews: 400,
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -292,6 +308,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Continuous identity verification',
         'Micro - segmentation',
         'AI - powered threat detection',
@@ -304,6 +322,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Automated response',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -326,6 +345,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Python',
         'TensorFlow',
         'React',
@@ -336,6 +357,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Docker',
         'Kubernetes',
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -356,6 +378,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Network access control',
         'Remote work security',
         'Cloud security',
@@ -363,6 +387,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Compliance management',
         'Threat prevention',
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -373,12 +398,15 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Palo Alto Networks',
         'Cisco',
         'Fortinet',
         'Check Point',
         'Juniper Networks',
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -391,6 +419,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -404,6 +434,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       rating: 4 && 4.9,
       reviews: 450,
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -424,6 +455,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Intelligent testing and QA',
         'Performance optimization',
         'Predictive issue detection',
@@ -435,6 +468,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Team collaboration tools',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -457,6 +491,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'React',
         'Node && Node.js',
         'Python',
@@ -467,6 +503,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Azure',
         'Jenkins',
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -497,12 +534,15 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'GitLab',
         'GitHub Actions',
         'Jenkins',
         'CircleCI',
         'Travis CI',
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -515,6 +555,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -529,6 +571,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       reviews: 1250,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -540,6 +583,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       id: 'quantum - safe - data - storage',
       name: 'Quantum - Safe Data Storage',
       tagline: 'Future - proof your data with quantum - resistant encryption',
@@ -563,6 +608,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       popular: true,
       icon: '💾',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -584,6 +630,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'React',
         'Node && Node.js',
         'Python',
@@ -592,6 +640,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'AWS',
         'Docker',
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -644,6 +693,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.',
       launchDate: '2025-11-20',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       customers: 1100,
       rating: 4 && 4.8,
       reviews: 550,
@@ -653,7 +704,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
   ];    features: [
 
-=======
 export interface Innovative2026ITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -698,7 +748,10 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring';
       'Global edge computing networkQuantum-safe data storage'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       id: 'quantum-safe-data-storage'
       name: 'Quantum-Safe Data Storage'
       tagline: 'Future-proof your data with quantum-resistant encryption'
@@ -1325,6 +1378,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'AWS'
         'Docker'
       ]
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -1338,6 +1392,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Docker',
       ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       integrations: [
         'AWS S3',
         'Azure Blob',
@@ -1357,6 +1413,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       ],
       roi: 'Average customer saves $500K annually through improved security and compliance management.',
       competitors: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1390,16 +1447,21 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       implementationDetails:
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.'
       launchDate: '2025-11-20'
       customers: 1100
       rating: 4.8
       reviews: 550
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.',
       launchDate: '2025-11-20',
       customers: 1100,
@@ -1407,14 +1469,16 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       reviews: 550,
 <<<<<<< HEAD
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication';
       'API accessMobile applications'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     ];
     popular: true, icon: '⚛️',
     color: 'from-indigo-600 to-purple-700', textColor: 'text-indigo-400',
@@ -1452,9 +1516,12 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       website: 'https://ziontechgroup.com';
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026ITInfrastructureService {;
   id: string,;
@@ -1716,6 +1783,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     launchDate: '2025-11-20',;
     customers: 1100,;
     rating: 4.8;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1748,29 +1816,30 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     reviews: 550
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
     real_implementation: true,
     implementation_details: 'Enterprise - grade quantum - safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24 / 7 support.',
     launch_date: '2025 - 11 - 20', customers: 1100,
     rating: 4.8,
     reviews: 550;
-<<<<<<< HEAD
 ];
 =======
 <<<<<<< HEAD
 ];
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026ITInfrastructureService {;
   id: string,;
@@ -2039,21 +2108,11 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 ];
 =======
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
-<<<<<<< HEAD
 ;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026ITInfrastructureService {;
   id: string,;
@@ -2317,15 +2376,14 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     customers: 1100,;
     rating: 4.8;
     reviews: 550;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

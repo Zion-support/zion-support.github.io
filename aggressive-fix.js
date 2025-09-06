@@ -1,5 +1,37 @@
+<<<<<<< HEAD
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+=======
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+#!/usr/bin/env node
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 function createValidReactComponent(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName
@@ -69,6 +101,7 @@ function processDirectory(dirPath) {
         if (fixFile(fullPath)) {
           fixedCount++;
         }
+<<<<<<< HEAD
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join("")
@@ -91,6 +124,8 @@ function createValidReactComponent(filePath) {
 export default function ${componentName}() {
 }`;
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       }
     }
     return fixedCount;
@@ -120,6 +155,13 @@ function createValidReactComponent(filePath) {
 export default function ${componentName}() {
 }`;
 }
+<<<<<<< HEAD
+=======
+    <div>;
+      <h1>${component_name}</h1>;
+      <p > This is a valid React component.</p>;
+    </div>);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }`;
 }
 

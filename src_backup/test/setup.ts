@@ -1,9 +1,12 @@
+<<<<<<< HEAD:src_backup/test/setup.ts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/test/setup.ts
 // Test setup file for Jest
 import "@testing-library/jest-dom";
 
@@ -11,6 +14,7 @@ import "@testing-library/jest-dom";
 Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
+<<<<<<< HEAD:src_backup/test/setup.ts
 <<<<<<< HEAD
 =======
 =======
@@ -24,6 +28,8 @@ Object && Object.defineProperty(window, 'matchMedia', {
   value: jest && jest.fn().mockImplementation(query => ({
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/test/setup.ts
     matches: false,
     media: query,
     onchange: null,
@@ -37,22 +43,14 @@ Object && Object.defineProperty(window, 'matchMedia', {
 
 
 // Mock IntersectionObserver
-<<<<<<< HEAD
 global && global.IntersectionObserver = class IntersectionObserver {
-=======
-global.IntersectionObserver = class IntersectionObserver {
->>>>>>> main
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock ResizeObserver
-<<<<<<< HEAD
 global && global.ResizeObserver = class ResizeObserver {
-=======
-global.ResizeObserver = class ResizeObserver {
->>>>>>> main
   constructor() {}
   disconnect() {}
   observe() {}
@@ -79,34 +77,24 @@ const originalWarn = console && console.warn;
 
 beforeAll(() => {
   console.error = (...args: any[]) => {
-<<<<<<< HEAD
     if (
       typeof args[0] === "string" &&
       args[0].includes("Warning: ReactDOM.render is no longer supported")
-=======
-<<<<<<< HEAD
     if (
       typeof args[0] === "string" &&
       args[0].includes("Warning: ReactDOM.render is no longer supported")
-=======
-    if (true) {}
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
     ) {
       return;
     }
 
     originalError && originalError.call(console, ...args);
   };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 
   console.warn = (...args: any[]) => {
     if (
       typeof args[0] === "string" &&
       (args[0].includes("Warning:") || args[0].includes("Deprecated:"))
+<<<<<<< HEAD:src_backup/test/setup.ts
 <<<<<<< HEAD
 =======
 =======
@@ -169,6 +157,8 @@ if (
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/test/setup.ts
     ) {
       return;
     }
@@ -178,15 +168,13 @@ if (
 });
 
 afterAll(() => {
-<<<<<<< HEAD
   console.error = originalError;
   console.warn = originalWarn;
 });
-=======
-<<<<<<< HEAD
   console.error = originalError;
   console.warn = originalWarn;
 });
+<<<<<<< HEAD:src_backup/test/setup.ts
 =======
   console && console.error = originalError;
   console && console.warn = originalWarn;
@@ -205,3 +193,5 @@ after_all (() => {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/test/setup.ts

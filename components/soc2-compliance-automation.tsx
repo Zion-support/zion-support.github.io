@@ -1,12 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
+
 import React from 'react';
 
 
@@ -14,20 +14,27 @@ import SEO from '../components/SEO';
 import Link from 'next/link';
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
             Automate SOC 2 readiness with continuous controls, evidence;
             pipelines, and prebuilt auditor workflows. Integrates with cloud;
             providers and ticketing systems.;
           </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
           <div className='mt - 8 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
             {[;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from 'react',
@@ -75,6 +82,8 @@ export default function SOC2ComplianceAutomationPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
               {
                 title: 'Controls Library'
                 desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.'
@@ -97,9 +106,12 @@ export default function SOC2ComplianceAutomationPage() {
               }
               {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {[;
@@ -129,12 +141,6 @@ export default function SOC2ComplianceAutomationPage() {
               },;
             ].map(f => (;
 
-=======
-                title: 'Audit Room'
-                desc: 'Share evidence securely with auditors; immutable logs.'
-              }
-            ].map(f => (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <div
                 key={f.title}
                 className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur'
@@ -143,6 +149,7 @@ export default function SOC2ComplianceAutomationPage() {
                 <p className='mt-2 text-sm text-gray-300'>{f.desc}</p>
               </div>
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           </div>
@@ -235,6 +242,8 @@ export default function SOC2ComplianceAutomationPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
@@ -244,10 +253,13 @@ export default function SOC2ComplianceAutomationPage() {
 		</>
 	)
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
           </div>;
 
@@ -349,11 +361,14 @@ export default function SOC2ComplianceAutomationPage() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
             <Link;
               href='/contact';
@@ -381,20 +396,22 @@ export default function SOC2ComplianceAutomationPage() {
   </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
+}
+
 
 }
 
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -402,3 +419,5 @@ export default function SOC2ComplianceAutomationPage() {
 =======
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

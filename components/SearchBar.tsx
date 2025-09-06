@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -199,6 +202,7 @@ const SearchBar: React.FC = () => {
 };
 
 export default SearchBar;
+<<<<<<< HEAD
 =======
 interface SearchResult {
   title: string, description: string
@@ -217,6 +221,8 @@ interface SearchBarProps {
   placeholder?: string;
   className?: string;
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -232,7 +238,6 @@ const SearchBar: React.FC<SearchBarProps> = ({
     if (onSearch && query.trim()) {
       onSearch(query.trim());
     }
-<<<<<<< HEAD
     {
       title: 'Contact Us'
       description: 'Get in touch with our experts for consultation and quotes'
@@ -251,9 +256,12 @@ const SearchBar: React.FC<SearchBarProps> = ({
     setIsOpen(true);
     setIsLoading(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   };
 
   const handleClear = () => {
@@ -404,5 +412,8 @@ const SearchBar: React.FC<SearchBarProps> = ({
 };
 
 export default SearchBar;
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

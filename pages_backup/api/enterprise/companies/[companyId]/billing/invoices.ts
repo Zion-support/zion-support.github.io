@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
 <<<<<<< HEAD
 =======
 =======
@@ -6,24 +7,34 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/billing/invoices.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { store } from "../../../../../../utils/data/enterpriseStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { companyId } = req.query;
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/billing/invoices.ts
   }
   const invoices = store && store.listInvoices(companyId);
   return res && res.status(200).json(invoices);
 }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/billing/invoices.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../../utils / data / enterprise_store';
 export default /**
@@ -40,10 +51,13 @@ if ( {) {
   const invoices = store.list_invoices (company_id);
   return res.status (200).json (invoices);
 }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
 <<<<<<< HEAD
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/billing/invoices.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 import { store } from '[^']*';
@@ -77,10 +91,13 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/billing/invoices.ts
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -88,8 +105,6 @@ export default function handler(req, res) {
 }
   const invoices = store.listInvoices(companyId);
   return res.status(200).json(invoices);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   } catch (error) {
     console.error("Error:", error);
@@ -104,6 +119,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -120,3 +136,5 @@ export default function handler(req, res) {
   return res.status(200).json(invoices)
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/billing/invoices.ts

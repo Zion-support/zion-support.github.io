@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import { ServiceVariant } from '../types / service - variants';
 ;
 
 export interface EnterpriseITBreakthroughService2029 {
 
 export interface EnterpriseITBreakthroughService2029 {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -17,6 +21,8 @@ import { ServiceVariant } from '../types / service - variants';
 ;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export interface EnterpriseITBreakthroughService2029 {
 
 
@@ -24,8 +30,11 @@ export interface EnterpriseITBreakthroughService2029 {
 export interface EnterpriseITBreakthroughService2029 {;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
   name: string;
   tagline: string;
@@ -62,6 +71,7 @@ export interface EnterpriseITBreakthroughService2029 {;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -87,6 +97,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Autonomous infrastructure management',
         'AI - powered deployment automation',
         'Self - healing systems',
@@ -100,6 +112,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       ],
       popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -108,6 +121,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / autonomous - devops - platform',
@@ -137,12 +152,15 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       variant: 'enterprise - futuristic',
       contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -157,6 +175,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       reviews: 178,
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -177,6 +196,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Advanced scalability',
         'Quantum encryption',
         'Performance optimization',
@@ -187,6 +208,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
         'Training and support',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -225,6 +247,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -239,6 +263,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       reviews: 42,
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -256,6 +281,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'AI threat detection',
         'Automated response systems',
         'Behavioral analysis',
@@ -268,6 +295,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
         'Training and support',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -306,6 +334,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -320,6 +350,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       reviews: 156,
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -337,6 +368,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Autonomous IT management',
         'Self - healing infrastructure',
         'Predictive maintenance',
@@ -349,6 +382,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
         'Analytics dashboard',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -387,6 +421,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -396,14 +432,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       implementation_details:;
         'Advanced autonomous IT operations center with AI - powered management, self - healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.',
       launch_date: '2025 - 01 - 15',
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Advanced autonomous IT operations center with AI-powered management, self-healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.',
       launchDate: '2025-01-15',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 180,
       rating: 4 && 4.9,
       reviews: 95,
@@ -412,12 +442,15 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
   ];    features: [
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -438,6 +471,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     website: string
   
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -468,12 +502,15 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Autonomous infrastructure managementAI-powered deployment automationSelf-healing systemsPredictive scalingAutomated monitoringIntelligent incident responsePerformance optimizationSecurity automation';
       'Compliance monitoringAnalytics dashboard'
   ];    features: [;
       'Autonomous infrastructure managementAI - powered deployment automation_self - healing systems_predictive scaling_automated monitoring_intelligent incident response_performance optimization_security automation';
       'Compliance monitoring_analytics dashboard';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -673,6 +710,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     category: 'Enterprise IT & Operations';
     real_service: true;
     technology: ['AI, Machine Learning, IT Automation, Infrastructure Management, Monitoring Tools, Predictive Analytics'];
@@ -688,6 +727,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -697,6 +737,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     realImplementation: true;
     implementationDetails: 'Advanced autonomous IT operations center with AI-powered management, self-healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.';
     launchDate: '2025-01-15';
@@ -704,20 +746,15 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     rating: 4 && 4.9;
     reviews: 95
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 ];
 <<<<<<< HEAD
 ;
-=======
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -730,16 +767,14 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 ];
 ;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseITBreakthroughService2029 {;
   id: string,;
@@ -990,13 +1025,12 @@ export interface EnterpriseITBreakthroughService2029 {;
     customers: 180,;
     rating: 4.9;
     reviews: 95;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

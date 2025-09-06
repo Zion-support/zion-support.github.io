@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -15,6 +16,10 @@
     "dev": "vite",
     "build": "vite build",
     "build:netlify": "node scripts/build-with-error-handling.js",
+=======
+    "dev": "vite",
+    "build": "vite build",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
     "start": "vite preview --port 4173",
@@ -69,7 +74,10 @@
     "@radix-ui/react-tooltip": "^1.0.7",
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
+<<<<<<< HEAD
     "@sendgrid/mail": "^8.1.5",
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     "@supabase/ssr": "^0.6.1",
 >>>>>>> 8fd25f885ef5f7c479ebfaa3c8ff4946200161f8
     "@supabase/supabase-js": "^2.57.2",
@@ -143,8 +151,12 @@
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
+<<<<<<< HEAD
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
+=======
+    "vite": "^7.1.4"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   },
   "engines": {
     "node": ">=18.0.0",
@@ -171,5 +183,9 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
+<<<<<<< HEAD
 }
 >>>>>>> 8fd25f885ef5f7c479ebfaa3c8ff4946200161f8
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

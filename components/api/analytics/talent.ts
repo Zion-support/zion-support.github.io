@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,9 @@ import { createServerClient } from '../../../utils/supabase/server';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
       supabase
 =======
@@ -52,9 +56,12 @@ supabase
         { label: 'ai', value: 1 }
       ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
     });
 <<<<<<< HEAD
@@ -62,9 +69,8 @@ supabase
 
   }
 
-<<<<<<< HEAD
-=======
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -73,6 +79,8 @@ supabase
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
   }
@@ -80,6 +88,7 @@ supabase
 }
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -91,6 +100,10 @@ supabase
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
@@ -179,6 +192,7 @@ function handler() {
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 }
@@ -189,3 +203,6 @@ function handler() {
 =======
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

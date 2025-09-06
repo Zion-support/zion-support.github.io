@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -145,6 +146,9 @@ module.exports = { fixFinalSyntax };
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -152,7 +156,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('ℹ️ [2025-09-06T09:26:05.797Z] 🚀 Starting Final Syntax Errors Fix...');
-console.log('ℹ️ [2025-09-06T09:26:05.800Z] ==================================================');
+console.log('ℹ️ [2025-09-06T09:26:05.800Z] =');
 console.log('');
 
 // Fix livekit room file
@@ -230,7 +234,7 @@ if (fs.existsSync(mediaGeneratePath)) {
 
 console.log('');
 console.log('📊 FINAL SYNTAX ERRORS FIX REPORT');
-console.log('ℹ️ [2025-09-06T09:26:05.802Z] ==================================================');
+console.log('ℹ️ [2025-09-06T09:26:05.802Z] =');
 console.log('');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Files fixed: 5');
 console.log('ℹ️ [2025-09-06T09:26:05.802Z] Errors: 0');

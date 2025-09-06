@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/integrations/webhooks/resume-viewed.ts
 <<<<<<< HEAD
 =======
 
@@ -16,6 +17,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const state = null;
     results.push({ providerId: conn.providerId, ok: true })
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/resume-viewed.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -34,9 +38,12 @@ export default async function handler(
       c && c.providerId === "hubspot" ||
       c && c.providerId === "zoho" ||
       c && c.providerId === "pipedrive"
+<<<<<<< HEAD:pages_backup/api/integrations/webhooks/resume-viewed.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/resume-viewed.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -78,10 +85,13 @@ function handler() {
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
   }
+<<<<<<< HEAD:pages_backup/api/integrations/webhooks/resume-viewed.ts
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/resume-viewed.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -100,9 +110,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   res.status(200).json({ ok: true, results })
 }
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
       provider_id: conn.provider_id
       level: "info"
@@ -135,6 +143,7 @@ const crms = state.connections.filter(
   res.status(200).json({ ok: true, results });
 <<<<<<< HEAD
 }
+<<<<<<< HEAD:pages_backup/api/integrations/webhooks/resume-viewed.ts
 <<<<<<< HEAD
 }
 
@@ -144,16 +153,18 @@ const crms = state.connections.filter(
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
-  res.status(200).json({ ok: true, results });
->>>>>>> main
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/resume-viewed.ts
+  res.status(200).json({ ok: true, results });
 }
 }
 
 }
+<<<<<<< HEAD:pages_backup/api/integrations/webhooks/resume-viewed.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/resume-viewed.ts

@@ -1,6 +1,9 @@
+<<<<<<< HEAD:pages_backup/careers.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/careers.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
@@ -23,6 +26,7 @@ const Page = () => {
 };
 
 export default Page;
+<<<<<<< HEAD:pages_backup/careers.tsx
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Users,
@@ -816,3 +820,5 @@ origin/automation-improvements-final
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/careers.tsx

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -33,6 +34,8 @@ export interface CuttingEdge2029Service {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Corporate strategy development',
       'Resource allocation optimization',
       'Financial management automation',
@@ -44,6 +47,7 @@ export interface CuttingEdge2029Service {
       'Performance optimization',
     ],
     popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -100,6 +104,8 @@ export interface CuttingEdge2029Service {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -107,6 +113,7 @@ export interface CuttingEdge2029Service {
     },
     real_implementation: true,
     implementation_details:;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -321,6 +328,8 @@ export interface CuttingEdge2029Service {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.',
     launchDate: '2029-03-01',
     customers: 8,
@@ -339,8 +348,8 @@ export interface CuttingEdge2029Service {
     rating: 4.8
 
 
-<<<<<<< HEAD
     reviews: 23
+<<<<<<< HEAD
 =======
 =======
     reviews: 23
@@ -412,6 +421,8 @@ export interface CuttingEdge2029Service {
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -431,7 +442,6 @@ export interface CuttingEdge2029Service {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Neural Interface Services
@@ -510,6 +520,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -517,8 +528,9 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-;
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+;
     realImplementation: true
     implementationDetails:
       'Comprehensive autonomous AI platform with corporate management capabilities, decision-making algorithms, and operational automation. Includes real-time monitoring and human oversight options.'
@@ -704,31 +716,13 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     growthRate: '400% annual growth'
     variant: 'quantum-futuristic'
     contactInfo: {
-<<<<<<< HEAD
 }
-=======
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-<<<<<<< HEAD
       'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.'
     launchDate: '2029-03-01'
     customers: 8
     rating: 4.8
     reviews: 23
   }
-=======
-      'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.',
-    launchDate: '2029-03-01',
-    customers: 8,
-    rating: 4.8,
-    reviews: 23,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -739,21 +733,13 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     launchDate: '2029-03-01';
     customers: 8;
     rating: 4.8
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Neural Interface Services
   {
     reviews: 23
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdge2029Service {;
   id: string,;
@@ -1013,11 +999,8 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     customers: 8,;
     rating: 4.8;
     reviews: 23;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ];
@@ -1232,3 +1215,5 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
   }
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

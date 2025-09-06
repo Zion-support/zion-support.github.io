@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     ok: true,
     text: `Mock ${request.type} for ${request.companyName} on ${request.date}`;
   };
@@ -10,16 +13,10 @@
 
   };
 }
-=======
-
-
-  };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   }
 
-<<<<<<< HEAD
 
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
@@ -32,18 +29,24 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
       path: '',
@@ -68,6 +71,7 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
     {
       path: '',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -78,6 +82,8 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`,
     },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   ];
 
 ;
@@ -92,8 +98,11 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
 export function buildPressRelease(
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   type: PressReleaseType
 ;
   // Check condition
@@ -105,7 +114,6 @@ if (return [...base, ...web3Extras]) {
 export function buildPressRelease (
   type: PressReleaseType,
   params: {
-<<<<<<< HEAD
   type: PressReleaseType,
   params: {;
   type: PressReleaseType
@@ -119,8 +127,6 @@ if (return [...base, ...web3Extras]) {
 export function buildPressRelease (
   type: PressReleaseType,
   params: {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     company_name: string;
 export function buildPressRelease(
 
@@ -128,18 +134,22 @@ export function buildPressRelease(
   params: {;
     companyName: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     date: string;
     raiseAmount?: string;
     tokenName?: string;
     anchors?: string[];
   }
 ): string {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -151,12 +161,15 @@ export function buildPressRelease(
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   if (type === 'seed-round') {
     return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces a seed round of ${params && params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
   if (type === 'token-sale') {
     return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces the ${params && params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -167,12 +180,17 @@ export function buildPressRelease(
 
 =======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export function buildTimeline(startDate: Date) {
   const addDays = (d: Date, days: number) =>;
     new Date(d.getFullYear(), d.getMonth(), d.getDate() + days);
   const fmt = (d: Date) => d.toISOString().substring(0, 10);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   return [
     { label: 'Week 1: Closed Beta Invite', date: fmt(addDays(startDate, 0)) }
     { label: 'Week 2: ZionGPT Core Reveal', date: fmt(addDays(startDate, 7)) }
@@ -182,7 +200,6 @@ export function buildTimeline(startDate: Date) {
     }
     { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
   ];
-<<<<<<< HEAD
 
 
 function titleCase(s: string) {
@@ -191,16 +208,20 @@ function titleCase(s: string) {
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 function titleCase(s: string) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 function titleCase(s: string) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -228,6 +249,13 @@ function titleCase(s: string) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );}
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 }
     return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} announces a seed round of ${params.raise_amount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\n_quotes:\n- CEO: "We are thrilled..."\n\n_about ${params.company_name}:\n${boilerplate}`;
@@ -265,6 +293,7 @@ function title_case() {
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -275,3 +304,5 @@ function title_case() {
 =======
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

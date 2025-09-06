@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -229,6 +232,7 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
+<<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setSubmitStatus('success');
@@ -443,3 +447,5 @@ export default ContactForm;
 };
 export default ContactForm;
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

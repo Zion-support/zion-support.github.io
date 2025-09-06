@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src_backup/components/support/SupportWidget.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 const [isOpen, setIsOpen] = useState(false)
@@ -8,6 +9,8 @@ const [isOpen, setIsOpen] = useState(false)
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/support/SupportWidget.tsx
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
@@ -52,6 +55,7 @@ export function SupportWidget() {
                 className={cn(
                   "font-semibold",
                   theme === "dark" ? "text-white" : "text-gray-800",
+<<<<<<< HEAD:src_backup/components/support/SupportWidget.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -107,6 +111,8 @@ export function SupportWidget() {
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/support/SupportWidget.tsx
                 )}
               >
 
@@ -168,6 +174,7 @@ export function SupportWidget() {;
               </h3>
             </div>
             <div className="flex items-center gap-2">
+<<<<<<< HEAD:src_backup/components/support/SupportWidget.tsx
 <<<<<<< HEAD
               <Button
 =======
@@ -175,6 +182,8 @@ export function SupportWidget() {;
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/support/SupportWidget.tsx
               <Button
                 variant="ghost"
                 size="icon"
@@ -203,8 +212,8 @@ export function SupportWidget() {;
   );
 <<<<<<< HEAD
 }
-<<<<<<< HEAD
 ;
+<<<<<<< HEAD:src_backup/components/support/SupportWidget.tsx
 =======
 ;
 =======
@@ -214,3 +223,5 @@ export function SupportWidget() {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/support/SupportWidget.tsx

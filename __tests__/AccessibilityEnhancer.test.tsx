@@ -86,11 +86,13 @@ describe('AccessibilityEnhancer', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-});
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 });
+});
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 =======
@@ -121,3 +123,5 @@ describe('AccessibilityEnhancer'
 =======
 });
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

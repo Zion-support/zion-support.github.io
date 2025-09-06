@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements.cjs
 =======
 <<<<<<< HEAD
@@ -13,6 +14,10 @@
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:scripts/simple-app-improvements.cjs
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');

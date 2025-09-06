@@ -1,23 +1,30 @@
 import type { NextPage } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 
 
   return (
+<<<<<<< HEAD
 =======
 =======
 import Link from 'next/link';
 import Seo from '../../components/seo/Seo';
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 const ProductManagementChat: NextPage = () => {
   return (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -26,6 +33,8 @@ const ProductManagementChat: NextPage = () => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     <div>
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />
       <main>
@@ -37,6 +46,7 @@ const ProductManagementChat: NextPage = () => {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,6 +57,10 @@ const ProductManagementChat: NextPage = () => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     <div>;
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />;
       <main>;
@@ -59,14 +73,13 @@ const ProductManagementChat: NextPage = () => {
 };
 export default ProductManagementChat;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-
 =======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
+
 import Link from 'next / link';
 import Seo from '../../components / seo / Seo';
   return (
@@ -82,16 +95,11 @@ import Seo from '../../components / seo / Seo';
 ;
 export default ProductManagementChat;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 export default ProductManagementChat;
 
 
 export default ProductManagementChat;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default ProductManagementChat;
 
       <main>
@@ -107,6 +115,7 @@ export default ProductManagementChat
 
 export default ProductManagementChat;
 export default ProductManagementChat;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -114,3 +123,5 @@ export default ProductManagementChat;
 =======
 const ProductManagementChat: NextPage;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -21,10 +21,6 @@ const DataPipelineEngineeringChat: NextPage = () => {;
     </div>
       </Head>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <main>;
         <h1>DataPipelineEngineeringChat</h1>;
         <p>Service details coming soon...</p>;
@@ -37,11 +33,6 @@ export default DataPipelineEngineeringChat;
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -62,6 +53,7 @@ const DataPipelineEngineeringChat: NextPage = () => {
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -72,6 +64,8 @@ const DataPipelineEngineeringChat: NextPage = () => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -96,11 +90,14 @@ const DataPipelineEngineeringChat: NextPage = () => {
 export default DataPipelineEngineeringChat;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     <div>
       <Head>
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
@@ -148,9 +145,12 @@ export default DataPipelineEngineeringChat;
 
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

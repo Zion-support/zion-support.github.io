@@ -1,23 +1,5 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 
-const fs = require('fs');
-const path = require('path');
-<<<<<<< HEAD
-const { execSync } = require('child_process');
-
-console.log('🔧 Comprehensive syntax error fixing...');
-
-// Function to fix specific syntax patterns
-function fixFileContent(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix merge conflict markers
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`  🔄 Fixing merge conflicts in ${filePath}`);
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
       modified = true;
     }
 
@@ -153,14 +135,6 @@ for (const file of files) {
 
 console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
 console.log('🎯 Comprehensive syntax fixing complete!');
-=======
-=======
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 class ComprehensiveSyntaxFixer {
   constructor() {
@@ -474,10 +448,6 @@ for (const file of files) {;
   }
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 // Run the fixer
 const fixer = new ComprehensiveSyntaxFixer();
 <<<<<<< HEAD
@@ -580,6 +550,7 @@ if (require.main === module) {;
 
 module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
@@ -590,3 +561,6 @@ console.log('🎯 Comprehensive syntax fixing complete!');
 =======
 fixer.run().catch(console.error);
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -5,11 +5,24 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
+<<<<<<< HEAD
     <div className="animate-fade-in">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
           <p className="text-xl text-gray-600">We reply within one business day</p>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Contact Us
+          </h1>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Ready to transform your business with cutting-edge technology? 
+            Let&apos;s discuss how we can help you achieve your goals.
+          </p>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

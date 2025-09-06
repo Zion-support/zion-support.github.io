@@ -10,6 +10,13 @@ const { describe,it,expect } from "vitest"; describe("Trust Score User API",() =
 import { describe,it,expect } from 'vitest'; describe('Trust Score User API',() => { it('should work',() => { expect(true).toBe(true)})}
 });''
 });''
+<<<<<<< HEAD
+=======
+import { describe, it, expect } from 'vitest'
+describe('Trust Score User API'
+  it('should work'
+const { describe,it,expect } from "vitest"; describe('Trust Score User API', () => { it("should work"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import { describe, it, expect } from 'vitest'
 describe('Trust Score User API'
   it('should work'

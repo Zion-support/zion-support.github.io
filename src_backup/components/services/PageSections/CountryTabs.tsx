@@ -324,8 +324,8 @@ export function CountryTabs({
 
 import { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
-import { Input } from '@/components / ui / input';
-import { Button } from '@/components / ui / button';
+import { Input } from '@/components/ui/ input';
+import { Button } from '@/components/ui/ button';
 import {
   Pagination,
   PaginationContent,
@@ -333,9 +333,9 @@ import {
   PaginationButton,
   PaginationNext,
   PaginationPrevious,
-} from '@/components / ui / pagination';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { CountryServiceCard } from '@/components / services / CountryServiceCard';
+} from '@/components/ui/ pagination';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/ tabs';
+import { CountryServiceCard } from '@/components/ services / CountryServiceCard';
 import { CountryPricing } from '@/data / onsiteServicePricing';
 interface CountryTabsProps {
   popular_countries: string[];

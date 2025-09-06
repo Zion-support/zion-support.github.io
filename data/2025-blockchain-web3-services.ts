@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export interface BlockchainWeb3Service {
 <<<<<<< HEAD
 export interface BlockchainWeb3Service {;
@@ -21,10 +24,13 @@ id: string;
     setupTime: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 =======
     enterprise: string
@@ -77,6 +83,7 @@ id: string;
     support:
       '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.'
     compliance: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -159,6 +166,8 @@ id: string;
     icon: '🌾',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2024 - 01 - 15',
@@ -167,6 +176,7 @@ id: string;
     reviews: 6200,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -181,6 +191,8 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     implementationDetails:
       'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.'
     roi: 'NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.'
@@ -198,6 +210,7 @@ id: string;
     support:
       '24/7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.'
     compliance: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -278,6 +291,8 @@ id: string;
     icon: '🎨',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - pink - 500 to - rose - 600',
     popular: true,
     launch_date: '2024 - 03 - 01',
@@ -287,6 +302,7 @@ id: string;
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -295,10 +311,13 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     competitors: [
       'IBM Food Trust, SAP Blockchain, Oracle Blockchain, VeChain, WaltonChain'
     ]
     techStack: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -310,6 +329,8 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     implementationDetails:
       'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.'
     roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.'
@@ -325,6 +346,7 @@ id: string;
       'SAP, Oracle, Microsoft Dynamics, Salesforce, Custom ERP systems, IoT platforms'
     ]
     support:
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -405,6 +427,8 @@ id: string;
     icon: '🔗',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,
     launch_date: '2024 - 02 - 10',
@@ -413,6 +437,7 @@ id: string;
     reviews: 680,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -425,6 +450,8 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     implementationDetails:
       'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.'
     roi: 'Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.'
@@ -441,12 +468,15 @@ id: string;
     ]
     support:
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup.com/web3-social-media-platform',
@@ -458,9 +488,9 @@ id: string;
     rating: 4.6,
     reviews: 18000,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -686,6 +716,10 @@ id: string;
     support: 'Community support, developer documentation, custom development services, and enterprise solutions.',
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+      'Community support, developer documentation, custom development services, and enterprise solutions.',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
     id: 'web3 - social - media - platform',
@@ -753,12 +787,15 @@ id: string;
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup.com / web3 - social - media - platform',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     icon: '🌐',
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
@@ -767,6 +804,7 @@ id: string;
     rating: 4 && 4.6,
     reviews: 18000,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -800,6 +838,8 @@ id: string;
 ];      'Social networking_content creation and sharing_community building_brand marketing_influencer monetization_decentralized governance';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     ];
 
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'];
@@ -807,33 +847,34 @@ id: string;
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'];
 
     icon: '🌐';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - purple - 500 to - indigo - 600';
     popular: true;
     launch_date: '2024 - 01 - 01';
     customers: 25000;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4.6,
     reviews: 18000;
   }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     rating: 4.6,
     reviews: 18000;
   }
 ;
-=======
-
-    rating: 4 && 4.6,
-
-    reviews: 18000
-<<<<<<< HEAD
     rating: 4.6,
     reviews: 18000;
   }
 
+<<<<<<< HEAD
 =======
 
 export interface BlockchainWeb3Service {;
@@ -844,17 +885,12 @@ export interface BlockchainWeb3Service {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-;
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+;
   }
 ];
-=======
 export interface BlockchainWeb3Service {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1116,17 +1152,11 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     customers: 25000,;
     rating: 4.6,;
     reviews: 18000;
-<<<<<<< HEAD
     rating: 4.6,
     reviews: 18000;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
@@ -1135,3 +1165,5 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
   }
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

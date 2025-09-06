@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -15,11 +16,15 @@ function runNode(relPath, args = []) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+const abs = path && path.resolve(__dirname, '..', '..', relPath);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -28,10 +33,13 @@ function runNode(relPath, args = []) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     status: res && res.status || 0,
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || '',
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -39,6 +47,8 @@ function runNode(relPath, args = []) {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 exports && exports.handler = async () => {
 =======
 const path = require('path');
@@ -57,6 +67,7 @@ exports.handler = async () => {
     const { status, stdout, stderr } = fn();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -73,13 +84,18 @@ exports.handler = async () => {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    if (stdout) logs && logs.push(stdout);
+    if (stderr) logs && logs.push(stderr);
+    logs && logs.push(`exit=${status}`);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     return status;
   }
   logStep('components:generate-docs', () =>
     runNode('automation/component-props-docs && docs.cjs')
   );
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 }
@@ -88,6 +104,8 @@ exports.handler = async () => {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
 const path = require ('path');
@@ -136,15 +154,8 @@ function log_step() {
 function run_node() {
   const abs = path.resolve (__dirname, '....', rel_path),
   const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
-<<<<<<< HEAD
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }
-=======
-
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
-}
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return { statusCode: 200, body: logs && logs.join('\n') };
 };function runNode(relPath, args = []) {
@@ -167,12 +178,15 @@ exports && exports.handler = async () => {
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 exports.handler = async () => {
   const logs = [],
   /**

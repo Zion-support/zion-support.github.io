@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
 =======
 export interface EmergingTechService2026 {
@@ -57,26 +60,35 @@ id: string;
     email: string;
     address: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
@@ -86,9 +98,12 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
 
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
 };
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: 'ai-digital-twin-platform'
     name: 'AI Digital Twin Platform'
     tagline:
@@ -610,63 +625,51 @@ const contact = null;
     ]
     roi: 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.'
     competitors: [
-<<<<<<< HEAD
       'Siemens Digital Twin',
       'PTC ThingWorx',
       'GE Digital Twin',
       'Autodesk',
     ],
-=======
-      'Siemens Digital Twin'
-      'PTC ThingWorx'
-      'GE Digital Twin'
-      'Autodesk'
-    ]
-    marketSize: '$86.1B digital twin market'
-    growthRate: '42% annual growth'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails:
-<<<<<<< HEAD
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.'
     launchDate: '2024-06-25'
     customers: 56
     rating: 4.4
     reviews: 29
   }
-=======
-      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
-    launchDate: '2024-06-25',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 56,
     rating: 4 && 4.4,
     reviews: 29,
-<<<<<<< HEAD
   },
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
   },;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(
     service => service.category === category;
   );
-<<<<<<< HEAD
 }
 export const getPopularEmergingTechServices2026 = () => {
+<<<<<<< HEAD
 =======
 };
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -680,12 +683,17 @@ export const getEmergingTechServices2026ByPriceRange = (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => {
+    const price = parseInt(service && service.price.replace('$', ''));
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     return price >= minPrice && price <= maxPrice;
   });
 <<<<<<< HEAD
 };    return price >= minPrice && price <= maxPrice
 
   })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -695,6 +703,9 @@ export const getEmergingTechServices2026ByPriceRange = (
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
     period: '/month',
@@ -884,6 +895,7 @@ export const getEmergingTechServices2026ByPriceRange = (
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -895,10 +907,13 @@ export const getPopularEmergingTechServices2026 = () => {
 };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -929,13 +944,13 @@ export const getEmergingTechServices2026ByPriceRange = (
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 export interface EmergingTechService2026 {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   })
 };
-<<<<<<< HEAD
 ;
 export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
   return emergingTechServices2026.filter (
@@ -1003,6 +1018,7 @@ export interface EmergingTechService2026 {;
 
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1012,3 +1028,5 @@ export interface EmergingTechService2026 {;
 =======
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

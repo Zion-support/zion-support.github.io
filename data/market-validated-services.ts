@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -10,6 +11,8 @@
 =======
 import { ServiceVariant } from '../types/service-variants';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
   name: string;
   tagline: string;
@@ -29,6 +32,7 @@ import { ServiceVariant } from '../types/service-variants';
     address: string;
     website?: string;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -60,12 +64,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'RAG over your docs with hybrid search',
       'Guardrails: PII / PHI redaction, jailbreak detection',
       'Human handoff + conversation analytics',
       'Slack / Teams / Widget channels',
     ],
     category: 'AI & Assistants',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -77,12 +84,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     customers: 1200,
     trial_days: 14,
     setup_time: '30 minutes',
     contact_info,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -102,11 +112,14 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Policy and toxicity checks',
       'Latency and cost KPIs',
       'Prompt / version diff and alerts',
     ],
     category: 'AI & MLOps',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -118,12 +131,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     customers: 600,
     trial_days: 14,
     setup_time: '1 hour',
     contact_info,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -142,11 +158,14 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Chunking strategies + citations',
       'Toolformer - style agents',
       'Eval suite and drift monitoring',
     ],
     category: 'AI & Search',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -158,11 +177,14 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     customers: 900,
     trial_days: 14,
     setup_time: '2 hours',
     contact_info,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -183,11 +205,14 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'OWASP Top 10 tests',
       'CI gate',
       'Fix guidance',
     ],
     category: 'Enterprise IT - Security',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -197,6 +222,8 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     variant: 'cyberpunk',
     rating: 4 && 4.6,
     customers: 750,
@@ -205,6 +232,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     contact_info,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -223,11 +251,14 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'SLOs & error budgets',
       'Alerting',
       'Dashboards',
     ],
     category: 'Enterprise IT - Observability',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -237,6 +268,8 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     variant: 'holographic',
     rating: 4 && 4.6,
     customers: 640,
@@ -244,6 +277,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '40 minutes',
     contact_info,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -263,12 +297,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Auto rightsizing',
       'Idle cleanup',
       'Spot orchestration',
       'Anomaly detection',
     ],
     category: 'Enterprise IT - FinOps',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -278,6 +315,8 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     variant: 'quantum',
     rating: 4 && 4.6,
     customers: 820,
@@ -286,6 +325,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     contact_info,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -303,12 +343,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Slow query ranking',
       'AI index advice',
       'Pool tuning',
       'SLA / SLO dashboards',
     ],
     category: 'Enterprise IT - Data',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -320,12 +363,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     customers: 560,
     trial_days: 14,
     setup_time: '45 minutes',
     contact_info,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -372,12 +418,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Global synthetic checks',
       'Error budgets & burn rates',
       'On - call & escalations',
       'Incident runbooks',
     ],
     category: 'Enterprise IT - SRE',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -389,12 +438,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     customers: 1100,
     trial_days: 14,
     setup_time: '25 minutes',
     contact_info,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -412,12 +464,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Expiry alerts',
       'Issuer checks',
       'Auto - renew validation',
       'Inventory export',
     ],
     category: 'Enterprise IT - Security',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -427,6 +482,8 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     variant: 'default',
     rating: 4 && 4.5,
     customers: 2200,
@@ -435,6 +492,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     contact_info,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -452,12 +510,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Change detection',
       'Misconfig alerts',
       'TTL insights',
       'Export & audit',
     ],
     category: 'Enterprise IT - Networking',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -467,6 +528,8 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     variant: 'default',
     rating: 4 && 4.4,
     customers: 980,
@@ -474,6 +537,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '15 minutes',
     contact_info,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -496,10 +560,13 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Watermarks',
       'Async webhooks',
     ],
     category: 'Micro SaaS',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -511,12 +578,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     customers: 1300,
     trial_days: 7,
     setup_time: '10 minutes',
     contact_info,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -534,12 +604,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'RUM collection',
       'CWV dashboards',
       'Waterfall analysis',
       'Alerts & webhooks',
     ],
     category: 'Micro SaaS',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -551,12 +624,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     customers: 760,
     trial_days: 14,
     setup_time: '20 minutes',
     contact_info,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -574,12 +650,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Edge evaluation',
       'Targeting & segments',
       'Experiments',
       'SDKs & audit',
     ],
     category: 'Micro SaaS',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -591,12 +670,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     customers: 430,
     trial_days: 14,
     setup_time: '30 minutes',
     contact_info,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -643,12 +725,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Control mapping',
       'Evidence collection',
       'Change tracking',
       'Export & auditor access',
     ],
     category: 'Enterprise IT - Compliance',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -660,12 +745,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     customers: 310,
     trial_days: 7,
     setup_time: '1 day',
     contact_info,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -712,12 +800,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Capture & inspect',
       'Replay with backoff',
       'Signature verification',
       'Forwarding rules',
     ],
     category: 'Micro SaaS',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -729,6 +820,8 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     customers: 1650,
     trial_days: 14,
     setup_time: '10 minutes',
@@ -737,9 +830,12 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Managed vector DB'
       'Ingestion pipelines'
       'Metadata filters'
@@ -826,6 +922,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export interface MarketValidatedService {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -885,6 +982,8 @@ export interface MarketValidatedService {
   {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: 'vector - search - starter',
     name: 'Vector Search Starter',
     tagline: 'Deploy a production - grade vector database and APIs',
@@ -895,9 +994,12 @@ export interface MarketValidatedService {
     features: [;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
       'WORM retention',
       'Export APIs',
@@ -916,6 +1018,7 @@ export interface MarketValidatedService {
     contact_info,
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -923,12 +1026,15 @@ export interface MarketValidatedService {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
       'Access controls',
     ],
     category: 'AI & Search',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -948,13 +1054,17 @@ export interface MarketValidatedService {
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-export interface MarketValidatedService {
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+export interface MarketValidatedService {
 export interface MarketValidatedService {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 	id: string;
 	name: string;
 	tagline: string;
@@ -968,8 +1078,8 @@ export interface MarketValidatedService {;
 	rating?: number;
 	customers?: number;
 	trialDays?: number;
-<<<<<<< HEAD
 }}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 }}
@@ -979,12 +1089,15 @@ export interface MarketValidatedService {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
   mobile: "+1 302 464 0950",
 	email: "kleber@ziontechgroup && ziontechgroup.com",
 	address: "364 E Main St STE 1008 Middletown DE 19709";
   website: "https://ziontechgroup && ziontechgroup.com";,
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1783,3 +1896,5 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 =======
 const contactInfo = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

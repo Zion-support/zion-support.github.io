@@ -23,12 +23,17 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 <<<<<<< HEAD
 
   const getProgressValue = () => {
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationProgress.tsx
 <<<<<<< HEAD
 
 
 =======
 import { ApplicationStatus  } from '@/types / jobs';
 import { Progress  } from '@/components / ui / progress';
+=======
+import { ApplicationStatus  } from '@/types/ jobs';
+import { Progress  } from '@/components/ui/ progress';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/jobs/applications/ApplicationProgress.tsx
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn  } from '@/lib / utils';
 interface ApplicationProgressProps {
   status: ApplicationStatus,

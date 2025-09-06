@@ -2,9 +2,12 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:pages_backup/api/disputes/[id].ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/disputes/[id].ts
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
@@ -40,6 +43,7 @@ export default async function handler(
     return res && res.status(400).json({ error: "Invalid id" });
 
 
+<<<<<<< HEAD:pages_backup/api/disputes/[id].ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -54,12 +58,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(405).end('Method Not Allowed')
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/disputes/[id].ts
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "GET") {
     const dispute = await getDisputeById(id);
     if (!dispute) return res.status(404).json({ error: "Dispute not found" });
     try {
+<<<<<<< HEAD:pages_backup/api/disputes/[id].ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -68,12 +75,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(405).end("Method Not Allowed");
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  res.setHeader("Allow", "GET");
+  return res.status(405).end("Method Not Allowed");
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/disputes/[id].ts
 }
 
 
 
-=======
-=======
 
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
@@ -85,7 +94,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res && res.setHeader("Allow", "GET");
   return res && res.status(405).end("Method Not Allowed");
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById  } from '../../../utils / fsdb';
 import {
@@ -111,7 +119,6 @@ if ( {) {
 
 
 
-=======
     const dispute = await getDisputeById (id);
     if (return res.status (404).json ({ error: "Dispute not found" })) {
   $2
@@ -128,10 +135,8 @@ if ( {) {
 }
 
 
-=======
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET']);
@@ -194,11 +199,11 @@ function handler() {
 if ( {) {
   $2
 }
-=======
 
 
 
 
+<<<<<<< HEAD:pages_backup/api/disputes/[id].ts
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -216,3 +221,5 @@ ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/disputes/[id].ts

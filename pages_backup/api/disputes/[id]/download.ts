@@ -16,8 +16,6 @@ import {
   parseUserFromRequest,
 =======
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   parseUserFromRequest
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ensureInvolvedOrAdmin,;
@@ -25,15 +23,10 @@ import {
 <<<<<<< HEAD
 
 export default async function handler(
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   req: NextApiRequest
   res: NextApiResponse
 ) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   const { id, fileName } = req && req.query as { id?: string; fileName?: string };
 
@@ -50,10 +43,13 @@ export default async function handler(
 ) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
 
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/download.ts
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/disputes/[id]/download.ts
   if (
     !id |
     !fileName |
@@ -64,9 +60,12 @@ export default async function handler(
 <<<<<<< HEAD
 =======
     return res.status(400).json({ error: "Invalid parameters" });
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/download.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/disputes/[id]/download.ts
   }
 
   const user = parseUserFromRequest(req);
@@ -91,11 +90,14 @@ res.setHeader(
     'Content-Disposition',
     `attachment; filename="${path.basename(att.fileName)}"`
   );
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/download.ts
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/disputes/[id]/download.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -106,6 +108,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id, fileName } = req.query as { id?: string, fileName?: string };
   if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {
     return res.status(400).json({ error: 'Invalid parameters' })
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/download.ts
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -114,13 +117,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/disputes/[id]/download.ts
   }
 
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
   if (!dispute) return res && res.status($1).json({ $2 });
   try {
-=======
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
   } catch (e: any) {
     return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
@@ -267,13 +271,14 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
+<<<<<<< HEAD:pages_backup/api/disputes/[id]/download.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/disputes/[id]/download.ts

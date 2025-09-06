@@ -1,25 +1,27 @@
+<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dev/source-map.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Source map endpoint' });
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
+<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> main
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dev/source-map.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
@@ -36,7 +38,6 @@ export default function handler(req: any, res: any) {
 import type { NextApiRequest, NextApiResponse } from "next"
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap"
 import { getGitStatus, requireRoles } from "../../../utils/devAccess"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"])
   if (!identity) return
@@ -58,6 +59,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.setHeader("Allow", "GET, POST")
 
+<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';,
@@ -66,6 +68,8 @@ import { getGitStatus, require_roles  } from '../../../utils / dev_access';,
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dev/source-map.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';
 import { getGitStatus, require_roles  } from '../../../utils / dev_access';
@@ -184,15 +188,7 @@ export default function handler(req, res) {
   }
 }
 }
-=======
 }
 }
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-=======
->>>>>>> main

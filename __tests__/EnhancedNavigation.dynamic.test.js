@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,6 +29,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -48,8 +53,11 @@ describe('EnhancedNavigationdynamic', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 });
 });
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedNavigationdynamic from '../components/EnhancedNavigation.dynamic'; describe('EnhancedNavigationdynamic',() => { test('renders without crashing',() => { render(<EnhancedNavigationdynamic />); expect( screen.getByTestId('enhancednavigation.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedNavigationdynamic />)}); test('handles user interactions',() => { render(<EnhancedNavigationdynamic />)}); test('applies correct styling',() => { render(<EnhancedNavigationdynamic />)})});
@@ -82,6 +90,7 @@ describe('EnhancedNavigationdynamic'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedNavigationdynamic from "./components/EnhancedNavigation.dynamic"; describe('EnhancedNavigationdynamic', () => { test("renders without crashing",() => { render(<EnhancedNavigationdynamic />); expect( screen.getByTestId("enhancednavigation.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedNavigationdynamic />)}); test("handles user interactions",() => { render(<EnhancedNavigationdynamic />)}); test("applies correct styling"
+<<<<<<< HEAD
 });
 });
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedNavigationdynamic from '../components/EnhancedNavigation.dynamic'; describe('EnhancedNavigationdynamic',() => { test('renders without crashing',() => { render(<EnhancedNavigationdynamic />); expect( screen.getByTestId('enhancednavigation.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedNavigationdynamic />)}); test('handles user interactions',() => { render(<EnhancedNavigationdynamic />)}); test('applies correct styling',() => { render(<EnhancedNavigationdynamic />)})});
@@ -110,3 +119,9 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Enhanced
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+
+});
+});
+import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedNavigationdynamic from '../components/EnhancedNavigation.dynamic'; describe('EnhancedNavigationdynamic',() => { test('renders without crashing',() => { render(<EnhancedNavigationdynamic />); expect( screen.getByTestId('enhancednavigation.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedNavigationdynamic />)}); test('handles user interactions',() => { render(<EnhancedNavigationdynamic />)}); test('applies correct styling',() => { render(<EnhancedNavigationdynamic />)})});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/auth/confirm.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -23,6 +24,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET' && req.method !== 'POST') {
     res.status(405).end();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET' && req.method !== 'POST') {
+    res.status(405).end(),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/[...nextauth].ts
     return
   }
   

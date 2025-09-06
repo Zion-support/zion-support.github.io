@@ -1,23 +1,16 @@
 <<<<<<< HEAD
 
 
-<<<<<<< HEAD
 
 import { ServiceVariant } from '../types/service-variants',
 
-=======
-=======
-
-import { ServiceVariant } from '../types/service-variants',
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
 }
 
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { ServiceVariant } from '../types/service-variants';
@@ -67,11 +60,11 @@ export interface ComprehensiveMicroSaasService {
 
 const contact = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
@@ -80,8 +73,11 @@ name: 'AI Healthcare Diagnostics Platform';
 
 tagline: 'Advanced AI - powered medical diagnostics with 99.7% accuracy';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 price: '$599';
 period: '/month';
 description: 'Revolutionary AI platform that provides accurate medical diagnostics, treatment recommendations, and patient monitoring with FDA compliance.';
@@ -91,6 +87,7 @@ features: [ 'AI - powered medical image analysis (X - ray, MRI, CT) Symptom anal
 'Real - time diagnostic accuracy tracking_multi - specialty coverage (cardiology, radiology, oncology) ';
 'Automated report generation_telemedicine integration capabilities' ];
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -107,6 +104,8 @@ setup_time: '2 weeks';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 category: 'Healthcare AI';
 real_service: true;
 technology: ['Deep Learning, Computer Vision, Python, TensorFlow, PyTorch'];
@@ -114,6 +113,7 @@ integrations: ['Epic, Cerner, Allscripts, PACS systems, Telemedicine platforms']
 use_cases: ['Medical imaging analysis_diagnostic assistance', 'Treatment planning_patient monitoring'];
 roi: 'Average 500% ROI through improved diagnostic accuracy and reduced misdiagnosis costs';
 competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -137,6 +137,8 @@ market_advantage: 'Highest accuracy rate in the market with comprehensive multi 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 //Fintech AI Services {
   id: 'ai - fintech - intelligence - platform';
@@ -151,6 +153,7 @@ features: [ 'Real - time market analysis and prediction_automated trading strate
 'Multi - asset class coverage_advanced financial modeling';
 'Real - time alerts and notifications_integration with major exchanges' ];
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -167,6 +170,8 @@ setup_time: '1 week';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 category: 'Fintech AI';
 real_service: true;
 technology: ['Machine Learning, Deep Learning, Python, TensorFlow, PyTorch'];
@@ -174,6 +179,7 @@ integrations: ['Bloomberg, Reuters, Interactive Brokers, TD Ameritrade, Coinbase
 use_cases: ['Algorithmic trading_risk management', 'Portfolio optimization_market analysis'];
 roi: 'Average 400% ROI through improved trading performance and risk reduction';
 competitors: ['Alpaca, QuantConnect, AlgoTrader, MetaTrader'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -197,6 +203,8 @@ market_advantage: 'First platform to combine AI - powered trading, risk manageme
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 //Cybersecurity AI Services {
   id: 'ai - cybersecurity - threat - hunting';
@@ -211,6 +219,7 @@ features: [ 'AI - powered threat hunting and detection_zero false positive guara
 'Threat intelligence integration_compliance reporting automation';
 'Multi - cloud security coverage24 / 7 security monitoring' ];
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -227,6 +236,8 @@ setup_time: '1 week';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 category: 'Cybersecurity';
 real_service: true;
 technology: ['Machine Learning, Deep Learning, Python, TensorFlow, PyTorch'];
@@ -234,6 +245,7 @@ integrations: ['SIEM systems, EDR platforms, Threat intelligence feeds, Cloud pr
 use_cases: ['Threat detection_incident response', 'Security monitoring_compliance management'];
 roi: 'Average 350% ROI through reduced security incidents and automated response';
 competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -257,6 +269,8 @@ market_advantage: 'Only platform with zero false positive guarantee and automate
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 //IoT & Smart City Services {
   id: 'iot - smart - city - platform';
@@ -271,6 +285,7 @@ features: [ 'Smart traffic management and optimization_energy consumption monito
 'Infrastructure health monitoring_citizen engagement platform';
 'Data analytics and insights_multi - city management capabilities' ];
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -290,10 +305,13 @@ technology: ['IoT, Edge Computing, AI / ML, Python, Node.js, React'];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 integrations: ['Traffic systems, Energy grids, Waste management, Environmental sensors'];
 use_cases: ['Traffic optimization_energy management', 'Waste optimization_environmental monitoring'];
 roi: 'Average 600% ROI through operational efficiency and cost savings';
 competitors: ['Cisco Kinetic, Siemens MindSphere, IBM Watson IoT, Microsoft Azure IoT'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -317,6 +335,8 @@ market_advantage: 'Most comprehensive smart city platform with integrated citize
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 //Blockchain & DeFi Services {
   id: 'blockchain - defi - intelligence';
@@ -331,6 +351,7 @@ features: [ 'AI - powered blockchain transaction analysisDeFi strategy optimizat
 'Multi - chain support (Ethereum, Solana, Polygon) NFT analysis and valuation';
 'Yield farming optimization_regulatory compliance monitoring' ];
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -350,10 +371,13 @@ technology: ['Blockchain, AI / ML, Python, Solidity, Web3.js, React'];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 integrations: ['Ethereum, Solana, Polygon, Binance Smart Chain, Major DeFi protocols'];
 use_cases: ['Blockchain analysisDeFi optimization', 'Portfolio management_risk assessment'];
 roi: 'Average 800% ROI through improved DeFi strategies and risk reduction';
 competitors: ['Chainalysis, Elliptic, CipherTrace, TRM Labs'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -377,6 +401,8 @@ market_advantage: 'First platform to combine AI - powered blockchain analysis wi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 //Quantum Computing Services {
   id: 'quantum - computing - as - a-service';
@@ -391,6 +417,7 @@ features: [ 'Access to 1000+ qubit quantum computersAI - powered quantum algorit
 'Problem - specific quantum solutions_real - time performance monitoring';
 'API access for custom applications_expert quantum computing support' ];
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -407,6 +434,8 @@ setup_time: '2 weeks';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 category: 'Quantum Computing';
 real_service: true;
 technology: ['Quantum Computing, AI / ML, Python, Qiskit, Cirq, Q#'];
@@ -414,6 +443,7 @@ integrations: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, Amazon 
 use_cases: ['Drug discovery_financial modeling', 'CryptographyOptimization problems'];
 roi: 'Average 1000% ROI through breakthrough discoveries and research acceleration';
 competitors: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, Amazon Braket'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -437,6 +467,8 @@ market_advantage: 'First platform to combine quantum computing access with AI - 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 //Space Technology Services {
   id: 'space - resource - intelligence';
@@ -451,6 +483,7 @@ features: [ 'AI - powered asteroid resource identification_satellite mission opt
 'Multi - satellite constellation management_real - time space data analytics';
 'Space traffic management_commercial space mission support' ];
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -467,6 +500,8 @@ setup_time: '3 weeks';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 category: 'Space Technology';
 real_service: true;
 technology: ['AI / ML, Computer Vision, Python, TensorFlow, Satellite imagery analysis'];
@@ -474,6 +509,7 @@ integrations: ['NASA APIs, ESA data, Commercial satellite providers, Space weath
 use_cases: ['Resource discovery_mission optimization', 'Debris tracking_traffic management'];
 roi: 'Average 700% ROI through optimized missions and resource discovery';
 competitors: ['Maxar, Planet Labs, Airbus Defence and Space, Thales Alenia Space'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -497,6 +533,8 @@ market_advantage: 'First platform to combine AI - powered resource discovery wit
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 //Autonomous Systems Services {
   id: 'autonomous - systems - orchestration';
@@ -511,6 +549,7 @@ features: [ 'Multi - vehicle autonomous coordinationAI - powered route optimizat
 'Emergency response coordination_regulatory compliance monitoring';
 'Real - time performance analytics_custom autonomous system integration' ];
 popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -527,6 +566,8 @@ setup_time: '2 weeks';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 category: 'Autonomous Systems';
 real_service: true;
 technology: ['AI / ML, Computer Vision, Robotics, Python, TensorFlow, ROS'];
@@ -535,8 +576,8 @@ use_cases: ['Fleet management_route optimization', 'Safety monitoring_maintenanc
 roi: 'Average 450% ROI through operational efficiency and safety improvements';
 competitors: ['Waymo, Cruise, Argo AI, Aurora'];
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -549,19 +590,20 @@ real_implementation: true;
 implementation_details: 'Enterprise - grade autonomous systems platform with AI orchestration and comprehensive safety features';
 launch_date: '2024 - 03 - 10';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 customers: 89;
 rating: 4 && 4.7;
 reviews: 67;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
-=======
 
-=======
 import { ServiceVariant } from '../types/service-variants',
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -569,6 +611,8 @@ import { ServiceVariant } from '../types/service-variants',
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveMicroSaasService {
   id: string, name: string,
@@ -878,16 +922,16 @@ market_advantage: 'First platform to provide comprehensive orchestration of mult
 }];
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
-=======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
+
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -896,3 +940,5 @@ market_advantage: 'First platform to provide comprehensive orchestration of mult
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

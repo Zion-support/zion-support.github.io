@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const fs = require ('fs'),
 console.log ('🔧 Fixing site loading issues...'),
 // Fix Next.js configuration;
@@ -54,6 +58,11 @@ console.log('🔧 Fixing site loading issues...'),;
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
 const nextConfig = {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   reactStrictMode: true,;
   reactStrictMode: true;
 
@@ -63,6 +72,11 @@ const nextConfig = {;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
   images: {;
+<<<<<<< HEAD
+=======
+
+    domains: ["localhost", "ziontechgroup.com"];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   },
   output: 'standalone',
   trailing_slash: false,

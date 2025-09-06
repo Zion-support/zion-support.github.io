@@ -57,6 +57,7 @@ import { useAuth } from "@/hooks/useAuth"
 
 
 // use_router replaces the old use_location hook from react - router;
+<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 import { use_router } from 'next / router';
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -76,6 +77,9 @@ import { useAuth } from '@/hooks/useAuth';
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { use_router } from 'next/router';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/contracts/templates/TemplateList.tsx
 import {
   AlertDialog;
   AlertDialogAction;
@@ -84,16 +88,22 @@ import {
   AlertDialogDescription;
   AlertDialogFooter;
   AlertDialogHeader;
+<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 <<<<<<< HEAD
   AlertDialogTitle } from '@/components / ui / alert - dialog';
 import { ContractTemplate  } from '@/types / contracts';
 import { Button  } from '@/components / ui / button';
+=======
+  AlertDialogTitle } from '@/components/ui/ alert - dialog';
+import { ContractTemplate  } from '@/types/ contracts';
+import { Button  } from '@/components/ui/ button';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/contracts/templates/TemplateList.tsx
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
-import { useContractTemplates  } from '@/hooks / useContractTemplates';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Separator  } from '@/components / ui / separator';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components / ui / tooltip';
-import { use_auth  } from '@/hooks / use_auth';
+import { useContractTemplates  } from '@/hooks/ useContractTemplates';
+import { Card, CardContent  } from '@/components/ui/ card';
+import { Separator  } from '@/components/ui/ separator';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/ tooltip';
+import { use_auth  } from '@/hooks/ use_auth';
 // use_router replaces the old use_location hook from react - router;
   AlertDialog,
   AlertDialogAction,
@@ -102,6 +112,7 @@ import { use_auth  } from '@/hooks / use_auth';
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+<<<<<<< HEAD:src_backup/components/contracts/templates/TemplateList.tsx
 <<<<<<< HEAD
 import { useState } from "react"
 interface TemplateListProps {
@@ -167,6 +178,9 @@ import { useAuth } from "@/hooks/useAuth",;
 import { useRouter } from 'next/router',;
 =======
   AlertDialogTitle} from "@/components / ui / alert - dialog",
+=======
+  AlertDialogTitle} from "@/components/ui/ alert - dialog",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/contracts/templates/TemplateList.tsx
 import { useState  } from './react';
 interface TemplateListProps {
   templates: ContractTemplate[],

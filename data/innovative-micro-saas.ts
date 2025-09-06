@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
 =======
 export interface InnovativeMicroSaas {
@@ -53,6 +56,7 @@ id: string;
     reviews: 1600,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -154,6 +158,8 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Visual smart contract builder',
       'Multi - blockchain support',
 =======
@@ -174,6 +180,7 @@ id: string;
     ],
     popular: true,
     icon: '⚡',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -210,6 +217,8 @@ id: string;
     realService: true,
     technology: [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Blockchain',
       'Smart Contracts',
       'Solidity',
@@ -223,6 +232,7 @@ id: string;
       'Ethereum',
       'Polygon',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -251,6 +261,8 @@ id: string;
 =======
     useCases: [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Legal agreements',
       'Real estate transactions',
       'Insurance claims',
@@ -260,6 +272,7 @@ id: string;
     ],
     roi: 'Average customer sees 400% ROI within 6 months through reduced costs and improved efficiency.',
     competitors: ['OpenLaw', 'Clause', 'Agrello', 'Lexon', 'Monax'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -273,6 +286,8 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -287,17 +302,17 @@ id: string;
     reviews: 900,
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  {
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+  {
   {
 
       'AI-powered sentiment analysis',
       'Multi-channel feedback collection',
-=======
     id: 'ai - powered - customer - feedback - analyzer',
     name: 'AI - Powered Customer Feedback Analyzer',
     tagline: 'Transform feedback into actionable insights',
@@ -309,7 +324,6 @@ id: string;
       'AI - powered sentiment analysis',
       'Multi - channel feedback collection',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Automatic categorization',
       'Trend identification',
       'Real - time alerts',
@@ -356,6 +370,7 @@ id: string;
     icon: '💬',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -387,6 +402,8 @@ id: string;
     realService: true,
     technology: [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Natural Language Processing',
       'Machine Learning',
       'Sentiment Analysis',
@@ -400,6 +417,7 @@ id: string;
       'MongoDB',
       'AWS',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -438,6 +456,8 @@ id: string;
 =======
     competitors: [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Qualtrics',
       'SurveyMonkey',
       'Typeform',
@@ -458,14 +478,10 @@ id: string;
     rating: 4 && 4.7,
     reviews: 1400,
   },
-<<<<<<< HEAD
   {
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered scheduling',
-=======
     id: 'automated - social - media - scheduler',
     name: 'Automated Social Media Scheduler',
     tagline: 'AI - powered social media management',
@@ -476,7 +492,6 @@ id: string;
     features: [;
       'AI - powered scheduling',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Content generation suggestions',
       'Multi - platform support',
 =======
@@ -522,6 +537,7 @@ id: string;
     icon: '📱',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
       'AI/ML',
@@ -541,11 +557,14 @@ id: string;
       'AI / ML',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Social Media APIs',
       'React',
       'Node && Node.js',
       'Python',
       'PostgreSQL',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       'Redis',
@@ -634,10 +653,11 @@ id: string;
     reviews: 2250,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   {
 
       'AI-powered planning',
-=======
     id: 'intelligent - project - management',
     name: 'Intelligent Project Management',
     tagline: 'AI - powered project planning and execution',
@@ -648,6 +668,7 @@ id: string;
     features: [;
       'AI - powered planning',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     marketSize: '$4.2B social media management market',
@@ -678,6 +699,8 @@ id: string;
     features: [
       'AI-powered planning',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Resource optimization',
       'Timeline prediction',
       'Risk assessment',
@@ -690,6 +713,7 @@ id: string;
     ],
     popular: true,
     icon: '📋',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -711,6 +735,8 @@ id: string;
       'AI / ML',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Project Management',
       'React',
       'Node && Node.js',
@@ -739,6 +765,7 @@ id: string;
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -762,6 +789,8 @@ id: string;
 =======
     useCases: [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Project planning',
       'Resource management',
       'Team collaboration',
@@ -786,11 +815,6 @@ id: string;
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -840,9 +864,12 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     growthRate: '140% annual growth', variant: 'ai-futuristic',
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'
     launchDate: '2024-01-30'
     customers: 3200
@@ -870,6 +897,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 1600
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
       
@@ -880,6 +908,10 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -890,9 +922,9 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     reviews: 1600;
 
   }
-<<<<<<< HEAD
 ];
 export interface InnovativeMicroSaas {;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 ];
@@ -912,6 +944,8 @@ export interface InnovativeMicroSaas {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string,;
   name: string,;
   tagline: string,;
@@ -1167,14 +1201,9 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     customers: 3200,;
     rating: 4.8,;
     reviews: 1600;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
 ];
-<<<<<<< HEAD
   id: string,;
   name: string,;
   tagline: string,;
@@ -1215,6 +1244,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
   reviews: number;
 }
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1243,3 +1273,5 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
   }
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

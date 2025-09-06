@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -11,10 +12,17 @@
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
+=======
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -140,3 +148,7 @@ export { cleanConsoleLogs, processFile };
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

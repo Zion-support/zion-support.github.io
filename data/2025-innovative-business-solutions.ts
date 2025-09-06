@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -11,6 +12,8 @@
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeBusinessSolution {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
   name: string;
   tagline: string;
@@ -41,6 +44,7 @@ export interface InnovativeBusinessSolution {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -106,6 +110,8 @@ export interface InnovativeBusinessSolution {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export interface InnovativeBusinessSolution {
   id: string, name: string,
   tagline: string, price: string,
@@ -126,12 +132,12 @@ export interface InnovativeBusinessSolution {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -139,6 +145,8 @@ export interface InnovativeBusinessSolution {
       website: 'https://ziontechgroup.com';
     }
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     real_implementation: true,
     implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.';
     launch_date: '2025 - 05 - 01';
@@ -147,10 +155,7 @@ export interface InnovativeBusinessSolution {
     reviews: 26;
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
     realImplementation: true
     implementationDetails:
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
@@ -558,21 +563,12 @@ export interface InnovativeBusinessSolution {
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
     launchDate: '2025-05-01'
     customers: 38
     rating: 4.7
     reviews: 26
   }
-=======
-      'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
-    launchDate: '2025-05-01',
-    customers: 38,
-    rating: 4.7,
-    reviews: 26,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -585,14 +581,16 @@ export interface InnovativeBusinessSolution {
     rating: 4.7
 
     reviews: 26
-<<<<<<< HEAD
   }
 ];
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeBusinessSolution {;
   id: string,;
@@ -895,6 +893,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     customers: 38;
     rating: 4.7,
     reviews: 26;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 =======
@@ -1406,3 +1405,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
   }
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

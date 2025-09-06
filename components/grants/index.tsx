@@ -1,14 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 import type {;
   GrantApplication,;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
@@ -35,8 +41,11 @@ export default function GrantsPage() {;
     program?: string;
   }>({});
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
       .catch(() => setItems([]));  }, [filters]);
@@ -65,6 +74,7 @@ export default function GrantsPage() {;
           </Link>;
           <Link href='/incubator'>;
             <a className='px-3 py-2 bg-purple-600 text-white rounded'>;
+<<<<<<< HEAD
 =======
     <EnhancedLayout>;
       <div className='flex items - center justify - between mb - 6'>;
@@ -174,6 +184,8 @@ export default function GrantsPage() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   useEffect(() => {
 
     const params = new URLSearchParams();
@@ -232,7 +244,6 @@ export default function GrantsPage() {;
           value={filters.sector |''}
           onChange={e =>
             setFilters(f => ({ ...f, sector: e.target.value |undefined }))
-<<<<<<< HEAD
           }
         >
           <option value=''>All Sectors</option>
@@ -247,8 +258,6 @@ export default function GrantsPage() {;
           value={filters.status |''}
           onChange={e =>
             setFilters(f => ({ ...f, status: e.target.value |undefined }))
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export default /**
  * GrantsPage - Function description
  */
@@ -287,9 +296,12 @@ function GrantsPage() {
           </Link>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           }
         >
           <option value=''>All Stages</option>
@@ -303,14 +315,18 @@ function GrantsPage() {
           className='border rounded p-2'
           placeholder='Region'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
           value={filters && filters.region || ''}
           onChange={e =>;
             setFilters(f => ({ ...f, region: e && e.target.value || undefined }));
 
+<<<<<<< HEAD
 =======
           value={filters.region |''}
           onChange={e =>
@@ -319,14 +335,19 @@ function GrantsPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           }
         />
         <select
           className='border rounded p-2'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
       <div className='grid md:grid - cols - 4 gap - 4 mb - 6'>;
         <select;
@@ -334,9 +355,12 @@ function GrantsPage() {
           value={filters.sector || ''}
           on_change={e =>;
             set_filters (function => ({ ...f, sector: e.target.value || undefined }));
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           }
         >;
           <option value=''>All Sectors</option>;
@@ -363,10 +387,13 @@ function GrantsPage() {
           }
         />;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <select
           className='border rounded p-2'
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         <select;
           className='border rounded p - 2';
           value={filters.program || ''}
@@ -395,47 +422,25 @@ function GrantsPage() {
                 <div className='text - xs text - gray - 600 dark:text - gray - 400'>;
                   {g.sector || 'General'} • {g.region || 'Global'} •{' '}
 
-=======
-          value={filters.program |''}
-          onChange={e =>
-            setFilters(f => ({ ...f, program: e.target.value |undefined }))
-          }
-        >
-          <option value=''>All Programs</option>
-          <option value='grant'>Grant</option>
-          <option value='incubator'>Incubator</option>
-        </select>
-      </div>
-      <div className='grid gap-4'>
-        {items.map(g => (
-          <div
-            key={g.id}
-            className='border rounded p-4 bg-white/70 dark:bg-black/40'
-          >
-            <div className='flex items-center justify-between'>
-              <div>
-                <h3 className='text-lg font-medium'>
-                  <Link href={`/grants/${g.id}`}>
-                    <a>{g.projectName}</a>
-                  </Link>
-                </h3>
-                <div className='text-xs text-gray-600 dark:text-gray-400'>
-                  {g.sector |'General'} • {g.region |'Global'} •{' '}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         <select
           className='border rounded p-2'
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                   {g.program === 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
               </div>;
               <div className='flex gap - 2 items - center'>;
                 {g.program === 'incubator' && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
           value={filters && filters.program || ''}
           onChange={e =>;
@@ -447,9 +452,6 @@ function GrantsPage() {
           <option value='incubator'>Incubator</option>;
         </select>;
       </div>;
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
         <div className="flex gap-2">
@@ -459,9 +461,12 @@ function GrantsPage() {
       </div>
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       <div className='grid gap-4'>;
         {items && items.map(g => (;
           <div
@@ -484,6 +489,7 @@ function GrantsPage() {
                     Incubated by Zion;
                   </span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -496,6 +502,11 @@ function GrantsPage() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+                  <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
+                    Incubated by Zion
+                  </span>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 )}
                 {g && g.status === 'Approved' && (;
                   <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
@@ -518,34 +529,21 @@ function GrantsPage() {
         {items && items.length === 0 && (;
           <div className='text-sm text-gray-600'>No grants found.</div>;
         )}
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       </div>
     </EnhancedLayout>
 <<<<<<< HEAD
 );
-=======
       </div>;
     </EnhancedLayout>;
   );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 
-<<<<<<< HEAD
   return (
     <EnhancedLayout>
     <EnhancedLayout>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                   <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
                     Incubated by Zion;
                   </span>)}
@@ -571,9 +569,12 @@ function GrantsPage() {
     </EnhancedLayout>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

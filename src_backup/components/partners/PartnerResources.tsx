@@ -6,8 +6,8 @@ interface ResourceItem {;
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
+} from '@/components/ui/ card';
+import { Button } from '@/components/ui/ button';
   Download,
   FileImage,
   FileText,
@@ -15,6 +15,7 @@ import { Button } from '@/components / ui / button';
   FileVideo,
   Link,
 } from 'lucide-react';
+<<<<<<< HEAD:src_backup/components/partners/PartnerResources.tsx
 import { toast } from '@/hooks / use - toast';
 <<<<<<< HEAD
 =======
@@ -46,6 +47,9 @@ import { toast } from '@/hooks/use-toast'
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { toast } from '@/hooks/ use - toast';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/partners/PartnerResources.tsx
 interface ResourceItem {
   id: string;
   title: string;

@@ -1,5 +1,8 @@
+<<<<<<< HEAD:pages_backup/solutions.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/solutions.tsx
 import React from 'react';
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
@@ -330,6 +333,7 @@ export default function SolutionsPage() {
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   View All Services
+<<<<<<< HEAD:pages_backup/solutions.tsx
 =======
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -898,16 +902,18 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                 >
                   Schedule Consultation
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/solutions.tsx
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </Layout>
   );
 }
+<<<<<<< HEAD:pages_backup/solutions.tsx
 <<<<<<< HEAD
 =======
     </UltraAdvancedFuturisticBackground>
@@ -973,3 +979,5 @@ export default Solutions;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/solutions.tsx

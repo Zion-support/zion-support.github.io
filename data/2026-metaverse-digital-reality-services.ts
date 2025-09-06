@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
 =======
 export interface MetaverseDigitalRealityService2026 {
@@ -59,15 +62,19 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
     },
   ];    features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
       "Immersive experiences";
       "Digital reality";
       "Metaverse platform";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -81,6 +88,8 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 export interface MetaverseDigitalRealityService2026 {;
 
@@ -115,21 +124,21 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
     contactInfo: {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
 <<<<<<< HEAD
 
 ];
 
-=======
 ;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-export interface MetaverseDigitalRealityService2026 {;
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+export interface MetaverseDigitalRealityService2026 {;
   };
 
 export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] =
@@ -162,8 +171,6 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       "Digital reality";
       "Metaverse platform";
       "Advanced graphics";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -195,19 +202,22 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       "Metaverse platform",
       "Advanced graphics",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       "Social interactions"
     ],
     link: "/services/2026-metaverse-digital-reality",
     category: "Metaverse Digital Reality 2026",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
     }
   }
 ;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     }
@@ -215,21 +225,16 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
 ;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
-<<<<<<< HEAD
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -237,3 +242,5 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
 =======
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

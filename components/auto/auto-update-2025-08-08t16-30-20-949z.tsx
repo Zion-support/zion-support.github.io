@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +8,10 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   return (
     <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Auto Update</h1>;
@@ -22,6 +27,7 @@
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -34,6 +40,11 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React from 'react';
 
 
@@ -74,16 +85,17 @@ function AutoUpdatePage4() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
+
+
 
 
 
@@ -92,7 +104,6 @@ function AutoUpdatePage4() {
 
 import React from 'react';
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function AutoUpdatePage4() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -106,14 +117,10 @@ export default function AutoUpdatePage4() {
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Auto Update</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Generated content.</p>
-<<<<<<< HEAD
 
     </div>
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </div>
   );
 
@@ -126,6 +133,7 @@ export default function AutoUpdatePage4() {
   );
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -134,3 +142,5 @@ export default function AutoUpdatePage4() {
     </div>
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -11,17 +11,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 <<<<<<< HEAD
   if (req.method === "POST") {
-<<<<<<< HEAD
     const body = req.body || {},
     const current = tokenStore.getConfig(),
     const updated = { ...current, ...body },
     tokenStore.setConfig(updated),
-=======
-    const body = req.body || {}
-    const current = tokenStore.getConfig()
-    const updated = { ...current, ...body }
-    tokenStore.setConfig(updated)
->>>>>>> main
     return res.status(200).json(updated)
   }
   return res.status(405).json({ error: "Method not allowed" })

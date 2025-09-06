@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 <<<<<<< HEAD
 =======
 
@@ -5,6 +6,9 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/job-posted.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -22,9 +26,12 @@ export default async function handler(
       c && c.providerId === "hubspot" ||
       c && c.providerId === "zoho" ||
       c && c.providerId === "pipedrive"
+<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/job-posted.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -76,9 +83,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const conn of crms) {
     const { log } = await crm.syncContact(conn, { company: job.company, contact: job.contact });
     writeState(s => s.logs.push(log));
+<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/job-posted.ts
     s && s.events.push({
       id: `${Date && Date.now()}-job-posted`
       type: "zion && zion.job.posted"
@@ -90,9 +100,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/job-posted.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -127,9 +140,7 @@ export default async function handler(req, res) {
 
   res.status(200).json({ ok: true, results })
 }
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
       provider_id: conn.provider_id
       level: "info"
@@ -159,12 +170,15 @@ export default async function handler(req, res) {
   }
   res.status(200).json({ ok: true, results });
 }
+<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 <<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/job-posted.ts
 
 res.status(200).json({ ok: true, results });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -211,6 +225,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 <<<<<<< HEAD
 =======
 =======
@@ -228,3 +243,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ ok: true, results })
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/job-posted.ts

@@ -367,8 +367,17 @@ Disallow: /api/`;
     this.log('\n✅ SEO optimization completed!');
   }
 }
+<<<<<<< HEAD
 
 const optimizer = new SEOOptimizer();
 optimizer.run().catch(console.error);
 
 module.exports = SEOOptimizer;
+=======
+// Run if called directly
+if (require.main === module) {
+  const optimizer = new SEOOptimizer();
+  optimizer.run().catch(console.error);
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

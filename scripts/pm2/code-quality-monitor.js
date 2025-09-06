@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 }};
@@ -22,11 +25,14 @@
     severity: 'low'})};
 ; // Unused imports (basic check); if (line && line.match(/^import.*from/) && !line && line.includes('//')) {; const importMatch = line && line.match(/import\s+(\w+)/); if (importMatch) {; const importName = importMatch[1]; if (importName ! = = 'React' && !content && content.includes(importName)) {; analysis && analysis.issues.push({; line: lineNum, type: 'unused-import', message: `Potentially unused import ${importName}`; severity: 'medium'})}}}});
 ; return analysis} catch (error) {; this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`); return null}};
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ; async walkDirectory(dir) {; const analyses = [];
 ; try {; const items = fs && fs.readdirSync(dir);
 ; for (const item of items) {; const fullPath = path && path.join(dir, item); const stat = fs && fs.statSync(fullPath);
@@ -36,8 +42,11 @@
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ; analyses && analyses.forEach(analysis = > {; analysis && analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue && issue.type] = (issuesByType[issue && issue.type] || 0) + 1;
 ; // Count by severity; issuesBySeverity[issue && issue.severity]++})});
 ; const report = {; timestamp: new Date().toISOString(), summary: {
@@ -79,6 +88,7 @@
 const monitor = new CodeQualityMonitor();
 
 
+<<<<<<< HEAD
 =======
 =======
 }}; async analyzeFile(filePath) {try {; const content = fs.readFileSync(filePath, 'utf8'); const stats = fs.statSync(filePath); const analysis = {; file: filePath, size: stats.size, lines: content.split('\n').length
@@ -183,6 +193,8 @@ monitor.run().catch(error = > {; process.exit(1)});
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 };
 };
 ;
@@ -212,6 +224,12 @@ monitor.run().catch(error = > {; process.exit(1)});
             message: 'Trailing spaces found';
             severity: 'low';
           });
+<<<<<<< HEAD
+=======
+
+}};
+monitor && monitor.run().catch(error = > {; process && process.exit(1)});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     };
   };
 ,
@@ -328,6 +346,31 @@ monitor.run().catch(error = > {; process.exit(1)});
           };
         };
       };
+<<<<<<< HEAD
+=======
+    } catch (error) {,
+      this.log(`Error walking directory ${dir}: ${error.message}`),
+    };
+,
+    return analyses,
+  };
+,
+  generateReport(analyses) {,
+    const totalFiles = analyses.length,
+    const totalIssues = analyses.reduce((sum, analysis) => sum + analysis.issues.length, 0),
+,
+    const issuesByType = {};
+    const issuesBySeverity = { low: 0, medium: 0, high: 0 };
+,
+    analyses.forEach(analysis => {,
+      analysis.issues.forEach(issue => {,
+        // Count by type,
+        issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1,
+,
+        // Count by severity,
+        issuesBySeverity[issue.severity]++,
+      }),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }),
 ,
     const report = {,
@@ -336,6 +379,16 @@ monitor.run().catch(error = > {; process.exit(1)});
         totalFiles,
         totalIssues,
         issuesByType,
+<<<<<<< HEAD
+=======
+        issuesBySeverity,
+      },
+      files: analyses.filter(analysis => analysis.issues.length > 0),
+      recommendations: this.generateRecommendations(issuesByType, totalIssues),
+    };
+,
+    return report,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   };
 ,
   generateRecommendations(issuesByType, totalIssues) {,
@@ -346,6 +399,11 @@ monitor.run().catch(error = > {; process.exit(1)});
         type: 'trailing-spaces',
         priority: 'low',
         message: 'Remove trailing spaces from files',
+<<<<<<< HEAD
+=======
+        action: 'Run the lint-fixer to automatically remove trailing spaces',
+      }),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     };
 ,
     if (issuesByType['console-statement'] > 0) {,
@@ -353,6 +411,11 @@ monitor.run().catch(error = > {; process.exit(1)});
         type: 'console-statement',
         priority: 'medium',
         message: 'Remove console statements from production code',
+<<<<<<< HEAD
+=======
+        action: 'Replace console statements with proper logging or remove them',
+      }),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     };
 ,
     if (issuesByType['unused-import'] > 0) {,
@@ -360,6 +423,11 @@ monitor.run().catch(error = > {; process.exit(1)});
         type: 'unused-import',
         priority: 'medium',
         message: 'Remove unused imports',
+<<<<<<< HEAD
+=======
+        action: 'Clean up unused imports to reduce bundle size',
+      }),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     };
 ,
     if (totalIssues > 100) {,
@@ -367,12 +435,30 @@ monitor.run().catch(error = > {; process.exit(1)});
         type: 'general',
         priority: 'high',
         message: 'High number of code quality issues detected',
+<<<<<<< HEAD
+=======
+        action: 'Run comprehensive code cleanup and establish coding standards',
+      }),
+    };
+,
+    return recommendations,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   };
 ,
   async saveReport(report) {,
     try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
+<<<<<<< HEAD
+=======
+        fs.mkdirSync(reportDir, { recursive: true }),
+      };
+,
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
+      this.log(`Report saved to: ${this.reportFile}`),
+    } catch (error) {,
+      this.log(`Error saving report: ${error.message}`),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     };
   };
 ,
@@ -380,6 +466,10 @@ monitor.run().catch(error = > {; process.exit(1)});
     try {,
       const status = execSync('git status --porcelain', {,
         cwd: this.projectRoot,
+<<<<<<< HEAD
+=======
+        encoding: 'utf8',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       }),
 ,
       if (status.trim()) {,
@@ -401,6 +491,10 @@ monitor.run().catch(error = > {; process.exit(1)});
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
+<<<<<<< HEAD
+=======
+        fs.mkdirSync(logsDir, { recursive: true }),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       };
 ,
       // Check git status,
@@ -420,6 +514,12 @@ monitor.run().catch(error = > {; process.exit(1)});
       this.log(`Duration: ${duration}ms`),
 ,
       if (report.summary.totalIssues > 0) {,
+<<<<<<< HEAD
+=======
+        this.log('\n🚨 Issues by type: '),
+        Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
+          this.log(`  ${type}: ${count}`),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         }),
 ,
         this.log('\n💡 Recommendations: '),
@@ -430,6 +530,18 @@ monitor.run().catch(error = > {; process.exit(1)});
 ,
         // If there are many issues and git is clean, suggest running the lint fixer,
         if (report.summary.totalIssues > 50 && isClean) {,
+<<<<<<< HEAD
+=======
+          this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues'),
+        };
+      } else {,
+        this.log('✨ Excellent! No code quality issues found!'),
+      };
+,
+    } catch (error) {,
+      this.log(`❌ Error running code quality monitor: ${error.message}`),
+      process.exit(1),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     };
   };
 };
@@ -437,6 +549,11 @@ monitor.run().catch(error = > {; process.exit(1)});
 // Run the code quality monitor,
 const monitor = new CodeQualityMonitor(),
 monitor.run().catch(error => {,
+<<<<<<< HEAD
+=======
+  process.exit(1),
+}),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }}
 ; async analyze_file (file_path) { try { const content = fs.readFileSync (file_path, 'utf8'); const stats = fs.stat_sync (file_path);
 ; const analysis = { file: file_path, size: stats.size, lines: content.split ('\n').length,
@@ -856,6 +973,7 @@ monitor.run().catch(error = > {; process.exit(1)});
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   process.exit(1)
@@ -869,3 +987,7 @@ monitor.run().catch(error = > {; process.exit(1)});
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+  process.exit(1)
+}),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

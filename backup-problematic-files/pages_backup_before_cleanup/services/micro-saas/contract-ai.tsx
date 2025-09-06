@@ -10,3 +10,9 @@ export default function Contractai({ }: ContractaiProps) {
       <p>This component is under development.</p>
     </div>
   );
+<<<<<<< HEAD:backup-problematic-files/pages_backup_before_cleanup/services/micro-saas/contract-ai.tsx
+=======
+}
+}
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:backup-problematic-files/pages.bak/services/micro-saas/contract-ai.tsx

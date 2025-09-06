@@ -209,7 +209,7 @@ export function ListingCard(): any ({;
 
 import React from 'react';
 import { cn } from '@/lib / utils';
-import { Badge } from '@/components / ui / badge';
+import { Badge } from '@/components/ui/ badge';
 import Link from 'next / link';
 import Image from 'next / image';interface ListingCardProps {
   id?: string,

@@ -1,6 +1,9 @@
+<<<<<<< HEAD:pages_backup/api.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
@@ -444,6 +447,7 @@ export default function APIPage() {
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD:pages_backup/api.tsx
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Code,
@@ -727,6 +731,8 @@ export default function APIPage() {
         </section>
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api.tsx
       </div>
     </Layout>
         {/* CTA Section */}

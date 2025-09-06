@@ -102,16 +102,16 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
 
 import { useState } from 'react';
 import { use_form, ControllerRenderProps } from 'react - hook - form';
-import { Button } from '@/components / ui / button';
-import { Textarea } from '@/components / ui / textarea';
+import { Button } from '@/components/ui/ button';
+import { Textarea } from '@/components/ui/ textarea';
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormMessage,
-} from '@/components / ui / form';
-import { Card, CardContent } from '@/components / ui / card';
+} from '@/components/ui/ form';
+import { Card, CardContent } from '@/components/ui/ card';
 interface ReplyFormProps {
   on_submit: (content: string) => Promise < void>;
   parent_id?: string;

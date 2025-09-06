@@ -2,25 +2,26 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req.method === 'POST') {
     // In a real implementation, validate and insert review into Supabase
   }
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
+
   if (req.method === 'POST') {
     // In a real implementation, validate and insert review into Supabase
   }
-<<<<<<< HEAD
 
 
   return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -32,14 +33,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method === 'GET') {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     // In a real implementation, fetch reviews from Supabase by talent id/slug
 <<<<<<< HEAD
     const { slug } = req.query as { slug?: string }
@@ -82,10 +88,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ;
 export default async /**
  * handler - Function description
@@ -128,6 +137,7 @@ return res;
   return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed');
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -138,6 +148,8 @@ return res;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   if (req.method === 'GET') {
 
     // In a real implementation, fetch reviews from Supabase by talent id/slug;
@@ -176,12 +188,15 @@ return res
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 
@@ -191,6 +206,7 @@ return res
 }
 }
     // In a real implementation, validate and insert review into Supabase
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -198,3 +214,5 @@ return res
 =======
     .end('Method Not Allowed');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

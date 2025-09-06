@@ -33,6 +33,10 @@ try {
     Shield,
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     Zap,
   } = require('lucide-react');
   console.log('✅ Lucide React icons import successful', {
@@ -46,6 +50,7 @@ try {
     Zap: 'typeof Zap',;
     Zap: 'typeof Zap',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
@@ -58,6 +63,8 @@ try {
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   });
   console.log('🎉 All core dependencies imported successfully!');
   console.log('📋 Components should be ready for build');

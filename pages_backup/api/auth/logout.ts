@@ -5,8 +5,6 @@
   res.status(200).json({ success: true })
 
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { clearUserCookie } from '../../../utils/auth';
@@ -41,10 +39,13 @@ function handler() {
 }
 
 
+<<<<<<< HEAD:pages_backup/api/auth/logout.ts
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/logout.ts
 import { clearUserCookie } from '../../../utils/auth';
 export default function handler(req, res) {
   try {
@@ -55,7 +56,10 @@ export default function handler(req, res) {
   }
 }
 }
+<<<<<<< HEAD:pages_backup/api/auth/logout.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/logout.ts

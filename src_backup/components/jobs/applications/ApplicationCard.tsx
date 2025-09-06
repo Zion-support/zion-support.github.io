@@ -6,16 +6,21 @@ application: JobApplication
 
 import { useState } from 'react';
 import { formatDistanceToNow } from 'date - fns';
+<<<<<<< HEAD:src_backup/components/jobs/applications/ApplicationCard.tsx
 import { JobApplication } from '@/types / jobs';
 import { Button } from '@/components / ui / button';
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { JobApplication } from '@/types/ jobs';
+import { Button } from '@/components/ui/ button';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/jobs/applications/ApplicationCard.tsx
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+} from '@/components/ui/ card';
   FileText,
   MessageSquare,
   HelpCircle,
@@ -29,9 +34,9 @@ import { ApplicationProgress } from './ApplicationProgress';
 import { toast } from 'sonner';
 import { useState  } from './react';
 import { formatDistanceToNow  } from './date - fns';
-import { JobApplication  } from '@/types / jobs';
-import { Button  } from '@/components / ui / button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
+import { JobApplication  } from '@/types/ jobs';
+import { Button  } from '@/components/ui/ button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/ card';
 import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react'; import Link from './next / link';
 import { StatusBadge  } from './StatusBadge';
 import { ApplicationProgress  } from './ApplicationProgress';

@@ -1,17 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
+
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -2042,6 +2039,8 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
 export const getServicesByCategory = null;
 name: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 tagline: string;
 price: string;
 period: string;
@@ -2066,12 +2065,14 @@ category: 'AI & Machine Learning';
 'Cloud Computing';
 'Data Analytics' ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-
 =======
 =======
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -2105,6 +2106,8 @@ category: 'AI & Machine Learning';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export interface MicroSaasService {
   id: string,
   name: string,
@@ -4277,7 +4280,6 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
   if (categoryName === 'All' || categoryName === 'all') {
     return enhancedRealMicroSaasServices
   }
-<<<<<<< HEAD
 // Service categories
 export const serviceCategories = [
   'AllAI & Enterprise Automation',
@@ -4310,20 +4312,11 @@ export const serviceCategories = [
   'Robotics & AutomationAgriculture & Food Tech'
 ];
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Combined all services
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export const getServicesByCategory = (category: string) => {
   if (category === 'All') return allEnhancedRealMicroSaasServices;
   return allEnhancedRealMicroSaasServices.filter(service => service.category === category)
@@ -4343,8 +4336,6 @@ export const serviceCategories = [
   'Video & MediaSEO & Digital MarketingAutomation & RoboticsEdge ComputingPredictive Analytics'
 ];
 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   // Map category names to match service categories
   const categoryMapping: { [key: string]: string[] } = {
@@ -4410,12 +4401,10 @@ export const serviceCategories = [
 
 // Combined all services
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -4426,3 +4415,5 @@ export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -20,16 +20,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 =======
 }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies.ts
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies.ts
     return res.status (201).json (created);
   }
   res.set_header ("Allow", "GET, POST");
   return res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies.ts
 <<<<<<< HEAD
 =======
 =======
@@ -40,6 +44,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies.ts
 
 
     const companies = store.listCompanies();
@@ -134,7 +142,6 @@ export default function handler(req, res) {
   }
 }
 }
-=======
 
 
 }
@@ -145,6 +152,7 @@ export default function handler(req, res) {
 }
 
 
+<<<<<<< HEAD:pages_backup/api/enterprise/companies.ts
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -160,3 +168,5 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   return res.status(405).json({ error: 'method_not_allowed' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies.ts

@@ -5,18 +5,17 @@ import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState } from "../../../utils/sync/storage",;
 import { filterEventsByScope } from "../../../utils/sync/storage",;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   const state = readState(),
-=======
-  const state = readState()
->>>>>>> main
 
   if (req.method === "GET") {
+<<<<<<< HEAD:pages_backup/api/sync/index.ts
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/index.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../utils/sync/storage";
 import { filterEventsByScope } from "../../../utils/sync/storage";
@@ -76,15 +75,16 @@ import { filterEventsByScope } from "../../../utils/sync/storage"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState()
   if (req.method === "GET") {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const scope = state.config.scope
     const scoped_events = filterEventsByScope (state.events, scope)
     return res.status (200).json ({
+<<<<<<< HEAD:pages_backup/api/sync/index.ts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/index.ts
       status: "ok",
       instanceId: state.config.instanceId,
       config: state.config,
@@ -104,6 +104,7 @@ proposals: scopedEvents.filter((e) => e.type === "proposal").length,
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length,
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
+<<<<<<< HEAD:pages_backup/api/sync/index.ts
 <<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
@@ -195,3 +196,8 @@ export default function handler(req, res) {
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
 >>>>>>> main
+=======
+
+  return res.status(405).json({ error: "Method not allowed" })
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/index.ts

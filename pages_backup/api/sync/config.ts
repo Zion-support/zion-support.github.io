@@ -35,8 +35,8 @@ import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, writeState } from "../../../utils/sync/storage"
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   const state = readState(),
+<<<<<<< HEAD:pages_backup/api/sync/config.ts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -48,21 +48,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState()
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  const state = readState()
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/config.ts
   if (req.method === "GET") {
     return res.status(200).json({ config: state.config })
   }
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> main
 }
   } catch (error) {
     console.error("Error:", error);
@@ -74,7 +66,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === "POST") {
     const { optIn, paused, scope, peers, instanceId } = req.body as Partial<InstanceConfig> & {
-<<<<<<< HEAD
       peers?: Peer[],
       scope?: SyncScope,
       instanceId?: string
@@ -88,6 +79,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     writeState(state),
+<<<<<<< HEAD:pages_backup/api/sync/config.ts
 <<<<<<< HEAD
     return res.status(200).json({ config: state.config })
     } catch (error) {
@@ -123,21 +115,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> main
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/config.ts
     if (typeof optIn === "boolean") state.config.optIn = optIn
     if (typeof paused === "boolean") state.config.paused = paused
     if (scope) state.config.scope = scope
     if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId
-<<<<<<< HEAD
     writeState(state)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
 
     writeState(state)
 
+<<<<<<< HEAD:pages_backup/api/sync/config.ts
 <<<<<<< HEAD
 =======
   const state = null;
@@ -213,6 +203,8 @@ if (state.config.instance_id = instance_id, ) {
 
 =======
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/config.ts
     return res.status(200).json({ config: state.config })
     } catch (error) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

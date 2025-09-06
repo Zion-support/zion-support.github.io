@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -10,6 +11,8 @@ export interface PracticalBusinessSolution2029 {
 
   {
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: 'ai - business - intelligence - suite',
     name: 'AI Business Intelligence Suite',
     tagline:;
@@ -20,8 +23,11 @@ export interface PracticalBusinessSolution2029 {
       'Comprehensive AI - powered business intelligence platform that provides real - time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',
     features: [;
       'Real - time data analytics',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Predictive business modeling',
       'Automated report generation',
       'Custom dashboard creation',
@@ -34,7 +40,6 @@ export interface PracticalBusinessSolution2029 {
     ],
     popular: true,
     icon: '📊',
-<<<<<<< HEAD
       'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'
     ],    features: [
 
@@ -173,6 +178,7 @@ export interface PracticalBusinessSolution2029 {
       mobile: '+1 302 464 0950';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-business-intelligence-suite';
@@ -203,6 +209,8 @@ export interface PracticalBusinessSolution2029 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     reviews: 167
   }
 
@@ -236,6 +244,7 @@ export interface PracticalBusinessSolution2029 {
     name: 'Intelligent Customer Experience Platform';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -245,6 +254,8 @@ export interface PracticalBusinessSolution2029 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'E-commerce companies, Retail businesses, SaaS companies, Service providers, Hospitality industry';
     trialDays: 14;
     setupTime: '1-2 weeks';
@@ -316,6 +327,7 @@ export interface PracticalBusinessSolution2029 {
       mobile: '+1 302 464 0950';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -332,6 +344,8 @@ export interface PracticalBusinessSolution2029 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     reviews: 134
   }
 
@@ -365,6 +379,7 @@ export interface PracticalBusinessSolution2029 {
     name: 'Smart Supply Chain Optimization';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -374,6 +389,8 @@ export interface PracticalBusinessSolution2029 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'Manufacturing companies, Retail chains, E-commerce businesses, Logistics companies, Distribution networks';
     trialDays: 30;
     setupTime: '3-4 weeks';
@@ -445,6 +462,7 @@ export interface PracticalBusinessSolution2029 {
       mobile: '+1 302 464 0950';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -461,6 +479,8 @@ export interface PracticalBusinessSolution2029 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     reviews: 98
   }
 
@@ -494,6 +514,7 @@ export interface PracticalBusinessSolution2029 {
     name: 'Intelligent HR Management System';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -503,6 +524,8 @@ export interface PracticalBusinessSolution2029 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'Medium to large companies, HR departments, Recruitment agencies, Consulting firms, Educational institutions';
     trialDays: 21;
     setupTime: '2-3 weeks';
@@ -574,6 +597,7 @@ export interface PracticalBusinessSolution2029 {
       mobile: '+1 302 464 0950';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -590,6 +614,8 @@ export interface PracticalBusinessSolution2029 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     reviews: 189
   }
 
@@ -623,6 +649,7 @@ export interface PracticalBusinessSolution2029 {
     name: 'Smart Financial Management Platform';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -632,6 +659,8 @@ export interface PracticalBusinessSolution2029 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'Small to medium businesses, Financial departments, Accounting firms, Consulting companies, Startups';
     trialDays: 30;
     setupTime: '2-4 weeks';
@@ -703,6 +732,7 @@ export interface PracticalBusinessSolution2029 {
       mobile: '+1 302 464 0950';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -719,6 +749,8 @@ export interface PracticalBusinessSolution2029 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     reviews: 156
   }
 
@@ -752,6 +784,7 @@ export interface PracticalBusinessSolution2029 {
     name: 'Intelligent Marketing Automation';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -761,6 +794,8 @@ export interface PracticalBusinessSolution2029 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'Marketing agencies, E-commerce businesses, SaaS companies, B2B companies, Retail businesses';
     trialDays: 14;
     setupTime: '1-2 weeks';
@@ -832,6 +867,7 @@ export interface PracticalBusinessSolution2029 {
       mobile: '+1 302 464 0950';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -848,6 +884,8 @@ export interface PracticalBusinessSolution2029 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     reviews: 234
   }
 
@@ -883,6 +921,7 @@ export interface PracticalBusinessSolution2029 {
     price: '$899';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -894,6 +933,8 @@ export interface PracticalBusinessSolution2029 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'Project managers, Development teams, Consulting firms, Construction companies, Event planners';
     trialDays: 21;
     setupTime: '1-2 weeks';
@@ -902,6 +943,7 @@ export interface PracticalBusinessSolution2029 {
     technology: ['AI optimization, Machine learning, Project analytics, Workflow automation, Risk modeling'];
     integrations: ['Communication tools, File sharing platforms, Time tracking, Reporting tools, Team collaboration'];
     useCases: ['Workflow optimization, Risk management, Team collaboration, Resource management, Quality assurance'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -936,6 +978,8 @@ export interface PracticalBusinessSolution2029 {
     roi: 'Average customer sees 350% ROI through improved project success rates and team efficiency.';
     competitors: ['Asana, Monday.com, Trello, Jira, Basecamp'],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     marketSize: '$12B market';
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
@@ -967,6 +1011,7 @@ export interface PracticalBusinessSolution2029 {
       mobile: '+1 302 464 0950';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -983,6 +1028,8 @@ export interface PracticalBusinessSolution2029 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     reviews: 312
   }
 
@@ -1016,6 +1063,7 @@ export interface PracticalBusinessSolution2029 {
     name: 'Intelligent Sales Optimization';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1025,6 +1073,8 @@ export interface PracticalBusinessSolution2029 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'Sales teams, B2B companies, SaaS businesses, Real estate, Financial services';
     trialDays: 21;
     setupTime: '2-3 weeks';
@@ -1096,6 +1146,7 @@ export interface PracticalBusinessSolution2029 {
       mobile: '+1 302 464 0950';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1112,12 +1163,13 @@ export interface PracticalBusinessSolution2029 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     reviews: 198
   }
 ];
 export const getPopularPracticalBusinessSolutions2029 = () => {
 
-<<<<<<< HEAD
   return practicalBusinessSolutions2029.filter(service => service.popular);
 
 };
@@ -1125,10 +1177,6 @@ export const getPopularPracticalBusinessSolutions2029 = () => {
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.category === category)
 };
-=======
-  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular)
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 };
@@ -1138,6 +1186,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1146,10 +1195,11 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
   return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return price >= minPrice && price <= maxPrice;
   });
 }
@@ -1160,6 +1210,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     variant: 'ai-futuristic'
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1169,6 +1220,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
       website: 'https://ziontechgroup.com';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }
     real_implementation: true,
     implementation_details: 'Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.';
@@ -1177,26 +1230,14 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     rating: 4.9,
     reviews: 198;
   }
-<<<<<<< HEAD
 ;
 export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   return practicalBusinessSolutions2029.filter (service => service.popular);
-=======
-];
-<<<<<<< HEAD
 ;
 export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   return practicalBusinessSolutions2029.filter (service => service.popular);
-=======
-<<<<<<< HEAD
 export const getPopularPracticalBusinessSolutions2029 = () => {
-=======
-
-export const getPopularPracticalBusinessSolutions2029 = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return practicalBusinessSolutions2029.filter(service => service.popular);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 ;
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>: any {
@@ -1230,6 +1271,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     reviews: 167,
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1249,6 +1291,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Customer journey mapping',
       'Real - time optimization',
       'Multi - channel integration',
@@ -1260,6 +1304,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
       'Revenue optimization',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1298,6 +1343,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1311,6 +1358,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     rating: 4 && 4.9,
     reviews: 134,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1330,6 +1378,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'AI demand forecasting',
       'Inventory optimization',
       'Supply chain risk management',
@@ -1342,6 +1392,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
       'Performance analytics',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1380,6 +1431,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1393,6 +1446,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     rating: 4 && 4.8,
     reviews: 98,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1413,6 +1467,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Employee engagement analytics',
       'Turnover prediction',
       'Performance optimization',
@@ -1424,6 +1480,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
       'HR analytics dashboard',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1460,6 +1517,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1473,6 +1532,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     rating: 4 && 4.7,
     reviews: 189,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1492,6 +1552,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'AI cash flow optimization',
       'Financial risk prediction',
       'Automated accounting',
@@ -1504,6 +1566,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
       'Performance analytics',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1540,6 +1603,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1553,6 +1618,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     rating: 4 && 4.8,
     reviews: 156,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1572,6 +1638,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'AI campaign optimization',
       'Content personalization',
       'Customer behavior prediction',
@@ -1584,6 +1652,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
       'Performance analytics',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1620,6 +1689,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1633,6 +1704,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     rating: 4 && 4.9,
     reviews: 234,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1652,6 +1724,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'AI workflow optimization',
       'Project risk prediction',
       'Task automation',
@@ -1664,6 +1738,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
       'Performance analytics',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1707,6 +1782,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1720,6 +1797,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     rating: 4 && 4.8,
     reviews: 312,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1739,6 +1817,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'AI lead scoring',
       'Customer behavior prediction',
       'Sales process optimization',
@@ -1751,6 +1831,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
       'ROI analytics',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1787,6 +1868,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1801,9 +1884,9 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     reviews: 198,
   },
 ];
-<<<<<<< HEAD
   return practicalBusinessSolutions2029.filter(service => service.popular);
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   return practicalBusinessSolutions2029.filter(service => service.popular);
@@ -1820,12 +1903,15 @@ export const getPopularPracticalBusinessSolutions2029 = () => {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular);
 };
 
 export const getPracticalBusinessSolutions2029ByCategory = (
   category: string
 ) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1839,12 +1925,17 @@ export const getPracticalBusinessSolutions2029ByCategory = (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(
+    service => service && service.category === category
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   );
 }
 export const getPracticalBusinessSolutions2029ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1858,6 +1949,10 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => {
+    const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     return price >= minPrice && price <= maxPrice;
   });
 };export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
@@ -1868,6 +1963,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
 ;
 export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   return practicalBusinessSolutions2029.filter (service => service.popular);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -2004,6 +2100,8 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     realImplementation: true,
     implementationDetails: "Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.",
     launchDate: "2024-07-01",
@@ -2409,11 +2507,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
 =======
 };
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface PracticalBusinessSolution2029 {;
   id: string,;
@@ -2456,7 +2550,6 @@ export interface PracticalBusinessSolution2029 {;
   reviews: number;
 }
 ;
-<<<<<<< HEAD
 export const getPracticalBusinessSolutions2029ByCategory = (
   category: string) =>: any {
   return practicalBusinessSolutions2029.filter (
@@ -2798,8 +2891,6 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     rating: 4 && 4.9,
     reviews: 198;
 ]}}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
@@ -3167,8 +3258,8 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
-<<<<<<< HEAD
 };
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 };
@@ -3185,3 +3276,5 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
       email: 'kleber@ziontechgroup.com';
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 <<<<<<< HEAD
@@ -77,14 +78,27 @@ function fixMergeConflicts(filePath) {
 =======
     // Remove merge conflict markers and keep the second version (after =======)
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
+=======
+
+
+const fs = require('fs');
+const path = require('path');
+
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
+
+function fixMergeConflicts(filePath) {
+  try {
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     const lines = content.split('\n');
     const fixedLines = [];
     let inConflict = false;
     let keepContent = false;
 
-    
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
+<<<<<<< HEAD
       
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,25 +139,32 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/=======.*?\n?/g, '');
     content = content.replace(/>>>>>>> [a-f0-9]+.*?\n?/g, '');
     
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     // Clean up any remaining conflict markers
     content = content.replace(/<<<<<<< .*?\n?/g, '');
-    content = content.replace(/=======.*?\n?/g, '');
-    content = content.replace(/>>>>>>> .*?\n?/g, '');
+    content = content.replace(/
     
     // Write the cleaned content back
     fs.writeFileSync(filePath, content, 'utf8');
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> main
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     return false;
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 function findAndFixConflicts(dir) {
@@ -178,15 +199,11 @@ function findAndFixConflicts(dir) {
 function fixFilesInDirectory(dirPath) {
   const items = fs.readdirSync(dirPath);
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   let fixedCount = 0;
-  
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  function scanDirectory(currentDir) {
-=======
-console.log('🔧 Starting comprehensive merge conflict resolution...');
 
+<<<<<<< HEAD
 // Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
   try {
@@ -213,11 +230,14 @@ function fixMergeConflicts(filePath) {
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     if (!content.includes('<<<<<<< HEAD')) {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       return false;
     }
 <<<<<<< HEAD
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
+<<<<<<< HEAD
     
 <<<<<<< HEAD
     // Split by merge conflict markers
@@ -310,6 +330,12 @@ function fixMergeConflicts(filePath) {
     const resolvedContent = resolvedLines.join('\n');
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -327,6 +353,7 @@ class MergeConflictResolver {
   }
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -414,6 +441,8 @@ function processDirectory(dirPath) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 <<<<<<< HEAD
   
@@ -421,83 +450,19 @@ function processDirectory(dirPath) {
   return files;
 }
 
-<<<<<<< HEAD
-// Main execution
-try {
-  const filesWithConflicts = findFilesWithConflicts('/workspace');
-  console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
-  
-  let fixedCount = 0;
-  for (const file of filesWithConflicts) {
-    if (fixMergeConflicts(file)) {
-      fixedCount++;
-    }
-  }
-  
-  console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
-  
-  // Run a quick syntax check
-  console.log('🔍 Running syntax check...');
-  try {
-    execSync('npm run type-check', { stdio: 'pipe' });
-    console.log('✅ TypeScript check passed');
-  } catch (error) {
-    console.log('⚠️  TypeScript check failed, but merge conflicts are resolved');
-  }
-  
-} catch (error) {
-  console.error('❌ Error during merge conflict resolution:', error.message);
-  process.exit(1);
-}
-=======
-function findFilesWithConflicts(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
->>>>>>> main
     const items = fs.readdirSync(currentDir);
     
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
-<<<<<<< HEAD
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        scanDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.css'))) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD')) {
-=======
-      if (stat.isDirectory()) {
-        // Skip node_modules, .git, and other common directories
-        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
-          traverse(fullPath);
-        }
-      } else if (stat.isFile()) {
-        // Check if file contains merge conflict markers
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
->>>>>>> main
+
             files.push(fullPath);
           }
         } catch (error) {
           // Skip files that can't be read
-<<<<<<< HEAD
-=======
-  function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other irrelevant directories
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-          walkDir(fullPath);
+
         }
+<<<<<<< HEAD
       } else if (stat.isFile()) {
         const ext = path.extname(item);
         if (['.ts', '.tsx', '.js', '.jsx', '.json', '.css', '.html'].includes(ext)) {
@@ -526,6 +491,9 @@ function findAndFixConflicts(dir) {
   let fixedCount = 0;
   
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
@@ -535,6 +503,7 @@ function findAndFixConflicts(dir) {
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
       if (fixMergeConflicts(filePath)) {
         fixedCount++;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -561,22 +530,18 @@ function findAndFixConflicts(dir) {
   traverse(dir);
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+      }
+    }
+  }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   return files;
 }
 
 // Main execution
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-console.log('Finding files with merge conflicts...');
-const conflictedFiles = findFilesWithConflicts('/workspace');
 
-console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
-
-let fixedCount = 0;
-for (const file of conflictedFiles) {
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 console.log('🔍 Scanning for files with merge conflicts...');
 const filesWithConflicts = findFilesWithConflicts(process.cwd());
 
@@ -584,15 +549,13 @@ console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
 
 let fixedCount = 0;
 for (const file of filesWithConflicts) {
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
   if (fixMergeConflicts(file)) {
     fixedCount++;
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
 console.log('🎉 Merge conflict resolution complete!');
@@ -601,6 +564,8 @@ console.log('🎉 Merge conflict resolution complete!');
 >>>>>>> main
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   return fixedCount;
 }
 
@@ -625,6 +590,7 @@ for (const dir of otherDirs) {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 console.log('Merge conflict fixing completed!');
@@ -652,50 +618,15 @@ try {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return files;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 
 // Main execution
-<<<<<<< HEAD
-try {
-  const srcDir = path.join(__dirname, 'src');
-  const filesWithConflicts = findFilesWithConflicts(srcDir);
-  
-  console.log(`🔍 Found ${filesWithConflicts.length} files with merge conflicts`);
-  
-  let resolvedCount = 0;
-  for (const filePath of filesWithConflicts) {
-    if (resolveMergeConflicts(filePath)) {
-      resolvedCount++;
-    }
-  }
-  
-  console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
-  
-  // Verify no more conflicts
-  const remainingConflicts = findFilesWithConflicts(srcDir);
-  if (remainingConflicts.length === 0) {
-    console.log('🎉 All merge conflicts resolved successfully!');
-  } else {
-    console.log(`⚠️  ${remainingConflicts.length} files still have conflicts:`);
-    remainingConflicts.forEach(file => console.log(`   - ${file}`));
-  }
-  
-} catch (error) {
-  console.error('❌ Error during merge conflict resolution:', error.message);
-  process.exit(1);
-=======
-console.log('Finding files with merge conflicts...');
-const conflictedFiles = findFilesWithConflicts('/workspace');
 
-console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
-
-let fixedCount = 0;
-for (const file of conflictedFiles) {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
-  }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 console.log('Merge conflict fix completed.');
 =======
@@ -846,3 +777,5 @@ const totalFixed = processDirectory('.');
 console.log(`\nResolved conflicts in ${totalFixed} files.`);
 console.log('Merge conflict resolution complete!');
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

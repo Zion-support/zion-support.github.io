@@ -1,5 +1,5 @@
-<<<<<<< HEAD
   contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -32,12 +32,13 @@ export interface AdvancedAIAutomationService {
     website: string
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
@@ -51,8 +52,8 @@ export interface AdvancedAIAutomationService {
     customers: 89;
     rating: 4.8,
     reviews: 38;
-<<<<<<< HEAD
   }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   }
@@ -63,8 +64,9 @@ export interface AdvancedAIAutomationService {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-;
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+;
     realImplementation: true
     implementationDetails:
       'Enterprise-grade DevOps automation platform with AI-powered optimization, multi-cloud support, and advanced monitoring capabilities.'
@@ -249,14 +251,12 @@ export interface AdvancedAIAutomationService {
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.'
     launchDate: '2024-10-01'
     customers: 89
     rating: 4.8
     reviews: 38
+<<<<<<< HEAD
 =======
 =======
     mobile: string;
@@ -560,6 +560,8 @@ export interface AdvancedAIAutomationService {
     reviews: 38,;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -578,16 +580,16 @@ export interface AdvancedAIAutomationService {
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 38
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedAIAutomationService {;
   id: string,;
@@ -850,12 +852,9 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     customers: 89,;
     rating: 4.8;
     reviews: 38;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -867,3 +866,6 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

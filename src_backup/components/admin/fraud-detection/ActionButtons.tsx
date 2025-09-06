@@ -96,6 +96,7 @@ interface ActionButtonsProps {
 
 
 import React from 'react';
+<<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
 import { Button } from '@/components / ui / button';
 <<<<<<< HEAD
 import React from "react",;
@@ -162,6 +163,9 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
   );
 };
 =======
+=======
+import { Button } from '@/components/ui/ button';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/admin/fraud-detection/ActionButtons.tsx
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
 interface ActionButtonsProps {
   flag_id: string;

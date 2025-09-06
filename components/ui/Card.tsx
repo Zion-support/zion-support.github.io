@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React from 'react';
 
 interface CardProps {
@@ -16,6 +19,7 @@ export default function Card({ children, className = '' }: CardProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import React from "react";
 import { cn } from "../../lib/utils";
@@ -255,3 +259,5 @@ export {
   CardContent,
 };
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

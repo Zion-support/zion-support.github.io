@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -56,12 +57,15 @@ if ( {) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         content,
         message: 'chore (automation): daily rankings update',
         token,
       });
     }
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -102,11 +106,14 @@ exports.handler = async function() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     })),
     const top = entries.sort ((a, b) => b.points - a.points).slice (0, 100),
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -115,6 +122,8 @@ exports.handler = async function() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     const content = JSON.stringify ({ updated_at: Date.now (), top }, null, 2),
     // Check condition
 if ( {) {
@@ -129,10 +138,10 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
-<<<<<<< HEAD
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   } catch (e) {
@@ -184,16 +193,20 @@ if ( {) {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 },
 },
-=======
+
+},
+
+},
+
 <<<<<<< HEAD
-
-},
-
-},
-
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -202,3 +215,5 @@ if ( {) {
 =======
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

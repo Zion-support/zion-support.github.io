@@ -1,36 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-
-console.log('🔒 Running security audit...');
-console.log('✅ Security audit completed');
 =======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
+
 <<<<<<< HEAD
-#!/usr/bin/env node;
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-function log(msg, level = "INFO")
-    execSync(cmd, { "stdio": "inherit"})
-    return { "ok"}
-    return { "ok": false, "error"}
-  log("� Starting security audit...")
-  log("Running npm audit (moderate)..."
-  const audit = tryExec("npm audit --audit-level=moderate")
-    log("Vulnerabilities found, attempting npm audit fix", "WARN")
-    tryExec("npm audit fix")
-  const sensitive = [".env", ".env.local", ".env.production", "config.json", "secrets.json"]
-    log(`Sensitive files "present": ${found.join(", ")}`, "WARN"
-    log("No sensitive files found in repo root")
-  log(" Security audit completed")
-=======
-#!/usr/bin/env node
-
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -533,3 +513,5 @@ if (require.main === module) {
 
 module.exports = SecurityAuditor;
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

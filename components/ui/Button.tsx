@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React from 'react';
 import Link from 'next/link';
 
@@ -107,6 +110,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     </button>
   );
 }
+<<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react";
@@ -282,3 +286,5 @@ export default Button;
 =======
 export { Button };
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

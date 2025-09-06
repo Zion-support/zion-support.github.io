@@ -1,6 +1,9 @@
+<<<<<<< HEAD:pages_backup/partners.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/partners.tsx
 import React from 'react';
 <<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
@@ -178,6 +181,7 @@ const Page = () => {
 };
 
 export default Page;
+<<<<<<< HEAD:pages_backup/partners.tsx
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import Head from 'next/head';
@@ -1361,3 +1365,5 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
 =======
 }
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/partners.tsx

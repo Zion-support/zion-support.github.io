@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export interface DeployTemplateResult {
 =======
@@ -50,20 +51,27 @@ function folder(
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return {
 <<<<<<< HEAD
+=======
+}
+export interface DeployTemplateResult {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     nodes: []
     edges: []
   }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 export function getGitStatus() {
   return {
-<<<<<<< HEAD
     connected: false
     branch: 'main'
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -73,6 +81,8 @@ export function getGitStatus() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 function buildZionSourceMap(): SourceNode[] {
   return [
@@ -119,17 +129,21 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
 export interface DeployTemplateResult {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -146,6 +160,8 @@ export function getGitStatus() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     connected: false,
     branch: 'main';
   };
@@ -157,16 +173,10 @@ export function getSourceMapWithExistence(): SourceNode[] {;
 }
 
 export interface DeployTemplateResult {;
-<<<<<<< HEAD
   createdPaths: string[];
   skippedPaths: string[];
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   createdPaths: string[];
   skippedPaths: string[];
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
@@ -180,10 +190,10 @@ export function deployBasicTemplateForPath(
   const createdPaths: string[] = [];
   const skippedPaths: string[] = [];
   ensureDirectory(absoluteDir);
-<<<<<<< HEAD
   } else {
     skippedPaths.push(keepFile);
   }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   } else {
@@ -210,6 +220,8 @@ export function deployBasicTemplateForPath(
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   } else {
     skippedPaths.push(readmeFile);
   }
@@ -221,9 +233,9 @@ export function deployBasicTemplateForPath(
   return { createdPaths, skippedPaths };
 
 }
-=======
   return { createdPaths, skippedPaths }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -231,6 +243,8 @@ export function deployBasicTemplateForPath(
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
   created_paths: string[];
@@ -251,6 +265,7 @@ export function ensure_directory (dir_path: string): void {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -264,3 +279,6 @@ export function ensure_directory (dir_path: string): void {
 =======
   return { createdPaths, skippedPaths };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -18,7 +18,17 @@ export default defineConfig({
           vendor: ["react", "react-dom"],
           ui: ["framer-motion", "lucide-react"],
           router: ["react-router-dom"]
+<<<<<<< HEAD
         },
+=======
+        }
+      }
+    },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       },
     },
   },

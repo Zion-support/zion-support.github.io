@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/backup/restore.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -5,6 +6,8 @@
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/backup/restore.ts
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -16,6 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const r = await fetch(url),
     if (!r.ok) return res.status(404).json({ error: 'Not found' }),
     const data = await r.json(),
+<<<<<<< HEAD:pages_backup/api/backup/restore.ts
 =======
 import type { NextApiRequest, NextApiResponse } from 'next'
 ;
@@ -36,6 +40,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
     const url = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/backup/restore.ts
     return res.status(200).json(data)
   } catch (e: any) {
     return res.status(500).json({ error: e?.message |'Restore failed' })

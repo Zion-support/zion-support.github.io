@@ -1,13 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export interface ModerationFlag {
 export interface ModerationFlag {;
 
 
 export interface ModerationFlag {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -15,6 +19,8 @@ export interface ModerationFlag {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
   contentId: string;
   contentType: "post" | "comment" | "user";
@@ -39,43 +45,32 @@ export interface ModerationFlag {
 let flags: ModerationFlag[] = [];
 =======
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 // Mock data storage - replace with actual database;
 let flags: ModerationFlag[] = [];
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 
 ;
 export async function getFlagById (id: string): Promise < ModerationFlag | null> {
   return flags.find (flag => flag.id === id) || null;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
 }
 export async function readAllFlags (): Promise < ModerationFlag[]> {
   return [...flags];
 
-<<<<<<< HEAD
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find((flag) => flag.id === id) || null;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 export async function readAllFlags (): Promise < ModerationFlag[]> {
   return [...flags];
 
-<<<<<<< HEAD
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find((flag) => flag.id === id) || null;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -104,6 +99,8 @@ export interface ModerationFlag {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
@@ -113,6 +110,7 @@ let flags: ModerationFlag[] = [];
 
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {;
   return flags.find(flag => flag.id === id) || null;
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
@@ -156,6 +154,8 @@ let flags: ModerationFlag[] = [];
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find(flag => flag.id === id) |null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 
 export async function readAllFlags(): Promise<ModerationFlag[]> {;
@@ -168,10 +168,6 @@ export async function createFlag(
 ): Promise<ModerationFlag> {
   const flag: ModerationFlag = {
     id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
     contentId: data.contentId || "",
     contentType: data.contentType || "post",
     reason: data.reason || "",
@@ -183,6 +179,7 @@ export async function createFlag(
 
   flags.push(flag);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     contentId: data.contentId || '',
@@ -191,6 +188,8 @@ export async function createFlag(
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
     content_id: data.content_id || '',
     content_type: data.content_type || 'post',
@@ -202,22 +201,17 @@ export async function createFlag(
   }
 ;
   flags.push (flag);
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
   return flag;
 }
 
 export async function updateFlagStatus(
   id: string,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   status: ModerationFlag["status"],
   adminNotes?: string,
 ): Promise<FlaggedContent | undefined> {
   const flag = await getFlagById(id);
   if (!flag) return undefined;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -255,12 +249,15 @@ export async function updateFlagStatus(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();
   await upsertFlag(flag);
   return flag;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -269,3 +266,5 @@ export async function updateFlagStatus(
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

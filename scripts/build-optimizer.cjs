@@ -9,6 +9,7 @@ const fs = require('fs')
     execSync('npm run build', { "stdio"})
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.error(' Build optimization "failed")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -100,3 +101,6 @@ if (require.main === module) {
 
 module.exports = BuildOptimizer;
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -31,12 +31,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const totalsByToken: Record<string, number> = {}
   const contributionsBySubject: Record<string, number> = {}
   let globalVotes = 0
+<<<<<<< HEAD:pages_backup/api/sync/metrics.ts
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/metrics.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 import type { NextApiRequest, NextApiResponse } from "next",;
@@ -92,9 +95,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const totalsByToken: Record<string, number> = {}
   const contributionsBySubject: Record<string, number> = {}
   let globalVotes = 0
+<<<<<<< HEAD:pages_backup/api/sync/metrics.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/metrics.ts
   for (const e of events) {
     if (e.type === "token_transfer") {
       const p = e.payload as any
@@ -197,12 +203,10 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 }
 }
 }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 

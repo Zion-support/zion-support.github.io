@@ -208,9 +208,13 @@ export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }: Con
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
+<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 <<<<<<< HEAD
 =======
 import { Button } from '@/components / ui / button';
+=======
+import { Button } from '@/components/ui/ button';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/contracts/page/ContractTypeCards.tsx
 import {
   Card,
   CardContent,
@@ -218,7 +222,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+} from '@/components/ui/ card';
 import { FileText, ShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {
   onStandardClick: () => void;

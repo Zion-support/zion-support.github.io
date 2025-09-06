@@ -1,13 +1,14 @@
+<<<<<<< HEAD:pages_backup/api/wallet/index.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/wallet/index.ts
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     return res.status (500).json ({ error: err.message || 'Unknown error' });
   }
 
@@ -33,9 +34,12 @@ export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_c
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getWalletSummary } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD:pages_backup/api/wallet/index.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/wallet/index.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {getWalletSummary} from '../../../utils/token/service';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -94,12 +98,12 @@ if ( {) {
 
 
 }
-=======
     return res.status (500).json ({ error: err.message || 'Unknown error' });
   }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD:pages_backup/api/wallet/index.ts
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -108,3 +112,5 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(500).json({ error: err.message |'Unknown error' });
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/wallet/index.ts

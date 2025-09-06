@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -11,6 +12,8 @@
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedInnovativeService {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
   name: string;
   tagline: string;
@@ -43,6 +46,7 @@ export interface AdvancedInnovativeService {
     address: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -62,11 +66,14 @@ export interface AdvancedInnovativeService {
   implementationDetails: string;
   launchDate: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -83,6 +90,8 @@ const contact = {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -95,9 +104,12 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: 'ai-autonomous-devops-orchestrator'
     name: 'AI Autonomous DevOps Orchestrator'
 =======
@@ -1140,6 +1152,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
@@ -1186,6 +1199,11 @@ const contact = {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+    ];
+    market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
@@ -1194,11 +1212,14 @@ const contact = {
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -1712,10 +1733,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1813,6 +1833,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     rating: 4.8,;
     reviews: 67,;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     benefits: [;
       '30% improvement in prediction accuracy',
       '50% reduction in modeling time',
@@ -1832,11 +1854,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
   },
 ];      'AI climate modeling_environmental monitoring_weather forecasting_sustainability analytics_custom model development';
     ];
-<<<<<<< HEAD
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
   }
 ];
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1853,3 +1875,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

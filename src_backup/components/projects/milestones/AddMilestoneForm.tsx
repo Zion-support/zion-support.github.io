@@ -30,22 +30,27 @@ import { use_form } from 'react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { z } from 'zod';
 import { CalendarIcon, Loader2 } from 'lucide-react'import { format } from 'date - fns';
-import { Button } from '@/components / ui / button';
-import { Calendar } from '@/components / ui / calendar';
+import { Button } from '@/components/ui/ button';
+import { Calendar } from '@/components/ui/ calendar';
 import {
   Form;
   FormControl;
   FormField;
   FormItem;
   FormLabel;
-  FormMessage} from '@/components / ui / form';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
+  FormMessage} from '@/components/ui/ form';
+import { Input } from '@/components/ui/ input';
+import { Textarea } from '@/components/ui/ textarea';
   Popover;
   PopoverContent;
+<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
 <<<<<<< HEAD
   PopoverTrigger} from '@/components / ui / popover'; import { AIMilestoneGenerator } from './AIMilestoneGenerator';
 import { GeneratedMilestone } from '@/hooks / useMilestoneGenerator';
+=======
+  PopoverTrigger} from '@/components/ui/ popover'; import { AIMilestoneGenerator } from './AIMilestoneGenerator';
+import { GeneratedMilestone } from '@/hooks/ useMilestoneGenerator';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/projects/milestones/AddMilestoneForm.tsx
 const form_schema = z.object ({
   title: z.string ().min (1, 'Title is required');
   description: z.string ().optional (),

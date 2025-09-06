@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -13,10 +14,13 @@ export interface CodeSample {
   language: 'curl' | 'javascript' | 'python';
   code: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export interface RateLimitInfo {
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
   burst?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -26,10 +30,13 @@ export interface RateLimitInfo {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export interface ErrorCode {
   code: string;
   http_status: number;
   message: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -42,6 +49,8 @@ export interface EndpointSpec {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export interface CodeSample {;
@@ -60,6 +69,7 @@ export interface ErrorCode {;
 
 export interface EndpointSpec {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -67,6 +77,8 @@ export interface EndpointSpec {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
   title: string;
   description: string;
@@ -91,8 +103,8 @@ samples: CodeSample[];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   errors?: ErrorCode[];
   tags?: string[];
-<<<<<<< HEAD
 export interface SectionSpec {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export interface SectionSpec {
@@ -111,12 +123,15 @@ export interface SectionSpec {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export interface SectionSpec {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
 
 export interface SectionSpec {;
 
-<<<<<<< HEAD
 export interface SectionSpec {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export interface SectionSpec {
@@ -124,18 +139,24 @@ export interface SectionSpec {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
   title: string;
   description?: string;
   endpoints: EndpointSpec[];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export interface ApiDocsSpec {
 
 
 export interface ApiDocsSpec {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -151,10 +172,13 @@ export interface ApiDocsSpec {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   product: 'Zion OS';
   versions: string[]; // available versions;
   default_version: string;
   sections: SectionSpec[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -172,6 +196,8 @@ export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export type Visibility = 'public' | 'partner' | 'internal';
 ;
 export interface CodeSample {
@@ -187,7 +213,6 @@ export interface ErrorCode {
   message: string;
 }
 export interface EndpointSpec {
-<<<<<<< HEAD
   id: string, title: string,
   description: string, path: string,
   method: HttpMethod, visibility: Visibility,
@@ -201,9 +226,9 @@ export interface EndpointSpec {
   params?: Record < string, string>;
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
-<<<<<<< HEAD
   lastUpdatedIso: string
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   lastUpdatedIso: string
@@ -218,6 +243,8 @@ export interface EndpointSpec {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 }
 
@@ -229,6 +256,7 @@ export interface EndpointSpec {
 }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -237,6 +265,8 @@ export interface EndpointSpec {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
 export type Visibility = 'public' | 'partner' | 'internal',;
 export interface CodeSample {;
@@ -293,9 +323,9 @@ export interface ApiDocsSpec {;
 
 
 
-<<<<<<< HEAD
   lastUpdatedIso: string;
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   lastUpdatedIso: string;
@@ -309,3 +339,5 @@ export interface ApiDocsSpec {;
   lastUpdatedIso: string
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

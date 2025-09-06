@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,11 +12,13 @@ import { SearchSuggestion } from '@/types/search';
 
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion } from "@/types/search";
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
 
     id: 'ai-model-1'
@@ -84,6 +87,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -127,6 +131,10 @@ import { SearchSuggestion } from "@/types/search",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -248,12 +256,11 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     rating: 4.8,
     reviewCount: 36,
     featured: true,
-<<<<<<< HEAD
+    location: "Global",
+
     location: "Global",
 
 <<<<<<< HEAD
-    location: "Global",
-
 =======
     location: 'Global',
     availability: 'Immediate',
@@ -272,6 +279,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     availability: "Immediate",
     aiScore: 94
   }
@@ -292,14 +301,6 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Enterprise AI solutions',;
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    type: 'product', // Use a valid type from the SearchSuggestion interface
-  }));};  ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "AI models",
     "GPT integration",
     "Machine learning",
@@ -312,6 +313,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     "Enterprise AI solutions"
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -322,11 +324,15 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   
   return suggestions.map(text => ({
     text,
     type: 'product' // Use a valid type from the SearchSuggestion interface
   }))
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -351,6 +357,10 @@ export const generateFilterOptions = () => {
 const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+    ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   ].sort();
   const locations = [
     ...new Set(
@@ -385,9 +395,12 @@ export const MAX_PRICE = Math && Math.max(
 export const MIN_PRICE = Math && Math.min(
   ...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0)
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 );
 reviewCount: 58;
 featured: true;
@@ -411,23 +424,30 @@ ratingOptions: [1, 2, 3, 4, 5]
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 };export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 
+<<<<<<< HEAD
 =======
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 // Generate filter options for sidebar
 export const generateFilterOptions = () => {
   // Extract unique categories, locations, and availability options from listings
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -436,6 +456,9 @@ export const generateFilterOptions = () => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       avatar_url: "https://images.unsplash.com / photo - 1600180758890 - 6b94519a8ba6?auto = format & fit = crop & w=100 & h=100"}
     images: ["https://images.unsplash.com / photo - 1624355834900 - 99cd2071585b?auto = format & fit = crop & w=800 & h=500"];
     created_at: "2023 - 12 - 10T16:45:00.000Z";
@@ -490,31 +513,6 @@ export const generateFilterOptions = () =>: any {
   ].sort ();
 ;
     product_types: product_types.map (type => ({
-<<<<<<< HEAD
-=======
-  const productTypes = [
-    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),;
-  ].sort();
-  const locations = [
-    ...new Set(
-      MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean)
-    ),
-  ].sort();
-  const availability = [
-    ...new Set(
-      MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean)
-    ),
-  ].sort();
-
-  const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
-  const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),
-  const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
-  
-  return {
-    productTypes: productTypes.map(type => ({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       label: type,
       value: type,
     })),
@@ -527,9 +525,12 @@ export const generateFilterOptions = () =>: any {
       value: item,
     })),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     rating_options: [1, 2, 3, 4, 5],
   }
 }
@@ -539,32 +540,21 @@ export const MAX_PRICE = Math.max (
 export const MIN_PRICE = Math.min (
   ...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 review_count: 58;
-=======
-    ratingOptions: [1, 2, 3, 4, 5],
-  };
-};
-
-export const MAX_PRICE = Math.max(
-  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
-);
-export const MIN_PRICE = Math.min(
-  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
-);
-reviewCount: 58;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 featured: true;
 location: "Global";
 availability: "Immediate";
 aiScore: 98 
 };
+<<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 featured: true;
 location: "Global";
 availability: "Immediate";
 ai_score: 98;
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 rating: 4.8;
 review_count: 32;
 location: "North America";
@@ -608,31 +598,28 @@ locations: locations.map (location => ({
 availability_options: availability.map (item => ({
   label: item, value: item;
 }) );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 rating_options: [1, 2, 3, 4, 5];
 }export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
 
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ratingOptions: [1, 2, 3, 4, 5] 
 
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     ratingOptions: [1, 2, 3, 4, 5]
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion } from "@/types/search",;
@@ -805,6 +792,7 @@ export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing
 
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
@@ -826,3 +814,6 @@ ratingOptions: [1, 2, 3, 4, 5]
 
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

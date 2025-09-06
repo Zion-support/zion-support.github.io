@@ -1,21 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-import { IntegrationProviderMeta } from "./types";
-export const PROVIDERS: IntegrationProviderMeta[] = [
-
-=======
 <<<<<<< HEAD
 
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
 
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
+import { IntegrationProviderMeta } from "./types";
+export const PROVIDERS: IntegrationProviderMeta[] = [
 
 
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
+<<<<<<< HEAD
 =======
 import { IntegrationProviderMeta  } from './types';
 ;
@@ -31,6 +32,8 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   {
     id: "salesforce"
     name: "Salesforce"
@@ -45,6 +48,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   }
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -57,6 +61,8 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   {
     id: "pipedrive"
     name: "PipeDrive"
@@ -78,9 +84,12 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   }
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: "bamboohr"
     name: "BambooHR"
     category: "ats"
@@ -89,10 +98,13 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 ];
 export function getProviderById(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 }
 import { IntegrationProviderMeta } from './types';
@@ -112,18 +124,22 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ;
 export function getProviderById (
   id: string,
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find ((p) => p.id === id);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -132,6 +148,8 @@ export function getProviderById (
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
     id: "bamboohr",
     name: "BambooHR",
@@ -144,15 +162,19 @@ export function getProviderById(
 
   id: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ): IntegrationProviderMeta | undefined {;
   return PROVIDERS.find((p) => p.id === id);
 }
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -167,3 +189,5 @@ export function getProviderById(id: string): IntegrationProviderMeta | undefined
   return PROVIDERS.find(p => p.id === id)
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

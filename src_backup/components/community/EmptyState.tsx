@@ -68,14 +68,14 @@ interface EmptyStateProps {;
 import React from 'react';
 import Link from 'next / link';
 import { MessageSquare } from 'lucide-react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components / ui / tooltip';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
+} from '@/components/ui/ tooltip';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/ tooltip';
 interface EmptyStateProps {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   title: string;

@@ -1,4 +1,19 @@
 
+<<<<<<< HEAD
+=======
+const logger = winston && winston.createLogger({
+  level: 'info',
+  format: winston && winston.format.combine(
+    winston && winston.format.timestamp(),
+    winston && winston.format.errors({ stack: true }),
+    winston && winston.format.json()
+  ),
+  defaultMeta: { service: 'automation-script' },
+  transports: [
+    new winston && winston.transports.File({ filename: 'logs/error && error.log', level: 'error' }),
+    new winston && winston.transports.File({ filename: 'logs/combined && combined.log' })
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   ]
 })
 
@@ -47,6 +62,12 @@ class AggressiveSyntaxFixer {;
         this.projectRoot = process.cwd(),;
         this.fixedFiles = [],;
         this.errors = [];
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }
 ;
     log(message) {;
@@ -119,11 +140,45 @@ class AggressiveSyntaxFixer {;
     async fixAllSyntaxErrors() {
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         try {
             // Get all TypeScript and JavaScript files
             const files = await glob('src/**/*.{ts,tsx,js,jsx}', {
                 ignore: ['node_modules/**.next/**dist/**build/**']
 
+<<<<<<< HEAD
+=======
+            }),
+
+            this && this.log(`📁 Found ${files && files.length} files to check`),
+
+
+            })
+            this.log(`📁 Found ${files.length} files to check`)
+            for (const file of files) {
+                await this && this.fixFile(file)
+            }
+            this.log(`✅ Fixed ${this.fixedFiles.length} files`)
+
+
+            this && this.log(`✅ Fixed ${this && this.fixedFiles.length} files`),
+            if (this && this.errors.length > 0) {
+                this && this.log(`⚠️  ${this && this.errors.length} files had errors that couldn't be auto-fixed`)
+
+            }
+            return {
+
+                fixedFiles: this && this.fixedFiles,
+                errors: this && this.errors
+
+            }
+        } catch (error) {
+
+            this && this.log(`❌ Error fixing syntax: ${error && error.message}`),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
             })
             this.log(`📁 Found ${files.length} files to check`)
@@ -132,12 +187,48 @@ class AggressiveSyntaxFixer {;
             }
             this.log(`✅ Fixed ${this.fixedFiles.length} files`)
 
+<<<<<<< HEAD
+=======
+            if (this.errors.length > 0) {
+                this.log(`⚠️  ${this.errors.length} files had errors that couldn't be auto-fixed`)
+            }
+            return {
+
+                fixedFiles: this.fixedFiles
+
+                errors: this.errors
+            }
+        } catch (error) {
+
+            this.log(`❌ Error fixing syntax: ${error.message}`)
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
             throw error
         }
     }
     async fixFile(filePath) {
         try {
+<<<<<<< HEAD
+=======
+
+            const fullPath = path && path.join(this && this.projectRoot, filePath),
+            const content = fs && fs.readFileSync(fullPath, 'utf8'),
+            const originalContent = content,
+            
+            // Check if this file has syntax errors
+            if (this && this.hasSyntaxErrors(content)) {
+                const fixedContent = this && this.createValidFile(filePath),
+                fs && fs.writeFileSync(fullPath, fixedContent),
+                this && this.fixedFiles.push(filePath),
+                this && this.log(`✅ Fixed: ${filePath}`)
+
+            }
+        } catch (error) {
+
+            this && this.errors.push({ file: filePath, error: error && error.message }),
+            this && this.log(`❌ Error fixing ${filePath}: ${error && error.message}`)
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         }
     }
     hasSyntaxErrors(content) {
@@ -162,6 +253,12 @@ class AggressiveSyntaxFixer {;
 
         ]
 
+<<<<<<< HEAD
+=======
+        return errorPatterns && errorPatterns.some(pattern => pattern && pattern.test(content))
+    }
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         return errorPatterns.some(pattern => pattern.test(content))
     }
     createValidFile(filePath) {
@@ -314,6 +411,45 @@ process.on('SIGTERM', () => {
 ;
 ;
 module.exports = AggressiveSyntaxFixer,;
+<<<<<<< HEAD
+=======
+
+
+        const result = await fixer && fixer.fixAllSyntaxErrors(),
+        const report = await fixer && fixer.generateReport(),
+        
+        logger && logger.info('\n📊 Aggressive Syntax Fix Report: '),
+        logger && logger.info(`Files Fixed: ${report && report.summary.totalFixed}`),
+        logger && logger.info(`Errors: ${report && report.summary.totalErrors}`),
+        logger && logger.info(`Success Rate: ${report && report.summary.successRate && successRate.toFixed(1)}%`),
+        
+        if (result && result.fixedFiles.length > 0) {
+            logger && logger.info('\n✅ Fixed Files: '),
+            result && result.fixedFiles.forEach(file => logger && logger.info(`  - ${file}`))
+        }
+        
+        if (result && result.errors.length > 0) {
+            logger && logger.info('\n❌ Files with Errors: '),
+            result && result.errors.forEach(({ file, error }) => logger && logger.info(`  - ${file}: ${error}`))
+        }
+        
+        process && process.exit(0)
+    } catch (error) {
+        logger && logger.error('❌ Aggressive syntax fixing failed:', error && error.message),
+        process && process.exit(1)
+    }
+}
+
+if (require && require.main === module) {
+    main()
+}
+
+module && module.exports = AggressiveSyntaxFixer, 
+
+// Graceful shutdown handling
+process && process.on('SIGINT', () => {
+  console && console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
 
   // Add cleanup logic here

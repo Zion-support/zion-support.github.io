@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -197,6 +198,10 @@ export interface EnterpriseITService2029V2 {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export interface EnterpriseITService2029V2 {;
   id: string;
 =======
@@ -785,7 +790,6 @@ mobile: '+1 302 464 0950',
     compliance: ['SOC 2', 'ISO 27001', 'ITIL', 'COBIT'],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     ];
-<<<<<<< HEAD
     benefits: [
       'Quantum computing capabilitiesUnbreakable securityExponential performance gainsFuture-proof infrastructureCompetitive advantageLong-term investment value'
     ];
@@ -877,22 +881,17 @@ mobile: '+1 302 464 0950',
     support: ['24/7 operations supportIT expertsImplementation team'], compliance: ['SOC 2ISO 27001ITILCOBIT'],
     scalability: 'Enterprise-grade, multi-tenant support',
     roi: '450% within 18 months',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     deployment: 'Cloud-native, hybrid options',
     support: ['24 / 7 operations support', 'IT experts', 'Implementation team'],
     compliance: ['SOC 2', 'ISO 27001', 'ITIL', 'COBIT'],    scalability: 'Enterprise - grade, multi - tenant support',    roi: '450% within 18 months',
     deployment: 'Cloud - native, hybrid options',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     maintenance: 'Fully autonomous, continuous optimization',
     training: 'IT operations training, certification',
     documentation: 'Operations guides, best practices',
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
     marketSize: '$28.9B by 2029';
     competitors: ['ServiceNowBMCMicro FocusIvanti'];
@@ -904,24 +903,25 @@ mobile: '+1 302 464 0950',
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
     compliance: ['SOC 2ISO 27001ITILCOBIT']
     scalability: 'Enterprise-grade, multi-tenant support';
     roi: '450% within 18 months'
     deployment: 'Cloud-native, hybrid options';
-=======
     maintenance: 'Fully autonomous, continuous optimization',
     training: 'IT operations training, certification',
     documentation: 'Operations guides, best practices',
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
   }
 ];
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -939,6 +939,8 @@ export interface EnterpriseITService2029V2 {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ];      'Enterprise IT operations_data center management_application performance management_infrastructure automation_service desk automationIT service management';
     ];
     market_size: '$28.9B by 2029';
@@ -1023,24 +1025,27 @@ mobile: '+1 302 464 0950',
     }
   }
 ];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 export interface EnterpriseITService2029V2 {;
 
     }
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

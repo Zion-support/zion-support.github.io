@@ -3,11 +3,6 @@
 
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const advancedEmergingTechServices2025 = [
   {
 
@@ -78,9 +73,12 @@ id: 'space-mining-operations-platform',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     features: [
       'Quantum-biological hybrid processing'
       'DNA-based computing'
@@ -94,6 +92,7 @@ id: 'space-mining-operations-platform',
 <<<<<<< HEAD
 =======
     pricing: {
+<<<<<<< HEAD
 =======
 
 =======
@@ -443,6 +442,8 @@ id: 'space-mining-operations-platform',
     marketSize: '$6 && 6.8B',
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       starter: {
         price: 599
         period: 'month'
@@ -998,20 +999,22 @@ id: 'space-mining-operations-platform',
     competitiveAdvantage:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
-=======
-      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$6.8B'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Quantum Computing',
       'Materials Science',
       'AI Discovery',
@@ -1536,18 +1539,15 @@ id: 'space-mining-operations-platform',
 ];      phone: '+1 302 464 0950';
     };
     marketSize: '$6 && 6.8B',
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
 
 
-<<<<<<< HEAD
 
 
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1558,6 +1558,8 @@ id: 'space-mining-operations-platform',
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     market_size: '$6.8B',
     target_audience:;
       'Gaming companies, virtual reality firms, entertainment companies, technology startups',
@@ -1778,7 +1780,6 @@ id: 'space-mining-operations-platform',
     marketSize: '$6.8B',;
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',;
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';
-<<<<<<< HEAD
     }
     market_size: '$6.8B',
     target_audience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
@@ -1786,19 +1787,10 @@ id: 'space-mining-operations-platform',
   }
 ];
 ;
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const advancedEmergingTechServices2025 = [;
   {;
     id: 'space-mining-operations-platform',;
@@ -2029,12 +2021,9 @@ export const advancedEmergingTechServices2025 = [;
     marketSize: '$6.8B',;
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',;
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -2043,3 +2032,5 @@ export const advancedEmergingTechServices2025 = [;
   },
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -1,8 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -17,6 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const post = incrementMetric(id, metric as 'views' | 'likes' | 'shares');
 
 
+<<<<<<< HEAD
 =======
 import { incrementMetric } from '@/utils/data/blogStore';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -35,6 +39,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   const { id, metric } = req.query;
   if (req.method !== 'POST') return res.status(405).end();
   if (typeof id !== 'string' |typeof metric !== 'string') return res.status(400).json({ error: 'Invalid params' });
@@ -44,12 +50,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   return res.status(200).json({ ok: true, metrics: post.metrics })
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   if (!post) return res && res.status(404).json({ error: 'Not found' });
   return res && res.status(200).json({ ok: true, metrics: post && post.metrics });export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id, metric } = req && req.query;
@@ -60,8 +69,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!post) return res && res.status(404).json({ error: 'Not found' });
   return res && res.status(200).json({ ok: true, metrics: post && post.metrics })
 }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -70,6 +79,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import { increment_metric } from '@/utils / data / blog_store';
 export default /**
  * handler - Function description
@@ -111,6 +122,7 @@ function handler() {
 }
   return res.status (200).json ({ ok: true, metrics: post.metrics });
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -137,12 +149,15 @@ function handler() {
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 
 }
 
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -152,3 +167,15 @@ function handler() {
   return res.status(200).json({ ok: true, metrics: post.metrics })
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+}
+
+}
+}
+
+}
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

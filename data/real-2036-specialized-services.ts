@@ -1,16 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export type Real2036SpecializedService = {
   id: string, name: string,
   tagline: string, description: string,
   category: string, price: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export type Real2036SpecializedService = {
   id: string;
 =======
@@ -23,6 +29,7 @@ export type Real2036SpecializedService = any;
   price: string;
   period?: string;
   features: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -40,6 +47,11 @@ export type Real2036SpecializedService = any;
   launchDate?: string;
   rating?: number;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
@@ -47,9 +59,12 @@ export type Real2036SpecializedService = any;
   useCases?: string[];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Space systems'
       'Safety protocols'
       'Training technology'
@@ -550,17 +565,21 @@ id: 'neuromorphic-computing-platform',
   }
   // Synthetic Biology Platform
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   {
     id: 'synthetic - biology - platform';
     name: 'Synthetic Biology Platform';
     tagline: 'Design and engineer biological systems with AI'
     description: 'Advanced platform that combines synthetic biology with artificial intelligence to design, engineer, and optimize biological systems for various applications.';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -571,10 +590,13 @@ id: 'neuromorphic-computing-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     period: '/month';
     features: [;
       'AI - powered DNA design_biological system simulation_automated lab protocols_genetic circuit optimization_safety and compliance tools_real - time monitoring_custom organism design_expert consultation';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -585,6 +607,8 @@ id: 'neuromorphic-computing-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'Pharmaceutical companies, Biotech firms, Research institutions';
     competitiveAdvantage: 'AI integration, Automated protocols, Safety focus';
     integration: ['Lab automation systemsDNA synthesis platformsSequencing servicesCloud platforms'];
@@ -608,6 +632,7 @@ id: 'neuromorphic-computing-platform',
     id: 'quantum - internet - protocol - suite';
     name: 'Quantum Internet Protocol Suite';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -619,10 +644,13 @@ id: 'neuromorphic-computing-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     period: '/month';
     features: [;
       'Quantum network protocols_interoperability standards_security frameworks_network management tools_performance optimization_compliance certification_custom protocol development_expert consultation';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -633,6 +661,8 @@ id: 'neuromorphic-computing-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'Internet service providers, Government agencies, Research institutions';
     competitiveAdvantage: 'Quantum protocols, Interoperability, Security focus';
     integration: ['Quantum networksInternet infrastructureSecurity systemsCloud platforms'];
@@ -671,6 +701,7 @@ id: 'neuromorphic-computing-platform',
       'Neural signal processing_real - time brain monitoring_custom interface design_safety and compliance_performance optimization_user training tools_custom applications_expert consultation';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -680,6 +711,8 @@ id: 'neuromorphic-computing-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'Healthcare providers, Research institutions, Accessibility companies';
     competitiveAdvantage: 'Direct neural interface, Real-time processing, Safety focus';
     integration: ['Medical devicesAccessibility toolsGaming platformsResearch systems'];
@@ -705,6 +738,7 @@ id: 'neuromorphic-computing-platform',
     tagline: 'Professional metaverse creation and management platform'
     description: 'Comprehensive platform for designing, building, and managing immersive metaverse experiences with advanced 3D graphics, AI, and blockchain integration.';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -714,10 +748,13 @@ id: 'neuromorphic-computing-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     period: '/month';
     features: [;
       '3D world building toolsAI - powered NPCsBlockchain integration_multi - user environmentsVR / AR support_performance optimization_custom development_expert consultation';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -728,6 +765,8 @@ id: 'neuromorphic-computing-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'Gaming companies, Real estate firms, Educational institutions';
     competitiveAdvantage: '3D tools, AI integration, Blockchain support';
     integration: ['VR headsetsAR devicesBlockchain platforms3D engines'];
@@ -751,6 +790,7 @@ id: 'neuromorphic-computing-platform',
     id: 'autonomous - vehicle - ai - platform';
     name: 'Autonomous Vehicle AI Platform';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -762,10 +802,13 @@ id: 'neuromorphic-computing-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     period: '/month';
     features: [;
       'Computer vision systems_sensor fusion algorithms_path planning and navigation_safety and redundancy_real - time processing_performance optimization_custom vehicle integration_expert consultation';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -776,6 +819,8 @@ id: 'neuromorphic-computing-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'Automotive companies, Transportation firms, Logistics providers';
     competitiveAdvantage: 'Advanced AI, Safety focus, Real-time processing';
     integration: ['Vehicle systemsSensor arraysNavigation systemsCloud platforms'];
@@ -801,6 +846,7 @@ id: 'neuromorphic-computing-platform',
     tagline: 'AI - powered discovery of next - generation materials';
     description: 'Revolutionary platform that uses quantum computing and AI to discover and design new materials with extraordinary properties for various applications.';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -810,10 +856,13 @@ id: 'neuromorphic-computing-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     period: '/month';
     features: [;
       'Quantum material simulationAI - powered discovery_property prediction_synthesis optimization_performance testing_custom material design_expert consultation_research collaboration';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -824,6 +873,8 @@ id: 'neuromorphic-computing-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'Materials companies, Research institutions, Manufacturing firms';
     competitiveAdvantage: 'Quantum simulation, AI discovery, Custom design';
     integration: ['Quantum computersAI platformsLab systemsResearch databases'];
@@ -849,6 +900,7 @@ id: 'neuromorphic-computing-platform',
     tagline: 'Advanced climate prediction and analysis with AI'
     description: 'Comprehensive platform that uses artificial intelligence to model and predict climate patterns, enabling better understanding and response to climate change.';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -858,10 +910,13 @@ id: 'neuromorphic-computing-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     period: '/month';
     features: [;
       'AI climate models_real - time data analysis_predictive modeling_scenario simulation_data visualization_custom analysis_expert consultation_research collaboration';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -872,6 +927,8 @@ id: 'neuromorphic-computing-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'Government agencies, Research institutions, Environmental organizations';
     competitiveAdvantage: 'AI modeling, Real-time analysis, Predictive capabilities';
     integration: ['Climate sensorsSatellite dataWeather servicesResearch databases'];
@@ -897,6 +954,7 @@ id: 'neuromorphic-computing-platform',
     tagline: 'Quantum - enhanced neural networks for advanced AI';
     description: 'Revolutionary platform that combines quantum computing with neural networks to create more powerful and efficient artificial intelligence systems.';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -906,10 +964,13 @@ id: 'neuromorphic-computing-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     period: '/month';
     features: [;
       'Quantum neural networks_hybrid quantum - classical AIAdvanced optimization_performance benchmarking_custom model development_expert consultation_research collaboration_training and support';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -920,6 +981,8 @@ id: 'neuromorphic-computing-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'AI companies, Research institutions, Technology firms';
     competitiveAdvantage: 'Quantum enhancement, Advanced AI, Performance optimization';
     integration: ['Quantum computersAI frameworksCloud platformsResearch tools'];
@@ -936,6 +999,7 @@ id: 'neuromorphic-computing-platform',
     price: '$6,999';
     period: '/month';
     features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1133,17 +1197,18 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: 'Space tourism companies, Aerospace firms, Travel agencies';
     competitiveAdvantage: 'Space expertise, Safety focus, Comprehensive management';
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'];
     useCases: ['Space tourismTraining programsSafety managementCustomer experience']
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management']
-<<<<<<< HEAD
   }
 ];
 
-<<<<<<< HEAD
 export type Real2036SpecializedService = {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 ];
@@ -1659,19 +1724,13 @@ export type Real2036SpecializedService = {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 ];
 ;
-=======
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export type Real2036SpecializedService = {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1910,13 +1969,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'],;
     useCases: ['Space tourismTraining programsSafety managementCustomer experience'],;
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management'];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
-<<<<<<< HEAD
 ;
 
 export type Real2036SpecializedService = {;
@@ -2176,6 +2230,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     integration: ['Spacecraft systems_training facilities_booking systems_safety systems'];
     use_cases: ['Space tourism_training programs_safety management_customer experience'],
     technology: ['Space systems_safety protocols_training technology_customer management'];
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2184,3 +2239,5 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   },
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

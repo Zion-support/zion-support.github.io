@@ -1,9 +1,12 @@
+<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/changelog.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
@@ -39,9 +42,12 @@ const body =
       fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
       res.status(200).json({ ok: true })
+<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/changelog.ts
     } catch (e: any) {
       res
         .status(500)
@@ -50,13 +56,13 @@ const body =
     return;
   }
 
+<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/changelog.ts
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -64,20 +70,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
 
 
+<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
 <<<<<<< HEAD
 
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/changelog.ts
 
 res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
+<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/changelog.ts
 export default /**
  * handler - Function description
  */
@@ -117,6 +127,7 @@ if ( {) {
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD:pages_backup/api/docs/changelog.ts
 <<<<<<< HEAD
 =======
 =======
@@ -132,3 +143,7 @@ if ( {) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/changelog.ts

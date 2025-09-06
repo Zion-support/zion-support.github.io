@@ -1,7 +1,10 @@
+<<<<<<< HEAD:pages_backup/resources.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/resources.tsx
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -17,6 +20,7 @@ export default function ResourcesPage() {
     </MainLayout>
   );
 }
+<<<<<<< HEAD:pages_backup/resources.tsx
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
@@ -482,3 +486,5 @@ export default function ResourcesPage() {
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/resources.tsx

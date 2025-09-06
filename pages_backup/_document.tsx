@@ -1,14 +1,18 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
+<<<<<<< HEAD:pages_backup/_document.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/_document.tsx
 export default function Document() {
   return (
     <Html lang="en">
 <<<<<<< HEAD
       <Head />
+<<<<<<< HEAD:pages_backup/_document.tsx
 =======
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
@@ -101,6 +105,8 @@ export default function Document() {
         />
       </Head>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/_document.tsx
       <body>
         <Main />
         <NextScript />
@@ -109,8 +115,8 @@ export default function Document() {
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
-<<<<<<< HEAD
 }
+<<<<<<< HEAD:pages_backup/_document.tsx
 =======
 }
   );
@@ -187,3 +193,5 @@ function Document() {
   );
 }
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/_document.tsx

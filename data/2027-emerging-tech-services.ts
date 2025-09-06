@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
 =======
 export interface Service {
@@ -173,6 +176,7 @@ id: string;
   link: string;
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -212,6 +216,8 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Pharmaceutical companies',
       'Agricultural companies',
       'Industrial biotech firms',
@@ -219,9 +225,12 @@ id: string;
       'Environmental companies',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Most comprehensive synthetic biology platform with AI integration',
     implementation_time: '8 - 12 weeks',
     roi: '1500% within 24 months',
@@ -263,6 +272,7 @@ id: string;
       'Industrial inspection'
     ]
     targetAudience: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -317,6 +327,8 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Medical device companies',
       'Environmental monitoring firms',
       'Navigation companies',
@@ -324,9 +336,12 @@ id: string;
       'Industrial companies',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     tags: [
       'Quantum Technology'
       'Sensors'
@@ -365,6 +380,7 @@ id: string;
       'Communication aids'
     ]
     targetAudience: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -417,6 +433,8 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Medical device companies',
       'Research institutions',
       'Assistive technology firms',
@@ -424,9 +442,12 @@ id: string;
       'Healthcare providers',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     tags: [
       'Brain-Computer Interface'
       'Neural Technology'
@@ -439,6 +460,7 @@ id: string;
     ]
   }
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -545,12 +567,15 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Manufacturing companies',
       'Logistics companies',
       'Agricultural companies',
       'Service providers',
       'Research institutions',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -572,6 +597,8 @@ id: string;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: 'quantum - materials - discovery',
     name: 'Quantum Materials Discovery Platform',
     description:;
@@ -608,6 +635,7 @@ id: string;
       'Medical device companies',
       'Energy companies',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -663,12 +691,15 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Investment banks',
       'Hedge funds',
       'Asset managers',
       'Insurance companies',
       'Regulatory bodies',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -693,6 +724,8 @@ id: string;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: 'quantum - climate - modeling',
     name: 'Quantum Climate Modeling Platform',
     description:;
@@ -729,6 +762,7 @@ id: string;
       'Insurance companies',
       'Energy companies',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -997,11 +1031,14 @@ export const emergingTech2027Services: Service[] = [
     targetAudience: [
       'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     ];
     marketSize: '$17 && 17.6B by 2027';
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
     implementationTime: '7-9 weeks';
     roi: '800% within 18 months';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1015,6 +1052,8 @@ export const emergingTech2027Services: Service[] = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     market_size: '$17.6B by 2027',
     competitive_advantage:;
       'Only quantum climate modeling platform with real - time predictions',
@@ -1030,13 +1069,17 @@ export const emergingTech2027Services: Service[] = [
     ],
   },
 ];      'Government agencies_research institutions_environmental organizations_insurance companies_energy companies';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     ];
     marketSize: '$17 && 17.6B by 2027';
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
     implementationTime: '7-9 weeks';
     roi: '800% within 18 months';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1060,13 +1103,12 @@ export interface Service {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 ];
-=======
 export interface Service {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   description: string,;
@@ -1334,11 +1376,8 @@ export const emergingTech2027Services: Service[] = [;
     roi: '800% within 18 months',;
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling',;
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1352,3 +1391,6 @@ export const emergingTech2027Services: Service[] = [;
 =======
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

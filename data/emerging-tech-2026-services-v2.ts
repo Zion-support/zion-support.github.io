@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,6 +26,8 @@ export interface EmergingTech2026ServiceV2 {
   growthRate: string, variant: ServiceVariant,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   contactInfo: {
 <<<<<<< HEAD
       
@@ -38,9 +41,12 @@ export interface EmergingTech2026ServiceV2 {
   rating: number,
   reviews: number
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
       'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.'
     launchDate: '2026-06-15'
@@ -110,9 +116,12 @@ export interface EmergingTech2026ServiceV2 {;
   reviews: number;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
@@ -143,11 +152,13 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -156,6 +167,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     customers: 65;
     rating: 4.9,
     reviews: 45;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -166,6 +178,8 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV2 {;
   id: string,;
@@ -562,11 +576,8 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     customers: 65,;
     rating: 4.9;
     reviews: 45;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1200,3 +1211,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
   }
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

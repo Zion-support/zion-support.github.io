@@ -3,15 +3,13 @@
 =======
 export function LoadingState() {;
   return (
-<<<<<<< HEAD
     <div className="flex justify-center items-center p-8">
       <Loader2 className="h-8 w-8 animate-spin text-primary" />
     </div>
-=======
-<<<<<<< HEAD
     <div className="flex justify-center items-center p-8">
       <Loader2 className="h-8 w-8 animate-spin text-primary" />
     </div>
+<<<<<<< HEAD:src_backup/components/jobs/applications/LoadingState.tsx
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className='flex justify-center items-center p-8'>;
@@ -42,6 +40,8 @@ function LoadingState() {
     </div>;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/jobs/applications/LoadingState.tsx
   );
 };
 

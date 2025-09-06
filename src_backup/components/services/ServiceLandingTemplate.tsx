@@ -89,6 +89,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 
   title,
   subtitle,
+<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -99,6 +100,8 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/services/ServiceLandingTemplate.tsx
   description,
   benefits,
 
@@ -170,10 +173,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
         </div>;
       </section>;
       {benefits.length > 0 && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
         <section className="py - 16 px - 4">;
           <div className="max - w-7xl mx - auto">;
             <h2 className="text - 3xl font - bold text - center text - gray - 900 mb - 12">;
@@ -194,6 +193,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
 <<<<<<< HEAD
 =======
 =======
@@ -310,6 +310,8 @@ className='rounded-full mr-4'
         </section>
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/services/ServiceLandingTemplate.tsx
       )}
 
 
@@ -327,21 +329,12 @@ className='rounded-full mr-4'
                 </div>;
 
               ))}
-<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
-=======
-<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
-=======
-            </div>
-          </div>
-        </section>
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
       )}
 
                     </div>)}
@@ -368,27 +361,12 @@ className='rounded-full mr-4'
         </section>)}
 
       {stats.length > 0 && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
         <section className="py - 16 px - 4">;
           <div className="max - w-7xl mx - auto">;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center">;
               {stats.map ((stat, index) => (
                 <div key={index}>;
                   <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
-<<<<<<< HEAD
-=======
-=======
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              {stats.map((stat, index) => (
-                <div key={index}>
-                  <div className="text-4xl font-bold text-blue-600 mb-2">
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
                     {stat.value}
 
 
@@ -405,21 +383,12 @@ className='rounded-full mr-4'
                 </div>;
 
               ))}
-<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
-=======
-<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
-=======
-            </div>
-          </div>
-        </section>
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
       )}
 
 
@@ -434,16 +403,8 @@ className='rounded-full mr-4'
 
           <a
             href={ctaLink}
-<<<<<<< HEAD
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
-=======
-<<<<<<< HEAD
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
-=======
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
-          >
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
             {ctaText}
 
           </a>;
@@ -467,11 +428,9 @@ className='rounded-full mr-4'
                 {benefit.icon && (
                   <div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon}
-<<<<<<< HEAD
                   </div>
-=======
-<<<<<<< HEAD
                   </div>
+<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
 =======
 <<<<<<< HEAD
                   </div>
@@ -480,6 +439,8 @@ className='rounded-full mr-4'
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/services/ServiceLandingTemplate.tsx
                 )}
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
                 <p className="text-zion-slate-light">{benefit.description}</p>
@@ -521,6 +482,7 @@ className='rounded-full mr-4'
                       {t.role && (
                         <p className="text-sm text-gray-400">{t.role}</p>
                       )}
+<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -528,10 +490,13 @@ className='rounded-full mr-4'
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/services/ServiceLandingTemplate.tsx
                     </div>
                   </div>
                 </CardFooter>
               </Card>
+<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -544,6 +509,8 @@ className='rounded-full mr-4'
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/services/ServiceLandingTemplate.tsx
             ))}
           </div>
         </div>
@@ -555,11 +522,9 @@ className='rounded-full mr-4'
           className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
           asChild
         >
-<<<<<<< HEAD
           <a href={ctaLink}>{ctaText}</a>
-=======
-<<<<<<< HEAD
           <a href={ctaLink}>{ctaText}</a>
+<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
 =======
 <<<<<<< HEAD
           <a href={ctaLink}>{ctaText}</a>
@@ -568,6 +533,8 @@ className='rounded-full mr-4'
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/services/ServiceLandingTemplate.tsx
         </Button>
       </section>
     </div>

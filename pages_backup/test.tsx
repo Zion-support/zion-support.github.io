@@ -1,6 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:pages_backup/test.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/test.tsx
 import MainLayout from '../components/layout/MainLayout';
 
 export default function TestPage() {
@@ -15,6 +18,7 @@ export default function TestPage() {
     </MainLayout>
   );
 }
+<<<<<<< HEAD:pages_backup/test.tsx
 =======
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
@@ -101,3 +105,5 @@ origin/main
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/test.tsx

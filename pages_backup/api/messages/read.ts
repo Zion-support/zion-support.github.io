@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/messages/read.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -11,6 +12,8 @@ import { getConversationById, markAsRead } from '[^']*';
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/messages/read.ts
 import { NextApiRequest, NextApiResponse } from 'next',;
 import { requireUser } from '../../../utils/auth',;
 import { getConversationById, markAsRead } from '../../../utils/messaging/storage',
@@ -25,6 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const conv = getConversationById(conversationId),
   if (!conv || !conv.participants.includes(user.id)) return res.status(404).json({ error: 'Conversation not found' }),
   markAsRead(conversationId, user.id),
+<<<<<<< HEAD:pages_backup/api/messages/read.ts
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
@@ -61,6 +65,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
   const user = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/messages/read.ts
   res.status(200).json({ success: true })
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

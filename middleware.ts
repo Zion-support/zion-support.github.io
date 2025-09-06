@@ -3,6 +3,7 @@ import type { NextRequest } from 'next/server';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function middleware(request: NextRequest) {
 =======
 export function middleware(_request: NextRequest) {
@@ -36,6 +37,10 @@ export function middleware(_request: NextRequest) {
 
   return response;
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+export function middleware(request: NextRequest) {
+  return NextResponse.next();
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 
 export const config = {
@@ -49,4 +54,12 @@ export const config = {
      */
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
+<<<<<<< HEAD
 };
+=======
+};
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

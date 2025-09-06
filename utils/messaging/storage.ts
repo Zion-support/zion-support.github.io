@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -9,6 +10,8 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   body: string;
   link_url?: string;
   attachmentBase64?: string;
@@ -24,31 +27,26 @@
   replyToId?: string;
   reactions: Array<{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export interface Conversation {
-=======
-    userId: string;
-    emoji: string;
-
-    createdAt: string
-
-=======
-    created_at: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }>;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-export interface Conversation {
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+export interface Conversation {
 
 
 export interface Conversation {;
 
-<<<<<<< HEAD
 export interface Conversation {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export interface Conversation {
@@ -56,6 +54,8 @@ export interface Conversation {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -71,22 +71,11 @@ export interface Conversation {
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-    tags?: string[]
-  }
-
-=======
-    project_id?: string;
-    tags?: string[],
-  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface MessageThread {;
 
 
@@ -98,6 +87,7 @@ export interface MessageThread {
   messages: string[]; // message IDs;
   createdAtIso: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -113,10 +103,12 @@ export interface MessageSearchResult {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export interface MessageSearchResult {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 export interface MessageSearchResult {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   message: Message;
   conversation: Conversation;
   highlights: string[];
@@ -133,6 +125,7 @@ class MessagingStorage {
   // Message methods
   async createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {
     const newMessage: Message = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -169,14 +162,19 @@ class MessagingStorage {
 =======
     return this && this.messages.get(id) || null,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
   async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
 
     if (!message) return null
     const updatedMessage = { ...message, ...updates }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     this.messages.set(id, updatedMessage);
     const message = this && this.messages.get(id);
     if (!message) return null,
@@ -189,6 +187,7 @@ class MessagingStorage {
     const message = this && this.messages.get(id);
     if (!message) return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -197,6 +196,8 @@ class MessagingStorage {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     this.messages.set(id, message);
 
     message && message.isDeleted = true;
@@ -206,6 +207,7 @@ class MessagingStorage {
   }
   async markAsRead(id: string): Promise<boolean> {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -214,6 +216,8 @@ class MessagingStorage {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     this.messages.set(id, message);
     const message = this && this.messages.get(id);
     if (!message || message && message.isRead) return false;
@@ -225,6 +229,7 @@ class MessagingStorage {
   }
   async markAsUnread(id: string): Promise<boolean> {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -233,6 +238,8 @@ class MessagingStorage {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     this.messages.set(id, message);
     const message = this && this.messages.get(id);
     if (!message || !message && message.isRead) return false;
@@ -246,6 +253,7 @@ class MessagingStorage {
     const message = this && this.messages.get(messageId);
     if (!message) return false;
     // Remove existing reaction from this user
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -268,11 +276,14 @@ class MessagingStorage {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     return true;
   }
   async removeReaction(messageId: string, userId: string): Promise<boolean> {
     const message = this && this.messages.get(messageId);
     if (!message) return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -282,6 +293,8 @@ class MessagingStorage {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     this.messages.set(messageId, message);
     message && message.reactions = message && message.reactions.filter(r => r && r.userId !== userId),
     this && this.messages.set(messageId, message);
@@ -290,6 +303,7 @@ class MessagingStorage {
   // Conversation methods
   async createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
     const newConversation: Conversation = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -309,10 +323,13 @@ class MessagingStorage {
       this.addToUserConversations(participantId, newConversation.id);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }
     return newConversation;
   }
   async getConversation(id: string): Promise<Conversation | null> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -323,6 +340,8 @@ class MessagingStorage {
 =======
     return this && this.conversations.get(id) || null,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
   async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
 
@@ -330,14 +349,18 @@ class MessagingStorage {
     if (!conversation) return null,
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     if (!conversation) return null
     const updatedConversation = {
       ...conversation
       ...updates
       updatedAtIso: new Date().toISOString()
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -359,11 +382,14 @@ class MessagingStorage {
     if (!conversation) return false
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     // Remove from user conversations
     for (const participantId of conversation && conversation.participants) {
       this && this.removeFromUserConversations(participantId, id);
     }
     // Delete all messages in this conversation
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -387,10 +413,16 @@ class MessagingStorage {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    for (const messageId of messageIds) {
+      this && this.messages.delete(messageId);
+    }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
   async archiveConversation(id: string): Promise<boolean> {
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -400,6 +432,8 @@ class MessagingStorage {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     this.conversations.set(id, conversation);
 
     conversation && conversation.isArchived = true;
@@ -411,6 +445,7 @@ class MessagingStorage {
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -419,6 +454,8 @@ class MessagingStorage {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     this.conversations.set(id, conversation);
 
     conversation && conversation.isArchived = false;
@@ -430,6 +467,7 @@ class MessagingStorage {
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -438,6 +476,8 @@ class MessagingStorage {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     this.conversations.set(id, conversation);
 
     conversation && conversation.isMuted = true;
@@ -449,6 +489,7 @@ class MessagingStorage {
     const conversation = this && this.conversations.get(id);
     if (!conversation) return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -457,6 +498,8 @@ class MessagingStorage {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     this.conversations.set(id, conversation);
 
     conversation && conversation.isMuted = false;
@@ -467,6 +510,7 @@ class MessagingStorage {
   // Query methods
   async getMessagesByConversation(conversationId: string, limit: number = 50, offset: number = 0): Promise<Message[]> {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -475,6 +519,8 @@ class MessagingStorage {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     const sortedIds = Array.from(messageIds).sort((a, b) => {
       const msgA = this.messages.get(a);
       const msgB = this.messages.get(b);
@@ -487,6 +533,7 @@ class MessagingStorage {
       .filter((msg): msg is Message => msg !== undefined);
   }
   async getConversationsByUser(userId: string, includeArchived: boolean = false): Promise<Conversation[]> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -503,6 +550,8 @@ class MessagingStorage {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }
     return conversations.sort((a, b) =>
       new Date(b.lastMessageAtIso).getTime() - new Date(a.lastMessageAtIso).getTime()
@@ -514,6 +563,7 @@ class MessagingStorage {
     );
   }
   async getUnreadMessageCount(userId: string): Promise<number> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -529,11 +579,12 @@ class MessagingStorage {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       const messageIds = this && this.conversationMessages.get(conversationId) || new Set();
       for (const messageId of messageIds) {
         const message = this && this.messages.get(messageId);
         if (message && message.recipientId === userId && !message && message.isRead) {
-=======
   relevance_score: number,
 }
 class MessagingStorage {
@@ -785,8 +836,8 @@ if ( {) {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           count++,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -794,11 +845,14 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         }
       }
     }
     return count;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -813,6 +867,8 @@ if ( {) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         }
       }
     }
@@ -822,6 +878,7 @@ if ( {) {
   }
   // Search methods
   async searchMessages(query: string, userId: string, limit: number = 20): Promise<MessageSearchResult[]> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -838,6 +895,8 @@ if ( {) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         if (body.includes(queryLower)) {
           const highlights = this.generateHighlights(message.body, query);
           const relevanceScore = this.calculateRelevanceScore(message.body, query);
@@ -849,6 +908,7 @@ if ( {) {
         }
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -875,10 +935,13 @@ if ( {) {
       this.threads.set(threadId, thread);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }
     return true;
   }
   async getThread(threadId: string): Promise<MessageThread | null> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -889,13 +952,18 @@ if ( {) {
 =======
     return this && this.threads.get(threadId) || null,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
   async getThreadMessages(threadId: string): Promise<Message[]> {
 
     if (!thread) return []
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     return thread.messages
       .map(id => this.messages.get(id))
     const thread = this && this.threads.get(threadId);
@@ -911,6 +979,7 @@ if ( {) {
     const conversation = this && this.conversations.get(conversationId);
     if (!conversation) return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -919,6 +988,8 @@ if ( {) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     this.conversations.set(conversationId, conversation);
 
     conversation && conversation.lastMessageId = messageId;
@@ -935,8 +1006,8 @@ if ( {) {
   private removeFromUserConversations(userId: string, conversationId: string): void {
     const userConversations = this && this.userConversations.get(userId);
     if (userConversations) {
-<<<<<<< HEAD
       userConversations && userConversations.delete(conversationId),
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       userConversations && userConversations.delete(conversationId),
@@ -949,6 +1020,8 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }
   }
   private addToConversationMessages(conversationId: string, messageId: string): void {
@@ -961,8 +1034,8 @@ if ( {) {
     const queryLower = query && query.toLowerCase();
     const textLower = text && text.toLowerCase();
     const highlights: string[] = [];
-<<<<<<< HEAD
     let index = textLower && textLower.indexOf(queryLower),
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     let index = textLower && textLower.indexOf(queryLower),
@@ -975,6 +1048,8 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     while (index !== -1) {
       const start = Math && Math.max(0, index - 20);
       const end = Math && Math.min(text && text.length, index + query && query.length + 20);
@@ -984,6 +1059,7 @@ if ( {) {
     return highlights;
   }
   private calculateRelevanceScore(text: string, query: string): number {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1109,12 +1185,15 @@ if ( {) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       score += matches * (word.length / query.length);
       const matches = (textLower && textLower.match(new RegExp(word, 'g')) || []).length;
       score += matches * (word && word.length / query && query.length);
     }
     return score;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1133,55 +1212,45 @@ if ( {) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 }
 // Singleton instance
 export const messagingStorage = new MessagingStorage();
 // Main functions for external use
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 export async function createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {;
   return messagingStorage.createMessage(message);
-}
-export async function getMessage(id: string): Promise<Message | null> {
-
-  return messagingStorage.getMessage(id)
-
 =======
-  return messagingStorage && messagingStorage.getMessage(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
-<<<<<<< HEAD
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
   return messagingStorage && messagingStorage.updateMessage(id, updates);
+<<<<<<< HEAD
 =======
   return messagingStorage.getMessage(id)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 
 
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
 
   return messagingStorage.updateMessage(id, updates);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export async function deleteMessage(id: string): Promise<boolean> {
-<<<<<<< HEAD
-=======
-
-  return messagingStorage.deleteMessage(id)
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return messagingStorage && messagingStorage.deleteMessage(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function markAsRead(id: string): Promise<boolean> {
-<<<<<<< HEAD
   return messagingStorage && messagingStorage.markAsRead(id),
+<<<<<<< HEAD
 =======
 
   return messagingStorage.markAsRead(id)
@@ -1193,10 +1262,10 @@ export async function markAsRead(id: string): Promise<boolean> {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
-<<<<<<< HEAD
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
-<<<<<<< HEAD
   return messagingStorage && messagingStorage.createConversation(conversation);
 }
 export async function getConversation(id: string): Promise<Conversation | null> {
@@ -1204,24 +1273,20 @@ export async function getConversation(id: string): Promise<Conversation | null> 
   return messagingStorage && messagingStorage.getConversation(id),
 =======
   return messagingStorage && messagingStorage.getConversation(id),
-=======
-=======
-
-export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return messagingStorage.createConversation(conversation);
 }
 export async function getConversation(id: string): Promise<Conversation | null> {
 
   return messagingStorage.getConversation(id)
 
-=======
   return messagingStorage && messagingStorage.getConversation(id),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
-<<<<<<< HEAD
 export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
   return messagingStorage && messagingStorage.updateConversation(id, updates);
 }
@@ -1229,6 +1294,7 @@ export async function getMessagesByConversation(conversationId: string, limit?: 
   return messagingStorage && messagingStorage.getMessagesByConversation(conversationId, limit, offset);
 }
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1245,25 +1311,24 @@ export async function getMessagesByConversation(conversationId: string, limit?: 
 
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
 export async function getUnreadMessageCount(userId: string): Promise<number> {
 
   return messagingStorage.getUnreadMessageCount(userId)
 
-=======
   return messagingStorage && messagingStorage.getUnreadMessageCount(userId),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
-<<<<<<< HEAD
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
   return messagingStorage && messagingStorage.searchMessages(query, userId, limit);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return messagingStorage.markAsRead(id)
 }
 
@@ -1301,9 +1366,12 @@ export async function searchMessages(query: string, userId: string, limit?: numb
 
   return messagingStorage.searchMessages(query, userId, limit);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 // Utility functions
 export function createMessageData(
@@ -1421,6 +1489,7 @@ export function markAsRead(conversationId: string, userId: string): void {
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1428,6 +1497,10 @@ export function markAsRead(conversationId: string, userId: string): void {
 // Utility functions
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+// Utility functions
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 export function generateMessageId(): string {
@@ -1438,9 +1511,12 @@ export function generateConversationId(): string {
 }
 export function formatMessageTime(isoString: string): string {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
@@ -1458,11 +1534,10 @@ export function generateConversationId(): string {;
 }
 
 export function formatMessageTime(isoString: string): string {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const date = new Date(isoString);
   const now = new Date();
-<<<<<<< HEAD
   if (diffInHours < 1) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1476,11 +1551,14 @@ export function formatMessageTime(isoString: string): string {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   } else if (diffInHours < 24) {
     return `${Math.floor(diffInHours)}h ago`;
   } else if (diffInHours < 168) { // 7 days
     return `${Math.floor(diffInHours / 24)}d ago`;
   } else {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1490,6 +1568,8 @@ export function formatMessageTime(isoString: string): string {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
@@ -1519,9 +1599,7 @@ export function formatMessageTime(isoString: string): string {;
     return `${Math.floor(diffInHours / 24)}d ago`;
   } else {
     return date.toLocaleDateString();
-=======
 
-<<<<<<< HEAD
   }
   // Cleanup methods;
   async clear_all (): Promise < void> {
@@ -1643,6 +1721,7 @@ if ( { // 7 days) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -1746,3 +1825,8 @@ export function sendMessage(input: NewMessageInput): {
 
   return { conversation, message };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

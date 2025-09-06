@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -11,6 +12,8 @@
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasV2 {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
   name: string;
   tagline: string;
@@ -43,6 +46,7 @@ export interface InnovativeMicroSaasV2 {
     address: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -65,6 +69,8 @@ export interface InnovativeMicroSaasV2 {
       'No-code smart contract creation',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: 'smart - contract - automation - platform',
     name: 'Smart Contract Automation Platform',
     tagline: 'Automated smart contract creation and management for businesses',
@@ -75,12 +81,15 @@ export interface InnovativeMicroSaasV2 {
     features: [;
       'No - code smart contract creation',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Template library (100+ templates)',
       'Automated contract execution',
       'Multi - blockchain support',
@@ -92,6 +101,7 @@ export interface InnovativeMicroSaasV2 {
       '24 / 7 contract management',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -114,6 +124,8 @@ export interface InnovativeMicroSaasV2 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Blockchain',
       'Smart Contracts',
       'React',
@@ -123,6 +135,7 @@ export interface InnovativeMicroSaasV2 {
       'Ethereum',
       'Polygon',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -161,6 +174,8 @@ export interface InnovativeMicroSaasV2 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -175,6 +190,7 @@ export interface InnovativeMicroSaasV2 {
     reviews: 289,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -194,6 +210,8 @@ export interface InnovativeMicroSaasV2 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Automated customer engagement',
       'Upsell and cross - sell automation',
       'Customer health scoring',
@@ -205,6 +223,7 @@ export interface InnovativeMicroSaasV2 {
       '24 / 7 customer success monitoring',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -228,6 +247,8 @@ export interface InnovativeMicroSaasV2 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -236,6 +257,7 @@ export interface InnovativeMicroSaasV2 {
       'Python',
       'TensorFlow',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -275,6 +297,8 @@ export interface InnovativeMicroSaasV2 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -289,6 +313,7 @@ export interface InnovativeMicroSaasV2 {
     reviews: 423,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -307,6 +332,8 @@ export interface InnovativeMicroSaasV2 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Automated workflow creation',
       'Intelligent task routing',
       'Process optimization suggestions',
@@ -318,6 +345,7 @@ export interface InnovativeMicroSaasV2 {
       '24 / 7 workflow management',
     ],
     popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -341,6 +369,8 @@ export interface InnovativeMicroSaasV2 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -349,6 +379,7 @@ export interface InnovativeMicroSaasV2 {
       'Python',
       'TensorFlow',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -378,6 +409,8 @@ export interface InnovativeMicroSaasV2 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Zapier',
       'Make',
       'IFTTT',
@@ -403,6 +436,7 @@ export interface InnovativeMicroSaasV2 {
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -420,6 +454,8 @@ export interface InnovativeMicroSaasV2 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Personalized financial planning',
       'Portfolio optimization algorithms',
       'Risk assessment and management',
@@ -431,6 +467,7 @@ export interface InnovativeMicroSaasV2 {
       '24 / 7 financial monitoring',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -454,6 +491,8 @@ export interface InnovativeMicroSaasV2 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -463,6 +502,7 @@ export interface InnovativeMicroSaasV2 {
       'TensorFlow',
       'Financial APIs',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -479,6 +519,8 @@ export interface InnovativeMicroSaasV2 {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -491,10 +533,6 @@ export interface InnovativeMicroSaasV2 {
     rating: 4.8
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 912
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -535,12 +573,15 @@ export interface InnovativeMicroSaasV2 {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     integrations: [;
       'Plaid',
       'Yodlee',
@@ -608,15 +649,14 @@ export interface InnovativeMicroSaasV2 {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   // Innovative Business Solutions
   {
 
-<<<<<<< HEAD
 ;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 ;
@@ -659,11 +699,12 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
     real_implementation: true,
     implementation_details: 'Production - ready AI - powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.';
     launch_date: '2024 - 02 - 01';
@@ -677,11 +718,8 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
 
 ];
 
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -893,3 +931,5 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   }
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

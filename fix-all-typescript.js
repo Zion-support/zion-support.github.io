@@ -94,6 +94,10 @@ function fixTypeScriptFiles(dir) {if (!fs.existsSync(dir)) return;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return, const items = fs.readdirSync(dir), items.forEach(item => { const fullPath = path.join(dir,item), const stat = fs.statSync(fullPath), if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'), if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname), ,
+<<<<<<< HEAD
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 #!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
@@ -191,6 +195,11 @@ origin/main
       } catch (error) {
         console.log(`Error processing ${fullPath}: ${error.message}`)}
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 #!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return, const items = fs.readdirSync(dir), items.forEach(item => { const fullPath = path.join(dir,item), const stat = fs.statSync(fullPath), if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'), if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname), ,
 #!/usr/bin/env node,
 const fs = require('fs'),
@@ -263,6 +272,7 @@ function fixTypeScriptFiles() {,
           console.log(`Fixing "file": ${fullPath}`),
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
       } catch (error) {,
+<<<<<<< HEAD
       try {
         const content = fs.readFileSync(fullPath, 'utf8');
         if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {
@@ -276,6 +286,8 @@ function fixTypeScriptFiles() {,
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')}
       } catch (error) {
         console.log(`Error processing ${fullPath}: ${error.message}`)}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')}
       } catch (error) {
         console.log(`Error processing ${fullPath}: ${error.message}`)}
@@ -387,9 +399,14 @@ function fixTypeScriptFiles() { if () return) {
   $2
 } if (=== '' || !content.includes ('export') && !content.includes ('import')) { console.log (`Fixing file: ${full_path}`)) {
   $2
+<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') |item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' |!content.includes('export') && !content.includes('import')) { console.log(`Fixing file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} console.log('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles(__dirname); console.log('✅ All TypeScript files fixed!');
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') |item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' |!content.includes('export') && !content.includes('import')) { console.log(`Fixing file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} console.log('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles(__dirname); console.log('✅ All TypeScript files fixed!');
   })};
+=======
+} fs.writeFileSync (full_path, ' } catch (error) { console.log (`Error processing ${full_path}: ${error.message}`)} } })} console.log ('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles (__dirname); console.log ('✅ All TypeScript files fixed!');
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   })}
 // Fix all TypeScript files in the project
 console.log('🔧 Fixing all TypeScript files...');

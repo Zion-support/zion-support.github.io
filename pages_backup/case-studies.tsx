@@ -1,6 +1,5 @@
 <<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
 
 const Page = () => {
@@ -22,6 +21,7 @@ const Page = () => {
 <<<<<<< HEAD
 =======
 export default Page;
+<<<<<<< HEAD:pages_backup/case-studies.tsx
 =======
 
 
@@ -890,3 +890,5 @@ import Layout from '../components / Layout';
   );
 }
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/case-studies.tsx

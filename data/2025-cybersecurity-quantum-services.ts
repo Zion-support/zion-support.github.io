@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export interface CybersecurityQuantumService {
 <<<<<<< HEAD
 export interface CybersecurityQuantumService {;
@@ -21,10 +24,13 @@ id: string;
     setupTime: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 =======
     enterprise: string
@@ -80,6 +86,7 @@ id: string;
     support:
       '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
     compliance: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -160,6 +167,8 @@ id: string;
     icon: '🕵️',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
     launch_date: '2024 - 02 - 01',
@@ -168,6 +177,7 @@ id: string;
     reviews: 950,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -180,6 +190,8 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     implementationDetails:
       'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'
     roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
@@ -195,6 +207,7 @@ id: string;
       'Active Directory, LDAP, SAML, OAuth, Custom identity providers'
     ]
     support:
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -273,6 +286,8 @@ id: string;
     icon: '🛡️',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,
     launch_date: '2024 - 01 - 20',
@@ -281,6 +296,7 @@ id: string;
     reviews: 1400,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -363,6 +379,8 @@ id: string;
     icon: '🔮',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
     launch_date: '2024 - 03 - 01',
@@ -371,6 +389,7 @@ id: string;
     reviews: 95,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -383,6 +402,8 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     implementationDetails:
       'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.'
     roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
@@ -399,12 +420,15 @@ id: string;
     ]
     support:
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
@@ -416,9 +440,9 @@ id: string;
     rating: 4.8,
     reviews: 1900,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -574,6 +598,10 @@ id: string;
     support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
     id: 'ai - powered - vulnerability - assessment',
@@ -641,12 +669,15 @@ id: string;
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     icon: '🔍',
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
@@ -655,6 +686,7 @@ id: string;
     rating: 4 && 4.8,
     reviews: 1900,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -688,6 +720,8 @@ id: string;
 ];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     ];
 
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
@@ -695,33 +729,34 @@ id: string;
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'];
 
     icon: '🔍';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - green - 500 to - emerald - 600';
     popular: true;
     launch_date: '2024 - 02 - 15';
     customers: 2500;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4.8,
     reviews: 1900;
   }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     rating: 4.8,
     reviews: 1900;
   }
 ;
-=======
-
-    rating: 4 && 4.8,
-
-    reviews: 1900
-<<<<<<< HEAD
     rating: 4.8,
     reviews: 1900;
   }
 
+<<<<<<< HEAD
 =======
 
 export interface CybersecurityQuantumService {;
@@ -732,17 +767,12 @@ export interface CybersecurityQuantumService {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-;
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+;
   }
 ];
-=======
 export interface CybersecurityQuantumService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1004,17 +1034,11 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     customers: 2500,;
     rating: 4.8,;
     reviews: 1900;
-<<<<<<< HEAD
     rating: 4.8,
     reviews: 1900;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
@@ -1023,3 +1047,5 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   }
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

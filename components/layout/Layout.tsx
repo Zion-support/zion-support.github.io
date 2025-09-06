@@ -1,17 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Head from 'next/head';
+<<<<<<< HEAD
 =======
 >>>>>>> main
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React, { ReactNode } from 'react';
 =======
 React from
@@ -116,6 +120,7 @@ function Layout() { return <div>{children}</div>; type LayoutProps = { children:
 function Layout() { return <div>{children}</div> } " ;
 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -123,12 +128,13 @@ function Layout() { return <div>{children}</div> } " ;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
-<<<<<<< HEAD
 }
 
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
@@ -146,6 +152,7 @@ export default function Layout({ children, title = "Zion Tech Group", descriptio
     </>
   );
 }
+<<<<<<< HEAD
 =======
   keywords?: string;
 }
@@ -194,3 +201,5 @@ export default Layout;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

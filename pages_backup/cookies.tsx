@@ -1,7 +1,10 @@
+<<<<<<< HEAD:pages_backup/cookies.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/cookies.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
@@ -19,6 +22,7 @@ export default function CookiesPage() {
         </div>
       </div>
     </MainLayout>
+<<<<<<< HEAD:pages_backup/cookies.tsx
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react';
@@ -372,6 +376,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/cookies.tsx
   );
       </Layout>
     </>;

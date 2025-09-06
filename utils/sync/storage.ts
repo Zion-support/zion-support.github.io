@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 let state: SyncState = { ...defaultState }
 export function readState(): SyncState {
@@ -22,8 +23,10 @@ export function updateState(updates: Partial<SyncState>): void {
 }
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
-<<<<<<< HEAD
 
 export function readState(): SyncState {;
   return { ...state };
@@ -151,10 +154,6 @@ export interface SyncConnection {
   createdAt: string;
   updatedAt: string;
 }
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface SyncMapping {
   id: string;
@@ -183,7 +182,6 @@ export interface SyncLog {
   timestamp: string;
 }
 
-<<<<<<< HEAD
 class SyncStorage {
   private jobs: Map<string, SyncJob> = new Map();
   private connections: Map<string, SyncConnection> = new Map();
@@ -385,12 +383,15 @@ export function formatDuration(startTime: string, endTime?: string): string {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -401,13 +402,17 @@ const default_state: SyncState = {
   },
   lastSyncedAt: new Date ().toISOString ();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   return events;export function resetState(): void {;
   state = { ...defaultState };
 }
 
+<<<<<<< HEAD
 =======
 }
 
@@ -424,6 +429,8 @@ const default_state: SyncState = {
 if ( {) {
   $2
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
     state.proposalMerkleById[entity_id] = event.merkle_root;
   }
@@ -463,6 +470,7 @@ if (return events) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   // Check condition
 if ( {) {
@@ -491,3 +499,5 @@ if ( {) {
 =======
   return events;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

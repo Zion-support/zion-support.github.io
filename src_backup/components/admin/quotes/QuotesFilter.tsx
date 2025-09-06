@@ -96,24 +96,24 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
               <SelectContent className='bg-zion-blue-dark border-zion-blue-light text-white'>;
 import React from 'react';
 import { Calendar, RefreshCw } from 'lucide-react';
-import { Card, CardContent } from '@/components / ui / card';
-import { Input } from '@/components / ui / input';
+import { Card, CardContent } from '@/components/ui/ card';
+import { Input } from '@/components/ui/ input';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components / ui / select';
+} from '@/components/ui/ select';
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/components / ui / popover';
-import { Button } from '@/components / ui / button';
-import { Calendar as CalendarComponent } from '@/components / ui / calendar';
+} from '@/components/ui/ popover';
+import { Button } from '@/components/ui/ button';
+import { Calendar as CalendarComponent } from '@/components/ui/ calendar';
 import { format } from 'date - fns';
 import type { DateRange } from 'react - day - picker';
-import type { QuoteStatus } from '@/types / quotes';
+import type { QuoteStatus } from '@/types/ quotes';
 interface QuotesFilterProps {
   search_query: string;
   setSearchQuery: (value: string) => void;

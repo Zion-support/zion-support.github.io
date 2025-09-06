@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       name: 'Test User'
     }
   }
@@ -14,15 +17,12 @@ export function assertTalentOrClientForOffer(
   offer: { clientId: string; talentSlug: string },
 
 
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
   if (u && u.role === 'client' && u && u.id === offer && offer.clientId) return u;
   if (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -33,6 +33,8 @@ export function assertTalentOrClientForOffer(
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   )
     return u;
   const err = new Error('Not authorized for this offer');
@@ -47,7 +49,6 @@ export function assertTalentOrClientForOffer(
 
 
 
-<<<<<<< HEAD
 
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -83,38 +84,16 @@ export interface AuthContext {
   permissions: string[];
   sessionId?: string;
 }
-=======
-  err && err.statusCode = 403;
-  throw err;export function requireAuth(req: any): User {
-
-  const user = getUserFromRequest(req);
-  if (!user) {
-
-    throw new Error('Authentication required')
-
-  }
-  return user;
-}
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
 
-<<<<<<< HEAD
 export function getUserFromRequest (req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session;
   const auth_header = req.headers.authorization;
   if () {) {
   $2
-=======
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
     return null;
   }
@@ -161,6 +140,7 @@ if ( {) {
   return user;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -172,3 +152,5 @@ if ( {) {
   err.statusCode = 403;
   throw err;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

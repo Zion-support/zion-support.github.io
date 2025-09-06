@@ -1,5 +1,5 @@
-<<<<<<< HEAD
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
@@ -14,6 +14,11 @@ exports && exports.handler = async function () {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+exports && exports.handler = async function () {
+  try {
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     const pages = [
       '/'
       '/about'
@@ -30,6 +35,7 @@ exports && exports.handler = async function () {
       pages && pages.map(p => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +
       `</urlset>`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -38,6 +44,8 @@ exports && exports.handler = async function () {
 
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
@@ -80,11 +88,14 @@ if ( {) {
         repo,
         path: 'public / sitemap - autogen.xml',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         content: xml,
         message: 'chore (automation): weekly sitemap refresh',
         token,
@@ -93,6 +104,7 @@ if ( {) {
     return {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -100,6 +112,8 @@ if ( {) {
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 exports.handler = async function() {
   try {
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
@@ -120,6 +134,7 @@ exports.handler = async function() {
       `<urlset xmlns="http://www.sitemaps.org / schemas / sitemap / 0.9">` +;
       pages.map ((p) => `<url><loc>${base_url}${p}</loc></url>`).join ('') +;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
       statusCode: 200
@@ -134,11 +149,14 @@ exports.handler = async function() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       `</urlset>`,
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
 <<<<<<< HEAD
     const token = process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -149,6 +167,8 @@ exports.handler = async function() {
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     // Check condition
 if ( {) {
   $2
@@ -156,15 +176,13 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'public / sitemap - autogen.xml', content: xml, message: 'chore (automation): weekly sitemap refresh', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: pages.length }) }
-<<<<<<< HEAD
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
-=======
-<<<<<<< HEAD
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   } catch (e) {
@@ -177,6 +195,8 @@ if ( {) {
   }
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, pages: pages && pages.length }),
     };
@@ -193,28 +213,19 @@ if ( {) {
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
-<<<<<<< HEAD
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen && autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
     }
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: pages && pages.length }) }
-=======
-
-
-    if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'public/sitemap-autogen && autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
-    }
-
-
-    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: pages && pages.length }) }
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 },
 =======
     const token = process.env.GITHUB_TOKEN;

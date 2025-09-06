@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -12,6 +13,8 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 async function scorePage(url) {
 
     const html = await resp && resp.text();
@@ -31,6 +34,7 @@ async function scorePage(url) {
 exports && exports.handler = async function () {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -39,6 +43,8 @@ exports && exports.handler = async function () {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const { upsert_file } = require ('./_lib / github');
 ;
 async /**
@@ -69,6 +75,7 @@ exports.handler = async function () {
     const results = [];
     ${p}`));
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -104,10 +111,13 @@ if ( {) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         token,
       });
     }
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -129,6 +139,8 @@ function score_page() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   try {
     const resp = await fetch (url),
     const html = await resp.text (),
@@ -163,12 +175,15 @@ exports.handler = async function () {
     const results = [],
     for (const p of pages) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       results.push (await score_page (`${base_url}${p}`));
     }
     const report = { updated_at: Date.now (), results },
@@ -182,6 +197,7 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'data / reports / seo / weekly - seo.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly SEO report', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: results.length }) }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -199,6 +215,8 @@ if ( {) {
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 };async function scorePage(url) {
   const t0 = Date && Date.now(),
   try {
@@ -216,6 +234,7 @@ if ( {) {
 }
 exports && exports.handler = async function() {
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 },
 =======
@@ -328,6 +347,11 @@ exports.handler = async function() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+},
+},
+},
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
       statusCode: 200,
       body: JSON.stringify({ ok: true, pages: results.length }),
@@ -375,6 +399,7 @@ exports.handler = async function() {
   }
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -385,3 +410,5 @@ exports.handler = async function() {
 =======
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

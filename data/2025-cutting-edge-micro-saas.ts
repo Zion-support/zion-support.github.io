@@ -3,7 +3,6 @@
 
 
 
-<<<<<<< HEAD
 export const cuttingEdgeMicroSaasServices2025 = [
   {
     id: 'customer-success-ai-pro'
@@ -441,10 +440,6 @@ id: 'customer-success-ai-pro',
       'Risk Management Standards'
     ]
   }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const cuttingEdgeMicroSaasServices2025 = [
   {
 
@@ -492,12 +487,15 @@ export const cuttingEdgeMicroSaasServices2025 = [
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export const cuttingEdgeMicroSaasServices2025 = [;
   {;
     id: 'customer-success-ai-pro',;
@@ -704,9 +702,12 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'],;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 ];
   },
@@ -716,6 +717,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
   }
 ];
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -738,3 +740,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
   },
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+];
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

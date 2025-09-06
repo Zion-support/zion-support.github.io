@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -10,12 +8,6 @@ interface LayoutProps {
 }
 
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
 
 
 class ErrorBoundary extends React.Component {
@@ -193,9 +185,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 export default Layout;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -240,13 +235,11 @@ export default function Layout({
 }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-<<<<<<< HEAD
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -256,6 +249,7 @@ export default function Layout({
     </>
   );
 }
+<<<<<<< HEAD
 =======
         <meta name="keywords" content={keywords} />
         <meta property="og:title" content={ogTitle || title} />
@@ -322,3 +316,5 @@ export default Layout;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

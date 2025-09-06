@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -9,18 +10,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
-import type { NextApiRequest, NextApiResponse } from 'next',
-import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 
-<<<<<<< HEAD
 
     );
     fs && fs.copyFileSync(file && file.filepath, targetPath);
@@ -29,6 +30,7 @@ import path from 'path';
     if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
 
 
+<<<<<<< HEAD
 =======
 import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage';
 export const config = { api: { bodyParser: false } }
@@ -45,6 +47,8 @@ import path from 'path';
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
 export const config = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   const form = formidable({ multiples: false });
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: 'Invalid form data' });
@@ -81,13 +85,15 @@ if (!file || !file.filepath)
     appendAuditLog({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
-    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -98,6 +104,8 @@ if (!file || !file.filepath)
     res.status(200).json({ ok: true });
   });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     res.status(200).json({ ok: true })
       type: 'file_upload',
       section,
@@ -107,28 +115,29 @@ if (!file || !file.filepath)
   });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
     res && res.status(200).json({ ok: true })
 <<<<<<< HEAD
+<<<<<<< HEAD
   })
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   })
 
 }
 
 }
 
-=======
-=======
   })
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   })
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
 export const config = { api: { body_parser: false } }
@@ -173,17 +182,19 @@ function handler() {
   });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
 
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -191,3 +202,5 @@ function handler() {
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

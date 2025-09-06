@@ -32,6 +32,7 @@ function ForgotPassword() {
   return (
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     <div>;
@@ -52,3 +53,5 @@ function ForgotPassword() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

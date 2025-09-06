@@ -1,6 +1,5 @@
 <<<<<<< HEAD
 
-<<<<<<< HEAD
 
   {
 
@@ -52,15 +51,19 @@ id: string;
     trialDays: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
       'Comply with future regulations',
       'Enable quantum - safe communications',
     ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -109,6 +112,8 @@ id: string;
     icon: '🔐',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
     launch_date: '2025 - 02 - 25',
@@ -117,6 +122,7 @@ id: string;
     reviews: 145,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -198,6 +204,8 @@ id: string;
     icon: '🧬',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - green - 500 to - teal - 600',
     popular: true,
     launch_date: '2025 - 03 - 01',
@@ -206,6 +214,7 @@ id: string;
     reviews: 56,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -288,6 +297,8 @@ id: string;
     icon: '⚡',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - yellow - 500 to - orange - 600',
     popular: true,
     launch_date: '2025 - 03 - 05',
@@ -296,6 +307,7 @@ id: string;
     reviews: 6,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -379,6 +391,8 @@ id: string;
     icon: '🌐',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - cyan - 500 to - blue - 600',
     popular: true,
     launch_date: '2025 - 03 - 10',
@@ -387,6 +401,7 @@ id: string;
     reviews: 23,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -469,6 +484,8 @@ id: string;
     icon: '🧠',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - pink - 500 to - purple - 600',
     popular: true,
     launch_date: '2025 - 03 - 15',
@@ -477,6 +494,7 @@ id: string;
     reviews: 42,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -557,6 +575,8 @@ id: string;
     icon: '📡',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - indigo - 500 to - purple - 600',
     popular: true,
     launch_date: '2025 - 03 - 20',
@@ -565,6 +585,7 @@ id: string;
     reviews: 98,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -647,6 +668,8 @@ id: string;
     icon: '🤖',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - gray - 500 to - slate - 600',
     popular: true,
     launch_date: '2025 - 03 - 25',
@@ -655,6 +678,7 @@ id: string;
     reviews: 187,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -737,6 +761,8 @@ id: string;
     icon: '🔬',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - teal - 500 to - cyan - 600',
     popular: true,
     launch_date: '2025 - 03 - 30',
@@ -745,6 +771,7 @@ id: string;
     reviews: 67,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -763,6 +790,9 @@ id: string;
     price: {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    price: {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       monthly: 2999,
       yearly: 29990,
       currency: 'USD',
@@ -790,9 +820,12 @@ id: string;
       'Comply with future regulations',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     targetAudience: [
       'Government agencies'
       'Financial institutions'
@@ -861,21 +894,27 @@ id: string;
       'Comply with future regulations',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
       'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-communications',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     target_audience: [;
       'Government agencies',
       'Financial institutions',
@@ -922,6 +961,7 @@ id: string;
     rating: 4 && 4.8,
     reviews: 89,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -931,6 +971,10 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+];
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular);
 };
 
@@ -1408,6 +1452,7 @@ export const getPopularEmergingTechServices = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export const getEmergingTechServicesByCategory = (category: string) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1416,6 +1461,8 @@ export const getEmergingTechServicesByCategory = (category: string) => {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   );
 };
 
@@ -1425,9 +1472,12 @@ export const getEmergingTechServicesByPriceRange = (
 ) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     return price >= minPrice && price <= maxPrice;
   });
 };import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
@@ -1436,6 +1486,7 @@ const contact = {mobile: "+1 302 464 0950"
   address: "364 E Main St STE 1008 Middletown DE 19709";
   website: "https://ziontechgroup.com";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -1443,6 +1494,8 @@ const contact = {mobile: "+1 302 464 0950"
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -1466,12 +1519,15 @@ const contact = {mobile: "+1 302 464 0950"
   reviews: number
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
@@ -1938,6 +1994,7 @@ const contact = {
   email: "kleber@ziontechgroup && ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1947,6 +2004,8 @@ const contact = {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
@@ -1969,6 +2028,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Training and educational resources" ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1987,10 +2047,13 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     integrations["IBM Quantum, Google Quantum, AWS Braket, Azure Quantum"],
     use_cases["Drug discovery, Financial modeling, Logistics optimization, Cryptography"],
     roi: "Solve previously intractable problems 1000x faster than classical computers",
     competitors["IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum"],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2001,6 +2064,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     variant: "quantum",
     contact_info: contact,
     real_implementation: true,
@@ -2030,6 +2095,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "API and SDK for developers" ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2048,6 +2114,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     integrations["AWS, Azure, GCP, Oracle, SAP, Salesforce"],
     use_cases["Supply chain tracking, Digital identity, Asset tokenization, DeFi protocols"],
     roi: "Reduce transaction costs by 80% and increase transparency by 100%",
@@ -2083,6 +2151,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Custom analytics and reporting tools" ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2101,10 +2170,13 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     integrations["NASA APIs, ESA data, commercial satellite providers, GIS systems"],
     use_cases["Precision agriculture, Environmental monitoring, Urban planning, Space operations"],
     roi: "Improve agricultural yields by 25% and reduce environmental monitoring costs by 60%",
     competitors["Planet Labs, Maxar Technologies, Airbus Defence and Space, BlackSky"],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2120,6 +2192,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     customers: 12,
     rating: 4 && 4.9,
     reviews: 9;,
@@ -2144,6 +2218,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Scalable cloud infrastructure" ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2162,10 +2237,13 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     integrations["AWS, Azure, GCP, industrial protocols, enterprise systems"],
     use_cases["Industrial monitoring, Smart cities, Asset tracking, Predictive maintenance"],
     roi: "Reduce operational costs by 30% and improve efficiency by 40%",
     competitors["AWS IoT, Azure IoT Hub, Google Cloud IoT, PTC ThingWorx"],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2176,6 +2254,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     variant: "default",
     contact_info: contact,
     real_implementation: true,
@@ -2205,6 +2285,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Custom content development services" ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2223,6 +2304,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     integrations["3D modeling software, enterprise systems, social platforms"],
     use_cases["Employee training, Product design, Customer engagement, Remote collaboration"],
     roi: "Reduce training costs by 50% and improve learning retention by 80%",
@@ -2258,6 +2341,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Training and simulation environments" ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2276,6 +2360,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     integrations["Industrial robots, drones, autonomous vehicles, IoT sensors"],
     use_cases["Industrial automation, Autonomous logistics, Precision agriculture, Research and development"],
     roi: "Increase operational efficiency by 200% and reduce human error by 90%",
@@ -2311,6 +2397,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Regulatory compliance and documentation" ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2329,6 +2416,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     integrations["Laboratory equipment, DNA synthesis services, research databases"],
     use_cases["Drug discovery, Bioengineering, Agricultural biotechnology, Research automation"],
     roi: "Accelerate drug discovery by 10x and reduce research costs by 70%",
@@ -2364,6 +2453,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Sustainability reporting and compliance" ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2382,6 +2472,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     integrations["Smart meters, renewable energy systems, grid infrastructure, IoT sensors"],
     use_cases["Renewable energy optimization, Smart grid management, Energy efficiency, Sustainability reporting"],
     roi: "Reduce energy costs by 25% and improve renewable energy utilization by 40%",
@@ -2417,6 +2509,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "API access for third - party applications" ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2435,6 +2528,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     integrations["Traffic signals, public transportation systems, IoT sensors, automotive systems"],
     use_cases["Traffic optimization, Public transportation, Logistics optimization, Autonomous vehicles"],
     roi: "Reduce traffic congestion by 30% and improve transportation efficiency by 40%",
@@ -2470,6 +2565,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Expert cybersecurity consultation" ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2488,6 +2584,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     integrations["Existing security infrastructure, identity management systems, communication platforms"],
     use_cases["Post - quantum cryptography, Quantum - resistant security, Advanced threat protection, Compliance"],
     roi: "Future - proof security infrastructure and maintain compliance with emerging standards",
@@ -2505,9 +2603,12 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 ]}
 export interface EmergingTechService {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   })
 }
 
@@ -3003,6 +3104,7 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
   });
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -3011,10 +3113,13 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     return price >= min_price && price <= max_price;
   });
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -3023,10 +3128,13 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 export interface EmergingTechService {;
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -3042,3 +3150,5 @@ export interface EmergingTechService {;
   });
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

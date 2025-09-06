@@ -1,7 +1,10 @@
+<<<<<<< HEAD:pages_backup/automation.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/automation.tsx
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -348,6 +351,7 @@ export default function AutomationPage() {
     </Layout>
   );
 }
+<<<<<<< HEAD:pages_backup/automation.tsx
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react';
@@ -896,3 +900,5 @@ export default function AutomationPage() {
 =======
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/automation.tsx

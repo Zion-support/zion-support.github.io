@@ -73,11 +73,11 @@ export function InvoiceHistory() {
   const invoices = [
     {
 
-  TableRow } from '@/components / ui / table';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
-import { Download, FileText, Search } from 'lucide-react'import { Input  } from '@/components / ui / input';
-import { toast  } from '@/hooks / use - toast';
+  TableRow } from '@/components/ui/ table';
+import { Button  } from '@/components/ui/ button';
+import { Badge  } from '@/components/ui/ badge';
+import { Download, FileText, Search } from 'lucide-react'import { Input  } from '@/components/ui/ input';
+import { toast  } from '@/hooks/ use - toast';
 export /**
  * InvoiceHistory - Function description
  */

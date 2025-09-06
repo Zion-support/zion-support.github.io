@@ -274,8 +274,13 @@ if (require.main === module) {
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
 }
+<<<<<<< HEAD
 
 
+=======
+module.exports = BuildMonitor;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const fs = require('fs);
 const path = require('path'),
   const { execSync } = require(child_process');

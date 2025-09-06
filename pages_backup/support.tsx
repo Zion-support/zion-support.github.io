@@ -1,7 +1,10 @@
+<<<<<<< HEAD:pages_backup/support.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/support.tsx
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -22,6 +25,7 @@ const Page = () => {
 };
 
 export default Page;
+<<<<<<< HEAD:pages_backup/support.tsx
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react';
@@ -1606,3 +1610,5 @@ export default SupportPage;
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/support.tsx

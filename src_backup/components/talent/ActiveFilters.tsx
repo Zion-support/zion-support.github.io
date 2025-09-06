@@ -384,8 +384,8 @@ export function ActiveFilters({;
 
 
 import React from 'react';
-import { ClickableBadge } from '@/components / ui / clickable - badge';
-import { Button } from '@/components / ui / button';
+import { ClickableBadge } from '@/components/ui/ clickable - badge';
+import { Button } from '@/components/ui/ button';
 import { X } from 'lucide-react';
 interface ActiveFiltersProps {
   selected_skills: string[];

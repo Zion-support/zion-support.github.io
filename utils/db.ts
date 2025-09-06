@@ -10,6 +10,7 @@ function getFilePath(fileName: string): string {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -29,26 +30,19 @@ export function writeJsonFile<T>(fileName: string, data: T): void {;
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
   items && items.push(item);
   writeJsonFile<T[]>(fileName, items);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-// Database utilities
-export interface DatabaseConfig {
-  host: string;
-  port: number;
-  database: string;
-  username: string;
-  password: string;
-  ssl?: boolean;
-}
 =======
-
-}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 // Database utilities
 export interface DatabaseConfig {
   host: string;
@@ -58,7 +52,6 @@ export interface DatabaseConfig {
   password: string;
   ssl?: boolean;
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface QueryResult<T = any> {
   rows: T[];
   rowCount: number;
@@ -93,26 +86,23 @@ export class DatabaseManager {
     } catch (error) {
       throw error;
     }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     if (fs.existsSync(filePath)) {;
       const content = fs.readFileSync(filePath, 'utf8');
       return JSON.parse(content);
     }
   } catch (error) {
     console.error('Error reading file:', error);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   return defaultValue;
 }
-<<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 // Default database configuration
 const defaultConfig: DatabaseConfig = {
   host: process.env.DB_HOST || 'localhost',
@@ -125,9 +115,12 @@ const defaultConfig: DatabaseConfig = {
 // Singleton database instance
 export const db = new DatabaseManager(defaultConfig);
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export function writeJsonFile < T>(file_name: string, data: T): void {
   const file_path = getFilePath (file_name);
   const tmp_path = `${file_path}.tmp`;
@@ -140,6 +133,7 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
   writeJsonFile < T[]>(file_name, items);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -148,6 +142,8 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
@@ -157,14 +153,18 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import fs from 'fs';
 import path from 'path';
 
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -182,3 +182,5 @@ import path from 'path';
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

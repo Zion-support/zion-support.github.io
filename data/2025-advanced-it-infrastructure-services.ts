@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -34,6 +35,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Quantum algorithm optimization',
         'Advanced AI model training',
         'Real - time quantum simulation',
@@ -707,6 +710,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       popular: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -739,10 +743,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Quantum computing, Kubernetes, Docker, React, Node.js, PostgreSQL, Redis',
       ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       integrations: [
         'AWS, Azure, GCP, IBM Quantum, Google Quantum, Microsoft Quantum',
       ],
       useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -776,10 +783,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'AI model training, Scientific simulations, Financial modeling, Drug discovery, Cryptography',
       ],
       roi: 'Organizations report 2000% ROI through quantum - accelerated computations and reduced processing time.',
       competitors: ['AWS, Azure, GCP, IBM Cloud, Google Cloud'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -792,6 +802,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -805,6 +817,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4 && 4.9,
       reviews: 15,
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -825,6 +838,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Autonomous edge node management',
         'Real - time data processing',
 =======
@@ -876,6 +891,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       popular: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -908,6 +924,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Kubernetes, Docker, React, Node.js, PostgreSQL, Redis, TensorFlow',
       ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       integrations: [
         'AWS IoT, Azure IoT, Google Cloud IoT, 5G networks, IoT devices',
       ],
@@ -916,6 +934,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       roi: 'Organizations report 500% ROI through reduced latency, improved performance, and lower operational costs.',
       competitors: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -964,6 +983,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -977,6 +998,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4 && 4.8,
       reviews: 28,
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1028,6 +1050,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Advanced zero-trust security architecture that continuously verifies every user, device, and network connection, providing comprehensive protection against modern cyber threats.',
       features: [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Continuous identity verification',
         'Device trust scoring',
         'Network segmentation',
@@ -1040,6 +1064,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Security reporting',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1074,10 +1099,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Kubernetes',
       ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       integrations: [
         'Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls',
       ],
       useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1113,10 +1141,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Identity management, Network security, Access control, Threat detection, Compliance',
       ],
       roi: 'Organizations report 600% ROI through reduced security incidents, improved compliance, and automated security.',
       competitors: ['Palo Alto, Cisco, Fortinet, Check Point, Juniper'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1130,6 +1161,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1162,6 +1195,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       popular: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1194,10 +1228,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Kubernetes',
       ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       integrations: [
         'Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls',
       ],
       useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1233,10 +1270,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Identity management, Network security, Access control, Threat detection, Compliance',
       ],
       roi: 'Organizations report 600% ROI through reduced security incidents, improved compliance, and automated security.',
       competitors: ['Palo Alto, Cisco, Fortinet, Check Point, Juniper'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1250,6 +1290,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1263,6 +1305,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4 && 4.9,
       reviews: 56,
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1314,6 +1357,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       features: [
         'AI-powered infrastructure management',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Automated capacity planning',
         'Intelligent power management',
         'Predictive maintenance',
@@ -1326,6 +1371,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Real - time analytics',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1367,6 +1413,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       ],
       integrations: ['VMware, Hyper - V, OpenStack, AWS, Azure, GCP'],
       use_cases: [;
@@ -1387,6 +1435,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       competitors: ['Equinix, Digital Realty, CyrusOne, CoreSite, QTS'],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1398,6 +1447,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1431,6 +1482,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1471,6 +1523,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       ],
       integrations: ['VMware, Hyper - V, OpenStack, AWS, Azure, GCP'],
       use_cases: [;
@@ -1491,6 +1545,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       competitors: ['Equinix, Digital Realty, CyrusOne, CoreSite, QTS'],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1502,6 +1557,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1515,6 +1572,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4 && 4.8,
       reviews: 22,
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1566,6 +1624,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Advanced quantum networking platform that provides unbreakable encryption, quantum key distribution, and intelligent network optimization for ultra-secure communications.',
       features: [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Quantum key distribution',
         'Unbreakable encryption',
         'Intelligent routing',
@@ -1579,6 +1639,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Advanced reporting',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1616,10 +1677,13 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Quantum computing, Python, React, Node.js, PostgreSQL, Redis, Kubernetes',
       ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       integrations: [
         'Cisco, Juniper, Arista, VMware, OpenStack, SDN controllers',
       ],
       useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2326,6 +2390,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Quantum key distribution (QKD)',
         'Quantum - secured communication channels',
         'Post - quantum cryptography implementation',
@@ -2374,6 +2440,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         '24 / 7 quantum network operations',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2457,6 +2524,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2470,6 +2539,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 5 && 5.0,
       reviews: 3,
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2521,6 +2591,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       features: [
         'AI-powered infrastructure automation',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Intelligent resource provisioning',
         'Automated scaling and optimization',
         'Infrastructure monitoring and analytics',
@@ -2532,6 +2604,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Comprehensive infrastructure management',
       ],
       popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2603,6 +2676,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 =======
       useCases: [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Infrastructure automation',
         'Resource provisioning',
         'Scaling optimization',
@@ -2611,6 +2686,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       roi: 'Infrastructure teams report 480% ROI with 65% reduction in provisioning time and 55% improvement in resource utilization.',
       competitors: ['Terraform', 'Ansible', 'Chef', 'Puppet'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2624,6 +2700,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2638,6 +2716,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 18,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2648,6 +2727,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       id: 'hybrid - cloud - orchestration - platform',
       name: 'Hybrid Cloud Orchestration Platform',
       tagline: 'Seamless multi - cloud and hybrid cloud management',
@@ -2670,6 +2751,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       popular: true,
       icon: '☁️',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2739,6 +2821,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.',
       launchDate: '2025-05-01',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       customers: 32,
       rating: 4 && 4.7,
       reviews: 24,
@@ -2748,7 +2832,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
   ];    features: [
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -2783,7 +2866,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     features: [
       'Hybrid quantum-classical computingQuantum algorithm optimizationAdvanced AI model trainingReal-time quantum simulationMulti-cloud orchestrationQuantum-secure encryptionAutonomous resource scalingPerformance monitoring';
       'Cost optimizationGlobal edge computing network'
-=======
       id: 'hybrid-cloud-orchestration-platform'
       name: 'Hybrid Cloud Orchestration Platform'
       tagline: 'Seamless multi-cloud and hybrid cloud management'
@@ -2836,6 +2918,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       color: 'from-blue-500 to-indigo-600'
       textColor: 'text-blue-400'
       link: 'https://ziontechgroup.com/hybrid-cloud-orchestration-platform'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -2856,6 +2939,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       textColor: 'text-blue-400',
       link: 'https://ziontechgroup.com/hybrid-cloud-orchestration-platform',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       marketPosition:
         'Advanced hybrid cloud orchestration platform with seamless multi-cloud management and comprehensive optimization capabilities.',
       targetAudience: [
@@ -2887,6 +2972,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'On-premises systems',
       ],
       useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2924,16 +3010,21 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       implementationDetails:
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.'
       launchDate: '2025-05-01'
       customers: 32
       rating: 4.7
       reviews: 24
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.',
       launchDate: '2025-05-01',
       customers: 32,
@@ -2941,14 +3032,16 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 24,
 <<<<<<< HEAD
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'Multi-cloud orchestration and managementHybrid cloud integration and optimizationIntelligent workload placementCross-cloud resource optimizationUnified monitoring and analyticsAutomated cloud migrationCustom cloud workflowsIntegration with cloud platforms';
       'Advanced cloud analyticsComprehensive cloud management'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     ];
     popular: true, icon: '☁️',
     color: 'from-indigo-600 to-purple-600', textColor: 'text-indigo-400',
@@ -3214,6 +3307,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       website: 'https://ziontechgroup.com';
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3244,6 +3338,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     },
   ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     reviews: 24
   }];
     popular: true;
@@ -3278,6 +3374,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     roi: 'Multi - cloud organizations report 420% ROI with 50% reduction in cloud costs and 60% improvement in resource utilization.';
     competitors: ['TerraformKubernetesCloud FoundryOpenShift'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3296,12 +3393,15 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     realImplementation: true;
     implementationDetails: 'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.';
     launchDate: '2025-05-01';
     customers: 32;
     rating: 4 && 4.7;
     reviews: 24
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -3313,6 +3413,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {;
   id: string,;
@@ -3392,12 +3494,15 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -3406,33 +3511,22 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32;
     rating: 4.7;
     reviews: 24;
-<<<<<<< HEAD
   }
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
   }
 ;
-=======
-
-=======
-
-
-
-  }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-;
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+;
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {;
   id: string,;
@@ -4061,15 +4155,14 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32,;
     rating: 4.7;
     reviews: 24;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

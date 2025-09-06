@@ -26,6 +26,7 @@
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -47,6 +48,8 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Quantum communication',
       'Satellite technology',
       'React',
@@ -56,6 +59,7 @@
       'AWS',
       'Custom quantum hardware',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -90,6 +94,8 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -104,6 +110,7 @@
     reviews: 12,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -122,6 +129,8 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Quantum computing drug simulation',
       'Predictive drug efficacy modeling',
       'Automated clinical trial design',
@@ -133,6 +142,7 @@
       '24 / 7 AI drug discovery operations',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -155,6 +165,8 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'AI algorithms',
       'Quantum computing',
       'Machine learning',
@@ -165,6 +177,7 @@
       'AWS',
       'Biotech tools',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -191,10 +204,13 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Traditional drug discovery',
       'Basic AI drug tools',
       'Manual research methods',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -207,6 +223,8 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -221,6 +239,7 @@
     reviews: 6,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -239,6 +258,8 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Fully autonomous manufacturing',
       'AI - powered quality control',
       'Predictive maintenance automation',
@@ -251,6 +272,7 @@
       '24 / 7 autonomous operations',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -273,6 +295,8 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'AI algorithms',
       'Robotics',
       'IoT sensors',
@@ -283,6 +307,7 @@
       'AWS',
       'Manufacturing systems',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -318,6 +343,8 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -387,18 +414,12 @@ id: string;
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   reviews: number
 }
 
 export const emergingTechServices: EmergingTechService[] = [
   // Quantum Internet & Communication Services
   {
-<<<<<<< HEAD
-=======
-
-    id: 'quantum-internet-security-platform', name: 'Quantum Internet Security Platform',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     tagline: 'Unhackable quantum-secured internet infrastructure',
 =======
     mobile: string;
@@ -522,6 +543,7 @@ export const emergingTechServices: EmergingTechService[] = [;
     rating: 4.8,
     reviews: 28;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -539,8 +561,9 @@ export interface EmergingTechService {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-;
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+;
     realImplementation: true
     implementationDetails:
       'Fully functional AI robotics platform with computer vision, predictive maintenance, and multi-robot coordination. Includes robotic operations center and 24/7 support.'
@@ -1296,24 +1319,12 @@ export interface EmergingTechService {;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.'
     launchDate: '2024-09-01'
     customers: 35
     rating: 4.8
     reviews: 28
   }
-=======
-      'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.',
-    launchDate: '2024-09-01',
-    customers: 35,
-    rating: 4.8,
-    reviews: 28,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1326,17 +1337,8 @@ export interface EmergingTechService {;
     rating: 4.8
 
     reviews: 28
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
 ];
-=======
-export interface EmergingTechService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string,;
   name: string,;
   tagline: string,;
@@ -1858,7 +1860,6 @@ export const emergingTechServices: EmergingTechService[] = [;
     customers: 35,;
     rating: 4.8,;
     reviews: 28;
-<<<<<<< HEAD
 
   }
 ];
@@ -2136,13 +2137,9 @@ export const emergingTechServices: EmergingTechService[] = [
     reviews: 28;
   }
 ;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -2995,3 +2992,5 @@ export const emergingTechServices: EmergingTechService[] = [
   }
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

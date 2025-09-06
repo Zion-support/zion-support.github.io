@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/enterprise.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -6,6 +7,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
       destination: '/plans/enterprise'
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/enterprise.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -269,14 +272,14 @@ export default function EnterprisePage() {
     </MainLayout>
   );
 }
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD:pages_backup/enterprise.tsx
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/enterprise.tsx
       permanent: false}}
 }
 export default function EnterpriseRedirect() { return null }
@@ -284,13 +287,8 @@ export default function EnterpriseRedirect() { return null }
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
       destination: '/plans/enterprise',
@@ -301,8 +299,6 @@ import type { GetServerSideProps } from 'next',
 import type { GetServerSideProps } from 'next';
 
 import type { GetServerSideProps } from 'next',;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
@@ -331,11 +327,9 @@ export default function EnterpriseRedirect() { return null   } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
+<<<<<<< HEAD:pages_backup/enterprise.tsx
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -346,3 +340,5 @@ import type { GetServerSideProps } from 'next';
 export const getServerSideProps: GetServerSideProps;
 export default function EnterpriseRedirect() { return null }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/enterprise.tsx

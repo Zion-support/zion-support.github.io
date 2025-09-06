@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 // Stub talent data - placeholder for missing functionality
 
 export const TALENT_PROFILES = [
@@ -38,6 +41,7 @@ id: '1',
 ];
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -45,10 +49,12 @@ id: '1',
 export const TALENT_PROFILES = [;
 
   {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
-];
 
+<<<<<<< HEAD
 
     id: '1', slug: 'sample-talent',
     name: 'Sample Talent', title: 'Full Stack Developer',
@@ -93,3 +99,5 @@ export const TALENT_PROFILES = [;
   },
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

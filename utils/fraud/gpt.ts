@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   try {
       return {
 =======
@@ -11,6 +12,10 @@
       return {
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  try {
+      return {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }
     const confidence =
       typeof parsed && parsed.confidence === 'number'
@@ -29,6 +34,7 @@
     return {
 <<<<<<< HEAD
   reasoning: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -56,12 +62,15 @@ export interface GptClassification {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
       confidence: 0.5,
     }
   }export interface GptResult {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -72,6 +81,8 @@ export interface GptClassification {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
@@ -79,14 +90,18 @@ export interface GptClassification {
 <<<<<<< HEAD
   }export interface GptResult {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   label: string;
   confidence: number;
   reasoning: string
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -97,11 +112,11 @@ export interface GptClassification {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   label: string;
   confidence: number;
   reasoning: string
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
   const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
@@ -115,24 +130,14 @@ export interface GptClassification {
   }
 
 }
+
+
+
+
+}
+
+}
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-<<<<<<< HEAD
-}
-=======
-=======
-
-
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
-}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -140,3 +145,5 @@ export interface GptClassification {
 =======
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

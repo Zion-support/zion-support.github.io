@@ -1,16 +1,18 @@
+<<<<<<< HEAD:pages_backup/api/book/export/templates.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/book/export/templates.ts
+
+
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
+<<<<<<< HEAD:pages_backup/api/book/export/templates.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -18,6 +20,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 const templates = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/book/export/templates.ts
 const templates = {
   lulu: {
     sizes: [
@@ -95,12 +99,14 @@ export default function handler(req, res) {
   }
 }
 }
-=======
 
 
 
 
+<<<<<<< HEAD:pages_backup/api/book/export/templates.ts
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/book/export/templates.ts

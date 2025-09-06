@@ -1,34 +1,23 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 import { ProfileData } from '@/types/profile';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
       {
 
-<<<<<<< HEAD
           'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
-=======
-        id: 'p2',
-        title: 'Sentiment Analysis API',
-        description:;
-          'Created an API for real - time sentiment analysis of customer feedback, processing over 50, 000 reviews daily with 94% accuracy.',
-        image_url:;
-          'https://images.unsplash.com / photo - 1555421689 - 491a97ff2040?auto = format & fit = crop & w=600 & h=400',
-
-        tags: ['NLP', 'API', 'Python'],
-        date: 'May 2023',
-      },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {
 
           'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
-=======
-=======
     id: 'talent-1'
     name: 'Alexandra Chen'
     title: 'Senior AI Engineer & Machine Learning Expert'
@@ -54,7 +43,6 @@ import { ProfileData } from '@/types/profile';
     ]
     projects: [
       {
-=======
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -68,7 +56,6 @@ export const MOCK_TALENTS: ProfileData[] = [
 <<<<<<< HEAD
 
       {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         id: 'p1'
         title: 'Facial Recognition System'
         description:
@@ -1172,7 +1159,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
     contactEmail: "david.martinez@example.com";
   }
 ];
-<<<<<<< HEAD
       {
 
           'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
@@ -1189,7 +1175,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
       {
 
           'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         id: 'p3',
         title: 'Predictive Maintenance System',
         description:;
@@ -1202,10 +1187,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
       },
     ],
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     experience: [;
       {
         id: 'e1',
@@ -1355,10 +1336,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
         'Limited availability for short-term consulting projects and infrastructure assessments.'
       availableHours: [
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         id: 'p2',
         title: 'DevOps Automation Pipeline',
         description:;
@@ -1618,10 +1595,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
       },
     ],
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     experience: [;
       {
         id: 'e1',
@@ -1772,10 +1745,6 @@ export const MOCK_TALENTS: ProfileData[] = [;
     ],
     availability: {
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       status: 'limited',
       message:;
         'Available for part - time projects only (up to 20 hours per week).',
@@ -1825,10 +1794,6 @@ contactEmail: "james && james.wilson@example && example.com"
 current: true 
 };
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 hourly_rate: 150;
 contact_email: "alexandra.chen@example.com";
 }
@@ -1843,8 +1808,6 @@ available_hours: [ {
   day: "Wednesday", hours: "1:00 PM - 5:00 PM";
 }
 {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   day: "Friday", hours: "1:00 PM - 5:00 PM";
 }
 hourly_rate: 135;
@@ -2218,21 +2181,26 @@ contact_email: "david.martinez@example.com";
 }];
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
+
+
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

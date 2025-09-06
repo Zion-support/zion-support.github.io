@@ -23,6 +23,7 @@ function DisputesList() {
       default:;
         return 'default';
 import React, { useState } from './react';
+<<<<<<< HEAD:src_backup/components/disputes/DisputesList.tsx
 import { Dispute, DisputeStatus  } from '@/types / disputes';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
@@ -33,15 +34,25 @@ import { Dispute, DisputeStatus } from "@/types/disputes",
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { Dispute, DisputeStatus  } from '@/types/ disputes';
+import { Button  } from '@/components/ui/ button';
+import { Badge  } from '@/components/ui/ badge';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/disputes/DisputesList.tsx
 import {
   Table;
   TableBody;
   TableCell;
   TableHead;
   TableHeader;
+<<<<<<< HEAD:src_backup/components/disputes/DisputesList.tsx
 <<<<<<< HEAD
   TableRow } from '@/components / ui / table';
 import Skeleton from "@/components / ui / skeleton";
+=======
+  TableRow } from '@/components/ui/ table';
+import Skeleton from "@/components/ui/ skeleton";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/disputes/DisputesList.tsx
 import { formatDistanceToNow  } from './date - fns';
 import Link from './next / link';
 =======

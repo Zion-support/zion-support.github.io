@@ -1,10 +1,8 @@
 <<<<<<< HEAD
 
 
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
@@ -23,16 +21,17 @@ const FILE = "jobs.json";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
+<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/jobs/[id].ts
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (idx === -1) {
     res && res.status(404).json({ error: "Job not found" });
     return;
@@ -245,11 +244,14 @@ return;
     if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
+<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/jobs/[id].ts
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job,;
     writeJsonFile<Job[]>(FILE, jobs),;
@@ -277,6 +279,7 @@ return;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
 <<<<<<< HEAD
 =======
 =======
@@ -284,6 +287,8 @@ return;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/jobs/[id].ts
   }
 }
   } catch (error) {
@@ -291,7 +296,6 @@ return;
     return res.status(500).json({ error: "Internal server error" });
   }
 
-=======
 }
 
   if (req.method === "PATCH") {
@@ -302,8 +306,6 @@ return;
       res.status(403).json({ error: 'Forbidden' });
 return;
     }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     const {
 <<<<<<< HEAD
@@ -362,6 +364,7 @@ res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
 }
+<<<<<<< HEAD:pages_backup/api/jobs/[id].ts
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -374,3 +377,5 @@ res.setHeader("Allow", "GET, PATCH");
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/jobs/[id].ts

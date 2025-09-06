@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -9,6 +10,8 @@
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -520,6 +523,7 @@ export default class ErrorBoundary extends Component<Props, State> {
               </details>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           </div>;
     // Log the error to an error reporting service;
@@ -566,23 +570,18 @@ export default class ErrorBoundary extends Component<Props, State> {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           </div>
         )
       );
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     return this.props.children;
   }
 }
 <<<<<<< HEAD
 
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
     return this && this.props.children;
   }
@@ -748,18 +747,21 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     return this.props.children;
   }
 }
 
-<<<<<<< HEAD
 export default ErrorBoundary;
+<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -767,3 +769,5 @@ export default ErrorBoundary;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -12,6 +12,7 @@ import { zod_resolver } from '@hookform / resolvers / zod';
 import { z } from 'zod';
 import { format } from 'date - fns';
 import { Loader2 } from 'lucide-react';
+<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 import { Button } from '@/components / ui / button';
 import { Textarea } from '@/components / ui / textarea';
 import { Input } from '@/components / ui / input';
@@ -29,6 +30,13 @@ import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { Button } from '@/components/ui/ button';
+import { Textarea } from '@/components/ui/ textarea';
+import { Input } from '@/components/ui/ input';
+import { Checkbox } from '@/components/ui/ checkbox';
+import { Alert, AlertDescription } from '@/components/ui/ alert';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/resume-builder/forms/education/EducationFormFields.tsx
 import {
   Form,
   FormControl,
@@ -37,10 +45,10 @@ import {
   FormLabel,
 <<<<<<< HEAD
   FormMessage,
-} from '@/components / ui / form';
+} from '@/components/ui/ form';
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
-import { Education } from '@/types / resume';
+import { Education } from '@/types/ resume';
 // Define schema for form validation;
 const education_schema = z.object ({
   institution: z.string ().min (1, 'Institution is required'),

@@ -40,3 +40,11 @@ export default function TalentsPage({ }: TalentsPageProps) {
 :src.disabled/src/pages.disabled/TalentsPage.jsx
 }
 }
+<<<<<<< HEAD
+=======
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/src/pages.disabled/TalentsPage.jsx
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

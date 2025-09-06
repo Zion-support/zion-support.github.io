@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export interface SpaceMetaverseService {
 <<<<<<< HEAD
 export interface SpaceMetaverseService {;
@@ -21,10 +24,13 @@ id: string;
     setupTime: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 =======
     enterprise: string
@@ -75,6 +81,7 @@ id: string;
       'VR headsets, AR devices, Blockchain wallets, Payment processors'
     ]
     support:
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -155,6 +162,8 @@ id: string;
     icon: '🌐',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
     launch_date: '2024 - 01 - 15',
@@ -163,6 +172,7 @@ id: string;
     reviews: 2400,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -245,6 +255,8 @@ id: string;
     icon: '🛰️',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - indigo - 500 to - purple - 600',
     popular: true,
     launch_date: '2024 - 03 - 01',
@@ -253,6 +265,7 @@ id: string;
     reviews: 65,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -290,11 +303,14 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Optimize orbital efficiency',
       'Reduce space debris',
       'Improve mission safety',
       'Ensure regulatory compliance',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -307,6 +323,8 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     implementationDetails:
       'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.'
     roi: 'Space organizations achieve 400% ROI through improved safety and reduced collision risks.'
@@ -324,6 +342,7 @@ id: string;
     support:
       '24/7 technical support, space safety consulting, custom development, and dedicated success manager.'
     compliance: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -369,6 +388,8 @@ id: string;
     icon: '🛸',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2024 - 02 - 15',
@@ -377,6 +398,7 @@ id: string;
     reviews: 320,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -389,6 +411,8 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     implementationDetails:
       'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.'
     roi: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.'
@@ -486,6 +510,7 @@ id: string;
     rating: 4 && 4.7,
     reviews: 1400,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -732,38 +757,41 @@ id: string;
     useCases: [
       'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     ];
 
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'];
 
     icon: '🥽';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - orange - 500 to - red - 600';
     popular: true;
     launch_date: '2024 - 01 - 20';
     customers: 1800;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4.7,
     reviews: 1400;
   }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     rating: 4.7,
     reviews: 1400;
   }
 ;
-=======
-
-    rating: 4 && 4.7,
-
-    reviews: 1400
-<<<<<<< HEAD
     rating: 4.7,
     reviews: 1400;
   }
 
+<<<<<<< HEAD
 =======
 
 export interface SpaceMetaverseService {;
@@ -774,17 +802,12 @@ export interface SpaceMetaverseService {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-;
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+;
   }
 ];
-=======
 export interface SpaceMetaverseService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1046,17 +1069,11 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     customers: 1800,;
     rating: 4.7,;
     reviews: 1400;
-<<<<<<< HEAD
     rating: 4.7,
     reviews: 1400;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
@@ -1065,3 +1082,5 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
   }
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

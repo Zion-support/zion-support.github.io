@@ -1,12 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 #!/usr/bin/env node;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const fs = require("fs")";const path = require("path")""
       "seo-optimization-report.json""),"
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -106,6 +111,7 @@ class SEOOptimizer {
       this.log(" SEO optimization check completed");";      return report,"
       this.log(` SEO optimization check "failed"`)
   .then(report => {);    console.log(" SEO optimization check completed successfully");";    process.exit(0),"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
@@ -267,3 +273,6 @@ optimizer
     process.exit(1);
   });
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -10,13 +10,8 @@
 
 =======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 }
 
@@ -48,11 +43,10 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 
 
+<<<<<<< HEAD:pages_backup/api/docs/spec.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -60,3 +54,5 @@ export default function handler(req, res) {
   res.status(200).json(v1)
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/spec.ts

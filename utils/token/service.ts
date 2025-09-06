@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -111,6 +112,8 @@ export function getAllTransactions() {
   return tokenStore.getTransactions();
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -120,10 +123,6 @@ export function getConfig() {
   };
 <<<<<<< HEAD
 export interface TokenTransaction {;
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   userId: string;
 
@@ -144,11 +143,14 @@ export interface TokenTransaction {
 // Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 export function issueTokens(
   userId: string,
@@ -157,10 +159,13 @@ export function issueTokens(
 ): TokenTransaction {
   const transaction: TokenTransaction = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount
@@ -168,6 +173,7 @@ export function issueTokens(
     reason
     timestamp: Date.now()
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -177,6 +183,8 @@ export function issueTokens(
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -184,6 +192,7 @@ export function issueTokens(
     reason,
     timestamp: Date.now(),
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -201,6 +210,10 @@ export function issueTokens(
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   transactions.push(transaction);
   return transaction;
 }
@@ -215,41 +228,20 @@ export function redeemTokens(
     userId
     amount: -amount, // Negative for redemption
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     type: "redeem",
     reason,
     timestamp: Date.now(),
   };
 
-=======
-<<<<<<< HEAD
     type: "redeem",
-=======
-<<<<<<< HEAD
-=======
-
-;
-export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount,
-    type: 'issue',
-    reason,
-    timestamp: Date.now ();
-  }
-;
-  transactions.push (transaction);
-  return transaction;
-}
-export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount: -amount, // Negative for redemption;
     type: 'redeem',
     reason,
+<<<<<<< HEAD
     timestamp: Date.now ();
   }
 ;
@@ -262,33 +254,28 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
     type: 'redeem',
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     reason,
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     timestamp: Date.now(),
   };
-<<<<<<< HEAD
-
-=======
-  
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
-  transactions.push(transaction);
-  return transaction;
-=======
 
   transactions.push(transaction);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return transaction;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  transactions.push(transaction);
+  return transaction;
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     reason,
     timestamp: Date && Date.now()
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     timestamp: Date.now();
   };
 // Token service utilities
@@ -305,16 +292,13 @@ export interface TokenConfig {
   updatedAt: Date;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>,
 ): void {
   const current = getConfig();
   // Update the configuration
   Object.assign(current, partial);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -407,6 +391,8 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   };
   
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   transactions.push(transaction);
   return transaction;
 }
@@ -414,20 +400,21 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   const current = tokenStore && tokenStore.getConfig();
   tokenStore && tokenStore.setConfig({ ...current, ...partial });
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -441,3 +428,5 @@ export function set_config (
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

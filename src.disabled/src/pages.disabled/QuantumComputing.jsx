@@ -30,3 +30,7 @@ class ErrorBoundary extends React.Component {
 }
 import _React from 'react'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;
 import _React from 'react'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;
+<<<<<<< HEAD
+=======
+import _React from 'react'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

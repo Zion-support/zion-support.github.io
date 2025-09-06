@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/applications.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -7,11 +8,13 @@ import type { NextApiRequest, NextApiResponse } from 'next',;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> main
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/applications.ts
 import { v4 as uuidv4 } from 'uuid',;
 import { readJsonFile, writeJsonFile } from '../../utils/db',;
 import type { Application } from '../../utils/types',;
 import { rateLimit } from '../../utils/rateLimit',;
-<<<<<<< HEAD
 const FILE = 'applications.json',
 =======
 import { readJsonFile, writeJsonFile } from '../../utils/fileUtils';
@@ -31,6 +34,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (jobId) apps = apps.filter((a) => a.jobId === String(jobId)),
     if (talentSlug) apps = apps.filter((a) => a.talentSlug === String(talentSlug)),
     res.status(200).json({ applications: apps }),
+<<<<<<< HEAD:pages_backup/api/applications.ts
 =======
 const FILE = 'applications.json'
 
@@ -63,6 +67,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (talentSlug) apps = apps.filter((a) => a.talentSlug === String(talentSlug))
     res.status(200).json({ applications: apps })
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/applications.ts
     return
 =======
     const { jobId, talentSlug } = req.query;
@@ -76,8 +82,11 @@ if (jobId) apps = apps.filter(a => a.jobId === String(jobId));
   }
 
   if (req.method === 'POST') {
+<<<<<<< HEAD:pages_backup/api/applications.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/applications.ts
     const { jobId, talentSlug, action } = req.body || {},
     if (!jobId || !talentSlug || !['applyskip'].includes(action)) {
       res.status(400).json({ error: 'Invalid request' }),
@@ -92,6 +101,7 @@ if (jobId) apps = apps.filter(a => a.jobId === String(jobId));
       existing.status = action === 'apply' ? 'applied' : 'skipped',
       writeJsonFile<Application[]>(FILE, apps),
       res.status(200).json({ application: existing }),
+<<<<<<< HEAD:pages_backup/api/applications.ts
 =======
     const { jobId, talentSlug, action } = req.body || {}
     if (!jobId || !talentSlug || !['applyskip'].includes(action)) {
@@ -111,10 +121,13 @@ if (jobId) apps = apps.filter(a => a.jobId === String(jobId));
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/applications.ts
       return
     }
 
     const app: Application = {
+<<<<<<< HEAD:pages_backup/api/applications.ts
 <<<<<<< HEAD
 =======
     const { jobId, talentSlug, action } = req.body || {};
@@ -138,6 +151,8 @@ return;
 
     const app: Application = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/applications.ts
       id: uuidv4(),
       jobId: String(jobId),
       talentSlug: String(talentSlug),
@@ -147,16 +162,6 @@ return;
     apps.push(app),
     writeJsonFile<Application[]>(FILE, apps),
     res.status(201).json({ application: app }),
-=======
-      id: uuidv4()
-      jobId: String(jobId)
-      talentSlug: String(talentSlug)
-      status: action === 'apply' ? 'applied' : 'skipped'
-      createdAtIso: now}
-    apps.push(app)
-    writeJsonFile<Application[]>(FILE, apps)
-    res.status(201).json({ application: app })
->>>>>>> main
     return
   }
   res.setHeader('AllowGET, POST')

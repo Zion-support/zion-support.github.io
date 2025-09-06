@@ -1,13 +1,12 @@
+<<<<<<< HEAD:pages_backup/api/support/requests.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/support/requests.ts
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb',
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJson, writeJson } from '../../../utils/fsDb'
->>>>>>> main
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

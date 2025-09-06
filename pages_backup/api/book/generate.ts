@@ -5,8 +5,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
@@ -64,8 +62,6 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   }
@@ -93,11 +89,14 @@ if ( {) {
   }
   res.status (200).json ({ chapters: drafted });
 }
+<<<<<<< HEAD:pages_backup/api/book/generate.ts
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/book/generate.ts
 ;
   res.status(200).json({ chapters: drafted });
   } catch (error) {
@@ -105,16 +104,22 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD:pages_backup/api/book/generate.ts
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/book/generate.ts
   res.status(200).json({ chapters: drafted });
 };
 }
 
 
 
+<<<<<<< HEAD:pages_backup/api/book/generate.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/book/generate.ts

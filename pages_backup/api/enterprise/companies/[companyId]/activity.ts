@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 <<<<<<< HEAD
 =======
 =======
@@ -6,25 +7,35 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/activity.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { store } from "../../../../../utils/data/enterpriseStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { companyId } = req.query;
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/activity.ts
   }
   const company = store && store.getCompanyById(companyId);
   if (!company) return res && res.status(404).json({ error: "company_not_found" });
   return res && res.status(200).json(company && company.activity);
 }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/activity.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 export default /**
@@ -44,10 +55,13 @@ if ( {) {
 }
   return res.status (200).json (company.activity);
 }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 <<<<<<< HEAD
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/activity.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 import { store } from '[^']*';
@@ -82,18 +96,19 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/activity.ts
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   const company = store.getCompanyById(companyId);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
   } catch (error) {
@@ -109,6 +124,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/activity.ts
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -125,3 +141,5 @@ export default function handler(req, res) {
   return res.status(200).json(company.activity)
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/activity.ts

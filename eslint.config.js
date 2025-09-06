@@ -1,7 +1,10 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
+<<<<<<< HEAD
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import nextPlugin from '@next/eslint-plugin-next';
@@ -121,7 +124,11 @@ export default [
         beforeAll: 'readonly',
         afterAll: 'readonly',
       },
+<<<<<<< HEAD
       parser: typescriptParser,
+=======
+      parser: tsparser,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',

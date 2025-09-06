@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -156,6 +157,8 @@ icon: <Grid className='w-6 h-6' />,
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React, { useState, useEffect } from 'react';
 import SEO from './seo/Seo';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -241,6 +244,7 @@ const getServiceCategory = (service: any) => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -302,10 +306,13 @@ return 'Other';
 };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -326,6 +333,8 @@ const allServices = [;
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   return 'Contact for pricing';
 =======
 return 'Contact for pricing';
@@ -342,6 +351,7 @@ const getServiceFeatures = (service: any) => {
 
 
 export default function AdvancedServicesShowcase() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const allServices = [;
@@ -363,10 +373,13 @@ return [];
 };
 export default function AdvancedServicesShowcase() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filteredServices, setFilteredServices] = useState(allServices);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -387,6 +400,8 @@ export default function AdvancedServicesShowcase() {
         </div>
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
   useEffect(() => {
     let filtered = allServices;
@@ -628,38 +643,14 @@ if (selectedCategory === 'enterprise')
         </div>
 <<<<<<< HEAD
         
-<<<<<<< HEAD
-=======
-  }, [selectedCategory, searchTerm]);
-
-  const ServiceCard = ({ service }: { service: any }) => (;
-    <motion&& motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0 && 0.5 }}
-      className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
-          </p>
-        </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {service.marketPosition}
           </p>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
         
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         <div className="flex items-center justify-between">
           <a
             href={service.link}
@@ -668,16 +659,8 @@ if (selectedCategory === 'enterprise')
             Learn More
             <ArrowRight className="w-4 h-4" />
           </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
           
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
           
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
@@ -708,8 +691,6 @@ if (selectedCategory === 'enterprise')
         </div>
       </div>
     </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 
   const ServiceList = ({ service }: { service: any }) => (
@@ -1120,9 +1101,6 @@ if (selectedCategory === 'enterprise')
                   }`}
                 >
                   <List className="w-5 h-5" />
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   )
   const ServiceList = ({ service }: { service: any }) => (
     <motion.div
@@ -1731,10 +1709,6 @@ if ( {) {
                   {category && category.icon}
                   {category && category.name}
                 </button>;
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
   );
 
   const ServiceList = ({ service }: { service: any }) => (
@@ -2015,6 +1989,7 @@ if ( {) {
 =======
                 >
                   <List className="w-5 h-5" />
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2026,10 +2001,13 @@ viewMode === 'list'
                 >
                   <List className='w-5 h-5' />
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 </button>
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2062,6 +2040,8 @@ viewMode === 'list'
                   {searchTerm && ` • Search: "${searchTerm}"`}
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           
           {/* Category Filters */}
           <div className="mt-6">
@@ -2102,6 +2082,7 @@ viewMode === 'list'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
@@ -2131,6 +2112,8 @@ viewMode === 'list'
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   {filteredServices.length} Services Found
                 </h2>
@@ -2139,16 +2122,8 @@ viewMode === 'list'
                   {searchTerm && ` • Search: "${searchTerm}"`}
                 </p>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
               
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
               
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-green-500" />
@@ -2173,8 +2148,6 @@ viewMode === 'list'
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         {/* Services Grid/List */}
 <<<<<<< HEAD
@@ -2245,9 +2218,6 @@ viewMode === 'list'
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions. 
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
                 </p>;
               </div>;
 
@@ -2351,10 +2321,6 @@ viewMode === 'list'
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions.
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
 
         {/* Services Grid/List */}
         <div className="space-y-6">
@@ -2396,14 +2362,10 @@ viewMode === 'list'
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions. 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-<<<<<<< HEAD
-<<<<<<< HEAD
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
@@ -2431,9 +2393,6 @@ viewMode === 'list'
     </div>
   )
 }
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
                 href={`mailto:${contactInfo && contactInfo.email}?subject=Business Transformation Consultation`}
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">;
                 Start Your Transformation;
@@ -2475,11 +2434,14 @@ viewMode === 'list'
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
@@ -2500,6 +2462,7 @@ viewMode === 'list'
     </div>
   )
 }
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -2512,3 +2475,5 @@ viewMode === 'list'
     </div>
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -1,6 +1,10 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 =
 >        fix: (content) => {
+=======
+        fix: (content) => {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
@@ -54,12 +58,19 @@ class IntelligentErrorFixer {
         }
 
 
+<<<<<<< HEAD
 =
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         fix: (content) => {
           // Remove merge conflict markers
           return content
         }
+<<<<<<< HEAD
 >        fix: (content) => {
+=======
+        fix: (content) => {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           // Remove merge conflict markers
           return content
         }
@@ -72,6 +83,10 @@ class IntelligentErrorFixer {
         pattern: /React\./g,
         fix: (content) => {
           if (!content.includes("import React")) {
+<<<<<<< HEAD
+=======
+          if (!content.includes("import React")) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
             return `import React from 'react';\n${content}`;
           }
           return content;
@@ -80,8 +95,12 @@ class IntelligentErrorFixer {
     };
   }
 
+<<<<<<< HEAD
 =
 >  async runBuildCheck() {
+=======
+  async runBuildCheck() {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     try {
       this.log('Running build check...');
       const result = execSync('yarn build', { 
@@ -97,8 +116,12 @@ class IntelligentErrorFixer {
     }
   }
 
+<<<<<<< HEAD
 =
 >  async runLintCheck() {
+=======
+  async runLintCheck() {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     try {
       this.log('Running lint check...');
       const result = execSync('yarn lint --format=json', { 
@@ -114,8 +137,12 @@ class IntelligentErrorFixer {
     }
   }
 
+<<<<<<< HEAD
 =
 >  async runTypeCheck() {
+=======
+  async runTypeCheck() {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     try {
       this.log('Running TypeScript check...');
       const result = execSync('npx tsc --noEmit --skipLibCheck', { 
@@ -130,12 +157,16 @@ class IntelligentErrorFixer {
       return { success: false, output: error.stdout || error.message };
     }
   }
+<<<<<<< HEAD
 <=
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
   extractErrorInfo(buildOutput) {
     const errors = [];
     const lines = buildOutput.split('\n');
     
+<<<<<<< HEAD
 >    lines.forEach((line, index) => {
       // Extract file paths and error messages
       const fileMatch = line.match(/\.\/(.*?\.(?:tsx?|jsx?)):/);
@@ -143,6 +174,14 @@ class IntelligentErrorFixer {
 =
       
 >      
+=======
+    lines.forEach((line, index) => {
+      // Extract file paths and error messages
+      const fileMatch = line.match(/\.\/(.*?\.(?:tsx?|jsx?)):/);
+      const errorMatch = line.match(/Error:|SyntaxError:|TypeError:/);
+      
+      
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       if (fileMatch && errorMatch) {
         errors.push({
           file: fileMatch[1],
@@ -151,25 +190,40 @@ class IntelligentErrorFixer {
         });
       }
     });
+<<<<<<< HEAD
 <=
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     
     return errors;
   }
 
+<<<<<<< HEAD
 >  async fixFile(filePath) {
+=======
+  async fixFile(filePath) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     if (!fs.existsSync(filePath)) {
       this.log(`File not found: ${filePath}`, 'ERROR');
       return false;
     }
 
+<<<<<<< HEAD
 =
 >    try {
+=======
+    try {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       this.log(`Attempting to fix file: ${filePath}`);
       let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
 
+<<<<<<< HEAD
 =
 >      // Apply error pattern fixes
+=======
+      // Apply error pattern fixes
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       for (const [patternName, pattern] of Object.entries(this.errorPatterns)) {
         const matches = content.match(pattern.pattern);
         if (matches) {
@@ -183,13 +237,18 @@ class IntelligentErrorFixer {
         }
       }
 
+<<<<<<< HEAD
 =
 >      // Specific fixes for common issues
+=======
+      // Specific fixes for common issues
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       if (content.includes('return()')) {
         content = content.replace(/return\(\)/g, 'return (');
         modified = true;
       }
 
+<<<<<<< HEAD
 =
 >      if (content.includes('};')) {
         content = content.replace(/}\s*;\s*$/gm, '}');
@@ -198,6 +257,14 @@ class IntelligentErrorFixer {
 =
 
 >
+=======
+      if (content.includes('};')) {
+        content = content.replace(/}\s*;\s*$/gm, '}');
+        modified = true;
+      }
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       // Fix import statements
       if (content.includes('React.') && !content.includes("import React")) {
         content = `import React from 'react';\n${content}`;
@@ -211,6 +278,7 @@ class IntelligentErrorFixer {
       }
 
 
+<<<<<<< HEAD
 =
 >      if (modified) {
         // Create backup
@@ -219,19 +287,32 @@ class IntelligentErrorFixer {
 =
         
 >        
+=======
+      if (modified) {
+        // Create backup
+        const backupPath = `${filePath}.backup.${Date.now()}`;
+        fs.copyFileSync(filePath, backupPath);
+        
+        
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         // Write fixed content
         fs.writeFileSync(filePath, content);
         this.log(`Successfully fixed and saved: ${filePath}`);
         return true;
       }
 
+<<<<<<< HEAD
 =
 >      return false;
+=======
+      return false;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     } catch (error) {
       this.log(`Error fixing file ${filePath}: ${error.message}`, 'ERROR');
       return false;
     }
   }
+<<<<<<< HEAD
   async cleanupDuplicateFiles() {
     this.log('Checking for duplicate page files...');
     const pagesDir = path.join(process.cwd(), 'pages');
@@ -260,6 +341,9 @@ class IntelligentErrorFixer {
       const files = fs.readdirSync(dir, { withFileTypes: true });
 
 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   async cleanupDuplicateFiles() {
     this.log('Checking for duplicate page files...');
     const pagesDir = path.join(process.cwd(), 'pages');
@@ -273,20 +357,48 @@ class IntelligentErrorFixer {
 
     function scanDirectory(dir) {
       const files = fs.readdirSync(dir, { withFileTypes: true });
+<<<<<<< HEAD
 >      
 
 
 =
       
 >      files.forEach(file => {
+=======
+
+
+  async cleanupDuplicateFiles() {
+    this.log('Checking for duplicate page files...');
+    const pagesDir = path.join(process.cwd(), 'pages');
+    
+    if (!fs.existsSync(pagesDir)) {
+      return;
+    }
+
+    const duplicates = [];
+    const seen = new Set();
+
+    function scanDirectory(dir) {
+      const files = fs.readdirSync(dir, { withFileTypes: true });
+      
+
+
+      
+      files.forEach(file => {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         if (file.isDirectory()) {
           scanDirectory(path.join(dir, file.name));
         } else if (file.name.endsWith('.js') || file.name.endsWith('.tsx')) {
           const baseName = file.name.replace(/\.(js|tsx)$/, '');
           const relativePath = path.relative(pagesDir, path.join(dir, baseName));
+<<<<<<< HEAD
 =
           
 >          
+=======
+          
+          
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           if (seen.has(relativePath)) {
             duplicates.push(path.join(dir, file.name));
           } else {
@@ -295,9 +407,14 @@ class IntelligentErrorFixer {
         }
       });
     }
+<<<<<<< HEAD
 <=
 
 >
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     scanDirectory(pagesDir);
 
     // Remove duplicate .js files if .tsx exists
@@ -311,6 +428,10 @@ class IntelligentErrorFixer {
       }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
     scanDirectory(pagesDir);
 
@@ -321,6 +442,7 @@ class IntelligentErrorFixer {
       }
 
 
+<<<<<<< HEAD
 =
 >    scanDirectory(pagesDir);
 
@@ -329,6 +451,8 @@ class IntelligentErrorFixer {
           fs.unlinkSync(duplicate);
         }
       }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const fs = require('fs');
 const path = require('path');
 const {
@@ -374,10 +498,19 @@ const {
         "mergeConflicts": {
 
 
+<<<<<<< HEAD
 =
           "fix": content => {
             // Remove merge conflict markers
             return content
+=======
+          "fix": content => {
+            // Remove merge conflict markers
+            return content
+          "fix": content => {
+            // Remove merge conflict markers
+            return content
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           pattern: /||
           "fix": content => {
             // Remove merge conflict markers
@@ -401,19 +534,27 @@ const {
     }
     async runBuildCheck() {
       try {
+<<<<<<< HEAD
 <
 
 
 
 =
 >        execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
+=======
+        execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         this.log('Successfully installed missing dependencies');
       } catch (error) {
         this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
 
 
+<<<<<<< HEAD
 =
 >        this.log('Running build check...');
+=======
+        this.log('Running build check...');
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         const result = execSync('yarn build', {
           "encoding": 'utf8',
           "stdio": 'pipe',
@@ -438,12 +579,16 @@ const {
         this.log('Lint check found "issues": ' + error.message, 'WARN');
         return { "success": false, "output": error.stdout || error.message };
       }
+<<<<<<< HEAD
 <
 
 
 
 =
 >    };
+=======
+    };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
     return report;
@@ -476,7 +621,10 @@ const {
             });
         );
         );
+<<<<<<< HEAD
         );
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           }
         }
         // Run build again after fixes
@@ -500,6 +648,7 @@ const {
       this.log(`Error in main execution: ${error.message}`, 'ERROR');
     }
   }
+<<<<<<< HEAD
 }
 
 
@@ -507,6 +656,17 @@ const {
 
 =
 >}
+=======
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }
     async runTypeCheck() {
       try {
@@ -719,11 +879,19 @@ if (require.main === module) {
   fixer.run().catch(console.error);
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 
 
+<<<<<<< HEAD
 =
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 module.exports = IntelligentErrorFixer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||
 }

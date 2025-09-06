@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -305,6 +306,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Continuous identity verification and authentication',
         'Micro - segmentation and network isolation',
         'Adaptive access controls and policies',
@@ -327,6 +330,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
         'Security analytics and insights',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -356,10 +360,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
         'Python, Go, React, Node.js, Kubernetes, Docker, AWS, Azure',
       ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       integrations: [
         'Active Directory, LDAP, SAML, OAuth, SIEM systems, EDR platforms',
       ],
       useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -390,10 +397,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Enterprise security, Government compliance, Financial security, Healthcare protection, Critical infrastructure security',
       ],
       roi: 'Organizations report 450% ROI through reduced security incidents and compliance costs.',
       competitors: ['Palo Alto, CrowdStrike, Okta, Duo, Ping Identity'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -407,6 +417,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -420,6 +432,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       rating: 4 && 4.9,
       reviews: 19,
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -474,6 +487,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
         'Real-time threat detection and analysis',
         'AI-powered threat prediction and modeling',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Automated threat response and mitigation',
         'Global threat intelligence sharing',
         'Vulnerability assessment and prioritization',
@@ -485,6 +500,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
         '24 / 7 security monitoring',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -516,6 +532,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
         'Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis',
       ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       integrations: [
         'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Security orchestration tools',
       ],
@@ -524,6 +542,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       ],
       roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.',
       competitors: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -567,6 +586,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -580,6 +601,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       rating: 4 && 4.8,
       reviews: 31,
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -635,6 +657,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       features: [
         'Multi-cloud security monitoring (AWS, Azure, GCP)',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Continuous compliance assessment and reporting',
         'Automated risk identification and remediation',
         'Identity and access management (IAM)',
@@ -646,6 +670,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
         'Security metrics and dashboards',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -677,11 +702,14 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       technology: ['Python, Go, React, Node.js, AWS SDK, Azure SDK, GCP SDK'],
       integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Terraform, Ansible'],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       useCases: [
         'Cloud security monitoring, Compliance management, Risk assessment, Security automation, Multi-cloud governance',
       ],
       roi: 'Cloud teams report 320% ROI through improved security posture and reduced compliance costs.',
       competitors: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -721,6 +749,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -734,6 +764,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       rating: 4 && 4.7,
       reviews: 42,
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -786,6 +817,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       features: [
         'Automated security testing in CI/CD',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Static application security testing (SAST)',
         'Dynamic application security testing (DAST)',
         'Software composition analysis (SCA)',
@@ -797,6 +830,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
         'Integration with DevOps tools',
       ],
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -826,10 +860,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
         'Python, Go, React, Node.js, Jenkins, GitLab CI, GitHub Actions',
       ],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       integrations: [
         'Jenkins, GitLab CI, GitHub Actions, Azure DevOps, CircleCI, Travis CI',
       ],
       useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -876,6 +913,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -890,9 +929,12 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       reviews: 28,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       id: 'iot-security-platform'
       name: 'IoT Security Platform'
       tagline: 'Secure your IoT ecosystem with comprehensive protection'
@@ -947,6 +989,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       rating: 4.7
       reviews: 21
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1059,6 +1102,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       realImplementation: true,
       implementationDetails:
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
       launchDate: '2024-09-25',
       customers: 43,
@@ -1111,10 +1156,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       reviews: 21,
   ];    features: [
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1135,6 +1176,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     website: string
   
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1193,10 +1235,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1213,10 +1258,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
     useCases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
     roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.'
     competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1241,6 +1289,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     reviews: 21
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     real_implementation: true,
     implementation_details: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
     launch_date: '2024 - 09 - 25', customers: 43,
@@ -1248,6 +1298,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     reviews: 21;
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1266,10 +1317,13 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
     use_cases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
     roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';
     competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1289,6 +1343,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     realImplementation: true;
     implementationDetails: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.';
     launchDate: '2024-09-25';
@@ -1296,20 +1352,15 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4 && 4.7;
     reviews: 21
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 ];
 <<<<<<< HEAD
 ;
-=======
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -1322,16 +1373,14 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 ];
 ;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedCybersecurityService {;
   id: string,;
@@ -1630,13 +1679,12 @@ export interface AdvancedCybersecurityService {;
     customers: 43,;
     rating: 4.7;
     reviews: 21;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

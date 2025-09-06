@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,6 +191,8 @@ const ComprehensiveServicesShowcase2025 = null;
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React, { useState } from 'react';
 import SEO from './seo/Seo';
 import { motion } from 'framer-motion';
@@ -438,6 +441,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                     <a
                       href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 // All services combined const allServices = [ ...advancedAIMLServices;
@@ -608,22 +612,16 @@ const ComprehensiveServicesShowcase2025 = () => {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Mail className="w-4 h-4" />
                       Get Started
                     </a>
                     <a
-<<<<<<< HEAD
-<<<<<<< HEAD
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Phone className="w-4 h-4" />
@@ -634,16 +632,11 @@ const ComprehensiveServicesShowcase2025 = () => {
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           {/* Services Display */}
           <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
               <motion.div 
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
           {/* Services Display */}
           <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
@@ -673,21 +666,16 @@ const ComprehensiveServicesShowcase2025 = () => {
           <AnimatePresence mode="wait">;
             {viewMode === 'grid' ? (;
               <motion&& motion.div 
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
 
           {/* Services Display */}
           <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
               <motion.div 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
                 key="grid"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -742,6 +730,8 @@ const ComprehensiveServicesShowcase2025 = () => {
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               >
                 {filteredServices.map((service, index) => (
@@ -801,6 +791,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                 {filteredServices && filteredServices.map((service, index) => (;
@@ -854,6 +845,8 @@ const ComprehensiveServicesShowcase2025 = () => {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -862,6 +855,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                         </span>
                       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -891,6 +885,8 @@ const ComprehensiveServicesShowcase2025 = () => {
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
                         <div>
@@ -928,6 +924,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                           </div>
                           
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                       {/* Service Info */}
@@ -953,6 +950,8 @@ const ComprehensiveServicesShowcase2025 = () => {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
@@ -960,19 +959,25 @@ const ComprehensiveServicesShowcase2025 = () => {
                                 <li key={idx} className="flex items-center">
                                   <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                                   {feature}
                                 </li>
                               ))}
                             </ul>
                           </div>
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                         </div>;
                         <div>;
                           <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days;
@@ -1014,28 +1019,32 @@ const ComprehensiveServicesShowcase2025 = () => {
                                 </li>
                               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                                   {feature}
                                 </li>
                               ))}
                             </ul>
                           </div>
 
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                           {/* Category and Action */}
                           <div className="flex flex-col items-end space-y-3">
                             <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
                               {getCategoryIcon(service.category)}
                               <span className="ml-1">{service.category}</span>
                             </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
                             
                             <a
                               href={service.link}
@@ -1069,9 +1078,6 @@ const ComprehensiveServicesShowcase2025 = () => {
         </div>
       </section>
 
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
                             </ul>;
                           </div>;
@@ -1135,11 +1141,14 @@ const ComprehensiveServicesShowcase2025 = () => {
             </div>;
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
                             
                             <a
                               href={service.link}
@@ -1173,9 +1182,12 @@ const ComprehensiveServicesShowcase2025 = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1187,16 +1199,8 @@ const ComprehensiveServicesShowcase2025 = () => {
               We deliver innovative, enterprise-grade solutions that transform businesses and drive growth
             </p>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1212,16 +1216,8 @@ const ComprehensiveServicesShowcase2025 = () => {
                 Cutting-edge AI and machine learning solutions that deliver real business value
               </p>
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1236,16 +1232,8 @@ const ComprehensiveServicesShowcase2025 = () => {
                 Bank-grade security and compliance for mission-critical business applications
               </p>
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1263,16 +1251,8 @@ const ComprehensiveServicesShowcase2025 = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
 
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -1282,16 +1262,8 @@ const ComprehensiveServicesShowcase2025 = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Let's discuss how our innovative services can help you achieve your business goals
           </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
           
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
           
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center">
               <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" />
@@ -1310,6 +1282,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1319,6 +1292,10 @@ const ComprehensiveServicesShowcase2025 = () => {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
       {/* Why Choose Us */}
       <section className="py-20 bg-white">;
@@ -1408,6 +1385,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
@@ -1418,6 +1396,10 @@ const ComprehensiveServicesShowcase2025 = () => {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
               className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
@@ -1427,9 +1409,12 @@ const ComprehensiveServicesShowcase2025 = () => {
             </a>
             <a
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
               href="https://ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2"
             >
@@ -1444,10 +1429,13 @@ const ComprehensiveServicesShowcase2025 = () => {
 };
 
 export default ComprehensiveServicesShowcase2025;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
               Visit Website;
             </a>;
           </div>;
@@ -1479,11 +1467,14 @@ export default ComprehensiveServicesShowcase;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
               href="https://ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2"
             >
@@ -1498,6 +1489,7 @@ export default ComprehensiveServicesShowcase;
 };
 
 export default ComprehensiveServicesShowcase2025;
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1509,3 +1501,5 @@ export default ComprehensiveServicesShowcase2025;
 };
 export default ComprehensiveServicesShowcase;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

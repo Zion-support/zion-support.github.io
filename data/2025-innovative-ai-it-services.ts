@@ -74,9 +74,12 @@
     ],
     link: 'https://ziontechgroup.com / quantum - ai - orchestrator',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
 =======
 export interface InnovativeAIService {
@@ -91,6 +94,7 @@ id: string;
     yearly: number;
     currency: string;
     trialDays: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -123,6 +127,8 @@ id: string;
   reviews: number
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
     icon: '⚛️',
     color: 'from - indigo - 500 to - blue - 600',
@@ -133,6 +139,7 @@ id: string;
     reviews: 89,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -170,12 +177,15 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Reduce DevOps workload by 90%',
       'Improve system reliability by 99 && 99.9%',
       'Reduce deployment failures by 95%',
       'Optimize costs by 40%',
       'Enable 24 / 7 autonomous operations',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -221,6 +231,8 @@ id: string;
     icon: '🤖',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2025 - 01 - 10',
@@ -229,6 +241,7 @@ id: string;
     reviews: 234,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -307,6 +320,8 @@ id: string;
     icon: '🛡️',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - red - 500 to - pink - 600',
     popular: true,
     launch_date: '2025 - 01 - 20',
@@ -315,6 +330,7 @@ id: string;
     reviews: 156,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -397,6 +413,8 @@ id: string;
     icon: '🚀',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
     launch_date: '2025 - 01 - 25',
@@ -405,6 +423,7 @@ id: string;
     reviews: 8,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -487,6 +506,8 @@ id: string;
     icon: '🧬',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - teal - 500 to - cyan - 600',
     popular: true,
     launch_date: '2025 - 01 - 30',
@@ -495,6 +516,7 @@ id: string;
     reviews: 45,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -575,6 +597,8 @@ id: string;
     icon: '🌐',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
     launch_date: '2025 - 02 - 01',
@@ -583,6 +607,7 @@ id: string;
     reviews: 423,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -663,6 +688,8 @@ id: string;
     icon: '🚚',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - orange - 500 to - red - 600',
     popular: true,
     launch_date: '2025 - 02 - 05',
@@ -671,6 +698,7 @@ id: string;
     reviews: 267,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -751,6 +779,8 @@ id: string;
     icon: '💰',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2025 - 02 - 10',
@@ -760,6 +790,7 @@ id: string;
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -768,6 +799,8 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     description:
       'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.'
     category: 'Healthcare & Biotechnology'
@@ -791,14 +824,16 @@ id: string;
       'Research collaboration tools'
     ]
     benefits: [
-<<<<<<< HEAD
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
       'Improve diagnostic accuracy by 99 && 99.9%',
     id: 'ai - healthcare - diagnostic',
@@ -808,6 +843,7 @@ id: string;
     description:;
       'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.',
     category: 'Healthcare & Biotechnology',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -854,6 +890,8 @@ id: string;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 
 =======
@@ -907,7 +945,6 @@ id: string;
     tagline: 'Quantum-powered AI orchestration for enterprise-scale operations';
     description: 'Revolutionary platform that combines quantum computing with AI to orchestrate complex enterprise operations, optimize resource allocation, and solve previously unsolvable computational problems.',
     category: 'Quantum AI';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     price: {
       monthly: 1599,
       yearly: 15990,
@@ -982,9 +1019,9 @@ id: string;
     customers: 350,
     rating: 4 && 4.9,
     reviews: 189,
-<<<<<<< HEAD
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
@@ -1026,31 +1063,31 @@ id: string;
     icon: '🏥';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     color: 'from - blue - 500 to - indigo - 600';
     popular: true;
     launch_date: '2025 - 02 - 15';
     customers: 350;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     rating: 4.9,
     reviews: 189;
   }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     rating: 4.9,
     reviews: 189;
   }
 ;
-=======
-
-    rating: 4 && 4.9,
-
-    reviews: 189
-<<<<<<< HEAD
     rating: 4.9,
     reviews: 189;
   }
 
+<<<<<<< HEAD
 =======
 
 export interface InnovativeAIService {;
@@ -1061,17 +1098,12 @@ export interface InnovativeAIService {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-;
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+;
   }
 ];
-=======
 export interface InnovativeAIService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1547,17 +1579,11 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     customers: 350,;
     rating: 4.9,;
     reviews: 189;
-<<<<<<< HEAD
     rating: 4.9,
     reviews: 189;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
@@ -1566,3 +1592,5 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
   }
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

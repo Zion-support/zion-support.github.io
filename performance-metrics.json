@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   "timestamp": "2025-09-05T00:20:16.317Z",
   "memory": {
     "rss": 48967680,
@@ -19,6 +22,7 @@
     ".next": {
       "size": 28534499,
       "sizeMB": "27.21"
+<<<<<<< HEAD
 =======
   "timestamp": "2025-09-03T22:43:35.522Z",
   "bundleSize": {
@@ -30,6 +34,12 @@
     "node_modules": {
       "size": 820676108,
       "sizeMB": "782.66"
+=======
+    },
+    "node_modules": {
+      "size": 0,
+      "sizeMB": "0.00"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }
   },
   "fileCounts": {

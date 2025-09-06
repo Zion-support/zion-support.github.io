@@ -85,7 +85,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ ok: true, top, total: memoryStore.length })
-=======
 
 
 

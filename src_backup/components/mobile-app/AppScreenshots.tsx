@@ -234,7 +234,7 @@ export const AppScreenshots: React.FC = () => {;
 }
 import React, { useRef } from './react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button  } from '@/components / ui / button';
+import { Button  } from '@/components/ui/ button';
 // These would be replaced with actual screenshots;
 const mock_screenshots = [;
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,10 @@ import _React from 'react';  import '@testing-library/jest-dom'; import MainSide
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+import _React from 'react';  import '@testing-library/jest-dom'; import MainSidebardynamic from '../components/MainSidebar.dynamic'; describe('MainSidebardynamic',() => { test('renders without crashing',() => { render(<MainSidebardynamic />); expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainSidebardynamic />)}); test('handles user interactions',() => { render(<MainSidebardynamic />)}); test('applies correct styling',() => { render(<MainSidebardynamic />)})});
+import _React from 'react';  import '@testing-library/jest-dom'; import MainSidebardynamic from '../components/MainSidebar.dynamic'; describe('MainSidebardynamic',() => { test('renders without crashing',() => { render(<MainSidebardynamic />); expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainSidebardynamic />)}); test('handles user interactions',() => { render(<MainSidebardynamic />)}); test('applies correct styling',() => { render(<MainSidebardynamic />)})});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -49,6 +54,17 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import MainSidebar from '../components/MainSidebar.dynamic';
+<<<<<<< HEAD
+=======
+
+
+import React from 'react';
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -80,6 +96,7 @@ describe ('MainSidebar', () => {
 import _React from 'react';  import '@testing-library/jest-dom'; import MainSidebardynamic from '../components/MainSidebar.dynamic'; describe('MainSidebardynamic',() => { test('renders without crashing',() => { render(<MainSidebardynamic />); expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainSidebardynamic />)}); test('handles user interactions',() => { render(<MainSidebardynamic />)}); test('applies correct styling',() => { render(<MainSidebardynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import MainSidebardynamic from '../components/MainSidebar.dynamic'; describe('MainSidebardynamic',() => { test('renders without crashing',() => { render(<MainSidebardynamic />); expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainSidebardynamic />)}); test('handles user interactions',() => { render(<MainSidebardynamic />)}); test('applies correct styling',() => { render(<MainSidebardynamic />)})});
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -104,3 +121,5 @@ import _React from 'react';  import '@testing-library/jest-dom'; import MainSide
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

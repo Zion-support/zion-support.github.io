@@ -5,9 +5,12 @@ import React from "react";
 import Layout from "../components/Layout";
 
 import React from 'react';
+<<<<<<< HEAD:pages_backup/about.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/about.tsx
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -196,6 +199,7 @@ export default function AboutPage() {
         </div>
       </div>
     </MainLayout>
+<<<<<<< HEAD:pages_backup/about.tsx
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import Layout from '../components/Layout';
@@ -510,6 +514,8 @@ export default function About() {;
       </div>
     </>
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/about.tsx
   );
       name: 'Kleber',
       role: 'Founder & CEO',

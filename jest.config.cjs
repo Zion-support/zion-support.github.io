@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -7,6 +8,11 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
+=======
+
+module.exports = {
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -20,6 +26,7 @@ const customJestConfig = {
       ]
     }]
   },
+<<<<<<< HEAD
   testMatch: [
     '<rootDir>/__tests__/**/*.(js|jsx|ts|tsx)',
     '<rootDir>/**/*.(test|spec).(js|jsx|ts|tsx)'
@@ -86,3 +93,6 @@ const customJestConfig = {
 }
 
 module.exports = createJestConfig(customJestConfig)
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

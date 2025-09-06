@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   memory: {
     used: number
     total: number
@@ -8,6 +9,8 @@
 }
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React, { useEffect } from 'react';
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -367,6 +370,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
           limit: (performance as any).memory.jsHeapSizeLimit
         } : null
       };
+<<<<<<< HEAD
 =======
 import React, { useEffect, useState } from 'react';
 
@@ -455,6 +459,11 @@ const PerformanceMonitor: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+
+      observer.observe({ entryTypes: ['navigation'] });
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
         console.log('Performance Metrics:', performanceData);
@@ -688,6 +697,7 @@ if (return 'Needs Improvement) {
       window.removeEventListener('load', measurePerformance);
     };
   }, [onPerformanceData]);
+<<<<<<< HEAD
 =======
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
       return () => observer.disconnect();
@@ -747,6 +757,8 @@ if (return 'Needs Improvement) {
     }
   }, []);
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 <<<<<<< HEAD
   if (!metrics) return null;

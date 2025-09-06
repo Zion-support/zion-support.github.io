@@ -1,12 +1,16 @@
+<<<<<<< HEAD:pages_backup/api/learn/courses/[id].ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/learn/courses/[id].ts
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 const dataPath = path.join(process.cwd(), 'datalearncourses.json'),
+<<<<<<< HEAD:pages_backup/api/learn/courses/[id].ts
 <<<<<<< HEAD
 
 
@@ -54,12 +58,11 @@ import fs from 'fs',;
 import path from 'path',;
 const dataPath = path.join(process.cwd(), 'datalearncourses.json')
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/learn/courses/[id].ts
 
     res.status(200).json({ course })
-=======
-=======
 res.status(200).json({ course })
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
 import path from 'path'
@@ -78,16 +81,14 @@ function handler() {
 }
 
     res.status (200).json ({ course });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   } catch (e: any) {
     res.status (500).json ({ error: e?.message ?? 'Failed to load course' });
   }
 };
+<<<<<<< HEAD:pages_backup/api/learn/courses/[id].ts
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/learn/courses/[id].ts

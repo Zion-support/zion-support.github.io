@@ -14,6 +14,7 @@ exports.handler = async (_event, _context) => {
     // // // console.log('content-optimizer fallback executed locally'),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -25,6 +26,8 @@ exports.handler = async (_event, _context) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     try {
         // Basic fallback logic
         const result = {
@@ -42,8 +45,11 @@ message: error && error.message
 
 #!/usr/bin/env node
 #!/usr/bin/env node
+<<<<<<< HEAD
 #!/usr/bin/env node
 #!/usr/bin/env node
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 // Netlify Function Fallback: content-optimizer
 // This is a local fallback when the main function is unavailable
@@ -52,13 +58,17 @@ exports.handler = async (_event, _context) => {
     console.log('content-optimizer fallback executed locally'),
 
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     try {
         // Basic fallback logic;
         const result = {
 
         console && console.error('Fallback execution error:', error),
         return {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -120,6 +130,10 @@ exports.handler = async (_event, _context) => {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 #!/usr/bin/env node;
 // Netlify Function Fallback: content-optimizer;
 // This is a local fallback when the main function is unavailable;
@@ -149,6 +163,7 @@ exports.handler = async (_event, _context) => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -164,3 +179,5 @@ exports.handler = async (_event, _context) => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

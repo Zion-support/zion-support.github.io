@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -11,6 +12,10 @@ export default function Placeholder() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>
@@ -72,6 +77,7 @@ export default function Placeholder() {
     </main>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,6 +91,11 @@ export default function Placeholder() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import Head from 'next / head';
 import Link from 'next / link';
 export default /**
@@ -127,6 +138,7 @@ function Placeholder() {
     </main>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -134,14 +146,13 @@ function Placeholder() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 export default function Placeholder() {
   return (
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 export default function Placeholder() {
@@ -162,7 +173,6 @@ export default function Placeholder() {
 
 export default function Placeholder() {
   return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <main className="min-h-screen p-8">
       <Head>
         <title>Reports • Seo • Index.html - Placeholder</title>
@@ -173,12 +183,7 @@ export default function Placeholder() {
         <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/reports/seo/index.html</code>.</p>
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></a>
       </div>
-<<<<<<< HEAD
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </main>
   );
 }
@@ -196,6 +201,7 @@ export default function Placeholder() {
 }
 ;
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -204,3 +210,5 @@ export default function Placeholder() {
     </main>
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

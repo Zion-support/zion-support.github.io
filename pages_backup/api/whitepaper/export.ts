@@ -1,12 +1,12 @@
+<<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 <<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',
 =======
-import type { NextApiRequest, NextApiResponse } from 'next'
->>>>>>> main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/whitepaper/export.ts
+import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default async /**
  * handler - Function description
@@ -38,8 +38,6 @@ function escape_html() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`
   const base64 = Buffer.from(html, 'utf-8').toString('base64')
@@ -58,8 +56,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const html = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json({ url })
+<<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/whitepaper/export.ts
 }
 function escapeHtml(str: string) {
   return String(str)
@@ -77,16 +78,14 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
   const { markdown, tokenName } = req.body || {},
   if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' }),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-=======
 }
 
+<<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/whitepaper/export.ts
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default async /**
@@ -116,20 +115,23 @@ function escape_html() {
     .replace (/>/g, '&gt, ');
 }
 ;
+<<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/whitepaper/export.ts
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`,
   const base64 = Buffer.from(html, 'utf-8').toString('base64'),
   const url = `data: text/html,base64,${base64}`,
   res.status(200).json({ url })
+<<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
@@ -183,6 +185,8 @@ function escapeHtml(str: string) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/whitepaper/export.ts
 
 function escapeHtml(str: string) {
   return String(str)
@@ -190,9 +194,12 @@ function escapeHtml(str: string) {
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
 };
+<<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/whitepaper/export.ts

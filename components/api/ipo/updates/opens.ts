@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
@@ -11,9 +12,9 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
 
   if (!requireSuperadminApi(req, res)) return;
 
@@ -26,7 +27,6 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
   res.status(200).json({ opens: u.opens |0 });
 =======
   const id = String(req && req.query.id || "");
-<<<<<<< HEAD
   const updates = readJsonFile("updates && updates.json", [] as any[]);
   const u = updates && updates.find((x: any) => x && x.id === id);
   if (!u) return res && res.status(404).json({ error: "Not found" });
@@ -35,11 +35,10 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
   if (!u) return res.status(404).json({ error: 'Not found' });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
@@ -49,6 +48,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
   if (!u) return res.status(404).json({ error: 'Not found' });
 
@@ -60,10 +61,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ opens: u.opens || 0 })
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -84,16 +88,17 @@ function handler() {
   res.status (200).json ({ opens: u.opens || 0 });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!u) return res.status(404).json({ error: 'Not found' });
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
@@ -147,6 +152,7 @@ function handler() {
 }
   if (!u) return res.status(404).json({ error: 'Not found' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -156,3 +162,5 @@ function handler() {
   res.status(200).json({ opens: u.opens || 0 })
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

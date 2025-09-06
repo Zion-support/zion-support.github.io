@@ -53,11 +53,12 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from '@/components / ui / dialog'; import { Button } from '@/components / ui / button'; import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
+} from '@/components/ui/ dialog'; import { Button } from '@/components/ui/ button'; import { Input } from '@/components/ui/ input';
+import { Textarea } from '@/components/ui/ textarea';
   Dialog;
   DialogContent;
   DialogHeader;
+<<<<<<< HEAD:src_backup/components/profile/ContactPublisherModal.tsx
   DialogTitle} from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
@@ -74,6 +75,11 @@ import { Textarea } from '@/components/ui/textarea';
 import {
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  DialogTitle} from '@/components/ui/ dialog';
+import { Button } from '@/components/ui/ button';
+import { Input } from '@/components/ui/ input';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/profile/ContactPublisherModal.tsx
   Form,
   FormField,
   FormItem,
@@ -81,20 +87,20 @@ import {
   FormControl,
 <<<<<<< HEAD
   FormMessage,
-} from '@/components / ui / form';
+} from '@/components/ui/ form';
 import { use_form, type Resolver } from 'react - hook - form';
 import { yup_resolver } from '@hookform / resolvers / yup';
 import * as yup from 'yup';
 import { SendIcon, Mail } from 'lucide-react'; import api from '@/services / api_client';
-import { toast } from '@/hooks / use - toast';
-import { use_auth } from '@/hooks / use_auth';
-import { LoginModal } from '@/components / auth / LoginModal';
+import { toast } from '@/hooks/ use - toast';
+import { use_auth } from '@/hooks/ use_auth';
+import { LoginModal } from '@/components/ auth / LoginModal';
   Form;
   FormField;
   FormItem;
   FormLabel;
   FormControl;
-  FormMessage} from '@/components / ui / form';
+  FormMessage} from '@/components/ui/ form';
 import {use_form, type, Resolver} from 'react - hook - form';
 import {yup_resolver} from '@hookform / resolvers / yup';
 import { SendIcon, Mail } from 'lucide-react';

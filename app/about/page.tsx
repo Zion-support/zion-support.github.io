@@ -28,6 +28,7 @@ export default function AboutPage() {
               largest enterprises.
             </p>
           </div>
+<<<<<<< HEAD
           <div className="bg-gray-50 rounded-xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>
             <ul className="space-y-4">
@@ -56,6 +57,19 @@ export default function AboutPage() {
                 <span className="text-gray-700">Continuous learning and improvement</span>
               </li>
             </ul>
+=======
+          
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
+            <p className="text-gray-300 text-lg mb-6">
+              To be the world&apos;s most trusted technology partner, known for our 
+              innovation, reliability, and commitment to client success.
+            </p>
+            <p className="text-gray-300 text-lg">
+              We envision a future where technology seamlessly integrates with 
+              business operations to create unprecedented value and opportunities.
+            </p>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           </div>
         </div>
 

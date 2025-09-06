@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   customers: number;
   rating: number;
   reviews: number;
@@ -29,6 +30,11 @@ const contact = {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  customers: number;
+  rating: number;
+  reviews: number;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -36,9 +42,12 @@ const contact = {
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
   mobile: '+1 302 464 0950',
@@ -48,10 +57,13 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 ;
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 
@@ -64,6 +76,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -113,12 +126,15 @@ export interface ComprehensiveService {
 
 const contact = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     tagline:
       'Automated code quality analysis, security scanning, and best practice recommendations'
     price: '$199'
     period: '/month'
     description:
       'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.'
+<<<<<<< HEAD
 <<<<<<< HEAD
     features: [
 <<<<<<< HEAD
@@ -177,6 +193,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
 
@@ -291,7 +309,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 =======
     icon: '🚨',
 
-=======
     color: 'from - red - 600 to - pink - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / intelligent - incident - response',
@@ -386,7 +403,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 <<<<<<< HEAD
 =======
 
-=======
     id: 'autonomous - devops - orchestrator',
     name: 'Autonomous DevOps Orchestrator',
     tagline:;
@@ -450,7 +466,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 <<<<<<< HEAD
 =======
 
-=======
     id: 'edge - ai - inference - platform',
     name: 'Edge AI Inference Platform',
     tagline:;
@@ -477,7 +492,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 =======
     icon: '🌐',
 
-=======
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / edge - ai - inference - platform',
@@ -511,7 +525,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 <<<<<<< HEAD
 =======
 
-=======
     id: 'blockchain - governance - automation',
     name: 'Blockchain Governance Automation',
     tagline:;
@@ -573,7 +586,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 <<<<<<< HEAD
 =======
 
-=======
     id: 'ai - powered - customer - success - platform',
     name: 'AI - Powered Customer Success Platform',
     tagline:;
@@ -635,7 +647,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 <<<<<<< HEAD
 =======
 
-=======
     id: 'quantum - machine - learning - platform',
     name: 'Quantum Machine Learning Platform',
     tagline:;
@@ -698,7 +709,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 <<<<<<< HEAD
 =======
 
-=======
     id: 'intelligent - supply - chain - optimizer',
     name: 'Intelligent Supply Chain Optimizer',
     tagline: 'AI - driven supply chain optimization and risk management',
@@ -820,7 +830,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 <<<<<<< HEAD
 =======
 
-=======
     id: 'ai - powered - content - creation - suite',
     name: 'AI - Powered Content Creation Suite',
     tagline:;
@@ -885,7 +894,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 <<<<<<< HEAD
 =======
 
-=======
     id: 'intelligent - data - governance - platform',
     name: 'Intelligent Data Governance Platform',
     tagline: 'Automated data quality, compliance, and lifecycle management',
@@ -946,7 +954,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 <<<<<<< HEAD
 =======
 
-=======
     id: 'quantum - financial - trading - engine',
     name: 'Quantum Financial Trading Engine',
     tagline:;
@@ -973,7 +980,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 =======
     icon: '💰',
 
-=======
     color: 'from - yellow - 600 to - amber - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / quantum - financial - trading - engine',
@@ -1071,7 +1077,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 <<<<<<< HEAD
 =======
 
-=======
     id: 'intelligent - iot - platform',
     name: 'Intelligent IoT Platform',
     tagline: 'AI - powered IoT device management, analytics, and automation',
@@ -1195,7 +1200,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 <<<<<<< HEAD
 =======
 
-=======
     id: 'ai - powered - sales - intelligence - platform',
     name: 'AI - Powered Sales Intelligence Platform',
     tagline:;
@@ -1250,14 +1254,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     reviews: 178,
   },
 
-=======
     id: 'ai-powered-code-review-assistant', name: 'AI-Powered Code Review Assistant',
     tagline: 'Automated code quality analysis, security scanning, and best practice recommendations',
     price: '$199', period: '/month',
     description: 'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [
-<<<<<<< HEAD
       'Automated security vulnerability detectionCode quality scoring and metricsBest practice recommendationsIntegration with GitHub/GitLabCustom rule configurationTeam performance analyticsAutomated PR commentsCompliance checking (SOC2, HIPAA)';
       'Performance impact analysis'
     ];
@@ -1278,8 +1279,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     realImplementation: true, implementationDetails: 'AI-powered analysis engine with custom rule sets and integration APIs.',
     launchDate: '2025-01-15', customers: 156,
     rating: 4.8,
-=======
-<<<<<<< HEAD
       'Automated security vulnerability detection'
       'Code quality scoring and metrics'
       'Best practice recommendations'
@@ -1291,23 +1290,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Performance impact analysis'
     ]
     popular: true
-<<<<<<< HEAD
-=======
-    icon: '🔍'
-    color: 'from-blue-600 to-indigo-700'
-    textColor: 'text-blue-400'
-    link: 'https://ziontechgroup.com/ai-code-review-assistant'
-    marketPosition:
-      'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.'
-    targetAudience: 'Development teams, DevOps engineers, CTOs'
-    trialDays: 14
-    setupTime: '2 hours'
-    category: 'Development & DevOps'
-    realService: true
-    technology: ['AI/ML, Static Analysis, Security Scanning']
-    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack']
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Automated security vulnerability detection',
       'Code quality scoring and metrics',
       'Best practice recommendations',
@@ -1339,7 +1321,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     technology: ['AI/ML, Static Analysis, Security Scanning'],
     integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     useCases: [
       'Code quality improvement, Security compliance, Team productivity'
     ]
@@ -1353,6 +1338,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     realImplementation: true
     implementationDetails:
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1361,9 +1347,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     customers: 156
     rating: 4.8
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     reviews: 89
   };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
       'Automated incident classification',
       'Smart escalation routing',
@@ -1648,11 +1635,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     reviews: 15,
   },
   {
-<<<<<<< HEAD
     variant: 'ai-futuristic'
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 =======
     id: 'ai-powered-sales-intelligence-platform', name: 'AI-Powered Sales Intelligence Platform',
     tagline: 'Predictive sales analytics, lead scoring, and revenue optimization',
@@ -1664,12 +1651,15 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Real-time insights dashboard'
     ];
     popular: true;
     icon: '📈';
     color: 'from-blue-600 to-indigo-700';
     textColor: 'text-blue-400';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1679,6 +1669,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     marketPosition: 'AI-enhanced sales intelligence, competes with Salesforce Einstein, HubSpot, Pipedrive.';
     targetAudience: 'Sales teams, Sales managers, Revenue operations';
     trialDays: 14;
@@ -1717,9 +1709,12 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     launch_date: '2025 - 04 - 01';
     customers: 234;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 ];
 ;
@@ -2431,16 +2426,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   }
 ];
 ;
-=======
-
-    rating: 4 && 4.8,
-
-    reviews: 178
-<<<<<<< HEAD
   }
 ];
 
 
+<<<<<<< HEAD
 =======
     rating: 4.8
     reviews: 178
@@ -2449,22 +2439,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     rating: 4.8,
     reviews: 178;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveService {;
   id: string,;
@@ -3159,12 +3145,9 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     customers: 234,;
     rating: 4.8;
     reviews: 178;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
@@ -3933,3 +3916,5 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   },
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -13,6 +13,7 @@ module.exports = {
     autoprefixer: {},
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -30,3 +31,6 @@ module.exports = {
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> 205f16ce4ac3a8c2ac0b2e278708c4357550db22
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

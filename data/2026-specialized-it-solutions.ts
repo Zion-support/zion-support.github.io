@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
 =======
 export interface SpecializedITSolution2026 {
@@ -57,18 +60,24 @@ id: string;
     email: string;
     address: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
   {
@@ -650,6 +659,7 @@ export const getPopularSpecializedITSolutions2026 = () => {;
   return specializedITSolutions2026.filter(solution => solution.popular);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -658,6 +668,11 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export const specializedITSolutions2026: SpecializedITSolution2026[] = [
+  // Cloud Infrastructure & DevOps
+  {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 ];
@@ -671,6 +686,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   maxPrice: number
 ) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -683,14 +699,18 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => {
+    const price = parseInt(solution && solution.price.replace('$', ''));
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     return price >= minPrice && price <= maxPrice;
   });
 <<<<<<< HEAD
 };    return price >= minPrice && price <= maxPrice
 
   })
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -698,6 +718,8 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
     period: '/month',
@@ -911,9 +933,9 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     launchDate: '2024-05-25', customers: 67,
     rating: 4.4,
     reviews: 33
-<<<<<<< HEAD
     website: string;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -958,13 +980,13 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 export interface SpecializedITSolution2026 {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   })
 };
-<<<<<<< HEAD
 ;
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: any {
   return specializedITSolutions2026.filter (
@@ -1032,6 +1054,7 @@ export interface SpecializedITSolution2026 {;
 
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1041,3 +1064,5 @@ export interface SpecializedITSolution2026 {;
 =======
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

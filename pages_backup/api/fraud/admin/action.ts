@@ -1,7 +1,5 @@
 <<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -14,9 +12,12 @@ export default async function handler(
     return res && res.status(405).json({ error: "Method not allowed" });
 
   }
+<<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/fraud/admin/action.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 import { AdminActionType } from '../../../../utils/fraud/types';
@@ -57,6 +58,7 @@ export default async function handler(
   if (!fraudId |!action) {
     return res.status(400).json({ error: "Missing fraudId or action" });
 
+<<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -70,6 +72,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!fraudId || !action) {
     res.status(400).json({ error: 'Missing fraudId or action' });
 return;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/fraud/admin/action.ts
   }
 
   const act = (action as string).toUpperCase() as AdminActionType;
@@ -124,6 +128,7 @@ function ensureAdmin(req: NextApiRequest): boolean {;
 
 
 
+<<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
 <<<<<<< HEAD
 =======
 =======
@@ -135,6 +140,11 @@ function ensureAdmin(req: NextApiRequest): boolean {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  store.addAdminAction(adminAction);
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/fraud/admin/action.ts
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 import { AdminActionType  } from '../../../../utils / fraud / types';
@@ -178,8 +188,6 @@ if ( {) {
   return res.status (200).json ({ success: true, action: admin_action });
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -204,6 +212,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/api/fraud/admin/action.ts
 <<<<<<< HEAD
 =======
 =======
@@ -225,3 +234,5 @@ if ( {) {
   res.status(200).json({ ok: true, status: newStatus });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/fraud/admin/action.ts

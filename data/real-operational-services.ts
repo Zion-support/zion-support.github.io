@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
 =======
 export interface RealOperationalService {
@@ -39,23 +42,29 @@ export interface RealOperationalService {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -64,20 +73,16 @@ export interface RealOperationalService {;
   contactInfo: {
 export const realOperationalServices: RealOperationalService[] = [
   {
-<<<<<<< HEAD
     id: "operational-intelligence", name: "Operational Intelligence Platform",
     tagline: "Real-time operational insights and optimization", price: "$99/month",
     description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
     id: 'operational-intelligence'
     name: 'Operational Intelligence Platform'
     tagline: 'Real-time operational insights and optimization'
     price: '$99/month'
     description:
       'Comprehensive operational intelligence platform for monitoring and optimizing business operations.'
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -93,6 +98,8 @@ export const realOperationalServices: RealOperationalService[] = [
     price: "$99/month";
     description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     features: [
       "Real-time monitoring";
       "Performance analytics";
@@ -121,43 +128,18 @@ export const realOperationalServices: RealOperationalService[] = [
 ];
 <<<<<<< HEAD
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 ];
 ;
-=======
-=======
-    id: "operational-intelligence",
-    name: "Operational Intelligence Platform",
-    tagline: "Real-time operational insights and optimization",
-    price: "$99/month",
-    description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",
-    features: [
-      "Real-time monitoring",
-      "Performance analytics",
-      "Operational insights",
-      "Optimization recommendations",
-      "Alert system"
-    ],
-    link: "/services/operational-intelligence",
-    category: "Operational Services",
-    realImplementation: true,
-    contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-=======
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -165,17 +147,15 @@ export const realOperationalServices: RealOperationalService[] = [
   },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-=======
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

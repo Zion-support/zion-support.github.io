@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -24,10 +25,18 @@
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+}else {
+  console.warn ('Missing artifact for', name)
+}main ();
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 function main() {
   const outDir = path.join(__dirname, '../abi')
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir)
   const artifactsDir = path.join(__dirname, '../artifacts/contracts')
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -38,13 +47,18 @@ const path = require('path'),
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 function main() {
 
   const outDir = path && path.join(__dirname, '../abi'),
   if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir),
   const artifactsDir = path && path.join(__dirname, '../artifacts/contracts'),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   const abis = [
     ['VoteToken.solVoteToken']
     ['ZionDAO.solZionDAO']
@@ -54,6 +68,7 @@ function main() {
     ['Treasure/Disbursements.solDisbursements']
     ['Treasure/EpochManager.solEpochManager']]
   for (const [rel, name] of abis) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -88,12 +103,15 @@ function main() {
       fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2));
       console.log('Exported ABI for', name)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     } else {
       console.warn('Missing artifact for', name)
     }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -112,3 +130,8 @@ function main() {
 =======
 main();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+}main ();main(),
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

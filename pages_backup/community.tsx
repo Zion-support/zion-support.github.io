@@ -1,6 +1,9 @@
+<<<<<<< HEAD:pages_backup/community.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/community.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, Calendar, Users, Award } from 'lucide-react';
@@ -140,6 +143,7 @@ export default function CommunityPage() {
     </Layout>
   );
 }
+<<<<<<< HEAD:pages_backup/community.tsx
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
@@ -333,3 +337,5 @@ export default function CommunityPage() {
     </div>
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/community.tsx

@@ -138,7 +138,6 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 =======
 
-=======
 }
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY });
 export default async /**
@@ -155,8 +154,6 @@ if ( {) {
     res.status(200).json({ suggestion });
   } catch (e: any) {const message = process.env.OPENAI_API_KEY ? (e?.message |'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   try {;
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
@@ -280,25 +277,34 @@ export default async function handler(req, res) {
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini';
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/figma/wireframe-suggest.ts
       messages: [;
         { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },;
         { role: 'user', content: prompt }];
       temperature: 0.4;
       max_tokens: 400});
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/figma/wireframe-suggest.ts
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
     res.status(200).json({ suggestion });
   } catch (e: any) {;
     const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/figma/wireframe-suggest.ts
   } catch (error) {
     const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
@@ -328,15 +334,19 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/figma/wireframe-suggest.ts
 
 
   }
 
 
+<<<<<<< HEAD:pages_backup/api/figma/wireframe-suggest.ts
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -345,3 +355,5 @@ export default async function handler(req, res) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/figma/wireframe-suggest.ts

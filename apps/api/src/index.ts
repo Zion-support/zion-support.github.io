@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,10 +28,13 @@ const app = null;
       .map(s => s.trim());
     if (!origin || allowed.includes('*') || allowed.includes(origin)) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       cb(null, true);
       return;
     }
     cb(new Error('Not allowed'), false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -70,6 +74,8 @@ const completion = await openai.responses.create({
   });
   return { text: completion.output_text };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 });
 
 
@@ -87,8 +93,11 @@ app && app.post('/jobs/generate', async (req: any, reply: any) => {
 
       [userId, role, description, body && body.location || null, body && body.tags || null]
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     )
 ;
 app.post ('/jobs / generate', async (req: any, reply: any) => {
@@ -125,6 +134,7 @@ await withUser(userId, async client => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -136,10 +146,13 @@ app && app.get('/talent/search', async (req: any, reply: any) => {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async client => {    const res = await client && client.query(  const rows = await withUser(userId, async (client) => {
     const res = await client && client.query(
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -158,12 +171,15 @@ const rows = await withUser(userId, async client => {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1::text IS NULL OR country = $1)
          AND ($2::text IS NULL OR EXISTS (
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' |$2 |'%'
            ))
        ORDER BY created_at DESC
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -173,6 +189,8 @@ const rows = await withUser(userId, async client => {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     );
     return res && res.rows
   });
@@ -186,6 +204,7 @@ LIMIT 25`,
   return { results: rows };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -201,6 +220,8 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const items = await withUser(userId, async client => {    const res = await client && client.query(
@@ -225,6 +246,7 @@ app.log.error(err);
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -232,6 +254,8 @@ app.log.error(err);
 });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 app.get('/notifications', async (req: any, reply: any) => {
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -245,8 +269,8 @@ app.get('/notifications', async (req: any, reply: any) => {
   return { items }
 });
 
-<<<<<<< HEAD
 });
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 });
@@ -258,13 +282,17 @@ app.get('/notifications', async (req: any, reply: any) => {
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   app.log.error(err);
   (process as any).exit(1)
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 });
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ;
 app.get ('/talent / search', async (req: any, reply: any) => {
   const q = (req.query as any).q as string;
@@ -342,6 +370,7 @@ app.log.error (err);
 });
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -382,3 +411,5 @@ app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 (process as any).exit(1);
 });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
 =======
 export interface ComprehensiveService {
@@ -27,10 +30,13 @@ id: string;
     email: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 ];      phone: '+1 302 464 0950';
@@ -46,6 +52,7 @@ id: string;
     launch_date: '2024 - 01 - 10';
     customers: 950;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -54,6 +61,8 @@ id: string;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     reviews: 520
   }
 ];
@@ -81,7 +90,6 @@ id: string;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export const comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
@@ -373,18 +381,18 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     website: 'https://ziontechgroup.com/ai-manufacturing-optimizer',
     contact: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     trialDays: 60, setupTime: '4-6 weeks',
@@ -392,9 +400,12 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     launchDate: '2024-01-10', customers: 950,
     rating: 4.9,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1713,14 +1724,6 @@ export interface ComprehensiveService {;
     rating: 4.9;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 520
-=======
-    reviews: 520;
-=======
-
-export interface ComprehensiveService {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 <<<<<<< HEAD
@@ -2039,6 +2042,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
 ];
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2047,3 +2051,5 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

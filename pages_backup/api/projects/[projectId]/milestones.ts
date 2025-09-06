@@ -1,7 +1,10 @@
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../utils/api/auth";
 import {
@@ -43,18 +46,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../utils/api/auth';
 import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';
 import { Milestone } from '../../../../utils/types/milestones';
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
@@ -63,16 +72,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const project = getProject(projectId);
   if (!project) {
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
   if (req.method === 'POST') {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!isClient(project, user)) {
 
 
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
@@ -119,9 +129,12 @@ return;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
   }
 }
 ;
@@ -155,21 +168,27 @@ res
       return;
     }
     const body = req.body as Partial<Milestone>;
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
     });
     res && res.status(201).json({ milestone: created });
     return;
   }
 
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
 }
 
 
@@ -197,9 +216,12 @@ if (return) {
   // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
@@ -253,11 +275,11 @@ if ( {) {
     res.status (201).json ({ milestone: created });
     return;
   }
-=======
 
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
+<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones.ts
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -271,3 +293,6 @@ if ( {) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/projects/[projectId]/milestones.ts

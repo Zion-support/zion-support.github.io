@@ -1,7 +1,6 @@
 <<<<<<< HEAD
 
 
-<<<<<<< HEAD
 
 export interface FeedbackRecord {;
 
@@ -12,6 +11,7 @@ export function tryWriteToFirestore(doc: any): Promise<boolean> {
 }
 
 export type FeedbackRecord = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -28,10 +28,13 @@ import path from 'path';
 
 export type FeedbackRecord = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
   createdAtIso: string;
   user: { id?: string; role?: string; talentSlug?: string };
   rating: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -70,6 +73,8 @@ export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<vo
   console.log('Feedback saved:', feedback.id);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 
 export interface FeedbackStats {
@@ -87,6 +92,7 @@ export interface FeedbackStats {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -95,14 +101,12 @@ export function getAllFeedback(): FeedbackRecord[] {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   metadata: Record < string, any>;
   created_at: string;
   ip: string;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 
 const feedbackData: FeedbackRecord[] = [];
 
@@ -111,19 +115,6 @@ export async function saveFeedbackFallback(
 ): Promise<void> {
   feedbackData.push(feedback);
   console.log("Feedback saved:", feedback.id);
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-const feedback_data: FeedbackRecord[] = [];
-;
-export async function saveFeedbackFallback (feedback: FeedbackRecord): Promise < void> {
-  feedback_data.push (feedback);
-  console.log ('Feedback saved:', feedback.id);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 }
 
 export function writeAll(rows: any[]): void {
@@ -136,6 +127,7 @@ export function writeAll(rows: any[]): void {
 export function getAllFeedback(): FeedbackRecord[] {
   return [...feedbackData];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export function getAllFeedback (): FeedbackRecord[] {
@@ -163,3 +155,5 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), 'utf-8');
   return rec;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
