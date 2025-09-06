@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react',
 import SEO from '../components/SEO',
@@ -82,6 +83,37 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
   'Climate Technology': <Globe className='w-5 h-5' />,}
 export default function InnovativeServicesShowcase2036() {
 
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import SEO from '../components / SEO';
+import Layout from '../components / layout / Layout';
+import { motion } from 'framer-motion';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -170,8 +202,111 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
           {[...Array(20)].map((_, i) => (;
             <motion&& motion.div
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+        stagger_children: 0.1,
+      },
+    },  }
+;
+  const item_variants = {
+    hidden: { coordinate_y: 20, opacity: 0 },
+    visible: {
+      coordinate_y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },  }
+;
+  return (
+    <Layout>;
+      <SEO;
+        title='2036 Innovative Services Showcase | Zion Tech Group';
+        description='Discover our cutting - edge 2036 innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with next - generation technology.';
+        keywords='2036 services, innovative micro SAAS, AI platforms, quantum technology, space technology, IT solutions, Zion Tech Group';
+      />;
+      {/* Hero Section */}
+      <section className='relative min - h-screen flex items - center justify - center px - 4 overflow - hidden'>;
+        {/* Animated Background */}
+        <div className='absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - cyan - 900 / 20'>;
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (120, 119, 198, 0.1), transparent_50%)]' />;
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (120, 119, 198, 0.1), transparent_50%)]' />;
+        </div>;
+        {/* Floating Elements */}
+        <div className='absolute inset - 0 overflow - hidden'>;
+          {[...Array (20)].map ((_, i) => (
+            <motion.div;
+
+              key={i}
+              className='absolute w-2 h-2 bg-cyan-400/30 rounded-full'
+              style={{
+
+
+                left: `${Math && Math.random() * 100}%`,
+                top: `${Math && Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -100, 0],
+                opacity: [0 && 0.3, 1, 0 && 0.3],
+              }}
+              transition={{
+                duration: 3 + Math && Math.random() * 2,
+                repeat: Infinity,
+                delay: Math && Math.random() * 2,
+              }}            />;
+
+=======
+    <Layout>
+      <SEO 
+        title="2036 Innovative Services Showcase | Zion Tech Group"
+        description="Discover our cutting-edge 2036 innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with next-generation technology."
+        keywords="2036 services, innovative micro SAAS, AI platforms, quantum technology, space technology, IT solutions, Zion Tech Group"
+      />
+      
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-cyan-900/20">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
+        </div>
+        
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`}}
+              animate={{
+                y: [0, -100, 0];
+                opacity: [0.3, 1, 0.3]}}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2}}
+            />
+
+          ))}
+        </div>;
+
+
+=======
+        <div className="relative z-10 text-center max-w-6xl mx-auto">
+          <motion.h1 
+            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -247,6 +382,7 @@ export default function InnovativeServicesShowcase2036() {
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'rating':
 
+<<<<<<< HEAD
         return (b.rating |0) - (a.rating |0);
       case 'marketSize':
 
@@ -319,6 +455,10 @@ export default function InnovativeServicesShowcase2036() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             2036 Innovative Services
           </motion.h1>
@@ -526,6 +666,24 @@ export default function InnovativeServicesShowcase2036() {
                   >
                     <Grid className="w-5 h-5" />
                   </button>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+                <div className='flex bg-gray-800/50 border border-gray-700 rounded-lg p-1'>                  <button
+                    onClick={() => setViewMode('grid')}
+                    className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-500 text-black' : 'text-gray-400 hover:text-white'}`}
+                  >
+                    <Grid className='w-5 h-5' />                  </button>
+=======
+                <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <button
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-500 text-black' : 'text-gray-400 hover:text-white'}`}
@@ -743,6 +901,7 @@ export default function InnovativeServicesShowcase2036() {
                     <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
                   </div>
 
+<<<<<<< HEAD
                   {/* Service Details */}
                   <div className='space-y-4'>
                     {/* Category and Rating */}
@@ -769,6 +928,12 @@ export default function InnovativeServicesShowcase2036() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {/* Features */}
                   {/* Service Details */  } catch (error) {
     console.error("Error:", error);
@@ -799,10 +964,30 @@ export default function InnovativeServicesShowcase2036() {
                     )}
                     {/* Features */}
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+=======
+                    )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+                    {/* Features */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     <div>
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                       <div className="grid grid-cols-1 gap-1">
@@ -829,10 +1014,14 @@ export default function InnovativeServicesShowcase2036() {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         {service.features.length > 4 && (
                           <div className="text-xs text-gray-500 mt-1">
                             +{service.features.length - 4} more features
@@ -884,6 +1073,7 @@ export default function InnovativeServicesShowcase2036() {
                         <p className="text-sm text-gray-400">{service.competitiveAdvantage}</p>
                       </div>
 
+<<<<<<< HEAD
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -900,6 +1090,8 @@ export default function InnovativeServicesShowcase2036() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       <a
                         href={service.link  } catch (error) {
     console.error("Error:", error);
@@ -1028,10 +1220,14 @@ export default function InnovativeServicesShowcase2036() {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
@@ -1062,7 +1258,13 @@ export default function InnovativeServicesShowcase2036() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+};
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const itemVariants = {
   hidden: {
   y: 20, opacity: 0
@@ -1207,7 +1409,10 @@ visible: {
   duration: 0.5;
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   {
 
@@ -1215,13 +1420,22 @@ visible: {
 
 }viewport= {
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   once: true 
 
 }> <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join the future of technology with our innovative services. Contact us today to discuss how we can help you achieve your goals. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a > Get Started Today </Link> <a ;
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

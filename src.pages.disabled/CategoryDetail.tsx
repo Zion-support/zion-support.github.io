@@ -2,6 +2,7 @@ import { useParams,Link,useNavigate } from \'react - router - dom\''\';\' import
 import { useParams,Link,useNavigate } from 'react - router - dom''';' import { Header } from '@/components / header / Header''';' import { Footer } from '@/components / Footer''';' import { GradientHeading } from '@/components / GradientHeading''';' import { ProductListingCard } from '@/components / ProductListingCard''';' import { useState,useEffect,useRef,Suspense,useCallback } from 'react'';";";""
 import { useParams,Link,useNavigate } from \'react - router - dom\''\';\' import { Header } from \'@/components / header / Header\''\';\' import { Footer } from \'@/components / Footer\''\';\' import { GradientHeading } from \'@/components / GradientHeading\''\';\' import { ProductListingCard } from \'@/components / ProductListingCard\''\';\' import { useState,useEffect,useRef,Suspense,useCallback } from \'react\'';\";\";
 import { useParams,Link,useNavigate } from 'react - router - dom''';' import { Header } from '@/components / header / Header''';' import { Footer } from '@/components / Footer''';' import { GradientHeading } from '@/components / GradientHeading''';' import { ProductListingCard } from '@/components / ProductListingCard''';' import { useState,useEffect,useRef,Suspense,useCallback } from 'react'';";";""
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 import { useParams,Link,useNavigate } from \'react - router - dom\''\';\' import { Header } from \'@/components / header / Header\''\';\' import { Footer } from \'@/components / Footer\''\';\' import { GradientHeading } from \'@/components / GradientHeading\''\';\' import { ProductListingCard } from \'@/components / ProductListingCard\''\';\' import { useState,useEffect,useRef,Suspense,useCallback } from \'react\'';\";\";
@@ -9,3 +10,6 @@ import { useParams,Link,useNavigate } from 'react - router - dom''';' import { H
 import { useParams,Link,useNavigate } from \'react - router - dom\''\';\' import { Header } from \'@/components / header / Header\''\';\' import { Footer } from \'@/components / Footer\''\';\' import { GradientHeading } from \'@/components / GradientHeading\''\';\' import { ProductListingCard } from \'@/components / ProductListingCard\''\';\' import { useState,useEffect,useRef,Suspense,useCallback } from \'react\'';\";\";
 import { useParams,Link,useNavigate } from 'react - router - dom''';' import { Header } from '@/components / header / Header''';' import { Footer } from '@/components / Footer''';' import { GradientHeading } from '@/components / GradientHeading''';' import { ProductListingCard } from '@/components / ProductListingCard''';' import { useState,useEffect,useRef,Suspense,useCallback } from 'react'';";";""
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

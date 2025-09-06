@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from 'react';
 
 
@@ -11,8 +14,11 @@ import { Textarea } from '../components/ui/textarea';
 import { Card, CardContent } from '../components/ui/card';
 import { useToast } from '../components/ui/use-toast';
 import { Mail, MessageSquare, MapPin, Phone, Send } from 'lucide-react';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -53,6 +59,7 @@ const Contact: React.FC = () => {
     }, 3000);
   };
 
+<<<<<<< HEAD
   const services = [
     'AI Services',
     'Cybersecurity',
@@ -63,6 +70,33 @@ const Contact: React.FC = () => {
     'Blockchain',
     'IT Support',
     'Other'
+=======
+  const contactInfo = [
+    {
+      icon: <Phone className="h-6 w-6 text-blue-500" />,
+      title: 'Phone',
+      content: '+1 (555) 123-4567',
+      description: 'Mon-Fri 9AM-6PM EST',
+    },
+    {
+      icon: <Mail className="h-6 w-6 text-green-500" />,
+      title: 'Email',
+      content: 'hello@ziontechgroup.com',
+      description: 'We respond within 24 hours',
+    },
+    {
+      icon: <MapPin className="h-6 w-6 text-purple-500" />,
+      title: 'Office',
+      content: '123 Tech Street, San Francisco, CA 94105',
+      description: 'Visit us anytime',
+    },
+    {
+      icon: <MessageSquare className="h-6 w-6 text-orange-500" />,
+      title: 'Live Chat',
+      content: 'Available 24/7',
+      description: 'Get instant support',
+    },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ];
 
   const contactInfo = {
@@ -71,6 +105,7 @@ const Contact: React.FC = () => {
     address: '364 E Main St STE 1008, Middletown, DE 19709'
   };
 
+<<<<<<< HEAD
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white flex items-center justify-center">
@@ -88,6 +123,129 @@ const Contact: React.FC = () => {
       </div>
     );
   }
+=======
+        {/* Contact Info */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {contactInfo.map((info, index) => (
+                <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
+                  <div className="flex justify-center mb-4">
+                    {info.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">{info.title}</h3>
+                  <p className="text-gray-900 font-medium mb-1">{info.content}</p>
+                  <p className="text-sm text-gray-600">{info.description}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Form */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Form */}
+              <Card className="p-8">
+                <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                        Name *
+                      </label>
+                      <Input
+                        id="name"
+                        name="name"
+                        type="text"
+                        required
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        Email *
+                      </label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder="your.email@company.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                      Company
+                    </label>
+                    <Input
+                      id="company"
+                      name="company"
+                      type="text"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      placeholder="Your company name"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                      Subject *
+                    </label>
+                    <Input
+                      id="subject"
+                      name="subject"
+                      type="text"
+                      required
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      placeholder="What's this about?"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                      Message *
+                    </label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      required
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder="Tell us about your project..."
+                      rows={6}
+                    />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full"
+                    size="lg"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="h-4 w-4 mr-2" />
+                        Send Message
+                      </>
+                    )}
+                  </Button>
+                </form>
+              </Card>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -361,6 +519,10 @@ const Contact: React.FC = () => {
       </div>
 
 
+<<<<<<< HEAD
+=======
+      <Footer />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </div>
   );
 };

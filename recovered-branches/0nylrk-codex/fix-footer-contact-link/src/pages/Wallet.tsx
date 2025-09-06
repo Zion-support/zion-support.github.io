@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import {useWallet} from '@/hooks/useWallet';
@@ -8,6 +13,10 @@ import {BadgeDollarSign} from 'lucide-react';
 export default function WalletPage() {;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { wallet, transactions, loading } = useWallet();
 import { useWallet } from '@/hooks/useWallet',
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card',

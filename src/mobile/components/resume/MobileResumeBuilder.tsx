@@ -88,8 +88,11 @@ export function MobileResumeBuilder() {
           onClick={() => setCurrentStep("basics")}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >
           Basics
         </Button>
@@ -101,7 +104,10 @@ export function MobileResumeBuilder() {
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >
           Experience
         </Button>
@@ -170,6 +176,10 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >;
           Skills;
         </Button>;
@@ -223,10 +233,13 @@ function BasicsStep() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           <Textarea 
@@ -243,6 +256,7 @@ function ExperienceStep() {
   }
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
+<<<<<<< HEAD
 
 
   }
@@ -256,6 +270,8 @@ function ExperienceStep() {
   )
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   };
@@ -431,3 +447,9 @@ function ExperienceStep() {;
 
   );
 }
+<<<<<<< HEAD
+=======
+
+
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

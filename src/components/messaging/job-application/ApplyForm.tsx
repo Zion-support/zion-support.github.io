@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 job: Job
   onClose: () => void
@@ -152,6 +153,20 @@ if ( {) {
 }
         await onApplySuccess (job.id);
       }
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useJobApplications } from '@/hooks/useJobApplications';
+import { useMessaging } from '@/context/MessagingContext';
+import { toast } from '@/hooks/use-toast';
+import { ResumeSelector, ResumeOption } from '../resume-selector';
+import { MessageTab } from './MessageTab';
+import { ResumeTab } from './ResumeTab';
+import { Job } from './types';
+import { logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       
@@ -344,6 +359,7 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
           ) : (
             'Submit Application'
           )}
+<<<<<<< HEAD
 
 if (!applicationSuccess) {
 }//Format message with proposal link if provided let fullMessage = message
@@ -401,5 +417,10 @@ return (<> <Tabs value= {
       </div>;
     </>;
 
+=======
+        </Button>
+      </div>
+    </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 };

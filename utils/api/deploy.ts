@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
@@ -6,12 +7,18 @@ function toSlug(name: string): string {return name;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 function toSlug(name: string): string {;
   return name;
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
     .slice(0, 64);
+<<<<<<< HEAD
 
 }
 function ensureDir(dirPath: string) {if (!fs.existsSync(dirPath)) {;
@@ -123,6 +130,16 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   }
 
 
+=======
+
+
+;
+  // Schedule launch stream (/summit);
+  ensureDir(eventsDir),;
+  const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -470,8 +487,55 @@ if ( {) {
     summary;
     version}
 }
+<<<<<<< HEAD
 
 
+=======
+=======
+      changelogPath,;
+      `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
+    ),;
+    assets.push({ kind: "file", path: changelogPath, description: "Changelog" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (input.modules.bookBuilder) {;
+    ensureDir(docsDir);
+    writeTextFile(;
+      bookPath,;
+      `# ${input.instanceName}: Founder Story & System Manifesto\n\nThis book captures the origin and guiding principles of ${input.instanceName}.\n`;
+    );
+    assets.push({ kind: "file", path: bookPath, description: "Zion Book (markdown source)" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (input.modules.launchKit) {;
+    ensureDir(docsDir);
+    writeTextFile(;
+      trailerScriptPath,;
+      `# Launch Trailer Script\n\nVoiceover: Welcome to ${input.instanceName}, a sovereign digital nation built on Zion OS.\n`;
+    );
+    assets.push({ kind: "file", path: trailerScriptPath, description: "Trailer script" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+
+  // Schedule launch stream (/summit);
+  ensureDir(eventsDir);
+  const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   writeTextFile(;
     summitEventPath;
     JSON.stringify(;
@@ -512,6 +576,7 @@ if ( {) {
       2;
     );
   ),;
+<<<<<<< HEAD
 
 
   assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" });
@@ -529,6 +594,9 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           "/constitution",;
           "/partners",;
           "/academy",;
@@ -539,6 +607,7 @@ if ( {) {
       2;
     );
   ),;
+<<<<<<< HEAD
 
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" });
   // Optional modules markers;
@@ -562,10 +631,16 @@ if ( {) {
     logs;
     summary;
     version}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

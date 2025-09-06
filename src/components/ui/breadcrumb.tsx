@@ -41,7 +41,10 @@ const Breadcrumb = React.forwardRef<
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",
       className
     )}
@@ -100,7 +103,10 @@ const BreadcrumbLink = React.forward_ref<;
 })
 BreadcrumbLink.displayName = "BreadcrumbLink"
  
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 const BreadcrumbSeparator = ({
@@ -118,6 +124,19 @@ const BreadcrumbSeparator = ({
     {children |<ChevronRight className='h-4 w-4' />}
   </li>
 )
+<<<<<<< HEAD
+=======
+
+  />;
+));
+Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';
+    ref = {ref,}
+    aria-label="breadcrumb";
+    className = {cn(;
+      "inline-flex items-center gap-1 text-sm text-zion-slate-light",;
+      className;
+    ),}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {...props}
   />;
 ));
@@ -179,13 +198,21 @@ const BreadcrumbEllipsis = ({;
     className={cn("flex h-9 w-9 items-center justify-center", className)}
 
 
+<<<<<<< HEAD
 
 export {
+=======
+export {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Breadcrumb
   BreadcrumbList
   BreadcrumbItem
   BreadcrumbLink
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     {...props}>;
@@ -221,8 +248,11 @@ export {
 
 export {;
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   BreadcrumbSeparator;
   BreadcrumbEllipsis};
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
@@ -231,9 +261,12 @@ const BreadcrumbEllipsis = ({
   className,
   ...props
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }: React.ComponentProps<"span">) => (
   <span
     role="presentation"

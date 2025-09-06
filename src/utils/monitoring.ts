@@ -12,9 +12,12 @@ export const track_performance = () =>: any {
 export const logEvent = (event: string) => {;
   console.log('Event logged:', event);
 
+<<<<<<< HEAD
 
 }
 export const trackPerformance = () => {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };
 
 export const trackPerformance = () => {;

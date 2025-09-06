@@ -2,11 +2,21 @@ import { use_router } from 'next / router';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { AlertTriangle } from 'lucide-react';
+<<<<<<< HEAD
 
 import Link from 'next/link';
 import Head from 'next/head';
 
 
+=======
+
+
+const errorMessages: Record<string string> = {;
+  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+  default: 'There was an issue with your authentication request.';
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const errorMessages: Record<string, string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
@@ -17,12 +27,19 @@ const errorMessages: Record<string, string> = {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 export default function AuthErrorPage() {
   const { query } = useRouter()
   const message = errorMessages[query.error as string] || errorMessages.default
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <>
       <Head>

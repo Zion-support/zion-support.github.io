@@ -1,7 +1,12 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
 import {Button} from "@/components/ui/button";
@@ -29,8 +34,11 @@ import { Link } from "react-router-dom",
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
@@ -66,6 +74,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
       default:;
         return "default";
     }
+<<<<<<< HEAD
 
   };
   if (isLoading) {;
@@ -107,10 +116,17 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
       </div>
     )
   }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               ))}
             </TableBody>;
           </Table>;

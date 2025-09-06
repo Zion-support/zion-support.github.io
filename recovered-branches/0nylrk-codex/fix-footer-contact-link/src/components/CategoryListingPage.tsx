@@ -1,5 +1,12 @@
 
 
+<<<<<<< HEAD
+=======
+
+
+
+import React from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -10,6 +17,7 @@ import {Input} from "@/components/ui/input";
 import {Select, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
 import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -112,6 +120,8 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Example listing type;
 interface Listing {;
   id: string,;
@@ -119,8 +129,23 @@ interface Listing {;
   description: string,;
   category: string,;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+import { useState } from './react';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { GradientHeading } from '@/components / GradientHeading';
+import { ListingScoreCard } from '@/components / ListingScoreCard';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
+// Example listing type;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Example listing type
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface Listing {
@@ -130,8 +155,24 @@ interface Listing {
   category: string,
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+  subcategory?: string,
+  image?: string,
+  tags?: string[],
+  author?: string,
+  authorImage?: string,
+  aiScore?: number,
+  rating?: number,
+  reviewCount?: number,
+  price?: number | null,
+  createdAt: string
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;
 
@@ -144,6 +185,7 @@ interface CategoryListingPageProps {;
 }
 
 
+<<<<<<< HEAD
 ;
 export function CategoryListingPage({;
   title,;
@@ -212,6 +254,10 @@ export function CategoryListingPage({;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {description}
 
             </p>;
@@ -228,6 +274,7 @@ export function CategoryListingPage({;
                   placeholder="Search listings..."
                   value={searchQuery}
 
+<<<<<<< HEAD
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                 />
@@ -239,6 +286,12 @@ export function CategoryListingPage({;
                       <ArrowDownAZ className="mr-2 h-4 w-4" />
                     ) : selectedSort === 'z-a' ? (
                       <ArrowUpZA className="mr-2 h-4 w-4" />
+=======
+                  onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e && e.target.value)}
+                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
+                />;
+              </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     ) : null}
                     <span>
@@ -284,8 +337,13 @@ export function CategoryListingPage({;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -343,10 +401,14 @@ export function CategoryListingPage({;
             </div>
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           )}
         </div>;
       </div>;

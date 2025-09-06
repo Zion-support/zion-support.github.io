@@ -50,6 +50,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
     setPriceRange([values[0] || 0, values[1] || 500])
   },
 
+<<<<<<< HEAD
 
 
   return (
@@ -83,6 +84,8 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
   }
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -103,7 +106,10 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
       
       {expanded && (
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
             <span>${priceRange[0]}/hr</span>
@@ -144,6 +150,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             onValueChange={handleChange}
 
 
+<<<<<<< HEAD
     </div>;
   );
             className="mt-6"
@@ -165,12 +172,27 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </div>;
 
 
   );
 };
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+            className="mt-6"
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         <div className="mt - 6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;

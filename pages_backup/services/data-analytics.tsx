@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -279,6 +280,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 export default function DataAnalyticsPage() {
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+  }
+];
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const benefits = [
   'Data-driven decision making',
   'Improved business performance',
@@ -288,8 +298,29 @@ const benefits = [
   'Automated reporting and analytics'
 ];
 export default function DataAnalyticsServices() {
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+export default function DataAnalyticsPage() {;
+const benefits = [;
+  'Data-driven decision making',;
+  'Improved business performance',;
+  'Better customer insights',;
+  'Reduced operational costs',;
+  'Enhanced competitive advantage',;
+  'Automated reporting and analytics';
+];
+export default function DataAnalyticsServices() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/data-analytics.tsx
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Layout
       title="Data Analytics Services - Zion Tech Group"
@@ -297,6 +328,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       keywords="data analytics, business intelligence, data warehousing, predictive analytics, data visualization, AI insights">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   {
     icon: BarChart3,
     title: 'Business Intelligence',
@@ -345,7 +380,11 @@ export default function DataAnalyticsPage() {
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -367,6 +406,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -385,6 +425,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         {/* Services Grid */}
         <section className="py-16 px-4">;
@@ -395,12 +439,21 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -418,8 +471,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -433,6 +492,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
         </section>
 
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
         {/* Benefits Section */}
         <section className="py-20">;
@@ -471,6 +531,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         </section>
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Benefits Section */}
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -508,6 +572,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         </section>
 
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
@@ -539,6 +604,71 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </Layout>
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+        {/* Benefits Section */}
+        <section className="py-20">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
+              <div>;
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+                  Why Choose Our Data Analytics Services?;
+                </h2>;
+                <p className="text-xl text-gray-600 mb-8">;
+                  Our data analytics experts help you transform raw data into;
+                  actionable insights that drive business growth and innovation.;
+                </p>;
+                <ul className="space-y-4">;
+                  {benefits && benefits.map((benefit, index) => (;
+                    <li key={index} className="flex items-start">;
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
+                      <span className="text-gray-700">{benefit}</span>;
+                    </li>;
+                  ))}
+                </ul>;
+              </div>;
+              <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">;
+                <h3 className="text-2xl font-bold mb-6">Ready to Unlock Your Data?</h3>;
+                <p className="text-lg mb-6">;
+                  Let our data analytics experts help you transform your data;
+                  into powerful insights that drive business success.;
+                </p>;
+                <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
+                  Schedule Consultation;
+                  <ArrowRight className="w-5 h-5 ml-2" />;
+                </button>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+        {/* CTA Section */}
+        <section className="py-20 bg-gray-900 text-white">;
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">;
+              Ready to Transform Your Data?;
+            </h2>;
+            <p className="text-xl mb-8 max-w-3xl mx-auto">;
+              Contact our data analytics team to discuss your specific requirements;
+              and discover how we can help unlock the value in your data.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <button className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">;
+                Contact Analytics Team;
+              </button>;
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">;
+                Download Analytics Guide;
+              </button>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+    </Layout>;
+    </>;
+    </Layout>;
+    </>;
+    </Layout>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
     </>;
   ),;

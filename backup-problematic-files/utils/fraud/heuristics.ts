@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :utils/fraud/heuristics.ts
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
 const suspiciousLinkHosts = [
@@ -57,6 +58,10 @@ function containsSuspiciousHost(text: string): boolean {;
   return suspiciousLinkHosts.some((host) => lower.includes(host));
 :backup-problematic-files/utils/fraud/heuristics.ts
 :backup-problematic-files/utils/fraud/heuristics.ts
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
   const lower = text && text.toLowerCase();
@@ -151,6 +156,7 @@ function containsVagueJobClaims (text: string): string[] {
   });
   return reasons;
 }
+<<<<<<< HEAD
 export interface HeuristicDeps {
   countEventsByIp: (
     ip: string
@@ -159,6 +165,15 @@ export interface HeuristicDeps {
     ip: string,
     source: MonitoredSource,
     withinMinutes: number;
+=======
+
+
+    ip: string,
+    source: MonitoredSource,
+    withinMinutes: number;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ) => Promise<number>;
 
 
@@ -208,7 +223,10 @@ export async function evaluateHeuristics(
       if (severity === 'low') severity = 'medium';
     }
   }
+<<<<<<< HEAD
 :utils/fraud/heuristics.ts
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function runHeuristics(data: any): HeuristicResult {
   // Mock implementation - in production, this would run actual fraud detection heuristics
   const flags = new Set<string>();
@@ -338,12 +356,33 @@ export function runHeuristics(data: any): HeuristicResult {
   }
 
 }
+<<<<<<< HEAD
+=======
+=======
+}
+
+export function isHighRiskEvent(result: HeuristicResult): boolean {
+  return result.severity === 'high' || result.severity === 'critical';
+}
+
+export function shouldBlockEvent(result: HeuristicResult): boolean {
+  return result.severity === 'critical' && result.confidence > 80;
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
   return {;
     flagged: reasons.length > 0;
     reasons;
     severity}
 }
+<<<<<<< HEAD
 main:utils/fraud/heuristics.ts
 :backup-problematic-files/utils/fraud/heuristics.ts
 :utils/fraud/heuristics.ts
@@ -352,3 +391,13 @@ main:utils/fraud/heuristics.ts
 }
 main:utils/fraud/heuristics.ts
 :backup-problematic-files/utils/fraud/heuristics.ts
+=======
+
+=======
+
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/heuristics.ts
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

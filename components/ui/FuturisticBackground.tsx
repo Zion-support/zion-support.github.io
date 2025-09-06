@@ -53,7 +53,16 @@ export default function FuturisticBackground() {;
 
 }
 
+<<<<<<< HEAD
 
+=======
+=======
+import React from 'react';
+export default /**
+ * FuturisticBackground - Function description
+ */
+function FuturisticBackground() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className='pointer - events - none absolute inset - 0 overflow - hidden'>;
       {/* Animated gradient background */}
@@ -79,7 +88,10 @@ function FuturisticBackground() {
       <div className="absolute bottom - 10 right - 1/5 w - 96 h - 96 rounded - full bg - fuchsia - 500 / 20 blur - 3xl animate - float [animation - delay: 1.2s]" />;
       <div className="absolute -top - 16 right - 1/3 w - 72 h - 72 rounded - full bg - violet - 500 / 20 blur - 3xl animate - float [animation - delay:2.1s]" />;
     </div>);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function FuturisticBackground() {
   return (
     <div className=&quot;pointer-events-none absolute inset-0 overflow-hidden&quot;>
@@ -99,5 +111,13 @@ export default function FuturisticBackground() {_return (
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+    </div>
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

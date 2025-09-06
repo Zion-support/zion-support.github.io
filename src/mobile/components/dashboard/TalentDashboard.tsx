@@ -11,6 +11,7 @@ export function TalentDashboard() {
             </Button>
           </Link>
         </div>
+<<<<<<< HEAD
 
 
         <div className='space-y-3'>
@@ -18,6 +19,9 @@ export function TalentDashboard() {
         <div className="space-y-3">
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
@@ -73,7 +77,10 @@ export function TalentDashboard() {
               <div className="flex gap-2 mt-3">
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <Button size="sm">Apply Now</Button>
                 <Button size="sm" variant="outline">View Details</Button>
               </div>
@@ -706,11 +713,14 @@ export function TalentDashboard() {;
 
   );
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     </div>);
 }

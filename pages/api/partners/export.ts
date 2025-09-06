@@ -1,15 +1,26 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
+<<<<<<< HEAD
 
   req: NextApiRequest
   res: NextApiResponse
 ) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status(400).json({ error: "Missing code" });
 
@@ -48,12 +59,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
   } catch (e: any) {
+<<<<<<< HEAD
     return res.status(500).json({ error: e?.message })
   }
+=======
+<<<<<<< HEAD
+    return res && res.status(500).json({ error: e?.message });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 }
+<<<<<<< HEAD
+=======
+
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getServerSupabase  } from '../../../utils / supabase / server';
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const code = (req.query.code as string)?.toLowerCase ();
+  if (return res.status (400).json ({ error: "Missing code" })) {
+  $2
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
   const using_placeholder =;
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
@@ -118,6 +148,10 @@ if ( {) {
   }
 }
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

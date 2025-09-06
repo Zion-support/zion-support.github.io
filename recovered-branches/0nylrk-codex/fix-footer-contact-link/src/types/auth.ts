@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   id?: string;
@@ -16,6 +17,8 @@
   updatedAt?: string
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   permissions?: string[];
   company_id?: string;
@@ -25,9 +28,12 @@
   updated_at?: string;
 }
 export interface UserProfile {
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id?: string;
   display_name?: string;
   email: string;
@@ -44,6 +50,7 @@ export interface UserProfile {
   permissions?: string[],
   company_id?: string;
 }
+<<<<<<< HEAD
 
 // Update AuthContextType definition to match implementation
 export interface AuthContextType {;
@@ -116,6 +123,8 @@ export interface AuthContextType {;
   signOut?: () => Promise<void>;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Update AuthContextType definition to match implementation;
 export interface AuthContextType {
   user: UserDetails | null;
@@ -136,6 +145,11 @@ export interface AuthContextType {
 
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface UserDetails {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

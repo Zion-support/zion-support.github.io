@@ -1,10 +1,18 @@
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }});
   }
 });
 console.log(`Fixed ${fixedCount} files`);
+<<<<<<< HEAD
 
 ;
   };
@@ -27,6 +35,11 @@ console.log(`Fixed ${fixedCount} files`);
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }});
 
 ;
@@ -47,6 +60,10 @@ console.log(`Fixed ${fixedCount} files`),
 ursor/fix-lint-push-and-merge-to-main-ae4e
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node import fs from "fs" import path from "path" function listFiles(dir,exts) { const out = [] for (const entry of fs.readdirSync(dir)) { const full = path.join(dir,entry) const st = fs.statSync(full) if (st.isDirectory()) { if (entry === "node_modules" | entry.startsWith(".")) continue out.push(.listFiles(full,exts)) } else if (exts.some(ext => full.endsWith(ext))) { out.push(full) } } return out } function fixFile(filePath) { try { const before = fs.readFileSync(filePath,"utf8") let after = before after = after.replace(/,\s*;/g,",") after = after.replace(/;\s*,/g,",") after = after.replace(/;\s*\]/g,"]") after = after.replace(/;\s*\}/g,"}") if (after !== before) { fs.writeFileSync(filePath,after,"utf8") console.log(`Fixed: ${filePath}`) return true } return false } catch (e) { console.error(`Error fixing ${filePath}:`,e.message) return false } } const files = listFiles(".",[".js",".jsx",".ts",".tsx"]) let fixed = 0 for (const f of files) if (fixFile(f)) fixed++ console.log(`Fixed remaining syntax issues in ${fixed} files.`) }'"`'"`
 #!/usr/bin/env node import fs from 'fs' import path from 'path' function listFiles(dir,exts) { const out = [] for (const entry of fs.readdirSync(dir)) { const full = path.join(dir,entry) const st = fs.statSync(full) if (st.isDirectory()) { if (entry === 'node_modules' || entry.startsWith('.')) continue out.push(...listFiles(full,exts)) } else if (exts.some(ext => full.endsWith(ext))) { out.push(full) } } return out } function fixFile(filePath) { try { const before = fs.readFileSync(filePath,'utf8') let after = before after = after.replace(/,\s*;/g,',') after = after.replace(/;\s*,/g,',') after = after.replace(/;\s*\]/g,']') after = after.replace(/;\s*\}/g,'}') if (after !== before) { fs.writeFileSync(filePath,after,'utf8') _console.log(`"Fixed": ${filePath}`) return true } return false } catch (e) { _console.error(`Error fixing ${filePath}:`,e.message) return false } } const files = listFiles('.',['.js','.jsx','.ts','.tsx']) let fixed = 0 for (const f of, files) if (fixFile(f)) fixed++ _console.log(`Fixed remaining syntax issues in ${fixed} files.`) }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 #!/usr/bin/env node
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -152,9 +169,28 @@ origin/automation-improvements-final
 
 
 // Run the main function
+<<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+=======
+
+main().catch(console.error);
+
+=======
+
+
+
+=======
+
+  
+
+main().catch(console.error);
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
 
 }
@@ -163,6 +199,7 @@ origin/automation-improvements-final
 
 main().catch(console.error);
 
+<<<<<<< HEAD
 
 
 
@@ -170,3 +207,36 @@ main().catch(console.error);
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/automation-improvements-final
+=======
+main().catch(console && console.error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    console.error (`Error processing ${file_path}:`, error.message);
+    return false;
+  }
+}
+// Process the specific files that have errors;
+const error_files = [;
+  'pages / about.tsx',
+  'pages / accessibility.tsx',
+  'pages / ai - services.tsx',
+  'pages / api.tsx',
+  'pages / blog.tsx';
+];
+console.log (`Processing ${error_files.length} files with errors`);
+let fixed_count = 0;
+error_files.for_each (file => {
+  if () {) {
+  $2
+}
+    fixed_count++;
+  }
+  console.log (`\n_processed ${total_files} files, fixed ${fixed_files} files`);
+}
+// Run the main function;
+main ().catch (console.error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

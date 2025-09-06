@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 ];      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ];
     category: 'Security & Identity';
@@ -12,6 +13,17 @@
 ];
 
 
+=======
+
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const real2027Q3Additions = [
+  {
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const real2027Q3Additions = [;
   {
     id: 'it - asset - discovery - agent',
@@ -335,7 +347,13 @@ export const real2027Q3Additions = [;
     real_service: true,
     roi: 'Prevent high - severity API incidents and cut MTTR.';
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 ];
 ;

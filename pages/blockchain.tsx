@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react'
 import Head from 'next/head'
@@ -35,6 +36,8 @@ export default function Blockchain() {
   }
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react';
 import Head from 'next / head';
 import ErrorBoundary from '../components / ErrorBoundary';
@@ -46,6 +49,7 @@ function Blockchain() {
 
     <>;
       <Head>;
+<<<<<<< HEAD
 
         <title>Blockchain Services - Zion Tech Group</title>;
         <meta name="description" content="Blockchain and Web3 solutions including smart contracts, DeFi, and cryptocurrency development." />;
@@ -73,3 +77,12 @@ function Blockchain() {
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+        <title > Blockchain Services - Zion Tech Group</title>;
+
+=======
+
+        <title>Blockchain Services - Zion Tech Group</title>
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

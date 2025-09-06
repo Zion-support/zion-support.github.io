@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import Link from 'next/link';
 export default function Reports() {
   return (
@@ -15,6 +16,9 @@ export default function Reports() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </div>
         <div className="border rounded p-5">
           <h3 className="font-semibold">External Link Health</h3>
@@ -26,10 +30,14 @@ export default function Reports() {
             <Link href="/automation_logs/link-report.json"><a className="text-blue-600">Full report →</Link></Link>
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
         </div>
         <div className="border rounded p-5">
@@ -39,10 +47,14 @@ export default function Reports() {
           <Link href="/automation-catalog.json"><a className="text-blue-600">Catalog JSON →</Link></Link>
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </div>
       </div>
     </div>

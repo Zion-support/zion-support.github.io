@@ -22,6 +22,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 
 
 
@@ -32,6 +33,10 @@ import {
   updateMilestoneStatus;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   if (typeof window === 'undefined') return 'client';
@@ -47,6 +52,7 @@ export default function ProjectMilestonesPage() {;
   );  const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 
   useEffect(() => {
     setRole(getRoleFromEnvOrQuery());  }, []);
@@ -80,6 +86,8 @@ export default function ProjectMilestonesPage(req, res) {
   const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   useEffect(() => {;
     setRole(getRoleFromEnvOrQuery());
@@ -98,14 +106,32 @@ export default function ProjectMilestonesPage(req, res) {
 }
   }, [role]),;
   useEffect(() => {;
+<<<<<<< HEAD
 
 
 
 
     if (!projectId) return;
+=======
+
+    if (!projectId) return;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+import Head from 'next/head';
+import MilestoneForm from '../../../components/monetization/MilestoneForm';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import MilestoneCard from '../../../components/monetization/MilestoneCard';
+
+import { Milestone } from '../../../utils/types/milestones';
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     let cancelled = false;
     (async () => {;
       setLoading(true);
@@ -143,11 +169,52 @@ export default function ProjectMilestonesPage(req, res) {
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
 
+<<<<<<< HEAD
     setMilestones(prev => [res.milestone, ...prev]);  }
     setMilestones(prev => [res.milestone, ...prev]);  };
 
 
 
+=======
+        if (!cancelled) setMilestones(data.milestones || [])
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message || 'Failed to load milestones')
+      } finally {
+        if (!cancelled) setLoading(false)
+      }
+})();
+    return () => {
+      cancelled = true
+    }
+=======
+      try {
+        const data = await fetchMilestones(projectId as string);
+
+        if (!cancelled) setLoading(false);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    })();
+    return () => {;
+      cancelled = true;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+=======
+    };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  }, [projectId]);
+
+=======
+
+    setMilestones(prev => [res.milestone, ...prev]);  };
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -165,8 +232,12 @@ export default function ProjectMilestonesPage(req, res) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
@@ -213,10 +284,15 @@ export default function ProjectMilestonesPage(req, res) {
           <p className="text-sm text-gray-600">Project: {projectId as string}</p>
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </div>
 
         {role !== 'talent' && (
@@ -343,5 +419,19 @@ if (return, ) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

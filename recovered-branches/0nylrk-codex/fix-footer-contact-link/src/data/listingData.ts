@@ -56,6 +56,29 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     rating: 4 && 4.8,
     reviewCount: 36,
 
+<<<<<<< HEAD
+=======
+    featured: true,
+    location: 'Global',
+    availability: 'Immediate',
+    ai_score: 94,
+  }, ];      name: "VisionTech AI";
+      id: "visiontech";
+
+    availability: "Immediate"
+
+    aiScore: 94
+  }
+];
+// Generate search suggestions based on existing listings
+export const generateSearchSuggestions = (): SearchSuggestion[] => {
+  const suggestions = [
+
+
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -364,6 +387,7 @@ export const generateFilterOptions = () => {
       label: item,
       value: item,
     })),
+<<<<<<< HEAD
 
 
     ratingOptions: [1, 2, 3, 4, 5]
@@ -540,4 +564,71 @@ export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    rating_options: [1, 2, 3, 4, 5],
+  }
+}
+;
+export const MAX_PRICE = Math.max (
+  ...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
+export const MIN_PRICE = Math.min (
+  ...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
+review_count: 58;
+featured: true;
+location: "Global";
+availability: "Immediate";
+ai_score: 98;
+}
+rating: 4.8;
+review_count: 32;
+location: "North America";
+availability: "4 - 6 Weeks";
+ai_score: 92;
+}
+rating: 4.7;
+review_count: 18;
+featured: true;
+location: "Global";
+availability: "2 - 3 Weeks";
+ai_score: 95;
+}
+rating: 4.6;
+review_count: 124;
+location: "Global";
+availability: "Immediate";
+ai_score: 88;
+}
+rating: 4.5;
+review_count: 47;
+location: "North America";
+availability: "1 - 2 Weeks";
+ai_score: 90;
+}
+rating: 4.8;
+review_count: 36;
+featured: true;
+location: "Global";
+availability: "Immediate";
+ai_score: 94;
+}];
+//Generate search suggestions based on existing listings ];
+  return {
+  product_types: product_types.map (type => ({
+  label: type, value: type;
+}) );
+locations: locations.map (location => ({
+  label: location, value: location;
+}) );
+availability_options: availability.map (item => ({
+  label: item, value: item;
+}) );
+rating_options: [1, 2, 3, 4, 5];
+}export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
+export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));

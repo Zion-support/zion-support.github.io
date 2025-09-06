@@ -1,15 +1,26 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
+<<<<<<< HEAD
 
   req: NextApiRequest
   res: NextApiResponse
 ) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status($1).json({ $2 });
 
@@ -50,6 +61,7 @@ if ( {) {
         payout_amount: 210,
         currency: 'USD'})
     }
+<<<<<<< HEAD
 
     const supabase = getServerSupabase();
     const events = ["visitsignupprofile_completedjob_createdhire"] as const;
@@ -77,6 +89,12 @@ if ( {) {
       conversion_rate: total_signups
         ? total_profile_completions / total_signups
 
+=======
+
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         : 0,
       payout_amount: total_profile_completions * 50,
       currency: "USD",
@@ -136,7 +154,10 @@ export default async function handler(req, res) {
     const supabase = getServerSupabase();
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const events = ['visitsignupprofile_completedjob_createdhire'] as const;
     const counts: Record<string, number> = {};
 
@@ -194,6 +215,7 @@ export default async function handler(req, res) {
 
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
@@ -201,3 +223,7 @@ export default async function handler(req, res) {
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -164,7 +164,10 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -180,11 +183,14 @@ if ( {) {
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder='Enter template name' />
@@ -272,6 +278,7 @@ if ( {) {
         
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -279,6 +286,10 @@ if ( {) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             Cancel
           </Button>
           <Button type='submit' disabled={saving}>
@@ -323,6 +334,7 @@ if ( {) {
                 Saving...
               </>
             ) : (
+<<<<<<< HEAD
 
 
               `${editTemplate ? 'Update' : 'Save'} Template`
@@ -347,16 +359,22 @@ try {
 }"}
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   editTemplate ? "Update" : "Save" 
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"};
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               `${editTemplate ? "Update" : "Save"} Template`
 
             )}

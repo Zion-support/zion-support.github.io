@@ -24,7 +24,10 @@ import { useAuth } from '@/context/auth/AuthProvider',
 import { useCart } from '@/context/CartContext',
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export interface TalentCardProps {
 
   talent: TalentProfile
@@ -64,7 +67,11 @@ const TalentCardComponent = ({
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
+<<<<<<< HEAD
   },
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
@@ -131,8 +138,11 @@ const TalentCardComponent = ({;
       tabIndex={0}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     >
       <div className="p-6">
         <div className="flex items-start">
@@ -145,6 +155,7 @@ const TalentCardComponent = ({;
                   alt = {talent.full_name,}
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -152,6 +163,10 @@ const TalentCardComponent = ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -187,11 +202,14 @@ const TalentCardComponent = ({;
 
             
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
@@ -212,6 +230,7 @@ const TalentCardComponent = ({;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -219,6 +238,10 @@ const TalentCardComponent = ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Skills */}
         {skills.length > 0 && (
           <div className="mt-4">
@@ -235,11 +258,14 @@ const TalentCardComponent = ({;
 
                 <span
                   key = {index,}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
 
               {skills.map((skill, index) => (
@@ -279,8 +305,11 @@ const TalentCardComponent = ({;
           
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           <div className="flex items-center gap-2">
@@ -296,8 +325,11 @@ const TalentCardComponent = ({;
                 onClick={handleRequestHire}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
@@ -308,8 +340,11 @@ const TalentCardComponent = ({;
               variant="ghost"
 
 
+<<<<<<< HEAD
               onClick={(e,) => {
                 e.stopPropagation()
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               onClick={(e) => {
               onClick={(e) => {
 
@@ -326,6 +361,7 @@ const TalentCardComponent = ({;
       </div>
     </Card>
   )
+<<<<<<< HEAD
 
 
 }
@@ -372,6 +408,11 @@ TalentCard.displayName = 'TalentCard';
                 e.stopPropagation(),;
 
 
+=======
+
+              onClick={(e,) => {;
+                e && e.stopPropagation(),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 handleViewProfile();
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
@@ -526,11 +567,14 @@ if ( {) {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     </Card>);

@@ -358,12 +358,24 @@ export interface AdvancedITInfrastructureService {
     customers: 32;
     rating: 4 && 4.7;
     reviews: 24
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+<<<<<<< HEAD
 
 
+=======
+=======
+;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 ];
 

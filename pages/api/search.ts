@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       ok: true,
       query: q,
@@ -16,15 +19,25 @@
     });
 
   } catch (e: any) {
+<<<<<<< HEAD
 
     res.status(500).json({ ok: false, error: e?.message |"Search failed" });
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
+<<<<<<< HEAD
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const q = (req.query.q as string) || '';
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
+<<<<<<< HEAD
 
 
     const keywords = Array.from(new Set([...(parsed.skills || []), ...(parsed.keywords || [])]));
@@ -94,3 +107,10 @@
 }
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+  }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

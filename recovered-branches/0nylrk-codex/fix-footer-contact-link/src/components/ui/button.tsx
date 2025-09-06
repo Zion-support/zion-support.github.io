@@ -10,10 +10,14 @@ import { cn } from "@/lib/utils"
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
   {
@@ -25,12 +29,26 @@ const buttonVariants = cva(
 
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90";
 
+<<<<<<< HEAD
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90";
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",;
+
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90";
+
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        destructive:
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -48,9 +66,13 @@ const buttonVariants = cva(
       size: "default"}}
 )
 
+<<<<<<< HEAD
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>;
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     VariantProps<typeof buttonVariants> {
@@ -144,8 +166,16 @@ const Button = React.forward_ref < HTMLButtonElement, ButtonProps>(
     return (
       <Comp;
         className={cn (button_variants ({ variant, size, class_name }))}
+<<<<<<< HEAD
 
 
+=======
+=======
+    return (;
+      <Comp;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         className={cn(buttonVariants({ variant, size, className }))}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ref={ref}
@@ -158,14 +188,20 @@ Button.displayName = "Button"
 export { Button, buttonVariants }
 
 
+<<<<<<< HEAD
 export { Button, buttonVariants };
 ;
 export { Button, buttonVariants }
 ;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -9,7 +9,10 @@ import {
 } from '@/utils/offworld/ipfs';
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {
   addJSON
@@ -18,12 +21,20 @@ import {
 } from '@/utils/offworld/ipfs';
 export default async function handler(
 
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
   req: NextApiRequest,
   res: NextApiResponse;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+  req: NextApiRequest,
+  res: NextApiResponse;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

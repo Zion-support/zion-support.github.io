@@ -7,11 +7,24 @@ export default function AISolutionsPage() {
   const aiSolutions = [
     {
 
+<<<<<<< HEAD
       id: 'machine-learning'
       title: 'Machine Learning Solutions'
       description:
         'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.'
       features: [
+=======
+      id: 'machine-learning',
+      title: 'Machine Learning Solutions',
+      description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
+    features: ['Predictive AnalyticsPattern RecognitionAnomaly DetectionRecommendation Systems'],
+      icon: '🧠',
+      category: 'Core AI',
+
+      complexity: 'Advanced'
+    }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         'Predictive Analytics',
         'Pattern Recognition',
@@ -22,9 +35,13 @@ export default function AISolutionsPage() {
       complexity: 'Advanced';
     };
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       id: 'natural-language-processing'
       title: 'Natural Language Processing'
@@ -319,11 +336,118 @@ export default function AISolutionsPage() {;
     'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas';
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                           {feature}
                         </li>
                       ))}
 
+=======
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;
+      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
+        <main className='container mx-auto px-6 py-12'>;
+          <section className='text-center mb-16'>;
+            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>;
+              AI Solutions;
+            </h1>;
+            <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
+              Cutting-edge artificial intelligence solutions that transform;
+              businesses and drive innovation;
+            </p>;
+          </section>;
+          <section className='mx-auto max-w-7xl'>;
+
+            {/* AI Solutions Grid */}
+            <div className='mb-16'>;
+              <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400'>;
+                Our AI Solutions;
+              </h2>;
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+                {aiSolutions && aiSolutions.map((solution, index) => (;
+                  <div
+                    key={index}
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'>;
+                    <div className='text-4xl mb-4'>{solution && solution.icon}</div>;
+                    <div className='flex items-center gap-2 mb-3'>;
+                      <span className='px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full'>;
+                        {solution && solution.category}
+                      </span>;
+                      <span className='px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full'>;
+                        {solution && solution.complexity}
+                      </span>;
+                    </div>;
+                    <h3 className='text-xl font-bold mb-3 text-white'>;
+                      {solution && solution.title}
+                    </h3>;
+                    <p className='text-white/70 mb-4'>{solution && solution.description}</p>;
+                    <ul className='space-y-1 mb-4'>;
+                      {solution && solution.features.map((feature, featureIndex) => (;
+                        <li
+                          key={featureIndex}
+                          className='text-sm text-white/60 flex items-center'>;
+                          <span className='text-cyan-400 mr-2'>•</span>                          {feature}
+                        </li>;
+                      ))}
+
+  ];
+  return (
+    <>
+      <Head>
+        <title>AI Solutions | Zion Tech Group - Advanced AI & Machine Learning</title>
+        <meta name="description" content="Explore Zion Tech Group's comprehensive AI solutions including machine learning, NLP, computer vision, and autonomous systems." />
+        <meta property="og:title" content="AI Solutions | Zion Tech Group" />
+        <meta property="og:description" content="Advanced AI solutions for machine learning, natural language processing, computer vision, and autonomous systems." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      
+
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              AI Solutions
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Cutting-edge artificial intelligence solutions that transform businesses and drive innovation
+            </p>
+          </section>
+          <section className="mx-auto max-w-7xl">
+
+                    </ul>;
+                    <Link      </Head>;
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
+        <main className="container mx-auto px-6 py-12">;
+          <section className="text-center mb-16">;
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">;
+              AI Solutions;
+            </h1>;
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">;
+              Cutting-edge artificial intelligence solutions that transform businesses and drive innovation;
+            </p>;
+          </section>;
+          <section className="mx-auto max-w-7xl">;
+
+            {/* AI Solutions Grid */}
+            <div className="mb-16">;
+              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Our AI Solutions</h2>;
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+                {aiSolutions && aiSolutions.map((solution, index) => (;
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
+                    <div className="text-4xl mb-4">{solution && solution.icon}</div>;
+                    <div className="flex items-center gap-2 mb-3">;
+                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{solution && solution.category}</span>;
+                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{solution && solution.complexity}</span>;
+                    </div>;
+                    <h3 className="text-xl font-bold mb-3 text-white">{solution && solution.title}</h3>;
+                    <p className="text-white/70 mb-4">{solution && solution.description}</p>;
+                    <ul className="space-y-1 mb-4">;
+                      {solution && solution.features.map((feature, featureIndex) => (;
+                        <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
+                          <span className="text-cyan-400 mr-2">•</span>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </ul>
 
                     <Link
@@ -357,8 +481,15 @@ export default function AISolutionsPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -369,8 +500,11 @@ export default function AISolutionsPage() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>;
             </div>;
 
@@ -378,8 +512,11 @@ export default function AISolutionsPage() {;
             {/* Industry Use Cases */}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Industry Use Cases */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -389,9 +526,12 @@ export default function AISolutionsPage() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 {useCases.map((useCase, index) => (
@@ -433,6 +573,11 @@ export default function AISolutionsPage() {;
             {/* Technologies */}
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -464,8 +609,11 @@ export default function AISolutionsPage() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       {tech}
                     </span>;
                   ))}
@@ -483,7 +631,11 @@ export default function AISolutionsPage() {;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Success Stories */}
 
 
@@ -524,6 +676,7 @@ export default function AISolutionsPage() {;
     </>
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -535,3 +688,18 @@ export default function AISolutionsPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+}
+    </>);
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

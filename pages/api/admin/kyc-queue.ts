@@ -1,9 +1,12 @@
 
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 const DATA_DIR = path.join(process.cwd(), 'datakyc')
@@ -15,6 +18,7 @@ const DATA_DIR = path.join(process.cwd(), 'datakyc');
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
 
+<<<<<<< HEAD
 function load(): Record<string, KycProfile> {
   try {
     if (!fs.existsSync(FILE)) return {};
@@ -27,12 +31,21 @@ function load(): Record<string, KycProfile> {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   } catch {
     return {};
   }
 }
 
 
+<<<<<<< HEAD
 
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
@@ -105,3 +118,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

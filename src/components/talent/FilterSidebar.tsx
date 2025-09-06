@@ -5,6 +5,7 @@ import { SkillsFilter } from "./filters/SkillsFilter",
 import { AvailabilityFilter } from "./filters/AvailabilityFilter",
 import { RegionFilter } from "./filters/RegionFilter",
 import { ExperienceFilter } from "./filters/ExperienceFilter",
+<<<<<<< HEAD
 
 
 import { PriceFilter } from "./filters/PriceFilter";
@@ -12,6 +13,8 @@ import { FilterSidebarProps } from "@/types/filters";
 export function FilterSidebar({
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import React from 'react';
@@ -69,6 +72,7 @@ export function FilterSidebar(): any ({;
   setSortOption;
   clearFilters;
 
+<<<<<<< HEAD
 
 export function FilterSidebar({
   searchTerm,
@@ -92,10 +96,13 @@ export function FilterSidebar({
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <>
       {/* Filter header */}
+<<<<<<< HEAD
 
 
       <div className='flex items-center justify-between mb-6'>
@@ -135,6 +142,8 @@ export function FilterSidebar({
         </Button>
       </div>
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           Filters
@@ -186,6 +195,7 @@ export function FilterSidebar({
   setSortOption,
   clearFilters,
 
+<<<<<<< HEAD
 
 
 
@@ -194,6 +204,8 @@ export function FilterSidebar({
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   isMobileFilterOpen
 }: FilterSidebarProps) {
   return (
@@ -204,7 +216,10 @@ export function FilterSidebar({
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           Filters
         </h3>
         <Button 
@@ -461,13 +476,35 @@ function FilterSidebar() {
         toggle_section={() => toggle_section ('price')}
         isMobileFilterOpen={isMobileFilterOpen}      />;
       {isMobileFilterOpen && (
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+        <Button;
+          on_click={() =>;
+            window.dispatch_event (new CustomEvent ('closeMobileFilter'));
+          }
+          className='w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4'        >;
+        <Button;
+          on_click = {(, ) => window.dispatch_event (new CustomEvent ('closeMobileFilter')), }
+          className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
+      {/* Search */}
+      <SearchFilter search_term={search_term} setSearchTerm={setSearchTerm} />;
+      {/* Sorting */}
+      <SortFilter sort_option={sort_option} setSortOption={setSortOption} />;
+      {/* Skills */}
+      <SkillsFilter;
+        selected_skills={selected_skills}
+        toggle_skill={toggle_skill}
+        expanded={expanded_sections.skills}
+        toggle_section={() => toggle_section ('skills')}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         isMobileFilterOpen={isMobileFilterOpen}
       />;
 
       {isMobileFilterOpen && (;
         <Button;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -476,14 +513,22 @@ function FilterSidebar() {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >
           Apply Filters
         </Button>
       )}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >;
         <Button
@@ -548,7 +593,32 @@ function FilterSidebar() {
           Apply Filters;
         </Button>;
       )}
+<<<<<<< HEAD
+=======
+    </>;
+  );
+<<<<<<< HEAD
+};
+}
+
+  );
+}
+        <Button;
+          on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
+          className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
+        >;
+          Apply Filters;
+        </Button>)}
+    </>);
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     </>;
   );
+<<<<<<< HEAD
+=======
+
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

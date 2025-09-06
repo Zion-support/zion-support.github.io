@@ -1,13 +1,17 @@
+<<<<<<< HEAD
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   for (const p of PROVIDERS) {
     const conn = state.connections.find(c => c.providerId === p.id)
     connections[p.id] = conn |{ providerId: p.id, status: 'disconnected' }
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -57,9 +61,38 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+=======
+=======
+}
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { read_state } from '../../../lib / integrations / file_store',
+import { PROVIDERS } from '../../../lib / integrations / registry',
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
+}
+  const state = read_state (),
+  const connections: Record < string, any> = {},
+  for (const p of PROVIDERS) {
+    const conn = state.connections.find (c => c.provider_id === p.id),
+    connections[p.id] = conn || { provider_id: p.id, status: 'disconnected' }
+  }
+  res.status (200).json ({ connections });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

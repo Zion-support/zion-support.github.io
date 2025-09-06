@@ -22,6 +22,7 @@ export default function PricingComparisonPage() {
           rating: '4.8/5'
           pros: ['Excellent templates', 'Good AI quality', 'Wide integrations']
           cons: [
+<<<<<<< HEAD
 
             'Higher pricing'
             'Limited customization'
@@ -34,6 +35,8 @@ export default function PricingComparisonPage() {
           rating: '4.6/5'
           pros: ['Unlimited words', 'Good value', 'Simple interface']
           cons: ['Basic features', 'Limited templates', 'No advanced SEO']
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             'Higher pricing',
@@ -65,7 +68,10 @@ export default function PricingComparisonPage() {
           cons: ['Basic featuresLimited templatesNo advanced SEO'],
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           savings: 'Save $17/month with Zion'
         },        {
           name: 'Writesonic'
@@ -304,9 +310,16 @@ export default function PricingComparisonPage() {
                 >;
                   <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;
                     {insight.icon}
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+                  </div>;
+                  <p className={`text - lg font - semibold ${insight.color}`}>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                     {insight.icon}
@@ -329,8 +342,16 @@ export default function PricingComparisonPage() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Detailed Comparison */}
 
         <section id="comparison" className="py-24 bg-gray-800">
@@ -507,6 +528,24 @@ export default function PricingComparisonPage() {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+=======
+                    <div key={compIndex} className='lg:col-span-1'>
+                      <Card className='h-full border border-gray-700'>
+                        <div className='text-center p-6'>
+                          <div className='inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 text-gray-400 text-sm font-medium mb-4'>
+                            {competitor.name}
+                          </div>
+
+                          <div className='flex items-center justify-center mb-4'>                            {[...Array(5)].map((_, i) => (
+
+                            {[...Array(5)].map((_, i) => (
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -523,11 +562,15 @@ export default function PricingComparisonPage() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           </div>
                           <div className='mb-4'>
                             <p className='text-lg font-semibold text-white'>
@@ -577,6 +620,10 @@ export default function PricingComparisonPage() {
                                 ))}
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   ))}
 </div>;
               </div>;
@@ -598,8 +645,11 @@ export default function PricingComparisonPage() {
         {/* CTA Section */}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -607,10 +657,13 @@ export default function PricingComparisonPage() {
 
               Ready to Save Money and Get Better Features?
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             </h2>
@@ -645,6 +698,25 @@ export default function PricingComparisonPage() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                className='bg-white text-indigo-600 hover:bg-gray-100'              >                href="/ai-content-generator"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-indigo-600 hover:bg-gray-100"
+                Try AI Content Generator
+              </Button>
+
+              <Button
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -4,6 +4,7 @@ totalSize: number;
   loadTime: number;
 
 
+<<<<<<< HEAD
 
   const { user } = useAuth()
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
@@ -20,6 +21,8 @@ totalSize: number;
     // Only show in development or when explicitly enabled
     const show =
       process.env.NODE_ENV === 'development' |
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const show = null;
       process.env.NODE_ENV === 'development' ||
 
@@ -84,6 +87,7 @@ if (return) {
     if (typeof window === 'undefined') return;
     setIsCollecting(true)
     try {
+<<<<<<< HEAD
 
 
       // Get performance entries for script resources
@@ -123,6 +127,8 @@ if (return) {
         loadTime: totalLoadTime / chunkData.length
         cacheHitRate: cacheHitRate * 100
       })
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
         totalSize,
@@ -133,8 +139,11 @@ if (return) {
       });
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
       // Get performance entries for script resources;
@@ -334,6 +343,7 @@ export function BundleAnalyzer() {;
           className="bg-background/80 backdrop-blur-sm"
         >
           <Package className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -341,6 +351,10 @@ export function BundleAnalyzer() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           Bundle Analyzer
         </Button>
       </div>
@@ -389,6 +403,7 @@ export function BundleAnalyzer() {;
                 onClick={toggleAnalyzer}
                 className="h-6 w-6 p-0"
               >
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -396,6 +411,10 @@ export function BundleAnalyzer() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 ✕
               </Button>
             </div>
@@ -501,8 +520,11 @@ if ( {) {
                           {chunk.name}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -516,11 +538,14 @@ if ( {) {
                       >
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         {formatSize(chunk.size)}
                       </Badge>
                     </div>
@@ -540,6 +565,7 @@ if ( {) {
             </>
           ) : (
 
+<<<<<<< HEAD
 
             <div className='text-xs text-muted-foreground'>
               {isCollecting
@@ -551,6 +577,8 @@ if ( {) {
       </Card>
     </div>
   )
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } 
 
 }
@@ -562,11 +590,14 @@ if ( {) {
     </div>;
   );
 } ;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

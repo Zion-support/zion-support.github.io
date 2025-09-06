@@ -1,6 +1,16 @@
 
+<<<<<<< HEAD
 const { execSync } = require('child_process');
 
+=======
+const { exec_sync } = require ('child_process'),
+console.log ('🚀 Starting simple merge process...'),
+try {
+  // Check git status;
+  console.log ('📊 Checking git status...'),
+  const status = exec_sync ('git status --porcelain', { encoding: 'utf8' }),
+  console.log ('Git status:', status || 'Clean working directory'),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Fetch latest changes;
   console.log ('📥 Fetching latest changes...'),
   exec_sync ('git fetch --all --prune'),
@@ -16,11 +26,18 @@ const { execSync } = require('child_process');
     console.log ('⚠️  Merge conflicts detected. Resolving...'),
     // Find files with merge conflicts;
 
+<<<<<<< HEAD
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     if (conflictFiles.trim()) {console.log('Found merge conflicts in:', conflictFiles.trim());
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 console.log('🚀 Starting simple merge process...'),;
 try {;
   // Check git status;
@@ -44,6 +61,7 @@ try {;
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),;
     if (conflictFiles.trim()) {;
       console.log('Found merge conflicts in:', conflictFiles.trim()),;
+<<<<<<< HEAD
       // Resolve conflicts by accepting our version;
 
       const files = conflictFiles.trim().split('\n');
@@ -51,6 +69,12 @@ try {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+      // Resolve conflicts by accepting our version;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       for (const file of files) {;
         if (file.trim()) {;
           console.log(`Resolving conflicts in: ${file}`);
@@ -110,11 +134,14 @@ try {;
   const branchList = branches.split('\n');
     .map(branch => branch.trim());
 
+<<<<<<< HEAD
     .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   console.log(`Found ${branchList.length} branches to merge: `),;
   branchList.forEach(branch => console.log(`  - ${branch}`)),;
   // Merge each branch;

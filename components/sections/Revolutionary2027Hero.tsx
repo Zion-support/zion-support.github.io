@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 
 } from 'lucide-react';
@@ -35,6 +36,10 @@ const Revolutionary2027Hero = () => {
     { icon: Atom, delay: 3, position: 'bottom-1/3 left-1/2' }
     { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' },  ];    { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' }
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -125,6 +130,7 @@ const Revolutionary2027Hero = () => {;
 
 
       {/* Animated Grid Pattern */}
+<<<<<<< HEAD
 
 
 
@@ -144,12 +150,36 @@ const Revolutionary2027Hero = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      <div className='absolute inset-0 opacity-20'>;
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  };
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">;
+      {/* Enhanced Background Effects */}
+
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0 && 0.15),transparent_50%)]"></div>;
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0 && 0.1),transparent_50%)]"></div>;
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0 && 0.08),transparent_50%)]"></div>;
+      {/* Animated Grid Pattern */}
+      <div className="absolute inset-0 opacity-20">;
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>;
+      </div>;
+
+
+=======
+
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  };
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Floating Icons */}
       {floatingIcons && floatingIcons.map((item, index) => (;
         <motion&& motion.div
           key={index}
           className={`absolute ${item && item.position} text-purple-400/30`}
           animate={{
+<<<<<<< HEAD
 
             y: [0, -20, 0]
             rotate: [0, 5, -5, 0]
@@ -168,6 +198,18 @@ const Revolutionary2027Hero = () => {;
         >
           <item.icon className='w-8 h-8' />            ease: "easeInOut"
 
+=======
+
+
+          }}          transition={{
+
+
+            duration: 4,
+            delay: item && item.delay,
+            repeat: Infinity,
+
+            ease: "easeInOut"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }}
         >
           <item.icon className="w-8 h-8" />
@@ -202,6 +244,7 @@ const Revolutionary2027Hero = () => {;
           animate="visible"
           className="space-y-8">;
           {/* Main Heading */}
+<<<<<<< HEAD
 
           <motion.div variants={itemVariants} className="space-y-6">
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight">
@@ -219,6 +262,8 @@ const Revolutionary2027Hero = () => {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           <motion && motion.div variants={itemVariants} className="space-y-6">;
@@ -237,6 +282,7 @@ const Revolutionary2027Hero = () => {;
               <span>Technology</span>;
             </div>;
           </motion && motion.div>;
+<<<<<<< HEAD
 
 
 
@@ -246,6 +292,8 @@ const Revolutionary2027Hero = () => {;
             </div>
           </motion.div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Subtitle */}
           <motion && motion.div variants={itemVariants} className='max-w-4xl mx-auto'>;
             <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed'>;
@@ -665,9 +713,18 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>;
       {/* Particle Effects */}
 
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+      {/* Particle Effects */}
+      <div className='absolute inset-0 pointer-events-none'>
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         {[...Array(20)].map((_, i) => (
@@ -714,6 +771,40 @@ export default Revolutionary2027Hero;
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    </section>
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              left: `${Math.random () * 100}%`,
+              top: `${Math.random () * 100}%`,
+            }}            animate={{
+              coordinate_y: [0, -100],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 3 + Math.random () * 2,
+              repeat: Infinity,
+              delay: Math.random () * 2,
+            }}          />))}
+      </div>;
+    </section>);
+}
+;
+export default Revolutionary2027Hero;              delay: Math.random () * 2}}
+          />))}
+      </div>;
+    </section>);
+}
+;
+export default Revolutionary2027Hero);
+}
+;
+export default Revolutionary2027Hero;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

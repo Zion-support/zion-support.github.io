@@ -13,6 +13,10 @@ import React from 'react';
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);

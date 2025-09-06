@@ -1,10 +1,15 @@
 
+<<<<<<< HEAD
 
+=======
+import React from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useNavigate} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {ProductListing} from "@/types/listings";
 import {Star, DollarSign} from "lucide-react";
+<<<<<<< HEAD
 
 import { useNavigate } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
@@ -13,6 +18,8 @@ import { ProductListing } from "@/types/listings";
 import { Star, DollarSign } from "lucide-react";
 interface ProductListingCardProps {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface ProductListingCardProps {;
   listing: ProductListing,;
@@ -30,6 +37,7 @@ export function ProductListingCard(): any ({ ;
 }: ProductListingCardProps) {;
   const isGrid = view === 'grid';
   const navigate = useNavigate();
+<<<<<<< HEAD
   // Get the first image or use a placeholder
   const imageUrl = listing.images && listing.images.length > 0
     ? listing.images[0]
@@ -41,6 +49,9 @@ import { Star, DollarSign } from "lucide-react",
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 interface ProductListingCardProps {
@@ -205,10 +216,15 @@ if ( {) {
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Image */}
 
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>;
@@ -249,6 +265,7 @@ if ( {) {
             )}
           </div>
           </div>;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -301,6 +318,8 @@ if ( {) {
               size="sm"
               onClick={(e) => {
                 e.stopPropagation();
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Title & Description */}

@@ -101,9 +101,12 @@ const getStatusIcon = (status: string) => {
       return <Clock className="h-4 w-4" />;
   }
 
+<<<<<<< HEAD
 
 }
 export default function OrderDetail() {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };
 
 export default function OrderDetail() {;
@@ -253,6 +256,7 @@ if ( {) {
 
   if (isLoading || !order) {;
     return (
+<<<<<<< HEAD
 
 
       <div className="container mx-auto px-4 py-8">
@@ -268,6 +272,12 @@ if ( {) {
       </div>
 
 
+=======
+      <div className='container max-w-3xl py-10'>;
+        <Skeleton className='h-6 w-full' />;
+      </div>;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     );
   }
   return (
@@ -531,11 +541,14 @@ if ( {) {
   );
 
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                   <div className="flex items - center space - x-3">;
                     <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
@@ -635,6 +648,7 @@ export default function OrderDetailPage() {;
     return (
       <div className="container max-w-3xl py-10">
         <Skeleton className="h-6 w-full" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -642,6 +656,10 @@ export default function OrderDetailPage() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </div>
     )
   }

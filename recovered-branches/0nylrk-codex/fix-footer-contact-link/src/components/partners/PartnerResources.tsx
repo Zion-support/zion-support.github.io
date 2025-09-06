@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
@@ -13,6 +14,11 @@ import { toast } from "@/hooks/use-toast",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ResourceItem {
 
   id: string
@@ -137,14 +143,18 @@ import {toast} from "@/hooks/use-toast";
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
                 </CardContent>
               </Card>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
+<<<<<<< HEAD
 
           </div>
         </CardContent>
@@ -200,6 +210,14 @@ import {toast} from "@/hooks/use-toast";
   )
 
 
+=======
+
+
+};
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>;
         </CardContent>;
       </Card>;
@@ -259,6 +277,7 @@ import {toast} from "@/hooks/use-toast";
         </CardContent>;
       </Card>;
 
+<<<<<<< HEAD
     </div>;
   );
 
@@ -268,3 +287,14 @@ import {toast} from "@/hooks/use-toast";
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+    </div>);
+
+}
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

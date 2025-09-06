@@ -56,15 +56,98 @@ if (return) {
       x: number,
       y: number,
 
+<<<<<<< HEAD
+=======
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        size: Math.random() * 2 + 1,
+        color: ['#06b6d4#3b82f6#8b5cf6#ec4899'][Math.floor(Math.random() * 4)],
+
+        opacity: Math.random() * 0.5 + 0.1
+      })
+    }
+    const animate = () => {
+      time += 0.01;
+
+      
+
+      // Clear canvas with fade effect
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Update and draw particles
+      particles.forEach((particle, index) => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+        // Draw particle with glow effect
+        ctx.save();
+        ctx.globalAlpha = particle.opacity;
+
+        
+        // Glow effect
+        ctx.shadowColor = particle.color;
+        ctx.shadowBlur = 10;
+        
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color;
+        ctx.fill();
+        
+
+        ctx.restore()
+      });
+      // Draw connecting lines between nearby particles
+      ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
+      ctx.lineWidth = 0.5;
+
+      
+
+      for (let i = 0, i < particles.length, i++) {
+        for (let j = i + 1, j < particles.length, j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke()
+
+          }
+        }
+      }
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ctx.stroke();          }
 
           }
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }
       }
 
@@ -572,11 +655,19 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
       <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Floating Elements */}
       <div className='absolute inset-0'>
         {/* Animated Grid Pattern */}
@@ -804,6 +895,7 @@ if ( {) {
         <motion.div;
           className="absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full";
           animate={{
+<<<<<<< HEAD
 
             rotate: [360, 0];
             scale: [1, 1.2, 1];
@@ -870,10 +962,15 @@ if ( {) {
             duration: 18,
             repeat: Infinity,
             ease: 'linear',
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }}
 
         />;
@@ -898,6 +995,7 @@ if ( {) {
         <motion&& motion.div
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
           animate={{
+<<<<<<< HEAD
 
             y: [0, -20, 0];
             opacity: [0.4, 0.8, 0.4]
@@ -911,6 +1009,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           }}
@@ -1009,6 +1109,14 @@ if ( {) {
 
           }}
           transition={{
+<<<<<<< HEAD
+=======
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           }}
@@ -1074,8 +1182,39 @@ if ( {) {
           }
           100% {
             transform: translate (50px, 50px);
+<<<<<<< HEAD
 
 
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            duration: 5
+            repeat: Infinity
+            ease: 'easeInOut'
+=======
+            duration: 5,
+            repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'easeInOut',
+            delay: 2,
+          }}
+        />
+      </div>
+            ease: "easeInOut",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            delay: 2
+          }}
+        />
+      </div>
+<<<<<<< HEAD
+            ease: "easeInOut"
+            delay: 2
+          }}
+        />
+      </div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             duration: 5,
             repeat: Infinity,
 
@@ -1127,13 +1266,34 @@ if ( {) {
 export default UltraFuturisticBackground2040;
 
 
+<<<<<<< HEAD
+=======
+      `}</style>;
+    </div>);
+}export default UltraFuturisticBackground2040;            opacity: 0.5;
+          }
+        }
+      `}</style>;
+    </div>);
+}  );
+}
+;
+export default UltraFuturisticBackground2040;
+;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

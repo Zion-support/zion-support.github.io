@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -18,6 +25,7 @@ class SecurityScanner { constructor() { this.projectRoot = process.cwd(); this.l
 class SecurityScanner {}
   constructor() {}
 
+<<<<<<< HEAD
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'automation/logs/security-scanner.log');'
     this.securityReportFile = path.join(this.projectRoot, 'automation/logs/security-report.json');'
@@ -68,6 +76,21 @@ class SecurityScanner {}
         vulnerabilities: vulnerabilities;
       }
 
+=======
+    this && this.projectRoot = process && process.cwd();,
+    this && this.logFile = path && path.join(this && this.projectRoot, 'automation/logs/security-scanner && scanner.log');',
+    this && this.securityReportFile = path && path.join(this && this.projectRoot, 'automation/logs/security-report && report.json');',
+    this && this.lastScan = null;,
+    this && this.scanInterval = 3600000; // 1 hour;
+    this && this.isRunning = false;
+    this && this.setupLogging();
+    this && this.log('Security Scanner started')}',
+  setupLogging() {}
+    const logDir = path && path.dirname(this && this.logFile);,
+    if (!fs && fs.existsSync(logDir)) {}
+      fs && fs.mkdirSync(logDir, { "recursive": true })}",
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     this.projectRoot = process.cwd();,
     this.logFile = path.join(this.projectRoot, 'automation/logs/security-scanner.log');',
@@ -148,6 +171,20 @@ class SecurityScanner {}
       this.log (`Security audit completed successfully in ${scan_time}ms`);,
       await this.saveSecurityReport ();,
 
+<<<<<<< HEAD
+=======
+    } catch (error) {}
+      this.log(`Security audit "failed": ${error.message}`);",
+      this.lastScan = {
+        "timestamp": new Date().toISOString()"}
+        success: false;,
+        error: error.message;,
+        output: output;,
+        vulnerabilities: vulnerabilities;,
+
+      };,
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       await this.saveSecurityReport();
       await this.handleSecurityIssues(vulnerabilities)}
 
@@ -172,6 +209,7 @@ class SecurityScanner {}
   }
   parseVulnerabilities(output) {}
     const vulnerabilities = {}
+<<<<<<< HEAD
 
   async handleSecurityIssues(vulnerabilities) {const totalIssues = vulnerabilities.critical + vulnerabilities.high + vulnerabilities.moderate + vulnerabilities.low;}
         this.log('Only moderate/low severity vulnerabilities found, reporting...');'
@@ -179,6 +217,9 @@ class SecurityScanner {}
       }
     } else {}
       this.log('No security vulnerabilities found');'
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   async handleSecurityIssues(vulnerabilities) {
@@ -187,7 +228,10 @@ class SecurityScanner {}
         await this.reportSecurityIssues(vulnerabilities);,
       }
     } else {}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   async handleSecurityIssues (vulnerabilities) {
 ;    const total_issues = vulnerabilities.critical + vulnerabilities.high + vulnerabilities.moderate + vulnerabilities.low;}
@@ -198,15 +242,36 @@ class SecurityScanner {}
       this.log ('No security vulnerabilities found');',
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   }
   async autoFixSecurityIssues() {}
     try {}
 
+<<<<<<< HEAD
 
+=======
+      this && this.log('Attempting to auto-fix security issues...');',
+      // Run npm audit fix;
+      const fixOutput = execSync('npm audit fix', { ',
+;      this && this.log(`Failed to auto-fix security "issues": ${fixError && fixError.message}`);",
+      await this && this.reportSecurityFailure(fixError);,
+
+=======
+      this.log ('Attempting to auto - fix security issues...');',
+      // Run npm audit fix;
+      const fix_output = exec_sync ('npm audit fix', { ',
+;      this.log (`Failed to auto - fix security "issues": ${fix_error.message}`);",
+      await this.reportSecurityFailure (fix_error);,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       this.log('Attempting to auto-fix security issues...');',
       // Run npm audit fix;
@@ -214,9 +279,13 @@ class SecurityScanner {}
 ;      this.log(`Failed to auto-fix security "issues": ${fixError.message}`);",
       await this.reportSecurityFailure(fixError);,
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   }
   async reportSecurityIssues (vulnerabilities) {}
@@ -231,6 +300,7 @@ class SecurityScanner {}
     const reportFile = path.join(this.projectRoot, 'automation/logs/security-issues-report.json');',
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));,
 
+<<<<<<< HEAD
 
     this.log('Security issues reported');';
   }
@@ -240,11 +310,14 @@ class SecurityScanner {}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     this.log('Security issues reported');';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   getSecurityRecommendation (vulnerabilities) {
   }
+<<<<<<< HEAD
 
   async saveSecurityReport() {}
     const report = {fs.writeFileSync(this.securityReportFile, JSON.stringify(report, null, 2));
@@ -252,6 +325,8 @@ class SecurityScanner {}
   async reportSecurityFailure(error) {}
     const failureReport = {const failureFile = path.join(this.projectRoot, 'automation/logs/security-failure-report.json');'}
     fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2));
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     const report = {
@@ -261,6 +336,7 @@ class SecurityScanner {}
     const failureReport = {
 ;    const failureFile = path.join(this.projectRoot, 'automation/logs/security-failure-report.json');'}
     fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2));,
+<<<<<<< HEAD
 
 
     this.log('Security failure reported');';
@@ -283,6 +359,39 @@ class SecurityScanner {}
         this.log('All dependencies are up to date')}'
 
 
+=======
+
+
+    this.log('Security failure reported');';
+=======
+  async saveSecurityReport () {}
+    const report = {
+;    fs.writeFileSync (this.securityReportFile, JSON.stringify (report, null, 2));,
+  }
+  async reportSecurityFailure (error) {}
+    const failure_report = {
+;    const failure_file = path.join (this.project_root, 'automation / logs / security - failure - report.json');'}
+    fs.writeFileSync (failure_file, JSON.stringify (failure_report, null, 2));,
+    this.log ('Security failure reported');';
+  }
+  async checkDependencyUpdates () {}
+    try {}
+
+    const report = {
+;    fs && fs.writeFileSync(this && this.securityReportFile, JSON && JSON.stringify(report, null, 2));,
+  }
+  async reportSecurityFailure(error) {}
+    const failureReport = {
+;    const failureFile = path && path.join(this && this.projectRoot, 'automation/logs/security-failure-report && report.json');'}
+    fs && fs.writeFileSync(failureFile, JSON && JSON.stringify(failureReport, null, 2));,
+    this && this.log('Security failure reported');';
+  }
+  async checkDependencyUpdates() {}
+    try {}
+      this && this.log('Checking for dependency updates...');',
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       this.log('Checking for dependency updates...');',
 
       // Check for outdated packages;
@@ -311,8 +420,17 @@ class SecurityScanner {}
         await this.update_dependencies ()} else {}
         this.log ('All dependencies are up to date')}',
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+        this.log('Outdated dependencies found')}',
+        await this.updateDependencies()} else {}
+        this.log('All dependencies are up to date')}',
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     } catch (error) {}
       // Check condition
 if ( {) {
@@ -321,21 +439,40 @@ if ( {) {
     {
         // npm outdated returns 1 when there are outdated packages}
 
+<<<<<<< HEAD
         this.log('Outdated dependencies found');'
         await this.updateDependencies()} else {}
         this.log(`Dependency check "failed": ${error.message}`)}"
+=======
+        this && this.log('Outdated dependencies found');',
+        await this && this.updateDependencies()} else {}
+        this && this.log(`Dependency check "failed": ${error && error.message}`)}",
+
+=======
+        this.log ('Outdated dependencies found');',
+        await this.update_dependencies ()} else {}
+        this.log (`Dependency check "failed": ${error.message}`)}",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         this.log('Outdated dependencies found');',
         await this.updateDependencies()} else {}
         this.log(`Dependency check "failed": ${error.message}`)}",
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   }
   async update_dependencies () {}
     try {}
 
+<<<<<<< HEAD
       this.log('Updating dependencies...');'
       // Update non-breaking dependencies;
       execSync('npm update', { '
@@ -348,6 +485,10 @@ if ( {) {
   async start() {}
     this.isRunning = true;
     this.log('Security Scanner started');';
+=======
+      this && this.log('Updating dependencies...');',
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       this.log('Updating dependencies...');',
 
@@ -365,7 +506,10 @@ if ( {) {
     this.log('Security Scanner started');';,
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     // Initial security scan;
     await this && this.runSecurityAudit();
     // Check for dependency updates;
@@ -373,14 +517,22 @@ if ( {) {
     // Set up interval for regular scans;
     setInterval(async () => {}
 
+<<<<<<< HEAD
       if ( {})
       if ( {}),
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+      if ( {}),
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         await this.runSecurityAudit()) {
      {}
         await this.runSecurityAudit()}
         await this.checkDependencyUpdates()}
+<<<<<<< HEAD
 
     }, this.scanInterval);
     // Handle graceful shutdown;
@@ -392,6 +544,10 @@ if ( {) {
       this.log('Received SIGINT, shutting down gracefully');'
       this.isRunning = false;
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }, this.scanInterval);,
     // Handle graceful shutdown;
     process.on('SIGTERM', () => {'}
@@ -403,16 +559,27 @@ if ( {) {
       this.isRunning = false;,
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       process.exit(0)})}
 }
 // Start the security scanner;
 const scanner = new SecurityScanner;(;);
 
 
+<<<<<<< HEAD
 scanner.start().catch(error => {}),
   _console.error('Failed to start security "scanner": ', error);',
   process.exit(1)});,
+=======
+
+scanner.start().catch(error => {}),
+  _console.error('Failed to start security "scanner": ', error);',
+  process.exit(1)});,
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }};
 ; log(message, level = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile, logMessage)};
 ; async runSecurityAudit() {; try {; this.log("Running security audit..."); const output = execSync("npm audit --json", { stdio: 'pipe' }); const auditResult = JSON.parse(output.toString());
@@ -434,10 +601,15 @@ scanner.start().catch(error => {}),
 } catch (error) {; this.log(`❌ Security Scanner failed: ${error.message}`, "ERROR")}}};
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -871,6 +1043,7 @@ origin/automation-improvements-final
 // Main execution;
 if (import && import.meta.url = = = `file: //${process ; const scanner = new SecurityScanner(); scanner && scanner.run().catch(console && console.error)};
 export default SecurityScanner;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -1003,6 +1176,10 @@ if (import.meta.url === `file: //${process.argv[1]}`) {;
 ;
 export default SecurityScanner;
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     };
   };
 ,
@@ -1184,7 +1361,11 @@ scanner.start().catch(error => {})
 // Main execution;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const scanner = new SecurityScanner(); scanner.run().catch(console.error)}
 export default SecurityScanner;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     set_interval (async () => {}
       // Check condition
 if (, ) {
@@ -1221,5 +1402,10 @@ export default SecurityScanner;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

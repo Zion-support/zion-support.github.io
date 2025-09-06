@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {ChatBotPanel} from "./ChatBotPanel";
@@ -13,6 +16,7 @@ export function SupportWidget() {;
 
 
   return (
+<<<<<<< HEAD
 
     <>
 
@@ -28,10 +32,14 @@ export function SupportWidget() {
   return (
     <>
 
+=======
+    <>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button
 
+<<<<<<< HEAD
 
 import { cn } from "@/lib/utils",
 import { useTheme } from "@/hooks/useTheme",
@@ -54,6 +62,11 @@ export function SupportWidget() {;
     <>;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button

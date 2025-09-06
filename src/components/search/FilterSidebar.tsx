@@ -70,6 +70,7 @@ export default FilterSidebar;
             </div>
           ))}
         </div>
+<<<<<<< HEAD
 
 
       </div>
@@ -78,6 +79,8 @@ export default FilterSidebar;
 '"`
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   filters: FilterGroup[];
@@ -122,3 +125,26 @@ function FilterSidebar() {
     </>;
   )};
 '"`;
+<<<<<<< HEAD
+=======
+
+
+
+import React from 'react',;
+interface FilterSidebarProps {;
+  className?: string,;
+  children?: React.ReactNode;
+}
+;
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
+  className,;
+  children;
+}) => {;
+  return (;
+    <div className={`filter-sidebar ${className || ''}`}>;
+      {children}
+    </div>;
+  );
+};
+export default FilterSidebar;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

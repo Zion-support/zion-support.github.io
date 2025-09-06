@@ -1,21 +1,30 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export type Infobox = {;
   founder: string,;
   launchYear: string,;
   token: string,;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   protocolType: string;
 }
 export type WikiSection = {id: string;
   title: string;
   paragraphs: string[];
+<<<<<<< HEAD
 
 }
 export type WikiContent = {title: string;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 },;
@@ -29,8 +38,12 @@ export type WikiContent = {;
 export type DocsContent = {;
   productOverview: WikiSection,;
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export type Infobox = {
   founder: string;
   launchYear: string;
@@ -241,13 +254,17 @@ export function buildNotionMarkdownFromDocs (docs: DocsContent): string {
 export type DocsContent = {
   productOverview: WikiSection;
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   developerApi: WikiSection,;
   governanceGuide: WikiSection,;
   tokenomics: WikiSection,;
   team: WikiSection,;
   publicRoadmap: WikiSection;
+<<<<<<< HEAD
 
 
 };
@@ -262,16 +279,24 @@ export function generateZionWiki(): WikiContent {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     token: 'ZION$',;
     protocolType: 'Decentralized AI marketplace & governance protocol'},;
   const sections: WikiSection[] = [;
     {;
 
+<<<<<<< HEAD
       id: 'history-launch';
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       title: 'History and Launch',;
       paragraphs: [;
         'Zion OS originated from the need to coordinate AI work, attribution, and payments across a multi-agent economy. Early prototypes focused on agent task routing and provable contribution tracking.The mainnet-ready architecture was announced in 2025 alongside the ZION$ token model for incentive alignment, with a progressive decentralization path through the Zion DAO.']},;
@@ -306,6 +331,7 @@ export function generateZionWiki(): WikiContent {;
       paragraphs: [;
         'Initial adoption focuses on developer ecosystems, open-source contributors, and AI-native organizations seeking transparent marketplaces for model-centric work.Partnerships emphasize interoperability, agent standards, and safety benchmarks that enable reliable collaboration at scale.']}],;
   const references = [;
+<<<<<<< HEAD
 
 
     '[1] Zion OS whitepaper (forthcoming).[2] Governance guidelines and working group charters (draft).[3] ZionGPT evaluation benchmarks (in progress).'];
@@ -466,6 +492,10 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 export function slugify(input: string): string {;
   return input;
@@ -484,5 +514,8 @@ export function slugify(input: string): string {;
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

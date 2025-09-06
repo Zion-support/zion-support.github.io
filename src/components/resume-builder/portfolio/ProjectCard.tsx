@@ -8,11 +8,23 @@ import Image from 'next/image';
 import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {
 
+<<<<<<< HEAD
+=======
+
+  project: PortfolioProject;
+  onEdit: (project: PortfolioProject) => void;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   onDelete: (projectId: string) => void; import Image from 'next/image'
 interface ProjectCardProps {
   project: PortfolioProject
   onEdit: (project: PortfolioProject,) => void
   onDelete: (projectId: string,) => void
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 
@@ -136,6 +148,12 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
+<<<<<<< HEAD
+=======
+  const [ deleteDialogOpen, setDeleteDialogOpen ] = useState(false),
+
+  
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const handleDelete = () => {
     if (project.id) {
       onDelete(project.id)
@@ -145,6 +163,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
 
 
+<<<<<<< HEAD
 ;
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
@@ -160,6 +179,8 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -179,6 +200,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
             className="object-cover"
             loading="lazy"
           />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -186,6 +208,10 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted">
             <FileText className="h-12 w-12 text-muted-foreground/50" />
@@ -258,11 +284,14 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
             <a
               href={project.github_url}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -273,6 +302,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
               </Button>
             </Link>
           )}
+<<<<<<< HEAD
 
 
 
@@ -292,6 +322,8 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
               </Button>;
             </a>;
           )}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         </div>;
 
@@ -310,8 +342,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
             onClick={() => setDeleteDialogOpen(true)}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <Link className="h-4 w-4" />
               </Button>
             </Link>
@@ -329,6 +364,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
         </div>
       </CardFooter>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -337,6 +373,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -446,8 +487,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 
             <AlertDialogAction
               onClick={handleDelete}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className='bg-destructive text-destructive-foreground'>              Delete              Are you sure you want to delete this project? This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
@@ -457,8 +501,11 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
               onClick={handleDelete}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
@@ -468,6 +515,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
               className='bg-destructive text-destructive-foreground'
             >            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -475,6 +523,10 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>

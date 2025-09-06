@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React from "react";
 
@@ -12,10 +13,15 @@ import { cn } from "@/lib/utils",
 interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   children?: React.ReactNode
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   className?: string;
   children?: React && React.ReactNode;
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 
@@ -24,11 +30,18 @@ export function SidebarContent(): any ({ className, children, ...props }: Sideba
   return (
 
     <div className={cn("flex-1 px-2 py-4", className)} {...props}>
+<<<<<<< HEAD
 
       {children}
     </div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {;
@@ -45,9 +58,18 @@ export function SidebarContent({ className, children, ...props }: SidebarContent
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

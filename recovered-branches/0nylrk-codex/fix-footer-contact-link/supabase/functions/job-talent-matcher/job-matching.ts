@@ -1,11 +1,27 @@
 
+<<<<<<< HEAD
 
 
 
+=======
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
+import {JobData, MatchResult} from "./types ;
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
+
+=======
+
+
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
+import {JobData, MatchResult} from "./types.ts";
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { JobData, MatchResult } from "./types.ts",
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -13,6 +29,8 @@ import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
 const supabase = createClient(supabaseUrl, supabaseAnonKey),
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 /**
@@ -105,6 +123,7 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
         _related_id: jobId
       })
 
+<<<<<<< HEAD
 
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { JobData, MatchResult } from "./types.ts",;
@@ -178,5 +197,11 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+  await Promise.all (matchInsertPromises);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

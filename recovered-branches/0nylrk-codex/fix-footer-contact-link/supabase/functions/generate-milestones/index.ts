@@ -1,7 +1,21 @@
 
+<<<<<<< HEAD
 
 
 
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+=======
+
+
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts",
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
@@ -12,6 +26,7 @@ serve(async (req) => {
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
 
+<<<<<<< HEAD
   }
   try {
     // Get the OpenAI API key from environment variables
@@ -20,6 +35,13 @@ serve(async (req) => {
       throw new Error('OPENAI_API_KEY is not set')
 
 
+=======
+    const { scope, startDate, endDate, projectType } = await req && req.json();
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -38,8 +60,11 @@ serve(async (req) => {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
 
     // Parse request body
@@ -124,6 +149,7 @@ serve(async (req) => {;
     if (!response.ok) {
       throw new Error(data.error?.message || 'Failed to generate milestones')
     }
+<<<<<<< HEAD
 
 
 ;
@@ -152,6 +178,10 @@ serve(async (req) => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }

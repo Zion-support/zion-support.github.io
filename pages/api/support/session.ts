@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -54,3 +55,22 @@ export default async function handler(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { sessionId, eventType, payload } = req.body as { sessionId: string, eventType: string, payload?: any };
+  if (!sessionId || !eventType) return res.status(400).json({ error: 'sessionId and eventType required' });
+  const log = readJson<any[]>('support/sessions.json', []);
+  const entry = { ts: Date.now(), sessionId, eventType, payload };
+  log.push(entry);
+  writeJson('support/sessions.json', log);
+  await logSupportEventToOperator({ type: eventType, sessionId, payload });
+  return res.status(200).json({ ok: true })
+}
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

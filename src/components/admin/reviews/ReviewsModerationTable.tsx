@@ -3,6 +3,7 @@ Dialog,
   DialogDescription,
   DialogFooter,
   DialogHeader,
+<<<<<<< HEAD
 
 
   DialogTitle,
@@ -94,12 +95,18 @@ interface ReviewsModerationTableProps {
       onRefresh(),
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       setViewDetailsOpen(false)
     },
     onError: (error: Error) => {
       toast({
         title: "Error",
         description: `Failed to update review: ${error.message}`,
+<<<<<<< HEAD
 
 
         variant: 'destructive',
@@ -127,6 +134,10 @@ interface ReviewsModerationTableProps {
       .toUpperCase()
   },
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (isLoading) {
 
     return (
@@ -337,6 +348,7 @@ export function ReviewsModerationTable(): any ({;
     )
 
 
+<<<<<<< HEAD
   }
   const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: 'approved' })
@@ -390,6 +402,8 @@ export function ReviewsModerationTable(): any ({;
                         alt={review.reviewer_profile.display_name || ''}                      />
     updateReviewStatus({ reviewId, status: "approved" })
   },
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     ) : (
                       <AvatarFallback>
@@ -498,6 +512,7 @@ export function ReviewsModerationTable(): any ({;
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage;
                         src={review.reviewer_profile.avatar_url}
+<<<<<<< HEAD
 
 
                         alt={review.reviewer_profile.display_name || ""}
@@ -513,6 +528,16 @@ export function ReviewsModerationTable(): any ({;
                   <div>
 
 
+=======
+                        alt={review.reviewer_profile.display_name || ''}                      />) : (
+                      <AvatarFallback>;
+                        {review.reviewer_profile?.display_name ? (
+                          get_initials (review.reviewer_profile.display_name)) : (
+                          <User className='h - 4 w - 4' />)}
+                      </AvatarFallback>)}
+                  </Avatar>;
+                  <div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {review.is_anonymous ? (
                       <span className="text-sm font-medium">Anonymous</span>
                     ) : (
@@ -638,8 +663,11 @@ export function ReviewsModerationTable(): any ({;
                         <X className="h-4 w-4 text-red-500" />
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       </Button>
                     </>
                   )}
@@ -689,11 +717,14 @@ export function ReviewsModerationTable(): any ({;
                           Mark as approved
                         </DropdownMenuItem>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       )}
                     </DropdownMenuContent>
                   </DropdownMenu>
@@ -720,6 +751,7 @@ export function ReviewsModerationTable(): any ({;
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -727,13 +759,20 @@ export function ReviewsModerationTable(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <Avatar>
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
 
 
+<<<<<<< HEAD
                         alt={selectedReview.reviewer_profile.display_name |''}                      />
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         alt={selectedReview.reviewer_profile.display_name || ''}                      />
 
 
@@ -777,15 +816,21 @@ export function ReviewsModerationTable(): any ({;
                           <User className='h-4 w-4' />;
                         )}
                       </AvatarFallback>;
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 <<<<<<< HEAD
 
 
-
-
-
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     )}
                   </Avatar>
                   <div>
@@ -818,6 +863,7 @@ export function ReviewsModerationTable(): any ({;
               <div className="space-y-2">
                 <h4 className="text-sm font-medium">Additional Ratings</h4>
                 <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -825,6 +871,10 @@ export function ReviewsModerationTable(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {selectedReview.communication_rating && (
                     <Badge variant='outline'>
                       Communication: {selectedReview.communication_rating}/5
@@ -882,8 +932,11 @@ export function ReviewsModerationTable(): any ({;
                       {selectedReview.would_work_again ? "Would work again" : "Would not work again"}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </Badge>
                   )}
 
@@ -985,6 +1038,7 @@ export function ReviewsModerationTable(): any ({;
                   disabled={isPending}                >;
                   Mark as Approved;
                 </Button>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -993,11 +1047,17 @@ export function ReviewsModerationTable(): any ({;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               )}
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       )}
+<<<<<<< HEAD
 
 
     </>
@@ -1012,6 +1072,8 @@ export function ReviewsModerationTable(): any ({;
   star
 }/>) )
 }</div>)
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
@@ -1020,8 +1082,11 @@ export function ReviewsModerationTable(): any ({;
 }</div>) ;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
             </TableRow>))}
@@ -1184,6 +1249,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</TableCell> <TableCell> </TableCell> <TableCell> <Badge variant=" outline"> {
 
 
+<<<<<<< HEAD
   review.status.charAt (0) .toUpperCase () + review.status.slice (1) "
 }</Badge> </TableCell> <TableCell>) : (" None") "
 }</TableCell> <Button size=" sm"variant=" outline"className=" h-8 w-8 p-0"onClick={
@@ -1201,6 +1267,8 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }/>) : (<AvatarFallback> {"
   selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>
 }</AvatarFallback>)
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }</AvatarFallback>) 
 
 
@@ -1235,3 +1303,56 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }"}
     </>;
   );
+<<<<<<< HEAD
+=======
+
+
+
+  review.status.char_at (0) .toUpperCase () + review.status.slice (1) ";
+}</Badge> </TableCell> <TableCell>) : (" None") ";
+}</TableCell> <Button size=" sm"variant=" outline"className=" h - 8 w - 8 p - 0"on_click={
+  () => handle_approve (review.id);
+}disabled= {
+  is_pending ";
+}> <Check className=" h - 4 w - 4 text - green - 500"/> </Button> <Button > <X className=" h - 4 w - 4 text - red - 500"/> </Button> </>) ";
+}<DropdownMenu> <DropdownMenuTrigger as_child> <Button variant=" ghost"size=" sm"className=" h - 8 w - 8 p - 0"> <MoreHorizontal className=" h - 4 w - 4"/> </Button> </DropdownMenuTrigger> Mark as approved </DropdownMenuItem>);
+}</DropdownMenuContent> </DropdownMenu> </div> </TableCell> </TableRow>) ) ";
+}</TableBody> </Table> </DialogDescription> </DialogHeader> <div className=" space - y-4"> <div className=" flex items - center justify - between"> <div className=" flex items - center gap - 2"> <Avatar> {
+  selected_review.reviewer profile?.avatar url ? (<AvatarImage src= {
+  selected_review.reviewer profile.avatar url;
+}alt= {";
+  selected_review.reviewer profile.display name || "";
+}/>) : (<AvatarFallback> {";
+  selected_review.reviewer profile?.display name ? get_initials (selected_review.reviewer profile.display name) : <User className="h - 4 w - 4"/>;
+}</AvatarFallback>);
+}</Avatar> <div> </Badge> </div> </div> <div> {
+  render_stars (selected_review.rating) ";
+}</div> </div> <div className="border rounded - md p - 3 bg - muted / 20"> <p className="whitespace - pre - wrap"> {
+  selected_review.review text ";
+}</p> </div> <div className="space - y-2"> <h4 className="text - sm font - medium">Additional Ratings</h4> Timeliness: {
+  selected_review.timeliness rating;
+}/5 </Badge>);
+}{
+  selected_review.would work again !== undefined && (<Badge variant= {";
+  selected_review.would work again ? " default": " secondary";
+}> </Badge>);
+}</div> </div> {";
+  selected_review.report count > 0 && (<div className="bg - red - 50 border border - red - 200 rounded - md p - 3"> <h4 className="text - sm font - medium text - red - 800">Reports: {
+  selected_review.report count ";
+}</h4> <p className="text - sm text - red - 700"> This review has been reported by users and may need investigation. </p> </div>) ";
+}</div> <DialogFooter> <Button variant=" destructive" on_click={
+  () => handle_reject (selected_review.id);
+}disabled= {
+  is_pending;
+}> Reject </Button> <Button on_click={
+  () => handle_approve (selected_review.id);
+}disabled= {
+  is_pending;
+}> Approve </Button> </>);
+}> Mark as Rejected </Button>);
+}> Mark as Approved </Button>);
+}</DialogFooter> </DialogContent> </Dialog>);
+}</>);
+}"}
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

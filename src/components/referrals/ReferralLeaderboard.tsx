@@ -9,6 +9,7 @@ export function ReferralLeaderboard() {
   // This would typically be fetched from the server
   // For now, we'll use mock data
   const leaderboardData: LeaderboardEntry[] = [
+<<<<<<< HEAD
 
 
     { rank: 1, name: 'Alex Johnson', referrals: 24 }
@@ -16,6 +17,8 @@ export function ReferralLeaderboard() {
     { rank: 3, name: 'Taylor Wong', referrals: 15 }
     { rank: 4, name: 'Casey Brown', referrals: 12 }
     { rank: 5, name: 'Jordan Lee', referrals: 10 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     { rank: 1, name: 'Alex Johnson', referrals: 24 },
@@ -25,8 +28,11 @@ export function ReferralLeaderboard() {
     { rank: 5, name: 'Jordan Lee', referrals: 10 },
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ]
   return (
     <Card>
@@ -65,7 +71,10 @@ export function ReferralLeaderboard() {;
   ];
 
   return (
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     <Card>;
       <CardHeader>;
         <CardTitle className='flex items-center gap-2'>;
@@ -99,11 +108,14 @@ export function ReferralLeaderboard() {;
                           ? 'bg-amber-200 text-amber-800'
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </CardTitle>
         <CardDescription>Top referrers this month</CardDescription>
       </CardHeader>
@@ -118,6 +130,7 @@ export function ReferralLeaderboard() {;
             <div 
               key={entry.rank}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -126,6 +139,11 @@ export function ReferralLeaderboard() {;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               <div className="flex items-center gap-3">
                 <div 
@@ -138,6 +156,7 @@ export function ReferralLeaderboard() {;
                       ? "bg-amber-200 text-amber-800"
 
                       : "bg-muted text-muted-foreground"
+<<<<<<< HEAD
 
 
                 >
@@ -159,16 +178,22 @@ export function ReferralLeaderboard() {;
 }
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </CardContent>;
     </Card>;
   );
 };
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from 'lucide-react';
 interface LeaderboardEntry {;
@@ -256,3 +281,16 @@ export function ReferralLeaderboard() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
+=======
+
+  );
+}
+
+            </div>))}
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

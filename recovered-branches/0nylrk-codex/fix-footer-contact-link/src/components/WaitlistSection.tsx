@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -16,6 +19,7 @@ export function WaitlistSection() {;
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+<<<<<<< HEAD
 
 
 import { useState } from "react",
@@ -32,6 +36,11 @@ import { Checkbox } from "@/components/ui/checkbox",
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function WaitlistSection() {
   const [email, setEmail] = useState(""),
   const [name, setName] = useState(""),
@@ -166,6 +175,89 @@ if ( {) {
   };
 
 
+<<<<<<< HEAD
+=======
+  },
+  
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  return (
+    <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
+      {/* Background elements */}
+
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">;
+        <div className="absolute -top-40 -left-40 w-80 h-80 bg-zion-purple rounded-full filter blur-[100px]"></div>;
+        <div className="absolute top-40 right-20 w-60 h-60 bg-zion-cyan rounded-full filter blur-[100px]"></div>;
+      </div>;
+
+      <div className="container mx-auto px-4 relative z-10">;
+        <div className="max-w-3xl mx-auto">;
+          <div className="text-center mb-12">;
+            <GradientHeading>Register Now</GradientHeading>;
+            <p className="text-zion-slate-light text-lg mt-4">;
+              Join our growing community of AI and tech professionals. ;
+              Complete your registration to access exclusive features and personalized services.;
+            </p>;
+          </div>;
+
+          <form onSubmit={handleSubmit} className="space-y-6 bg-zion-blue-light p-8 rounded-lg border border-zion-purple/20">;
+            <div className="space-y-2">;
+              <Label htmlFor="name">Full Name</Label>;
+
+              <Input
+                id="name"
+                placeholder="John Smith"
+                value={name}
+
+                onChange={(e) => setName(e && e.target.value)}
+                className="bg-zion-blue-dark border-zion-blue-light";
+              />;
+            </div>;
+
+            <div className="space-y-2">;
+              <Label htmlFor="email">Email Address</Label>;
+
+              <Input
+                id="email"
+                type="email"
+                placeholder="you@company && company.com"
+                value={email}
+
+                onChange={(e) => setEmail(e && e.target.value)}
+                className="bg-zion-blue-dark border-zion-blue-light";
+              />;
+            </div>;
+
+            <div className="space-y-2">;
+              <Label htmlFor="role">Your Role</Label>;
+
+              <Input
+                id="role"
+                placeholder="IT Manager, Developer, Business Owner, etc."
+                value={role}
+
+                onChange={(e) => setRole(e && e.target.value)}
+                className="bg-zion-blue-dark border-zion-blue-light";
+              />;
+            </div>;
+
+            <div className="flex items-center space-x-2">;
+              <Checkbox
+                id="terms" 
+
+                checked={agreeTerms}
+                onCheckedChange={(checked) => setAgreeTerms(checked as boolean)}
+              />;
+              <Label
+                htmlFor="terms"
+
+
+            <Button 
+              type="submit" 
+              disabled={isSubmitting} 
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -175,6 +267,21 @@ if ( {) {
       </div>
     </section>
   )
+<<<<<<< HEAD
+=======
+
+                className="text-sm text-zion-slate font-normal">;
+                I agree to receive updates about Zion and understand I can unsubscribe anytime.;
+              </Label>;
+            </div>;
+
+            <Button
+              type="submit" 
+              disabled={isSubmitting} 
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
+              {isSubmitting ? "Processing..." : "Complete Registration"}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import { useState } from "react",;
@@ -201,6 +308,10 @@ export function WaitlistSection() {;
       return;
     }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
   return (
     <section id="waitlist" className="py - 20 bg - zion - blue - dark relative overflow - hidden">;
@@ -274,11 +385,19 @@ export function WaitlistSection() {;
           </form>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
     </section>;
   );
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

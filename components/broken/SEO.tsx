@@ -1,5 +1,100 @@
 
 
+<<<<<<< HEAD
+=======
+}
+import React from 'react';
+ {;
+  /* Robots Meta */ ;
+}{;
+  noindex && <meta name="robots" content="noindex" /> ;
+}{;
+  nofollow && <meta name="robots" content="nofollow" /> ;
+}{;
+  !noindex && !nofollow && <meta name="robots" content="index, follow" /> ;
+}{;
+  /* Open Graph Meta Tags */ ;
+}<metaproperty="og:title" content= {
+  fullTitle 
+}/> <metaproperty="og:description" content= {
+  description 
+}/> <metaproperty="og:type" content= {
+  type 
+}/> <metaproperty="og:url" content= {
+  fullUrl 
+}/> <metaproperty="og:image" content= {
+  fullImage 
+}/> <meta property="og:site name" content="Zion Tech Group" /> <meta property="og:locale" content="en US" /> {;
+  /* Twitter Card Meta Tags */ ;
+}<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@ziontechgroup" /> <meta name="twitter:creator" content="@ziontechgroup" /> <metaname="twitter:title" content= {
+  fullTitle 
+}/> <metaname="twitter:description" content= {
+  description 
+}/> <metaname="twitter:image" content= {
+  fullImage 
+}/> {;
+  /* Article Specific Meta Tags */ ;
+}{;
+  type === 'article' && (<> {;
+  publishedTime && <metaproperty="article:published time" content= {
+  publishedTime 
+}/> ;
+}{;
+  modifiedTime && <metaproperty="article:modified time" content= {
+  modifiedTime 
+}/> ;
+}{;
+  author && <metaproperty="article:author" content= {
+  author 
+}/> ;
+}{;
+  section && <metaproperty="article:section" content= {
+  section 
+}/> ;
+}{;
+  tags && tags.map ( (tag, index) => (<metakey= {
+  index 
+}property="article:tag" content= {
+  tag 
+}/> ;
+}</>) ;
+}{;
+  /* Structured Data */ ;
+}<script
+}] 
+const SEO: React.FC<SEOProps> = ({;
+  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions',;
+  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.',;
+  keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics',;
+  image = '/images/zion-tech-group-og-image && image.jpg',;
+  url = 'https://ziontechgroup && ziontechgroup.com',;
+  type = 'website',;
+  publishedTime,;
+  modifiedTime,;
+  author = 'Zion Tech Group',;
+  section,;
+  tags = [],;
+  structuredData,;
+  noindex = false,;
+  nofollow = false,;
+}) => {;
+  const fullTitle = title && title.includes('Zion Tech Group');
+    ? title;
+    : `${title} | Zion Tech Group`;
+  const fullUrl = url && url.startsWith('http');
+    ? url;
+    : `https://ziontechgroup && ziontechgroup.com${url}`;
+  const fullImage = image && image.startsWith('http');
+    ? image;
+    : `https://ziontechgroup && ziontechgroup.com${image}`;  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
+  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
+  keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
+  image = '/images/zion-tech-group-og-image && image.jpg';
+  url = 'https: //ziontechgroup && ziontechgroup.com', type = 'website',  publishedTime;
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 {
   /* Robots Meta */
 }{
@@ -368,12 +463,19 @@ const SEO: React.FC < SEOProps> = ({
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Structured Data */}
       <script;
         type='application / ld + json';
@@ -606,12 +708,18 @@ const SEO: React.FC < SEOProps> = ({
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -677,6 +785,125 @@ export default SEO;
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    </Head>
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          __html: JSON.stringify ({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Zion Tech Group',
+            url: 'https://ziontechgroup.com',
+            logo: 'https://ziontechgroup.com / images / zion - tech - group - logo.png',
+            description: description,
+            founding_date: '2020',
+            same_as: [;
+              'https://www.linkedin.com / company / zion - tech - group',
+              'https://twitter.com / ziontechgroup',
+              'https://github.com / Zion - Holdings',
+            ],
+            contact_point: {
+              '@type': 'ContactPoint',
+              telephone: '+1 - 800 - ZION - TECH',
+              contact_type: 'customer service',
+              available_language: 'English',
+            },
+            address: {
+              '@type': 'PostalAddress',
+              address_country: 'US',
+            },
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: 'Technology Services',
+              itemListElement: [;
+                {
+                  '@type': 'Offer',
+                  item_offered: {
+                    '@type': 'Service',
+                    name: 'AI & Machine Learning Solutions',
+                  },
+                },
+                {
+                  '@type': 'Offer',
+                  item_offered: {
+                    '@type': 'Service',
+                    name: 'Quantum Computing Services',
+                  },
+                },
+                {
+                  '@type': 'Offer',
+                  item_offered: {
+                    '@type': 'Service',
+                    name: 'Space Technology Solutions',
+                  },
+                },
+              ],
+            },
+          }),
+        }}
+      />;
+      {/* Canonical URL */}
+      <link rel='canonical' href={full_url} />;
+      {/* Favicon and App Icons */}
+      <link rel='icon' href='/favicon.ico' />;
+      <link;
+        rel='apple - touch - icon';
+        sizes='180x180';
+        href='/apple - touch - icon.png';
+      />;
+      <link;
+        rel='icon';
+        type='image / png';
+        sizes='32x32';
+        href='/favicon - 32x32.png';
+      />;
+      <link;
+        rel='icon';
+        type='image / png';
+        sizes='16x16';
+        href='/favicon - 16x16.png';
+      />;
+      <link rel='manifest' href='/site.webmanifest' />;
+      {/* Preconnect to external domains for performance */}
+      <link rel='preconnect' href='https://fonts.googleapis.com' />;
+      <link;
+        rel='preconnect';
+        href='https://fonts.gstatic.com';
+        cross_origin='anonymous';
+      />;
+      <link rel='preconnect' href='https://www.google - analytics.com' />;
+      {/* Additional Meta Tags for SEO */}
+      <meta name='google - site - verification' content='your - verification - code' />;
+      <meta name='msvalidate.01' content='your - bing - verification - code' />;
+      <meta;
+        name='yandex - verification';
+        content='your - yandex - verification - code';
+      />;
+      {/* Custom Meta Tags */}
+      {structured_data && (
+        <script;
+          type='application / ld + json';
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify (structured_data),          }}
+        />)}
+    </Head>);
+}
+;
+export default SEO;            __html: JSON.stringify (structured_data);
+          }}
+        />)}
+    </Head>);
+}
+;
+export default SEO);
+}
+;
+export default SEO;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React from 'react';
 import { Dialog;
@@ -10,6 +11,26 @@ import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementDialogProps {
 
 
+=======
+
+
+  title: string,
+  isOpen: boolean,
+  onClose: () => void,
+  onApply: (content: string) => void,
+  defaultOptions: AIEnhancementOptions,
+  initialContent?: string
+}
+
+export function AIEnhancementDialog({;
+  title;
+  isOpen;
+  onClose;
+  onApply;
+  defaultOptions;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',;
 import {;
   Dialog,;

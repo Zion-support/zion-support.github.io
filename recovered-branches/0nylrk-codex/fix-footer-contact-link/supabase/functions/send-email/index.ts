@@ -1,10 +1,29 @@
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {Resend} from "npm: resend@2 ;
+=======
+
+
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Resend } from "npm: resend@2.0.0",
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {Resend} from "npm: resend@2.0.0";
+=======
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Resend } from "npm: resend@2.0.0",
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -51,8 +70,12 @@ serve(async (req) => {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 });

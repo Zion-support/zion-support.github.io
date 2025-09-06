@@ -15,7 +15,10 @@ className
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {reply.authorRole}
               </Badge>
             )}
@@ -37,7 +40,10 @@ className
       
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <CardFooter className="flex justify-between">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" className="px-2">
@@ -55,8 +61,11 @@ className
             Mark as Answer
           </Button>
         )}
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           </div>;
         </div>;
@@ -85,11 +94,14 @@ className
           </Button>;
         )}
       </CardFooter>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </Card>;
   );
 };

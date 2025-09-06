@@ -4,8 +4,11 @@ interface TimelineStepProps {
   formData: QuoteFormData
   updateFormData: (data: Partial<QuoteFormData>) => void
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { format } from "date-fns",
 import { Calendar } from "@/components/ui/calendar",
@@ -22,8 +25,11 @@ interface TimelineStepProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
@@ -31,6 +37,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 
     <div className='space-y-6'>
       <div>
+<<<<<<< HEAD
 
 
         <h3 className='text-xl font-semibold text-white mb-4'>
@@ -45,6 +52,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.timeline === 'fixed'
                   ? 'bg-zion-purple/20 border-zion-purple'
@@ -66,11 +76,14 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
             
             <div 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.timeline === 'flexible'
                   ? 'bg-zion-purple/20 border-zion-purple'
@@ -87,6 +100,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
           
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -94,6 +108,10 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
                   Start Date
@@ -167,8 +185,11 @@ function TimelineStep() {
                         !formData.startDate && "text-zion-slate-light"
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
@@ -187,16 +208,20 @@ function TimelineStep() {
                       initialFocus
                       className="p-3 pointer-events-auto"
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     />
                   </PopoverContent>
                 </Popover>
               </div>
               
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -204,6 +229,10 @@ function TimelineStep() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
                   End Date
@@ -211,6 +240,7 @@ function TimelineStep() {
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
+<<<<<<< HEAD
 
 
                       variant='outline'
@@ -225,6 +255,8 @@ function TimelineStep() {
                         <span>Pick a date</span>
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                       selected={formData && formData.startDate}
                       onSelect={date => updateFormData({ startDate: date })}                      initialFocus;
@@ -286,8 +318,11 @@ function TimelineStep() {
                       mode="single"
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       selected={formData.endDate}
                       onSelect={date => updateFormData({ endDate: date })}
                       initialFocus

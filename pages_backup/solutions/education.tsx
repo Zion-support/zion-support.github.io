@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
 import React from 'react';
@@ -51,6 +52,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     icon: Users,
     title: 'Student Information Systems,',
     description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',
+=======
+
+
+  },
+  {}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     icon: Users,
     title: 'Student Information Systems,',
     description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',
@@ -61,11 +69,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     description: 'Platforms for creating, managing, and delivering educational content and resources.',
   },
   {}
-    icon: Laptop,
-    title: 'Virtual Classrooms,',
-    description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
-  },
+    icon: BookOpen,;
+    title: 'Digital Content Management,',;
+    description: 'Platforms for creating, managing, and delivering educational content and resources.',;
+  },;
   {}
+<<<<<<< HEAD
     icon: Globe,
     title: 'Accessibility Solutions,',
     description: 'ADA-compliant educational technology that ensures equal access for all students.'';
@@ -102,6 +111,45 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     icon: Users,
     title: 'Teacher Resources',
     description: 'Professional development and teaching support tools'
+=======
+
+    icon: Laptop,;
+    title: 'Virtual Classrooms,',;
+    description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'',;
+  },;
+  {}
+    icon: Globe,;
+    title: 'Accessibility Solutions,',;
+    description: 'ADA-compliant educational technology that ensures equal access for all students.'',;
+    title: 'Learning Management Systems',;
+    description: 'Comprehensive LMS platforms for online and blended learning';
+  },;
+  {;
+    icon: Users,;
+    title: 'Student Information Systems',;
+    description: 'Complete student data management and academic tracking';
+  },;
+  {}
+    icon: BookOpen,;
+    title: 'Digital Content Management',;
+    description: 'Interactive digital content creation and distribution';
+  },;
+  {;
+    icon: CheckCircle,;
+    title: 'Assessment Tools',;
+    description: 'Advanced testing and evaluation platforms';
+  },;
+  {;
+    icon: ArrowRight,;
+    title: 'Parent Portal',;
+    description: 'Communication and engagement tools for parents';
+  },;
+  {;
+    icon: Users,;
+    title: 'Teacher Resources',;
+    description: 'Professional development and teaching support tools';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 ;];
 const solutions = [;
@@ -178,6 +226,7 @@ const benefits = [;
   'Reduced operational costs',;
   'Accessible learning for all students';
 ];
+<<<<<<< HEAD
 export default function EducationSolutions() {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
     title: 'Virtual Classrooms',
@@ -302,6 +351,25 @@ const benefits = [
 export default function EducationSolutions() {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+export default function EducationSolutions() {;
+    title: 'Virtual Classrooms',;
+    description: 'Online learning platform with video conferencing and collaboration',;
+    benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording'];
+  }
+];
+
+export default function EducationSolutionsPage() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Layout
       title="Education Solutions - Zion Tech Group"
@@ -309,11 +377,19 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       keywords="education solutions, learning management system, student information system, educational technology, digital learning">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <section className="bg-gradient-to-r from-indigo-600 to-blue-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -346,6 +422,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 Comprehensive solutions designed to enhance learning experiences
                 and streamline educational operations.
               </p>
+<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
@@ -361,11 +438,21 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-indigo-600" />
                   </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -655,6 +742,7 @@ export default function EducationSolutionsPage() {;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
                   ))}
+<<<<<<< HEAD
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-indigo-600 to-blue-700 p-8 rounded-xl text-white">
@@ -682,6 +770,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </motion && motion.div>;
               ))}
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -785,6 +877,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
       </div>;
     </Layout>;
         {/* Benefits Section */}
@@ -821,6 +914,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </div>
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>
           </div>
         </section>
@@ -845,6 +947,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </Layout>
     </Layout>
     </Layout>
@@ -854,6 +957,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </Layout>
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 =======
         {/* CTA Section */}

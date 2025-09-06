@@ -1,7 +1,11 @@
 
 
+<<<<<<< HEAD
 
 :src.disabled/src/components/PerformanceOptimizations.js.jsx
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;,\"});\"})\"; \"
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ;,\"});\"})\"; \"

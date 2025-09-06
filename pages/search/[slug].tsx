@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -10,10 +11,16 @@ import { SEO  } from '@/components/SEO';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
+<<<<<<< HEAD
 
 import { Search, Filter, Grid, List } from 'lucide-react';import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
@@ -30,6 +37,10 @@ import { useDebounce  } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface BaseSearchResult {
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   title: string;
   description?: string;
@@ -77,11 +88,40 @@ type SearchResult =;
 
 
 
+<<<<<<< HEAD
+=======
+const hasRating = (;
+  result: SearchResult;
+): result is ProductSearchResult | TalentSearchResult =>;
+  result && result.type === 'product' ||;
+  result && result.type === 'equipment' ||;
+  result && result.type === 'talent';
+
+interface SearchResultsPageProps {;
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  initialResults: SearchResult[];
+  query: string;
+  slug: string;
+  totalCount: number;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+import { Search, Filter, Grid, List } from 'lucide-react'
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Search, Filter, Grid, List } from 'lucide-react';
 
 import { SEO } from '@/components/SEO';
@@ -166,6 +206,7 @@ interface OfflineFilters {
           const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
           return bPrice - aPrice;        });
         break;
+<<<<<<< HEAD
 
       case 'rating':
         all.sort((a, b) => {
@@ -174,6 +215,15 @@ interface OfflineFilters {
           const bRating =
 
 
+=======
+
+
+=======
+
+            b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -341,8 +391,11 @@ function offlineSearch(;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           return bRating - aRating;
         });
         break;
@@ -350,6 +403,7 @@ function offlineSearch(;
         break;
     }
   } else {;
+<<<<<<< HEAD
 
     all.sort((a, b) => a.title.localeCompare(b.title));
     } catch (error) {
@@ -359,6 +413,36 @@ function offlineSearch(;
 }
   const start = (page - 1) * limit;
   const paginated = all.slice(start, start + limit);
+=======
+    all && all.sort((a, b) => a && a.title.localeCompare(b && b.title));
+
+=======
+          return aPrice - bPrice
+        });
+        break;
+      case 'price_desc':
+        all.sort((a, b) => {
+          const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
+          const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
+          return bPrice - aPrice
+        });
+        break;
+      case 'rating':
+        all.sort((a, b) => {
+<<<<<<< HEAD
+          const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
+          const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
+          return bRating - aRating
+        });
+        break;
+      default: break
+    }
+  } else {
+    all.sort((a, b) => a.title.localeCompare(b.title))
+
+  }
+  const start = (page - 1) * limit;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -374,6 +458,11 @@ export default function SearchResultsPage(): any ({;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+<<<<<<< HEAD
+=======
+}: SearchResultsPageProps) {  const router = useRouter();
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return { results: paginated, totalCount: all.length   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -392,8 +481,11 @@ export default function SearchResultsPage(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
   const [loading, setLoading] = useState(false);
@@ -543,6 +635,7 @@ export default function SearchResultsPage(req, res) {
     (acc, result) => {
       if (!acc[result.type]) acc[result.type] = [];
       acc[result.type]!.push(result);
+<<<<<<< HEAD
       return acc;
     }
     {} as Record<string, SearchResult[]>  );
@@ -644,6 +737,9 @@ export default function SearchResultsPage(req, res) {
       if (!acc[result.type]) acc[result.type] = [];
       acc[result.type]!.push(result);
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       return acc
     },
     {} as Record<string SearchResult[]>),
@@ -733,6 +829,7 @@ export default function SearchResultsPage(req, res) {
                 router && router.push(`/talent/${id}`);
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             />
@@ -775,6 +872,25 @@ export default function SearchResultsPage(req, res) {
   }
 }
 
+=======
+              talent={{
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                id: result.id,
+                user_id: result.id,
+                full_name: result.title,
+                professional_title: result.description || '',
+                profile_picture_url: result.image,
+                average_rating: result.rating,
+                skills: result.tags || [],
+                location: result.category,
+                bio: result.description,
+                summary: result.description,
+                is_verified: false,
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             />;
           </div>;
         );
@@ -796,10 +912,15 @@ export default function SearchResultsPage(req, res) {
   },
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <>;
       <SEO
@@ -882,6 +1003,7 @@ export default function SearchResultsPage(req, res) {
             </div>
             {/* Controls */}
 
+<<<<<<< HEAD
             <div className='flex flex-wrap items-center justify-between gap-4 mt-6'>
               <div className='flex items-center gap-2 flex-wrap'>
             {/* Controls */  } catch (error) {
@@ -895,6 +1017,9 @@ export default function SearchResultsPage(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <Button
                   variant="outline"
                   size="sm"
@@ -907,6 +1032,7 @@ export default function SearchResultsPage(req, res) {
                 </Button>
                 <select
 
+<<<<<<< HEAD
                   value={sortBy  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -935,6 +1061,12 @@ export default function SearchResultsPage(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+                  data-testid='filter-button'>;
+                  <Filter className='h-4 w-4' />                  Filters;
+                </Button>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <select
                   value={sortBy}
                   onChange={e => setSortBy(e && e.target.value)}
@@ -1201,12 +1333,71 @@ export default function SearchResultsPage(req, res) {
     };  }
 
 }
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+<<<<<<< HEAD
+      results = data.results || [];
+      totalCount = data.totalCount || results.length;
+      logInfo(`Server-side fetch successful: ${results.length} results`)
+    } else {
+      logErrorToProduction(`Search API error: ${response.status} ${response.statusText}`),
+      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
+      results = offline.results;
+      totalCount = offline.totalCount
+    }
+    return {
+      props: {
+        initialResults: results,
+        query;
+        slug;
+        totalCount}}
+  } catch (error) {
+    logErrorToProduction('Error fetching search results:', { data: error }),
+    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
+    return {
+      props: {
+        initialResults: offline.results,
+        query;
+        slug;
+        totalCount: offline.totalCount}}
+  }
+
+};
+      total_count = offline.total_count;    }
+    return {
+      props: {
+        initial_results: results,
+        query,
+        slug,
+        total_count,
+      },
+    }
+  } catch (error) {
+    logErrorToProduction ('Error fetching search results:', { data: error });
+    const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
+;
+    return {
+      props: {
+        initial_results: offline.results,
+        query,
+        slug,
+total_count: offline.total_count,
+      },
+    }  }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1323,15 +1514,20 @@ export const getServerSideProps: GetServerSideProps<;
     if (response.ok) {;
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       const data = await response.json();
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
 
 
+<<<<<<< HEAD
     } else {;
       logErrorToProduction(;
         `Search API error: ${response.status} ${response.statusText}`);
@@ -1380,3 +1576,6 @@ export const getServerSideProps: GetServerSideProps<;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -19,6 +19,7 @@ interface MobileChatViewProps {;
   onBack: () => void;
   onSendMessage: (content: string) => void
 
+<<<<<<< HEAD
 
 
 export function MobileChatView({
@@ -44,6 +45,24 @@ import { useRouter } from 'next/router',
 import { toast } from "sonner",
 
 
+=======
+
+import React, { useState } from 'react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import {
+  Send,
+  PaperclipIcon,
+  ChevronLeft,
+  MoreVertical,
+  Video,
+  Phone,
+} from 'lucide-react';
+import { cn } from '@/lib / utils';
+import { use_router } from 'next / router';
+import { toast } from 'sonner';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface Message {
   id: string;
   content: string;
@@ -116,9 +135,15 @@ export function MobileChatView(): any ({;
   const [newMessage, setNewMessage] = useState('');
   const router = useRouter();
   const handleSend = () => {;
+<<<<<<< HEAD
     if (newMessage.trim() !== "") {;
       onSendMessage(newMessage),;
       setNewMessage("");
+=======
+    if (newMessage && newMessage.trim() !== '') {;
+      onSendMessage(newMessage);
+      setNewMessage('');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   };
 
@@ -175,8 +200,11 @@ export function MobileChatView(): any ({;
   
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -199,11 +227,14 @@ export function MobileChatView(): any ({;
           
           <div className="flex items-center flex-1 gap-3 mx-2">
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
               <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
@@ -241,6 +272,7 @@ export function MobileChatView(): any ({;
               </p>
             </div>
           </div>
+<<<<<<< HEAD
 
 
           <div className='flex'>
@@ -282,6 +314,8 @@ export function MobileChatView(): any ({;
             
             <Button variant="ghost" size="icon" aria-label="More options">
               <MoreVertical className="h-5 w-5" />
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             </Button>
@@ -484,6 +518,7 @@ export function MobileChatView(): any ({;
 
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -491,6 +526,10 @@ export function MobileChatView(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {message.status === 'read' ? '✓✓' : '✓'}
 
               </div>;
@@ -536,13 +575,6 @@ export function MobileChatView(): any ({;
             placeholder='Type a message...'
             className='flex-1'          />
 
-          <Button
-            size='icon'
-            onClick={handleSend}
-            disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? 'opacity-50' : ''}
-            aria-label='Send message'          >
-            <Send className='h-5 w-5' />
           </Button>
         </div>
       </div>;
@@ -602,7 +634,10 @@ export function MobileChatView(): any ({;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </Button>
         </div>
       </div>

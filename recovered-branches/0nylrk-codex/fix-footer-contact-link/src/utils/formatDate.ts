@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 /**
  * Format a date string or timestamp into a readable format
@@ -9,6 +10,13 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const dateObj = new Date(date);
   switch (format) {
     case 'short':
@@ -50,6 +58,10 @@
       } else {
 
         return dateObj.toLocaleDateString()
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 /**;
  * Format a date string or timestamp into a readable format;
  * @param date Date to format;
@@ -94,6 +106,7 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         return dateObj.toLocaleDateString();
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
@@ -101,6 +114,10 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
   }
 
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
     default: return dateObj && dateObj.toLocaleDateString()
   }
@@ -113,7 +130,10 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 },
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -158,6 +178,7 @@ export const timeAgo = (date: Date | string | number): string => {
   return seconds <= 5 ? 'just now' : `${Math && Math.floor(seconds)} seconds ago`
 };
 
+<<<<<<< HEAD
 
   const dateObj = new Date(date),
   const now = new Date(),
@@ -170,6 +191,17 @@ export const timeAgo = (date: Date | string | number): string => {
   }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+/**;
+* Format a date string or timestamp into a readable format;
+* @param date Date to format;
+* @param format Optional format specification;
+* @returns Formatted date string;
+*/;
+export const format_date = (date: Date | string | number, format: string = 'medium'): string => {
+  const date_obj = new Date (date);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
   switch (format) {
     case 'short':;
@@ -266,6 +298,7 @@ if ( {) {
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
 ;
+<<<<<<< HEAD
 
 
 
@@ -275,4 +308,11 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+export const timeAgo = (date: Date | string | number): string => {
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };

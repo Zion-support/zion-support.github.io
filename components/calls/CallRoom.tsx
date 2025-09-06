@@ -20,6 +20,10 @@ class ErrorBoundary extends React.Component {
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   Room,
   RoomEvent,
@@ -28,9 +32,13 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
   createLocalTracks,;
   VideoPresets,;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
@@ -49,10 +57,26 @@ type Props = {;
   onLeave?: (durationSec: number) => void;
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+  projectId,
+  userId,
+  displayName,
+  roomName,
+  serverUrl,
+  token,
+  startMode,
+  onLeave,
+}: Props) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
@@ -61,6 +85,7 @@ type Props = {;
 
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
+<<<<<<< HEAD
 
 type Props = {
   projectId: string
@@ -74,6 +99,15 @@ type Props = {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+};
+
+export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
@@ -183,11 +217,14 @@ export default function CallRoom(): any ({ projectId, userId, displayName, roomN
 
 
 
+<<<<<<< HEAD
   };
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const gridCols = useMemo(() => {
     const count = participants.length |1;
@@ -221,6 +258,7 @@ export default function CallRoom(): any ({ projectId, userId, displayName, roomN
 }
 
 
+<<<<<<< HEAD
         ))}
       </div>
     </div>
@@ -232,3 +270,7 @@ export default function CallRoom(): any ({ projectId, userId, displayName, roomN
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

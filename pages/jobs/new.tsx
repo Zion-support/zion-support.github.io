@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import { useState } from 'react'
@@ -17,6 +18,10 @@ export default function NewJobPage() {
     }, 800)
   },
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
@@ -51,5 +56,8 @@ export default function NewJobPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

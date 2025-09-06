@@ -38,7 +38,14 @@ import {;
 } from 'lucide-react';
 interface ServiceCardProps {;
   service: {;
+<<<<<<< HEAD
 
+=======
+=======
+  Globe,;
+  Rocket,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from 'lucide-react';
 
 interface ServiceCardProps {
@@ -149,9 +156,17 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
     }
+<<<<<<< HEAD
 
 
 
+=======
+
+      default:
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         return <Zap className='w-5 h-5' />;    }
 
     }
@@ -159,8 +174,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   };
 
   const getGradientClass = (color: string) => {
@@ -176,8 +194,46 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      {/* Main card */}
+      <div className="relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden">;
+        {/* Background pattern */}
+
+      className="group relative";
+    >;
+      {/* Glow effect */}
+      <div className="absolute -inset - 1 bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 rounded - 2xl blur opacity - 25 group - hover:opacity - 75 transition duration - 1000 group - hover:duration - 200"></div>;
+      {/* Main card */}
+      <div className="relative bg - gray - 900 / 80 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl p - 6 h - full overflow - hidden">;
+        {/* Background pattern */}
+        <div className="absolute inset - 0 opacity - 5">;
+          <div className="absolute inset - 0 bg - gradient - to - br from - cyan - 400 to - purple - 400"></div>;
+          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_1px_1px, rgba (255, 255, 255, 0.15)_1px, transparent_0)] bg-[length:20px_20px]"></div>;
+        </div>;
+
+        {/* Header */}
+        <div className="relative z - 10 mb - 6">;
+          <div className="flex items - start justify - between mb - 4">;
+            <div className="flex items - center space - x-3">;
+              <div className="text - 3xl">{service.icon}</div>;
+              <div>;
+                <div className="flex items - center space - x-2">;
+                  {getCategoryIcon (service.category)}
+                  <span className="text - xs font - medium text - gray - 400 uppercase tracking - wider">;
+                    {service.category}
+
+
+                  <span className='text-xs font-medium text-gray-400 uppercase tracking-wider'>                    {service.category}
+
+                    {service.category}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </span>
                 </div>
               </div>
@@ -226,8 +282,13 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
             {service.tagline}
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </p>
         </div>
         {/* Stats */}
@@ -269,6 +330,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
               </div>
               <div className='text-xs text-gray-400'>Rating</div>
 
+<<<<<<< HEAD
 
 
 
@@ -289,6 +351,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>
             <div className='text-center'>
               <div className='text-2xl font-bold text-purple-400'>
@@ -368,14 +435,20 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>;
         </div>;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Features preview */}
         <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
@@ -389,11 +462,15 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {service.features.slice(0, 3).map((feature, idx) => (
               <motion.div
                 key={idx}
@@ -469,6 +546,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
               </motion.div>
             ))}
             {service.features.length > 3 && (
+<<<<<<< HEAD
 
               <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features              >
                 <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
@@ -478,6 +556,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
             {service.features.length > 3 && (
               <div className="text-xs text-gray-500 mt-2">
                 +{service.features.length - 3} more features
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -489,8 +569,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Benefits */}
         <div className="relative z-10 mb-6">
           <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Benefits</h4>
@@ -533,6 +616,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -540,6 +624,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Benefits */}
         <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
@@ -551,10 +637,14 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
           <div className='space-y-2'>            {service.benefits.slice(0, 2).map((benefit, idx) => (
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
                 key={idx}
@@ -580,6 +670,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
             ))}
 
 
+<<<<<<< HEAD
 
 
 
@@ -588,6 +679,13 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Market info */}
 
         {service.marketSize && service.growthRate && (
@@ -617,8 +715,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <motion.a
             href={service.link}
             whileHover={{ scale: 1.05 }}
@@ -634,14 +735,53 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
           </motion.a>
         </div>
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+        <div className='relative z-10'>          <motion&& motion.a
+            href={service && service.link}
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }}
+            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'        <div className="relative z-10">;
+          <motion&& motion.a
+            href={service && service.link}
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }}
+            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'>;
+            <span className='relative z-10 flex items-center space-x-2'>;
+              <span>Learn More</span>;
+              <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200' />;
+            </span>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+<<<<<<< HEAD
+=======
+            {/* Button glow effect */}
+            <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'></div>          </motion && motion.a>          >;
+            <span className="relative z-10 flex items-center space-x-2">;
+              <span>Learn More</span>;
+              <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />;
+            </span>;
+            {/* Button glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>;
+          </motion && motion.a>;
+        </div>;
+=======
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Hover overlay */}
         <motion&& motion.div
           initial={{ opacity: 0 }}
@@ -651,16 +791,104 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+                className='flex items - center space - x-2 text - sm';
+              >;
+                <div className='w - 2 h - 2 bg - gradient - to - r from - green - 400 to - emerald - 400 rounded - full'></div>;
+                <span className='text - gray - 300'>{benefit}</span>              </motion.div>                className="flex items - center space - x-2 text - sm";
+              >;
+                <div className="w - 2 h - 2 bg - gradient - to - r from - green - 400 to - emerald - 400 rounded - full"></div>;
+                <span className="text - gray - 300">{benefit}</span>))}
+          </div>;
+        </div>;
+        {/* Market info */}
+        {service.market_size && service.growth_rate && (
+          <div className='relative z - 10 mb - 6'>;
+            <div className='bg - gray - 800 / 30 rounded - lg p - 3 border border - gray - 600 / 20'>;
+              <div className='flex items - center justify - between text - xs'>;
+                <span className='text - gray - 400'>Market Size</span>;
+                <span className='text - cyan - 400 font - medium'>;
+                  {service.market_size}
+                </span>;
+              </div>;
+              <div className='flex items - center justify - between text - xs mt - 1'>;
+                <span className='text - gray - 400'>Growth Rate</span>;
+                <span className='text - green - 400 font - medium'>;
+                  {service.growth_rate}
+                </span>              </div>          <div className="relative z - 10 mb - 6">;
+            <div className="bg - gray - 800 / 30 rounded - lg p - 3 border border - gray - 600 / 20">;
+              <div className="flex items - center justify - between text - xs">;
+                <span className="text - gray - 400">Market Size</span>;
+                <span className="text - cyan - 400 font - medium">{service.market_size}</span>;
+              </div>;
+              <div className="flex items - center justify - between text - xs mt - 1">;
+                <span className="text - gray - 400">Growth Rate</span>;
+                <span className="text - green - 400 font - medium">{service.growth_rate}</span>;
+            </div>;
+          </div>)}
+        {/* CTA Button */}
+        <div className='relative z - 10'>          <motion.a;
+            href={service.link}
+            while_hover={{ scale: 1.05 }}
+            while_tap={{ scale: 0.95 }}
+            className='group / btn relative w - full inline - flex items - center justify - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white font - semibold rounded - xl overflow - hidden transition - all duration - 300 hover:shadow - lg hover:shadow - cyan - 500 / 25'        <div className="relative z - 10">;
+          <motion.a;
+            href={service.link}
+            while_hover={{ scale: 1.05 }}
+            while_tap={{ scale: 0.95 }}
+            className='group / btn relative w - full inline - flex items - center justify - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white font - semibold rounded - xl overflow - hidden transition - all duration - 300 hover:shadow - lg hover:shadow - cyan - 500 / 25';
+          >;
+            <span className='relative z - 10 flex items - center space - x-2'>;
+              <span > Learn More</span>;
+              <ArrowRight className='w - 4 h - 4 group - hover / btn:translate - x-1 transition - transform duration - 200' />;
+            </span>;
+            {/* Button glow effect */}
+            <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - purple - 400 opacity - 0 group - hover / btn:opacity - 100 transition - opacity duration - 300'></div>          </motion.a>          >;
+            <span className="relative z - 10 flex items - center space - x-2">;
+              <span > Learn More</span>;
+              <ArrowRight className="w - 4 h - 4 group - hover / btn:translate - x-1 transition - transform duration - 200" />;
+            </span>;
+            {/* Button glow effect */}
+            <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - purple - 400 opacity - 0 group - hover / btn:opacity - 100 transition - opacity duration - 300"></div>;
+          </motion.a>;
+        </div>;
+        {/* Hover overlay */}
+        <motion.div;
+          initial={{ opacity: 0 }}
+          while_hover={{ opacity: 1 }}
+          className='absolute inset - 0 bg - gradient - to - br from - cyan - 500 / 10 to - purple - 500 / 10 rounded - 2xl pointer - events - none';
+        />;
+      </div>;
+    </motion.div>);
+}
+;
+export default UltraFuturisticServiceCardV2;        />;
+      </div>;
+    </motion.div>);
+}
+;
+export default UltraFuturisticServiceCardV2;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         />
       </div>
     </motion.div>
   );
 
+<<<<<<< HEAD
 }
 };
 
@@ -682,3 +910,10 @@ export default UltraFuturisticServiceCardV2;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -573,12 +573,23 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Scenario modeling'
     ]
     marketAdvantage:
+<<<<<<< HEAD
 
 
 
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
 
+=======
+<<<<<<< HEAD
+      'Advanced predictive analytics platform with custom ML model development'
+  }
+=======
+      'Advanced predictive analytics platform with custom ML model development',
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ];
 ;
 export default specializedEnterpriseServices;    id: 'quantum - machine - learning - platform';
@@ -904,7 +915,12 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 export default specializedEnterpriseServices;
 
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default specializedEnterpriseServices;

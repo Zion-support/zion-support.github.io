@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Referral, ReferralStatus } from "@/types/referrals",
 import { Badge } from "@/components/ui/badge";
@@ -13,6 +14,11 @@ import { formatDate } from "@/utils/referralUtils",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ReferralTableProps {
 
   referrals: Referral[]
@@ -64,6 +70,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         </p>
       </div>
     )
+<<<<<<< HEAD
 
   }
   return (
@@ -85,8 +92,14 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
             <TableCell>{referral.email |'-'}</TableCell>
             <TableCell>{renderStatusBadge(referral.status)}</TableCell>
             <TableCell>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Referral, ReferralStatus } from "@/types/referrals",;
 import { Badge } from "@/components/ui/badge",;
@@ -134,8 +147,17 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+              {referral.referred_user_type;
+                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1);
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 : '-'}
             </TableCell>;
             <TableCell>{referral && referral.completed_at ? formatDate(referral && referral.completed_at) : '-'}</TableCell>;

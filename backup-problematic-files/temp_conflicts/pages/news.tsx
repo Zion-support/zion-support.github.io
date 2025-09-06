@@ -1624,8 +1624,13 @@ export default function News() {;
     </>;
   );
 }
+<<<<<<< HEAD
 :temp_conflicts/pages/news.tsx
 ;
 }
 }
 :backup-problematic-files/temp_conflicts/pages/news.tsx
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

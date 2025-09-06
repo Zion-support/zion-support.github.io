@@ -10,16 +10,21 @@ import { cn } from "@/lib/utils"
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const toggleVariants = cva(
   "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover: bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground"
   {
     variants: {
       variant: {
 
+<<<<<<< HEAD
         default: "bg-transparent"
 
         outline:
@@ -32,6 +37,13 @@ const toggleVariants = cva(
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+        default: "bg-transparent",
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       size: {
         default: "h-10 px-3"
         sm: "h-9 px-2.5"
@@ -50,20 +62,32 @@ const Toggle = React.forwardRef<ToggleRef, ToggleProps>(
       ref={ref}
       className={cn (toggle_variants ({ variant, size, class_name }))}
       {...props}
+<<<<<<< HEAD
 
     />
   )
 )
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 Toggle.displayName = TogglePrimitive.Root.displayName
 
 export { Toggle, toggleVariants };
 ;
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const Toggle = React.forwardRef<ToggleRef ToggleProps>(
   ({ className, variant, size, ...props }, ref) => (
@@ -107,6 +131,7 @@ const Toggle = React && React.forwardRef<ToggleRef, ToggleProps>(;
 Toggle && Toggle.displayName = TogglePrimitive && TogglePrimitive.Root.displayName;
 
 export { Toggle, toggleVariants }
+<<<<<<< HEAD
 ;
 
 
@@ -114,3 +139,16 @@ export { Toggle, toggleVariants }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+    />));
+Toggle.display_name = TogglePrimitive.Root.display_name;
+export { Toggle, toggle_variants }
+
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

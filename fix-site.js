@@ -1,18 +1,39 @@
 
+<<<<<<< HEAD
 const fs = require('fs');
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+const fs = require ('fs'),
+console.log ('🔧 Fixing site loading issues...'),
+// Fix Next.js configuration;
+const next_config = `/** @type {import ('next').NextConfig} */;
+const next_config = {
+  reactStrictMode: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  page_extensions: ['tsxtsjsxjs'],
+  images: {
+=======
+
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 console.log('🔧 Fixing site loading issues...'),;
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
 const nextConfig = {;
 
+<<<<<<< HEAD
   reactStrictMode: true;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   eslint: { ignoreDuringBuilds: true },;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
@@ -32,11 +53,15 @@ console.log ('✅ Next.js configuration fixed'),
 const emptyFiles = [;
   'components/BundleAnalyzer.jscomponents/PerformanceMonitor.jscomponents/SEO.js';
 
+<<<<<<< HEAD
 ];
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 emptyFiles.forEach(file => {;
   if (fs.existsSync(file) && fs.statSync(file).size === 0) {;
     fs.unlinkSync(file),;

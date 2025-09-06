@@ -3,12 +3,19 @@
 import Link from 'next/link';
 
 export const metadata = {
+<<<<<<< HEAD
 
   title: 'Services | Zion Tech Group',
   description: 'Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.',
 
 
 
+=======
+  title: "Services | Zion Tech Group",
+  description:
+    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };
 
 export default function ServicesOverviewPage() {
@@ -76,6 +83,7 @@ export default function ServicesOverviewPage() {
           icon="⚙️"
         />
         <ServiceCard
+<<<<<<< HEAD
           href="/services/blockchain"
 
           title="Blockchain Services"
@@ -98,6 +106,20 @@ export default function ServicesOverviewPage() {
           ]}
           icon="🔒"
 
+=======
+          href="/services/automation-tools"
+          title="Business Automation"
+          description="Intelligent automation tools that streamline operations and boost productivity"
+          bullets={["Workflow automation", "Document processing", "Customer service bots"]}
+          icon="⚡"
+        />
+        <ServiceCard
+          href="/services/ai-copilots"
+          title="AI Copilots"
+          description="Intelligent assistants that enhance productivity and automate complex tasks"
+          bullets={["Code development", "Customer support", "Sales & marketing"]}
+          icon="🧠"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         />
         <ServiceCard
           href="/services/data-analytics"

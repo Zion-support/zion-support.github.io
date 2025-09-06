@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React from "react";
 
@@ -12,6 +13,20 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
   switch(tabValue) {
     case 'pending':
       return (
+=======
+import React from './react';
+import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
+
+=======
+
+
+import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
+
+=======
+import React from "react",
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
         <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">
@@ -53,6 +68,11 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 
 
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
 interface FraudTabContentProps {;
@@ -97,9 +117,15 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       return null;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 };

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import React, { useRef } from "react",
@@ -29,6 +30,16 @@ export const AppScreenshots: React.FC = () => {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+
+// These would be replaced with actual screenshots
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300
@@ -62,6 +73,7 @@ export const AppScreenshots: React.FC = () => {;
   },
 
   return (
+<<<<<<< HEAD
 
     <section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -83,6 +95,13 @@ export const AppScreenshots: React.FC = () => {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+          <div 
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -96,7 +115,22 @@ export const AppScreenshots: React.FC = () => {;
                   src={screenshot.src}
                   alt={screenshot.alt}
 
+<<<<<<< HEAD
 
+=======
+=======
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             onClick={() => scroll("right")}
           >
             <ChevronRight className="h-6 w-6" />
@@ -107,8 +141,12 @@ export const AppScreenshots: React.FC = () => {;
   )
 
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 },
 import React, { useRef } from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
@@ -183,8 +221,11 @@ export const AppScreenshots: React.FC = () => {;
     </section>;
   );
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react';
 
@@ -6,6 +7,8 @@ import React from 'react';
 export type SkeletonProps = {
   className?: string;
 };
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default function Skeleton({ className = '' }: SkeletonProps) {
     >
@@ -62,18 +65,37 @@ export default function Skeleton(): any ({ className = '' }: SkeletonProps) {;
           100% { transform: translateX(100%) }
         }
 
+<<<<<<< HEAD
+=======
+
+export const Skeleton: React.FC<SkeletonProps> = ({ ",;
+  className = ",;
+  width,;
+  height,;
+  rounded = false}) => {;
+  const style: React && React.CSSProperties = {}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const Skeleton: React.FC<SkeletonProps> = ({ "
   className = "
   width
   height
   rounded = false}) => {
   const style: React.CSSProperties = {}
+<<<<<<< HEAD
 
 
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ";
   if (width) style && style.width = typeof width === "number" ? "${width}px" : width,;
 if (height) style && style.height = typeof height === "number" ? "${height}px" : height,;
@@ -126,4 +148,8 @@ export default Component;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

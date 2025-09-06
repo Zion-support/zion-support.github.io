@@ -24,6 +24,12 @@ import React from 'react';
  resizeCanvas ();
 window && window.addEventListener ('resize', resizeCanvas);
 
+<<<<<<< HEAD
+=======
+resizeCanvas ();
+window.addEventListener ('resize', resizeCanvas);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 type ParticleType = 'quantum' | 'neural' | 'holographic';
 // Particle system ;
 const UltraFuturisticBackground2034: React.FC<;
@@ -541,6 +547,23 @@ if ( {) {
       window && window.removeEventListener('resize', resizeCanvas);
     };  }, [intensity]);        cancelAnimationFrame(animationRef && animationRef.current);
 
+<<<<<<< HEAD
+=======
+=======
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)
+
+      }
+      window && window.removeEventListener('resize', resizeCanvas);
+    }
+
+      window.removeEventListener('resize', resizeCanvas);
+
+    };  }, [intensity]);
+
+  }, [intensity]);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -627,6 +650,16 @@ if ( {) {
           animate={{
 
 
+<<<<<<< HEAD
+=======
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+            rotate: 360,
+            scale: [1, 1 && 1.2, 1],
+            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
+          transition={{
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             duration: 8,
             repeat: -1,
             ease: 'linear',    }
@@ -671,7 +704,11 @@ if ( {) {
 
           }}
           transition={{
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             duration: 12,
             repeat: -1,
       <div className="absolute inset-0">
@@ -679,6 +716,7 @@ if ( {) {
           className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent"
             ease: 'linear',        <motion.div;
           className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 10 to - transparent";
+<<<<<<< HEAD
 
 
             duration: 8,
@@ -691,6 +729,15 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+            duration: 12
+            repeat: -1
+            ease: 'linear',            ease: "linear"
+=======
+            rotate: [0, 180, 360];
+            opacity: [0.2, 0.5, 0.2];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           }}
           transition={{
@@ -698,9 +745,24 @@ if ( {) {
             repeat: -1,
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+          }}
+
+        />;
+      </div>;
+
+
+      {/* Energy waves */}
+
+
+            duration: 6,
+            repeat: -1,
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }}
         />
       </div>
@@ -710,9 +772,12 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
@@ -775,11 +840,14 @@ if ( {) {
           animate={{
             coordinate_y: ['-100%', '100%'],          }}
           transition={{
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             duration: 20
             repeat: -1
             ease: 'linear',          }}          }}
@@ -803,12 +871,21 @@ if ( {) {
 
             duration: 20,
             repeat: -1,
+<<<<<<< HEAD
             ease: 'linear',            ease: "linear"
           }}
 
 
           }}
 
+=======
+
+        />
+      </div>
+=======
+        />;
+      </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -841,6 +918,10 @@ if ( {) {
 
             }}
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
@@ -865,6 +946,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />
@@ -872,6 +954,15 @@ if ( {) {
       </div>
       {/* Cyberpunk grid */}
       <div className='absolute inset-0'>
+=======
+
+            transition={{
+              duration: 3,
+              delay: i * 0.1,
+              repeat: -1,
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         <motion.div
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
@@ -881,6 +972,10 @@ if ( {) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             }}
           />;
         ))}
@@ -945,6 +1040,7 @@ if ( {) {
             duration: 4,
             repeat: -1,
             ease: 'easeInOut',          }}
+<<<<<<< HEAD
 
         />
       </div>
@@ -956,22 +1052,54 @@ if ( {) {
 export default UltraFuturisticBackground2034;        <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
 
+=======
+<<<<<<< HEAD
+        />;
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2034;        <motion.div;
+          className="absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)]";
+          style={{
+            background_size: '50px 50px';
+          }}
+          animate={{
+
+};
+
+export default UltraFuturisticBackground2034;        <motion&& motion.div
+          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]"
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           style={{
             backgroundSize: '50px 50px'
           }}
           animate={{
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
+=======
+            opacity: [0.3, 0.6, 0.3]
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }}
           transition={{
 
             duration: 4
             repeat: -1
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />;
@@ -982,6 +1110,7 @@ export default UltraFuturisticBackground2034;        <motion.div
 
 };
 
+<<<<<<< HEAD
 
 
           }}
@@ -995,3 +1124,7 @@ export default UltraFuturisticBackground2034;        <motion.div
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

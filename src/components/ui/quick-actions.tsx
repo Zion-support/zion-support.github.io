@@ -41,6 +41,7 @@ import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 import { logErrorToProduction } from '@/utils / production_logger';
+<<<<<<< HEAD
 
 
 
@@ -56,6 +57,8 @@ import { logErrorToProduction } from '@/utils/productionLogger'
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {
   Zap,
   Download,
@@ -87,6 +90,7 @@ if ( {) {
 }
     return null;
   }
+<<<<<<< HEAD
 
 
   const [isVisible, setIsVisible] = useState(false)
@@ -100,6 +104,13 @@ if ( {) {
       await action()
 
 
+=======
+  const [is_visible, setIsVisible] = useState (false);
+  const [is_processing, setIsProcessing] = useState < string | null>(null);
+  const execute_action = async (action_id: string, action: () => void) => {
+    setIsProcessing (action_id);    try {
+      await action ();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     } catch (error) {
       logErrorToProduction (`Failed to execute action ${action_id}:`, {
         data: error,
@@ -108,11 +119,14 @@ if ( {) {
       setIsProcessing(null)
     }
   }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       id: 'enable - performance - monitor',
 
@@ -158,7 +172,10 @@ export function QuickActions() {;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -168,6 +185,7 @@ export function QuickActions() {;
       icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
 
 
         localStorage.setItem('performance-monitoringtrue'),
@@ -182,6 +200,12 @@ export function QuickActions() {;
       }},
 
 
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -189,6 +213,7 @@ export function QuickActions() {;
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
 
 
         localStorage.setItem('bundle-analyzertrue'),
@@ -203,6 +228,12 @@ export function QuickActions() {;
       }},
 
 
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       id: 'clear-cache',
       label: 'Clear Cache',
@@ -216,6 +247,7 @@ export function QuickActions() {;
             names.forEach(name => caches.delete(name))
           })
         }
+<<<<<<< HEAD
 
 
         localStorage.clear()
@@ -223,6 +255,8 @@ export function QuickActions() {;
         window.location.reload()
       }
     }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       },
@@ -234,10 +268,13 @@ export function QuickActions() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       id: 'preload-critical-resources'
       label: 'Preload Critical Resources'
@@ -247,9 +284,12 @@ export function QuickActions() {;
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   dangerous?: boolean;
 
@@ -533,6 +573,7 @@ export function QuickActions() {;
           className="bg-background/80 backdrop-blur-sm"
         >
           <Settings className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -540,6 +581,10 @@ export function QuickActions() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           Quick Actions
         </Button>
       </div>
@@ -570,8 +615,11 @@ export function QuickActions() {;
             >
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               ✕
             </Button>
           </div>
@@ -579,10 +627,13 @@ export function QuickActions() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
@@ -627,11 +678,14 @@ export function QuickActions() {;
     </div>;
   );
 } ;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

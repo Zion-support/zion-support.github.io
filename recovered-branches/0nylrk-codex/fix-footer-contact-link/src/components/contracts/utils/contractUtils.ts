@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import { supabase } from "@/integrations/supabase/client",
@@ -16,6 +17,12 @@ import { ContractFormValues } from "../components/ContractForm",
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface Milestone {
   title: string,
   description: string,
@@ -87,6 +94,7 @@ export async function generateContract(
       paymentTerms: values.paymentTerms,
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
+<<<<<<< HEAD
 
 
 import { supabase } from "@/integrations/supabase/client",;
@@ -135,6 +143,9 @@ export async function generateContract(;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   
   if (data.success && data.contract) {
@@ -142,7 +153,10 @@ export async function generateContract(;
 
   } else {
     throw new Error("Failed to generate contract")
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { supabase } from '@/integrations / supabase / client';
 import { TalentProfile } from '@/types / talent';
@@ -160,6 +174,13 @@ export async function generate_contract (
   client_name: string;
   generated_milestones: GeneratedMilestone[]): Promise < string> {
   const additional_clauses = values.additional_clauses || [];
+<<<<<<< HEAD
+=======
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 ;
   // Prepare milestone data if we have AI - generated milestones;
@@ -202,10 +223,15 @@ if ( {) {
     throw new Error("Failed to generate contract");
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 ;

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 :src/components/profile/HireNowCTA.jsx
 import React, {useState} from 'react';
 import {Button} from "../ui/Button";
@@ -88,8 +92,12 @@ export function HireNowCTA("props": "any) {;
     </Card>)}
 ;
 export default HireNowCTA;
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from 'react';
 import { Button } from '../ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
@@ -103,15 +111,23 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         budget: '',
         startDate: '',
         message: ''
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 :src/components/profile/HireNowCTA.jsx
     }
     );
     const handleSubmit = (props: any) => {
     });
     const handleSubmit = (e) => {
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         e.preventDefault();
         if (onHire) {
             onHire(formData);
@@ -121,7 +137,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             projectDescription: '',
             budget: '',
             startDate: '',
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 :src/components/profile/HireNowCTA.jsx
             message: ''}
     );
@@ -130,8 +150,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         });
         setIsFormOpen(false);
     };
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
@@ -195,8 +219,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </form>)}
       </CardContent>
     </Card>);
+<<<<<<< HEAD
 }
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

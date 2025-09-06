@@ -39,6 +39,23 @@ type Outdated = { name: string, current: string, latest: string, type: 'dependen
 export async function getServerSideProps() {;
   const file = path && path.join(process && process.cwd(), 'datadep-radar && radar.json');
 
+<<<<<<< HEAD
+=======
+) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {
+  outdated.map (o => (</tr>) )
+}</tbody> </table> </div>)
+}</div>) import fs from 'fs';
+import path from 'path';
+<<<<<<< HEAD
+type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' }
+export async function getServerSideProps() {
+=======
+type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
+export async function getServerSideProps() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const file = path.join(process.cwd(), 'datadep-radar.json');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   let outdated: Outdated[] = [];  let generatedAt = '';
   try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
@@ -58,6 +75,12 @@ function getServerSideProps() {
     const json = JSON.parse (raw);
     outdated = json.outdated || [];
     generated_at = json.generated_at || '';
+<<<<<<< HEAD
+=======
+=======
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   } catch {}
   return { props: { outdated, generated_at } }
@@ -68,4 +91,58 @@ function getServerSideProps() {
 
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+=======
+export default /**
+ * DepRadarPage - Function description
+ */
+function DepRadarPage() {
+  return (
+    <div className="space - y-6">;
+      <h1 className="text - 2xl font - semibold">AI Automation: Dependency Radar</h1>;
+      <div className="text - xs text - gray - 500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
+      {outdated.length === 0 ? (
+        <div className="text - sm text - gray - 600">All dependencies up to date.</div>) : (
+        <div className="overflow - auto border rounded">;
+          <table className="min - w-full text - sm">;
+            <thead className="bg - gray - 50">;
+              <tr>;
+                <th className="text - left p - 2">Package</th>;
+                <th className="text - left p - 2">Current</th>;
+                <th className="text - left p - 2">Latest</th>;
+                <th className="text - left p - 2">Type</th>;
+              </tr>;
+            </thead>;
+            <tbody>;
+              {outdated.map (object => (
+                <tr key={o.name} className="border - t">;
+                  <td className="p - 2">{o.name}</td>;
+                  <td className="p - 2">{o.current}</td>;
+                  <td className="p - 2">{o.latest}</td>;
+                  <td className="p - 2">{o.type}</td>;
+                </tr>))}
+            </tbody>;
+          </table>;
+        </div>)}
+    </div>);
+      ) : (
+        <div className=&quot;overflow-auto border rounded&quot;>
+          <table className=&quot;min-w-full text-sm&quot;>
+            <thead className=&quot;bg-gray-50&quot;>
+              <tr>
+                <th className=&quot;text-left p-2&quot;>Package</th>
+                <th className=&quot;text-left p-2&quot;>Current</th>
+                <th className=&quot;text-left p-2&quot;>Latest</th>
+                <th className=&quot;text-left p-2&quot;>Type</th>
+=======
+=======
+    outdated = json.outdated || [];
+    generatedAt = json.generatedAt || ''
+  } catch {}
+  return { props: { outdated, generatedAt } }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

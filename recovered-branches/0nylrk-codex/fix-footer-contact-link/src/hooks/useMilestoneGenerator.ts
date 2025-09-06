@@ -1,7 +1,14 @@
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {toast} from 'sonner';
+export interface MilestoneInput {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   scope: string;
   start_date: string;
   end_date: string | null,
@@ -9,16 +16,23 @@
 
 }
 
+<<<<<<< HEAD
 export interface GeneratedMilestone {
 
 export interface GeneratedMilestone {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+export interface GeneratedMilestone {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   title: string;
   description: string;
 
       setIsGenerating(true),
 
+<<<<<<< HEAD
 
   isAiGenerated: boolean
 }
@@ -30,6 +44,9 @@ export interface GeneratedMilestone {;
     try {
       setIsGenerating(true)
       const { data, error } = await supabase.functions.invoke('generate-milestones', {
+=======
+      const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         body: input
       });
@@ -107,8 +124,11 @@ export function useMilestoneGenerator() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     generatedMilestones;
     isGenerating;
 

@@ -1,10 +1,21 @@
 
+<<<<<<< HEAD
 
 // Define the types for our sitemap structure
+=======
+// Define the types for our sitemap structure;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+export type SitemapItem = {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   path: string;
   label: string;
   description?: string;
@@ -638,10 +649,15 @@ export const getAccessibleRoutes = (;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes];
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     if (userType === 'employer' |userType === 'buyer') {
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
@@ -654,16 +670,31 @@ export const getAccessibleRoutes = (;
 
 
 ;
+<<<<<<< HEAD
   return accessibleRoutes;
 
 
   
   return accessibleRoutes
+=======
+// Dynamic Path Patterns;
+export const dynamic_paths = {
+  talent_profile: '/talent/:id';
+  project_details: '/project/:project_id';
+  project_milestones: '/project/:project_id / milestones';
+  project_room: '/project/:project_id / room';
+  job_details: '/job/:id';
+  category_details: '/categories/:slug',
+  dispute_details: '/dashboard / disputes/:dispute_id'}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 
   return accessibleRoutes;
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };

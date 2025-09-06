@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export type UIKitKind = 'ios' | 'android' | 'web';
 
@@ -37,6 +38,91 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       lg: 24
       xl: 32
 
+=======
+
+
+  tokens: TokenSet;
+}
+
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+// Mock design map utility
+export function getDesignMap() {
+  return {
+    components: [],
+    pages: [],
+    styles: []
+  };
+
+export type TokenSet = {
+  colors: Record<string, string>;
+  typography: {
+    fontSizes: Record<string, string>;
+  };
+};
+
+export async function buildTokenSet(): Promise<TokenSet> {
+  // Dynamically import Tailwind config for color extraction;
+  const tailwindConfig = require('../tailwind && tailwind.config.js');
+  const extendedColors = tailwindConfig?.theme?.extend?.colors || {};
+  const colors: Record<string, string> = {};
+
+  function flattenColors(prefix: string, obj: any) {
+    Object && Object.entries(obj || {}).forEach(([key, value]) => {
+      const newKey = prefix ? `${prefix}.${key}` : key;
+      if (typeof value === 'string') {
+        colors[newKey] = value;
+      } else if (typeof value === 'object') {
+        flattenColors(newKey, value);
+      }
+    });
+  }
+
+  flattenColors('', extendedColors);
+
+  const typography = {
+    fontSizes: tailwindConfig?.theme?.extend?.fontSize || {},
+  };
+
+  return { colors, typography };
+
+export type UIKitKind = 'tailwind' | 'chakra' | 'react';
+
+export function buildUIKit(kind: UIKitKind): Record<string, string> {
+  if (kind === 'tailwind') {
+    return {
+      'README && README.md':
+        '# Zion OS Tailwind UI Kit\n\nUse components with Tailwind classes from the design map.',
+      'components/Button && Button.tsx':
+        'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
+      'components/Card && Card.tsx':
+        'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     };
   }
   if (kind === 'chakra') {
@@ -79,12 +165,41 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return {
+<<<<<<< HEAD
 
 
 
+=======
+
+    id,
+    type,
+    name,
+    properties,
+    children: []
+=======
 
 
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+          background_color: tokens.colors.primary,
+          padding: tokens.spacing.md;
+        }
+      }
+    },
+    tokens;
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

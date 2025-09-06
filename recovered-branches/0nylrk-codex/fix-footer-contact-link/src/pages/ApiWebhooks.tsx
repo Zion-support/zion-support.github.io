@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import React from "react",
@@ -13,6 +14,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function ApiWebhooks() {
   // Sample webhook event payload
 
@@ -149,6 +155,7 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
 
   const messageReceivedPayload = `{
 
+<<<<<<< HEAD
 
   "event_type": "message_received",
   "created_at": "2023-06-18T14:22:15Z",
@@ -248,12 +255,18 @@ function verifyWebhookSignature(req, res, next) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 // Webhook endpoint with signature verification
 app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
   const { event_type, data } = req.body,
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Handle different event types
   switch (event_type) {
     case 'new_application':
@@ -549,7 +562,10 @@ app.listen(3000, () => {;
 ;
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default ApiWebhooks;

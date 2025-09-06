@@ -36,6 +36,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
 
 
 
+<<<<<<< HEAD
   const getAvailabilityColor = (status: string) => {    switch (status) {
       case 'full-time':
         return 'bg-green-500/20 text-green-400'
@@ -48,14 +49,19 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
     }
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         return 'bg-blue-500/20 text-blue-400',;
       default:;
         return 'bg-gray-500/20 text-gray-400';
     };
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }; return 'bg-gray-500/20 text-gray-400'
     }
   }
@@ -100,6 +106,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return 'Project'
       default:
         return status
+<<<<<<< HEAD
 
 
   }
@@ -107,6 +114,8 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       <Clock className='h-3 w-3' />
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React from 'react';
 
@@ -170,6 +179,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -177,6 +187,10 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )

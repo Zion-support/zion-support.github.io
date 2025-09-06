@@ -54,6 +54,23 @@ function matchesRegion(): any (profile: TalentProfile, region?: string) {;
           </div>;
         </div>;
 
+<<<<<<< HEAD
+=======
+=======
+  const r = region.toLowerCase();
+  return profile.location.toLowerCase().includes(r)
+}
+function matchesService(profile: TalentProfile, service?: string) {
+  if (!service) return true;
+  const s = service.toLowerCase();
+  return profile.title.toLowerCase().includes(s) || profile.skills.some((sk) => sk.toLowerCase().includes(s))
+}
+export default function TalentGrid({ region, service }: Props) {
+  const items = React.useMemo(
+    () => TALENT_PROFILES.filter((p) => matchesRegion(p, region) && matchesService(p, service)),
+    [region, service]
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       ))}
     </div>;

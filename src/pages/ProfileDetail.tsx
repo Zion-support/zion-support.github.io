@@ -6,6 +6,7 @@ export default function ProfileDetail() {;
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 
 
 import { useState, useEffect } from "react",
@@ -25,6 +26,8 @@ export default function ProfileDetail() {
   // definitions, so avoid passing a type argument to prevent TS2347.
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   useEffect(() => {
@@ -125,6 +128,7 @@ export default function ProfileDetail() {
 
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   return (
     <>
@@ -135,6 +139,11 @@ export default function ProfileDetail() {
         description = {profileData.bio || "Check out this talent's profile on Zion!",}
 
 
+=======
+
+        description = {profileData.bio || "Check out this talent's profile on Zion!",}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState, useEffect } from "react",;
 import { useRouter } from "next/router",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -227,8 +236,11 @@ export default function ProfileDetail() {;
         description={profileData.bio || "Check out this talent's profile on Zion!"}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       />
@@ -383,6 +395,7 @@ if ( {) {
                 </div>;
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -390,6 +403,10 @@ if ( {) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -548,11 +565,14 @@ if ( {) {
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
+<<<<<<< HEAD
 
 
                 hourly_rate: profileData?.hourly_rate || 0
                 hourly_rate: profileData?.hourly_rate || 0,
                 hourly_rate: profileData?.hourly_rate || 0
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               }}
@@ -585,6 +605,7 @@ if ( {) {
             </div>
               </div>;
             </div>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -593,6 +614,11 @@ if ( {) {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
               <h3 className="text-xl font-bold mb-4">Social</h3>;
@@ -624,11 +650,14 @@ if ( {) {
                   <a;
                     href={profileData.twitter_url}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -651,11 +680,14 @@ if ( {) {
                   <a;
                     href={profileData.linkedin_url}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"

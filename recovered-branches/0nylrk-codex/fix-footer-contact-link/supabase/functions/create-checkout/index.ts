@@ -1,19 +1,37 @@
 
+<<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
 
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
+import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 
 
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+import Stripe from "https://esm.sh/stripe@14.21.0",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+
+=======
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import Stripe from "https://esm.sh/stripe@14.21.0",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -195,6 +213,7 @@ serve(async (req) => {
   }
 });
 
+<<<<<<< HEAD
 
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
@@ -272,6 +291,12 @@ serve(async (req) => {;
               description: productDescription;
             },;
 
+=======
+=======
+              name: product_name,
+              description: product_description;
+            }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             unit_amount: amount * 100, // Convert to cents;
             ...(product_type === "subscription" ? { recurring: { interval: "month" } } : {});
           }
@@ -313,10 +338,19 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 500})
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 });

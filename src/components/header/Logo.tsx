@@ -3,6 +3,7 @@ return (
         <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
       </Link>);
   }
+<<<<<<< HEAD
 
 
 
@@ -26,6 +27,8 @@ export function Logo({ customLogo }: LogoProps) {
   // Use the white-label color if available and no specific _customColor is provided
   // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined),
   
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   if (logoToUse) {

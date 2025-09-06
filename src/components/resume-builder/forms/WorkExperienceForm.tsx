@@ -7,6 +7,7 @@ if ( {) {
       } else {
         success = await addWorkExperience(resumeId, experienceData)
       }
+<<<<<<< HEAD
 
 
       if (success) {
@@ -25,6 +26,8 @@ if ( {) {
     }
   }
   const handleEdit = (work: WorkExperience) => {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       setError(err.message || 'An error occurred');
@@ -33,8 +36,11 @@ if ( {) {
   const handleEdit = (work: WorkExperience) => {;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -322,10 +328,13 @@ export function WorkExperienceForm(): any ({;
                         : (work.end_date ? (typeof work.end_date === 'string' 
                           ? work.end_date 
                           : format(work.end_date, 'MMM yyyy')) : '')}
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
@@ -333,6 +342,7 @@ export function WorkExperienceForm(): any ({;
                   </div>
                   <div className="flex gap-2">
                     <Button
+<<<<<<< HEAD
 
 
 
@@ -789,17 +799,25 @@ export function WorkExperienceForm(): any ({;
 
 
 
+=======
+                    setEditingId(null),
+                    setEditingId(null),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     form.reset({
                       company_name: '',
                       role_title: '',
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
+<<<<<<< HEAD
 
 
                       location: ''})
 
 
+=======
+                      location: ''})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   } else {
                     onBack()
             />;
@@ -842,6 +860,7 @@ export function WorkExperienceForm(): any ({;
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -849,6 +868,10 @@ export function WorkExperienceForm(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {editingId ? 'Update' : 'Add'} Experience
                 </Button>
                 {!editingId && workExperiences.length > 0 && (
@@ -891,3 +914,55 @@ export function WorkExperienceForm(): any ({;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
+                    setEditingId (null);
+                    form.reset ({
+                      company_name: '',
+                      role_title: '',
+                      start_date: format (new Date (), 'yyyy - MM - dd'),
+                      is_current: false,
+                      description: '',
+                      location: '',
+                    });
+                  } else {
+                    on_back ();
+                  }
+                }}
+              >;
+                {editing_id ? 'Cancel' : 'Back'}
+              </Button>;
+              <div className='flex gap - 2'>;
+                <Button type='submit' disabled={is_loading}>;
+                  {is_loading && (
+                    <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}
+                  {editing_id ? 'Update' : 'Add'} Experience;
+                </Button>;
+                {!editing_id && work_experiences.length > 0 && (
+                  <Button type='button' on_click={on_complete}>;
+                    Next;
+                  </Button>)}
+              </div>;
+            </div>;
+          </form>;
+        </Form>;
+      </div>;
+
+
+
+      ...work;
+      start_date: formatDateValue(work.start_date),
+      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
+  };
+
+
+
+    </div>);
+}> {';
+  editing_id ? 'Cancel': 'Back';
+}</Button> Next </Button>);
+}</div> </div> </form> </Form> </div> </div>);
+}'"  );
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

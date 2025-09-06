@@ -13,6 +13,10 @@ return (
             <Gift className='h-5 w-5' />          </li>            <Gift className="h-5 w-5" />;
           </li>;
 
+<<<<<<< HEAD
+=======
+import { Gift } from 'lucide-react'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -43,11 +47,14 @@ export default function RewardsPage() {
     </div>;
   );
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   );
 }

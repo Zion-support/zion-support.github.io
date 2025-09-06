@@ -569,7 +569,10 @@ import { Input } from '@/components/ui/input';
     setCurrentSharedWhitepaperId(null)
     setCurrentSharedWhitepaperIsPublic(null)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState, useEffect, useCallback } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
@@ -578,6 +581,10 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Trash2, Download, Share2 } from 'lucide-react'
 import { Send } from 'lucide-react', // Added Send icon
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { toast } from "sonner",
 import { logErrorToProduction } from '@/utils/productionLogger',
 interface WhitepaperSection {
@@ -922,6 +929,12 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     setShareableLink(null),
     setCurrentSharedWhitepaperId(null),
     setCurrentSharedWhitepaperIsPublic(null),
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     try {
       const whitepaperPayload = {
         tokenName,
@@ -989,6 +1002,17 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               title='Generate Shareable Link'
             >
               <Share2 className='h-4 w-4' />{' '}
+<<<<<<< HEAD
+=======
+
+              <span className='ml-1 hidden sm:inline'>Share</span>;
+            </Button>;
+          </div>;
+        </div>;
+
+        <form onSubmit={e => e && e.preventDefault()} className='space-y-6'>;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* ... (Input fields remain the same) ... */}
           <div>
             <label htmlFor='tokenName' className='block text-sm font-medium'>
@@ -1141,6 +1165,46 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 <Button
                   variant='ghost'
                   size='icon'
+<<<<<<< HEAD
+=======
+                  onClick={() => removeDistributionItem(item.id)}
+                  aria-label='Remove'
+                >
+                  <Trash2 className='h-4 w-4' />
+                </Button>              </div>
+
+        <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
+          {/* ... (Input fields remain the same) ... */}
+           <div>
+            <label htmlFor="tokenName" className="block text-sm font-medium">Token Name:</label>
+            <Input id="tokenName" value={tokenName} onChange={(e) => setTokenName(e.target.value)} required />
+          </div>
+          <div>
+            <label htmlFor="tokenSupply" className="block text-sm font-medium">Token Supply:</label>
+            <Input id="tokenSupply" value={tokenSupply} onChange={(e) => setTokenSupply(e.target.value)} required />
+          </div>
+          <div>
+            <label htmlFor="useCases" className="block text-sm font-medium">Use Cases:</label>
+            <textarea id="useCases" value={useCases} onChange={(e) => setUseCases(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
+          </div>
+          <div>
+            <label htmlFor="rewardsLogic" className="block text-sm font-medium">Rewards Logic:</label>
+            <textarea id="rewardsLogic" value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
+          </div>
+
+          {/* Token Distribution Inputs */}
+          <div className="space-y-3 p-3 border rounded-md">
+            <h2 className="text-lg font-semibold">Token Distribution</h2>
+            {distributionData.map((item) => (
+              <div key={item.id} className="flex items-center space-x-2">
+                <Input type="text" placeholder="Category" value={item.name} onChange={(e) => handleDistributionChange(item.id, 'name', e.target.value)} className="flex-grow"/>
+                <Input type="number" placeholder="%" value={item.percentage} onChange={(e) => handleDistributionChange(item.id, 'percentage', e.target.value)} className="w-24" min="0" max="100"/>
+                <Button variant="ghost" size="icon" onClick={() => removeDistributionItem(item.id)} aria-label="Remove"><Trash2 className="h-4 w-4"/></Button>
+              </div>
+            ))}
+            <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
+            <div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               )}
             </div>
           )}
@@ -1151,6 +1215,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
+<<<<<<< HEAD
               type='button'
               onClick={handleSubmitToCounsel}
               disabled={
@@ -1202,6 +1267,8 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             </Button>;
           )}
            {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
@@ -1281,8 +1348,11 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             {sections.map((section) => (
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <WhitepaperSectionEditor
                 key={section.id}
                 title={section.title}
@@ -1293,7 +1363,10 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 onContentChange={(newContent) => handleSectionContentChange(section.id, newContent)}
               />;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ))}
           </div>
         )}
@@ -1327,18 +1400,24 @@ const WhitepaperGeneratorPage: React.FC = () => {;
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 '";
 ;
 }
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
         <WhitepaperPreviewPanel
             sections={sections}
@@ -1351,11 +1430,14 @@ const WhitepaperGeneratorPage: React.FC = () => {;
   );
 },;
 export default WhitepaperGeneratorPage;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

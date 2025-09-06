@@ -1,8 +1,24 @@
 
+<<<<<<< HEAD
 
+=======
+/* eslint - env node */;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+/* eslint-env node */
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 module.exports = {
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 /* eslint-env node */
 module.exports = {
   env: {
@@ -171,7 +187,27 @@ ursor/add-new-services-and-deploy-updates-0462
 
 
 
+<<<<<<< HEAD
 
+=======
+=======
+
+
+=======
+};
+
+
+
+};
+
+=======
+
+>>>>>>> origin/automation-improvements-final
+=======
+    "commit-and-push.js"
+  ]
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     "ecosystem.simple.js",
     "ecosystem.working.js",
     "execute-automation.js",
@@ -223,11 +259,15 @@ ursor/add-new-services-and-deploy-updates-0462
     "clean - conflicts.js",
     "commit - and - push.js",
   ],
+<<<<<<< HEAD
 };
 
 
 
 };
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 
 ;
@@ -264,7 +304,12 @@ module.exports = {;
 },;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

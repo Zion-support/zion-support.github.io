@@ -3,6 +3,7 @@ if (onDisputeCreated) {
         }
       }
     } catch (error) {
+<<<<<<< HEAD
 
 
 
@@ -16,11 +17,19 @@ if (onDisputeCreated) {
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
 
+<<<<<<< HEAD
+=======
+      logErrorToProduction('Error submitting dispute:', { data: error }),
+      toast.error("Failed to submit dispute. Please try again.")
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     } finally {
       setIsSubmitting(false)
     }
@@ -33,11 +42,14 @@ if (onDisputeCreated) {
       </div>
       
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
@@ -55,11 +67,14 @@ if (onDisputeCreated) {
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
               <FormItem>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -378,11 +393,14 @@ if ( {) {
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {...field}
                   />
                 </FormControl>
@@ -393,10 +411,13 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       ))}
                     </ul>;
                   </div>;
@@ -408,6 +429,7 @@ if ( {) {
           <div className='flex justify-end space-x-2'>
           
           <div className="flex justify-end space-x-2">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -415,6 +437,10 @@ if ( {) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {onCancel && (
               <Button type='button' variant='outline' onClick={onCancel}>
                 Cancel
@@ -538,3 +564,14 @@ if ( {) {
 }value= {
   value;
 }> {
+<<<<<<< HEAD
+=======
+  label;
+}</SelectItem>) );
+}</SelectContent> </Select> <FormMessage /> </FormItem>);
+}/> <FormField <FormItem> <FormLabel > Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <FormItem> <FormLabel > Attachments (optional) </FormLabel> <FormControl> <div className="space - y-4" > <Input type="file" multiple > Remove </Button> </li>) );
+}</ul> </div>);
+}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>);
+}'"}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

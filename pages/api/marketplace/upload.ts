@@ -1,11 +1,25 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next",;
+;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from "next",
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ ok: false, error: "Method not allowed" }),
   const { name, url } = req.body || {},
@@ -13,6 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // Echo back URL, real impl would upload to storage (Supabase, S3, etc.)
 
 
+<<<<<<< HEAD
   return res.status(201).json({ ok: true, file: { name, url: url || null } })
 import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req, res) {
@@ -44,3 +59,6 @@ export default function handler(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

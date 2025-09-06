@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
@@ -9,11 +10,14 @@ export default async function handler(
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 export default async function handler(
 
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
@@ -23,6 +27,9 @@ export default async function handler(
 ) {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
@@ -35,6 +42,7 @@ export default async function handler(
     yoyGrowth: 1.85
     completedProjects: 3275
     globalReach: ["USEUAPACLATAM"]
+<<<<<<< HEAD
 
     funnel: [
       { stage: "Visitors", value: 250000 }
@@ -62,6 +70,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   try {
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
@@ -72,6 +84,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ],
 
 
+<<<<<<< HEAD
     if (req.method === 'GET') {
       // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
       const data = {
@@ -97,4 +110,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+  }
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }

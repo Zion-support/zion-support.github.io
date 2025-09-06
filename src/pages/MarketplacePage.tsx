@@ -24,6 +24,10 @@ import { INITIAL_MARKETPLACE_PRODUCTS  } from '@/data/initialMarketplaceProducts
 import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
+<<<<<<< HEAD
+=======
+const MarketplaceInsights = ({ stats }: { stats: any }) => (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const MarketplaceInsights = ({ stats }: { stats: any },) => (
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
@@ -104,6 +108,11 @@ const MarketplaceFilterControls = ({;
       <Filter className="h-4 w-4 text-muted-foreground" />
       <select value={filterCategory} onChange={(e,) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
       <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <option value="">All Categories</option>
         {categories.map((cat: string,) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
@@ -549,6 +558,11 @@ function MarketplacePageContent() {;
         <NextSeo;
           title="Marketplace - Zion Tech Marketplace Solutions & Services";
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
         />
       <div className="container py-8">
@@ -798,9 +812,12 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
         openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png' }] }}
       />;
@@ -828,6 +845,7 @@ if ( {) {
           showRecommended = {showRecommended,}
           setShowRecommended = {setShowRecommended,}
           loading = {isFetching,}
+<<<<<<< HEAD
 
 
         />
@@ -840,6 +858,8 @@ if ( {) {
               ref = {index === products.length - 1 ? lastElementRef : null,}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               initial={{ opacity: 0, scale: 0.9 }} 
@@ -867,6 +887,7 @@ if ( {) {
               ref={index === products.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0, scale: 0.9 }} ;
               animate={{ opacity: 1, scale: 1 }} ;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -875,6 +896,11 @@ if ( {) {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
               whileHover={{ scale: 1.02 }}
@@ -991,9 +1017,12 @@ if ( {) {
           ))}
 
 
+<<<<<<< HEAD
         </AnimatePresence>
       </motion.div>
       {(isFetching |loading) && products.length > 0 && (
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {(isFetching || loading) && products.length > 0 && (
 
 
@@ -1020,8 +1049,11 @@ if ( {) {
             </Button>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           )}
         </div>
       )}
@@ -1072,11 +1104,17 @@ if ( {) {
     </div>
     </>
   )
+<<<<<<< HEAD
 
 
 }
 
 
+=======
+}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 
 // Main export;
@@ -1143,11 +1181,14 @@ function MarketplacePage() {
   return <MarketplacePageContent />;
 }
 ;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 // Main export export default function MarketplacePage() {
   return <MarketplacePageContent />;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
@@ -8,6 +9,8 @@ function toOpenApi() {
   v1.sections.forEach((section) => {
     section.endpoints.forEach((ep: EndpointSpec) => {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               }
@@ -41,13 +44,17 @@ function toOpenApi() {
     }
   }
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 }
+<<<<<<< HEAD
 
 
 
@@ -159,6 +166,9 @@ export default function handler(req, res) {
   try {
 
 
+=======
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(toOpenApi())
 }
@@ -175,6 +185,7 @@ function handler() {
   res.set_header ("Content - Type", "application / json");
   res.status (200).json (toOpenApi ());
 }
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -182,3 +193,10 @@ function handler() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

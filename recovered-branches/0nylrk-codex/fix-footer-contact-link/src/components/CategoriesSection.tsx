@@ -1,6 +1,13 @@
 
+<<<<<<< HEAD
 
 
+=======
+import { GradientHeading } from './GradientHeading';
+import { Link } from './react-router-dom';
+import { Briefcase, HardDrive, Lightbulb, Users } from './lucide-react';
+const categories = [;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   {
     title: "Services",
     description: "On - demand IT support, consulting, development, and more";
@@ -19,12 +26,18 @@
   {
     title: "Equipment"
     description: "Rent or buy specialized hardware, servers, and devices";
+<<<<<<< HEAD
 
     icon: <HardDrive className="w-10 h-10" />
     link: "/equipment"
     color: "from-amber-500 to-orange-600"}
 
 
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
@@ -32,8 +45,11 @@ import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const categories = [
   {
     title: "Services",
@@ -61,6 +77,7 @@ const categories = [
     color: "from-emerald-500 to-green-600"}]
 const specialServices = [
   {
+<<<<<<< HEAD
 
     title: "IT Onsite Services"
     link: "/it-onsite-services"
@@ -81,6 +98,10 @@ import { GradientHeading } from "./GradientHeading",;
 import { Link } from "react-router-dom",;
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const categories = [;
   {;
     title: "Services",;
@@ -117,11 +138,18 @@ const specialServices = [;
 
 interface CategoriesSectionProps {;
   showTitle?: boolean;
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
@@ -231,6 +259,7 @@ function CategoriesSection() {
                 {service && service.title}
               </Link>;
             ))}
+<<<<<<< HEAD
 
           </div>
         </div>
@@ -248,6 +277,14 @@ function CategoriesSection() {
 
 
 };
+=======
+=======
+
+};
+
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>;
         </div>;
 
@@ -263,8 +300,18 @@ function CategoriesSection() {
 
     </section>);
 }
+<<<<<<< HEAD
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+=======
+
+
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,9 +1,15 @@
 
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface FraudItem {
 
 
@@ -29,6 +35,38 @@ export default function FraudAdminPage() {
 
 
 
+<<<<<<< HEAD
+=======
+  id: string
+  userId: string | null
+  source: string
+  createdAt: string
+  heuristic: { reasons: string[], severity: string }
+  gpt?: { label: string, reason: string, confidence: number }
+
+  status: string
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export default function FraudAdminPage() {
+
+    const saved = localStorage.getItem('admin-token') |''
+    setAdminToken(saved)
+  }, [])
+  const fetchItems = async () => {
+    setLoading(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} })
+      const json = await res.json()
+      if (!res.ok) throw new Error(json.error |'Failed to load')
+      setItems(json.items |[])
+    } catch (e: any) {
+      setError(e.message |'Failed to load')
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     } finally {
 
       set_loading (false);
@@ -125,19 +163,31 @@ export default function FraudAdminPage() {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
+<<<<<<< HEAD
 
       {loading && <div>Loading...</div>}
       {error && <div className="text-red-600">{error}</div>}
 
 
+=======
+
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {loading && <div>Loading...</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -150,10 +200,15 @@ export default function FraudAdminPage() {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -186,10 +241,14 @@ export default function FraudAdminPage() {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </div>
                 </td>
                 <td className="p-2 border">
@@ -220,9 +279,13 @@ export default function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 }
 }
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

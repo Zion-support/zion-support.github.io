@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -6,6 +7,8 @@ interface PreviewResumeProps {
   resume: Resume;
   onBack: () => void
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {Resume} from '@/types/resume';
 import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
@@ -15,7 +18,11 @@ import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationS
 
 
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Resume } from '@/types/resume',;
 import {;
   PreviewHeader,;
@@ -31,8 +38,11 @@ interface PreviewResumeProps {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
@@ -53,8 +63,12 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   )
 }
 
+<<<<<<< HEAD
 ;
 ;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

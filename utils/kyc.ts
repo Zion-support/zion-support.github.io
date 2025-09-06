@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
 export type KycRole = 'client' | 'talent' | 'enterprise';
 export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
 export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
@@ -9,6 +12,12 @@ export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
   status: 'pending' | 'approved' | 'rejected';
 }
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export interface KycProfile {
 
 
@@ -130,6 +139,7 @@ export interface KycProfile {
     details?: any
   }>;
 }
+<<<<<<< HEAD
 
 export function getRequiredDocuments(role: KycRole): string[] {
   if (role === 'client') {;
@@ -147,6 +157,9 @@ export function getOptionalDocuments(role: KycRole): string[] {
 }
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function generateKycDocumentId(): string {
   return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
@@ -160,9 +173,14 @@ export function isKycProfileExpired(profile: KycProfile): boolean {
   return new Date(profile.expiresAt) < new Date();
 }
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const missing: string[] = [];
 ;
   // Check condition
@@ -196,6 +214,7 @@ if ( {) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 
 
 
@@ -203,3 +222,10 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

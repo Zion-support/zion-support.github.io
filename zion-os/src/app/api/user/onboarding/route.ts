@@ -27,13 +27,37 @@ if (!session?.user?.email) {
       { status: 200 }
     );
   } catch (error) {
+<<<<<<< HEAD
 
     console.error('Onboarding completion error:', error);
     return NextResponse.json(
+=======
+<<<<<<< HEAD
+    console && console.error('Onboarding completion error:', error);
+    return NextResponse && NextResponse.json(
+          id: updated_user.id,
+          name: updated_user.name,
+          email: updated_user.email,
+          role: updated_user.role,
+          onboarding_completed: updated_user.onboarding_completed,
+        },
+      },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error ('Onboarding completion error:', error);
+    return NextResponse.json (
+
+      { error: 'Internal server error' },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
@@ -71,8 +95,11 @@ export async function POST(request: NextRequest) {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       { status: 500 }
     );
   }

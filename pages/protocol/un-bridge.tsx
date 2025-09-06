@@ -3,6 +3,7 @@ export default function UNBridge() {
   const [form, setForm] = useState({
 
 
+<<<<<<< HEAD
     title: 'Zion DAO x Digital Labor Initiative'
     targetInstitution: 'UN Development Programme'
     type: 'Workforce Dev'
@@ -13,6 +14,37 @@ export default function UNBridge() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
+
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+    language: 'en',;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
@@ -127,7 +159,10 @@ export default function UNBridge(req, res) {
     }
 
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Global Outreach: UN Bridge</h1>;
@@ -305,11 +340,14 @@ export default function UNBridge(req, res) {
     </div>;
   );
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Global Outreach: UN Bridge</h1>
@@ -413,6 +451,7 @@ export default function UNBridge(req, res) {
           {translated && (
 
 
+<<<<<<< HEAD
             <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
               {translated  } catch (error) {
     console.error("Error:", error);
@@ -434,11 +473,15 @@ export default function UNBridge(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
           {result?.meta && (
             <div className="text-sm space-y-1">
               <div><span className="font-medium">Status:</span> {result.meta.status}</div>
               {result.meta.artifacts?.markdownPath && (
+<<<<<<< HEAD
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</Link></div>
               )  } catch (error) {
     console.error("Error:", error);
@@ -460,6 +503,11 @@ export default function UNBridge(req, res) {
                 <div>IPFS CID: {result.meta.artifacts.ipfsCid}</div>
               )}
 
+=======
+<<<<<<< HEAD
+                <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</a></div>
+              )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {result.meta.artifacts?.pdfPath && (
 
 export default /**
@@ -572,7 +620,16 @@ if (return) {
     } finally {
       set_loading (false);
     }
+<<<<<<< HEAD
 
+=======
+=======
+
+
+}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
               )  } catch (error) {
     console.error("Error:", error);
@@ -759,7 +816,12 @@ if (return) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

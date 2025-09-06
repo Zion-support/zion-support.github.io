@@ -4,6 +4,7 @@ const imgRef = useRef<HTMLDivElement>(null);
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -12,6 +13,8 @@ const imgRef = useRef<HTMLDivElement>(null);
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -50,7 +53,10 @@ export function OptimizedImage({
   useEffect(() => {
 
 
+<<<<<<< HEAD
     if (!lazy |priority |isInView) return
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     if (!lazy || priority || isInView) return;
 
 
@@ -123,6 +129,7 @@ if (||) {
         if (entry && entry.isIntersecting) {;
           setIsInView(true),;
           observer.disconnect();
+<<<<<<< HEAD
 
 
         }
@@ -192,6 +199,13 @@ if (||) {
   const generateBlurDataURL = () => {
     if (blurDataURL) return blurDataURL,
     
+=======
+
+
+
+        }
+      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     // Generate a simple gray blur placeholder
@@ -292,6 +306,7 @@ if (||) {
       {isInView && !hasError && (;
 
         <Image;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -299,6 +314,10 @@ if (||) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           src={getOptimizedSrc(src)}
   // Generate blur placeholder;
   const generateBlurDataURL = () =>: any {
@@ -329,20 +348,26 @@ if (return blurDataURL) {
           blurDataURL={
             placeholder === 'blur' ? generateBlurDataURL() : undefined
           }
+<<<<<<< HEAD
 
 
           onLoad={handleLoad}
           onError={handleError}
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           className={cn(            'transition-opacity duration-300'
 
 
           className={cn(            'transition-opacity duration-300',
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             isLoading ? 'opacity-0' : 'opacity-100'
           ),}
           className={cn(;
@@ -350,12 +375,18 @@ if (return blurDataURL) {
             isLoading ? 'opacity-0' : 'opacity-100';
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {...props}
         />
       )}
@@ -364,6 +395,7 @@ if (return blurDataURL) {
         <div className='absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse' />
       {(isLoading && isInView) && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -371,6 +403,10 @@ if (return blurDataURL) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       )}
       {/* Error fallback */}
       {hasError && (
@@ -415,11 +451,14 @@ if (return blurDataURL) {
               </svg>
               <span className="text-xs">Image not available</span>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>
           )}
         </div>
@@ -490,6 +529,7 @@ export function getImageDimensions(
     img.onerror = reject
     img.src = src
   })
+<<<<<<< HEAD
 
 
 }
@@ -622,4 +662,6 @@ export function getImageDimensions (
   });
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }

@@ -21,8 +21,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
@@ -133,10 +136,13 @@ const serviceCategories = [
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
 ];
+<<<<<<< HEAD
 
 export default function UltraFuturisticServiceShowcase2034() {
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import {;
@@ -313,8 +319,82 @@ const service_categories = [;
             computing, and emerging technology solutions. Each service is
             designed to transform your business and propel you into the future.
           </p>
+<<<<<<< HEAD
+=======
+=======
+        stagger_children: 0.1,
+      },
+    },  }
+;
+  const item_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
+    visible: { opacity: 1, coordinate_y: 0 },        stagger_children: 0.1;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    hidden: { opacity: 0, y: 20 }
+    visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      }
+    }
+  }
+;
+  const item_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
+    visible: { opacity: 1, coordinate_y: 0 },
+  }
+<<<<<<< HEAD
+;
+=======
+=======
+    hidden: { opacity: 0, y: 20 },
+<<<<<<< HEAD
+    visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
+      }
+    }
+=======
+    visible: { opacity: 1, y: 0 },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
+=======
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  return (
+    <section className='py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden'>;
+      {/* Animated Background */}
+<<<<<<< HEAD
+      <div className='absolute inset - 0 overflow - hidden'>;
+        <div className='absolute -top - 40 -right - 40 w - 80 h - 80 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl animate - pulse'></div>;
+        <div className='absolute -bottom - 40 -left - 40 w - 80 h - 80 bg - gradient - to - tr from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 1000'></div>;
+        <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 bg - gradient - to - r from - green - 500 / 10 to - teal - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 500'></div>;
+      </div>;
+      <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>        {/* Header */}  }
+;
+=======
+      <div className='absolute inset-0 overflow-hidden'>
+        <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
+        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>
+      </div>
+<<<<<<< HEAD
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
+=======
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
+=======
+        {/* Header */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <section className="py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden">;
       {/* Animated Background */}
@@ -342,6 +422,16 @@ const service_categories = [;
             designed to transform your business and propel you into the future.;
           </p>;
 
+<<<<<<< HEAD
+=======
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+
+        {/* Header */}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -427,10 +517,13 @@ const service_categories = [;
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ].map((stat, index) => (
               <motion.div
 
@@ -462,14 +555,26 @@ const service_categories = [;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>;
         </motion && motion.div>;
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Search and Filter */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -481,11 +586,15 @@ const service_categories = [;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -521,8 +630,11 @@ const service_categories = [;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Category Filter */}
             <select
               value={selectedCategory}
@@ -543,7 +655,11 @@ const service_categories = [;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Service Categories */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -563,6 +679,7 @@ const service_categories = [;
           </div>
         </motion.div>
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -591,6 +708,23 @@ const service_categories = [;
               {service.popular && (
                 <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
 
+=======
+          </div>;
+        </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Services Grid */}
+        <motion&& motion.div
+          variants={containerVariants}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               )}
@@ -1025,11 +1159,20 @@ const service_categories = [;
                 <a
 
               <div className="flex space-x-3">
+<<<<<<< HEAD
+=======
+=======
+              <div className='flex space-x-3'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <a
 
                   href={service.link}
@@ -1083,7 +1226,11 @@ const service_categories = [;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1095,11 +1242,15 @@ const service_categories = [;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -1158,6 +1309,7 @@ const service_categories = [;
               </a>;
                              <a
                  href="/pricing-2034"
+<<<<<<< HEAD
 
                  className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg"
                >
@@ -1172,6 +1324,8 @@ const service_categories = [;
         </motion.div>
       </div>
     </section>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }
@@ -1356,6 +1510,7 @@ const service_categories = [;
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 
   );
 }
@@ -1364,3 +1519,6 @@ const service_categories = [;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

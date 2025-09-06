@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import { useState, useEffect } from "react",
@@ -16,6 +17,16 @@ export function useJobMatches(jobId: string) {
   const [isProcessing, setIsProcessing] = useState(false),
 
 
+=======
+
+
+
+export function useJobMatches(jobId: string) {
+  const [matches, setMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isProcessing, setIsProcessing] = useState(false);
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const fetchMatches = async () => {
     setIsLoading(true);
 
@@ -118,6 +129,7 @@ export function useJobMatches(jobId: string) {
     } finally {
       setIsProcessing(false)
 
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -194,6 +206,8 @@ export function useJobMatches(jobId: string) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 

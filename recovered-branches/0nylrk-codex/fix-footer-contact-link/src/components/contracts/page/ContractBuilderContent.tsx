@@ -13,7 +13,13 @@ import {useAuth} from '@/hooks/useAuth';
 // Mock data for demo purposes
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export function ContractBuilderContent() {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { user } = useAuth();
   const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
   const [recentContracts, setRecentContracts] = useState([
@@ -37,6 +43,10 @@ import {useAuth} from '@/hooks/useAuth';
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from 'react',;
 import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder',;
 import { ContractBuilder } from '@/components/contracts/ContractBuilder',;
@@ -77,7 +87,11 @@ export function ContractBuilderContent() {;
   ]),
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const handleContractGenerated = (content: string) => {
     // // // console.log('Contract generated:', content.substring(0, 100) + '...')
@@ -97,9 +111,12 @@ export function ContractBuilderContent() {;
       <ContractTypeCards 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         onStandardClick={() => setShowBuilderType('standard')}
         onSmartClick={() => setShowBuilderType('smart')}
       />

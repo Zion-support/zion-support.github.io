@@ -1,7 +1,12 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -11,15 +16,23 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+<<<<<<< HEAD
 
 const profileSchema = z.object({
   displayName: z.string().min(2, "Name must be at least 2 characters");
   bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters");
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")});
 type ProfileFormValues = z.infer<typeof profileSchema>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from "react",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -37,7 +50,11 @@ import {
   FormMessage} from "@/components/ui/form",
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const profileSchema = z.object({
   displayName: z.string().min(2, "Name must be at least 2 characters"),
@@ -96,10 +113,15 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
               </FormItem>;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             )}
 
           />;
@@ -143,6 +165,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                     }`}
                     className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]";
                     {...field}
+<<<<<<< HEAD
                   />
                 </FormControl>
                 <FormMessage className="text-red-400" />
@@ -161,6 +184,8 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   )
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   />;
                 </FormControl>;
 
@@ -174,11 +199,19 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           </Button>;
         </form>;
       </Form>;
+<<<<<<< HEAD
 
     </div>;
   );
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

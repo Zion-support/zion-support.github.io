@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React from 'react';
 import { Milestone  } from '@/hooks/useMilestones';
@@ -9,6 +10,12 @@ interface PaymentSummaryProps {
   paymentTerms: string | null
 
 
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -19,8 +26,11 @@ interface PaymentSummaryProps {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
@@ -59,6 +69,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
           </div>
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
+<<<<<<< HEAD
 
 
           </div>
@@ -69,21 +80,42 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 
   );
 
+=======
+
+import {Milestone} from '@/hooks/useMilestones';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {CreditCard} from 'lucide-react';
+interface PaymentSummaryProps {;
+  milestones: Milestone[],;
+  paymentTerms: string | null;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
             <p className="font-medium">
               ${paidAmount}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </p>;
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+            <p className="font-medium">
+              ${paidAmount}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };

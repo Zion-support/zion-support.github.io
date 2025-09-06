@@ -1,12 +1,21 @@
 import OpenAI from 'openai';
 
 
+<<<<<<< HEAD
 type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {
   return new OpenAI({ apiKey })
 
 
 
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import OpenAI from 'openai',;
 type OpenAIClient = OpenAI,;
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
@@ -21,6 +30,33 @@ export async function generateJobPost(openai: OpenAIClient, role: string, opts: 
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
 
+<<<<<<< HEAD
+=======
+
+  return completion.output_text;
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import OpenAI from 'openai',;
+type OpenAIClient = OpenAI,;
+export function createOpenAIClient(apiKey: string): OpenAIClient {;
+  return new OpenAI({ apiKey });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+;
+export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {;
+  const prompt = `Create a concise, compelling job post for a ${role}.;
+Company: ${opts.company || 'Confidential'}
+Location: ${opts.location || 'Remote'}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 Key skills: ${(opts.tags || []).join() || 'N/A'};
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai.responses.create({

@@ -62,7 +62,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 } catch (error) {
   console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   performanceChecks.bundleAnalysis = true} catch (error) {
   console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)')}
 try {

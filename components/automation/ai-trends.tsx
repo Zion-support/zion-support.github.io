@@ -12,8 +12,39 @@ export type Trend = {;
   summary: string,;
   tags: string[];
 };
+<<<<<<< HEAD
 
 export async function getServerSideProps() {;
+=======
+export async function getServerSideProps() {;
+  const file = path && path.join(process && process.cwd(), 'dataai-trends && trends.json');
+  let items: Trend[] = [];  try {;
+    const raw = fs && fs.readFileSync(file, 'utf-8');
+    items = JSON && JSON.parse(raw);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+</div> </div>) )
+=======
+ </div> </div>) ) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+export type Trend = {
+  id: string
+  date: string
+  title: string
+  highlights: string[]
+  summary: string
+  tags: string[]
+}
+export async function getServerSideProps() {
+=======
+</div> </div>) ) 
+
+ </div> </div>) ) 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }</div> </div>) import fs from 'fs';
 import path from 'path';
@@ -86,9 +117,16 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
           </div>
         ))}
       </div>
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+    </div>;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 );
 }
   );

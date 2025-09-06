@@ -87,6 +87,52 @@ origin/main
 const MainLayout: React.FC < MainLayoutProps> = ({
 
 
+<<<<<<< HEAD
+=======
+  children,
+  title = 'Zion Tech Group - Technology Solutions',
+  description = 'Leading technology solutions provider specializing in web development, mobile applications, AI integration, and cloud services.',
+  keywords = 'technology, web development, mobile apps, AI, cloud services, software solutions',
+  canonical,
+  noindex = false,
+  nofollow = false,
+  type = 'website',
+  image = '/og - image.jpg',
+  url;
+  return (
+
+  title = 'Zion Tech Group - Leading Technology Solutions Provider'
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.'
+  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services'
+
+=======
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  ogImage = '/og-image.jpg';
+}) => {return (;
+const MainLayout: React.FC<MainLayoutProps> = ({;
+  children,;
+  title = 'Zion Tech Group - Technology Solutions',;
+  description = 'Leading technology solutions provider specializing in web development, mobile applications, AI integration, and cloud services.',;
+  keywords = 'technology, web development, mobile apps, AI, cloud services, software solutions',;
+  canonical,;
+  noindex = false,;
+  nofollow = false,;
+  type = 'website',;
+  image = '/og-image && image.jpg',;
+  url;
+  return (
+    <>;
+      <Head>;
+        <title>{title}</title>;
+        <meta name="description" content={description} />;
+        <meta name="viewport" content="width=device-width, initial-scale=1" />;
+        <link rel="icon" href="/favicon && favicon.ico" />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {canonical && <link rel="canonical" href={canonical} />}
         {noindex && <meta name="robots" content="noindex" />}
         {nofollow && <meta name="robots" content="nofollow" />}
@@ -100,6 +146,7 @@ const MainLayout: React.FC < MainLayoutProps> = ({
         <meta name="twitter:title" content={title} />;
         <meta name="twitter:description" content={description} />;
         {image && <meta name="twitter:image" content={image} />}
+<<<<<<< HEAD
 
 
 
@@ -115,6 +162,16 @@ const MainLayout: React.FC < MainLayoutProps> = ({
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      </Head>;
+        <Header />;
+        <main className="flex-1">;
+          {children}
+        </main>;
+        <Footer />;
+      </div>;
+    </>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 export default MainLayout;
   title = 'Zion Tech Group - Leading Technology Solutions Provider',;

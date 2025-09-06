@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -13,17 +14,24 @@ import { Badge } from "@/components/ui/badge",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function RecentActivity() {
   // Mock activity data
 
   const activities = [
     {
+<<<<<<< HEAD
 
       id: "act-1"
       user: "Michael Chen"
       action: "posted a new job"
       target: "Senior React Developer"
       timestamp: "1h ago"
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       id: "act-1",
@@ -32,6 +40,7 @@ export function RecentActivity() {
       target: "Senior React Developer",
       timestamp: "1h ago",
 
+<<<<<<< HEAD
       type: "job";
     };
 
@@ -45,6 +54,10 @@ export function RecentActivity() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       id: "act-2"
       user: "Sarah Wilson"
@@ -128,8 +141,12 @@ export function RecentActivity() {
   )
 
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -222,6 +239,18 @@ export function RecentActivity() {;
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+            View All Activity;
+          </button>;
+        </div>;
+      </CardContent>;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

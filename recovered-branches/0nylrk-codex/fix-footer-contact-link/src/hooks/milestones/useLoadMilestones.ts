@@ -1,13 +1,21 @@
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
+<<<<<<< HEAD
 
 export const useLoadMilestones = (projectId?: string) => {;
   const { user } = useAuth();
@@ -42,22 +50,54 @@ export const useLoadMilestones = (projectId?: string) => {;
           .order('created_at', { ascending: false });
         if (activitiesError) throw activitiesError;
 
+=======
+
+        
+        activitiesMap[milestone && milestone.id] = activitiesData || []
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       setActivities(activitiesMap);
       setError(null)
     } catch (err: any) {
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       console && console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err && err.message),
       toast && toast.error("Failed to fetch milestones")
 
+<<<<<<< HEAD
         
         activitiesMap[milestone.id] = activitiesData || []
 
 
 
+=======
+=======
+export const useLoadMilestones = (project_id?: string) =>: any {
+  const { user } = use_auth ();
+  const [milestones, set_milestones] = useState < Milestone[]>([]);
+  const [activities, set_activities] = useState < Record < string, MilestoneActivity[]>>({});
+  const [is_loading, setIsLoading] = useState (true);
+  const [error, set_error] = useState < string | null>(null);
+;
+  const fetch_milestones = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      setIsLoading (false);
+=======
+
+        
+        activitiesMap[milestone.id] = activitiesData || []
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -105,6 +145,7 @@ if (throw milestones_error) {
           .order('created_at', { ascending: false }),;
         if (activitiesError) throw activitiesError,;
         activitiesMap[milestone.id] = activitiesData || [];
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -120,6 +161,8 @@ if (throw milestones_error) {
       setIsLoading(false)
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -151,6 +194,7 @@ if ( {) {
     activities;
     is_loading;
     error;
+<<<<<<< HEAD
 
     refetch: fetchMilestones
 
@@ -182,5 +226,13 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    refetch: fetch_milestones;
+=======
+      setIsLoading(false)
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 };

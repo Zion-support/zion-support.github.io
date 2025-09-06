@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react',
 import Head from 'next/head',
@@ -9,6 +10,10 @@ import { motion } from 'framer-motion';
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { 
   Home, 
   Brain, 
@@ -22,6 +27,7 @@ import {
   Globe, 
   ArrowRight ;
 } from 'lucide-react';
+<<<<<<< HEAD
 origin/main
 
 import {
@@ -74,11 +80,119 @@ const sitemapData = [
       { name: 'Guides', url: '/guides', icon: Globe }
       { name: 'FAQ', url: '/faq', icon: Users }
     ]
+=======
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+const sitemapData = [;
+  {;
+    category: 'Main Pages',;
+    pages: [;
+      { name: 'Home', url: '/', icon: Home },;
+      { name: 'About', url: '/about', icon: Users },;
+      { name: 'Contact', url: '/contact', icon: Globe },;
+      { name: 'Services', url: '/services', icon: Settings }
+    ];
+  },;
+  {;
+    category: 'Services',;
+    pages: [;
+      { name: 'AI Services', url: '/ai-services', icon: Brain },;
+      { name: 'IT Services', url: '/it-services', icon: Network },;
+      { name: 'Micro SaaS', url: '/micro-saas', icon: Target },;
+      { name: 'Cloud Services', url: '/services/cloud', icon: Cloud },;
+      { name: 'Cybersecurity', url: '/services/cybersecurity', icon: Shield },;
+      { name: 'Data Analytics', url: '/services/data-analytics', icon: BarChart3 }
+    ];
+  },;
+  {;
+    category: 'Solutions',;
+    pages: [;
+      { name: 'Cloud Migration', url: '/solutions/cloud-migration', icon: Cloud },;
+      { name: 'Digital Transformation', url: '/solutions/digital-transformation', icon: Settings },;
+      { name: 'Custom Solutions', url: '/solutions/custom', icon: Target }
+    ];
+  },;
+  {;
+    category: 'Resources',;
+    pages: [;
+      { name: 'Documentation', url: '/docs', icon: Globe },;
+      { name: 'API Documentation', url: '/api-docs', icon: Settings },;
+      { name: 'Guides', url: '/guides', icon: Globe },;
+
+=======
+import React from 'react';
+import Head from 'next / head';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
+import {
+  Home,
+  Brain,
+  Network,
+  Target,
+  Users,
+  Shield,
+  Cloud,
+  BarChart3,
+  Settings,
+  Globe,
+  ArrowRight;
+} from 'lucide-react';
+;
+const sitemap_data = [;
+  {
+    category: 'Main Pages',
+    pages: [;
+      { name: 'Home', url: '/', icon: Home },
+      { name: 'About', url: '/about', icon: Users },
+      { name: 'Contact', url: '/contact', icon: Globe },
+      { name: 'Services', url: '/services', icon: Settings }
+    ];
+  },
+  {
+    category: 'Services',
+    pages: [;
+      { name: 'AI Services', url: '/ai - services', icon: Brain },
+      { name: 'IT Services', url: '/it - services', icon: Network },
+      { name: 'Micro SaaS', url: '/micro - saas', icon: Target },
+      { name: 'Cloud Services', url: '/services / cloud', icon: Cloud },
+      { name: 'Cybersecurity', url: '/services / cybersecurity', icon: Shield },
+      { name: 'Data Analytics', url: '/services / data - analytics', icon: BarChart3 }
+    ];
+  },
+  {
+    category: 'Solutions',
+    pages: [;
+      { name: 'Cloud Migration', url: '/solutions / cloud - migration', icon: Cloud },
+      { name: 'Digital Transformation', url: '/solutions / digital - transformation', icon: Settings },
+      { name: 'Custom Solutions', url: '/solutions / custom', icon: Target }
+    ];
+  },
+  {
+    category: 'Resources',
+    pages: [;
+      { name: 'Documentation', url: '/docs', icon: Globe },
+      { name: 'API Documentation', url: '/api - docs', icon: Settings },
+      { name: 'Guides', url: '/guides', icon: Globe },
+      { name: 'FAQ', url: '/faq', icon: Users }
+    ];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 ];
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function SitemapPage() {
   return (
     <>
@@ -141,7 +255,102 @@ export default function SitemapPage() {
                 </motion && motion.div>;
               ))}
 
+<<<<<<< HEAD
 
+=======
+=======
+;
+export default /**
+ * SitemapPage - Function description
+ */
+function SitemapPage() {
+  return (
+    <>;
+      <Head>;
+        <title > Sitemap - Zion Tech Group</title>;
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />;
+      </Head>;
+      <div className="min - h-screen bg - gray - 50">;
+        {/* Hero Section */}
+        <section className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 20">;
+          <div className="max - w-7xl mx - auto px - 4">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text - center";
+            >;
+              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
+                Site <span className="text - yellow - 400">Map</span>;
+              </h1>;
+              <p className="text - xl mb - 8 max - w-3xl mx - auto">;
+                Navigate through all our pages, services, and resources;
+              </p>;
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* Sitemap Content */}
+        <section className="py - 16">;
+          <div className="max - w-7xl mx - auto px - 4">;
+            <div className="grid gap - 8 md:grid - cols - 2 lg:grid - cols - 3">;
+              {sitemap_data.map ((section, section_index) => (
+                <motion.div;
+                  key={section.category}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  animate={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: section_index * 0.1 }}
+                  className="bg - white rounded - lg shadow - lg p - 6";
+                >;
+                  <h3 className="text - xl font - bold mb - 4 text - gray - 800">;
+                    {section.category}
+                  </h3>;
+                  <div className="space - y-3">;
+                    {section.pages.map ((page, page_index) => (
+                      <Link;
+                        key={page.name}
+                        href={page.url}
+                        className="flex items - center space - x-3 p - 3 rounded - lg hover:bg - gray - 50 transition - colors group";
+                      >;
+                        <page.icon className="w - 5 h - 5 text - blue - 600 group - hover:text - blue - 700" />;
+                        <div>;
+                          <div className="font - medium text - gray - 800 group - hover:text - blue - 600">;
+                            {page.name}
+                          </div>;
+                        </div>;
+                        <ArrowRight className="w - 4 h - 4 text - gray - 400 group - hover:text - blue - 600 ml - auto" />;
+                      </Link>))}
+                  </div>;
+                </motion.div>))}
+
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+
+=======
+
+
+
+=======
+    </>);
+}
+
+
+=======
+
+
+
+}
+
+
+=======
+
+
+=======
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {
 
@@ -202,19 +411,27 @@ function SitemapPage() {
       description: 'Browse services by category and technology area'
     }
     {
+<<<<<<< HEAD
 
       href: '/contact'
       label: '📧 Contact'
       description: 'Get in touch and start your project'
     }
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       href: '/contact',
       label: '📧 Contact',
       description: 'Get in touch and start your project',
     },;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ];
 
 ;
@@ -560,14 +777,72 @@ export default function SitemapPage() {;
       description: 'Real-time system status and uptime',;
     },  ];
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+  const contactInfo = [;
+    { type: 'Phone', value: '+1 (302) 464-0950', action: 'tel:+13024640950' },;
+    {;
+      type: 'Email',;
+      value: 'kleber@ziontechgroup && ziontechgroup.com',;
+      action: 'mailto:kleber@ziontechgroup && ziontechgroup.com',;
+    },;
+    {;
+      type: 'Address',;
+      value: 'Middletown, DE',;
+      action: 'https://maps && maps.google.com/?q=Middletown,DE',;
+    },;
+  ];
+
+        />;
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/sitemap' />      </Head>;
+      <SmartHeader />;
+
+
+      {/* Hero Section */}
+      <section className='pt-32 pb-20 px-6'>;
+        <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
+
+=======
+
+  const featuredServices = [
+    { href: '/ai-business-intelligence', label: 'AI Business Intelligence', category: 'AI & ML' },
+    { href: '/quantum-cybersecurity', label: 'Quantum Cybersecurity', category: 'Cybersecurity' },
+    { href: '/edge-computing-orchestration', label: 'Edge Computing Orchestration', category: 'Edge Computing' },
+    { href: '/space-technology', label: 'Space Technology Innovation', category: 'Space Technology' },
+    { href: '/neural-interface', label: 'Neural Interface Development', category: 'Biotechnology' },
+    { href: '/autonomous-devops', label: 'Autonomous DevOps', category: 'Cloud & DevOps' },
+    { href: '/ai-customer-experience', label: 'AI Customer Experience', category: 'AI & ML' },
+    { href: '/quantum-neural-networks', label: 'Quantum Neural Networks', category: 'Quantum Computing' }
+];
+  const resources = [
+    { href: '/reports', label: '📊 Reports', description: 'Latest technology reports and insights' },
+    { href: '/newsroom', label: '📰 Newsroom', description: 'Company updates and industry news' },
+    { href: '/automation', label: '⚡ Automations', description: 'Automation tools and solutions' },
+    { href: '/search', label: '🔎 Search', description: 'Search across all services and content' }
+];
+  const externalLinks = [
+    { href: 'https://github.com/ai-factory', label: 'GitHub', description: 'Open source projects and code examples' },
+    { href: 'https://docs.ziontechgroup.com', label: 'Documentation', description: 'Technical documentation and guides' },
+    { href: 'https://status.ziontechgroup.com', label: 'System Status', description: 'Real-time system status and uptime' }
+];
+  const contactInfo = [
+    { type: 'Phone', value: '+1 (302) 464-0950', action: 'tel:+13024640950' },
+    { type: 'Email', value: 'kleber@ziontechgroup.com', action: 'mailto:kleber@ziontechgroup.com' },
+    { type: 'Address', value: 'Middletown, DE', action: 'https://maps.google.com/?q=Middletown,DE' }
+];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Sitemap | Zion Tech Group</title>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category." />
         <meta property="og:title" content="Sitemap | Zion Tech Group" />
         <meta property="og:description" content="Complete website sitemap and navigation guide." />
@@ -580,6 +855,7 @@ export default function SitemapPage() {;
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
+<<<<<<< HEAD
 
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -619,6 +895,11 @@ export default function SitemapPage() {;
               Tech Group.
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   ];
 
@@ -656,6 +937,7 @@ export default function SitemapPage() {;
               </a>;
               <a
                 href='/search'
+<<<<<<< HEAD
 
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
               >
@@ -671,10 +953,16 @@ export default function SitemapPage() {;
         <div className='max-w-7xl mx-auto'>          <motion.div
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
             className='mb-16'
 
@@ -695,10 +983,30 @@ export default function SitemapPage() {;
                 key={page.href}
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+            className='mb-16'>;
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              Main Pages;
+            </h2>;
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>;
+              Core pages that provide essential information about our company;
+              and services;
+            </p>;
+          </motion && motion.div>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages && mainPages.map((page, index) => (;
+              <motion&& motion.div
+                key={page && page.href}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 
                 className='group'
 
@@ -724,10 +1032,13 @@ export default function SitemapPage() {;
           </div>
         </div>
       </section>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {/* Service Categories */}
+<<<<<<< HEAD
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -739,6 +1050,27 @@ export default function SitemapPage() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Service Categories */}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Service Categories
@@ -749,6 +1081,7 @@ export default function SitemapPage() {;
             </p>
           </motion.div>
 
+<<<<<<< HEAD
 
               >
                 <Link
@@ -771,6 +1104,36 @@ export default function SitemapPage() {;
           </div>
         </div>
       </section>
+=======
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Service Categories
+            </h2>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Browse our comprehensive range of technology solutions organized by category
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {serviceCategories.map((category, index) => (
+
+              <motion.div
+                key={category.href}
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            className='mb-16'>;
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              Service Categories;
+            </h2>;
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>;
+              Browse our comprehensive range of technology solutions organized;
+              by category;
+            </p>;
+          </motion && motion.div>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories && serviceCategories.map((category, index) => (;
+              <motion&& motion.div
+                key={category && category.href}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -794,10 +1157,28 @@ export default function SitemapPage() {;
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      {/* Featured Services */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Featured Services
@@ -806,6 +1187,7 @@ export default function SitemapPage() {;
             </p>
           </motion.div>
 
+<<<<<<< HEAD
 
               >
                 <Link
@@ -826,6 +1208,34 @@ export default function SitemapPage() {;
           </div>
         </div>
       </section>
+=======
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Featured Services
+            </h2>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Our most popular and innovative technology solutions
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredServices.map((service, index) => (
+
+              <motion.div
+                key={service.href}
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            className='mb-16'>;
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              Featured Services;
+            </h2>;
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Our most popular and innovative technology solutions;
+            </p>;
+          </motion && motion.div>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
+              <motion&& motion.div
+                key={service && service.href}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -849,10 +1259,28 @@ export default function SitemapPage() {;
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      {/* Resources & Tools */}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Resources & Tools
@@ -861,6 +1289,7 @@ export default function SitemapPage() {;
             </p>
           </motion.div>
 
+<<<<<<< HEAD
 
               >
                 <Link
@@ -883,6 +1312,34 @@ export default function SitemapPage() {;
           </div>
         </div>
       </section>
+=======
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Resources & Tools
+            </h2>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Additional resources, tools, and information to help you succeed
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {resources.map((resource, index) => (
+
+              <motion.div
+                key={resource.href}
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            className='mb-16'>;
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              Resources & Tools;
+            </h2>;
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed;
+            </p>;
+          </motion && motion.div>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources && resources.map((resource, index) => (;
+              <motion&& motion.div
+                key={resource && resource.href}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -906,10 +1363,28 @@ export default function SitemapPage() {;
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      {/* External Resources */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               External Resources
@@ -918,6 +1393,7 @@ export default function SitemapPage() {;
             </p>
           </motion.div>
 
+<<<<<<< HEAD
 
               >
                 <a
@@ -942,6 +1418,34 @@ export default function SitemapPage() {;
           </div>
         </div>
       </section>
+=======
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              External Resources
+            </h2>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Additional resources and tools hosted on external platforms
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {externalLinks.map((link, index) => (
+
+              <motion.div
+                key={link.href}
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            className='mb-16'>;
+            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
+              External Resources;
+            </h2>;
+            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms;
+            </p>;
+          </motion && motion.div>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks && externalLinks.map((link, index) => (;
+              <motion&& motion.div
+                key={link && link.href}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -965,10 +1469,28 @@ export default function SitemapPage() {;
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-4xl mx-auto'>          <motion&& motion.div
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      {/* Contact Information */}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Contact Information
@@ -979,12 +1501,31 @@ export default function SitemapPage() {;
             </p>
           </motion.div>
 
+<<<<<<< HEAD
 
               >
                 <h3 className='text-lg font-bold text-white mb-3'>
                   {contact.type}
                 </h3>
 
+=======
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+              Contact Information
+            </h2>
+            <p className="text-white/60 text-center max-w-2xl mx-auto">
+              Get in touch with us for consultations, support, or to start your project
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {contactInfo.map((contact, index) => (
+
+              <motion.div
+                key={contact.type}
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               Contact Information;
@@ -1007,7 +1548,10 @@ export default function SitemapPage() {;
                 viewport={{ once: true }}
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <a
                   href={contact && contact.action}
                   target={
@@ -1023,6 +1567,46 @@ export default function SitemapPage() {;
                 </a>;
               </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+=======
+                className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
+              >
+                <h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
+                <a
+                  href={contact.action}
+                  target={contact.action.startsWith('http') ? '_blank' : '_self'}
+                  rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
+className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                >
+                  {contact.value}
+                </a>
+              </motion.div>
+
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* Quick Navigation */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
+              Need Help Finding Something?;
+            </h2>;
+            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;
+              Use our search functionality or contact us directly for assistance;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       {/* Quick Navigation */}
       <section className='py-20 px-6'>
@@ -1032,7 +1616,11 @@ export default function SitemapPage() {;
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1070,8 +1658,11 @@ export default function SitemapPage() {;
   }
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           >
@@ -1091,6 +1682,7 @@ export default function SitemapPage() {;
               </Link>;
               <Link
                 href='/contact'
+<<<<<<< HEAD
 
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
               >
@@ -1105,6 +1697,16 @@ export default function SitemapPage() {;
 
 
 
+=======
+
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
 }animate= {
   {
@@ -1153,11 +1755,20 @@ export default function SitemapPage() {;
 
 }viewport= {
   {
+<<<<<<< HEAD
 
   once: true
 }> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>)
   )
 
+=======
+  once: true 
+}> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion && motion.div> </div> </section> <SmartFooter /> </div>) ;
+  );
+}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
           >;
             <h1 className='text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6'>;

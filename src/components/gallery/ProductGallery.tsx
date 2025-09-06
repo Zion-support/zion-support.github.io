@@ -214,11 +214,14 @@ function ProductGallery() {
             />          </div>;
         </DialogContent>;
       )}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     </Dialog>;
   );
@@ -228,11 +231,14 @@ function ProductGallery() {
 };
 };
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState, Suspense } from 'react',;
 import {;
   Dialog,;

@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -73,10 +76,17 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React && React.useState(false);
   const [imagePreview, setImagePreview] = React && React.useState(null as string | null);
   const [activeTab, setActiveTab] = React && React.useState("manual");
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Define the form schema with zod
 
 const productSchema = z.object({
@@ -156,6 +166,7 @@ export function ProductSubmissionForm() {
   },
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 
   // Apply AI-generated content to the form
   const handleApplyGenerated = (content: any) => {
@@ -279,6 +290,8 @@ export function ProductSubmissionForm() {;
   const [imagePreview, setImagePreview] = React.useState(null as string | null),;
   const [activeTab, setActiveTab] = React.useState("manual"),;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
@@ -300,6 +313,7 @@ export function ProductSubmissionForm() {;
         variant: "destructive"})
       return
     }
+<<<<<<< HEAD
 
   },;
   // Apply AI-generated content to the form;
@@ -370,6 +384,34 @@ export function ProductSubmissionForm() {;
           throw new Error(updateError.message);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+    setIsSubmitting(true),
+    
+
+
+    try {
+      // Create the product listing
+      const productData = {
+        title: values.title
+        description: values.description
+        price: parseFloat(values.price)
+        category: values.category
+        currency: "USD", // Default currency
+        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [];
+        author: {
+          name: user.displayName |"Anonymous Creator"
+          id: user.id}
+        createdAt: new Date().toISOString()}
+      const { data: productRecord, error: productError } = await supabase
+        .from('product_listings')
+        .insert([productData])
+        .select('id')
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }
       }
       
@@ -481,10 +523,14 @@ export function ProductSubmissionForm() {;
                 </FormItem>;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               )}
 
             />;

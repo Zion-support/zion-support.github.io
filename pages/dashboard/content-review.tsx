@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import useSWR from 'swr',
 import React, { useMemo, useState } from 'react',
@@ -10,11 +11,30 @@ import ModerationModal from '../../components/admin/ModerationModal';
       if (k) acc[k] = decodeURIComponent(v |'');
       return acc;
 
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
 export default function ContentReviewPage() {
   const [filters, setFilters] = useState<{;
@@ -98,6 +118,8 @@ export default function ContentReviewPage(req, res) {
   }
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 
@@ -105,11 +127,14 @@ import React, { useMemo, useState } from 'react';
     );
     set_selected (null);
     mutate ();  }
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <EnhancedLayout>;
 
@@ -288,6 +313,7 @@ import React, { useMemo, useState } from 'react';
                 </tr>
               ))}
               {flags.length === 0 && (
+<<<<<<< HEAD
 
                 <tr>
                   <td
@@ -312,6 +338,16 @@ import React, { useMemo, useState } from 'react';
 );
 
 
+=======
+
+
+=======
+
+
+}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
               )  } catch (error) {
     console.error("Error:", error);
@@ -336,6 +372,20 @@ import React, { useMemo, useState } from 'react';
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
+=======
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

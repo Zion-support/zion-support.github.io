@@ -23,10 +23,25 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   res.status(200).json(terms)
 }
 
+<<<<<<< HEAD
 }
 
 
 }
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import { readJsonFile } from '../../../../utils / api / storage';
+import { requireSuperadminApi } from '../../../../utils / api / auth';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () return) {
+  $2
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const terms = readJsonFile ('deal / terms.json', {
     round: 'Series A',
     target: '$10, 000, 000',
@@ -51,8 +66,12 @@ function handler() {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 
@@ -60,7 +79,11 @@ function handler() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

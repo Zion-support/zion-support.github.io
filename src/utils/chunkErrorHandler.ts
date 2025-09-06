@@ -199,9 +199,12 @@ if ( {) {
   }
   private hardRefresh(): void {
     // Force a hard refresh bypassing all caches
+<<<<<<< HEAD
 
 
     window.location.href = window.location.href + '?_t=' + Date.now()
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   }
@@ -251,7 +254,10 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   private showFatalErrorMessage (): void {
     // Create a user - friendly error message;
@@ -265,6 +271,7 @@ if ( {) {
 
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
+<<<<<<< HEAD
     const errorDiv = document.createElement('div'),
     errorDiv.style.cssText = `
       position: fixed,
@@ -281,6 +288,8 @@ if ( {) {
       font-family: system-ui, -apple-system, sans-serif,
     `,
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -293,6 +302,7 @@ if ( {) {
           This might be due to a poor network connection or a temporary server issue.
         </p>
         <button onclick="window.location.reload()" style="
+<<<<<<< HEAD
 
 
           background: #0070f3
@@ -334,6 +344,11 @@ if ( {) {
           cursor: pointer,
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         ">
           Go Home
         </button>
@@ -435,11 +450,14 @@ if ( {) {
         userAgent: navigator.userAgent,;
         url: window.location.href;
       });
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     }
     return this.errorStats.get(sessionKey)!
@@ -488,12 +506,15 @@ export default chunkErrorHandler
         ">
           Try Again
         </button>
+<<<<<<< HEAD
 
 
         <button onclick="window.location.href='/'" style="
 export default chunkErrorHandler
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       background: rgba (0, 0, 0, 0.8);
@@ -522,6 +543,7 @@ export default chunkErrorHandler
           margin - right: 1rem;        ">;
           Try Again;
         </button>;
+<<<<<<< HEAD
         <button onclick="window.location.href='/'" style=";
 
 
@@ -584,13 +606,18 @@ export default chunkErrorHandler;
         </button>;
         <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
 }
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {;
@@ -655,6 +682,9 @@ export default chunkErrorHandler;
 // Create and export singleton instance;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default chunkErrorHandler;

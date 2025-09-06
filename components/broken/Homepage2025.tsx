@@ -1,9 +1,12 @@
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
 ...innovative2035AIServices;
 ...innovative2035ITServices;
@@ -83,6 +86,7 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   service.id
 }initial= {
   {
+<<<<<<< HEAD
 
   opacity: 0, y: 50
 }whileInView= {
@@ -109,6 +113,9 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }whileInView= {
   {
   opacity: 1, y: 0
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }transition= {
   {
   duration: 0.8, delay: index * 0.1
@@ -275,6 +282,7 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>) ;
 
 
+<<<<<<< HEAD
 
 }export default Homepage2025;export default Homepage2025;
 
@@ -286,3 +294,29 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+}export default Homepage2025;export default Homepage2025;
+
+
+export default Homepage2025;
+
+=======
+}export default Homepage2025;export default Homepage2025;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+}
+}
+}
+}
+{
+  title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊';
+}].map ( (feature, index) => (<motion.div </p> </motion.div>) );
+}</div> </div> </div> </footer> </UltraFuturisticBackground2035>);
+}export default Homepage2025;export default Homepage2025;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

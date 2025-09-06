@@ -26,10 +26,13 @@ export /**
 function ReferralStats() {
   const stat_cards = [;
     {
+<<<<<<< HEAD
       title: 'Total Referrals'
       icon: <Share className='h-5 w-5 text-muted-foreground' />
       description: "People you've invited"
     }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       title: 'Total Referrals',
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
 import { ReferralStats as ReferralStatsType  } from '@/types / referrals';
@@ -92,8 +95,11 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
     },;
   ];
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
@@ -132,8 +138,11 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
         </Card>;
       ))}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
       {statCards.map((card, i) => (
         <Card key={i}>
@@ -153,7 +162,10 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ) : (
               <>
                 <div className="text-2xl font-bold">{card.value}</div>
@@ -195,6 +207,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
     <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;
       {stat_cards.map ((card, i) => (
 
+<<<<<<< HEAD
 
 }
 }
@@ -202,6 +215,13 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
+=======
+}
+}
+}
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </>
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",;

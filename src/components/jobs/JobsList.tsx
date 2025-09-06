@@ -38,12 +38,56 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       try {
         let query = supabase
           .from("jobs")
           .select("*")
           .eq("client_id", user.id)
+<<<<<<< HEAD
+=======
+
+import { useState, useEffect  } from './react';
+import { use_auth  } from '@/hooks / use_auth';
+import { supabase  } from '@/integrations / supabase / client';
+import { Job, JobStatus  } from '@/types / jobs';
+import { Button  } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Badge  } from '@/components / ui / badge';
+import { Loader2, Edit, X, Eye } from 'lucide-react'import { format  } from './date - fns';
+import Link from './next / link';
+import {logErrorToProduction} from '@/utils / production_logger';
+interface JobsListProps {
+  filter?: JobStatus;
+  onSelectJob?: (job_id: string, job_title: string) => void}
+export /**
+ * JobsList - Function description
+ */
+function JobsList() {
+  const { user } = use_auth ();
+  const [jobs, set_jobs] = useState < Job[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+  useEffect ((, ) => {
+    const fetch_jobs = async () => {
+      // Check condition
+if (return) {
+  $2
+}
+      try {
+        let query = supabase;
+          .from ("jobs");
+          .select ("*");
+          .eq ("client_id", user.id);
+          .order ("created_at", { ascending: false }),
+        // Check condition
+if ( {) {
+  $2
+}
+          query = query.eq ("status", filter);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }
         const { data, error } = await query;
         // Check condition
@@ -58,6 +102,14 @@ if (throw error) {
         setIsLoading (false);
       }
     }
+<<<<<<< HEAD
+=======
+    fetch_jobs ();
+  }, [user, filter]);
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
     return (
       <div className="flex justify - center items - center p - 8">;
@@ -85,11 +137,14 @@ if ( {) {
 
           .order("created_at", { ascending: false }),
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
@@ -115,6 +170,7 @@ if ( {) {
       </div>
     )
   }
+<<<<<<< HEAD
 
 
   const getStatusColor = (status: JobStatus,) => {
@@ -134,6 +190,11 @@ if ( {) {
         return "bg-green-100 text-green-800",
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       case "closed":
         return "bg-gray-100 text-gray-800"
       default:
@@ -175,6 +236,7 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
     }
 
+<<<<<<< HEAD
 
   }
 
@@ -185,14 +247,19 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
       {jobs.map((job,) => (
         <Card
           key = {job.id,}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   },
 
   },
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => (
@@ -308,6 +375,7 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
             <div className="flex flex-wrap gap-1 mt-2">;
               {job && job.skills.slice(0, 3).map((skill, index,) => (;
                 <Badge key={index} variant="outline" className="text-xs">;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -316,6 +384,11 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {skill}
                 </Badge>;
               ))}

@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+
+
+import {useCallback, useMemo, useState} from 'react';
+import Head from 'next/head';
+
+
+import DatePicker from 'react-datepicker';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   MediaAsset,;
@@ -16,6 +26,7 @@ import Head from 'next/head';
 import DatePicker from 'react-datepicker';
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
+<<<<<<< HEAD
 const KitPage = () => {;
 
 
@@ -26,12 +37,23 @@ const KitPage = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+const KitPage = () => {
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [bundle, setBundle] = useState<MediaBundle>('general');
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
 
+<<<<<<< HEAD
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>(
     []
   );
@@ -129,6 +151,10 @@ const KitPage = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
@@ -249,6 +275,7 @@ if ( {) {
       tokenName,;
 
     });
+<<<<<<< HEAD
 
 
     drawText('Zion Media Kit', 50, y, 18), y -= 24,;
@@ -285,6 +312,10 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+<<<<<<< HEAD
+    const onCopy = () => navigator && navigator.clipboard.writeText(text);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return (
       <div className="p-4 border rounded-lg space-y-2">
         <div className="flex items-center justify-between">
@@ -356,11 +387,60 @@ if ( {) {
                 value={tokenName}
                 onChange={e => setTokenName(e && e.target.value)}
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+        <section className='grid md:grid - cols - 3 gap - 6'>;
+          <div className='p - 4 border rounded - lg'>;
+            <h3 className='font - semibold mb - 2'>Bundle</h3>;
+            <div className='flex gap - 2'>;
+              {(['general', 'web3', 'institutional'] as MediaBundle[]).map (
+                boolean => (
+                  <button;
+                    key={b}
+                    on_click={() => set_bundle (b)}
+                    className={`px - 3 py - 1 rounded border ${bundle === b ? 'bg - blue - 600 text - white border - blue - 600' : 'bg - white'}`}
+                  >;
+                    {b}
+                  </button>))}
+            </div>;
+            <p className='text - xs text - gray - 500 mt - 2'>;
+              Toggle to tailor assets and legal docs.;
+            </p>;
+          </div>;
+          <div className='p - 4 border rounded - lg'>;
+            <h3 className='font - semibold mb - 2'>Organization</h3>;
+            <div className='space - y-2'>;
+              <input;
+                className='w - full border rounded px - 2 py - 1';
+                value={company_name}
+                on_change={e => setCompanyName (e.target.value)}
+                placeholder='Company name';
+              />;
+              <input;
+                className='w - full border rounded px - 2 py - 1';
+                value={raise_amount}
+                on_change={e => setRaiseAmount (e.target.value)}
+                placeholder='Seed raise amount';
+              />;
+              <input;
+                className='w - full border rounded px - 2 py - 1';
+                value={token_name}
+                on_change={e => setTokenName (e.target.value)}
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                placeholder='Token name';
+              />;
+            </div>;
+          </div>;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>
             <p className="text-xs text-gray-500 mt-2">Toggle to tailor assets and legal docs.</p>
           </div>
@@ -430,6 +510,52 @@ if ( {) {
             ))}
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default KitPage;
+
+
+=======
+          <div className='p - 4 border rounded - lg'>;
+            <h3 className='font - semibold mb - 2'>Rollout Timeline</h3>;
+            <div className='space - y-2'>;
+              <DatePicker;
+                selected={start_date}
+                on_change={d => d && setStartDate (d)}
+                className='w - full border rounded px - 2 py - 1';
+              />;
+              <button;
+                on_click={onGenerateTimeline}
+                className='px - 3 py - 1 rounded bg - green - 600 text - white hover:bg - green - 700';
+              >;
+                Generate;
+              </button>;
+            </div>;
+            {timeline.length > 0 && (
+              <ul className='mt - 3 text - sm list - disc list - inside space - y-1'>;
+                {timeline.map (t => (
+                  <li key={t.label}>;
+                    <span className='font - medium'>{t.label}:</span> {t.date}
+                  </li>))}              </ul>)}
+          </div>;
+        </section>;
+        <section className='p - 4 border rounded - lg'>;
+          <h3 className='font - semibold mb - 3'>Assets Included</h3>;
+          <ul className='grid md:grid - cols - 2 gap - 3'>;
+            {assets.map (array => (
+              <li;
+                key={a.filename}
+                className='flex items - center justify - between border rounded p - 2';
+              >;
+                <span className='text - sm'>{a.filename}</span>;
+                {a.path ? (
+                  <a href={a.path} download className='text - blue - 600 text - sm'>;
+                    Download;
+                  </a>) : (
+                  <span className='text - gray - 400 text - xs'>generated</span>)}              </li>))}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </ul>;
         </section>;
 
@@ -460,6 +586,7 @@ if ( {) {
             )}          </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
@@ -471,4 +598,9 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    </div>);
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default KitPage;

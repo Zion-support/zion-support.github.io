@@ -7,16 +7,20 @@ export function DynamicListingPage({
   categoryFilters,
   initialPrice = { min: 0, max: 10000 },
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       prev.includes(category)
         ? prev.filter(c => c !== category)
         : [...prev, category]
     )
 
+<<<<<<< HEAD
 
 
 
@@ -134,6 +138,8 @@ interface DynamicListingPageProps {;
   const clearCategories = () => setSelectedCategories([])
   const [view, setView] = useState<ListingView>('grid')
   const isGrid = view === 'grid'
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   const clearCategories = () => setSelectedCategories([]),
@@ -146,6 +152,7 @@ interface DynamicListingPageProps {;
     <List className='h-4 w-4' />
   ) : (
 
+<<<<<<< HEAD
     <LayoutGrid className='h-4 w-4' />
   )
   const [isLoading, setIsLoading] = useState(false)
@@ -177,6 +184,9 @@ interface DynamicListingPageProps {;
   const handleSliderChange = (values: number[]) => {
     const [min, max] = values.map(Number)
     if (min == null |max == null |isNaN(min) |isNaN(max)) return
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     if (min == null || max == null || isNaN(min) || isNaN(max)) return;
 
 
@@ -185,6 +195,7 @@ interface DynamicListingPageProps {;
   let filteredListings: ProductListing[] = []
   try {
 
+<<<<<<< HEAD
 
     filteredListings = allListings.filter(listing => {      const matchesSearch =
         !searchQuery |
@@ -201,6 +212,11 @@ interface DynamicListingPageProps {;
     filteredListings = allListings.filter(listing => {      const matchesSearch = null;
 
 
+=======
+
+    filteredListings = allListings.filter(listing => {      const matchesSearch = null;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     <LayoutGrid className="h-4 w-4" />
   ),
   const [isLoading, setIsLoading] = useState(false),
@@ -243,13 +259,20 @@ interface DynamicListingPageProps {;
     filteredListings = allListings.filter((listing) => {
       const matchesSearch =
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         !searchQuery ||
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (listing.tags &&
           listing.tags.some((tag: string) =>
+<<<<<<< HEAD
 
 
             tag.toLowerCase().includes(searchQuery.toLowerCase())
@@ -281,6 +304,8 @@ interface DynamicListingPageProps {;
             tag.toLowerCase().includes(searchQuery.toLowerCase()))),
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       const matchesSpecs =
@@ -319,6 +344,7 @@ interface DynamicListingPageProps {;
           listing.price <= currentPriceFilter[1])
           listing.price <= currentPriceFilter[1]),
 
+<<<<<<< HEAD
 
 
       const matchesRating =
@@ -326,6 +352,8 @@ interface DynamicListingPageProps {;
         (listing.rating !== undefined && listing.rating >= selectedRating)
       const matchesRating =
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         selectedRating === null ||
         (listing.rating !== undefined && listing.rating >= selectedRating),
@@ -357,12 +385,15 @@ interface DynamicListingPageProps {;
     capture_exception (error);
     logErrorToProduction ('Listing filter error:', { data: error });
   }
+<<<<<<< HEAD
 
 
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true)
     const listing = allListings.find(item => item.id === listingId)
     setTimeout(() => {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -372,8 +403,11 @@ interface DynamicListingPageProps {;
     setTimeout(() => {;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       setIsLoading(false);      if (listing) {
         toast({
           title: 'Quote Requested'
@@ -625,6 +659,7 @@ export function DynamicListingPage(): any ({;
           serviceType: categorySlug
           specificItem: {
 
+<<<<<<< HEAD
 
             id: listing.id
             title: listing.title
@@ -635,6 +670,8 @@ export function DynamicListingPage(): any ({;
         if (typeof window !== 'undefined') {
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
         }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             id: listing.id,
             title: listing.title,
             category: listing.category,
@@ -647,6 +684,7 @@ export function DynamicListingPage(): any ({;
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
         }
 
+<<<<<<< HEAD
         router.push('/request-quote')
       }
     }, 500)
@@ -667,6 +705,8 @@ export function DynamicListingPage(): any ({;
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="min-h-screen bg-zion-blue py-12 px-4">
       <div className="container mx-auto">
@@ -694,6 +734,7 @@ export function DynamicListingPage(): any ({;
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -701,6 +742,10 @@ export function DynamicListingPage(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   Categories
                 </label>
                 <div className='space-y-2'>
@@ -716,8 +761,11 @@ export function DynamicListingPage(): any ({;
                       />
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       <label
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer"
@@ -785,8 +833,11 @@ export function DynamicListingPage(): any ({;
                       >;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         {filter.label}
                       </label>
                     </div>
@@ -823,11 +874,14 @@ export function DynamicListingPage(): any ({;
                         <SelectItem key={b || 'unknown-brand'} value={b || ''} className="text-white">
                           {b || 'N/A'}
                         </SelectItem>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                       ))}
                     </SelectContent>;
@@ -843,6 +897,7 @@ export function DynamicListingPage(): any ({;
                   Specifications;
                 </label>;
                 <Input
+<<<<<<< HEAD
 
 
                   type="text"
@@ -853,6 +908,11 @@ export function DynamicListingPage(): any ({;
                   placeholder="Search specifications..."
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   value={specQuery}
                   onChange={(e: React && React.ChangeEvent<HTMLInputElement>) =>;
                     setSpecQuery(e && e.target.value);
@@ -860,6 +920,7 @@ export function DynamicListingPage(): any ({;
                   className='bg-zion-blue border border-zion-blue-light text-white'                />
                   className="bg-zion-blue border border-zion-blue-light text-white"
                 />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -867,6 +928,10 @@ export function DynamicListingPage(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>
               {availabilityOptions.length > 0 && (
                 <div className='mb-6'>
@@ -894,11 +959,14 @@ export function DynamicListingPage(): any ({;
                       setSelectedAvailability(value);
                     }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   >
                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                       <SelectValue placeholder="Select Availability" />
@@ -919,11 +987,14 @@ export function DynamicListingPage(): any ({;
                           {a || 'N/A'}
                         </SelectItem>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       ))}
                     </SelectContent>;
                   </Select>;
@@ -948,8 +1019,11 @@ export function DynamicListingPage(): any ({;
                     aria-label="Price range"
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     defaultValue={[0, priceRange.max]}
                     min={0}
                     max={priceRange && priceRange.max}
@@ -961,6 +1035,7 @@ export function DynamicListingPage(): any ({;
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -968,6 +1043,10 @@ export function DynamicListingPage(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
                   </div>
@@ -1021,11 +1100,14 @@ export function DynamicListingPage(): any ({;
                       }}
                       aria-pressed={selectedRating === rating}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       className={`{
                         selectedRating === rating
                           ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
@@ -1047,11 +1129,14 @@ export function DynamicListingPage(): any ({;
                               className="h-3 w-3 fill-zion-cyan text-zion-cyan"
                             />
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           ))}
                           <span className='ml-1'>& Up</span>;
                         </div>;
@@ -1080,6 +1165,7 @@ export function DynamicListingPage(): any ({;
                   setSelectedBrand("all"),
                   setSpecQuery(""),
                   setSelectedAvailability("all")
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1087,6 +1173,10 @@ export function DynamicListingPage(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 }}
               >
                 Clear All
@@ -1327,6 +1417,7 @@ export function DynamicListingPage(): any ({;
                 </div>
 
                 <div className="flex items-center gap-2 ml-auto">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1334,6 +1425,10 @@ export function DynamicListingPage(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <Select value={sortOption} onValueChange={setSortOption}>
                     <SelectTrigger className='w-[150px] bg-zion-blue border border-zion-blue-light text-white'>
                       <SelectValue placeholder='Sort' />
@@ -1428,6 +1523,7 @@ export function DynamicListingPage(): any ({;
                     title={isGrid ? "List view" : "Grid view"}
                     className="border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple"
                   >
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1435,6 +1531,10 @@ export function DynamicListingPage(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {ToggleViewIcon}
                     <span className="sr-only">
                       {isGrid ? "List view" : "Grid view"}
@@ -1448,6 +1548,7 @@ export function DynamicListingPage(): any ({;
 
             <div className="mb-6">
               <p className="text-zion-slate-light">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1455,6 +1556,10 @@ export function DynamicListingPage(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 Showing {filteredListings.length} results
                 {selectedCategories.length > 0 &&
                   ` in ${selectedCategories.join(', ')}`}
@@ -1497,8 +1602,11 @@ export function DynamicListingPage(): any ({;
                     : "flex flex-col gap-6"
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 }
               >
                 {[1, 2, 3, 4].map(i => (
@@ -1526,11 +1634,14 @@ export function DynamicListingPage(): any ({;
                         <Skeleton height={24} width="25%" />
                         <Skeleton height={32} width="25%" />
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       </div>
                     </div>
                   </div>
@@ -1564,9 +1675,12 @@ export function DynamicListingPage(): any ({;
                     onRequestQuote={handleRequestQuote}
                     detailBasePath={detailBasePath}
                   />;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                 ))}
@@ -1580,6 +1694,7 @@ export function DynamicListingPage(): any ({;
                   Try adjusting your filters or search query
                 </p>
                 <Button
+<<<<<<< HEAD
                   variant='outline'
                   onClick={() => {
                     setSearchQuery('')
@@ -1595,6 +1710,11 @@ export function DynamicListingPage(): any ({;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   variant="outline"
                   onClick={() => {
                     setSearchQuery(""),
@@ -1606,6 +1726,7 @@ export function DynamicListingPage(): any ({;
                     setSelectedAvailability("all")
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1614,6 +1735,11 @@ export function DynamicListingPage(): any ({;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 >
                   Clear All
                 </Button>

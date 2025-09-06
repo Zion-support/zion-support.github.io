@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
   Menu
   X
@@ -65,6 +66,41 @@ import {
   CheckCircle;} from 'lucide-react';import {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+=======
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Menu,
   X,
   Search,
@@ -126,7 +162,10 @@ import {
   CheckCircle,;} from 'lucide-react';import { ;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Menu, X, Search, ChevronDown, ChevronRight;
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -247,6 +286,18 @@ const mainNavigation = [
 
 const quickLinks = [
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export default function UltraFuturisticNavigation2029V2() {
+  const [isOpen, setIsOpen] = useState(false)
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [isOpen, setIsOpen] = useState(false);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -270,11 +321,15 @@ const quickLinks = [
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -490,10 +545,28 @@ className="relative group"
             ))}
           </div>
           {/* Right side - Contact & Search */}
+<<<<<<< HEAD
 
           <div className='hidden lg:flex items-center space-x-4'>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+<<<<<<< HEAD
+          <div className="hidden lg:flex items-center space-x-4">
+            {/* Search */}
+=======
+          <div className='hidden lg:flex items-center space-x-4'>
+=======
+
+              </motion.div>
+
+            ))}
+          </div>
+
+          {/* Right side - Contact & Search */}
+
+          <div className="hidden lg:flex items-center space-x-4">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Search */}
             <div className='relative'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -524,8 +597,13 @@ className="relative group"
             </div>
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Contact Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -553,11 +631,19 @@ className="relative group"
 
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -571,11 +657,15 @@ className="relative group"
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <div className='px-4 py-6 space-y-4'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -639,8 +729,11 @@ className="relative group"
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Quick Links */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -678,6 +771,7 @@ className="relative group"
                 </div>
               </div>
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -685,6 +779,11 @@ className="relative group"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Contact Info */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -698,11 +797,14 @@ className="relative group"
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </div>
                   <div className="flex items-center space-x-3 text-gray-400">
                     <Mail className="w-4 h-4" />
@@ -868,6 +970,14 @@ className="relative group"
       <AnimatePresence>;
         {activeCategory && (;
           <motion&& motion.div
+<<<<<<< HEAD
+=======
+=======
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Service Categories Dropdown */}
@@ -884,11 +994,15 @@ className="relative group"
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <div className='max-w-7xl mx-auto px-4 py-8'>
               <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
@@ -1010,6 +1124,7 @@ className="relative group"
                         </Link>;
 
 
+<<<<<<< HEAD
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
@@ -1018,6 +1133,8 @@ className="relative group"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1030,9 +1147,84 @@ className="relative group"
           </motion && motion.div>;
         )}
 
+<<<<<<< HEAD
 
   );
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      </AnimatePresence>;
+    </nav>;
+  );
+=======
+
+  );
+
+}
+=======
+
+}
+  );
+}
+                        </p>;
+                      </div>;
+                    </div>;
+                    <div className='space - y-3'>                      {category.services.map ((service, index) => (
+                        <Link;
+                          key={service.name}
+                          href={service.href}
+                          className='block p - 3 rounded - lg bg - gray - 800 / 50 hover:bg - gray - 800 / 70 transition - colors duration - 300 group'          >;
+            <div className="max - w-7xl mx - auto px - 4 py - 8">;
+              <div className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8">;
+                {service_categories.map ((category) => (
+                  <div key={category.title} className="space - y-4">;
+                    <div className="flex items - center space - x-3">;
+                      <div className={`p - 2 rounded - lg bg - gradient - to - r ${category.color}`}>;
+                        <category.icon className="w - 5 h - 5 text - white" />;
+                      </div>;
+                      <div>;
+                        <h3 className="text - lg font - semibold text - white">{category.title}</h3>;
+                        <p className="text - sm text - gray - 400">{category.description}</p>;
+                      </div>;
+                    </div>;
+                    <div className="space - y-3">;
+                      {category.services.map ((service, index) => (
+                        <Link;
+                          key={service.name}
+                          href={service.href}
+                          className='block p - 3 rounded - lg bg - gray - 800 / 50 hover:bg - gray - 800 / 70 transition - colors duration - 300 group';
+                        >;
+                          <div className='flex justify - between items - start'>;
+                            <div>;
+                              <h4 className='font - medium text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
+                                {service.name}
+                              </h4>;
+                              <p className='text - sm text - gray - 400 mt - 1'>;
+                                {service.description}
+                              </p>;
+                            </div>;
+                            <span className='text - sm font - semibold text - cyan - 400'>;
+                              {service.price}
+                            </span>                          </div>                        >;
+                          <div className="flex justify - between items - start">;
+                            <div>;
+                              <h4 className="font - medium text - white group - hover:text - cyan - 400 transition - colors duration - 300">;
+                                {service.name}
+                              </h4>;
+                              <p className="text - sm text - gray - 400 mt - 1">{service.description}</p>;
+                            </div>;
+                            <span className="text - sm font - semibold text - cyan - 400">{service.price}</span>;
+                          </div>;
+                        </Link>))}
+                    </div>;
+                  </div>))}
+              </div>;
+            </div>;
+          </motion.div>)}
+      </AnimatePresence>;
+    </nav>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

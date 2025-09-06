@@ -66,14 +66,18 @@ const EnhancedLoading: React.FC<{;
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
           {showProgress && (
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
 
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -81,6 +85,10 @@ const EnhancedLoading: React.FC<{;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
@@ -104,12 +112,18 @@ const EnhancedLoading: React.FC<{;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Enhanced Error Component
 const EnhancedError: React.FC<{
   error: Error
@@ -129,6 +143,7 @@ const EnhancedError: React.FC<{
         <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
           {isOnline ? (
             <AlertTriangle className="h-6 w-6 text-red-600" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -136,6 +151,10 @@ const EnhancedError: React.FC<{
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           ) : (
             <WifiOff className='h-6 w-6 text-red-600' />
         </div>;
@@ -190,11 +209,14 @@ const EnhancedError: React.FC<{;
           </p>
           {retryCount > 0 && (
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               Retry {retryCount}/{maxRetries}
             </p>;
           )}
@@ -216,8 +238,11 @@ const EnhancedError: React.FC<{;
             <RefreshCw className="h-4 w-4 mr-2" />
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             Try Again
           </Button>
         )}
@@ -241,6 +266,7 @@ const useNetworkStatus = () => {
 }
 
 
+<<<<<<< HEAD
 // Advanced Dynamic Component Loader
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   importFn
@@ -275,6 +301,8 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       }, 100)
       return () => clearInterval(interval)
     }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     };
 ;
 
@@ -507,6 +535,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
         />;
       </motion.div>;
     );
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -515,6 +544,11 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   // Success state
   if (DynamicComponent) {
@@ -581,8 +615,11 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
 // export const DynamicChartComponent = createDynamicComponent(
@@ -786,8 +823,11 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 //       </div>
 //     )
 //   }
+<<<<<<< HEAD
 // )
 export default DynamicComponentLoader; export default DynamicComponentLoader
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // );
 // export const DynamicThreeComponent = createDynamicComponent (
 //   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),

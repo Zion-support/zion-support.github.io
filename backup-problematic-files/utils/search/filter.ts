@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :utils/search/filter.ts
 // Search filter utilities
 export const filterResults = (results: any[], filters: any) => {
@@ -113,6 +114,13 @@ export function suggestDidYouMean(query: string): string | null {;
   if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM';
   if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr';
   return null;
+=======
+
+};
+
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export type AccessLevel = 'public' | 'private' | 'admin';
 
 export interface SearchResult {
@@ -288,8 +296,16 @@ export function suggestDidYouMean(query: string): string[] {
   }
   
   return suggestions.slice(0, 3); // Return max 3 suggestions
+<<<<<<< HEAD
 main:utils/search/filter.ts
 :backup-problematic-files/utils/search/filter.ts
 }
 }
 :backup-problematic-files/utils/search/filter.ts
+=======
+
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -17,18 +17,26 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 
 import Head from 'next/head';
 import {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 
@@ -168,6 +176,163 @@ import { Zap, Star, Calendar } from 'lucide-react';
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
+<<<<<<< HEAD
+=======
+=======
+        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
+        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
+        return bRoi - aRoi;
+      default: return a.name.localeCompare(b.name)
+;
+  // Filter and sort services;
+  let filtered_services = revolutionaryMicroSaasServices;
+;
+  // Category filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    filtered_services = getRevolutionaryServicesByCategory (selected_category);  }
+  // Price range filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    const [min, max] = price_range;
+      .split ('-');
+      .map (p => (p === '+' ? Infinity : parse_int (p)));
+    filtered_services = getRevolutionaryServicesByPriceRange (min, max);  }
+  // Search filter;
+  if ( {    filtered_services = getRevolutionaryServicesByCategory (selected_category)) {
+  $2
+}
+  }
+  // Price range filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    const [min, max] = price_range;
+      .split ('-');
+      .map (p => (p === '+' ? Infinity : parse_int (p)));
+    filtered_services = getRevolutionaryServicesByPriceRange (min, max);    const [min, max] = price_range.split ('-').map (p => p === '+' ? Infinity : parse_int (p));
+    filtered_services = getRevolutionaryServicesByPriceRange (min, max);
+  }
+  // Search filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    filtered_services = filtered_services.filter (
+      service =>;
+        service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        service.category.toLowerCase ().includes (search_query.toLowerCase ()));  }    filtered_services = filtered_services.filter (service =>;
+      service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      service.category.toLowerCase ().includes (search_query.toLowerCase ()));
+  // Sort services;
+  filtered_services.sort ((a, b) => {
+    switch (sort_by) {
+      case 'price':;
+        return (
+          parse_float (a.price.replace ('$', '').replace (', ', '')) -;
+          parse_float (b.price.replace ('$', '').replace (', ', '')));      case 'popularity':        return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, ''));
+      case 'popularity':;
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+      case 'category':;
+        return a.category.locale_compare (b.category);
+      case 'roi':;
+        const a_roi = parse_float (a.roi.match (/\d+/)?.[0] || '0');
+        const b_roi = parse_float (b.roi.match (/\d+/)?.[0] || '0');
+        return b_roi - a_roi;
+      default:;
+        return a.name.locale_compare (b.name);    }      default: return a.name.locale_compare (b.name);
+    }
+  });
+;
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      name: 'Quantum AI & Cognitive Computing',
+      description: 'Revolutionary quantum AI solutions with human-level reasoning capabilities',
+      icon: <Brain className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum AI & Cognitive Computing').length,
+      color: 'from-purple-500 to-indigo-600'
+    };
+    {
+      name: 'Autonomous Manufacturing & Industry 4.0',
+      description: 'Next-generation autonomous manufacturing with zero human intervention',
+      icon: <Factory className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Manufacturing & Industry 4.0').length,
+      color: 'from-orange-500 to-red-600'
+    };
+    {
+      name: 'Quantum Blockchain & DeFi',
+      description: 'Quantum-secured blockchain platforms with infinite scalability',
+      icon: <Globe className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Blockchain & DeFi').length,
+      color: 'from-green-500 to-emerald-600'
+    };
+    {
+      name: 'AI Biomedical Research & Drug Discovery',
+      description: 'AI-powered platforms for accelerated drug discovery and medical research',
+      icon: <FlaskIcon className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Biomedical Research & Drug Discovery').length,
+      color: 'from-blue-500 to-indigo-600'
+    };
+    {
+      name: 'Quantum Cybersecurity & Threat Detection',
+      description: 'Quantum-resistant cybersecurity with AI-powered threat detection',
+      icon: <ShieldCheck className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Cybersecurity & Threat Detection').length,
+      color: 'from-red-500 to-pink-600'
+    };
+    {
+      name: 'Space Technology & Satellite Optimization',
+      description: 'Revolutionary platforms for space exploration and satellite optimization',
+      icon: <Rocket className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Space Technology & Satellite Optimization').length,
+      color: 'from-indigo-500 to-purple-600'
+    };
+    {
+      name: 'AI Content Creation & Marketing',
+      description: 'Quantum-powered content creation at infinite scale',
+      icon: <FileText className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Content Creation & Marketing').length,
+      color: 'from-teal-500 to-cyan-600'
+    };
+    {
+      name: 'Quantum Computing as a Service',
+      description: 'Enterprise quantum computing with real quantum processors',
+      icon: <Cpu className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Computing as a Service').length,
+      color: 'from-violet-500 to-purple-600'
+    };
+    {
+      name: 'Autonomous Vehicles & Smart Transportation',
+      description: 'AI platforms for autonomous vehicles and smart transportation',
+      icon: <CarIcon className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Vehicles & Smart Transportation').length,
+      color: 'from-emerald-500 to-green-600'
+    };
+    {
+      name: 'Smart Energy & Renewable Energy',
+      description: 'AI platforms for smart energy grids and renewable energy optimization',
+      icon: <LeafIcon className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length,
+      color: 'from-yellow-500 to-orange-600'
+    }
+  ];
+=======
+
+
+  ];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -294,12 +459,15 @@ import { Zap, Star, Calendar } from 'lucide-react';
       },
     },
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -394,12 +562,17 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -423,8 +596,13 @@ import { Zap, Star, Calendar } from 'lucide-react';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -602,6 +780,10 @@ import { Zap, Star, Calendar } from 'lucide-react';
               initial="hidden"
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   variants={itemVariants}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -646,8 +828,12 @@ import { Zap, Star, Calendar } from 'lucide-react';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Popular Services Showcase */}
 
         <section className="py-16">
@@ -658,10 +844,20 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
               initial={{ opacity: 0, y: 20 }}
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -699,6 +895,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}                  Most Popular
+<<<<<<< HEAD
 
                 </span>
                 <br />
@@ -708,10 +905,20 @@ import { Zap, Star, Calendar } from 'lucide-react';
                 Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.
               </p>
             </motion.div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+            <motion.div 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
@@ -732,10 +939,13 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     onClick={() => setSelectedService(service)}
 
@@ -834,12 +1044,16 @@ import { Zap, Star, Calendar } from 'lucide-react';
               className="mb-8"
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -914,6 +1128,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+<<<<<<< HEAD
 
                     >
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
@@ -931,6 +1146,8 @@ import { Zap, Star, Calendar } from 'lucide-react';
               }
               variants={containerVariants}
               initial='hidden'
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     </button>;
                   </div>;
@@ -940,10 +1157,19 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
               className={viewMode === 'grid' 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+              whileInView='visible'              viewport={{ once: true }}            <motion.div 
+              className={viewMode === 'grid' 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -956,11 +1182,14 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1068,14 +1297,31 @@ import { Zap, Star, Calendar } from 'lucide-react';
             <motion&& motion.div
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 
+<<<<<<< HEAD
+=======
+=======
+
+        {/* Service Details Modal */}
+        <AnimatePresence>
+          {selectedService && (
+            <motion.div
+              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1365,8 +1611,13 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>
             </motion.div>
           </div>
@@ -1448,6 +1699,13 @@ import { Zap, Star, Calendar } from 'lucide-react';
 }
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

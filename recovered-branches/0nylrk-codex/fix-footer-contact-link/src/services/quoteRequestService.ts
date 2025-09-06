@@ -1,9 +1,30 @@
 
+<<<<<<< HEAD
 
 
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
+=======
+
+import {supabase} from "@/integrations/supabase/client";
+
+
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+
+
+import { supabase } from '@/integrations / supabase / client';
+import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
+
+export const quoteRequestService = {
+  // Get all quote requests (for admin);
+  get_all: async () => {
+    const { data, error } = await supabase;
+      .from ('quote_requests');
+      .select (`;
+        *;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -170,6 +191,7 @@ if (throw error) {
     // If marking as responded, set replied_at
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
+<<<<<<< HEAD
 
 
 import { supabase } from "@/integrations/supabase/client",;
@@ -270,5 +292,9 @@ export const quoteRequestService = {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 };

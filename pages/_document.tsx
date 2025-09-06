@@ -1,18 +1,36 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
+=======
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import {Html, Head, Main, NextScript} from 'next/document';
+
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <link rel='icon' href='/favicon.ico' />
         <meta name='theme-color' content='#0a0a0a' />
         <meta
@@ -31,7 +49,11 @@ export default function Document() {
         />      </Head>
 
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#0a0a0a" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -44,7 +66,10 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default function Document() {;
   return (
@@ -67,20 +92,45 @@ export default function Document() {;
           rel='stylesheet'
 
 
+<<<<<<< HEAD
+=======
+}
+=======
+  );
+
+=======
+
+  );
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     </Html>);
 ;
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

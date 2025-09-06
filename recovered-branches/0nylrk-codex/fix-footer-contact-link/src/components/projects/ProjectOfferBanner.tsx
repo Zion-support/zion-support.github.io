@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {Bell, Calendar, X} from "lucide-react";
@@ -9,6 +12,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ProjectOfferBanner() {;
+<<<<<<< HEAD
 
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
@@ -24,6 +28,8 @@ import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 export function ProjectOfferBanner() {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
@@ -42,6 +48,7 @@ export function ProjectOfferBanner() {
       const offers = projects.filter(p => p.status === 'offer_sent');
       setPendingOffers(offers)
 
+<<<<<<< HEAD
     }
   }, [projects, isLoading]);
   const handleDismiss = (projectId: string, e: React.MouseEvent) => {
@@ -60,6 +67,11 @@ export function ProjectOfferBanner() {
     return null
 
 
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Bell, Calendar, X } from "lucide-react",;
@@ -94,8 +106,11 @@ export function ProjectOfferBanner() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   
   return (

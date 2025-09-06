@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   id: string;
@@ -25,10 +26,80 @@
 }
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 
+=======
+<<<<<<< HEAD
+export type InnovativeMicroSaas = {
+      'Multi-speaker diarization',
+  launch_date?: string;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   {
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      'Smart review routing',
+      'NPS & CSAT',
+      'Churn alerts',
+      'Multi - location dashboards',
+    ],
+    integrations: ['Google Business Profile', 'Yelp'],
+
+    use_cases: ['Local ranking', 'Reputation management'],
+    link: 'https://ziontechgroup.com / services / local - seo - reviews - booster',
+    real_service: true,
+
+  },
+  {
+
+=======
+    id: 'smart - invoice - reconciliation',
+    name: 'Smart Invoice Reconciliation',
+    description:;
+      'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.',
+    category: 'Financial Technology',
+    pricing: { starter: '$59 / mo' },
+    features: [;
+
+      'OCR ingestion',
+      'Matching heuristics',
+      'Discrepancy alerts',
+      'Export to ERP',
+    ],
+    integrations: ['QuickBooks', 'Xero', 'Stripe'],
+
+    use_cases: ['Accounting automation', 'Finance ops'],
+    link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
+    real_service: true,
+
+  },
+  {
+
+      'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
+=======
+    id: 'candidate - screening - copilot',
+    name: 'Candidate Screening Copilot',
+    description:;
+      'Summarize resumes, score against job descriptions, and auto - generate interview question sets.',
+
+    category: 'Human Resources',
+    pricing: { starter: '$69/mo' },
+    features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
+    integrations: ['Greenhouse', 'Lever'],
+
+    use_cases: ['Faster hiring', 'Bias reduction'],
+    link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
+    real_service: true,
+
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ];	id: string;
 
 

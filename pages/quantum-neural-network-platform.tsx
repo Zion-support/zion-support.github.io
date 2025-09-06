@@ -1,6 +1,32 @@
 
 
 
+<<<<<<< HEAD
+=======
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
+import { 
+  Atom, Brain, Cpu, Zap, Shield, Globe, 
+
+=======
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import {
+  Atom, Brain, Cpu, Zap, Shield, Globe,
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  Rocket, Target, TrendingUp, Users, CheckCircle,
+  ArrowRight, Star, Award, Clock, DollarSign
+} from 'lucide-react',
+const QuantumNeuralNetworkPlatform = () => {
+  const features = [
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       icon: Brain,
       title: "Quantum Consciousness Integration",
@@ -21,6 +47,7 @@
       title: "Financial Modeling"
       description: "Advanced risk assessment and market prediction algorithms"
     }
+<<<<<<< HEAD
 
   ]
 
@@ -43,6 +70,11 @@ const QuantumNeuralNetworkPlatform = () => {
       title: "Quantum Consciousness Integration",
       description: "Advanced AI consciousness with quantum processing capabilities",
 
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       color: "from-purple-500 to-pink-500"
     },
     {
@@ -64,7 +96,10 @@ const QuantumNeuralNetworkPlatform = () => {
       color: "from-red-500 to-orange-500"
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ],
   const benefits = [
     "1000x faster neural network training",
@@ -76,7 +111,10 @@ const QuantumNeuralNetworkPlatform = () => {
   ],
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const useCases = [
     {
       title: "AI Research & Development",
@@ -95,7 +133,10 @@ const QuantumNeuralNetworkPlatform = () => {
       description: "Advanced risk assessment and market prediction algorithms"
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ],
   return (
     <>
@@ -117,14 +158,19 @@ const QuantumNeuralNetworkPlatform = () => {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
 
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -158,6 +204,85 @@ const QuantumNeuralNetworkPlatform = () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+=======
+=======
+      color: "from - purple - 500 to - pink - 500";
+    },
+    {
+      icon: Atom,
+      title: "Quantum Neural Processing",
+      description: "Revolutionary quantum computing for neural network operations",
+      color: "from - blue - 500 to - cyan - 500";
+    },
+    {
+      icon: Cpu,
+      title: "Hybrid AI Architecture",
+      description: "Combines classical and quantum computing for optimal performance",
+      color: "from - emerald - 500 to - teal - 500";
+    },
+    {
+      icon: Shield,
+      title: "Quantum Security",
+      description: "Unbreakable encryption using quantum cryptography",
+      color: "from - red - 500 to - orange - 500";
+    }
+  ],
+  const benefits = [;
+    "1000x faster neural network training",
+    "Quantum - level security and encryption",
+    "Scalable consciousness simulation",
+    "Real - time quantum decision making",
+    "Advanced pattern recognition",
+    "Future - proof technology foundation";
+  ],
+  const use_cases = [;
+    {
+      title: "AI Research & Development",
+      description: "Accelerate AI breakthroughs with quantum processing power";
+    },
+    {
+      title: "Cybersecurity",
+      description: "Unbreakable security protocols using quantum encryption";
+    },
+    {
+      title: "Scientific Discovery",
+      description: "Solve complex scientific problems in minutes, not years";
+    },
+    {
+      title: "Financial Modeling",
+      description: "Advanced risk assessment and market prediction algorithms";
+    }
+  ],
+  return (
+    <>;
+      <Head>;
+        <title > Quantum Neural Network Platform - Zion Tech Group</title>;
+        <meta name="description" content="Revolutionary quantum neural network platform combining AI consciousness with quantum computing for unprecedented performance and capabilities." />;
+        <meta name="keywords" content="quantum computing, neural networks, AI consciousness, quantum AI, advanced technology" />;
+        <meta property="og:title" content="Quantum Neural Network Platform - Zion Tech Group" />;
+        <meta property="og:description" content="Revolutionary quantum neural network platform combining AI consciousness with quantum computing." />;
+        <meta property="og:type" content="website" />;
+        <meta property="og:url" content="https://ziontechgroup.com / quantum - neural - network - platform" />;
+      </Head>;
+      <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        {/* Hero Section */}
+        <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="absolute inset - 0 bg - gradient - to - r from - purple - 600 / 20 to - blue - 600 / 20"></div>;
+          <div className="relative max - w-7xl mx - auto text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 performance, security, and capabilities in neural network operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -351,10 +476,14 @@ const QuantumNeuralNetworkPlatform = () => {;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -373,6 +502,7 @@ const QuantumNeuralNetworkPlatform = () => {;
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
+<<<<<<< HEAD
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -403,6 +533,10 @@ const QuantumNeuralNetworkPlatform = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -461,10 +595,14 @@ const QuantumNeuralNetworkPlatform = () => {;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -485,6 +623,7 @@ const QuantumNeuralNetworkPlatform = () => {;
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
+<<<<<<< HEAD
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -515,6 +654,10 @@ const QuantumNeuralNetworkPlatform = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
@@ -570,10 +713,14 @@ const QuantumNeuralNetworkPlatform = () => {;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -592,6 +739,7 @@ const QuantumNeuralNetworkPlatform = () => {;
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
+<<<<<<< HEAD
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -622,6 +770,10 @@ const QuantumNeuralNetworkPlatform = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >
                   <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
@@ -647,10 +799,14 @@ const QuantumNeuralNetworkPlatform = () => {;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -724,6 +880,7 @@ export default QuantumNeuralNetworkPlatform,
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
 
     </>;
   );
@@ -735,3 +892,15 @@ export default QuantumNeuralNetworkPlatform;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    </>);
+},
+export default QuantumNeuralNetworkPlatform,
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+},
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

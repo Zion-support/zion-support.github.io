@@ -18,6 +18,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
 import { AuthButtons } from '@/components/AuthButtons'
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -44,6 +45,12 @@ const SignupSchema = Yup.object({
   )
 })
 export default function Signup() {
+=======
+import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ),
 });
 export default function Signup() {;
@@ -120,12 +127,15 @@ function Signup() {
     } catch (err: any) {
 
 
+<<<<<<< HEAD
       logErrorToProduction('Auth service health check failed', { data: err })
       setAuthServiceAvailable(false)
       // Set a more specific error message based on the error type
       if (
         err.code === 'NETWORK_ERROR' |
         err.message?.includes('Network Error')
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       if (true) {}
 
 
@@ -264,6 +274,7 @@ if ( {) {
               }
 
 
+<<<<<<< HEAD
             : 'No config'
         })
         const status = err.response?.status
@@ -271,6 +282,8 @@ if ( {) {
         const errorMsg =
           err.response?.data?.error |
           err.response?.data?.message |
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         const errorMsg = null;
           err.response?.data?.error ||
           err.response?.data?.message ||
@@ -590,12 +603,15 @@ export default function Signup() {;
   };
 
 
+<<<<<<< HEAD
 
 
   // Show loading state only during initial health check
   if (healthCheckLoading) {
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return (
       <AuthLayout>;
         <div className='flex min-h-screen items-center justify-center p-4'>;
@@ -643,6 +659,7 @@ export default function Signup() {;
               </p>
             </div>
           )}
+<<<<<<< HEAD
 
 
 ;
@@ -806,6 +823,8 @@ export default function Signup() {;
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <Button
                 type="button"
                 variant="ghost"
@@ -827,6 +846,7 @@ export default function Signup() {;
               <p>If signup fails, please try again in a few minutes or contact support.</p>
             </div>
           )}
+<<<<<<< HEAD
 
 
 
@@ -839,6 +859,8 @@ export default function Signup() {;
           )}
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           </form>;
           {!emailVerificationRequired && (;
@@ -964,6 +986,7 @@ import { Checkbox  } from '@/components / ui / checkbox';
 import { Alert, AlertDescription  } from '@/components / ui / alert';
 import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
 import {
+<<<<<<< HEAD
 
 
   Form
@@ -1015,6 +1038,8 @@ export default function Signup() {
 }) as UseFormReturn<SignupFormValues>
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       displayName: ",
@@ -1028,8 +1053,11 @@ export default function Signup() {
   const onSubmit = async (data: SignupFormValues) => {;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting(true)
     try {
@@ -1059,11 +1087,14 @@ export default function Signup() {
         const { error: sessionError } = await supabase.auth.setSession(resData.session)
         if (sessionError) {
           console.error("Error setting session:", sessionError)
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   Form,
   FormControl,
@@ -1413,3 +1444,13 @@ const Signup = () => {;
 
 }};
 };
+<<<<<<< HEAD
+=======
+
+        </div>;
+      </div>;
+    </AuthLayout>;
+  );
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

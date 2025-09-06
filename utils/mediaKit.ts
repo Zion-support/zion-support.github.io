@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export type MediaBundle = 'general' | 'web3' | 'institutional';
 export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
 export interface MediaGenerationResponse {;
@@ -12,18 +13,27 @@ export async function generateMediaContent(request: MediaGenerationRequest): Pro
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   };
 
 
   }
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
 
+<<<<<<< HEAD
       path: ''
       filename: 'legal/terms-of-use.md'
       type: 'text'
@@ -36,6 +46,10 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.`
     }
     {
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       path: '',
 
@@ -46,8 +60,11 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
     },;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ];
   const web3Extras: MediaAsset[] = [
 
@@ -82,9 +99,15 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
 export function buildPressRelease(
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  type: PressReleaseType,
+  params: {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     companyName: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     date: string;
@@ -141,7 +164,14 @@ function titleCase(s: string) {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 }
@@ -175,6 +205,7 @@ function title_case() {
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -182,3 +213,5 @@ function title_case() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

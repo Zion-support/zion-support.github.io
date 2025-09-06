@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
@@ -18,6 +19,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (!u) return res.status(404).json({ error: 'Not found' });
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   if (!requireSuperadminApi(req, res)) return;
@@ -31,10 +34,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 
+<<<<<<< HEAD
 
+=======
+  if (!u) return res.status(404).json({ error: 'Not found' });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 
 
 
@@ -43,3 +51,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

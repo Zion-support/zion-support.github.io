@@ -1,5 +1,15 @@
 
 
+<<<<<<< HEAD
+=======
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+export default function ToolResourcePage() {
+  const router = useRouter(),
+  const { id } = router.query,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -191,6 +201,15 @@ export default function ToolResourcePage() {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default function ToolResourcePage(req, res) {
   try {
@@ -365,9 +384,13 @@ export default function ToolResourcePage(req, res) {
 }
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ],
   const tool = tools.find(t => t.id === id),
   if (!tool) {
@@ -384,11 +407,17 @@ export default function ToolResourcePage(req, res) {
                 The tool resource you're looking for doesn't exist.
               </p>
 
+<<<<<<< HEAD
               <Link
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -428,10 +457,14 @@ export default function ToolResourcePage(req, res) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>
@@ -445,6 +478,7 @@ export default function ToolResourcePage(req, res) {
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
 
 
+<<<<<<< HEAD
                   <div
                     className="prose prose-invert max-w-none"
                     dangerouslySetInnerHTML={{ __html: tool.fullContent }}
@@ -460,6 +494,11 @@ export default function ToolResourcePage(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   />
                 </div>
               </div>
@@ -572,10 +611,14 @@ export default function ToolResourcePage(req, res) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </ul>
                 </div>
 
@@ -599,11 +642,17 @@ export default function ToolResourcePage(req, res) {
 
             <div className="text-center">
 
+<<<<<<< HEAD
               <Link
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -614,9 +663,12 @@ export default function ToolResourcePage(req, res) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
 
 
   )
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                   </ul>;
                 </div>;
@@ -630,6 +682,23 @@ export default function ToolResourcePage(req, res) {
                     <div>;
                       <span className="text - white / 60 text - sm">Time Required:</span>;
                       <p className="text - white font - medium">{tool.estimated_time}</p>;
+<<<<<<< HEAD
+=======
+=======
+                  </ul>;
+                </div>;
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">;
+                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>;
+                  <div className="space-y-3">;
+                    <div>;
+                      <span className="text-white/60 text-sm">Type:</span>;
+                      <p className="text-white font-medium">{tool.type}</p>;
+                    </div>;
+                    <div>;
+                      <span className="text-white/60 text-sm">Time Required:</span>;
+                      <p className="text-white font-medium">{tool.estimatedTime}</p>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </div>;
                   </div>;
                 </div>;
@@ -646,6 +715,7 @@ export default function ToolResourcePage(req, res) {
           </div>;
         </main>;
       </div>;
+<<<<<<< HEAD
 
     </>;
   );
@@ -660,3 +730,14 @@ export default function ToolResourcePage(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+<<<<<<< HEAD
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

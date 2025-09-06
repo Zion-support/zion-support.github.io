@@ -7,7 +7,10 @@ import {useAuth} from '@/hooks/useAuth';
 export function useFetchResume() {;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -69,6 +72,7 @@ export function useFetchResume() {;
       // Otherwise, fetch the user's active resume or most recent resume;
       let resume_query = supabase.from ('talent_resumes').select ('*');
 ;
+<<<<<<< HEAD
 
       const { data: resumeData, error: resumeError } = await resumeQuery.single(),;
       if (resumeError) {;
@@ -83,6 +87,8 @@ export function useFetchResume() {;
         throw resumeError
       }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // Check condition
 if ( {) {
   $2
@@ -122,10 +128,13 @@ if ( {) {
       
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // Fetch work experience
       const { data: workData, error: workError } = await supabase
         .from('work_history')
@@ -192,6 +201,7 @@ if ( {) {
   return {
     isLoading;
 ;
+<<<<<<< HEAD
 
       // Fetch work experience;
       const { data: workData, error: workError } = await supabase;
@@ -253,6 +263,10 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     error;
     resume;
 

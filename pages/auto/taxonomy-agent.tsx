@@ -10,8 +10,11 @@ const TaxonomyAgent: NextPage = () => {
       <main className="space-y-4">
         <h1 className="text-2xl font-bold">AI Taxonomy Tagger Agent</h1>
         <p>Suggests topic tags for each page to improve discovery and navigation.</p>
+<<<<<<< HEAD
 
         <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</a></Link>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -24,6 +27,7 @@ const TaxonomyAgent: NextPage = () => {
   )
 },
 
+<<<<<<< HEAD
 export default TaxonomyAgent,
 
 
@@ -34,3 +38,7 @@ export default TaxonomyAgent,
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

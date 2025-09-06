@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
@@ -11,9 +14,13 @@ const client = new OpenAI({
 });
 export default async function handler(
 
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
@@ -58,6 +65,10 @@ export default async function handler(
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
 
+<<<<<<< HEAD
+=======
+Key Metrics: ${JSON && JSON.stringify(metrics)}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
 Operator Prompt: ${operatorPrompt}
@@ -103,6 +114,47 @@ function extractSection(body: string, title: string): string {
 }
 
 
+<<<<<<< HEAD
+=======
+}
+      content = chat.choices?.[0]?.message?.content || "";
+;
+    } catch (err) {
+      content = "";
+    }
+    const slides = seed.map ((title, idx) => ({
+      id: `${idx + 1}`,
+      title,
+      content: extract_section (content, title),
+    }));
+    const version = `v${new Date ().toISOString ()}`;
+    res.status (200).json ({ slides, version });
+  } catch (e: any) {
+    res.status (500).json ({ error: e?.message || "Generation failed" });
+  }
+}
+function extract_section (body: string, title: string): string {
+  // Check condition
+if (return "") {
+  $2
+}
+  // naive split by headings;
+  const lines = body.split ("\n");
+  const match_idx = lines.find_index ((l) =>;
+    l.toLowerCase ().includes (title.toLowerCase ()),
+  );
+  // Check condition
+if ( {) {
+  $2
+}
+    const snippet = lines.slice (match_idx + 1, match_idx + 12).join ("\n");
+    return snippet.trim ();
+  }
+  return "";
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -115,9 +167,15 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
@@ -159,5 +217,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

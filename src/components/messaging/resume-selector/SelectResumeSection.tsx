@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export function SelectResumeSection({
 
@@ -79,6 +80,9 @@ export function SelectResumeSection({
 
 }
 
+=======
+import React from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { FileText } from 'lucide-react';
 
 interface ResumeOption {

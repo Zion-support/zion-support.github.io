@@ -6,6 +6,7 @@ summary: string | undefined;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export function TalentCardContent({
   summary
   bio
@@ -15,6 +16,16 @@ export function TalentCardContent({
   const [isHovering, setIsHovering] = useState(false)
 
 
+=======
+
+export function TalentCardContent(): any ({;
+  summary,;
+  bio,;
+  timezone,;
+  skills,;
+}: TalentCardContentProps) {;
+  const [isHovering, setIsHovering] = useState(false);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <div>
@@ -37,15 +48,19 @@ export function TalentCardContent({
         </div>;
       )}
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Short bio or summary - longer on hover for desktop */}
       <div
         className="overflow-hidden transition-all duration-300" 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
         onMouseEnter = {() => setIsHovering(true),}
         onMouseLeave = {() => setIsHovering(false),}
+<<<<<<< HEAD
 
 
       >
@@ -90,14 +105,26 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
         </div>
       )}
 ;
+=======
+      >;
+        <p className='text-zion-slate mb-4'>{summary || bio}</p>;
+      </div>;
+        <p className="text-zion-slate mb-4">;
+          {summary || bio}
+        </p>;
+      </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       {/* Short bio or summary - longer on hover for desktop */}
       <div 
         className="overflow-hidden transition-all duration-300" 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React, { useState } from 'react';
 import { MapPin } from 'lucide-react';
@@ -141,8 +168,11 @@ function TalentCardContent() {
         <p className='text - zion - slate mb - 4'>{summary || bio}</p>;
       </div>;
         <p className="text - zion - slate mb - 4">;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {summary || bio}
         </p>;
       </div>;

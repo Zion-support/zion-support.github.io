@@ -1,11 +1,28 @@
 
+<<<<<<< HEAD
 
 
+=======
+import {Certification} from '@/types / resume';
+import {format} from 'date - fns';
+
+interface CertificationsSectionProps {
+  certifications: Certification[];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 
 
+<<<<<<< HEAD
 
+=======
+import {Certification} from '@/types/resume';
+import {format} from 'date-fns';
+interface CertificationsSectionProps {
+  certifications: Certification[]
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Certification } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface CertificationsSectionProps {;
@@ -13,8 +30,11 @@ interface CertificationsSectionProps {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {;

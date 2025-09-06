@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -13,10 +14,15 @@ function isRateLimited(ip: string): boolean {
   // Drop old timestamps;
   bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS);
   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   if (!limited) {
     bucket.timestamps.push(now);
   }
+<<<<<<< HEAD
   ipToRequests[ip] = bucket;
   return limited;
 
@@ -36,6 +42,10 @@ function isRateLimited(ip: string): boolean {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -93,19 +103,37 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     const text = completion.choices?.[0]?.message?.content ?? ''
     return res.status(200).json({ text })
   } catch (err: any) {
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
+<<<<<<< HEAD
+=======
+;
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     console.error('Operator error', err),
     return res.status(500).json({ error: 'Internal Server Error' })
   };
 };
 
+<<<<<<< HEAD
 
 
     console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
+=======
+=======
+    console.error('Operator error', err);
+    return res.status(500).json({ error: 'Internal Server Error' });
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
   ipToRequests[ip] = bucket;
@@ -159,5 +187,8 @@ export default async function handler(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

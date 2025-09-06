@@ -31,12 +31,15 @@ if (isLoading) {
           } : undefined
         }
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 
 
@@ -101,19 +104,27 @@ if (isLoading) {
             onApprove = {onApprove,}
             onReject = {onReject,}
           />
+<<<<<<< HEAD
 
 
         ))}
 
+=======
+        ))}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </div>;
     </div>;
   );
 };
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   // Check condition
 if ( {) {

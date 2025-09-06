@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   id: string;
@@ -7,6 +8,8 @@
   growthRate: number;
   relatedKeywords: string[];
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   search_volume: number;
   trend_direction: 'rising' | 'falling' | 'stable';
@@ -16,9 +19,13 @@
   timestamp: Date;
 
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface CompetitorAnalysis {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   competitor_name: string;
   website: string;
@@ -34,9 +41,13 @@
   last_updated: Date;
 
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface MarketSegment {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   name: string;
   size: number;
@@ -49,9 +60,13 @@
   solutions: string[];
 
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface MarketReport {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   title: string;
   industry: string;
@@ -66,9 +81,13 @@
   expires_at: Date;
 
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface MarketResearchRequest {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   industry: string;
   target_market: string;
   research_type: 'trends' | 'competitors' | 'segments' | 'comprehensive';
@@ -78,9 +97,13 @@
   custom_metrics?: string[];
 
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface MarketResearchResponse {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   success: boolean;
   data: {
     trends?: MarketTrend[];
@@ -90,6 +113,7 @@
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
+<<<<<<< HEAD
 
   estimatedROI: number
 }
@@ -101,6 +125,8 @@
     this.apiKey = apiKey
     this.baseUrl = baseUrl
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {
     try {
@@ -258,6 +284,11 @@ export const aiMarketResearchService = new AIMarketResearchService(process.env.M
 
 
 
+<<<<<<< HEAD
+=======
+=======
+    segments?: MarketSegment[],
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     report?: MarketReport;
   }
   insights: string[];
@@ -426,10 +457,18 @@ if ( {) {
 }
 export const aiMarketResearchService = new AIMarketResearchService (process.env.MARKET_RESEARCH_API_KEY || 'demo - key');
 ;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+export interface MarketTrend {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');

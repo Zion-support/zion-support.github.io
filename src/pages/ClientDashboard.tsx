@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function ClientDashboardContent() {;
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -91,6 +92,8 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",;
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",;
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",;
 import { useIsMobile } from "@/hooks/use-mobile",;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 function ClientDashboardContent() {;
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),;
   const { jobs, isLoading } = useJobs(),;
@@ -227,6 +230,7 @@ if ( {) {
             </Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -235,6 +239,11 @@ if ( {) {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* New Onboarding Steps */}
         <div className="mb-8">
           <ClientOnboardingSteps />
@@ -255,6 +264,7 @@ if ( {) {
                 <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
               </TabsList>
               
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -262,6 +272,10 @@ if ( {) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <TabsContent value="all" className="mt-0">
                 <JobsList onSelectJob={handleJobSelect} />
               </TabsContent>
@@ -310,6 +324,7 @@ if ( {) {
     </>
   )
 }
+<<<<<<< HEAD
 export default function ClientDashboard() {
   return (
     <ProtectedRoute>
@@ -385,6 +400,8 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
     </>
   )
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         </div>;
 

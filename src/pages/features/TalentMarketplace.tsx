@@ -49,6 +49,7 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
+<<<<<<< HEAD
 
 
 
@@ -63,6 +64,8 @@ import { GradientHeading } from "@/components/GradientHeading",
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function TalentMarketplace() {
@@ -139,6 +142,7 @@ export default function TalentMarketplace() {
               <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>
             </div>
           </div>
+<<<<<<< HEAD
 
 
           <div className='text-center'>
@@ -182,6 +186,11 @@ export default function TalentMarketplace() {
           </div>
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/talent">Browse Talent</Link>
@@ -191,10 +200,13 @@ export default function TalentMarketplace() {
       </main>
     </>
   )
+<<<<<<< HEAD
 
 
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 ;
 
@@ -244,3 +256,9 @@ export default function TalentMarketplace() {;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
+=======
+
+
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

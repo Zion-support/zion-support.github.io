@@ -1,13 +1,19 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addBasicInfoSection(;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   doc: jsPDF;
   basicInfo: ResumeBasicInfo;
   colors: PdfThemeColors
@@ -34,6 +40,7 @@ export function addBasicInfoSection(;
   yPos += 10;
   // Add summary if available
 
+<<<<<<< HEAD
 
     yPos += (summaryLines.length * 6) + 10
 import { jsPDF } from 'jspdf',;
@@ -74,6 +81,10 @@ export function addBasicInfoSection(;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   return yPos
 

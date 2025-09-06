@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -20,6 +21,10 @@ import { SEO } from "@/components/SEO",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function EnterprisePlans() {
   return (
     <>
@@ -39,7 +44,10 @@ export default function EnterprisePlans() {
       <Footer />
     </>
   )
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -74,7 +82,14 @@ import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
 import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
 import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
 import {SEO} from "@/components/SEO";
+<<<<<<< HEAD
 
+=======
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -107,9 +122,18 @@ export default function EnterprisePlans() {;
     </>;
   );
 }
+<<<<<<< HEAD
 ;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

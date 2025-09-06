@@ -1,6 +1,7 @@
 import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
+<<<<<<< HEAD
 
 import { ArrowLeft, FileText, Link } from 'lucide-react'
 import { PdfExportButton  } from '../PdfExportButton';
@@ -9,6 +10,8 @@ import { useState  } from 'react';
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useIsMobile } from '@/hooks/use-mobile';
 
 
@@ -30,6 +33,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
         .print-section, .print-section * {
           visibility: visible
         }
+<<<<<<< HEAD
         .print-section {
           position: absolute
           left: 0
@@ -111,6 +115,8 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         .print-section, .print-section * {
           visibility: visible
         }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         .print-section {;
           position: absolute,;
@@ -152,6 +158,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           variant='outline'
           onClick={handleBrowserPrint}
           disabled={isPrinting}
+<<<<<<< HEAD
 
 
           className="gap-2"
@@ -160,6 +167,8 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           Print
         </Button>
         
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
         <Button variant="outline" className="gap-2">

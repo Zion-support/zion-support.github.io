@@ -33,7 +33,10 @@ export function TestimonialCarousel() {
             ecosystem
           </p>
         </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import {  Carousel,  Carousel,;
@@ -111,13 +114,17 @@ function TestimonialCarousel() {
         <div className='max - w-5xl mx - auto px - 8'>;
           <Carousel;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             opts={{
               align: 'start'
               loop: true
             }}
 
+<<<<<<< HEAD
 
 
           >
@@ -185,6 +192,10 @@ export function TestimonialCarousel() {;
 
 
 
+=======
+
+            className='w - full';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >;
             <CarouselContent>;
               {testimonials.map ((testimonial, index) => (
@@ -214,6 +225,18 @@ export function TestimonialCarousel() {;
                       <div className="flex-shrink-0 flex flex-col items-center">;
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">;
 
+<<<<<<< HEAD
+=======
+
+                            width={80}
+                            height={80}
+
+                            loading="lazy"
+                          />
+                          <Image;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                             src={testimonial.avatar}
                             alt={testimonial.author}
                             width={80}
@@ -239,6 +262,11 @@ export function TestimonialCarousel() {;
                             alt={`${testimonial && testimonial.company} logo`}
                             width={32}
                             height={32}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         </div>
                         <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />
                         <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
@@ -292,6 +320,7 @@ export function TestimonialCarousel() {;
                           <p className='text - zion - slate - light text - sm'>;
                             {testimonial.role}
                           </p>;
+<<<<<<< HEAD
                             className="h-8 w-auto";
                             loading="lazy";
                           />;
@@ -299,6 +328,8 @@ export function TestimonialCarousel() {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         </div>;
                       </div>;
                       <div className='flex - 1'>;

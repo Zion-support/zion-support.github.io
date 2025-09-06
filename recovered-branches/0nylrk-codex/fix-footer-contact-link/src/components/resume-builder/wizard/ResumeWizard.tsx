@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+=======
+=======
+
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -22,10 +29,16 @@ import {ResumeStepContent} from './ResumeStepContent';
 import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
 import {RESUME_STEPS} from './constants';
+<<<<<<< HEAD
 
 export function ResumeWizard() {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { user } = useAuth();
   const { ;
     isLoading;
@@ -42,6 +55,7 @@ export function ResumeWizard() {;
   // Use the extracted hook for progress calculation
 
 
+<<<<<<< HEAD
   const progress = useResumeProgress(resume);
   useEffect(() => {
     if (user) {
@@ -68,6 +82,13 @@ export function ResumeWizard() {;
     }
 
 
+=======
+=======
+
+  };
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useResume } from '@/hooks/useResume',;
@@ -164,6 +185,7 @@ export function ResumeWizard() {;
       </Alert>
     )
 
+<<<<<<< HEAD
   }
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
@@ -173,6 +195,11 @@ export function ResumeWizard() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   if (showNewResumeForm) {
 

@@ -57,15 +57,21 @@ export function ClientDashboard() {
                     <UserCheck className="h-4 w-4" />
                   </div>
                 </div>
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 <<<<<<< HEAD
 
 
-
-
-
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <Button size="sm" variant="outline">View Details</Button>
               </div>
             </div>
@@ -89,6 +95,7 @@ export function ClientDashboard() {
         <div className='space-y-3'>
         
         <div className="space-y-3">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -96,6 +103,10 @@ export function ClientDashboard() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between">
@@ -124,6 +135,7 @@ export function ClientDashboard() {
             </CardContent>
           </Card>
           
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -131,6 +143,10 @@ export function ClientDashboard() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between">
@@ -158,6 +174,7 @@ export function ClientDashboard() {
                   AWS
                 </Badge>              <div className="mt-3 flex gap-1 flex-wrap">
               <div className="mt-3 flex gap-1 flex-wrap">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -165,6 +182,10 @@ export function ClientDashboard() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <Badge variant="outline" className="text-xs">React</Badge>
                 <Badge variant="outline" className="text-xs">Node.js</Badge>
                 <Badge variant="outline" className="text-xs">AWS</Badge>
@@ -178,6 +199,7 @@ export function ClientDashboard() {
         </div>
       </section>
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -185,11 +207,16 @@ export function ClientDashboard() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
         </div>
         
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -197,6 +224,10 @@ export function ClientDashboard() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Card>
           <CardContent className="p-4 space-y-4">
             <div className="flex gap-3 items-start">
@@ -217,6 +248,7 @@ export function ClientDashboard() {
             <div className="flex gap-3 items-start">
               <div className="bg-primary/10 p-2 rounded-full">
                 <FileText className="h-5 w-5 text-primary" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -224,6 +256,10 @@ export function ClientDashboard() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>
               <div>
                 <p className="text-sm">
@@ -265,17 +301,21 @@ export function ClientDashboard() {
 
             
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <Button variant="outline" className="w-full">View All Notifications</Button>
           </CardContent>
         </Card>
       </section>
 
 
+<<<<<<< HEAD
     </div>;
   );
 };
@@ -289,6 +329,11 @@ import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 
 
+=======
+
+    </div>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
 import Link from "next/link";
 export function ClientDashboard() {;

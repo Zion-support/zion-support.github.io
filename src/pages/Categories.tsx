@@ -10,8 +10,11 @@ interface CategoryType {
   name: string;
   slug: string;
   icon: string
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 class ErrorBoundary extends React.Component {
@@ -174,6 +177,7 @@ export default Categories"";
 ";
   )}
 
+<<<<<<< HEAD
 
 export: default Categories
 export default Categories," ]
@@ -230,6 +234,12 @@ export interface CategoriesProps {;
 }
 
 
+=======
+export: default Categories,;
+export default Categories," ];
+export default Categories"")))))))));
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const Categories: React.FC: = () => {, ";
   const categories = [];

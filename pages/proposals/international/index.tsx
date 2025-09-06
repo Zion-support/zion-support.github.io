@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useEffect, useState } from 'react';
 import React, { useEffect, useState } from 'react',;
@@ -5,6 +6,8 @@ import React, { useEffect, useState } from 'react',;
 
 export default function InternationalProposals() {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       const res = await fetch('/api/proposals/list');
       const data = await res.json();
@@ -14,9 +17,12 @@ export default function InternationalProposals() {
     })()
   }, [])
   async function updateStatus(id: string, status: string) {
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) })
     const res = await fetch('/api/proposals/list')
     const data = await res.json()
@@ -24,6 +30,7 @@ export default function InternationalProposals() {
 
 
   }
+<<<<<<< HEAD
 
 
 export default function InternationalProposals(req, res) {
@@ -50,6 +57,11 @@ export default function InternationalProposals(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
   return (
@@ -95,10 +107,14 @@ export default function InternationalProposals(req, res) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>
               <div className="mt-3 flex items-center gap-2 text-xs">
                 <button onClick={() => updateStatus(p.id, 'Under Review')} className="px-2 py-1 border rounded">Mark Under Review</button>
@@ -110,7 +126,17 @@ export default function InternationalProposals(req, res) {
 
 
 
+<<<<<<< HEAD
 
+=======
+        </div>
+      )}
+    </div>
+  );
+};
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -121,6 +147,10 @@ export default function InternationalProposals(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </div>
       )  } catch (error) {
     console.error("Error:", error);
@@ -139,5 +169,8 @@ export default function InternationalProposals(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

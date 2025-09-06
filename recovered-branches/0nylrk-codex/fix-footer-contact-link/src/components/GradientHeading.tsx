@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+=======
+interface GradientHeadingProps {;
+  children: React && React.ReactNode,;
+
+  className?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -7,6 +17,7 @@
 interface GradientHeadingProps {
   children: React.ReactNode,
   className?: string,
+<<<<<<< HEAD
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 }
 
@@ -16,6 +27,14 @@ export function GradientHeading({ children, className, level = "h2" }: GradientH
   const Tag = level,
   
 
+=======
+
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+}
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Tag
       className={cn(
@@ -25,10 +44,13 @@ export function GradientHeading({ children, className, level = "h2" }: GradientH
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
         className
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       )}
     >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

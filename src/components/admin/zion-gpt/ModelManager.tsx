@@ -17,6 +17,7 @@ if ( {) {
       }
 
       // Update this model;
+<<<<<<< HEAD
 
 
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
@@ -41,6 +42,8 @@ interface ModelVersionData extends ModelConfig {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
@@ -65,6 +68,7 @@ interface ModelVersionData extends ModelConfig {
           .from('model_versions');
           .update({ active: false });
           .eq('purpose', purpose);
+<<<<<<< HEAD
 
 
 
@@ -74,6 +78,8 @@ interface ModelVersionData extends ModelConfig {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
 
       // Update this model;
@@ -160,6 +166,7 @@ interface ModelVersionData extends ModelConfig {
                       <Button
                         variant="ghost"
                         size="sm"
+<<<<<<< HEAD
 
 
                         onClick={() => checkTrainingStatus(model.id)}
@@ -170,6 +177,9 @@ interface ModelVersionData extends ModelConfig {
                         disabled={activeJobs[model.id]}
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
@@ -188,8 +198,11 @@ interface ModelVersionData extends ModelConfig {
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       >
                         {model.active ? (
                           <>
@@ -206,11 +219,14 @@ interface ModelVersionData extends ModelConfig {
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                         title = {model && model.errorMessage || "Training failed",}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
@@ -233,11 +249,14 @@ interface ModelVersionData extends ModelConfig {
                   </TableCell>;
                 </TableRow>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               ))}
             </TableBody>;
           </Table>;
@@ -247,11 +266,14 @@ interface ModelVersionData extends ModelConfig {
   );
 }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   return (

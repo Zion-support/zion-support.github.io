@@ -1,10 +1,25 @@
 
+<<<<<<< HEAD
 
+=======
+import {JobData, TalentProfile, MatchResult} from "./types ;
+
+=======
+
+
+import { JobData, TalentProfile, MatchResult } from "./types.ts",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Get openAI API key from environment variables
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",
 
@@ -59,8 +74,59 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+import { JobData, TalentProfile, MatchResult } from "./types.ts",;
+// Get openAI API key from environment variables;
+const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",;
+/**;
+ * Normalizes skills using OpenAI;
+ * @param skills Array of skill strings to normalize;
+ * @returns Array of normalized skills;
+ */;
+export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]> {;
+  try {;
+    const skillsString = skills.join(", "),;
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {;
+      method: "POST",;
+      headers: {;
+        "Content-Type": "application/json",;
+        "Authorization": `Bearer ${openAiApiKey}`;
+      },;
+      body: JSON.stringify({;
+        model: "gpt-4o-mini",;
+        messages: [;
+          {;
+            role: "system",;
+            content: "You are a skill normalizer for a tech job platform. Normalize the provided skills to their standard industry naming conventions (e.g., 'react js' to 'React.jsnodejs' to 'Node.js'). Return only a comma-separated list of the normalized skills, nothing else.";
+          },;
+          {;
+            role: "user",;
+            content: skillsString;
+          }
+        ],;
+        temperature: 0.3;
+      });
+    }),;
+    const data = await response.json(),;
+    if (!data.choices || !data.choices[0] || !data.choices[0].message) {;
+      throw new Error("Failed to normalize skills with AI");
+    }
+;
+    // Extract and clean the normalized skills;
+    const normalizedSkillsText = data.choices[0].message.content.trim(),;
+    const normalizedSkills = normalizedSkillsText.split(",").map((skill: string) => skill.trim()).filter(Boolean),;
+    return normalizedSkills;
+  } catch (error) {;
+    console.error("Error in normalizeSkillsWithAI:", error),;
+    // If AI normalization fails, return the original skills;
+    return skills;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 /**
@@ -148,11 +214,22 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
     const talentProfilesText = talents.map ((talent, index) => {
       return `;
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+      Job Title: ${jobDetails.title}
+      Description: ${jobDetails.description}
+      Category: ${jobDetails.category}
+      Required Skills: ${jobDetails.skills.join(", ")}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         Talent ${index + 1} ID: ${talent.id}
         Name: ${talent.full_name}
         Title: ${talent.professional_title}
@@ -238,6 +315,29 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
     
 
 
+<<<<<<< HEAD
+=======
+      throw new Error("Failed to match talents with AI")
+    }
+    // Parse the AI response
+
+    const aiResponse = JSON.parse(data.choices[0].message.content),
+    
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    // Check if the response is in the expected format
+    if (!Array && Array.isArray(aiResponse)) {
+      throw new Error("AI response format is invalid")
+    }
+    return aiResponse
+  } catch (error) {
+
+    console && console.error("Error in findBestMatches:", error);
+    
+
+    // If AI matching fails, perform a basic skill matching
+    return performBasicSkillMatching(jobDetails, talents)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 /**
@@ -263,6 +363,7 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
     );
     // Calculate a basic match score
 
+<<<<<<< HEAD
 
 
         Bio Summary: ${talent.bio ? talent.bio.substring(0, 100) + "..." : "No bio"}
@@ -353,6 +454,8 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
       matchedSkills: matchedSkills;
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const matchScore = Math && Math.round((matchedSkills && matchedSkills.length / requiredSkills && requiredSkills.length) * 100);
     
 
@@ -365,9 +468,13 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   })
   .filter(match => match && match.score > 30) // Only include matches with at least 30% score

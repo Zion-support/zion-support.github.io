@@ -44,11 +44,14 @@ import { Project, ProjectStatus  } from '@/types / projects';
 import { Button  } from '@/components / ui / button';
 import {logErrorToProduction} from '@/utils / production_logger';
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {
   Card,
   CardContent,
@@ -142,6 +145,52 @@ import { ProjectReviewSection } from '@/components/projects/reviews/ProjectRevie
 } from 'lucide-react'
 
 function ProjectDetailsContent() {
+<<<<<<< HEAD
+=======
+  AlertDialogTrigger} from "@/components/ui/alert-dialog",
+import { Avatar } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
+
+function ProjectDetailsContent() {
+  const router = useRouter(),
+  // Get projectId from Next.js router query params
+  const { projectId } = router.query as { projectId?: string },
+  const { user } = useAuth(),
+  const { getProjectById, updateProjectStatus } = useProjects(),
+  
+  const [project, setProject] = useState<Project | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [notes, setNotes] = useState<any[]>([]),
+  const [newNote, setNewNote] = useState(""),
+  const [isSubmittingNote, setIsSubmittingNote] = useState(false),
+  const [activeTab, setActiveTab] = useState("details"),
+  
+  // Load project data
+  useEffect(() => {
+    async function loadProject() {
+                                <span className="font-medium text-sm">
+                                  {note.created_by_profile?.display_name || "User"}
+                                </span>
+                                <span className="text-xs text-muted-foreground">
+                                  {format(new Date(note.created_at), "PPp")}
+                                </span>
+                              </div>
+                              <p className="text-sm whitespace-pre-wrap">{note.content}</p>
+                            </div>
+                          ))
+                        ) : (
+                          <div className="text-center py-8">
+                            <MessageSquare className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
+                            <p className="text-muted-foreground">
+                              No notes yet. Add the first note to this project.
+                            </p>
+                          </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         )}
 
                       </div>;
@@ -1094,6 +1143,11 @@ function ProjectDetailsContent() {
 
 
               
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
@@ -1197,6 +1251,7 @@ function ProjectDetailsContent() {
         </div>;
       </main>;
 
+<<<<<<< HEAD
             </Card>
           </div>
         </div>
@@ -1205,6 +1260,8 @@ function ProjectDetailsContent() {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
     </>);
 
@@ -1252,8 +1309,11 @@ case "in progress": return <Badge className="bg - blue - 100 text - blue - 800">
 case "completed": return <Badge variant="default">Completed</Badge>;";
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;";
 default: return <Badge variant="outline"> {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
 setIsSubmittingNote (true);
@@ -1303,8 +1363,11 @@ default: return <Badge variant="outline"> {;
   () => handleStatusChange (" completed") ;
 }> Mark as Completed </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>) ;
 }<Linkhref= {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   `/project/[id]/milestones` "
 }> <Layers className=" mr-2 h-4 w-4"/> Milestones </Link> </Button>) ;
 }<Linkhref= {
@@ -1445,6 +1508,7 @@ const ProjectDetails = () => {
               </Link>
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
                 Contact Us
+<<<<<<< HEAD
 
 
               </Link>
@@ -1571,3 +1635,6 @@ const ProjectDetails = () =>: any {
 }
 
 
+=======
+              </Link>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

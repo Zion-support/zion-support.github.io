@@ -21,6 +21,7 @@ function ensureStorage() {
 
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
 const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml');
@@ -40,6 +41,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+=======
+
+
+  const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 
       return `
@@ -80,10 +90,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   siteUrl
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
 
+<<<<<<< HEAD
 
 
   items
 }</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
+=======
+  items 
+}</channel> </rss>`;  return res && res.status(200).json({ ok: true, path: '/podcast && podcast.xml' })
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 
@@ -197,14 +213,23 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
 }</channel> </rss>`;
 
   items 
+<<<<<<< HEAD
 }</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 }
 }</channel> </rss>`;
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

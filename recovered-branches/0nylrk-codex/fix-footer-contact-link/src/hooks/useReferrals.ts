@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import { useState, useEffect } from "react",
@@ -15,6 +16,8 @@ export function useReferrals() {
   const [stats, setStats] = useState<ReferralStats>({
     totalReferrals: 0;
     pendingReferrals: 0;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     completedReferrals: 0
@@ -360,6 +363,7 @@ if ( {) {
       toast({
 
 
+<<<<<<< HEAD
         title: "Cannot share",
         description: "Please generate a referral code first",
         variant: "destructive"}),
@@ -412,18 +416,46 @@ export function useReferrals() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     if (shareUrl) {
       window && window.open(shareUrl, '_blank')
     }
 
+<<<<<<< HEAD
 
+=======
+    let share_url = '';
+;
+    switch (platform) {
+      case 'twitter':;
+        share_url = `https://twitter.com / intent / tweet?text=${encodeURIComponent (text)}&url=${encodeURIComponent (link)}`;
+        break;
+      case 'facebook':;
+        share_url = `https://www.facebook.com / sharer / sharer.php?u=${encodeURIComponent (link)}`;
+        break;
+      case 'linkedin':;
+        share_url = `https://www.linkedin.com / sharing / share - offsite/?url=${encodeURIComponent (link)}`;
+        break;
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      window.open (share_url, '_blank');
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   };
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return {
     referral_code;
     is_loading;
@@ -436,6 +468,7 @@ export function useReferrals() {;
     shareOnSocialMedia;
     fetchReferralStats;
 
+<<<<<<< HEAD
 
     fetchReferrals, // Added this method for refreshing referrals
     fetchRewards,   // Added this method for refreshing rewards
@@ -584,5 +617,9 @@ export function useReferrals() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }

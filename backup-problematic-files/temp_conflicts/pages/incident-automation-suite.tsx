@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages-disabled/biotech-ai.tsx
 import React from 'react',
 import React from 'react';
@@ -17,6 +18,18 @@ export default function IncidentAutomationSuitePage() {
 export default function IncidentAutomationSuitePage() {;
 export default function IncidentAutomationSuitePage() {
 :backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
+=======
+
+import React from 'react';
+
+import Head from 'next/head';
+import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+
+import {Button} from '../components/ui/Button';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
   if (!service) return null;
 
@@ -41,6 +54,7 @@ export default function IncidentAutomationSuitePage() {
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /><span>{feat}</span></li>
                 ))}
+<<<<<<< HEAD
 :backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
               </ul>;
             </div>;
@@ -65,6 +79,9 @@ export default function IncidentAutomationSuitePage() {
   ),;
 }
 ;
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">
@@ -86,6 +103,7 @@ export default function IncidentAutomationSuitePage() {
       </div>
     </UltraFuturisticBackground>
   )
+<<<<<<< HEAD
 :pages-disabled/biotech-ai.tsx
 }
 }
@@ -96,3 +114,11 @@ main:pages-disabled/biotech-ai.tsx
 ;
 main:pages-disabled/biotech-ai.tsx
 :backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
+=======
+
+=======
+
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/incident-automation-suite.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

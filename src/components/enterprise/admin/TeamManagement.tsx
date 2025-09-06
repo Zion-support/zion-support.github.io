@@ -4,14 +4,18 @@ const handleAddMember = () => {
       toast({
 
 
+<<<<<<< HEAD
         title: 'Email required'
         description: 'Please enter an email address for the new team member.'
         variant: 'destructive'
       })
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
       return
+<<<<<<< HEAD
         title: 'Email required',
         description: 'Please enter an email address for the new team member.',
         variant: 'destructive',
@@ -21,6 +25,12 @@ const handleAddMember = () => {
     toast({
       title: 'Invitation sent'
       description: `An invitation has been sent to ${newMemberEmail}`
+=======
+    }
+    toast({
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       title: 'Invitation sent',
       description: `An invitation has been sent to ${newMemberEmail}`,
 
@@ -147,11 +157,14 @@ if ( {) {
   }
 
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
@@ -160,9 +173,12 @@ if ( {) {
 
     toast({
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
@@ -184,6 +200,7 @@ if ( {) {
       description: `A new invitation has been sent to ${memberEmail}`})
   },
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -192,6 +209,11 @@ if ( {) {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -230,11 +252,14 @@ if ( {) {
                   onChange={(e) => setNewMemberEmail(e.target.value)}
                 />
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
                 <Label htmlFor="role" className="text-right">
@@ -264,11 +289,14 @@ if ( {) {
 
       <div className="rounded-md border">
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Table>
           <TableHeader>
             <TableRow>
@@ -284,11 +312,14 @@ if ( {) {
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <TableCell>
                   <div className="flex items-center gap-2">
                     <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
@@ -302,11 +333,14 @@ if ( {) {
                           .join("")}
                       </span>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </div>
                     <div>
                       <div className="font-medium">{member.name}</div>
@@ -323,11 +357,14 @@ if ( {) {
                     variant={member.status === "active" ? "default" : "outline"}
                   >
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {member.status}
                   </Badge>
                 </TableCell>
@@ -346,11 +383,14 @@ if ( {) {
                       >
                         <Mail className="h-4 w-4 mr-1" />
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         Resend
                       </Button>
                     ) : (
@@ -603,6 +643,7 @@ export function TeamManagement() {;
                     </div>;
                   </div>;
                 </TableCell>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -611,6 +652,11 @@ export function TeamManagement() {;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     )}
                   </div>;
                 </TableCell>;

@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 import { addPipelineItem, getVendorById } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -10,6 +11,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
 
+=======
+
+
+  if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const { vendorId, title } = req && req.body || {};

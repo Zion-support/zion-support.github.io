@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 
+=======
+import React from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -12,6 +16,7 @@ import {Slider} from "@/components/ui/slider";
 import {ProductListing, ListingView} from "@/types/listings";
 import {Search, Filter, LayoutGrid, List, Star} from "lucide-react";
 import {toast} from "@/hooks/use-toast";
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react",
 import { useNavigate } from "react-router-dom",
@@ -75,6 +80,8 @@ import { ProductListing, ListingView } from "@/types/listings",;
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react",;
 import { toast } from "@/hooks/use-toast",;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface PriceRange {;
   min: number,;
   max: number;
@@ -95,11 +102,27 @@ export function DynamicListingPage(): any ({;
   categorySlug;
   listings: allListings,;
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  categoryFilters;
+  initialPrice = { min: 0, max: 10000 }
+}: DynamicListingPageProps) {;
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [view, setView] = useState<ListingView>("grid");
+  const [isLoading, setIsLoading] = useState(false);
+  const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
+  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate(),
@@ -339,9 +362,20 @@ if ( {) {
               category: listing.category,
               image: listing.images?.[0];
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+              id: listing.id,;
+              title: listing.title,;
+              category: listing.category,;
+              image: listing.images?.[0];
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             }
           }
         });
@@ -366,10 +400,15 @@ if ( {) {
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {description}
 
 
@@ -385,9 +424,12 @@ if ( {) {
                       <SelectItem key={filter.value} value={filter.value} className="text-white">;
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         {filter.label}
                       </SelectItem>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -433,9 +475,12 @@ if ( {) {
                     onValueChange={handleSliderChange}
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     className="mb-4"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   />
@@ -481,6 +526,7 @@ if ( {) {
                         </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                       )}
@@ -498,6 +544,13 @@ if ( {) {
                       )}
                     </Button>;
                   ))}
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      )}
+                    </Button>;
+                  ))}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 </div>;
               </div>;
@@ -514,10 +567,13 @@ if ( {) {
               <Button 
                 variant="outline" 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
                   console.log("Resetting filters");
@@ -540,6 +596,7 @@ if ( {) {
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-grow">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+<<<<<<< HEAD
 
                   <Input
                     type="text"
@@ -605,6 +662,27 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+                  setSelectedCategory("all"),;
+                  setCurrentPriceFilter([priceRange && priceRange.min, priceRange && priceRange.max]);
+                  setSelectedRating(null);
+                }}
+=======
+                        selected_rating === rating;
+                          ? "bg - zion - purple / 20 border - zion - purple text - zion - purple";
+                          : "border - zion - blue - light text - zion - slate - light";
+                      }`}
+                    >;
+                      {rating === null ? (
+                        "Any") : (
+                        <div className="flex items - center">;
+                          {[...Array (rating)].map ((_, i) => (
+                            <Star key={i} className="h - 3 w - 3 fill - zion - cyan text - zion - cyan" />))}
+                          <span className="ml - 1">& Up</span>;
+                        </div>)}
+                    </Button>))}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </div>;
               </div>;
               <Button;
@@ -711,8 +789,39 @@ if ( {) {
                     key={listing.id}
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+            {isLoading ? (;
+              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
+                {[1, 2, 3, 4].map((i) => (;
+                  <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">;
+                    <Skeleton className="h-48 w-full bg-zion-blue-light/20" />;
+                    <div className="p-4">;
+                      <Skeleton className="h-6 w-1/3 mb-2 bg-zion-blue-light/20" />;
+                      <Skeleton className="h-8 w-5/6 mb-4 bg-zion-blue-light/20" />;
+                      <Skeleton className="h-4 w-full mb-2 bg-zion-blue-light/20" />;
+                      <Skeleton className="h-4 w-4/5 mb-4 bg-zion-blue-light/20" />;
+                      <div className="flex justify-between items-center pt-4">;
+                        <Skeleton className="h-6 w-1/4 bg-zion-blue-light/20" />;
+                        <Skeleton className="h-8 w-1/4 bg-zion-blue-light/20" />;
+                      </div>;
+                    </div>;
+                  </div>;
+                ))}
+              </div>;
+            ) : filteredListings && filteredListings.length > 0 ? (;
+              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
+                {filteredListings && filteredListings.map((listing) => (;
+                  <ProductListingCard
+                    key={listing && listing.id}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+                  <ProductListingCard 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     key={listing.id}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     listing={listing}
@@ -764,9 +873,20 @@ if ( {) {
     </div>;
   );
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+                  onClick={() => {;
+                    setSearchQuery(""),;
+                    setSelectedCategory("all");
+                    setCurrentPriceFilter([priceRange.min, priceRange.max]);
+                    setSelectedRating(null);
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   }}
                   className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
                 >;

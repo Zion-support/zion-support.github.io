@@ -27,18 +27,29 @@ export type OnboardingStep = {;
   id: string;
   label: string;
   completed: boolean;
+<<<<<<< HEAD
 
   ctaLabel?: string;
   ctaHref?: string;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+};
+
+export type OnboardingProgressCardProps = {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   title: string;
   steps: OnboardingStep[];
   highlightColorClass?: string;}
 function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
+<<<<<<< HEAD
 
   return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
   ctaHref?: string
@@ -52,6 +63,8 @@ export type OnboardingProgressCardProps = {
   ctaHref?: string
 };
   return Math.round((completedCount / steps.length) * 100);
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -162,7 +175,18 @@ function compute_percentage (steps: OnboardingStep[]): number {
   // Check condition
 if (return 0) {
   $2
+<<<<<<< HEAD
 
+=======
+=======
+function computePercentage(steps: OnboardingStep[]): number {
+  if (!steps |steps.length === 0) return 0;
+  const completedCount = steps.filter(s => s.completed).length;
+<<<<<<< HEAD
+  return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
+  ctaHref?: string
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
   const completed_count = steps.filter (string => s.completed).length;
   return Math.round ((completed_count / steps.length) * 100);  cta_label?: string;
@@ -301,6 +325,40 @@ function OnboardingProgressCard() {
 }
 
 
+<<<<<<< HEAD
+=======
+      {/* Checklist */}
+      <ul className=&quot;mt-4 space-y-2&quot;>
+        {steps.map((step) => (
+          <li key={step.id} className=&quot;flex items-center justify-between&quot;>
+            <div className=&quot;flex items-center gap-2&quot;>
+              {step.completed ? (
+                <CheckCircle2 className=&quot;text-green-600 dark:text-green-400&quot; size={18} />
+              ) : (
+                <Circle className=&quot;text-gray-400&quot; size={18} />
+              )}
+              <span className={_step.completed ? 'line-through opacity-70' : ''}>{_step.label}</span>
+            </div>
+            {_!step.completed && step.ctaHref && step.ctaLabel ? (
+              <Link href={step.ctaHref}>
+                <a className=&quot;text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition&quot;>
+                  {step.ctaLabel}
+                </a>
+              </a>
+=======
+      <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
+        <div
+          className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
+export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {;
+  const percentage = computePercentage(steps);
+  const allDone = percentage === 100;
+  const firstIncomplete = steps.find((s) => !s.completed && s.ctaHref && s.ctaLabel);
+
+};
+
+function computePercentage(steps: OnboardingStep[]): number {
+  if (!steps || steps.length === 0) return 0;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
@@ -327,6 +385,33 @@ function OnboardingProgressCard() {
           <span className="text-sm">All steps completed — great job!</span>
         </div>
       ) : null}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Checklist */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <ul className='mt-4 space-y-2'>
+        {steps.map(step => (
+          <li key={step.id} className='flex items-center justify-between'>
+            <div className='flex items-center gap-2'>
+                <CheckCircle2
+                  className='text-green-600 dark:text-green-400'
+                  size={18}
+                />
+              ) : (
+                <Circle className='text-gray-400' size={18} />
+              )}
+              <span className={step.completed ? 'line-through opacity-70' : ''}>
+                {step.label}
+              </span>
+            </div>
+            {!step.completed && step.ctaHref && step.ctaLabel ? (
+              <Link href={step.ctaHref}>
+                <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       {/* Checklist */}
 
@@ -341,10 +426,13 @@ function OnboardingProgressCard() {
         ))}
       </ul>
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Primary CTA for next step */}
       {!allDone && firstIncomplete ? (
         <div className=&quot;mt-5&quot;>
@@ -356,6 +444,7 @@ function OnboardingProgressCard() {
         </div>
       ) : null}
     </div>
+<<<<<<< HEAD
 
   )
 
@@ -365,3 +454,9 @@ function OnboardingProgressCard() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  )
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

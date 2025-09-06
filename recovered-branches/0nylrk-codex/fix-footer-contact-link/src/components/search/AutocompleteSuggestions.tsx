@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import React from "react";
 
 
@@ -8,6 +9,19 @@ import React from "react";
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+import {SearchSuggestion, SearchHighlight} from "@/types/search";
+
+=======
+import React from "react",
+import { SearchSuggestion, SearchHighlight } from "@/types/search",
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface AutocompleteSuggestionsProps {
 
   suggestions: SearchSuggestion[]
@@ -24,10 +38,14 @@ interface AutocompleteSuggestionsProps {;
   visible: boolean;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 // Helper function to highlight matching text
 
@@ -38,7 +56,11 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const lowerText = text.toLowerCase();
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
@@ -51,6 +73,7 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
     match: text.substring (index, index + search_term.length);
     after: text.substring (index + search_term.length);
   }
+<<<<<<< HEAD
 
 }
 export function AutocompleteSuggestions({
@@ -62,6 +85,18 @@ export function AutocompleteSuggestions({
   if (!visible |suggestions.length === 0) return null;
 
 
+=======
+
+
+};
+
+export function AutocompleteSuggestions({ 
+  suggestions, 
+  searchTerm, ;
+  onSelectSuggestion;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
   const lowerText = text.toLowerCase(),;
   const lowerSearchTerm = searchTerm.toLowerCase(),;

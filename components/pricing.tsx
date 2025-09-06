@@ -1,3 +1,102 @@
+<<<<<<< HEAD
+=======
+
+
+import React, { useState } from 'react';
+import Head from 'next/head';
+
+
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+import {
+
+
+  Check,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  Shield,
+  Zap,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Target,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,;
+  ExternalLink,;} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
+  Check, Star, Users, TrendingUp, DollarSign, Clock, ;
+
+
+  Shield, Zap, Rocket, Brain, Atom, Globe, Target;
+  ArrowRight, Phone, Mail, MapPin, ExternalLink
+ } from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+// Import all service data
+import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
+import { innovativeAIServices2029  } from '../data/2029-innovative-ai-services';
+import { quantumSpaceInnovations2029  } from '../data/2029-quantum-space-innovations';
+import { enterpriseITInnovations2029  } from '../data/2029-enterprise-it-innovations';
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import Head from 'next / head';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
+
+
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
+import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
+import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
+import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
+
+
+        acc[category] = [];
+      }
+      acc[category].push (service);
+      return acc;
+
+  });
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from 'react',
 import Head from 'next/head',
 import React, { useState } from 'react';
@@ -6,7 +105,11 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Check
   Star
   Users
@@ -226,6 +329,11 @@ export default function PricingPage() {;
     : microSaasServices.filter(service => service.category === selectedCategory);
 
   const yearlyDiscount = 0.2, // 20% discount for yearly billing
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -402,6 +510,7 @@ export default function PricingPage() {;
 
               <select
                 value={selectedPriceRange}
+<<<<<<< HEAD
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
                 className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"
               >
@@ -416,6 +525,17 @@ export default function PricingPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+
+=======
+            transition={{ duration: 0.8 }}
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 ))}
 
 
@@ -988,8 +1108,11 @@ if ( {) {
 
           </div>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         </section>
@@ -1255,6 +1378,7 @@ if ( {) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
+<<<<<<< HEAD
 }> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) }
 
 }
@@ -1265,3 +1389,7 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,13 +1,23 @@
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
+=======
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { ShieldAlert  } from './lucide-react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface EmptyFraudStateProps {
   has_filters: boolean;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface EmptyFraudStateProps {
   hasFilters: boolean,
   onResetFilters: () => void
@@ -27,6 +37,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
           : "You don't have any fraud flags yet"}
       </p>
       {hasFilters && (
+<<<<<<< HEAD
 
         <Button variant="outline" onClick={onResetFilters}>
           Clear Filters
@@ -34,6 +45,13 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       )}
 
 
+=======
+
+    </div>;
+);
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -59,12 +77,24 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
           ? "Try adjusting your filters";
           : "You don't have any fraud flags yet"}
       </p>;
+<<<<<<< HEAD
 
       {hasFilters && (;
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
       )}
     </div>;
   );
+=======
+      {has_filters && (
+        <Button variant="outline" on_click={onResetFilters}>;
+          Clear Filters;
+        </Button>)}
+    </div>);
+}
+;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

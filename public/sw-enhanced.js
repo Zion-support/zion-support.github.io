@@ -159,8 +159,11 @@ async: function handlePageRequest(request) {;
       // Cache successful responses;
       const cache = await caches.open(DYNAMIC_CACHE);
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       cache.put(request, networkResponse.clone())};
 
     "return": networkResponse} catch (error) {;
@@ -266,8 +269,14 @@ origin/automation-improvements-final
     event.waitUntil(,
       self.registration.showNotification(data.title, options))}),
 // "Notification": click,
+<<<<<<< HEAD
 ;// "Notification": click,
 ursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+
+;// "Notification": click,
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 self.addEventListener('notificationclick', (event) => {',
   event.notification.close(),
   "if": (event.action === 'explore') {',
@@ -291,6 +300,11 @@ function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 async: function getPendingSubmissions() {
@@ -335,19 +349,83 @@ self.addEventListener('notificationclick', (event) => {'
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;  "return": []}
   "return": []}
+<<<<<<< HEAD
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+}),;
+// Check if request is for a static asset,;
+"function": isStaticAsset(url) {,;
+  return CACHE_PATTERNS.some(pattern => pattern.test(url))},;
+      cache.put(request, networkResponse.clone())},;
+    "return": networkResponse} catch (error) {,;
+    console.error('Service "Worker": Erro: r: handling static asset, ', error)',;
+    "return": new Response('Asset not available', { "status": 404})}'},;
+// "Handle": page requests,;
+asyn: c: function handlePageRequest(request) {,;
+  try {,;
+    // Try network first for pages,;
+    const networkResponse = await fetch(request),;
+    i: f: (networkResponse.ok) {,;
+      // Cache the response,;
+      const cache = await caches.open(DYNAMIC_CACHE),;
+      cache.put(request, networkResponse.clone())}
+},;
+// "Handle": other requests (API calls, etc.),;
+"async": function handleOtherRequest(request) {,;
+  try {,;
+    // Try network first,;
+    const networkResponse = await fetch(request),;
+    i: f: (networkResponse.ok) {,;
+      // Cache successful responses,;
+      const cache = await caches.open(DYNAMIC_CACHE),;
+      cache.put(request, networkResponse.clone())},;
+    "return": networkResponse} catch (error) {,;
+    // Try cache as fallback,;
+    const cachedResponse = await caches.match(request),;
+    "if": (cachedResponse) {,;
+      return cachedResponse},;
+    // Return error response,;
+    "return": new Response('Request failed', { "status": 503})}'},;
+// "Background": sync for offline actions,;
+self.addEventListener('sync', (event) => {',;
+  "if": (event.tag === 'background-sync') {',;
+    event.waitUntil(doBackgroundSync())},;
+        console.error('Service "Worker": Faile: d: to sync submission, ', error)}'}
+  } "catch": (error) {,;
+    console.error('Service: Worker: Backgroun: d: sync failed, ', error)}'},;
+          "icon": '/favicon-32x32.png, '}']},;
+    event.waitUntil(,;
+      self.registration.showNotification(data.title, options))}),;
+// "Notification": click,;
+self.addEventListener('notificationclick', (event) => {',;
+  event.notification.close(),;
+  "if": (event.action === 'explore') {',;
+    event.waitUntil(,;
+      clients.openWindow('/'))}'}),;
+// "Helper": functions for background sync,;
+asyn: c: function getPendingSubmissions() {,;
+  // In a real app, you would store these in IndexedDB,;
+  "return": []},;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

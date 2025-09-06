@@ -23,8 +23,11 @@ module.exports = {
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8',
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           800: '#1e40af',
           900: '#1e3a8a',
         },
@@ -99,8 +102,11 @@ module.exports = {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['Fira Code', 'monospace'],
       },
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
@@ -129,6 +135,7 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+<<<<<<< HEAD
 
 
     require('@tailwindcss/aspect-ratio')
@@ -137,3 +144,8 @@ module.exports = {
 
 
 
+=======
+    require('@tailwindcss/aspect-ratio'),
+  ],
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

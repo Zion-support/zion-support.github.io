@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -32,6 +33,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (req.method === "GET") {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const scope = state.config.scope,
@@ -45,17 +50,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
         totalEvents: scopedEvents.length,
 
+<<<<<<< HEAD
         proposals: scopedEvents.filter((e) => e.type === "proposal").length,
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length,
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length,
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
 
 
+<<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -127,3 +137,6 @@ export default function handler(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

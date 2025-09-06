@@ -56,6 +56,7 @@ import { useRole } from '../context/RoleContext';
     setOpen(false);  }
 
   }
+<<<<<<< HEAD
 
 
 
@@ -64,6 +65,10 @@ import { useRole } from '../context/RoleContext';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!open) return null;
@@ -72,6 +77,13 @@ import { useRole } from '../context/RoleContext';
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

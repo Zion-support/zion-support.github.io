@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -26,6 +29,7 @@ export default async function handler(
     return res && res.status(404).json({ error: "Fraud record not found" });
   }
   const adminAction: AdminActionType = {
+<<<<<<< HEAD
 
     id: `action-${Date.now()}`
     fraudId
@@ -38,6 +42,8 @@ export default async function handler(
   return res.status(200).json({ success: true, action: adminAction });
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -65,6 +71,17 @@ function ensureAdmin(req: NextApiRequest): boolean {;
 }
 
 
+<<<<<<< HEAD
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getFraudStore  } from '../../../../utils / fraud / store';
+import { AdminActionType  } from '../../../../utils / fraud / types';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 export default async /**
  * handler - Function description
@@ -131,7 +148,12 @@ if ( {) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

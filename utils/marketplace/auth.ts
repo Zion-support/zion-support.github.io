@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { NextApiRequest } from 'next';
 export function getUserFromRequest(req: any): User | null {
@@ -19,6 +20,10 @@ export function getUserFromRequest(req: any): User | null {
 }
 export function assertTalentOrClientForOffer(
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
@@ -44,10 +49,23 @@ export function assertTalentOrClientForOffer(
   }
   return user;
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
     return null;
   }
@@ -95,6 +113,7 @@ if ( {) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -102,3 +121,5 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

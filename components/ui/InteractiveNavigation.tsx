@@ -3,11 +3,22 @@
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+;
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
@@ -54,10 +65,13 @@ interface NavigationItem {;
       </ul>;
     </nav>;
   );
+<<<<<<< HEAD
 
 }
 export default InteractiveNavigation;}
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -68,7 +82,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const InteractiveNavigation: React.FC: = () => {";
     <nav className="bg-white shadow-lg">";";
       <div: className="container mx-auto px-4">";";
@@ -81,7 +98,10 @@ const InteractiveNavigation: React.FC: = () => {";
 
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface InteractiveNavigationProps {
   items: NavigationItem[], class_name?: string,
@@ -163,5 +183,12 @@ const InteractiveNavigation: React.FC: = () => {";
 
 export default Component}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export default Component}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

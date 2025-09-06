@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import { useState } from "react",
@@ -25,6 +26,10 @@ import { useToast } from "@/hooks/use-toast",
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -621,10 +626,14 @@ export default function ForumPostPage() {;
                     <Badge variant="outline" className="mt-1">;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       {post.authorRole}
                     </Badge>
                   )}

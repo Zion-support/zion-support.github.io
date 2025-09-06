@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
@@ -29,6 +30,8 @@ export function middleware(request: NextRequest) {;
   }
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { NextResponse } from 'next / server',
 import type { NextRequest } from 'next / server',
@@ -51,7 +54,11 @@ export const config = {
   matcher: ['/dashboard / dashboard/']}
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 export const config = {;
   matcher: ['/dashboard/dashboard/']};

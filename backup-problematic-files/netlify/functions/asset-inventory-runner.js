@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/asset-inventory-runner.js
 :backup-problematic-files/netlify/functions/asset-inventory-runner.js
 const path = require('path'),;
@@ -25,6 +26,11 @@ exports.handler = async () => {;
 },;
 :backup-problematic-files/netlify/functions/asset-inventory-runner.js
 :backup-problematic-files/netlify/functions/asset-inventory-runner.js
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -53,6 +59,7 @@ exports.handler = async () => {
   logStep('assets:inventory', () => runNode('automation/asset-inventory.cjs'));
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
+<<<<<<< HEAD
 :netlify/functions/asset-inventory-runner.js
   return { statusCode: 200, body: logs.join('\n') }
 };function runNode(relPath, args = []) {
@@ -74,6 +81,8 @@ exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
   return { statusCode: 200, body: logs.join('\n') }
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return { statusCode: 200, body: logs.join('\n') };
 };function runNode(relPath, args = []) {
@@ -98,6 +107,7 @@ exports.handler = async () => {
 
   return { statusCode: 200, body: logs.join('\n') }
 },
+<<<<<<< HEAD
 main:netlify/functions/asset-inventory-runner.js
 :backup-problematic-files/netlify/functions/asset-inventory-runner.js
 :netlify/functions/asset-inventory-runner.js
@@ -105,3 +115,11 @@ main:netlify/functions/asset-inventory-runner.js
 }
 main:netlify/functions/asset-inventory-runner.js
 :backup-problematic-files/netlify/functions/asset-inventory-runner.js
+=======
+
+=======
+
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/asset-inventory-runner.js
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

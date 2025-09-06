@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -27,6 +28,8 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   }
   if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
     res.status(429).json({ error: 'Too Many Requests' });
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     return false;
   }
@@ -35,6 +38,7 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   return true;
 
 
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -46,3 +50,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

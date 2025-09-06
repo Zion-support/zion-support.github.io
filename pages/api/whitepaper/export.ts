@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -13,6 +14,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.status(200).json({ url })
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 function escapeHtml(str: string) {
   return String(str)
@@ -22,7 +26,10 @@ function escapeHtml(str: string) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next',
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 export default async /**
  * handler - Function description
@@ -55,7 +62,10 @@ function escape_html() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`,
   const base64 = Buffer.from(html, 'utf-8').toString('base64'),
@@ -63,6 +73,7 @@ function escape_html() {
   res.status(200).json({ url })
 
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -115,3 +126,6 @@ function escapeHtml(str: string) {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

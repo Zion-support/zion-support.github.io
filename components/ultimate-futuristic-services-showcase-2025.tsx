@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
   Star
   TrendingUp
@@ -66,6 +67,42 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import Head from 'next / head';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+=======
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Star,
   TrendingUp,
   Users,
@@ -115,9 +152,23 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
   BookOpen,
   Sparkles as SparklesIcon,
   Zap as ZapIcon,
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+<<<<<<< HEAD
+  Brain as BrainIcon,
+  Play as PlayIcon,
+} from 'lucide-react';
+
+import Layout from '../components/layout/Layout';
+import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {
+  Star, TrendingUp, Users, Award, Clock, Heart, 
+  Brain, Atom, Shield, Rocket, Zap, Globe, ;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   CheckCircle, ArrowRight, Search, Filter;
   ChevronDown, ChevronUp, Eye, Play, Sparkles;
   Target, Microscope, Lock, Cloud, BarChart3;
@@ -133,6 +184,7 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
 import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
 
+<<<<<<< HEAD
 
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -182,6 +234,17 @@ const stats = [
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+export default function UltimateFuturisticServicesShowcase2025() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+export default function UltimateFuturisticServicesShowcase2025() {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
@@ -402,10 +465,13 @@ const stats = [
 
 
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>;
           </motion && motion.div>;
         </div>;
@@ -415,8 +481,11 @@ const stats = [
       {/* Search and Filter Section */}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Search and Filter Section */}
       <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -425,11 +494,14 @@ const stats = [
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Search */}
             <div className='relative flex-1 max-w-md'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -476,8 +548,23 @@ const stats = [
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+            <div className='flex flex-wrap gap-3'>
+
+              />
+            </div>
+
+            {/* Category Filter */}
+
+                  <option key={category.title} value={category.title}>
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {category.title} ({category.count})
                   </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -505,6 +592,28 @@ const stats = [
                 <option value='customers'>Most Customers</option>
               </select>
 
+<<<<<<< HEAD
+=======
+              {/* Sort Options */}
+              <select
+                value={sortBy}
+                onChange={e => setSortBy(e && e.target.value)}
+                className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
+              >;
+                <option value='popular'>Most Popular</option>;
+                <option value='price-low'>Price: Low to High</option>;
+                <option value='price-high'>Price: High to Low</option>;
+                <option value='rating'>Highest Rated</option>;
+                <option value='customers'>Most Customers</option>;
+              </select>;
+=======
+              </select>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Sort Options */}
               <select
@@ -770,7 +879,39 @@ const stats = [
                       </div>;
                     ))}
 
+<<<<<<< HEAD
 
+=======
+=======
+                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                      </span>;
+                      <span className='text - gray - 400'>{service.period}</span>                    </div>                      {service.icon}
+                    </div>;
+                  </div>;
+                  <div className={`${view_mode === 'list' ? 'flex - 1' : ''}`}>;
+                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors">;
+=======
+                  <div className='absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-3 py-1 rounded-full'>                    Popular                  <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    Popular
+                  </div>
+                )}
+
+                {/* Service Header */}
+                <div
+                  className={`${viewMode === 'list' ? 'flex items-start space-x-6' : 'text-center'}`}
+                >
+                  <div
+                    className={`${viewMode === 'list' ? 'flex-shrink-0' : 'mx-auto mb-4'}`}
+                  >
+                    <div
+                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl`}
+                    >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {service.icon}
                     </div>
@@ -861,8 +1002,12 @@ const stats = [
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {/* Service Details */}
                 <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                   <div className='text-gray-400'>
@@ -876,8 +1021,16 @@ const stats = [
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </div>
                   <div className='text-gray-400'>
                     <span className='block'>Trial</span>
@@ -1069,9 +1222,13 @@ const stats = [
 
 
                 {/* Contact Info */}
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <div className='mt-6 pt-6 border-t border-white/10'>;
                   <div className='text-center text-sm text-gray-400'>;
                     <p>Contact us for custom pricing and implementation</p>;
@@ -1102,10 +1259,14 @@ const stats = [
 
             ))}
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       </a>
                     </div>
                   </div>
@@ -1122,10 +1283,18 @@ const stats = [
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-gray-400 mb-6">Try adjusting your search criteria or category filter</p>
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* No Results */}
 
           {sortedServices.length === 0 && (
@@ -1157,7 +1326,11 @@ const stats = [
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
@@ -1167,11 +1340,14 @@ const stats = [
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1198,6 +1374,7 @@ const stats = [
 
               <Link
                 href="/contact"
+<<<<<<< HEAD
 
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
               >
@@ -1215,6 +1392,8 @@ const stats = [
         </div>
       </section>
     </Layout>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }
@@ -1429,6 +1608,7 @@ const stats = [
       </section>;
     </Layout>);
 }
+<<<<<<< HEAD
 
   );
 }
@@ -1437,3 +1617,6 @@ const stats = [
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

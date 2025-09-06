@@ -76,8 +76,11 @@ const ContentCard: React.FC < ContentCardProps> = ({
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Content */}
       <h3 className='text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2'>;
         {title}
@@ -93,6 +96,16 @@ const ContentCard: React.FC < ContentCardProps> = ({
 
           </span>
 
+<<<<<<< HEAD
+=======
+
+      {/* Content */}
+      <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
+        {title}
+      </h3>
+      
+      <p className="text-white/70 leading-relaxed mb-6 line-clamp-3">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {description}
       </p>
 
@@ -132,9 +145,22 @@ const ContentCard: React.FC < ContentCardProps> = ({
 
 
       {/* Hover Effects */}
+<<<<<<< HEAD
+=======
+      <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />;
+    </Link>;
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 
+=======
+};
+export default ContentCard;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className='flex items - start justify - between mb - 6'>;
         <div;
           className={`w - 12 h - 12 bg - gradient - to - br ${color} rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300`}
@@ -191,7 +217,12 @@ export default ContentCard;
 ;
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

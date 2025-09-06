@@ -10,6 +10,7 @@ if ( {) {
     window.gtag ('event', event, data);
   }
 }
+<<<<<<< HEAD
 
 export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
@@ -30,8 +31,24 @@ export const trackEvent = (
 export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', GA_TRACKING_ID, {
+=======
+;
+export const trackPageView = (url: string) =>: any {
+  // Check condition
+if ( {) {
+  $2
+}
+    window.gtag ('config', 'GA_MEASUREMENT_ID', {
+
+      page_path: url,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+      page_path: url,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 
       page_path: url,;
 
@@ -42,6 +59,22 @@ export const trackPageView = (url: string) => {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  if (typeof window !== 'undefined' && window && window.gtag) {
+    window && window.gtag('config', GA_TRACKING_ID, {
+      page_path: url,
+
+    });
+  }
+}
+=======
+
+      page_path: url,;
+
+=======
+      page_path: url,
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     });
   }
 };
@@ -107,6 +140,7 @@ interface WebVitalMetric {
   value: number;
   id: string;
 }
+<<<<<<< HEAD
 
 export const trackWebVitals = (metric: WebVitalMetric) => {
   if (typeof window !== 'undefined' && window.gtag) {
@@ -114,6 +148,14 @@ export const trackWebVitals = (metric: WebVitalMetric) => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+      event_category: 'Web Vitals',
+      event_label: metric.id,
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      non_interaction: true,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     });
   }
 
@@ -122,9 +164,12 @@ export const trackWebVitals = (metric: WebVitalMetric) => {
 // Track events;
 
 export const event = ({
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   action
   category
   label
@@ -138,9 +183,13 @@ export const event = ({
   value,
 }: {;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   action: string;
   category: string;
   label?: string;

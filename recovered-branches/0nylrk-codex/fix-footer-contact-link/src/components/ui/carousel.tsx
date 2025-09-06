@@ -31,8 +31,12 @@ type CarouselContextProps = {
 
 
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   orientation: "horizontal" | "vertical"
 } & Omit<CarouselProps "orientation">
 
@@ -76,8 +80,11 @@ function useCarousel(): CarouselContextProps {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 ;
   return context as CarouselContextProps;
@@ -211,12 +218,16 @@ if ( {) {
 }
         return;
       }
+<<<<<<< HEAD
 
 
 
       onSelect(api)
       api.on("reInit", onSelect)
       api.on("select", onSelect)
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -275,10 +286,14 @@ className={cn(&quot;relative&quot;, className)}
           aria-roledescription="carousel"
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {...props}
         >;
           {children}
@@ -363,6 +378,7 @@ const CarouselPrevious = React.forwardRef<
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
+<<<<<<< HEAD
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
@@ -372,6 +388,29 @@ const CarouselPrevious = React.forwardRef<
       <span className=&quot;sr-only&quot;>Previous slide</span>
 
 
+=======
+=======
+      className={cn (
+        &quot;absolute  h - 8 w - 8 rounded - full & quot;,
+        orientation === &quot;horizontal & quot;
+          ? &quot;-left - 12 top - 1/2 -translate - y-1 / 2&quot;
+          : &quot;-top - 12 left - 1/2 -translate - x-1 / 2 rotate - 90 & quot;,
+        class_name)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      disabled={!canScrollPrev}
+      on_click={scroll_prev}
+      {...props}
+
+
+
+=======
+    >
+      <ArrowLeft className="h-4 w-4" />
+      <span className="sr-only">Previous slide</span>
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </Button>
   )
 })
@@ -400,6 +439,7 @@ const CarouselNext = React.forwardRef<
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
+<<<<<<< HEAD
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
@@ -409,6 +449,37 @@ const CarouselNext = React.forwardRef<
       <span className=&quot;sr-only&quot;>Next slide</span>
 
 
+=======
+=======
+      className={cn (
+        &quot;absolute h - 8 w - 8 rounded - full & quot;,
+        orientation === &quot;horizontal & quot;
+          ? &quot;-right - 12 top - 1/2 -translate - y-1 / 2&quot;
+          : &quot;-bottom - 12 left - 1/2 -translate - x-1 / 2 rotate - 90 & quot;,
+        class_name)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      disabled={!canScrollNext}
+      on_click={scroll_next}
+      {...props}
+
+>;
+      <ArrowRight className=&quot;h - 4 w - 4&quot; />;
+      <span className=&quot;sr - only & quot;>Next slide</span>;
+    </Button>);
+});
+CarouselNext.display_name = &quot;CarouselNext & quot;
+;
+=======
+
+
+=======
+    >
+      <ArrowRight className="h-4 w-4" />
+      <span className="sr-only">Next slide</span>
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </Button>
   )
 })
@@ -427,5 +498,9 @@ export {
 ;
 ;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

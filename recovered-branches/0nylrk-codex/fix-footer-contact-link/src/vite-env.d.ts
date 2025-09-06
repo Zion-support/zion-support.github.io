@@ -79,6 +79,7 @@ declare let process: {;
 }
 // Badge component type fixes
 declare module '@/components/ui/badge' {
+<<<<<<< HEAD
 
   export interface BadgeProps {
   }
@@ -87,6 +88,12 @@ declare module '@/components/ui/badge' {
 
   export const Badge: React.FC<BadgeProps>;
 
+=======
+
+interface ImportMetaEnv {
+  readonly VITE_APP_TITLE: string,
+  // add more env variables as needed;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 interface ImportMeta {
   readonly env: ImportMetaEnv;
@@ -107,6 +114,7 @@ declare module '@vitejs/plugin-react - swc' {
   import { Plugin } from 'vite',
   export default function reactSWC (): Plugin;
 }
+<<<<<<< HEAD
 
 // Removed custom lucide-react stub;
 // Create a replacement stub for LiveKit components;
@@ -123,6 +131,26 @@ declare module '@livekit/components-react' {export interface VideoCallProps {;
     key?: string | number
 },;
 
+=======
+declare module 'path' {
+  export function resolve (...paths: string[]): string,
+  export function join (...paths: string[]): string,
+  export function dirname (path: string): string;
+}
+declare module 'lovable - tagger' {
+  import { Plugin } from 'vite',
+  export function component_tagger (): Plugin;
+}
+// Add Node.js globals;
+declare let __dirname: string,
+declare let process: {
+  env: {
+    [key: string]: string | undefined,
+    NODE_ENV: 'development' | 'production' | 'test',
+    PORT?: string;
+  }
+},
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Badge component type fixes;
 declare module '@/components / ui / badge' {
   export interface BadgeProps {
@@ -167,14 +195,25 @@ declare module '@/components / ChatAssistant / ChatMessage' {
     timestamp?: Date,
 
     key?: string | number;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  }
+}
+// ProductListingCard type fixes;
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
 }
+<<<<<<< HEAD
 
 declare module '@livekit/components-styles' {// Empty stub for the styles;
 }
@@ -185,6 +224,12 @@ declare module '@/components/ProductListingCard' {;
   export interface ProductListingCardProps {;
     listing: any,;
 
+=======
+
+declare module '@/components / ProductListingCard' {
+  export interface ProductListingCardProps {
+    listing: any,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     view?: any,  // Made optional to fix the errors;
     onRequestQuote: (listing_id: string) => void,
     key?: string | number;
@@ -204,6 +249,7 @@ declare module '@livekit / components - react' {
   export const VideoCall: React.FC < VideoCallProps>;
   export const LiveKitRoom: React.FC < any>;
 }
+<<<<<<< HEAD
 ;
 
 
@@ -213,4 +259,9 @@ declare module '@livekit / components - react' {
 declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
 }
+=======
+declare module '@livekit / components - styles' {
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;

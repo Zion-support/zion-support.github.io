@@ -1,16 +1,26 @@
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+import {Skill} from '@/types/resume';
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface SkillsSectionProps {
   skills: Skill[];
 }
 export function SkillsSection({ skills }: SkillsSectionProps) {
   // Group skills by category
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import { Skill  } from '@/types / resume';
@@ -35,9 +45,12 @@ if ( {) {
       acc[category].push (skill);
       return acc;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const skillsByCategory = skills.reduce((acc, skill) => {;
     const category = skill.category || 'Other';
     if (!acc[category]) {
@@ -45,8 +58,12 @@ if ( {) {
     }
     acc[category].push(skill);
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Skill } from '@/types/resume',;
 interface SkillsSectionProps {;
   skills: Skill[];
@@ -63,8 +80,11 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return acc
   }, {} as Record<string Skill[]>),
 

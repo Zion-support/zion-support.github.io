@@ -44,7 +44,10 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
   fs.appendFileSync(errorLogFile, JSON.stringify(errorDetails, null, 2) + '\n');
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   fs.appendFileSync(errorLogFile, JSON.stringify(errorDetails, null, 2) + '\n')}
 // Automation functions
 const automations = {
@@ -371,7 +374,14 @@ async function fixTypeScriptErrors() {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   log('Critical syntax errors fixed')}
 async function fixTypeScriptErrors() {
   log('Fixing TypeScript errors...');

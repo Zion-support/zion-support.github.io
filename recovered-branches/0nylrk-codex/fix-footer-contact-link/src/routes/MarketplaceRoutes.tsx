@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import Marketplace from "@/pages/Marketplace",
@@ -122,6 +123,12 @@ import VideoCall from "@/pages/VideoCall",;
 
 const MarketplaceRoutes = () => {
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const MarketplaceRoutes = () => {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const MarketplaceRoutes = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
@@ -196,6 +203,7 @@ const MarketplaceRoutes = () => {;
       />;
     </Routes>;
   );
+<<<<<<< HEAD
 
 
 
@@ -203,4 +211,15 @@ const MarketplaceRoutes = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+};
+
+
+=======
+
+},
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default MarketplaceRoutes;

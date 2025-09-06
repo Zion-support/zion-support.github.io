@@ -147,8 +147,11 @@ export default function Careers() {;
     {
       title: "Impactful Projects",
       description: "Contribute to innovations that make advanced technology accessible worldwide.",
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       icon: (
@@ -202,6 +205,7 @@ export default function Careers() {;
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24'>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -209,6 +213,10 @@ export default function Careers() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <div>
               <h2 className='text-3xl font-bold text-white mb-6'>
                 Why Work at Zion?
@@ -268,11 +276,14 @@ export default function Careers() {;
                   <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                     {benefit.icon}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                   <p className="text-zion-slate-light">{benefit.description}</p>
@@ -411,11 +422,14 @@ function Careers() {
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.type}</span>
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.department}</span>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                             </div>
                             <p className="text-zion-slate-light mb-4">{job.description}</p>
                           </div>
@@ -569,6 +583,7 @@ export default function Careers() {;
                       </CardContent>;
 
                     </Card>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -576,6 +591,10 @@ export default function Careers() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   ))}
                 </TabsContent>;
               ))}
@@ -601,11 +620,14 @@ export default function Careers() {;
               Send us your resume and let's start a conversation. You can also
               apply directly by emailing us at
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <a
                 href={`mailto:${applyEmail}`}
                 className="text-zion-cyan hover:text-zion-purple transition-colors"
@@ -616,6 +638,7 @@ export default function Careers() {;
             </p>
             <Button
               asChild
+<<<<<<< HEAD
 
 
               className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
@@ -640,6 +663,8 @@ const Careers: React.FC = () => {
       </div>
     </>
   )
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }
@@ -652,11 +677,14 @@ export default Careers
 
 }
 ;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     </Card>))}
                 </TabsContent>))}

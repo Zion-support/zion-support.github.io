@@ -55,6 +55,7 @@ export default function GuestCheckoutModal(): any ({;
     }
   },
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -62,6 +63,10 @@ export default function GuestCheckoutModal(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
 
     <Dialog open={open} onOpenChange={onOpenChange}>;
@@ -188,6 +193,7 @@ export default function GuestCheckoutModal(): any ({;
               Email Address
             </Label>
             <Input
+<<<<<<< HEAD
 
 
               id='guest-email'
@@ -265,6 +271,10 @@ export default function GuestCheckoutModal(): any ({;
             >
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {isSubmitting ? (
                 'Processing...'
               ) : (
@@ -273,11 +283,14 @@ export default function GuestCheckoutModal(): any ({;
                   Continue to Payment
                 </>
               )}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               disabled={isSubmitting || !email || !address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;
@@ -292,3 +305,38 @@ export default function GuestCheckoutModal(): any ({;
 
 };
 };
+<<<<<<< HEAD
+=======
+
+
+          <DialogFooter className='space - x-2'>;
+            <Button;
+              type='button';
+              variant='outline';
+              on_click={() => onOpenChange (false)}
+              className='border - zion - cyan / 30 text - zion - slate - light hover:bg - zion - cyan / 10'            >;
+              Cancel;
+            </Button>;
+            <Button;
+              type='submit';
+              disabled={is_submitting || !email || !address}
+              className='bg - zion - cyan hover:bg - zion - cyan / 90 text - zion - blue'            >;
+              {is_submitting ? (
+                'Processing...') : (
+                <>;
+                  <CreditCard className='h - 4 w - 4 mr - 2' />;
+                  Continue to Payment;
+                </>)}
+            </Button>;
+          </DialogFooter>;
+        </form>;
+      </DialogContent>;
+
+}
+
+
+    </Dialog>);
+}
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

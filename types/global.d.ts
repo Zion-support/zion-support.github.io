@@ -88,6 +88,7 @@ declare global {
   }
 }
 
+<<<<<<< HEAD
 
 // Module declarations
 declare module "*.svg" {
@@ -151,6 +152,8 @@ declare namespace NodeJS {
   }
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export {};
 export {};
@@ -174,6 +177,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 // Re-export DOM types that might not be available
 export {}
+<<<<<<< HEAD
 
 
 export {};
@@ -187,3 +191,10 @@ export {};
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+// Re - export DOM types that might not be available;
+export {}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

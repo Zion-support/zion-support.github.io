@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 const InitPage: NextPage = () => {
@@ -49,6 +50,22 @@ const InitPage: NextPage = () => {
       [group]: { ...prev[group], [key]: !prev[group][key] }
     }));  }
 
+=======
+
+
+  marketplace: true,
+  gpt: true,
+  academy: true,
+  token: true,
+  dao: true,
+
+    setState((prev) => ({
+      ...prev;
+      [group]: { ...prev[group], [key]: !prev[group][key] }}))
+  };
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -138,6 +155,7 @@ const InitPage: NextPage = () => {;
 
 
         body: JSON.stringify(state)}),;
+<<<<<<< HEAD
 
       const json = await res.json();
       if (!res.ok) throw new Error(json?.error |'Deployment failed');
@@ -152,6 +170,8 @@ const InitPage: NextPage = () => {;
 }
   },
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -162,10 +182,14 @@ const InitPage: NextPage = () => {;
     } catch (error) {
       setError(err.message || 'Unexpected error');
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
 
     <div className='space-y-8'>;
@@ -241,9 +265,21 @@ const InitPage: NextPage = () => {;
           <div>;
 
             >              <option>Admin</option>
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+    <div className="space-y-8">
+      <div>
+        <h1 className="text-2xl font-bold">Genesis Deploy</h1>
+        <p className="text-sm text-gray-600 dark:text-gray-400">Initialize a full Zion OS instance from a single control panel.</p>
+      </div>
+      <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 max-w-4xl">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <div>
             <label className="block text-sm font-medium">Instance Name</label>
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.instanceName} onChange={(e) => setState({ ...state, instanceName: e.target.value })} required />
@@ -393,6 +429,45 @@ const InitPage: NextPage = () => {;
                     checked={state.modules[key]}
                     onChange={() => handleToggle('modules', key)}
                   />                  <span>/{key}</span>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div>
+            <label className="block text-sm font-medium">Logo URL</label>
+            <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.branding.logoUrl} onChange={(e) => setState({ ...state, branding: { ...state.branding, logoUrl: e.target.value } })} />
+          </div>
+          <div>
+            <label className="block text-sm font-medium">Primary Color</label>
+            <input type="color" className="mt-1 w-20 h-10 p-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40" value={state.branding.primaryColor} onChange={(e) => setState({ ...state, branding: { ...state.branding, primaryColor: e.target.value } })} />
+          </div>
+          <div>
+            <label className="block text-sm font-medium">Secondary Color</label>
+            <input type="color" className="mt-1 w-20 h-10 p-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40" value={state.branding.secondaryColor} onChange={(e) => setState({ ...state, branding: { ...state.branding, secondaryColor: e.target.value } })} />
+          </div>
+          <div>
+            <label className="block text-sm font-medium">Subdomain</label>
+            <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.branding.subdomain} onChange={(e) => setState({ ...state, branding: { ...state.branding, subdomain: e.target.value } })} />
+          </div>
+        </section>
+<<<<<<< HEAD
+        <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+            <h3 className='font-semibold mb-3'>Auto-Deploy Modules</h3>
+            <div className='space-y-2'>
+              {Object.keys(state.modules).map(key => (
+                <label key={key} className='flex items-center gap-3 text-sm'>
+                  <input
+                    type='checkbox'
+                    checked={state.modules[key]}
+                    onChange={() => handleToggle('modules', key)}
+                  />                  <span>/{key}</span>
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h3 className="font-semibold mb-3">Auto-Deploy Modules</h3>
@@ -403,10 +478,15 @@ const InitPage: NextPage = () => {;
                   <span>/{key}</span>
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </label>
               ))}
             </div>
@@ -432,6 +512,7 @@ const InitPage: NextPage = () => {;
             disabled={submitting}
             className='inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60'>;
             {submitting ? 'Deploying…' : 'Deploy Genesis'}
+<<<<<<< HEAD
 
           </button>
           {error && <span className='text-sm text-red-500'>{error}</span>}        </div>
@@ -484,13 +565,42 @@ export default InitPage;
 }
     </div>;
   );
+=======
+
+          </button>;
+          {error && <span className='text-sm text-red-500'>{error}</span>}        </div>;
+      </form>;
+=======
+
+
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+      {result && (;
+        <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
+          <h3 className='font-semibold'>Deployment Result</h3>;
+          <pre className='mt-2 text-xs whitespace-pre-wrap'>;
+            {JSON && JSON.stringify(result, null, 2)}
+          </pre>;
+        </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      )}
+    </div>;
+  );
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 export default InitPage;
 
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

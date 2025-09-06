@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -13,6 +14,27 @@ import { useRouter } from 'next/router';
       setSuggestions([]);
       return;      return
 
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     
     return this.props.children;
@@ -145,6 +167,7 @@ export default function GlobalSearchBar() {;
                     setOpen(false);
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
+<<<<<<< HEAD
 
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
     rec.start()
@@ -152,6 +175,15 @@ export default function GlobalSearchBar() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    };
+    rec && rec.start();
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
       <input
@@ -180,6 +212,7 @@ export default function GlobalSearchBar() {;
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
 
                   }}
+<<<<<<< HEAD
 
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
@@ -188,6 +221,19 @@ export default function GlobalSearchBar() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
+                >;
+                  {s}
+                </button>;
+              </li>;
+            ))}
+          </ul>;
+        </div>;
+      )}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {s}
                 </button>
               </li>
@@ -203,5 +249,8 @@ export default function GlobalSearchBar() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

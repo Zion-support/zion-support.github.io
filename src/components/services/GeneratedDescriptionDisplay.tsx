@@ -11,6 +11,7 @@ import {;
 import { Textarea } from '@/components/ui/textarea';
 import { Check, Pencil } from 'lucide-react';
 
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
@@ -23,13 +24,18 @@ import { Check, Pencil } from 'lucide-react'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface GeneratedDescriptionDisplayProps {;
   description: string;
   onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {;
   description: string,;
   onSave: (editedDescription: string,) => void;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export function GeneratedDescriptionDisplay(): any ({;
   description,;
@@ -57,6 +63,7 @@ export function GeneratedDescriptionDisplay(): any ({;
 
 
 
+<<<<<<< HEAD
 
   const handleSave = () => {
     onSave(editedDescription),
@@ -71,6 +78,10 @@ export function GeneratedDescriptionDisplay(): any ({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -88,11 +99,14 @@ export function GeneratedDescriptionDisplay(): any ({;
             className="border-zion-blue-light text-zion-slate-light hover:text-white"
           >
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {isEditing ? (
               <>
                 <Check className="h-4 w-4 mr-1" />
@@ -191,6 +205,7 @@ export function GeneratedDescriptionDisplay({;
           />
         ) : (
           <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -198,6 +213,10 @@ export function GeneratedDescriptionDisplay({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {editedDescription}
           </div>
         )}
@@ -217,12 +236,16 @@ export function GeneratedDescriptionDisplay({;
           >
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             Save Changes
           </Button>
         </CardFooter>
       )}
+<<<<<<< HEAD
 
 
     </Card>
@@ -241,16 +264,60 @@ export function GeneratedDescriptionDisplay({;
 }
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) 
 }</Card>) 
 }'";
 };
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     </Card>;
   );
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+        {is_editing ? (
+          <Textarea;
+            value={edited_description}
+            on_change={e => setEditedDescription (e.target.value)}
+            className='bg - zion - blue border border - zion - blue - light text - white min - h-[300px] resize - none'          />) : (
+          <div className='bg - zion - blue p - 4 rounded - md text - white min - h-[300px] whitespace - pre - wrap'>;
+            {edited_description}
+          </div>)}
+      </CardContent>;
+      {is_editing && (
+        <CardFooter>;
+          <Button;
+            on_click={handle_save}
+            className='w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white'          >;
+            Save Changes;
+          </Button>;
+        </CardFooter>)}
+    </Card>);
+  is_editing ? (<> <Check className="h - 4 w - 4 mr - 1" /> Done </>) : (<> <Pencil className="h - 4 w - 4 mr - 1" /> Edit </>);
+}</Button> </CardTitle> </CardHeader> <CardContent> {
+  is_editing ? (<Textarea value= {
+  edited_description;
+}</div>);
+}</CardContent> {
+  is_editing && (<CardFooter> <Button on_click={
+  handle_save ";
+}className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white" > Save Changes </Button> </CardFooter>);
+}</Card>);
+}'";
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

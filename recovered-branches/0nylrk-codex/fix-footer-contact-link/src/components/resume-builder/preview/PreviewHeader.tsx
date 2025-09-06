@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import {Button} from '@/components/ui/button';
@@ -9,17 +14,27 @@ import {useState} from 'react';
 import {useIsMobile} from '@/hooks/use-mobile';
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void
 }
 
+<<<<<<< HEAD
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
 
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [isPrinting, setIsPrinting] = useState(false);
 
   const isMobile = useIsMobile();
@@ -54,6 +69,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
       @media print {;
         body * {;
           visibility: hidden;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -62,6 +78,8 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         .print-section, .print-section * {
           visibility: visible
         }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         .print-section {
           position: absolute
@@ -75,6 +93,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           display: none !important;
         }
       }
+<<<<<<< HEAD
 
     `;
     document.head.appendChild(style);
@@ -82,6 +101,18 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+    `,
+    document.head.appendChild(style),
+=======
+=======
+    `,
+    document.head.appendChild(style),
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     
     // Trigger print dialog
     window.print(),
@@ -101,6 +132,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         <ArrowLeft className="h-4 w-4" />
         Back
       </Button>
+<<<<<<< HEAD
 
       <div
         className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
@@ -110,6 +142,10 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           variant="outline"
           onClick={handleBrowserPrint}
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
         <PdfExportButton resume={resume} />
         <Button 
@@ -117,7 +153,10 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           onClick={handleBrowserPrint} 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           disabled={isPrinting}
           className="gap-2"
         >

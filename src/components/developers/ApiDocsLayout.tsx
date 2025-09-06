@@ -51,14 +51,20 @@ import {
 } from "@/data/docsSearchData",
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ApiDocsLayoutProps {
   children: React.ReactNode;
 }
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const router = useRouter()
   const currentPath = router.pathname
   const [searchValue, setSearchValue] = useState("")
@@ -66,11 +72,21 @@ interface ApiDocsLayoutProps {
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const router = useRouter(),
   const currentPath = router.pathname,
   const [searchValue, setSearchValue] = useState(""),
 
+<<<<<<< HEAD
+=======
+
+
+  const navigationItems = [
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
     { title: "Webhooks", path: "/developers/docs/webhooks" },
@@ -229,18 +245,24 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
 }</nav> </div> {
   /* Main content */ "
 }<div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12"> {
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   children
 }</div> </div>)
 }export default ApiDocsLayout
 "export default ApiDocsLayout
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
 /* Sidebar */ ";
@@ -348,3 +370,13 @@ if ( {) {
 }</div> </div>) 
 }export default ApiDocsLayout;
 "export default ApiDocsLayout;
+<<<<<<< HEAD
+=======
+
+     </div>;
+    </div>;
+  );
+}
+;
+export default ApiDocsLayout;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

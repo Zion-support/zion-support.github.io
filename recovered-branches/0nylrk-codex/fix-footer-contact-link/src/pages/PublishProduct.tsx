@@ -1,6 +1,32 @@
 
+<<<<<<< HEAD
 
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -11,6 +37,7 @@ import {SEO} from "@/components/SEO";
 export default function PublishProduct() {;
   const { isAuthenticated, isLoading } = useAuth();
 
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -26,6 +53,14 @@ export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth(),
   
 
+=======
+  // Show loading while checking authentication;
+  if (isLoading) {;
+
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Show loading while checking authentication
   if (isLoading) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -46,6 +81,7 @@ export default function PublishProduct() {
   }
   return (
 
+<<<<<<< HEAD
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO
         title="Publish Your Product"
@@ -69,6 +105,12 @@ export default function PublishProduct() {
   )
 
 
+=======
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -117,11 +159,19 @@ export default function PublishProduct() {;
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
 
     </div>;
   );
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

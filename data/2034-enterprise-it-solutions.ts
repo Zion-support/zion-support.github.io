@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+<<<<<<< HEAD
+export type EnterpriseITSolution = {
+    starter: string; // e.g. "$2, 999 / mo";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   name: string;
   tagline?: string;
@@ -18,17 +30,27 @@
     professional?: string;
     enterprise?: string;
 
+<<<<<<< HEAD
   }
   };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+  };
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   features: string[];
   integrations?: string[];
   use_cases?: string[];
   link: string; // canonical internal link under /services/*;
   real_service?: boolean;
   rating?: number;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       'Policy-based access',
       'Micro-segmentation',
@@ -50,6 +72,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
       'Micro - segmentation',
 
 
+<<<<<<< HEAD
       'Device posture checks',
       'SSO & MFA integration',
     ],
@@ -156,6 +179,9 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
     ],
     integrations: ['Okta', 'Azure AD', 'Google Workspace'],
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
   {
@@ -285,6 +311,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
       'Provisioning workflows',
     ],
     integrations: ['Okta', 'Azure AD', 'Google Workspace'],
+<<<<<<< HEAD
     useCases: ['Audit readiness', 'Insider risk reduction'],
     link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
     realService: true,
@@ -303,6 +330,11 @@ realService: true
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }];	id: string;
 	name: string;
 
@@ -312,6 +344,10 @@ realService: true
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export type EnterpriseITSolution = {
 	id: string,
 	name: string,

@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
 export default async function handler(
@@ -8,9 +11,28 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
+<<<<<<< HEAD
 
 
 
+=======
+
+    (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
+    (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
+
+      "placeholder-key";
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../../utils/supabase/server';
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+  const usingPlaceholder = 
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
@@ -90,7 +112,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: e?.message });
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

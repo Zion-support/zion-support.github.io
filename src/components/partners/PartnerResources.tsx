@@ -15,6 +15,7 @@ import { Button } from '@/components / ui / button';
   Link,
 } from 'lucide-react';
 import { toast } from '@/hooks / use - toast';
+<<<<<<< HEAD
 
 
 
@@ -38,14 +39,19 @@ import { Button } from '@/components/ui/button'
 import { toast } from '@/hooks/use-toast'
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ResourceItem {
   id: string;
   title: string;
   description: string;
   type: 'image' | 'video' | 'document' | 'link';
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   icon: JSX.Element;
   url: string;
@@ -72,7 +78,10 @@ interface ResourceItem {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
@@ -120,6 +129,7 @@ export function PartnerResources() {
       title: 'Talking Points',
       description: 'Key messages and benefits to highlight',
       type: 'document',
+<<<<<<< HEAD
 
 
       icon: <FileText className='h-10 w-10 text-zion-cyan' />,
@@ -148,10 +158,17 @@ export function PartnerResources() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+
+  icon: JSX && JSX.Element;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     // In a real app, this would download the actual resource
     toast({
       title: "Download started",
       description: `Downloading ${resource.title}`,
+<<<<<<< HEAD
 
 
       variant: 'default',
@@ -173,6 +190,14 @@ export function PartnerResources() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -360,8 +385,11 @@ export function PartnerResources() {;
                     <Download className="h-4 w-4" />;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
                 </CardContent>
@@ -373,6 +401,7 @@ export function PartnerResources() {;
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -380,6 +409,10 @@ export function PartnerResources() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <CardHeader>
           <CardTitle>Promotion Guidelines</CardTitle>
           <CardDescription>
@@ -404,6 +437,7 @@ export function PartnerResources() {;
           <div className="space-y-2">
             <h3 className="text-lg font-semibold text-white">Don'ts</h3>
             <ul className="list-disc pl-5 space-y-1 text-zion-slate-light">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -411,6 +445,10 @@ export function PartnerResources() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <li>Make unrealistic promises about earnings or results</li>
               <li>Use manipulative or misleading marketing tactics</li>
               <li>Spam your referral link across unrelated content</li>
@@ -423,6 +461,7 @@ export function PartnerResources() {;
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -430,6 +469,10 @@ export function PartnerResources() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <CardHeader>
           <CardTitle>Partner Support</CardTitle>
           <CardDescription>
@@ -447,6 +490,7 @@ export function PartnerResources() {;
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
 
 
   );
@@ -457,6 +501,9 @@ export function PartnerResources() {;
 }'"}
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>;
         </CardContent>;
       </Card>;
@@ -557,11 +604,14 @@ export function PartnerResources() {;
           </Button>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

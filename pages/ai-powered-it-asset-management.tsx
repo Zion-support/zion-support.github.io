@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -94,14 +95,22 @@ import {
 
 
     {
+=======
+
+
+    {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       icon: Brain,
 
       title: "AI - Powered Asset Discovery",
       description: "Intelligent detection and cataloging of all IT assets across your network",
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign,
   Database, Network, Server, Laptop, Smartphone
@@ -135,8 +144,16 @@ const AIPoweredITAssetManagement = () => {
 
   ],
   const asset_types = [;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+      description: "AI-driven insights for asset lifecycle management and optimization",
+      color: "from-red-500 to-orange-500"
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ],
   const assetTypes = [
 
@@ -151,7 +168,10 @@ const AIPoweredITAssetManagement = () => {
   ],
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const benefits = [
 
     {
@@ -160,6 +180,30 @@ const AIPoweredITAssetManagement = () => {
       value: "35%",
 
 
+<<<<<<< HEAD
+=======
+=======
+      description: "Reduction in IT asset costs"
+    },
+    {
+      icon: Clock,
+      title: "Time Savings",
+      value: "60%",
+      description: "Faster asset management"
+    },
+    {
+      icon: Shield,
+      title: "Security Improvement",
+      value: "90%",
+      description: "Better security compliance"
+    },
+    {
+      icon: TrendingUp,
+      title: "Efficiency Boost",
+      value: "200%",
+      description: "Increased operational efficiency"
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   ],
@@ -174,6 +218,71 @@ const AIPoweredITAssetManagement = () => {
     "Integration with existing IT tools"
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+=======
+      description: "Reduction in IT asset costs"
+    },
+    {
+      icon: Clock,
+      title: "Time Savings",
+      value: "60%",
+      description: "Faster asset management"
+    },
+    {
+      icon: Shield,
+      title: "Security Improvement",
+      value: "90%",
+      description: "Better security compliance"
+    },
+    {
+      icon: TrendingUp,
+      title: "Efficiency Boost",
+      value: "200%",
+      description: "Increased operational efficiency"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ],
+  const capabilities = [
+    "Automated asset discovery and inventory",
+    "Real-time health monitoring and alerts",
+    "Predictive maintenance scheduling",
+    "License compliance management",
+    "Security vulnerability assessment",
+    "Asset lifecycle optimization",
+    "Cost allocation and tracking",
+    "Integration with existing IT tools"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ],
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ];
   return (
     <div className="min-h-screen bg-gray-50">
@@ -241,14 +350,19 @@ export default AIPoweredITAssetManagement;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
 
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -304,6 +418,56 @@ export default AIPoweredITAssetManagement;
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 
 
+=======
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+=======
+=======
+      description: "Reduction in IT asset costs";
+    },
+    {
+      icon: Clock,
+      title: "Time Savings",
+      value: "60%",
+      description: "Faster asset management";
+    },
+    {
+      icon: Shield,
+      title: "Security Improvement",
+      value: "90%",
+      description: "Better security compliance";
+    },
+    {
+      icon: TrendingUp,
+      title: "Efficiency Boost",
+      value: "200%",
+      description: "Increased operational efficiency";
+    }
+  ],
+  const capabilities = [;
+    "Automated asset discovery and inventory",
+    "Real - time health monitoring and alerts",
+    "Predictive maintenance scheduling",
+    "License compliance management",
+    "Security vulnerability assessment",
+    "Asset lifecycle optimization",
+    "Cost allocation and tracking",
+    "Integration with existing IT tools";
+  ],
+  return (
+    <>;
+      <Head>;
+        <title > AI - Powered IT Asset Management - Zion Tech Group</title>;
+        <meta name="description" content="Revolutionary AI - powered IT asset management platform that provides intelligent discovery, monitoring, and optimization of all your IT infrastructure and assets." />;
+        <meta name="keywords" content="IT asset management, AI monitoring, asset discovery, IT infrastructure, predictive maintenance" />;
+        <meta property="og:title" content="AI - Powered IT Asset Management - Zion Tech Group" />;
+        <meta property="og:description" content="Revolutionary AI - powered IT asset management platform." />;
+        <meta property="og:type" content="website" />;
+        <meta property="og:url" content="https://ziontechgroup.com / ai - powered - it - asset - management" />;
+      </Head>;
+      <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - indigo - 900 to - slate - 900">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Hero Section */}
         <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="absolute inset - 0 bg - gradient - to - r from - indigo - 600 / 20 to - purple - 600 / 20"></div>;
@@ -316,15 +480,24 @@ export default AIPoweredITAssetManagement;
 
                 Transform your IT operations with intelligent asset management that discovers,
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 Transform your IT operations with intelligent asset management that discovers, 
                 Transform your IT operations with intelligent asset management that discovers,
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 monitors, and optimizes every piece of your technology infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -625,10 +798,14 @@ const AIPoweredITAssetManagement = () => {;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -647,6 +824,7 @@ const AIPoweredITAssetManagement = () => {;
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
+<<<<<<< HEAD
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -717,6 +895,10 @@ const AIPoweredITAssetManagement = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -823,10 +1005,14 @@ const AIPoweredITAssetManagement = () => {;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -847,6 +1033,7 @@ const AIPoweredITAssetManagement = () => {;
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
+<<<<<<< HEAD
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -917,6 +1104,10 @@ const AIPoweredITAssetManagement = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
@@ -1020,10 +1211,14 @@ const AIPoweredITAssetManagement = () => {;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1042,6 +1237,7 @@ const AIPoweredITAssetManagement = () => {;
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
+<<<<<<< HEAD
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1112,6 +1308,10 @@ const AIPoweredITAssetManagement = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -1221,10 +1421,14 @@ const AIPoweredITAssetManagement = () => {;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1243,6 +1447,7 @@ const AIPoweredITAssetManagement = () => {;
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
+<<<<<<< HEAD
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1313,6 +1518,10 @@ const AIPoweredITAssetManagement = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
@@ -1354,10 +1563,14 @@ const AIPoweredITAssetManagement = () => {;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1437,12 +1650,15 @@ const AIPoweredITAssetManagement = () => {;
   )
 }
 export default AIPoweredITAssetManagement;
+<<<<<<< HEAD
 
 
 },
 
 export default AIPoweredITAssetManagement,
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >;
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Transform Your IT Asset Management?;
@@ -1463,6 +1679,7 @@ export default AIPoweredITAssetManagement,
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
 
     </>;
   );
@@ -1474,3 +1691,15 @@ export default AIPoweredITAssetManagement;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    </>);
+},
+export default AIPoweredITAssetManagement,
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+},
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

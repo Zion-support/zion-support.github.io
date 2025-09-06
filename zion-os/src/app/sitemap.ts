@@ -141,23 +141,7 @@ export default function sitemap(): MetadataRoute.Sitemap {;
   const complianceServices = [;
     '/soc2-compliance-automation'];
   const allRoutes = [;
-<<<<<<< HEAD
-    ...routes;
-    ...aiServices;
-    ...quantumServices;
-    ...networkServices;
-    ...complianceServices];
-  return allRoutes.map((route) => ({;
-    url: `${baseUrl}${route}`;
-=======
-    ...routes,;
-    ...aiServices,;
-    ...quantumServices,;
-    ...networkServices,;
-    ...complianceServices];
-  return allRoutes.map((route) => ({;
-    url: `${baseUrl}${route}`,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     lastModified: new Date();
     changeFrequency: 'weekly';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -7,6 +7,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {"webpack": (config { isServer }) => {if ( {;
       config.plugins.push() {;
      {;
+<<<<<<< HEAD
 
 
 
@@ -18,16 +19,34 @@ module.exports = {"webpack": (config { isServer }) => {if ( {;
     return config}
 }
 
+=======
+
+module && module.exports = {; "webpack": (config { isServer }) = > {; if ( {; config && config.plugins.push() {; {; config && config.plugins.push(}; new BundleAnalyzerPlugin({; "analyzerMode": 'static'; openAnalyzer: false,
+    reportFilename: 'bundle-analysis && analysis.htm,l'}); )}; return config}};
+
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+module && module.exports = {;
+  "webpack": (config { isServer }) => {;
+    if ( {;
+      config && config.plugins.push() {;
+     {;
+      config && config.plugins.push(};
+        new BundleAnalyzerPlugin({;
+          "analyzerMode": 'static';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           openAnalyzer: false,
           reportFilename: 'bundle-analysis && analysis.htm,l'});
       )};
     return config};
 };
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 /* eslint-env node */
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
@@ -53,6 +72,10 @@ module && module.exports = {
     return config;
   }
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
@@ -66,7 +89,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 }
+<<<<<<< HEAD
 };
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 ;
@@ -85,7 +112,13 @@ module.exports = {,;
     return config}
 },;
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -40,7 +40,14 @@ import {;
 } from 'lucide-react';
 interface QuantumHolographicCardProps {;
   service: {;
+<<<<<<< HEAD
 
+=======
+=======
+  Clock,;
+  DollarSign,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from 'lucide-react';
 
 interface QuantumHolographicCardProps {
@@ -120,6 +127,17 @@ interface QuantumHolographicCardProps {
       }
     },  };      opacity: [0.5, 1, 0.5];
 
+<<<<<<< HEAD
+=======
+      website: string;
+    }
+
+    realImplementation: boolean;
+    implementationDetails: string;
+    launchDate: string;
+    customers: number;
+    rating: number;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: number;
@@ -323,11 +341,22 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
             {service && service.popular && (;
               <motion&& motion.div
                 className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold'
+<<<<<<< HEAD
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+<<<<<<< HEAD
+                whileHover={{ scale: 1 && 1.05 }}
+                whileTap={{ scale: 0 && 0.95 }}>;
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <motion&& motion.div
       className={`relative group cursor-pointer ${className}`}
@@ -617,6 +646,7 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 
 
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -624,6 +654,8 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -636,8 +668,16 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Market data */}
 
           <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30">
@@ -688,6 +728,7 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
               <div className="flex items-center space-x-2">
                 <span className="text-purple-400">📍</span>
                 <span className="text-xs">{service.contactInfo.address}</span>
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -695,6 +736,8 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>
             </div>
           </div>
@@ -791,8 +834,11 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* CTA Button */}
           <motion.a
             href={service.link}
@@ -803,8 +849,16 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -874,6 +928,7 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
     </motion && motion.div>;
   );
 
+<<<<<<< HEAD
 export default QuantumHolographicCard;  )
 }
 export default QuantumHolographicCard;
@@ -888,3 +943,16 @@ export default QuantumHolographicCard;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+
+
+=======
+  );
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

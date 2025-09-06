@@ -228,6 +228,7 @@ import {
     }
   ];
   const integrations = [
+<<<<<<< HEAD
 
 
     {
@@ -235,6 +236,12 @@ import {
       icon: '🛒'
       description: 'E-commerce content automation'
 
+=======
+
+      popular: false,;
+      color: 'border-purple-600',;
+      buttonColor: 'bg-purple-600 hover:bg-purple-700';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
 
   const useCases = [;
@@ -390,6 +397,7 @@ import {
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
     { name: 'Slack', icon: '💬', description: 'Team collaboration' },
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
+<<<<<<< HEAD
 
 
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
@@ -402,6 +410,12 @@ import {
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -570,6 +584,7 @@ import {
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
 
+<<<<<<< HEAD
                 style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
               >
                 <div className="relative">
@@ -609,6 +624,10 @@ import {
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose
 
+=======
+=======
+              Everything you need to create exceptional content at scale
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -890,9 +909,15 @@ import {
 
 
                           {example}
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+                        </div>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                           {example}
@@ -916,8 +941,16 @@ import {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Pricing Section */}
 
       <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
@@ -1086,9 +1119,72 @@ import {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+                    <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+
+                <div className='text-center mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-2'>;
+                    {plan && plan.name}
+                  </h3>;
+                  <div className='text-4xl font-bold text-white mb-2'>;
+                    {plan && plan.price}
+                    <span className='text-lg text-gray-400'>{plan && plan.period}</span>;
+                  </div>;
+                  <p className='text-gray-400'>{plan && plan.description}</p>;
+                </div>;
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li
+                      key={featureIndex}
+                      className='flex items-center text-gray-300'>;
+                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
+                  <p className="text-gray-400">{plan && plan.description}</p>;
+                </div>;
+                <ul className="space-y-4 mb-8">;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li key={featureIndex} className="flex items-center text-gray-300">;
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
+
+                      {feature}
+                    </li>;
+                  ))}
+
+                </ul>;
+
+
+                <Button
+                  href='/contact'
+                  className={`w-full ${plan && plan.buttonColor} text-white`}
+                  size='lg'>;
+                  Get Started;
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan && plan.buttonColor} text-white`}
+                  size="lg";
+                >;
+                  Get Started;
+                  <ArrowRight className="w-5 h-5 ml-2" />;
+                </Button>;
+              </Card>;
+
+=======
+                      {feature}
+=======
+
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </li>
                   ))}
                 </ul>
@@ -1114,8 +1210,16 @@ import {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Integrations Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -1175,12 +1279,21 @@ import {
               </Card>;
 
 
+<<<<<<< HEAD
             ))}
           </div>
         </div>
       </section>
 
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+              </Card>
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
@@ -1197,8 +1310,11 @@ import {
       {/* CTA Section */}
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1207,9 +1323,12 @@ import {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             Ready to Transform Your Content Creation?
@@ -1271,5 +1390,17 @@ import {
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  );
+
+    </>);
+}
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

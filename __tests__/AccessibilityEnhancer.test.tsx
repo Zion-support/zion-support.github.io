@@ -86,3 +86,7 @@ describe('AccessibilityEnhancer'
     const element = screen.getByRole('button'
     fireEvent.keyDown(element, { "key"
     fireEvent.keyDown(element, { "key"
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

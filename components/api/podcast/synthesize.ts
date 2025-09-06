@@ -45,7 +45,10 @@ export default async function handler(
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ensureStorage();
 
 
@@ -117,7 +120,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       mp4Url: publicBase + '.mp4'}
     episodes[idx] = episode;
 
+<<<<<<< HEAD
 
+=======
+  } catch (error: any) {
+    console.error(error)
+    return res.status(500).json({ error: error?.message |'Synthesis failed' })
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       .json({ error: error?.message || 'Synthesis failed' });
   }    return res && res.status(200).json({ episode })
   } catch (error: any) {
@@ -193,7 +202,10 @@ if ( {) {
   }
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -201,7 +213,11 @@ if ( {) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

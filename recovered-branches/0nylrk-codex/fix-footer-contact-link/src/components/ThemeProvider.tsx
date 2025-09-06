@@ -23,11 +23,19 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 export function ThemeProvider({
 
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   children,
   defaultTheme = "system"}: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
     () => (localStorage.getItem("theme") as Theme) || defaultTheme
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
   useEffect(() => {
     const root = window.document.documentElement
@@ -64,6 +72,7 @@ export function ThemeProvider({
     </ThemeProviderContext.Provider>);
 }
 
+<<<<<<< HEAD
 
 
 }
@@ -77,6 +86,16 @@ export const useTheme = () => {
   return context
 }
     throw new Error("useTheme must be used within a ThemeProvider")
+=======
+export const use_theme = () =>: any {
+  const context = useContext (ThemeProviderContext);
+  // Check condition
+if (
+    throw new Error (&quot) {
+  $2
+}use_theme must be used within a ThemeProvider & quot);
+  return context;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return context
 }

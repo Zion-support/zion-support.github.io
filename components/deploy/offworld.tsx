@@ -1,10 +1,16 @@
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import Head from 'next/head',
 import {useState} from 'react';
 import Head from 'next/head';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+import { useState } from 'react';
+import Head from 'next/head';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [error, setError] = useState<string>('');
   const [provider, setProvider] = useState<string>('');
   async function handleDeploy() {
@@ -27,6 +33,7 @@ import {useState} from 'react';
 
   }
   return (
+<<<<<<< HEAD
     <div className='min-h-screen p-8'>
       <Head>
         <title>Zion Offworld Deploy</title>
@@ -35,6 +42,16 @@ import {useState} from 'react';
       <p className='mb-6'>
         Export the site and pin it to IPFS for disconnected/offworld use.
       </p>
+=======
+    <div className='min-h-screen p-8'>;
+      <Head>;
+        <title>Zion Offworld Deploy</title>;
+      </Head>;
+      <h1 className='text-2xl font-bold mb-4'>Zion OS Offworld Deploy</h1>;
+      <p className='mb-6'>;
+        Export the site and pin it to IPFS for disconnected/offworld use.;
+      </p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <button
         className='px-4 py-2 bg-black text-white rounded'
         onClick={handleDeploy}>;
@@ -167,5 +184,9 @@ import {useState} from 'react';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

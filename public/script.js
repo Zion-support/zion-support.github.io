@@ -1,7 +1,61 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)'
+        })
+    }),
+    
+    // Stats counter animation
+    const statNumbers = document.querySelectorAll('.stat-number'),
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target),
+                statsObserver.unobserve(entry.target)
+            }
+        })
+    }, { threshold: 0.5 }),
+    
+    statNumbers.forEach(stat => {
+        statsObserver.observe(stat)
+    }),
+    
+    // Back to top button
+    const backToTopBtn = document.createElement('button'),
+    backToTopBtn.innerHTML = '↑',
+    backToTopBtn.className = 'back-to-top',
+    backToTopBtn.setAttribute('aria-labelBack to top'),
+    document.body.appendChild(backToTopBtn),
+    
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }),
+    
+    // Show/hide back to top button
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('visible')
+        } else {
+            backToTopBtn.classList.remove('visible')
+        }
+    }),
+    
+    // Initialize tooltips
+    initializeTooltips(),
+    
+    // Initialize modals
+    initializeModals()
+}),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 // Search function
@@ -12,15 +66,19 @@ function performSearch(query) {
 
     if (searchResults) {
         const results = [
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' }
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' }
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' }
 
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
 
+<<<<<<< HEAD
 
         )
 
@@ -314,6 +372,8 @@ function performSearch(query) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         ].filter(item => 
             item && item.title.toLowerCase().includes(query)
         ),
@@ -384,6 +444,7 @@ function initializeModals() {
             ).join(''),
             searchResults.style.display = 'block'
         } else {
+<<<<<<< HEAD
 
             searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
             searchResults.style.display = 'block'
@@ -419,6 +480,33 @@ function animateCounter(element) {;
         const suffix = element.textContent.replace(/\d/g, ''),;
         element.textContent = Math.floor(current) + suffix;
 
+=======
+            search_results.innerHTML = '<div class="search - result - item no - results">No results found</div>',
+            search_results.style.display = 'block';
+        }
+    }
+}
+// Counter animation;
+/**
+ * animate_counter - Function description
+ */
+function animate_counter() {
+    const target = parse_int (element.text_content.replace (/\D / g, '')),
+    const duration = 2000,
+    const step = target / (duration / 16),
+    let current = 0,
+    const timer = set_interval (() => {
+        current += step,
+        // Check condition
+if ( {) {
+  $2
+}
+            current = target,
+            clear_interval (timer);
+        }
+        const suffix = element.text_content.replace (/\d / g, ''),
+        element.text_content = Math.floor (current) + suffix;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }, 16);
 }
 // Tooltip initialization;
@@ -445,20 +533,26 @@ if ( {) {
 }
                 this.tooltip.remove (),
                 this.tooltip = null;
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             }
         });
     });
 }
+<<<<<<< HEAD
 
 
 ;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Modal initialization;
 /**
  * initialize_modals - Function description
@@ -515,9 +609,13 @@ if ( {) {
 }
                     modal.class_list.remove ('active'),
                     document.body.style.overflow = '';
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 }
             });
         }
@@ -525,6 +623,7 @@ if ( {) {
 }
 
 
+<<<<<<< HEAD
 
                     document.body.style.overflow = ''
 
@@ -542,6 +641,9 @@ function logPerformance() {
         console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms')
 
         console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         const perfData = window.window.window.performance.getEntriesByType('navigation')[0],
         // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),
@@ -558,9 +660,12 @@ function logPerformance() {
 })
 // Analytics tracking (replace with your analytics service)
 function trackEvent(eventName, eventData = {}) {
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     // Implement your analytics tracking here
@@ -667,6 +772,7 @@ document && document.addEventListener('click', function(e) {
 // Log performance when page is fully loaded
 
 
+<<<<<<< HEAD
 ;
 // Performance monitoring;
 function logPerformance() {;
@@ -677,6 +783,20 @@ function logPerformance() {;
     }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
+=======
+=======
+  title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager';
+}
+{
+  title: 'Quantum Neural Network Platform', url: '/solutions / quantum - neural - network - platform';
+}
+{
+  title: 'AI & Autonomous Systems', url: '/services / ai - autonomous - systems';
+}
+{
+  title: 'Quantum Computing Services', url: '/services / quantum - computing';
+}].filter (item => item.title.toLowerCase () .includes (query) );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 }//Counter animation //Close modal on overlay click modals.for_each (modal => {
   modal.addEventListener ('click', function (e) {
@@ -737,6 +857,7 @@ document.addEventListener ('click', function (e) {
     }
 }),
 // Log performance when page is fully loaded;
+<<<<<<< HEAD
 
 
 
@@ -746,3 +867,14 @@ document.addEventListener ('click', function (e) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+window.addEventListener ('load', log_performance),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+    // // // console.log('Event tracked:', eventName, eventData),
+    // Implement your analytics tracking here
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

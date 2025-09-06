@@ -1,7 +1,12 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -16,6 +21,10 @@ import {Card, CardContent} from "@/components/ui/card";
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -35,7 +44,11 @@ import { Badge } from "@/components/ui/badge",
 import { Card, CardContent } from "@/components/ui/card",
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 
@@ -68,6 +81,7 @@ export function MobileJobPost() {
   
   const renderStepContent = () => {
     switch (currentStep) {
+<<<<<<< HEAD
 
       case "details": return <DetailsStep />,
       case "requirements":
@@ -202,6 +216,9 @@ import { Zap, ChevronLeft, ChevronRight } from "lucide-react",;
 import { Badge } from "@/components/ui/badge",;
 import { Card, CardContent } from "@/components/ui/card",;
 type JobPostStep = "details" | "requirements" | "budget" | "preview",;
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
@@ -544,6 +561,7 @@ function DetailsStep() {
           {skills.map((skill) => (
             <Badge
               key={skill}
+<<<<<<< HEAD
 
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
@@ -565,6 +583,8 @@ function RequirementsStep() {;
       setSkills([...skills, newSkill]),;
       setNewSkill("");
     }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   };
 
@@ -618,14 +638,21 @@ function RequirementsStep() {;
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1">;
               {skill}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <button
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 onClick={() => removeSkill(skill)}
               >;
                 ×;
@@ -656,6 +683,7 @@ function RequirementsStep() {;
       <div className="space-y-2">
         <Label htmlFor="responsibilities">Key Responsibilities</Label>
         <Textarea
+<<<<<<< HEAD
 
           id="responsibilities"
           placeholder="List the key responsibilities for this role"
@@ -670,24 +698,36 @@ function RequirementsStep() {;
 }
         <Textarea 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
 
           rows={4}
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         />;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 function BudgetStep() {
@@ -801,6 +841,20 @@ function PreviewStep() {
 }
 }
 
+<<<<<<< HEAD
+=======
+=======
+      <div className="space - y-2">;
+        <Label html_for="additional_info">Additional Budget Information</Label>;
+        <Textarea;
+          id="additional_info";
+          placeholder="Any additional information about budget or payment";
+          rows={3}
+        />;
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 /**
  * PreviewStep - Function description
  */
@@ -840,7 +894,11 @@ function PreviewStep() {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

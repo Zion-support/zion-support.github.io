@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -34,16 +35,22 @@ const AutoIndex: NextPage = () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </li>
         </ul>
       </main>
     </div>
 
+<<<<<<< HEAD
 
   )
 }
 export default AutoIndex;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 },
 export default AutoIndex,
@@ -76,11 +83,21 @@ const AutoIndex: NextPage = () => {;
         </ul>;
       </main>;
     </div>;
+<<<<<<< HEAD
 
   );
 },;
+=======
+  ),;
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default AutoIndex;

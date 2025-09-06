@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -9,6 +12,7 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/compon
 import {useToast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 export function OnChainExport() {;
+<<<<<<< HEAD
 
   const [isConnected, setIsConnected] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
@@ -28,6 +32,8 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const [isConnected, setIsConnected] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
@@ -144,7 +150,30 @@ export function OnChainExport() {
             <Wallet className="h-5 w-5" />;
           )}
 
+<<<<<<< HEAD
 
+=======
+=======
+                {isExporting ? "Processing..." : "Export Tokens"}
+                {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
+              </Button>
+            )}
+          </div>
+        ) : (
+          <div className="space-y-2">
+            <p className="text-sm text-muted-foreground mb-3">
+              Connect your web3 wallet to export tokens to the blockchain.
+            </p>
+            <Button onClick={handleConnectWallet} className="w-full">
+              Connect Wallet
+            </Button>
+          </div>
+
+};
+;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -245,6 +274,7 @@ export function OnChainExport() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
 ;
 
 
@@ -252,3 +282,12 @@ export function OnChainExport() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

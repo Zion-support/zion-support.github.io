@@ -5,12 +5,16 @@ import { Button } from '@/components/ui/button';
   );
 };
 };
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -47,3 +51,9 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
 };
 
 }
+<<<<<<< HEAD
+=======
+
+
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

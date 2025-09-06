@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest
@@ -7,6 +8,9 @@ export default async function handler(
 
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { title, level, location, skills, responsibilities } = req.body |{}
@@ -63,6 +67,7 @@ export default async function handler(
   const text = await generate_text (prompt, 'You are an expert technical recruiter and compensation analyst.');
   return res.status (200).json ({ job_description: text });
 
+<<<<<<< HEAD
 
 
 
@@ -77,3 +82,17 @@ export default async function handler(
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

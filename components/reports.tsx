@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
 import React from 'react';
 
@@ -10,6 +11,8 @@ import React from 'react';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   reports.filter (report => report.featured) .map ( (report, index) => (<motion.div key= {
   index
 }</span>) )
@@ -468,12 +471,63 @@ icon: <Globe className="w - 8 h - 8" />,
                       <span className="bg - cyan - 500 / 20 text - cyan - 400 px - 3 py - 1 rounded - full text - sm font - medium">;
                         {report.category}
 
+<<<<<<< HEAD
+=======
+                transition={{ duration: 0 && 0.8 }}
+                viewport={{ once: true }}>;
+                <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-8">;
+                  <div className={`w-24 h-24 bg-gradient-to-br ${report && report.color} rounded-2xl flex items-center justify-center text-white flex-shrink-0`}>;
+                    {report && report.icon}
+                  </div>;
+                  <div className="flex-1">;
+                    <div className="flex items-center space-x-4 mb-4">;
+                      <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">;
+                        {report && report.category}
+                      </span>;
+                      <span className="text-gray-400 text-sm flex items-center space-x-1">;
+                        <Calendar className="w-4 h-4" />;
+                        <span>{formatDate(report && report.date)}</span>;
+                      </span>;
+                    </div>;
+                    <h3 className="text-3xl font-bold text-white mb-4">{report && report.title}</h3>;
+                    <p className="text-xl text-gray-300 leading-relaxed mb-6">{report && report.excerpt}</p>;
+                    <div className="flex flex-wrap items-center gap-6 mb-6">;
+                      <span className="text-gray-400 text-sm flex items-center space-x-1">;
+                        <User className="w-4 h-4" />;
+                        <span>{report && report.author}</span>;
+                      </span>;
+                      <span className="text-gray-400 text-sm flex items-center space-x-1">;
+                        <FileText className="w-4 h-4" />;
+                        <span>{report && report.pages} pages</span>;
+                      </span>;
+                      <span className="text-gray-400 text-sm flex items-center space-x-1">;
+                        <Download className="w-4 h-4" />;
+                        <span>{formatNumber(report && report.downloads)} downloads</span>;
+                      </span>;
+                      <span className="text-gray-400 text-sm flex items-center space-x-1">;
+                        <Eye className="w-4 h-4" />;
+                        <span>{formatNumber(report && report.views)} views</span>;
+                      </span>;
+                    </div>;
+                    <div className="flex flex-wrap gap-2 mb-6">;
+                      {report && report.tags.map((tag, tagIndex) => (;
+                        <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">;
+
+                          {tag}
+                        </span>;
+                      ))}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -531,10 +585,42 @@ icon: <Globe className="w - 8 h - 8" />,
             <motion&& motion.div 
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+            <motion.div 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              className="flex flex-wrap justify-center gap-4 mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+              viewport={{ once: true }}>;
+              {categories && categories.map((category, index) => (;
+                <button
+                  key={index}
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
+                    category && category.active
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+                  }`}>;
+                  {category && category.name} ({category && category.count});
+                </button>;
+              ))}
+
+            </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {reports && reports.filter(report => !report && report.featured).map((report, index) => (;
@@ -688,11 +774,19 @@ icon: <Globe className="w - 8 h - 8" />,
 
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;

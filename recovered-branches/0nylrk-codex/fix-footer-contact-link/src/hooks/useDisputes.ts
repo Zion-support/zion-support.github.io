@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -24,6 +25,10 @@ export function useDisputes() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const [error, setError] = useState<string | null>(null);
   const fetchDisputes = async () => {
@@ -200,12 +205,23 @@ export function useDisputes() {
       console && console.error("Error updating dispute status:", err);
       toast && toast.error("Failed to update dispute status");
       return false
+<<<<<<< HEAD
 
     }
   }
   const resolveDispute = async (
 
 
+=======
+
+      console.error ("Error fetching dispute:", err);
+      toast.error ("Failed to fetch dispute details");
+=======
+
+    disputeId: string, 
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -362,10 +378,15 @@ if (throw error) {
     disputeId: string,;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     resolution: { summary: string, resolution_type: string }
   ): Promise < boolean> => {
     try {
@@ -501,11 +522,22 @@ if ( {) {
     create_dispute;
     updateDisputeStatus;
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+    resolve_dispute;
+    getDisputeMessages,
+    addDisputeMessage;
+
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ): Promise<boolean> => {;
     try {;
       const { error } = await supabase;
@@ -603,8 +635,11 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 ;

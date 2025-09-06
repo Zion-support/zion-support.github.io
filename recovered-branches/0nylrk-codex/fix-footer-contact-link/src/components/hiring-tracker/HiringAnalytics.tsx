@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -10,11 +11,23 @@ interface HiringAnalyticsProps {
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
 
 
+=======
+import { useState, useEffect } from './react';
+import { useJobApplications } from '@/hooks / useJobApplications';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
+
+interface HiringAnalyticsProps {
+  job_id?: string;
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState, useEffect} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
 
+<<<<<<< HEAD
 
   const { applications, isLoading } = useJobApplications(jobId);
   const [analyticsData, setAnalyticsData] = useState<{
@@ -81,6 +94,8 @@ import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface HiringAnalyticsProps {;
   jobId?: string;
 }
@@ -149,7 +164,10 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
 
   if (isLoading) {;
     return <div>Loading analytics data...</div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 
   if (!applications || applications.length === 0) {;
@@ -171,10 +189,18 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
   
   if (!applications || applications.length === 0) {
+=======
+
+  }
+  
+  if (!applications || applications.length === 0) {
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return (
       <Card className="text-center py-16">
         <CardContent>

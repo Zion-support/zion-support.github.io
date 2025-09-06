@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 
@@ -7,14 +8,44 @@ import { motion } from 'framer-motion';
 import { Cpu, Network, Zap, Shield, Database, Globe;
   ArrowRight, CheckCircle, Star, TrendingUp, Users
  } from 'lucide-react';
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function EdgeComputingPage() {
 
   const features = [
@@ -179,6 +210,257 @@ export default function EdgeComputingPage() {
       title: "Data Synchronization",
       description: "Seamless data synchronization between edge nodes and central systems with conflict resolution.",
       color: "from-indigo-500 to-purple-500"
+<<<<<<< HEAD
+=======
+
+export default function EdgeComputingPage() {;
+  const features = [;
+    {;
+      icon: Cpu,;
+      title: 'Edge Orchestration',;
+      description:;
+        'Intelligent distribution and management of computing workloads across edge nodes for optimal performance.',;
+      color: 'from-blue-500 to-cyan-500',;
+    },;
+  ];
+
+  const benefits = [
+    "Reduce latency by 80-90% with edge processing",
+    "Cut bandwidth costs by 60% through local data processing",
+    "Improve reliability with distributed computing architecture",
+    "Scale seamlessly across global edge networks",
+    "Enable real-time AI and machine learning at the edge",
+    "Reduce central server load and improve overall performance"
+  ],
+  const useCases = [
+    {
+      industry: "Manufacturing",
+      description: "Real-time quality control, predictive maintenance, and production optimization",
+      results: "30% reduction in downtime, 25% improvement in product quality"
+    },
+    {
+      industry: "Healthcare",
+      description: "Patient monitoring, medical device management, and telemedicine support",
+      results: "40% faster response times, improved patient outcomes"
+    },
+    {
+      industry: "Transportation",
+      description: "Autonomous vehicle support, traffic management, and fleet optimization",
+      results: "50% reduction in accidents, 35% improvement in efficiency"
+    },
+    {
+      industry: "Retail",
+      description: "Inventory management, customer analytics, and supply chain optimization",
+      results: "45% reduction in stockouts, 30% improvement in customer satisfaction"
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  const pricing = [
+    {
+      plan: "Starter",
+      price: "$399",
+      period: "/month",
+      description: "Basic edge computing for small deployments",
+      features: [
+<<<<<<< HEAD
+        "Up to 10 edge nodes";
+        "Basic orchestration";
+        "Standard monitoring";
+        "Email support";
+        "Basic security features";
+        "Up to 100 IoT devices"
+      ];
+      popular: false
+    };
+=======
+        "Up to 10 edge nodes",
+        "Basic orchestration",
+        "Standard monitoring",
+        "Email support",
+        "Basic security features",
+        "Up to 100 IoT devices"
+      ],
+      popular: false
+    },
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    {
+      plan: "Professional",
+      price: "$999",
+      period: "/month",
+      description: "Advanced features for growing edge networks",
+      features: [
+<<<<<<< HEAD
+        "Everything in Starter";
+        "Up to 100 edge nodes";
+        "Advanced orchestration";
+        "Real-time monitoring";
+        "Priority support";
+        "Advanced security";
+        "Up to 1000 IoT devices";
+        "Custom integrations"
+      ];
+      popular: true
+    };
+=======
+        "Everything in Starter",
+        "Up to 100 edge nodes",
+        "Advanced orchestration",
+        "Real-time monitoring",
+        "Priority support",
+        "Advanced security",
+        "Up to 1000 IoT devices",
+        "Custom integrations"
+      ],
+      popular: true
+    },
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    {
+      plan: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "Full-scale solution for large organizations",
+      features: [
+<<<<<<< HEAD
+        "Everything in Professional";
+        "Unlimited edge nodes";
+        "Custom orchestration";
+        "Dedicated support team";
+        "Unlimited IoT devices";
+        "On-premise deployment";
+        "Custom training";
+        "SLA guarantees"
+      ];
+      popular: false
+    }
+
+  ];
+  const benefits = [;
+    'Reduce latency by 80-90% with edge processing',;
+    'Cut bandwidth costs by 60% through local data processing',;
+    'Improve reliability with distributed computing architecture',;
+    'Scale seamlessly across global edge networks',;
+    'Enable real-time AI and machine learning at the edge',;
+    'Reduce central server load and improve overall performance',  ];
+  const useCases = [;
+    {;
+      industry: 'Manufacturing',;
+      description:;
+        'Real-time quality control, predictive maintenance, and production optimization',;
+      results: '30% reduction in downtime, 25% improvement in product quality',;
+    },;
+    {;
+      industry: 'Healthcare',;
+      description:;
+        'Patient monitoring, medical device management, and telemedicine support',;
+      results: '40% faster response times, improved patient outcomes',;
+    },;
+    {;
+      industry: 'Transportation',;
+      description:;
+        'Autonomous vehicle support, traffic management, and fleet optimization',;
+      results: '50% reduction in accidents, 35% improvement in efficiency',;
+    },;
+    {;
+      industry: 'Retail',;
+      description:;
+        'Inventory management, customer analytics, and supply chain optimization',;
+      results:;
+        '45% reduction in stockouts, 30% improvement in customer satisfaction',;
+    },  ];
+  const pricing = [;
+    {;
+      plan: 'Starter',;
+      price: '$399',;
+      period: '/month',;
+      description: 'Basic edge computing for small deployments',;
+      features: [;
+        'Up to 10 edge nodes',;
+        'Basic orchestration',;
+        'Standard monitoring',;
+        'Email support',;
+        'Basic security features',;
+        'Up to 100 IoT devices',;
+      ],;
+      popular: false,;
+    },;
+    {;
+      plan: 'Professional',;
+      price: '$999',;
+      period: '/month',;
+      description: 'Advanced features for growing edge networks',;
+      features: [;
+        'Everything in Starter',;
+        'Up to 100 edge nodes',;
+        'Advanced orchestration',;
+        'Real-time monitoring',;
+        'Priority support',;
+        'Advanced security',;
+        'Up to 1000 IoT devices',;
+        'Custom integrations',;
+      ],;
+      popular: true,;
+    },;
+    {;
+      plan: 'Enterprise',;
+      price: 'Custom',;
+      period: '',;
+      description: 'Full-scale solution for large organizations',;
+      features: [;
+        'Everything in Professional',;
+        'Unlimited edge nodes',;
+        'Custom orchestration',;
+        'Dedicated support team',;
+        'Unlimited IoT devices',;
+        'On-premise deployment',;
+        'Custom training',;
+        'SLA guarantees',;
+      ],;
+      popular: false,;
+    },  ];
+  return (
+
+          content='https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration'
+        />      </Head>;
+      <EnhancedNavigation />;
+
+
+      {/* Hero Section */}
+      <section className='pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
+        <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            className='text-center'>;
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
+              Edge Computing;
+              <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
+                {' '}
+                Orchestration;
+              </span>;
+            </h1>;
+            <p className='text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8'>;
+              Bring computing power to the edge of your network. Our edge;
+              computing platform reduces latency, cuts bandwidth costs, and;
+              enables real-time processing for mission-critical applications.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <a
+                href='/contact'
+                className='bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'>;
+                Get Started Today;
+              </a>;
+              <a
+                href='#demo'
+
+    <>
+      <Head>
+        <title>Edge Computing Orchestration - Zion Tech Group</title>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     },
     {
       icon: Globe,
@@ -222,10 +504,127 @@ export default function EdgeComputingPage() {
         'Worldwide edge network deployment with intelligent traffic routing and load balancing.',;
       color: 'from-yellow-500 to-orange-500',;
     },;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    {;
+      industry: "Healthcare",;
+      description: "Patient monitoring, medical device management, and telemedicine support",;
+      results: "40% faster response times, improved patient outcomes";
+    },;
+    {;
+      industry: "Transportation",;
+      description: "Autonomous vehicle support, traffic management, and fleet optimization",;
+      results: "50% reduction in accidents, 35% improvement in efficiency";
+    },;
+    {;
+      industry: "Retail",;
+      description: "Inventory management, customer analytics, and supply chain optimization",;
+      results: "45% reduction in stockouts, 30% improvement in customer satisfaction";
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const pricing = [;
+    {;
+      plan: "Starter";
+      price: "$399";
+      period: "/month";
+      description: "Basic edge computing for small deployments";
+      features: [;
+        "Up to 10 edge nodes",;
+        "Basic orchestration",;
+        "Standard monitoring",;
+        "Email support",;
+        "Basic security features",;
+        "Up to 100 IoT devices";
+      ],;
+      popular: false;
+    },;
+    {;
+      plan: "Professional",;
+      price: "$999",;
+      period: "/month",;
+      description: "Advanced features for growing edge networks",;
+      features: [;
+        "Everything in Starter",;
+        "Up to 100 edge nodes",;
+        "Advanced orchestration",;
+        "Real-time monitoring",;
+        "Priority support",;
+        "Advanced security",;
+        "Up to 1000 IoT devices",;
+        "Custom integrations";
+      ],;
+      popular: true;
+    },;
+    {;
+      plan: "Enterprise",;
+      price: "Custom",;
+      period: "",;
+      description: "Full-scale solution for large organizations",;
+      features: [;
+        "Everything in Professional",;
+        "Unlimited edge nodes",;
+        "Custom orchestration",;
+        "Dedicated support team",;
+        "Unlimited IoT devices",;
+        "On-premise deployment",;
+        "Custom training",;
+        "SLA guarantees";
+      ],;
+      popular: false;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  return (;
+    <>;
+      <Head>;
+        <title>Edge Computing Orchestration - Zion Tech Group</title>;
+        <meta name="description" content="Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing with our advanced edge computing platform." />;
+        <meta name="keywords" content="edge computing, IoT management, edge orchestration, real-time processing, distributed computing, Zion Tech Group" />;
+        <meta property="og:title" content="Edge Computing Orchestration - Zion Tech Group" />;
+        <meta property="og:description" content="Transform your business with edge computing orchestration. Reduce latency, cut costs, and enable real-time processing." />;
+        <meta property="og:type" content="website" />;
+        <meta property="og:url" content="https://ziontechgroup.com/edge-computing-orchestration" />;
+      </Head>;
+      <EnhancedNavigation />;
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+        <div className="max-w-7xl mx-auto px-6">;
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center"
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Edge Computing
@@ -903,7 +1302,11 @@ export default function EdgeComputingPage() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </ul>
 
                 <a
@@ -933,6 +1336,7 @@ export default function EdgeComputingPage() {
         </div>;
       </section>;
 
+<<<<<<< HEAD
       {/* CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -960,6 +1364,33 @@ export default function EdgeComputingPage() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+      {/* CTA */}
+      <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>;
+        <div className='max-w-4xl mx-auto px-6 text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}>;
+            <h2 className='text-4xl font-bold text-white mb-6'>;
+              Ready to Deploy Edge Computing?;
+            </h2>;
+            <p className='text-xl text-blue-100 mb-8'>;
+              Join the edge computing revolution and transform your business;
+              with real-time processing capabilities.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <a
+                href='/contact'
+                className='bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'>;
+                Start Free Trial;
+              </a>;
+              <a
+                href='/contact'
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -986,6 +1417,7 @@ export default function EdgeComputingPage() {
       <EnhancedFooter />
     </>
 
+<<<<<<< HEAD
 );
 
 
@@ -998,3 +1430,84 @@ export default function EdgeComputingPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
+                Schedule Demo;
+              </a>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+      <EnhancedFooter />;
+    </>;
+  );
+
+=======
+
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  )
+}
+
+                    </span>;
+                  </div>;
+                  <p className='text - slate - 600'>{plan.description}</p>;
+                </div>;
+                <ul className='space - y-4 mb - 8'>;
+                  {plan.features.map (feature => (
+                    <li key={feature} className='flex items - center space - x-3'>;
+                      <CheckCircle className='w - 5 h - 5 text - green - 500 flex - shrink - 0' />;
+                      <span className='text - slate - 700'>{feature}</span>                    </li>))}
+                </ul>;
+                <a;
+                  href='/contact';
+                  className='block w - full bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 text - white text - center py - 3 rounded - xl font - medium transition - all duration - 200 transform hover:scale - 105'                >;
+                  Get Started;
+                </a>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA */}
+      <section className='py - 20 bg - gradient - to - r from - blue - 600 to - cyan - 600'>;
+        <div className='max - w-4xl mx - auto px - 6 text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+          >;
+            <h2 className='text - 4xl font - bold text - white mb - 6'>;
+              Ready to Deploy Edge Computing?;
+            </h2>;
+            <p className='text - xl text - blue - 100 mb - 8'>;
+              Join the edge computing revolution and transform your business;
+              with real - time processing capabilities.;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <a;
+                href='/contact';
+                className='bg - white text - blue - 600 hover:bg - blue - 50 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200 transform hover:scale - 105'              >;
+                Start Free Trial;
+              </a>;
+              <a;
+                href='/contact';
+                className='border border - white / 20 text - white hover:bg - white / 10 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200'              >;
+                Schedule Demo;
+              </a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <EnhancedFooter />;
+    </>);
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

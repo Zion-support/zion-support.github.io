@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/cron-weekly-deps.js
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
 const { upsertFile } = require('./_lib/github'),;
@@ -41,6 +42,11 @@ exports.handler = async function() {;
 },;
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const { upsertFile } = require('./_lib/github');
 const fs = require('fs');
 const path = require('path');
@@ -105,6 +111,7 @@ exports.handler = async function () {
     return null
   }
 }
+<<<<<<< HEAD
 :netlify/functions/cron-weekly-deps.js
 exports.handler = async function() {
   try {
@@ -122,6 +129,9 @@ exports.handler = async function() {
     const owner = process.env.GITHUB_OWNER
     const repo = process.env.GITHUB_REPO
     const token = process.env.GITHUB_TOKEN
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 exports.handler = async function() {
   try {
@@ -141,18 +151,29 @@ exports.handler = async function() {
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })
     }
+<<<<<<< HEAD
 :netlify/functions/cron-weekly-deps.js
 
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return { statusCode: 200, body: JSON.stringify({ ok: true, count: entries.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 :netlify/functions/cron-weekly-deps.js
 
 }
@@ -165,3 +186,13 @@ main:netlify/functions/cron-weekly-deps.js
 }
 main:netlify/functions/cron-weekly-deps.js
 :backup-problematic-files/netlify/functions/cron-weekly-deps.js
+=======
+
+},
+
+=======
+
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-weekly-deps.js
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

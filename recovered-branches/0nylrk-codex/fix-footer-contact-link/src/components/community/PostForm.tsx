@@ -1,7 +1,21 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {ForumCategory} from "@/types/community";
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { 
@@ -26,15 +40,19 @@ import { ForumCategory } from "@/types/community";
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
 
+<<<<<<< HEAD
 interface PostFormValues {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string
+<<<<<<< HEAD
 
 }
 
@@ -49,6 +67,19 @@ interface PostFormProps {
 
 
 
+=======
+
+  initialValues?: Partial<PostFormValues>;
+  onSubmit: (values: PostFormValues) => void,
+  isEditing?: boolean
+}
+
+export const PostForm = ({;
+  initialValues;
+  onSubmit;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import {;
@@ -99,10 +130,13 @@ export const PostForm = ({
       categoryId: initialValues?.categoryId |"project-help"
       tags: initialValues?.tags |""
     }
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -147,6 +181,7 @@ export const PostForm = ({
     try {
       await on_submit (values);
     } finally {
+<<<<<<< HEAD
 
       setIsSubmitting(false)
     }
@@ -154,6 +189,10 @@ export const PostForm = ({
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
@@ -162,11 +201,18 @@ export const PostForm = ({
       setIsSubmitting(false);
 
     }
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  }
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -271,6 +317,7 @@ export default PostForm;
 },
 
 
+<<<<<<< HEAD
 export default PostForm,
 
 export default PostForm;
@@ -280,3 +327,6 @@ export default PostForm,
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

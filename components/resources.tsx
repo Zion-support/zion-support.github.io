@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -5,6 +6,8 @@ import Link from 'next/link';
 export default function ResourcesPage() {
   return (
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 class ErrorBoundary extends React.Component {
@@ -44,6 +47,7 @@ import React from 'react';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ResourcesPage;
 
+<<<<<<< HEAD
 
 
 
@@ -54,7 +58,63 @@ export default Resources;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+              name: 'Market Pricing',
+              href: '/market - pricing',
+              blurb: 'Vendor links and typical budgets.',
+            },
+            {
+              name: 'Services Advertising',
+              href: '/services - advertising',
+              blurb: 'Features, capabilities, and benefits.',
+            },
+            {
+              name: 'Case Studies',
+              href: '/case - studies',
+              blurb: 'Proof of value and outcomes.',
+            },
+            {
+              name: 'Developer Hub',
+              href: '/developer',
+              blurb: 'APIs, SDKs, and examples.',
+            },
+          ].map (it => (
+            <Link;
+              key={it.href}
+              href={it.href}
+              className='p - 6 rounded - 2xl bg - black / 50 border border - gray - 800 hover:border - cyan - 500 / 50 transition - colors block';
+            >;
+              <div className='text - sm text - gray - 400'>Resource</div>;
+              <h3 className='text - xl font - semibold text - white'>{it.name}</h3>;
+              <p className='mt - 1 text - gray - 300'>{it.blurb}</p>;
+              <div className='mt - 3 text - cyan - 300'>Open →</div>            </Link>            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' }
+            { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' },
+            { name: 'Market Pricing', href: '/market - pricing', blurb: 'Vendor links and typical budgets.' },
+            { name: 'Services Advertising', href: '/services - advertising', blurb: 'Features, capabilities, and benefits.' }
+            { name: 'Case Studies', href: '/case - studies', blurb: 'Proof of value and outcomes.' },
+            { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
+          ].map ((it) => (
+            <Link key={it.href} href={it.href} className="p - 6 rounded - 2xl bg - black / 50 border border - gray - 800 hover: border - cyan - 500 / 50 transition - colors block">;
+              <div className="text - sm text - gray - 400">Resource</div>;
+              <h3 className="text - xl font - semibold text - white">{it.name}</h3>;
+              <p className="mt - 1 text - gray - 300">{it.blurb}</p>;
+              <div className="mt - 3 text - cyan - 300">Open →</div>))}
+        </div>;
+      </div>;
+    </UltraFuturisticBackground>));
+}
+;
+export default ResourcesPage;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

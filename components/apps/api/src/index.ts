@@ -216,7 +216,97 @@ app.get('/notifications', async (req, reply) => {
     );
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+;
+app.get ('/talent / search', async (req, reply) => {
+  const q = (req.query as any).q as string;
+  const country = (req.query as any).country as string | undefined;
+  const user_id = getUserId (req);
+  if (return reply.code (401).send ({ error: 'unauthorized' })) {
+  $2
+}
+  const rows = await with_user (user_id, async client => {
+    const res = await client.query (
+      `SELECT id, full_name, country, skills, experience_years FROM talent_profile;
+      WHERE ($1::text IS NULL OR country = $1)         AND ($2::text IS NULL OR EXISTS (
+              SELECT 1 FROM unnest (skills) s WHERE s ILIKE '%' || $2 || '%'));
+      ORDER BY created_at DESC;
+      LIMIT 25`,  const rows = await with_user (user_id, async (client) => {
+    const res = await client.query (
+      `SELECT id, full_name, country, skills, experience_years FROM talent_profile;
+      WHERE ($1: :text IS NULL OR country = $1);
+              SELECT 1 FROM unnest (skills) s WHERE s ILIKE '%' || $2 || '%'));
+      ORDER BY created_at DESC;
+      LIMIT 25`,
+      [country || null, q || null]);
+    return res.rows;
+  });
+  return { results: rows }});      [country || null, q || null]);
+    return res.rows;
+  });
+  return { results: rows }
+});
+<<<<<<< HEAD
+;
+app.get ('/projects/:name / track', async (req, reply) => {
+  const name = (req.params as any).name as string;
+  const user_id = getUserId (req);
+  if (return reply.code (401).send ({ error: 'unauthorized' })) {
+  $2
+}
+  const project = await with_user (user_id, async client => {
+    const res = await client.query (
+      `SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`,
+      [name]);
+    return res.rows[0];
+  });
+  if (return reply.code (404).send ({ error: 'not found' })) {
+  $2
+}
+  return { project }});  const project = await with_user (user_id, async (client) => {
+    const res = await client.query (`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
+    return res.rows[0];
+  });
+  if (return reply.code (404).send ({ error: 'not found' })) {
+  $2
+}
+  return { project }
+app.get ('/notifications', async (req, reply) => {
+  const user_id = getUserId (req);
+  if (return reply.code (401).send ({ error: 'unauthorized' })) {
+  $2
+}
+  const items = await with_user (user_id, async client => {    const res = await client.query (
+      `SELECT id, channel, title, body, data, read, created_at FROM notification;
+      WHERE read = false ORDER BY created_at DESC LIMIT 20`);
+    return res.rows;  const items = await with_user (user_id, async (client) => {
+    const res = await client.query (
+      `SELECT id, channel, title, body, data, read, created_at FROM notification;
+      WHERE read = false ORDER BY created_at DESC LIMIT 20`);
+    return res.rows;
+  });
+  return { items }
+});
+;
+const port = Number (process.env.API_PORT || 4000);
+app.listen ({ port, host: '0.0.0.0' }).catch (err => {
+  app.log.error (err);
+  process.exit (1);
+});  });
+  return { items }
+});
+;
+const port = Number (process.env.API_PORT || 4000);
+app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
+  app.log.error (err);
+  process.exit (1);
+});
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

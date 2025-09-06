@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -19,6 +20,11 @@ import { cn } from "@/lib/utils",
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
@@ -64,12 +70,17 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
 
+<<<<<<< HEAD
       
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -291,6 +302,15 @@ if ( {) {
   }
 
 }
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+}
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

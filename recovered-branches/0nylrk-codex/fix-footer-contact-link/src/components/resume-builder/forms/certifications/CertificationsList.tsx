@@ -8,7 +8,10 @@ import {Edit, Trash2} from 'lucide-react';
 import {format} from 'date-fns';
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
@@ -24,10 +27,15 @@ interface CertificationsListProps {;
   onDelete: (id: string) => void;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 export function CertificationsList({
   certifications
@@ -95,4 +103,110 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  )}
+                </p>;
+              </div>;
+              <div className="flex gap-2">;
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => onEdit(cert)}
+                >;
+                  <Edit className="h-4 w-4" />;
+                </Button>;
+                <Button
+                  variant="ghost"
+                  size="icon"
+
+                      {typeof cert.expiration_date === "string";
+                        ? cert.expiration_date;
+                        : format (cert.expiration_date, "MMM yyyy")}
+                    </>)}
+                </p>;
+              </div>;
+              <div className="flex gap - 2">;
+                <Button;
+                  variant="ghost";
+                  size="icon";
+                  on_click={() => on_edit (cert)}
+                >;
+                  <Edit className="h - 4 w - 4" />;
+                </Button>;
+                <Button;
+                  variant="ghost";
+                  size="icon";
+                  on_click={() => on_delete (cert.id!)}
+                >;
+                  <Trash2 className="h - 4 w - 4" />;
+                </Button>;
+              </div>;
+            </div>;
+
+            {cert.credential_url && (
+              <p className="text - xs mt - 2">;
+                <a;
+                  href={cert.credential_url}
+
+                  onClick={() => onDelete(cert && cert.id!)}
+                >;
+                  <Trash2 className="h-4 w-4" />;
+                </Button>;
+              </div>;
+            </div>;
+            {cert && cert.credential_url && (;
+              <p className="text-xs mt-2">;
+                <a
+                  href={cert && cert.credential_url} 
+                  target="_blank" 
+
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline">;
+                  View credential;
+                </a>;
+              </p>;
+            )}
+          </CardContent>;
+        </Card>;
+      ))}
+
+    </div>;
+  );
+}
+
+=======
+                  target="_blank";
+                  rel="noopener noreferrer";
+                  className="text - primary hover:underline";
+                >;
+                  View credential;
+                </a>;
+              </p>)}
+          </CardContent>;
+        </Card>))}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  View credential
+                </Link>
+              </p>
+            )}
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

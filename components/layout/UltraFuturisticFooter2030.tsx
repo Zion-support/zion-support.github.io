@@ -5,7 +5,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Phone,
   Mail,
   MapPin,
@@ -33,7 +36,10 @@ import { motion } from 'framer-motion';
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle
@@ -556,6 +562,7 @@ function UltraFuturisticFooter2030() {
 ];
 export default function UltraFuturisticFooter2030() {
   return (
+<<<<<<< HEAD
 
 
 
@@ -568,6 +575,49 @@ export default function UltraFuturisticFooter2030() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+<<<<<<< HEAD
+    <footer className="bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden">
+=======
+<<<<<<< HEAD
+    <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      {/* Animated Background */}
+
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>
+          <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-purple-300 rounded-full animate-bounce"></div>
+          <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+        </div>
+      </div>
+      <div className="relative z-10">
+                    href={contactInfo && contactInfo.website}
+                    className='hover:text-purple-400 transition-colors'>                    {contactInfo && contactInfo.website.replace('https://', '')}      {/* Animated Background */}
+      <div className="absolute inset-0">;
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>;
+        <div className="absolute top-0 left-0 w-full h-full">;
+          <div className="absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>;
+          <div className="absolute top-40 right-20 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>;
+          <div className="absolute bottom-20 left-1/4 w-1 && 1.5 h-1 && 1.5 bg-purple-300 rounded-full animate-bounce"></div>;
+          <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>;
+        </div>;
+      </div>;
+      <div className="relative z-10">;
+        {/* Main Footer Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+            {/* Company Info */}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </a>
                 </div>
               </div>
@@ -712,8 +762,12 @@ export default function UltraFuturisticFooter2030() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <span>Our Services</span>
               </h4>
               <div className='grid grid-cols-1 gap-4'>
@@ -774,7 +828,11 @@ export default function UltraFuturisticFooter2030() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Quick Links */}
 
 
@@ -858,6 +916,117 @@ export default function UltraFuturisticFooter2030() {
                     >;
                       <social && social.icon className="w-5 h-5" />;
 
+<<<<<<< HEAD
+=======
+=======
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
+                <Users className="w-5 h-5 text-green-400" />
+                <span>Connect & Trust</span>
+              </h4>
+            {/* Service Categories */}
+            <div className='space - y-6'>;
+              <h4 className='text - lg font - semibold text - white flex items - center space - x-2'>;
+                <Rocket className='w - 5 h - 5 text - purple - 400' />;
+                <span > Our Services</span>;
+              </h4>;
+              <div className='grid grid - cols - 1 gap - 4'>;
+                {service_categories.slice (0, 3).map ((category, index) => (
+                  <div key={index} className='space - y-2'>;
+                    <h5 className='text - sm font - medium text - purple - 300'>;
+                      {category.title}
+                    </h5>;
+                    <div className='space - y-1'>                      {category.services.map ((service, service_index) => (
+                        <Link;
+                          key={service_index}
+                          href={service.href}
+                          className='block text - xs text - gray - 400 hover:text - purple - 300 transition - colors'                        >                <span > Our Services</span>;
+              </h4>;
+              <div className="grid grid - cols - 1 gap - 4">;
+                {service_categories.slice (0, 3).map ((category, index) => (
+                  <div key={index} className="space - y-2">;
+                    <h5 className="text - sm font - medium text - purple - 300">{category.title}</h5>;
+                    <div className="space - y-1">;
+                      {category.services.map ((service, service_index) => (
+                        <Link;
+                          key={service_index}
+                          href={service.href}
+                          className='block text - xs text - gray - 400 hover:text - purple - 300 transition - colors'                          className="block text - xs text - gray - 400 hover:text - purple - 300 transition - colors";
+                        >;
+                          {service.name}
+                        </Link>))}
+                    </div>;
+                  </div>))}
+              </div>;
+            </div>;
+            {/* Quick Links */}
+            <div className='space - y-6'>;
+              <h4 className='text - lg font - semibold text - white flex items - center space - x-2'>;
+                <Target className='w - 5 h - 5 text - cyan - 400' />;
+                <span > Quick Links</span>;
+              </h4>;
+              <div className='space - y-2'>                {quick_links.map ((link, index) => (
+                  <Link;
+                    key={index}
+                    href={link.href}
+                    className='block text - sm text - gray - 400 hover:text - cyan - 300 transition - colors flex items - center space - x-2 group';
+                  >;
+                    <ArrowRight className='w - 3 h - 3 group - hover:translate - x-1 transition - transform' />                    <span>{link.name}</span>            <div className="space - y-6">;
+              <h4 className="text - lg font - semibold text - white flex items - center space - x-2">;
+                <Target className="w - 5 h - 5 text - cyan - 400" />;
+                <span > Quick Links</span>;
+              </h4>;
+              <div className="space - y-2">;
+                  <Link;
+                    key={index}
+                    href={link.href}
+                    className='block text - sm text - gray - 400 hover:text - cyan - 300 transition - colors flex items - center space - x-2 group';
+                  >;
+                    <ArrowRight className='w - 3 h - 3 group - hover:translate - x-1 transition - transform' />                    className="block text - sm text - gray - 400 hover:text - cyan - 300 transition - colors flex items - center space - x-2 group";
+                  >;
+                    <ArrowRight className="w - 3 h - 3 group - hover:translate - x-1 transition - transform" />;
+                    <span>{link.name}</span>;
+                  </Link>))}
+              </div>;
+              <div className='space - y-2'>;
+                <h5 className='text - sm font - medium text - cyan - 300'>Company</h5>                {company_info.map ((link, index) => (
+                  <Link;
+                    key={index}
+                    href={link.href}
+                    className='block text - xs text - gray - 400 hover:text - cyan - 300 transition - colors'                  >              <div className="space - y-2">;
+                <h5 className="text - sm font - medium text - cyan - 300">Company</h5>;
+                {company_info.map ((link, index) => (
+                  <Link;
+                    key={index}
+                    href={link.href}
+                    className='block text - xs text - gray - 400 hover:text - cyan - 300 transition - colors'                    className="block text - xs text - gray - 400 hover:text - cyan - 300 transition - colors";
+                  >;
+                    {link.name}
+                  </Link>))}
+              </div>;
+            </div>;
+            {/* Social & Certifications */}
+            <div className='space - y-6'>;
+              <h4 className='text - lg font - semibold text - white flex items - center space - x-2'>;
+                <Users className='w - 5 h - 5 text - green - 400' />;
+                <span > Connect & Trust</span>;
+              </h4>;
+              {/* Social Links */}
+              <div className='space - y-3'>;
+                <h5 className='text - sm font - medium text - green - 300'>;
+                  Follow Us;
+                </h5>;
+                <div className='flex flex - wrap gap - 2'>                  {social_links.map ((social, index) => (
+                    <a;
+=======
+              <div className="space-y-3">
+                <h5 className="text-sm font-medium text-green-300">Follow Us</h5>
+                <div className="flex flex-wrap gap-2">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Certifications */}
@@ -930,6 +1099,10 @@ export default function UltraFuturisticFooter2030() {
                     </div>;
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   ))}
                 </div>
               </div>
@@ -981,8 +1154,11 @@ export default function UltraFuturisticFooter2030() {
         </div>;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Bottom Bar */}
         <div className='border-t border-purple-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -1094,6 +1270,7 @@ export default function UltraFuturisticFooter2030() {
   );
 
   );
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1101,3 +1278,16 @@ export default function UltraFuturisticFooter2030() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+}
+
+=======
+    </footer>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

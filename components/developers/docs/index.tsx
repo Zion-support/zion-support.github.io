@@ -36,12 +36,21 @@ type DocsContent = {
   title: string;
   sections: Section[];
 }
+<<<<<<< HEAD
 
 type PageProps = {
   docs: DocsContent;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+};
+
+export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json');
   const raw = fs.readFileSync(contentPath, 'utf8');
   const docs = JSON.parse(raw) as DocsContent;
@@ -144,15 +153,20 @@ function ApiDocsPage() {
     </DocsLayout>);
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               ))}
             </div>
           )}
         </section>
       ))}
 
+<<<<<<< HEAD
     </DocsLayout>
 
 
@@ -162,3 +176,11 @@ function ApiDocsPage() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+}
+
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

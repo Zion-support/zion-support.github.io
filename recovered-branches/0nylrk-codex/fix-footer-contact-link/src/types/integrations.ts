@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
 ;
 export type IntegrationStatus = "connected" | "warning" | "disconnected";
@@ -15,8 +18,18 @@ export interface Integration {
   lastSync?: string
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
+=======
+export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
+=======
+export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export type IntegrationStatus = "connected" | "warning" | "disconnected",
 
@@ -40,6 +53,13 @@ export interface Integration {
 
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   details: string
 }
 export type CrmIntegrationEvents =
@@ -54,6 +74,7 @@ export type AtsIntegrationEvents =
   | "job_synced",
 
 
+<<<<<<< HEAD
 export type AtsIntegrationEvents = 
   | "applicant_created"
   | "candidate_status_changed"
@@ -80,6 +101,9 @@ export interface SyncLog {;
   status: "success" | "error" | "warning",;
   timestamp: string,;
 
+=======
+  timestamp: string,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   details: string;
 }
 export type CrmIntegrationEvents =;

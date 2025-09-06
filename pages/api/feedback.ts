@@ -72,6 +72,7 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
   return ok(res, { id: doc && doc.id });
 }
 
+<<<<<<< HEAD
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -89,6 +90,20 @@ function ok(res: NextApiResponse, data: any) {
   }
 
 
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return bad (res, "Method not allowed", 405)) {
+  $2
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
   const { rating, comment, kind, context } = req.body || {}
   const r = Number (rating);
@@ -106,13 +121,88 @@ function ok(res: NextApiResponse, data: any) {
 }
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 
 
+=======
+=======
+function bad(res: NextApiResponse, msg: string, code = 400) {
+  return res.status(code).json({
+    ok: false,
+    error: msg
+  });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export default async function handler(req, res) {
+  try {
+  const doc = {
+    id: 'feedback-id',
+    createdAtIso: new Date().toISOString(),
+    user: 'user',
+    rating: 5,
+    comment: 'feedback comment',
+    kind: 'general',
+    context: 'api'
+  };
+  return ok(res, {
+    id: doc.id
+  });
+import type { NextApiRequest, NextApiResponse } from "next",
+import { v4 as uuidv4 } from "uuid",
+import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store",
+function ok(res: NextApiResponse, data: any) { return res.status(200).json({ ok: true, ...data })   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+function bad(res: NextApiResponse, msg: string, code = 400) { return res.status(code).json({ ok: false, error: msg })   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+async function tryWriteToFirestore(req, res) {
+  try {
+  const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } = process.env as Record<string string | undefined>,
+  if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) return false,
+  try {
+    const admin = require("firebase-admin"),
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
           projectId: FIREBASE_PROJECT_ID,
           clientEmail: FIREBASE_CLIENT_EMAIL,
+<<<<<<< HEAD
 
 
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")})})
@@ -274,12 +364,17 @@ export default async function handler(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (req.method !== "POST") return bad(res, "Method not allowed", 405);
   const { rating, comment, kind, context } = req.body || {};
   const r = Number(rating);
   if (!r || r < 1 || r > 5) return bad(res, "rating must be 1-5");
 
 
+<<<<<<< HEAD
   const k: FeedbackRecord["kind"] = kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
   const user = {;
     id: (req.headers["x-demo-user-id"] as string) || undefined;
@@ -316,3 +411,6 @@ export default async function handler(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

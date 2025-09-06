@@ -12,21 +12,27 @@
           >
             <FilePlus className="h-4 w-4" />
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </Button>
         </div>
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     <Card className='w-full max-w-2xl mx-auto'>;
       <CardContent className='py-8'>;
@@ -43,11 +49,14 @@
   );
 };
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 },
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -73,11 +82,14 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {;
     </Card>;
   );
 };
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

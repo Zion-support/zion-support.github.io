@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -14,6 +17,7 @@ import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/
 import {Clock, ExternalLink, MessageSquare, Video, X} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 import {InterviewResponseForm} from "./InterviewResponseForm";
+<<<<<<< HEAD
 
 interface InterviewCardProps {
   interview: Interview,
@@ -123,6 +127,8 @@ import { Clock, ExternalLink, MessageSquare, Video, X } from "lucide-react",;
 import { toast } from "@/components/ui/use-toast",;
 import { InterviewResponseForm } from "./InterviewResponseForm",;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface InterviewCardProps {;
   interview: Interview,;
   onRefresh: () => Promise<void>;
@@ -187,12 +193,19 @@ function InterviewCard() {
     } else {
       return `Starts in ${formatDistanceToNow (interview_date)}`;
     }
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  }
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true),
@@ -264,6 +277,7 @@ function InterviewCard() {
         return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>,
       default:
         return <Badge>{interview.status}</Badge>
+<<<<<<< HEAD
 
     }
   }
@@ -273,8 +287,14 @@ function InterviewCard() {
     } else {
       return interview.client_name |'Client'
     }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   },;
 
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {;
@@ -417,6 +437,7 @@ function InterviewCard() {
               <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
                 <AlertDialogHeader>;
                   <AlertDialogTitle>Cancel Interview Request</AlertDialogTitle>;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -493,16 +514,116 @@ function InterviewCard() {
               </AlertDialogContent>
             </AlertDialog>
           )}
+=======
+=======
+      toast ({
+        title: "Error",
+        description: "Failed to cancel the interview. Please try again.",
+        variant: "destructive";
+      });
+    }
+    setIsLoading (false);
+  }
+;
+  const getStatusBadge = () =>: any {
+    switch (interview.status) {
+      case 'requested':;
+        return <Badge className="bg - amber - 500">Pending</Badge>;
+      case 'confirmed':;
+        return isInterviewLive ?;
+          <Badge className="bg - green - 500 animate - pulse">Live Now</Badge> :;
+          <Badge className="bg - green - 600">Confirmed</Badge>;
+      case 'declined':;
+        return <Badge variant="destructive">Declined</Badge>;
+      case 'rescheduled':;
+        return <Badge className="bg - blue - 500">Rescheduled</Badge>;
+      case 'completed':;
+        return <Badge className="bg - green - 700">Completed</Badge>;
+      case 'cancelled':;
+        return <Badge variant="outline" className="border - destructive text - destructive">Cancelled</Badge>;
+      default:;
+        return <Badge>{interview.status}</Badge>;
+    }
+  }
+;
+  const getOtherPartyName = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      return interview.talent_name || 'Talent';
+    } else {
+      return interview.client_name || 'Client';
+    }
+  }
+;
+  return (
+    <Card className="bg - zion - blue - dark border border - zion - blue - light overflow - hidden">;
+      <CardHeader className="pb - 2 relative">;
+        <div className="absolute right - 4 top - 4">;
+          {getStatusBadge ()}
+        </div>;
+        <CardTitle className="text - lg">{interview.title}</CardTitle>;
+        <p className="text - sm text - muted - foreground">;
+          with {getOtherPartyName ()}
+        </p>;
+      </CardHeader>;
+      <CardContent className="pt - 2">;
+        <div className="space - y-3">;
+          <div className="flex items - start gap - 3">;
+            <Clock className="h - 4 w - 4 mt - 0.5 text - muted - foreground" />;
+            <div>;
+              <p className="font - medium">{formatted_date}</p>;
+              <p className="text - sm text - muted - foreground">;
+                {formatted_time} - {formattedEndTime} ({interview.duration_minutes} minutes);
+              </p>;
+              <p className="text - xs text - muted - foreground mt - 1">;
+                {getRelativeTime ()}
+              </p>;
+            </div>;
+          </div>;
+          {interview.meeting_platform && (
+            <div className="flex items - center gap - 3">;
+              <Video className="h - 4 w - 4 text - muted - foreground" />;
+              <div>;
+                <p className="font - medium capitalize">{interview.meeting_platform}</p>;
+              </div>;
+            </div>)}
+          {interview.notes && (
+            <div className="flex items - start gap - 3">;
+              <MessageSquare className="h - 4 w - 4 mt - 0.5 text - muted - foreground" />;
+              <p className="text - sm line - clamp - 2">{interview.notes}</p>;
+            </div>)}
+        </div>;
+      </CardContent>;
+      <CardFooter className="pt - 2">;
+        <div className="grid grid - cols - 1 gap - 2 w - full">;
+          {/* For clients with pending requests */}
+          {is_client && isInterviewPending && (
+            <AlertDialog>;
+              <AlertDialogTrigger as_child>;
+                <Button variant="outline" size="sm" className="w - full">;
+                  <X className="h - 4 w - 4 mr - 2" /> Cancel Request;
+                </Button>;
+              </AlertDialogTrigger>;
+              <AlertDialogContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
+                <AlertDialogHeader>;
+                  <AlertDialogTitle > Cancel Interview Request</AlertDialogTitle>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           
 ;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (;
             <div className="grid grid-cols-2 gap-2">;
@@ -552,8 +673,11 @@ function InterviewCard() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
               )}

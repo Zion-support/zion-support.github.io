@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -5,6 +6,9 @@ import React, { Component, ReactNode, ErrorInfo } from 'react';
 
 
 
+=======
+import React, { Component, ReactNode } from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface Props {
   children: ReactNode;
@@ -29,24 +33,31 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
+<<<<<<< HEAD
 
     this.setState({
       error,
       errorInfo
     });
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 
   render() {
     if (this.state.hasError) {
       return (
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
           <div className="text-center p-8">
             <h1 className="text-4xl font-bold text-red-400 mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
+<<<<<<< HEAD
 
             <div className="flex space-x-3">
               <button
@@ -75,6 +86,14 @@ class ErrorBoundary extends Component<Props, State> {
             )}
 
 
+=======
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
+            >
+              Refresh Page
+            </button>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
         </div>
       );

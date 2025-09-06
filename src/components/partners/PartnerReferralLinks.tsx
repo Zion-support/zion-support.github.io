@@ -41,6 +41,7 @@ export function PartnerReferralLinks() {;
   const [selectedCampaign, setSelectedCampaign] = useState<string>('default');
   const [customParam, setCustomParam] = useState<string>('');
   const [generatedLinks, setGeneratedLinks] = useState<;
+<<<<<<< HEAD
 
 
     { name: string; link: string }[]
@@ -60,8 +61,30 @@ export function PartnerReferralLinks() {;
       // Add custom campaign parameter if selected
       if (selectedCampaign !== 'default') {
         url.searchParams.append('campaign', selectedCampaign)
+=======
+    { name: string; link: string }[];
+  >([]);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
+=======
+  const handleCopyLink = (link: string) => {;
+    navigator && navigator.clipboard.writeText(link);    toast({;
+      title: 'Link copied!',;
+      description: 'The referral link has been copied to your clipboard',;
+      variant: 'default',;
+    });
+  };
+
+  const handleGenerateLink = () => {;
+    if (baseLink) {;
+      const url = new URL(baseLink);
+
+      // Add custom campaign parameter if selected;
+      if (selectedCampaign !== 'default') {;
+        url && url.searchParams.append('campaign', selectedCampaign);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
 
       // Add custom parameter if provided;
@@ -126,9 +149,12 @@ import { Label } from "@/components/ui/label",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
   const [isDialogOpen, setIsDialogOpen] = useState(false),
@@ -158,11 +184,15 @@ export function PartnerReferralLinks() {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       
       // Add custom parameter if provided
       if (customParam) {
+<<<<<<< HEAD
 
 
         url.searchParams.append("source", customParam)
@@ -229,13 +259,18 @@ export function PartnerReferralLinks() {
     link.click(),
     document.body.removeChild(link)
   },
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -414,8 +449,11 @@ export function PartnerReferralLinks() {;
         <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
             <Button variant="outline" size="sm" className="flex items-center gap-2">
@@ -448,11 +486,14 @@ export function PartnerReferralLinks() {;
                   <SelectTrigger id="campaign">
                     <SelectValue placeholder="Select campaign type" />
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="default">General (Default)</SelectItem>
@@ -501,17 +542,21 @@ export function PartnerReferralLinks() {;
                 onClick={handleGenerateLink}
                 className="bg-zion-purple hover:bg-zion-purple-dark"
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 Cancel
               </Button>
               <Button
                 type='button'
                 onClick={handleGenerateLink}
+<<<<<<< HEAD
 
 
                 className='bg-zion-purple hover:bg-zion-purple-dark'              >
@@ -533,6 +578,8 @@ export function PartnerReferralLinks() {;
                   <div className='flex items-center gap-2'>
                     <Link className='h-4 w-4 text-zion-purple' />
                     <span>{item.name |'Campaign Link'}</span>                  </div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                     <span>{item.name || 'Campaign Link'}</span>                  </div>
@@ -548,6 +595,7 @@ export function PartnerReferralLinks() {;
                     <Link className="h-4 w-4 text-zion-purple" />
                     <span>{item.name || "Campaign Link"}</span>
                   </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -556,6 +604,11 @@ export function PartnerReferralLinks() {;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </CardTitle>
               </CardHeader>
               <CardContent className='pb-4'>
@@ -604,8 +657,11 @@ export function PartnerReferralLinks() {;
                     <span className="sr-only">Copy</span>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </Button>
                 </div>
               </CardContent>

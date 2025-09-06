@@ -1,8 +1,29 @@
 
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { MultiverseState, InstanceConfig, SyncEvent } from './types';
 const defaultState: SyncState = {
+=======
+
+    );
+  }
+
+  return events;export function resetState(): void {
+  state = { ...defaultState }
+
+}
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+const default_state: SyncState = {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   config: {
     instanceId: 'default-instance'
     peers: []
@@ -13,6 +34,7 @@ const defaultState: SyncState = {
   lastSyncedAt: new Date().toISOString()
 
 }
+<<<<<<< HEAD
 export function upsertEvent(
   state: MultiverseState
   event: SyncEvent
@@ -23,6 +45,19 @@ export function upsertEvent(
   const isNewer = event.version > currentVersion;
   if (event.type === 'proposal' && event.merkleRoot && isNewer) {
     state.proposalMerkleById[entityId] = event.merkleRoot;
+=======
+}
+}
+  const entity_id = getEntityId (event);
+  const current_version = state.latestVersionByEntityId[entity_id] || 0;
+  const is_newer = event.version > current_version;
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    state.proposalMerkleById[entity_id] = event.merkle_root;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   if (isNewer) {
     state.latestVersionByEntityId[entityId] = event.version;
@@ -68,6 +103,7 @@ export function filterEventsByScope(
         e.type === 'leaderboard_entry'
     );
   }
+<<<<<<< HEAD
 
   return events;export function resetState(): void {
   state = { ...defaultState }
@@ -78,6 +114,10 @@ export function filterEventsByScope(
 }
 
 
+=======
+  return events;export function reset_state (): void {
+  state = { ...default_state }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 
@@ -85,9 +125,12 @@ export function filterEventsByScope(
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

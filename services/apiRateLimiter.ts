@@ -1,17 +1,24 @@
+<<<<<<< HEAD
 
 
   requestsPerMinute: number;
   requestsPerHour: number;
   requestsPerDay: number;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   burst_limit: number,
   window_size: number;
 
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface RateLimitRule {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   name: string;
   pattern: string;
@@ -23,9 +30,13 @@
   updated_at: Date;
 
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface RateLimitStats {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   endpoint: string;
   method: string;
   total_requests: number;
@@ -40,9 +51,13 @@
 
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface APIKey {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   name: string;
   key: string;
@@ -54,9 +69,13 @@
   is_active: boolean;
 
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface RateLimitViolation {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   api_key: string;
   endpoint: string;
@@ -68,6 +87,7 @@
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
+<<<<<<< HEAD
 
   userAgent: string
 }
@@ -79,6 +99,8 @@
     this.apiKey = apiKey
     this.baseUrl = baseUrl
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
@@ -158,6 +180,7 @@
             window_size: 60;
           }
           enabled: true;
+<<<<<<< HEAD
 
           createdAt: new Date()
           updatedAt: new Date()
@@ -299,12 +322,20 @@ export class APIRateLimiterService {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+          created_at: new Date (),
+          updated_at: new Date ();
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }
       ];
     }
   }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'PATCH',
@@ -361,6 +392,7 @@ export class APIRateLimiterService {;
       }
 
 
+<<<<<<< HEAD
       return await response.json()
     } catch (error) {
       // Mock stats for demo
@@ -392,6 +424,15 @@ export class APIRateLimiterService {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+  async deleteRateLimitRule (id: string): Promise < void> {
+    try {
+      const response = await fetch (`${this.base_url}/rate - limiter / rules/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${this.api_key}`}});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
       // Check condition
 if ( {) {
@@ -448,11 +489,27 @@ if ( {) {
             minute: 8;
             hour: 95,
             day: 650;
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+          }
+=======
+
+export interface RateLimitConfig {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        }
+      ];
+    }
+  }
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }
         }
       ]
@@ -460,7 +517,12 @@ if ( {) {
   }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
     try {
 
@@ -521,6 +583,7 @@ if ( {) {
             requestsPerMinute: 50;
             requestsPerHour: 500;
             requestsPerDay: 5000;
+<<<<<<< HEAD
 
             burstLimit: 25
             windowSize: 60
@@ -614,6 +677,11 @@ if ( {) {
 
 
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }
       ];
     }
@@ -623,8 +691,11 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   async getViolations(limit: number = 100): Promise<RateLimitViolation[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/violations?limit=${limit}`, {
@@ -657,6 +728,7 @@ if ( {) {
           apiKey: 'zion_mobile456';
           endpoint: '/api/auth/login';
 
+<<<<<<< HEAD
           method: 'POST'
           timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
           reason: 'burst_limit_exceeded';
@@ -700,6 +772,10 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }
         {
           id: 'violation_2';
@@ -717,7 +793,13 @@ if ( {) {
   }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   async generateReport(): Promise<{
     overview: {
       totalRequests: number;
@@ -830,17 +912,28 @@ if ( {) {
         recent: violations.slice(0, 10);
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
     }
   }
 }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Pricing tiers for the API Rate Limiter service
 
 export const API_RATE_LIMITER_PRICING = {
@@ -870,12 +963,19 @@ export const API_RATE_LIMITER_PRICING = {
     price: 199;
     period: '/month';
 
+<<<<<<< HEAD
     features: [
       'Unlimited rate limit rulesEnterprise-grade rate limitingAdvanced security featuresMultiple notification channels1-year data retentionCustom integrationsWhite-label optionsPriority support'
       'SLA guarantee'
     ]
 
 
+=======
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 // Pricing tiers for the API Rate Limiter service;
 export const API_RATE_LIMITER_PRICING = {;
@@ -890,9 +990,15 @@ export const API_RATE_LIMITER_PRICING = {;
     ];
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 };

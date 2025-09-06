@@ -71,8 +71,11 @@ if ( {) {
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -103,8 +106,11 @@ if ( {) {
               >
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -125,6 +131,7 @@ if ( {) {
                 onClick={() => window.location.reload()}
                 className="w-full"
               >
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -132,6 +139,10 @@ if ( {) {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 Reload Page
               </Button>
             </div>
@@ -230,13 +241,17 @@ export const useApiErrorHandler = () =>: any {
                 <pre className="mt-2 whitespace-pre-wrap break-all">
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
+<<<<<<< HEAD
 
 
           </div>
@@ -262,6 +277,8 @@ export const useApiErrorHandler = () => {
 }
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }, ;
   return { handleApiError };
@@ -284,11 +301,14 @@ export const useApiErrorHandler = () => {;
     });
   };
   return { handleApiError }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

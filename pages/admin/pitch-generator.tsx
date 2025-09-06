@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState } from 'react';
@@ -32,6 +33,8 @@ function SlidePreview({
 export const getServerSideProps: GetServerSideProps = async ctx => {
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const result = await requireAdminRole(ctx);
@@ -39,9 +42,23 @@ export const getServerSideProps: GetServerSideProps = async ctx => {;
   if ('redirect' in result) return result;
   return result;
 
+<<<<<<< HEAD
 }
 export default function PitchGenerator() {
   const [builder, setBuilder] = useState<BuilderState>({
+=======
+};
+export default function PitchGenerator() {;
+  const [builder, setBuilder] = useState<BuilderState>({;
+    mission: '',;
+    fundingStage: '',;
+    vision: '',;
+    roundType: '',;
+    targetRaise: '',;
+    assets: [],;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     mission: '',
     fundingStage: '',
@@ -50,9 +67,13 @@ export default function PitchGenerator() {
     targetRaise: '',
     assets: [],;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   });  const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -357,8 +378,11 @@ if (return) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     setLoading(true);
     try {;
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
@@ -445,6 +469,7 @@ if (return) {
     } finally {
       setLoading(false);    }
   }, [slides, versionTag]);
+<<<<<<< HEAD
 
   const updateActiveSlide = (updates: Partial<Slide>) => {
     setSlides(arr =>
@@ -478,6 +503,19 @@ if (return) {
     if (!slide.chart) return null,
     const { type, data } = slide.chart,
 
+=======
+  const exportGoogleSlides = useCallback(async () => {;
+    setLoading(true);
+    try {;
+      const res = await fetch('/api/admin/pitch/export', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({;
+          slides,;
+          format: 'gslides',;
+          version: versionTag,;
+        }),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       });
       const json = await res && res.json();
       if (json && json.url) {;
@@ -499,7 +537,10 @@ if (return) {
     if (!slide && slide.chart) return null,;
     const { type, data } = slide && slide.chart;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return (
 
 
@@ -540,10 +581,14 @@ if (return) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {type === 'timeline' && (
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
               {data.map((d) => (
@@ -566,6 +611,42 @@ if (return) {
       </div>
     )
   };
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+        </div>
+      </div>
+    );
+  }
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        </div>
+      </div>
+    )
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  return (
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -583,12 +664,19 @@ if (return) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </div>
       </div>
     )
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <EnhancedLayout>
@@ -770,10 +858,15 @@ if (return) {
                 <li>Active users (30d)</li>
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -924,9 +1017,169 @@ if (return) {
   );
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+      </div>
+    </EnhancedLayout>
+  )
+}
+                <textarea;
+                  value={active_slide.content}
+                  on_change={e => updateActiveSlide ({ content: e.target.value })}
+                  className='w - full mt - 3 border rounded px - 2 py - 1 bg - transparent';
+=======
+<<<<<<< HEAD
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
+              <div className='font-medium mb-2'>History</div>
+              <div className='text-xs text-gray-500 dark:text-gray-400'>
+<<<<<<< HEAD
+                Version: {versionTag |'—'}
+=======
+                Version: {versionTag || '—'}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              </div>
+              <ul className='mt-2 space-y-1 text-sm'>
+                {history.map(h => (
+                  <li
+                    key={h.id}
+                    className='flex justify-between border rounded px-2 py-1'
+                  >
+                    <span>{h.version}</span>
+                    <span className='text-gray-500 dark:text-gray-400'>
+                      {new Date(h.createdAt).toLocaleString()}
+                    </span>                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className='lg:col-span-2 space-y-4'>
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
+              <div className='flex items-center justify-between'>
+                <div className='font-medium'>Slides</div>
+                <div className='text-sm text-gray-500 dark:text-gray-400'>
+                  {slides.length} total
+                </div>
+              </div>
+              <div className='mt-3 flex gap-3 overflow-x-auto py-2'>
+                {slides.map((s, i) => (
+                  <SlidePreview
+                    key={s.id}
+                    slide={s}
+                    isActive={i === activeIndex}
+                    onClick={() => setActiveIndex(i)}
+                  />
+                ))}
+                <button
+                  onClick={addSlide}
+                  className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'
+                >
+                  + Add Slide
+                </button>
+              </div>
+            </div>
+            {/* Active Slide Editor */}
+            {activeSlide && (
+              <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
+                <div className='flex items-center justify-between'>
+                  <input
+                    value={activeSlide.title}
+                    onChange={e => updateActiveSlide({ title: e.target.value })}
+                    className='font-semibold text-lg bg-transparent border-b focus:outline-none'
+                  />
+                  <div className='flex gap-2'>
+                    <button
+                      onClick={() => rephraseSlide(activeIndex)}
+                      disabled={loading}
+                      className='px-2 py-1 rounded bg-blue-600 text-white text-sm disabled:opacity-50'
+                    >
+                      Rephrase
+                    </button>
+                  </div>
+                </div>
+                <textarea
+                  value={activeSlide.content}
+                  onChange={e => updateActiveSlide({ content: e.target.value })}
+                  className='w-full mt-3 border rounded px-2 py-1 bg-transparent'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                  rows={10}
+                />;
+                <div className='mt - 4 grid grid - cols - 3 gap - 2 text - sm'>;
+                  <button;
+                    on_click={() =>;
+                      updateActiveSlide ({
+                        chart: {
+                          type: 'bar',
+                          data: [;
+                            { label: 'Q1', value: 20 },
+                            { label: 'Q2', value: 40 },
+                            { label: 'Q3', value: 60 },
+                            { label: 'Q4', value: 80 },
+                          ],
+                        },
+                      });
+                    }
+                    className='border rounded px - 2 py - 1';
+                  >;
+                    Bar Chart;
+                  </button>;
+                  <button;
+                    on_click={() =>;
+                      updateActiveSlide ({
+                        chart: {
+                          type: 'funnel',
+                          data: [;
+                            { label: 'Visitors', value: 100 },
+                            { label: 'Signups', value: 40 },
+                            { label: 'Projects', value: 15 },
+                          ],
+                        },
+                      });
+                    }
+                    className='border rounded px - 2 py - 1';
+                  >;
+                    Funnel;
+                  </button>;
+                  <button;
+                    on_click={() =>;
+                      updateActiveSlide ({
+                        chart: {
+                          type: 'timeline',
+                          data: [;
+                            { label: 'MVP', value: 2023 },
+                            { label: 'Seed', value: 2024 },
+                            { label: 'Series A', value: 2025 },
+                          ],
+                        },
+                      });
+                    }
+                    className='border rounded px - 2 py - 1';
+                  >;
+                    Timeline;
+                  </button>;
+                </div>              </div>)}
+          </div>;
+        </div>;
+</main>;
+    </>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

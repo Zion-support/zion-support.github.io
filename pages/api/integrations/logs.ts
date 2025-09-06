@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -14,7 +17,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 
+<<<<<<< HEAD
 
+=======
+=======
+=======
+    ? state.logs.filter((l) => l.providerId === providerId)
+    : state.logs;
+  res.status(200).json({ logs });
+}
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -41,9 +56,30 @@ function handler() {
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
 }
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+  const { provider_id } = req.query as { provider_id?: string }
+  const state = read_state ();
+  const logs = provider_id;
+    ? state.logs.filter ((l) => l.provider_id === provider_id);
+    : state.logs;
+  res.status (200).json ({ logs });
+}
+
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

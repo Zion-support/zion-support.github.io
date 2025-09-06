@@ -41,9 +41,12 @@ export const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 
 
 
 export default PerformanceMonitor;
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -418,6 +418,88 @@ if ( {) {
   return (
     <div className='relative min-h-screen bg-black overflow-hidden'>;
 
+<<<<<<< HEAD
+=======
+      />;
+
+
+      {/* Floating Geometric Shapes */}
+      <div className='fixed inset-0 pointer-events-none z-10'>;
+        {/* Animated Grid */}
+        <motion&& motion.div
+          className='absolute inset-0 opacity-20'
+          style={{
+            backgroundImage: `
+
+              linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px',
+
+=======
+
+            `,
+            backgroundSize: '50px 50px',
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          }}
+          animate={{
+            backgroundPosition: ['0px 0px', '50px 50px']
+          background:;
+            'radial - gradient (ellipse at center, #0a0a0a 0%, #000000 100%)',
+        }}
+      />;
+      {/* Floating Geometric Shapes */}
+      <div className='fixed inset - 0 pointer - events - none z - 10'>;
+        {/* Animated Grid */}
+        <motion.div;
+          className='absolute inset - 0 opacity - 20';
+          style={{
+            background_image: `;
+              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px),
+              linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px);
+            `,
+            background_size: '50px 50px',
+          }}
+          animate={{
+            background_position: ['0px 0px', '50px 50px'],
+=======
+      canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
+    }
+    window.addEventListener('resize', handleResize);
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+  return (
+    <div className='relative min-h-screen bg-black overflow-hidden'>
+      {/* Animated Canvas Background */}
+      <canvas
+        ref={canvasRef}
+        className='fixed inset-0 w-full h-full pointer-events-none z-0'
+        style={{
+          background:
+            'radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%)'
+        }}
+      />
+      {/* Floating Geometric Shapes */}
+      <div className='fixed inset-0 pointer-events-none z-10'>
+        {/* Animated Grid */}
+        <motion.div
+          className='absolute inset-0 opacity-20'
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+              linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+
+          }}
+          animate={{
+            backgroundPosition: ['0px 0px', '50px 50px']
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }}
           transition={{
             duration: 20
@@ -486,6 +568,7 @@ if ( {) {
           }}
         />
 
+<<<<<<< HEAD
 
         />;
 
@@ -508,6 +591,8 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Floating Neon Shapes */}
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
@@ -748,9 +833,14 @@ ease: 'linear',
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Energy Orbs */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50'
@@ -862,8 +952,16 @@ ease: 'linear',
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Gradient Overlays */}
 
         />;
@@ -928,6 +1026,7 @@ ease: 'linear',
     </div>;
   );
 
+<<<<<<< HEAD
 
 
 export default UltraFuturisticBackground2045;
@@ -941,3 +1040,7 @@ export default UltraFuturisticBackground2045;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+};  );
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

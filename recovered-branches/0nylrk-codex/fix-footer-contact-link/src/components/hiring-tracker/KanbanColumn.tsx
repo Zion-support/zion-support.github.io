@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import { Droppable } from "react-beautiful-dnd",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -15,6 +16,10 @@ import { CandidateCard } from "./CandidateCard",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface KanbanColumnProps {
 
   id: string
@@ -32,6 +37,7 @@ export function KanbanColumn({;
   title;
   description;
   applications;
+<<<<<<< HEAD
 
 
 export function KanbanColumn({
@@ -40,6 +46,13 @@ export function KanbanColumn({
   description,
   applications,
 
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   count
 }: KanbanColumnProps) {
   // Add color based on column type
@@ -110,6 +123,7 @@ export function KanbanColumn({
               className="min-h-full space-y-2"
             >
               {applications.map((application, index) => (
+<<<<<<< HEAD
 
                 <CandidateCard
                 <CandidateCard 
@@ -144,6 +158,8 @@ export function KanbanColumn({;
         return "default",;
       case "hired":;
         return "success",;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       case "rejected":;
         return "destructive",
@@ -182,10 +198,18 @@ export function KanbanColumn({;
               {applications.map ((application, index) => (
                 <CandidateCard;
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+                <CandidateCard 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   key={application.id}
 
                   application={application}

@@ -14,6 +14,7 @@ import { supabase } from '@/integrations/supabase/client';
 // Form schema
 
 
+<<<<<<< HEAD
 const formSchema = z.object({
   brand_name: z.string().min(2, { message: 'Brand name must be at least 2 characters' })
   subdomain: z.string()
@@ -51,6 +52,9 @@ export function WhitelabelRequestForm() {
         landing_page_copy: {
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           headline: values.headline,
           subtitle: values.subtitle,
           cta: values.cta};
@@ -58,7 +62,10 @@ export function WhitelabelRequestForm() {
       
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -76,12 +83,33 @@ export function WhitelabelRequestForm() {
         variant: 'destructive'
         title: 'Error creating tenant'
         description: error.message |'Something went wrong'})
+<<<<<<< HEAD
     }
 
   }
   };
 
 
+=======
+
+import {useForm} from 'react-hook-form';
+import {z} from 'zod';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {Input} from '@/components/ui/input';
+import {Button} from '@/components/ui/button';
+import {Textarea} from '@/components/ui/textarea';
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
+import {toast} from '@/hooks/use-toast';
+import {supabase} from '@/integrations/supabase/client';
+=======
+    }
+
+  };
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { z } from 'zod',;
@@ -166,8 +194,12 @@ export function WhitelabelRequestForm() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <Card className="w-full max-w-2xl">

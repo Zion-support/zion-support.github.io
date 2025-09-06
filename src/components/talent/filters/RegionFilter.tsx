@@ -7,8 +7,11 @@ return (
       >
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <span>Region</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -102,15 +105,21 @@ const REGION_OPTIONS = [;
   { id: "Asia", label: "Asia" },;
   { id: "South America", label: "South America" },;
   { id: "Australia", label: "Australia" },;
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 <<<<<<< HEAD
 
 
-
-
-
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   { id: "Africa", label: "Africa" }
 ]
 
@@ -228,6 +237,7 @@ function RegionFilter() {
 }className="flex w - full items - center justify - between text - white font - medium" > <span > Region</span>) : (<ChevronDown className="h - 4 w - 4 text - zion - slate - light" />);
 }</button> {
   REGION OPTIONS.map (region => (<div key= {
+<<<<<<< HEAD
 
 
   region.id "
@@ -236,6 +246,14 @@ function RegionFilter() {
 }</label> </div>) )
 }</div>)
 }</div>)
+=======
+  region.id ";
+}className="flex items - center" > <Checkbox > {
+  region.label;
+}</label> </div>) );
+}</div>);
+}</div>);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }"}
 
   region.label 
@@ -244,8 +262,11 @@ function RegionFilter() {
 }</div>) ;
 }"};
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;

@@ -144,6 +144,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         tags: ["mediation", "dispute", "resolution"]
       },
       {
+<<<<<<< HEAD
 
 
 id: 'dispute-prevention',
@@ -192,6 +193,11 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         tags: ["navigation", "interface"];
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       {
         id: 'complete-profile'
@@ -284,8 +290,11 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
       }
     ];
   }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 ];

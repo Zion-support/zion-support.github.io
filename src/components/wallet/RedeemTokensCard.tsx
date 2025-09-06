@@ -18,6 +18,7 @@ return (
             <div className='space-y-4 py-4'>;
               {REWARD_OPTIONS && REWARD_OPTIONS.map(option => (;
 
+<<<<<<< HEAD
                 <div
 
 
@@ -173,6 +174,8 @@ const REWARD_OPTIONS: RewardOption[] = [
             </DialogHeader>
             <div className='space-y-4 py-4'>
               {REWARD_OPTIONS.map(option => (
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <div
                   key={option.id}
                   className='flex justify-between items-center border-b pb-4'
@@ -193,6 +196,7 @@ const REWARD_OPTIONS: RewardOption[] = [
                           ? 'default'
                           : 'outline'
                       }
+<<<<<<< HEAD
                       disabled={!wallet |wallet.balance < option.cost}
                       onClick={() => handleRedeem(option)}                    >
                       Redeem <ArrowRight className='ml-1 h-3 w-3' />
@@ -217,6 +221,49 @@ const REWARD_OPTIONS: RewardOption[] = [
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
 
 
+=======
+
+                      disabled={!wallet || wallet.balance < option && option.cost}
+                      onClick={() => handleRedeem(option)}                    >;
+                      Redeem <ArrowRight className='ml-1 h-3 w-3' />;
+                    </Button>;
+                  </div>;
+                </div>;
+
+              ))}
+            </div>;
+            <div className='flex justify-between'>;
+              <Button
+                variant='outline'
+                size='sm'
+                onClick={() => setOpen(false)}
+
+
+
+
+
+
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <Gift className="h-5 w-5" /> Redeem Rewards
+        </CardTitle>
+        <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Dialog open={open} onOpenChange={setOpen}>
+          <DialogTrigger asChild>
+            <Button className="w-full">View Available Rewards</Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Available Rewards</DialogTitle>
+              <DialogDescription>
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </Button>
                   </div>
                 </div>
@@ -232,6 +279,7 @@ const REWARD_OPTIONS: RewardOption[] = [
         </Dialog>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
         <Dialog open={open} onOpenChange={set_open}>;
           <DialogTrigger as_child>;
@@ -302,6 +350,12 @@ export function RedeemTokensCard() {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+
+        <Dialog open={open} onOpenChange={set_open}>;
+          <DialogTrigger as_child>;
+            <Button className='w - full'>View Available Rewards</Button>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
@@ -349,3 +403,13 @@ export function RedeemTokensCard() {;
           </DialogContent>;
         </Dialog>;
       </CardContent>;
+<<<<<<< HEAD
+=======
+
+
+
+    </Card>);
+}
+
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

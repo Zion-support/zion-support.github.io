@@ -129,6 +129,7 @@ export function WebhookManager() {;
     createWebhook,
     toggleWebhook,
     deleteWebhook,
+<<<<<<< HEAD
 
 
     testWebhook
@@ -186,6 +187,8 @@ export function WebhookManager() {;
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added"),
       return
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     }
@@ -193,6 +196,7 @@ export function WebhookManager() {;
     setNewWebhook({
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
+<<<<<<< HEAD
 
 
       selectedEvent: '' as WebhookEventType,
@@ -226,6 +230,8 @@ export function WebhookManager() {;
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields"),
       return
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     }
@@ -235,6 +241,7 @@ export function WebhookManager() {;
       newWebhook.url, 
       newWebhook.eventTypes, 
       newWebhook.secret || undefined
+<<<<<<< HEAD
 
 
     ),
@@ -242,6 +249,8 @@ export function WebhookManager() {;
     )
     ),
     
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     // Reset form
@@ -250,6 +259,7 @@ export function WebhookManager() {;
       url: "",
       selectedEvent: "" as WebhookEventType,
       eventTypes: [],
+<<<<<<< HEAD
 
 
       secret: '',
@@ -269,6 +279,8 @@ export function WebhookManager() {;
     await testWebhook(webhookId, eventType)
   },
   
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -296,8 +308,11 @@ export function WebhookManager() {;
                 placeholder="e.g., Job Postings Webhook"
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 value={newWebhook.name}
                 onChange={e =>
                   setNewWebhook({ ...newWebhook, name: e.target.value })
@@ -326,11 +341,14 @@ export function WebhookManager() {;
                 <ClickableBadge
                   key = {event,}
                   onRemove = {(,) => handleRemoveEvent(event),}
+<<<<<<< HEAD
 
 
                 >
                   {eventOptions.find(e => e.value === event)?.label |event}
                 </ClickableBadge>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               ))}
@@ -340,7 +358,10 @@ export function WebhookManager() {;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
@@ -466,6 +487,12 @@ export function WebhookManager() {;
                   key={event} ;
                   onRemove={() => handleRemoveEvent(event)}
                 >;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {eventOptions.find(e => e.value === event)?.label || event}
                 </ClickableBadge>;
               ))}
@@ -490,6 +517,57 @@ export function WebhookManager() {;
             <Input
               id='webhook-secret'
               placeholder='A secret key to verify the webhook source'
+<<<<<<< HEAD
+=======
+              value={newWebhook && newWebhook.secret}
+              onChange={e =>;
+                setNewWebhook({ ...newWebhook, secret: e && e.target.value });
+              }            />;
+            <p className='text-xs text-muted-foreground'>;
+              If provided, this secret will be used to sign the webhook payload.;
+            </p>;
+          </div>;
+        </CardContent>;
+        <CardFooter>;
+          <Button onClick={handleCreateWebhook}>;
+            <Save className='h-4 w-4 mr-2' /> Create Webhook;
+          </Button>;
+        </CardFooter>;
+      </Card>;
+
+      <div>;
+        <h3 className='text-lg font-medium mb-4'>Your Webhooks</h3>;
+
+        {loading ? (;
+          <p>Loading webhooks...</p>;
+        ) : error ? (;
+          <p className='text-red-500'>{error}</p>;
+        ) : webhooks && webhooks.length === 0 ? (;
+          <p>No webhooks configured yet. Create your first webhook above.</p>;
+        ) : (;
+          <div className='space-y-4'>;
+            {webhooks && webhooks.map(webhook => (;
+              <Card key={webhook && webhook.id}>;
+                <CardHeader className='pb-2'>;
+                  <div className='flex justify-between items-start'>;
+                    <div>;
+                      <CardTitle className='text-lg'>{webhook && webhook.name}</CardTitle>;
+                      <CardDescription className='truncate max-w-md'>;
+                </SelectContent>;
+              </Select>;
+              <Button type="button" onClick={handleAddEvent} variant="outline">;
+                <PlusCircle className="h-4 w-4 mr-2" /> Add;
+              </Button>;
+            </div>;
+          </div>;
+          <div className="space-y-2">;
+            <Label htmlFor="webhook-secret">Secret(optional)</Label>;
+            <Input
+              id="webhook-secret" 
+              placeholder="A secret key to verify the webhook source"
+              value={newWebhook && newWebhook.secret}
+              onChange={(e) => setNewWebhook({...newWebhook, secret: e && e.target.value})}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             />;
             <p className="text-xs text-muted-foreground">;
               If provided, this secret will be used to sign the webhook payload.</p>;
@@ -547,11 +625,14 @@ export function WebhookManager() {;
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         {webhook.url}
                       </CardDescription>
                     </div>
@@ -575,7 +656,10 @@ export function WebhookManager() {;
                         >;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           {webhook.is_active ? 'Disable' : 'Enable'}
                         </Button>
                       </div>
@@ -688,6 +772,11 @@ export function WebhookManager() {;
                     <div className="text-xs text-muted-foreground">;
                       {webhook.last_triggered_at;
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         : 'Never triggered'}
                     </div>
                   </div>
@@ -731,6 +820,7 @@ export function WebhookManager() {;
 
 
 
+<<<<<<< HEAD
                       ))}
                     </SelectContent>
                   </Select>
@@ -742,6 +832,8 @@ export function WebhookManager() {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {testResult && (
           <Card className='mt-4 border-blue-200'>
             <CardHeader>
@@ -767,6 +859,7 @@ export function WebhookManager() {;
                         ? 'text-green-600';
                         : 'text-red-600';
                     }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -775,6 +868,11 @@ export function WebhookManager() {;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
         {testResult && (;
           <Card className="mt-4 border-blue-200">;
@@ -795,7 +893,10 @@ export function WebhookManager() {;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {testResult.responseBody || '<empty>'}
                   </pre>
                 </div>

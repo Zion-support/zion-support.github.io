@@ -1,5 +1,31 @@
 
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -14,6 +40,7 @@ import z from "zod";
 import {ChatAssistant} from "@/components/ChatAssistant";
 import {Mail, MessageSquare, MapPin, Phone} from "lucide-react";
 import {AppLayout} from "@/layout/AppLayout";
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { Header } from "@/components/Header",
@@ -36,17 +63,33 @@ import { AppLayout } from "@/layout/AppLayout",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export default function Contact() {
   const [formData, setFormData] = useState({
+=======
+export default function Contact() {;
+  const [formData, setFormData] = useState({;
+    name: "",;
+    email: "",;
+    subject: "",;
+    message: "";
+
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
+<<<<<<< HEAD
 
     message: "";
   });
@@ -55,6 +98,10 @@ export default function Contact() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     message: ""
   }),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -148,7 +195,109 @@ export default function Contact() {
         variant: "destructive"
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+    <AppLayout>;
+      <SEO
+        title="Contact Zion - Get in Touch" 
+        description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform." 
+        keywords="contact Zion, AI marketplace support, tech platform contact"
+        canonical="https://app && app.ziontechgroup.com/contact"
+      />;
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+          <div className="text-center mb-16">;
+            <GradientHeading>Contact Us</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+              Have questions or want to learn more? We'd love to hear from you.;
+            </p>;
+          </div>;
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">;
+            <div>;
+              <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>;
+              <p className="text-zion-slate-light text-lg mb-8">;
+                Whether you have a question about our platform, pricing, or anything else, ;
+                our team is ready to answer all your questions.;
+              </p>;
+
+              <form onSubmit={handleSubmit} className="space-y-6">;
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
+                  <div>;
+                    <label htmlFor="name" className="block text-white mb-2">Your Name</label>;
+
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData && formData.name}
+                      onChange={handleChange}
+                      className="bg-zion-blue-dark border-zion-blue-light text-white"
+                      placeholder="John Doe"
+                      required
+
+                    />;
+                  </div>;
+                  <div>;
+                    <label htmlFor="email" className="block text-white mb-2">Email Address</label>;
+
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData && formData.email}
+                      onChange={handleChange}
+                      className="bg-zion-blue-dark border-zion-blue-light text-white"
+                      placeholder="john@example && example.com"
+                      required
+
+                    />;
+                  </div>;
+                </div>;
+
+                <div>;
+                  <label htmlFor="subject" className="block text-white mb-2">Subject</label>;
+
+                  <Input
+                    id="subject"
+                    name="subject"
+                    value={formData && formData.subject}
+                    onChange={handleChange}
+                    className="bg-zion-blue-dark border-zion-blue-light text-white"
+                    placeholder="How can we help you?"
+                    required
+
+                  />;
+                </div>;
+
+                <div>;
+                  <label htmlFor="message" className="block text-white mb-2">Message</label>;
+
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData && formData.message}
+                    onChange={handleChange}
+                    className="bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px]"
+                    placeholder="Tell us what you'd like to know..."
+                    required
+
+                  />;
+                </div>;
+
+                <Button
+                  type="submit" 
+
+=======
+
+                <Button 
+                  type="submit" 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
@@ -527,10 +676,15 @@ export default function Contact() {;
       </main>;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Chat Assistant Modal */}
       {isChatOpen && (;
         <ChatAssistant

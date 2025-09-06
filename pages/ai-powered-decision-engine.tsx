@@ -5,6 +5,7 @@ export default function AiPoweredDecisionEngine() {
 		<ServiceLanding
 
 
+<<<<<<< HEAD
 			title="AI-Powered Decision Engine"
 			description="Operationalize policy, risk, pricing, and routing decisions with explainable AI and guardrails. Deploy strategies, test variants, and monitor outcomes."
 			subtitle="Make better decisions, continuously"
@@ -19,6 +20,13 @@ export default function AiPoweredDecisionEngine() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 			implementationWeeks="3-7 days"
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
 			features={[
@@ -30,6 +38,7 @@ export default function AiPoweredDecisionEngine() {
 				"Integrations: Kafka, Snowflake, Redis, REST/gRPC",
 				"Drift monitoring and alerts",
 				"Versioned strategies with canary rollouts"
+<<<<<<< HEAD
 
 
 			]  } catch (error) {
@@ -59,3 +68,8 @@ export default function AiPoweredDecisionEngine() {
 }
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

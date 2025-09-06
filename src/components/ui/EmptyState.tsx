@@ -10,6 +10,7 @@ interface EmptyStateProps {
   onRetry?: () => void;
   showRetry?: boolean;
 
+<<<<<<< HEAD
 
 
 export function EmptyState({
@@ -39,6 +40,9 @@ export function EmptyState({
   showRetry = false,
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   icon
 }: EmptyStateProps) {
   return (
@@ -123,16 +127,20 @@ export function EmptyState({;
       )}
       {showRetry && onRetry && (;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           onClick={onRetry}
           variant="outline"
           className="flex items-center gap-2"
         >
           <RefreshCw className="h-4 w-4" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -141,16 +149,24 @@ export function EmptyState({;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           Try Again
         </Button>
       )}
     </div>;
   );
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 } 
 

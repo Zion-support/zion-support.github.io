@@ -217,6 +217,24 @@ if (return null) {
       </div>;
 
 
+<<<<<<< HEAD
+=======
+=======
+import { Star } from 'lucide-react';
+export default function WCAGScannerPage() {
+=======
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { extraServices } from '../data/extra-services';
+
+export default function WCAGScannerPage() {
+
+  const service = extraServices.find(s =>
+    s.link.endsWith('/wcag-accessibility-scanner');
+  );  if (!service) return null;import { Star } from 'lucide-react';
+export default function WCAGScannerPage() {;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
   if (!service) return null;
 
@@ -267,6 +285,7 @@ if (return null) {
 }
 
 
+<<<<<<< HEAD
 
 
 
@@ -277,3 +296,6 @@ if (return null) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

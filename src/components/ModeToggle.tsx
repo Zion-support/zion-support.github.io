@@ -2,9 +2,12 @@ import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
+<<<<<<< HEAD
 
 
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
@@ -20,6 +23,7 @@ export function ModeToggle() {
 
 
 
+<<<<<<< HEAD
   const { theme, toggleTheme } = useTheme();
   const [isClient, setIsClient] = useState(false);
   // Ensure we're on the client side to avoid hydration mismatches
@@ -30,6 +34,8 @@ export function ModeToggle() {
 
   const resolvedTheme = (() => {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     setIsClient(true);
   }, []);
@@ -37,8 +43,11 @@ export function ModeToggle() {
   const resolvedTheme = (() => {;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     if (!isClient) return 'light'; // Default for SSR
     if (theme === 'system') {
       return window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -110,9 +119,12 @@ if ( {) {
 
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     
 
@@ -191,6 +203,7 @@ export function ModeToggle() {
         disabled
         aria-label="Loading theme toggle"
         className="focus-visible:ring-ring relative text-foreground"
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -198,6 +211,10 @@ export function ModeToggle() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       >
         <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
         <span className="sr-only">Loading theme toggle</span>
@@ -335,6 +352,7 @@ export function ModeToggle() {;
           <Button;
             variant="ghost";
             size="icon";
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -342,6 +360,10 @@ export function ModeToggle() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             onClick={handleToggle}
             aria-pressed={isDarkMode}
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
@@ -375,8 +397,11 @@ export function ModeToggle() {;
           >
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {isDarkMode ? (
               <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
             ) : (
@@ -406,11 +431,14 @@ export function ModeToggle() {;
             <span className="sr-only">
               Toggle theme. Current: {resolvedTheme}. Click to switch to {isDarkMode ? 'light' : 'dark'}.
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </span>
           </Button>
         </TooltipTrigger>

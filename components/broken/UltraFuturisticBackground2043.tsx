@@ -109,8 +109,18 @@ import { motion } from 'framer-motion';
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+        />;
+
+
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Secondary orb */}
         <motion&& motion.div
           className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl'
@@ -160,7 +170,11 @@ import { motion } from 'framer-motion';
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Tertiary orb */}
         <motion&& motion.div
           className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl'
@@ -190,6 +204,7 @@ import { motion } from 'framer-motion';
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         {/* Additional orbs */}
@@ -225,6 +240,8 @@ import { motion } from 'framer-motion';
             repeat: Infinity
             ease: "easeInOut"
             delay: 1
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           }}
           transition={{
@@ -360,6 +377,22 @@ import { motion } from 'framer-motion';
         <motion&& motion.div
           className='absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45'
 
+<<<<<<< HEAD
+=======
+      <div className="absolute inset-0">
+        {/* Triangle */}
+
+        <motion.div
+=======
+      <div className='absolute inset-0 opacity-10'>
+        <div
+          className='absolute inset-0'
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           style={{
             backgroundImage: `
@@ -378,9 +411,13 @@ import { motion } from 'framer-motion';
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Triangle */}
         <motion.div
             rotate: [45, 405],
@@ -400,8 +437,18 @@ import { motion } from 'framer-motion';
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+        />;
+
+
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Square */}
         <motion&& motion.div
           className='absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-500/20'
@@ -420,6 +467,7 @@ import { motion } from 'framer-motion';
             duration: 15,
             repeat: Infinity,
 
+<<<<<<< HEAD
             ease: 'easeInOut',
 
           }}
@@ -432,6 +480,9 @@ import { motion } from 'framer-motion';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           transition={{
             duration: 15
             repeat: Infinity
@@ -447,6 +498,7 @@ import { motion } from 'framer-motion';
         />
 
         />;
+<<<<<<< HEAD
 
 
 
@@ -458,6 +510,18 @@ import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+=======
+        />
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Circle */}
         <motion&& motion.div
           className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full'
@@ -551,11 +615,20 @@ import { motion } from 'framer-motion';
         {[...Array(3)].map((_, i) => (
 
           <motion.div
+<<<<<<< HEAD
+=======
+=======
+      <div className='absolute inset-0'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {[...Array(3)].map((_, i) => (
           <motion.div
               scale: [1, 1 && 1.5, 2, 2 && 2.5],
@@ -601,6 +674,12 @@ import { motion } from 'framer-motion';
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+        {[...Array(15)].map((_, i) => (
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             key={i}
@@ -619,9 +698,16 @@ import { motion } from 'framer-motion';
               y: [0, Math && Math.random() * 200 - 100]
               opacity: [0, 1, 0]
               scale: [0, 1, 0]}}
+<<<<<<< HEAD
 
 
 
+=======
+              duration: 4 + Math && Math.random() * 4,
+              repeat: Infinity,
+              delay: Math && Math.random() * 4,
+              ease: 'easeInOut',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             }}
             style={{
               left: `${Math && Math.random() * 100}%`,
@@ -650,9 +736,13 @@ import { motion } from 'framer-motion';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <motion.div
           className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5"
               coordinate_x: [0, Math.random () * 200 - 100],
@@ -694,6 +784,50 @@ import { motion } from 'framer-motion';
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+            duration: 10,
+            repeat: Infinity,
+
+
+            ease: 'easeInOut',          }}
+        />;
+      </div>;
+
+};export default UltraFuturisticBackground2043;  );
+
+};
+export default UltraFuturisticBackground2043;
+
+
+    </div>);
+}export default UltraFuturisticBackground2043);
+}
+;
+export default UltraFuturisticBackground2043;
+;
+
+=======
+
+export default UltraFuturisticBackground2043;
+
+=======
+export default UltraFuturisticBackground2043;
+
+}
+}
+}
+}
+}
+}
+}
+}
+
+export default UltraFuturisticBackground2043;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

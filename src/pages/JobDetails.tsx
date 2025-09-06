@@ -5,8 +5,11 @@ Calendar,
   Users;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Briefcase;
 import {;
   Calendar,;
@@ -57,7 +60,10 @@ interface Job {
   skills?: string[];
   created_at: string;
   category: string;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default function JobDetails() {;
   const router = useRouter(); // Init router;
@@ -112,6 +118,7 @@ interface Job {;
 export default function JobDetails() {
 
 
+<<<<<<< HEAD
 
   const formatBudget = (budget: any) => {
     if (!budget) return "Not specified",
@@ -228,6 +235,8 @@ export default function JobDetails() {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <>
       <SEO 
@@ -235,6 +244,7 @@ export default function JobDetails() {
         description={job.description.substring(0, 160)}
       />
       <Header />
+<<<<<<< HEAD
 
 
 
@@ -409,6 +419,17 @@ export default function JobDetails() {;
                     <p className='font-medium'>{formatBudget(job.budget)}</p>
 
 
+=======
+
+                
+                <div className="flex items-start">
+                  <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
+                  <div className="ml-3">
+                    <p className="text-sm text-muted-foreground">Deadline</p>
+                    <p className="font-medium">
+                      {job.deadline ? new Date(job.deadline).toLocaleDateString() : "Flexible"}
+                    </p>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </div>
                 </div>
                 
@@ -429,15 +450,21 @@ export default function JobDetails() {;
                     Apply Now;
                   </Button>;
                 )}
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 
 
 <<<<<<< HEAD
 
 
-
-
-
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 
                 <div className="flex items-start">
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
@@ -467,6 +494,7 @@ export default function JobDetails() {;
                   </Button>;
                 )}
                 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -475,6 +503,11 @@ export default function JobDetails() {;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {isOwnJob && (
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
@@ -653,6 +686,7 @@ if ( {) {
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -661,10 +695,16 @@ if ( {) {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Job application modal */}
       {job && (
         <ApplyToJobModal
           job={{
+<<<<<<< HEAD
 
 
             id: job.id
@@ -679,6 +719,8 @@ if ( {) {
             company_name: job.company_name ?? "Company",
             budget: formatBudget(job.budget),
             client_id: job.client_id,
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           }}

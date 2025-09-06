@@ -94,13 +94,17 @@ const faqs = [;
 
 export function FaqSection() {;
   return (
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     <section className='py-20 bg-zion-blue' id='faq'>;
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>;
         <div className='text-center mb-12'>;
           <GradientHeading>Frequently Asked Questions</GradientHeading>;
           <p className='mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto'>;
 import { GradientHeading } from './GradientHeading';
+<<<<<<< HEAD
           <Accordion type='single' collapsible className='w-full'>
             {faqs.map((faq, index) => (
               <AccordionItem
@@ -123,6 +127,8 @@ import {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -276,6 +282,7 @@ const faqs = [;
 export function FaqSection() {;
 
 
+<<<<<<< HEAD
 
 
 
@@ -285,10 +292,13 @@ export function FaqSection() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const faqs = [
   {
     question: "How do I publish my AI product or service?",
     answer:
+<<<<<<< HEAD
 
 
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."}
@@ -391,6 +401,10 @@ const faqs = [
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function FaqSection() {
   return (
     <section className="py-20 bg-zion-blue" id="faq">
@@ -405,18 +419,25 @@ export function FaqSection() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">
           <div className="flex items-center mb-6">
             <FileText className="h-6 w-6 text-zion-cyan mr-2" />
             <h3 className="text-xl font-bold text-white">Common Questions</h3>
           </div>
           
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -424,6 +445,10 @@ export function FaqSection() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
@@ -558,11 +583,14 @@ export function FaqSection() {;
             {faqs && faqs.map((faq, index) => (;
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   );
 }

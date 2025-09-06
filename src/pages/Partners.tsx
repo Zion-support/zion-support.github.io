@@ -4,11 +4,14 @@ Card,
   CardHeader,;
   CardTitle;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
@@ -22,6 +25,7 @@ import { PartnerResources } from '@/components/partners/PartnerResources';
 import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -29,6 +33,10 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -48,10 +56,13 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default function Partners() {;
   logInfo('PartnersPage rendering');
@@ -87,6 +98,7 @@ import { useRouter  } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 export default function Partners() {
 
+<<<<<<< HEAD
   logInfo('PartnersPage rendering')
   const [activeTab, setActiveTab] = useState("overview")
   const { t } = useTranslation()
@@ -1038,3 +1050,11 @@ function check_health() {
 ;
 
 
+=======
+  logInfo('PartnersPage rendering'),
+  const [activeTab, setActiveTab] = useState("overview"),
+  const { t } = useTranslation(),
+  const { user, isAuthenticated } = useAuth(),
+  const router = useRouter(),
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 export function ActiveProjectsCard() {
@@ -21,6 +22,8 @@ import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
@@ -35,6 +38,7 @@ export function ActiveProjectsCard() {
     }
   }, [projects, isLoading]),
   
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -42,6 +46,10 @@ export function ActiveProjectsCard() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (isLoading) {
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -72,6 +80,7 @@ export function ActiveProjectsCard() {;
 
   if (isLoading) {;
     return (
+<<<<<<< HEAD
 
 
       <Card>
@@ -79,6 +88,8 @@ export function ActiveProjectsCard() {;
           <CardTitle className='flex items-center gap-2'>
             <BriefcaseIcon className='h-5 w-5 text-primary' />            <span>Active Projects</span>          <CardTitle className="flex items-center gap-2">
           <CardTitle className="flex items-center gap-2">
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             <BriefcaseIcon className="h-5 w-5 text-primary" />
@@ -142,8 +153,11 @@ export function ActiveProjectsCard() {;
     );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   }
@@ -165,6 +179,7 @@ export function ActiveProjectsCard() {;
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>          <CardTitle className="flex items-center gap-2">
           <CardTitle className="flex items-center gap-2">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -173,6 +188,11 @@ export function ActiveProjectsCard() {;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <BriefcaseIcon className="h-5 w-5 text-primary" />
             <span>Active Projects</span>
           </CardTitle>
@@ -194,12 +214,16 @@ export function ActiveProjectsCard() {;
           </Button>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </CardContent>
       </Card>
     )
   }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -208,6 +232,11 @@ export function ActiveProjectsCard() {;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
   }
   return (
@@ -250,6 +279,7 @@ export function ActiveProjectsCard() {;
 
                   : 'In Progress'}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </Badge>
             </div>
             <div className='flex items-center text-xs text-muted-foreground gap-2'>
@@ -286,6 +316,29 @@ export function ActiveProjectsCard() {;
               <span>Started {new Date(project.start_date).toLocaleDateString()}</span>
             </div>
             <Button size="sm" variant="outline" className="w-full mt-2" asChild>
+=======
+              </Badge>;
+            </div>;
+            <div className='flex items-center text-xs text-muted-foreground gap-2'>;
+              <Clock className='h-3 w-3' />;
+              <span>;
+                Started {new Date(project && project.start_date).toLocaleDateString()}
+              </span>;
+            </div>;
+            <Button size='sm' variant='outline' className='w-full mt-2' asChild>              <Link href={`/project/${project && project.id}`}>View Project</Link>            <Button size="sm" variant="outline" className="w-full mt-2" asChild>;
+              <Link href={`/project/${project && project.id}`}>View Project</Link>;
+            </Button>;
+          </div>;
+        ))}
+      </CardContent>;
+      {activeProjects && activeProjects.length > 2 && (;
+        <CardFooter>;
+          <Button variant='ghost' className='w-full' asChild>;
+            <Link href='/projects'>View All Projects</Link>          </Button>          <Button variant="ghost" className="w-full" asChild>;
+            <Link href="/projects">View All Projects</Link>;
+          </Button>;
+        </CardFooter>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
               <Link href={`/project/${project.id}`}>View Project</Link>

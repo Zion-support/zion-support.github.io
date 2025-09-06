@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -12,6 +13,9 @@ import { GradientHeading } from "@/components/GradientHeading",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function EnterpriseHero() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -44,5 +48,63 @@ export function EnterpriseHero() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+                />;
+              </div>;
+            </div>;
+          </div>;
+          <div className="relative">;
+
+            <div className="aspect - video rounded - lg bg - gradient - to - br from - zion - cyan / 20 to - zion - purple / 20 p - 1">;
+              <div className="w - full h - full bg - card rounded - md flex items - center justify - center">;
+                <img;
+                  src="/placeholder.svg";
+                  alt="Enterprise Dashboard";
+                  className="rounded max - w-full max - h-full object - cover";
+                />;
+              </div>;
+            </div>;
+            <div className="absolute -bottom - 4 -right - 4 bg - card p - 4 rounded - lg shadow - lg border border - border">;
+              <p className="text - sm font - medium">;
+
+                Custom branding & white labeling;
+              </p>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+    </section>);
+
+}
+=======
+                <img src="/logos/placeholder-logo.svg" alt="Enterprise 1" className="h-8" />
+                <img src="/logos/placeholder-logo.svg" alt="Enterprise 2" className="h-8" />
+                <img src="/logos/placeholder-logo.svg" alt="Enterprise 3" className="h-8" />
+              </div>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="aspect-video rounded-lg bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 p-1">
+              <div className="w-full h-full bg-card rounded-md flex items-center justify-center">
+                <img 
+                  src="/placeholder.svg" 
+                  alt="Enterprise Dashboard" 
+                  className="rounded max-w-full max-h-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="absolute -bottom-4 -right-4 bg-card p-4 rounded-lg shadow-lg border border-border">
+              <p className="text-sm font-medium">Custom branding & white labeling</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

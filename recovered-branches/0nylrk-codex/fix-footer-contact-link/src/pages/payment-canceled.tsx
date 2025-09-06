@@ -1,8 +1,20 @@
 
+<<<<<<< HEAD
 
 import React from 'react';
 
 
+=======
+
+
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+import {XCircle} from 'lucide-react';
+export default function PaymentCanceled() {;
+  const navigate = useNavigate();
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useNavigate } from 'react-router-dom',
@@ -28,10 +40,17 @@ export default function PaymentCanceled() {
             Try Again
           </Button>
 
+<<<<<<< HEAD
           <Button
           <Button 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+          <Button 
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             variant="outline"
             onClick={() => navigate('/dashboard')}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
@@ -42,12 +61,20 @@ export default function PaymentCanceled() {
       </div>
     </div>
   )
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {XCircle} from 'lucide-react';
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
@@ -87,11 +114,19 @@ export default function PaymentCanceled() {;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
     </div>;
   );
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

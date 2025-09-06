@@ -1,28 +1,41 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Input} from "@/components/ui/input";
 import {Copy, Facebook, Link, Share, Twitter} from "lucide-react";
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",
 
+<<<<<<< HEAD
 
 import { Input } from "@/components/ui/input";
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
@@ -32,6 +45,10 @@ interface ReferralLinkProps {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
   const [copied, setCopied] = useState(false),
   
@@ -56,6 +73,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
       <CardContent>
         <div className="flex flex-col space-y-3">
           <div className="flex space-x-2">
+<<<<<<< HEAD
 
             <Input
               value={referralLink}
@@ -118,6 +136,9 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input",;
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",;
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ReferralLinkProps {;
   referralLink: string,;
   onCopy: () => void,;
@@ -197,5 +218,24 @@ export function ReferralLink(): any ({ referralLink, onCopy, onShare }: Referral
             >;
               <Share className="h-4 w-4" />;
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+              LinkedIn;
+            </Button>;
+          </div>;
+        </div>;
+      </CardFooter>;
+
+    </Card>);
+}
+
+=======
+
+  )
+=======
+  )
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

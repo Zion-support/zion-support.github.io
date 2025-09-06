@@ -33,6 +33,7 @@ import { Star } from 'lucide-react';
 
 
 
+<<<<<<< HEAD
 
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -48,6 +49,11 @@ import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -55,18 +61,26 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
+<<<<<<< HEAD
 
 
     totalRevenue: 850.0,
     pendingRevenue: 200.0,
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   },
   
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
@@ -83,10 +97,13 @@ export function PartnerDashboard() {
     pendingRevenue: 200.00
 
 
+<<<<<<< HEAD
   },
   
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
@@ -118,11 +135,14 @@ export function PartnerDashboard() {
           </CardContent>
         </Card>            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
@@ -133,6 +153,7 @@ export function PartnerDashboard() {
           </CardContent>
         </Card>
         
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -140,6 +161,10 @@ export function PartnerDashboard() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
@@ -152,6 +177,7 @@ export function PartnerDashboard() {
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
 
 
         <Card className='bg-zion-blue-dark border-zion-blue-light'>
@@ -165,6 +191,8 @@ export function PartnerDashboard() {
             <div className='text-2xl font-bold'>${stats.totalRevenue}</div>
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         
 
@@ -182,6 +210,7 @@ export function PartnerDashboard() {
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
               ${stats.pendingRevenue} pending payout
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -190,6 +219,11 @@ export function PartnerDashboard() {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </p>
           </CardContent>
         </Card>
@@ -197,6 +231,7 @@ export function PartnerDashboard() {
       {/* Performance Chart */}      {/* Performance Chart */}
       
       {/* Performance Chart */}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -205,6 +240,11 @@ export function PartnerDashboard() {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Performance Overview</CardTitle>
@@ -233,6 +273,7 @@ export function PartnerDashboard() {
             <CardDescription>Your latest partner referrals</CardDescription>
           </div>
           <Button variant="outline" size="sm">View All</Button>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -240,6 +281,10 @@ export function PartnerDashboard() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </CardHeader>
         <CardContent>
           <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
@@ -278,6 +323,7 @@ export function PartnerDashboard() {
 
             </p>
           </div>
+<<<<<<< HEAD
 
 
         </CardContent>
@@ -607,3 +653,6 @@ function PartnerDashboard() {
 ;
 
 
+=======
+        </CardContent>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

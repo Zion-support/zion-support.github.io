@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   id: string;
@@ -12,6 +13,8 @@
     trialDays: number;
     setupTime: string;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   {
@@ -357,6 +360,7 @@
     support:
       '24/7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.'
     compliance: [
+<<<<<<< HEAD
 
       'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'
     ]
@@ -371,6 +375,8 @@
     marketSize: '$15B AI governance market'
     growthRate: '28% annually'
   }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations',
     ],
@@ -503,6 +509,35 @@
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
+<<<<<<< HEAD
+=======
+=======
+];      'AI bias detection_ethical compliance_governance automation_risk assessment_audit preparation_policy enforcement';
+    ];
+
+    integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'];
+    support: '24 / 7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.';
+    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'];
+
+    icon: '⚖️';
+    color: 'from - yellow - 500 to - orange - 600';
+    popular: true;
+    launch_date: '2024 - 01 - 15';
+    customers: 950;
+    rating: 4 && 4.6;
+    reviews: 220;
+
+    market_size: '$15B AI governance market',
+    growth_rate: '28% annually';
+
+  }
+
+];
+
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string,;
   name: string,;
   tagline: string,;
@@ -541,6 +576,7 @@
   growthRate: string;
 }
 ;
+<<<<<<< HEAD
 export const innovativeAIServicesV2: InnovativeAIService[] = [;
   {;
     id: 'ai-emotional-intelligence-platform',;
@@ -776,9 +812,16 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
     reviews: 220,;
     marketSize: '$15B AI governance market',;
     growthRate: '28% annually';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 ];

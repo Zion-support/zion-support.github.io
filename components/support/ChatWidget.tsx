@@ -88,6 +88,7 @@ function generateSessionId(): any (): string {;
   async function logEvent(eventType: string, payload: any) {
     try {
       await fetch('/api/support/session', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
@@ -96,14 +97,51 @@ function generateSessionId(): any (): string {;
           payload
         })
       });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
+=======
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
+
+    } catch {}
+  }
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           sessionId: sessionIdRef.current,
           eventType,
           payload,
         }),
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+=======
+    } catch {}
+  }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  async function escalateSupport(reason: string) {
+    try {
+      await fetch('/api/support/escalate', {
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+
+      setShowEscalation(true)
+
+      setShowEscalation(true);    } catch {}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     } catch {}
   }
 
@@ -271,6 +309,10 @@ function generateSessionId(): any (): string {;
   }
 
   return (
+<<<<<<< HEAD
+=======
+    <div className='fixed bottom-4 right-4 z-50'>      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
@@ -297,10 +339,13 @@ function generateSessionId(): any (): string {;
     <div className='fixed bottom-4 right-4 z-50'>
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     }
   }
@@ -318,8 +363,11 @@ function generateSessionId(): any (): string {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   }
                 >
                   {m.content}
@@ -380,6 +428,32 @@ function generateSessionId(): any (): string {;
             {!showEscalation ? (
               <div className='flex gap-2'>
 
+<<<<<<< HEAD
+=======
+          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
+            {!showEscalation ? (;
+              <div className='flex gap-2'>;
+                <input
+                  value={input}
+                  onChange={e => setInput(e && e.target.value)}
+                  onKeyDown={e => {;
+                    if (e && e.key === 'Enter' && !e && e.shiftKey) {;
+                      e && e.preventDefault();
+=======
+<<<<<<< HEAD
+=======
+
+          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
+            {!showEscalation ? (
+              <div className='flex gap-2'>
+                <input
+                  value={input}
+                  onChange={e => setInput(e.target.value)}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                      e.preventDefault();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       onSend();
                     }
                   }}
@@ -390,6 +464,11 @@ function generateSessionId(): any (): string {;
                   disabled={isLoading}
 
 
+<<<<<<< HEAD
+=======
+          <div className="border-t border-gray-200 dark:border-gray-800 p-2">
+            {!showEscalation ? (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <div className="flex gap-2">
 
                 <input
@@ -399,9 +478,20 @@ function generateSessionId(): any (): string {;
                     }
                   }}
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+                  placeholder="Ask a question…"
+                  className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 />
                 <button
                   onClick={() => onSend()}
@@ -431,7 +521,19 @@ function generateSessionId(): any (): string {;
 
 }
 
+<<<<<<< HEAD
 
+=======
+}
+=======
+    </div>;
+  );
+}
+    </div>
+<<<<<<< HEAD
+  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 useEffect ( () => {
   // Check condition
 if ( {) {
@@ -806,8 +908,12 @@ if ( {) {
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,9 +27,12 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
 
@@ -43,7 +49,31 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 
 
 export default function InnovativeServicesPage() {;
+<<<<<<< HEAD
 
+=======
+=======
+import {
+<<<<<<< HEAD
+  innovativeMicroSaasServices
+  getInnovativeServicesByCategory
+  getPopularInnovativeServices
+  getInnovativeServicesByPriceRange
+  getInnovativeServiceCategories;
+} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+
+export default function InnovativeServicesPage() {
+=======
+  innovativeMicroSaasServices,
+  getInnovativeServicesByCategory,
+  getPopularInnovativeServices,
+  getInnovativeServicesByPriceRange,;
+  getInnovativeServiceCategories,;
+} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+export default function InnovativeServicesPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -166,9 +196,12 @@ import {
   getInnovativeServiceCategories;
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
+<<<<<<< HEAD
 export default function InnovativeServicesPage() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -395,8 +428,18 @@ if ( {) {
                   {/* Category Filter */}
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+                      {categories.map(category => (                        <option key={category.name} value={category.name}>
+
+                        <option key={category.name} value={category.name}>
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           {category.name} ({category.count})
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -410,6 +453,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                     <select
@@ -435,6 +479,9 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           {range.label}
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -448,6 +495,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                     <select
@@ -473,6 +521,9 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           {option.value}
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -486,9 +537,26 @@ if ( {) {
                   {/* View Mode Toggle */}
                   <div className="flex-shrink-0">
                     <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
+<<<<<<< HEAD
+=======
+=======
+                    </select>
+                  </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+
+                  {/* View Mode Toggle */}
+                  <div className='flex-shrink-0'>
+                    <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${;
@@ -514,6 +582,7 @@ if ( {) {
                         <List className="w-5 h-5" />
 
 
+<<<<<<< HEAD
                       </button>
 
 
@@ -521,6 +590,9 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </div>
                   </div>
                 </div>
@@ -661,6 +733,15 @@ if ( {) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+                            </div>
+                          )}
+                        </div>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
@@ -669,11 +750,14 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
                           {service.description}
@@ -754,11 +838,15 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -858,6 +946,30 @@ if ( {) {
                   and cutting-edge technology.
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+<<<<<<< HEAD
+=======
+=======
+            </div>;
+          </section>;
+          {/* Call to Action */}
+          <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
+            <div className='max-w-4xl mx-auto text-center'>;
+              <EnhancedFuturisticCard className='p-12'>;
+                <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+                  Ready to Lead the Future?;
+                </h2>;
+                <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+                  Join the revolution with our breakthrough micro SAAS services.;
+                  Transform your business with quantum AI, autonomous systems,;
+                  and cutting-edge technology.;
+                </p>;
+                <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+                  <Button
+                    href={`tel:${contactInfo && contactInfo.mobile}`}
+=======
+            </div>
+          </section>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Call to Action */}
@@ -938,10 +1050,15 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -951,10 +1068,39 @@ if ( {) {
     </>
 
 
+<<<<<<< HEAD
+=======
+                </div>;
+              </EnhancedFuturisticCard>;
+            </div>;
+          </section>;
+        </div>;
+      </QuantumHolographicBackground>;
+
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  );
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    </>);
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

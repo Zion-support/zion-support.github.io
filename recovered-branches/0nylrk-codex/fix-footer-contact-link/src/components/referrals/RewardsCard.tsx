@@ -6,21 +6,31 @@ import {ReferralReward} from "@/types/referrals";
 import {formatDate} from "@/utils/referralUtils";
 import {BadgeDollarSign, Badge} from "lucide-react";
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals",
 import { formatDate } from "@/utils/referralUtils",
 import { BadgeDollarSign, Badge } from "lucide-react",
 
+<<<<<<< HEAD
 
 import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from "lucide-react";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean
@@ -47,7 +57,35 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
       </Card>);
   }
 
+<<<<<<< HEAD
 
+=======
+=======
+    );
+  }
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <BadgeDollarSign className="h-5 w-5" />
+          Your Rewards
+        </CardTitle>
+        <CardDescription>
+          Rewards earned from successful referrals
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          {rewards.map((reward, index) => (
+            <div
+              key={reward.id}
+              className={`flex justify-between items-start ${
+                index !== rewards.length - 1 ? "border-b pb-3" : ""
+
+  )
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralReward } from "@/types/referrals",;
 import { formatDate } from "@/utils/referralUtils",;
@@ -212,8 +250,12 @@ if ( {) {
   );
 
 }
+<<<<<<< HEAD
 }
 ;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

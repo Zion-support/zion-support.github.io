@@ -237,5 +237,31 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+    return res.status(500).json({ error: 'Internal server error' });
+
+  }
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    aggregate.push (record);
+    await fse.writeJSON (aggregate_path, aggregate, { spaces: 2 });
+;
+    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup);
+    // For now, just return success with AI data;
+    return res.status (200).json ({ ok: true, id, summary, tags });
+  } catch (error) {
+    return res.status (500).json ({ error: 'Internal server error' });
+  }    return res.status (200).json ({ ok: true, id, summary, tags });
+  } catch (error) {
+    return res.status (500).json ({ error: 'Internal server error' });
+}
+  }
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -4,11 +4,17 @@ interface ApplicationRowProps {
   onViewApplication: (application_id: string) => Promise < void>;
   onStatusChange: (
 
+<<<<<<< HEAD
 
 
 }
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function ApplicationRow({
 
   application
@@ -18,11 +24,14 @@ export function ApplicationRow({
   onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
+<<<<<<< HEAD
 
 
   const talentName = application.talent_profile?.full_name |'Unknown'
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import { formatDistanceToNow } from 'date-fns';
@@ -66,6 +75,7 @@ export function ApplicationRow(): any ({;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
 
+<<<<<<< HEAD
 
 
 
@@ -76,6 +86,8 @@ export function ApplicationRow(): any ({;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <TableRow key={application.id}>
       <TableCell>
@@ -100,8 +112,11 @@ export function ApplicationRow(): any ({;
               />
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ) : (
               <User className="h-5 w-5 text-gray-400" />
             )}
@@ -146,8 +161,11 @@ export function ApplicationRow(): any ({;
           <BarChart className="h-4 w-4 mr-1" />
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <ScoreBadge application={application} />
         </Button>
       </TableCell>
@@ -350,3 +368,30 @@ export function ApplicationRow({;
     </TableRow>;
   );
 }
+<<<<<<< HEAD
+=======
+
+        {application.resume ? (
+          <Button variant='ghost' size='sm' as_child>;
+            <a;
+              href={application.resume.file_url || '#'}
+              target='_blank';
+              rel='noopener noreferrer';
+            >;
+              <FileText className='h - 4 w - 4 mr - 1' /> View;
+            </a>;
+          </Button>) : (
+          <span className='text - muted - foreground text - sm'>No resume</span>)}
+      </TableCell>;
+      <TableCell className='text - right'>;
+        <ApplicationActions;
+          application = {application, }
+          processing_id = {processing_id, }
+          onViewApplication = {onViewApplication, }
+          onStatusChange = {onStatusChange, }
+        />;
+      </TableCell>;
+    </TableRow>);
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

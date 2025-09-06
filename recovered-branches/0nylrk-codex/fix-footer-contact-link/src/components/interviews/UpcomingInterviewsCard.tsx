@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useEffect, useState } from "react";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -13,6 +16,7 @@ import {Avatar} from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {;
 
   const { fetchInterviews } = useInterviews();
+<<<<<<< HEAD
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -35,6 +39,20 @@ export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews(),
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true),
+=======
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+
+
+  useEffect(() => {;
+    const loadInterviews = async () => {;
+
+      setIsLoading(true);
+      try {;
+        const interviews = await fetchInterviews();
+        const now = new Date();
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   useEffect(() => {
@@ -134,6 +152,7 @@ function UpcomingInterviewsCard() {
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 
 
 
@@ -148,6 +167,12 @@ function UpcomingInterviewsCard() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ))}
           </div>;
         </CardContent>;

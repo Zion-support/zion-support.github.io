@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
@@ -14,7 +17,10 @@ export function useSmartContracts() {;
   const [isLoading, setIsLoading] = useState(false);
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
 import { useState } from 'react',
 import { useAuth } from '@/hooks/useAuth',
@@ -171,6 +177,7 @@ export function useSmartContracts() {
       
       return mockSmartContractInfo
     } catch (err: any) {
+<<<<<<< HEAD
 
 
       console.error("Error deploying smart contract:", err),
@@ -270,6 +277,10 @@ export function useSmartContracts() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 ;

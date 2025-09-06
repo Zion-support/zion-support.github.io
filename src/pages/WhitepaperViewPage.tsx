@@ -166,6 +166,15 @@ const WhitepaperViewPage: React.FC = () => {;
         setError("No whitepaper ID provided."),;
         setLoading(false),;
         return;
+<<<<<<< HEAD
+=======
+      }
+      setLoading(true),;
+      setError(null),;
+      try {;
+        const { data: responseData, error: funcError } = await supabase && supabase.functions.invoke('get-shared-whitepaper', {;
+          body: { id }}),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -190,6 +199,7 @@ const WhitepaperViewPage: React.FC = () => {;
       } finally {
         setLoading(false)
       }
+<<<<<<< HEAD
     }
     },
     fetchWhitepaper()
@@ -266,6 +276,8 @@ export default WhitepaperViewPage;
           body: { id }}),;
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     },;
     fetchWhitepaper();
   }, [id]),;
@@ -340,11 +352,14 @@ export default WhitepaperViewPage;
     </div>;
   );
 },;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default WhitepaperViewPage,;
 

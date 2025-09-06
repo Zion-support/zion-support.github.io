@@ -510,8 +510,7 @@ export default function HomePage() {
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
               <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift&quot;>
-=======
-            
+
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
               Built for the future of decentralized business.
@@ -540,22 +539,6 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Everything You Need to Build the Future
             </h2>
-<<<<<<< HEAD
-            <p className=&quot;text-xl text-white/70 max-w-2xl mx-auto&quot;>
-              From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit
-              for launching sovereign digital economies.
-            </p>
-          </div>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-=======
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit 
-              for launching sovereign digital economies.
-            </p>
-          </div>
-<<<<<<< HEAD
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
-=======
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <<<<<<< HEAD

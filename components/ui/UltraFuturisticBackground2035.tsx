@@ -797,9 +797,32 @@ if ( {) {
               animate={{
                 opacity: [0, 1, 0]
                 scaleX: [0, 1, 0]
+<<<<<<< HEAD
 
 
 
+=======
+=======
+                top: `${(i / 20) * 100}%`,
+                color: colors.primary;
+              }}
+              animate={{
+                opacity: [0, 1, 0];
+                scale_x: [0, 1, 0];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              }}
+
+=======
+
+
+=======
+=======
+
+
+
+              transition={{
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 duration: 3,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
@@ -843,8 +866,29 @@ export default UltraFuturisticBackground2035;  );
 export default UltraFuturisticBackground2035;
 
 
+<<<<<<< HEAD
+=======
+=======
+                ease: 'easeInOut',              }}                ease: "easeInOut";
+              }}
+            />))}
+        </div>;
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2035);
+}
+;
+export default UltraFuturisticBackground2035;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
@@ -857,3 +901,8 @@ export default UltraFuturisticBackground2035;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

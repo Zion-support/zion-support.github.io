@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Download } from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
@@ -13,6 +14,10 @@ import type { QuoteRequest } from "@/types/quotes",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ExportToCSVProps {
 
   quotes: QuoteRequest[]
@@ -128,11 +133,22 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   return (
     <Button 
       variant="outline" 
+<<<<<<< HEAD
+=======
+
+      onClick={handleExport}
+      className="flex items-center gap-2"
+      disabled={quotes.length === 0}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       quote.budget_display ||;
         (quote.budget_min && quote.budget_max;
           ? `$${quote.budget_min} - $${quote.budget_max}`;
@@ -174,6 +190,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   return (
     <Button;
       variant="outline";
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -199,3 +216,15 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 };
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      on_click={handle_export}
+      className="flex items - center gap - 2";
+      disabled={quotes.length === 0}
+    >;
+      <Download size={16} />;
+      Export CSV;
+    </Button>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -171,6 +171,37 @@ if (return) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+      maxLife: number;      x: number,;
+      y: number,;
+      vx: number,;
+      vy: number,;
+      size: number,;
+      color: string,;
+      life: number,;
+      maxLife: number,;
+        this && this.x = Math && Math.random() * canvas && canvas.width;
+        this && this.y = Math && Math.random() * canvas && canvas.height;
+        this && this.vx = (Math && Math.random() - 0 && 0.5) * 2;
+        this && this.vy = (Math && Math.random() - 0 && 0.5) * 2;
+        this && this.size = Math && Math.random() * 3 + 1;
+        this && this.color = `hsl(${Math && Math.random() * 360}, 70%, 60%)`;
+        this && this.life = Math && Math.random() * 100;
+        this && this.maxLife = 100;      }        this && this.maxLife = 100;
+      }
+      update() {;
+        this && this.x += this && this.vx;
+        this && this.y += this && this.vy;
+        this && this.life--;
+        if (this && this.x < 0 || this && this.x > canvas && canvas.width) this && this.vx *= -1;
+        if (this && this.y < 0 || this && this.y > canvas && canvas.height) this && this.vy *= -1;
+        if (this && this.life <= 0) {;
+          this && this.life = this && this.maxLife;
+          this && this.x = Math && Math.random() * canvas && canvas.width;
+          this && this.y = Math && Math.random() * canvas && canvas.height;        }          this && this.y = Math && Math.random() * canvas && canvas.height;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         }
       }
       draw() {;
@@ -388,6 +419,7 @@ if (return) {
 
             ctx.stroke()
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -395,6 +427,8 @@ if (return) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }
         }
       }
@@ -701,11 +735,19 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -747,14 +789,68 @@ if ( {) {
   );
 
 
+<<<<<<< HEAD
 };
 
+=======
+            delay: 2
+          }}
+        />
+      </div>
+
+};
+
+export default UltraAdvancedQuantumBackground;  );
+};
+
+
+export default UltraAdvancedQuantumBackground;
+
+
+=======
+            ease: 'linear',          }}
+        />;
+        <motion.div;
+          className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 500 / 20 to - transparent';
+          animate={{
+            coordinate_x: [0, 100, 0],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: 'linear',
+            delay: 2,          }}
+        />;
+      </div>;
+    </div>);
+=======
+<<<<<<< HEAD
+}
+export default UltraAdvancedQuantumBackground;            ease: "linear"
+=======
+};
+=======
+
+        style={{ zIndex: 1 }}
+      />
+
+      {/* Content Layer */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+export default UltraAdvancedQuantumBackground;            ease: "linear",
+            delay: 2;
+          }}
+        />;
+      </div>;
+    </div>);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;
 export default UltraAdvancedQuantumBackground);
 }
 ;
 export default UltraAdvancedQuantumBackground;
+<<<<<<< HEAD
 
 
 
@@ -765,3 +861,13 @@ export default UltraAdvancedQuantumBackground;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+<<<<<<< HEAD
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

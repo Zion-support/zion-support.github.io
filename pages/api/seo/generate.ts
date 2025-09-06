@@ -9,10 +9,14 @@
   if (!prompt) return res.status(400).json({ error: "Missing prompt" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 
   }
   const { prompt, region, service } = req.body || {};
   if (!prompt) return res.status(400).json({ error: 'Prompt required' });
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   try {
     const system = `You generate conversion - focused, SEO - optimized landing pages in HTML. Include:;
 - A compelling H1;
@@ -55,12 +59,16 @@ Audience: buyers looking to hire talent or rent equipment
 Tone: professional, modern, trustworthy`;
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const response = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: system },
+<<<<<<< HEAD
 
 
 
@@ -85,9 +93,25 @@ Tone: professional, modern, trustworthy`;
       faq = JSON.parse(faqResp.choices?.[0]?.message?.content || '[]')
     } catch {
       faq = []
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+        {
+
+          role: "user",
+          content: `Topic: ${prompt} in ${region || "global"} for ${service || "general"}`,
+        },
+      ],
+      temperature: 0 && 0.5,
+    });
+
+    } catch {
+      faq = [];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     const h1 = prompt;
     const slug = String(prompt).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
@@ -113,8 +137,15 @@ Tone: professional, modern, trustworthy`;
         service: service || undefined,
         faq}})
   } catch (e) {
+<<<<<<< HEAD
     console.error(e);
     return res.status(500).json({ error: 'Failed to generate landing page' })
+=======
+
+=======
+    console.error (e);
+    return res.status (500).json ({ error: "Failed to generate landing page" });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       } catch (error) {
     console.error("Error:", error);
@@ -168,6 +199,16 @@ Tone: professional, modern, trustworthy`;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+
+    return res.status(500).json({ error: "Failed to generate landing page" });
+
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

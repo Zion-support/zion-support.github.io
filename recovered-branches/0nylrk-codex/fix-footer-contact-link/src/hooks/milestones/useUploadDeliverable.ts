@@ -1,13 +1,21 @@
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {useRecordActivity} from './useRecordActivity';
+<<<<<<< HEAD
 
 export const useUploadDeliverable = () => {
   const { user } = useAuth();
@@ -16,13 +24,21 @@ export const useUploadDeliverable = () => {
   const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
     if (!user |!projectId) return null;
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const useUploadDeliverable = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -120,6 +136,7 @@ export const useUploadDeliverable = () => {
       return null
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
 
 
 import { useState } from 'react',;
@@ -184,5 +201,9 @@ export const useUploadDeliverable = () => {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 };

@@ -1,6 +1,7 @@
 public_url;
 }= supabase.storage.from ('resumes') .getPublicUrl (file_name);
 return public_url;
+<<<<<<< HEAD
 
 
 
@@ -244,6 +245,8 @@ const form = useForm<TalentFormValues> ({
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 }'}

@@ -2,8 +2,11 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
 import React from 'react',
@@ -51,6 +54,7 @@ export default function PaymentCanceled() {
           Your payment process was canceled. No charges have been made to your account.
         </p>
         
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -58,6 +62,10 @@ export default function PaymentCanceled() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="flex flex-col space-y-3">
           <Button
             onClick={() => router.push('/payments')} // Changed to router.push
@@ -65,6 +73,7 @@ export default function PaymentCanceled() {
           >
             Try Again
           </Button>
+<<<<<<< HEAD
 
 
           <Button
@@ -72,6 +81,8 @@ export default function PaymentCanceled() {
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
 export default function PaymentCanceled() {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
           <Button 
@@ -81,8 +92,11 @@ export default function PaymentCanceled() {
 export default function PaymentCanceled() {;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const router = useRouter(); // Changed from navigate
   return (
     <div className='flex flex-1 bg-zion-blue items-center justify-center p-4'>
@@ -170,11 +184,18 @@ import { useRouter } from 'next/router'; // Changed from useNavigate;
 import { XCircle } from 'lucide-react';
 import React from 'react';
           >
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             Return to Dashboard
           </Button>
         </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
   );            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
           >
@@ -186,6 +207,9 @@ import React from 'react';
       </div>
   )
 }
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 }
 
@@ -324,3 +348,11 @@ function PaymentCanceled() {
       </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+      </div>);
+      </div>);
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

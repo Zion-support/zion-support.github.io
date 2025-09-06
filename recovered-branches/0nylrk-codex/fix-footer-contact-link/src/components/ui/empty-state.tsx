@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button";
@@ -14,6 +15,10 @@ import { Link } from "react-router-dom",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface EmptyStateProps {
 
   icon: React.ReactNode
@@ -52,7 +57,27 @@ export function EmptyState(): any ({;
   action;
   secondaryAction;
   className}: EmptyStateProps) {;
+<<<<<<< HEAD
 
+=======
+=======
+
+    text: string,
+    href?: string,
+    onClick?: () => void
+  },
+  secondaryAction?: {
+    text: string,
+    href?: string,
+    onClick?: () => void
+  },
+
+  className?: string
+}
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   className}: EmptyStateProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -63,6 +88,7 @@ export function EmptyState(): any ({;
 
         "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",
         className
+<<<<<<< HEAD
 
       )}
     >
@@ -122,6 +148,10 @@ export function EmptyState({;
     >
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
 
+=======
+      )}>;
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {icon}
 
       </div>;
@@ -135,7 +165,10 @@ export function EmptyState({;
               <Link to={action && action.href}>{action && action.text}</Link>;
             </Button>;
           ) : (;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <Button
               size="lg" 
 
@@ -151,11 +184,14 @@ export function EmptyState({;
               size="lg" 
               className="bg-zion-purple hover:bg-zion-purple-light"
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               onClick={action.onClick}
             >
               {action.text}

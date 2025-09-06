@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from "react";
@@ -8,6 +9,22 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import {
 
+=======
+
+
+import {;
+  Form,;
+  FormControl,;
+  FormDescription,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage,;
+
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Form,
   FormControl,
   FormDescription,
@@ -16,14 +33,21 @@ import {
   FormLabel,
   FormMessage,;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from "@/components/ui/form";
 
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
@@ -34,6 +58,11 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const platform = watch("platform");
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { AppMetadataValues } from "./MetadataManager",
@@ -44,11 +73,16 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Badge } from "@/components/ui/badge",
 import { X } from "lucide-react",
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
@@ -60,6 +94,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const platform = watch("platform");
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -249,9 +285,12 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
             <FormField;
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               control={control}
               name="shortDescription"
               render={({ field }) => (
@@ -274,10 +313,14 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
             />;
             <FormField;
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               control={control}
               name="longDescription"
               render={({ field }) => (
@@ -287,10 +330,14 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                     <Textarea
                     <Textarea 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
@@ -316,10 +363,14 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
               
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
 
@@ -331,10 +382,14 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                     <button 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       type="button"
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300";
@@ -351,9 +406,12 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
             
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <FormField
               control={control}
               name="version"
@@ -362,6 +420,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
 
+<<<<<<< HEAD
                     <Input placeholder="e.g., 1.0.0" {...field} />
                   </FormControl>
                 </FormItem>
@@ -372,6 +431,11 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
       </CardContent>
     </Card>
 
+=======
+);
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     <Input 
                       placeholder="e.g., 1.0.0"
                       {...field}
@@ -386,8 +450,16 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
         </Form>;
       </CardContent>;
 
+<<<<<<< HEAD
     </Card>;
   );
+=======
+    </Card>);
+}
+;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

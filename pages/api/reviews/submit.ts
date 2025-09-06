@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
@@ -24,6 +25,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   }
@@ -63,6 +66,7 @@ if ( {) {
 
       };
 
+<<<<<<< HEAD
 
     if (!text |String(text).trim().length === 0) {
       return res.status(400).json({ error: "Review text is required" });
@@ -85,6 +89,12 @@ if ( {) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     const project = await findProjectById(projectId);
     if (!project) {
@@ -143,6 +153,33 @@ if ( {) {
 
       reported: false, reports: [],
 
+<<<<<<< HEAD
+=======
+      id: uuidv4(),
+      projectId,
+    fromRole,
+      fromId,
+    toRole,
+      toId,
+    rating,
+      text: String(text).trim(),
+      categories,
+      anonymous: Boolean(anonymous),
+      approved: false, // requires admin approval
+      reported: false,
+      reports: [],
+
+      removed: false,
+      createdAt: now};
+
+    await upsertReview(review);
+
+    return res.status(201).json({ message: 'Review submitted', reviewId: review.id })
+  } catch (error: any) {
+    return res.status(500).json({ error: 'Internal server error', details: error?.message })
+
+      anonymous: Boolean (anonymous),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       approved: false, // requires admin approval;
       reported: false,
       reports: [],
@@ -161,6 +198,7 @@ if ( {) {
       .json ({ error: "Internal server error", details: error?.message });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -180,6 +218,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

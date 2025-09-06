@@ -1,7 +1,22 @@
 
+<<<<<<< HEAD
 
 
 
+=======
+import { GradientHeading } from './GradientHeading';
+import { Check, Handshake, Search, Send } from './lucide-react';
+const steps = [;
+=======
+
+=======
+import { GradientHeading } from "./GradientHeading",
+import { Check, Handshake, Search, Send } from "lucide-react",
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const steps = [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
@@ -38,8 +53,55 @@ export function HowItWorksSection() {;
   return (
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+import { GradientHeading } from "./GradientHeading",;
+import { Check, Handshake, Search, Send } from "lucide-react",;
+const steps = [;
+  {;
+    title: "Post",;
+    description: "Publish your service, job, or equipment in minutes with our AI-powered form.",;
+    icon: Send},;
+  {;
+    title: "Match",;
+    description: "Our AI automatically matches your needs with the perfect providers or opportunities.",;
+    icon: Search},;
+  {;
+    title: "Hire/Buy",;
+    description: "Connect directly with matched providers and complete your transaction securely.",;
+    icon: Handshake},;
+  {;
+    title: "Done",;
+    description: "Enjoy hassle-free delivery and support for your technology solutions.",;
+    icon: Check}];
+export function HowItWorksSection() {;
+  return (;
+
+    <section className="py-20 bg-zion-blue">;
+      <div className="container mx-auto px-4">;
+        <div className="text-center mb-16">;
+          <GradientHeading>How It Works</GradientHeading>;
+          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">;
+            A simple four-step process to connect technology providers with clients;
+          </p>;
+        </div>;
+
+        <div className="relative">;
+          {/* Timeline line */}
+          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0 && 0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>;
+
+          <div className="space-y-12 md:space-y-0">;
+
+            {steps.map((step, index) => (;
+              <div;
+                key={step.title}
+                className={`flex flex-col md:flex-row items-center ${;
+                  index % 2 === 0 ? "md:flex-row-reverse" : "";
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
@@ -68,6 +130,7 @@ export function HowItWorksSection() {;
                 </div>;
               </div>;
             ))}
+<<<<<<< HEAD
 
           </div>
         </div>
@@ -75,7 +138,23 @@ export function HowItWorksSection() {;
     </section>
   )
 
+=======
+
+          </div>;
+        </div>;
+      </div>;
+    </section>;
+  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+};
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

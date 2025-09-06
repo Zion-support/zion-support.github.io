@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {logErrorToProduction} from '@/utils/productionLogger';
+<<<<<<< HEAD
 
 
 interface Props {
@@ -33,6 +34,8 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface Props {;
   children: React && React.ReactNode;
 }
@@ -60,6 +63,7 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
   render() {;
     if (this && this.state.hasError) {;
       return (
+<<<<<<< HEAD
 
 
         <div className='container py-8'>
@@ -142,6 +146,8 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
                   <RefreshCw className="h-4 w-4 mr-2" />
                   Try Again
                 </Button>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                 <Button onClick={() => window.location.reload()} variant="default">
@@ -152,6 +158,7 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
           </Card>
         </div>
       )
+<<<<<<< HEAD
 
 
     }
@@ -160,6 +167,8 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
     }
     return this.props.children
   }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -172,8 +181,11 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
 } ;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
                   onClick={() => window && window.location.reload()}
                   variant='default';

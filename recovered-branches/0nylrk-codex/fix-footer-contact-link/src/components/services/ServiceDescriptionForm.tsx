@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import React, { useState } from "react",
@@ -22,6 +23,8 @@ type FormData = z.infer<typeof formSchema>;
 import z from "zod",
 import { zodResolver } from "@hookform/resolvers/zod",
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -40,9 +43,16 @@ const form_schema = z.object ({
   target_audience: z.string ()}),
 type FormData = z.infer < typeof form_schema>;
 ;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
@@ -53,6 +63,7 @@ type FormData = z.infer<typeof formSchema>,
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void;
 }
+<<<<<<< HEAD
 
 
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
@@ -62,6 +73,13 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
   const [isLoading, setIsLoading] = useState(false),
   
 
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -86,6 +104,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
           targetAudience: data.targetAudience 
 
 
+<<<<<<< HEAD
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -134,6 +153,8 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       if (response.error) {
         throw new Error(response.error)
@@ -240,6 +261,7 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
 
                     <Input
                       {...field}
@@ -256,6 +278,9 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
             <FormField
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>;
@@ -275,10 +300,18 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
             />;
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+            <FormField
+              control={form && form.control}
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="keyFeatures"

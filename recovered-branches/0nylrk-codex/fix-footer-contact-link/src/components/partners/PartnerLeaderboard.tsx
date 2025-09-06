@@ -1,10 +1,17 @@
 
+<<<<<<< HEAD
 
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from "lucide-react";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+import { Badge } from '@/components / ui / badge';
+import { Crown, Medal, Trophy } from './lucide-react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface LeaderboardEntry {
 
@@ -40,6 +47,7 @@ export function PartnerLeaderboard() {
       rank: 1
       name: "AI Tech Guru"
       avatar: "", // URL would be here
+<<<<<<< HEAD
 
       referrals: 178
       earnings: 4500
@@ -49,18 +57,24 @@ export function PartnerLeaderboard() {
     }
     },
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       referrals: 178,
       earnings: 4500,
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
 
       id: "2"
@@ -100,6 +114,7 @@ export function PartnerLeaderboard() {
 
 
 
+<<<<<<< HEAD
       badges: ["newcomer"]
 
     }
@@ -126,6 +141,10 @@ export function PartnerLeaderboard() {
                   className={`flex items-center justify-between p-3 rounded-md ${
                     entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :
                     entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 interface LeaderboardEntry {;
@@ -280,6 +299,7 @@ function PartnerLeaderboard() {
           <CardDescription > This month's top - performing partners</CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
 
           <div className="space-y-4">;
             {leaderboard.length > 0 ? (;
@@ -293,6 +313,12 @@ function PartnerLeaderboard() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+          <div className="space - y-4">;
+            {leaderboard.length > 0 ? (
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -381,9 +407,29 @@ function PartnerLeaderboard() {
                         </Badge>;
                       )}
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    </div>;
+                  </div>;
+                </div>;
+              ));
+            ) : (;
+              <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">;
+                <Trophy className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />;
+                <p className="text-zion-slate-light mb-2">Leaderboard will appear here</p>;
+                <p className="text-xs text-zion-slate-light">;
+                  Start referring to earn your spot on the leaderboard;
+                </p>;
+              </div>;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             )}
           </div>
         </CardContent>

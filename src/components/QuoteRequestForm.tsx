@@ -17,6 +17,7 @@ import {Sparkles, Loader2} from 'lucide-react'
 import {z} from "zod"
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary"
 const serviceStepSchema = z.object({
+<<<<<<< HEAD
 
 
   serviceType: z.string().min(1)
@@ -43,6 +44,14 @@ export function QuoteRequestForm() {
   
 
 
+=======
+
+
+  serviceType: z.string().min(1),
+  specificItem: z.object({ id: z.string() })}),
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -57,6 +66,7 @@ export function QuoteRequestForm() {
       type: "fixed"
     }
     },
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -64,6 +74,10 @@ export function QuoteRequestForm() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     contactInfo: {
       name: ""
       email: ""
@@ -75,8 +89,12 @@ export function QuoteRequestForm() {
     setFormData(prev => ({
       ...prev;
 
+<<<<<<< HEAD
 
 };
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 };
 }

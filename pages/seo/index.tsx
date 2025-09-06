@@ -14,6 +14,27 @@ export default function SEOIndex() {
       <h1 className="text - 2xl font - semibold mb - 4">SEO Landing Pages</h1>;
       {slugs.length === 0 ? (
 
+<<<<<<< HEAD
+=======
+=======
+}
+
+=======
+        <div className="text - sm text - gray - 500">Generated pages will appear once deployed.</div>) : (
+        <ul className="list - disc ml - 5">;
+          {slugs.map ((s) => (
+            <li key={s}><a className="text - cyan - 600" href={`/seo/${s}`}>{s}</a></li>))}
+        </ul>)}
+    </div>);
+=======
+import React from 'react';
+export default function SEOIndex() {
+
+  return (
+    <div>
+      <h1 className="text-2xl font-semibold mb-4">SEO Landing Pages</h1>
+      {slugs.length === 0 ? (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="text-sm text-gray-500">Generated pages will appear once deployed.</div>
       ) : (
         <ul className="list-disc ml-5">
@@ -26,7 +47,14 @@ export default function SEOIndex() {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+<<<<<<< HEAD
 
+=======
+  );
+};
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <li key={s}><a className="text-cyan-600" href={`/seo/${s}`}>{s}</Link></li>
           ))  } catch (error) {
     console.error("Error:", error);
@@ -51,5 +79,8 @@ export default function SEOIndex() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

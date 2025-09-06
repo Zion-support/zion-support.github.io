@@ -19,10 +19,13 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 export default function UltraFuturisticBackground2035() {
 export default function UltraFuturisticBackground2035() {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -368,6 +371,7 @@ if ( {) {
             opacity: [0.4, 0.7, 0.4]
           }}
           transition={{
+<<<<<<< HEAD
 
             duration: 12
             repeat: Infinity
@@ -376,6 +380,9 @@ if ( {) {
 
             ease: 'easeInOut',            ease: "easeInOut"
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           }}
         />
         {/* Neon Glow Effects */}
@@ -434,8 +441,11 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (;
           <motion&& motion.div
@@ -488,17 +498,27 @@ if ( {) {
 
 
             }}
+<<<<<<< HEAD
           />
         ))}
 
 
 
+=======
+          />;
+=======
+
+
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
+<<<<<<< HEAD
 
 
               ease: 'easeInOut',            }}
@@ -510,6 +530,10 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
@@ -563,11 +587,28 @@ if ( {) {
           animate={{
             scaleX: [0, 1, 0]
             opacity: [0, 1, 0]
+<<<<<<< HEAD
 
+=======
+=======
+            ease: 'easeInOut',            ease: "easeInOut";
+          }}
+        />;
+        <motion.div;
+          className='absolute top - 1/2 left - 0 w - full h - px bg - gradient - to - r from - transparent via - cyan - 500 / 50 to - transparent';
+          animate={{
+            scale_x: [0, 1, 0],
+            opacity: [0, 1, 0],          className="absolute top - 1/2 left - 0 w - full h - px bg - gradient - to - r from - transparent via - cyan - 500 / 50 to - transparent";
+          animate={{
+            scale_x: [0, 1, 0];
+            opacity: [0, 1, 0];
+          transition={{
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         />;
 
 
+<<<<<<< HEAD
 
 
 
@@ -576,6 +617,8 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Quantum Dots */}
         {[...Array(15)].map((_, i) => (;
           <motion&& motion.div
@@ -880,6 +923,7 @@ if ( {) {
                 top: `${i * 5}%`;
               }}
               animate={{
+<<<<<<< HEAD
 
                 height: [8, 32, 8];
                 opacity: [0.3, 1, 0.3]
@@ -889,13 +933,20 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               transition={{
                 duration: 2 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
 
 
+<<<<<<< HEAD
                 ease: 'easeInOut',              }}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               }}
 
@@ -925,5 +976,12 @@ if ( {) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

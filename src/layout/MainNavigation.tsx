@@ -2,8 +2,11 @@ interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
   className?: string
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import Link from 'next / link';
 import { use_router } from 'next / router';
@@ -58,8 +61,11 @@ if ( {) {
 }
       e.prevent_default ();
       setLoginOpen (true);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       return;
 
     }
@@ -90,6 +96,7 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
 
 
   ]
@@ -162,6 +169,39 @@ import { MiniCartPreview } from '@/components/cart/MiniCartPreview',;
 import { LoginModal } from '@/components/auth/LoginModal',;
 
 
+=======
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+import { cn } from '@/lib/utils';
+import { useAuth } from '@/hooks/useAuth';
+import { useTranslation } from 'react-i18next';
+import { useFavorites } from '@/hooks/useFavorites';
+import { useCart } from '@/context/CartContext';
+import {;
+  Heart,;
+  MessageSquare,;
+  CreditCard,;
+  ShoppingCart,;
+  Wallet,;
+} from 'lucide-react';
+import { LanguageSelector } from '@/components/header/LanguageSelector';
+import {;
+  HoverCard,;
+  HoverCardTrigger,;
+  HoverCardContent,;
+} from '@/components/ui/hover-card';
+import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
+import { LoginModal } from '@/components/auth/LoginModal';import { LanguageSelector } from '@/components/header/LanguageSelector';
+import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';
+import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
+import { LoginModal } from '@/components/auth/LoginModal';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface MainNavigationProps {;
   isAdmin?: boolean,;
   unreadCount?: number,;
@@ -254,8 +294,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       </button>
       <nav
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         className={cn('navbar', className)}
         role='navigation'
         aria-label='Main navigation'>;
@@ -296,9 +339,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   onClick={() => setIsMobileMenuOpen(false)}
 
 
+<<<<<<< HEAD
                   className={cn(
                     'nav-link'
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     'nav-link',
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
 
@@ -315,6 +361,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -323,6 +370,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {link.name}
                 </Link>
               </li>
@@ -934,12 +986,16 @@ export default function Page() {; []);
                     )}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   >
                     <ShoppingCart className="w-4 h-4 mr-1" />
                     {t('nav.cartCart')}
                     {cartCount > 0 && (
+<<<<<<< HEAD
 
 
                       <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>
@@ -1100,16 +1156,22 @@ export default function Page() { [])
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }`};
 ;
                           {link.name}'`;
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         {activeDropdown === link.key && (;"
                           <div className="ml-4 mt-2 space-y-1">
                             {link.children.map((child: unknown (
@@ -1212,6 +1274,7 @@ export default function Page() { [])
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                         {cartCount}
                       </span>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1220,6 +1283,11 @@ export default function Page() { [])
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     )}
                   </Link>
                 </HoverCardTrigger>
@@ -1236,3 +1304,54 @@ export default function Page() { [])
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
+<<<<<<< HEAD
+=======
+
+
+                        {link && link.name}
+                      </Link>;
+                    )}
+                                on_click={: unknown setIsMobileMenuOpen (false)}
+                                {child.name}
+                              </Link>))}
+                          </div>)}
+                      </div>) : (
+                      <Link;
+                        to={link.href}`;
+                        className={`block px - 4 py - 3 text - sm font - medium rounded - md transition - colors ${is_active (link);
+                            ? 'bg - zion - cyan text - white'';
+                            : 'text - zion - slate - light hover:text - white hover:bg - white / 10'`;
+}`}
+                        on_click={: unknown setIsMobileMenuOpen (false)}
+                        {link.name}
+                      </Link>)}
+
+                  </Link>;
+                </HoverCardTrigger>;
+                <HoverCardContent>;
+                  <MiniCartPreview />;
+                </HoverCardContent>;
+              </HoverCard>;
+            </li>;
+          </ul>;
+
+          <div className='flex items - center gap - 2 mt - 4 md:mt - 0 md:ml - auto'>;
+
+            <LanguageSelector />;
+          </div>;
+        </div>;
+      </nav>;
+
+
+
+      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
+    </>));
+}
+
+;
+}
+
+  )
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

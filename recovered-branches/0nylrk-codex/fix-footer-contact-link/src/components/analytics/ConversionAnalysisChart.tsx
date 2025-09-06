@@ -1,7 +1,11 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+} from "@/components/ui/card";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface ConversionAnalysisProps {;
@@ -21,9 +25,25 @@ export function ConversionAnalysisChart(): any ({;
     data && data.length > 0;
       ? Object && Object.keys(data[0]).filter((key) => key !== "date");
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+import React from './react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ConversionAnalysisProps {
   data: Array < Record < string, any>>;
   time_range: string;
@@ -43,6 +63,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
   const dataKeys = data && data.length > 0
     ? Object.keys(data[0]).filter(key => key !== 'date')
     : [],
+<<<<<<< HEAD
 
 
 
@@ -51,6 +72,8 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -105,10 +128,15 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
     </Card>;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 
 }

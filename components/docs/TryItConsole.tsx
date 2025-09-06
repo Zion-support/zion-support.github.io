@@ -1,9 +1,16 @@
 
 
+<<<<<<< HEAD
   path: string; // full URL or relative
   requiresAuth: boolean;
 export default function TryItConsole({
 
+=======
+interface TryItProps {
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   method,
   path,
@@ -11,18 +18,49 @@ export default function TryItConsole({
 }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+interface TryItProps {;
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+  path: string; // full URL or relative;
+  requiresAuth: boolean;
+
+export default function TryItConsole(): any ({;
+  method,;
+  path,;
+  requiresAuth,;
+}: TryItProps) {;
+  const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
+  path: string, // full URL or relative;
+  requiresAuth: boolean;
+}
+
+export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {;
+  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
@@ -60,15 +98,21 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
   }
   return (
 
+<<<<<<< HEAD
     <div className='space-y-2'>
 
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
 
+=======
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       const res = await fetch(url, {
 
         method;
         headers;
 
+<<<<<<< HEAD
 
       setResponse(text)
     } catch (e: any) {
@@ -78,6 +122,17 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),;
+      const text = await res && res.text();
+      setResponse(text);
+    } catch (e: any) {;
+      setResponse(String(e?.message || e));
+    } finally {;
+      setLoading(false);
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   }
   return (
@@ -97,9 +152,28 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />
         </div>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+        <div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 
+=======
+          <textarea
+            className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
+            value={body}
+            onChange={e => setBody(e && e.target.value)}
+            placeholder='{ }';
+          />;
+=======
+<<<<<<< HEAD
+      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
 
       )}
@@ -186,6 +260,11 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+=======
+=======
+    <div className='space-y-2'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     }
@@ -196,7 +275,11 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
 
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

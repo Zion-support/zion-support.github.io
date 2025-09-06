@@ -5,7 +5,10 @@
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
       <div className='max-w-2xl w-full'>;
@@ -166,6 +169,11 @@ if ( {) {
             <Link 
               href="/"
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               <Home className="w-4 h-4 mr-2" />
               Go Home
@@ -290,6 +298,15 @@ export default function PageErrorBoundary({
       }
     )
   }
+<<<<<<< HEAD
+=======
+
+
+  const FallbackComponent = null;
+    fallback ||
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     ((props: FallbackProps) => (
       <PageErrorFallback {...props} pageName={pageName} />
     ))
@@ -303,8 +320,11 @@ export default function PageErrorBoundary({
 
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             <button;
               onClick={handleRefresh}
@@ -399,8 +419,11 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -408,6 +431,7 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
       }}
     >;
       {children}
+<<<<<<< HEAD
 
 
     </ErrorBoundary>
@@ -415,17 +439,22 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
 }
 }
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 } ;
 } ;
 };
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     </ErrorBoundary>;

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   id: string;
@@ -25,14 +28,33 @@ function StatusIcon(): any ({;
     </span>;
   );
 import { useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD
 
 
+=======
+import Head from 'next/head';
+interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
+interface ConnectionMap { [providerId: string]: any }
+
+
+interface ConnectionMap {;
+  [key: string]: boolean,;
+
+
+=======
+
+import { useEffect, useMemo, useState } from 'react';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {
     console.error("Error:", error);
@@ -166,6 +188,7 @@ export default function AdminIntegrationsPage() {
       await refresh();
 
 
+<<<<<<< HEAD
     } finally { setLoading(false);   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -216,10 +239,14 @@ export default function AdminIntegrationsPage() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
     return (
+<<<<<<< HEAD
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -289,6 +316,10 @@ export default function AdminIntegrationsPage() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   function RulesModal() {
     if (!selected) return null,
     const provider = providers.find(p => p.id === selected)!,
@@ -450,6 +481,7 @@ export default function AdminIntegrationsPage() {
             <li>;
               Talent Matched → GET{' '}
 
+<<<<<<< HEAD
               <code>
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
               </code>
@@ -533,6 +565,16 @@ export default function AdminIntegrationsPage() {
           </ul>
 
 
+=======
+
+        </section>
+
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         </section>
@@ -563,6 +605,11 @@ function ManualOverrideForm() {;
     });
     if (res && res.ok) setMessage('Saved');
     else setMessage('Error');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -653,6 +700,17 @@ function ManualOverrideForm() {
 
 
 
+<<<<<<< HEAD
+=======
+}
+}
+}
+}
+}
+}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ),
   } catch (error) {
     console.error("Error:", error);
@@ -663,5 +721,8 @@ function ManualOverrideForm() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -77,14 +77,18 @@ const LoadingSkeleton = () => React.createElement(
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Chart components (heavy - only load when needed)
 // TODO: Uncomment when Chart component is available
 // export const DynamicChart = dynamic(
 //   () => import('../components/charts/Chart'),
+<<<<<<< HEAD
 
 
 //   {//     loading: LoadingSkeleton,
@@ -217,6 +221,8 @@ export const DynamicVirtualList = dynamic(;
     ssr: false;
   }
 ),;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 // Usage examples: // Replace: import Chart from '../components/charts/Chart';

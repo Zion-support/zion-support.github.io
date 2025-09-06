@@ -38,9 +38,13 @@ import {
   ChevronDown,
   Cloud,;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from "lucide-react";
 const helpArticles = [
   {
@@ -159,18 +163,28 @@ const help_categories = [;
     articles: helpArticles
   }
 
+<<<<<<< HEAD
 
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState("");
+=======
+];
+
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     color: 'blue',
     articles: helpArticles
   }
 ];
+<<<<<<< HEAD
 
 export default function HelpPage() {
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {;
   Search,;
@@ -256,8 +270,11 @@ const helpCategories = [;
 ];
 
 export default function HelpPage() {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
 

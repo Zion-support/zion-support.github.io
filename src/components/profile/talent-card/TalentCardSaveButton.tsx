@@ -3,12 +3,20 @@
     if (onToggleSave) {
       onToggleSave(profileId, !localIsSaved)
     }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
 
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     toast({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites'
       description: localIsSaved
@@ -73,6 +81,7 @@ export function TalentCardSaveButton(): any ({;
 
     </button>
   )
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -80,6 +89,10 @@ export function TalentCardSaveButton(): any ({;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }variant: "default" 
 }) 
 };
@@ -87,11 +100,14 @@ export function TalentCardSaveButton(): any ({;
 }";
 };
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",
@@ -169,3 +185,12 @@ if ( {) {
     </button>;
   );
 }
+<<<<<<< HEAD
+=======
+}/> </button>);
+}";
+}
+
+
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

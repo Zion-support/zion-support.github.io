@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -48,6 +49,32 @@ const service = useMemo(() => {
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
       } catch {
 
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useMemo } from 'react';
+import Head from 'next / head';
+import {GetStaticPaths, GetStaticProps} from 'next';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         return false;
       }
     });
@@ -81,6 +108,10 @@ import path from 'path';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 type Service = typeof enhancedRealMicroSaasServices[number];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices
     .concat(extraServices as Service[], additionalEnhancedServices as Service[])
@@ -104,6 +135,7 @@ function getAllServices(): Service[] {
 		.concat(real2025Q4Additions as unknown as Service[]);
 		.concat(realMarketServicesExtended as unknown as Service[]);
 		.concat(real2026Q1Additions as unknown as Service[]);
+<<<<<<< HEAD
 
 		.concat(real2026Additions as unknown as Service[]);
 		.concat(added2026Q2Services as unknown as Service[]);
@@ -128,6 +160,15 @@ export async function getStaticPaths() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+	const services = getAllServices(),
+	const slugs = new Set<string>(),
+	 })),;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 		fallback: false;
 	}
 export async function getStaticProps() {
@@ -140,6 +181,7 @@ export async function getStaticProps() {
 	return {props: { service }
 	}
 
+<<<<<<< HEAD
 export default function RootServiceDetailPage({ service }: { service: Service }) {const canonical = `https://ziontechgroup.com/${toSlug(service.id |service.name |'')}`,	return (
 
   } catch (error) {
@@ -363,6 +405,9 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
@@ -386,6 +431,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 					dangerouslySetInnerHTML={{
 						__html: JSON && JSON.stringify(
 							{
+<<<<<<< HEAD
 
 								"@context": "https://schema.org"
 								"@type": "Service",								name: service.name
@@ -514,6 +560,11 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								{(service.features || []).slice(0, 12).map((f: string) => (
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
@@ -531,9 +582,12 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 							</div>
 						</Card>
 					</div>
@@ -546,11 +600,20 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 									<Phone className="w-4 h-4" /> +1 302 464 0950
 								</Link>
 								</a>
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+								</a>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
 								</a>
@@ -577,7 +640,10 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 								"@context": "https://schema && schema.org",
@@ -692,7 +758,18 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 
 
 
+<<<<<<< HEAD
 
+=======
+;
+
+}
+}
+}
+}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 	);
   } catch (error) {
     console.error("Error:", error);
@@ -738,7 +815,12 @@ if ( {) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

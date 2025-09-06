@@ -1,7 +1,12 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {useToast} from "@/hooks/use-toast";
 import {useNavigate} from "react-router-dom";
@@ -18,11 +23,19 @@ import {QuoteFormData} from "@/types/quotes";
 import {Sparkles} from "lucide-react";
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
 
+<<<<<<< HEAD
 export function QuoteRequestForm() {
 
 export function QuoteRequestForm() {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+export function QuoteRequestForm() {;
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
@@ -51,8 +64,11 @@ export function QuoteRequestForm() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
@@ -312,7 +328,37 @@ function QuoteRequestForm() {
             <div className="flex justify-between mt-8">
               {currentStep !== "service" && (
 
+<<<<<<< HEAD
 
+=======
+=======
+                <Button
+                  variant="outline"
+                  onClick={handleBack}
+                  className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
+                >
+                  Back
+                </Button>
+              )}
+              {currentStep !== "summary" ? (
+                <Button
+                  onClick={handleNext}
+                  className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                >
+                  Continue
+                </Button>
+              ) : (
+                <Button
+                  onClick={handleSubmit}
+                  disabled={isSubmitting}
+                  className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                >
+                  {isSubmitting ? "Submitting..." : "Submit Request"}
+                </Button>
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { useNavigate } from "react-router-dom",;
@@ -490,6 +536,18 @@ export function QuoteRequestForm() {;
               )}
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+            </div>;
+          </CardContent>;
+        </Card>;
+      </div>;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

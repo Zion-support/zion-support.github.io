@@ -1,6 +1,10 @@
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
@@ -17,6 +21,48 @@ import {Button} from '@/components / ui / button';
 import {toast} from '@/hooks / use - toast';
 import {Share, Users} from 'lucide-react';
 
+<<<<<<< HEAD
+=======
+import {use_navigate} from 'react-router-dom';
+export default /**
+ * ReferralsPage - Function description
+ */
+function ReferralsPage() {
+  const navigate = use_navigate ();
+  const { is_authenticated } = use_auth ();
+  const {
+    is_loading;
+    referral_code;
+
+    referrals;
+    rewards;
+    stats;
+    getReferralLink;
+    copyReferralLink;
+
+
+
+import {useEffect} from 'react';
+import {useAuth} from '@/hooks/useAuth';
+import {useReferrals} from '@/hooks/useReferrals';
+import {ReferralStats} from '@/components/referrals/ReferralStats';
+import {ReferralLink} from '@/components/referrals/ReferralLink';
+import {ReferralTable} from '@/components/referrals/ReferralTable';
+import {RewardsCard} from '@/components/referrals/RewardsCard';
+import {ReferralGuide} from '@/components/referrals/ReferralGuide';
+import {ReferralLeaderboard} from '@/components/referrals/ReferralLeaderboard';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Button} from '@/components/ui/button';
+import {toast} from '@/hooks/use-toast';
+import {Share, Users} from 'lucide-react';
+import {useNavigate} from 'react-router-dom';
+export default function ReferralsPage() {;
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -61,6 +107,7 @@ export default function ReferralsPage() {
 
   return (
 
+<<<<<<< HEAD
     <div className="container max-w-7xl py-10">
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">
         <div>
@@ -110,6 +157,12 @@ export default function ReferralsPage() {
   )
 
 
+=======
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -199,11 +252,19 @@ export default function ReferralsPage() {;
           <ReferralLeaderboard />;
         </div>;
       </div>;
+<<<<<<< HEAD
 
     </div>;
   );
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

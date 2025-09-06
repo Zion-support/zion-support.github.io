@@ -18,8 +18,12 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'message':;
       return <span className="text-blue-500">💬</span>;
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from '@/components/icons',
@@ -31,6 +35,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { useNavigate } from 'react-router-dom',
 import { Notification, NotificationType } from '@/context/notifications',
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -51,6 +56,8 @@ export const getTypeIcon = (type: NotificationType) => {
     default:
       return <span className="text-gray-500">📣</span>
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -59,6 +66,38 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'message':
 
 
+<<<<<<< HEAD
+=======
+    case 'system':;
+      return <span className="text-yellow-500">⚠️</span>,;
+    default:;
+      return <span className="text-gray-500">📣</span>;
+  }
+};
+=======
+
+  }
+};
+
+interface NotificationItemProps {
+  notification: Notification,
+  onMarkAsRead: (id: string) => Promise<void>,
+  onDismiss: (id: string) => Promise<void>
+}
+
+export const NotificationItem: React.FC<NotificationItemProps> = ({ 
+  notification, 
+  onMarkAsRead, 
+  onDismiss 
+}) => {;
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (!notification.read) {
+      onMarkAsRead(notification.id)
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from '@/components/icons',;
@@ -112,19 +151,26 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     if (!notification.read) {;
       onMarkAsRead(notification.id);
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
       navigate(notification.action_url)
     }
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   },
 
   };
@@ -168,6 +214,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
         </div>
       </div>
       {/* Action buttons that appear on hover */}
+<<<<<<< HEAD
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">
         <TooltipProvider>
           <Tooltip>
@@ -213,6 +260,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     </div>
   )
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
         <TooltipProvider>;
           <Tooltip>;
@@ -226,10 +275,18 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
           </Tooltip>;
         </TooltipProvider>;
       </div>;
+<<<<<<< HEAD
 
     </div>;
   );
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };

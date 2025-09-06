@@ -9,4 +9,8 @@ import _React from 'react' export default function Home() { return ( <main style
 import React from \'react\' export default function Home() { return ( <main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup.com</p></main> ) }\"
 import _React from 'react' export default function Home() { return ( <main style={{ "padding": "'40px'","fontFamily": 'sans-serif' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup.com</p></main> ) }"
 ;
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

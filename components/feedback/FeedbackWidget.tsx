@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
+<<<<<<< HEAD
 
 export type FeedbackWidgetProps = {;
   responseId?: string;
@@ -35,6 +36,9 @@ export default function FeedbackWidget({
     () => responseId |uuidv4()
     [responseId]
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
   const submit = async () => {;
     if (!rating) {;
@@ -394,14 +398,21 @@ if ( {) {
         </div>
       )}
     </div>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

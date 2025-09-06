@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import { useParams  } from 'react-router-dom';
@@ -15,6 +16,13 @@ export default function ProjectRoom() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+  const { projectId } = useParams() as { projectId: string },;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
@@ -71,8 +79,11 @@ export default function ProjectRoom() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
   const startVideoCall = () => {
     setIsInCall(true),
@@ -118,6 +129,7 @@ export default function ProjectRoom() {;
     const mockUsers = [
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+<<<<<<< HEAD
 
 
   ]),;
@@ -154,6 +166,9 @@ export default function ProjectRoom() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   
   return (
     <>;
@@ -347,10 +362,109 @@ export default function ProjectRoom() {;
   $2
 
 }
+<<<<<<< HEAD
 
+=======
+      setCallParticipants (prev => [...prev, random_user]);
+      toast (`${random_user.name} joined the call`);
+    }
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+          <TabsContent value="video" className="space - y-4">;
+            <Card>;
+              <CardHeader>;
+                <CardTitle > Video Meetings</CardTitle>;
+                <CardDescription > Schedule and join video calls</CardDescription>;
+              </CardHeader>;
+              <CardContent className="min - h-[400px] p - 4">;
+                {isInCall ? (
+                  <div className="space - y-4">;
+                    <VideoCallRoom;
+                      room_id={`project-${project_id}`}
+                      participants={call_participants}
+                      on_leave={endVideoCall}
+                    />;
+                    {/* This button is just for demo / testing purposes */}
+                    <div className="flex justify - center mt - 4">;
+                      <Button variant="outline" on_click={simulateUserJoining} className="text - sm">;
+                        Simulate user joining (demo only);
+                      </Button>;
+                    </div>;
+                  </div>) : (
+                  <div className="flex flex - col items - center justify - center h-[400px] space - y-4">;
+                    <p className="text - muted - foreground">Start a video call with your team</p>;
+                    <div className="flex gap - 2">;
+                      <Button on_click={startVideoCall} className="bg - zion - blue hover:bg - zion - blue - light gap - 2">;
+                        <Video className="h - 4 w - 4" />;
+                        Start Video Call;
+                      </Button>;
+                    </div>;
+                    <div className="text - xs text - muted - foreground mt - 4">;
+                      <p > Recent calls:</p>;
+                      <p > No recent calls for this project</p>;
+                    </div>;
+                  </div>)}
+              </CardContent>;
+            </Card>;
+          </TabsContent>;
+          <TabsContent value="calendar" className="space - y-4">;
+            <Card>;
+              <CardHeader>;
+                <CardTitle > Project Calendar</CardTitle>;
+                <CardDescription > Schedule and manage events</CardDescription>;
+              </CardHeader>;
+              <CardContent className="h-[400px]">;
+                <div className="flex items - center justify - center h - full">;
+                  <p className="text - muted - foreground">Calendar will be implemented soon</p>;
+                </div>;
+              </CardContent>;
+            </Card>;
+          </TabsContent>;
+          <TabsContent value="team" className="space - y-4">;
+            <Card>;
+              <CardHeader>;
+                <CardTitle > Team Members</CardTitle>;
+                <CardDescription > Manage project participants</CardDescription>;
+              </CardHeader>;
+              <CardContent className="h-[400px]">;
+                <div className="flex items - center justify - center h - full">;
+                  <p className="text - muted - foreground">Team management will be implemented soon</p>;
+                </div>;
+              </CardContent>;
+            </Card>;
+          </TabsContent>;
+          <TabsContent value="settings" className="space - y-4">;
+            <Card>;
+              <CardHeader>;
+                <CardTitle > Project Settings</CardTitle>;
+                <CardDescription > Configure project parameters</CardDescription>;
+              </CardHeader>;
+              <CardContent className="h-[400px]">;
+                <div className="flex items - center justify - center h - full">;
+                  <p className="text - muted - foreground">Settings will be implemented soon</p>;
+
+                </div>;
+              </CardContent>;
+            </Card>;
+          </TabsContent>;
+        </Tabs>;
+      </main>;
+      <Footer />;
+
+    </>);
+}
+
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,17 +1,34 @@
 
+<<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
 
 
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {Configuration, OpenAIApi} from "npm: openai@4 ;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
+
+=======
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -27,6 +44,7 @@ serve(async (req) => {
     const { query } = await req && req.json();
     if (!query) {
       return new Response(
+<<<<<<< HEAD
 
         JSON.stringify({ error: "Query is required" });
         JSON.stringify({ error: "Query is required" }),
@@ -38,6 +56,12 @@ serve(async (req) => {
     }
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
 
+=======
+
+
+    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     if (!openAiKey) throw new Error("OPENAI_API_KEY is not set");
     const configuration = new Configuration({ apiKey: openAiKey });
     const openai = new OpenAIApi(configuration);
@@ -74,6 +98,7 @@ serve(async (req) => {
     }
     return new Response(
 
+<<<<<<< HEAD
       JSON.stringify({ filters });
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
@@ -85,6 +110,17 @@ serve(async (req) => {
     )
 
 
+=======
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
+const cors_headers = {
+  "Access - Control - Allow - Origin": "*",
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       JSON.stringify({ filters }),
 
 ;
@@ -140,9 +176,15 @@ if ( {) {
     );
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 });

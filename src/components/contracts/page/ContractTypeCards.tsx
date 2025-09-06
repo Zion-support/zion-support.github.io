@@ -38,6 +38,7 @@
       </Card>
       
       <Card>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -46,6 +47,11 @@
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2">
@@ -90,11 +96,14 @@
           </Button>
         </CardFooter>
       </Card>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </div>
 
 

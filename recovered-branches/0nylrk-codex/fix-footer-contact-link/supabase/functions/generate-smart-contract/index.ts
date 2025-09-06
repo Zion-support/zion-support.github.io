@@ -1,7 +1,21 @@
 
+<<<<<<< HEAD
 
 
 
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+=======
+
+
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts",
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
@@ -32,8 +46,16 @@ serve(async (req) => {
     // Create the smart contract prompt for OpenAI
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
+<<<<<<< HEAD
 
 
+=======
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -69,8 +91,11 @@ serve(async (req) => {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -96,7 +121,11 @@ serve(async (req) => {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     prompt += `
     Format the code properly with comments explaining each section. Include a simple deployment script.
     `;
@@ -125,6 +154,7 @@ serve(async (req) => {;
     if (!response && response.ok) {
       throw new Error(data && data.error?.message || 'Failed to generate smart contract')
     }
+<<<<<<< HEAD
     const solidityCode = data.choices[0].message.content.trim();
     return new Response(JSON.stringify({
       success: true
@@ -145,6 +175,46 @@ serve(async (req) => {;
         status: 500, 
 
 
+=======
+
+    const solidityCode = data && data.choices[0].message && message.content.trim();
+    
+    return new Response(JSON && JSON.stringify({ 
+      success: true, 
+      solidityCode 
+
+=======
+;
+    const data = await response.json ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error (data.error?.message || 'Failed to generate smart contract');
+    }
+    const solidity_code = data.choices[0].message.content.trim ();
+;
+    return new Response (JSON.stringify ({
+      success: true,
+      solidity_code;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    }), {
+      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+  } catch (error) {
+
+      JSON && JSON.stringify({ 
+        success: false, 
+        error: error && error.message || 'Failed to generate smart contract' 
+
+      });
+
+
+      { 
+        status: 500, 
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     prompt += `;
     Format the code properly with comments explaining each section. Include a simple deployment script.;
@@ -186,10 +256,15 @@ serve(async (req) => {;
         status: 500,;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }

@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import React, { Suspense } from "react";
@@ -6,7 +34,22 @@ import "./App ;
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 
+<<<<<<< HEAD
 
+=======
+import {;
+  AuthRoutes,;
+  DashboardRoutes,;
+  MarketplaceRoutes,;
+  TalentRoutes,;
+  AdminRoutes,;
+  MobileAppRoutes,;
+  ContentRoutes,;
+  ErrorRoutes,;
+  EnterpriseRoutes,;
+  CommunityRoutes,;
+  DeveloperRoutes,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from "./routes";
 const Home = React && React.lazy(() => import("./pages/Home"));
 const AIMatcherPage = React && React.lazy(() => import("./pages/AIMatcher"));
@@ -43,6 +86,7 @@ const baseRoutes = [;
   { path: "/community", element: <CommunityPage /> },;
   { path: "/contact", element: <ContactPage /> },;
 ];
+<<<<<<< HEAD
 
 
 import React, { Suspense } from 'react',
@@ -53,6 +97,8 @@ import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const App = () => {;
 
@@ -64,8 +110,19 @@ const App = () => {;
             {baseRoutes && baseRoutes.map(({ path, element }) => (;
               <Route key={path} path={path} element={element} />;
             ))}
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+import React, { Suspense } from './react';
+import { Routes, Route  } from './react-router-dom';
+import "./App.css";
+import { ThemeProvider  } from './components / ThemeProvider';
+import { WhitelabelProvider  } from './context / WhitelabelContext';
+import { Toaster  } from './components / ui / toaster';
+import { Toaster, as, SonnerToaster  } from './components / ui / sonner';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -165,6 +222,11 @@ export default App;
 },
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default App;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -1,7 +1,12 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
@@ -13,6 +18,10 @@ import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -28,7 +37,11 @@ import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 
@@ -39,6 +52,7 @@ export function MobileResumeBuilder() {
   
   const renderStepContent = () => {
     switch (currentStep) {
+<<<<<<< HEAD
 
       case "basics": return <BasicsStep />,
       case "experience":
@@ -131,6 +145,10 @@ function BasicsStep() {
 }
 
 
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
 
@@ -237,6 +255,14 @@ function BasicsStep() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
+=======
+
+
+          <Textarea 
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -676,11 +702,62 @@ function SkillsStep() {;
                 <Select
                   value={skill && skill.proficiency}
                   onValueChange={(value) => updateSkill(skill && skill.id, "proficiency", value)}
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+;
+  const add_skill = () =>: any {
+    const new_id = (skills.length + 1).to_string ();
+    set_skills ([...skills, { id: new_id, name: "", proficiency: "beginner" }]);
+  }
+;
+  const remove_skill = (id: string) =>: any {
+    set_skills (skills.filter (skill => skill.id !== id));
+  }
+;
+  const update_skill = (id: string, field: string, value: string) =>: any {
+    set_skills (skills.map (skill =>;
+      skill.id === id ? { ...skill, [field]: value } : skill));
+  }
+;
+  return (
+    <div className="space - y-4">;
+      <Card>;
+        <CardContent className="p - 4">;
+          <div className="space - y-4">;
+            {skills.map ((skill) => (
+              <div key={skill.id} className="flex items - center gap - 2">;
+                <Input;
+                  placeholder="Skill (e.g. JavaScript, Figma)";
+                  value={skill.name}
+                  on_change={(e) => update_skill (skill.id, "name", e.target.value)}
+                  className="flex - 1";
+                />;
+                <Select;
+                  value={skill.proficiency}
+                  onValueChange={(value) => update_skill (skill.id, "proficiency", value)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                >;
+                  <SelectTrigger className="w-[130px]">;
+                    <SelectValue placeholder="Level" />;
+                  </SelectTrigger>;
+                  <SelectContent>;
+                    <SelectItem value="beginner">Beginner</SelectItem>;
+                    <SelectItem value="intermediate">Intermediate</SelectItem>;
+                    <SelectItem value="advanced">Advanced</SelectItem>;
+                    <SelectItem value="expert">Expert</SelectItem>;
+                  </SelectContent>;
+                </Select>;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 )}
               </div>;
             ))}
@@ -718,6 +795,7 @@ function SkillsStep() {;
 }
 
 }
+<<<<<<< HEAD
 ;
 ;
 
@@ -726,3 +804,7 @@ function SkillsStep() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

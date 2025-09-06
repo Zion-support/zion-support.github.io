@@ -56,8 +56,11 @@ body {
   background-color: #ffffff;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -68,7 +71,10 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 /* Focus styles for better accessibility */
@@ -355,7 +361,11 @@ body {
   .animate-bounce {
     animation: none;
   }
+<<<<<<< HEAD
 }
 
 
 
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

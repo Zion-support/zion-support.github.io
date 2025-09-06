@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return {
     props: {
       docs: content as DocsContent,
@@ -107,6 +110,13 @@ export default function PrintDocs(): any ({ docs }: PageProps) {;
   useEffect(() => {;
     const id = setTimeout(() => window && window.print(), 500);
 
+<<<<<<< HEAD
+=======
+export default function PrintDocs({ docs }: PageProps) {
+  useEffect(() => {;
+    const id = setTimeout(() => window.print(), 500);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return () => clearTimeout(id);
   }, []);
   return (
@@ -212,12 +222,32 @@ export default function PrintDocs({ docs }: PageProps) {
             <h2 className=&quot;text-2xl font-semibold mb-2&quot;>{s.title}</h2>
             {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
             {s.code && s.code.map((c, i) => (
+<<<<<<< HEAD
 
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+              <pre key={i} className=&quot;mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap&quot;>{c.content}</pre>
+=======
+              <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c.content}</pre>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            ))}
+          </section>
+        ))}
+      </div>
+    </div>
+<<<<<<< HEAD
+  )
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -226,3 +256,5 @@ export default function PrintDocs({ docs }: PageProps) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

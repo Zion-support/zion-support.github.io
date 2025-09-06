@@ -1,10 +1,18 @@
 
+<<<<<<< HEAD
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return twMerge(clsx(inputs));}
+=======
+=======
+
+
+export function cn(...inputs: ClassValue[]) {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));
 }
@@ -40,6 +48,7 @@ export function formatCurrency(amount: number, currency = "USD"): string {
 >>>>>>> origin/main
 }
 }
+<<<<<<< HEAD
 
 
 
@@ -48,6 +57,44 @@ export function formatCurrency(amount: number, currency = "USD"): string {
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+<<<<<<< HEAD
+=======
+=======
+}
+import { type ClassValue, clsx  } from './clsx';
+import { tw_merge  } from './tailwind - merge';
+;
+export /**
+ * cn - Function description
+ */
+function cn() {
+  return tw_merge (clsx (inputs));}
+export function format_date (date: Date | string | number): string {
+  return new Intl.DateTimeFormat ("en - US", {
+    month: "long", day: "numeric",
+    year: "numeric",
+}
+export function format_currency (amount: number, currency = "USD"): string {
+  return new Intl.NumberFormat ("en - US", {
+    style: "currency", currency,
+  }).format (amount);
+}
+}
+;
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 };
@@ -55,7 +102,11 @@ export function formatCurrency(amount: number, currency = "USD"): string {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

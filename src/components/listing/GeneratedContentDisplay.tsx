@@ -6,8 +6,11 @@
             {content && content.tags.map((tag, index) => (;
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -47,6 +50,7 @@ interface GeneratedContentDisplayProps {;
 }
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
+<<<<<<< HEAD
 
 
 
@@ -62,6 +66,11 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -84,6 +93,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
               >                {tag}              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
         
         <div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -91,6 +101,10 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
@@ -104,9 +118,12 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
             ))}
 
         
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
         <div>
@@ -269,3 +286,24 @@ function GeneratedContentDisplay() {
     </Card>;
   );
 }
+<<<<<<< HEAD
+=======
+
+        <Button;
+          on_click={on_apply}
+          className='w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white';
+        >;
+          Apply to My Listing;
+          <ArrowRight className='ml - 2 h - 4 w - 4' />        </Button>;
+      </CardFooter>;
+    </Card>);
+}          className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover: from - zion - cyan - light hover:to - zion - cyan text - white";
+        >;
+          Apply to My Listing;
+          <ArrowRight className="ml - 2 h - 4 w - 4" />;
+      </CardFooter>;
+    </Card>);
+}
+
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

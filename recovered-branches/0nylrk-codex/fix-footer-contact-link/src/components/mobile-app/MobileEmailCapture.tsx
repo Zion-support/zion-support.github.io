@@ -1,6 +1,12 @@
 
+<<<<<<< HEAD
 
 
+=======
+import React, { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const MobileEmailCapture: React.FC = () => {
   const [email, set_email] = useState ("");
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -44,6 +50,10 @@ if (return) {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -64,7 +74,11 @@ export const MobileEmailCapture: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 1000)),
       setIsSuccess(true),
       setEmail(""),
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       setTimeout(() => {
         setIsSuccess(false)
       }, 5000)
@@ -78,6 +92,7 @@ export const MobileEmailCapture: React.FC = () => {
 
 
   return (
+<<<<<<< HEAD
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
@@ -144,6 +159,9 @@ export const MobileEmailCapture: React.FC = () => {;
   return (
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">;
       <div className="container mx-auto px-4">;
         <div className="max-w-3xl mx-auto text-center">;
@@ -179,10 +197,18 @@ export const MobileEmailCapture: React.FC = () => {;
           </p>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
     </section>;
   );
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };

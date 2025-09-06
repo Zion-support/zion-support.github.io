@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Skill} from '@/types/resume';
@@ -9,7 +12,10 @@ import {handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useSkills() {;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -21,6 +27,10 @@ export function useSkills() {;
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Skill } from '@/types/resume',;
@@ -37,8 +47,11 @@ export function useSkills() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     
     setIsLoading(true),
@@ -69,6 +82,7 @@ export function useSkills() {;
       return handleResumeError(e, 'Could not add skill')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 
     }
   }
@@ -78,6 +92,12 @@ export function useSkills() {;
       return false
 
 
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     setIsLoading(true),;
     setError(null),;
@@ -106,8 +126,11 @@ export function useSkills() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     
     setIsLoading(true),
@@ -128,6 +151,7 @@ export function useSkills() {;
       return handleResumeError(e, 'Could not delete skill')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
     }
   }
   return {
@@ -136,10 +160,28 @@ export function useSkills() {;
     addSkill;
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
+=======
+=======
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {Skill} from '@/types / resume';
+import {use_auth} from '@/hooks / use_auth';
+import {handleResumeError, showSuccessToast} from './useResumeUtils';
+export /**
+ * use_skills - Function description
+ */
+function use_skills() {
+  const { user } = use_auth ();
+  const [is_loading, setIsLoading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
   const add_skill = async (resume_id: string, skill: Skill): Promise < boolean> => {
     // Check condition
@@ -159,8 +201,11 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

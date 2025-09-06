@@ -1,10 +1,23 @@
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+;
+
+export interface TokenTransaction {
+=======
+
+
+export interface TokenTransaction {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -14,11 +27,19 @@ import path from 'path';
   metadata?: Record < string, any>;
 }
 
+<<<<<<< HEAD
 export interface TokenConfig {
 
 export interface TokenConfig {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+export interface TokenConfig {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   name: string;
   symbol: string;
   total_supply: number;
@@ -99,6 +120,7 @@ function save_config (config: TokenConfig): void {
 function getDefaultConfig (): TokenConfig {
 
   return {
+<<<<<<< HEAD
 
     name: 'ZION Token'
     symbol: 'ZION$'
@@ -111,14 +133,19 @@ function getDefaultConfig (): TokenConfig {
 }
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     name: 'ZION Token',
     symbol: 'ZION$',
 
+<<<<<<< HEAD
 
 export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
 
@@ -132,6 +159,7 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
   saveTransactions(transactions);
   return newTransaction;
 }
+<<<<<<< HEAD
 
 export function getConfig(): TokenConfig {
   return loadConfig();
@@ -140,6 +168,8 @@ export function setConfig(config: TokenConfig): void {
   saveConfig(config);
 }
 export function getUserBalance(userId: string): number {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -154,7 +184,10 @@ export function setConfig(config: TokenConfig): void {;
 export function getUserBalance(userId: string): number {;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const transactions = loadTransactions();
   let balance = 0;
   for (const tx of transactions) {

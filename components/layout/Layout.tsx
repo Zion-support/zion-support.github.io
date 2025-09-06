@@ -1,6 +1,11 @@
 
 
 import React from 'react';
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { ReactNode } from 'react';
 
 >>>>>>> origin/automation-improvements-final
@@ -10,8 +15,11 @@ import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/automation-improvements-final
 
@@ -20,11 +28,15 @@ import Footer from '../Footer';
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -85,10 +97,108 @@ import Header from './Header;
 import Footer from './Footer;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  "./Footer"import Footer  from "react./Footer,;
+export default function Layout({ children }: LayoutProps) {;
+  return (;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 <div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;
     </div>;
   )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
 }}
+<<<<<<< HEAD
 
 
+=======
+=======
+type LayoutProps = {children: React && React.ReactNode;
+};
+  children: React && React.ReactNode}
+export: default function Layout() {;
+  return: <div>{children}</div>;
+React from";
+  "react""import Footer from "react";
+<<<<<<< HEAD
+  "./Footer"import Footer  from "react./Footer,;
+export default function Layout(): any ({ children }: LayoutProps) {;
+  return (
+
+export: default /**
+ * Layout - Function description
+ */
+function Layout() {
+;
+  return: <div>{children}</div>;
+React from";
+  "react""import Footer from './react';
+  "./Footer"import Footer  from "react./Footer,
+export default /**
+ * Layout - Function description
+ */
+function Layout() {
+  return (
+<div className="min - h-screen flex flex - col>      <Header />"      <main className="flex - 1 pt - 16>        {children}"      </main><Footer />;
+    </div>)"; type: LayoutProps = { children: React.ReactNode, } export default /**
+ * Layout - Function description
+ */
+function Layout() { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, } export default /**
+ * Layout - Function description
+ */
+function Layout() { return <div>{children}</div> } " ;
+}}
+
+=======
+    <div className="min-h-screen bg-gray-50">
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export default function Layout({ children }: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      {children  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

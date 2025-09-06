@@ -1,6 +1,21 @@
 
 
 
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
+;
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+  const state = readState(),
+  const events = filterEventsByScope(state.events, state.config.scope),
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
@@ -17,9 +32,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const events = filterEventsByScope(state.events, state.config.scope),
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const totalsByToken: Record<string, number> = {},
   const contributionsBySubject: Record<string, number> = {},
   let globalVotes = 0,
@@ -33,6 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } else if (e.type === "proposal") {
 
 
+<<<<<<< HEAD
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
     }
   }
@@ -46,9 +66,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     treasuryTotals: totalsByToken
     topContributors
     totalVoteCount: globalVotes
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     lastSyncedAt: state.lastSyncedAt})
       const p = e.payload as any,
+<<<<<<< HEAD
 
 
     treasuryTotals: totalsByToken,
@@ -138,3 +163,7 @@ export default function handler(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

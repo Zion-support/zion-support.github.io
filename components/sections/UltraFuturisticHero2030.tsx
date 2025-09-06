@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
   ArrowRight
   Zap
@@ -25,6 +26,10 @@ import {
   Mail;} from 'lucide-react';import {
   ArrowRight, Zap, Brain, Atom, Rocket, Star
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ArrowRight,
   Zap,
   Brain,
@@ -46,7 +51,10 @@ import {
   ArrowRight, Zap, Brain, Atom, Rocket, Star, ;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   TrendingUp, Shield, Globe, Cpu, Sparkles;
   Play, CheckCircle, Award, Users, Clock, Phone, Mail
 const contactInfo = {
@@ -101,6 +109,7 @@ export default function UltraFuturisticHero2030() {
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>  { number: '2030', label: 'Future Ready', icon: Star };
 ];
 export default function UltraFuturisticHero2030() {
+<<<<<<< HEAD
 
   return (
 
@@ -119,10 +128,37 @@ export default function UltraFuturisticHero2030() {
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
+<<<<<<< HEAD
 
+=======
+  };
+  {;
+    icon: Rocket,;
+    title: 'Space Technology',;
+    description: 'Automated space exploration and resource utilization';
+  };
+  {;
+    icon: Shield,;
+    title: 'Quantum Security',;
+    description: 'Unbreakable encryption with quantum key distribution',;
+  },;
+  {;
+    icon: Rocket,;
+    title: 'Space Technology',;
+    description: 'Automated space exploration and resource utilization',;
+  },;
+  {;
+    icon: Shield,;
+    title: 'Quantum Security',;
+    description: 'Unbreakable encryption with quantum key distribution',;
+  },];    description: 'Unbreakable encryption with quantum key distribution';
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ];
 
 
@@ -132,8 +168,12 @@ export default function UltraFuturisticHero2030() {
         <motion&& motion.div
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
@@ -145,11 +185,15 @@ export default function UltraFuturisticHero2030() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -213,6 +257,7 @@ export default function UltraFuturisticHero2030() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -220,6 +265,15 @@ export default function UltraFuturisticHero2030() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -230,11 +284,15 @@ export default function UltraFuturisticHero2030() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Link
@@ -280,9 +338,18 @@ export default function UltraFuturisticHero2030() {
         </motion.div>
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -326,14 +393,21 @@ export default function UltraFuturisticHero2030() {
 
 
           transition={{ duration: 0.8, delay: 1.2 }}
+<<<<<<< HEAD
 
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'        >
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >
           {features.map((feature, index) => (
             <motion.div
@@ -566,9 +640,13 @@ function UltraFuturisticHero2030() {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>
                 <feature.icon className='w-6 h-6 text-white' />
@@ -594,8 +672,11 @@ function UltraFuturisticHero2030() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Stats Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -607,11 +688,15 @@ function UltraFuturisticHero2030() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -643,6 +728,11 @@ function UltraFuturisticHero2030() {
               key={index}
               initial={{ opacity: 0, scale: 0 && 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               transition={{ duration: 0.8, delay: 1.8 + index * 0.1 }}
               className='text-center group'
 
@@ -672,8 +762,11 @@ function UltraFuturisticHero2030() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Contact Information */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -683,6 +776,7 @@ function UltraFuturisticHero2030() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           <h3 className='text-2xl font-bold text-white mb-6'>
@@ -713,6 +807,8 @@ function UltraFuturisticHero2030() {
               <Globe className='w-6 h-6 text-emerald-400 mb-2' />
               <span className='text-gray-300 text-sm'>Visit Us</span>
               <a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 href={contactInfo.website}
                 className='text-white font-semibold hover:text-emerald-400 transition-colors'
@@ -727,14 +823,33 @@ function UltraFuturisticHero2030() {
         </motion.div>
 
 
+<<<<<<< HEAD
+=======
+                href={contactInfo && contactInfo.website}
+                className='text-white font-semibold hover:text-emerald-400 transition-colors'>                {contactInfo && contactInfo.website.replace('https://', '')}            <div className="flex flex-col items-center">;
+              <Globe className="w-6 h-6 text-emerald-400 mb-2" />;
+              <span className="text-gray-300 text-sm">Visit Us</span>;
+              <a href={contactInfo && contactInfo.website} className="text-white font-semibold hover:text-emerald-400 transition-colors">;
+              </a>;
+            </div>;
+          </div>;
+        </motion && motion.div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Trust Indicators */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -745,11 +860,15 @@ function UltraFuturisticHero2030() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         >
           <p className='text-gray-400 text-sm mb-4'>
             Trusted by leading companies worldwide
@@ -982,11 +1101,57 @@ function UltraFuturisticHero2030() {
   );  );
 }
 
+<<<<<<< HEAD
+=======
+=======
+  )
+}
+            ease: 'easeInOut',          }}
+        />;
+        <motion.div;
+          className='absolute bottom - 32 left - 32 w - 3 h - 3 bg - cyan - 400 rounded - full';
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [0.3, 0.8, 0.3],
+          }}
+          transition={{
+<<<<<<< HEAD
+            duration: 4,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />;
+        <motion.div;
+          className='absolute top - 1/2 right - 1/4 w - 1 h - 1 bg - emerald - 400 rounded - full';
+          animate={{
+            scale: [1, 3, 1],
+            opacity: [0.2, 0.6, 0.2],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: 'easeInOut',          }}
+        />;
+      </div>;
+    </section>);            ease: "easeInOut";
+          }}
+        />;
+      </div>;
+    </section>));
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

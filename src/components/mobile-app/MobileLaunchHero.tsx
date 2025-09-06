@@ -26,7 +26,10 @@ return (
             <div className="mb-8">
 
 
+<<<<<<< HEAD
               <AppStoreButtons
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <AppStoreButtons 
 
 
@@ -54,7 +57,10 @@ return (
                   variant='ghost'
                   size='lg'
                   className='text-white hover:bg-white/10'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import React from "react";
@@ -82,8 +88,35 @@ export const MobileLaunchHero: React.FC = () => {
                 >                  See Features              
 
 
+<<<<<<< HEAD
 
 
+=======
+            
+            <p className="text-lg md:text-xl opacity-90 mb-8">
+              Find top AI talent or global IT jobs on the go. Track projects, message candidates, and get AI-powered matches instantly with our mobile app.
+            </p>
+            
+            <div className="mb-8">
+              <AppStoreButtons 
+                appStoreUrl={appStoreUrl}
+                googlePlayUrl={googlePlayUrl}
+              />
+            </div>
+            
+            <div className="flex flex-wrap gap-4">
+              <Link href="/open-app">
+                <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
+                  Open App
+                  <ArrowRight size={20} />
+                </Button>
+              </Link>
+              
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <Link href="#features">
                 <Button variant="ghost" size="lg" className="text-white hover:bg-white/10">
                   See Features
@@ -121,10 +154,13 @@ export const MobileLaunchHero: React.FC = () => {
       </div>
     </section>
   )
+<<<<<<< HEAD
 
 }
 "  )
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import React from 'react';
@@ -192,11 +228,14 @@ export const MobileLaunchHero: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

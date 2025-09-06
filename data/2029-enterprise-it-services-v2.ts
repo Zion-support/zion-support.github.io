@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
     maintenance: 'Fully autonomous, continuous optimization',
@@ -344,6 +345,9 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     technology: ['AI/MLAutomationMonitoringITSM'];
     integration: ['ITSM platformsMonitoring toolsEnterprise systems'];
     support: ['24/7 operations supportIT expertsImplementation team'];
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     compliance: ['SOC 2ISO 27001ITILCOBIT']
     scalability: 'Enterprise-grade, multi-tenant support';
@@ -365,6 +369,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     partnership: 'Strategic enterprise partnerships'
     funding: 'Series B funding, $180M valuation';
 
+<<<<<<< HEAD
     exit: 'IPO or enterprise acquisition';
     contact: {
       mobile: '+1 302 464 0950';
@@ -609,6 +614,8 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
       email: 'kleber@ziontechgroup.com',;
       website: 'https://ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     }
   }
@@ -617,6 +624,11 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
 ;
 
 
+<<<<<<< HEAD
+=======
+export interface EnterpriseITService2029V2 {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   }
 ];

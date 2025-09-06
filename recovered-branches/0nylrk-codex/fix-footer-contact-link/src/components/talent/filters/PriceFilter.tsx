@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import { ChevronDown, ChevronUp } from "lucide-react",
@@ -55,6 +56,12 @@ import { Slider } from "@/components/ui/slider",;
 import { PriceFilterProps } from "@/types/filters",;
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;
 
+=======
+import {ChevronDown, ChevronUp} from "lucide-react";
+import {Slider} from "@/components/ui/slider";
+import {PriceFilterProps} from "@/types/filters";
+export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const handleChange = (values: number[]) => {;
     setPriceRange([values[0], values[1]]);
   };
@@ -83,12 +90,21 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             <span>${priceRange[1]}/hr</span>;
           </div>;
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+          <Slider
+=======
+
+          <Slider 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             value={[priceRange[0], priceRange[1]]}
             min={50}
             max={200}

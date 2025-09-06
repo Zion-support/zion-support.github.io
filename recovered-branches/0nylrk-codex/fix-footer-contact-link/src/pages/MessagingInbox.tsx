@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 
 import { MessageSquare, Video  } from 'lucide-react';
 import { useMessaging  } from '@/context/MessagingContext';
@@ -62,6 +63,17 @@ export default function MessagingInbox() {
   
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+import {MessageSquare, Video} from 'lucide-react';
+import {use_messaging} from '@/context / MessagingContext';
+import {ProtectedRoute} from '@/components / ProtectedRoute';
+import {ConversationsList, ConversationDetailView} from '@/components / messaging';
+import {useIsMobile} from '@/hooks / use - mobile';
+import {toast} from 'sonner';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
@@ -192,10 +204,18 @@ if ( {) {
                 </div>) : (
                 <ConversationsList;
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+                <ConversationsList;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   conversations={conversations}
                   active_conversation={active_conversation}
                   setActiveConversation={setActiveConversation}

@@ -498,8 +498,14 @@ const allServices = [;
     </div>;
   );
 },;
+<<<<<<< HEAD
 :temp_conflicts/pages/2025-comprehensive-services-showcase.tsx
 export default ComprehensiveServicesShowcase2025;
 }
 export default ComprehensiveServicesShowcase;
 :backup-problematic-files/components/2025-comprehensive-services-showcase.tsx
+=======
+
+export default ComprehensiveServicesShowcase;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

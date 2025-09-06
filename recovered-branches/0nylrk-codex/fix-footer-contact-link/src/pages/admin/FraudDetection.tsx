@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState, useEffect } from "react",
@@ -21,6 +22,10 @@ import { FraudFlag, FraudStats } from "@/types/fraud",
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 // Import refactored components
 import {
@@ -186,10 +191,14 @@ export default function FraudDetection() {;
       );
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     // Apply status filter
     if (statusFilter) {
@@ -328,9 +337,12 @@ export default function FraudDetection() {;
               className="bg-zion-purple hover:bg-zion-purple-light"
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               disabled={isLoading}
             >
               Refresh Data
@@ -349,10 +361,14 @@ export default function FraudDetection() {;
           
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <TabsContent value="all" className="mt-6">
 
           <TabsList>;

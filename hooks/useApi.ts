@@ -20,6 +20,10 @@ interface ApiState<T> {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 };import { useState, useEffect } from 'react';
 
+<<<<<<< HEAD
+=======
+};import { useState, useEffect } from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface ApiState<T> {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -28,11 +32,19 @@ interface ApiState<T> {
   error: string | null;
 }
 
+<<<<<<< HEAD
 
 export function useApi<T>(url: string, options?: RequestInit) {
   const [state, setState] = useState<ApiState<T>>({
 
   });
+=======
+export function use_api < T>(url: string, options?: RequestInit) {
+  const [state, set_state] = useState < ApiState < T>>({
+    data: null,
+    loading: true,
+    error: null,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -175,12 +187,15 @@ export default function UseApi({ }: UseApiProps) {
     </div>;
   );
 
+<<<<<<< HEAD
 
 
 interface ApiState<T> {
   data: T | null, loading: boolean,
   error: string | null,
 origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 }
@@ -236,9 +251,14 @@ if ( {) {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -247,3 +267,14 @@ if ( {) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

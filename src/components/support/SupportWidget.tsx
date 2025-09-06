@@ -88,14 +88,18 @@ export function SupportWidget() {;
             <div className="flex items-center">
               <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />
               <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 Zion Support
               </h3>
             </div>
             <div className="flex items-center gap-2">
+<<<<<<< HEAD
 
 
               <Button
@@ -131,3 +135,6 @@ export function SupportWidget() {;
 ;
 
 
+=======
+              <Button
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

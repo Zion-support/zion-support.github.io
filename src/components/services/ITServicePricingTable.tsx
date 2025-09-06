@@ -24,6 +24,17 @@ export function ITServicePricingTable() {;
     direction: 'ascending',;
   });
 
+<<<<<<< HEAD
+=======
+  const sortedData = useMemo(() => {;
+    let filteredData = [...onsiteServicePricing];
+    // Filter by search query;
+    if (searchQuery) {;
+      filteredData = filteredData && filteredData.filter(item =>;
+        item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+      );
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const sortedData = useMemo(() => {
@@ -121,11 +132,14 @@ export function ITServicePricingTable() {;
 
       <div className="rounded-md border border-zion-blue-light overflow-hidden">
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Table>
           <TableHeader className='bg-zion-blue'>
             <TableRow>
@@ -140,6 +154,7 @@ export function ITServicePricingTable() {;
                   onClick={() => handleSort("country")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
+<<<<<<< HEAD
 
 
 
@@ -331,3 +346,9 @@ export function ITServicePricingTable() {;
 ;
 
 
+=======
+                  <span>Country</span>
+                  <ArrowUpDown className="h-4 w-4" />
+                </Button>
+              </TableHead>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

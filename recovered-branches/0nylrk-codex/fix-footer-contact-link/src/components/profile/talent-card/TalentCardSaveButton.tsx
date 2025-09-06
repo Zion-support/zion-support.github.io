@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react",
 import { Heart } from "lucide-react",
 import { cn } from "@/lib/utils";
@@ -14,6 +15,10 @@ import { useToast } from "@/hooks/use-toast",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface TalentCardSaveButtonProps {
 
   profileId: string
@@ -54,6 +59,7 @@ export function TalentCardSaveButton({
         title: "Authentication required"
         description: "Please log in to save talents to your favorites"
         variant: "destructive"
+<<<<<<< HEAD
 
       });
       return
@@ -64,6 +70,18 @@ export function TalentCardSaveButton({
     }
 
 
+=======
+
+import React from "react";
+import {Heart} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useToast} from "@/hooks/use-toast";
+=======
+
+    
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }),
       return
 import React from "react",;
@@ -106,9 +124,25 @@ export function TalentCardSaveButton({;
       onToggleSave(profileId, !localIsSaved);
     }
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+      }),;
+      return;
+    }
+;
+    setLocalIsSaved(!localIsSaved),;
+    if (onToggleSave) {;
+      onToggleSave(profileId, !localIsSaved);
+    }
+    
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",
       description: localIsSaved 
@@ -132,12 +166,23 @@ export function TalentCardSaveButton({;
 
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
 
+<<<<<<< HEAD
         )}
       />
     </button>
   )
 
 
+=======
+        )} 
+      />;
+    </button>;
+  );
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     toast({;
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
@@ -163,10 +208,15 @@ export function TalentCardSaveButton({;
   );
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

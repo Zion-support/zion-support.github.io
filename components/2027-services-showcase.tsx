@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
   Search
   Star
@@ -46,6 +47,92 @@ import { practicalMicroSaas2027  } from '../data/2027-practical-micro-saas';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import Head from 'next / head';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
+import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
+
+
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('name');
+
+=======
+import {
+=======
+
+
+  Search,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Target,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Eye,
+  Heart,
+  Share2,
+  Download,
+  Phone,
+<<<<<<< HEAD
+  Mail,
+  MapPin,} from 'lucide-react';import {
+  Search, Star, Users, TrendingUp, DollarSign, Clock,
+  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe,
+  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud,
+  Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin;
+
+import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 export default function ServicesShowcase2027() {;
@@ -406,11 +493,15 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <span>View Pricing</span>
               </Link>
             </div>
@@ -419,14 +510,32 @@ transition={{ duration: 0 && 0.8 }}>;
       </section>
 
 
+<<<<<<< HEAD
+=======
+                className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2">;
+                <DollarSign className="w-5 h-5" />;
+                <span>View Pricing</span>;
+              </Link>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Search and Filters */}
 
 
@@ -468,7 +577,11 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Price Range Filter */}
 
 
@@ -485,6 +598,7 @@ transition={{ duration: 0 && 0.8 }}>;
                 <label className='block text-cyan-400 font-medium mb-2'>;
                   Sort By;
                 </label>;
+<<<<<<< HEAD
 
 
 
@@ -492,6 +606,18 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 
+=======
+=======
+                </select>
+              </div>
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Sort By */}
               <div>
                 <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By">Sort By</label>
@@ -805,8 +931,11 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       </div>
                     </div>
                     <div className="flex items-start justify-between mb-4">;
@@ -830,12 +959,21 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
                         )}
+<<<<<<< HEAD
                       </div>
                     </div>
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {/* ROI */}
 
                       </div>;
@@ -846,12 +984,19 @@ transition={{ duration: 0 && 0.8 }}>;
                     </div>
 
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
                     {/* ROI */}
@@ -910,6 +1055,7 @@ transition={{ duration: 0 && 0.8 }}>;
                     </div>;
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -919,6 +1065,14 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {/* Category Badge */}
                     <div className='mt-4'>;
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service && service.category}                    <div className="mt-4">;
@@ -943,7 +1097,11 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (;
             <motion&& motion.div
@@ -954,6 +1112,7 @@ transition={{ duration: 0 && 0.8 }}>;
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all');
+<<<<<<< HEAD
 
                   setSelectedPriceRange('all');
                 }}
@@ -976,6 +1135,9 @@ transition={{ duration: 0 && 0.8 }}>;
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
 
 
+=======
+                  setSelectedPriceRange('all')
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
@@ -993,8 +1155,16 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Contact Section */}
       <section className='px-4 sm:px-6 lg:px-8 mb-20'>
         <div className='max-w-4xl mx-auto'>
@@ -1006,8 +1176,16 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               Ready to Transform Your Business?
             </h2>
             <p className='text-cyan-300 mb-8 text-lg'>
@@ -1060,6 +1238,7 @@ transition={{ duration: 0 && 0.8 }}>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link
                 href="/contact"
+<<<<<<< HEAD
 
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25"
               >
@@ -1132,8 +1311,11 @@ transition={{ duration: 0 && 0.8 }}>;
     </UltraFuturisticMatrixBackground2027>
 );  )
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
+<<<<<<< HEAD
   );
 
 
@@ -1143,3 +1325,8 @@ transition={{ duration: 0 && 0.8 }}>;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    </UltraFuturisticMatrixBackground2027>));
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

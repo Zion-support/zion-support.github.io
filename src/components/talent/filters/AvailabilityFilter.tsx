@@ -7,8 +7,11 @@ return (
       >
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <span>Availability</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -42,11 +45,14 @@ function AvailabilityFilter() {
 
       
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {expanded && (
         <div className='mt - 4 space - y-2'>;
           {AVAILABILITY_OPTIONS.map (option => (
@@ -110,12 +116,17 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 id={`availability-${option.id}`}
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
+<<<<<<< HEAD
 
 
   { id: "full_time", label: "Full-time" },
   { id: "part_time", label: "Part-time" },
 
 
+=======
+  { id: "full_time", label: "Full-time" },
+  { id: "part_time", label: "Part-time" },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label
@@ -204,6 +215,7 @@ import { AvailabilityFilterProps } from "@/types/filters",;
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -211,6 +223,10 @@ const AVAILABILITY_OPTIONS = [;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   { id: "project", label: "Project-based" }
 ]
 
@@ -239,6 +255,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`availability-${option.id}`}
+<<<<<<< HEAD
 
 
                 className='ml-2 text-sm text-zion-slate-light cursor-pointer'
@@ -266,17 +283,23 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 }"}
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   option.label 
 }</label> </div>) ) 
 }</div>) ;
 }</div>) ;
 }"};
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {option.label}

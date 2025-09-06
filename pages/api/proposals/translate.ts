@@ -1,6 +1,17 @@
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { OpenAI } from "openai";
+export default async function handler(
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (req.method !== "POST") return res.status($1).json({ $2 });
   try {
     const { markdown, targetLanguage = "en" } = req.body |{}
@@ -83,6 +94,58 @@ function handler() {
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      .json({ error: error?.message || "Translation failed" });
+=======
+
+
+  }
+
+    const translated = completion.choices?.[0]?.message?.content || markdown;
+    return res.status (200).json ({ translated });
+  } catch (error: any) {
+    return res;
+      .status (500);
+      .json ({ error: error?.message || "Translation failed" });
+
+=======
+    return res
+      .status(500)
+<<<<<<< HEAD
+      .json({ error: error?.message |"Translation failed" });
+=======
+=======
+      .json({ error: error?.message || "Translation failed" });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  }
+}
+
+=======
+
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -47,8 +47,13 @@
     return res
       .status(500)
       .json({ error: error?.message |"Failed to generate proposal" });
+<<<<<<< HEAD
 
 
+=======
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       language = 'en'
     } = req.body || {};
 
@@ -82,16 +87,54 @@
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Failed to generate proposal' })
 
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+=======
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      supporting_multiverses,
+      content_markdown,
+      language,
+    });
+;
+    return res.status (200).json ({ meta, markdown: content_markdown });
+  } catch (error: any) {
+    return res;
+      .status (500);
+      .json ({ error: error?.message || "Failed to generate proposal" });
+      ],
+      temperature: 0.3,
+    });
+const contentMarkdown = completion.choices?.[0]?.message?.content || '# Proposal Draft\n\nTBD';
+    const meta = createProposal({
+      title,
+    targetInstitution,
+      type,
+    regionalScope,
+      budgetOrResolution,
+    supportingMultiverses,
+      contentMarkdown,
+      language,
+    });
+return res.status(200).json({ meta, markdown: contentMarkdown })
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message || 'Failed to generate proposal' })
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 }
+<<<<<<< HEAD
 
   } catch (error) {
     console.error("Error:", error);
@@ -115,3 +158,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

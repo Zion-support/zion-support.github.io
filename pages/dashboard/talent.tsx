@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
@@ -9,6 +10,10 @@ const STEPS = [
   { key: 'availability', label: 'Availability set' }
   { key: 'match', label: 'First match received' }
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -21,10 +26,14 @@ const STEPS = [
 type StepKey = typeof STEPS[number]['key'];
 
 export default function TalentDashboard() {
+<<<<<<< HEAD
 
 
   });
 
+=======
+  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ profile: false, skills: false, availability: false, match: false }),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.talent');
@@ -68,9 +77,12 @@ export default function TalentDashboard() {;
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-4">
       <EnhancedCard>
@@ -98,6 +110,7 @@ export default function TalentDashboard() {;
               {completed[s.key] ? (
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
               ) : (
+<<<<<<< HEAD
 
                 <EnhancedButton
                   onClick={() => toggle(s.key)}
@@ -114,6 +127,16 @@ export default function TalentDashboard() {;
 );
 
 
+=======
+
+
+=======
+
+
+}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -136,6 +159,20 @@ export default function TalentDashboard() {;
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
+=======
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

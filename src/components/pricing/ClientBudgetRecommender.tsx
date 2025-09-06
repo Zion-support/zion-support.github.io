@@ -28,6 +28,7 @@ if ( {) {
 import { Sparkles } from 'lucide-react'
 interface ClientBudgetRecommenderProps {
 
+<<<<<<< HEAD
 
   jobTitle: string
   category: string
@@ -41,11 +42,14 @@ interface ClientBudgetRecommenderProps {
   scope?: string
   experienceLevel?: string
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   jobTitle: string,
   category: string,
   timeline?: string,
   scope?: string,
   experienceLevel?: string,
+<<<<<<< HEAD
 
   onSuggestionApplied: (minValue: number, maxValue: number,) => void
 }
@@ -167,6 +171,9 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -174,6 +181,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestionType: "client",
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
+<<<<<<< HEAD
 
 
           accepted: true,
@@ -197,6 +205,11 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-4">
       <div>
@@ -216,6 +229,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           >
             <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
 
+<<<<<<< HEAD
 
 }
 
@@ -225,6 +239,58 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 },
 
 
+=======
+          </Button>
+        ) : (
+            disabled={!jobTitle || !category}
+            className='w-full'>;
+            <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation;
+          </Button>;
+        ) : (;
+          <PricingSuggestionBox
+    <div className='space - y-4'>;
+      <div>;
+        {!suggestion && !is_loading ? (
+          <Button;
+            type='button';
+            variant='outline';
+            on_click={generate_suggestion}
+            disabled={!job_title || !category}
+            className='w - full'          >;
+            <Sparkles className='h - 4 w - 4 mr - 2' /> Get Budget Recommendation;
+          </Button>) : (
+          <PricingSuggestionBox;
+            suggestion={suggestion}
+            isLoading={isLoading}
+            onApplySuggestion={handleApplySuggestion}
+
+            rate_type='hourly'          />)}
+      </div>;
+    </div>);
+}
+// Check condition
+if (params.scope = scope) {
+  $2
+}
+// Check condition
+if (params.experience_level = experience_level) {
+  $2
+}
+//Track this suggestion application // Check condition
+if ( {) {
+  $2
+
+}
+if (scope) params.scope = scope
+if (experienceLevel) params.experienceLevel = experienceLevel
+//Track this suggestion application if (user && user.id) {
+  trackPricingSuggestion ({
+}
+
+
+},
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             rateType="hourly"
           />
         )}
@@ -233,7 +299,10 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     </div>;
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

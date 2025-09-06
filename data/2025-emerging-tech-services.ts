@@ -644,6 +644,7 @@
     reviews: 67,
   },
   {
+<<<<<<< HEAD
     id: 'autonomous-robotics'
     name: 'Autonomous Robotics Platform'
     tagline:
@@ -653,6 +654,45 @@
     category: 'Robotics & Automation'
     price: {
 
+=======
+
+=======
+    id: 'quantum - communications',
+    name: 'Quantum Communications Platform',
+    tagline:;
+      'Secure quantum communication networks for unbreakable data transmission',
+    description:;
+      'Revolutionary platform that enables secure quantum communication networks with quantum key distribution, quantum entanglement, and unbreakable data transmission capabilities.',
+    category: 'Quantum Technology',
+    price: {
+<<<<<<< HEAD
+      monthly: 2999,
+      yearly: 29990,
+      currency: 'USD',
+      trial_days: 45,
+      setup_time: '2 weeks',
+    },
+    features: [;
+      'Quantum key distribution',
+      'Quantum entanglement networks',
+      'Secure communication protocols',
+      'Network infrastructure',
+      'Performance monitoring',
+      'Security validation',
+      'Integration APIs',
+      'Commercial deployment',
+      'Research collaboration',
+      'Regulatory compliance',
+    ],
+    benefits: [;
+
+      'Unbreakable communication security',
+      'Future - proof against quantum attacks',
+      'Enable quantum applications',
+      'Reduce security risks by 99 && 99.9%',
+      'Comply with future regulations',
+    ],
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
     ],
@@ -660,12 +700,19 @@
 
 ];
 
+<<<<<<< HEAD
 
 export const getPopularEmergingTechServices = () => {;
 
   return emergingTechServices2025.filter(service => service.popular);
 }
 
+=======
+  return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular);
+};
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const getEmergingTechServicesByCategory = (category: string) => {
   return emergingTechServices2025.filter(
     service => service.category === category;
@@ -676,6 +723,7 @@ export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
 
   return emergingTechServices2025.filter(service => {
     const price = parseInt(service.price.monthly.toString()) |0;
@@ -688,6 +736,8 @@ export const getEmergingTechServicesByPriceRange = (
 const contact = {mobile: "+1 302 464 0950"
   email: "kleber@ziontechgroup.com"
   address: "364 E Main St STE 1008 Middletown DE 19709";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   website: "https://ziontechgroup.com";
 
@@ -1639,6 +1689,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     reviews: 7;
 ]}
 export interface EmergingTechService {
+<<<<<<< HEAD
 
 
   id: string,;
@@ -2130,11 +2181,18 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     return price >= minPrice && price <= maxPrice;
   });
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface EmergingTechService {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

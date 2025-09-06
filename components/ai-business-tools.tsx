@@ -34,6 +34,7 @@ import {
   Check,
   ExternalLink,
   TrendingUp,
+<<<<<<< HEAD
 
   Shield,
   Globe,;} from 'lucide-react';import { 
@@ -48,6 +49,8 @@ import {
   BarChart3
   Users
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -378,7 +381,109 @@ function AIBusinessToolsPage() {
       best_for: 'Training departments, marketers, educators',
     },
     {
+<<<<<<< HEAD
 
+=======
+      name: 'Copy.ai',
+      description:;
+        'AI copywriting tool that generates marketing copy, product descriptions, and creative content for businesses.',
+      category: 'AI Copywriting',
+      pricing: 'Free - $49 / month',
+      rating: 4.4,
+      users: '200K+',
+      icon: <MessageSquare className='w - 8 h - 8 text - orange - 400' />,
+      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
+      features: [;
+        'Marketing copy generation',
+        'Product descriptions',
+        'Social media posts',
+        'Email campaigns',
+        'Blog content',
+        'Free tier available',
+      ],
+      website: 'https://copy.ai',
+      use_case:;
+        'Great for small businesses, entrepreneurs, and marketers who need quality copy without hiring writers.',
+      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
+      cons: ['Limited customization', 'Quality varies', 'Basic features'],
+      best_for: 'Small businesses, entrepreneurs, marketers',
+    },
+    {
+      name: 'Grammarly',
+      description:;
+        'AI - powered writing assistant that checks grammar, spelling, tone, and style to improve your writing.',
+      category: 'AI Writing',
+      pricing: 'Free - $12 / month',
+      rating: 4.7,
+      users: '30M+',
+      icon: <Check className='w - 8 h - 8 text - green - 400' />,
+      color: 'bg - gradient - to - br from - green - 500 to - teal - 600',
+      features: [;
+        'Grammar & spelling check',
+        'Tone analysis',
+        'Style suggestions',
+        'Plagiarism detection',
+        'Browser extension',
+        'Mobile apps',
+      ],
+      website: 'https://grammarly.com',
+      use_case:;
+        'Essential for anyone who writes professionally, including students, professionals, and content creators.',
+      pros: [;
+        'Excellent accuracy',
+        'Multiple platforms',
+        'Free tier',
+        'User - friendly',
+      ],
+      cons: ['Limited free features', 'Privacy concerns', 'Can be overzealous'],
+      best_for: 'Students, professionals, content creators',
+    },
+    {
+      name: 'Lumen5',
+      description:;
+        'AI video maker that transforms text content into engaging videos for social media and marketing.',      category: 'AI Video',
+      pricing: 'Free - $79 / month',
+      rating: 4.3,
+      users: '100K+',
+      icon: <Video className='w - 8 h - 8 text - blue - 400' />,      description: 'AI video maker that transforms text content into engaging videos for social media and marketing.',
+
+      category: 'AI Video',
+      pricing: 'Free - $79 / month',
+      rating: 4.3,
+      users: '100K+',
+
+      icon: <Video className='w - 8 h - 8 text - blue - 400' />,
+      features: [;
+        'Text - to - video conversion',
+        'Video templates',
+        'Music library',
+        'Brand customization',
+        'Social media formats',
+        'Free tier available',
+      ],
+      website: 'https://lumen5.com',
+      use_case:;
+        'Perfect for marketers, social media managers, and businesses that want to create video content from existing text.',
+      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
+      cons: ['Limited customization', 'Basic features', 'Watermark on free'],
+      best_for: 'Marketers, social media managers, small businesses',
+    },
+    {
+      name: 'Surfer SEO',
+      description:;
+        'AI - powered SEO tool that helps optimize content for search engines using data - driven insights.',      category: 'AI SEO',
+      pricing: '$59 - $199 / month',
+      rating: 4.6,
+      users: '25K+',
+      icon: <TrendingUp className='w - 8 h - 8 text - green - 400' />,      description: 'AI - powered SEO tool that helps optimize content for search engines using data - driven insights.',
+
+      category: 'AI SEO',
+      pricing: '$59 - $199 / month',
+      rating: 4.6,
+      users: '25K+',
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         'Data-driven insights',
         'Content optimization',
         'Competitor analysis',
@@ -389,7 +494,10 @@ function AIBusinessToolsPage() {
     },;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ];
   const categories = [
     'All'
@@ -757,8 +865,16 @@ export default function AIBusinessToolsPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {aiTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>AI Tools</div>
@@ -1020,6 +1136,17 @@ export default function AIBusinessToolsPage() {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+=======
+
+
+              <button
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1045,7 +1172,11 @@ export default function AIBusinessToolsPage() {;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Tools Grid */}
       <section id='tools' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1056,12 +1187,16 @@ export default function AIBusinessToolsPage() {;
                 : `${selectedCategory} Tools`}
 
 
+<<<<<<< HEAD
             </h2>
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Discover the most powerful AI tools that are transforming how businesses operate and create content.'
@@ -1071,10 +1206,79 @@ export default function AIBusinessToolsPage() {;
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      {/* Category Filter */}
+      <section className='py - 16 bg - gray - 900'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+          <div className='flex flex - wrap justify - center gap - 4'>;
+            {categories.map (category => (              <button      <section className="py - 16 bg - gray - 900">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+          <div className="flex flex - wrap justify - center gap - 4">;
+            {categories.map ((category) => (
+                key={category}
+                on_click={() => setSelectedCategory (category)}
+                className={`px - 6 py - 3 rounded - full text - sm font - medium transition - all duration - 300 ${
+                  selected_category === category;
+                    ? 'bg - green - 600 text - white shadow - lg';
+                    : 'bg - gray - 800 text - gray - 300 hover:bg - gray - 700 hover:text - white';
+                }`}
+              >;
+                {category}
+              </button>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Tools Grid */}
+      <section id='tools' className='py - 24 bg - black'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight'>;
+              {selected_category === 'All';
+                ? 'All AI Tools';
+                : `${selected_category} Tools`}
+            <p className='text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+              {selected_category === 'All';
+                ? 'Discover the most powerful AI tools that are transforming how businesses operate and create content.';
+                : `Explore the best ${selected_category.toLowerCase ()} tools to enhance your business capabilities.`}
+            </p>;
+          </div>;
+          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
+            {filtered_tools.map ((tool, index) => (
+              <Card;
+                key={index}
+                className='group border border - gray - 800 hover:border - green - 500 / 30 hover:bg - gray - 900 / 80 transition - all duration - 300 hover:-translate - y-1';
+                style={{ animation_delay: `${index * 0.1}s` }}
+              >;
+                <div className='flex items - start space - x-6'>;
+                  <div className='relative'>;
+                    <div;
+                      className={`w - 20 h - 20 rounded - 2xl flex items - center justify - center text - 3xl bg - gradient - to - br ${tool.color} shadow - xl group - hover:scale - 110 transition - transform duration - 300`}
+                    >;
+
+                      {tool.icon}
+                    </div>;
+                  </div>;
+                  <div className='flex - 1'>;
+                    <div className='flex items - center justify - between mb - 2'>;
+                      <h3 className='text - 2xl font - bold text - white group - hover:text - green - 400 transition - colors duration - 300'>;
+                        {tool.name}
+                      </h3>;
+                      <div className='flex items - center space - x-2'>;
+                        <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
+                        <span className='text - sm text - gray - 300'>;
+                          {tool.rating}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -1088,6 +1292,15 @@ export default function AIBusinessToolsPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+                      <Button
+                        href={tool.website}
+                        variant='outline'
+                        size='sm'
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* AI Benefits Section */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1099,8 +1312,16 @@ export default function AIBusinessToolsPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               Why Choose AI Tools?
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1389,9 +1610,28 @@ export default function AIBusinessToolsPage() {;
       </section>;
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    </>);
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

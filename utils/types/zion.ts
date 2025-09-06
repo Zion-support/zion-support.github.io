@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -7,6 +8,13 @@ export interface Branding {;
   primaryColor?: string;
   secondaryColor?: string;
   subdomain?: string;
+=======
+
+=======
+
+export interface Branding {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   logoUrl?: string,;
   primaryColor?: string,;
   secondaryColor?: string,;
@@ -30,6 +38,7 @@ export interface DeployModules {;
   apiDocsWiki: boolean;
   zionBrain: boolean;
   // Bonus;
+<<<<<<< HEAD
 
   globalMap?: boolean;
   franchiseOnboarding?: boolean;
@@ -39,6 +48,12 @@ export interface DeployModules {;
   bookStore?: boolean;
 
 
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
   referralAmbassadors?: boolean,;
@@ -56,6 +71,7 @@ export interface DeployInput {;
   defaultLanguage: string;
   deploymentRegion: string;
   tokenActivation: boolean;
+<<<<<<< HEAD
 
 
   governanceMode: GovernanceMode,;
@@ -88,6 +104,10 @@ export interface GeneratedAsset {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;
 export interface DeployResult {;
@@ -98,19 +118,38 @@ export interface DeployResult {;
   logs: DeployLogEntry[];
   summary: string;
   version: string;
+<<<<<<< HEAD
 
 
 
+=======
+
+export type GovernanceMode = "Admin" | "DAO" | "Hybrid",
+export interface Branding {
+  logo_url?: string,
+  primary_color?: string,
+  secondary_color?: string,
+  subdomain?: string;
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 export interface DeployModules {
   marketplace: boolean,
@@ -169,6 +208,11 @@ export interface AccessControlConfig {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

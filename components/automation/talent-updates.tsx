@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }</div> </div>) import fs from 'fs';
@@ -12,9 +15,15 @@ import path from 'path';
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
+<<<<<<< HEAD
 
   const file = path.join(process.cwd(), 'datatalent_ai.json');
 
+=======
+type TalentSummary = { slug: string, summary: string },;
+export async function getServerSideProps() {;
+  const file = path && path.join(process && process.cwd(), 'datatalent_ai && datatalent_ai.json');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   let generatedAt = '';
   let summaries: TalentSummary[] = [];  try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
@@ -25,11 +34,25 @@ import {TALENT_PROFILES} from '../../data/talent';
   return { props: { generatedAt, summaries } }
 }
 
+<<<<<<< HEAD
 
 
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+    generatedAt = json.generatedAt || '';
+    summaries = json.summaries || []
+
+  } catch {}
+  return { props: { generatedAt, summaries } }
+}
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
 
   return (

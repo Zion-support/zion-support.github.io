@@ -1,15 +1,24 @@
 
+<<<<<<< HEAD
 export type SyncScope = "full" | "dao" | "marketplace";
 export interface Peer {id: string;
 
   baseUrl: string, // e.g., https: //zion-latam.example.org;
   scope?: SyncScope;
+=======
+export type SyncScope = "full" | "dao" | "marketplace",
+export interface Peer {
+  id: string,
+  base_url: string, // e.g., https: //zion - latam.example.org;
+  scope?: SyncScope,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   paused?: boolean;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 export interface InstanceConfig {instanceId: string;
   optIn: boolean;
   paused: boolean;
@@ -25,6 +34,23 @@ export interface InstanceConfig {instanceId: string;
 
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export interface InstanceConfig {
+  instance_id: string,
+  opt_in: boolean,
+  paused: boolean,
+  scope: SyncScope,
+  peers: Peer[],
+  secret_configured: boolean;
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
@@ -45,6 +71,7 @@ export interface TokenTransferPayload extends BaseEventPayload {txId: string;
   | "leaderboard_entry",;
 export interface BaseEventPayload {;
   id: string;
+<<<<<<< HEAD
 
 
   } catch (error) {
@@ -76,6 +103,10 @@ export interface ProposalPayload extends BaseEventPayload {;
 export interface TokenTransferPayload extends BaseEventPayload {;
   txId: string;
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   token: string;
   amount: number;
   fromSubnet: string;
@@ -130,14 +161,18 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
   subjectId: string, // userId or teamId;
+<<<<<<< HEAD
 
 
   score: number;
@@ -152,9 +187,14 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
@@ -166,12 +206,17 @@ export interface SyncEvent {eventId: string;
   payload: SyncEventPayload;
   | LeaderboardEntryPayload,;
 export interface SyncEvent {;
+<<<<<<< HEAD
 
 
   eventId: string;
   type: SyncEventType,;
   payload: SyncEventPayload,;
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   originInstanceId: string;
   version: number;
   timestamp: number;
@@ -185,8 +230,22 @@ export interface MultiverseState {
   proposalMerkleById: Record < string string>;
 
   events: SyncEvent[];
+<<<<<<< HEAD
 
 
+=======
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   } catch (error) {
     console.error("Error:", error);
@@ -199,6 +258,7 @@ export interface MultiverseState {;
   config: InstanceConfig,;
 
 
+<<<<<<< HEAD
   lastSyncedAt: number;
   seenEventIds: Record<string, true>,;
   latestVersionByEntityId: Record<string, number>,;
@@ -217,3 +277,7 @@ export interface MultiverseState {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

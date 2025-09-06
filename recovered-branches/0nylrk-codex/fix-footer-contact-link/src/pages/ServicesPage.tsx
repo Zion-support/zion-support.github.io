@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import { DynamicListingPage } from "@/components/DynamicListingPage",
@@ -25,6 +26,10 @@ import { Globe } from "lucide-react",
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -169,6 +174,7 @@ const SERVICE_FILTERS = [
   { label: 'Analytics', value: 'analytics' }
   { label: 'Consulting', value: 'consulting' }
   { label: 'Strategy', value: 'strategy' }]
+<<<<<<< HEAD
 
 
 export default function ServicesPage() {
@@ -217,6 +223,16 @@ import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 import { Globe } from "lucide-react",;
 
+=======
+=======
+import {DynamicListingPage} from "@/components/DynamicListingPage";
+import {ProductListing} from "@/types/listings";
+import {AppLayout} from "@/layout/AppLayout";
+import {TrustedBySection} from "@/components/TrustedBySection";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {Globe} from "lucide-react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Sample service listings;
 const SERVICE_LISTINGS: ProductListing[] = [;
   {;
@@ -310,5 +326,35 @@ const SERVICE_LISTINGS: ProductListing[] = [;
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      />;
+      <TrustedBySection />;
+    </AppLayout>;
+  );
+}
+
+=======
+      <DynamicListingPage;
+        title="IT & AI Services";
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";
+        category_slug="services";
+        listings={SERVICE_LISTINGS}
+        category_filters={SERVICE_FILTERS}
+        initial_price={{ min: 3000, max: 10000 }}
+      />;
+      <TrustedBySection />;
+    </AppLayout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+      <DynamicListingPage 
+        title="IT & AI Services"
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
+        categorySlug="services"
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

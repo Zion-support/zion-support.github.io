@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   id: string;
@@ -12,6 +13,8 @@
     trialDays: number;
     setupTime: string;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   {
@@ -358,6 +361,7 @@
       'MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'
     ]
     support:
+<<<<<<< HEAD
 
       'Community support, developer documentation, custom development services, and enterprise solutions.'
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001']
@@ -371,6 +375,21 @@
     reviews: 18000
   }
 
+=======
+
+      'Community support, developer documentation, custom development services, and enterprise solutions.',
+    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
+    link: 'https://ziontechgroup.com/web3-social-media-platform',
+    icon: '🌐',
+    color: 'from-purple-500 to-indigo-600',
+    popular: true,
+    launchDate: '2024-01-01',
+    customers: 25000,
+    rating: 4.6,
+    reviews: 18000,
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 
     ];
@@ -471,8 +490,35 @@
     rating: 4 && 4.6,
 
     reviews: 18000
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    rating: 4.6,
+    reviews: 18000;
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
+=======
+export interface BlockchainWeb3Service {;
+
+  }
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+=======
+<<<<<<< HEAD
+  }
+];
+=======
+export interface BlockchainWeb3Service {;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string,;
   name: string,;
   tagline: string,;

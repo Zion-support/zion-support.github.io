@@ -1,6 +1,10 @@
 
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Switch} from '@/components/ui/switch';
@@ -14,7 +18,11 @@ import {useAuth} from '@/hooks/useAuth';
 export function FraudDetectionSettings() {;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
@@ -23,6 +31,10 @@ export function FraudDetectionSettings() {;
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Switch } from '@/components/ui/switch',
@@ -66,6 +78,7 @@ export function FraudDetectionSettings() {
         variant: "destructive"
       });
     } finally {
+<<<<<<< HEAD
 
       setIsSaving(false);
     }
@@ -195,6 +208,9 @@ export function FraudDetectionSettings() {;
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),;
   const [isSaving, setIsSaving] = useState(false),;
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const handleSavePreferences = async () => {;
     if (!user?.id) return;
 
@@ -314,5 +330,50 @@ export function FraudDetectionSettings() {;
                   You can opt out of some of these protections, but this may limit your ability to use certain platform features. ;
                   We prioritize keeping our marketplace safe while respecting your privacy.;
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+                </p>;
+              </AccordionContent>;
+            </AccordionItem>;
+          </Accordion>;
+
+            <Button
+              onClick={handleSavePreferences}
+              disabled={isSaving}
+              className="bg-zion-purple hover:bg-zion-purple-light"
+            >
+              {isSaving ? "Saving..." : "Save Preferences"}
+
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+
+=======
+          <div className="pt - 2">;
+            <Button;
+              on_click={handleSavePreferences}
+              disabled={is_saving}
+              className="bg - zion - purple hover:bg - zion - purple - light";
+            >;
+              {is_saving ? "Saving..." : "Save Preferences"}
+
+            </Button>;
+          </div>;
+        </div>;
+      </CardContent>;
+
+    </Card>);
+}
+
+=======
+
+  )
+=======
+  )
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

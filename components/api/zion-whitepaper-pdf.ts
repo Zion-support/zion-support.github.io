@@ -5,12 +5,20 @@ import PDFDocument from 'pdfkit';
 
 import {
 
+<<<<<<< HEAD
   getWhitepaperSections
   OPERATOR_PROMPT;
   getWhitepaperSections,;
   OPERATOR_PROMPT,;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+  getWhitepaperSections,;
+  OPERATOR_PROMPT,;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
 
@@ -35,6 +43,7 @@ function write_section() {
 
   });
 
+<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest
@@ -43,22 +52,45 @@ export default async function handler(
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  try {
+  const editionParam = (req && req.query.edition as string) || 'full';
+
+=======
+
+) {;
+  const editionParam = (req.query.edition as string) || 'full';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
       : 'full';
 
+<<<<<<< HEAD
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader(
     'Content-Disposition'
     `attachment; filename="zion-protocol-${edition}.pdf"`
   );
+=======
+    align: 'left'})
+}
+
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const editionParam = (req.query.edition as string) || 'full';
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -130,11 +162,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     );
   doc.end();
   // End
+<<<<<<< HEAD
   doc.addPage();
   doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
 
 
 
+=======
+  doc.addPage(),
+  doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'),
+
+  doc.end()
+
+}
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
 
   doc.moveDown(0.5);
@@ -143,7 +187,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const sections = getWhitepaperSections(edition as any);
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

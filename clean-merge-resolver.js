@@ -1,6 +1,23 @@
 
+<<<<<<< HEAD
 
 
+=======
+#!/usr / bin / env node;
+const { exec_sync } = require ('child_process'),
+const fs = require ('fs'),
+const path = require ('path'),
+console.log ('🚀 Starting comprehensive merge conflict resolution and PR merging...'),
+=======
+#!/usr/bin/env node;
+<<<<<<< HEAD
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+<<<<<<< HEAD
+console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Function to fix merge conflicts in a file;
 /**
  * fixMergeConflicts - Function description
@@ -94,7 +111,22 @@ function fixMergeConflicts(filePath) {;
 ;
 // Function to get all files recursively;
 function getAllFiles(dir, extensions) {;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  let files = [],;
+  try {;
+    const items = fs.readdirSync(dir),;
+    for (const item of items) {;
+      const fullPath = path.join(dir, item),;
+      const stat = fs.statSync(fullPath),;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  let files = [];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   try {;
     const items = fs.readdirSync(dir);
@@ -223,11 +255,15 @@ async function main() {;
         console.log('Found merge conflicts in:', conflictFiles.trim()),;
         // Resolve conflicts by accepting our version;
 
+<<<<<<< HEAD
         const files = conflictFiles.trim().split('\n');
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         for (const file of files) {;
           if (file.trim()) {;
             console.log(`Resolving conflicts in: ${file}`);
@@ -259,6 +295,7 @@ async function main() {;
     // Now scan for and fix any remaining merge conflicts in files;
     console.log('🔍 Scanning for merge conflicts in files...'),;
     const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md.css']),;
+<<<<<<< HEAD
 
 
     let fixedCount = 0;
@@ -320,11 +357,16 @@ async function main() {;
 }
 ;
 main().catch(console.error),;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

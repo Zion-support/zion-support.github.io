@@ -24,7 +24,10 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
 
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -329,10 +332,13 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Hero Section */}
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">;
@@ -436,6 +442,11 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                 </div>
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -501,8 +512,11 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                 {/* Sort By */}
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
@@ -560,11 +574,32 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                     {/* Features */}
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                           </li>
                         ))}
                       </ul>
                     </div>
+=======
+
+                      {service.name}
+                    </h3>
+
+                    {/* Tagline */}
+
+                      {service.tagline}
+                    </p>
+
+                    {/* Price */}
+
+                      {service.description}
+                    </p>
+
+                    {/* Features */}
+
+                            {feature}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                           </li>
@@ -577,11 +612,14 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {/* Category and Technology */}
 
                     <div className="flex items-center justify-between mb-4">
@@ -624,10 +662,14 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     >
                       Learn More
                     </a>
@@ -646,7 +688,11 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -672,6 +718,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 
 
+<<<<<<< HEAD
             )}
           </div>
         </section>
@@ -681,6 +728,10 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -690,11 +741,14 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
                         </span>;
@@ -870,7 +924,93 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
   );
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+              className='bg - gradient - to - r from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 700 / 50 backdrop - blur - sm';
+            >;
+              <h2 className='text - 3xl font - bold text - white mb - 6'>;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className='text - xl text - gray - 300 mb - 8'>;
+                Join thousands of companies already leveraging our revolutionary;
+                2026 AI, quantum, and IT solutions;
+              </p>;
+              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8'>;
+                <div className='flex items - center justify - center space - x-3 text - cyan - 300'>;
+                  <span className='text - 2xl'>📱</span>;
+                  <span className='font - semibold'>{contact_info.mobile}</span>;
+                </div>;
+                <div className='flex items - center justify - center space - x-3 text - purple - 300'>;
+                  <span className='text - 2xl'>✉️</span>;
+                  <span className='font - semibold'>{contact_info.email}</span>;
+                </div>;
+                <div className='flex items - center justify - center space - x-3 text - pink - 300'>;
+                  <span className='text - 2xl'>📍</span>;
+                  <span className='font - semibold text - sm'>;
+                    {contact_info.address}
+                  </span>;
+                </div>;
+              </div>;
+              <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+                <a;
+                  href='/contact';
+                  className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105'                >;
+                  Contact Us Now;
+                </a>;
+                <a;
+                  href='/pricing';
+                  className='px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                >            >;
+              <h2 className="text - 3xl font - bold text - white mb - 6">Ready to Transform Your Business?</h2>;
+              <p className="text - xl text - gray - 300 mb - 8">;
+                Join thousands of companies already leveraging our revolutionary 2026 AI, quantum, and IT solutions;
+              </p>;
+              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8">;
+                <div className="flex items - center justify - center space - x-3 text - cyan - 300">;
+                  <span className="text - 2xl">📱</span>;
+                  <span className="font - semibold">{contact_info.mobile}</span>;
+                </div>;
+                <div className="flex items - center justify - center space - x-3 text - purple - 300">;
+                  <span className="text - 2xl">✉️</span>;
+                  <span className="font - semibold">{contact_info.email}</span>;
+                </div>;
+                <div className="flex items - center justify - center space - x-3 text - pink - 300">;
+                  <span className="text - 2xl">📍</span>;
+                  <span className="font - semibold text - sm">{contact_info.address}</span>;
+                </div>;
+              </div>;
+              <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
+                <a;
+                  href="/contact";
+                  className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105";
+                >;
+                  Contact Us Now;
+                </a>;
+                <a;
+                  href='/pricing';
+                  className='px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                  href="/pricing";
+                  className="px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300";
+                >;
+                  View Pricing;
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>);
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

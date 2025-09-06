@@ -11,11 +11,24 @@ import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },;
 export async function getServerSideProps() {;
   const file = path && path.join(process && process.cwd(), 'datanews-digest && digest.json');
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
 export async function getServerSideProps() {
+<<<<<<< HEAD
+=======
+=======
+</div> </div>) ) 
+
+ </div> </div>) ) 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }</div> </div>) import fs from 'fs';
 import path from 'path';
@@ -43,6 +56,12 @@ export async function getServerSideProps() {;
     const json = JSON.parse (raw);
     items = json.items || [];
     generated_at = json.generated_at || '';
+<<<<<<< HEAD
+=======
+=======
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   } catch {}
   return { props: { items, generatedAt } }
@@ -73,10 +92,16 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
         ))}
       </div>
 
+<<<<<<< HEAD
     </div>
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    </div>;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 );
 }
   );

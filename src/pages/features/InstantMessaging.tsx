@@ -49,6 +49,7 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
+<<<<<<< HEAD
 
 
 
@@ -63,6 +64,8 @@ import { GradientHeading } from "@/components/GradientHeading",
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function InstantMessaging() {
@@ -154,6 +157,7 @@ export default function InstantMessaging() {
               <p className="text-zion-slate-light">You can mute rooms or disable notifications in your account settings.</p>
             </div>
           </div>
+<<<<<<< HEAD
 
 
           <div className='text-center'>
@@ -197,6 +201,11 @@ export default function InstantMessaging() {
           </div>
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Start Chatting</Link>
@@ -206,10 +215,13 @@ export default function InstantMessaging() {
       </main>
     </>
   )
+<<<<<<< HEAD
 
 
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 ;
 
@@ -258,3 +270,9 @@ export default function InstantMessaging() {;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
+=======
+
+
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

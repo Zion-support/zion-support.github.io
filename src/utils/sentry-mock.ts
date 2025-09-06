@@ -119,11 +119,14 @@ const mockSentry = {;
   Integrations: {;
     BrowserTracing: class BrowserTracing {;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       constructor() {}
     }
     Http: class Http {
@@ -136,8 +139,11 @@ const mockSentry = {;
       constructor() {}
 
 
+<<<<<<< HEAD
     }
   }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     },
   },
 
@@ -245,6 +251,7 @@ const mock_sentry = {
   }
 }
 
+<<<<<<< HEAD
 
 // Mock scope
 const mockScope = {
@@ -324,17 +331,54 @@ export const makeFetchTransport = mockSentry.makeFetchTransport
 export const createTransport = mockSentry.createTransport
 export const SDK_VERSION = mockSentry.SDK_VERSION
 export const Severity = mockSentry.Severity
+=======
+export const init = mockSentry && mockSentry.init;
+export const captureException = mockSentry && mockSentry.captureException;
+export const captureMessage = mockSentry && mockSentry.captureMessage;
+export const captureEvent = mockSentry && mockSentry.captureEvent;
+export const addBreadcrumb = mockSentry && mockSentry.addBreadcrumb;
+export const configureScope = mockSentry && mockSentry.configureScope;
+export const withScope = mockSentry && mockSentry.withScope;
+export const setUser = mockSentry && mockSentry.setUser;
+export const setTag = mockSentry && mockSentry.setTag;
+export const setTags = mockSentry && mockSentry.setTags;
+export const setExtra = mockSentry && mockSentry.setExtra;
+export const setExtras = mockSentry && mockSentry.setExtras;
+export const setContext = mockSentry && mockSentry.setContext;
+export const getCurrentHub = mockSentry && mockSentry.getCurrentHub;
+export const getClient = mockSentry && mockSentry.getClient;
+export const startTransaction = mockSentry && mockSentry.startTransaction;
+export const ErrorBoundary = mockSentry && mockSentry.ErrorBoundary;
+export const withErrorBoundary = mockSentry && mockSentry.withErrorBoundary;
+export const showReportDialog = mockSentry && mockSentry.showReportDialog;
+export const onLoad = mockSentry && mockSentry.onLoad;
+export const wrap = mockSentry && mockSentry.wrap;
+export const Handlers = mockSentry && mockSentry.Handlers;
+export const withSentryConfig = mockSentry && mockSentry.withSentryConfig;
+export const SentryWebpackPlugin = mockSentry && mockSentry.SentryWebpackPlugin;
+export const Tracing = mockSentry && mockSentry.Tracing;
+export const Integrations = mockSentry && mockSentry.Integrations;
+export const makeBrowserOfflineTransport =
+  mockSentry && mockSentry.makeBrowserOfflineTransport;
+export const makeFetchTransport = mockSentry && mockSentry.makeFetchTransport;
+export const createTransport = mockSentry && mockSentry.createTransport;
+export const SDK_VERSION = mockSentry && mockSentry.SDK_VERSION;
+export const Severity = mockSentry && mockSentry.Severity;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 // Additional exports for compatibility
 export { mockSentry as Sentry }
 // All exports are already defined above
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   // Browser-specific methods
@@ -347,11 +391,14 @@ export { mockSentry as Sentry }
 export { mockSentry as Sentry };
 // All exports are already defined above;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Mock scope;
 const mock_scope = {
   set_user: noop,

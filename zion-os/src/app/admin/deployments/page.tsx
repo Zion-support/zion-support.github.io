@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 'use client';
 import { useState, useEffect } from 'react';
@@ -211,6 +212,10 @@ const getVerticalIcon = (vertical: string) => {
             <div>
               <p className='text-2xl font-bold'>{getStatusCount('failed')}</p>
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <p className='text-sm text-white/60'>Failed</p>            </div>  return (
     <div className="space-y-8">
       {/* Header Section */}
@@ -525,6 +530,7 @@ export default function DeploymentsPage() {;
             {label} ({count});
           </button>;
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -533,6 +539,14 @@ export default function DeploymentsPage() {;
 
 
         ))}
+=======
+      </div>;
+
+
+      {/* Deployments Grid */}
+      <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>;
+        {filteredDeployments && filteredDeployments.map(deployment => (;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </div>
       {/* Deployments Grid */}
       <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>
@@ -717,9 +731,59 @@ export default function DeploymentsPage() {;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
+=======
+                  <div className='flex items-center gap-2 text-white/70'>
+                    <MapPin className='w-4 h-4' />
+                    <span>
+                      {[deployment.region, deployment.country]
+                        .filter(Boolean)
+                        .join(', ')}
+                    </span>                  </div>              {/* Domain & Location */}
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="flex items-center gap-2 text-white/70">
+                  <span>🌐</span>
+                  <span className="font-mono">
+<<<<<<< HEAD
+                    {deployment.domain |deployment.subdomain |'No domain set'}
+                  </span>
+                </div>
+                {(deployment.region |deployment.country) && (
+=======
+                    {deployment.domain || deployment.subdomain || 'No domain set'}
+                  </span>
+                </div>
+                {(deployment.region || deployment.country) && (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  <div className="flex items-center gap-2 text-white/70">
+                    <span>📍</span>
+                    <span>{deployment.region} {deployment.country}</span>
+                  </div>
+
+            <div className="p-6 space-y-4">;
+              {/* Domain & Location */}
+              <div className="grid grid-cols-2 gap-4 text-sm">;
+                <div className="flex items-center gap-2 text-white/70">;
+                  <Globe className="w-4 h-4" />;
+                  <span className="font-mono">;
+                    {deployment.domain || deployment.subdomain || 'No domain set'}
+                  </span>;
+                </div>;
+                {(deployment.region || deployment.country) && (;
+                  <div className="flex items-center gap-2 text-white/70">;
+                    <MapPin className="w-4 h-4" />;
+                    <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
+                  </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 )}
               </div>;
               {/* Features */}
@@ -764,8 +828,11 @@ export default function DeploymentsPage() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   )}
 
                 </div>;
@@ -815,8 +882,11 @@ export default function DeploymentsPage() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 )}
 
               </div>;
@@ -925,10 +995,15 @@ export default function DeploymentsPage() {;
           </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         ))}
 
       </div>;
@@ -1071,7 +1146,67 @@ export default function DeploymentsPage() {;
 
   );
 }
+<<<<<<< HEAD
 
+=======
+=======
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
+            >
+              <Rocket className="w-4 h-4" />
+              Deploy First Instance
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+
+=======
+        </div>;
+      )}
+    </div>;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  );
+}
+<<<<<<< HEAD
+    </div>))}
+    </div>);
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      {filteredDeployments.length === 0 && (;
+        <div className="text-center py-16">;
+          <div className="w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full">;
+            <Rocket className="w-8 h-8 text-white/40" />;
+          </div>;
+          <h3 className="text-lg font-medium text-white/60 mb-2">No deployments found</h3>;
+          <p className="text-white/40 mb-6">;
+            {filter === 'all';
+              ? 'Start by creating your first Zion ecosystem deployment';
+              : `No deployments with status "${filter}" found`;
+            }
+          </p>;
+          {filter === 'all' && (;
+            <a;
+              href="/admin/os-deploy";
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200";
+            >;
+              <Rocket className="w-4 h-4" />;
+              Deploy First Instance;
+            </a>;
+          )}
+        </div>;
+      )}
+    </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

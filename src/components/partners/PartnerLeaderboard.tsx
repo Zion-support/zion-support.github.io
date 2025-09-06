@@ -14,6 +14,7 @@ export function PartnerLeaderboard() {
       badges: ["gold", "trending"]
     }
     },
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -21,6 +22,10 @@ export function PartnerLeaderboard() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       id: "2"
       rank: 2
@@ -31,6 +36,7 @@ export function PartnerLeaderboard() {
       badges: ["silver"]
     }
     },
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -38,6 +44,10 @@ export function PartnerLeaderboard() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       id: "3"
       rank: 3
@@ -48,6 +58,7 @@ export function PartnerLeaderboard() {
       badges: ["bronze"]
     }
     },
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -55,6 +66,10 @@ export function PartnerLeaderboard() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     {
       id: "4"
       rank: 4
@@ -63,6 +78,7 @@ export function PartnerLeaderboard() {
       referrals: 98
       earnings: 2450
       badges: []
+<<<<<<< HEAD
 
 
     }
@@ -126,6 +142,9 @@ import { Badge } from "@/components/ui/badge",;
 import { Crown, Medal, Trophy } from 'lucide-react';
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;

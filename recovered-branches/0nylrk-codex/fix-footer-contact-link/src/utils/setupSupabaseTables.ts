@@ -1,15 +1,24 @@
 
 
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {supabase} from "@/integrations/supabase/client";
 import { supabase } from "@/integrations/supabase/client",
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 /**
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
@@ -90,6 +99,7 @@ export const initializeDatabase = async () => {
       console.error('Error creating profiles table:', createError)
     } else {
 
+<<<<<<< HEAD
 
       // // // console.log('Profiles table setup completed')
 import { supabase } from "@/integrations/supabase/client",;
@@ -191,5 +201,7 @@ export const ensureProfilesTableExists = async () => {;
 // Call this when the app starts to ensure the table exists;
 export const initializeDatabase = async () => {;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   await ensureProfilesTableExists();
 };

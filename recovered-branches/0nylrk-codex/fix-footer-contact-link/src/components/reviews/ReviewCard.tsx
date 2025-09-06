@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 interface ReviewCardProps {
@@ -6,8 +10,11 @@ interface ReviewCardProps {
   onReport: (reviewId: string, reason: string) => Promise<boolean>
 }
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {formatDistanceToNow} from "date-fns";
 import {Star, Flag, User} from "lucide-react";
@@ -17,6 +24,7 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Textarea} from "@/components/ui/textarea";
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
@@ -26,12 +34,48 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
+=======
+interface ReviewCardProps {;
+  review: Review,;
+  onReport: (reviewId: string, reason: string) => Promise<boolean>;
+}
+
+export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
+
+  const [reportReason, setReportReason] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 
+<<<<<<< HEAD
+=======
+
+    setIsReporting(true);
+    const success = await onReport(review && review.id, reportReason);
+    setIsReporting(false);
+
+
+    if (success) {;
+      setReportReason("");
+      setIsReportDialogOpen(false);
+    }
+  };
+
+  const renderStars = (rating?: number) => {;
+    if (!rating) return null;
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map((star) => (;
@@ -70,6 +114,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
 
   DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea",
@@ -77,10 +122,16 @@ import { Textarea } from "@/components/ui/textarea",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  DialogTrigger,
+} from '@/components / ui / dialog';
+import { Textarea  } from '@/components / ui / textarea';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ReviewCardProps {
   review: Review;
   on_report: (review_id: string, reason: string) => Promise < boolean>;
 }
+<<<<<<< HEAD
 
 
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
@@ -97,6 +148,30 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       setReportReason("");
       setIsReportDialogOpen(false);
 
+=======
+export /**
+ * ReviewCard - Function description
+ */
+function ReviewCard() {
+  const [report_reason, setReportReason] = useState ("");
+  const [is_reporting, setIsReporting] = useState (false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState (false);
+;
+  const handle_report = async () => {
+    if () return) {
+  $2
+}
+    setIsReporting (true);
+    const success = await on_report (review.id, report_reason);
+    setIsReporting (false);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      setReportReason ("");
+      setIsReportDialogOpen (false);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   }
   const renderStars = (rating?: number) => {
@@ -173,8 +248,11 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
                 </AvatarFallback>
                   {review.reviewer_profile?.display_name ? 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     getInitials(review.reviewer_profile.display_name) : "??"}
 
                 </AvatarFallback>;
@@ -189,6 +267,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
                 : review.reviewer_profile?.display_name |"User"}
             </div>
             <div className="text-sm text-muted-foreground">
+<<<<<<< HEAD
 
               {formatDistanceToNow(new Date(review.created_at), {
                 addSuffix: true
@@ -196,14 +275,25 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
             </div>
           </div>
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
             </div>;
           </div>;
         </div>;
         <div className="flex">;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+        </div>
+        <div className="flex">
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {renderStars(review.rating)}
         </div>
         <div className="flex">{renderStars(review.rating)}</div>
@@ -211,7 +301,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 </AvatarFallback>)}
             </Avatar>)}
@@ -240,8 +333,15 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
         review.would_work_again !== undefined) && (
         <div className="border - t pt - 3 mt - 3">;
           <div className="flex flex - wrap gap - 2">;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -306,7 +406,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
                 <span className="ml-1 text-yellow-500">{review && review.communication_rating}/5</span>;
               </Badge>;
             )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             {review && review.quality_rating && (;
               <Badge variant="outline" className="flex gap-1 items-center">;
@@ -336,8 +439,13 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
         </div>;
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       )}
           </div>;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       )}
@@ -384,12 +492,63 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
     </div>
   );
 
+=======
+        </div>)}
+      <div className="mt - 3 flex justify - end">;
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
+          <DialogTrigger as_child>;
+            <Button variant="ghost" size="sm" className="text - muted - foreground">;
+              <Flag className="h - 3 w - 3 mr - 1" />;
+
+              Report;
+            </Button>;
+          </DialogTrigger>;
+          <DialogContent>;
+            <DialogHeader>;
+
+              <DialogTitle > Report Review</DialogTitle>;
+              <DialogDescription>;
+                If you believe this review violates our community guidelines,
+                please provide details below.;
+              </DialogDescription>;
+            </DialogHeader>;
+            <Textarea;
+              placeholder="Why are you reporting this review?";
+              value={report_reason}
+              on_change={(e) => setReportReason (e.target.value)}
+              className="min - h-[100px]";
+            />;
+            <DialogFooter>;
+              <Button;
+                variant="outline";
+                on_click={() => setIsReportDialogOpen (false)}
+              >;
+                Cancel;
+              </Button>;
+              <Button;
+                on_click={handle_report}
+                disabled={!report_reason.trim () || is_reporting}
+              >;
+                {is_reporting ? "Submitting..." : "Submit Report"}
+
+              </Button>;
+            </DialogFooter>;
+          </DialogContent>;
+        </Dialog>;
+      </div>;
+
+    </div>);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
   )
 }
 
+<<<<<<< HEAD
 ;
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

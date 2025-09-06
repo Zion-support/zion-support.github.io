@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 
 
+<<<<<<< HEAD
 export default function UseTokensButton({
 
   const [open, setOpen] = useState(false);
@@ -42,6 +43,8 @@ export default function UseTokensButton({
     </>
   );
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }: {;
   serviceId?: string;
@@ -80,6 +83,7 @@ export default function UseTokensButton({
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
+<<<<<<< HEAD
       />
     </>
 );
@@ -101,6 +105,18 @@ export default function UseTokensButton({
       />
     </>
   );
+=======
+
+=======
+export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+      />
+    </>
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [open, setOpen] = useState(false);
   return (
     <>;

@@ -28,10 +28,13 @@ export function FeaturesGuideSection() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         'Navigate to the AI Matcher page from the homepage or marketplace',
         'Fill in your project requirements and specifications',
         'Review the AI-recommended matches tailored to your needs',
@@ -302,9 +305,12 @@ export function FeaturesGuideSection() {
   const features = [
     {
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
@@ -1339,6 +1345,7 @@ function FeaturesGuideSection() {
 
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
               >;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1346,6 +1353,10 @@ function FeaturesGuideSection() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 {feature.title}
               </TabsTrigger>
             ))}
@@ -1367,11 +1378,14 @@ function FeaturesGuideSection() {
                 key={feature.id} 
                 value={feature.id}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
                 {feature.title}
@@ -1542,8 +1556,11 @@ function FeaturesGuideSection() {
                       <li key={idx} className="text-zion-slate-light">;
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>;
                       </li>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     ))}
                   </ol>;
@@ -1563,8 +1580,11 @@ function FeaturesGuideSection() {
               onClick = {() => fireEvent('explore_marketplace_click'),}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     ))}
                   </ol>
                 </div>
@@ -1575,6 +1595,7 @@ function FeaturesGuideSection() {
         <div className='mt-12 text-center'>
         
         <div className="mt-12 text-center">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1582,6 +1603,10 @@ function FeaturesGuideSection() {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <Button
             variant="outline"
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
@@ -1599,6 +1624,7 @@ function FeaturesGuideSection() {
             >
               Explore Full Marketplace
               <ArrowRight className="ml-2 h-4 w-4" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1607,6 +1633,11 @@ function FeaturesGuideSection() {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </Link>
           </Button>
         </div>

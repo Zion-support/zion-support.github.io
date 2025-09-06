@@ -5,6 +5,7 @@ export default function AIAutonomousEcosystemManager() {
 		<ServiceLanding
 
 
+<<<<<<< HEAD
 			title="AI Autonomous Ecosystem Manager"
 			slug="ai-autonomous-ecosystem-manager"
 			description="Coordinate fleets of specialized AI agents to manage complex multi-team workflows. Enforce policies, allocate resources, and ensure safety across the ecosystem."
@@ -14,6 +15,14 @@ export default function AIAutonomousEcosystemManager() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 			pricePerMonthUSD={2999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -21,9 +30,13 @@ export default function AIAutonomousEcosystemManager() {
 }
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Average ROI 4–9x within 6 months"
 			features={[
@@ -33,6 +46,7 @@ export default function AIAutonomousEcosystemManager() {
 				"Sandboxing and E2E approvals for sensitive actions",
 				"Cost and performance optimization",
 				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
+<<<<<<< HEAD
 
 
 			]  } catch (error) {
@@ -62,3 +76,8 @@ export default function AIAutonomousEcosystemManager() {
 }
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

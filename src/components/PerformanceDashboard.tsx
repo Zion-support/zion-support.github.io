@@ -306,6 +306,7 @@ const PerformanceDashboard: React.FC = () => {
 
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -314,6 +315,11 @@ const PerformanceDashboard: React.FC = () => {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
 
 
@@ -332,6 +338,7 @@ const PerformanceDashboard: React.FC = () => {
           </CardContent>
         </Card>
         
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -339,6 +346,10 @@ const PerformanceDashboard: React.FC = () => {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -351,6 +362,7 @@ const PerformanceDashboard: React.FC = () => {
           </CardContent>
         </Card>
         
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -358,6 +370,10 @@ const PerformanceDashboard: React.FC = () => {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -365,6 +381,7 @@ const PerformanceDashboard: React.FC = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
 
 
             <div className="text-2xl font-bold">{metrics.loadTime}s</div>
@@ -382,6 +399,13 @@ const PerformanceDashboard: React.FC = () => {
               <span className="text-sm font-semibold text-green-600">Healthy</span>
 
 
+=======
+            <div className='flex items-center space-x-2'>
+              <CheckCircle className='h-5 w-5 text-green-500' />
+              <span className='text-sm font-semibold text-green-600'>
+                Healthy
+              </span>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>
           </CardContent>
         </Card>
@@ -488,8 +512,11 @@ const PerformanceDashboard: React.FC = () => {;
                   {getCategoryIcon(improvement.category)}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
@@ -677,8 +704,11 @@ const PerformanceDashboard: React.FC = () => {;
                   </div>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <p className='text-sm text-gray-600 mt-1'>
                     {improvement.description}
                   </p>
@@ -703,8 +733,11 @@ const PerformanceDashboard: React.FC = () => {;
           <Shield className="h-4 w-4 mr-2" />
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           Check Health Status
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
@@ -714,11 +747,14 @@ const PerformanceDashboard: React.FC = () => {;
       </div>
     </div>
   )
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           variant='outline';
         >;
@@ -729,11 +765,14 @@ export default PerformanceDashboard, ;
 export default PerformanceDashboard;
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 },
 
 export default PerformanceDashboard, 
@@ -753,11 +792,14 @@ export default PerformanceDashboard,
 };
 
 export default PerformanceDashboard;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

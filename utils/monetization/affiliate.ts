@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -17,6 +18,8 @@ export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AF
     return res.status(500).json({ error: "Internal server error" });
   }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export function affiliate (url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {
   // Check condition
@@ -29,6 +32,13 @@ if (return url, ) {
 
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {;
+=======
+export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

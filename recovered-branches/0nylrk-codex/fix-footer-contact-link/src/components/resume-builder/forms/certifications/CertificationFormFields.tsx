@@ -1,14 +1,31 @@
 
 
+<<<<<<< HEAD
 
+=======
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components / ui / form';
+import { Input  } from '@/components / ui / input';
+import { UseFormReturn  } from './react - hook - form';
+import { CertificationFormValues  } from './types';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn < CertificationFormValues>;
 }
 
+<<<<<<< HEAD
 export function CertificationFormFields({
   form
 }: CertificationFormFieldsProps) {
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
 import {Input} from '@/components/ui/input';
@@ -18,8 +35,12 @@ import {CertificationFormValues} from './types';
 interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
 import { Input } from '@/components/ui/input',;
 import { UseFormReturn } from 'react-hook-form',;
@@ -28,10 +49,15 @@ interface CertificationFormFieldsProps {;
   form: UseFormReturn<CertificationFormValues>;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 export function CertificationFormFields({ form }: CertificationFormFieldsProps) {
@@ -144,11 +170,66 @@ function CertificationFormFields() {
               <FormMessage />;
             </FormItem>;
           )}
+<<<<<<< HEAD
 
         />
       </div>
     </>
 
+=======
+        />;
+      </div>;
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+
+        <FormField
+          control={form && form.control}
+          name="credential_id"
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Credential ID (Optional)</FormLabel>;
+=======
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+      </div>;
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+        <FormField;
+          control={form.control}
+          name="issue_date";
+          render={({ field }) => (
+            <FormItem>;
+              <FormLabel > Issue Date</FormLabel>;
+              <FormControl>;
+                <Input type="date" {...field} value={field.value || ""} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+        <FormField;
+          control={form.control}
+          name="expiration_date";
+          render={({ field }) => (
+            <FormItem>;
+              <FormLabel > Expiration Date (Optional)</FormLabel>;
+              <FormControl>;
+                <Input type="date" {...field} value={field.value || ""} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+      </div>;
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+        <FormField;
+          control={form.control}
+          name="credential_id";
+          render={({ field }) => (
+            <FormItem>;
+              <FormLabel > Credential ID (Optional)</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <FormControl>;
                 <Input placeholder="ABC123XYZ" {...field} />;
               </FormControl>;
@@ -191,7 +272,15 @@ function CertificationFormFields() {
 }
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -23,6 +23,7 @@ if ( {) {
         description: 'Please add at least one service to your profile.',
         variant: 'destructive',
 
+<<<<<<< HEAD
 
 
 
@@ -30,6 +31,8 @@ if ( {) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       })
 
       return;
@@ -188,7 +191,10 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // Create the service profile
       const { data: profileData, error } = await supabase
         .from('profiles')
@@ -214,9 +220,12 @@ if ( {) {
         })
         .eq('id', user.id)
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
@@ -236,6 +245,7 @@ if ( {) {
           hourly_rate: Number(values.hourlyRate),
           availability_status: values.availability,
           location: values.location,
+<<<<<<< HEAD
 
 
           website: values.website || null}),
@@ -246,6 +256,8 @@ if ( {) {
           website: values.website || null}),
 
       if (serviceError) throw serviceError,
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       */
@@ -320,8 +332,11 @@ if ( {) {
                   <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
                 </div>
               </div>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {;
   Form,;
@@ -591,8 +606,11 @@ export function ServiceProviderRegistrationForm() {;
         ];
       }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),;
       const userEmail = (userData as any).user?.email,;
@@ -727,8 +745,11 @@ export function ServiceProviderRegistrationForm() {;
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
 
     <div className='max-w-4xl mx-auto p-4 md:p-6'>;
@@ -752,8 +773,11 @@ export function ServiceProviderRegistrationForm() {;
                           <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           <FormControl>
                             <div className="relative">
                               <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -786,7 +810,10 @@ export function ServiceProviderRegistrationForm() {;
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Business/Service Name</FormLabel>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           <FormControl>
                             <div className="relative">
                               <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -914,6 +941,12 @@ export function ServiceProviderRegistrationForm() {;
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
+<<<<<<< HEAD
+=======
+                />;
+                {/* AI Enhancement Option */}
+                <FormField;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   control={form.control}
                   name="enhancedProfile"
                   render={({ field }: { field: any }) => (
@@ -946,6 +979,7 @@ export function ServiceProviderRegistrationForm() {;
                         : 'Generate Enhanced Profile'}
                     </Button>;
                   </div>;
+<<<<<<< HEAD
 
 
 
@@ -1007,6 +1041,30 @@ export function ServiceProviderRegistrationForm() {;
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
 
 
+=======
+
+
+                        </FormLabel>
+                        <FormDescription className="text-zion-slate-light">
+                          Let AI help optimize your service description for better visibility and client engagement
+                        </FormDescription>
+                      </div>
+                      <FormControl>
+                        <Switch
+
+                          aria-label="AI profile enhancement"
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                          className="data-[state=checked]:bg-zion-purple"
+                        />
+
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </Button>
                   </div>
                 )}
@@ -1037,6 +1095,7 @@ export function ServiceProviderRegistrationForm() {;
                     </div>
                     
                     <div className="space-y-4">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1044,6 +1103,10 @@ export function ServiceProviderRegistrationForm() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       <div>
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>
                         <p className="text-zion-slate italic">{generatedContent.summary}</p>
@@ -1097,11 +1160,14 @@ export function ServiceProviderRegistrationForm() {;
               <Separator className="bg-zion-blue-light/50" />
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Services and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Services Section */}
@@ -1123,8 +1189,11 @@ export function ServiceProviderRegistrationForm() {;
                         <div className="flex gap-2">
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           <FormControl>
                             <Input
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
@@ -1302,11 +1371,14 @@ export function ServiceProviderRegistrationForm() {;
                             onClick={handleAddService}
                           >
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                             Add
                           </Button>
                         </div>
@@ -1317,6 +1389,7 @@ export function ServiceProviderRegistrationForm() {;
                       </FormItem>
                     )}
                   />
+<<<<<<< HEAD
 
 
                   <div className='flex flex-wrap gap-2 mt-2'>
@@ -1345,6 +1418,8 @@ export function ServiceProviderRegistrationForm() {;
                           className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"
                         >
                           <X className="h-3 w-3" />
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                         </button>
@@ -1385,8 +1460,11 @@ export function ServiceProviderRegistrationForm() {;
                         <FormLabel className="text-zion-slate-light">Starting Rate (USD)</FormLabel>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         <FormControl>
                           <div className="relative">
                             <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
@@ -1526,8 +1604,11 @@ export function ServiceProviderRegistrationForm() {;
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                                 Currently Unavailable
                               </label>
                             </div>
@@ -1551,8 +1632,11 @@ export function ServiceProviderRegistrationForm() {;
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <Button
                   type="button"
                   variant="outline"
@@ -1574,11 +1658,14 @@ export function ServiceProviderRegistrationForm() {;
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Service Profile"}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </Button>
               </div>
             </CardFooter>
@@ -1650,6 +1737,7 @@ try {
   body: {
 
 
+<<<<<<< HEAD
   providerData: {
   name: values.name, title: values.title, bio: values.bio,  services: serviceTags, location: values.location
 })
@@ -1668,6 +1756,8 @@ if (error) throw error
   new Date () .getFullYear ()
 }Zion Marketplace</p>
 }//Continue with submission even if email fails
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   new Date () .getFullYear () 
 }Zion Marketplace</p>
 }//Continue with submission even if email fails 

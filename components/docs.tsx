@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Star } from 'lucide-react';
 
 
+<<<<<<< HEAD
 export default function DocsPage() {
 export default function DocsPage() {
   const contact = {
@@ -22,10 +23,19 @@ export default function DocsPage() {
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+        { name: 'Overview', href: '/enhanced-services-showcase' },
+        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
+        { name: 'Contact Sales', href: '/contact' }]
+    };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     {
       title: 'AI Services Docs'
@@ -205,13 +215,25 @@ export default function DocsPage() {;
       default:;
         return 'bg-gray-500/20 text-gray-400';    }      case 'Beginner': return 'bg-green-500/20 text-green-400';
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
+<<<<<<< HEAD
 
       case 'Advanced': return 'bg-red-500/20 text-red-400'
       default: return 'bg-gray-500/20 text-gray-400'
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  };
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
 
@@ -290,8 +312,11 @@ export default function DocsPage() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   ))}
                 </ul>;
               </Card>;
@@ -388,10 +413,104 @@ export default function DocsPage() {;
 
   );
 }
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+                      </a>                    </li>      </Head>;
+      <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
+        <div className="max - w-6xl mx - auto space - y-10">;
+          <div className="text - center">;
+            <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">Documentation</h1>;
+            <p className="text - slate - 300 mt - 4">Quick links, references, and integration guides for our services.</p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
+            {sections.map ((s) => (
+              <Card key={s.title} className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
+                <h2 className="text - xl font - semibold mb - 4 text - white">{s.title}</h2>;
+                <ul className="space - y-2">;
+                  {s.links.map ((l) => (
+                    <li key={l.name}>;
+                      <a href={l.href} className="text - cyan - 400 hover:underline">{l.name}</a>;
+                    </li>))}
+                </ul>;
+              </Card>))}
+          </div>;
+          <Card className='p - 6 bg - black / 40 border border - gray - 700 / 50'>;
+            <h2 className='text - xl font - semibold mb - 4 text - white'>;
+              External References;
+            </h2>;
+            <ul className='grid grid - cols - 1 md:grid - cols - 2 gap - 3 text - slate - 300'>;
+              {external.map (e => (
+                <li key={e.name}>;
+                  <a;
+                    href={e.url}
+                    target='_blank';
+                    rel='noopener noreferrer';
+                    className='text - cyan - 400 hover:underline';
+                  >;
+                    {e.name}
+                  </a>;
+                </li>              ))}
+            </ul>;
+          </Card>;
+          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
+            <h2 className="text - xl font - semibold mb - 4 text - white">External References</h2>;
+            <ul className="grid grid - cols - 1 md:grid - cols - 2 gap - 3 text - slate - 300">;
+              {external.map ((e) => (
+                <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text - cyan - 400 hover:underline">{e.name}</a></li>;
+            </ul>;
+          </Card>;
+          <Card className='p - 6 bg - black / 40 border border - gray - 700 / 50'>;
+            <h2 className='text - xl font - semibold mb - 4 text - white'>;
+              Need help?;
+            </h2>;
+            <div className='flex flex - col sm:flex - row gap - 3'>;
+              <Button;
+                href='/contact';
+                className='bg - gradient - to - r from - cyan - 600 to - blue - 600 text - white';
+              >;
+                Contact Support;
+              </Button>;
+              <Button;
+                href={contact.website}
+                variant='outline';
+                className='border - gray - 600 text - gray - 200';
+              >;
+                Visit Website;
+              </Button>;
+              <a;
+                className='text - cyan - 400';
+                href={`tel:${contact.mobile.replace (/[^+\\d]/g, '')}`}
+              >;
+                {contact.mobile}
+              </a>;
+              <a className='text - purple - 400' href={`mailto:${contact.email}`}>;
+                {contact.email}
+              </a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
+            <h2 className="text - xl font - semibold mb - 4 text - white">Need help?</h2>;
+            <div className="flex flex - col sm:flex - row gap - 3">;
+              <Button href="/contact" className="bg - gradient - to - r from - cyan - 600 to - blue - 600 text - white">Contact Support</Button>;
+              <Button href={contact.website} variant="outline" className="border - gray - 600 text - gray - 200">Visit Website</Button>;
+              <a className="text - cyan - 400" href={`tel:${contact.mobile.replace (/[^+\\d]/g, '')}`}>{contact.mobile}</a>;
+              <a className="text - purple - 400" href={`mailto:${contact.email}`}>{contact.email}</a>;
+          </Card>;
+        </div>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+;
+}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               ))}
             </ul>
@@ -400,5 +519,8 @@ export default function DocsPage() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

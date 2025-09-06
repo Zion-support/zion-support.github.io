@@ -9,6 +9,7 @@ import { FlagResult } from './types',
 /**
  * Flag content for review
  */
+<<<<<<< HEAD
 
 
 export const flagContent = async (
@@ -18,6 +19,23 @@ export const flagContent = async (
   contentId: string;
   contentExcerpt: string;
 
+=======
+
+
+// Content flagging functionality;
+import {supabase} from '@/integrations / supabase / client';
+import {FraudSeverity, FraudFlag} from '@/types / fraud';
+import {FlagResult} from './types';
+/**;
+* Flag content for review;
+*/;
+export const flag_content = async (
+  user_id: string;
+  user_email: string | undefined;
+  content_type: FraudFlag['content_type'];
+  content_id: string;
+  content_excerpt: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   severity: FraudSeverity;
   reason: string
   userId: string,
@@ -82,6 +100,7 @@ export const flagContent = async (
     
     if (error) throw error,
     
+<<<<<<< HEAD
 
 
 // Content flagging functionality;
@@ -133,6 +152,10 @@ export const flagContent = async (;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   }
 };

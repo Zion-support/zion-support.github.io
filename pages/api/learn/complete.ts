@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -22,6 +25,7 @@ res.setHeader('AllowPOST')
   if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
 
+<<<<<<< HEAD
 
     return res.status(200).json({ ok: true, user })
   } catch (e: any) {
@@ -89,6 +93,14 @@ export default function handler(req, res) {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} },;
 
+=======
+    const users = readJson(usersPath);
+    const courses = readJson(coursesPath);
+    const course = courses.find((c: any) => c.id === courseId);
+    if (!course) return res.status(404).json({ error: 'Course not found' });
+
+    const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     if (!user.certifications.includes(courseId)) user.certifications.push(courseId);
     if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge);
     if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;
@@ -138,10 +150,25 @@ if (user.boostInSearch = enable_boost, ) {
   }
 
 }
+<<<<<<< HEAD
+=======
+
+=======
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

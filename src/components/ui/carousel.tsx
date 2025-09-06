@@ -26,15 +26,21 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
+<<<<<<< HEAD
 
 
   }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   orientation: "horizontal" | "vertical"
 } & Omit<CarouselProps "orientation">
 
@@ -80,7 +86,10 @@ function useCarousel(): CarouselContextProps {;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 ;
   return context as CarouselContextProps;
@@ -91,6 +100,7 @@ const Carousel = React.forwardRef<
 >(
   (
     {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -99,6 +109,11 @@ const Carousel = React.forwardRef<
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       orientation = "horizontal",
       opts,
       setApi,
@@ -141,11 +156,14 @@ const Carousel = React.forwardRef<
           event.preventDefault()
           scrollNext()
         }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import * as React from &quot;react & quot;
 import useEmblaCarousel from &quot;embla - carousel - react & quot;
@@ -155,6 +173,10 @@ import { Button } from &quot;@/components / ui / button & quot;
 
       };
 
+<<<<<<< HEAD
+=======
+      },;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       },;
@@ -217,6 +239,7 @@ if ( {) {
         return;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 onSelect(api)
       api.on(&quot;reInit&quot; onSelect)
       api.on(&quot;select&quot; onSelect)
@@ -225,6 +248,9 @@ onSelect(api)
         api?.off(&quot;select&quot; onSelect)
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       return () => {
@@ -275,15 +301,21 @@ on_select (api);
           onKeyDownCapture={handleKeyDown}
 
 
+<<<<<<< HEAD
 className={cn(&quot;relative&quot;, className)}
 className={cn(&quot;relative&quot; className)}
 
 
+=======
+className={cn(&quot;relative&quot; className)}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           role=&quot;region&quot;
           aria-roledescription=&quot;carousel&quot;
           className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -292,6 +324,11 @@ className={cn(&quot;relative&quot; className)}
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {...props}
         >;
           {children}
@@ -330,6 +367,7 @@ const CarouselContent = React.forward_ref<;
           orientation === "horizontal"
             ? "-ml-4 snap-x snap-mandatory"
             : "-mt-4 flex-col snap-y snap-mandatory",
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -337,6 +375,10 @@ const CarouselContent = React.forward_ref<;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           className
         )}
         {...props}
@@ -380,6 +422,7 @@ const CarouselItem = React.forward_ref<;
         orientation === &quot;horizontal&quot; ? &quot;pl-4&quot; : &quot;pt-4&quot;
         "min-w-0 shrink-0 grow-0 basis-full snap-start",
         orientation === "horizontal" ? "pl-4" : "pt-4",
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -387,6 +430,10 @@ const CarouselItem = React.forward_ref<;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         className
       )}
       {...props}
@@ -433,6 +480,7 @@ const CarouselPrevious = React.forward_ref<;
         orientation === "horizontal"
           ? "left-1 sm:left-2 md:-left-12 top-1/2 -translate-y-1/2"
           : "top-1 sm:top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90",
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -440,6 +488,10 @@ const CarouselPrevious = React.forward_ref<;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         className
       )}
       className={cn (
@@ -460,7 +512,10 @@ const CarouselPrevious = React.forward_ref<;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </Button>
   )
 })
@@ -500,6 +555,7 @@ const CarouselNext = React.forward_ref<;
         orientation === "horizontal"
           ? "right-1 sm:right-2 md:-right-12 top-1/2 -translate-y-1/2"
           : "bottom-1 sm:bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -507,6 +563,10 @@ const CarouselNext = React.forward_ref<;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         className
       )}
       className={cn (
@@ -534,7 +594,10 @@ CarouselNext.display_name = &quot;CarouselNext & quot;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </Button>
   )
 })

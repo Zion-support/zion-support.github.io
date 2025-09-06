@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
@@ -7,6 +8,12 @@ interface NotificationHeaderProps {
   onMarkAllAsRead: () => Promise<void>
 
 
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 interface NotificationHeaderProps {;
@@ -15,8 +22,11 @@ interface NotificationHeaderProps {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
@@ -31,6 +41,7 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
         <Button
           variant="ghost"
           size="sm"
+<<<<<<< HEAD
 
           onClick={onMarkAllAsRead}
           className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark"
@@ -40,6 +51,14 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
       )}
     </div>
 
+=======
+=======
+import {Button} from '@/components/ui/button';
+interface NotificationHeaderProps {;
+  unreadCount: number,;
+  onMarkAllAsRead: () => Promise<void>;
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           onClick={onMarkAllAsRead}
           className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark">;
@@ -50,7 +69,11 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 
 
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </div>;
   );
 };

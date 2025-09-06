@@ -6,10 +6,13 @@ return (
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
@@ -43,6 +46,7 @@ return (
           </CardFooter>
         </Card>
         
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -50,6 +54,10 @@ return (
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -83,6 +91,7 @@ return (
           </CardFooter>
         </Card>
         
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -90,6 +99,10 @@ return (
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -121,6 +134,7 @@ return (
           </CardFooter>
         </Card>
         
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -128,6 +142,10 @@ return (
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -179,6 +197,7 @@ return (
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
             <Sparkles className="h-5 w-5 text-primary" />
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -186,6 +205,10 @@ return (
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
           <div>
             <h3 className='font-medium'>Need higher limits?</h3>
@@ -197,6 +220,7 @@ return (
         </div>
         <Button>Contact Us</Button>
       </div>
+<<<<<<< HEAD
 
 
     </div>;
@@ -212,6 +236,9 @@ import { Input } from "@/components/ui/input",;
 import { toast } from "@/hooks/use-toast",;
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {;
   Card,;
   CardContent,;
@@ -424,3 +451,16 @@ export function UsageStats() {;
             </p>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+
+
+        <Button > Contact Us</Button>;
+      </div>;
+    </div>);
+}"}
+
+    </div>
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

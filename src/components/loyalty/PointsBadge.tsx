@@ -65,7 +65,6 @@ export function PointsBadge() {;
 
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <TooltipProvider>;
@@ -120,11 +119,14 @@ export function PointsBadge() {;
             >
               <Gift className="h-4 w-4" aria-hidden="true" />
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <span>{`${points} pts`}</span>
             </Link>
           </TooltipTrigger>
@@ -179,6 +181,7 @@ export function PointsBadge() {;
 
 
         
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -186,6 +189,10 @@ export function PointsBadge() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
@@ -234,7 +241,10 @@ export function PointsBadge() {;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
@@ -246,6 +256,7 @@ export function PointsBadge() {;
             </TooltipContent>
           </Tooltip>
         )}
+<<<<<<< HEAD
 
 
       </div>
@@ -257,6 +268,8 @@ export function PointsBadge() {;
 }
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 ;
 
@@ -267,3 +280,20 @@ export function PointsBadge() {;
     </TooltipProvider>;
   );
 }
+<<<<<<< HEAD
+=======
+
+}
+
+
+              <p className='text - sm'>Refresh points balance</p>;
+            </TooltipContent>;
+          </Tooltip>)}
+      </div>;
+      {!is_authenticated && (
+        <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />)}
+    </TooltipProvider>);
+}
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

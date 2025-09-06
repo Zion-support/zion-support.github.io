@@ -27,13 +27,21 @@ import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { SearchSuggestion } from "@/types/search";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Tabs;
   TabsContent;
   TabsList;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const pageKey = `search-${routeKey}-${router.asPath}`
 import { useRouter } from 'next/router'
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
@@ -103,6 +111,7 @@ interface SearchResult {
   description: string
 }
 function highlight(text: string, term: string) {
+<<<<<<< HEAD
 
 
 
@@ -374,6 +383,8 @@ export default function SearchPage() {;
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   },;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault(),;
@@ -385,6 +396,7 @@ export default function SearchPage() {;
 
 
 
+<<<<<<< HEAD
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();    if (query && query.trim()) {;
       router && router.push(`/search?q=${encodeURIComponent(query && query.trim())}`);
@@ -396,6 +408,8 @@ export default function SearchPage() {;
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div key={pageKey}>
       <main className="container mx-auto px-4 py-8">
@@ -415,6 +429,7 @@ export default function SearchPage() {;
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
             }}
             searchSuggestions={suggestions}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -422,6 +437,10 @@ export default function SearchPage() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             placeholder="Search talent, jobs, and projects..."
           />
         </form>
@@ -553,6 +572,7 @@ export default function SearchPage() {;
         )}
 
 
+<<<<<<< HEAD
       </main>
     </div>
   )
@@ -567,6 +587,8 @@ if (query.trim () ) {
   if (!term.trim () ) {
   setResults ([])
 return
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 return;
 
 
@@ -807,6 +829,7 @@ router.push (`/search?q=$ {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="max - w-6xl mx -auto">
           {/* Results Count */}
+<<<<<<< HEAD
 
 
           <div  className="mb-6">
@@ -843,6 +866,8 @@ router.push (`/search?q=$ {
     </>
   )
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 ;

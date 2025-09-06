@@ -19,12 +19,29 @@ serve(async (req) => {
   }
 
 
+<<<<<<< HEAD
+=======
+  const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
+  const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
+  const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY") || "";
+  
+
+  if (!openAiKey) {
+    return new Response(
+      JSON && JSON.stringify({ error: "OpenAI API key is not configured" });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
   const supabase = createClient(supabaseUrl, supabaseAnonKey);
   try {
+<<<<<<< HEAD
     const { applicationId } = await req.json();
+=======
+
+    const { applicationId } = await req && req.json();
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
@@ -35,8 +52,12 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" });
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
@@ -47,8 +68,11 @@ serve(async (req) => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
@@ -158,8 +182,12 @@ serve(async (req) => {
       `;
       resumeSkills = application.talent_profile?.skills || []
 
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     );
   }
 ;
@@ -244,8 +272,11 @@ serve(async (req) => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
 
     // 4. Prepare job details
@@ -318,6 +349,7 @@ serve(async (req) => {
                   "score": 65,
                   "analysis": "Candidate has relevant degree."
                 }
+<<<<<<< HEAD
 
               }
               "suggestion": "Recommended for Review"
@@ -410,6 +442,10 @@ serve(async (req) => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
 
     const aiResult = await openAIResponse.json(),
@@ -490,6 +526,7 @@ serve(async (req) => {
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
 
 
 ;
@@ -548,5 +585,9 @@ serve(async (req) => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 });

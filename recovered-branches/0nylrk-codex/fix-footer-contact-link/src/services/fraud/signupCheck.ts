@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 // Signup checking functionality
 import { supabase  } from '@/integrations/supabase/client';
@@ -7,10 +8,26 @@ import { SignupCheckResult } from './types';
 /**
  * Check for suspicious signup patterns
  */
+=======
+// Signup checking functionality;
+import {supabase} from '@/integrations / supabase / client';
+import {analyze_email} from './analyze_email';
+import {SignupCheckResult} from './types';
+/**;
+* Check for suspicious signup patterns;
+*/;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+export const checkSignupPatterns = async (;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   email: string;
   ip_address?: string): Promise < SignupCheckResult> => {
   const reasons: string[] = [];
@@ -32,6 +49,10 @@ import { SignupCheckResult } from './types';
       if (!error && recentSignups && recentSignups.length >= 3) {
 
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Signup checking functionality;
 import { supabase } from '@/integrations/supabase/client',;
 import { analyzeEmail } from './analyzeEmail',;
@@ -63,10 +84,15 @@ export const checkSignupPatterns = async (;
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`);
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
     } catch (error) {
       console && console.error('Error checking signup patterns:', error)

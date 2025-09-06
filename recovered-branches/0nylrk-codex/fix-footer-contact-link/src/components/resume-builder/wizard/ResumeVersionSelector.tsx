@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -12,12 +16,16 @@ import {Resume} from '@/types/resume';
 import {useResume} from '@/hooks/useResume';
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void
 }
 
+<<<<<<< HEAD
 
 export function ResumeVersionSelector({
   currentResume
@@ -26,6 +34,12 @@ export function ResumeVersionSelector({
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState('');
@@ -41,16 +55,27 @@ export function ResumeVersionSelector({
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
+<<<<<<< HEAD
 
         setNewResumeTitle("");
 
+=======
+        setNewResumeTitle('');
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       setIsLoading(false);
     }
   }
 
+<<<<<<< HEAD
 
 
+=======
+        setNewResumeTitle('')
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from 'react',;
 import {;
   DropdownMenu,;
@@ -87,6 +112,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         setNewResumeTitle('');
 
 
+<<<<<<< HEAD
       }
       setIsLoading(false);
     }
@@ -107,6 +133,15 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+      setIsLoading(false);
+    }
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
     <div className="flex items-center gap-2">
@@ -181,8 +216,12 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
   )
 }
 
+<<<<<<< HEAD
 ;
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

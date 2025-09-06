@@ -30,13 +30,26 @@ interface AddMilestoneFormProps {;
   projectEndDate?: string;
   projectType?: string;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export function AddMilestoneForm(): any ({;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+
+export function AddMilestoneForm({;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   onSubmit;
   isSubmitting;
   onCancel;
@@ -44,7 +57,16 @@ export function AddMilestoneForm(): any ({;
   projectStartDate = '';
   projectEndDate = null;
 
+<<<<<<< HEAD
 
+=======
+=======
+      });
+      return
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -120,10 +142,16 @@ export function AddMilestoneForm({;
       return;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
 
     // If there are multiple milestones, submit them one by one

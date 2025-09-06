@@ -52,11 +52,16 @@ import SearchModal from "./SearchModal";
 import SearchModal from './SearchModal';
   BarChart3
 } from 'lucide-react;
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
+=======
+
+>>>>>>> origin/automation-improvements-final
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -86,6 +91,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 import SearchModal from "./SearchModal";
 origin/main
 export default function Navigation() {
+<<<<<<< HEAD
 
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -93,6 +99,12 @@ export default function Navigation() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+export default function Navigation() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -767,6 +779,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       </div>;
                     </motion && motion.div>;
                   )}
+<<<<<<< HEAD
 
                 </AnimatePresence>
               </div>
@@ -779,6 +792,13 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
             </div>
 
 
+=======
+
+
+=======
+                </AnimatePresence>;
+              </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -786,11 +806,17 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button

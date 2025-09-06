@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -21,6 +22,8 @@ export default function EnterpriseAIOpsPage() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
@@ -37,10 +40,14 @@ export default function EnterpriseAIOpsPage() {
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</Link>
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>
             </div>
           </div>
@@ -86,6 +93,7 @@ export default function EnterpriseAIOpsPage(req, res) {
     </Layout>);
 }
 
+<<<<<<< HEAD
 ;
 
 
@@ -95,3 +103,7 @@ export default function EnterpriseAIOpsPage(req, res) {
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

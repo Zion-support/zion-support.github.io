@@ -290,15 +290,39 @@ if (import.meta.url === `file: //${process.argv[1]}`) {const fixer = new SyntaxF
 export default SyntaxFixer;
     })
 
+<<<<<<< HEAD
+=======
+          modified = true
+        },
+,
+        if (modified) {,
+          fs.writeFileSync(file, content),
+          this.fixesApplied++,
+          this.log(`Fixed export issues in ${file}`)
+        }
+      } catch (error) {,
+<<<<<<< HEAD
+        this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+=======
+<<<<<<< HEAD
+this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+=======
+        this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
     })
   },
 ,
   getSourceFiles() {,
 
+<<<<<<< HEAD
     const files = [],;
     const srcDir = path.join(process.cwd(), &quot;src&quot;),
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ,
     if (fs.existsSync(srcDir)) {,
       const walkDir = (dir) => {,
@@ -310,7 +334,7 @@ export default SyntaxFixer;
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
             walkDir(fullPath)
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             files.push(fullPath)
           }
         })
@@ -425,6 +449,25 @@ this.log ("=" * 50),
     }
   }
 
+<<<<<<< HEAD
+=======
+
+},
+,
+// Main execution,
+// Check condition
+if ( {, ) {
+  $2
+}
+  const fixer = new SyntaxFixer (),
+  fixer.run ().catch (console.error);
+},
+,
+export default SyntaxFixer,
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     });
   },;
@@ -528,7 +571,12 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 export default SyntaxFixer;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

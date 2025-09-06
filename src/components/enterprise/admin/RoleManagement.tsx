@@ -2,6 +2,7 @@ export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
 import React from 'react';
+<<<<<<< HEAD
 
 
 
@@ -11,17 +12,22 @@ import React from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   TableRow,
 } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
@@ -31,7 +37,10 @@ import { toast } from '@/hooks / use - toast'; import { InfoIcon } from 'lucide-
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from '@/components / ui / tooltip';
 export /**
  * RoleManagement - Function description
@@ -266,6 +275,7 @@ export function RoleManagement() {;
         viewBilling: false,
 
 
+<<<<<<< HEAD
   const roleDescriptions: Record<string string> = {
     "Admin": "Full access to all features and settings",
     "Recruiter": "Can manage candidates and job postings",
@@ -276,6 +286,11 @@ export function RoleManagement() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-6">
       <div>
@@ -300,11 +315,14 @@ export function RoleManagement() {;
               </div>
               <p className="text-sm text-muted-foreground">{description}</p>
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             </div>
           ))}
         </div>
@@ -312,6 +330,7 @@ export function RoleManagement() {;
       <div className='rounded-md border'>
 
       <div className="rounded-md border">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -319,6 +338,10 @@ export function RoleManagement() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Table>
           <TableHeader>
             <TableRow>
@@ -405,6 +428,7 @@ export function RoleManagement() {;
             {teamMembers.map(member => (              <TableRow key={member.id}>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -412,6 +436,10 @@ export function RoleManagement() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <TableCell>
                   <div className='font-medium'>{member.name}</div>
                   <div className='text-sm text-muted-foreground'>
@@ -431,8 +459,11 @@ export function RoleManagement() {;
                     <option value="Viewer">Viewer</option>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
@@ -790,6 +821,7 @@ export function RoleManagement() {;
                 <TableCell className="text-center">;
                   <Switch;
                     aria-label="View candidates";
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -797,6 +829,10 @@ export function RoleManagement() {;
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>
                       handlePermissionChange(
@@ -864,6 +900,7 @@ export function RoleManagement() {;
 
                     checked={member.permissions.viewBilling}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     onCheckedChange={checked =>
                       handlePermissionChange(member.id, 'viewBilling', checked)
                     }                  />
@@ -878,16 +915,22 @@ export function RoleManagement() {;
 }
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       </div>;
     </div>;
   );
 };
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
                     }
@@ -903,3 +946,63 @@ export function RoleManagement() {;
   );
 
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+                <TableCell className='text - center'>;
+                  <Switch;
+                    aria - label='View candidates';
+                    checked={member.permissions.view_candidates}
+                    onCheckedChange={checked =>;
+                      handlePermissionChange (
+                        member.id,
+                        'view_candidates',
+                        checked);
+                    }                  />;
+                </TableCell>;
+                <TableCell className='text - center'>;
+                  <Switch;
+                    aria - label='Edit candidates';
+                    checked={member.permissions.edit_candidates}
+                    onCheckedChange={checked =>;
+                      handlePermissionChange (
+                        member.id,
+                        'edit_candidates',
+                        checked);
+                    }                  />;
+                </TableCell>;
+                <TableCell className='text - center'>;
+                  <Switch;
+                    aria - label='Create jobs';
+                    checked={member.permissions.create_jobs}
+                    onCheckedChange={checked =>;
+                      handlePermissionChange (member.id, 'create_jobs', checked);
+                    }                  />;
+                </TableCell>;
+                <TableCell className='text - center'>;
+                  <Switch;
+                    aria - label='Manage team';
+                    checked={member.permissions.manage_team}
+                    onCheckedChange={checked =>;
+                      handlePermissionChange (member.id, 'manage_team', checked);
+                    }                  />;
+                </TableCell>;
+                <TableCell className='text - center'>;
+                  <Switch;
+                    aria - label='View billing';
+                    checked={member.permissions.view_billing}
+                    onCheckedChange={checked =>;
+                      handlePermissionChange (member.id, 'view_billing', checked);
+                    }                  />;
+                </TableCell>;
+              </TableRow>))}
+          </TableBody>;
+        </Table>;
+      </div>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

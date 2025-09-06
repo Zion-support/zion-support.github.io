@@ -1,6 +1,11 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -11,6 +16,7 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Sparkles, ArrowRight} from "@/components/icons";
 import {supabase} from "@/integrations/supabase/client";
 import {Badge} from "@/components/ui/badge";
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
@@ -33,6 +39,16 @@ interface GeneratedContent {
   }
   keyPoints: string[]
 
+=======
+interface GeneratedContent {;
+  description: string,;
+  tags: string[],;
+  suggestedPrice: {;
+    min: number,;
+    max: number;
+  };
+  keyPoints: string[];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 interface AIListingGeneratorProps {;
@@ -42,12 +58,22 @@ interface AIListingGeneratorProps {;
     title?: string;
     category?: string;
     keyFeatures?: string;
+<<<<<<< HEAD
 
     targetAudience?: string
 import { supabase } from "@/integrations/supabase/client",
 import { Badge } from "@/components/ui/badge",
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+    targetAudience?: string;
+  }
+}
+
+export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
+  const { toast } = useToast();
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -58,6 +84,7 @@ interface GeneratedContent {
   keyPoints: string[]
 
 
+<<<<<<< HEAD
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -108,6 +135,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [isLoading, setIsLoading] = useState(false),
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
     switch(field) {
@@ -270,10 +299,14 @@ if ( {) {
         throw new Error(error.message);
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       if (data.error) {
         throw new Error(data.error)
@@ -395,12 +428,19 @@ if ( {) {
               onChange={(e) => handleInputChange(e, 'targetAudience')}
               placeholder="e.g. Developers, Marketers, Startups"
               className="bg-zion-blue border border-zion-blue-light text-white"
+<<<<<<< HEAD
 
               disabled={isLoading}
             />
           </div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
       setGeneratedContent(data.generated),;
 
@@ -492,10 +532,15 @@ if ( {) {
           <Button;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             onClick={handleGenerate}
             disabled={isLoading || !title || !category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"

@@ -24,6 +24,11 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Rocket,
   Brain,
   Atom,
@@ -36,9 +41,13 @@ import { motion } from 'framer-motion';
   Eye,;
   Timer,;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 } from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 
 
@@ -51,6 +60,7 @@ import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFutu
 import { cuttingEdge2029Services  } from '../data/2029-cutting-edge-innovations';
 import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services';
 
+<<<<<<< HEAD
 
 
 
@@ -64,6 +74,9 @@ import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services'
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const all2029Services = [
     ...cuttingEdgeInnovations2029
     ...spaceColonization2029Services
@@ -128,6 +141,7 @@ export default function UltraFuturistic2029InnovationsPage() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 
 
 
@@ -136,6 +150,8 @@ export default function UltraFuturistic2029InnovationsPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Hero Section */}
 
 
@@ -152,6 +168,7 @@ export default function UltraFuturistic2029InnovationsPage() {;
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
 
+<<<<<<< HEAD
 
     </>
   );
@@ -315,12 +332,57 @@ export default function UltraFuturistic2029InnovationsPage() {;
 }`
 }className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold" > Call Now </a> </div> </motion.div> </div> </section> {
 
+=======
+=======
+                  all2029Services.reduce ((sum, s) => sum + s.rating, 0) /;
+                  all2029Services.length).to_fixed (1),
+                icon: TrendingUp,
+                color: 'from - green - 500 to - teal - 500',
+              },
+            ].map ((stat, index) => (
+              <motion.div;
+                key={index}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className='text - center';
+              >;
+                <div;
+                  className={`w - 20 h - 20 bg - gradient - to - br ${stat.color} rounded - 3xl flex items - center justify - center mx - auto mb - 6`}
+                >;
+                  <stat.icon className='w - 10 h - 10 text - white' />;
+                </div>;
+                <div className='text - 4xl font - bold text - white mb - 2'>;
+                  {stat.value}
+                </div>;
+                <div className='text - gray - 400'>{stat.label}</div>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Contact CTA */}
+      <section className='py - 20 px - 4 sm:px - 6 lg:px - 8 relative'>;
+        <div className='max - w-4xl mx - auto text - center'>;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='bg - gradient - to - r from - purple - 900 / 30 to - pink - 900 / 30 border border - purple - 500 / 30 rounded - 3xl p - 12 backdrop - blur - sm';
+          >;
+            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+              Ready to Experience 2029?;
+            </h2>;
+            <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               Join the future of technology with our revolutionary 2029;
               innovations. Contact us today to discover how we can transform;
               your business.;
             </p>;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   /* Footer */ 
@@ -330,6 +392,8 @@ export default function UltraFuturistic2029InnovationsPage() {;
 
   /* Footer */ 
 }<UltraFuturisticFooter2029 /> </>)   )
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 <div className='flex flex - col sm:flex - row items - center justify - center gap - 4'>;
               <a;
@@ -348,7 +412,49 @@ export default function UltraFuturistic2029InnovationsPage() {;
           </motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
+=======
+=======
+
+        </div>
+      </section>
+      {/* Contact CTA */}
+      <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-3xl p-12 backdrop-blur-sm'
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              Ready to Experience 2029?
+            </h2>
+            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
+              Join the future of technology with our revolutionary 2029
+              innovations. Contact us today to discover how we can transform
+              your business.
+            </p>
+            <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
+              <a
+                href='/contact'
+                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'
+              >
+                Get Started Today
+              </a>
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'
+              >
+                Call Now
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Footer */}
       <UltraFuturisticFooter2029 />;
     </>);
@@ -474,7 +580,10 @@ export default function UltraFuturistic2029InnovationsPage() {;
 {
   label: 'Total Customers', value: all2029Services.reduce ( (sum, s) => sum + s.customers, 0), icon: Star, color: 'from - yellow - 500 to - orange - 500';
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 {
   label: 'Average Rating', value: (all2029Services.reduce ( (sum, s) => sum + s.rating, 0) / all2029Services.length) .to_fixed (1), icon: TrendingUp, color: 'from - green - 500 to - teal - 500';
 }].map ( (stat, index) => (<motion.div key= {
@@ -515,4 +624,8 @@ export default function UltraFuturistic2029InnovationsPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

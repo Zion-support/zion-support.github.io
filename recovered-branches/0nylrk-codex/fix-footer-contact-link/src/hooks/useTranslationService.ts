@@ -1,11 +1,17 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
 type ContentType = 'job' | 'profile' | 'service' | 'general';
+<<<<<<< HEAD
 interface TranslationResponse {
   translations: Record<SupportedLanguage, string>;
   error?: string
@@ -16,6 +22,26 @@ export function useTranslationService() {
 export function useTranslationService() {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {use_language, SupportedLanguage} from '@/context / LanguageContext';
+;
+type ContentType = 'job' | 'profile' | 'service' | 'general';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+interface TranslationResponse {
+  translations: Record < SupportedLanguage, string>;
+  error?: string;
+}
+
+
+
+export function useTranslationService() {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [isTranslating, setIsTranslating] = useState(false);
   const { currentLanguage } = useLanguage();
   const translateContent = async (
@@ -84,9 +110,13 @@ export function useTranslationService() {;
         initialTranslations[sourceLanguage] = content,;
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         return { translations: initialTranslations, error: error.message }
       }
       return { translations: data.translations }
@@ -144,10 +174,14 @@ export function useTranslationService() {;
     getTranslation;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 ;
   const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = '') =>: any {

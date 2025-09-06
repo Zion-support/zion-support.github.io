@@ -27,6 +27,10 @@ export interface EmptyMatchesCardProps {
 }
 
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
       <div className="mb-4 flex justify-center">
@@ -51,11 +55,17 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
             <Sparkles className="mr-2 h-4 w-4" />
             Find AI Matches
           </>
+<<<<<<< HEAD
 
         )}
       </Button>
 
 
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Sparkles, RefreshCcw } from "lucide-react",;
@@ -125,7 +135,15 @@ function EmptyMatchesCard() {
     </Card>);
 
 }
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

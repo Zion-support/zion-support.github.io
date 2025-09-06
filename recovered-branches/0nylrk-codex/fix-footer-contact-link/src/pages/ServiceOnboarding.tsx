@@ -1,6 +1,32 @@
 
+<<<<<<< HEAD
 
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react";
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 import {Header} from "@/components/Header";
@@ -10,6 +36,7 @@ import {Navigate} from "react-router-dom";
 export default function ServiceOnboarding() {;
   const { user, isLoading } = useAuth();
 
+<<<<<<< HEAD
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 import { Header } from "@/components/Header",
@@ -22,6 +49,13 @@ import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
 export default function ServiceOnboarding() {
   const { user, isLoading } = useAuth(),
+=======
+  // If not authenticated, redirect to login;
+  if (!isLoading && !user) {;
+    return <Navigate to="/login" replace />;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   // If not authenticated, redirect to login
@@ -84,6 +118,7 @@ export default function ServiceOnboarding() {;
 
     </>);
 }
+<<<<<<< HEAD
 ;
 
 
@@ -91,3 +126,11 @@ export default function ServiceOnboarding() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

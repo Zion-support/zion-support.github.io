@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -6,6 +7,8 @@
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -32,7 +35,10 @@ export default function SiteValidator(): any ({ report }: Props) {;
 
 
 
+<<<<<<< HEAD
 export default function SiteValidator({ report }: Props) {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   if (!report) return <div>No validation report yet.</div>;

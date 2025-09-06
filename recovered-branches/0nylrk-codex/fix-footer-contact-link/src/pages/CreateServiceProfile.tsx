@@ -1,12 +1,26 @@
 
+<<<<<<< HEAD
 
 import React from "react";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
+=======
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function CreateServiceProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -22,10 +36,18 @@ export default function CreateServiceProfile() {
       </div>
     </div>
   )
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react",;
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 
@@ -48,4 +70,11 @@ export default function CreateServiceProfile() {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+;
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

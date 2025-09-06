@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox",
@@ -15,6 +16,10 @@ import { FilterOptions } from "@/types/search",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface FilterSidebarProps {
   filters: {
 
@@ -28,6 +33,7 @@ interface FilterSidebarProps {
   onRatingChange: (rating: number | null) => void
 
 
+<<<<<<< HEAD
   },
   filterOptions: FilterOptions,
   onFilterChange: (filterType: string, value: string) => void,
@@ -64,6 +70,13 @@ import { Checkbox } from "@/components/ui/checkbox",;
 import { Filter, X, Star } from "lucide-react",;
 import { FilterOptions } from "@/types/search",;
 
+=======
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Filter, X, Star} from "lucide-react";
+import {FilterOptions} from "@/types/search";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface FilterSidebarProps {;
   filters: {;
     selectedProductTypes: string[],;
@@ -85,7 +98,10 @@ export function FilterSidebar(): any ({;
   onRatingChange;
   onClearFilters;
 }: FilterSidebarProps) {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
 
 
@@ -116,11 +132,14 @@ export function FilterSidebar(): any ({;
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           onClick={onClearFilters}
         >
           Clear All

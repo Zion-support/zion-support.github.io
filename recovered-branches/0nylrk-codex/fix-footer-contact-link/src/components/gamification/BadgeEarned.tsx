@@ -1,11 +1,17 @@
 
+<<<<<<< HEAD
 
 import React from "react";
+=======
+import React from './react';
+import { getBadgeMeta, BadgeKey } from './badge_config';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface BadgeEarnedProps {
 
   badge: BadgeKey
 
+<<<<<<< HEAD
   size?: number;
 
   showName?: boolean;
@@ -14,6 +20,47 @@ interface BadgeEarnedProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+import {getBadgeMeta, BadgeKey} from "./badgeConfig";
+
+interface BadgeEarnedProps {;
+  badge: BadgeKey,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  size?: number;
+
+
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
+
+=======
+  show_name?: boolean;
+  show_desc?: boolean;
+  earned_date?: string;
+}
+export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  badge;
+
+  size = 44;
+
+  showDesc = false,;
+  earnedDate}) => {;
+  const meta = getBadgeMeta(badge);
+  if (!meta) return null;
+  const Icon = meta && meta.icon;
+
+
+=======
+
+
+import {getBadgeMeta, BadgeKey} from "./badgeConfig";
+
+=======
+import React from "react",
+import { getBadgeMeta, BadgeKey } from "./badgeConfig",
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -22,6 +69,7 @@ interface BadgeEarnedProps {
   size?: number,
   showName?: boolean,
   showDesc?: boolean,
+<<<<<<< HEAD
   earnedDate?: string
 }
 
@@ -44,6 +92,12 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   const meta = getBadgeMeta(badge),
   if (!meta) return null,
   const Icon = meta.icon,
+=======
+
+  earnedDate?: string
+}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -106,9 +160,12 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>;
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {meta.name}
         </span>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -122,6 +179,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
         <span className="text-xs text-zion-slate-light">{meta && meta.description}</span>;
       )}
 
+<<<<<<< HEAD
     </div>
   )
 
@@ -129,4 +187,18 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+    </div>;
+  );
+
+=======
+=======
+    </div>;
+  );
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };

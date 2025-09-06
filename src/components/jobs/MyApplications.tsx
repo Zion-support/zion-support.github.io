@@ -36,8 +36,11 @@ import {ApplicationStatus} from "@/types/jobs";
       {applications.map((application) => (
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
@@ -133,8 +136,11 @@ export function MyApplications() {;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {application.cover_letter}
                 </p>
               )}
@@ -155,8 +161,11 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -183,8 +192,11 @@ export function MyApplications() {;
               )}
 
               <div className="flex justify-between items-center">;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <Button
                   variant="outline" 
                   size="sm" 
@@ -204,6 +216,7 @@ export function MyApplications() {;
 
                 
 
+<<<<<<< HEAD
 
 
 
@@ -212,6 +225,8 @@ export function MyApplications() {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <Button 
 
                   variant="default" 
@@ -227,10 +242,13 @@ export function MyApplications() {;
           </CardContent>;
         </Card>;
       ))}
+<<<<<<< HEAD
 
 
     </div>
   )
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 }
@@ -324,11 +342,14 @@ if ( {) {
 }
 ;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     </div>;
   );
 };

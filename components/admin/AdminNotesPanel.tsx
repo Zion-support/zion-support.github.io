@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useEffect, useMemo, useState } from 'react';
@@ -8,6 +9,17 @@ export type AdminNotesPanelProps = {
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+export type AdminNotesPanelProps = {;
+  targetType: string; // e && e.g., 'user' | 'listing';
+  targetId: string; // unique identifier for the target;
+};
+type Note = {;
+  target_type: string; // e.g., 'user' | 'listing';
+  target_id: string; // unique identifier for the target;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;
 type Note = {
@@ -19,14 +31,23 @@ type Note = {
 import React, { useEffect, useMemo, useState } from 'react';
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   targetType,
   targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 type Note = {
   id: string
   targetType: string
@@ -35,15 +56,28 @@ type Note = {
   authorId: string
   createdAt: number
 
+<<<<<<< HEAD
 }
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
+=======
+};
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -149,12 +183,22 @@ if ( {) {
       setText('');
 
 
+<<<<<<< HEAD
       await fetchNotes()
     } finally {
       setAdding(false)
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+    }
+  }
+
+  if (!isAdmin) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     }
   }
@@ -418,6 +462,7 @@ if ( {) {
         )}
       </div>
     </div>
+<<<<<<< HEAD
 
 
 
@@ -426,3 +471,10 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+<<<<<<< HEAD
+  )
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

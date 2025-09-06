@@ -1,11 +1,15 @@
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
 import {
+<<<<<<< HEAD
 
   parseUserFromRequest
   ensureInvolvedOrAdmin
@@ -16,9 +20,27 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const { id, fileName } = req.query as { id?: string; fileName?: string }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  const { id, fileName } = req.query as { id?: string; fileName?: string };
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (
     !id |
     !fileName |
@@ -27,6 +49,33 @@ export default async function handler(
   ) {
 
 
+<<<<<<< HEAD
+=======
+  const user = parseUserFromRequest(req);
+  const dispute = await getDisputeById(id);
+  if (!dispute) return res.status($1).json({ $2 });
+  try {
+    ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+  } catch (e: any) {
+    return res.status(e.statusCode |403).json({ error: "Forbidden" });
+  }
+  const att = dispute.attachments.find((a) => a.fileName === fileName);
+  if (!att) return res.status($1).json({ $2 });
+  const stat = fs.statSync(att.path);
+  res.setHeader("Content-Type", att.mimeType);
+  res.setHeader("Content-Length", String(stat.size));
+  res.setHeader(
+    "Content-Disposition"
+    `attachment; filename="${path.basename(att.fileName)}"`
+  );
+  const stream = fs.createReadStream(att.path);
+  stream.pipe(res);
+}
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -43,6 +92,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
+<<<<<<< HEAD
 
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
@@ -94,3 +144,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  if (!dispute) return res && res.status($1).json({ $2 });
+  try {
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

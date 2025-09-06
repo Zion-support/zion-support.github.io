@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {Header} from "@/components/header";
 import {Footer} from "@/components/Footer";
 import {JobPostingForm} from "@/components/jobs";
@@ -10,6 +13,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 import {useIsMobile} from "@/hooks/use-mobile";
 export default function PostJob() {;
+<<<<<<< HEAD
 
   const { isAuthenticated, isLoading } = useAuth();
   const isMobile = useIsMobile();
@@ -23,6 +27,8 @@ import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const { isAuthenticated, isLoading } = useAuth();
 
@@ -35,6 +41,7 @@ export default function PostJob() {
   const isMobile = useIsMobile(),
   
   if (isLoading) {
+<<<<<<< HEAD
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>
@@ -69,6 +76,24 @@ export default function PostJob() {
   )
 
 
+=======
+=======
+  if (isLoading) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
+      <div className="flex items-center justify-center min-h-screen">;
+        <div className="animate-pulse">Loading...</div>;
+      </div>;
+    );
+  }
+
+
+  return (
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
@@ -112,6 +137,7 @@ export default function PostJob() {;
       </main>;
       <Footer />;
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
+<<<<<<< HEAD
 
       {isMobile && <div className="h-16"></div>}
     </>;
@@ -119,5 +145,12 @@ export default function PostJob() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

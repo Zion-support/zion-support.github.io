@@ -3,11 +3,18 @@ name: string;
   text: string;
   avatar?: string
 }
+<<<<<<< HEAD
 
 
 interface ServiceLandingTemplateProps {
 
 
+=======
+
+
+interface ServiceLandingTemplateProps {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   title: string;
   subtitle: string;
   heroImage?: string;
@@ -59,6 +66,7 @@ export interface Benefit {;
   icon?: React.ReactNode;
 }
 export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
+<<<<<<< HEAD
 
 
 export interface Benefit {
@@ -99,6 +107,16 @@ interface ServiceLandingTemplateProps {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+
+
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
@@ -126,12 +144,15 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           </p>
   testimonials,
   ctaText,
+<<<<<<< HEAD
 
 
   ctaLink}) => {
   ctaLink,
 }) => {
   ctaLink}) => {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   return (
@@ -161,6 +182,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
       <section className="py-12 px-4">
         <div className="container mx-auto text-center">
           <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -169,6 +191,11 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {description}
 
     <div className="min - h-screen bg - white">;
@@ -313,6 +340,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
           >
             {ctaText}
+<<<<<<< HEAD
 
 
           </a>
@@ -323,6 +351,8 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 }
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           </a>;
         </div>;
@@ -406,3 +436,33 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
       </section>
     </div>
   )
+<<<<<<< HEAD
+=======
+
+                  </div>;
+                  <div className="text - gray - 600">{stat.label}</div>;
+                </div>))}
+            </div>;
+          </div>;
+        </section>)}
+      <section className="py - 16 px - 4 bg - blue - 600">;
+        <div className="max - w-4xl mx - auto text - center">;
+          <h2 className="text - 3xl font - bold text - white mb - 4">;
+            Ready to Get Started?;
+          </h2>;
+          <p className="text - xl text - blue - 100 mb - 8">;
+            Contact us today to learn more about our services.;
+          </p>;
+          <a;
+            href={cta_link}
+            className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors inline - block";
+          >;
+            {cta_text}
+          </a>;
+        </div>;
+      </section>;
+    </div>);
+}
+
+},
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

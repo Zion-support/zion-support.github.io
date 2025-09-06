@@ -24,6 +24,19 @@ class ErrorBoundary extends React.Component {
 import React, { useMemo, useState } from 'react';
 
 
+<<<<<<< HEAD
+=======
+=======
+
+export default function ServiceDescriptionGeneratorPage(req, res) {
+  try {
+
+=======
+export default function ServiceDescriptionGeneratorPage(req, res) {
+  try {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function ServiceDescriptionGeneratorPage() {;
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
@@ -33,7 +46,11 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
@@ -44,13 +61,20 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
     'professional' | 'friendly' | 'persuasive' | 'technical'
 
   >('professional');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
@@ -58,6 +82,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 
 
+<<<<<<< HEAD
   const keyFeatures = useMemo(() => {
     return featuresInput
       .split('\n')
@@ -98,6 +123,8 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
     if (!generated) return;
     navigator.clipboard.writeText(generated).catch(() => {});
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   }
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
@@ -184,7 +211,10 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
       </p>
       <form
         onSubmit={handleSubmit}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'>;
         <div>;
           <label className='block text-sm font-medium mb-1'>;
@@ -200,11 +230,14 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
   }
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div>
           <label className="block text-sm font-medium mb-1">Service Title</label>
           <input
@@ -330,9 +363,43 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
     </div>;
   );
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+            className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={generated}
+            onChange={(e) => setGenerated(e.target.value)}
+          />
+          {accepted && (
+            <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        <div>;
+          <label className='block text - sm font - medium mb - 1'>;
+            Additional Notes (optional);
+          </label>;
+          <textarea;
+            className='w - full min - h-[80px] rounded - md border border - gray - 300 dark:border - gray - 700 bg - transparent px - 3 py - 2 focus:outline - none focus:ring - 2 focus:ring - blue - 500';
+            placeholder='Constraints, deliverables, timeline, pricing preferences, compliance, etc.';
+            value={additional_notes}
+            on_change={e => setAdditionalNotes (e.target.value)}
+          />;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         </div>;
 
       )  } catch (error) {
@@ -349,7 +416,12 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

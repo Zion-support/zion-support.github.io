@@ -187,6 +187,7 @@ const HeroSection: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -195,6 +196,11 @@ const HeroSection: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Badge */}
           <motion&& motion.div
             initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -473,6 +479,19 @@ const HeroSection: React.FC = () => {
           </motion.h1>
 
           {_/* Subtitle */}
+<<<<<<< HEAD
+=======
+=======
+            className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
+          >
+            Transform Your Business with
+            <span className='block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>              Cutting-Edge Technology            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+          >
+            Transform Your Business with
+            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            </span>
+          </motion.h1>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -514,6 +533,11 @@ const HeroSection: React.FC = () => {
           </motion.div>
 
           {_/* Stats */}
+<<<<<<< HEAD
+=======
+=======
+            className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-16'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -567,12 +591,20 @@ const HeroSection: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
 
+<<<<<<< HEAD
+=======
+                className='text-center group'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors">
                   <stat.icon className="w-8 h-8 text-blue-400" />
@@ -583,11 +615,17 @@ const HeroSection: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ))}
           </motion.div>
         </motion.div>
@@ -603,7 +641,11 @@ const HeroSection: React.FC = () => {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}
@@ -611,11 +653,56 @@ const HeroSection: React.FC = () => {
         transition={{ duration: 1, delay: 1 }}
 
 
+<<<<<<< HEAD
 
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
 
+=======
+=======
+                className='text - center group';
+              >;
+                <div className='w - 16 h - 16 bg - white / 10 backdrop - blur - sm rounded - 2xl flex items - center justify - center mx - auto mb - 4 border border - white / 20 group - hover:border - blue - 400 transition - colors'>;
+                  <stat.icon className='w - 8 h - 8 text - blue - 400' />;
+                </div>;
+                <div className='text - 3xl font - bold text - white mb - 2'>;
+                  {stat.value}
+                </div>;
+                <div className='text - gray - 400 font - medium'>{stat.label}</div>              </motion.div>              >;
+                <div className="w - 16 h - 16 bg - white / 10 backdrop - blur - sm rounded - 2xl flex items - center justify - center mx - auto mb - 4 border border - white / 20 group - hover:border - blue - 400 transition - colors">;
+                  <stat.icon className="w - 8 h - 8 text - blue - 400" />;
+                </div>;
+                <div className="text - 3xl font - bold text - white mb - 2">{stat.value}</div>;
+                <div className="text - gray - 400 font - medium">{stat.label}</div>;
+              </motion.div>))}
+          </motion.div>;
+        </motion.div>;
+      </div>;
+      {/* Scroll Indicator */}
+      <motion.div;
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+        className='absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2'      >;
+        <motion.div;
+          animate={{ coordinate_y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className='w - 6 h - 10 border - 2 border - white / 30 rounded - full flex justify - center'        >;
+          <motion.div;
+            animate={{ coordinate_y: [0, 12, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className='w - 1 h - 3 bg - white / 60 rounded - full mt - 2'          />;
+        </motion.div>;
+      </motion.div>;
+    </section>);
+}
+;
+export default HeroSection;        className="absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2";
+      >;
+        <motion.div;
+          animate={{ coordinate_y: [0, 10, 0] }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           transition={{ duration: 2, repeat: Infinity }}
           className='w - 6 h - 10 border - 2 border - white / 30 rounded - full flex justify - center'          className="w - 6 h - 10 border - 2 border - white / 30 rounded - full flex justify - center";
         >;
@@ -634,6 +721,7 @@ export default HeroSection);
 }
 ;
 export default HeroSection;
+<<<<<<< HEAD
 
 
     </section>
@@ -642,3 +730,7 @@ export default HeroSection;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

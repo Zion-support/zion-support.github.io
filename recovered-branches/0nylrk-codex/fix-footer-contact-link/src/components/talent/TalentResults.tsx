@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react",
 import { TalentProfile } from "@/types/talent",
 import { ActiveFilters } from "@/components/talent/ActiveFilters",
@@ -15,6 +16,10 @@ import { TalentGrid } from "@/components/talent/TalentGrid",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface TalentResultsProps {
 
   filteredTalents: TalentProfile[]
@@ -49,6 +54,7 @@ interface TalentResultsProps {
     clearFilters: () => void
   }
 }
+<<<<<<< HEAD
 
 
 export function TalentResults({
@@ -60,6 +66,11 @@ export function TalentResults({
   handleToggleSave,
   isAuthenticated,
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   activeFiltersProps
 }: TalentResultsProps) {
   return (
@@ -111,10 +122,15 @@ export function TalentResults(): any ({;
     <div className="flex-1">;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Active filters */}
 
       <ActiveFilters {...activeFiltersProps} />;
@@ -138,6 +154,35 @@ export function TalentResults(): any ({;
         onToggleSave={handleToggleSave}
 
         clearFilters={activeFiltersProps && activeFiltersProps.clearFilters}
+<<<<<<< HEAD
+=======
+=======
+        isAuthenticated={isAuthenticated}
+        clearFilters={activeFiltersProps.clearFilters}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
+=======
+      />;
+    </div>;
+  );
+}
+
+        is_authenticated={is_authenticated}
+        clear_filters={activeFiltersProps.clear_filters}
+      />;
+    </div>);
+}
+
+=======
+;
+
+=======
+
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

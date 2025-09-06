@@ -24,6 +24,7 @@ appStoreUrl = {appStoreUrl,}
                 <p>Free download, in-app purchases available</p>
               </div>
             </div>
+<<<<<<< HEAD
 
 
             <div className="flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">
@@ -54,6 +55,9 @@ import { logInfo } from '@/utils/productionLogger',;
 export const DownloadSection: React.FC = () => {;
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // These would typically come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
@@ -113,11 +117,14 @@ export const DownloadSection: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 ";
 

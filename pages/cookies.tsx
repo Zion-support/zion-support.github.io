@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -5,10 +6,24 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+
+
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
 
   Shield
   Settings
@@ -19,6 +34,10 @@ import {
   XCircle
   AlertTriangle
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Shield,
   Settings,
   Info,
@@ -38,7 +57,10 @@ export default function CookiePolicyPage() {
     functional: false;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   });
   const cookieTypes = [
     {
@@ -323,6 +345,243 @@ export default function CookiePolicyPage() {;
 
                     className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
 
+<<<<<<< HEAD
+=======
+                    Save Preferences;
+                  </button>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+                What Are Cookies?;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                Cookies are small text files that are stored on your device when you visit our website. ;
+                They help us provide you with a better experience and understand how you use our site.;
+              </p>;
+            </motion && motion.div>;
+            <div className="max-w-4xl mx-auto">;
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
+                <motion&& motion.div
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.8 }}
+                  viewport={{ once: true }}>;
+                  <div className="flex items-center mb-4">;
+                    <Info className="w-6 h-6 text-blue-600 mr-3" />;
+                    <h3 className="text-lg font-semibold text-gray-900">How We Use Cookies</h3>;
+                  </div>;
+                  <ul className="space-y-2 text-gray-600">;
+                    <li className="flex items-start">;
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1" />;
+                      <span>Remember your preferences and settings</span>;
+                    </li>;
+                    <li className="flex items-start">;
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1" />;
+                      <span>Analyze website traffic and usage patterns</span>;
+                    </li>;
+                    <li className="flex items-start">;
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1" />;
+                      <span>Improve website performance and functionality</span>;
+                    </li>;
+                    <li className="flex items-start">;
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1" />;
+                      <span>Provide personalized content and recommendations</span>;
+                    </li>;
+                  </ul>;
+                </motion && motion.div>;
+                <motion&& motion.div
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
+                  viewport={{ once: true }}>;
+                  <div className="flex items-center mb-4">;
+                    <Settings className="w-6 h-6 text-purple-600 mr-3" />;
+                    <h3 className="text-lg font-semibold text-gray-900">Managing Cookies</h3>;
+                  </div>;
+                  <ul className="space-y-2 text-gray-600">;
+                    <li className="flex items-start">;
+                      <ArrowRight className="w-4 h-4 text-purple-500 mr-2 mt-1" />;
+                      <span>Use our cookie preference center above</span>;
+                    </li>;
+                    <li className="flex items-start">;
+                      <ArrowRight className="w-4 h-4 text-purple-500 mr-2 mt-1" />;
+                      <span>Configure your browser settings</span>;
+                    </li>;
+                    <li className="flex items-start">;
+                      <ArrowRight className="w-4 h-4 text-purple-500 mr-2 mt-1" />;
+                      <span>Opt out of third-party tracking</span>;
+                    </li>;
+                    <li className="flex items-start">;
+                      <ArrowRight className="w-4 h-4 text-purple-500 mr-2 mt-1" />;
+                      <span>Clear cookies from your device</span>;
+                    </li>;
+                  </ul>;
+                </motion && motion.div>;
+        {/* Cookie Information */}
+        <section className="py - 20 bg - white">;
+          <div className="container mx - auto px - 4">;
+            <motion.div;
+              className="text - center mb - 16";
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >;
+              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
+                What Are Cookies?;
+              </h2>;
+              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
+                Cookies are small text files that are stored on your device when you visit our website.;
+                They help us provide you with a better experience and understand how you use our site.;
+              </p>;
+            </motion.div>;
+            <div className="max - w-4xl mx - auto">;
+              <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
+                <motion.div;
+                  className="bg - gray - 50 p - 6 rounded - lg";
+                  initial={{ opacity: 0, coordinate_y: 30 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >;
+                  <div className="flex items - center mb - 4">;
+                    <Info className="w - 6 h - 6 text - blue - 600 mr - 3" />;
+                    <h3 className="text - lg font - semibold text - gray - 900">How We Use Cookies</h3>;
+                  </div>;
+                  <ul className="space - y-2 text - gray - 600">;
+                    <li className="flex items - start">;
+                      <CheckCircle className="w - 4 h - 4 text - green - 500 mr - 2 mt - 1" />;
+                      <span > Remember your preferences and settings</span>;
+                    </li>;
+                    <li className="flex items - start">;
+                      <CheckCircle className="w - 4 h - 4 text - green - 500 mr - 2 mt - 1" />;
+                      <span > Analyze website traffic and usage patterns</span>;
+                    </li>;
+                    <li className="flex items - start">;
+                      <CheckCircle className="w - 4 h - 4 text - green - 500 mr - 2 mt - 1" />;
+                      <span > Improve website performance and functionality</span>;
+                    </li>;
+                    <li className="flex items - start">;
+                      <CheckCircle className="w - 4 h - 4 text - green - 500 mr - 2 mt - 1" />;
+                      <span > Provide personalized content and recommendations</span>;
+                    </li>;
+                  </ul>;
+                </motion.div>;
+                <motion.div;
+                  className="bg - gray - 50 p - 6 rounded - lg";
+                  initial={{ opacity: 0, coordinate_y: 30 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.1 }}
+                  viewport={{ once: true }}
+                >;
+                  <div className="flex items - center mb - 4">;
+                    <Settings className="w - 6 h - 6 text - purple - 600 mr - 3" />;
+                    <h3 className="text - lg font - semibold text - gray - 900">Managing Cookies</h3>;
+                  </div>;
+                  <ul className="space - y-2 text - gray - 600">;
+                    <li className="flex items - start">;
+                      <ArrowRight className="w - 4 h - 4 text - purple - 500 mr - 2 mt - 1" />;
+                      <span > Use our cookie preference center above</span>;
+                    </li>;
+                    <li className="flex items - start">;
+                      <ArrowRight className="w - 4 h - 4 text - purple - 500 mr - 2 mt - 1" />;
+                      <span > Configure your browser settings</span>;
+                    </li>;
+                    <li className="flex items - start">;
+                      <ArrowRight className="w - 4 h - 4 text - purple - 500 mr - 2 mt - 1" />;
+                      <span > Opt out of third - party tracking</span>;
+                    </li>;
+                    <li className="flex items - start">;
+                      <ArrowRight className="w - 4 h - 4 text - purple - 500 mr - 2 mt - 1" />;
+                      <span > Clear cookies from your device</span>;
+                    </li>;
+                  </ul>;
+                </motion.div>;
+
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+                Questions About Our Cookie Policy?;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                If you have any questions about our use of cookies or this policy, ;
+                please don't hesitate to contact us.;
+              </p>;
+            </motion && motion.div>;
+
+            <div className="max-w-2xl mx-auto text-center">;
+              <div className="bg-white rounded-lg shadow-lg p-8">;
+                <div className="space-y-4">;
+                  <div className="flex items-center justify-center">;
+                    <Shield className="w-6 h-6 text-indigo-600 mr-3" />;
+                    <span className="text-lg font-semibold text-gray-900">Privacy Team</span>;
+                  </div>;
+                  <p className="text-gray-600">;
+                    Email: <a href="mailto:privacy@ziontechgroup && ziontechgroup.com" className="text-indigo-600 hover:text-indigo-700">privacy@ziontechgroup && ziontechgroup.com</a>;
+                  </p>;
+                  <p className="text-gray-600">;
+                    Phone: <a href="tel:+13024640950" className="text-indigo-600 hover:text-indigo-700">+1 302 464 0950</a>;
+                  </p>;
+                  <p className="text-sm text-gray-500">;
+                    Last updated: {new Date().toLocaleDateString()}
+=======
+        {/* Contact Information */}
+        <section className="py - 20 bg - gray - 50">;
+          <div className="container mx - auto px - 4">;
+            <motion.div;
+              className="text - center mb - 16";
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >;
+              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
+                Questions About Our Cookie Policy?;
+              </h2>;
+              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
+                If you have any questions about our use of cookies or this policy,
+                please don't hesitate to contact us.;
+              </p>;
+            </motion.div>;
+            <div className="max - w-2xl mx - auto text - center">;
+              <div className="bg - white rounded - lg shadow - lg p - 8">;
+                <div className="space - y-4">;
+                  <div className="flex items - center justify - center">;
+                    <Shield className="w - 6 h - 6 text - indigo - 600 mr - 3" />;
+                    <span className="text - lg font - semibold text - gray - 900">Privacy Team</span>;
+                  </div>;
+                  <p className="text - gray - 600">;
+                    Email: <a href="mailto:privacy@ziontechgroup.com" className="text - indigo - 600 hover:text - indigo - 700">privacy@ziontechgroup.com</a>;
+                  </p>;
+                  <p className="text - gray - 600">;
+                    Phone: <a href="tel:+13024640950" className="text - indigo - 600 hover:text - indigo - 700">+1 302 464 0950</a>;
+                  </p>;
+                  <p className="text - sm text - gray - 500">;
+                    Last updated: {new Date ().toLocaleDateString ()}
+
+                  </p>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default function CookiesPage() {
   return (
@@ -368,6 +627,7 @@ origin/automation-improvements-final
             <li>Opt‑out: browser settings and extensions</li>
           </ul>
 
+<<<<<<< HEAD
 origin/automation-improvements-final
           <p className='text-gray-400 text-sm'>
             Questions?{' '}
@@ -378,17 +638,25 @@ origin/automation-improvements-final
         </div>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
 
       </div>
     </UltraAdvancedFuturisticBackground>
   )
+<<<<<<< HEAD
 
 
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 }
+<<<<<<< HEAD
       </div>
     </UltraAdvancedFuturisticBackground>
   )
@@ -396,11 +664,71 @@ origin/automation-improvements-final
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+import { motion } from 'framer-motion';
+import Head from 'next / head';
+import Layout from '../components / Layout';
+export default /**
+ * CookiesPage - Function description
+ */
+function CookiesPage() {
+  return (
+    <UltraAdvancedFuturisticBackground>;
+      <SEO;
+        title='Cookie Policy | Zion Tech Group';
+        description='Information about cookies used by Zion Tech Group.';
+        canonical='https://ziontechgroup.com / cookies/';
+      />;
+      <div className='container mx - auto px - 4 py - 24 text - white'>;
+        <div className='max - w-3xl mx - auto space - y-6'>;
+          <h1 className='text - 4xl md:text - 5xl font - bold'>Cookie Policy</h1>;
+          <p className='text - gray - 300'>;
+            We use minimal, privacy‑respecting analytics. Some third‑party;
+            embeds may set cookies. You can block non‑essential cookies via your;
+            browser.;
+          </p>;
+          <ul className='list - disc list - inside text - gray - 300 space - y-1'>;
+      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com / cookies/" />;
+      <div className="container mx - auto px - 4 py - 24 text - white">;
+        <div className="max - w-3xl mx - auto space - y-6">;
+          <h1 className="text - 4xl md:text - 5xl font - bold">Cookie Policy</h1>;
+          <p className="text - gray - 300">We use minimal, privacy‑respecting analytics. Some third‑party embeds may set cookies. You can block non‑essential cookies via your browser.</p>;
+          <ul className="list - disc list - inside text - gray - 300 space - y-1">;
+<li > Purpose: performance and security</li>;
+            <li > Retention: session or short‑term</li>;
+            <li > Opt‑out: browser settings and extensions</li>;
+          </ul>;
+          <p className='text - gray - 400 text - sm'>;
+            Questions?{' '}
+            <a className='text - cyan - 400' href='mailto:kleber@ziontechgroup.com'>;
+              kleber@ziontechgroup.com;
+
+            </a>;
+          </p>;
+        </div>;
+      </Layout>;
+
+
+=======
+
+
+  );
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
     </>);
 ;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+<li > Purpose: performance and security</li> <li > Retention: session or short‑term</li> <li > Opt‑out: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -52,10 +52,29 @@ const defaultConfig: DatabaseConfig = {
 // Singleton database instance
 export const db = new DatabaseManager(defaultConfig);
 
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
+=======
+=======
+export function writeJsonFile < T>(file_name: string, data: T): void {
+  const file_path = getFilePath (file_name);
+  const tmp_path = `${file_path}.tmp`;
+  fs.writeFileSync (tmp_path, JSON.stringify (data, null, 2), 'utf - 8');
+  fs.rename_sync (tmp_path, file_path);
+}
+export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
+  const items = readJsonFile < T[]>(file_name, []);
+  items.push (item);
+  writeJsonFile < T[]>(file_name, items);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   const items = readJsonFile<T[]>(fileName, []);
@@ -63,12 +82,21 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   writeJsonFile<T[]>(fileName, items);
 }
 
+<<<<<<< HEAD
+=======
+=======
+import fs from 'fs';
+import path from 'path';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

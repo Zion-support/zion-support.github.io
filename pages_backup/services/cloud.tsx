@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
@@ -17,6 +27,7 @@ import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 export default function CloudServicesPage() {
   const cloudServices = [;
     {}
@@ -52,6 +63,10 @@ export default function CloudServicesPage() {
       <div className="min-h-screen bg-gray-50">";
   ];
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -95,8 +110,11 @@ const cloudServices = [;
 
 
 
+<<<<<<< HEAD
 export default function CloudServicesPage() {
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function CloudServicesPage() {
   const cloudServices = [;
     {}
@@ -130,6 +148,7 @@ export default function CloudServicesPage() {
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."">;
       <div className="min-h-screen bg-gray-50">";
   ];
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
   return (
@@ -138,6 +157,21 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
   
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <Layout
+      title="Cloud Solutions - Zion Tech Group"
+
+  
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     >
       <div className="min-h-screen bg-gray-50">
 =======
@@ -150,6 +184,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -157,6 +192,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
                 Cloud Solutions;
+=======
+
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center"">;
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">", Cloud Solutions,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </h1>;
               <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",;
                 Transform your business with our comprehensive cloud solutions. ;
@@ -166,9 +207,21 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -181,6 +234,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -270,6 +324,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/cloud.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
           <div className="container mx-auto px-4 text-center">";

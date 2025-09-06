@@ -1,6 +1,12 @@
 
+<<<<<<< HEAD
 
 
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.45.0",
+import {Resend} from "npm: resend@2 ;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Initialize Resend with API key
 const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
 
@@ -20,10 +26,27 @@ interface EmailData {
   user_type: string;
   days_inactive?: number;
   onboarding_status?: any;
+<<<<<<< HEAD
 
   job_id?: string
 
 
+=======
+
+
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
+import {Resend} from "npm: resend@2.0.0";
+
+=======
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+import { Resend } from "npm: resend@2.0.0",
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Initialize Resend with API key
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
 
@@ -191,6 +214,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       {
         headers: {
           ...corsHeaders,
+<<<<<<< HEAD
 
 
           "Content-Type": "application/json"},
@@ -308,6 +332,9 @@ serve(async (req) => {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {
   const { email_type, display_name, user_type } = emailData,
@@ -551,10 +578,18 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
         </div>
         <p>The Zion AI Marketplace Team</p>
       </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       subject: `Tips to find the perfect talent for "${email_data.job_title}"`;
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }),;
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {;
   const { email_type, display_name, user_type } = emailData,;
@@ -684,10 +719,16 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     `}
 }
 ;

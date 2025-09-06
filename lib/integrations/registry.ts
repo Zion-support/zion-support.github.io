@@ -43,6 +43,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     description: "Recruiting software"
   }
   {
+<<<<<<< HEAD
 
 
 ];
@@ -51,6 +52,8 @@ export function getProviderById(
   id: string,
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 import { IntegrationProviderMeta } from './types';
@@ -65,14 +68,30 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
 
+<<<<<<< HEAD
 
 
 
 
+=======
+=======
+;
+export function getProviderById (
+  id: string,
+): IntegrationProviderMeta | undefined {
+  return PROVIDERS.find ((p) => p.id === id);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+  id: string,
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

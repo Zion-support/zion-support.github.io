@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
@@ -6,6 +7,18 @@ export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'complet
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+import {supabase} from '@/integrations / supabase / client';
+export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
+;
+
+export interface Milestone {
+=======
+
+export interface Milestone {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   project_id: string;
   title: string;
@@ -15,22 +28,35 @@ export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'complet
   status: MilestoneStatus;
   created_at: string;
   updated_at: string;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   created_by: string,
   deliverables?: any[];
 
 }
+<<<<<<< HEAD
+=======
+export interface MilestoneActivity {
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export interface MilestoneActivity {
 
 export interface MilestoneActivity {;
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   milestone_id: string;
   user_id: string;
@@ -71,10 +97,14 @@ export interface MilestoneActivity {;
     display_name: string;
     avatar_url?: string;
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }

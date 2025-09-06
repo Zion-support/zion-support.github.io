@@ -4,6 +4,7 @@ import {
   Home,
   Bug,
   Send,
+<<<<<<< HEAD
 
 
   Clipboard,
@@ -26,6 +27,8 @@ interface ErrorBoundaryProps {
   fallback?: ReactNode
   onError?: (error: Error, errorInfo: ErrorInfo) => void
   enableRetry?: boolean
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   Clipboard,;
@@ -59,6 +62,7 @@ interface ErrorBoundaryProps {
   context?: string;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -85,6 +89,15 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       showDetails: false
     } }    ,}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null,
+      retryCount: 0,
+      userFeedback: '',
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       showDetails: false
     }
   }
@@ -748,6 +761,7 @@ if (return) {
 if (return) {
   $2
 }
+<<<<<<< HEAD
 
 
 ;
@@ -1030,6 +1044,8 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
     }
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     try {
       // Report to your error reporting service;
       const response = await fetch ('/api / error - report', {
@@ -1048,6 +1064,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
           context: this.props.context,
           timestamp: new Date ().toISOString (),
         }),
+<<<<<<< HEAD
 
 
       });          timestamp: new Date().toISOString()
@@ -1206,6 +1223,9 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
           timestamp: new Date().toISOString();
 
 
+=======
+      });          timestamp: new Date ().toISOString ();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         });
       });
       // Check condition
@@ -1223,16 +1243,22 @@ if ( {) {
 
     }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     this.setState({
       errorInfo,
       errorId,
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   private goHome = () => {
     if (typeof window !== 'undefined') {
@@ -1246,17 +1272,36 @@ if ( {) {
     if (this.state.hasError && this.state.error) {
       // Use custom fallback if provided
       if (this.props.fallback) {
+<<<<<<< HEAD
+=======
+
+
+        return this.props.fallback;
+
+
+  private getBuildInfo() {;
+    return {;
+      version: process && process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',;
+      environment: process && process.env.NODE_ENV,;
+      buildTime: process && process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',;
+    };
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
 
       const severity = this.getErrorSeverity(this.state.error)
       const suggestion = this.getErrorSuggestion(this.state.error)
+<<<<<<< HEAD
 
 
       const canRetry = null;
@@ -1267,6 +1312,8 @@ if ( {) {
 
       const severity = this.getErrorSeverity(this.state.error)
       const suggestion = this.getErrorSuggestion(this.state.error)
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       const canRetry = this.props.enableRetry !== false && 
@@ -1290,7 +1337,10 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 </div>
                 <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                   Oops! Something went wrong
@@ -1332,6 +1382,10 @@ if ( {) {
                   {this.state.retryCount > 0 && (
                     <p className="text-sm text-orange-600 dark:text-orange-400">
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     </p>
                 <div className="flex items-center justify-center gap-2 mt-2">
                   <Badge 
@@ -1449,6 +1503,12 @@ if ( {) {
 
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   )}
                 </div>
                 {/* Action Buttons */}
@@ -1498,6 +1558,10 @@ if ( {) {
                       exit={{ opacity: 0, height: 0 }}
                       className='border-t pt-4'
                       className="border-t pt-4"
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     >
                       <div className="space-y-4">
                         <div>
@@ -1508,6 +1572,13 @@ if ( {) {
                             {this.state.error.message}
                           </code>
                         </div>
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         {process.env.NODE_ENV === 'development' &&
   private go_home = () => {
     // Check condition
@@ -1716,6 +1787,19 @@ if ( {) {
                               </pre>;
                             </div>;
                           )}
+<<<<<<< HEAD
+=======
+
+                        <div className='flex gap-2'>;
+                          <Button
+                            onClick={this && this.copyErrorDetails}
+                            variant='outline'
+
+                            size='sm'>;
+                            <Clipboard className='h-4 w-4 mr-2' />;
+                            Copy Details;
+                          </Button>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                           {this && this.props.showReportButton !== false && (;
 
@@ -1724,8 +1808,11 @@ if ( {) {
                               variant='outline'
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         {process.env.NODE_ENV === 'development' && this.state.error.stack && (
                           <div>
                             <h4 className="font-semibold text-sm mb-2">Stack Trace:</h4>
@@ -1741,6 +1828,7 @@ if ( {) {
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
@@ -1762,6 +1850,8 @@ if ( {) {
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                             Copy Details
                           </Button>
                           {this.props.showReportButton !== false && (
@@ -1797,6 +1887,7 @@ if ( {) {
                       </div>;
                     </motion && motion.div>;
                   )}
+<<<<<<< HEAD
 
 
                 </AnimatePresence>
@@ -1825,6 +1916,12 @@ export const useErrorBoundary = () => {
   return { captureError }
 
 
+=======
+
+
+
+  return WrappedComponent;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   text: string;
@@ -10,16 +11,23 @@
   logo?: {
     url: string;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     width: number,
     height: number;
 
   }
 }
+<<<<<<< HEAD
 
 
   dataUrl: string;
 
+=======
+export interface QRCodeResult {
+  data_url: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   options: QRCodeOptions;
   generated_at: Date;
   size: {
@@ -29,9 +37,13 @@
 
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface QRCodeTemplate {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   name: string;
   description: string;
@@ -173,6 +185,7 @@ class QRCodeService {
   }
   getTemplates(): QRCodeTemplate[] {
     return [
+<<<<<<< HEAD
 
       {
         id: 'business-card';
@@ -288,6 +301,10 @@ class QRCodeService {;
     phone: string,;
     website?: string,;
 
+=======
+=======
+    website?: string,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     address?: string;
   }): Promise < QRCodeResult> {
     const vcard = this.generateVCard (data);
@@ -367,6 +384,7 @@ class QRCodeService {;
         options: { size: 300, errorCorrectionLevel: 'H' }
         category: 'business';
 
+<<<<<<< HEAD
       },;
       {;
         id: 'wifi-network',;
@@ -413,15 +431,80 @@ class QRCodeService {;
 
   getErrorCorrectionInfo(): Record<string, any> {
     return this.ERROR_CORRECTION_LEVELS
+=======
+      }
+      {
+        id: 'wifi - network';
+        name: 'WiFi Network';
+
+        description: 'Share WiFi credentials easily',
+        options: { size: 256, errorCorrectionLevel: 'M' }
+        category: 'business';
+
+      }
+      {
+        id: 'email - contact';
+        name: 'Email Contact';
+
+        description: 'Quick email composition with pre - filled details',
+        options: { size: 256, errorCorrectionLevel: 'M' }
+        category: 'business';
+
+      }
+      {
+        id: 'social - media';
+        name: 'Social Media';
+
+        description: 'Link to your social media profiles',
+        options: { size: 256, errorCorrectionLevel: 'M' }
+        category: 'social';
+
+      }
+      {
+        id: 'website - link';
+        name: 'Website Link';
+
+        description: 'Direct link to your website',
+        options: { size: 256, errorCorrectionLevel: 'M' }
+        category: 'business';
+
+      }
+      {
+        id: 'phone - number';
+        name: 'Phone Number';
+        description: 'Quick dial with pre - filled number',
+        options: { size: 256, errorCorrectionLevel: 'M' }
+        category: 'personal';
+=======
+
+export interface QRCodeOptions {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      }
+    ];
+  }
+
+
+
+
+  getErrorCorrectionInfo(): Record<string, any> {
+    return this.ERROR_CORRECTION_LEVELS
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
   getErrorCorrectionInfo(): Record<string any> {;
     return this.ERROR_CORRECTION_LEVELS;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
   private validateOptions(options: QRCodeOptions): void {
 
@@ -519,7 +602,10 @@ if (.length === 0) {) {
   private generateVCard (data: any): string {
     let vcard = 'BEGIN:VCARD\nVERSION:3.0\n',
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     vcard += `FN:${data.name}\n`;
     vcard += `ORG:${data.company}\n`;
     vcard += `TITLE:${data.title}\n`;
@@ -542,6 +628,7 @@ if (.length === 0) {) {
   }
   private generateWiFiString(data: any): string {
 
+<<<<<<< HEAD
     let wifiString = 'WIFI:'
     wifiString += `S:${data.ssid},`;
     wifiString += `T:${data.encryption},`;
@@ -574,6 +661,11 @@ if (.length === 0) {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     if (data.hidden) {
 
@@ -582,11 +674,16 @@ if (.length === 0) {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     wifiString += ;
     return wifiString
   }
   private generateMailtoString(data: any): string {
+<<<<<<< HEAD
 
     let mailto = `mailto:${data.to}`;
     const params: string[] = []
@@ -622,6 +719,8 @@ if (.length === 0) {) {
     let smsString = `sms:${data.phone}`,;
     if (data.message) {;
       smsString += `?body=${encodeURIComponent(data.message)}`;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   private generateSMSString(data: any): string {
@@ -634,7 +733,12 @@ if (.length === 0) {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  private generateGeoString(data: any): string {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -654,10 +758,15 @@ if (.length === 0) {) {
       geoString += `,${data.altitude}`;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     if (data.name) {
       geoString += `?q=${encodeURIComponent(data.name)}`
@@ -667,7 +776,13 @@ if (.length === 0) {) {
   }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   // Utility methods
   estimateQRCodeCapacity(text: string, errorCorrectionLevel: 'L' | 'M' | 'Q' | 'H'): {
     canFit: boolean;
@@ -700,16 +815,22 @@ if (.length === 0) {) {
       maxCapacity;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
   }
   getQRCodeHistory(): QRCodeResult[] {
     // In a real app, this would retrieve from storage
     return []
   }
+<<<<<<< HEAD
 
   saveQRCode(qrCode: QRCodeResult): void {
     // In a real app, this would save to storage
@@ -726,6 +847,9 @@ export const qrCodeService = new QRCodeService();
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     // // // console.log('QR Code saved:', qrCode.options.text)
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
     // Check condition
 if (vcard += `URL:${data.website}\n`) {
@@ -830,7 +954,13 @@ if ( {) {
 export const qrCodeService = new QRCodeService ();
 ;
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const qrCodeService = new QRCodeService();

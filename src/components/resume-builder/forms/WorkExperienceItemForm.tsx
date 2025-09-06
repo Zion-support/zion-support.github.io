@@ -9,6 +9,7 @@
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
+<<<<<<< HEAD
 
 
       description: initialData?.description || "",
@@ -93,6 +94,9 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <>
       <Form {...form}>
@@ -107,8 +111,11 @@
                 <FormItem>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <FormLabel>Company Name</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Acme Corporation" {...field} />
@@ -358,8 +365,11 @@ export function WorkExperienceItemForm({;
                 <FormItem>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <FormLabel>Role Title</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Senior Developer" {...field} />
@@ -385,8 +395,11 @@ export function WorkExperienceItemForm({;
                 <FormItem>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <FormLabel>Location</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />
@@ -413,8 +426,11 @@ export function WorkExperienceItemForm({;
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       I currently work here
                     </label>
                   </div>
@@ -437,8 +453,11 @@ export function WorkExperienceItemForm({;
                   <FormLabel>Start Date</FormLabel>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
@@ -455,11 +474,14 @@ export function WorkExperienceItemForm({;
                           )}
                         >
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           {field.value ? (
                             format(field.value, "MMM yyyy")
                           ) : (
@@ -568,6 +590,9 @@ export function WorkExperienceItemForm({;
                   <FormItem className="flex flex-col">
                     <FormLabel>End Date</FormLabel>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
                     <Popover>
@@ -586,11 +611,14 @@ export function WorkExperienceItemForm({;
                             )}
                           >
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                             {field.value ? (
                               format(field.value, "MMM yyyy")
                             ) : (
@@ -683,6 +711,7 @@ export function WorkExperienceItemForm({;
                     </Popover>;
                     <FormMessage />;
                   </FormItem>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -695,6 +724,18 @@ export function WorkExperienceItemForm({;
               />
             )}
           </div>
+=======
+
+
+
+                )}
+              />
+            )}
+
+          </div>;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <FormField
             control={form && form.control}
             name='description'
@@ -798,6 +839,7 @@ export function WorkExperienceItemForm({;
                       options={{
 
 
+<<<<<<< HEAD
                         enhancementType: 'work-description'
                         content: field.value |''
                         context: `${watchRoleTitle} at ${watchCompanyName}`
@@ -831,6 +873,8 @@ export function WorkExperienceItemForm({;
                     >
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       AI Writer
                     </Button>
                   </div>
@@ -842,11 +886,14 @@ export function WorkExperienceItemForm({;
                     placeholder="Describe your responsibilities, achievements, and skills used in this role..."
                     className="min-h-[150px]"
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {...field}
                   />
                 </FormControl>
@@ -913,19 +960,25 @@ export function WorkExperienceItemForm({;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
 
 
+<<<<<<< HEAD
         defaultOptions={{
           enhancementType: 'work-description'
           content: form.getValues('description') |''
           context: `${watchRoleTitle} at ${watchCompanyName}`
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           enhancementType: 'work-description',
           content: form.getValues('description') || '',
           context: `${watchRoleTitle} at ${watchCompanyName}`,
@@ -1015,6 +1068,7 @@ setIsEnhancementDialogOpen (false);
 }<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" aria - hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
 }/> {
   !watchIsCurrent && (<FormField control= {
+<<<<<<< HEAD
 
 
   form.control
@@ -1027,6 +1081,18 @@ setIsEnhancementDialogOpen (false);
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>)
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>)
 }"
+=======
+  form.control;
+}<FormLabel > End Date</FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button) : (<span > Select date</span>) ";
+}<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" aria - hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
+}/>) ";
+}</div> <FormField <FormLabel > Description</FormLabel> <div className="flex gap - 2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textarea placeholder="Describe your responsibilities, achievements, and skills used in this role..." className="min - h-[150px]" {
+  ...field;
+}/> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : (<>Save</>);
+}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>);
+}";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 }
 
@@ -1036,8 +1102,11 @@ setIsEnhancementDialogOpen (false);
 };
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           enhancementType: "work-description",
           content: form.getValues("description") || "",

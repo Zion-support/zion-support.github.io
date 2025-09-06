@@ -6,6 +6,7 @@ export async function getStaticProps() {;
   return { props: { articles } };
 
 
+<<<<<<< HEAD
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {;
   const categories = Array.from(new Set(articles.map(a => a.category)));
 
@@ -27,17 +28,23 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
   const categories = Array.from(new Set(articles.map((a) => a.category))),
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               ))}
           </div>;
         </div>;
       ))}
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className="space-y-8">
       <h1 className="text-2xl font-semibold">Help Center</h1>
@@ -54,6 +61,7 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
                     <div className="text-xs opacity-70 mt-1">Last updated {new Date(a.updatedAt).toLocaleDateString()}</div>
                   </a>
                 </Link>
+<<<<<<< HEAD
               ))}
           </div>
         </div>
@@ -63,13 +71,25 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
 
 
 );
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 }
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 
+=======
+=======
+
+
+}
+}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -93,5 +113,8 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

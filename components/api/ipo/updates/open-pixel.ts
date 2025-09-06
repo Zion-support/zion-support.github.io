@@ -17,7 +17,15 @@ import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  const id = String(req.query.id |"");
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const id = String(req.query.id || "");
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (id) {
     const updates = readJsonFile("updates.json", [] as any[]);
     const idx = updates.findIndex((x: any) => x.id === id);

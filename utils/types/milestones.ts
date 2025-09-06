@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
 export type ProjectParticipantRole = 'client' | 'talent';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   clientUserId: string;
   talentUserId: string;
@@ -20,12 +23,18 @@ export type Project = {  id: string;
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
   return (
 
+<<<<<<< HEAD
     value === 'Pending' |
     value === 'In Progress' |
     value === 'Submitted' |
     value === 'Approved' |
     value === 'Paid'
   );export interface MilestoneAttachment {
+=======
+  );export interface MilestoneAttachment {
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     value === 'Pending' ||
     value === 'In Progress' ||
@@ -34,9 +43,13 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
     value === 'Paid';
   );export interface MilestoneAttachment {;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   id: string;
   name: string;
   url: string;
@@ -46,6 +59,14 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
   uploaded_at: string,
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export interface CreateMilestoneRequest {
+=======
+  uploadedAt: string
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   title: string;
@@ -56,9 +77,19 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+export interface UpdateMilestoneRequest {
+=======
+
+
+export interface UpdateMilestoneRequest {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   title?: string;
   description?: string;
   dueDate?: string;
@@ -67,8 +98,145 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
   attachments?: MilestoneAttachment[];
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+=======
+
+export function isOverdue(milestone: Milestone): boolean {
+  if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {
+    return false;
+  }
+  return new Date(milestone.dueDate) < new Date();
+}
+
+export function getDaysUntilDue(milestone: Milestone): number | null {
+  if (!milestone.dueDate) return null;
+  const dueDate = new Date(milestone.dueDate);
+  const now = new Date();
+  const diffTime = dueDate.getTime() - now.getTime();
+  return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+}
+
+export function isDueSoon(milestone: Milestone, daysThreshold: number = 3): boolean {
+  const daysUntilDue = getDaysUntilDue(milestone);
+  return daysUntilDue !== null && daysUntilDue <= daysThreshold && daysUntilDue >= 0;
+}
+
+export function calculateMilestoneProgress(milestone: Milestone): number {
+  switch (milestone.status) {
+    case 'PENDING':
+      return 0;
+    case 'IN_PROGRESS':
+      return 25;
+    case 'SUBMITTED':
+      return 50;
+    case 'APPROVED':
+      return 75;
+    case 'PAID':
+    case 'COMPLETED':
+      return 100;
+    case 'OVERDUE':
+      return 25;
+    default:
+      return 0;
+  }
+}
+
+export function formatMilestoneAmount(amount: number, currency: string = 'USD'): string {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: currency
+  }).format(amount);
+}
+
+export function formatMilestoneDate(date: string): string {
+  return new Date(date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
+}
+
+export function createMilestoneTimelineEntry(
+  milestoneId: string,
+  action: MilestoneTimeline['action'],
+  userId: string,
+  notes?: string
+): MilestoneTimeline {
+  return {
+    id: `timeline_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    milestoneId,
+    action,
+    timestamp: new Date().toISOString(),
+    userId,
+    notes
+  };
+}
+
+export function createMilestoneNotification(
+  milestoneId: string,
+  userId: string,
+  type: MilestoneNotification['type'],
+  message: string
+): MilestoneNotification {
+  return {
+    id: `notif_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    milestoneId,
+    userId,
+    type,
+    message,
+    read: false,
+    createdAt: new Date().toISOString()
+  };
+}
+
+export function createMilestoneComment(
+  milestoneId: string,
+  userId: string,
+  content: string,
+  parentId?: string
+): MilestoneComment {
+  return {
+    id: `comment_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    milestoneId,
+    userId,
+    content,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+    parentId
+  };
+}
+
+export function createMilestoneFile(
+  milestoneId: string,
+  name: string,
+  url: string,
+  size: number,
+  type: string,
+  uploadedBy: string
+): MilestoneFile {
+  return {
+    id: `file_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    milestoneId,
+    name,
+    url,
+    size,
+    type,
+    uploadedBy,
+    uploadedAt: new Date().toISOString()
+  };
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

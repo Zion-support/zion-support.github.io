@@ -1,9 +1,14 @@
 
+<<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
 
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface TokenRequest {
   userId: string;
@@ -79,11 +84,26 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
     if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
   }
 
+<<<<<<< HEAD
+=======
+
+  const { error: txError } = await supabase && supabase.from('token_transactions').insert({
+    user_id: userId;
+    amount: Math && Math.abs(delta);
+    transaction_type: type,
+
+    reason});
+  if (txError) return new Response(JSON && JSON.stringify({ error: txError && txError.message }), { status: 500 });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",;
 interface TokenRequest {;
@@ -94,8 +114,33 @@ interface TokenRequest {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+      .from('wallets');
+      .update({ balance, updated_at: new Date().toISOString() });
+      .eq('user_id', userId),;
+    if (error) return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+  } else {;
+    const { error } = await supabase;
+      .from('wallets');
+      .insert({ user_id: userId, balance }),;
+    if (error) return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+  }
+;
+  const { error: txError } = await supabase.from('token_transactions').insert({;
+    user_id: userId,;
+    amount: Math.abs(delta),;
+    transaction_type: type,;
+    reason}),;
+  if (txError) return new Response(JSON.stringify({ error: txError.message }), { status: 500 });
+  return new Response(JSON.stringify({ success: true, balance }), { status: 200 });
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 ;

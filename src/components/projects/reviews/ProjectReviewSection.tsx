@@ -42,10 +42,13 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -57,6 +60,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           Reviews are visible once the project is completed and both parties submit feedback
         </CardDescription>
       </CardHeader>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -65,6 +69,11 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       
       <CardContent>
         {isCompleted ? (
@@ -170,6 +179,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
                         Edit Review;
                       </Button>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -178,6 +188,11 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     )}
 
 
@@ -186,9 +201,17 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
               </div>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             <ReviewsList
               reviews = {reviews,}
               isLoading = {isLoading,}
@@ -222,7 +245,10 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             />
           </div>
         ) : (
@@ -233,6 +259,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
             </p>
           </div>
         )}
+<<<<<<< HEAD
 
 
       </CardContent>
@@ -251,6 +278,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
 }
 }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     </Card>;
   );

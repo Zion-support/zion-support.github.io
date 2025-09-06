@@ -95,6 +95,7 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
             {isSelected ? 'Selected' : 'Select'}
           </Button>
         </div>
+<<<<<<< HEAD
 
         
         {resume.basic_info.summary && (
@@ -247,3 +248,9 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 ;
 
 
+=======
+      </CardContent>
+    </Card>
+  );
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

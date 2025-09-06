@@ -2,6 +2,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
@@ -10,6 +14,7 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Loader2} from "lucide-react";
 import {useNavigate} from "react-router-dom";
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -25,11 +30,20 @@ interface PaymentButtonProps {
   serviceId: string
   providerId: string
 
+=======
+interface PaymentButtonProps {;
+  amount: number,;
+  serviceId: string,;
+  providerId: string,;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   buttonText?: string;
   className?: string;
   onPaymentInitiated?: () => void;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   redirectUrl?: string;
 }
 
@@ -62,9 +76,12 @@ export function PaymentButton(): any ({;
       return;
     }
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
@@ -74,6 +91,7 @@ interface PaymentButtonProps {
   onPaymentInitiated?: () => void,
   redirectUrl?: string
 }
+<<<<<<< HEAD
 
 
 export function PaymentButton({
@@ -183,6 +201,11 @@ export function PaymentButton({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
       
       // Call the create-checkout edge function
@@ -223,7 +246,18 @@ export function PaymentButton({;
         onPaymentInitiated();
       }
 
+<<<<<<< HEAD
 
+=======
+=======
+      // Reset button state after a short delay
+      setTimeout(() => {
+        setIsProcessing(false)
+      }, 1500)
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 
       // Call the create-checkout edge function;
@@ -265,10 +299,15 @@ export function PaymentButton({;
     <Button;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
@@ -283,6 +322,7 @@ export function PaymentButton({;
       ) : (;
         buttonText;
       )}
+<<<<<<< HEAD
 
     >
       {isProcessing ? (
@@ -295,9 +335,20 @@ export function PaymentButton({;
       )}
     </Button>
   )
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+    </Button>;
+  );
+=======
+=======
+    </Button>;
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     </Button>;
@@ -305,5 +356,9 @@ export function PaymentButton({;
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;

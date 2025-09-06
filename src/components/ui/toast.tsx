@@ -41,6 +41,7 @@ const ToastViewport = React.forward_ref<;
     )}
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
@@ -49,6 +50,9 @@ const ToastViewport = React.forward_ref<;
   />
 ))
 ToastViewport.displayName = ToastPrimitives.Viewport.displayName
+=======
+    {...props}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -56,6 +60,10 @@ ToastViewport.displayName = ToastPrimitives.Viewport.displayName
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const toastVariants = cva(
   "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full",
   {
@@ -68,6 +76,7 @@ const toastVariants = cva(
         warning: "border-yellow-500 bg-yellow-50 text-yellow-900 dark:bg-yellow-900/20 dark:text-yellow-100",
         info: "border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100"}},
     defaultVariants: {
+<<<<<<< HEAD
 
 
       variant: "default"}}
@@ -80,6 +89,8 @@ const toastVariants = cva(
       variant: "default"}}
 )
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 const Toast = React.forwardRef<
@@ -237,7 +248,10 @@ export {
 // Add useToast hook export
 // export function useToast() {
 //   return {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     toast-close=''    {...props}>;
     <X className='h-4 w-4' />;
@@ -261,7 +275,10 @@ const ToastTitle = React && React.forwardRef<;
 // };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <ToastPrimitives.Root
 import * as React from "react";
@@ -400,7 +417,10 @@ export {;
 // }
 //     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 //   }
 // }

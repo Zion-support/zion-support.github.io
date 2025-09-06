@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 ;
 
@@ -9,13 +12,17 @@ export type NotificationType = 'message' | 'quote_request' | 'booking_confirmati
 
 export interface CreateNotificationParams {;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   userId: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   message: string;
   type: NotificationType;
+<<<<<<< HEAD
 
   relatedId?: string | null;
   sendEmail?: boolean;
@@ -25,16 +32,32 @@ export interface CreateNotificationParams {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+export interface CreateNotificationResult {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   success: boolean;
   notificationId?: string
   error?: any
 }
 
+<<<<<<< HEAD
 export interface HireRequestNotificationParams {
 
 export interface HireRequestNotificationParams {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+export interface HireRequestNotificationParams {;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   talentId: string;
   adminId?: string;
   requesterName: string;
@@ -43,7 +66,10 @@ export interface HireRequestNotificationParams {;
   projectSummary?: string
   hireRequestId: string
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   related_id?: string | null;
   send_email?: boolean;
@@ -73,22 +99,35 @@ export interface OnboardingNotificationParams {
 export interface SystemNotificationParams {
   user_id: string;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+export interface OnboardingNotificationParams {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   userId: string;
   missingMilestone: string
   userRole: 'talent' | 'client'
 }
 
+<<<<<<< HEAD
 export interface SystemNotificationParams {
 
 export interface SystemNotificationParams {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+export interface SystemNotificationParams {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   userId: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   message: string;
 
+<<<<<<< HEAD
 
   sendEmail?: boolean
 }
@@ -140,3 +179,7 @@ export interface SystemNotificationParams {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

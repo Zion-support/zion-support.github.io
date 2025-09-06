@@ -6,6 +6,7 @@ return (
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
+<<<<<<< HEAD
 
 
           <div className='flex flex-wrap gap-3'>
@@ -38,16 +39,22 @@ return (
 }
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };
 }</div> </div> </div> </section>) ;
 }'";
 };
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <div className="flex flex-wrap gap-3">
             {shareLinks.map((link, index) => (
               <Button

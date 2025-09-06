@@ -1,7 +1,15 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from "react",
 import { format } from "date-fns",
 import { Calendar } from "@/components/ui/calendar",
@@ -13,10 +21,15 @@ import { cn } from "@/lib/utils",
 import { QuoteFormData } from "@/types/quotes",
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface TimelineStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -27,12 +40,19 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
     <div className="space-y-6">
       <div>
 
+<<<<<<< HEAD
         <h3 className="text-xl font-semibold text-white mb-4">
           When do you need this?
         </h3>
         <h3 className="text-xl font-semibold text-white mb-4">When do you need this?</h3>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+        <h3 className="text-xl font-semibold text-white mb-4">When do you need this?</h3>
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <div className="space-y-4">
           <div className="flex items-center space-x-4">
             <div
@@ -49,10 +69,17 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               </p>
             </div>
 
+<<<<<<< HEAD
             <div
             <div 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+            <div 
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === "flexible"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -190,7 +217,20 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
                     align="start"
                   >
 
+<<<<<<< HEAD
 
+=======
+=======
+                    <Calendar
+                      mode="single"
+                      selected={formData.endDate}
+                      onSelect={(date) => updateFormData({ endDate: date })}
+                      initialFocus
+                      className="p-3 pointer-events-auto"
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { useState } from "react",;
 import { format } from "date-fns",;
 import { Calendar } from "@/components/ui/calendar",;
@@ -288,6 +328,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
 
                       initialFocus;
                       className="p-3 pointer-events-auto";
+<<<<<<< HEAD
 
                       disabled={(date) => date < (formData.startDate || new Date())}
                     />
@@ -300,17 +341,63 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
       </div>
     </div>
 
+=======
+                      disabled={(date) => date < (formData && formData.startDate || new Date())}
+=======
+                    >;
+                      <CalendarIcon className="mr - 2 h - 4 w - 4" />;
+                      {form_data.end_date ? (
+                        format (form_data.end_date, "PPP")) : (
+                        <span > Pick a date</span>)}
+                    </Button>;
+                  </PopoverTrigger>;
+                  <PopoverContent;
+                    className="w - auto p - 0 bg - zion - blue - dark border border - zion - blue - light";
+                    align="start";
+                  >;
+                    <Calendar;
+                      mode="single";
+                      selected={form_data.end_date}
+                      on_select={(date) => updateFormData ({ end_date: date })}
+                      initial_focus;
+                      className="p - 3 pointer - events - auto";
+                      disabled={(date) =>;
+                        date < (form_data.start_date || new Date ());
+                      }
+
+                    />;
+                  </PopoverContent>;
+                </Popover>;
+              </div>;
+
+
+  )
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             </div>)}
         </div>;
       </div>;
     </div>);
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

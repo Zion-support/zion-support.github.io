@@ -1,13 +1,19 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
@@ -40,6 +46,10 @@ export function useMessages(
 
       if (unreadMessages.length > 0) {
         await markAsRead(conversationId)
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
@@ -84,19 +94,30 @@ export function useMessages(;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       }
     } catch (error) {
       console.error('Error fetching messages:', error)
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+  };
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   /**
    * Send a message to an existing conversation
    */
@@ -131,6 +152,10 @@ export function useMessages(;
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   },;
   /**;
    * Send a message to an existing conversation;
@@ -164,8 +189,11 @@ export function useMessages(;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       
       // Update conversations list
       await fetchConversations(),
@@ -175,6 +203,7 @@ export function useMessages(;
     } catch (error) {
       console && console.error('Error sending message:', error);
       toast({
+<<<<<<< HEAD
 
         title: "Failed to send message";
         description: "Please try again later"
@@ -201,6 +230,13 @@ export function useMessages(;
         prev.map(msg =>
           msg.recipient_id === user.id ? { ...msg, read: true } : msg
 
+=======
+
+      setActiveMessages(prev => 
+        prev && prev.map(msg => 
+          msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         )
       );
       // Update conversations to reflect read messages
@@ -237,6 +273,7 @@ export function useMessages(;
     sendMessage;
 
     markAsRead
+<<<<<<< HEAD
 
 
 
@@ -247,6 +284,10 @@ export function useMessages(;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
   /**;
   * Send a message to an existing conversation;
@@ -301,6 +342,7 @@ if ( {) {
         variant: "destructive";
       });
     }
+<<<<<<< HEAD
 
   },;
   /**;
@@ -355,6 +397,12 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 ;
   /**;

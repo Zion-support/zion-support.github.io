@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export interface TalentCardProps {
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -9,6 +12,7 @@ export interface TalentCardProps {
   isAuthenticated: boolean
 <<<<<<< HEAD
 export interface TalentCardProps {
+<<<<<<< HEAD
   talent: TalentProfile
   onViewProfile: (id: string,) => void
   onRequestHire: (talent: TalentProfile,) => void
@@ -23,6 +27,8 @@ export interface TalentCardProps {
 }
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       onViewProfile(talent.id)
 
@@ -45,6 +51,7 @@ export interface TalentCardProps {
       onToggleSave(talent.id, !isSaved)
     if (onToggleSave) {
 
+<<<<<<< HEAD
 
 
               {talent.profile_picture_url && !avatarError ? (
@@ -68,6 +75,11 @@ import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
 
 
+=======
+
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Link from "next/link",;
 import { TalentProfile } from "@/types/talent",;
@@ -128,11 +140,14 @@ export function TalentCard({;
                   fill={true}                  style={{ objectFit: 'cover' }}
                   className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
                   priority={false}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 />;
               ) : (;
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  {talentNameInitial}
@@ -183,6 +198,7 @@ export interface TalentCardProps {
                   onError={() => setAvatarError(true)}
                   priority={false}
 
+<<<<<<< HEAD
 
                 />
               ) : (
@@ -234,6 +250,8 @@ export interface TalentCardProps {
                 onClick={handleToggleSave}
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
@@ -256,6 +274,7 @@ export interface TalentCardProps {
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
                 <div className="flex items-center text-zion-slate-light">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -264,6 +283,11 @@ export interface TalentCardProps {
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
                 </div>
@@ -367,3 +391,47 @@ export interface TalentCardProps {
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
+<<<<<<< HEAD
+=======
+
+        
+        <div className="mt-5 flex items-center justify-between">
+          <div>
+                <span className='text - zion - slate - light font - normal'>/hr</span>;
+              </div>) : (
+              <div className='text - zion - slate - light'>Rate not specified</div>)}
+          </div>;
+          <div className='flex items - center gap - 2'>;
+            {is_authenticated && (
+              <Button;
+                size='sm';
+                variant='secondary';
+                on_click={handleRequestHire}
+                className='bg - zion - purple hover:bg - zion - purple - light text - white'              >                className="bg - zion - purple hover:bg - zion - purple - light text - white";
+          <div>;
+
+            {talent.hourly_rate ? (
+              <div className="text-white font-bold">
+                ${talent.hourly_rate}
+
+          </div>;
+
+          <div className="flex items-center gap-2">;
+            {isAuthenticated && (;
+
+              <Button
+              <Button
+
+                size="sm"
+                variant="secondary"
+                onClick={handleRequestHire}
+
+
+            </Button>;
+          </div>;
+        </div>;
+      </div>;
+
+
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

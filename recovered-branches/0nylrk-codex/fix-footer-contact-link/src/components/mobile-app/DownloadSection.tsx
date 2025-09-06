@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react",
 import { QrCodeIcon } from "lucide-react";
 import { AppStoreButtons } from "./AppStoreButtons";
@@ -14,6 +15,10 @@ import { AppStoreButtons } from "./AppStoreButtons",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
@@ -31,7 +36,10 @@ export const DownloadSection: React.FC = () => {
                 Download the Zion app now and take your tech career or hiring
                 needs to the next level. Available on iOS and Android.
               </p>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React from './react';
 import { QrCodeIcon  } from './lucide-react';
@@ -62,13 +70,17 @@ export const DownloadSection: React.FC = () => {
                 onAppStoreClick={() => console.log ("App Store button clicked")}
                 onGooglePlayClick={() =>;
                   console.log ("Google Play button clicked");
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 }
               
               <AppStoreButtons 
                 className="mb-8" 
+<<<<<<< HEAD
 
 
 import React from "react",;
@@ -99,6 +111,13 @@ export const DownloadSection: React.FC = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+              <AppStoreButtons 
+                className="mb-8" 
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               />
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
@@ -118,7 +137,10 @@ export const DownloadSection: React.FC = () => {;
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React from "react";
 import {QrCodeIcon} from "lucide-react";
@@ -146,6 +168,12 @@ export const DownloadSection: React.FC = () => {;
                 onAppStoreClick={() => console && console.log("App Store button clicked")}
                 onGooglePlayClick={() => console && console.log("Google Play button clicked")}
 
+<<<<<<< HEAD
+=======
+};
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
 },
 
@@ -174,5 +202,13 @@ export const DownloadSection: React.FC = () => {;
 ;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+export default DownloadSection;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 interface TalentProfileProps {
@@ -8,8 +12,11 @@ interface TalentProfileProps {
 
   onMessageTalent?: () => void
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React from "react";
 import {Handshake, MessageSquare, Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -24,6 +31,7 @@ import {ProfileRatings} from "./ProfileRatings";
 import {TalentProfile, as, TalentProfileType} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {Availability} from "@/types/profile";
+<<<<<<< HEAD
 
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
@@ -53,6 +61,12 @@ interface TalentProfileProps {
 
   onMessageTalent?: () => void
 
+=======
+interface TalentProfileProps {;
+  profile: TalentProfileType,;
+  onRequestHire: () => void,;
+  onMessageTalent?: () => void;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 export function TalentProfile({
   profile;
@@ -102,11 +116,15 @@ export function TalentProfile({
   return (
     <div className="container mx-auto px-4 py-8">
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Profile Header */}
       <ProfileHero
         name={profile && profile.full_name}
@@ -146,10 +164,14 @@ export function TalentProfile({
           
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
           {/* Ratings Section */}

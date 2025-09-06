@@ -2,12 +2,17 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import React, { useState } from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from "lucide-react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -32,12 +37,25 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface BrowseItem {;
   id: string,;
   title: string,;
   subtitle: string,;
   description: string,;
+<<<<<<< HEAD
+=======
+=======
+import React, { useState } from './react';
+import { Card, CardContent } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from './lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 interface BrowseItem {
   id: string,
@@ -55,12 +73,16 @@ interface BrowseCardsProps {
 
 
 
+<<<<<<< HEAD
   onViewDetails: (id: string) => void
 }
 
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]);
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const [savedItems, setSavedItems] = useState<string[]>([]),
   
@@ -92,16 +114,29 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
                   )}
+<<<<<<< HEAD
 
                   <div>
                     <h3 className="font-medium">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>
                   </div>
                 </div>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+                <button
+=======
+
+                <button 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item && item.id)}
                 >;
@@ -201,10 +236,14 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                   >;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     {badge}
                   </Badge>;
                 ))}

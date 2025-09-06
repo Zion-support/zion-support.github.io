@@ -8,7 +8,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 class ErrorBoundary extends React.Component {
@@ -43,12 +46,26 @@ import { motion } from 'framer-motion';
   Rocket, Target, Cpu, Cloud, Lock, Users, Award;
   CheckCircle, Sparkles, Infinity, Zap as Lightning;
 
+<<<<<<< HEAD
+=======
+=======
+import { 
+  ArrowRight, Star, 
+  Brain, Atom, Shield, Zap, TrendingUp, Globe;
+  Rocket, Target, Cpu, Cloud, Lock, Users, Award;
+  CheckCircle, Sparkles, Infinity, Zap as Lightning
+} from 'lucide-react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               {/* Company Badge */}
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   ArrowRight,
   Star,
   Brain,
@@ -147,11 +164,14 @@ const Homepage2038: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Company Badge */}
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -162,11 +182,15 @@ const Homepage2038: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               >
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2038</span>
@@ -286,6 +310,7 @@ const Homepage2038: React.FC = () => {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -295,6 +320,11 @@ const Homepage2038: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -317,11 +347,18 @@ const Homepage2038: React.FC = () => {
             <motion.div
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -331,11 +368,15 @@ const Homepage2038: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -474,11 +515,18 @@ const Homepage2038: React.FC = () => {
             <motion.div
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -488,11 +536,15 @@ const Homepage2038: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
                 Revolutionary AI Services
@@ -551,8 +603,15 @@ const Homepage2038: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+              ))}
+
+                    variant="consciousness"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   />
                 </motion.div>
 
@@ -733,6 +792,24 @@ const Homepage2038: React.FC = () => {
         </section>;
 
 
+<<<<<<< HEAD
+=======
+        {/* Featured Micro SAAS Services */}
+        <section className="py-24 px-4 bg-black/20">
+=======
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* Featured Micro SAAS Services */}
+        <section className='py-24 px-4 bg-black/20'>
+          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/20">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -744,8 +821,13 @@ const Homepage2038: React.FC = () => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent'>
                 Innovative Micro SAAS
@@ -804,8 +886,15 @@ const Homepage2038: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+              ))}
+
+                    variant="automation"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   />
                 </motion.div>
 
@@ -889,6 +978,24 @@ const Homepage2038: React.FC = () => {
         </section>;
 
 
+<<<<<<< HEAD
+=======
+        {/* Featured IT Services */}
+        <section className="py-24 px-4">
+=======
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* Featured IT Services */}
+        <section className='py-24 px-4'>
+          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -900,8 +1007,13 @@ const Homepage2038: React.FC = () => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>
                 Advanced IT Infrastructure
@@ -960,8 +1072,15 @@ const Homepage2038: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+              ))}
+
+                    variant="quantum"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   />
                 </motion.div>
 
@@ -1045,6 +1164,24 @@ const Homepage2038: React.FC = () => {
         </section>;
 
 
+<<<<<<< HEAD
+=======
+        {/* Why Choose Us */}
+        <section className="py-24 px-4 bg-black/30">
+=======
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* Why Choose Us */}
+        <section className='py-24 px-4 bg-black/30'>
+          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/30">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1052,6 +1189,7 @@ const Homepage2038: React.FC = () => {
               className='text-center mb-20'
 
 
+<<<<<<< HEAD
             >
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1059,6 +1197,10 @@ const Homepage2038: React.FC = () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                 Why Choose Zion Tech Group?
               </h2>
@@ -1150,6 +1292,13 @@ const Homepage2038: React.FC = () => {
                   color: "from-yellow-500 to-orange-500"
 
 
+<<<<<<< HEAD
+=======
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   whileHover={{ scale: 1.05 }}
                 >
@@ -1181,8 +1330,11 @@ const Homepage2038: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               ))}
             </div>
           </div>
@@ -1202,22 +1354,40 @@ const Homepage2038: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
 
+<<<<<<< HEAD
+=======
+=======
+            </div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         {/* CTA Section */}
         <section className="py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1227,11 +1397,15 @@ const Homepage2038: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             >
               <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                 Ready to Shape the Future?
@@ -1342,6 +1516,7 @@ export default Homepage2038;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 export default Homepage2038;  )
 }
@@ -1350,3 +1525,6 @@ export default Homepage2038;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

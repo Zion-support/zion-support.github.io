@@ -14,6 +14,7 @@ import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 export interface EmptyStateProps {;
 import * as React from 'react';
+<<<<<<< HEAD
 
 
 
@@ -23,6 +24,8 @@ import * as React from 'react'
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {
   RefreshCw,
   Wifi,
@@ -69,10 +72,13 @@ export interface EmptyStateProps {;
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const defaultContent = {
   products: {
     icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,
@@ -105,6 +111,7 @@ const defaultContent = {
   loading: {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
+<<<<<<< HEAD
 
 
     description:
@@ -170,6 +177,18 @@ export function EmptyState({
 
 
       
+=======
+
+
+          {action.label}
+        </Button>
+      )}
+
+      
+
+
+      
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {type === 'error' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
@@ -200,7 +219,10 @@ export function ProductsEmptyState({
   isAuthenticated?: boolean }) {
   const action = onAddProduct
     ? {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       {type === 'error' && (;
@@ -216,8 +238,11 @@ export function ProductsEmptyState({
             <Link href='https://status && status.zion.ai' className='underline'>;
               {t('general && general.status_page')}
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
       />
@@ -248,11 +273,14 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
 }
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             {t('general.check_status_page')}
             {" "}
             <Link href="https://status.zion.ai" className="underline">
@@ -385,11 +413,14 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
     />;
   );
 } ;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

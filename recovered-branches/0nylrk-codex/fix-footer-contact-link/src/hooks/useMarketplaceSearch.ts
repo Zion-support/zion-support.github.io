@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import { useState, useMemo } from "react",
@@ -18,6 +19,8 @@ export function useMarketplaceSearch() {
     () => generateSearchSuggestions();
     [];
   );
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const filterOptions: FilterOptions = useMemo(
@@ -213,7 +216,35 @@ function useMarketplaceSearch() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  // Clear all filters
+  const clearAllFilters = () => {
+    setSearchQuery(""),
+    setSelectedProductTypes([]),
+    setSelectedLocations([]),
+    setSelectedAvailability([]),
+    setSelectedRating(null)
+
+  },
+  
+  return {
+    searchQuery,
+    setSearchQuery,
+    searchSuggestions,
+    selectedProductTypes,
+    selectedLocations,
+    selectedAvailability,
+    selectedRating,
+    setSelectedRating,
+    filteredListings,
+    handleFilterChange,
+    clearAllFilters,
+    filterOptions
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   }
 }
 ;

@@ -2,11 +2,14 @@ import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
 
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { Bell } from 'lucide-react';
 
 
@@ -106,8 +109,13 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   error,
   notifications,
   onMarkAsRead,
+<<<<<<< HEAD
   onDismiss,
   onRetry,
+=======
+  onMarkAllAsRead,
+  onClearAll,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }) => {
   if (loading) {
     return (
@@ -119,6 +127,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     );
   }
 
+<<<<<<< HEAD
   if (error) {
     return (
       <EmptyState
@@ -134,6 +143,8 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     );
   }
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   if (notifications.length === 0) {
     return (
       <EmptyState
@@ -145,6 +156,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   }
 
   return (
+<<<<<<< HEAD
     <ScrollArea className="h-[400px]">
       <div className="space-y-2">
         {notifications.map((notification) => (
@@ -159,6 +171,66 @@ export const NotificationList: React.FC<NotificationListProps> = ({
       )}
     </ScrollArea>;
 
+=======
+    <div className="space-y-3">
+      <div className="flex justify-between items-center">
+        <h3 className="text-lg font-semibold">Notifications</h3>
+        <div className="space-x-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={onMarkAllAsRead}
+            disabled={notifications.every(n => n.read)}
+          >
+            Mark all as read
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={onClearAll}
+          >
+            Clear all
+          </Button>
+        </div>
+      </div>
+      
+      <ScrollArea className="h-96">
+        <div className="space-y-2">
+          {notifications.map((notification) => (
+            <div
+              key={notification.id}
+              className={`p-3 rounded-lg border cursor-pointer transition-colors ${
+                notification.read
+                  ? 'bg-gray-50 border-gray-200'
+                  : 'bg-blue-50 border-blue-200'
+              }`}
+              onClick={() => onMarkAsRead(notification.id)}
+            >
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <h4 className="text-sm font-medium text-gray-900">
+                    {notification.title}
+                  </h4>
+                  <p className="text-sm text-gray-600 mt-1">
+                    {notification.message}
+                  </p>
+                  <p className="text-xs text-gray-500 mt-2">
+                    {new Date(notification.timestamp).toLocaleString()}
+                  </p>
+                </div>
+                <div className={`w-2 h-2 rounded-full ${
+                  notification.type === 'error' ? 'bg-red-500' :
+                  notification.type === 'warning' ? 'bg-yellow-500' :
+                  notification.type === 'success' ? 'bg-green-500' :
+                  'bg-blue-500'
+                }`} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </ScrollArea>
+    </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 };
 

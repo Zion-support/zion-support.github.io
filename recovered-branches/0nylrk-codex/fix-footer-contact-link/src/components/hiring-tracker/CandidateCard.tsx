@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -21,6 +22,8 @@ import {
   BriefcaseIcon
 } from "lucide-react",
 import {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   MessageSquare
   User
@@ -43,9 +46,27 @@ import { toast } from "@/hooks/use-toast";
 import { HireConfirmationModal } from "./HireConfirmationModal";
 
 interface CandidateCardProps {;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+import { useState  } from './react';
+import { Draggable  } from './react - beautiful - dnd';
+import { formatDistanceToNow  } from './date - fns';
+import { Link  } from './react-router-dom';
+import { JobApplication  } from '@/types / jobs';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Avatar  } from '@/components / ui / avatar';
+import { Button  } from '@/components / ui / button';
+import { Textarea  } from '@/components / ui / textarea';
+import {
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   MessageSquare,
   User,
   FileText,
@@ -60,6 +81,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
 
 
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
@@ -70,17 +92,27 @@ import { HireConfirmationModal } from "./HireConfirmationModal",
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface CandidateCardProps {
   application: JobApplication,
   index: number
 }
 
 
+<<<<<<< HEAD
 export function CandidateCard({ application, index }: CandidateCardProps) {
   const [showNotes, setShowNotes] = useState(false);
   const [notes, setNotes] = useState(application.notes |"");
   const [showHireModal, setShowHireModal] = useState(false);
   // Check if application is stalled (no activity for 7 days)
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   const isStalled =
@@ -203,9 +235,12 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
             className="mb-2 p-0 shadow-sm border";
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
@@ -240,10 +275,15 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                       <User className="h-4 w-4" />;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                     )}
                   </Avatar>
                   <div>
@@ -261,12 +301,17 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </div>
                 </div>
 
+<<<<<<< HEAD
                 
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
@@ -275,6 +320,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
+<<<<<<< HEAD
 
                       {showNotes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>
@@ -318,6 +364,20 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                     <ScoreBadge application={application} />
                   </div>
                 )}
+=======
+=======
+                  </Avatar>;
+                  <div>;
+                    <h4 className="font-medium text-sm">;
+                      {application && application.talent_profile?.full_name || "Candidate"}
+                    </h4>;
+                    <p className="text-xs text-muted-foreground">;
+                      {application && application.talent_profile?.professional_title ||;
+                        "Applicant"}
+                    </p>;
+                  </div>;
+                </div>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                       {showNotes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>;
@@ -344,10 +404,14 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
@@ -380,10 +444,15 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 ;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Notes Section */}
               {showNotes && (;
                 <div className="mt-2">;
@@ -402,7 +471,13 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
               )}
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {/* Action Buttons */}
               <div className="flex justify-between mt-2 gap-1">
                 <Button variant="outline" size="sm" className="flex-1" asChild>
@@ -417,10 +492,15 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                 >
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   <Link to={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
@@ -435,10 +515,14 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                 >
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {application.resume?.file_url ? (
 
                     <a
@@ -464,8 +548,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   className="flex-1"
                   onClick={() => setShowHireModal(true)}
                 >;
@@ -477,7 +564,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
         )}
       </Draggable>
       </Draggable>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export /**
@@ -645,9 +735,15 @@ function CandidateCard() {
           </Card>)}
       </Draggable>;
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         is_open={showHireModal}
@@ -661,10 +757,14 @@ function CandidateCard() {
     </>;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
 
 }

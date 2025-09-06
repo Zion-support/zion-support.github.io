@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React from 'react';
 import fs from 'fs';
@@ -7,18 +8,40 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 type Experiment = {
 
 
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+  return (type Experiment = {
+  title: string
+import React from "react";
+import fs from "fs";
+import path from "path";
+type Experiment = {
+  title: string,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+  title: string,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   hypothesis?: string;
   metric?: string;
   effort?: number;
@@ -197,16 +220,38 @@ export default function CurationPage({ updatedAt, items }: Props) {
         {!items.length && (
           <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
             Nothing to show yet.
+<<<<<<< HEAD
+=======
+=======
+
+
+
+              </div>
+            )}
+          </div>
+        ))}
+        {!items.length && (
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
 
             Nothing to show yet.
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
         )}
       </div>
     </main>
   );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export async function getStaticProps() {
 
   try {;
@@ -296,7 +341,11 @@ function getStaticProps() {
 }
 
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         updatedAt: null,
         items: [],
       },
@@ -321,7 +370,13 @@ function getStaticProps() {
     };
   }        items: []},
       revalidate: 300}
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

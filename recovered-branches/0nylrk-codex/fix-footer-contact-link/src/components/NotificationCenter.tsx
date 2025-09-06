@@ -1,7 +1,11 @@
 
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
 
+=======
+// Use the shared icon wrapper;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {Bell} from '@/components/icons';
 import {Button} from '@/components/ui/button';
@@ -29,9 +33,17 @@ export const NotificationCenter: React.FC = () => {;
 import React, { useState, useEffect } from 'react',
 
 import React, { useState, useEffect } from 'react',
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+=======
+import React, { useState, useEffect } from 'react',
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 // Use the shared icon wrapper
 import { Bell } from '@/components/icons',
 import { Button } from '@/components/ui/button',
@@ -147,10 +159,14 @@ export const NotificationCenter: React.FC = () => {
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">;
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>;
           )}
@@ -159,6 +175,7 @@ export const NotificationCenter: React.FC = () => {
       </PopoverTrigger>;
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
         <NotificationHeader
+<<<<<<< HEAD
           unreadCount={unreadCount}
           onMarkAllAsRead={handleMarkAllAsRead}
 
@@ -166,6 +183,18 @@ export const NotificationCenter: React.FC = () => {
           filter={filter as FilterType}
           onFilterChange={handleFilterChange}
         />
+=======
+          unreadCount={unreadCount} 
+          onMarkAllAsRead={handleMarkAllAsRead} 
+        />;
+
+        <NotificationFilter
+          filter={filter as FilterType} 
+          onFilterChange={handleFilterChange} 
+        />;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <NotificationList
         
 
@@ -175,13 +204,17 @@ export const NotificationCenter: React.FC = () => {
           onFilterChange={handleFilterChange} 
         />
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <NotificationList 
           loading={loading}
           error={error}
           notifications={filtered_notifications}
           onMarkAsRead={markAsRead}
+<<<<<<< HEAD
 
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
@@ -192,6 +225,13 @@ export const NotificationCenter: React.FC = () => {
   )
 
 
+=======
+
+
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         />;
 
         <NotificationFooter onClose={() => setOpen(false)} />;
@@ -200,8 +240,14 @@ export const NotificationCenter: React.FC = () => {
   );
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 };

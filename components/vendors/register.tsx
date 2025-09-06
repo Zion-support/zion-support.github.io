@@ -1,10 +1,21 @@
 
+<<<<<<< HEAD
 import { FormEvent, useState } from 'react';
 import {FormEvent, useState} from 'react';
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+import {FormEvent, useState} from 'react';
+export default function VendorRegisterPage() {;
+
+=======
+
+import {FormEvent, useState} from 'react';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   async function onSubmit(): any (e: FormEvent<HTMLFormElement>) {;
@@ -78,7 +89,10 @@ import {FormEvent, useState} from 'react';
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Failed to submit');
       setMessage('Application submitted. Await approval.');
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       form.reset()
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -88,8 +102,12 @@ import {FormEvent, useState} from 'react';
       setLoading(false)
     }
   }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <div className='max-w-2xl mx-auto space-y-6'>
       <h1 className='text-2xl font-semibold'>
@@ -277,8 +295,17 @@ import {FormEvent, useState} from 'react';
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 
 
 
 
 
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

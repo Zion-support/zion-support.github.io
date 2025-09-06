@@ -1,10 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
 
     const users = readUsers()
     if (req.method === 'GET') {
@@ -13,6 +17,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
       const { userId = 'demo-user' } = req.query;
 
+=======
+
+    const users = readUsers(),
+    if (req && req.method === 'GET') {
+      const { userId = 'demo-user' } = req && req.query;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       const user = users[userId as string];
       return res.status(200).json({ progress: user?.progress ?? {} });
     }
@@ -51,6 +62,7 @@ function readUsers() {
 
 
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = readUsers();
@@ -108,3 +120,5 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

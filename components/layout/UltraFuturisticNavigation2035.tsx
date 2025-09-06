@@ -3,8 +3,11 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import {
   Menu,
   ChevronDown,
@@ -66,7 +69,10 @@ import {
 } from 'lucide-react';
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import {
   Menu
@@ -130,10 +136,17 @@ import {
 interface NavigationItem {
   name: string;
 
+<<<<<<< HEAD
   href: string;  icon?: React.ReactNode;import {
   href: string;  icon?: React.ReactNode;import { ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+  href: string;  icon?: React.ReactNode;import { ;
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles
@@ -231,16 +244,22 @@ interface NavigationItem {;
   children?: NavigationItem[];
   badge?: string;
   title?: string;
+<<<<<<< HEAD
 
 
   featured?: boolean;  featured?: boolean
 }
   featured?: boolean;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const contactInfo = {
 
@@ -1052,6 +1071,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     badge: 'Showcase',
     featured: true,
 
+<<<<<<< HEAD
 
     description: 'Revolutionary AI consciousness and emotional intelligence',
     badge: 'New',
@@ -1076,6 +1096,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  }
+  {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     name: 'AI & Consciousness',
 
@@ -1874,6 +1898,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
         <div
           className={`absolute inset-0 transition-opacity duration-300 ${
             isScrolled ? 'opacity-100' : 'opacity-0'
+<<<<<<< HEAD
 
           }`}
         >
@@ -1897,10 +1922,27 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                   Revolutionary Technology
                 </div>              </div>
             </Link>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+    closeDropdowns()
+  };
+
+
+=======
+
+            {/* Desktop Navigation */}  };
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
     <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled
@@ -2631,6 +2673,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                 </div>
                                 <ArrowRight className=&quot;w-4 h-4 opacity-50&quot; />
                               </a>
+<<<<<<< HEAD
+=======
+=======
+                        className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -2660,6 +2707,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                                 }`}
                                 onClick={closeDropdowns}
+<<<<<<< HEAD
 
                               >                        onMouseLeave={closeDropdowns}
                       >
@@ -2675,6 +2723,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                           </div>
                           <div className="space-y-2">
                             {item.children?.map((child) => (
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -2689,6 +2739,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                 }`}
                                 onClick={closeDropdowns}
                               >
+<<<<<<< HEAD
 
                                 {child.featured && (
                                   <Star className='w-4 h-4 text-cyan-400' />
@@ -2704,12 +2755,18 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                 </div>
                                 <ArrowRight className='w-4 h-4 opacity-50' />                              </Link>                                <ArrowRight className="w-4 h-4 opacity-50" />
                               </Link>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                             ))}
                           </div>
                         </div>
@@ -2772,11 +2829,14 @@ const UltraFuturisticNavigation2035: React.FC = () => {
             <div className='hidden lg:flex items-center gap-4'>
               {/* Quick Actions */}
               <div className='flex items-center gap-2'>
+<<<<<<< HEAD
 
                 {quickActions.map(action => (                  <Link            <div className="hidden lg:flex items-center gap-4">
               {/* Quick Actions */}
               <div className="flex items-center gap-2">
                 {quickActions.map((action) => (
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -2890,12 +2950,16 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                             }`}>
 
 
+<<<<<<< HEAD
                               {item.badge}
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                             </span>
                           )}
                         </div>
@@ -2909,14 +2973,28 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                       </button>
 
 
+<<<<<<< HEAD
+=======
+                        />                      </button>                        <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
+                          activeDropdown === item && item.name ? 'rotate-180' : ''
+                        }`} />;
+                      </button>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                       {/* Mobile Dropdown */}
                       <AnimatePresence>;
                         {activeDropdown === item && item.name && (;
@@ -2953,8 +3031,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                               </Link>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             ))}
@@ -2976,8 +3057,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                           key={action.name}
                           href={action.href}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -3003,7 +3087,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   {/* Mobile Contact Info */}
                   <div className='pt-4 border-t border-gray-800/50'>;
                     <div className='space-y-3 text-sm text-gray-400'>;
@@ -3017,9 +3105,12 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                         <span>{contactInfo.mobile}</span>
                       </a>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -3231,6 +3322,10 @@ export default UltraFuturisticNavigation2035;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

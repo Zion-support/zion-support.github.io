@@ -9,6 +9,7 @@ project_name: string, goals: string,
 export interface ProjectBrief {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   projectName: string, goals: string
   timeline: string, budget: string
   techStack?: string[]
@@ -47,4 +48,12 @@ export interface ProjectBrief {;
 
 
 
+=======
+  projectName: string;
+  goals: string;
+  timeline: string;
+  budget: string;
+  techStack?: string[];
+  talentFilters?: { verifiedOnly?: boolean; regions?: string[] };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }

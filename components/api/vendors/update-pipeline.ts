@@ -63,6 +63,30 @@ function handler() {
   } catch (e: any) {
     res.status (500).json ({ error: e.message });
 
+<<<<<<< HEAD
 
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+    res.status(500).json({ error: e.message })
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  try {
+    updatePipelineItemStatus(String(itemId), String(status) as any);
+    res.status(200).json({ ok: true })
+  } catch (e: any) {
+    res.status(500).json({ error: e.message })
+  }
+
+}
+
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :utils/fraud/store.ts
 export interface FraudRecord {;
 :backup-problematic-files/utils/fraud/store.ts
@@ -273,6 +274,14 @@ export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent 'source'
     createdAt: partial.createdAt ?? new Date().toISOString()}
 }
 :backup-problematic-files/utils/fraud/store.ts
+=======
+
+export interface FraudRecord {;
+
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export interface FraudRecord {
 :backup-problematic-files/utils/fraud/store.ts
   id: string;
@@ -285,9 +294,16 @@ export interface FraudRecord {
   adminId?: string;
   resolution?: string;
 }
+<<<<<<< HEAD
 export interface MonthlyReport {
 
 export interface MonthlyReport {;
+=======
+
+
+export interface MonthlyReport {;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   month: string;
   totalCases: number;
   resolvedCases: number;
@@ -337,9 +353,18 @@ class FraudStore {
   }
 }
 export const fraudStore = new FraudStore();
+<<<<<<< HEAD
 :utils/fraud/store.ts
 export const getFraudStore = () => fraudStore;
 export const getFraudStore = () => fraudStore;
 main:utils/fraud/store.ts
 :backup-problematic-files/utils/fraud/store.ts
 :backup-problematic-files/utils/fraud/store.ts
+=======
+
+export const getFraudStore = () => fraudStore;
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

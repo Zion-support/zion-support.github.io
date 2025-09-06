@@ -22,6 +22,7 @@ import { FilterType } from '@/components/notifications/NotificationFilter',
 export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -29,6 +30,10 @@ export const NotificationCenter: React.FC = () => {
 
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     unreadCount, 
     markAsRead, 
     markAllAsRead,
@@ -44,6 +49,7 @@ export const NotificationCenter: React.FC = () => {
   const [loadedOnce, setLoadedOnce] = useState(false),
   const enqueueSnackbar = useEnqueueSnackbar(),
 
+<<<<<<< HEAD
 
 
   const handleFilterChange = (newFilter: FilterType,) => {
@@ -123,6 +129,10 @@ export const NotificationCenter: React.FC = () => {;
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
 
 
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
           <Bell className="h-5 w-5 text-zion-slate-light" />
@@ -143,11 +153,14 @@ export const NotificationCenter: React.FC = () => {;
   const handleFilterChange = (newFilter: FilterType) => {;
     setFilter(newFilter as any);
   };
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   return (
 
@@ -155,12 +168,18 @@ export const NotificationCenter: React.FC = () => {;
 
           )}
 
+<<<<<<< HEAD
 
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
 
 
+=======
+        </Button>;
+      </PopoverTrigger>;
+      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         <NotificationHeader
           unreadCount = {unreadCount,}
           onMarkAllAsRead = {handleMarkAllAsRead,}
@@ -173,6 +192,7 @@ export const NotificationCenter: React.FC = () => {;
 
 
         <NotificationList
+<<<<<<< HEAD
 
 
         <NotificationHeader 
@@ -186,12 +206,15 @@ export const NotificationCenter: React.FC = () => {;
         <NotificationList 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           loading = {loading,}
           error = {error,}
           notifications = {filteredNotifications,}
           onMarkAsRead = {markAsRead,}
           onDismiss = {dismissNotification,}
           onRetry = {fetchNotifications,}
+<<<<<<< HEAD
 
 
         />
@@ -221,17 +244,23 @@ export const NotificationCenter: React.FC = () => {;
           onRetry={fetchNotifications}
 
 
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         />;
 
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
   );
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 },;
 
     <Popover open={open} onOpenChange={(v, ) => set_open (v ?? false)}>;

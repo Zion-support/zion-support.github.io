@@ -1,4 +1,23 @@
 
+<<<<<<< HEAD
+=======
+
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components / ui / form';
+import { Input  } from '@/components / ui / input';
+import { Control  } from './react - hook - form';
+import { BasicInfoFormData  } from './schema';
+
+interface PersonalInfoFieldsProps {
+  control: Control < BasicInfoFormData>;
+}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -7,7 +26,11 @@ import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
 
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
@@ -15,8 +38,11 @@ import { BasicInfoFormData } from "./schema",
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
 }
@@ -79,10 +105,14 @@ function PersonalInfoFields() {
           </FormItem>
 
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
         )}
 
       />;
@@ -122,15 +152,23 @@ function PersonalInfoFields() {
       <FormField
         control={control}
         name="phone"
+<<<<<<< HEAD
 
         render={({ field }) => (
 
+=======
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Phone</FormLabel>;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </FormItem>)}
       />;
       <FormField;
         control={control}
         name="email";
         render={({ field }) => (
+<<<<<<< HEAD
           <FormItem>
             <FormLabel>Phone</FormLabel>
             <FormControl>
@@ -144,12 +182,51 @@ function PersonalInfoFields() {
 
   );
 }
+=======
+          <FormItem>;
+            <FormLabel > Email</FormLabel>;
+            <FormControl>;
+              <Input type="email" placeholder="john@example.com" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>)}
+      />;
+      <FormField;
+        control={control}
+        name="phone";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > Phone</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            <FormControl>;
+              <Input placeholder="+1 234 567 8900" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+
+      />;
+    </div>;
+  );
+}
+
+=======
+          </FormItem>)}
+      />;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   )
 }
 ;
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

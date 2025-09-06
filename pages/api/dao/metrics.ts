@@ -1,6 +1,11 @@
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -26,8 +31,11 @@ async function fetchJson(url: string) {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json();
@@ -38,9 +46,16 @@ async function fetchJson(url: string) {;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
+=======
+
+function readJson(p: string) {
+  return JSON.parse(fs.readFileSync(p, "utf-8"));
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -52,8 +67,11 @@ function readJson(p: string) {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
@@ -64,7 +82,13 @@ function writeJson(p: string, v: any) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
@@ -73,9 +97,22 @@ export default async function handler(
 
 
 
+<<<<<<< HEAD
+=======
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+;
+export default async function handler(req, res) {
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   try {;
 ;
 export default async function handler(req, res) {
+<<<<<<< HEAD
 
 
 
@@ -83,6 +120,12 @@ export default async function handler(req, res) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   try {
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  try {
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
@@ -276,6 +319,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
+<<<<<<< HEAD
 
   } catch (error) {
     console.error("Error:", error);
@@ -290,3 +334,9 @@ if ( {) {
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

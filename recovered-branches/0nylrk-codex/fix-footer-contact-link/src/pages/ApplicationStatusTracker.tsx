@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import { AppLayout } from "@/layout/AppLayout",
@@ -17,6 +18,12 @@ import { useIsMobile } from "@/hooks/use-mobile",
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
   
@@ -48,9 +55,24 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
   )
+<<<<<<< HEAD
 
 
 
+=======
+
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {ApplicationsTracker} from "@/components/jobs/applications";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Briefcase, Inbox} from "lucide-react";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useIsMobile} from "@/hooks/use-mobile";
+=======
+
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -92,7 +114,10 @@ function ApplicationStatusTrackerContent() {;
       </div>;
     </>;
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
@@ -142,13 +167,17 @@ export default /**
 function ApplicationStatusTracker() {
   return (
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     <ProtectedRoute>;
       <AppLayout>;
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
+<<<<<<< HEAD
     </ProtectedRoute>;
   );
 }
@@ -158,7 +187,16 @@ function ApplicationStatusTracker() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     </ProtectedRoute>);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

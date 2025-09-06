@@ -3,10 +3,20 @@
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 module.exports = {;
 
   apps:[;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 module.exports = {apps:[;
 origin/main
     {;
@@ -113,6 +123,7 @@ origin/automation-improvements-final
 },
 }
 export default {
+<<<<<<< HEAD
 
 
 
@@ -205,6 +216,8 @@ module.exports = {;
   ];
 },;
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   apps: [;
     {
 
@@ -215,9 +228,40 @@ module.exports = {;
 }
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+    name: "ziontechgroup - site",
+    script: "npm",
+    args: "start",
+    instances: 1,
+    exec_mode: "fork",
+    env: {
+      NODE_ENV: "production",
+      PORT: 3000;
+    },
+    env_production: {
+      NODE_ENV: "production",
+      PORT: 3000;
+    },
+    max_memory_restart: "1G",
+    node_args: "--max - old - space - size = 1024",
+    error_file: "./logs / err.log",
+    out_file: "./logs / out.log",
+    log_file: "./logs / combined.log",
+    time: true;
+  }];
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

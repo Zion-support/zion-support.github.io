@@ -1,14 +1,25 @@
 import type { GetServerSideProps } from 'next';
 
+<<<<<<< HEAD
 
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function VendorProfilePage({ vendor }: Props) {
+=======
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
+export default function VendorProfilePage({ vendor }: Props) {;
+=======
+type Props = { vendor: Vendor | null };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function VendorProfilePage({ vendor }: Props) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -43,6 +54,43 @@ export default function VendorProfilePage({ vendor }: Props) {
 
 
 
+<<<<<<< HEAD
+=======
+              <div
+                key={sp && sp.id}
+                className='border border-gray-200 dark:border-gray-800 rounded overflow-hidden'>;
+                {sp && sp.imageUrl ? (;
+                  // eslint-disable-next-line @next/next/no-img-element;
+                  <img
+                    src={sp && sp.imageUrl}
+                    alt={sp && sp.title}
+                    className='w-full h-40 object-cover'
+                  />;
+                ) : (;
+                  <div className='w-full h-40 bg-gray-100 dark:bg-gray-900' />;
+                )}
+                <div className='p-3'>;
+                  <div className='font-medium'>{sp && sp.title}</div>;
+                  <div className='text-sm text-gray-500'>{sp && sp.description}</div>                </div>            {vendor && vendor.sampleProjects.map(sp => (;
+              <div key={sp && sp.id} className="border border-gray-200 dark:border-gray-800 rounded overflow-hidden">;
+                {sp && sp.imageUrl ? (;
+                  // eslint-disable-next-line @next/next/no-img-element;
+                  <img src={sp && sp.imageUrl} alt={sp && sp.title} className="w-full h-40 object-cover" />;
+                ) : (;
+                  <div className="w-full h-40 bg-gray-100 dark:bg-gray-900" />;
+                )}
+                <div className="p-3">;
+                  <div className="font-medium">{sp && sp.title}</div>;
+                  <div className="text-sm text-gray-500">{sp && sp.description}</div>;
+                </div>;
+              </div>;
+
+            ))}
+          </div>;
+        </div>;
+      )}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </div>
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
@@ -222,6 +270,7 @@ export const getServerSideProps: GetServerSideProps < Props> = async ctx => {
     </div>);
 }
 
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
   const slug = String(ctx.params?.slug |'');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
@@ -264,7 +313,13 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
 };
 
 };
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
