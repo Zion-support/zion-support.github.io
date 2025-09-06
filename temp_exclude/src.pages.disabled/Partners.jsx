@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface PartnersProps {
   // Add props here as needed
 }
-
 export default function Partners({ }: PartnersProps) {
   return (
     <div>
@@ -11,13 +9,8 @@ export default function Partners({ }: PartnersProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src.pages.disabled/Partners.jsx
+}}
 }
-=======
 }
-=======
-}
-=======
 }

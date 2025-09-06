@@ -1,68 +1,63 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
 
-=======
-import { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import CodeBlock from "./CodeBlock";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface Param {
-  name: string,
-  type: string,
-  required?: boolean
-}
+  name: string;
+type: string;
+required?: boolean ;
+}interface ApiPlaygroundProps {;
+  method: string;
+  path: string;
+  params?: Param[];
 
-interface ApiPlaygroundProps {
-  method: string,
-  path: string,
-  params?: Param[]
-}
-
-export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {
-  const [apiKey, setApiKey] = useState("demo_key_123");
+export function ApiPlayground({
+  method,
+  path,
+  params = [],
+}: ApiPlaygroundProps) {
+  const [apiKey, setApiKey] = useState('demo_key_123');
   const [paramValues, setParamValues] = useState<Record<string, string>>({});
-  const [body, setBody] = useState("{}");
+  const [body, setBody] = useState('{}');
   const [response, setResponse] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleParamChange = (name: string, value: string) => {
-    setParamValues((prev) => ({ ...prev, [name]: value }))
+    setParamValues(prev => ({ ...prev, [name]: value }));
   };
-
   const sendRequest = async () => {
     // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? window.location.origin : '');
+    const baseUrl =
+      process.env.NEXT_PUBLIC_API_URL ||
+      (typeof window !== 'undefined' ? window.location.origin : '');
     let url = `${baseUrl}${path}`;
 
     const searchParams = new URLSearchParams();
-    if (method === "GET" || method === "DELETE") {
-      params.forEach((p) => {
+    if (method === 'GET' || method === 'DELETE') {
+      params.forEach(p => {
         const val = paramValues[p.name];
-        if (val) searchParams.append(p.name, val)
+        if (val) searchParams.append(p.name, val);
       });
       const query = searchParams.toString();
-      if (query) url += `?${query}`
-    }
+      if (query) url += `?${query}`;    }
 
     const options: RequestInit = {
-      method;
+      method,
       headers: {
         Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json"};
+        'Content-Type': 'application/json',
+      },
       // Add timeout to prevent hanging
-      signal: AbortSignal.timeout(15000)},
-    if (method !== "GET" && method !== "DELETE") {
+      signal: AbortSignal.timeout(15000),
+    };
+
+    if (method !== 'GET' && method !== 'DELETE') {
       try {
-        options.body = JSON.stringify(JSON.parse(body))
+        options.body = JSON.stringify(JSON.parse(body));
       } catch {
-        options.body = body
+        options.body = body;
       }
     }
 
@@ -72,70 +67,69 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
     try {
       const res = await fetch(url, options);
       const contentType = res.headers.get('content-type');
-      
-      let responseText: string,
+
+      let responseText: string;
       if (contentType?.includes('application/json')) {
         try {
           const jsonData = await res.json();
-          responseText = JSON.stringify(jsonData, null, 2)
+          responseText = JSON.stringify(jsonData, null, 2);
         } catch {
-          responseText = await res.text()
+          responseText = await res.text();
         }
       } else {
-        responseText = await res.text()
+        responseText = await res.text();
       }
 
       // Format the response with status information
       const statusInfo = `HTTP ${res.status} ${res.statusText}\n\n`;
-      setResponse(statusInfo + responseText)
+      setResponse(statusInfo + responseText);
     } catch (err: any) {
       let errorMessage = 'Request failed';
-      
+
       if (err.name === 'AbortError') {
-        errorMessage = 'Request timed out (15s)'
+        errorMessage = 'Request timed out (15s)';
       } else if (err.message?.includes('Failed to fetch')) {
-        errorMessage = 'Network error - check CORS configuration or API endpoint'
+        errorMessage =
+          'Network error - check CORS configuration or API endpoint';
       } else {
-        errorMessage = err.message || 'Unknown error occurred'
+        errorMessage = err.message || 'Unknown error occurred';
       }
-      
-      setResponse(`Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting: \n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`)
+
+      setResponse(
+        `Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting:\n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`
+      );
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   };
 
   return (
-    <div className="space-y-4">
+    <div className='space-y-4'>
       <Input
         value={apiKey}
-        onChange={(e) => setApiKey(e.target.value)}
-        placeholder="API Key"
+        onChange={e => setApiKey(e.target.value)}
+        placeholder='API Key'
       />
-      {params.map((p) => (
+      {params.map(p => (
         <Input
           key={p.name}
-          value={paramValues[p.name] || ""}
-          onChange={(e) => handleParamChange(p.name, e.target.value)}
-        />
+          value={paramValues[p.name] || ''}
+          onChange={e => handleParamChange(p.name, e.target.value)}        />
       ))}
-      {method !== "GET" && method !== "DELETE" && (
+      {method !== 'GET' && method !== 'DELETE' && (
         <Textarea
           value={body}
-          onChange={(e) => setBody(e.target.value)}
-          className="font-mono"
-        />
+          onChange={e => setBody(e.target.value)}
+          className='font-mono'        />
       )}
       <Button onClick={sendRequest} disabled={loading}>
-        {loading ? "Sending..." : "Send Request"}
+        {loading ? 'Sending...' : 'Send Request'}
       </Button>
-      {response && <CodeBlock code={response} language="json" />}
+      {response && <CodeBlock code={response} language='json' />}
     </div>
   );
-}
 
 export default ApiPlayground;
-<<<<<<< HEAD
   const val = paramValues[p.name];
 if (val) searchParams.append (p.name, val) ;
 });
@@ -163,17 +157,3 @@ if (contentType?.includes ('application/json') ) {;
 }</div>) ;
 }export default ApiPlayground;
 '"
-=======
-
-<<<<<<< HEAD
-    let url = `${baseUrl}${path}`;
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-export default ApiPlayground;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

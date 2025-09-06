@@ -1,51 +1,26 @@
-<<<<<<< HEAD
-}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
-};
-};
-  return (;
-    <a href={resolved} className={className} {...rest}>;
-      {children};
-};
-};
-};
 import React from 'react';
 
-// Define HTMLAnchorElement type if not available
+// Define HTMLAnchorElement if not available
 interface HTMLElement {
-  className?: string;
+  className: string;
+  id: string;
+  innerHTML: string;
+  textContent: string | null;
+  style: { [key: string]: string };
 }
 
 interface HTMLAnchorElement extends HTMLElement {
-  href: string,
-  className?: string;
+  tagName: 'A';
+  href: string;
+  target: string;
 }
 
 type Href = string | { pathname?: string; href?: string };
 
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  href: Href,
-  children: React.ReactNode,
+  href: Href;
+  children: React.ReactNode;
 };
-=======
-import React from 'react';
-
-// Define HTMLAnchorElement type if not available
-interface HTMLElement {
-  className?: string;
-}
-
-interface HTMLAnchorElement extends HTMLElement {
-  href: string,
-  className?: string;
-}
-
-type Href = string | { pathname?: string; href?: string };
-
-type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  href: Href,
-  children: React.ReactNode,
-};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 function resolveHref(href: Href): string {
   if (typeof href === 'string') return href;
@@ -71,8 +46,4 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
       {children}
     </a>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

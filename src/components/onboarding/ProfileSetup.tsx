@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { User, Mail, AtSign, GraduationCap } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-=======
 
-import { useState } from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { User, Mail, AtSign, GraduationCap } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import {
   Form;
   FormControl;
@@ -35,7 +15,7 @@ const profileSchema = z.object({
 type ProfileFormValues = z.infer<typeof profileSchema>;
 
 interface ProfileSetupProps {
-  onComplete: (data: ProfileFormValues) => void,
+  onComplete: (data: ProfileFormValues,) => void,
   userType: string
 }
 
@@ -70,9 +50,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
           <FormField
-            control={form.control}
+            control = {form.control,}
             name="displayName"
-            render={({ field }: { field: any }) => (
+            render={({ field }: { field: any },) => (
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                 <FormControl>
@@ -91,9 +71,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           />
           
           <FormField
-            control={form.control}
+            control = {form.control,}
             name="headline"
-            render={({ field }: { field: any }) => (
+            render={({ field }: { field: any },) => (
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
                 <FormControl>
@@ -116,9 +96,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           />
           
           <FormField
-            control={form.control}
+            control = {form.control,}
             name="bio"
-            render={({ field }: { field: any }) => (
+            render={({ field }: { field: any },) => (
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>
                 <FormControl>
@@ -147,7 +127,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       </Form>
     </div>
   );
-<<<<<<< HEAD
 case "talent": return "Talent";";
 case "client": return "Client";
 default: ;
@@ -164,11 +143,4 @@ getTypeLabel () ";
   ...field ";
 }/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ;
 }/> <Button > Complete Profile </Button> </form> </Form> </div>) ;
-}"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+}"}

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import EnhancedLayout from '../layout/EnhancedLayout';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export type ProposalType =
   | 'Workforce Dev'
@@ -9,21 +7,14 @@ export type ProposalType =
   | 'Digital ID'
   | 'Education';
 
-=======
-export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export type ProposalForm = {
-  targetInstitution: string,
-  type: ProposalType,
-  regionalScope: string,
-  budgetOrGoals: string,
-  supportingMultiverses: string,
+  targetInstitution: string;
+  type: ProposalType;
+  regionalScope: string;
+  budgetOrGoals: string;
+  supportingMultiverses: string;
   language?: string;
-<<<<<<< HEAD
-  customPrompt?: string;
-=======
-export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
-export type ProposalForm = {
+  customPrompt?: string;};export type ProposalForm = {
   targetInstitution: string,
   type: ProposalType,
   regionalScope: string,
@@ -31,10 +22,6 @@ export type ProposalForm = {
   supportingMultiverses: string,
   language?: string;
   customPrompt?: string
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  customPrompt?: string
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 export default function ProposalGenerator() {
@@ -46,28 +33,23 @@ export default function ProposalGenerator() {
     supportingMultiverses: '',
     language: 'English',
     customPrompt:
-<<<<<<< HEAD
-<<<<<<< HEAD
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
   });
-=======
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'});
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
-  const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
+  const [exportLinks, setExportLinks] = useState<{
+    pdfUrl?: string;
+    jsonUrl?: string;
+    mdUrl?: string;
+  } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
 
-<<<<<<< HEAD
   function handleChange<K extends keyof ProposalForm>(
     key: K,
     value: ProposalForm[K]
   ) {
-    setForm(prev => ({ ...prev, [key]: value }));
-=======
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'});
-  const [isGenerating, setIsGenerating] = useState(false);
+    setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
@@ -75,11 +57,6 @@ export default function ProposalGenerator() {
 
   function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
     setForm((prev) => ({ ...prev, [key]: value }))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
-    setForm((prev) => ({ ...prev, [key]: value }))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async function handleGenerate() {
@@ -89,26 +66,17 @@ export default function ProposalGenerator() {
       const res = await fetch('/api/proposals/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify(form),
       });
-=======
-        body: JSON.stringify(form)}),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       const data = await res.json();
       setDraftMarkdown(data.markdown || '');
       setDraftJson(data.json || null);
-      setStatusMessage('Draft ready. You can edit and export.')
+      setStatusMessage('Draft ready. You can edit and export.');
     } catch (e: any) {
       console.error(e);
-      setStatusMessage('Failed to generate. You can edit manually and export.')
+      setStatusMessage('Failed to generate. You can edit manually and export.');
     } finally {
-<<<<<<< HEAD
-      setIsGenerating(false);
-=======
-        body: JSON.stringify(form)}),
-      const data = await res.json();
+      setIsGenerating(false);    }      const data = await res.json();
       setDraftMarkdown(data.markdown || '');
       setDraftJson(data.json || null);
       setStatusMessage('Draft ready. You can edit and export.')
@@ -117,10 +85,6 @@ export default function ProposalGenerator() {
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
       setIsGenerating(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      setIsGenerating(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 
@@ -133,33 +97,24 @@ export default function ProposalGenerator() {
         body: JSON.stringify({
           markdown: draftMarkdown,
           json: draftJson,
-<<<<<<< HEAD
-<<<<<<< HEAD
           meta: form,
         }),
       });
-=======
-          meta: form})}),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       const data = await res.json();
-      setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl }),
-      setStatusMessage('Exported. Files saved.')
+      setExportLinks({
+        pdfUrl: data.pdfUrl,
+        jsonUrl: data.jsonUrl,
+        mdUrl: data.mdUrl,
+      });
+      setStatusMessage('Exported. Files saved.');
     } catch (e) {
       console.error(e);
-<<<<<<< HEAD
-      setStatusMessage('Export failed');
-=======
-          meta: form})}),
-      const data = await res.json();
+      setStatusMessage('Export failed');    }      const data = await res.json();
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl }),
       setStatusMessage('Exported. Files saved.')
     } catch (e) {
       console.error(e);
       setStatusMessage('Export failed')
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      setStatusMessage('Export failed')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 
@@ -169,71 +124,55 @@ export default function ProposalGenerator() {
       const res = await fetch('/api/proposals/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify({
           markdown: draftMarkdown,
           json: draftJson,
           meta: form,
         }),
       });
-=======
-        body: JSON.stringify({ markdown: draftMarkdown, json: draftJson, meta: form })}),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       const data = await res.json();
-      setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`)
+      setStatusMessage(
+        `Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`
+      );
     } catch (e) {
       console.error(e);
-<<<<<<< HEAD
-      setStatusMessage('Submission failed');
-=======
-        body: JSON.stringify({ markdown: draftMarkdown, json: draftJson, meta: form })}),
-      const data = await res.json();
+      setStatusMessage('Submission failed');    }
+  }
+
+  return (
+    <div className='space-y-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        <div className='space-y-4'>      const data = await res.json();
       setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`)
     } catch (e) {
       console.error(e);
       setStatusMessage('Submission failed')
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      setStatusMessage('Submission failed')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <div className='space-y-4'>
-=======
-    <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="space-y-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <div>
-            <label className="block text-sm font-medium" htmlFor="input-Target institution">Target institution</label>
+            <label className='block text-sm font-medium'>
+              Target institution
+            </label>
             <input
-              className="w-full border rounded px-3 py-2"
+              className='w-full border rounded px-3 py-2'
               value={form.targetInstitution}
-              onChange={(e) => handleChange('targetInstitution', e.target.value)}
-              placeholder="UNDP / World Bank / ILO"
+              onChange={e => handleChange('targetInstitution', e.target.value)}
+              placeholder='UNDP / World Bank / ILO'
             />
           </div>
           <div>
-            <label className="block text-sm font-medium" htmlFor="input-Type">Type</label>
+            <label className='block text-sm font-medium'>Type</label>
             <select
-              className="w-full border rounded px-3 py-2"
+              className='w-full border rounded px-3 py-2'
               value={form.type}
-<<<<<<< HEAD
               onChange={e =>
                 handleChange('type', e.target.value as ProposalType)
-              }
-=======
-    <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="space-y-4">
-          <div>
+              }            >          <div>
             <label className="block text-sm font-medium" htmlFor="input-Target institution">Target institution</label>
             <input
               className="w-full border rounded px-3 py-2"
@@ -248,10 +187,6 @@ export default function ProposalGenerator() {
               className="w-full border rounded px-3 py-2"
               value={form.type}
               onChange={(e) => handleChange('type', e.target.value as ProposalType)}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              onChange={(e) => handleChange('type', e.target.value as ProposalType)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
@@ -260,63 +195,62 @@ export default function ProposalGenerator() {
             </select>
           </div>
           <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <label className='block text-sm font-medium'>Regional scope</label>
-=======
-            <label className="block text-sm font-medium" htmlFor="input-Regional scope">Regional scope</label>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <input
-              className="w-full border rounded px-3 py-2"
+              className='w-full border rounded px-3 py-2'
               value={form.regionalScope}
-              onChange={(e) => handleChange('regionalScope', e.target.value)}
-              placeholder="Global / Africa / LATAM / APAC / EU / ..."
+              onChange={e => handleChange('regionalScope', e.target.value)}
+              placeholder='Global / Africa / LATAM / APAC / EU / ...'
             />
           </div>
           <div>
-            <label className="block text-sm font-medium" htmlFor="input-Budget / Resolution goals">Budget / Resolution goals</label>
+            <label className='block text-sm font-medium'>
+              Budget / Resolution goals
+            </label>
             <textarea
-              className="w-full border rounded px-3 py-2 min-h-[80px]"
+              className='w-full border rounded px-3 py-2 min-h-[80px]'
               value={form.budgetOrGoals}
-              onChange={(e) => handleChange('budgetOrGoals', e.target.value)}
-              placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc."
+              onChange={e => handleChange('budgetOrGoals', e.target.value)}
+              placeholder='$5M for pilot; goals: 10k workers onboarded, 70% female youth, etc.'
             />
           </div>
           <div>
-            <label className="block text-sm font-medium" htmlFor="input-Supporting multiverse(s)">Supporting multiverse(s)</label>
+            <label className='block text-sm font-medium'>
+              Supporting multiverse(s)
+            </label>
             <input
-              className="w-full border rounded px-3 py-2"
+              className='w-full border rounded px-3 py-2'
               value={form.supportingMultiverses}
-              onChange={(e) => handleChange('supportingMultiverses', e.target.value)}
-              placeholder="Eg. Zion.ai, Zion.ID, Zion.Work"
+              onChange={e =>
+                handleChange('supportingMultiverses', e.target.value)
+              }
+              placeholder='Eg. Zion.ai, Zion.ID, Zion.Work'
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div>
-              <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>
+              <label className='block text-sm font-medium'>Language</label>
               <input
-                className="w-full border rounded px-3 py-2"
+                className='w-full border rounded px-3 py-2'
                 value={form.language}
-                onChange={(e) => handleChange('language', e.target.value)}
-                placeholder="English / French / Spanish / Arabic / ..."
+                onChange={e => handleChange('language', e.target.value)}
+                placeholder='English / French / Spanish / Arabic / ...'
               />
             </div>
             <div>
-              <label className="block text-sm font-medium" htmlFor="input-GPT Prompt Assist">GPT Prompt Assist</label>
+              <label className='block text-sm font-medium'>
+                GPT Prompt Assist
+              </label>
               <textarea
-                className="w-full border rounded px-3 py-2 min-h-[80px]"
+                className='w-full border rounded px-3 py-2 min-h-[80px]'
                 value={form.customPrompt}
-                onChange={(e) => handleChange('customPrompt', e.target.value)}
+                onChange={e => handleChange('customPrompt', e.target.value)}
               />
             </div>
           </div>
-          <div className="flex gap-2">
+          <div className='flex gap-2'>
             <button
-<<<<<<< HEAD
-              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
-=======
-            <label className="block text-sm font-medium" htmlFor="input-Regional scope">Regional scope</label>
-            <input
+              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
               className="w-full border rounded px-3 py-2"
               value={form.regionalScope}
               onChange={(e) => handleChange('regionalScope', e.target.value)}
@@ -363,59 +297,33 @@ export default function ProposalGenerator() {
           <div className="flex gap-2">
             <button
               className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               onClick={handleGenerate}
               disabled={isGenerating}
             >
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>
             <button
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className='px-4 py-2 bg-emerald-600 text-white rounded'
-=======
-              className="px-4 py-2 bg-emerald-600 text-white rounded"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              className="px-4 py-2 bg-emerald-600 text-white rounded"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+              className='px-4 py-2 bg-emerald-600 text-white rounded'              onClick={handleExport}              className="px-4 py-2 bg-emerald-600 text-white rounded"
               onClick={handleExport}
               disabled={!draftMarkdown}
             >
               Export (PDF/JSON/MD)
             </button>
             <button
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className='px-4 py-2 bg-purple-600 text-white rounded'
-=======
-              className="px-4 py-2 bg-purple-600 text-white rounded"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              className="px-4 py-2 bg-purple-600 text-white rounded"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+              className='px-4 py-2 bg-purple-600 text-white rounded'              onClick={handleSubmitBridge}              className="px-4 py-2 bg-purple-600 text-white rounded"
               onClick={handleSubmitBridge}
               disabled={!draftMarkdown}
             >
               Submit Bridge
             </button>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           {statusMessage && (
             <p className='text-sm text-gray-600'>{statusMessage}</p>
           )}
-=======
-          {statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           {exportLinks && (
-            <div className="text-sm space-y-1">
+            <div className='text-sm space-y-1'>
               {exportLinks.pdfUrl && (
                 <div>
-<<<<<<< HEAD
                   <a
                     className='text-blue-600 underline'
                     href={exportLinks.pdfUrl}
@@ -423,24 +331,18 @@ export default function ProposalGenerator() {
                     rel='noreferrer'
                   >
                     PDF
-                  </a>
-=======
-          {statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
-          {exportLinks && (
+                  </a>                </div>
+              )}
+              {exportLinks.mdUrl && (
+                <div>          {exportLinks && (
             <div className="text-sm space-y-1">
               {exportLinks.pdfUrl && (
                 <div>
                   <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               )}
               {exportLinks.mdUrl && (
                 <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <a
                     className='text-blue-600 underline'
                     href={exportLinks.mdUrl}
@@ -448,19 +350,14 @@ export default function ProposalGenerator() {
                     rel='noreferrer'
                   >
                     Markdown
-                  </a>
-=======
-                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                  </a>                </div>
+              )}
+              {exportLinks.jsonUrl && (
+                <div>                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
                 </div>
               )}
               {exportLinks.jsonUrl && (
                 <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <a
                     className='text-blue-600 underline'
                     href={exportLinks.jsonUrl}
@@ -468,52 +365,24 @@ export default function ProposalGenerator() {
                     rel='noreferrer'
                   >
                     JSON
-                  </a>
-=======
-                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                  </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
                 </div>
               )}
             </div>
           )}
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='space-y-2'>
           <label className='block text-sm font-medium'>Draft (Markdown)</label>
-=======
-        <div className="space-y-2">
-          <label className="block text-sm font-medium" htmlFor="input-Draft (Markdown)">Draft (Markdown)</label>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <textarea
-            className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
+            className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
             value={draftMarkdown}
-<<<<<<< HEAD
-            onChange={e => setDraftMarkdown(e.target.value)}
-=======
-        <div className="space-y-2">
-          <label className="block text-sm font-medium" htmlFor="input-Draft (Markdown)">Draft (Markdown)</label>
-          <textarea
+            onChange={e => setDraftMarkdown(e.target.value)}          />          <textarea
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
             onChange={(e) => setDraftMarkdown(e.target.value)}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-            onChange={(e) => setDraftMarkdown(e.target.value)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           />
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

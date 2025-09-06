@@ -11,7 +11,6 @@ const { execSync } = require('child_process')
       const content = fs.readFileSync(filePath, 'utf8')
       const syntaxIssues = [{ "pattern": //, "message"}]
         { "pattern": //, "message"}
-        { "pattern": />>>>>>>/, "message"}
         { "pattern": /import\s+.*?from\s+['"][^'"]*?['"]\s*['"]/, "message"}
         { "pattern": /className=\{"[^"]*\$\{[^}]*\}[^"]*$/, "message"
         { "pattern": /console\.log\([^)]*$/, "message"}

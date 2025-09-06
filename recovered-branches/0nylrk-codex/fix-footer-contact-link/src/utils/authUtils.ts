@@ -1,5 +1,5 @@
 
-import { supabase } from "@/integrations/supabase/client";
+import {supabase} from "@/integrations/supabase/client";
 import type { UserDetails } from "@/types/auth";
 /**
  * Utility function to clean up authentication state
@@ -49,7 +49,7 @@ export const checkNewRegistration = async (user: UserDetails) => {
           payload: {
             user_id: user.id;
             email_type: "welcome_series";
-            user_type: user.userType || "unknown";
+            user_type: user.userType || "unknown",
             display_name: user.displayName || user.email?.split("@")[0] || "User"
           }
         });
@@ -64,7 +64,7 @@ export const checkNewRegistration = async (user: UserDetails) => {
           template_data: {
             user_id: user.id;
             email_type: "welcome_series";
-            user_type: user.userType || "unknown";
+            user_type: user.userType || "unknown",
             display_name: user.displayName || user.email?.split("@")[0] || "User"
           }
         })

@@ -10,10 +10,8 @@ class DependencyMonitor {}
   async start() {}
     console.log('Starting Dependency Monitor...');
     this.isRunning = true;
-    
     // Initial dependency check;
     await this.runDependencyCheck();
-    
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
@@ -28,14 +26,11 @@ class DependencyMonitor {}
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);
-
       let output = ;';';
       let errorOutput = ;';';
-
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
-
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
@@ -74,14 +69,11 @@ class DependencyMonitor {}
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);
-
       let output = ;';';
       let errorOutput = ;';';
-
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
-
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
@@ -99,7 +91,6 @@ class DependencyMonitor {}
   stop() {}
     console.log('Stopping Dependency Monitor...');
     this.isRunning = false;
-    
     if ( {})
       clearInterval(this.intervalId)};
     console.log('Dependency Monitor stopped')) {}
@@ -112,17 +103,14 @@ if ( {})
   const monitor = new DependencyMonitor) {}
      {}
   const monitor = new DependencyMonitor}(;);
-  
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     monitor.stop();
     process.exit(0)}
 });
-  
   process.on('SIGTERM', () => {}
     monitor.stop();
     process.exit(0)}
 });
-  
   monitor.start().catch(console.error)};
 module.exports = DependencyMonitor;

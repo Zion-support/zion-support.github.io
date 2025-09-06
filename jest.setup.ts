@@ -2,23 +2,14 @@
 import '@testing-library/jest-dom';
 
 // Mock global objects that might not be available in test environment
-<<<<<<< HEAD
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
-  disconnect: jest.fn(),
-=======
-global.ResizeObserver = (global as any).ResizeObserver || (() => ({
-  observe: () => {},
-  unobserve: () => {},
-  disconnect: () => {},
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-}));
+  disconnect: jest.fn(),}));}));
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-<<<<<<< HEAD
   value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
@@ -68,23 +59,3 @@ afterAll(() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
 });
-=======
-  value: (query: string) => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: () => {}, // deprecated
-    removeListener: () => {}, // deprecated
-    addEventListener: () => {},
-    removeEventListener: () => {},
-    dispatchEvent: () => {},
-  }),
-});
-
-// Mock IntersectionObserver
-global.IntersectionObserver = (global as any).IntersectionObserver || (() => ({
-  observe: () => {},
-  unobserve: () => {},
-  disconnect: () => {},
-}));
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

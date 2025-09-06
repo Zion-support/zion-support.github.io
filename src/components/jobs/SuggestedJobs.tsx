@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useAuth } from '@/hooks/useAuth';
-import { Loader2 } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { useJobSuggestions } from '@/hooks/useJobSuggestions';
-import { JobMatchesCard } from './JobMatchesCard';
-import { NoJobsCard } from './NoJobsCard';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
+    updateJobMatchStatus, 
 import { useAuth } from "@/hooks/useAuth";
-import { Loader2 } from 'lucide-react'
-import { Badge } from "@/components/ui/badge";
+import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge";
 import { useJobSuggestions } from "@/hooks/useJobSuggestions";
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
@@ -33,14 +22,12 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   } = useJobSuggestions(currentTalentId);
 
   const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied');
-    // In a real app, this might redirect to application form or open a modal
+    updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal
   };
 
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined');
   };
-
   if (isLoading) {
     return (
       <div className="flex items-center justify-center p-6">
@@ -68,10 +55,10 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
-                key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline} 
+                key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
               />
             ))}
           </div>
@@ -88,10 +75,10 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
-                key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline} 
+                key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
               />
             ))}
           </div>
@@ -108,11 +95,11 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
               <JobMatchesCard 
-                key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline}
-                showApplied={true}
+                key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
+                showApplied = {true,}
               />
             ))}
           </div>
@@ -120,7 +107,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
       )}
     </div>
   );
-<<<<<<< HEAD
 
 }= useJobSuggestions (currentTalentId);
 const handleApply = (matchId: string, jobId: string) => {;
@@ -173,13 +159,4 @@ if (isLoading) {;
 }/>) ) ;
 }</div> </div>) ;
 }</div>) ;
-}'"
-=======
-
-<<<<<<< HEAD
-    updateJobMatchStatus, 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+}'"}

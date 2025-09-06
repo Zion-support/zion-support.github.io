@@ -1,22 +1,13 @@
 
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { 
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger;
-  DropdownMenuSeparator;
-  DropdownMenuLabel;
-  DropdownMenuRadioGroup;
-  DropdownMenuRadioItem;
-  DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
 // Use the centralized icon wrapper to avoid missing icon issues
-import { FileText, ChevronDown, Loader2, Download } from '@/components/icons';
-import { Resume } from '@/types/resume';
-import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport';
-import { toast } from '@/hooks/use-toast';
-import { FontFamily } from '@/utils/pdf/fontConfig';
+import {FileText, ChevronDown, Loader2, Download} from '@/components/icons';
+import {Resume} from '@/types/resume';
+import {exportResumeToPDF, ExportOptions} from '@/utils/pdfExport';
+import {toast} from '@/hooks/use-toast';
+import {FontFamily} from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
   resume: Resume
 }
@@ -35,7 +26,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
     try {
       const options: ExportOptions = {
         theme;
-        includePortfolio;
+        includePortfolio,
         maxProjects: 3,
         fontFamily
       };

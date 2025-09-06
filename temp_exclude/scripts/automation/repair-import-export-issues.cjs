@@ -2,7 +2,6 @@
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
-
 function deriveAlias(modulePath) {}
 	const base = modulePath.split('/').filter(Boolean).pop() || 'module';
 	const alias = base.replace(/[^a-zA-Z0-9_$]/g, '_');
@@ -36,10 +35,8 @@ function fixExportDefaultConst(filePath, content) {}
 function processFile(fullPath) {}
 	const original = fs.readFileSync(fullPath, 'utf8');
 	let content = original;
-
 	content = fixImportEllipsis(content);
 	content = fixExportDefaultConst(fullPath, content);
-
 	if (content !== original) {}
 		fs.writeFileSync(fullPath, content, 'utf8');
 		return true};

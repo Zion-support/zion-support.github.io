@@ -27,12 +27,7 @@ export const defaultSEO = {
   additionalMetaTags: [
     {
       name: 'viewport',
-<<<<<<< HEAD
       content: 'width=device-width, initial-scale = 1',
-=======
-      content: 'width=device-width, initial-scale=1',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-    },
     {
       name: 'theme-color',
       content: '#1e40af',

@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Phone } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { AppStoreButtons } from './AppStoreButtons';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
+};
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Phone } from 'lucide-react'
-import { Button } from "@/components/ui/button";
+import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button";
 import { AppStoreButtons } from "./AppStoreButtons";
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
@@ -32,8 +22,8 @@ export const MobileAppHero: React.FC = () => {
             
             <div className="mb-8">
               <AppStoreButtons 
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
+                appStoreUrl = {appStoreUrl,}
+                googlePlayUrl = {googlePlayUrl,}
               />
             </div>
             
@@ -57,14 +47,4 @@ export const MobileAppHero: React.FC = () => {
     </section>
   )
 };
-<<<<<<< HEAD
 "
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

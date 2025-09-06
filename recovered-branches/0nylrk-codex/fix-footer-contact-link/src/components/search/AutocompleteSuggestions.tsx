@@ -1,6 +1,6 @@
 
 import React from "react";
-import { SearchSuggestion, SearchHighlight } from "@/types/search";
+import {SearchSuggestion, SearchHighlight} from "@/types/search";
 
 interface AutocompleteSuggestionsProps {
   suggestions: SearchSuggestion[],

@@ -1,10 +1,10 @@
 
-import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from 'sonner';
-import { Milestone, MilestoneStatus } from './types';
-import { useRecordActivity } from './useRecordActivity';
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {toast} from 'sonner';
+import {Milestone, MilestoneStatus} from './types';
+import {useRecordActivity} from './useRecordActivity';
 export const useUpdateMilestone = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -44,7 +44,7 @@ export const useUpdateMilestone = () => {
       return true
     } catch (err: any) {
       console.error("Error updating milestone status:", err);
-      toast.error("Failed to update status: " + err.message);
+      toast.error("Failed to update status: " + err.message),
       return false
     } finally {
       setIsSubmitting(false)
@@ -55,7 +55,7 @@ export const useUpdateMilestone = () => {
     if (!user) return false;
     
     try {
-      setIsSubmitting(true);
+      setIsSubmitting(true),
       
       const { error } = await supabase
         .from('project_milestones')
@@ -72,7 +72,7 @@ export const useUpdateMilestone = () => {
       return true
     } catch (err: any) {
       console.error("Error updating milestone:", err);
-      toast.error("Failed to update milestone: " + err.message);
+      toast.error("Failed to update milestone: " + err.message),
       return false
     } finally {
       setIsSubmitting(false)

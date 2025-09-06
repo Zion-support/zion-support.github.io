@@ -47,17 +47,17 @@ export type {
 export const SERVICE_CATEGORIES = {
   UTILITIES: {
     name: 'Utility Tools';
-    description: 'Essential tools for everyday tasks';
+    description: 'Essential tools for everyday tasks',
     services: ['urlShortenerpasswordGeneratorqrCodeGenerator']
   };
   MEDIA: {
     name: 'Media & Files';
-    description: 'File conversion and media processing tools';
+    description: 'File conversion and media processing tools',
     services: ['fileConverter']
   };
   ANALYSIS: {
     name: 'Analysis & Insights';
-    description: 'Text analysis and content insights';
+    description: 'Text analysis and content insights',
     services: ['textAnalysis']
   }
 } as const;
@@ -65,14 +65,14 @@ export const SERVICE_CATEGORIES = {
 // Service metadata for the application
 export const SERVICES_METADATA = {
   urlShortener: {
-    name: 'URL Shortener';
+    name: 'URL Shortener',
     description: 'Create short, trackable URLs with analytics';
     icon: '🔗';
     category: 'UTILITIES';
     features: [
       'Custom short codesClick trackingAnalytics dashboardExpiration datesQR code generation'
     ];
-    pricing: 'Free';
+    pricing: 'Free',
     apiEndpoint: '/api/url-shortener'
   };
   passwordGenerator: {
@@ -83,7 +83,7 @@ export const SERVICES_METADATA = {
     features: [
       'Multiple generation modesStrength analysisCustom character setsPassword historySecurity recommendations'
     ];
-    pricing: 'Free';
+    pricing: 'Free',
     apiEndpoint: '/api/password-generator'
   };
   qrCodeGenerator: {
@@ -94,7 +94,7 @@ export const SERVICES_METADATA = {
     features: [
       'Multiple QR code typesCustom stylingLogo integrationError correctionTemplate library'
     ];
-    pricing: 'Free';
+    pricing: 'Free',
     apiEndpoint: '/api/qr-code-generator'
   };
   fileConverter: {
@@ -105,7 +105,7 @@ export const SERVICES_METADATA = {
     features: [
       'Multiple file formatsBatch conversionQuality settingsMetadata preservationCloud processing'
     ];
-    pricing: 'Free (Basic) / $9.99/month (Pro)';
+    pricing: 'Free (Basic) / $9.99/month (Pro)',
     apiEndpoint: '/api/file-converter'
   };
   textAnalysis: {
@@ -116,7 +116,7 @@ export const SERVICES_METADATA = {
     features: [
       'Readability metricsSentiment analysisKeyword extractionEntity recognitionLanguage detection'
     ];
-    pricing: 'Free (Basic) / $19.99/month (Pro)';
+    pricing: 'Free (Basic) / $19.99/month (Pro)',
     apiEndpoint: '/api/text-analysis'
   }
 } as const;
@@ -137,7 +137,7 @@ export const getServiceStats = () => {
   return {
     totalUsers: 15420;
     totalRequests: 2847500;
-    averageResponseTime: 125;
+    averageResponseTime: 125,
     services: {
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };

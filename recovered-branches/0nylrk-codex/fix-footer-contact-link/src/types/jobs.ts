@@ -12,7 +12,7 @@ export type JobCategory =
 
 export interface JobBudget {
   min: number;
-  max: number;
+  max: number,
   currency: string
 }
 
@@ -26,7 +26,7 @@ export interface Job {
   budget: JobBudget;
   deadline: string;
   status: JobStatus;
-  created_at: string;
+  created_at: string,
   updated_at: string
 }
 
@@ -36,7 +36,7 @@ export interface JobFormData {
   category: JobCategory;
   skills: string;
   budgetMin: number;
-  budgetMax: number;
+  budgetMax: number,
   deadline: Date
 }
 
@@ -63,7 +63,7 @@ export interface JobMatch {
     key_projects: any[];
     skills: string[];
     location?: string;
-    category?: string;
+    category?: string,
     company_name?: string
   }
 }
@@ -74,7 +74,7 @@ export interface ResumeAttachment {
   type: 'ai_resume' | 'custom_upload';
   file_url?: string;
   resume_id?: string;
-  summary?: string;
+  summary?: string,
   skills?: string[]
 }
 
@@ -97,7 +97,7 @@ export interface JobApplication {
     full_name: string;
     professional_title: string;
     profile_picture_url?: string;
-    bio: string;
+    bio: string,
     skills: string[]
   };
   resume?: ResumeAttachment;
@@ -107,15 +107,15 @@ export interface JobApplication {
   match_breakdown?: {
     skills_match?: {
       score: number;
-      matching: string[];
+      matching: string[],
       missing: string[]
     };
     experience_match?: {
-      score: number;
+      score: number,
       analysis: string
     };
     education_match?: {
-      score: number;
+      score: number,
       analysis: string
     }
   };

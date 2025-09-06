@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 const nextConfig = {
   assetPrefix,
@@ -13,19 +17,29 @@ const isIpfs = process.env.NEXT_PUBLIC_ASSET_PREFIX?.includes('/ipfs/');
 
 module.exports = {
 >>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   reactStrictMode: true,
-=======
 const nextConfig = {
   assetPrefix,
   poweredByHeader: false,
   trailingSlash: false,  reactStrictMode: true,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
 =======
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const nextConfig = {
   assetPrefix,
   poweredByHeader: false,
   trailingSlash: false,  reactStrictMode: true,
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   bundlePagesRouterDependencies: true,
 
   // Optimized for fast builds (hanging issue SOLVED)
@@ -91,11 +105,20 @@ const nextConfig = {
   images: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     unoptimized: isNetlify, // Disable optimization on Netlify to prevent 404s
     loader: 'default',
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -249,18 +272,30 @@ const nextConfig = {
       minimumCacheTTL: 60, // Shorter cache for debugging
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     }),
 =======
     domains: ["localhost"],
     unoptimized: true,
 >>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
-  },
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  },
     }),  },
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     }),  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    }),  },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
@@ -358,11 +393,20 @@ const nextConfig = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     }
     
     // Development optimizations to prevent memory leaks with 176+ pages
@@ -1014,11 +1058,20 @@ const nextConfig = {
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
   async redirects() {
     return [
@@ -1026,18 +1079,30 @@ const nextConfig = {
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
   },
 =======
   trailingSlash: true,
   assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined,
 >>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
-  webpack: (config) => {
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  webpack: (config) => {
   },  webpack: (config) => {
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   },  webpack: (config) => {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  },  webpack: (config) => {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     // Support TS path alias '@/...' by mapping it to the project root
     config.resolve = config.resolve || {};
     config.resolve.alias = config.resolve.alias || {};

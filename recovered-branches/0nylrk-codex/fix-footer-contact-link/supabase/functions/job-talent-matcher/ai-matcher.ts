@@ -1,5 +1,5 @@
 
-import { JobData, TalentProfile, MatchResult } from "./types.ts";
+import {JobData, TalentProfile, MatchResult} from "./types.ts";
 
 // Get openAI API key from environment variables
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "";
@@ -16,18 +16,18 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST";
       headers: {
-        "Content-Type": "application/json";
+        "Content-Type": "application/json",
         "Authorization": `Bearer ${openAiApiKey}`
       };
       body: JSON.stringify({
         model: "gpt-4o-mini";
         messages: [
           {
-            role: "system";
+            role: "system",
             content: "You are a skill normalizer for a tech job platform. Normalize the provided skills to their standard industry naming conventions (e.g., 'react js' to 'React.jsnodejs' to 'Node.js'). Return only a comma-separated list of the normalized skills, nothing else."
           };
           {
-            role: "user";
+            role: "user",
             content: skillsString
           }
         ];
@@ -43,7 +43,7 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     
     // Extract and clean the normalized skills
     const normalizedSkillsText = data.choices[0].message.content.trim();
-    const normalizedSkills = normalizedSkillsText.split(",").map((skill: string) => skill.trim()).filter(Boolean);
+    const normalizedSkills = normalizedSkillsText.split(",").map((skill: string) => skill.trim()).filter(Boolean),
     
     return normalizedSkills
   } catch (error) {
@@ -88,26 +88,24 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST";
       headers: {
-        "Content-Type": "application/json";
+        "Content-Type": "application/json",
         "Authorization": `Bearer ${openAiApiKey}`
       };
       body: JSON.stringify({
         model: "gpt-4o-mini";
         messages: [
           {
-            role: "system";
+            role: "system",
             content: `You are an AI talent matcher for a job marketplace. Based on the job details and talent profiles provided, identify the top 5 matching talents (or fewer if there aren't 5 good matches). For each match, provide:
             1. The talent ID
             2. A match score from 0-100
             3. A list of matched skills
             4. A brief reason for the match (2-3 sentences)
             
-            Return your response in JSON format only, with no additional text:
-            
-            [
+            Return your response in JSON format only, with no additional text: [
               {
                 "talentId": "talent-id-1";
-                "score": 85;
+                "score": 85,
                 "matchedSkills": ["skill1", "skill2"];
                 "reason": "Brief reason for match"
               };
@@ -115,11 +113,11 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
             ]`
           };
           {
-            role: "user";
+            role: "user",
             content: `Job Details:\n${jobDetailsText}\n\nTalent Profiles:\n${talentProfilesText}`
           }
         ];
-        temperature: 0.4;
+        temperature: 0.4,
         response_format: { type: "json_object" }
       })
     });
@@ -172,7 +170,7 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
     return {
       talentId: talent.id;
       score: matchScore;
-      matchedSkills: matchedSkills;
+      matchedSkills: matchedSkills,
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`
     }
   })

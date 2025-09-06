@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface AIAnalyticsProps {
   // Add props here as needed
 }
-
 export default function AIAnalytics({ }: AIAnalyticsProps) {
   return (
     <div>
@@ -11,13 +9,8 @@ export default function AIAnalytics({ }: AIAnalyticsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src.pages.disabled/AIAnalytics.jsx
+}}
 }
-=======
 }
-=======
-}
-=======
 }

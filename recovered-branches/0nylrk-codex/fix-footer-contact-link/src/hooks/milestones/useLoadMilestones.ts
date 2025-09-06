@@ -1,9 +1,9 @@
 
-import { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from 'sonner';
-import { Milestone, MilestoneActivity } from './types';
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {toast} from 'sonner';
+import {Milestone, MilestoneActivity} from './types';
 
 export const useLoadMilestones = (projectId?: string) => {
   const { user } = useAuth();
@@ -53,7 +53,7 @@ export const useLoadMilestones = (projectId?: string) => {
       setError(null)
     } catch (err: any) {
       console.error("Error fetching milestones:", err);
-      setError("Failed to fetch milestones: " + err.message);
+      setError("Failed to fetch milestones: " + err.message),
       toast.error("Failed to fetch milestones")
     } finally {
       setIsLoading(false)

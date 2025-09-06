@@ -12,8 +12,8 @@ Location: ${opts.location || 'Remote'}
 Key skills: ${(opts.tags || []).join() || 'N/A'}
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai.responses.create({
-    model: 'gpt-4o-mini';
+    model: 'gpt-4o-mini',
     input: prompt
   });
-  return completion.output_text
+  return completion.output_text;
 }

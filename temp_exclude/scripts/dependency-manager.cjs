@@ -127,13 +127,6 @@ class DependencyManager {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 Report saved "to": ${reportFile}`);
     // Print summary
-    
-    
-    
-    
-    
-    
-    
     return report}
   async run() {
     try {this.log('🚀 Starting Dependency Manager'),const report = this.generateReport(),this.log('✅ Dependency management completed');

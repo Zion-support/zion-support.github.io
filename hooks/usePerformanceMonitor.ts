@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 interface PerformanceMetrics {
   loadTime: number, firstContentfulPaint: number,
@@ -86,8 +85,3 @@ export function usePerformanceMonitor() {
   return { metrics, isSupported };
 }
 
-=======
-};
-;
-export default usePerformanceMonitor;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

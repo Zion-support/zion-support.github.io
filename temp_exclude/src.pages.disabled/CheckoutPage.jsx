@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from \'react\';
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src.pages.disabled/CheckoutPage.jsx
+import _React from 'react';import _React from 'react';
 import _React from 'react';
-=======
 import _React from 'react';
-=======
 import _React from 'react';
-=======
-import _React from 'react';
-=======
 import _React from 'react';

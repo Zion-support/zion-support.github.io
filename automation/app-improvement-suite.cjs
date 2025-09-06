@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
+// const path = require('path'); // Unused for now
+// const { execSync } = require('child_process'); // Unused for now
 
 console.log('🚀 Starting App Improvement Suite');
 

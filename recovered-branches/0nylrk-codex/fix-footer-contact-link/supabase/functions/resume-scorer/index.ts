@@ -1,9 +1,9 @@
 
-import "https: //deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2";
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*";
+  "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 serve(async (req) => {
@@ -57,7 +57,7 @@ serve(async (req) => {
 
     // 2. Fetch resume details if a resume_id is provided
     let resumeContent = "";
-    let resumeSkills: string[] = [];
+    let resumeSkills: string[] = [],
     
     if (application.resume_id) {
       const { data: resume, error: resumeError } = await supabase
@@ -116,7 +116,7 @@ serve(async (req) => {
 
     // 5. Process using OpenAI to calculate match score
     const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST";
+      method: "POST",
       headers: {
         "Authorization": `Bearer ${openAiKey}`;
         "Content-Type": "application/json"};
@@ -124,13 +124,13 @@ serve(async (req) => {
         model: "gpt-4o-mini";
         messages: [
           {
-            role: "system";
+            role: "system",
             content: `You are an expert resume analyzer that compares resumes against job descriptions
             to determine how well a candidate matches a job. Analyze the resume and job details 
             provided, focusing on skills, experience, and qualifications.`
           };
           {
-            role: "user";
+            role: "user",
             content: `
             # Job Details
             Title: ${jobTitle}
@@ -146,13 +146,12 @@ serve(async (req) => {
             3. A detailed breakdown of how well the candidate's skills and experience align with job requirements
             4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match"
             
-            Respond in JSON format with the following structure:
-            {
+            Respond in JSON format with the following structure: {
               "score": 75;
               "summary": "Good match with relevant experience in required technologies.";
               "breakdown": {
                 "skills_match": {
-                  "score": 80;
+                  "score": 80,
                   "matching": ["skill1", "skill2"];
                   "missing": ["skill3"]
                 };
@@ -200,7 +199,7 @@ serve(async (req) => {
         match_score: matchResult.score;
         match_summary: matchResult.summary;
         match_breakdown: matchResult.breakdown;
-        match_suggestion: matchResult.suggestion;
+        match_suggestion: matchResult.suggestion,
         scored_at: new Date().toISOString()
       })
       .eq("id", applicationId);

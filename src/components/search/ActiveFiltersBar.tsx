@@ -1,6 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import { X } from 'lucide-react'
+
+
+
+export default ActiveFiltersBar;import React from 'react';
+import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 interface SearchFilters {
@@ -14,18 +16,19 @@ interface SearchFilters {
 
 interface ActiveFiltersBarProps {
   filters: SearchFilters,
-  onFiltersChange: (filters: SearchFilters) => void,
+  onFiltersChange: (filters: SearchFilters,) => void,
   onClearAll: () => void,
   className?: string
 }
 
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
-  filters;
-  onFiltersChange;
-  onClearAll;
+  filters,
+  onFiltersChange,
+  onClearAll,
   className = ''
-}) => {
+},) => {
   const activeFilters: Array<{ key: string, label: string, value: string }> = [],
+
   // Add type filters
   filters.types.forEach(type => {
     const labels: Record<string, string> = {
@@ -34,13 +37,13 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       service: 'Services',
       blog: 'Blog Posts',
       doc: 'Documentation'
-    };
+    },
     activeFilters.push({
       key: `type-${type}`,
       label: 'Type',
       value: labels[type] || type
     })
-  });
+  }),
 
   // Add category filter
   if (filters.category) {
@@ -75,7 +78,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       price_asc: 'Price: Low to High',
       price_desc: 'Price: High to Low',
       rating: 'Highest Rated'
-    };
+    },
     activeFilters.push({
       key: 'sort',
       label: 'Sort',
@@ -83,10 +86,10 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     })
   }
 
-  const removeFilter = (filterKey: string) => {
+  const removeFilter = (filterKey: string,) => {
     if (filterKey.startsWith('type-')) {
-      const typeToRemove = filterKey.replace('type-', '');
-      const newTypes = filters.types.filter(t => t !== typeToRemove);
+      const typeToRemove = filterKey.replace('type-', ''),
+      const newTypes = filters.types.filter(t => t !== typeToRemove),
       onFiltersChange({ ...filters, types: newTypes })
     } else if (filterKey === 'category') {
       onFiltersChange({ ...filters, category: '' })
@@ -97,19 +100,19 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     } else if (filterKey === 'sort') {
       onFiltersChange({ ...filters, sort: 'relevance' })
     }
-  };
+  },
 
   if (activeFilters.length === 0) {
-    return null;
+    return null
   }
 
   return (
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>
-      <span className="text-sm font-medium text-muted-foreground">Active filters: </span>
+      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
       
       {activeFilters.map(filter => (
         <Badge 
-          key={filter.key} 
+          key = {filter.key,}
           variant="secondary" 
           className="flex items-center gap-1 pl-2 pr-1"
         >
@@ -120,7 +123,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
             variant="ghost"
             size="sm"
             className="h-4 w-4 p-0 hover:bg-transparent"
-            onClick={() => removeFilter(filter.key)}
+            onClick = {(,) => removeFilter(filter.key),}
             aria-label={`Remove ${filter.label} filter`}
           >
             <X className="h-3 w-3" />
@@ -131,28 +134,32 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       <Button
         variant="ghost"
         size="sm"
-        onClick={onClearAll}
+        onClick = {onClearAll,}
         className="text-xs h-6 px-2"
       >
         Clear all
       </Button>
     </div>
   )
-};
+},
 
-export default ActiveFiltersBar;
-<<<<<<< HEAD
-'"
-=======
-<<<<<<< HEAD
+export default ActiveFiltersBar,
+interface Filter {
+  key: string;
+  value: string;
+  label: string;
+}
 
-<<<<<<< HEAD
+interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {;
 
-<<<<<<< HEAD
+  filters: Filter[];
+  onRemoveFilter: key: string void;
+  onClearAll: : unknown void}
 
-
-export default ActiveFiltersBar;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline";
+      >;
+        Clear all;
+      </button>;
+    </div>;
+  )}
+'";

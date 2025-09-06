@@ -12,14 +12,12 @@ rm -f apps.backup/slack-bot/src/index.ts
 # Auto-resolve common merge conflicts in TypeScript/JavaScript files
 echo "Resolving merge conflicts in code files..."
 find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read file; do
-    if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file"; then
+    if [ -f "$file" ] && grep -q "" "$file"; then
         echo "Resolving conflicts in $file"
         
         # For most conflicts, keep the main branch version (HEAD)
         # This is a simple strategy - in production you'd want more sophisticated resolution
-        sed -i '/^<<<<<<< HEAD/,/^=======/!d' "$file"
-        sed -i '/^>>>>>>> /d' "$file"
-        sed -i '/^=======$/d' "$file"
+        sed -i '/^/,/^        sed -i '/^$/d' "$file"
     fi
 done
 

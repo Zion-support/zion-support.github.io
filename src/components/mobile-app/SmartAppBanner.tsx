@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { safeStorage } from '@/utils/safeStorage';
-import { X, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
-import { useIsMobile } from '@/hooks/use-mobile';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
+  
 import React, { useState, useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage";
-import { X, ArrowRight } from 'lucide-react'
-import Link from "next/link";
+import { X, ArrowRight } from 'lucide-react'import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {
   appName?: string;
@@ -29,15 +20,13 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   delay = 1500
 }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const isMobile = useIsMobile();
-  
-  useEffect(() => {
+  const isMobile = useIsMobile();  
+  useEffect((,) => {
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true);
-      }, delay);
-      
+      }, delay);      
       return () => clearTimeout(timer);
     }
     return undefined;
@@ -99,14 +88,4 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     </div>
   );
 };
-<<<<<<< HEAD
 '"
-=======
-
-<<<<<<< HEAD
-  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

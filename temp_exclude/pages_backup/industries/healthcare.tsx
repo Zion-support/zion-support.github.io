@@ -1,5 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import {Heart,, Brain,, Shield,, Users,, BarChart3,, CheckCircle,, ArrowRight,, Phone,, Mail,, Calendar,, Stethoscope,, Activity,, Database,, Camera,, FileText} from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import { Heart, 
+  Brain, 
+  Shield, 
+  Users, 
+  BarChart3, 
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -12,14 +28,6 @@ import { Heart,
   Shield, 
   Users, 
   BarChart3, 
-=======
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-=======
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
 import {
   Heart,
   Brain,
@@ -37,15 +45,11 @@ import {
   Camera,
   FileText;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 const services = [;
   {}
     title: 'AI-Powered Medical Diagnostics,',
     description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.,',
-=======
-=======
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -114,16 +118,13 @@ const services = [
       'Outcome tracking systems'';
     ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 const benefits = [;
   {}
     title: 'Improved Patient Outcomes,',
     description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.,',
+    icon: Heart;
     icon: Heart,
-=======
-=======
 ];
 const benefits = [
   {
@@ -146,16 +147,12 @@ const benefits = [
     description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.,',
     icon: Shield,
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 const caseStudies = [;
   {}
     title: 'AI Diagnostic System Implementation,',
     description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.,',
     results: ['60% faster diagnosis, '25% accuracy improvement', '40% cost reduction']',
-=======
-=======
 ];
 const caseStudies = [
   {
@@ -173,8 +170,6 @@ const caseStudies = [
     description: 'Unified health records across 15 healthcare facilities, improving care coordination.',',
     results: ['15 facilities connected, '80% workflow improvement', '100% data accuracy']',
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 export default function HealthcarePage() {
   return (;
@@ -219,8 +214,6 @@ export default function HealthcarePage() {
             </motion.div>;
           </div>;
         </section>;
-=======
-=======
 ];
 export default function HealthcarePage() {
   return (
@@ -275,8 +268,6 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Healthcare Technology Services,
@@ -289,8 +280,6 @@ export default function HealthcarePage() {
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {services.map((service, index) => (,
                 <motion.div}),
-=======
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -308,21 +297,17 @@ export default function HealthcarePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">";
                     <service.icon className="w-6 h-6 text-white" />";
-                  </div>;
+                  </div>,
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>"
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
                   <ul className="space-y-3">";
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-=======
-=======
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
@@ -340,13 +325,15 @@ export default function HealthcarePage() {
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-=======
-=======
+            </div>,
+          </div>;
+        </section>;
+            </div>,
+          </div>;
+        </section>;
             </div>
           </div>
         </section>
@@ -357,8 +344,6 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Healthcare Solutions?,
@@ -371,8 +356,6 @@ export default function HealthcarePage() {
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-=======
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -399,13 +382,15 @@ export default function HealthcarePage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-=======
-=======
+            </div>,
+          </div>;
+        </section>;
+            </div>,
+          </div>;
+        </section>;
             </div>
           </div>
         </section>
@@ -416,8 +401,6 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Healthcare Success Stories,
@@ -430,8 +413,6 @@ export default function HealthcarePage() {
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">",
               {caseStudies.map((study, index) => (,
                 <motion.div}),
-=======
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -449,8 +430,6 @@ export default function HealthcarePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300""
                 >;
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>"
@@ -459,8 +438,6 @@ export default function HealthcarePage() {
                     {study.results.map((result, resultIndex) => (,
                       <div key={resultIndex} className="flex items-center text-sm text-green-600">"
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />";
-=======
-=======
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
                 >
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>
@@ -475,13 +452,15 @@ export default function HealthcarePage() {
                   </div>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-=======
-=======
+            </div>,
+          </div>;
+        </section>;
+            </div>,
+          </div>;
+        </section>;
             </div>
           </div>
         </section>
@@ -492,8 +471,6 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             >,
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Healthcare?,
               </h2>;
@@ -512,10 +489,8 @@ export default function HealthcarePage() {
         </section>;
       </div>;
     </Layout>;
-=======
-=======
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">
                 Ready to Transform Healthcare?
               </h2>
               <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
@@ -535,5 +510,5 @@ export default function HealthcarePage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

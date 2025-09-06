@@ -1,26 +1,19 @@
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export type PaginationProps = {
-  page: number,
-  pageSize: number,
-  total: number,
-  onChange: (nextPage: number) => void
+  page: number;
+  pageSize: number;
+  total: number;
+  onChange: (nextPage: number) => void;
 };
 
-<<<<<<< HEAD
 export default function Pagination({
   page,
   pageSize,
   total,
   onChange,
-}: PaginationProps) {
-=======
-export type PaginationProps = {
+}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
   page: number,
   pageSize: number,
   total: number,
@@ -28,41 +21,37 @@ export type PaginationProps = {
 };
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
 
   const goTo = (p: number) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (p >= 1 && p <= totalPages) onChange(p);
-=======
-    if (p >= 1 && p <= totalPages) onChange(p)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
-    <div className="flex items-center justify-between gap-2 mt-4">
-      <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>
+    <div className='flex items-center justify-between gap-2 mt-4'>
+      <EnhancedButton
+        variant='secondary'
+        size='md'
+        onClick={() => goTo(page - 1)}
+        disabled={!canPrev}
+      >
         Prev
       </EnhancedButton>
-      <div className="text-sm">
+      <div className='text-sm'>
         Page {page} of {totalPages}
       </div>
-<<<<<<< HEAD
       <EnhancedButton
         variant='secondary'
         size='md'
         onClick={() => goTo(page + 1)}
         disabled={!canNext}
-      >
-=======
-    if (p >= 1 && p <= totalPages) onChange(p)
-  };
+      >        Next
+      </EnhancedButton>
+    </div>
+  );
+}  };
 
   return (
     <div className="flex items-center justify-between gap-2 mt-4">
@@ -73,19 +62,119 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
         Page {page} of {totalPages}
       </div>
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         Next
       </EnhancedButton>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+import Link from 'next/link';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  baseUrl: string;
+  className?: string;
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+
+const Pagination: React.FC<PaginationProps> = ({ ;
+  currentPage,
+  totalPages,
+  baseUrl,
+  className = '' ;
+}) => {
+  const getPageNumbers = () => {;
+    const pages = [];
+    const maxVisiblePages = 5;
+    if (totalPages <= maxVisiblePages) {;
+      for (let i = 1; i <= totalPages; i++) {;
+        pages.push(i);
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    } else {;
+      const startPage = Math.max(1, currentPage - 2);
+      const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+      if (startPage > 1) {;
+        pages.push(1);
+        if (startPage > 2) {;
+          pages.push('...');
+}
+      }
+
+      for (let i = startPage; i <= endPage; i++) {;
+        pages.push(i);
+}
+
+      if (endPage < totalPages) {;
+        if (endPage < totalPages - 1) {;
+          pages.push('...');
+}
+        pages.push(totalPages);
+}
+    }
+
+    return pages;
+};
+  if (totalPages <= 1) return null;
+  return (;
+    <nav className={`flex items-center justify-center space-x-2 ${className}`}>;
+      {/* Previous Button */}
+      {currentPage > 1 ? (;
+        <Link;
+          href={`${baseUrl}?page=${currentPage - 1}`}
+          className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors">;
+          <ChevronLeft className="w-4 h-4 mr-1" />;
+          Previous;
+        </Link>;
+      ) : (;
+        <span className="flex items-center px-3 py-2 text-sm font-medium text-gray-300 bg-gray-100 border border-gray-200 rounded-lg cursor-not-allowed">;
+          <ChevronLeft className="w-4 h-4 mr-1" />;
+          Previous;
+        </span>;
+      )}
+
+      {/* Page Numbers */}
+      <div className="flex items-center space-x-1">;
+        {getPageNumbers().map((page, index) => {;
+          if (page === '...') {;
+            return (;
+              <span key={index} className="px-3 py-2 text-sm text-gray-500">;
+                ...;
+              </span>;
+            );
+}
+
+          const pageNumber = page as number;
+          const isCurrentPage = pageNumber === currentPage;
+          return (;
+            <Link;
+              key={pageNumber}
+              href={`${baseUrl}?page=${pageNumber}`}
+              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${;
+                isCurrentPage;
+                  ? 'bg-blue-600 text-white border border-blue-600';
+                  : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-900';
+}`}
+            >;
+              {pageNumber}
+            </Link>;
+          );
+})}
+      </div>;
+
+      {/* Next Button */}
+      {currentPage < totalPages ? (;
+        <Link;
+          href={`${baseUrl}?page=${currentPage + 1}`}
+          className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors">;
+          Next;
+          <ChevronRight className="w-4 h-4 ml-1" />;
+        </Link>;
+      ) : (;
+        <span className="flex items-center px-3 py-2 text-sm font-medium text-gray-300 bg-gray-100 border border-gray-200 rounded-lg cursor-not-allowed">;
+          Next;
+          <ChevronRight className="w-4 h-4 ml-1" />;
+        </span>;
+      )}
+    </nav>;
+  );
+};
+export default Pagination;
+}

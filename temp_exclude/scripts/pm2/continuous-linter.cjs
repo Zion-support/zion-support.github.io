@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const chokidar = require('chokidar');
-
 class ContinuousLinter {}
   constructor() {}
     this.logFile = 'logs/pm2/continuous-linter.log';
@@ -66,7 +65,6 @@ class ContinuousLinter {}
       };
       let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
-
       // Fix common linting issues;
       const fixes = [{}]
           "pattern": /console\.log\([^)]*\);/g,
@@ -112,7 +110,6 @@ class ContinuousLinter {}
           "description": 'Format TODO comments'
         };
       ];
-
       for (const fix of fixes) {}
         const before = content;
         if (typeof fix.replacement === 'function') {}
@@ -138,10 +135,8 @@ class ContinuousLinter {}
   };
   async processFile(filePath) {}
     this.log(`Processing "file": ${filePath}`);
-    
     // Fix common issues first;
     await this.fixCommonIssues(filePath);
-    
     // Run lint fix on the specific file;
     try {}
       execSync(`npx eslint "${filePath}" --fix`, { `})
@@ -156,14 +151,12 @@ class ContinuousLinter {}
   };
   startWatching() {}
     this.log('Starting file watcher...');
-    
     const watchPatterns = ['src/**/*.{ts,tsx,js,jsx}',]
       'pages/**/*.{ts,tsx,js,jsx}',
       'components/**/*.{ts,tsx,js,jsx}',
       '__tests__/**/*.{ts,tsx,js,jsx}',
       'scripts/**/*.{ts,tsx,js,jsx}'
     ];
-
     this.watcher = chokidar.watch(watchPatterns, {})
       "ignored": [/node_modules/,]
         /\.next/,
@@ -177,7 +170,6 @@ class ContinuousLinter {}
       "ignoreInitial": true;
     }
 });
-
     this.watcher;
       .on('add', (filePath) => {}
         this.log(`New file "detected": ${filePath}`);
@@ -197,7 +189,6 @@ class ContinuousLinter {}
         this.error(`Watcher "error": ${error.message}`);
       }
 });
-
     this.log('File watcher started successfully');
   };
   stopWatching() {}
@@ -208,7 +199,6 @@ class ContinuousLinter {}
   };
   async runFullLint() {}
     this.log('Running full project lint...');
-    
     try {}
       await this.runLintFix();
       await this.runPrettierFix();
@@ -221,14 +211,11 @@ class ContinuousLinter {}
   };
   async run() {}
     this.log('Starting continuous linting automation...');
-    
     try {}
       // Run initial full lint;
       await this.runFullLint();
-      
       // Start watching for changes;
       this.startWatching();
-      
       // Keep the process running;
       process.on('SIGINT', () => {}
         this.log('Received SIGINT, stopping...');
@@ -236,16 +223,13 @@ class ContinuousLinter {}
         process.exit(0);
       }
 });
-      
       process.on('SIGTERM', () => {}
         this.log('Received SIGTERM, stopping...');
         this.stopWatching();
         process.exit(0);
       }
 });
-      
       this.log('Continuous linting automation is running...');
-      
     } catch (err) {}
       this.error(`Error in "run": ${err.message}`);
       return { "success": false, "error": err.message };
@@ -255,9 +239,7 @@ class ContinuousLinter {}
 // Run if called directly;
 if (require.main === module) {}
   const linter = new ContinuousLinter();
-  
   const command = process.argv[2];
-  
   if (command === 'watch') {}
     linter.run();
   } else if (command === 'fix') {}

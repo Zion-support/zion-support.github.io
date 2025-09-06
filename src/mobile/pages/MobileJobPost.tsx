@@ -1,45 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { MobileHeader } from '@/mobile/components/common/MobileHeader';
-import { BottomNavigation } from '@/mobile/components/common/BottomNavigation';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,;
-} from '@/components/ui/select';
-import { Zap, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
+  
 import React, { useState } from "react";
-import { MobileHeader } from "@/mobile/components/common/MobileHeader";
-import { BottomNavigation } from "@/mobile/components/common/BottomNavigation";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { 
-  Select;
-  SelectContent;
-  SelectItem;
-  SelectTrigger;
-  SelectValue 
-} from "@/components/ui/select";
-import { Zap, ChevronLeft, ChevronRight } from 'lucide-react'
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
+import {MobileHeader} from "@/mobile/components/common/MobileHeader";
+import {BottomNavigation} from "@/mobile/components/common/BottomNavigation";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Label} from "@/components/ui/label";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Zap, ChevronLeft, ChevronRight} from 'lucide-react'
+import {Badge} from "@/components/ui/badge";
+import {Card, CardContent} from "@/components/ui/card";
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview";
-
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
   
@@ -105,7 +77,7 @@ export function MobileJobPost() {
             <Button 
               variant="outline" 
               className="flex-1 gap-1" 
-              onClick={goToPrevStep}
+              onClick = {goToPrevStep,}
             >
               <ChevronLeft className="h-4 w-4" /> Back
             </Button>
@@ -113,7 +85,7 @@ export function MobileJobPost() {
           
           <Button 
             className="flex-1 gap-1"
-            onClick={goToNextStep}
+            onClick = {goToNextStep,}
           >
             {currentStep === "preview" ? "Publish Job" : "Continue"}
             {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
@@ -175,7 +147,7 @@ function DetailsStep() {
         <Textarea 
           id="description" 
           placeholder="Describe the job role and responsibilities" 
-          rows={5}
+          rows = {5,}
         />
       </div>
     </div>
@@ -195,7 +167,7 @@ function RequirementsStep() {
     }
   };
   
-  const removeSkill = (skill: string) => {
+  const removeSkill = (skill: string,) => {
     setSkills(skills.filter(s => s !== skill))
   };
   
@@ -238,16 +210,16 @@ function RequirementsStep() {
       <div className="space-y-2">
         <Label>Required Skills</Label>
         <div className="flex flex-wrap gap-2 mb-3">
-          {skills.map((skill) => (
+          {skills.map((skill,) => (
             <Badge 
-              key={skill} 
+              key = {skill,}
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
             >
               {skill}
               <button 
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
-                onClick={() => removeSkill(skill)}
+                onClick = {(,) => removeSkill(skill),}
               >
                 ×
               </button>
@@ -256,10 +228,10 @@ function RequirementsStep() {
         </div>
         <div className="flex gap-2">
           <Input 
-            value={newSkill}
-            onChange={(e) => setNewSkill(e.target.value)}
+            value = {newSkill,}
+            onChange = {(e,) => setNewSkill(e.target.value),}
             placeholder="Add a skill"
-            onKeyDown={(e) => e.key === 'Enter' && addSkill()}
+            onKeyDown = {(e,) => e.key === 'Enter' && addSkill(),}
           />
           <Button onClick={addSkill}>Add</Button>
         </div>
@@ -270,7 +242,7 @@ function RequirementsStep() {
         <Textarea 
           id="requirements" 
           placeholder="List any specific requirements or qualifications" 
-          rows={4}
+          rows = {4,}
         />
       </div>
       
@@ -279,7 +251,7 @@ function RequirementsStep() {
         <Textarea 
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
-          rows={4}
+          rows = {4,}
         />
       </div>
     </div>
@@ -356,7 +328,7 @@ function BudgetStep() {
         <Textarea 
           id="additionalInfo" 
           placeholder="Any additional information about budget or payment" 
-          rows={3}
+          rows = {3,}
         />
       </div>
     </div>
@@ -404,7 +376,6 @@ function PreviewStep() {
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>
   );
-<<<<<<< HEAD
 
 };";
 min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"className=" flex gap-1"> <Zap className=" h-4 w-4"/> AI Assist </Button> </div> {;
@@ -429,13 +400,4 @@ min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"clas
 }<div className=" space-y-2"> <Label htmlFor=" paymentType">Payment Type</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select payment type"/> </SelectTrigger> <SelectContent> <SelectItem value=" hourly">Hourly Rate</SelectItem> <SelectItem value=" fixed">Fixed Price</SelectItem> <SelectItem value=" salary">Salary</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label>Salary Range</Label> <div className=" flex gap-4 items-center"> <Input placeholder=" Min"type=" number"className=" w-full"/> <span>to</span> <Input placeholder=" Max"type=" number"className=" w-full"/> <Select defaultValue=" usd"> <SelectTrigger className=" w-24"> <SelectValue placeholder=" Currency"/> </SelectTrigger> <SelectContent> <SelectItem value=" usd">USD</SelectItem> <SelectItem value=" eur">EUR</SelectItem> <SelectItem value=" gbp">GBP</SelectItem> </SelectContent> </Select> </div> </div> <div className=" space-y-2"> <Label htmlFor=" deadline">Application Deadline</Label> <Input type=" date"id=" deadline"/> </div> <div className=" space-y-2"> <Label htmlFor=" startDate">Expected Start Date</Label> <Input type=" date"id=" startDate"/> </div> <div className=" space-y-2"> <Label htmlFor=" duration">Project Duration</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select project duration"/> </SelectTrigger> <SelectContent> <SelectItem value=" ltw">Less than a week</SelectItem> <SelectItem value=" ltm">Less than a month</SelectItem> <SelectItem value=" 1-3m">1-3 months</SelectItem> <SelectItem value=" 3-6m">3-6 months</SelectItem> <SelectItem value=" 6m+">6+ months</SelectItem> <SelectItem value=" ongoing">Ongoing</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" additionalInfo">Additional Budget Information</Label> <Textarea id=" additionalInfo"placeholder=" Any additional information about budget or payment"rows= {;
   3 ;
 }/> </div> </div>) '";
-}<Card> <CardContent className=" p-4"> <h3 className=" font-bold text-lg">Senior React Developer</h3> <p className=" text-muted-foreground">TechCorp Inc. • Remote • Full-time</p> <div className=" flex gap-2 my-3"> <Badge variant=" outline">React</Badge> <Badge variant=" outline">TypeScript</Badge> <Badge variant=" outline">Node.js</Badge> </div> </div> <div className=" space-y-1 text-sm mt-3"> <p className=" font-medium">Experience Level:</p> <p>Senior</p> </div> </div> <div className=" mt-4 pt-3 border-t border-border"> <h4 className=" font-medium mb-2">Description</h4> <p className=" text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=" outline"className=" w-full" >Edit Job Post</Button> </div> '"
-=======
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+}<Card> <CardContent className=" p-4"> <h3 className=" font-bold text-lg">Senior React Developer</h3> <p className=" text-muted-foreground">TechCorp Inc. • Remote • Full-time</p> <div className=" flex gap-2 my-3"> <Badge variant=" outline">React</Badge> <Badge variant=" outline">TypeScript</Badge> <Badge variant=" outline">Node.js</Badge> </div> </div> <div className=" space-y-1 text-sm mt-3"> <p className=" font-medium">Experience Level:</p> <p>Senior</p> </div> </div> <div className=" mt-4 pt-3 border-t border-border"> <h4 className=" font-medium mb-2">Description</h4> <p className=" text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=" outline"className=" w-full" >Edit Job Post</Button> </div> '"}

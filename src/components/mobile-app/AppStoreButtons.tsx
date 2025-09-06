@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Apple, GithubIcon } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { logInfo } from '@/utils/productionLogger';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
-import { Apple, GithubIcon } from 'lucide-react'
-import { cn } from "@/lib/utils";
+import { Apple, GithubIcon } from 'lucide-react'import { cn } from "@/lib/utils";
 import { logInfo } from '@/utils/productionLogger';
 interface AppStoreButtonsProps {
   className?: string;
@@ -23,31 +14,34 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   className;
   appStoreUrl = "#";
   googlePlayUrl = "#";
-  onAppStoreClick;
+};  className,
+  appStoreUrl = "#",
+  googlePlayUrl = "#",
+  onAppStoreClick,
   onGooglePlayClick
-}) => {
-  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+},) => {
+  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
     if (!appStoreUrl || appStoreUrl === "#") {
-      e.preventDefault();
-      logInfo("App Store download clicked");
+      e.preventDefault(),
+      logInfo("App Store download clicked"),
       onAppStoreClick?.()
     }
-  };
+  },
 
-  const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
     if (!googlePlayUrl || googlePlayUrl === "#") {
-      e.preventDefault();
-      logInfo("Google Play download clicked");
+      e.preventDefault(),
+      logInfo("Google Play download clicked"),
       onGooglePlayClick?.()
     }
-  };
+  },
 
   return (
     <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
       <a
-        href={appStoreUrl}
-        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover: bg-gray-900 transition-colors"
-        onClick={handleAppStoreClick}
+        href = {appStoreUrl,}
+        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
+        onClick = {handleAppStoreClick,}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Download on the App Store"
@@ -60,9 +54,9 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       </a>
 
       <a
-        href={googlePlayUrl}
+        href = {googlePlayUrl,}
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
-        onClick={handleGooglePlayClick}
+        onClick = {handleGooglePlayClick,}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Get it on Google Play"
@@ -86,15 +80,4 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       </a>
     </div>
   )
-};
-<<<<<<< HEAD
-"
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+},

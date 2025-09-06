@@ -1,9 +1,9 @@
 
 import React from "react";
-import { CheckCircle, Circle, ArrowRight } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import {CheckCircle, Circle, ArrowRight} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
 export interface OnboardingStep {
   id: string,
   label: string,

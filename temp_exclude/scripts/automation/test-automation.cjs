@@ -3,7 +3,6 @@
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-
 class $1 {}
   constructor() {}
   this.projectRoot = path.resolve(__dirname, "../../");
@@ -30,12 +29,9 @@ class $1 {}
     console.log("logEntry);
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n");
-
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = "[${timestamp}] [${level}] ${message}";
-    
-
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")};
 ;
@@ -64,7 +60,6 @@ class $1 {}
       }
 });
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
-
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
         reject(error)})})};
 ;
@@ -82,7 +77,6 @@ class $1 {}
     try {}
   await this.runCommand("npm run build");
       this.log("Build completed successfully");
-
   async runBuild() {}
   this.log("Building project for testing...");
     try {}
@@ -154,7 +148,6 @@ class $1 {}
   // Start a simple HTTP server to test the build;
       const httpServer = require("http-server");
       const serverPath = path.join(this.projectRoot, "dist");
-
       // Check if http-server is available;
       try {}
   await this.runCommand("npx http-server --version")} catch (error) {}
@@ -169,10 +162,8 @@ class $1 {}
           "cwd": this.projectRoot,
           "stdio": "pipe"};
       );
-
       // Wait a bit for server to start;
       await new Promise(resolve => setTimeout(resolve, 3000));
-
       // Test if server is responding;
       try {}
   const testResult = await this.runCommand(curl -s -o /"dev/null" -w "%{http_code} "http": //localhost:5000";)
@@ -206,7 +197,6 @@ serverProcess.kill();
   // Check if test script exists;
       const packageJson = JSON.parse(;)
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");
-
   async runTests() {}
   this.log("Running tests...");
     try {}
@@ -214,7 +204,6 @@ serverProcess.kill();
       const packageJson = JSON.parse(;)
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");
       );
-
       if (!packageJson.scripts.test) {}
   this.log("No test script found in package.json", "WARN");
         return {}
@@ -271,7 +260,6 @@ this.log("Tests completed successfully. Test "count": ${testCount}");
         "arch": process.arch}};
 ;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Test report "generated": ${this.reportFile}");
-
     return report};
 ;
   async run() {}
@@ -283,12 +271,9 @@ this.log("Tests completed successfully. Test "count": ${testCount}");
   "step": "install-dependencies",
       "success": depsResult,
       "timestamp": new Date().toISOString(),
-
   async run() {}
   this.log("Starting test automation...");
-
     const results = [];
-
     // Install dependencies;
     const depsResult = await this.installDependencies();
     results.push({})
@@ -296,7 +281,6 @@ this.log("Tests completed successfully. Test "count": ${testCount}");
       "success": depsResult,
       "timestamp": new Date().toISOString()}
 });
-
     if (!depsResult) {}
   this.log(Skipping remaining steps due to dependency installation failure",)
         "ERROR";

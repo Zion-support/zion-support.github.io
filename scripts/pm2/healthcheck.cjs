@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -17,17 +16,7 @@ function pingPreview() {}
 	if (!ok) {}
 		console.error('Healthcheck failed');
 		process.exit(1)};
-	console.log('Healthy')})();
-=======
-#!/usr/bin/env node
-
-/**
- * Health Check Automation Script
- * Monitors system health and application status
- */
-
-const { execSync } = require('child_process');
-const fs = require('fs');
+	console.log('Healthy')})();    // Check disk space
 const path = require('path');
 
 class HealthChecker {
@@ -196,12 +185,7 @@ class HealthChecker {
 
   calculateOverallHealth(diskUsage, memoryUsage, pm2Status, buildStatus) {
     let score = 100;
-<<<<<<< HEAD
 
-=======
-    const issues = [];
-    
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     // Check disk space
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);
@@ -264,4 +248,3 @@ if (require.main === module) {
 }
 
 module.exports = HealthChecker;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

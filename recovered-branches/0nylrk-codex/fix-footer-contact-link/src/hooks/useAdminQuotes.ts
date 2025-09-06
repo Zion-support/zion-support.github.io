@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { quoteRequestService } from '@/services/quoteRequestService';
+import {useState} from 'react';
+import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
+import {quoteRequestService} from '@/services/quoteRequestService';
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
-import { useToast } from '@/components/ui/use-toast';
+import {useToast} from '@/components/ui/use-toast';
 import type { DateRange } from '@/types/dateRange';
 export const useAdminQuotes = () => {
   const { toast } = useToast();
@@ -15,7 +15,7 @@ export const useAdminQuotes = () => {
   // Fetch all quote requests
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotesadmin'];
-    queryFn: () => quoteRequestService.getAll();
+    queryFn: () => quoteRequestService.getAll(),
     enabled: true});
 
   // Filter quotes based on selected filters
@@ -72,7 +72,7 @@ export const useAdminQuotes = () => {
       quoteRequestService.updateStatus(id, status);
     onSuccess: () => {
       toast({
-        title: "Status updated";
+        title: "Status updated",
         description: "The quote request status has been updated"
       });
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
@@ -80,7 +80,7 @@ export const useAdminQuotes = () => {
     onError: (error: Error) => {
       toast({
         title: "Error";
-        description: "Failed to update status: " + error.message;
+        description: "Failed to update status: " + error.message,
         variant: "destructive"
       })
     }
@@ -92,7 +92,7 @@ export const useAdminQuotes = () => {
       quoteRequestService.toggleArchive(id, isArchived);
     onSuccess: (_, variables) => {
       toast({
-        title: variables.isArchived ? "Quote archived" : "Quote unarchived";
+        title: variables.isArchived ? "Quote archived" : "Quote unarchived",
         description: variables.isArchived 
           ? "The quote request has been archived" 
           : "The quote request has been moved back to active quotes"
@@ -102,7 +102,7 @@ export const useAdminQuotes = () => {
     onError: (error: Error) => {
       toast({
         title: "Error";
-        description: "Failed to update quote: " + error.message;
+        description: "Failed to update quote: " + error.message,
         variant: "destructive"
       })
     }
@@ -113,7 +113,7 @@ export const useAdminQuotes = () => {
     mutationFn: (id: string) => quoteRequestService.delete(id);
     onSuccess: () => {
       toast({
-        title: "Quote deleted";
+        title: "Quote deleted",
         description: "The quote request has been permanently deleted"
       });
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
@@ -121,7 +121,7 @@ export const useAdminQuotes = () => {
     onError: (error: Error) => {
       toast({
         title: "Error";
-        description: "Failed to delete quote: " + error.message;
+        description: "Failed to delete quote: " + error.message,
         variant: "destructive"
       })
     }
@@ -138,7 +138,7 @@ export const useAdminQuotes = () => {
     searchQuery;
     setSearchQuery;
     dateRange;
-    setDateRange;
+    setDateRange,
     updateStatus: (id: string, status: QuoteStatus) => 
       updateStatusMutation.mutate({ id, status });
     toggleArchive: (id: string, isArchived: boolean) => 

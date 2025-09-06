@@ -1,39 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { format } from 'date-fns';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,;
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { QuoteStatusBadge } from '@/components/quotes/QuoteStatusBadge';
-import {
-  Eye,
-  MessageSquare,
-  ArchiveIcon,
-  RefreshCw,
-  CalendarIcon,;
-} from 'lucide-react';
-import type { QuoteRequest } from '@/types/quotes';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
-import { format } from "date-fns";
-import { 
-  Card;
-  CardContent, 
-  CardHeader, 
-  CardTitle, 
-  CardDescription
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react'
+import {format} from "date-fns";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
+import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes";
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
@@ -41,15 +12,14 @@ type QuoteRequestCardProps = {
   onMarkAsResponded?: (id: string) => void,
   onToggleArchive: (id: string, isArchived: boolean) => void
 };
-
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote;
   onViewDetails;
-  onMarkAsResponded;
+  onMarkAsResponded,
   onToggleArchive
-}) => {
+},) => {
   // Format date for display
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string,) => {
     try {
       return format(new Date(dateString), 'PP')
     } catch (e) {
@@ -87,7 +57,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
           <Button
             variant="outline"
             size="sm"
-            onClick={() => onViewDetails(quote)}
+            onClick = {() => onViewDetails(quote),}
             className="flex items-center gap-1"
           >
             <Eye className="h-4 w-4" />
@@ -99,7 +69,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => onMarkAsResponded(quote.id)}
+                onClick = {(,) => onMarkAsResponded(quote.id),}
                 className="flex items-center gap-1"
               >
                 <MessageSquare className="h-4 w-4" />
@@ -110,7 +80,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => onToggleArchive(quote.id, !quote.is_archived)}
+              onClick = {() => onToggleArchive(quote.id, !quote.is_archived),}
               className="flex items-center gap-1"
             >
               {quote.is_archived ? (
@@ -125,11 +95,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     </Card>
   )
 };
-<<<<<<< HEAD
-"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+"},
+;
+};

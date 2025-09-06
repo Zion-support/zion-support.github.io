@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Brain, Clock, Award, Zap } from 'lucide-react';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,;
-} from '@/components/ui/card';
-=======
-
-import React from "react";
-import { Brain, Clock, Award, Zap } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+};
 
 const features = [
   {
@@ -52,8 +36,7 @@ export const AppFeatures: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover: border-zion-cyan transition-colors duration-300">
-              <CardHeader>
+            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover: border-zion-cyan transition-colors duration-300">              <CardHeader>
                 <div className="mb-4">{feature.icon}</div>
                 <CardTitle className="text-white">{feature.title}</CardTitle>
               </CardHeader>
@@ -67,7 +50,6 @@ export const AppFeatures: React.FC = () => {
     </section>
   )
 };
-<<<<<<< HEAD
 {";
   icon: <Clock className="h-10 w-10 text-zion-cyan" />;";
 title: "1-Click Hiring";";
@@ -97,12 +79,3 @@ export const AppFeatures: React.FC = () => {";
 }</div> </div> </section>) ;
 };
 "
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

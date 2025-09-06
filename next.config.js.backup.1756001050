@@ -7,11 +7,20 @@ const nextConfig = {
   reactStrictMode: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   bundlePagesRouterDependencies: true,
   // Temporarily disable ESLint during build to handle unescaped entities
   eslint: {
@@ -22,9 +31,15 @@ const nextConfig = {
     ignoreBuildErrors: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
   },
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9531
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
   // Disable ESLint during build to focus on core functionality
   eslint: {
@@ -42,24 +57,19 @@ const nextConfig = {
   // Environment configuration
   env: {
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
-<<<<<<< HEAD
-    NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL || 'placeholder',
-    NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder',
-  },
-
-  serverExternalPackages: ['@prisma/client'],
-  
-=======
-  },
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9531
   modularizeImports: {
-=======
   },  modularizeImports: {
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   },  modularizeImports: {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  },  modularizeImports: {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     'lucide-react': {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
       skipDefaultConversion: true,
@@ -88,21 +98,34 @@ const nextConfig = {
     workerThreads: false, // Disable worker threads to reduce memory usage
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
     cpus: Math.min(2, 2), // Adaptive CPU limit
     // Bundle analysis optimizations moved to root level
 =======
     cpus: Math.min(2, require('os').cpus().length), // Adaptive CPU limit
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9531
-    // Disable profiling for faster builds
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    // Disable profiling for faster builds
     cpus: Math.min(2, 2), // Adaptive CPU limit
     // Bundle analysis optimizations moved to root level    // Disable profiling for faster builds
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     cpus: Math.min(2, 2), // Adaptive CPU limit
     // Bundle analysis optimizations moved to root level    // Disable profiling for faster builds
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    cpus: Math.min(2, 2), // Adaptive CPU limit
+    // Bundle analysis optimizations moved to root level    // Disable profiling for faster builds
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     swcTraceProfiling: false,
   },
 
@@ -142,6 +165,10 @@ const nextConfig = {
   ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
   webpack: (config, { dev, isServer }) => {
@@ -439,15 +466,24 @@ const nextConfig = {
 
     // Add polyfills for Node.js APIs
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9531
-    config.resolve.fallback = {
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    config.resolve.fallback = {
   webpack: (config, { dev, isServer }) => {
     // Handle problematic packages    config.resolve.fallback = {
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   webpack: (config, { dev, isServer }) => {
     // Handle problematic packages    config.resolve.fallback = {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  webpack: (config, { dev, isServer }) => {
+    // Handle problematic packages    config.resolve.fallback = {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       ...config.resolve.fallback,
       fs: false,
       net: false,
@@ -484,11 +520,20 @@ const nextConfig = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     // Optimize bundle size for production
     if (!dev) {
       config.optimization = {
@@ -514,6 +559,10 @@ const nextConfig = {
           },
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
       };
 =======
@@ -550,30 +599,21 @@ const nextConfig = {
         'react-markdown': require('path').resolve(__dirname, 'src/stubs/markdown-stub.ts'),
       };
       console.log('🚑 Emergency stubs enabled for Netlify build');
-    }
-
-    // Add webpack rules to force ESM handling
-    config.module.rules.push({
-      test: /node_modules\/(formik|date-fns|lodash|react-day-picker|micromark|mdast-util-|decode-named-character-reference|character-entities|devlop)/,
-      type: 'javascript/auto',
-      resolve: {
-        fullySpecified: false,
-      },
-    });
-
-    // Additional ESM handling for Next.js 15 compatibility
-    if (!isServer) {
-      // Ensure ESM modules are properly resolved
-      config.resolve.mainFields = ['module', 'main'];
-      config.resolve.conditionNames = ['import', 'require', 'default'];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9531
-    }
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    }
       };    }
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       };    }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      };    }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     
     return config;
   },

@@ -1,75 +1,43 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect, useCallback } from 'react';
-
-export const useMessageChannelHandler = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
-    // Hook implementation
-  }, []);
-  
-  return { state, setState };
-};
-
-export default useMessageChannelHandler;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useEffect, useCallback } from 'react';
 
-// Define MessageEvent type if not available
+// Define MessageEvent if not available
 interface Event {
-<<<<<<< HEAD
-  type: string, target: EventTarget | null,
-}
-
-interface EventTarget {
-  addEventListener(type: string, listener: (event: Event) => void): void,
-  removeEventListener(type: string, listener: (event: Event) => void): void,
-}
-
-interface Window extends EventTarget {
-  addEventListener(type: string, listener: (event: Event) => void): void,
-  removeEventListener(type: string, listener: (event: Event) => void): void,
-}
-
-interface MessageEvent<T = unknown> extends Event {
-  data: T, origin: string,
-  source: Window | null,
-}
-
-interface MessageChannelHandlerProps {
-  onMessage?: (message: unknown) => void, onError?: (error: Error) => void,
-=======
   type: string;
   target: EventTarget | null;
 }
 
+type EventListener = (event: Event) => void;
+
 interface EventTarget {
-  addEventListener(type: string, listener: (event: Event) => void): void;
-  removeEventListener(type: string, listener: (event: Event) => void): void;
+  addEventListener(type: string, listener: EventListener): void;
+  removeEventListener(type: string, listener: EventListener): void;
 }
 
-interface Window extends EventTarget {
-  addEventListener(type: string, listener: (event: Event) => void): void;
-  removeEventListener(type: string, listener: (event: Event) => void): void;
+interface MessageEventSource {
+  postMessage(message: any, targetOrigin: string): void;
 }
 
-interface MessageEvent<T = unknown> extends Event {
+interface MessagePort {
+  postMessage(message: any): void;
+  start(): void;
+  close(): void;
+}
+
+interface MessageEvent<T = any> extends Event {
   data: T;
   origin: string;
-  source: Window | null;
+  lastEventId: string;
+  source: MessageEventSource | null;
+  ports: ReadonlyArray<MessagePort>;
 }
 
 interface MessageChannelHandlerProps {
   onMessage?: (message: unknown) => void;
   onError?: (error: Error) => void;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 
 export function useMessageChannelHandler({
-  onMessage;
+  onMessage,
   onError
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback((event: MessageEvent<unknown>) => {
@@ -90,9 +58,4 @@ export function useMessageChannelHandler({
       window.removeEventListener('message', handleMessage);
     };
   }, [handleMessage]);
-<<<<<<< HEAD
 }
->>>>>>> 7a79ab46aa7794ec396c2388b3c38de69cb877ae
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

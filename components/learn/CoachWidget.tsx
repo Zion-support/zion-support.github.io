@@ -12,35 +12,23 @@ export default function CoachWidget() {
       const resp = await fetch('/api/learn/coach', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify({ prompt: input }),
-=======
-        body: JSON.stringify({ prompt: input })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       });
       const data = await resp.json();
-      setReply(data.text || '')
+      setReply(data.text || '');
     } finally {
-<<<<<<< HEAD
-      setLoading(false);
-=======
-        body: JSON.stringify({ prompt: input })
-      });
+      setLoading(false);    }
+  }
+
+  return (      });
       const data = await resp.json();
       setReply(data.text || '')
     } finally {
       setLoading(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      setLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className='border rounded p-3'>
       <div className='font-medium mb-2'>ZionGPT Coach</div>
       <div className='flex gap-2'>
@@ -57,30 +45,11 @@ export default function CoachWidget() {
         >
           {loading ? '...' : 'Ask'}
         </button>
-=======
-    <div className="border rounded p-3">
-      <div className="font-medium mb-2">ZionGPT Coach</div>
-      <div className="flex gap-2">
-        <input className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" placeholder="Ask for help..." value={input} onChange={(e) => setInput(e.target.value)} />
-        <button onClick={ask} className="px-3 py-2 bg-blue-600 text-white rounded" disabled={loading}>{loading ? '...' : 'Ask'}</button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-      </div>
-      {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
-    </div>
-  );
-<<<<<<< HEAD
-=======
-    <div className="border rounded p-3">
-      <div className="font-medium mb-2">ZionGPT Coach</div>
-      <div className="flex gap-2">
-        <input className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" placeholder="Ask for help..." value={input} onChange={(e) => setInput(e.target.value)} />
-        <button onClick={ask} className="px-3 py-2 bg-blue-600 text-white rounded" disabled={loading}>{loading ? '...' : 'Ask'}</button>
-      </div>
-      {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
+      {reply && (
+        <div className='mt-2 text-sm text-gray-800 dark:text-gray-200'>
+          {reply}
+        </div>
+      )}
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

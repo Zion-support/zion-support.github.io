@@ -1,6 +1,6 @@
 
-import { useRef, useEffect } from 'react';
-import { useAnalytics } from '@/context/AnalyticsContext';
+import {useRef, useEffect} from 'react';
+import {useAnalytics} from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {
   const { trackEvent } = useAnalytics();
   const componentRef = useRef<HTMLDivElement>(null);
@@ -15,11 +15,11 @@ export function useTrackUserBehavior(componentName: string) {
       if (target.tagName === 'BUTTON' || target.closest('button')) {
         const button = target.tagName === 'BUTTON' ? target : target.closest('button');
         const buttonId = button?.id || '';
-        const buttonText = button?.textContent || '';
+        const buttonText = button?.textContent || '',
         
         trackEvent('button_click', {
           component: componentName;
-          elementId: buttonId;
+          elementId: buttonId,
           text: buttonText
         })
       }
@@ -29,10 +29,10 @@ export function useTrackUserBehavior(componentName: string) {
     const trackFormSubmits = (e: Event) => {
       const target = e.target as HTMLFormElement;
       if (target.tagName === 'FORM') {
-        const formId = target.id || '';
+        const formId = target.id || '',
         
         trackEvent('form_submit', {
-          component: componentName;
+          component: componentName,
           elementId: formId
         })
       }

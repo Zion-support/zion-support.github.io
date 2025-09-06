@@ -1,7 +1,7 @@
 
-import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
 
 type ContentType = 'job' | 'profile' | 'service' | 'general';
 
@@ -20,14 +20,14 @@ export function useTranslationService() {
     sourceLanguage: SupportedLanguage = 'en';
     targetLanguages: SupportedLanguage[] = ['enesptar']
   ): Promise<TranslationResponse> => {
-    setIsTranslating(true);
+    setIsTranslating(true),
     
     try {
       const { data, error } = await supabase.functions.invoke('translate-content', {
         body: {
           content;
           sourceLanguage;
-          targetLanguages;
+          targetLanguages,
           contentType
         }
       });
@@ -39,7 +39,7 @@ export function useTranslationService() {
         const initialTranslations: Record<SupportedLanguage, string> = {
           en: content;
           es: '';
-          pt: '';
+          pt: '',
           ar: ''
         };
         initialTranslations[sourceLanguage] = content;
@@ -54,20 +54,20 @@ export function useTranslationService() {
       const initialTranslations: Record<SupportedLanguage, string> = {
         en: content;
         es: '';
-        pt: '';
+        pt: '',
         ar: ''
       };
       initialTranslations[sourceLanguage] = content;
       
       return { 
-        translations: initialTranslations;
+        translations: initialTranslations,
         error: err instanceof Error ? err.message : 'Unknown translation error' 
       }
     }
   };
   
   const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = '') => {
-    if (!translations) return fallback;
+    if (!translations) return fallback,
     return translations[currentLanguage] || translations.en || fallback
   };
   

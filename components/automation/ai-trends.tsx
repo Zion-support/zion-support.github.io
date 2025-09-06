@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  </div> </div>) ) 
-}</div> </div>) 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import fs from 'fs';
+}</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {
   id: string,
@@ -18,12 +12,7 @@ export type Trend = {
 
 export async function getServerSideProps() {
   const file = path.join(process.cwd(), 'dataai-trends.json');
-<<<<<<< HEAD
-  let items: Trend[] = [];
-=======
-  let items: Trend[] = [],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  try {
+  let items: Trend[] = [];  try {
     const raw = fs.readFileSync(file, 'utf-8');
     items = JSON.parse(raw)
   } catch {}
@@ -55,9 +44,4 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

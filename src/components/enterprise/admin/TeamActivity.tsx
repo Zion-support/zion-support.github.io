@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,;
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import { CalendarIcon, Search } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    return <Badge variant={style.variant}>{category}</Badge>
+  };
 
 import React from "react";
 import {
@@ -26,6 +11,16 @@ import {
   TableRow} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from 'lucide-react'
+import React from "react";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge";
+import { CalendarIcon, Search } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 export function TeamActivity() {
@@ -80,7 +75,6 @@ export function TeamActivity() {
     const diffMins = Math.floor(diffMs / (1000 * 60));
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-
     if (diffMins < 60) {
       return `${diffMins} minutes ago`
     } else if (diffHrs < 24) {
@@ -92,7 +86,7 @@ export function TeamActivity() {
     }
   };
 
-  const getCategoryBadge = (category: string) => {
+  const getCategoryBadge = (category: string,) => {
     const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {
       jobs: { variant: "default" },
       candidates: { variant: "outline" },
@@ -133,7 +127,7 @@ export function TeamActivity() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {activities.map((activity) => (
+            {activities.map((activity,) => (
               <TableRow key={activity.id}>
                 <TableCell className="font-medium">{activity.user}</TableCell>
                 <TableCell>{activity.action}</TableCell>
@@ -163,7 +157,6 @@ export function TeamActivity() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 
 };
 const getCategoryBadge = (category: string) => {;
@@ -173,15 +166,4 @@ const getCategoryBadge = (category: string) => {;
   activity.id ;
 }> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
-}"
-=======
-
-<<<<<<< HEAD
-    return <Badge variant={style.variant}>{category}</Badge>
-  };
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+}"}

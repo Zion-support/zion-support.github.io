@@ -3,7 +3,6 @@
  * Main Error Detection Service;
  * Continuously scans the project for errors and coordinates fixing;
  */
-
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync, spawn } = // // require('child_process');
@@ -26,7 +25,6 @@ class ErrorDetectionService {}
       "dependency": [],
       "configuration": [];
     };
-    
     this.fixAttempts = new Map();
     this.isRunning = false};
   log(level, message, data = null) {}
@@ -54,20 +52,15 @@ class ErrorDetectionService {}
     fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')};
   async start() {}
     this.log('info', 'Starting Error Detection Service...');
-    
     try {}
       // Create necessary directories;
       this.ensureDirectories();
-      
       // Initial scan;
       await this.performFullScan();
-      
       // Start continuous monitoring;
       this.startContinuousMonitoring();
-      
       // Start file watching for real-time detection;
       this.startFileWatching();
-      
       this.log('info', 'Error Detection Service started successfully');
       
       // Keep the process alive;
@@ -96,11 +89,9 @@ class ErrorDetectionService {}
       return};
     this.isRunning = true;
     this.log('info', 'Starting full project error scan...');
-
     try {}
       // Clear previous error data;
       this.clearErrorData();
-
       // Perform various scans;
       await Promise.all([this.scanForSyntaxErrors(),]
         this.scanForTypeScriptErrors(),
@@ -109,10 +100,8 @@ class ErrorDetectionService {}
         this.scanForDependencyErrors(),
         this.scanForConfigurationErrors();
       ]);
-
       // Generate comprehensive report;
       await this.generateErrorReport();
-
       // Trigger fixes if auto-fix is enabled;
       if (this.autoFix) {}
         await this.triggerErrorFixes()};
@@ -125,16 +114,13 @@ class ErrorDetectionService {}
       this.errorTypes[key] = []})};
   async scanForSyntaxErrors() {}
     this.log('info', 'Scanning for syntax errors...');
-    
     try {}
       const sourceFiles = this.findSourceFiles();
       let syntaxErrors = 0;
-
       for (const file of sourceFiles) {}
         try {}
           // Try to parse the file;
           const content = fs.readFileSync(file, 'utf8');
-          
           // Check for common syntax issues;
           if (this.hasSyntaxIssues(content, file)) {}
             this.errorTypes.syntax.push({})
@@ -163,11 +149,9 @@ class ErrorDetectionService {}
   };
   async scanForTypeScriptErrors() {}
     this.log('info', 'Scanning for TypeScript errors...');
-    
     try {}
       // Run TypeScript compiler check;
       const result = this.runTypeScriptCheck();
-      
       if (result.errors && result.errors.length > 0) {}
         this.errorTypes.typescript = result.errors.map(error => ({})
           "file": error.file,
@@ -183,11 +167,9 @@ class ErrorDetectionService {}
   };
   async scanForESLintErrors() {}
     this.log('info', 'Scanning for ESLint errors...');
-    
     try {}
       // Run ESLint check;
       const result = this.runESLintCheck();
-      
       if (result.errors && result.errors.length > 0) {}
         this.errorTypes.eslint = result.errors.map(error => ({})
           "file": error.filePath,
@@ -204,11 +186,9 @@ class ErrorDetectionService {}
   };
   async scanForBuildErrors() {}
     this.log('info', 'Scanning for build errors...');
-    
     try {}
       // Try to build the project;
       const result = this.runBuildCheck();
-      
       if (result.errors && result.errors.length > 0) {}
         this.errorTypes.build = result.errors.map(error => ({})
           "file": error.file || 'build',
@@ -222,11 +202,9 @@ class ErrorDetectionService {}
   };
   async scanForDependencyErrors() {}
     this.log('info', 'Scanning for dependency errors...');
-    
     try {}
       // Check for dependency issues;
       const result = this.runDependencyCheck();
-      
       if (result.errors && result.errors.length > 0) {}
         this.errorTypes.dependency = result.errors.map(error => ({})
           "package": error.package,
@@ -241,7 +219,6 @@ class ErrorDetectionService {}
   };
   async scanForConfigurationErrors() {}
     this.log('info', 'Scanning for configuration errors...');
-    
     try {}
       const configFiles = ['package.json',]
         'tsconfig.json',
@@ -287,15 +264,12 @@ class ErrorDetectionService {}
         this.walkDirectory(fullPath, extensions, files)};
     }
 });
-
     return files};
   walkDirectory(dir, extensions, files) {}
     const items = fs.readdirSync(dir);
-    
     items.forEach(item => {})
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
       if (stat.isDirectory()) {}
         this.walkDirectory(fullPath, extensions, files)} else if (stat.isFile()) {}
         const ext = path.extname(item);
@@ -306,7 +280,6 @@ class ErrorDetectionService {}
   hasSyntaxIssues(content, filename) {}
     // Check for common syntax issues;
     const issues = [];
-    
     // Check for unterminated strings;
     const stringRegex = /(["'"])((?:(?!\1)[^\\]|\\.)*\1)/g;
     const matches = content.match(stringRegex);
@@ -315,7 +288,6 @@ class ErrorDetectionService {}
       const singleQuotes = (content.match(/'/g) || []).length;
       const doubleQuotes = (content.match(/"/g) || []).length;
       const backticks = (content.match(/"/g) || []).length;
-      
       if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {}
         return true};
     };
@@ -358,7 +330,6 @@ class ErrorDetectionService {}
         "stdio": 'pipe'
       }
 });
-      
       if (result) {}
         return JSON.parse(result)};
       return { "errors": [] }} catch (error) {}
@@ -374,7 +345,6 @@ class ErrorDetectionService {}
         "stdio": 'pipe'
       }
 });
-      
       if (result) {}
         return JSON.parse(result)};
       return { "errors": [] }} catch (error) {}
@@ -390,7 +360,6 @@ class ErrorDetectionService {}
         "stdio": 'pipe'
       }
 });
-      
       return { "errors": [] }} catch (error) {}
       // Build failed, extract errors from stderr;
       const stderr = error.stderr ? error.stderr.toString() : '';
@@ -404,7 +373,6 @@ class ErrorDetectionService {}
         "stdio": 'pipe'
       }
 });
-      
       if (result) {}
         const audit = JSON.parse(result);
         return this.parseDependencyErrors(audit)};
@@ -414,7 +382,6 @@ class ErrorDetectionService {}
   parseTypeScriptErrors(stderr) {}
     const errors = [];
     const lines = stderr.split('\n');
-    
     lines.forEach(line => {})
       const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
       if (match) {}
@@ -427,12 +394,10 @@ class ErrorDetectionService {}
         })};
     }
 });
-    
     return { errors }};
   parseESLintErrors(stderr) {}
     const errors = [];
     const lines = stderr.split('\n');
-    
     lines.forEach(line => {})
       const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
       if (match) {}
@@ -447,12 +412,10 @@ class ErrorDetectionService {}
         })};
     }
 });
-    
     return { errors }};
   parseBuildErrors(stderr) {}
     const errors = [];
     const lines = stderr.split('\n');
-    
     lines.forEach(line => {})
       if (line.includes('"Error": ') || line.includes('error:')) {}
         errors.push({})
@@ -463,11 +426,9 @@ class ErrorDetectionService {}
         })};
     }
 });
-    
     return { errors }};
   parseDependencyErrors(audit) {}
     const errors = [];
-    
     if (audit.vulnerabilities) {}
       Object.keys(audit.vulnerabilities).forEach(pkg => {})
         const vuln = audit.vulnerabilities[pkg];
@@ -501,7 +462,6 @@ class ErrorDetectionService {}
   };
   extractConfigurationIssues(content, filename) {}
     const issues = [];
-    
     try {}
       if (filename.endsWith('.json')) {}
         JSON.parse(content)};
@@ -528,7 +488,6 @@ class ErrorDetectionService {}
       "errors": this.errorTypes,
       "recommendations": this.generateRecommendations();
     };
-
     // Calculate totals;
     Object.keys(this.errorTypes).forEach(type => {})
       const count = this.errorTypes[type].length;
@@ -539,18 +498,14 @@ class ErrorDetectionService {}
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
 });
-
     // Write report to file;
     const reportPath = path.join(this.projectRoot, 'error-reports', `error-scan-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
     this.log('info', `Error report "generated": ${reportPath}`);
     this.log('info', `Total errors "found": ${report.summary.totalErrors}`);
-
     return report};
   generateRecommendations() {}
     const recommendations = [];
-
     if (this.errorTypes.syntax.length > 0) {}
       recommendations.push({})
         "priority": 'high',
@@ -578,7 +533,6 @@ class ErrorDetectionService {}
     return recommendations};
   async triggerErrorFixes() {}
     this.log('info', 'Triggering automatic error fixes...');
-    
     try {}
       // Trigger syntax error fixes;
       if (this.errorTypes.syntax.length > 0) {}
@@ -605,7 +559,6 @@ class ErrorDetectionService {}
   };
   startContinuousMonitoring() {}
     this.log('info', 'Starting continuous error monitoring...');
-    
     // Monitor for new errors every minute;
     setInterval(async () => {}
       if (!this.isRunning) {}
@@ -614,7 +567,6 @@ class ErrorDetectionService {}
   };
   startFileWatching() {}
     this.log('info', 'Starting file watching for real-time error detection...');
-    
     const watcher = chokidar.watch(['src/**/*.{js,jsx,ts,tsx}',)]
       'components/**/*.{js,jsx,ts,tsx}',
       'pages/**/*.{js,jsx,ts,tsx}',
@@ -626,7 +578,6 @@ class ErrorDetectionService {}
       "persistent": true;
     }
 });
-
     watcher;
       .on('change', (filePath) => {}
         this.log('debug', `File "changed": ${filePath}`);
@@ -643,10 +594,8 @@ class ErrorDetectionService {}
     try {}
       // Quick check for syntax issues in the changed file;
       const content = fs.readFileSync(filePath, 'utf8');
-      
       if (this.hasSyntaxIssues(content, filePath)) {}
         this.log('warn', `Syntax issues detected "in": ${filePath}`);
-        
         // Add to syntax errors;
         this.errorTypes.syntax.push({})
           "file": filePath,
@@ -656,7 +605,6 @@ class ErrorDetectionService {}
           "timestamp": new Date().toISOString();
         }
 });
-
         // Trigger immediate fix if auto-fix is enabled;
         if (this.autoFix) {}
           await this.triggerService('syntax-error-fixer')};
@@ -671,30 +619,25 @@ class ErrorDetectionService {}
 };
 // Start the service;
 const service = new ErrorDetectionService();
-
 // Handle graceful shutdown;
 process.on('SIGINT', () => {}
   service.log('info', 'Received SIGINT, shutting down gracefully...');
   process.exit(0)}
 });
-
 process.on('SIGTERM', () => {}
   service.log('info', 'Received SIGTERM, shutting down gracefully...');
   process.exit(0)}
 });
-
 // Handle uncaught errors;
 process.on('uncaughtException', (error) => {}
   service.log('error', 'Uncaught exception', error);
   process.exit(1)}
 });
-
 process.on('unhandledRejection', (reason, promise) => {}
   service.log('error', 'Unhandled rejection', { reason, promise }
 });
   process.exit(1)}
 });
-
 // Start the service;
 service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);

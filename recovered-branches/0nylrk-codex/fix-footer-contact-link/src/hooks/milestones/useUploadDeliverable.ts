@@ -1,9 +1,9 @@
 
-import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from 'sonner';
-import { useRecordActivity } from './useRecordActivity';
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {toast} from 'sonner';
+import {useRecordActivity} from './useRecordActivity';
 export const useUploadDeliverable = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -13,7 +13,7 @@ export const useUploadDeliverable = () => {
     if (!user || !projectId) return null;
     
     try {
-      setIsSubmitting(true);
+      setIsSubmitting(true),
       
       // Get the current milestone
       const { data: milestone, error: fetchError } = await supabase
@@ -32,7 +32,7 @@ export const useUploadDeliverable = () => {
         filename: file.name;
         size: file.size;
         type: file.type;
-        added_at: new Date().toISOString();
+        added_at: new Date().toISOString(),
         added_by: user.id
       };
       
@@ -59,7 +59,7 @@ export const useUploadDeliverable = () => {
       return newDeliverable
     } catch (err: any) {
       console.error("Error uploading deliverable:", err);
-      toast.error("Failed to upload deliverable: " + err.message);
+      toast.error("Failed to upload deliverable: " + err.message),
       return null
     } finally {
       setIsSubmitting(false)

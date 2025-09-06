@@ -1,28 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { ExternalLink } from 'lucide-react';
-import { TalentProfile } from '@/types/talent';
-import { HireRequestModal } from '@/components/profile/hire-request';
-import { useAuthStatus } from '@/hooks/talent';
-import type { UserProfile } from '@/types/auth';
-=======
-import React, { useState } from "react";
-import { Star } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-import { ExternalLink } from 'lucide-react'
-import { TalentProfile } from "@/types/talent";
-import { HireRequestModal } from "@/components/profile/hire-request";
-import { useAuthStatus } from "@/hooks/talent";
-import type { UserProfile } from "@/types/auth";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 interface TalentCardFooterProps {
   profile: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire?: (profile: TalentProfile) => void
+  onViewProfile: (id: string,) => void,
+  onRequestHire?: (profile: TalentProfile,) => void
 }
 
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
@@ -49,26 +29,29 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
   const handleRequestHire = (e: React.MouseEvent) => {
     e.stopPropagation();
     
+      const handleRequestHire = (e: React.MouseEvent,) => {
+    e.stopPropagation(),
+    
     if (onRequestHire) {
       onRequestHire(profile)
     } else {
       // Open hire modal directly if no handler provided
       setIsHireModalOpen(true)
     }
-  };
+  },
 
   // Handle view profile
-  const handleViewProfile = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handleViewProfile = (e: React.MouseEvent,) => {
+    e.stopPropagation(),
     
     // Navigate to the talent profile page
-    router.push(`/talent/${profile.id || ''}`);
+    router.push(`/talent/${profile.id || ''}`),
     
     // Also call the onViewProfile callback if provided
     if (onViewProfile) {
       onViewProfile(profile.id || '')
     }
-  };
+  },
 
   return (
     <>
@@ -93,7 +76,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           <Button 
             variant="default" 
             size="sm" 
-            onClick={handleRequestHire}
+            onClick = {handleRequestHire,}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
@@ -102,7 +85,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           <Button 
             variant="outline" 
             size="sm" 
-            onClick={handleViewProfile}
+            onClick = {handleViewProfile,}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
             View
@@ -113,44 +96,12 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       
       {/* Hire Request Modal */}
       <HireRequestModal
-        talent={profile}
-        isOpen={isHireModalOpen}
-        onClose={() => setIsHireModalOpen(false)}
-        userDetails={userProfile}
+        talent = {profile,}
+        isOpen = {isHireModalOpen,}
+        onClose = {() => setIsHireModalOpen(false),}
+        userDetails = {userProfile,}
       />
     </>
-  );
-<<<<<<< HEAD
-
-};
-//Handle view profile const handleViewProfile = (e: React.MouseEvent) => {;
-  e.stopPropagation ();';
-profile.id || '' ;
-}`);
-//Also call the onViewProfile callback if provided <div> {;
-  profile.hourly rate ? (<div> <span className="text-zion-slate-light text-xs" >Hourly Rate</span> <div className="text-white font-bold" >$ {;
-  profile.hourly rate ;
-}/hr</div> </div>) : (</div>) ";
-}</div> > Hire </Button> <Button > View <ExternalLink className="h-3 w-3 ml-1" /> </Button> </div> </div> {;
-  /* Hire Request Modal */ ;
-}<HireRequestModal talent= {;
-  profile ;
-}isOpen= {;
-  isHireModalOpen ;
-}onClose= {;
-  () => setIsHireModalOpen (false) ;
-}userDetails= {;
-  userProfile ;
-}/> </>) ;
-}'"
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-    
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+  )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+;

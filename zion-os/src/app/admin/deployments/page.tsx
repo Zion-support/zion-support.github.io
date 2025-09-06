@@ -1,29 +1,92 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
-=======
-"use client";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import { useState, useEffect } from 'react';
+import {
+  Rocket,
+  Clock,
+  CheckCircle,
+  AlertCircle,
+  Play,
+  Eye,
+  Settings,
+  Globe,
+  Activity,
+  Calendar,
+  User,
+  Building2,
+  Shield,
+  TrendingUp,
+  Users,
+  Zap,
+  Sparkles,
+  ArrowRight,
+  RefreshCw,
+  Pause,
+  StopCircle,
+  MapPin,;
+} from 'lucide-react';
 
-import { Rocket, CheckCircle, Clock, AlertCircle, XCircle } from 'lucide-react';
+interface Deployment {
+  id: string;
+  instanceName: string;
+  status: 'pending' | 'deploying' | 'completed' | 'failed' | 'paused';
+  createdAt: string;
+  updatedAt: string;
+  progress: number;
+  features: string[];
+  vertical: string;
+  governanceType: string;
+  domain?: string;
+  subdomain?: string;
+  region?: string;
+  country?: string;
 
-const getStatusColor = (status: string) => {
-  switch (status) {
-    case 'active':
-      return 'text-green-400';
-    case 'pending':
-      return 'text-yellow-400';
-    case 'failed':
-      return 'text-red-400';
-    case 'stopped':
-      return 'text-gray-400';
-    default:
-      return 'text-gray-400';
-  }
-};
+// Mock data - replace with actual API calls
+const mockDeployments: Deployment[] = [
+  {
+    id: 'deploy-001',
+    instanceName: 'Zion Health Network',
+    status: 'completed',
+    createdAt: '2024-01-15T10:30:00Z',
+    updatedAt: '2024-01-15T11:45:00Z',
+    progress: 100,
+    features: ['marketplace', 'zion_gpt', 'kyc_aml', 'dao_voting'],
+    vertical: 'HEALTH',
+    governanceType: 'DAO_FULL',
+    domain: 'health.zion.network',
+    region: 'North America',
+    country: 'United States',
+  },
+  {
+    id: 'deploy-002',
+    instanceName: 'EduDAO Academy',
+    status: 'deploying',
+    createdAt: '2024-01-15T14:20:00Z',
+    updatedAt: '2024-01-15T15:10:00Z',
+    progress: 65,
+    features: ['academy', 'zion_gpt', 'incubator_grants'],
+    vertical: 'EDUCATION',
+    governanceType: 'DAO_LITE',
+    subdomain: 'edu',
+    region: 'Europe',
+    country: 'Germany',
+  },
+  {
+    id: 'deploy-003',
+    instanceName: 'LegalTech DAO',
+    status: 'pending',
+    createdAt: '2024-01-15T16:00:00Z',
+    updatedAt: '2024-01-15T16:00:00Z',
+    progress: 0,
+    features: ['marketplace', 'onchain_contracts', 'web3_login'],
+    vertical: 'LAW',
+    governanceType: 'DAO_FULL',
+    domain: 'legal.zion.network',
+    region: 'Asia Pacific',
+    country: 'Singapore',
+  },
+];
 
 export default function DeploymentsPage() {
-<<<<<<< HEAD
   const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments);
   const [filter, setFilter] = useState<
     'all' | 'pending' | 'deploying' | 'completed' | 'failed'
@@ -102,168 +165,87 @@ export default function DeploymentsPage() {
 
   const filteredDeployments = deployments.filter(
     deployment => filter === 'all' || deployment.status === filter
-  );
-
-=======
-"use client";
-
-import { Rocket, CheckCircle, Clock, AlertCircle, XCircle } from 'lucide-react';
-
-const getStatusColor = (status: string) => {
-  switch (status) {
-    case 'active':
-      return 'text-green-400';
-    case 'pending':
-      return 'text-yellow-400';
-    case 'failed':
-      return 'text-red-400';
-    case 'stopped':
-      return 'text-gray-400';
-    default: return 'text-gray-400',
-  }
-};
-
-export default function DeploymentsPage() {
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  const deployments = []; // This should be populated from your data source
+  );  const deployments = []; // This should be populated from your data source
   const filter = 'all'; // This should be managed with state
   
   const filteredDeployments = deployments.filter(deployment => filter === 'all' || deployment.status === filter);
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  const getStatusCount = (status: string) => {
     return deployments.filter(d => d.status === status).length;
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'active':
-        return <CheckCircle className="w-4 h-4 text-green-400" />;
-      case 'pending':
-        return <Clock className="w-4 h-4 text-yellow-400" />;
-      case 'failed':
-        return <XCircle className="w-4 h-4 text-red-400" />;
-      case 'stopped':
-        return <AlertCircle className="w-4 h-4 text-gray-400" />;
-      default:
-        return <AlertCircle className="w-4 h-4 text-gray-400" />;
-    }
-  };
-
-  const getVerticalIcon = (_vertical: string) => {
-    // Return appropriate icon based on vertical
-    return <div className="w-6 h-6 bg-blue-500 rounded" />;
-  };
-
-  const formatDate = (date: string) => {
-    return new Date(date).toLocaleDateString();
-  };
-
-  const setFilter = (_newFilter: string) => {
-    // This should be managed with state
-  };
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   return (
-    <div className="space-y-8">
+    <div className='space-y-8'>
       {/* Header Section */}
-      <div className="border-b border-white/10 pb-6">
-        <h1 className="text-3xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+      <div className='border-b border-white/10 pb-6'>
+        <h1 className='text-3xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent'>
           Deployment Management
         </h1>
-        <p className="text-white/70 mt-2">Monitor and manage your Zion ecosystem deployments</p>
+        <p className='text-white/70 mt-2'>
+          Monitor and manage your Zion ecosystem deployments
+        </p>
       </div>
 
       {/* Stats Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
-        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-blue-500/20 rounded-lg">
-              <Rocket className="w-5 h-5 text-blue-400" />
+      <div className='grid grid-cols-1 md:grid-cols-5 gap-4 mb-8'>
+        <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
+          <div className='flex items-center gap-3'>
+            <div className='p-2 bg-blue-500/20 rounded-lg'>
+              <Rocket className='w-5 h-5 text-blue-400' />
             </div>
             <div>
-              <p className="text-2xl font-bold">{deployments.length}</p>
-              <p className="text-sm text-white/60">Total</p>
+              <p className='text-2xl font-bold'>{deployments.length}</p>
+              <p className='text-sm text-white/60'>Total</p>
             </div>
           </div>
         </div>
-        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-yellow-500/20 rounded-lg">
-              <Clock className="w-5 h-5 text-yellow-400" />
+
+        <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
+          <div className='flex items-center gap-3'>
+            <div className='p-2 bg-yellow-500/20 rounded-lg'>
+              <Clock className='w-5 h-5 text-yellow-400' />
             </div>
             <div>
-              <p className="text-2xl font-bold">{getStatusCount('pending')}</p>
-              <p className="text-sm text-white/60">Pending</p>
+              <p className='text-2xl font-bold'>{getStatusCount('pending')}</p>
+              <p className='text-sm text-white/60'>Pending</p>
             </div>
           </div>
         </div>
-        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-blue-500/20 rounded-lg">
-              <CheckCircle className="w-5 h-5 text-blue-400" />
+
+        <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
+          <div className='flex items-center gap-3'>
+            <div className='p-2 bg-blue-500/20 rounded-lg'>
+              <Activity className='w-5 h-5 text-blue-400' />
             </div>
             <div>
-              <p className="text-2xl font-bold">{getStatusCount('deploying')}</p>
-              <p className="text-sm text-white/60">Active</p>
+              <p className='text-2xl font-bold'>
+                {getStatusCount('deploying')}
+              </p>
+              <p className='text-sm text-white/60'>Active</p>
             </div>
           </div>
         </div>
-        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-green-500/20 rounded-lg">
-              <CheckCircle className="w-5 h-5 text-green-400" />
+
+        <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
+          <div className='flex items-center gap-3'>
+            <div className='p-2 bg-green-500/20 rounded-lg'>
+              <CheckCircle className='w-5 h-5 text-green-400' />
             </div>
             <div>
-              <p className="text-2xl font-bold">{getStatusCount('completed')}</p>
-              <p className="text-sm text-white/60">Live</p>
+              <p className='text-2xl font-bold'>
+                {getStatusCount('completed')}
+              </p>
+              <p className='text-sm text-white/60'>Live</p>
             </div>
           </div>
         </div>
-        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-red-500/20 rounded-lg">
-              <AlertCircle className="w-5 h-5 text-red-400" />
+
+        <div className='bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10'>
+          <div className='flex items-center gap-3'>
+            <div className='p-2 bg-red-500/20 rounded-lg'>
+              <AlertCircle className='w-5 h-5 text-red-400' />
             </div>
             <div>
-<<<<<<< HEAD
               <p className='text-2xl font-bold'>{getStatusCount('failed')}</p>
-              <p className='text-sm text-white/60'>Failed</p>
-=======
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'active':
-        return <CheckCircle className="w-4 h-4 text-green-400" />;
-      case 'pending':
-        return <Clock className="w-4 h-4 text-yellow-400" />;
-      case 'failed':
-        return <XCircle className="w-4 h-4 text-red-400" />;
-      case 'stopped':
-        return <AlertCircle className="w-4 h-4 text-gray-400" />;
-      default: return <AlertCircle className="w-4 h-4 text-gray-400" />,
-    }
-  };
-
-  const getVerticalIcon = (_vertical: string) => {
-    // Return appropriate icon based on vertical
-    return <div className="w-6 h-6 bg-blue-500 rounded" />;
-  };
-
-  const formatDate = (date: string) => {
-    return new Date(date).toLocaleDateString();
-  };
-
-  const setFilter = (_newFilter: string) => {
-    // This should be managed with state
-  };
-
-  return (
+              <p className='text-sm text-white/60'>Failed</p>            </div>  return (
     <div className="space-y-8">
       {/* Header Section */}
       <div className="border-b border-white/10 pb-6">
@@ -327,56 +309,38 @@ export default function DeploymentsPage() {
             <div>
               <p className="text-2xl font-bold">{getStatusCount('failed')}</p>
               <p className="text-sm text-white/60">Failed</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              <p className="text-2xl font-bold">{getStatusCount('failed')}</p>
-              <p className="text-sm text-white/60">Failed</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
         </div>
       </div>
 
       {/* Filter Tabs */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className='flex flex-wrap gap-2'>
-=======
-      <div className="flex flex-wrap gap-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-        {[
           { key: 'all', label: 'All Deployments', count: deployments.length },
-          { key: 'pending', label: 'Pending', count: getStatusCount('pending') },
-          { key: 'deploying', label: 'Deploying', count: getStatusCount('deploying') },
-          { key: 'completed', label: 'Completed', count: getStatusCount('completed') },
-          { key: 'failed', label: 'Failed', count: getStatusCount('failed') }
+          {
+            key: 'pending',
+            label: 'Pending',
+            count: getStatusCount('pending'),
+          },
+          {
+            key: 'deploying',
+            label: 'Deploying',
+            count: getStatusCount('deploying'),
+          },
+          {
+            key: 'completed',
+            label: 'Completed',
+            count: getStatusCount('completed'),
+          },
+          { key: 'failed', label: 'Failed', count: getStatusCount('failed') },
         ].map(({ key, label, count }) => (
           <button
             key={key}
-            onClick={() => setFilter(key)}
+            onClick={() => setFilter(key as any)}
             className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-<<<<<<< HEAD
               filter === key
                 ? 'bg-blue-600 text-white shadow-lg'
-                : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'
-=======
-      <div className="flex flex-wrap gap-2">
-        {[
-          { key: 'all', label: 'All Deployments', count: deployments.length },
-          { key: 'pending', label: 'Pending', count: getStatusCount('pending') },
-          { key: 'deploying', label: 'Deploying', count: getStatusCount('deploying') },
-          { key: 'completed', label: 'Completed', count: getStatusCount('completed') };
-          { key: 'failed', label: 'Failed', count: getStatusCount('failed') }
-        ].map(({ key, label, count }) => (
-          <button
-            key={key}
-            onClick={() => setFilter(key)}
-            className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-              filter === key ? 'bg-blue-600 text-white shadow-lg' : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              filter === key ? 'bg-blue-600 text-white shadow-lg' : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'            }`}              filter === key ? 'bg-blue-600 text-white shadow-lg' : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'
             }`}
           >
             {label} ({count})
@@ -385,39 +349,28 @@ export default function DeploymentsPage() {
       </div>
 
       {/* Deployments Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>
         {filteredDeployments.map(deployment => (
-=======
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-        {filteredDeployments.map((deployment) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <div
             key={deployment.id}
-            className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5"
+            className='group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5'
           >
             {/* Status Header */}
-            <div className="p-6 border-b border-white/10">
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-white/10 rounded-lg">
+            <div className='p-6 border-b border-white/10'>
+              <div className='flex items-start justify-between mb-4'>
+                <div className='flex items-center gap-3'>
+                  <div className='p-2 bg-white/10 rounded-lg'>
                     {getVerticalIcon(deployment.vertical)}
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-white group-hover:text-white/90 transition-colors">
+                    <h3 className='font-bold text-lg text-white group-hover:text-white/90 transition-colors'>
                       {deployment.instanceName}
                     </h3>
-                    <div className="flex items-center gap-2 mt-1">
-                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-white/10 text-white/80">
+                    <div className='flex items-center gap-2 mt-1'>
+                      <span className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-white/10 text-white/80'>
                         {deployment.vertical}
                       </span>
-<<<<<<< HEAD
-                      <span className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400'>
-=======
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-        {filteredDeployments.map((deployment) => (
-          <div
+                      <span className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400'>                        {deployment.governanceType}          <div
             key={deployment.id}
             className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5"
           >
@@ -437,17 +390,11 @@ export default function DeploymentsPage() {
                         {deployment.vertical}
                       </span>
                       <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         {deployment.governanceType}
                       </span>
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 <div className='flex items-center gap-2'>
                   {getStatusIcon(deployment.status)}
@@ -455,53 +402,28 @@ export default function DeploymentsPage() {
                     className={`text-sm font-medium ${getStatusColor(deployment.status)}`}
                   >
                     {deployment.status.charAt(0).toUpperCase() +
-                      deployment.status.slice(1)}
-=======
-                <div className="flex items-center gap-2">
+                      deployment.status.slice(1)}                  </span>                <div className="flex items-center gap-2">
                   {getStatusIcon(deployment.status)}
                   <span className={`text-sm font-medium ${getStatusColor(deployment.status)}`}>
                     {deployment.status.charAt(0).toUpperCase() + deployment.status.slice(1)}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                <div className="flex items-center gap-2">
-                  {getStatusIcon(deployment.status)}
-                  <span className={`text-sm font-medium ${getStatusColor(deployment.status)}`}>
-                    {deployment.status.charAt(0).toUpperCase() + deployment.status.slice(1)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  </span>
                 </div>
               </div>
 
               {/* Progress Bar for Active Deployments */}
               {deployment.status === 'deploying' && (
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className='space-y-2'>
                   <div className='flex justify-between text-sm text-white/70'>
-=======
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm text-white/70">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     <span>Deployment Progress</span>
                     <span>{deployment.progress}%</span>
                   </div>
-                  <div className="w-full bg-white/10 rounded-full h-2">
+                  <div className='w-full bg-white/10 rounded-full h-2'>
                     <div
-<<<<<<< HEAD
-                      className='bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out'
-=======
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm text-white/70">
-                    <span>Deployment Progress</span>
+                      className='bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out'                      style={{ width: `${deployment.progress}%` }}                    <span>Deployment Progress</span>
                     <span>{deployment.progress}%</span>
                   </div>
                   <div className="w-full bg-white/10 rounded-full h-2">
                     <div
                       className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                      className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       style={{ width: `${deployment.progress}%` }}
                     ></div>
                   </div>
@@ -510,32 +432,25 @@ export default function DeploymentsPage() {
             </div>
 
             {/* Deployment Details */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='p-6 space-y-4'>
-=======
-            <div className="p-6 space-y-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {/* Domain & Location */}
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div className="flex items-center gap-2 text-white/70">
-                  <span>🌐</span>
-                  <span className="font-mono">
-                    {deployment.domain || deployment.subdomain || 'No domain set'}
+              <div className='grid grid-cols-2 gap-4 text-sm'>
+                <div className='flex items-center gap-2 text-white/70'>
+                  <Globe className='w-4 h-4' />
+                  <span className='font-mono'>
+                    {deployment.domain ||
+                      deployment.subdomain ||
+                      'No domain set'}
                   </span>
                 </div>
                 {(deployment.region || deployment.country) && (
-<<<<<<< HEAD
                   <div className='flex items-center gap-2 text-white/70'>
                     <MapPin className='w-4 h-4' />
                     <span>
                       {[deployment.region, deployment.country]
                         .filter(Boolean)
                         .join(', ')}
-                    </span>
-=======
-            <div className="p-6 space-y-4">
-              {/* Domain & Location */}
+                    </span>                  </div>              {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center gap-2 text-white/70">
                   <span>🌐</span>
@@ -547,47 +462,26 @@ export default function DeploymentsPage() {
                   <div className="flex items-center gap-2 text-white/70">
                     <span>📍</span>
                     <span>{deployment.region} {deployment.country}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  <div className="flex items-center gap-2 text-white/70">
-                    <span>📍</span>
-                    <span>{deployment.region} {deployment.country}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 )}
               </div>
 
               {/* Features */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='space-y-2'>
                 <div className='text-sm font-medium text-white/80'>
                   Active Features
                 </div>
                 <div className='flex flex-wrap gap-2'>
                   {deployment.features.slice(0, 4).map(feature => (
-=======
-              <div className="space-y-2">
-                <div className="text-sm font-medium text-white/80">Active Features</div>
-                <div className="flex flex-wrap gap-2">
-                  {deployment.features?.slice(0, 4).map((feature) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     <span
                       key={feature}
-                      className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70"
+                      className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'
                     >
-                      {feature}
+                      {feature.replace('_', ' ')}
                     </span>
                   ))}
-<<<<<<< HEAD
                   {deployment.features.length > 4 && (
-                    <span className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'>
-=======
-              <div className="space-y-2">
-                <div className="text-sm font-medium text-white/80">Active Features</div>
-                <div className="flex flex-wrap gap-2">
-                  {deployment.features?.slice(0, 4).map((feature) => (
-                    <span
+                    <span className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'>                      +{deployment.features.length - 4} more                    <span
                       key={feature}
                       className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70"
                     >
@@ -596,11 +490,6 @@ export default function DeploymentsPage() {
                   ))}
                   {deployment.features?.length > 4 && (
                     <span className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  {deployment.features?.length > 4 && (
-                    <span className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       +{deployment.features.length - 4} more
                     </span>
                   )}
@@ -608,8 +497,6 @@ export default function DeploymentsPage() {
               </div>
 
               {/* Timestamps */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>
                 <div className='flex items-center gap-1'>
                   <Calendar className='w-3 h-3' />
@@ -617,9 +504,7 @@ export default function DeploymentsPage() {
                 </div>
                 {deployment.updatedAt !== deployment.createdAt && (
                   <div className='flex items-center gap-1'>
-                    <RefreshCw className='w-3 h-3' />
-=======
-              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
+                    <RefreshCw className='w-3 h-3' />                    <span>Updated: {formatDate(deployment.updatedAt)}</span>              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
                 <div className="flex items-center gap-1">
                   <span>📅</span>
                   <span>Created: {formatDate(deployment.createdAt)}</span>
@@ -627,65 +512,50 @@ export default function DeploymentsPage() {
                 {deployment.updatedAt !== deployment.createdAt && (
                   <div className="flex items-center gap-1">
                     <span>🔄</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
-                <div className="flex items-center gap-1">
-                  <span>📅</span>
-                  <span>Created: {formatDate(deployment.createdAt)}</span>
-                </div>
-                {deployment.updatedAt !== deployment.createdAt && (
-                  <div className="flex items-center gap-1">
-                    <span>🔄</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                    <span>Updated: {formatDate(deployment.updatedAt)}</span>
                   </div>
                 )}
               </div>
             </div>
 
             {/* Action Buttons */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='p-6 pt-0'>
               <div className='flex gap-2'>
-=======
-            <div className="p-6 pt-0">
-              <div className="flex gap-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {deployment.status === 'pending' && (
-                  <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">
-                    ▶️ Start Deployment
+                  <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
+                    <Play className='w-4 h-4' />
+                    Start Deployment
                   </button>
                 )}
+
                 {deployment.status === 'deploying' && (
                   <>
-                    <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">
-                      ⏸️ Pause
+                    <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
+                      <Pause className='w-4 h-4' />
+                      Pause
                     </button>
-                    <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">
-                      ⏹️ Stop
+                    <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
+                      <StopCircle className='w-4 h-4' />
+                      Stop
                     </button>
                   </>
                 )}
+
                 {deployment.status === 'completed' && (
-                  <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">
-                    👁️ View Instance
+                  <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
+                    <Eye className='w-4 h-4' />
+                    View Instance
                   </button>
                 )}
+
                 {deployment.status === 'failed' && (
-                  <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">
-                    🔄 Retry
+                  <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
+                    <RefreshCw className='w-4 h-4' />
+                    Retry
                   </button>
                 )}
-<<<<<<< HEAD
 
                 <button className='flex items-center justify-center px-3 py-2 bg-white/10 hover:bg-white/20 text-white/80 text-sm font-medium rounded-lg transition-colors duration-200'>
-                  <Settings className='w-4 h-4' />
-=======
-            <div className="p-6 pt-0">
-              <div className="flex gap-2">
-                {deployment.status === 'pending' && (
+                  <Settings className='w-4 h-4' />                </button>                {deployment.status === 'pending' && (
                   <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">
                     ▶️ Start Deployment
                   </button>
@@ -712,11 +582,6 @@ export default function DeploymentsPage() {
                 )}
                 <button className="flex items-center justify-center px-3 py-2 bg-white/10 hover:bg-white/20 text-white/80 text-sm font-medium rounded-lg transition-colors duration-200">
                   ⚙️
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                <button className="flex items-center justify-center px-3 py-2 bg-white/10 hover:bg-white/20 text-white/80 text-sm font-medium rounded-lg transition-colors duration-200">
-                  ⚙️
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </button>
               </div>
             </div>
@@ -726,36 +591,27 @@ export default function DeploymentsPage() {
 
       {/* Empty State */}
       {filteredDeployments.length === 0 && (
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='text-center py-16'>
           <div className='w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full'>
             <Rocket className='w-8 h-8 text-white/40' />
-=======
-        <div className="text-center py-16">
-          <div className="w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full">
-            <Rocket className="w-8 h-8 text-white/40" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </div>
-          <h3 className="text-lg font-medium text-white/60 mb-2">No deployments found</h3>
-          <p className="text-white/40 mb-6">
-            {filter === 'all' 
-              ? 'Start by creating your first Zion ecosystem deployment' 
-              : `No deployments with status "${filter}" found`
-            }
+          <h3 className='text-lg font-medium text-white/60 mb-2'>
+            No deployments found
+          </h3>
+          <p className='text-white/40 mb-6'>
+            {filter === 'all'
+              ? 'Start by creating your first Zion ecosystem deployment'
+              : `No deployments with status "${filter}" found`}
           </p>
           {filter === 'all' && (
             <a
-              href="/admin/os-deploy"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
+              href='/admin/os-deploy'
+              className='inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200'
             >
-<<<<<<< HEAD
-              <Rocket className='w-4 h-4' />
-=======
-        <div className="text-center py-16">
-          <div className="w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full">
-            <Rocket className="w-8 h-8 text-white/40" />
-          </div>
+              <Rocket className='w-4 h-4' />              Deploy First Instance
+            </a>
+          )}
+        </div>          </div>
           <h3 className="text-lg font-medium text-white/60 mb-2">No deployments found</h3>
           <p className="text-white/40 mb-6">
             {filter === 'all' 
@@ -769,16 +625,10 @@ export default function DeploymentsPage() {
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
             >
               <Rocket className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              <Rocket className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Deploy First Instance
             </a>
           )}
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
       </div>
 
       {/* Deployments Table */}
@@ -825,16 +675,7 @@ export default function DeploymentsPage() {
         </div>
       </div>
     </div>
-  );
-=======
-      )}
+  );      )}
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      )}
-    </div>
-  );
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

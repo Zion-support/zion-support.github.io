@@ -18,11 +18,20 @@
       "@/*": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "./*"
       ],
       "@/pages/*": [
@@ -46,6 +55,10 @@
     },
     /* Bundler mode */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
     "moduleResolution": "bundler",
 =======
@@ -91,13 +104,21 @@
     /* Bundler mode */
     "moduleResolution": "node",
 >>>>>>> origin/cursor/website-audit-and-enhancement-bb45
-    "esModuleInterop": true,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "esModuleInterop": true,
     "moduleResolution": "bundler",    "esModuleInterop": true,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "moduleResolution": "bundler",    "esModuleInterop": true,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "moduleResolution": "bundler",    "esModuleInterop": true,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "resolveJsonModule": true,
     "strict": false,
     "noUnusedLocals": false,
@@ -135,11 +156,20 @@
     "zion.app/recovered-content/**",
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "contracts/**",
     "dao/**",
     "zion-os/**",
@@ -150,6 +180,10 @@
     "server/**",
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     "cypress/**"
 =======
     "apps/**",
@@ -159,11 +193,19 @@
     "**/*.spec.ts",
     "**/*.spec.tsx"
 >>>>>>> origin/cursor/website-audit-and-enhancement-bb45
-  ]
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  ]
     "cypress/**"  ]
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "cypress/**"  ]
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "cypress/**"  ]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }

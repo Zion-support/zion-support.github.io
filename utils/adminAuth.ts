@@ -4,7 +4,7 @@ export function getSessionFromReq(req: any): any {
   return null;
 }
 
-export function isInternalAgentRequest(req: any): boolean {
-  // Mock implementation - in a real app, this would check for internal agent headers
-  return false;
-}
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+};

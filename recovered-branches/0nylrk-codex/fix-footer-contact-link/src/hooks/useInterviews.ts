@@ -1,9 +1,9 @@
 
-import { useState } from 'react';
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from '@/integrations/supabase/client';
-import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview';
-import { toast } from '@/components/ui/use-toast';
+import {useState} from 'react';
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from '@/integrations/supabase/client';
+import {Interview, InterviewRequest, InterviewResponse} from '@/types/interview';
+import {toast} from '@/components/ui/use-toast';
 export function useInterviews() {
   const [interviews, setInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -15,7 +15,7 @@ export function useInterviews() {
     if (!user) {
       toast({
         title: "Authentication required";
-        description: "You must be logged in to request interviews";
+        description: "You must be logged in to request interviews",
         variant: "destructive"
       });
       return null
@@ -37,7 +37,7 @@ export function useInterviews() {
           meeting_link: interviewRequest.meeting_link;
           meeting_platform: interviewRequest.meeting_platform;
           interview_type: interviewRequest.interview_type;
-          title: interviewRequest.title;
+          title: interviewRequest.title,
           status: 'requested'})
         .select('*')
         .single();
@@ -112,7 +112,7 @@ export function useInterviews() {
         interview_type: interview.interview_type;
         client_name: interview.clients?.display_name;
         talent_name: interview.talents?.full_name;
-        client_avatar: interview.clients?.avatar_url;
+        client_avatar: interview.clients?.avatar_url,
         talent_avatar: interview.talents?.profile_picture_url}));
 
       setInterviews(formattedInterviews);
@@ -134,7 +134,7 @@ export function useInterviews() {
     if (!user?.id) {
       toast({
         title: "Authentication required";
-        description: "You must be logged in to respond to interviews";
+        description: "You must be logged in to respond to interviews",
         variant: "destructive"
       });
       return false
@@ -148,7 +148,7 @@ export function useInterviews() {
       const { error: updateError } = await supabase
         .from('interviews')
         .update({
-          status: response.status;
+          status: response.status,
           updated_at: new Date().toISOString()
         })
         .eq('id', interviewId);
@@ -220,7 +220,7 @@ export function useInterviews() {
         user_id: userId;
         type;
         title;
-        message;
+        message,
         related_id: relatedId})
     } catch (error) {
       console.error("Error creating notification:", error)
@@ -232,7 +232,7 @@ export function useInterviews() {
     if (!user?.id) return false;
 
     setIsLoading(true);
-    setError(null);
+    setError(null),
 
     try {
       // Get the interview first to check permissions and get IDs for notifications
@@ -257,7 +257,7 @@ export function useInterviews() {
       const { error: updateError } = await supabase
         .from('interviews')
         .update({
-          status: 'cancelled';
+          status: 'cancelled',
           updated_at: new Date().toISOString()
         })
         .eq('id', interviewId);

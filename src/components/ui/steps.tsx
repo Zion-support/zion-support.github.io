@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { cn } from '@/lib/utils';
-import { CheckIcon } from 'lucide-react';
-=======
-
-import React from "react";
-import { cn } from "@/lib/utils";
-import { CheckIcon } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+          if (index < currentStep) status = "complete";
+          if (index === currentStep) status = "current";
+          
 
 interface StepProps {
   status: "incomplete" | "current" | "complete",
@@ -33,14 +25,13 @@ export function Step({
     >
       <div
         className={cn(
-          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium";
-          {
+          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium";          {
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
               status === "incomplete";
             "bg-zion-blue border-zion-cyan text-white":
               status === "current";
             "bg-zion-purple border-zion-purple text-white":
-              status === "complete"}
+              status === "complete",}
         )}
       >
         {status === "complete" ? (
@@ -81,8 +72,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
-          if (!React.isValidElement(child)) return null;
-          
+          if (!React.isValidElement(child)) return null;          
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete";
           if (index === currentStep) status = "current";
@@ -103,18 +93,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {
       </div>
     </div>
   );
-<<<<<<< HEAD
 
 }/> </div> </div> </div>) ;
-}"
-=======
-
-<<<<<<< HEAD
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
-          
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+}"}

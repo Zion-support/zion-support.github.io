@@ -2,60 +2,66 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔧 Starting merge conflict resolution...');
-
-// Get list of files with conflicts
-const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
-  .trim()
-  .split('\n')
-  .filter(file => file.length > 0);
-
-console.log(`Found ${conflictFiles.length} files with merge conflicts`);
-
-let resolvedCount = 0;
-let errorCount = 0;
-
-conflictFiles.forEach(file => {
-  try {
-    console.log(`Resolving conflicts in: ${file}`);
+function resolveMergeConflicts() {
+    console.log('Resolving merge conflicts...');
     
-    let content = fs.readFileSync(file, 'utf8');
-    const originalContent = content;
-    
-    // Remove conflict markers and keep the incoming changes (HEAD)
-    content = content.replace(/<<<<<<< HEAD\n[\s\S]*?=======\n[\s\S]*?>>>>>>> [^\n]+\n/g, '');
-    
-    // If content changed, write it back
-    if (content !== originalContent) {
-      fs.writeFileSync(file, content, 'utf8');
-      console.log(`✅ Resolved conflicts in: ${file}`);
-      resolvedCount++;
-    } else {
-      console.log(`⚠️ No changes needed for: ${file}`);
+    try {
+        // Get list of conflicted files
+        const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
+            .trim()
+            .split('\n')
+            .filter(file => file.length > 0);
+        
+        console.log(`Found ${conflictedFiles.length} conflicted files`);
+        
+        for (const file of conflictedFiles) {
+            if (!fs.existsSync(file)) {
+                console.log(`Skipping non-existent file: ${file}`);
+                continue;
+            }
+            
+            console.log(`Resolving conflicts in: ${file}`);
+            
+            // For most files, accept the main branch version (ours)
+            // For deleted files in main, remove them
+            if (file.includes('performance-monitor.cjs') || 
+                file.includes('coach.ts') || 
+                file.includes('complete.ts') || 
+                file.includes('leaderboard.ts')) {
+                // These files were deleted in main, so remove them
+                try {
+                    fs.unlinkSync(file);
+                    console.log(`Removed deleted file: ${file}`);
+                } catch (err) {
+                    console.log(`Could not remove file ${file}: ${err.message}`);
+                }
+            } else {
+                // Accept main branch version for other files
+                try {
+                    execSync(`git checkout --ours "${file}"`, { stdio: 'pipe' });
+                    execSync(`git add "${file}"`, { stdio: 'pipe' });
+                    console.log(`Resolved conflicts in: ${file}`);
+                } catch (err) {
+                    console.log(`Could not resolve ${file}: ${err.message}`);
+                }
+            }
+        }
+        
+        // Add all resolved files
+        execSync('git add .', { stdio: 'pipe' });
+        
+        console.log('Merge conflicts resolved successfully');
+        return true;
+        
+    } catch (error) {
+        console.error('Error resolving merge conflicts:', error.message);
+        return false;
     }
-  } catch (error) {
-    console.error(`❌ Error resolving ${file}:`, error.message);
-    errorCount++;
-  }
-});
-
-<<<<<<< HEAD
-console.log(`\n📊 Conflict Resolution Summary: `),
-=======
-console.log(`\n📊 Conflict Resolution Summary:`);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-console.log(`✅ Successfully resolved: ${resolvedCount} files`);
-console.log(`❌ Errors: ${errorCount} files`);
-console.log(`📁 Total files processed: ${conflictFiles.length}`);
-
-if (resolvedCount > 0) {
-  console.log('\n🔄 Adding resolved files to git...');
-  try {
-    execSync('git add .', { stdio: 'inherit' });
-    console.log('✅ Files added to git successfully');
-  } catch (error) {
-    console.error('❌ Error adding files to git:', error.message);
-  }
 }
 
-console.log('\n🎉 Merge conflict resolution completed!');
+if (resolveMergeConflicts()) {
+    console.log('Ready to commit merge resolution');
+} else {
+    console.log('Failed to resolve merge conflicts');
+    process.exit(1);
+}

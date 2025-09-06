@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} \"from\": \'@/components / ui / form\'';\";\";
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src.pages.disabled/SignUp.jsx
+Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
-=======
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
-=======
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
-=======
-Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
-=======
 Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""

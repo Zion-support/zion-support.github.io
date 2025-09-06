@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -101,16 +96,9 @@ function fixLintIssues(filePath) {
           const imports = importMatch[1].split(',').map(imp => imp.trim());
           // Check if any of these imports are actually used
           const usedImports = imports.filter(imp => {
-<<<<<<< HEAD
             const importName = imp.split(' as ')[0].trim();
             return content.includes(importName) && !line.includes(importName);
-          });
-=======
-    const importName = imp.split(' as ')[0].trim(),
-    return content.includes(importName) && !line.includes(importName)
-  });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-          return usedImports.length > 0;
+          });          return usedImports.length > 0;
         }
       }
       return true;
@@ -157,12 +145,7 @@ try {
 } catch (error) {
   console.error('Script error:', error);
   process.exit(1);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 }

@@ -2,7 +2,6 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class ErrorDetectionMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -16,7 +15,6 @@ class ErrorDetectionMonitor {}
         fs.mkdirSync(dir, { "recursive": true })};
     }
 });
-    
     this.errorHistory = [];
     this.lastCheck = null};
   log(message, level = 'INFO') {}
@@ -70,7 +68,6 @@ class ErrorDetectionMonitor {}
     const errorLines = output.split('\n').filter(line => )
       line.includes('error TS') || line.includes('"error": ');
     );
-    
     return errorLines.map(line => ({})
       type: 'typescript',
       "message": line.trim(),
@@ -80,7 +77,6 @@ class ErrorDetectionMonitor {}
     const errorLines = output.split('\n').filter(line => )
       line.includes('error') || line.includes('"Error": ');
     );
-    
     return errorLines.map(line => ({})
       type: 'eslint',
       "message": line.trim(),
@@ -90,7 +86,6 @@ class ErrorDetectionMonitor {}
     const errorLines = output.split('\n').filter(line => )
       line.includes('error') || line.includes('"Error": ') || line.includes('Failed');
     );
-    
     return errorLines.map(line => ({})
       type: 'build',
       "message": line.trim(),
@@ -100,7 +95,6 @@ class ErrorDetectionMonitor {}
     const errorLines = output.split('\n').filter(line => )
       line.includes('vulnerability') || line.includes('VULNERABILITY');
     );
-    
     return errorLines.map(line => ({})
       "type": 'dependency',
       "message": line.trim(),
@@ -108,16 +102,13 @@ class ErrorDetectionMonitor {}
     }))};
   async checkForErrors() {}
     this.log('Starting comprehensive error detection...');
-    
     const checks = [{ "name": 'TypeScript', "check": this.runTypeScriptCheck.bind(this) },]
       { "name": 'ESLint', "check": this.runLintCheck.bind(this) },
       { "name": 'Build', "check": this.runBuildCheck.bind(this) },
       { "name": 'Dependencies', "check": this.runDependencyCheck.bind(this) };
     ];
-
     const results = {};
     let totalErrors = 0;
-
     for (const check of checks) {}
       try {}
         const result = await check.check();
@@ -133,11 +124,9 @@ class ErrorDetectionMonitor {}
       "threshold": this.errorThreshold,
       "exceeded": totalErrors > this.errorThreshold;
     };
-
     // Save error report;
     const reportPath = path.join(this.reportsDir, `error-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
-
     // Update error history;
     this.errorHistory.push(errorReport);
     if (this.errorHistory.length > 100) {}
@@ -145,9 +134,7 @@ class ErrorDetectionMonitor {}
     // Save error history;
     const historyPath = path.join(this.reportsDir, 'error-history.json');
     fs.writeFileSync(historyPath, JSON.stringify(this.errorHistory, null, 2));
-
     this.lastCheck = new Date();
-
     if (totalErrors > this.errorThreshold) {}
       this.log(`ERROR THRESHOLD "EXCEEDED": ${totalErrors} errors found ("threshold": ${this.errorThreshold})`, 'CRITICAL');
       this.triggerErrorAlert(errorReport)} else {}
@@ -155,7 +142,6 @@ class ErrorDetectionMonitor {}
     return errorReport};
   triggerErrorAlert(errorReport) {}
     this.log('Triggering error alert...', 'WARN');
-    
     // Create alert file for other processes to detect;
     const alertPath = path.join(this.reportsDir, 'error-alert.json');
     fs.writeFileSync(alertPath, JSON.stringify({})
@@ -163,24 +149,20 @@ class ErrorDetectionMonitor {}
       "message": 'Error threshold exceeded',
       "report": errorReport;
     }, null, 2));
-
     // Log critical error;
     const criticalLogPath = path.join(this.logsDir, 'critical-errors.log');
     const logEntry = `[${new Date().toISOString()}] "CRITICAL": ${errorReport.totalErrors} errors detected\n`;`
     fs.appendFileSync(criticalLogPath, logEntry)};
   async startMonitoring() {}
     this.log('Starting error detection monitor...');
-    
     // Run initial check;
     await this.checkForErrors();
-    
     // Set up periodic checking;
     setInterval(async () => {}
       try {}
         await this.checkForErrors()} catch (error) {}
         this.log(`Error in periodic "check": ${error.message}`, 'ERROR')};
     }, this.checkInterval);
-
     this.log(`Error detection monitor started. Checking every ${this.checkInterval / 1000} seconds.`)};
   getStatus() {}
     return {}
@@ -194,18 +176,15 @@ class ErrorDetectionMonitor {}
 // Main execution;
 if (require.main === module) {}
   const monitor = new ErrorDetectionMonitor();
-  
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     monitor.log('Shutting down error detection monitor...');
     process.exit(0)}
 });
-
   process.on('SIGTERM', () => {}
     monitor.log('Shutting down error detection monitor...');
     process.exit(0)}
 });
-
   // Start monitoring;
   monitor.startMonitoring().catch(error => {})
     monitor.log(`Failed to start "monitoring": ${error.message}`, 'ERROR');

@@ -1,18 +1,24 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { v4 as uuidv4 } from 'uuid';
-import { readJsonFile, writeJsonFile } from '../../utils/db';
-import type { Job } from '../../utils/types';
-import { rateLimit } from '../../utils/rateLimit';
-const FILE = 'jobs.json';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4, as, uuidv4 } from "uuid";
+import { readJsonFile, writeJsonFile } from "../../utils/db";
+import type { Job } from "../../utils/types";
+import { rateLimit } from "../../utils/rateLimit";
+
+const FILE = "jobs.json";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
   if (!rateLimit(req, res)) return;
-  if (req.method === 'GET') {
+
+  if (req.method === "GET") {
     const jobs = readJsonFile<Job[]>(FILE, []);
     res.status(200).json({ jobs });
-    return
+    return;
   }
 
-  if (req.method === 'POST') {
+  if (req.method === "POST") {
     const {
       title,
       description,
@@ -21,10 +27,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       budgetMinUsd,
       budgetMaxUsd,
       deliveryDeadlineIso,
-      clientEmail
+      clientEmail,
     } = req.body || {};
     if (!title || !description || !clientEmail) {
-      res.status(400).json({ error: 'Missing required fields' });
+      res.status(400).json({ error: "Missing required fields" });
       return;
     }
 
@@ -33,22 +39,42 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       id: uuidv4(),
       title: String(title),
       description: String(description),
-      category: String(category || ''),
-      requiredSkills: Array.isArray(requiredSkills) ? requiredSkills.map(String) : [],
-      budgetMinUsd: typeof budgetMinUsd === 'number' ? budgetMinUsd : undefined,
-      budgetMaxUsd: typeof budgetMaxUsd === 'number' ? budgetMaxUsd : undefined,
-      deliveryDeadlineIso: deliveryDeadlineIso ? String(deliveryDeadlineIso) : undefined,
+      category: String(category || ""),
+      requiredSkills: Array.isArray(requiredSkills)
+        ? requiredSkills.map(String)
+        : [],
+      budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined,
+      budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined,
+      deliveryDeadlineIso: deliveryDeadlineIso
+        ? String(deliveryDeadlineIso)
+        : undefined,
       clientEmail: String(clientEmail),
-      status: 'New',
+      status: "New",
       createdAtIso: nowIso,
-      updatedAtIso: nowIso
+      updatedAtIso: nowIso,
     };
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
     if (!job.category) {
       const skills = (job.requiredSkills || []).map((s) => s.toLowerCase());
-      if (skills.some((s) => s.includes('openai') || s.includes('langchain') || s.includes('rag'))) job.category = 'LLM App';
-      else if (skills.some((s) => s.includes('aws') || s.includes('kubernetes') || s.includes('terraform'))) job.category = 'Cloud';
-      else job.category = 'General';
+      if (
+        skills.some(
+          (s) =>
+            s.includes("openai") ||
+            s.includes("langchain") ||
+            s.includes("rag"),
+        )
+      )
+        job.category = "LLM App";
+      else if (
+        skills.some(
+          (s) =>
+            s.includes("aws") ||
+            s.includes("kubernetes") ||
+            s.includes("terraform"),
+        )
+      )
+        job.category = "Cloud";
+      else job.category = "General";
     }
 
     const jobs = readJsonFile<Job[]>(FILE, []);
@@ -58,6 +84,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return;
   }
 
-  res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed')
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
 }

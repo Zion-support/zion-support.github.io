@@ -3,11 +3,20 @@
   "files": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "/workspace/contracts/ZionGovernor.sol": {
       "lastModificationDate": 1754702703638,
       "contentHash": "c24f231bae64c8a2917b543da0d052c6",
@@ -20,6 +29,10 @@
             "runs": 200
           },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
           "evmVersion": "paris",
 =======
@@ -36,13 +49,21 @@
             "runs": 200
           },
 >>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-          "outputSelection": {
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+          "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
           "evmVersion": "paris",          "outputSelection": {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+          "evmVersion": "paris",          "outputSelection": {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -61,11 +82,20 @@
       "imports": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "@openzeppelin/contracts/governance/Governor.sol",
         "@openzeppelin/contracts/governance/extensions/GovernorSettings.sol",
         "@openzeppelin/contracts/governance/extensions/GovernorCountingSimple.sol",
@@ -93,6 +123,10 @@
           },
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
           "evmVersion": "paris",
 =======
         "@semaphore-protocol/contracts/base/SemaphoreVerifier.sol"
@@ -117,13 +151,21 @@
             "runs": 200
           },
 >>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-          "outputSelection": {
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+          "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
           "evmVersion": "paris",          "outputSelection": {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+          "evmVersion": "paris",          "outputSelection": {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -142,11 +184,20 @@
       "imports": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "../token/ERC721/IERC721Receiver.sol",
         "../token/ERC1155/IERC1155Receiver.sol",
         "../utils/cryptography/ECDSA.sol",
@@ -373,6 +424,10 @@
           },
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
           "evmVersion": "paris",
 =======
         "./Constants.sol",
@@ -398,13 +453,21 @@
             "runs": 200
           },
 >>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-          "outputSelection": {
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+          "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
           "evmVersion": "paris",          "outputSelection": {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+          "evmVersion": "paris",          "outputSelection": {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -424,11 +487,20 @@
       "versionPragmas": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "^0.8.1"
       ],
       "artifacts": [
@@ -1080,6 +1152,10 @@
           },
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
           "evmVersion": "paris",
 =======
         ">=0.8.23 <0.9.0"
@@ -1099,13 +1175,21 @@
             "runs": 200
           },
 >>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-          "outputSelection": {
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+          "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
           "evmVersion": "paris",          "outputSelection": {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+          "evmVersion": "paris",          "outputSelection": {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -1125,11 +1209,20 @@
       "versionPragmas": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "^0.8.0"
       ],
       "artifacts": [
@@ -1188,6 +1281,10 @@
           },
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
           "evmVersion": "paris",
 =======
         ">=0.8.23 <0.9.0"
@@ -1209,13 +1306,21 @@
             "runs": 200
           },
 >>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-          "outputSelection": {
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+          "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
           "evmVersion": "paris",          "outputSelection": {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+          "evmVersion": "paris",          "outputSelection": {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -1235,11 +1340,20 @@
       "versionPragmas": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "^0.8.0"
       ],
       "artifacts": [
@@ -1378,6 +1492,10 @@
           },
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
           "evmVersion": "paris",
 =======
         "^0.8.21"
@@ -1400,13 +1518,21 @@
             "runs": 200
           },
 >>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-          "outputSelection": {
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+          "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
           "evmVersion": "paris",          "outputSelection": {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+          "evmVersion": "paris",          "outputSelection": {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -1426,11 +1552,20 @@
       "versionPragmas": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "^0.8.0"
       ],
       "artifacts": [
@@ -1860,6 +1995,10 @@
       "artifacts": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
         "ZionToken"
 =======
         "^0.8.21"
@@ -1868,13 +2007,21 @@
         "IZkBallotView",
         "ZkTreasury"
 >>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-      ]
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      ]
         "ZionToken"      ]
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
         "ZionToken"      ]
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+        "ZionToken"      ]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     }
   }
 }

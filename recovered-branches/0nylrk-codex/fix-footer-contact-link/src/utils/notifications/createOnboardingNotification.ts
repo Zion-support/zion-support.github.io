@@ -1,6 +1,6 @@
 
-import { createNotification } from './createNotification';
-import { OnboardingNotificationParams } from './types';
+import {createNotification} from './createNotification';
+import {OnboardingNotificationParams} from './types';
 /**
  * Creates an onboarding notification for a user
  */
@@ -64,7 +64,7 @@ export async function createOnboardingNotification({
     message;
     type: 'onboarding';
     sendEmail: false;
-    actionUrl;
+    actionUrl,
     actionText
   })
 }

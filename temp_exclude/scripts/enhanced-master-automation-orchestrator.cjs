@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
     log('info', `"Successful": ${masterReport.summary.successful}`);
     log('info', `"Failed": ${masterReport.summary.failed}`);
@@ -7,19 +6,15 @@
     log('info', `Success "rate": ${masterReport.metrics.successRate}%`);
     log('info', `Performance "score": ${masterReport.metrics.performanceScore}/100`);
     log('info', `Total "duration": ${Math.round(masterReport.metrics.totalDuration / 1000)}s`);
-    
     if (masterReport.recommendations.length > 0) {
       log('info', '"Recommendations": ');
       masterReport.recommendations.forEach(rec => {
         log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
         log('info', `  "Action": ${rec.action}`)})}
-    
     // Save comprehensive report
     const reportPath = path.join(process.cwd(), `enhanced-master-automation-report-${masterReport.sessionId}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(masterReport, null, 2));
-    
     log('info', `Enhanced automation report saved "to": enhanced-master-automation-report-${masterReport.sessionId}.json`);
-    
     // Determine exit status
     if (masterReport.summary.failed > 0) {
       log('error', 'Enhanced automation completed with critical failures');
@@ -28,19 +23,12 @@
       process.exit(0)} else {
       log('info', 'Enhanced automation completed successfully!');
       process.exit(0)}
-    
   } catch (error) {
     log('error', 'Fatal error in enhanced automation orchestrator', error.message);
     process.exit(1)}
 }
-
 // Run the enhanced orchestrator
-main();
-=======
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-#!/usr/bin/env node;
+main();#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')

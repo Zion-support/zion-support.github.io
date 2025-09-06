@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface TestimonialsProps {
   // Add props here as needed
 }
-
 export default function Testimonials({ }: TestimonialsProps) {
   return (
     <div>
@@ -11,13 +9,8 @@ export default function Testimonials({ }: TestimonialsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+:src.pages.disabled/Testimonials.jsx
+}}
 }
-=======
 }
-=======
-}
-=======
 }

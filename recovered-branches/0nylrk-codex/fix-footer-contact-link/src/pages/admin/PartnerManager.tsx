@@ -1,18 +1,18 @@
 
-import { useState, useEffect } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { toast } from "@/hooks/use-toast";
-import { Check, Flag, Search, Settings, X } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import {useState, useEffect} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {useNavigate} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
+import {toast} from "@/hooks/use-toast";
+import {Check, Flag, Search, Settings, X} from "lucide-react";
+import {supabase} from "@/integrations/supabase/client";
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -161,7 +161,7 @@ export default function PartnerManager() {
   };
 
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
-    let filtered = partners;
+    let filtered = partners,
     
     // Filter by status
     if (status !== "all") {
@@ -183,23 +183,23 @@ export default function PartnerManager() {
   };
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
+    setSearchQuery(e.target.value),
     filterPartners(partners, activeTab, e.target.value)
   };
 
   const handleTabChange = (value: string) => {
-    setActiveTab(value);
+    setActiveTab(value),
     filterPartners(partners, value, searchQuery)
   };
 
   const handleViewDetails = (partner: PartnerProfile) => {
-    setSelectedPartner(partner);
+    setSelectedPartner(partner),
     setIsDetailsOpen(true)
   };
 
   const handleOpenSettings = (partner: PartnerProfile) => {
     setSelectedPartner(partner);
-    setCommissionRate(partner.commission_rate || 25);
+    setCommissionRate(partner.commission_rate || 25),
     setIsSettingsOpen(true)
   };
 
@@ -282,14 +282,14 @@ export default function PartnerManager() {
       case 'approved':
         return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>;
       case 'rejected':
-        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>;
+        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,
       default:
         return <Badge variant="outline">{status}</Badge>
     }
   };
 
   const getFraudFlagBadge = (flags: number = 0) => {
-    if (flags === 0) return null;
+    if (flags === 0) return null,
     
     return (
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
