@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
