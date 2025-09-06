@@ -15,8 +15,14 @@ class ErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = { hasError: false };
   }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ error, errorInfo });
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
   handleReload = () => {
@@ -60,5 +66,13 @@ class ErrorBoundary extends Component<Props, State> {
                 Reload Page
               </button>
             </div>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
 export default ErrorBoundary;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
