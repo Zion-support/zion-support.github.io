@@ -25,7 +25,6 @@ import {
   MapPin,
   Building2,
 } from 'lucide-react';
-,
 const navigation = {
   'Services': [
     { name: 'AI Services', href: '/ai-services' },
@@ -35,13 +34,15 @@ const navigation = {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Quantum Computing', href: '/quantum-computing' },
     { name: 'Blockchain', href: '/blockchain' },
-    { name: 'IoT Solutions', href: '/iot-solutions' },
+
+    { name: 'IoT Solutions', href: '/iot-solutions' }
+
   ],
   'Solutions': [
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Startup Solutions', href: '/solutions/startup' },
     { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
-    { name: 'Custom Development', href: '/solutions/custom' },
+    { name: 'Custom Development', href: '/solutions/custom' }
   ],
   'Industries': [
     { name: 'Healthcare', href: '/industries/healthcare' },
@@ -51,7 +52,7 @@ const navigation = {
     { name: 'Manufacturing', href: '/industries/manufacturing' },
     { name: 'Retail', href: '/industries/retail' },
     { name: 'Agriculture', href: '/industries/agriculture' },
-    { name: 'Energy', href: '/industries/energy' },
+    { name: 'Energy', href: '/industries/energy' }
   ],
   'Resources': [
     { name: 'Blog', href: '/blog' },
@@ -61,7 +62,7 @@ const navigation = {
     { name: 'White Papers', href: '/white-papers' },
     { name: 'Webinars', href: '/webinars' },
     { name: 'Training', href: '/training' },
-    { name: 'FAQ', href: '/faq' },
+    { name: 'FAQ', href: '/faq' }
   ],
   'Company': [
     { name: 'About Us', href: '/about' },
@@ -71,14 +72,15 @@ const navigation = {
     { name: 'News', href: '/news' },
     { name: 'Partners', href: '/partners' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy' },
-  ],
+    { name: 'Privacy Policy', href: '/privacy' }
+  ]
 };
-,
+
 const quickLinks = [
   { name: 'Free Consultation', href: '/consultation' },
   { name: 'Get Quote', href: '/quote' },
-  { name: 'Support', href: '/support' },
+  { name: 'Support', href: '/support' }
+
 ];
 
 interface SidebarProps {
@@ -103,7 +105,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const handleDropdownToggle = (item: string) => {
     setActiveDropdown(activeDropdown === item ? null : item);
   };
-,
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -147,7 +149,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     <button
                       onClick={() => handleDropdownToggle(title)}
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
-                    >
+
+                    >,
+
                       <span>{title}</span>
                       <ChevronDown className={`w-5 h-5 transition-transform ${
                         activeDropdown === title ? 'rotate-180' : ''
@@ -219,4 +223,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       )}
     </AnimatePresence>
   );
-}
+
+};
+

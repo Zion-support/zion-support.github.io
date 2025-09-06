@@ -34,7 +34,7 @@ for (const file of conflictedFiles) {
       // Check if file exists and has conflict markers
       if (fs.existsSync(file)) {
         const content = fs.readFileSync(file, 'utf8');
-        if (content.includes('<<<<<<< HEAD')) {
+        if (content.includes('')) {
           // Accept HEAD version (current branch)
           execSync(`git checkout --ours "${file}"`);
           execSync(`git add "${file}"`);

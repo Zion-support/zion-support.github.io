@@ -23,18 +23,7 @@ class AppOptimizer {;
     try {;
       // Run build optimization;
       this.log('📦 Running build optimization...');
-<<<<<<< HEAD
-      execSync('npm run build', { stdio: 'inherit' }),
-      
-      // Run performance optimization
-      this.log('⚡ Running performance optimization...');
-      execSync('npm run perf:audit', { stdio: 'inherit' }),
-      
-      this.log('✅ App optimization completed successfully!'),
-    } catch (error) {
-      this.log(`❌ Optimization failed: ${error.message}`),
-      throw error,
-=======
+
       execSync('npm run build', { stdio:'inherit' });
       ;
       // Run performance optimization;
@@ -45,7 +34,7 @@ class AppOptimizer {;
     } catch (error) {;
       this.log(`❌ Optimization failed:${error.message}`);
       throw error;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
     }
   }
 }

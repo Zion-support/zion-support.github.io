@@ -5,24 +5,7 @@ function fixObjectSyntax(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-<<<<<<< HEAD
 
-    // Fix semicolons in object properties
-    content = content.replace(/(\w+):\s*"([^"]*)"\s*;/g, '$1: "$2",');
-    content = content.replace(/(\w+):\s*"([^"]*)"\s*;/g, '$1: "$2"'),
-
-    // Fix semicolons in array elements
-    content = content.replace(/"([^"]*)"\s*;/g, '"$1",');
-    content = content.replace(/"([^"]*)"\s*;/g, '"$1"');
-
-    // Fix semicolons in function declarations
-    content = content.replace(
-      /function\s+(\w+)\s*\(\s*\)\s*{\s*;/g;
-      'function $1() {'
-    );
-
-    // Fix semicolons in const/let declarations
-=======
 ;
     // Fix semicolons in object properties;
     content = content.replace(/(\w+):\s*"([^"]*)"\s*;/g, '$1:"$2",');
@@ -37,7 +20,7 @@ function fixObjectSyntax(filePath) {;
       'function $1() {';    );
 ;
     // Fix semicolons in const/let declarations;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
     content = content.replace(/(const|let)\s+(\w+)\s*=\s*\[\s*;/g, '$1 $2 = [');
     content = content.replace(/(const|let)\s+(\w+)\s*=\s*\{\s*;/g, '$1 $2 = {');
 ;
@@ -53,19 +36,13 @@ function fixObjectSyntax(filePath) {;
       fs.writeFileSync(filePath, content, 'utf8');
       modified = true,
     }
-<<<<<<< HEAD
 
-    return modified,
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false,
-=======
 ;
     return modified;
   } catch (error) {;
     console.error(`Error processing ${filePath} `, error.message);
     return false;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
   }
 }
 ;
@@ -76,22 +53,7 @@ function processDirectory(dirPath) {;
   for (const file of files) {;
     const filePath = path.join(dirPath, file);
     const stat = fs.statSync(filePath);
-<<<<<<< HEAD
 
-    if (stat.isDirectory()) {
-      fixedCount += processDirectory(filePath),
-    } else if (
-      file.endsWith('.tsx') ||
-      file.endsWith('.ts') ||
-      file.endsWith('.jsx') ||
-      file.endsWith('.js')
-    ) {
-      if (fixObjectSyntax(filePath)) fixedCount++,
-    }
-  }
-
-  return fixedCount,
-=======
 ;
     if (stat.isDirectory()) {;
       fixedCount += processDirectory(filePath);
@@ -106,7 +68,7 @@ function processDirectory(dirPath) {;
   }
 ;
   return fixedCount;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 }
 ;
 console.log('Starting object syntax fixes...');

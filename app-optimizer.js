@@ -1,4 +1,2 @@
-// App Optimizer
-// This file optimizes the application performance
-
-console.log('App optimizer loaded');
+// App optimizer script
+console.log('App optimizer starting...');

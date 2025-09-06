@@ -1,153 +1,36 @@
 const fs = require('fs');
-<<<<<<< HEAD
 
-
-// Create basic component templates for corrupted files
-const componentTemplates = {
-  'components/AccessibilityProvider.tsx': `import React, { createContext, useContext, ReactNode } from 'react';
-
-interface AccessibilityContextType {
-<<<<<<< HEAD
-  announceToScreenReader: (message: string) => void,
-  setFocus: (elementId: string) => void,
-=======
   announceToScreenReade: r: (messag: e: string) => void;
   setFocu: s: (elementI: d: string) => void;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
-=======
-const path = require('path');
-;
-// Create basic component templates for corrupted files;
-const componentTemplates = {;
-  'components/AccessibilityProvider.tsx':`import React, { createContext, useContext, ReactNode } from 'react';
-;
-interface AccessibilityContextType {;
-  announceToScreenReade:r:(messag:e:string) => void;
-  setFocu:s:(elementI:d:string) => void;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 }
 ;
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
-<<<<<<< HEAD
 
-interface AccessibilityProviderProps {
-<<<<<<< HEAD
-  children: ReactNode,
-}
-
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
-  const announceToScreenReader = (message: string) => {
-    const liveRegion = document.getElementById('live-region'),
-=======
   childre: n: ReactNode;
-=======
-;
-interface AccessibilityProviderProps {;
-  childre:n:ReactNode;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
-}
-;
-export const:AccessibilityProvider:React.FC<AccessibilityProviderProps> = ({ children }) => {;
-  const announceToScreenReader = (messag:e:string) => {;
-    const liveRegion = document.getElementById('live-region');
-<<<<<<< HEAD
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
-    if (liveRegion) {
-      liveRegion.textContent = message;
-    }
-  };
 
-<<<<<<< HEAD
-  const setFocus = (elementId: string) => {
-    const element = document.getElementById(elementId),
-=======
-  const setFocus = (elementI: d: string) => {
-    const element = document.getElementById(elementId);
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
-    if (element) {
-      element.focus(),
-=======
-    if (liveRegion) {;
-      liveRegion.textContent = message;
-    }
-  };
-;
-  const setFocus = (elementI:d:string) => {;
-    const element = document.getElementById(elementId);
-    if (element) {;
-      element.focus();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
     }
   };
 ;
   return (;
     <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>;
       {children}
-<<<<<<< HEAD
-    </AccessibilityContext.Provider>
-  ),
-=======
+
     </AccessibilityContext.Provider>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 };
 ;
 export const useAccessibility = () => {;
   const context = useContext(AccessibilityContext);
-<<<<<<< HEAD
-  if (context === undefined) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider'),
-=======
+
   if (context === undefined) {;
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
   }
-<<<<<<< HEAD
-  return context,
-};`,
 
-=======
   return context;
-<<<<<<< HEAD
-};`;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
-  'components/Analytics.tsx': `import React, { useEffect } from 'react';
 
-interface AnalyticsProps {
-  trackingId?: string,
-}
-
-const: Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
-  useEffect(() => {
-    if (typeof window !== 'undefined' && trackingId) {
-      // Initialize analytics here
-<<<<<<< HEAD
-      console.log('Analytics initialized with tracking ID:', trackingId),
-=======
-      console.log('Analytics initialized with tracking: ID:', trackingId);
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
-    }
-  }, [trackingId]);
-
-  return null,
-=======
-};`,;
-;
-  'components/Analytics.tsx':`import React, { useEffect } from 'react';
-;
-interface AnalyticsProps {;
-  trackingId?:string;}
-;
-const:Analytics:React.FC<AnalyticsProps> = ({ trackingId }) => {;
-  useEffect(() => {;
-    if (typeof window !== 'undefined' && trackingId) {;
-      // Initialize analytics here;
-      console.log('Analytics initialized with tracking:ID:', trackingId);
-    }
-  }, [trackingId]);
-;
-  return null;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
 };
 ;
 export default Analytics;`,;
@@ -157,30 +40,20 @@ import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lu
 ;
 const:Header:React.FC = () => {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-<<<<<<< HEAD
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen),
-=======
 ;
   const toggleMenu = () => {;
     setIsMenuOpen(!isMenuOpen);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
   };
 ;
   return (;
     <header className="bg-white shadow-lg">;
       {/* Top Bar */}
-<<<<<<< HEAD
-      <div className="bg-blue-900 text-white py-2">
-        <div className="container mx-auto px-4">
-<<<<<<< HEAD
-          <div className="flex flex-col md: flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-6 mb-2 md:mb-0">
-=======
+
           <div className="flex flex-col: md:flex-row justify-between items-center text-sm">
             <div className="flex items-center space-x-6 mb-2: md:mb-0">
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
                 <a href="te: l:+13024640950" className="hove: r:text-blue-300">+1 302 464 0950</a>
@@ -203,34 +76,6 @@ const:Header:React.FC = () => {;
         </div>
       </div>
 
-=======
-      <div className="bg-blue-900 text-white py-2">;
-        <div className="container mx-auto px-4">;
-          <div className="flex flex-col:md:flex-row justify-between items-center text-sm">;
-            <div className="flex items-center space-x-6 mb-2:md:mb-0">;
-              <div className="flex items-center">;
-                <Phone className="w-4 h-4 mr-2" />;
-                <a href="te:l:+13024640950" className="hove:r:text-blue-300">+1 302 464 0950</a>;
-              </div>;
-              <div className="flex items-center">;
-                <Mail className="w-4 h-4 mr-2" />;
-                <a href="mailt:o:kleber@ziontechgroup.com" className="hove:r:text-blue-300">kleber@ziontechgroup.com</a>;
-              </div>;
-            </div>;
-            <div className="flex items-center space-x-4">;
-              <span className="text-blue-200">24/7 Support Available</span>;
-              <div className="flex space-x-2">;
-                <a href="#" className="hove:r:text-blue-300"><Facebook className="w-4 h-4" /></a>;
-                <a href="#" className="hove:r:text-blue-300"><Twitter className="w-4 h-4" /></a>;
-                <a href="#" className="hove:r:text-blue-300"><Linkedin className="w-4 h-4" /></a>;
-                <a href="#" className="hove:r:text-blue-300"><Instagram className="w-4 h-4" /></a>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
       {/* Main Navigation */}
       <nav className="container mx-auto px-4">;
         <div className="flex justify-between items-center py-4">;
@@ -269,21 +114,9 @@ const:Header:React.FC = () => {;
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
-      </nav>
-    </header>
-  ),
-};
 
-export default Header;`;
-  'components/Layout.tsx': `import React, { ReactNode } from 'react';
-
-interface LayoutProps {
-<<<<<<< HEAD
-  children: ReactNode,
-=======
   childre: n: ReactNode;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
 }
 
 const: Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -304,17 +137,11 @@ interface LoadingSpinnerProps {
 
 const: LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {
   const sizeClasses = {
-<<<<<<< HEAD
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  },
-=======
+
     s: m: 'w-4 h-4',
     m: d: 'w-8 h-8',
     l: g: 'w-12 h-12'
   };
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
 
   return (
     <div className={\`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 \${sizeClasses[size]} \${className}\`}>
@@ -327,72 +154,15 @@ export default LoadingSpinner;`;
   'components/PerformanceMonitor.tsx': `import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
-  loadTime: number,
-  renderTime: number,
-  memoryUsage: number,
-=======
+
   loadTim: e: number;
   renderTim: e: number;
   memoryUsag: e: number;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
 }
 
 const: PerformanceMonitor: React.FC = () => {
-=======
-      </nav>;
-    </header>;
-  );
-};
-;
-export default Header;`,;
-;
-  'components/Layout.tsx':`import React, { ReactNode } from 'react';
-;
-interface LayoutProps {;
-  childre:n:ReactNode;}
-;
-const:Layout:React.FC<LayoutProps> = ({ children }) => {;
-  return (;
-    <main className="min-h-screen">;
-      {children}
-    </main>;
-  );
-};
-;
-export default Layout;`,;
-;
-  'components/LoadingSpinner.tsx':`import React from 'react';
-;
-interface LoadingSpinnerProps {;
-  size?:'sm' | 'md' | 'lg';
-  className?:string;}
-;
-const:LoadingSpinner:React.FC<LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {;
-  const sizeClasses = {;
-    s:m:'w-4 h-4',;
-    m:d:'w-8 h-8',;
-    l:g:'w-12 h-12';
-  };
-;
-  return (;
-    <div className={\`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 \${sizeClasses[size]} \${className}\`}>;
-      <span className="sr-only">Loading...</span>;
-    </div>;
-  );
-};
-;
-export default LoadingSpinner;`,;
-;
-  'components/PerformanceMonitor.tsx':`import React, { useEffect, useState } from 'react';
-;
-interface PerformanceMetrics {;
-  loadTim:e:number;
-  renderTim:e:number;
-  memoryUsag:e:number;}
-;
-const:PerformanceMonitor:React.FC = () => {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 ;
   useEffect(() => {;
@@ -400,20 +170,7 @@ const:PerformanceMonitor:React.FC = () => {;
       const observer = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
         const navigationEntry = entries.find(entry => entry.entryType === 'navigation') as PerformanceNavigationTiming;
-<<<<<<< HEAD
-        
-        if (navigationEntry) {
-          setMetrics({
-<<<<<<< HEAD
-            loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
-            renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
-            memoryUsage: (performance as any).memory?.usedJSHeapSize || 0
-          }),
-        }
-      });
 
-      observer.observe({ entryTypes: ['navigation'] }),
-=======
             loadTim: e: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
             renderTim: e: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
             memoryUsag: e: (performance as any).memory?.usedJSHeapSize || 0
@@ -422,61 +179,16 @@ const:PerformanceMonitor:React.FC = () => {;
       });
 
       observer.observe({ entryType: s: ['navigation'] });
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
 
       return () => observer.disconnect(),
-=======
-        ;
-        if (navigationEntry) {;
-          setMetrics({;
-            loadTim:e:navigationEntry.loadEventEnd - navigationEntry.loadEventStart,;
-            renderTim:e:navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,;
-            memoryUsag:e:(performance as any).memory?.usedJSHeapSize || 0;
-          });
-        }
-      });
-;
-      observer.observe({ entryType:s:['navigation'] });
-;
-      return () => observer.disconnect();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
     }
   }, []);
 ;
   if (!metrics) return null;
-<<<<<<< HEAD
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
-      <div>Loa: d: {metrics.loadTime.toFixed(2)}ms</div>
-      <div>Rende: r: {metrics.renderTime.toFixed(2)}ms</div>
-      <div>Memor: y: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
-    </div>
-  ),
-};
-
-export default PerformanceMonitor;`;
-  'components/SEOHead.tsx': `import React from 'react';
-import Head from 'next/head';
-
-interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
-  url?: string,
-}
-
-const: SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - AI-Powered Technology Solutions',
-  description = 'Leading provider of AI-powered technology solutions, web development, mobile apps, and digital transformation services.',
-  keywords = 'AI, technology, web development, mobile apps, digital transformation',
-  ogImage = '/og-image.jpg',
-<<<<<<< HEAD
-  url = 'https: //ziontechgroup.com'
-=======
   url = 'http: s://ziontechgroup.com'
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
 }) => {
   return (
     <Head>
@@ -502,71 +214,12 @@ export default SEOHead;`;
 import { Search, X } from 'lucide-react';
 
 interface SearchBarProps {
-<<<<<<< HEAD
-  onSearch?: (query: string) => void,
-=======
+
   onSearch?: (quer: y: string) => void;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
   placeholder?: string;
   className?: string,
-=======
-;
-  return (;
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">;
-      <div>Loa:d:{metrics.loadTime.toFixed(2)}ms</div>;
-      <div>Rende:r:{metrics.renderTime.toFixed(2)}ms</div>;
-      <div>Memor:y:{(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>;
-    </div>;
-  );
-};
-;
-export default PerformanceMonitor;`,;
-;
-  'components/SEOHead.tsx':`import React from 'react';import Head from 'next/head';
-;
-interface SEOHeadProps {;
-  title?:string;
-  description?:string;
-  keywords?:string;
-  ogImage?:string;
-  url?:string;
-}
-;
-const:SEOHead:React.FC<SEOHeadProps> = ({;
-  title = 'Zion Tech Group - AI-Powered Technology Solutions',;
-  description = 'Leading provider of AI-powered technology solutions, web development, mobile apps, and digital transformation services.',;
-  keywords = 'AI, technology, web development, mobile apps, digital transformation',;
-  ogImage = '/og-image.jpg',;
-  url = 'http:s://ziontechgroup.com';
-}) => {;
-  return (;
-    <Head>;
-      <title>{title}</title>;
-      <meta name="description" content={description} />;
-      <meta name="keywords" content={keywords} />;
-      <meta property="o:g:title" content={title} />;
-      <meta property="o:g:description" content={description} />;
-      <meta property="o:g:image" content={ogImage} />;
-      <meta property="o:g:url" content={url} />;
-      <meta property="o:g:type" content="website" />;
-      <meta name="twitte:r:card" content="summary_large_image" />;
-      <meta name="twitte:r:title" content={title} />;
-      <meta name="twitte:r:description" content={description} />;
-      <meta name="twitte:r:image" content={ogImage} />;
-      <link rel="canonical" href={url} />;
-    </Head>;
-  );
-};
-;
-export default SEOHead;`,;
-;
-  'components/SearchBar.tsx':`import React, { useState } from 'react';import { Search, X } from 'lucide-react';
-;
-interface SearchBarProps {;
-  onSearch?:(quer:y:string) => void;
-  placeholder?:string;
-  className?:string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 }
 ;
 const:SearchBar:React.FC<SearchBarProps> = ({;
@@ -576,19 +229,13 @@ const:SearchBar:React.FC<SearchBarProps> = ({;
 }) => {;
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
-<<<<<<< HEAD
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    if (onSearch && query.trim()) {
-      onSearch(query.trim()),
-=======
 ;
   const handleSubmit = (e:React.FormEvent) => {;
     e.preventDefault();
     if (onSearch && query.trim()) {;
       onSearch(query.trim());
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
     }
   };
 ;
@@ -608,62 +255,36 @@ const:SearchBar:React.FC<SearchBarProps> = ({;
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setIsOpen(true)}
             placeholder={placeholder}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-=======
+
             className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
           />
           {query && (
             <button
               type="button"
-=======
-            className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg:focus:outline-none:focus:ring-2:focus:ring-blue-500:focus:border-transparent";
-          />;
-          {query && (;
-            <button;
-              type="button";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
               onClick={handleClear}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400:hover:text-gray-600";
             >;
               <X className="w-4 h-4" />;
             </button>;
           )}
-<<<<<<< HEAD
-        </div>
-      </form>
-    </div>
-  ),
-=======
+
         </div>;
       </form>;
     </div>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 };
 ;
 export default SearchBar;`,;
 ;
   'components/Sidebar.tsx':`import React from 'react';import Link from 'next/link';
 import { Home, Settings, User, LogOut } from 'lucide-react';
-<<<<<<< HEAD
 
-interface SidebarProps {
-<<<<<<< HEAD
-  isOpen: boolean,
-  onClose: () => void,
-=======
   isOpe: n: boolean;
   onClos: e: () => void;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
-=======
-;
-interface SidebarProps {;
-  isOpe:n:boolean;
-  onClos:e:() => void;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 }
 ;
 const:Sidebar:React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
@@ -676,19 +297,9 @@ const:Sidebar:React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
   return (;
     <>;
       {/* Overlay */}
-<<<<<<< HEAD
-      {isOpen && (
-        <div
-<<<<<<< HEAD
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md: hidden"
-=======
+
           className="fixed inset-0 bg-black bg-opacity-50 z-40: md:hidden"
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
-=======
-      {isOpen && (;
-        <div;
-          className="fixed inset-0 bg-black bg-opacity-50 z-40:md:hidden";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
           onClick={onClose}
         />;
       )}
@@ -704,25 +315,9 @@ const:Sidebar:React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
             <h2 className="text-xl font-bold text-gray-800">Menu</h2>;
             <button;
               onClick={onClose}
-<<<<<<< HEAD
-              className="p-2 rounded-md: hover:bg-gray-100"
-            >
-              <LogOut className="w-5 h-5" />
-            </button>
-          </div>
 
-          <nav className="space-y-2">
-            {menuItems.map((item) => {
-              const Icon = item.icon,
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-<<<<<<< HEAD
-                  className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700 hover: bg-gray-100 hover:text-blue-600"
-=======
                   className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700: hover:bg-gray-100: hover:text-blue-600"
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
                   onClick={onClose}
                 >
                   <Icon className="w-5 h-5" />
@@ -741,23 +336,18 @@ export default Sidebar;`;
   'components/SimpleLayout.tsx': `import React, { ReactNode } from 'react';
 
 interface SimpleLayoutProps {
-<<<<<<< HEAD
-  children: ReactNode,
-  title?: string,
-=======
+
   childre: n: ReactNode;
   title?: string;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
 }
 
 const: SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
   return (
     <div className="min-h-screen bg-gray-50">
-<<<<<<< HEAD
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">
-=======
+
       <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
         {title && (
           <h1 className="text-3xl font-bold text-gray-900 mb-8">{title}</h1>
         )}
@@ -765,55 +355,7 @@ const: SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
       </div>
     </div>
   ),
-=======
-              className="p-2 rounded-md:hover:bg-gray-100";
-            >;
-              <LogOut className="w-5 h-5" />;
-            </button>;
-          </div>;
-;
-          <nav className="space-y-2">;
-            {menuItems.map((item) => {;
-              const Icon = item.icon;
-              return (;
-                <Link;
-                  key={item.href}
-                  href={item.href}
-                  className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700:hover:bg-gray-100:hover:text-blue-600";
-                  onClick={onClose}
-                >;
-                  <Icon className="w-5 h-5" />;
-                  <span>{item.label}</span>;
-                </Link>;
-              );
-            })}
-          </nav>;
-        </div>;
-      </div>;
-    </>;
-  );
-};
-;
-export default Sidebar;`,;
-;
-  'components/SimpleLayout.tsx':`import React, { ReactNode } from 'react';
-;
-interface SimpleLayoutProps {;
-  childre:n:ReactNode;
-  title?:string;}
-;
-const:SimpleLayout:React.FC<SimpleLayoutProps> = ({ children, title }) => {;
-  return (;
-    <div className="min-h-screen bg-gray-50">;
-      <div className="max-w-7xl mx-auto px-4:sm:px-6:lg:px-8 py-8">;
-        {title && (;
-          <h1 className="text-3xl font-bold text-gray-900 mb-8">{title}</h1>;
-        )}
-        {children}
-      </div>;
-    </div>;
-  );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 };
 ;
 export default SimpleLayout;`,;
@@ -860,31 +402,7 @@ const:Footer:React.FC = () => {;
           </div>;
 ;
           {/* Contact Info */}
-<<<<<<< HEAD
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <div className="space-y-2">
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
-                <span className="text-gray-300">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
-                <span className="text-gray-300">kleber@ziontechgroup.com</span>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
-  ),
-=======
           <div>;
             <h4 className="text-lg font-semibold mb-4">Contact</h4>;
             <div className="space-y-2">;
@@ -908,26 +426,16 @@ const:Footer:React.FC = () => {;
       </div>;
     </footer>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 };
 ;
 export default Footer;`,;
 ;
   'components/layout/Layout.tsx':`import React, { ReactNode } from 'react';import Header from '../Header';
 import Footer from './Footer';
-<<<<<<< HEAD
 
-interface LayoutProps {
-<<<<<<< HEAD
-  children: ReactNode,
-=======
   childre: n: ReactNode;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
-=======
-;
-interface LayoutProps {;
-  childre:n:ReactNode;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 }
 ;
 const:Layout:React.FC<LayoutProps> = ({ children }) => {;
@@ -936,17 +444,12 @@ const:Layout:React.FC<LayoutProps> = ({ children }) => {;
       <Header />;
       <main className="flex-1">;
         {children}
-<<<<<<< HEAD
-      </main>
-      <Footer />
-    </div>
-  ),
-=======
+
       </main>;
       <Footer />;
     </div>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 };
 ;
 export default Layout;`,;
@@ -954,23 +457,12 @@ export default Layout;`,;
   'components/layout/MainLayout.tsx':`import React, { ReactNode } from 'react';import Header from '../Header';
 import Footer from './Footer';
 import SEOHead from '../SEOHead';
-<<<<<<< HEAD
 
-interface MainLayoutProps {
-<<<<<<< HEAD
-  children: ReactNode,
-=======
   childre: n: ReactNode;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
   title?: string;
   description?: string,
-=======
-;
-interface MainLayoutProps {;
-  childre:n:ReactNode;
-  title?:string;
-  description?:string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 }
 ;
 const:MainLayout:React.FC<MainLayoutProps> = ({ children, title, description }) => {;
@@ -981,42 +473,10 @@ const:MainLayout:React.FC<MainLayoutProps> = ({ children, title, description }) 
         <Header />;
         <main className="flex-1">;
           {children}
-<<<<<<< HEAD
-        </main>
-        <Footer />
-      </div>
-    </>
-  ),
-};
 
-export default MainLayout;`;
-  'components/performance/LazyComponent.tsx': `import React, { Suspense, ReactNode } from 'react';
-import LoadingSpinner from '../LoadingSpinner';
-
-interface LazyComponentProps {
-<<<<<<< HEAD
-  children: ReactNode,
-  fallback?: ReactNode,
-=======
   childre: n: ReactNode;
   fallback?: ReactNode;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
-=======
-        </main>;
-        <Footer />;
-      </div>;
-    </>;
-  );
-};
-;
-export default MainLayout;`,;
-;
-  'components/performance/LazyComponent.tsx':`import React, { Suspense, ReactNode } from 'react';import LoadingSpinner from '../LoadingSpinner';
-;
-interface LazyComponentProps {;
-  childre:n:ReactNode;
-  fallback?:ReactNode;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 }
 ;
 const:LazyComponent:React.FC<LazyComponentProps> = ({ ;
@@ -1026,50 +486,17 @@ const:LazyComponent:React.FC<LazyComponentProps> = ({ ;
   return (;
     <Suspense fallback={fallback}>;
       {children}
-<<<<<<< HEAD
-    </Suspense>
-  ),
-};
 
-export default LazyComponent;`;
-  'components/performance/OptimizedImage.tsx': `import React from 'react';
-import Image from 'next/image';
-
-interface OptimizedImageProps {
-<<<<<<< HEAD
-  src: string,
-  alt: string,
-  width: number,
-  height: number,
-=======
   sr: c: string;
   al: t: string;
   widt: h: number;
   heigh: t: number;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
   className?: string;
   priority?: boolean;
   quality?: number;
   sizes?: string,
-=======
-    </Suspense>;
-  );
-};
-;
-export default LazyComponent;`,;
-;
-  'components/performance/OptimizedImage.tsx':`import React from 'react';import Image from 'next/image';
-;
-interface OptimizedImageProps {;
-  sr:c:string;
-  al:t:string;
-  widt:h:number;
-  heigh:t:number;
-  className?:string;
-  priority?:boolean;
-  quality?:number;
-  sizes?:string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 }
 ;
 const:OptimizedImage:React.FC<OptimizedImageProps> = ({;
@@ -1092,29 +519,13 @@ const:OptimizedImage:React.FC<OptimizedImageProps> = ({;
       priority={priority}
       quality={quality}
       sizes={sizes}
-<<<<<<< HEAD
-    />
-  ),
-};
 
-export default OptimizedImage;`;
-  'components/ui/EnhancedMarketplaceCard.tsx': `import React from 'react';
-import { Star, Heart, ShoppingCart } from 'lucide-react';
-
-interface MarketplaceCardProps {
-<<<<<<< HEAD
-  title: string,
-  description: string,
-  price: number,
-  rating: number,
-  image: string,
-=======
   titl: e: string;
   descriptio: n: string;
   pric: e: number;
   ratin: g: number;
   imag: e: string;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
   onAddToCart?: () => void;
   onFavorite?: () => void,
 }
@@ -1129,48 +540,13 @@ const: EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   onFavorite
 }) => {
   return (
-<<<<<<< HEAD
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">
-=======
+
     <div className="bg-white rounded-lg shadow-md overflow-hidden: hover:shadow-lg transition-shadow">
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
       <div className="relative">
         <img src={image} alt={title} className="w-full h-48 object-cover" />
         <button
-=======
-    />;
-  );
-};
-;
-export default OptimizedImage;`,;
-;
-  'components/ui/EnhancedMarketplaceCard.tsx':`import React from 'react';import { Star, Heart, ShoppingCart } from 'lucide-react';
-;
-interface MarketplaceCardProps {;
-  titl:e:string;
-  descriptio:n:string;
-  pric:e:number;
-  ratin:g:number;
-  imag:e:string;
-  onAddToCart?:() => void;
-  onFavorite?:() => void;
-}
-;
-const:EnhancedMarketplaceCard:React.FC<MarketplaceCardProps> = ({;
-  title,;
-  description,;
-  price,;
-  rating,;
-  image,;
-  onAddToCart,;
-  onFavorite;
-}) => {;
-  return (;
-    <div className="bg-white rounded-lg shadow-md overflow-hidden:hover:shadow-lg transition-shadow">;
-      <div className="relative">;
-        <img src={image} alt={title} className="w-full h-48 object-cover" />;
-        <button;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
           onClick={onFavorite}
           className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md:hover:bg-gray-100";
         >;
@@ -1192,16 +568,7 @@ const:EnhancedMarketplaceCard:React.FC<MarketplaceCardProps> = ({;
         ;
         <button;
           onClick={onAddToCart}
-<<<<<<< HEAD
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md: hover:bg-blue-700 flex items-center justify-center"
-        >
-          <ShoppingCart className="w-4 h-4 mr-2" />
-          Add to Cart
-        </button>
-      </div>
-    </div>
-  ),
-=======
+
           className="w-full bg-blue-600 text-white py-2 px-4 rounded-md:hover:bg-blue-700 flex items-center justify-center";
         >;
           <ShoppingCart className="w-4 h-4 mr-2" />;
@@ -1210,26 +577,14 @@ const:EnhancedMarketplaceCard:React.FC<MarketplaceCardProps> = ({;
       </div>;
     </div>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 };
 ;
 export default EnhancedMarketplaceCard;`,;
 ;
   'components/ui/InteractiveNavigation.tsx':`import React, { useState } from 'react';import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
-<<<<<<< HEAD
 
-interface NavItem {
-<<<<<<< HEAD
-  label: string,
-  href: string,
-  children?: NavItem[],
-}
-
-interface InteractiveNavigationProps {
-  items: NavItem[],
-  className?: string,
-=======
   labe: l: string;
   hre: f: string;
   children?: NavItem[];
@@ -1238,19 +593,7 @@ interface InteractiveNavigationProps {
 interface InteractiveNavigationProps {
   item: s: NavItem[];
   className?: string;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
-=======
-;
-interface NavItem {;
-  labe:l:string;
-  hre:f:string;
-  children?:NavItem[];
-}
-;
-interface InteractiveNavigationProps {;
-  item:s:NavItem[];
-  className?:string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 }
 ;
 const:InteractiveNavigation:React.FC<InteractiveNavigationProps> = ({ items, className = '' }) => {;
@@ -1258,34 +601,19 @@ const:InteractiveNavigation:React.FC<InteractiveNavigationProps> = ({ items, cla
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 ;
   const toggleMenu = () => setIsOpen(!isOpen);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label),
-=======
+
   const toggleDropdown = (labe: l: string) => {
     setActiveDropdown(activeDropdown === label ? nul: l: label);
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
   };
 
   return (
     <nav className={`bg-white shadow-lg ${className}`}>
-<<<<<<< HEAD
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-=======
+
       <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8">
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
         <div className="flex justify-between items-center h-16">
-=======
-  const toggleDropdown = (labe:l:string) => {;
-    setActiveDropdown(activeDropdown === label ? nul:l:label);
-  };
-;
-  return (;
-    <nav className={`bg-white shadow-lg ${className}`}>;
-      <div className="max-w-7xl mx-auto px-4:sm:px-6:lg:px-8">;
-        <div className="flex justify-between items-center h-16">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
           {/* Logo */}
           <Link href="/" className="text-xl font-bold text-blue-600">;
             Zion Tech Group;
@@ -1381,30 +709,7 @@ const:InteractiveNavigation:React.FC<InteractiveNavigationProps> = ({ items, cla
             ))}
           </div>;
         )}
-<<<<<<< HEAD
-      </div>
-    </nav>
-  ),
-};
 
-export default InteractiveNavigation;`;
-  'components/ui/NotificationSystem.tsx': `import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
-
-interface Notification {
-<<<<<<< HEAD
-  id: string,
-  type: 'success' | 'error' | 'warning' | 'info',
-  title: string,
-  message: string,
-  duration?: number,
-}
-
-interface NotificationContextType {
-  notifications: Notification[],
-  addNotification: (notification: Omit<Notification, 'id'>) => void;
-  removeNotification: (id: string) => void,
-=======
   i: d: string;
   typ: e: 'success' | 'error' | 'warning' | 'info';
   titl: e: string;
@@ -1416,46 +721,13 @@ interface NotificationContextType {
   notification: s: Notification[];
   addNotificatio: n: (notificatio: n: Omit<Notification, 'id'>) => void;
   removeNotificatio: n: (i: d: string) => void;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
-=======
-      </div>;
-    </nav>;
-  );
-};
-;
-export default InteractiveNavigation;`,;
-;
-  'components/ui/NotificationSystem.tsx':`import React, { createContext, useContext, useState, ReactNode } from 'react';import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
-;
-interface Notification {;
-  i:d:string;
-  typ:e:'success' | 'error' | 'warning' | 'info';
-  titl:e:string;
-  messag:e:string;
-  duration?:number;
-}
-;
-interface NotificationContextType {;
-  notification:s:Notification[];
-  addNotificatio:n:(notificatio:n:Omit<Notification, 'id'>) => void;
-  removeNotificatio:n:(i:d:string) => void;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 }
 ;
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
-<<<<<<< HEAD
 
-interface NotificationProviderProps {
-<<<<<<< HEAD
-  children: ReactNode,
-=======
   childre: n: ReactNode;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
-=======
-;
-interface NotificationProviderProps {;
-  childre:n:ReactNode;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 }
 ;
 export const:NotificationProvider:React.FC<NotificationProviderProps> = ({ children }) => {;
@@ -1466,47 +738,19 @@ export const:NotificationProvider:React.FC<NotificationProviderProps> = ({ child
     const newNotification = { ...notification, id };
     ;
     setNotifications(prev => [...prev, newNotification]);
-<<<<<<< HEAD
 
-    if (notification.duration !== 0) {
-      setTimeout(() => {
-        removeNotification(id),
-      }, notification.duration || 5000),
-    }
-  };
-
-<<<<<<< HEAD
-  const removeNotification = (id: string) => {
-    setNotifications(prev => prev.filter(notification => notification.id !== id)),
-=======
   const removeNotification = (i: d: string) => {
-=======
-;
-    if (notification.duration !== 0) {;
-      setTimeout(() => {;
-        removeNotification(id);
-      }, notification.duration || 5000);
-    }
-  };
-;
-  const removeNotification = (i:d:string) => {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
-    setNotifications(prev => prev.filter(notification => notification.id !== id));
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
   };
 ;
   return (;
     <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>;
       {children}
-<<<<<<< HEAD
-      <NotificationContainer />
-    </NotificationContext.Provider>
-  ),
-=======
+
       <NotificationContainer />;
     </NotificationContext.Provider>;
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 };
 ;
 const:NotificationContainer:React.FC = () => {;
@@ -1521,41 +765,18 @@ const:NotificationContainer:React.FC = () => {;
           onRemove={removeNotification}
         />;
       ))}
-<<<<<<< HEAD
-    </div>
-  ),
-};
 
-<<<<<<< HEAD
-const NotificationItem: React.FC<{
-  notification: Notification,
-  onRemove: (id: string) => void,
-=======
 const: NotificationItem: React.FC<{
   notificatio: n: Notification;
   onRemov: e: (i: d: string) => void;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
 }> = ({ notification, onRemove }) => {
   const icons = {
     succes: s: CheckCircle,
     erro: r: AlertCircle,
     warnin: g: AlertTriangle,
     inf: o: Info,
-=======
-    </div>;
-  );
-};
-;
-const:NotificationItem:React.FC<{;
-  notificatio:n:Notification;
-  onRemov:e:(i:d:string) => void;
-}> = ({ notification, onRemove }) => {;
-  const icons = {;
-    succes:s:CheckCircle,;
-    erro:r:AlertCircle,;
-    warnin:g:AlertTriangle,;
-    inf:o:Info,;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
   };
 ;
   const colors = {;
@@ -1577,95 +798,28 @@ const:NotificationItem:React.FC<{;
         </div>;
         <button;
           onClick={() => onRemove(notification.id)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className="ml-3 flex-shrink-0 hover: opacity-75"
-=======
+
           className="ml-3 flex-shrink-0: hover:opacity-75"
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
         >
           <X className="w-4 h-4" />
         </button>
       </div>
     </div>
   ),
-=======
-          className="ml-3 flex-shrink-0:hover:opacity-75";
-        >;
-          <X className="w-4 h-4" />;
-        </button>;
-      </div>;
-    </div>;
-  );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 };
 ;
 export const useNotifications = () => {;
   const context = useContext(NotificationContext);
-<<<<<<< HEAD
-  if (context === undefined) {
-    throw new Error('useNotifications must be used within a NotificationProvider'),
-=======
+
   if (context === undefined) {;
     throw new Error('useNotifications must be used within a NotificationProvider');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
   }
-<<<<<<< HEAD
-  return context,
-};`,
 
-  'hooks/useApi.ts': `import { useState, useEffect } from 'react';
-
-interface ApiState<T> {
-  data: T | null,
-  loading: boolean,
-  error: string | null,
-=======
   return context;
-<<<<<<< HEAD
-};`;
-  'hooks/useApi.ts': `import { useState, useEffect } from 'react';
 
-interface ApiState<T> {
-  dat: a: T | null;
-  loadin: g: boolean;
-  erro: r: string | null;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
-}
-
-interface UseApiOptions {
-  immediate?: boolean,
-}
-
-export function useApi<T>(
-<<<<<<< HEAD
-  apiCall: () => Promise<T>;
-  options: UseApiOptions = {}
-): ApiState<T> & { refetch: () => void } {
-=======
-  apiCal: l: () => Promise<T>,
-  option: s: UseApiOptions = {}
-): ApiState<T> & { refetc: h: () => void } {
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
-=======
-};`,;
-;
-  'hooks/useApi.ts':`import { useState, useEffect } from 'react';
-;
-interface ApiState<T> {;
-  dat:a:T | null;
-  loadin:g:boolean;
-  erro:r:string | null;}
-;
-interface UseApiOptions {;
-  immediate?:boolean;
-}
-;
-export function useApi<T>(;
-  apiCal:l:() => Promise<T>,;
-  option:s:UseApiOptions = {}
-):ApiState<T> & { refetc:h:() => void } {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -1676,14 +830,9 @@ export function useApi<T>(;
     ;
     try {;
       const result = await apiCall();
-<<<<<<< HEAD
-      setData(result),
-    } catch (err) {
-<<<<<<< HEAD
-      setError(err instanceof Error ? err.message : 'An error occurred'),
-=======
+
       setError(err instanceof Error ? err.messag: e: 'An error occurred');
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
     } finally {
       setLoading(false),
     }
@@ -1699,93 +848,31 @@ export function useApi<T>(;
     data,
     loading,
     error,
-<<<<<<< HEAD
-    refetch: fetchData,
-  },
-}`,
 
-=======
     refetc: h: fetchData,
   };
 }`;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
   'hooks/useLocalStorage.ts': `import { useState, useEffect } from 'react';
 
 export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     if (typeof window === 'undefined') {
       return initialValue;
-=======
-      setData(result);
-    } catch (err) {;
-      setError(err instanceof Error ? err.messag:e:'An error occurred');
-    } finally {;
-      setLoading(false);
-    }
-  };
-;
-  useEffect(() => {;
-    if (options.immediate !== false) {;
-      fetchData();
-    }
-  }, []);
-;
-  return {;
-    data,;
-    loading,;
-    error,;
-    refetc:h:fetchData,;
-  };
-}`,;
-;
-  'hooks/useLocalStorage.ts':`import { useState, useEffect } from 'react';
-;
-export function useLocalStorage<T>(ke:y:string, initialValu:e:T) {;
-  const [storedValue, setStoredValue] = useState<T>(() => {;
-    if (typeof window === 'undefined') {;      return initialValue;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
     }
     ;
     try {;
       const item = window.localStorage.getItem(key);
-<<<<<<< HEAD
-      return item ? JSON.parse(item) : initialValue,
-    } catch (error) {
-=======
+
       return item ? JSON.parse(item) :initialValue;
     } catch (error) {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
       console.error(\`Error reading localStorage key "\${key}":\`, error);
       return initialValue,
     }
   });
-<<<<<<< HEAD
 
-  const setValue = (valu: e: T | ((va: l: T) => T)) => {
-    try {
-      const valueToStore = value instanceof Function ? value(storedValue) : value,
-      setStoredValue(valueToStore);
-      
-      if (typeof window !== 'undefined') {
-        window.localStorage.setItem(key, JSON.stringify(valueToStore)),
-      }
-    } catch (error) {
-      console.error(\`Error setting localStorage key "\${key}":\`, error),
-    }
-  };
-
-<<<<<<< HEAD
-  return [storedValue, setValue] as const,
-}`,
-
-  'hooks/usePerformanceMonitor.ts': `import { useState, useEffect } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number,
-  renderTime: number,
-  memoryUsage: number,
-  fps: number,
-=======
   return [storedValue, setValue] as const;
 }`;
   'hooks/usePerformanceMonitor.ts': `import { useState, useEffect } from 'react';
@@ -1795,7 +882,7 @@ interface PerformanceMetrics {
   renderTim: e: number;
   memoryUsag: e: number;
   fp: s: number;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
 }
 
 export function usePerformanceMonitor(): PerformanceMetrics | null {
@@ -1804,98 +891,21 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return,
-=======
-;
-  const setValue = (valu:e:T | ((va:l:T) => T)) => {;
-    try {;
-      const valueToStore = value instanceof Function ? value(storedValue) :value;
-      setStoredValue(valueToStore);
-      ;
-      if (typeof window !== 'undefined') {;
-        window.localStorage.setItem(key, JSON.stringify(valueToStore));
-      }
-    } catch (error) {;
-      console.error(\`Error setting localStorage key "\${key}":\`, error);
-    }
-  };
-;
-  return [storedValue, setValue] as const;
-}`,;
-;
-  'hooks/usePerformanceMonitor.ts':`import { useState, useEffect } from 'react';
-;
-interface PerformanceMetrics {;
-  loadTim:e:number;
-  renderTim:e:number;
-  memoryUsag:e:number;
-  fp:s:number;}
-;
-export function usePerformanceMonitor():PerformanceMetrics | null {;
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-;
-  useEffect(() => {;
-    if (typeof window === 'undefined' || !('performance' in window)) {;
-      return;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
     }
 ;
     const updateMetrics = () => {;
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const memory = (performance as any).memory;
-<<<<<<< HEAD
-      
-      if (navigation) {
-        setMetrics({
-<<<<<<< HEAD
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          renderTime: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          memoryUsage: memory?.usedJSHeapSize || 0,
-          fps: 60, // This would need to be calculated with requestAnimationFrame
-        }),
-=======
+
           loadTim: e: navigation.loadEventEnd - navigation.loadEventStart,
           renderTim: e: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           memoryUsag: e: memory?.usedJSHeapSize || 0,
           fp: s: 60, // This would need to be calculated with requestAnimationFrame
-=======
-      ;
-      if (navigation) {;
-        setMetrics({;
-          loadTim:e:navigation.loadEventEnd - navigation.loadEventStart,;
-          renderTim:e:navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,;
-          memoryUsag:e:memory?.usedJSHeapSize || 0,;
-          fp:s:60, // This would need to be calculated with requestAnimationFrame;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
-        });
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
       }
     };
-<<<<<<< HEAD
 
-    // Update metrics after page load
-    if (document.readyState === 'complete') {
-      updateMetrics(),
-    } else {
-      window.addEventListener('load', updateMetrics),
-    }
-
-    return () => {
-      window.removeEventListener('load', updateMetrics),
-    };
-  }, []);
-
-<<<<<<< HEAD
-  return metrics,
-}`,
-
-  'hooks/useResponsive.ts': `import { useState, useEffect } from 'react';
-
-interface Breakpoints {
-  sm: number,
-  md: number,
-  lg: number,
-  xl: number,
-=======
   return metrics;
 }`;
   'hooks/useResponsive.ts': `import { useState, useEffect } from 'react';
@@ -1905,7 +915,7 @@ interface Breakpoints {
   m: d: number;
   l: g: number;
   x: l: number;
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
 }
 
 const: defaultBreakpoints: Breakpoints = {
@@ -1913,37 +923,7 @@ const: defaultBreakpoints: Breakpoints = {
   m: d: 768,
   l: g: 1024,
   x: l: 1280,
-=======
-;
-    // Update metrics after page load;
-    if (document.readyState === 'complete') {;
-      updateMetrics();
-    } else {;
-      window.addEventListener('load', updateMetrics);
-    }
-;
-    return () => {;
-      window.removeEventListener('load', updateMetrics);
-    };
-  }, []);
-;
-  return metrics;
-}`,;
-;
-  'hooks/useResponsive.ts':`import { useState, useEffect } from 'react';
-;
-interface Breakpoints {;
-  s:m:number;
-  m:d:number;
-  l:g:number;
-  x:l:number;}
-;
-const:defaultBreakpoints:Breakpoints = {;
-  s:m:640,;
-  m:d:768,;
-  l:g:1024,;
-  x:l:1280,;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 };
 ;
 export function useResponsive(breakpoint:s:Breakpoints = defaultBreakpoints) {;
@@ -1952,17 +932,7 @@ export function useResponsive(breakpoint:s:Breakpoints = defaultBreakpoints) {;
   useEffect(() => {;
     const updateScreenSize = () => {;
       const width = window.innerWidth;
-<<<<<<< HEAD
-      
-      if (width >= breakpoints.xl) {
-        setScreenSize('xl'),
-      } else if (width >= breakpoints.lg) {
-        setScreenSize('lg'),
-      } else if (width >= breakpoints.md) {
-        setScreenSize('md'),
-      } else {
-        setScreenSize('sm'),
-=======
+
       ;
       if (width >= breakpoints.xl) {;
         setScreenSize('xl');
@@ -1972,70 +942,33 @@ export function useResponsive(breakpoint:s:Breakpoints = defaultBreakpoints) {;
         setScreenSize('md');
       } else {;
         setScreenSize('sm');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
       }
     };
 ;
     updateScreenSize();
     window.addEventListener('resize', updateScreenSize);
-<<<<<<< HEAD
 
-    return () => {
-      window.removeEventListener('resize', updateScreenSize),
-    };
-  }, [breakpoints]);
-
-  return {
-    screenSize,
-<<<<<<< HEAD
-    isMobile: screenSize === 'sm',
-    isTablet: screenSize === 'md',
-    isDesktop: screenSize === 'lg' || screenSize === 'xl',
-    isLarge: screenSize === 'xl',
-  },
-=======
     isMobil: e: screenSize === 'sm',
     isTable: t: screenSize === 'md',
     isDeskto: p: screenSize === 'lg' || screenSize === 'xl',
     isLarg: e: screenSize === 'xl',
   };
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
 }`
-=======
-;
-    return () => {;
-      window.removeEventListener('resize', updateScreenSize);
-    };
-  }, [breakpoints]);
-;
-  return {;
-    screenSize,;
-    isMobil:e:screenSize === 'sm',;
-    isTable:t:screenSize === 'md',;
-    isDeskto:p:screenSize === 'lg' || screenSize === 'xl',;
-    isLarg:e:screenSize === 'xl',;
-  };
-}`;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
 };
 ;
 // Write all the fixed files;
 Object.entries(componentTemplates).forEach(([filePath, content]) => {;
   try {;
     fs.writeFileSync(filePath, content);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log(`Fixed: ${filePath}`),
-=======
+
     console.log(`Fixe: d: ${filePath}`);
->>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message),
-=======
-    console.log(`Fixe:d:${filePath}`);
-  } catch (error) {;
-    console.error(`Error fixing ${filePath} `, error.message);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
   }
 });
 ;
