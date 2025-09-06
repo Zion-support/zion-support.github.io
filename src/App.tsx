@@ -29,16 +29,19 @@ const Home = () => (
           title="AI Services"
           description="Transform your business with cutting-edge AI solutions."
           icon="✨"
+          features={["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]}
         />
         <ServiceCard
           title="Cybersecurity"
           description="Protect your digital assets with advanced security solutions."
           icon="🔒"
+          features={["Threat Detection", "Data Encryption", "Security Audits", "Incident Response"]}
         />
         <ServiceCard
           title="Cloud Infrastructure"
           description="Scale your operations with robust cloud solutions."
           icon="☁️"
+          features={["Cloud Migration", "Auto Scaling", "Load Balancing", "Disaster Recovery"]}
         />
       </div>
 
