@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Button from '../components/Button';
 import Card from '../components/Card';
 
@@ -21,22 +22,50 @@ const Contact: React.FC = () => {
     e.preventDefault();
     alert('Message Sent! We will get back to you shortly.');
     console.log('Form submitted:', formData);
+    setFormData({ name: '', email: '', company: '', message: '' });
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+    <motion.div 
+      className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
+        <motion.div className="text-center mb-16" variants={itemVariants}>
+          <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Contact Our Team
           </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto animate-slide-up">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             We're here to help! Reach out to us for any inquiries, support, or partnership opportunities.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="bg-slate-800 p-8 rounded-lg shadow-lg animate-fade-in">
+        <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12" variants={itemVariants}>
+          <motion.div className="bg-slate-800 p-8 rounded-lg shadow-lg" variants={itemVariants}>
             <h2 className="text-3xl font-bold mb-6 text-white">Send Us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -102,9 +131,9 @@ const Contact: React.FC = () => {
                 Send Message
               </Button>
             </form>
-          </div>
+          </motion.div>
 
-          <div className="space-y-8 animate-slide-up">
+          <motion.div className="space-y-8" variants={itemVariants}>
             <Card
               title="General Inquiries"
               description="info@ziontechgroup.com"
@@ -140,10 +169,10 @@ const Contact: React.FC = () => {
               description="Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM\nSunday: Closed"
               className="bg-slate-800"
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

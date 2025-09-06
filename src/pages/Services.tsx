@@ -1,23 +1,52 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import ServiceCard from '../components/ServiceCard';
 import Card from '../components/Card';
+import Button from '../components/Button';
 
 const Services: React.FC = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+    <motion.div 
+      className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
+        <motion.div className="text-center mb-16" variants={itemVariants}>
+          <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Our Cutting-Edge Services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             At Zion Tech Group, we offer a comprehensive suite of technology solutions designed to empower your business
             and drive innovation across all sectors.
           </p>
-        </div>
+        </motion.div>
 
         {/* Main Services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" variants={itemVariants}>
           <ServiceCard
             title="AI & Machine Learning"
             description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
@@ -48,33 +77,33 @@ const Services: React.FC = () => {
             description="Unlock insights from your data with advanced analytics, business intelligence, and data visualization."
             icon="📊"
           />
-        </div>
+        </motion.div>
 
         {/* Why Choose Our Services */}
-        <div className="mt-16 text-center">
+        <motion.div className="mt-16 text-center" variants={itemVariants}>
           <h2 className="text-4xl font-bold mb-8">Why Choose Zion Tech Group for Your Services?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={itemVariants}>
             <Card title="Expert Team" description="Our specialists are leaders in their respective fields." />
             <Card title="Tailored Solutions" description="Custom services designed to meet your unique business needs." />
             <Card title="Innovation Driven" description="Always at the forefront of technological advancements." />
             <Card title="Reliable Support" description="Dedicated 24/7 support to ensure seamless operations." />
             <Card title="Scalable & Secure" description="Solutions built for growth and robust security." />
             <Card title="Proven Track Record" description="Successful implementations across diverse industries." />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
+        <motion.div className="text-center mt-16" variants={itemVariants}>
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Contact us today to discuss your project and discover how our expert services can drive your success.
           </p>
-          <Button variant="primary" size="large" onClick={() => alert('Get a Free Consultation!')}>
+          <Button variant="primary" size="large" onClick={() => window.location.href = '/contact'}>
             Get a Free Consultation
           </Button>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
