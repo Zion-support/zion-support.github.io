@@ -26,8 +26,13 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req && req.method !== 'GET') {
     return res && res.setHeader('Allow', 'GET').status(405).end('Method Not Allowed');
+=======
+  if (req.method !== 'GET') {;
+    return res.setHeader('Allow', 'GET').status(405).end('Method Not Allowed');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   const { slug, lang } = req && req.query as { slug: string; lang?: string };
   try {
@@ -54,8 +59,13 @@ export default async function handler(
     return res && res.status(500).json({ error: e && e.message });
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req && req.method !== 'GET') {
     return res && res.setHeader('AllowGET').status(405).end('Method Not Allowed');
+=======
+  if (req.method !== 'GET') {;
+    return res.setHeader('AllowGET').status(405).end('Method Not Allowed');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   const { slug, lang } = req && req.query as { slug: string, lang?: string };
   try {
@@ -73,6 +83,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(500).json({ error: e && e.message })
   };
 }
+<<<<<<< HEAD
 import {supabase, as, supabase_client} from '@/utils / supabase / client';
 import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
 import type { TalentProfile } from '@/utils / types / talent';
@@ -189,3 +200,17 @@ if (throw error) {
   }
 
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

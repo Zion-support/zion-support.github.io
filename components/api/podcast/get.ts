@@ -25,11 +25,22 @@ function ensureStorage() {
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   ensureStorage();
   const { id } = req.query as { id?: string };
+=======
+<<<<<<< HEAD
+  ensureStorage()
+  const { id } = req.query as { id?: string }
+=======
+  ensureStorage(),;
+  const { id } = req.query as { id?: string };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const episode = episodes.find((e) => e.id === id);
   if (!episode) return res.status(404).json({ error: 'Not found' });
+<<<<<<< HEAD
   return res.status(200).json({ episode })
 }
   ensureStorage(),
@@ -93,3 +104,22 @@ function handler() {
   return res.status (200).json ({ episode });
 
 }
+=======
+<<<<<<< HEAD
+  return res.status(200).json({ episode });  const episode = episodes.find((e) => e.id === id);
+  if (!episode) return res.status(404).json({ error: 'Not found' });
+
+  return res.status(200).json({ episode })
+}
+<<<<<<< HEAD
+=======
+  return res.status(200).json({ episode });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+=======
+  return res.status(200).json({ episode });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

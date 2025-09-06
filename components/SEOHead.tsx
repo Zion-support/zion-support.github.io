@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +17,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import React from 'react';
 import Head from 'next / head';
 import { use_router } from 'next / router';
@@ -92,12 +95,21 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta property="og:site_name" content="Zion Tech Group" />;
       <meta property="og:locale" content="en_US" />;
       {/* Twitter Card Tags */}
+<<<<<<< HEAD
       <meta name="twitter:card" content={twitterCard} />;
       <meta name="twitter:title" content={fullTitle} />;
       <meta name="twitter:description" content={description} />;
       <meta name="twitter:image" content={imageUrl} />;
       <meta name="twitter:site" content="@ziontechgroup" />;
       <meta name="twitter:creator" content="@ziontechgroup" />;
+=======
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={imageUrl} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Additional Meta Tags */}
       <meta name="theme-color" content="#2563eb" />;
       <meta name="msapplication-TileColor" content="#2563eb" />;
@@ -128,6 +140,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta name="twitter:site" content="@ziontechgroup" />;
       <meta name="twitter:creator" content="@ziontechgroup" />;
       {/* Additional SEO */}
+<<<<<<< HEAD
       <meta name="theme-color" content="#1e40af" />;
       <meta name="msapplication-TileColor" content="#1e40af" />;
       <meta name="msapplication-config" content="/browserconfig && browserconfig.xml" />;
@@ -233,20 +246,33 @@ const SEOHead: React.FC < SEOHeadProps> = ({
       <meta name="theme - color" content="#1e40af" />;
       <meta name="msapplication - TileColor" content="#1e40af" />;
       <meta name="msapplication - config" content="/browserconfig.xml" />;
+=======
+      <meta name="theme-color" content="#1e40af" />
+      <meta name="msapplication-TileColor" content="#1e40af" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Structured Data */}
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
+<<<<<<< HEAD
           __html: JSON && JSON.stringify(structuredData || defaultStructuredData)
         }}
       />;
+=======
+          __html: JSON.stringify(structuredData |defaultStructuredData)
+        }}
+      />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
       <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;
       <link rel="preconnect" href="https://images && images.unsplash.com" />;
     </Head>;
   );
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
           __html: JSON.stringify (structured_data || defaultStructuredData);
         }}
       />;
@@ -258,3 +284,10 @@ const SEOHead: React.FC < SEOHeadProps> = ({
 }
 ;
 export default SEOHead;
+=======
+=======
+};
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default SEOHead;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

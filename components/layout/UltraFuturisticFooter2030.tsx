@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
@@ -250,6 +251,44 @@ const serviceCategories = [;
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030' }
     ];
   }
+=======
+<<<<<<< HEAD
+import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+import {
+<<<<<<< HEAD
+  Phone
+  Mail
+  MapPin
+  Globe
+  Zap
+  Brain
+  Atom
+  Rocket
+  Shield
+  Cpu
+  Target
+  Microscope
+  Users
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Youtube
+  Github
+  ArrowRight
+  Heart
+  Star
+  Award
+  CheckCircle;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Phone,
   Mail,
   MapPin,
@@ -272,6 +311,7 @@ const serviceCategories = [;
   ArrowRight,
   Heart,
   Star,
+<<<<<<< HEAD
   Award,
   CheckCircle,} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom,
@@ -485,6 +525,154 @@ const quickLinks = [;
   { name: 'Resources', href: '/resources' },;
   { name: 'Case Studies', href: '/case-studies' },;
   { name: 'Blog', href: '/blog' },;
+=======
+  Award,;
+  CheckCircle,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  Rocket, Shield, Cpu, Target, Microscope, Users;
+  Facebook, Twitter, Linkedin, Instagram, Youtube;
+  Github, ArrowRight, Heart, Star, Award, CheckCircle
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
+}
+const serviceCategories = [
+  {
+    title: '🚀 AI & Consciousness'
+    services: [
+      {
+        name: 'AI Consciousness Evolution'
+        href: '/ai-consciousness-evolution-platform'
+      }
+      {
+        name: 'AI Emotional Intelligence'
+        href: '/ai-emotion-intelligence-platform'
+      }
+      {
+        name: 'AI Creativity Orchestrator'
+        href: '/ai-creativity-orchestrator'
+      }
+      {
+        name: 'AI Autonomous Business Manager'
+        href: '/ai-autonomous-business-manager'
+      }
+    ]
+  }
+    title: '⚛️ Quantum & Emerging Tech'
+    services: [
+      {
+        name: 'Quantum Internet Security'
+        href: '/quantum-internet-security-gateway'
+      }
+      {
+        name: 'Quantum Learning Accelerator'
+        href: '/quantum-learning-accelerator'
+      }
+      {
+        name: 'Quantum Financial Trading'
+        href: '/quantum-financial-trading-platform'
+      }
+      {
+        name: 'Quantum Cloud Infrastructure'
+        href: '/quantum-cloud-infrastructure'
+      }
+    ]
+  }
+  {
+    title: '🧬 Biotech & DNA Computing'
+    services: [
+      {
+        name: 'DNA Computing Platform'
+        href: '/biotech-dna-computing-platform'
+      }
+      {
+        name: 'Personalized Nutrition'
+        href: '/biotech-personalized-nutrition'
+      }
+      {
+        name: 'Predictive Health Analytics'
+        href: '/ai-predictive-health-analytics'
+      }
+      { name: 'Research Automation', href: '/advanced-research-automation' }
+    ]
+  },  {
+    title: '🏙️ Enterprise IT Solutions'
+    services: [
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },      { name: 'DNA Computing Platform', href: '/biotech-dna-computing-platform' }
+      { name: 'Personalized Nutrition', href: '/biotech-personalized-nutrition' }
+      { name: 'Predictive Health Analytics', href: '/ai-predictive-health-analytics' }
+      { name: 'Research Automation', href: '/advanced-research-automation' }
+    ]
+  }
+    title: '🏙️ Enterprise IT Solutions'
+    services: [
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' }
+      {
+        name: 'Autonomous IT Operations'
+        href: '/autonomous-it-operations-center'
+      }
+      {
+        name: 'AI Enterprise Security'
+        href: '/ai-powered-enterprise-security'
+      }
+      {
+        name: 'Intelligent Data Governance'
+        href: '/intelligent-data-governance'
+      }
+    ]
+  }
+    title: '🌌 Space & Metaverse Tech'
+    services: [
+      {
+        name: 'Space Mining Automation'
+        href: '/space-mining-automation-platform'
+      }
+      {
+        name: 'Metaverse Digital Reality'
+        href: '/metaverse-digital-reality-platform'
+      }
+      { name: 'Quantum Research Platform', href: '/quantum-research-platform' }
+      { name: 'AI Research Assistant', href: '/ai-research-assistant' }
+    ]
+  }
+  {
+    title: '🎯 2030 Innovative Micro SAAS'
+    services: [
+      {
+        name: 'AI Business Intelligence Suite 2030'
+        href: '/ai-business-intelligence-suite-2030'
+      }
+      {
+        name: 'AI Customer Experience Platform 2030'
+        href: '/ai-customer-experience-platform-2030'
+      }
+      {
+        name: 'AI Marketing Automation Suite 2030'
+        href: '/ai-marketing-automation-2030'
+      }
+      {
+        name: 'AI HR Management Suite 2030'
+        href: '/ai-hr-management-suite-2030'
+      }
+    ]
+  },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' }
+      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' }
+      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' }
+      { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030' }
+    ]
+  }
+const quickLinks = [
+  { name: 'Home', href: '/' }
+  { name: 'Services', href: '/services' }
+  { name: 'Solutions', href: '/solutions' }
+  { name: 'Pricing', href: '/pricing' }
+  { name: 'Resources', href: '/resources' }
+  { name: 'Case Studies', href: '/case-studies' }
+  { name: 'Blog', href: '/blog' }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   { name: 'Contact', href: '/contact' },];  { name: 'Contact', href: '/contact' }
 ];
 const companyInfo = [;
@@ -515,6 +703,7 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
   { name: 'GitHub', href: 'https://github && github.com/ziontechgroup', icon: Github },;
 ];
+<<<<<<< HEAD
 const certifications = [;
   'ISO 27001 Certified',;
   'SOC 2 Type II Compliant',;
@@ -524,6 +713,21 @@ const certifications = [;
   'FedRAMP Authorized',];
 export default function UltraFuturisticFooter2030() {;
   return (
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+const certifications = [
+  'ISO 27001 Certified'
+  'SOC 2 Type II Compliant'
+  'GDPR Compliant'
+  'HIPAA Compliant'
+  'PCI DSS Level 1'
+  'FedRAMP Authorized',];
+export default function UltraFuturisticFooter2030() {
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>];
 const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },;
@@ -653,7 +857,13 @@ function UltraFuturisticFooter2030() {
 ];
 export default function UltraFuturisticFooter2030() {
   return (
+<<<<<<< HEAD
     <footer className="bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden">
+=======
+<<<<<<< HEAD
+    <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
@@ -698,6 +908,7 @@ export default function UltraFuturisticFooter2030() {
                 Transforming businesses through innovative solutions and intelligent automation.;
               </p>;
               {/* Contact Info */}
+<<<<<<< HEAD
               <div className="space-y-3">;
                 <div className="flex items-center space-x-3 text-sm text-gray-300">;
                   <Phone className="w-4 h-4 text-purple-400" />;
@@ -816,6 +1027,75 @@ export default function UltraFuturisticFooter2030() {
                 <Rocket className="w-5 h-5 text-purple-400" />
                 <span>Our Services</span>
               </h4>
+=======
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <Phone className="w-4 h-4 text-purple-400" />
+                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-purple-400 transition-colors">
+                    {contactInfo.mobile}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <Mail className="w-4 h-4 text-purple-400" />
+                  <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
+                    {contactInfo.email}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <MapPin className="w-4 h-4 text-purple-400" />
+                  <span>{contactInfo.address}</span>
+                </div>
+                <div className="flex items-center space-x-3 text-sm text-gray-300">
+                  <Globe className="w-4 h-4 text-purple-400" />
+                  <a href={contactInfo.website} className="hover:text-purple-400 transition-colors">
+                    {contactInfo.website.replace('https://', '')}
+=======
+
+<<<<<<< HEAD
+];
+
+export default function UltraFuturisticFooter2030() {
+  return (
+
+                    {contactInfo.website.replace('https://', '')}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                    {contactInfo.website.replace('https://', '')}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  </a>
+                </div>
+              </div>
+            </div>
+            {/* Service Categories */}
+            <div className='space-y-6'>
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
+                <Rocket className='w-5 h-5 text-purple-400' />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                <span>Our Services</span>
+              </h4>
+              <div className='grid grid-cols-1 gap-4'>
+                {serviceCategories.slice(0, 3).map((category, index) => (
+                  <div key={index} className='space-y-2'>
+                    <h5 className='text-sm font-medium text-purple-300'>
+                      {category.title}
+                    </h5>
+                    <div className='space-y-1'>                      {category.services.map((service, serviceIndex) => (
+                        <Link
+                          key={serviceIndex}
+                          href={service.href}
+                          className='block text-xs text-gray-400 hover:text-purple-300 transition-colors'                        >                <span>Our Services</span>
+              </h4>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="grid grid-cols-1 gap-4">
                 {serviceCategories.slice(0, 3).map((category, index) => (
                   <div key={index} className="space-y-2">
@@ -825,7 +1105,11 @@ export default function UltraFuturisticFooter2030() {
                         <Link
                           key={serviceIndex}
                           href={service.href}
+<<<<<<< HEAD
 className="block text-xs text-gray-400 hover:text-purple-300 transition-colors"
+=======
+                          className='block text-xs text-gray-400 hover:text-purple-300 transition-colors'                          className="block text-xs text-gray-400 hover:text-purple-300 transition-colors"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         >
                           {service.name}
                         </Link>
@@ -833,10 +1117,36 @@ className="block text-xs text-gray-400 hover:text-purple-300 transition-colors"
                     </div>;
                   </div>;
                 ))}
+<<<<<<< HEAD
               </div>;
             </div>;
             {/* Quick Links */}
             <div className="space-y-6">
+=======
+              </div>
+            </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Quick Links */}
+            <div className='space-y-6'>
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
+                <Target className='w-5 h-5 text-cyan-400' />
+                <span>Quick Links</span>
+              </h4>
+              <div className='space-y-2'>                {quickLinks.map((link, index) => (
+                  <Link
+                    key={index}
+                    href={link.href}
+                    className='block text-sm text-gray-400 hover:text-cyan-300 transition-colors flex items-center space-x-2 group'
+                  >
+                    <ArrowRight className='w-3 h-3 group-hover:translate-x-1 transition-transform' />                    <span>{link.name}</span>            <div className="space-y-6">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h4 className="text-lg font-semibold text-white flex items-center space-x-2">
                 <Target className="w-5 h-5 text-cyan-400" />
                 <span>Quick Links</span>
@@ -873,11 +1183,16 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                   <Link
                     key={index}
                     href={link.href}
+<<<<<<< HEAD
 className="block text-xs text-gray-400 hover:text-cyan-300 transition-colors"
+=======
+                    className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors'                    className="block text-xs text-gray-400 hover:text-cyan-300 transition-colors"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >
                     {link.name}
                   </Link>
                 ))}
+<<<<<<< HEAD
               </div>;
             </div>;
             {/* Social & Certifications */}
@@ -886,6 +1201,32 @@ className="block text-xs text-gray-400 hover:text-cyan-300 transition-colors"
                 <Users className='w-5 h-5 text-green-400' />;
                 <span>Connect & Trust</span>;
               </h4>;
+=======
+              </div>
+            </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Social & Certifications */}
+            <div className='space-y-6'>
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
+                <Users className='w-5 h-5 text-green-400' />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                <span>Connect & Trust</span>
+              </h4>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {/* Social Links */}
               <div className='space-y-3'>;
                 <h5 className='text-sm font-medium text-green-300'>;
@@ -897,6 +1238,7 @@ className="block text-xs text-gray-400 hover:text-cyan-300 transition-colors"
                       href={social && social.href}                <span>Connect & Trust</span>;
               </h4>;
               {/* Social Links */}
+<<<<<<< HEAD
               <div className="space-y-3">;
                 <h5 className="text-sm font-medium text-green-300">Follow Us</h5>;
                 <div className="flex flex-wrap gap-2">;
@@ -1011,6 +1353,58 @@ className="block text-xs text-gray-400 hover:text-cyan-300 transition-colors"
                 </h5>;
                 <div className='flex flex - wrap gap - 2'>                  {social_links.map ((social, index) => (
                     <a;
+=======
+              <div className="space-y-3">
+                <h5 className="text-sm font-medium text-green-300">Follow Us</h5>
+                <div className="flex flex-wrap gap-2">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+<<<<<<< HEAD
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'
+                    >
+                      <social.icon className='w-5 h-5' />                    </a>                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40"
+                    >
+                      <social.icon className="w-5 h-5" />
+                  ))}
+                </div>
+              </div>
+=======
+
+                    </a>
+
+                  ))}
+                </div>
+              </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              {/* Certifications */}
+              <div className='space-y-3'>
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
+                  <Award className='w-4 h-4' />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  <span>Certifications</span>
+                </h5>
+                <div className='grid grid-cols-1 gap-2'>
+                  {certifications.map((cert, index) => (
+                    <div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       key={index}
                       href={social.href}                <span > Connect & Trust</span>;
               </h4>;
@@ -1081,6 +1475,44 @@ className="block text-xs text-gray-400 hover:text-cyan-300 transition-colors"
                 <Link href="/privacy" className="hover:text-purple-400 transition-colors">Privacy Policy</Link>
                 <Link href="/terms" className="hover:text-purple-400 transition-colors">Terms of Service</Link>
               </div>
+<<<<<<< HEAD
+=======
+            </div>
+          </div>
+        </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Bottom Bar */}
+        <div className='border-t border-purple-500/20'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
+            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+<<<<<<< HEAD
+              <div className='flex items-center space-x-6 text-sm text-gray-400'>;
+=======
+              <div className='flex items-center space-x-6 text-sm text-gray-400'>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+                <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
+                <Link
+                  href='/privacy'
+                  className='hover:text-purple-400 transition-colors'
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  href='/terms'
+                  className='hover:text-purple-400 transition-colors'
+                >
+                  Terms of Service
+                </Link>
+              </div>
+              <div className='flex items-center space-x-4 text-sm text-gray-400'>              </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="flex items-center space-x-4 text-sm text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Heart className="w-4 h-4 text-red-400" />
@@ -1101,6 +1533,7 @@ className="block text-xs text-gray-400 hover:text-cyan-300 transition-colors"
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
 className='hover:text-purple-400 transition-colors'>;
                   Terms of Service;
                 </Link>;
@@ -1158,7 +1591,21 @@ className='hover:text-purple-400 transition-colors'>;
           </div>;
         </div>;
       </div>;
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
     </footer>);
 }
+=======
+;
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

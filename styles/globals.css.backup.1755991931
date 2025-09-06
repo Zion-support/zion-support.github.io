@@ -894,6 +894,28 @@ body::after {
   animation: quantumSpin 2s linear infinite;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .quantum-loader::before {
   top: 0;
   left: 0;
@@ -910,9 +932,39 @@ body::after {
   bottom: 10px;
   border-bottom-color: rgba(147, 51, 234, 0.8);
   animation-duration: 2s;
+<<<<<<< HEAD
 
   animation-direction: reverse;
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> main
+  animation-direction: reverse;
+=======
+/* Print styles */
+@media print {
+  .futuristic-bg,
+  .grid-bg,
+  .quantum-bg,
+  .neural-bg {
+    background: #ffffff !important;
+    animation: none !important;
+  }
+  
+  .futuristic-card {
+    background: #ffffff !important;
+    border: 1px solid #000000 !important;
+    box-shadow: none !important;
+  }
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 /* New futuristic effects */
@@ -1015,12 +1067,54 @@ body::after {
   animation: quantumSpin 8s linear infinite;
 
 }
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+  animation-direction: reverse;}
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  animation-direction: reverse;}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  animation-direction: reverse;}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 @keyframes quantumSpin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Enhanced Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
@@ -1087,9 +1181,31 @@ body::after {
 @keyframes cyberMove {
   0% { background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
   100% { background-position: 20px 20px, 20px 30px, 30px 10px, 10px 20px; }
+<<<<<<< HEAD
 
 }
 }
+=======
+<<<<<<< HEAD
+}
+=======
+.biomedical-pulse {
+  animation: biomedicalPulse 2s ease-in-out infinite;
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+}
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 @keyframes biomedicalPulse {
   0%, 100% { 
@@ -1172,4 +1288,22 @@ body::after {
     filter: hue-rotate(10deg);
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-bcf6
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

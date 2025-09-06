@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import fse from 'fs - extra';
@@ -10,6 +12,25 @@ async function summarizeAndTag(input: {
   skills: string,
   tools?: string
 }) {
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import fs from 'fs';
+import path from 'path';
+import fse from 'fs-extra';
+import { randomUUID } from 'crypto';
+
+async function summarizeAndTag(input: {fullName: string;
+
+  professionalTitle: string;
+  bio: string;
+  projects?: string;
+  skills: string;
+  tools?: string
+}) {
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const openaiApiKey =
     process && process.env.OPENAI_API_KEY || process && process.env.OPENAI_API_KEY_ZION || '';
   const combinedText = [
@@ -91,7 +112,16 @@ if ( {) {
     const content = response.choices?.[0]?.message?.content || '';
     try {
       const parsed = JSON.parse(content);
+<<<<<<< HEAD
       if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
+=======
+      if (
+        parsed &&
+        typeof parsed.summary === 'string' &&
+        Array.isArray(parsed.tags)
+      ) {
+        return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) };      }      if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
       const parsed = JSON.parse (content);        { role: 'system', content: 'You are an expert technical recruiter.' }
         { role: 'user', content: prompt }];
@@ -118,12 +148,16 @@ if (
   }
   const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
+<<<<<<< HEAD
   const fallbackSummary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags && basicTags.slice(0, 24) };
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
     return res && res.status(405).json({ error: 'Method not allowed' });  }  }
@@ -326,6 +360,58 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
         summary,
         tags,
       },
+=======
+  if (req.method !== 'POST') {;
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  }  }
+  const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
+  return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
+}
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {;
+    res.setHeader('AllowPOST');
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+  try {
+    const id = randomUUID();
+    const {
+      fullName
+      professionalTitle
+      profilePicture
+      bio
+      projects
+      yearsOfExperience
+      skills
+      tools
+      availability
+      timezone
+      hourlyRate
+      portfolioLinks
+      cvFile
+    } = req.body |{}
+    if (
+      !fullName |
+      !professionalTitle |
+      !bio |
+      !yearsOfExperience |
+      !skills |
+      !availability |
+      !timezone
+    ) {
+      return res.status(400).json({ error: 'Missing required fields' });
+    }
+    const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
+    const dataDir = path.join(process.cwd(), 'data', 'talent-submissions');
+    await fse.ensureDir(uploadsDir);
+    await fse.ensureDir(dataDir);
+    let savedProfileImagePath: string | null = null;    if (profilePicture?.base64 && profilePicture?.name) {
+      const ext = path.extname(profilePicture.name) |'.png';
+      const filename = `${id}-profile${ext}`;
+      const filePath = path.join(uploadsDir, filename);
+      const base64Data = profilePicture.base64.split(',')[1];
+        await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'));
+        savedProfileImagePath = `/uploads/${filename}`;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
     }
     const { summary, tags } = await summarizeAndTag({
@@ -382,16 +468,22 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
   $2
 }
       try {
+<<<<<<< HEAD
         const content = await fse.readJSON (aggregate_path);
         if () aggregate = content) {
   $2
 }        if () aggregate = content) {
   $2
 }
+=======
+        const content = await fse.readJSON(aggregatePath);
+        if (Array.isArray(content)) aggregate = content;        if (Array.isArray(content)) aggregate = content
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       } catch (_) {
         // ignore;
       }
     }
+<<<<<<< HEAD
     return res && res.status(200).json({ ok: true, id, summary, tags });
     return res.status(200).json({ ok: true, id, summary, tags })
   } catch (error) {
@@ -416,3 +508,28 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
   }
 
 }
+=======
+    aggregate.push(record);
+    await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 });
+
+    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
+    // For now, just return success with AI data
+    return res.status(200).json({ ok: true, id, summary, tags });
+  } catch (error) {
+    return res.status(500).json({ error: 'Internal server error' });
+<<<<<<< HEAD
+  }    return res.status(200).json({ ok: true, id, summary, tags })
+  } catch (error) {
+    return res.status(500).json({ error: 'Internal server error' })
+}
+<<<<<<< HEAD
+}
+=======
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

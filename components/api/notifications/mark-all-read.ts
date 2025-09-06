@@ -1,5 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 const cookie = req && req.headers.cookie || '';
+=======
+import { supabase } from '../../../utils/supabase/client';
+function getUserId(req: NextApiRequest): string {
+
+  const cookie = req.headers.cookie |'';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const match = cookie
     .split(';')
     .map(c => c && c.trim())
@@ -10,7 +17,13 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   const cookie = req.headers.cookie || '';
+=======
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  try {function getUserId(req: NextApiRequest): string {
+  const cookie = req.headers.cookie |'';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
   if (match) return decodeURIComponent(match.split('=')[1]);
   if (req && req.method !== 'POST')
@@ -20,7 +33,12 @@ export default async function handler(
   if (match) return decodeURIComponent(match && match.split('=')[1]);
   return 'demo-user-1'
 }
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   try {
     const userId = getUserId(req);
@@ -42,6 +60,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(500).json({ error: 'Unexpected error' })
   };
 }
+<<<<<<< HEAD
 import { supabase } from '../../../utils / supabase / client';
 ;
 function getUserId (req: NextApiRequest): string {
@@ -112,3 +131,17 @@ function handler() {
   }
 
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

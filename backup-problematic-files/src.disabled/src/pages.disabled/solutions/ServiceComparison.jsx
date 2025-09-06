@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,3 +19,17 @@ class ErrorBoundary extends React.Component {
 }
 import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Servicecomparison() {}; return null} )}
 import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Servicecomparison() {}; return null} )}
+=======
+import React from 'react';
+
+const ServiceComparison = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ServiceComparison</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ServiceComparison;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

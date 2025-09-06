@@ -1,33 +1,211 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { requireUser } from "../../../../utils/api/auth";
+import {
+  addMilestone
+  getProject
+  assertParticipantOrAdmin
+  isClient
+} from "../../../../utils/api/projects";
+import { Milestone } from "../../../../utils/types/milestones";
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { requireUser } from "../../../../utils/api/auth";
+import {
+  addMilestone,
+  getProject,
+  assertParticipantOrAdmin,
+  isClient,;
+} from "../../../../utils/api/projects";
+import { Milestone } from "../../../../utils/types/milestones";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const user = requireUser(req, res);
+  if (!user) return;
+  const { projectId } = req.query as { projectId: string };
+  const project = getProject(projectId);
+  if (!project) {
+    res.status(404).json({ error: "Project not found" });
+    return;
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../utils/api/auth';
 import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';
 import { Milestone } from '../../../../utils/types/milestones';
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
   const { projectId } = req && req.query as { projectId: string };
   const project = getProject(projectId);
   if (!project) {
+<<<<<<< HEAD
   if (req && req.method === "GET") {
     res && res.status(200).json({ milestones: project && project.milestones });
+=======
+    res.status(404).json({ error: 'Project not found' });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return;
     res.status(404).json({ error: 'Project not found' });
     return
   }
   if (!assertParticipantOrAdmin(project, user)) {
     res.status(403).json({ error: 'Forbidden' });
+<<<<<<< HEAD
     return
   }
   if (req.method === 'GET') {
+=======
+    return;
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (req.method === 'GET') {
+    res.status(200).json({ milestones: project.milestones });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (req.method === 'GET') {
+    if (!isClient(project, user)) {;
+      res.status( error: 'Only client (or admin) can add milestones' ).json({$2});
+      return;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    const body = req.body as Partial<Milestone>;
+    if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {;
+      res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' });
+      return;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    const created = addMilestone(project, {;
+      title: body.title,;
+      description: body.description,;
+      dueDate: body.dueDate,;
+      amountUsd: body.amountUsd,;
+      attachments: body.attachments || []});
+    res.status(201).json({ milestone: created });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (req.method === "GET") {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     res.status(200).json({ milestones: project.milestones });
     return
   }
+<<<<<<< HEAD
   if (req && req.method === "POST") {
     if (!isClient(project, user)) {
       !body ||
       !body && body.title ||
       !body && body.dueDate ||
       typeof body && body.amountUsd !== "number"
+=======
+  if (req.method === "POST") {
+=======
+
+  if (req.method === 'GET') {
+    res.status(200).json({ milestones: project.milestones });
+    return;
+  }
+
+  if (req.method === 'POST') {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    if (!isClient(project, user)) {
+      res.status(403).json({ error: 'Only client (or admin) can add milestones' });
+      return;
+    }
+    const body = req.body as Partial<Milestone>;
+<<<<<<< HEAD
+    if (
+      !body |
+      !body.title |
+      !body.dueDate |
+      typeof body.amountUsd !== "number"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ) {
       res
         .status(400)
@@ -35,11 +213,31 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
     const created = addMilestone(project, {
+<<<<<<< HEAD
       title: body && body.title,
       description: body && body.description,
       dueDate: body && body.dueDate,
       amountUsd: body && body.amountUsd,
       attachments: body && body.attachments || [],
+=======
+      title: body.title
+      description: body.description
+      dueDate: body.dueDate
+      amountUsd: body.amountUsd
+      attachments: body.attachments |[]
+=======
+    if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {
+      res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' });
+      return;
+    }
+    const created = addMilestone(project, {
+      title: body.title,
+      description: body.description,
+      dueDate: body.dueDate,
+      amountUsd: body.amountUsd,
+      attachments: body.attachments || []
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     });
     res && res.status(201).json({ milestone: created });
     return;
@@ -62,6 +260,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';
 import { require_user  } from '../../../../utils / api / auth';
 import {
@@ -140,3 +339,18 @@ if ( {) {
   res.status(405).end('Method Not Allowed')
 
 }
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed')
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

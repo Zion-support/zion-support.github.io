@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { format } from 'date - fns';
 import { CalendarIcon } from 'lucide-react';
 import { UseFormReturn, ControllerRenderProps } from 'react - hook - form';
@@ -230,15 +231,68 @@ function ProjectDetailsFields() {
               <Textarea
                 placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
-                {...field}
-              />
-            </FormControl>
-            <FormDescription>
-              Be specific about what is included and any limitations
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
+=======
+
+import { format } from "date-fns",;
+import { CalendarIcon } from 'lucide-react';
+import { UseFormReturn, ControllerRenderProps } from "react-hook-form",;
+import { ;
+  FormField,;
+  FormItem, ;
+  FormLabel, ;
+  FormControl, ;
+  FormDescription, ;
+  FormMessage ;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Button } from "@/components/ui/button",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { Calendar } from "@/components/ui/calendar",;
+import { ContractFormValues } from "./ContractForm",;
+;
+interface ProjectDetailsFieldsProps {;
+  form:UseFormReturn<ContractFormValues>;
+}
+;
+export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
+  return (;
+    <>;
+      <FormField;
+        control={form.control}
+        name="projectName";
+        render={({ field } { field:ControllerRenderProps<ContractFormValues "projectName"> }) => (;
+          <FormItem>;
+            <FormLabel>Project Name</FormLabel>;
+            <FormControl>;
+              <Input placeholder="AI Website Development" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>;
         )}
+      />;
+      ;
+      <FormField;
+        control={form.control}
+        name="scopeSummary";
+        render={({ field } { field:ControllerRenderProps<ContractFormValues "scopeSummary"> }) => (;
+          <FormItem>;
+            <FormLabel>Scope Summary</FormLabel>;
+            <FormControl>;
+              <Textarea;
+                placeholder="Describe the project scope, deliverables, and expectations...";
+                className="min-h-[120px]";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                {...field}
+              />;
+            </FormControl>;
+            <FormDescription>;
+              Be specific about what is included and any limitations;
+            </FormDescription>;
+            <FormMessage />;
+          </FormItem>;
+        )}
+<<<<<<< HEAD
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
@@ -258,12 +312,35 @@ function ProjectDetailsFields() {
                         format(field.value, "PPP")
                       ) : (
                         <span>Pick a date</span>
+=======
+      />;
+      ;
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+        <FormField;
+          control={form.control}
+          name="startDate";
+          render={({ field } { field:ControllerRenderProps<ContractFormValues "startDate"> }) => (;
+            <FormItem className="flex flex-col">;
+              <FormLabel>Start Date</FormLabel>;
+              <Popover>;
+                <PopoverTrigger asChild>;
+                  <FormControl>;
+                    <Button;
+                      variant={"outline"}
+                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+                    >;
+                      {field.value ? (;
+                        format(field.value, "PPP");
+                      ) :(;
+                        <span>Pick a date</span>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                     </Button>;
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className="w-auto p-0" align="start">;
+<<<<<<< HEAD
                   <Calendar
                     mode="single"
                     selected={field && field.value}
@@ -421,6 +498,38 @@ function ProjectDetailsFields() {
                       {field && field.value ? (;
                         format(field && field.value, "PPP");
                       ) : (;
+=======
+                  <Calendar;
+                    mode="single";
+                    selected={field.value}
+                    onSelect={field.onChange}
+                    disabled={(date) => date < new Date()}
+                    initialFocus;
+                  />;
+                </PopoverContent>;
+              </Popover>;
+              <FormMessage />;
+            </FormItem>;
+          )}
+        />;
+        ;
+        <FormField;
+          control={form.control}
+          name="endDate";
+          render={({ field } { field:ControllerRenderProps<ContractFormValues "endDate"> }) => (;
+            <FormItem className="flex flex-col">;
+              <FormLabel>End Date (Optional)</FormLabel>;
+              <Popover>;
+                <PopoverTrigger asChild>;
+                  <FormControl>;
+                    <Button;
+                      variant={"outline"}
+                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+                    >;
+                      {field.value ? (;
+                        format(field.value, "PPP");
+                      ) :(;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <span>Pick a date</span>;
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -428,6 +537,7 @@ function ProjectDetailsFields() {
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className="w-auto p-0" align="start">;
+<<<<<<< HEAD
                   <Calendar
                     mode="single"
                     selected={field && field.value || undefined}
@@ -487,6 +597,14 @@ function ProjectDetailsFields() {
                     on_select={field.on_change}
                     disabled={(date) => date < form.get_values ("start_date")}
                     initial_focus;
+=======
+                  <Calendar;
+                    mode="single";
+                    selected={field.value || undefined}
+                    onSelect={field.onChange}
+                    disabled={(date) => date < form.getValues("startDate")}
+                    initialFocus;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   />;
                 </PopoverContent>;
               </Popover>;
@@ -494,6 +612,7 @@ function ProjectDetailsFields() {
                 Leave empty if the end date is flexible;
               </FormDescription>;
               <FormMessage />;
+<<<<<<< HEAD
   );
 }
             </FormItem>)}
@@ -501,3 +620,33 @@ function ProjectDetailsFields() {
       </div>;
     </>);
 }
+=======
+            </FormItem>;
+          )}
+        />;
+      </div>;
+    </>;
+  ),;}
+ import {;
+  FormField;
+FormItem;
+FormLabel;
+FormControl;
+FormDescription;
+FormMessage interface ProjectDetailsFieldsProps {;
+  form: UseFormReturn<ContractFormValues> ;
+}form ;
+}: ProjectDetailsFieldsProps) {;
+  return (<> <FormField control= {;
+  form.control ;
+}<FormItem> <FormLabel>Project Name</FormLabel> <FormControl> <Input placeholder="AI Website Development" {;
+  ...field ;
+}/> ;
+}/> <FormField ";
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormItem className="flex flex-col"> ";
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) ";
+}/> <FormField <FormItem className="flex flex-col"> ";
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormDescription> Leave empty if the end date is flexible </FormDescription> <FormMessage /> </FormItem>) ;
+}/> </div> </>) ;
+}"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

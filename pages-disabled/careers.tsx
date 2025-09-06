@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -12,6 +13,44 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
+=======
+<<<<<<< HEAD
+import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Users, Rocket, Brain, Atom, Shield, Cloud;
+  ArrowRight, MapPin, Clock, DollarSign, Star, Zap
+ } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+export default function CareersPage() {
+
+  const openPositions = [
+    {
+<<<<<<< HEAD
+      title: "Senior AI Engineer"
+      department: "AI & Machine Learning"
+=======
+      title: "Senior AI Engineer",
+      department: "AI & Machine Learning",;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      location: "San Francisco, CA / Remote";
+      type: "Full-time"
+      experience: "5+ years"
+      salary: "$150,000 - $200,000";
+      description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients"
+      requirements: [
+        "Advanced degree in Computer Science, AI, or related field";
+        "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
+        "Experience with large-scale AI model deployment";
+        "Strong background in machine learning algorithms"
+      ];
+      benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
+      icon: Brain
+      color: "from-purple-500 to-pink-500"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
     return this.props.children;
   }
@@ -292,9 +331,23 @@ import React from 'react';
                 <p className="text-white/70">{benefit && benefit.description}</p>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
+=======
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -367,6 +420,7 @@ import React from 'react';
                             {benefit}
                           </span>;
                         ))}
+<<<<<<< HEAD
                       </div>;
                     </div>;
                   </div>;
@@ -424,6 +478,36 @@ import React from 'react';
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
+=======
+                      </div>
+                    </div>
+                  </div>
+                  <div className="lg:flex-shrink-0">
+                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                      Apply Now
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* CTA Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text - center mb - 16";
@@ -559,6 +643,7 @@ import React from 'react';
     </div>;
   );
 }
+<<<<<<< HEAD
               </motion.div>))}
           </div>;
         </div>;
@@ -595,3 +680,14 @@ import React from 'react';
       <EnhancedFooter />;
     </div>);
 }
+=======
+
+      <EnhancedFooter />
+    </div>
+  )
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

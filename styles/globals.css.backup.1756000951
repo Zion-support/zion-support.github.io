@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Import Inter font for modern typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
@@ -91,18 +113,96 @@
   animation: spin-slow 20s linear infinite;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Enhanced Scrollbar */
 
+<<<<<<< HEAD
 ::-webkit-scrollbar {
 /* Enhanced Scrollbar */::-webkit-scrollbar {
 
 ::-webkit-scrollbar {
 
+=======
+/* Global styles */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Enhanced scrollbar */
+>>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
+<<<<<<< HEAD
+::-webkit-scrollbar {
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+::-webkit-scrollbar {
+/* Enhanced Scrollbar */::-webkit-scrollbar {
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+/* Enhanced Scrollbar */::-webkit-scrollbar {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+/* Enhanced Scrollbar */::-webkit-scrollbar {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   width: 12px;
 }
 
 ::-webkit-scrollbar-track {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   background: rgba(0, 0, 0, 0.4);
   border-radius: 6px;
   border: 1px solid rgba(0, 255, 255, 0.2);
@@ -124,9 +224,26 @@
 ::selection {
   background: rgba(0, 255, 255, 0.35);
   color: white;
+<<<<<<< HEAD
 
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> main
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+=======
+  background: rgba(15, 23, 42, 0.3);
+  backdrop-filter: blur(10px);
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 ::-webkit-scrollbar-thumb {
@@ -139,6 +256,26 @@
   background: linear-gradient(135deg, #0891b2, #7c3aed);
 
 }
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);}
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 ::-moz-selection {
   background: rgba(0, 255, 255, 0.5);
@@ -311,7 +448,29 @@
 
 /* Selection styles */
 ::selection {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   background-color: var(--primary);
   color: var(--primary-foreground);
 }
@@ -782,6 +941,7 @@ h3 {
   body::before,
   body::after {
     animation: none;
+<<<<<<< HEAD
 
   }
 
@@ -789,6 +949,41 @@ h3 {
   }}
 
 }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> main
+  }
+=======
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  color: white;
+>>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+  }}
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  }}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  }}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 /* Loading states */
 .loading {

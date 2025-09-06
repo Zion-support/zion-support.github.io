@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -41,10 +42,29 @@ function HelpCenterPage() {
   return (
     <>;
       <SEO;
+=======
+
+import React from "react",;
+import HelpCenter from "@/components/support/HelpCenter",;
+import { SEO } from "@/components/SEO",;
+;
+export default function HelpCenterPage() {;
+  return (;
+    <>;
+      <SEO ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         title="Help Center | Zion AI Marketplace";
         description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team.";
         keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace";
       />;
       <HelpCenter />;
+<<<<<<< HEAD
     </>);
 }
+=======
+    </>;
+  ),;
+} export default function HelpCenterPage () {
+  return (<> <SEO title="Help Center | Zion AI Marketplace" description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team." keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace" /> <HelpCenter /> </>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

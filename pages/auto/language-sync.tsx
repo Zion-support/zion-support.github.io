@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const LanguageSync: NextPage = () => {
   return (
     <div>
@@ -13,6 +20,7 @@ const LanguageSync: NextPage = () => {
           <Link href="/public/locales/pt/common.json">PT</Link>
           <Link href="/public/locales/es/common.json">ES</Link>
           <Link href="/public/locales/ar/common.json">AR</Link>
+<<<<<<< HEAD
     <div>
       <Head>
         <title>Global Language Sync Agent</title>
@@ -27,10 +35,17 @@ const LanguageSync: NextPage = () => {
           <Link href=&quot;/public/locales/es/common.json&quot;>ES</Link>
           <Link href=&quot;/public/locales/ar/common.json&quot;>AR</Link>
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         </div>
       </main>
     </div>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 export default LanguageSync;
 import type { NextPage } from 'next',
@@ -59,3 +74,19 @@ export default LanguageSync,
 
 export default LanguageSync
 
+<<<<<<< HEAD
+=======
+=======
+},
+export default LanguageSync,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+},
+<<<<<<< HEAD
+
+export default LanguageSync,;
+=======
+export default LanguageSync,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

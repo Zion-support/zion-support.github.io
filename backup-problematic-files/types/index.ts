@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Core Types
+=======
+// Contact information
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export interface ContactInfo {
 export interface ContactInfo {;
 export interface ContactInfo {
@@ -6,21 +10,39 @@ export interface ContactInfo {
   address: string, site: string,
 export interface Service {;
 }
+
+// Service interfaces
 export interface Service {
+<<<<<<< HEAD
   }
   }
+=======
+  id: string;
+  name: string;
+  description: string;
+  category: 'micro-saas' | 'ai-services' | 'it-services';
+  price: {
+    min: number;
+    max: number;
+    currency: string;
+  };
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   features: string[];
   technologies: string[];
   delivery_time: string;
   support: string;
   image?: string;
   popular?: boolean;
+<<<<<<< HEAD
   title: string;
   href: string;
   icon: string;
   color: string;
 ;
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
+
 export interface ServiceCategory {
   title: string;
   description: string;
@@ -29,6 +51,11 @@ export interface ServiceCategory {
   href: string;
   color: string;
 }
+<<<<<<< HEAD
+=======
+
+// SEO and performance
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export interface SEOProps {
   title?: string;
   description?: string;
@@ -109,6 +136,7 @@ export interface AnimationState {,
   hasError: boolean,
 };
 }
+<<<<<<< HEAD
 export interface LoadingState {
   is_loading: boolean;
   error?: string;
@@ -147,11 +175,24 @@ export interface SEOProps {
   noindex?: boolean;
   image?: string;
 }
+=======
+
+export interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+}
+
+// Loading and error states
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export interface LoadingState {
   isLoading: boolean;
   error?: string;
   progress?: number;
 }
+<<<<<<< HEAD
 export interface AnimationState {
   isLoaded: boolean;
   hasError: boolean;
@@ -163,7 +204,19 @@ export interface FormData {
   phone?: string;
   service?: string;
   message: string;
+=======
+
+export interface ErrorInfo {
+  message: string;
+  code?: string;
+  details?: any;
+  timestamp: string;
+  userAgent?: string;
+  url?: string;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
+
+// Form interfaces
 export interface ContactForm {
   name: string;
   email: string;
@@ -174,6 +227,7 @@ export interface ContactForm {
   message: string;
   preferredContact: 'email' | 'phone' | 'both';
 }
+<<<<<<< HEAD
   preferred_contact: 'email' | 'phone' | 'both';
 ;
 }
@@ -690,6 +744,9 @@ export interface ErrorInfo {
   userAgent?: string;
   url?: string;
 }
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export interface FormField {
   name: string;
   label: string;
@@ -702,8 +759,9 @@ export interface FormField {
     max?: number;
     pattern?: string;
     message?: string;
-  }
+  };
 }
+<<<<<<< HEAD
 // Environment
 export interface Environment {
   NODE_ENV: 'development' | 'production' | 'test';
@@ -712,6 +770,133 @@ export interface Environment {
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
 }
+=======
+
+// Team and company
+export interface TeamMember {
+  id: string;
+  name: string;
+  position: string;
+  bio: string;
+  image: string;
+  skills: string[];
+  linkedin?: string;
+  github?: string;
+  twitter?: string;
+}
+
+export interface CompanyInfo {
+  name: string;
+  tagline: string;
+  description: string;
+  address: {
+    street: string;
+    city: string;
+    state: string;
+    zip: string;
+    country: string;
+  };
+  contact: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  certifications: string[];
+}
+
+// Content interfaces
+export interface Testimonial {
+  id: string;
+  name: string;
+  company: string;
+  position: string;
+  content: string;
+  rating: number;
+  image?: string;
+  project?: string;
+}
+
+export interface CaseStudy {
+  id: string;
+  title: string;
+  client: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  results: string[];
+  technologies: string[];
+  duration: string;
+  teamSize: number;
+  image: string;
+  featured?: boolean;
+}
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  publishedAt: string;
+  updatedAt: string;
+  tags: string[];
+  category: string;
+  image: string;
+  featured?: boolean;
+  readTime: number;
+}
+
+// Pricing
+export interface PricingTier {
+  id: string;
+  name: string;
+  price: number;
+  currency: string;
+  period: 'month' | 'year' | 'one-time';
+  features: string[];
+  limitations?: string[];
+  popular?: boolean;
+  cta: string;
+  description: string;
+}
+
+// API interfaces
+export interface ApiRequest {
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
+  url: string;
+  data?: any;
+  params?: Record<string, any>;
+  headers?: Record<string, string>;
+}
+
+export interface ApiResponse<T> {
+  success: boolean;
+  data?: T;
+  error?: string;
+  message?: string;
+}
+
+export interface PaginationParams {
+  page: number;
+  limit: number;
+  sort?: string;
+  order?: 'asc' | 'desc';
+}
+
+export interface PaginatedResponse<T> {
+  data: T[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    pages: number;
+    hasNext: boolean;
+    hasPrev: boolean;
+  };
+}
+
+// User and preferences
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export interface User {
   id: string;
   email: string;
@@ -749,6 +934,43 @@ export interface User {
     features: string[];
   }
 }
+<<<<<<< HEAD
+=======
+
+export interface UserPreferences {
+  theme: 'light' | 'dark' | 'system';
+  language: string;
+  accessibility: AccessibilitySettings;
+  notifications: {
+    email: boolean;
+    browser: boolean;
+    marketing: boolean;
+  };
+}
+
+export interface AccessibilitySettings {
+  highContrast: boolean;
+  fontSize: number;
+  reducedMotion: boolean;
+  screenReader: boolean;
+}
+
+// Navigation
+export interface NavigationItem {
+  name: string;
+  href: string;
+  submenu?: NavigationItem[];
+  external?: boolean;
+}
+
+export interface SocialLink {
+  platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
+  url: string;
+  label: string;
+}
+
+// Notifications
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export interface Notification {
   id: string;
   type: 'info' | 'success' | 'warning' | 'error';
@@ -764,6 +986,65 @@ export interface Notification {
   priority: 'low' | 'medium' | 'high';
   expires?: Date;
 }
+<<<<<<< HEAD
+=======
+
+// Project management
+export interface Project {
+  id: string;
+  name: string;
+  description: string;
+  status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
+  priority: 'low' | 'medium' | 'high' | 'critical';
+  startDate: Date;
+  endDate: Date;
+  budget: {
+    allocated: number;
+    spent: number;
+    currency: string;
+  };
+  team: {
+    lead: string;
+    members: string[];
+    external: string[];
+  };
+  client: {
+    name: string;
+    contact: string;
+    industry: string;
+  };
+  deliverables: {
+    name: string;
+    description: string;
+    status: 'pending' | 'in-progress' | 'completed' | 'review';
+    dueDate: Date;
+  }[];
+  risks: {
+    description: string;
+    probability: 'low' | 'medium' | 'high';
+    impact: 'low' | 'medium' | 'high';
+    mitigation: string;
+  }[];
+  dependencies: {
+    project: string;
+    type: 'blocking' | 'influencing';
+    description: string;
+  }[];
+  metrics: {
+    name: string;
+    value: number;
+    unit: string;
+    target: number;
+  }[];
+  lessons: {
+    learned: string;
+    category: 'technical' | 'process' | 'communication' | 'management';
+    impact: 'positive' | 'negative' | 'neutral';
+  }[];
+}
+
+// Component props
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export interface BaseComponentProps {
   class_name?: string;
   children?: React.ReactNode;
@@ -787,6 +1068,7 @@ export interface InputProps {
   error?: string;
   required?: boolean;
 }
+<<<<<<< HEAD
 export interface ApiRequest {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   url: string;
@@ -884,12 +1166,17 @@ export interface FormField {
   }
 }
 // Environment;
+=======
+
+// Environment
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export interface Environment {
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
+<<<<<<< HEAD
 }
 export interface Partner {
   name: string;
@@ -985,3 +1272,6 @@ export interface SuccessResponse < T> {
 }
 export type Response < T> = SuccessResponse < T> | ErrorResponse;
 ;
+=======
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

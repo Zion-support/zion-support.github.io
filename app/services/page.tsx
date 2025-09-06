@@ -1,7 +1,19 @@
+<<<<<<< HEAD
 export const metadata = {;
   title: "Services | Zion Tech Group",;
   description:;
     "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
+=======
+import Link from "next/link";
+export const metadata = {
+  title: "Services | Zion Tech Group",
+  description:
+<<<<<<< HEAD
+    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+=======
+    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 };
 export default function ServicesOverviewPage() {;
   return (
@@ -81,6 +93,7 @@ function ServicesOverviewPage() {
         />{" "}
       </div>{" "}
       <CTA />{" "}
+<<<<<<< HEAD
 function ServiceCard(): any ({;
   href,;
   title,;
@@ -88,6 +101,18 @@ function ServiceCard(): any ({;
   bullets,;
   icon,;
 }: {;
+=======
+    </div>;
+  );
+}
+function ServiceCard({
+  href
+  title
+  description
+  bullets
+  icon
+}: {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   href: string;
   title: string;
   description: string;

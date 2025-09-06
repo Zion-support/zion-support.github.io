@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const logMessage = `[${timestamp}] ${message}\n`;
+=======
+    const logMessage = `[${timestamp}] ${message}\n`;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   }
@@ -104,9 +108,7 @@ if (require.main === module) {
     case "report":
       runner.generateReport();
       break;
-    default:
-      console.log("Usage: node run-all-automations.cjs [run|report]");
-      process.exit(1);
+    default: console.log("Usage: node run-all-automations.cjs [run|report]"), process.exit(1),
   }
 }
 module.exports = RunAllAutomations;
@@ -142,4 +144,8 @@ const { execSync } = require('child_process')
         "type"
         "priority"
         "message"
+<<<<<<< HEAD
         "impact"
+=======
+        "impact"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

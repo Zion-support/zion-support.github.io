@@ -127,7 +127,9 @@ const search_data: SearchResult[] = [;
     category: "Company"
   }
 ];
+<<<<<<< HEAD
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
+<<<<<<< HEAD
 interface SearchModalProps {;
   isOpen: boolean;
   onClose: () => void;
@@ -249,6 +251,20 @@ const searchData: SearchResult[] = [;
   useEffect(() => {;
     if (isOpen && inputRef && inputRef.current) {;
       inputRef && inputRef.current.focus();
+=======
+=======
+
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [query, setQuery] = useState("");
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [recentSearches, setRecentSearches] = useState<string[]>([]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const inputRef = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      inputRef.current.focus();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
   }, [isOpen]);
   useEffect(() => {;

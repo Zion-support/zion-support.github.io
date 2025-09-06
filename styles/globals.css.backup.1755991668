@@ -187,6 +187,28 @@ h3 {
   letter-spacing: 0.1em;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Enhanced futuristic effects */
 .neon-glow {
   text-shadow: 
@@ -497,6 +519,10 @@ a:hover {
     inset 0 0 20px rgba(0, 212, 255, 0.1);
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .btn-futuristic::before {
   content: '';
 .btn-futuristic::before {  content: '';
@@ -778,13 +804,43 @@ a:hover {
 .button::before {
 
   content: '';
+<<<<<<< HEAD
 
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+.btn-futuristic::before {
+=======
+.particles-bg::before {
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  content: '';
+.btn-futuristic::before {  content: '';
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+.btn-futuristic::before {  content: '';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+.btn-futuristic::before {  content: '';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+<<<<<<< HEAD
 
   transition: left 0.5s ease;
 
@@ -792,11 +848,68 @@ a:hover {
   transition: left 0.5s ease;}
 
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+  transition: left 0.5s ease;
+=======
+  transition: left 0.5s;
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1dae
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+  transition: left 0.5s ease;}
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  transition: left 0.5s ease;}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  transition: left 0.5s ease;}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 .button:hover::before {
   left: 100%;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .btn-futuristic:hover {
   transform: translateY(-2px);
   box-shadow: 
@@ -889,9 +1002,78 @@ a:hover {
 /* Responsive design */
 @media (max-width: 768px) {
   .particles {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     display: none;
 
+<<<<<<< HEAD
+=======
+/* Enhanced typography */
+.futuristic-text {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textGradient 8s ease infinite;
+}
+
+@keyframes textGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Enhanced scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(31, 41, 55, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #2563eb, #7c3aed);
+}
+
+/* Enhanced focus states */
+.focus-ring:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Enhanced transitions */
+.transition-futuristic {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-futuristic:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .card {
+    @apply p-4;
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   
   .button {
@@ -913,7 +1095,28 @@ a:hover {
     animation: none !important;
 
   }
+<<<<<<< HEAD
 
+=======
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  }
+    display: none;  }
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    display: none;  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    display: none;  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+  
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   .cyber-grid {
     background-size: 15px 15px;
   }

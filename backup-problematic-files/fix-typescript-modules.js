@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')}} catch (error) {console.log(`Error processing ${fullPath}: ${error.message}`)}}})};// Fix all TypeScript files in api-disabled directory;
+=======
+fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')}} catch (error) {; console.log(`Error processing ${fullPath}: ${error.message}`)}}})};// Fix all TypeScript files in api-disabled directory;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const _apiDisabledDir = path.join(__dirname, 'api-disabled');
-if (fs.existsSync(apiDisabledDir)) {_; fixTypeScriptFiles(apiDisabledDir);} else {_;}
-      } catch (error) {console.log(`Error processing ${fullPath}: ${error.message}`)};};  })}
+if (fs.existsSync(apiDisabledDir)) {_; fixTypeScriptFiles(apiDisabledDir);} else {_;};
+;
+      } catch (error) {;
+        console.log(`Error processing ${fullPath}: ${error.message}`)};};  })};
 // Fix all TypeScript files in api-disabled directory;
 const apiDisabledDir = path.join(__dirname, 'api-disabled');
+<<<<<<< HEAD
 fs && fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')}} catch (error) {; console && console.log(`Error processing ${fullPath}: ${error && error.message}`)}}})};// Fix all TypeScript files in api-disabled directory;
 const _apiDisabledDir = path && path.join(__dirname, 'api-disabled');
 if (fs && fs.existsSync(apiDisabledDir)) {_; fixTypeScriptFiles(apiDisabledDir);} else {_;};
@@ -12,6 +19,9 @@ if (fs && fs.existsSync(apiDisabledDir)) {_; fixTypeScriptFiles(apiDisabledDir);
 // Fix all TypeScript files in api-disabled directory;
 const apiDisabledDir = path && path.join(__dirname, 'api-disabled');
 if (fs && fs.existsSync(apiDisabledDir)) {;
+=======
+if (fs.existsSync(apiDisabledDir)) {;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   fixTypeScriptFiles(apiDisabledDir);
   console && console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else {;
           fs && fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
@@ -35,6 +45,7 @@ if (fs && fs.existsSync(apiDisabledDir)) {,;
 const apiDisabledDir = path && path.join(__dirname, 'api-disabled'),
 if (fs && fs.existsSync(apiDisabledDir)) {,
   fixTypeScriptFiles(apiDisabledDir),
+<<<<<<< HEAD
   console.log('❌ api-disabled directory not found')};
 if (fs.existsSync(apiDisabledDir)) {fixTypeScriptFiles(apiDisabledDir);
   console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else {fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')}
@@ -143,3 +154,7 @@ if (=== '') { console.log (`Fixing empty file: ${full_path}`)) {
 } fs.writeFileSync (full_path, ' } catch (error) { console.log (`Error processing ${full_path}: ${error.message}`)} } })} const apiDisabledDir = path.join (__dirname, 'api - disabled'); if () { fixTypeScriptFiles (apiDisabledDir)) {
   $2
 } console.log ('✅ Fixed all empty TypeScript files in api - disabled directory')} else { console.log ('❌ api - disabled directory not found')}
+=======
+  console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else {,
+  console.log('❌ api-disabled directory not found')};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

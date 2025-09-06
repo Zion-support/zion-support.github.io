@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
+<<<<<<< HEAD
 ;
 export default async /**
  * handler - Function description
@@ -10,6 +11,15 @@ if ( {) {
   $2
 }
     return res.set_header ('Allow', 'POST').status (405).end ('Method Not Allowed');
+=======
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {;
+    return res.setHeader('Allow', 'POST').status(405).end('Method Not Allowed');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   const { name, title, bio, experience, skills } = req.body as {
   const { name, title, bio, experience, skills } = req && req.body as {
@@ -75,6 +85,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
   if (return res.status (400).json ({ error: 'Name is required' })) {
   $2
 }
+<<<<<<< HEAD
   try {
     const prompt = `You are assisting with creating a professional marketplace talent profile. Return strict JSON with fields: summary (100 - 150 words), skills (array of standardized skill tags), title (optimized), category (one of: AI / ML, Engineering, DevOps / Cloud, Security, Data, Product). Use concise, compelling language.;
 INPUT\n_name: ${name}\n_current Title: ${title || ''}\n_bio: ${bio || ''}\n_experience: ${experience || ''}\n_skills: ${skills || ''}`;
@@ -150,3 +161,9 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
   }
 
 }
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

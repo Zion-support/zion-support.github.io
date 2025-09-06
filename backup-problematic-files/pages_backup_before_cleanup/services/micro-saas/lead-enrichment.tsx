@@ -3,11 +3,19 @@ module.exports = default function LeadEnrichment() {; return (; <Article; title=
 import React from 'react';
 interface LeadenrichmentProps {
   // Add props here as needed
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function Leadenrichment({ }: LeadenrichmentProps) {
   return (
-    <div>
-      <h1>Leadenrichment</h1>
-      <p>This component is currently under development.</p>
+    <div className={className || ''}>
+      <h1>Lead-enrichment</h1>
+      <p>This component is under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

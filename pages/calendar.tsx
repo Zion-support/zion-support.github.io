@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {;
   Calendar,;
   Clock,;
@@ -10,6 +11,38 @@ import {;
   Video,;
   MessageSquare,;
   Building,;
+=======
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+<<<<<<< HEAD
+  Calendar
+  Clock
+  Users
+  CheckCircle
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  Video
+  MessageSquare
+  Building
+=======
+  Calendar,
+  Clock,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Video,
+  MessageSquare,
+  Building,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from "lucide-react";
 const timeSlots = [;
   { time: "9:00 AM", available: true, type: "Video Call" },;
@@ -725,6 +758,7 @@ function CalendarPage() {
               </Link>;
               <Link
                 href="/about"
+<<<<<<< HEAD
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">;
                 Learn About Us;
               </Link>;
@@ -732,6 +766,16 @@ function CalendarPage() {
           </motion && motion.div>;
         </div>;
       </section>;
+=======
+                className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
+              >
+                Learn About Us
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </div>;
   );
               <div className="mt - 8">;

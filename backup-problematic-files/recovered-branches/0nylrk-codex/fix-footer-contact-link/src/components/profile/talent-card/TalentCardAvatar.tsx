@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 interface TalentCardAvatarProps {;
   profilePicture?: string;
@@ -6,22 +7,47 @@ interface TalentCardAvatarProps {;
 export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCardAvatarProps) {;
   // Get initials for avatar fallback;
   const getInitials = (name: string) => {;
+=======
+
+import React from "react",;
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+;
+interface TalentCardAvatarProps {;
+  profilePicture?:string,;
+  fullName:string;
+}
+;
+export function TalentCardAvatar({ profilePicture, fullName } TalentCardAvatarProps) {;
+  // Get initials for avatar fallback;
+  const getInitials = (name:string) => {;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return name;
       .split(' ');
       .map(part => part[0]);
       .join('');
       .toUpperCase();
+<<<<<<< HEAD
   };
   return (
     <Avatar className="w-14 h-14 border-2 border-zion-blue-light">;
       <AvatarImage
         src={profilePicture || undefined} 
         alt={fullName} 
+=======
+  },;
+;
+  return (;
+    <Avatar className="w-14 h-14 border-2 border-zion-blue-light">;
+      <AvatarImage ;
+        src={profilePicture || undefined} ;
+        alt={fullName} ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       />;
       <AvatarFallback className="bg-zion-purple/20 text-zion-purple">;
         {getInitials(fullName)}
       </AvatarFallback>;
     </Avatar>;
+<<<<<<< HEAD
   );
 }
 import React from './react';
@@ -51,3 +77,18 @@ function TalentCardAvatar() {
       </AvatarFallback>;
     </Avatar>);
 }
+=======
+  ),;}
+ interface TalentCardAvatarProps {
+  profilePicture?: string;
+fullName: string 
+}profilePicture, fullName 
+}: TalentCardAvatarProps) {
+  //Get initials for avatar fallback const getInitials = (name: string) => {
+  return name .split (' ') .map (part => part[0]) .join ('') return (<Avatar className="w-14 h-14 border-2 border-zion-blue-light" > <AvatarImage src= {
+  profilePicture || undefined 
+}alt= {
+  fullName 
+}/> </AvatarFallback> </Avatar>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

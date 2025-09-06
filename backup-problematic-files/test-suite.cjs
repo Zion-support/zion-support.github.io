@@ -3,6 +3,7 @@
  * Comprehensive Test Suite;
  * Tests all aspects of the application;
  */
+
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -17,4 +18,8 @@ const path = require('path')
     this.log(` "Passed"`)
     this.log(` "Failed"`)
     this.log(` Success "Rate"`)
+<<<<<<< HEAD
     console.error('Test suite "failed")
+=======
+    console.error('Test suite "failed")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

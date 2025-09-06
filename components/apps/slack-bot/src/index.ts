@@ -1,9 +1,25 @@
+<<<<<<< HEAD
 dotenv.config();
 const apiBase = process && process.env.API_ORIGIN || 'http://localhost:4000';
 const app = new App({
   token: process && process.env.SLACK_BOT_TOKEN,
   signingSecret: process && process.env.SLACK_SIGNING_SECRET,
   appToken: process && process.env.SLACK_APP_LEVEL_TOKEN,
+=======
+<<<<<<< HEAD
+import { App  } from '@slack/bolt';
+=======
+import { App } from '@slack/bolt';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import dotenv from 'dotenv';
+import fetch from 'node-fetch';
+
+const apiBase = process.env.API_ORIGIN |'http://localhost:4000';
+const app = new App({
+  token: process.env.SLACK_BOT_TOKEN
+  signingSecret: process.env.SLACK_SIGNING_SECRET
+  appToken: process.env.SLACK_APP_LEVEL_TOKEN
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   socketMode: true,});
 function helpText(): string {
   return [  token: process && process.env.SLACK_BOT_TOKEN;
@@ -256,10 +272,15 @@ if ( {) {
     await respond({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` })
   }
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 (async () => {
   const port = Number(process && process.env.SLACK_PORT || 3001);
   await app && app.start(port);
   // eslint-disable-next-line no-console
+<<<<<<< HEAD
   console && console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();  console && console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })();
@@ -320,3 +341,21 @@ console.log (`⚡️ Zion Slack bot running on port ${port}`);
 
 (async () => {
 
+=======
+<<<<<<< HEAD
+console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();  console.log(`⚡️ Zion Slack bot running on port ${port}`)
+})();
+<<<<<<< HEAD
+
+=======
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

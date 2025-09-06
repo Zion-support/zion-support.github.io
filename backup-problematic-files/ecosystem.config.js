@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 module && module.exports = {;
   apps:[;
 module.exports = {apps:[;
     {;
       name:'error-fixer',;
       script:'automation/lint-error-fixer && fixer.cjs',;
+=======
+module.exports = {;
+  apps:[;
+    {;
+      name:'error-fixer',;
+      script:'automation/lint-error-fixer.cjs',;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       args:'continuous',;
       instances:1,;
       autorestart:true,;
@@ -12,14 +20,24 @@ module.exports = {apps:[;
       env:{;
         NODE_ENV:'production';
       },;
+<<<<<<< HEAD
       error_file:'./logs/error-fixer-error && error.log',;
       out_file:'./logs/error-fixer-out && out.log',;
       log_file:'./logs/error-fixer-combined && combined.log',;
+=======
+      error_file:'./logs/error-fixer-error.log',;
+      out_file:'./logs/error-fixer-out.log',;
+      log_file:'./logs/error-fixer-combined.log',;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       time:true;
     },;
     {;
       name:'intelligent-orchestrator',;
+<<<<<<< HEAD
       script:'automation/intelligent-orchestrator && orchestrator.cjs',;
+=======
+      script:'automation/intelligent-orchestrator.cjs',;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       args:'continuous',;
       instances:1,;
       autorestart:true,;
@@ -28,31 +46,51 @@ module.exports = {apps:[;
       env:{;
         NODE_ENV:'production';
       },;
+<<<<<<< HEAD
       error_file:'./logs/orchestrator-error && error.log',;
       out_file:'./logs/orchestrator-out && out.log',;
       log_file:'./logs/orchestrator-combined && combined.log',;
+=======
+      error_file:'./logs/orchestrator-error.log',;
+      out_file:'./logs/orchestrator-out.log',;
+      log_file:'./logs/orchestrator-combined.log',;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       time:true;
     },;
     {;
       name:'automation-dashboard',;
+<<<<<<< HEAD
       script:'automation/automation-dashboard && dashboard.cjs',;
+=======
+      script:'automation/automation-dashboard.cjs',;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       args:'start',;
       instances:1,;
       autorestart:true,;
       watch:false,;
       max_memory_restart:'1G',;
       env:{;
-        NODE_ENV:'production';
+        NODE_ENV:'production',;
         PORT:3001;
       },;
+<<<<<<< HEAD
       error_file:'./logs/dashboard-error && error.log',;
       out_file:'./logs/dashboard-out && out.log',;
       log_file:'./logs/dashboard-combined && combined.log',;
+=======
+      error_file:'./logs/dashboard-error.log',;
+      out_file:'./logs/dashboard-out.log',;
+      log_file:'./logs/dashboard-combined.log',;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       time:true;
     },;
     {;
       name:'code-quality-monitor',;
+<<<<<<< HEAD
       script:'automation/code-quality-monitor && monitor.cjs',;
+=======
+      script:'automation/code-quality-monitor.cjs',;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -60,14 +98,24 @@ module.exports = {apps:[;
       env:{;
         NODE_ENV:'production';
       },;
+<<<<<<< HEAD
       error_file:'./logs/code-quality-error && error.log',;
       out_file:'./logs/code-quality-out && out.log',;
       log_file:'./logs/code-quality-combined && combined.log',;
+=======
+      error_file:'./logs/code-quality-error.log',;
+      out_file:'./logs/code-quality-out.log',;
+      log_file:'./logs/code-quality-combined.log',;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       time:true;
     },;
     {;
       name:'performance-optimizer',;
+<<<<<<< HEAD
       script:'automation/performance-optimizer && optimizer.cjs',;
+=======
+      script:'automation/performance-optimizer.cjs',;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -75,15 +123,22 @@ module.exports = {apps:[;
       env:{;
         NODE_ENV:'production';
       },;
+<<<<<<< HEAD
       error_file:'./logs/performance-error && error.log',;
       out_file:'./logs/performance-out && out.log',;
       log_file:'./logs/performance-combined && combined.log',;
+=======
+      error_file:'./logs/performance-error.log',;
+      out_file:'./logs/performance-out.log',;
+      log_file:'./logs/performance-combined.log',;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       time:true;
     }
   ];
 };      env: {
         NODE_ENV: 'production'
       },
+<<<<<<< HEAD
       error_file: './logs/performance-error && error.log',
       out_file: './logs/performance-out && out.log',
       log_file: './logs/performance-combined && combined.log',
@@ -303,3 +358,12 @@ module && module.exports = {
   }];
 }
 ;
+=======
+      error_file: './logs/performance-error.log',
+      out_file: './logs/performance-out.log',
+      log_file: './logs/performance-combined.log',
+      time: true
+    }
+  ]
+},
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -30,11 +30,9 @@ import { }
 } from 'lucide-react';
 interface ChatMessage {}
   "id": string;
-  content: string;
-  sender: 'user' | 'bot';
-  timestamp: Date;
-  type: 'text' | 'file';
-  status: 'sending' | 'sent' | 'error';
+  content: string, sender: 'user' | 'bot',
+  timestamp: Date, type: 'text' | 'file',
+  status: 'sending' | 'sent' | 'error',
   metadata?: {}
     confidence?: number;
     suggestions?: string[];
@@ -163,9 +161,17 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
   // Toggle voice input;
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
+<<<<<<< HEAD
   // Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
     console.log(\"Rated message \${messageId} as \${rating}\")}, []);
+=======
+
+  // Rate response;
+  const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
+    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return ()
     <>
       {/* Chat Toggle Button */};
@@ -405,4 +411,8 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('Component Replacer "failed": ', error);
       process.exit(1)})};
+<<<<<<< HEAD
 module.exports = ComponentReplacer;
+=======
+module.exports = ComponentReplacer;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

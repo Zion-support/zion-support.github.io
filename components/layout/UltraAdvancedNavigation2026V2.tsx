@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +21,82 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react',
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Link from 'next/link';
+
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+<<<<<<< HEAD
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Zap
+  Brain
+  Atom
+  Microscope
+  Gamepad2
+  Shield
+  Rocket
+  Database
+  TestTube
+  Car
+  Globe
+  Code
+  Palette
+  Cloud
+  Server
+  Network
+  Cpu;
+} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+=======
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Brain,
+  Atom,
+  Microscope,
+  Gamepad2,
+  Shield,
+  Rocket,
+  Database,
+  TestTube,
+  Car,
+  Globe,
+  Code,
+  Palette,
+  Cloud,
+  Server,
+  Network,;
+  Cpu,;
+<<<<<<< HEAD
+} from 'lucide-react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+export default function UltraAdvancedNavigation2026V2() {;
+=======
+} from 'lucide-react';
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function UltraAdvancedNavigation2026V2() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -216,7 +292,16 @@ icon: <Zap className="w-4 h-4" />
         { name: 'Creative & Design', href: '/services?category=creative', icon: <Palette className="w-4 h-4" /> },
         { name: 'Global Solutions', href: '/services?category=global', icon: <Globe className="w-4 h-4" /> }
       ]
+<<<<<<< HEAD
     };
+=======
+    },    {
+<<<<<<< HEAD
+      name: 'Showcase'
+      href: '/enhanced-services-showcase-2026-v2'
+      icon: <Rocket className='w-4 h-4' />
+    }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       name: 'Showcase',
       href: '/enhanced-services-showcase-2026-v2',
@@ -273,6 +358,7 @@ function UltraAdvancedNavigation2026V2() {
     const handle_scroll = () =>: any {
       setIsScrolled (window.scroll_y > 20);
     }
+<<<<<<< HEAD
     window.addEventListener ('scroll', handle_scroll);
     return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      setIsScrolled (window.scroll_y > 20);
     }
@@ -379,15 +465,31 @@ function UltraAdvancedNavigation2026V2() {
       name: 'Pricing',
       href: '/pricing - enhanced - 2026',
       icon: <Database className='w - 4 h - 4' />,
+=======
+=======
+      name: 'Showcase',
+      href: '/enhanced-services-showcase-2026-v2',
+      icon: <Rocket className='w-4 h-4' />,
+    },
+    {
+      name: 'Pricing',
+      href: '/pricing-enhanced-2026',
+      icon: <Database className='w-4 h-4' />,
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'About',
       href: '/about',
+<<<<<<< HEAD
 icon: <Globe className='w - 4 h - 4' />,
+=======
+      icon: <Globe className='w-4 h-4' />,
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'Contact',
       href: '/contact',
+<<<<<<< HEAD
 icon: <Mail className='w - 4 h - 4' />,
     },  ];      icon: <Mail className="w - 4 h - 4" />;
     }
@@ -403,6 +505,52 @@ icon: <Mail className='w - 4 h - 4' />,
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-purple-400" />
 <span>{contactInfo.mobile}</span>
+=======
+      icon: <Mail className='w-4 h-4' />,
+    },  ];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  ];
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
+  }
+
+  return (
+    <>
+      {/* Top Contact Bar */}
+      <div className='bg-gradient-to-r from-purple-900/80 to-blue-900/80 backdrop-blur-sm border-b border-white/10'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='flex items-center justify-between py-2 text-sm'>
+            <div className='flex items-center space-x-6 text-gray-300'>
+              <div className='flex items-center space-x-2'>
+                <Phone className='w-4 h-4 text-purple-400' />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                <span>{contactInfo.mobile}</span>
+              </div>
+              <div className='flex items-center space-x-2'>
+                <Mail className='w-4 h-4 text-blue-400' />
+                <span>{contactInfo.email}</span>
+              </div>
+              <div className='flex items-center space-x-2'>
+                <MapPin className='w-4 h-4 text-green-400' />
+                <span>{contactInfo.address}</span>
+              </div>
+            </div>
+            <div className='flex items-center space-x-4'>
+              <Link
+                href='/enhanced-services-showcase-2026-v2'
+                className='text-purple-400 hover:text-purple-300 transition-colors'
+              >                🚀 New 2026 Services                <span>{contactInfo.mobile}</span>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-blue-400" />
@@ -417,6 +565,7 @@ icon: <Mail className='w - 4 h - 4' />,
               <Link href="/enhanced-services-showcase-2026-v2" className="text-purple-400 hover:text-purple-300 transition-colors">
                 🚀 New 2026 Services
               </Link>
+<<<<<<< HEAD
               </div>
             </div>
             <div className=&quot;flex items-center space-x-4&quot;>
@@ -424,10 +573,13 @@ icon: <Mail className='w - 4 h - 4' />,
                 🚀 New 2026 Services
               </a>
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 className='text-purple-400 hover:text-purple-300 transition-colors'>                🚀 New 2026 Services                <span>{contactInfo && contactInfo.mobile}</span>;
               </div>;
               <div className="flex items-center space-x-2">;
@@ -515,6 +667,39 @@ className='text-purple-400 hover:text-purple-300 transition-colors'>            
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
+=======
+      {/* Main Navigation */}
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? 'bg-black/90 backdrop-blur-xl border-b border-white/10 shadow-2xl'
+            : 'bg-transparent'
+        }`}
+      >
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='flex items-center justify-between h-20'>
+            {/* Logo */}
+            <Link href='/' className='flex items-center space-x-3 group'>
+              <div className='relative'>
+                <div className='w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300'>
+                  Z
+                </div>
+                <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300'></div>
+              </div>
+              <div className='hidden sm:block'>
+                <div className='text-xl font-bold text-white'>
+                  Zion Tech Group
+                </div>
+                <div className='text-xs text-gray-400'>Innovation 2026</div>              </div>
+            </Link>
+            {/* Desktop Navigation */}
+            <div className='hidden lg:flex items-center space-x-8'>
+              {navigationItems.map(item => (
+                <div key={item.name} className='relative group'>                  {item.dropdown ? (
+                    <button
+                      onMouseEnter={() => setActiveDropdown(item.name)}
+                      onMouseLeave={() => setActiveDropdown(null)}            {/* Logo */}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300">
@@ -547,10 +732,23 @@ className='text-purple-400 hover:text-purple-300 transition-colors'>            
                     <button
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+<<<<<<< HEAD
                       className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+=======
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'
                     >
                       {item.icon}
                       <span>{item.name}</span>
+                      <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                    </button>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'                    >                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
+<<<<<<< HEAD
                       <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                     </button>
                   ) : (
@@ -560,6 +758,12 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                     >
                       {item.icon}
                       <span>{item.name}</span>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </Link>
                   )}
                   {/* Dropdown Menu */}
@@ -567,20 +771,59 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                     <div
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+<<<<<<< HEAD
                       className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4"
                     >
+=======
+                      className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    >
+                      <div className='grid grid-cols-1 gap-2'>
+                        {item.dropdown.map(dropdownItem => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className='flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group'
+                          >
+                            <div className='text-purple-400 group-hover:text-purple-300 transition-colors'>
+                              {dropdownItem.icon}
+                            </div>
+<<<<<<< HEAD
+                            <span className='text-gray-300 group-hover:text-white transition-colors'>                              {dropdownItem.name}                    >
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <div className="grid grid-cols-1 gap-2">
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
+<<<<<<< HEAD
 className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group"
+=======
+                            className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           >
                             <div className="text-purple-400 group-hover:text-purple-300 transition-colors">
                               {dropdownItem.icon}
                             </div>
                             <span className="text-gray-300 group-hover:text-white transition-colors">
                               {dropdownItem.name}
+=======
+                            <span className='text-gray-300 group-hover:text-white transition-colors'>                              {dropdownItem.name}
+
+                              {dropdownItem.name}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </span>
                           </Link>
                         ))}
@@ -590,14 +833,35 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transiti
                 </div>;
               ))}
             </div>
+<<<<<<< HEAD
             {/* CTA Button */}
             <div className="hidden lg:flex items-center space-x-4">
+=======
+<<<<<<< HEAD
+            {/* CTA Button */}
+            <div className='hidden lg:flex items-center space-x-4'>
+              <Link href='/contact'>
+                <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started            <div className="hidden lg:flex items-center space-x-4">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Link href="/contact">
                 <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+=======
+
+            {/* CTA Button */}
+            <div className='hidden lg:flex items-center space-x-4'>
+              <Link href='/contact'>
+                <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Get Started
                 </button>
               </Link>
             </div>
+<<<<<<< HEAD
             </div>;
             {/* CTA Button */}
             <div className='hidden lg:flex items-center space-x-4'>;
@@ -724,12 +988,33 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transiti
               </Link>;
             </div>;
               className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors'
+            >
+              {isOpen ? (
+                <X className='w-6 h-6' />
+              ) : (
+                <Menu className='w-6 h-6' />
+              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </nav>
+<<<<<<< HEAD
 {/* Mobile Menu Button */}
             <button;
               on_click={() => setIsOpen (!is_open)}
@@ -839,6 +1124,99 @@ className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transiti
 href={item && item.href}
                         onClick={() => setIsOpen(false)}
                         className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ duration: 0.3 }}
+            className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
+<<<<<<< HEAD
+=======
+
+          >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <div className='p-6'>
+              <div className='flex items-center justify-between mb-8'>
+                <div className='text-xl font-bold text-white'>Menu</div>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className='p-2 text-gray-300 hover:text-white transition-colors'
+                >
+                  <X className='w-6 h-6' />
+                </button>
+              </div>
+              <div className='space-y-6'>
+                {navigationItems.map(item => (
+                  <div key={item.name}>
+                    {item.dropdown ? (
+                      <div>
+                        <button
+                          onClick={() =>
+                            setActiveDropdown(
+                              activeDropdown === item.name ? null : item.name
+                            )
+                          }
+                          className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3'
+                        >
+                          <div className='flex items-center space-x-3'>
+                            {item.icon}
+                            <span>{item.name}</span>
+                          </div>
+                          <ChevronDown
+                            className={`w-4 h-4 transition-transform duration-200 ${
+                              activeDropdown === item.name ? 'rotate-180' : ''
+                            }`}
+                          />
+                        </button>
+                        {activeDropdown === item.name && (
+                          <div className='ml-6 mt-2 space-y-2'>
+                            {item.dropdown.map(dropdownItem => (
+                              <Link
+                                key={dropdownItem.name}
+                                href={dropdownItem.href}
+                                onClick={() => setIsOpen(false)}
+                                className='flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white'
+                              >
+                                {dropdownItem.icon}
+                                <span>{dropdownItem.name}</span>
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>                    ) : (
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'                      >                    ) : (
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
+                        className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       >
                         {item.icon}
                         <span>{item.name}</span>
@@ -846,7 +1224,17 @@ href={item && item.href}
                     )}
                   </div>;
                 ))}
+<<<<<<< HEAD
                 <div className="pt-6 border-t border-white/10">
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+                <div className='pt-6 border-t border-white/10'>
+                  <Link href='/contact' onClick={() => setIsOpen(false)}>
+                    <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>                      Get Started                <div className="pt-6 border-t border-white/10">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
                     <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
                       Get Started
@@ -873,6 +1261,7 @@ href={item && item.href}
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
 <div className='pt-6 border-t border-white/10'>;
                   <Link href='/contact' onClick={() => setIsOpen(false)}>;
                     <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>                      Get Started                <div className="pt-6 border-t border-white/10">;
@@ -1006,6 +1395,16 @@ href={item && item.href}
               </div>;
             </div>;
       </AnimatePresence>;
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Overlay */}
       {isOpen && (;
         <motion&& motion.div
@@ -1018,6 +1417,7 @@ href={item && item.href}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
+<<<<<<< HEAD
 <div className='h-32'></div>;
     </>;
   );      <div className="h-32"></div>;
@@ -1032,3 +1432,50 @@ href={item && item.href}
     </>);      <div className="h - 32"></div>;
     </>);
 }
+=======
+<<<<<<< HEAD
+          className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
+        />
+      )}
+      {/* Spacer for fixed navigation */}
+      <div className='h-32'></div>
+    </>
+);      <div className="h-32"></div>
+    </>
+  );
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}
+
+          onClick={() => setIsOpen(false)}
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        />
+      )}
+
+      {/* Spacer for fixed navigation */}
+      <div className='h-32'></div>
+    </>
+<<<<<<< HEAD
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+);      <div className="h-32"></div>
+    </>
+  );
+}
+
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

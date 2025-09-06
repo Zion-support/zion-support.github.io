@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {Navigate} from "react-router-dom";
 import {useAuth} from "@/hooks/useAuth";
 import {Header} from "@/components/Header";
@@ -39,9 +40,44 @@ if ( {) {
     return <Navigate to="/onboarding" />;
   }
   return (
+=======
+import { Navigate } from "react-router-dom",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { LoginContent } from "@/components/auth/login",;
+;
+export default function Login() {;
+  const { isAuthenticated, user } = useAuth(),;
+  ;
+  // Redirect if user is already logged in and has completed profile;
+  if (isAuthenticated && user?.profileComplete) {;
+    return <Navigate to="/" />,;
+  }
+  ;
+  // Redirect to onboarding if user is authenticated but hasn't completed profile;
+  if (isAuthenticated && !user?.profileComplete) {;
+    return <Navigate to="/onboarding" />,;
+  }
+;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <>;
       <Header />;
       <LoginContent />;
       <Footer />;
+<<<<<<< HEAD
     </>);
+=======
+    </>;
+  ),; export default function Login () {
+  const {
+  isAuthenticated, user 
+}= useAuth ();
+//Redirect if user is already logged in and has completed profile if (isAuthenticated && user?.profileComplete) {
+  
+}// Redirect to onboarding if user is authenticated but hasn't completed profile if (isAuthenticated && !user?.profileComplete) {
+  
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from './react';
 import { use_navigate  } from './react-router-dom';
 import { Button  } from '@/components / ui / button';
@@ -40,6 +41,28 @@ export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
           variant="ghost" 
           size="sm" 
           className="mr-2"
+=======
+
+import React from 'react',;
+import { useNavigate } from 'react-router-dom',;
+import { Button } from '@/components/ui/button',;
+import { ArrowLeft } from 'lucide-react',;
+;
+interface ProjectHeaderProps {;
+  title:string;
+}
+;
+export function ProjectHeader({ title } ProjectHeaderProps) {;
+  const navigate = useNavigate(),;
+  ;
+  return (;
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">;
+      <div className="flex items-center">;
+        <Button ;
+          variant="ghost" ;
+          size="sm" ;
+          className="mr-2";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           onClick={() => navigate(-1)}
         >;
           <ArrowLeft className="h-4 w-4 mr-1" />;
@@ -48,9 +71,17 @@ export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
         <h1 className="text-2xl md:text-3xl font-bold truncate max-w-xl">{title}</h1>;
       </div>;
     </div>;
+<<<<<<< HEAD
   );
 }
         </h1>;
       </div>;
     </div>);
 }
+=======
+  ),;}
+ <Button variant="ghost" size="sm" className="mr-2" onClick= {
+  () => navigate (-1) 
+}> <ArrowLeft className="h-4 w-4 mr-1" /> Back </Button> </div> </div>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

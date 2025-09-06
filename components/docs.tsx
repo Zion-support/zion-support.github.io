@@ -1,9 +1,26 @@
+<<<<<<< HEAD
 import Head from 'next / head';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
+=======
+import Head from 'next/head';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+<<<<<<< HEAD
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function DocsPage() {
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function DocsPage() {
 export default /**
  * DocsPage - Function description
@@ -12,6 +29,7 @@ function DocsPage() {
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
+<<<<<<< HEAD
     address: '364 E Main St STE 1008 Middletown DE 19709',
 { name: 'Overview', href: '/enhanced-services-showcase' },
         { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
@@ -58,6 +76,59 @@ function DocsPage() {
       description: 'Check service availability and performance',
 icon: <CheckCircle className="w-6 h-6" />,
       href: '/status',
+=======
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  const contact = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  }
+  const sections = [
+    {
+      title: 'Getting Started'
+      links: [
+        { name: 'Overview', href: '/enhanced-services-showcase' }
+        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' }
+        { name: 'Contact Sales', href: '/contact' }
+      ]
+    },    {        { name: 'Contact Sales', href: '/contact' }]
+    }
+    {
+      title: 'AI Services Docs'
+      links: [
+        { name: 'AI Guardrails', href: '/ai-guardrails' }
+        { name: 'AI Evals', href: '/ai-evals' }
+        { name: 'Agentic RAG', href: '/agentic-rag' }
+      ]
+    },    {        { name: 'Agentic RAG', href: '/agentic-rag' }]
+    }
+    {
+      title: 'IT & Platform Docs'
+      links: [
+        { name: 'API Observability', href: '/api-observability' }
+        { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' }
+        { name: 'Status Pages & SLO', href: '/status-pages-slo' }
+      ]
+    }
+  ];        { name: 'Status Pages & SLO', href: '/status-pages-slo' }]
+    }];
+  const external = [
+    { name: 'OpenAI API pricing', url: 'https://openai.com/api/pricing' }
+    { name: 'Anthropic pricing', url: 'https://www.anthropic.com/pricing' }
+    { name: 'Pinecone pricing', url: 'https://www.pinecone.io/pricing/' }
+    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }
+  ];    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }]
+  const quickLinks = [
+    {
+      title: 'API Status'
+      description: 'Check service availability and performance'
+      icon: <CheckCircle className='w-6 h-6' />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       color: 'text-green-400'
     }
     {
@@ -75,12 +146,21 @@ icon: <CheckCircle className="w-6 h-6" />,
       color: 'text-purple-400'
     }
     {
+<<<<<<< HEAD
       title: 'Community Forum'
       description: 'Connect with other developers and users'
       icon: <ExternalLink className='w-6 h-6' />
       href: '/community'
       color: 'text-yellow-400'
     }
+=======
+      title: 'Community Forum',
+      description: 'Connect with other developers and users',
+      icon: <ExternalLink className='w-6 h-6' />,
+      href: '/community',
+      color: 'text-yellow-400',
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
   const filteredDocs = documentationItems.filter(doc => {
     const matchesSearch =
@@ -103,6 +183,7 @@ export default function DocsPage() {;
   });
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
+<<<<<<< HEAD
       case 'Beginner': return 'bg-green-500/20 text-green-400';
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
       case 'Advanced': return 'bg-red-500/20 text-red-400';
@@ -188,6 +269,10 @@ export default function DocsPage() {;
   const getDifficultyColor = (difficulty: string) => {;
     switch (difficulty) {;
       case 'Beginner':;
+=======
+<<<<<<< HEAD
+      case 'Beginner':
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         return 'bg-green-500/20 text-green-400';
       case 'Intermediate':;
         return 'bg-yellow-500/20 text-yellow-400';
@@ -196,6 +281,7 @@ export default function DocsPage() {;
       default:;
         return 'bg-gray-500/20 text-gray-400';    }      case 'Beginner': return 'bg-green-500/20 text-green-400';
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
+<<<<<<< HEAD
       year: 'numeric',
       month: 'short',
       day: 'numeric'
@@ -212,6 +298,31 @@ export default function DocsPage() {;
     });  };      day: 'numeric';
     });
   };
+=======
+      case 'Advanced': return 'bg-red-500/20 text-red-400'
+      default: return 'bg-gray-500/20 text-gray-400'
+<<<<<<< HEAD
+  }
+=======
+  };
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric'
+      month: 'short'
+      day: 'numeric'
+    });  };      day: 'numeric'
+    })
+  }
+=======
+
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/docs' />;
@@ -387,6 +498,38 @@ icon: <ExternalLink className='w - 6 h - 6' />,
         <meta name="description" content="Guides and references for Zion Tech Group AI, platform, and IT services." />
         <link rel="canonical" href="https://ziontechgroup.com/docs" />
       </Head>
+<<<<<<< HEAD
+=======
+      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-6xl mx-auto space-y-10'>
+          <div className='text-center'>
+            <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+              Documentation
+            </h1>
+            <p className='text-slate-300 mt-4'>
+              Quick links, references, and integration guides for our services.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            {sections.map(s => (
+              <Card
+                key={s.title}
+                className='p-6 bg-black/40 border border-gray-700/50'
+              >
+                <h2 className='text-xl font-semibold mb-4 text-white'>
+                  {s.title}
+                </h2>
+                <ul className='space-y-2'>
+                  {s.links.map(l => (
+                    <li key={l.name}>
+                      <a
+                        href={l.href}
+                        className='text-cyan-400 hover:underline'
+                      >
+                        {l.name}
+<<<<<<< HEAD
+                      </a>                    </li>      </Head>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-10">
           <div className="text-center">
@@ -402,6 +545,7 @@ icon: <ExternalLink className='w - 6 h - 6' />,
                     <li key={l.name}>
                       <a href={l.href} className="text-cyan-400 hover:underline">{l.name}</a>
                     </li>
+<<<<<<< HEAD
                         href={l && l.href}
                         className='text-cyan-400 hover:underline'>;
                         {l && l.name}
@@ -414,6 +558,30 @@ icon: <ExternalLink className='w - 6 h - 6' />,
             <ul className='grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300'>;
               {external && external.map(e => (;
                 <li key={e && e.name}>;
+=======
+=======
+                      </a>                    </li>
+
+                    </li>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
+          <Card className='p-6 bg-black/40 border border-gray-700/50'>
+            <h2 className='text-xl font-semibold mb-4 text-white'>
+              External References
+            </h2>
+            <ul className='grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300'>
+              {external.map(e => (
+                <li key={e.name}>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <a
                     href={e && e.url}
                     target='_blank'
@@ -427,6 +595,7 @@ icon: <ExternalLink className='w - 6 h - 6' />,
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
               {external.map((e) => (
                 <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
+<<<<<<< HEAD
             </ul>;
           </Card>;
           <Card className="p-6 bg-black/40 border border-gray-700/50">;
@@ -441,6 +610,16 @@ icon: <ExternalLink className='w - 6 h - 6' />,
               Need help?;
             </h2>;
             <div className='flex flex-col sm:flex-row gap-3'>;
+=======
+<<<<<<< HEAD
+            </ul>
+          </Card>
+          <Card className='p-6 bg-black/40 border border-gray-700/50'>
+            <h2 className='text-xl font-semibold mb-4 text-white'>
+              Need help?
+            </h2>
+            <div className='flex flex-col sm:flex-row gap-3'>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Button
                 href='/contact'
                 className='bg-gradient-to-r from-cyan-600 to-blue-600 text-white'>;
@@ -482,11 +661,15 @@ icon: <ExternalLink className='w - 6 h - 6' />,
               <Button href={contact.website} variant="outline" className="border-gray-600 text-gray-200">Visit Website</Button>
               <a className="text-cyan-400" href={`tel:${contact.mobile.replace(/[^+\\d]/g, '')}`}>{contact.mobile}</a>
               <a className="text-purple-400" href={`mailto:${contact.email}`}>{contact.email}</a>
+<<<<<<< HEAD
             </div>
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </Card>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 );
 }
                       </a>                    </li>      </Head>;
@@ -571,3 +754,22 @@ icon: <ExternalLink className='w - 6 h - 6' />,
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
+=======
+  );
+}
+<<<<<<< HEAD
+=======
+;
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+              ))}
+            </ul>
+          </Card>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

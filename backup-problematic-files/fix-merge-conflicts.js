@@ -1,26 +1,48 @@
+<<<<<<< HEAD
 };
+=======
+
+;
+  };
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   traverse(dir),;
   return files};
 // Find and fix files with merge conflicts,;
 const conflictedFiles = findFilesWithConflicts('.'),;
+<<<<<<< HEAD
 console && console.log(`Found ${conflictedFiles && conflictedFiles.length} files with merge conflicts`),;
 for (const file of conflictedFiles) {,;
   fixMergeConflicts(file)};
 console && console.log('Merge conflict resolution complete!'),;
+=======
+console.log(`Found ${conflictedFiles.length} files with merge conflicts`),;
+for (const file of conflictedFiles) {,;
+  fixMergeConflicts(file)};
+console.log('Merge conflict resolution complete!'),;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ;  };
   traverse(dir),
   return files};
 // Find and fix files with merge conflicts,
 const conflictedFiles = findFilesWithConflicts('.'),
+<<<<<<< HEAD
 console && console.log(`Found ${conflictedFiles && conflictedFiles.length} files with merge conflicts`),
 for (const file of conflictedFiles) {,
   fixMergeConflicts(file)};
 console && console.log('Merge conflict resolution complete!'),
 #!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixMergeConflicts(filePath) { try { let content = fs && fs.readFileSync(filePath,'utf8'), content = content && content.replace(/[\s\S]*?[\s\S]*?};
+=======
+console.log(`Found ${conflictedFiles.length} files with merge conflicts`),
+for (const file of conflictedFiles) {,
+  fixMergeConflicts(file)};
+console.log('Merge conflict resolution complete!'),
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'), content = content.replace(/[\s\S]*?[\s\S]*?};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 };
         };
       };
 };
+<<<<<<< HEAD
 ,);
 console && console.log('\nMerge conflict fixing complete!'),;
 console && console.log('\nMerge conflict fixing complete!'),;
@@ -188,3 +210,22 @@ try {
 console.log ('\n_merge conflict fixing complete!');
 console.log ('\n_merge conflict fixing complete!');
 ;
+=======
+;
+,);
+;
+console.log('\nMerge conflict fixing complete!'),;
+console.log('\nMerge conflict fixing complete!'),;
+,;
+console.log(`Fixed merge conflicts in ${fixedCount} files`),;
+,),;
+;    };
+  };
+  };
+};
+console.log('\nMerge conflict fixing complete!'),
+console.log('\nMerge conflict fixing complete!'),
+,
+console.log(`Fixed merge conflicts in ${fixedCount} files`),
+,),
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

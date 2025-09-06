@@ -15,7 +15,7 @@ const runCommand = (command, description) => {}
     const output = execSync(command, { })
       encoding: 'utf8', 
       stdio: 'pipe',
-      cwd: process.cwd();
+      cwd: process.cwd(),
     }
 });
     log(`Completed: ${description}`);
@@ -67,13 +67,13 @@ const main = async () => {}
   const linkCheckResults = checkLinks();
   // Generate comprehensive report;
   const results = {}
-    linkCheck: linkCheckResults;
+    linkCheck: linkCheckResults,
   };
   const report = generateLinkReport(results);
   if (report.overall.status === 'PASS') {}
-    log('Link checking passed: No broken links found');
+    log('Link checking passed: No broken links found'),
   } else {}
-    log('Link checking failed: Issues detected');
+    log('Link checking failed: Issues detected'),
   };
   log('Link Checker Process completed');
 };
@@ -93,4 +93,8 @@ main().catch(error => {})
   log(`Link Checker Process failed: ${error.message}`);
   process.exit(1);
 }
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

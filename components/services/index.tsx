@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default /**
  * ServicesIndexPage - Function description
  */
@@ -29,6 +30,51 @@ import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 import { Star } from 'lucide-react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export default function ServicesIndexPage () {
+=======
+ export default function ServicesIndexPage () {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export default function ServicesIndexPage () {
+=======
+ export default function ServicesIndexPage () {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
+}React.useEffect ( () => {
+  const next = services.filter ( (s) => {
+  //Category const handleSubmit = async (values: QuoteFormValues) => {
+  const res = await fetch ('/api/quote-request', {
+  method: 'POST', headers: {
+<<<<<<< HEAD
+  'Content-Type': 'application/json'
+}
+=======
+  'Content-Type': 'application/json' ;
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+body: JSON.stringify ({
+  service: values.serviceTitle, description: values.projectDescription, timeline: {
+  start: values.timelineStart, end: values.timelineEnd
+}
+budgetRange: values.budgetRange;
+}
+<Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) )
+}</div> </div> </div> </div> <QuoteRequestModal open= {
+  modalOpen
+}onClose= {
+  () => setModalOpen (false)
+}service= {
+  selected
+}onSubmit= {
+  handleSubmit
+}/> </div>)
+};export default ServicesPage;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
   slug: item.slug
   title: item.name
@@ -45,6 +91,7 @@ const ServicesPage: NextPage = () => {
   const [selected, setSelected] = React.useState<ServiceItem | null>(null);
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
+<<<<<<< HEAD
     .concat(
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -151,6 +198,10 @@ function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[]);
     .concat (
       extra_services as any[];
+=======
+    .concat(;
+      extraServices as any[];
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       additionalEnhancedServices as any[];
       newlyAddedServices as any[];
       curatedMarketServices as any[];
@@ -161,6 +212,7 @@ function ServicesIndexPage() {
       realOperationalServices as any[];
       verified2025Additions as any[];
       realServicesQ12025 as any[];
+<<<<<<< HEAD
   // Normalize various category labels into our main buckets;
   const categoryAliases: Record<string, string> = {;
     'AI & Data': 'AI & DataAI & Machine Learning': 'AI & DataGenAI': 'AI & DataCloud & FinOps': 'Cloud & FinOpsCloud & Data': 'Cloud & FinOpsPlatform Engineering': 'Cloud & FinOpsObservability': 'ObservabilityObservability & Telemetry': 'ObservabilityQuality & Monitoring': 'Quality & MonitoringSecurity & Reliability': 'Quality & MonitoringSecurity & Compliance': 'Quality & MonitoringDeveloper Tools': 'Developer ToolsGrowth & Marketing': 'Developer Tools';
@@ -411,11 +463,95 @@ export default function ServicesIndexPage() {_const _all = (enhancedRealMicroSaa
             <div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5&quot;>
               {filtered.map((service) => (
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
+=======
+      newVerifiedServicesQ22025 as any[]
+    );
+  const byCategory: Record<string, unknown[]> = {}
+  for (const c of categories) byCategory[c] = [];
+  // Normalize various category labels into our main buckets
+  const categoryAliases: Record<string, string> = {
+    'AI & Data': 'AI & DataAI & Machine Learning': 'AI & DataGenAI': 'AI & DataCloud & FinOps': 'Cloud & FinOpsCloud & Data': 'Cloud & FinOpsPlatform Engineering': 'Cloud & FinOpsObservability': 'ObservabilityObservability & Telemetry': 'ObservabilityQuality & Monitoring': 'Quality & MonitoringSecurity & Reliability': 'Quality & MonitoringSecurity & Compliance': 'Quality & MonitoringDeveloper Tools': 'Developer ToolsGrowth & Marketing': 'Developer Tools'
+  }
+  for (const s of all) {
+    const service = s as { category?: string }
+    const rawCat = (service.category |'').trim();
+    const mapped = categoryAliases[rawCat] |(categories.includes(rawCat) ? rawCat : 'Developer Tools');
+    byCategory[mapped].push(s)
+  }
+  React.useEffect(() => {
+    const next = services.filter((s) => {
+      // Category
+      if (filters.categories.length > 0 && !s.categories.some((c) => filters.categories.includes(c))) return false;
+      // Price
+      const min = s.priceFromUSD ?? s.priceRangeUSD?.[0];
+      const max = s.priceRangeUSD?.[1] ?? s.priceFromUSD;
+      if (filters.priceMin !== undefined && (min === undefined |max === undefined ? true : max < filters.priceMin)) return false;
+      if (filters.priceMax !== undefined && (min === undefined ? true : min > filters.priceMax)) return false;
+      // Rating
+      if (filters.ratingMin !== undefined && (s.rating ?? 0) < filters.ratingMin) return false;
+      // Delivery time (not available in data, simulate pass-through)
+      return true
+    });
+    setFiltered(next)
+  }, [filters, services]);
+  const availableCategories = React.useMemo(() => {
+    const set = new Set<string>();
+    services.forEach((s) => s.categories.forEach((c) => set.add(c)));
+    return Array.from(set)
+  }, [services]);
+  const handleRequestQuote = (service: ServiceItem) => {
+    setSelected(service);
+    setModalOpen(true)
+  }
+  const handleSubmit = async (values: QuoteFormValues) => {
+    const res = await fetch('/api/quote-request', {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({
+        service: values.serviceTitle
+        description: values.projectDescription
+        timeline: { start: values.timelineStart, end: values.timelineEnd }
+        budgetRange: values.budgetRange
+        email: values.email})})
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err?.message |'Failed to submit')
+    }
+<<<<<<< HEAD
+  }
+=======
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+    <UltraFuturisticBackground variant="quantum" intensity={1.5}>
+      <Head>
+        <title>Zion AI Marketplace - Services</title>
+        <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." />
+      </Head>
+      <div className="relative">
+        <div className="absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />
+        <div className="flex flex-col sm: flex-row gap-6">
+          <MarketplaceFilters availableCategories={availableCategories} value={filters} onChange={setFilters} />
+          <div className="flex-1">
+            <div className="mb-4 flex items-center justify-between">
+              <h1 className="text-2xl font-semibold text-white">Services</h1>
+              <div className="text-sm text-white/70">{filtered.length} results</div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {filtered.map((service) => (
+<<<<<<< HEAD
+                <EnhancedMarketplaceCard key={service.slug |service.id} service={service} onRequestQuote={handleRequestQuote} />
+=======
+                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               ))}
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       <QuoteRequestModal
         open={_modalOpen}
@@ -429,3 +565,35 @@ export default function ServicesIndexPage() {_const _all = (enhancedRealMicroSaa
 
 export default ServicesPage
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <QuoteRequestModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        service={selected}
+        onSubmit={handleSubmit}
+      />
+    </div>
+  )
+}
+export default ServicesPage;
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,3 +22,17 @@ import _React,{ useState,useEffect } from 'react'; import { Link } from 'react-r
     ; { "id": 'all',"name": 'All Services',"icon": 'Star' },; { "id": 'ai',"name": 'AI Solutions',"icon": 'Brain' },; { "id": 'quantum',"name": 'Quantum Tech',"icon": 'Zap' },; { "id": 'security',"name": 'Cybersecurity',"icon": 'Shield' },; { "id": 'cloud',"name": 'Cloud & DevOps',"icon": 'Cloud' },; { "id": 'data',"name": 'Data & Analytics',"icon": 'Database' },; { "id": 'iot',"name": 'IoT & Edge',"icon": 'Network' },,
     { "id": 'blockchain',"name": 'Blockchain',"icon": 'Lock' }
   ]; const services = [; {}; return null} }}}
+=======
+import React from 'react';
+
+const ServicesPage = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ServicesPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ServicesPage;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

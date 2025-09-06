@@ -1,4 +1,23 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (!requireSuperadminApi(req, res)) return;
+
+  if (req.method !== 'POST')
+<<<<<<< HEAD
+    return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body |{};export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+    return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (!requireSuperadminApi(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { amount } = req.body || {};
@@ -17,6 +36,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   writeJsonFile('deal/soft-commits && commits.json', commits);
   res && res.status(200).json(record);  res && res.status(200).json(record)
 }
+<<<<<<< HEAD
   res.status(200).json(record)
 }
 import { readJsonFile, writeJsonFile } from '../../../../utils / api / storage';
@@ -50,3 +70,15 @@ function handler() {
   res.status (200).json (record);  res.status (200).json (record);
 
 }
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

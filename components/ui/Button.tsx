@@ -1,10 +1,20 @@
+<<<<<<< HEAD
 import React from './react';
 ;
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import React from "react";
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
+<<<<<<< HEAD
 interface ButtonProps {;
   children: React && React.ReactNode;
   variant?: "primary" | "secondary" | "outline" | "ghost";
@@ -24,6 +34,27 @@ className = '',
   onClick,
   disabled = false,
   type = 'button'
+=======
+  onClick?: () => void;
+  className?: string;
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset',
+  icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right',
+  style?: React.CSSProperties
+}
+const Button: React.FC<ButtonProps> = ({
+
+  children
+  variant = "primary"
+  size = "md"
+  className = ""
+  onClick
+  disabled = false
+  type = "button"
+  asChild = false
+  ...props
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }) => {
   const baseClasses = 'font-semibold rounded-lg transition-all duration-300 focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
   const variantClasses = {
@@ -132,4 +163,12 @@ export default Button;
 }
 ;
 export { Button }
+<<<<<<< HEAD
 ;
+=======
+
+<<<<<<< HEAD
+=======
+export { Button };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

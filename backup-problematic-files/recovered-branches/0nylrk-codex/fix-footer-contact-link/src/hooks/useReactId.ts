@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from &quot;react & quot;
 ;
 /**;
@@ -21,3 +22,26 @@ if ( {) {
   }
   return id_ref.current;
 }
+=======
+import * as React from "react";
+;
+/**;
+ * React 18 introduced `useId` for generating unique IDs. If an older;
+ * React version is used where `useId` is unavailable, this hook provides;
+ * a small fallback that mimics the API using `useRef`.;
+ */;
+export function useReactId():string {;
+  if (typeof (React as any).useId === "function") {;
+    return (React as any).useId();
+  }
+;
+  const idRef = React.useRef<string | null>(null);
+  if (idRef.current === null) {;
+    idRef.current = Math.random().toString(36).slice(2);
+  }
+  return idRef.current;}
+import * as React from "react" /** * React 18 introduced `useId` for generating unique IDs. If an older * React version is used where `useId` is unavailable, this hook provides * a small fallback that mimics the API using `useRef`. */ const idRef = React.useRef<string | null> (null) if (idRef.current === null) {
+  idRef.current = Math.random () .toString (36) .slice (2) 
+}return idRef.current 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

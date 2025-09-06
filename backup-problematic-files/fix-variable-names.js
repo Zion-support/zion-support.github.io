@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 };
       return numberWords[match] || match}),;
     .replace(/[-_](.)/g, (match, group1) => group1 && group1.toUpperCase()),;
@@ -30,6 +31,44 @@ function fixedCount = 0;
     const stat = fs && fs.statSync(filePath);
     if (stat && stat.isDirectory()) {;
       fixedCount += findAndFixFiles(filePath)} else if (file && file.endsWith('.tsx') && file && file.includes('-')) {;
+=======
+
+};
+;
+      return numberWords[match] || match}),;
+    .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase()),;
+    .replace(/^(.)/, (match) => match.toUpperCase())};
+      return true};
+    return false} catch (error) {,;
+    console.error("Error fixing ${filePath} ", error.message),;
+    return false};
+};
+function fixedCount = 0,;
+  for (const filePath = path.join(dir, file),;
+    const stat = fs.statSync(filePath),;
+    if (stat.isDirectory()) {,;
+      fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {,;
+      if (fixFile(filePath)) {,;
+;
+        fixedCount++};};
+};
+  return fixedCount};
+;
+};
+      return numberWords[match] || match});
+    .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase());
+    .replace(/^(.)/, (match) => match.toUpperCase())};
+      return true};
+    return false} catch (error) {;
+    console.error("Error fixing ${filePath}:", error.message);
+    return false};
+};
+function fixedCount = 0;
+  for (const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    if (stat.isDirectory()) {;
+      fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       if (fixFile(filePath)) {;
 };
       return numberWords[match] || match}),
@@ -40,6 +79,7 @@ function fixedCount = 0;
     console && console.error("Error fixing ${filePath}:", error && error.message),
     return false};
 };
+<<<<<<< HEAD
     if (stat.isDirectory()) {fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {if (fixFile(filePath)) {;
         fixedCount++};}
 }
@@ -174,3 +214,15 @@ function findAndFixFiles() { const files = fs.readdir_sync (dir); let fixed_coun
   $2
 } console.log (`Fixed ${fixed_count} files.`); export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase; export default toCamelCase;
 ;
+=======
+function fixedCount = 0,
+  for (const filePath = path.join(dir, file),
+    const stat = fs.statSync(filePath),
+    if (stat.isDirectory()) {,
+      fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {,
+      if (fixFile(filePath)) {,
+        fixedCount++};
+    };
+  };
+  return fixedCount};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

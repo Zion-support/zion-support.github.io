@@ -98,7 +98,7 @@ class LinkCheckerAutomation {}
     async checkLink(url) {}
         return new Promise((resolve) => {;}
             try {}
-                const urlObj = new URL(ur;l;);
+                const urlObj = new URL(ur, l);
                 const options = {}
                     "hostname": urlObj.hostname,
                     "port": urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
@@ -206,4 +206,8 @@ if ( {})
      {}
     const automation = new LinkCheckerAutomation}(;);
     automation.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = LinkCheckerAutomation;
+=======
+module.exports = LinkCheckerAutomation;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

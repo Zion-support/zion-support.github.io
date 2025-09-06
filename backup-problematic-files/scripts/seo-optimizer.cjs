@@ -8,6 +8,7 @@ class SEOOptimizer {
   }
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
+    
   }
   async optimizeSEO() {
     this.log('🔍 Starting SEO optimization...');
@@ -170,4 +171,8 @@ if (require.main === module) {
   const optimizer = new SEOOptimizer();
   optimizer.run().catch(console.error);
 }
+<<<<<<< HEAD
 module.exports = SEOOptimizer;
+=======
+module.exports = SEOOptimizer;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -47,10 +48,47 @@ export function ContractPreview(): any ({ ;
   // Use either contractContent or generatedContract, whichever is provided;
   const displayContent = contractContent || generatedContract || "";
   return (
+=======
+
+import React from "react",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { TalentProfile } from "@/types/talent",;
+import { SmartContractInfo } from "@/types/smart-contracts",;
+;
+interface ContractPreviewProps {;
+  contractContent?:string,;
+  generatedContract?:string, // Added to support both naming conventions;
+  status?:'draft' | 'ready' | 'pending',;
+  talent?:TalentProfile,;
+  onDeploy?:() => void,;
+  onSign?:() => void,;
+  onClose?:() => void,;
+  deployStatus?:string,;
+  deploymentInfo?:SmartContractInfo | null,;
+}
+;
+export function ContractPreview({ ;
+  contractContent,;
+  generatedContract, ;
+  status = 'ready', ;
+  onDeploy, ;
+  onSign,;
+  onClose,;
+  deployStatus,;
+  deploymentInfo;
+} ContractPreviewProps) {;
+  ;
+  // Use either contractContent or generatedContract, whichever is provided;
+  const displayContent = contractContent || generatedContract || "",;
+  ;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <div className="space-y-4">;
       <div className="flex justify-between items-center mb-4">;
         <h2 className="text-2xl font-bold">Contract Preview</h2>;
         {status === 'ready' ? (;
+<<<<<<< HEAD
           <Badge
             variant="secondary"
             className="text-sm bg-green-100 text-green-800">;
@@ -66,6 +104,26 @@ export function ContractPreview(): any ({ ;
           <Badge variant="outline">Draft</Badge>;
         )}
       </div>;
+=======
+          <Badge ;
+            variant="secondary";
+            className="text-sm bg-green-100 text-green-800";
+          >;
+            Ready to Sign;
+          </Badge>;
+        ) :status === 'pending' ? (;
+          <Badge;
+            variant="outline";
+            className="text-sm bg-yellow-100 text-yellow-800";
+          >;
+            Pending Review;
+          </Badge>;
+        ) :(;
+          <Badge variant="outline">Draft</Badge>;
+        )}
+      </div>;
+      ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Contract content */}
       <div className="border rounded-lg p-6 bg-muted/50">;
         {/* Render the contract content as markdown or formatted text */}
@@ -73,15 +131,27 @@ export function ContractPreview(): any ({ ;
           {displayContent}
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Deployment info if available */}
       {deploymentInfo && (;
         <div className="mt-4 p-4 bg-primary/10 rounded-lg">;
           <h3 className="font-medium mb-2">Contract Deployment Info</h3>;
+<<<<<<< HEAD
           <p className="text-sm">Contract Address: {deploymentInfo && deploymentInfo.deployedAddress || "Pending..."}</p>;
           <p className="text-sm">Network: {deploymentInfo && deploymentInfo.networkName || "Unknown"}</p>;
           <p className="text-sm">Status: {deploymentInfo && deploymentInfo.status}</p>;
         </div>;
       )}
+=======
+          <p className="text-sm">Contract Address:{deploymentInfo.deployedAddress || "Pending..."}</p>;
+          <p className="text-sm">Network:{deploymentInfo.networkName || "Unknown"}</p>;
+          <p className="text-sm">Status:{deploymentInfo.status}</p>;
+        </div>;      )}
+      ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Actions */}
       <div className="flex justify-end space-x-3 mt-4">;
         {onClose && (;
@@ -89,11 +159,19 @@ export function ContractPreview(): any ({ ;
             Close;
           </Button>;
         )}
+<<<<<<< HEAD
+=======
+        ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {status === 'ready' && onSign && (;
           <Button onClick={onSign}>;
             Sign Contract;
           </Button>;
         )}
+<<<<<<< HEAD
+=======
+        ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {status === 'ready' && onDeploy && (;
           <Button variant="outline" onClick={onDeploy}>;
             Deploy on Blockchain;
@@ -101,6 +179,7 @@ export function ContractPreview(): any ({ ;
         )}
       </div>;
     </div>;
+<<<<<<< HEAD
   );
 }
           <Badge;
@@ -149,3 +228,45 @@ export function ContractPreview(): any ({ ;
       </div>;
     </div>);
 }
+=======
+  ),;}
+ interface ContractPreviewProps {
+  contractContent?: string;
+generatedContract?: string, //Added to support both naming conventions status?: 'draft' | 'ready' | 'pending';
+talent?: TalentProfile;
+onDeploy?: () => void;
+onSign?: () => void;
+onClose?: () => void;
+deployStatus?: string;
+deploymentInfo?: SmartContractInfo | null 
+}export function ContractPreview ({
+  contractContent;
+generatedContract;
+status = 'ready';
+onDeploy;
+onSign;
+onClose;
+deployStatus;
+deploymentInfo 
+}: ContractPreviewProps) {
+  //Use either contractContent or generatedContract, whichever is provided const displayContent = contractContent || generatedContract || "";
+>Contract Preview</h2> {
+  status === 'ready' ? (<Badge variant=" secondary"className="text-sm bg-green-100 text-green-800"> Ready to Sign </Badge>) : status === 'pending' ? (<Badge variant=" outline"className="text-sm bg-yellow-100 text-yellow-800"> Pending Review </Badge>) : (<Badge variant=" outline">Draft</Badge>) 
+}</div> {
+  /* Contract content */ 
+}<div className="border rounded-lg p-6 bg-muted/50"> {
+  /* Render the contract content as markdown or formatted text */ 
+}<div className="prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-muted-foreground"> {
+  displayContent 
+}</div> </div> {
+  /* Deployment info if available */ 
+}{
+  deploymentInfo && (<div className="mt-4 p-4 bg-primary/10 rounded-lg"> <h3 className="font-medium mb-2">Contract Deployment Info</h3> Close </Button>) 
+}{
+  status === 'ready' && onSign && (<Button onClick= {
+  onSign 
+}> Sign Contract </Button>) 
+}Deploy on Blockchain </Button>) 
+}</div> </div>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

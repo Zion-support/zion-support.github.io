@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client",
 import { useWalkthroughTarget  } from './OnboardingWalkthrough';,
 import { use_auth  } from '@/contexts / AuthContext';,
@@ -8,6 +9,23 @@ export /**
 function LayoutWrapper() {
   const { user, is_authenticated, logout } = use_auth ();
   return (
+=======
+<<<<<<< HEAD
+"use client";
+import { useWalkthroughTarget } from "./OnboardingWalkthrough";
+import { useAuth } from "@/contexts/AuthContext";
+import Link from "next/link";
+export function LayoutWrapper({ children }: { children: React.ReactNode }) {const { user, isAuthenticated, logout } = useAuth();
+=======
+"use client",;
+import { useWalkthroughTarget } from "./OnboardingWalkthrough",;
+import { useAuth } from "@/contexts/AuthContext",;
+import Link from "next/link",;
+export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
+  const { user, isAuthenticated, logout } = useAuth();
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <>;
       <nav className="border - b border - white / 10 sticky top - 0 z - 50 bg - zinc - 900 / 50 backdrop - blur" {...useWalkthroughTarget ("nav - menu")}>;
         <div className="max - w-6xl mx - auto px - 4 py - 3 flex items - center justify - between">;
@@ -34,9 +52,19 @@ function LayoutWrapper() {
                 >;
                   Dashboard;
                 </Link>;
+<<<<<<< HEAD
                 <div className="flex items - center gap - 3">;
                   <span className="text - sm text - zinc - 400">;
                     Welcome, {user?.name || user?.email}
+=======
+                <div className="flex items-center gap-3">;
+                  <span className="text-sm text-zinc-400">;
+<<<<<<< HEAD
+                    Welcome, {user?.name |user?.email}
+=======
+                    Welcome, {user?.name || user?.email}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </span>;
                   <button;
                     on_click={logout}

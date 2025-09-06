@@ -1,11 +1,30 @@
+<<<<<<< HEAD
 <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
+=======
+import Head from 'next/head';
+import React from 'react';
+export default function ManifestoPage(): JSX.Element {
+  return (
+    <>
+      <Head>
+        <title>Zion Manifesto</title>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       </Head>
       <main className="min-h-screen bg-gray-50 text-gray-900">
         <div className="mx-auto w-full max-w-5xl px-6 py-12">
           <header className="mb-12">
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Zion Manifesto</h1>
             <p className="mt-4 text-lg text-gray-700">
+<<<<<<< HEAD
 A public commitment to build an AI-native, trustless, and talent-first marketplace—in service of human sovereignty.
+=======
+              A public commitment to build an AI-native, trustless, and talent-first marketplace—in service of human sovereignty.
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </p>
           </header>
           <section className="prose prose-gray max-w-none">
@@ -21,6 +40,7 @@ A public commitment to build an AI-native, trustless, and talent-first marketpla
               work, programmable trust, and interoperable markets where value flows to the people who create it.
             </p>
             <h2 id="problem-with-traditional-marketplaces">The Problem with Traditional Marketplaces</h2>
+<<<<<<< HEAD
             </p>
           </header>
 
@@ -40,12 +60,15 @@ A public commitment to build an AI-native, trustless, and talent-first marketpla
 
             <h2 id=&quot;problem-with-traditional-marketplaces&quot;>The Problem with Traditional Marketplaces</h2>
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <ul>
               <li><strong>Platform Rent-Seeking</strong>: Centralized fees and policy risk diminish creator upside and user choice.</li>
               <li><strong>Captive Reputation</strong>: Profiles and reviews are siloed, your hard-won credibility is non-portable.</li>
               <li><strong>Low-Trust Transactions</strong>: Disputes, fraud, and misalignment waste time and undermine collaboration.</li>
               <li><strong>Data as Leverage</strong>: User data is harvested to entrench moats rather than empower the people who generate it.</li>
             </ul>
+<<<<<<< HEAD
 <h2 id="ai-for-empowerment">AI for Empowerment, Not Exploitation</h2>
             <p>
               AI should amplify human capability and agency—not replace it or capture its value. Zion is AI-native by design: matching
@@ -68,6 +91,20 @@ A public commitment to build an AI-native, trustless, and talent-first marketpla
               transitions gradually, _guided by real usage and contributor ownership. The end-state is a resilient, _permissionless network
               where anyone can build clients, _services, _and markets atop a common trust layer—talent-first, _globally accessible, _and
 
+=======
+            <h2 id="ai-for-empowerment">AI for Empowerment, Not Exploitation</h2>
+            <p>
+              AI should amplify human capability and agency—not replace it or capture its value. Zion is AI-native by design: matching
+
+              scoping, verification, and reputation signals are assisted by models, yet decisions remain human-sovereign. We prioritize
+              transparency, auditability, and consent. Your data powers your outcomes, not someone else’s moat.
+            </p>
+            <h2 id="our-decentralized-future">Our Decentralized Future</h2>
+            <p>
+              Zion evolves from a product into a protocol: identity, reputation, escrow, and discovery as shared public goods. Governance
+              transitions gradually, guided by real usage and contributor ownership. The end-state is a resilient, permissionless network
+              where anyone can build clients, services, and markets atop a common trust layer—talent-first, globally accessible, and
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               credibly neutral.
             </p>
           </section>
@@ -75,6 +112,7 @@ A public commitment to build an AI-native, trustless, and talent-first marketpla
       </main>
     </>
   )
+<<<<<<< HEAD
 }
 import Head from 'next / head',
 import React from 'react',
@@ -131,3 +169,14 @@ export default function ManifestoPage (): JSX.Element {
     </>);
 }
 
+=======
+<<<<<<< HEAD
+};
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

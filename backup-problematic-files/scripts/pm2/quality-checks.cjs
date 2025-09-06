@@ -16,7 +16,7 @@ const runCommand = (command, description) => {}
     const output = execSync(command, { })
       encoding: 'utf8', 
       stdio: 'pipe',
-      cwd: process.cwd();
+      cwd: process.cwd(),
     }
 });
     log(`Completed: ${description}`);
@@ -143,7 +143,7 @@ const main = async () => {}
     linting: lintingResults,
     typeChecking: typeCheckingResults,
     codeQuality: codeQualityResults,
-    coverage: coverageResults;
+    coverage: coverageResults,
   };
   const report = generateQualityReport(results);
   // Check if any quality checks failed;
@@ -179,4 +179,8 @@ main().catch(error => {})
   log(`Quality Checks Process failed: ${error.message}`);
   process.exit(1);
 }
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

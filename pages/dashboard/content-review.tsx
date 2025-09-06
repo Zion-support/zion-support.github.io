@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -204,11 +205,92 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
 export default function ContentReviewPage() {
   const [filters, setFilters] = useState<{ status?: string, reason?: string, userEmail?: string, contentType?: string }>({ status: 'pending' }),
   const query = useMemo(() => {
+=======
+<<<<<<< HEAD
+import useSWR from 'swr',
+import React, { useMemo, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GetServerSideProps } from 'next';
+import ModerationModal from '../../components/admin/ModerationModal';
+<<<<<<< HEAD
+
+const fetcher = (url: string) => fetch(url).then(r => r.json())
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const cookies = (req.headers.cookie |'').split(';').reduce(
+=======
+<<<<<<< HEAD
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
+  const cookies = (req.headers.cookie || '').split(';').reduce(
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    (acc: any, part: string) => {
+      const [k, v] = part.trim().split('=');
+      if (k) acc[k] = decodeURIComponent(v |'');
+      return acc;
+    }
+    {} as Record<string, string>
+  );
+  let role = 'guest';
+  try {
+    role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest';
+  } catch {}
+  if (role !== 'admin')
+    return { redirect: { destination: '/', permanent: false } }
+  return { props: {} }
+}
+export default function ContentReviewPage() {
+  const [filters, setFilters] = useState<{;
+    status?: string;
+    reason?: string;
+    userEmail?: string;
+    contentType?: string;
+  }>({ status: 'pending' });  const query = useMemo(() => {
+=======
+<<<<<<< HEAD
+import useSWR from 'swr';
+import React, { useMemo, useState } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GetServerSideProps } from 'next';
+import ModerationModal from '../../components/admin/ModerationModal';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
+  const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {;
+    const [k, v] = part.trim().split('=');
+    if (k) acc[k] = decodeURIComponent(v || '');
+    return acc;
+  }, {} as Record<string, string>),;
+  let role = 'guest';
+  try { role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest' } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (role !== 'admin') return { redirect: { destination: '/', permanent: false } },;
+  return { props: {}   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+},;
+export default function ContentReviewPage(req, res) {
+  try {
+  const [filters, setFilters] = useState<{ status?: string, reason?: string, userEmail?: string, contentType?: string }>({ status: 'pending' }),;
+  const query = useMemo(() => {;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const p = new URLSearchParams();
     if (filters.status) p.set('status', filters.status);
     if (filters.reason) p.set('reason', filters.reason);
     if (filters.userEmail) p.set('userEmail', filters.userEmail);
     if (filters.contentType) p.set('contentType', filters.contentType);
+<<<<<<< HEAD
     return p.toString()
   }, [filters]);
   const { data, mutate } = useSWR(`/api/admin/moderation/flags${query ? `?${query}` : ''}`, fetcher);
@@ -222,12 +304,121 @@ export default function ContentReviewPage() {
     setSelected(null);
     mutate()
   }
+=======
+    return p.toString();
+<<<<<<< HEAD
+  }, [filters]);
+  const { data, mutate } = useSWR(
+    `/api/admin/moderation/flags${query ? `?${query}` : ''}`
+    fetcher
+  );  const flags = data?.flags |[];
+  const [selected, setSelected] = useState<any | null>(null);
+  async function handleAction(
+    action: 'approve' | 'remove' | 'warn' | 'ban'
+    adminNotes?: string
+  ) {
+    if (!selected) return;
+    await fetch(
+      `/api/admin/moderation/flags/${encodeURIComponent(selected.id)}/action`
+      {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ action, adminNotes })
+      }
+    );
+    setSelected(null);
+    mutate();  }
+
+=======
+  }, [filters]),;
+  const { data, mutate } = useSWR(`/api/admin/moderation/flags${query ? `?${query}` : ''}`, fetcher);
+  const flags = data?.flags || [];
+  const [selected, setSelected] = useState<any | null>(null);
+  async function handleAction(action: 'approve'|'remove'|'warn'|'ban', adminNotes?: string) {;
+    if (!selected) return,;
+    await fetch(`/api/admin/moderation/flags/${encodeURIComponent(selected.id)}/action`, {;
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action, adminNotes });
+    });
+    setSelected(null);
+    mutate();
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <EnhancedLayout>
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl font-semibold">Admin Content Review</h1>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div className='mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm'>
+          <select
+            value={filters.status |''}
+            onChange={e =>
+              setFilters(f => ({ ...f, status: e.target.value |undefined }))
+            }
+            className='border rounded px-2 py-1'
+          >
+            <option value=''>All Statuses</option>
+            <option value='pending'>Pending</option>
+            <option value='approved'>Approved</option>
+            <option value='removed'>Removed</option>
+            <option value='warned'>Warned</option>
+            <option value='banned'>Banned</option>
+          </select>
+          <select
+            value={filters.contentType |''}
+            onChange={e =>
+              setFilters(f => ({
+                ...f
+                contentType: e.target.value |undefined
+              }))
+            }
+            className='border rounded px-2 py-1'
+          >
+            <option value=''>All Types</option>
+            <option value='listing'>Listing</option>
+            <option value='message'>Message</option>
+            <option value='cv'>CV</option>
+            <option value='job'>Job Post</option>
+          </select>
+          <input
+            placeholder='Reason contains...'
+            value={filters.reason |''}
+            onChange={e =>
+              setFilters(f => ({ ...f, reason: e.target.value |undefined }))
+            }
+            className='border rounded px-2 py-1'
+          />
+          <input
+            placeholder='User email'
+            value={filters.userEmail |''}
+            onChange={e =>
+              setFilters(f => ({
+                ...f
+                userEmail: e.target.value |undefined
+              }))
+            }
+            className='border rounded px-2 py-1'
+          />
+          <button
+            onClick={() => setFilters({ status: 'pending' })}
+            className='border rounded px-2 py-1'
+          >
+            Reset
+          </button>
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm">
           <select value={filters.status || ''} onChange={e => setFilters(f => ({ ...f, status: e.target.value || undefined }))} className="border rounded px-2 py-1">
             <option value="">All Statuses</option>
@@ -247,6 +438,10 @@ export default function ContentReviewPage() {
           <input placeholder="Reason contains..." value={filters.reason || ''} onChange={e => setFilters(f => ({ ...f, reason: e.target.value || undefined }))} className="border rounded px-2 py-1" />
           <input placeholder="User email" value={filters.userEmail || ''} onChange={e => setFilters(f => ({ ...f, userEmail: e.target.value || undefined }))} className="border rounded px-2 py-1" />
           <button onClick={() => setFilters({ status: 'pending' })} className="border rounded px-2 py-1">Reset</button>
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         </div>
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
@@ -260,6 +455,7 @@ export default function ContentReviewPage() {
                 <th className="text-left px-3 py-2">Created</th>
                 <th className="text-left px-3 py-2">Status</th>
                 <th className="text-left px-3 py-2">Actions</th>
+<<<<<<< HEAD
 
   const [selected, setSelected] = useState<any | null>(null),
 
@@ -311,11 +507,17 @@ export default function ContentReviewPage() {
                 <th className=&quot;text-left px-3 py-2&quot;>Status</th>
                 <th className=&quot;text-left px-3 py-2&quot;>Actions</th>
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </tr>
             </thead>
             <tbody>
               {flags.map((f: any) => (
+<<<<<<< HEAD
 <tr key={f.id} className="border-t hover:bg-gray-50/50">
+=======
+                <tr key={f.id} className="border-t hover:bg-gray-50/50">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <td className="px-3 py-2 font-mono text-xs">{f.id}</td>
                   <td className="px-3 py-2">{f.contentType}</td>
                   <td className="px-3 py-2">{f.userEmail}</td>
@@ -327,20 +529,42 @@ export default function ContentReviewPage() {
                     <button onClick={() => setSelected(f)} className="px-2 py-1 rounded border">Review</button>
                   </td>
                 </tr>
+<<<<<<< HEAD
               ))}
               {flags.length === 0 && (
 <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
               )}
+=======
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              {flags.length === 0 && (
+<<<<<<< HEAD
+                <tr>
+                  <td
+                    colSpan={8}
+                    className='px-3 py-6 text-center text-gray-500'
+                  >
+                    No results
+                  </td>
+                </tr>              )}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </tbody>
           </table>
         </div>
       </div>
+<<<<<<< HEAD
 {selected && (
             </tbody>;
           </table>;
         </div>;
       </div>;
       {selected && (;
+=======
+      {selected && (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <ModerationModal
           flag={selected}
           onClose={() => setSelected(null)}
@@ -350,6 +574,7 @@ export default function ContentReviewPage() {
     </EnhancedLayout>;
   );
     </EnhancedLayout>
+<<<<<<< HEAD
   )
 }
         <div className='overflow - auto border rounded'>;
@@ -400,10 +625,26 @@ export default function ContentReviewPage() {
                     No results;
                   </td>;
                 </tr>              )}
+=======
+);
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </tbody>;
           </table>;
         </div>;
       </div>;
+<<<<<<< HEAD
       {selected && (
         <ModerationModal;
           flag={selected}
@@ -412,3 +653,40 @@ export default function ContentReviewPage() {
         />)}
     </EnhancedLayout>);
 ;
+=======
+      {selected && (;
+        <ModerationModal;
+          flag={selected  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          onClose={() => setSelected(null)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          onAction={handleAction  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        />;
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

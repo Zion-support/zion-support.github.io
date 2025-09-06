@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,3 +19,17 @@ class ErrorBoundary extends React.Component {
 }
 import _React from 'react'; const Blockchain = () => { return ( <div> <h1>Blockchain</h1> <p>Component placeholder</p> </div> )}; export default Blockchain;
 import _React from 'react'; const Blockchain = () => { return ( <div> <h1>Blockchain</h1> <p>Component placeholder</p> </div> )}; export default Blockchain;
+=======
+import React from 'react';
+
+const Blockchain = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Blockchain</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Blockchain;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
 ;
 export interface ModerationAction {
@@ -21,3 +22,29 @@ export interface ModerationFlag {
   updated_at: string;
   admin_notes?: string,
 }
+=======
+export type ContentType = 'listing' | 'message' | 'cv' | 'job',;
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned',;
+;
+export type AiScores = {;
+  toxicity:number, // 0-1;
+  nsfw:number, // 0-1;
+  scam:number, // 0-1;
+},;
+;
+export type FlaggedContent = {;
+  id:string,;
+  contentType:ContentType,;
+  contentId:string,;
+  userId:string,;
+  userEmail:string,;
+  reason:string,;
+  status:ModerationStatus,;
+  snippet:string, // small preview of content;
+  metadata?:Record<string any>,;
+  aiScores:AiScores,;
+  createdAt:string,;
+  updatedAt:string,;
+  adminNotes?:string;
+},
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,8 +1,47 @@
+<<<<<<< HEAD
 import React from 'react';
 import React from './react';
 import MainLayout from "../src / components / layout / MainLayout";
 import { motion  } from './framer-motion';
 import {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+import {
+<<<<<<< HEAD
+  Code
+  Check
+  Globe
+  Shield
+  Zap
+  Database
+  Cpu
+  Cloud
+  XCircle
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Code,
   Check,
   Globe,
@@ -11,6 +50,7 @@ import {
   Database,
   Cpu,
   Cloud,
+<<<<<<< HEAD
   XCircle,
 } from './lucide-react';
 ;
@@ -19,6 +59,13 @@ export default /**
  */
 function APIPage() {
   const api_endpoints = [;
+=======
+  XCircle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from "lucide-react";
+export default function APIPage() {
+  const apiEndpoints = [
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       id: "auth",
       title: "Authentication",
@@ -64,6 +111,7 @@ function APIPage() {
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\;
   -H "Content - Type: application / json" \\;
   -d '{
+<<<<<<< HEAD
     "message": "Hello, how can you help me?",
     "model": "gpt - 4",
     "temperature": 0.7;
@@ -71,6 +119,22 @@ function APIPage() {
         },
       ],
     },
+=======
+    "message": "Hello, how can you help me?"
+    "model": "gpt-4"
+    "temperature": 0.7
+<<<<<<< HEAD
+  }'`
+        }
+      ]
+    }
+=======
+  }'`,
+        },
+      ],
+    },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   ];
 ;
   const response_examples = {
@@ -552,6 +616,7 @@ export default function APIPage() {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">;
                   View Documentation;
                 </a>;
@@ -561,6 +626,14 @@ export default function APIPage() {
         </section>;
       </div>;
     </MainLayout>;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;

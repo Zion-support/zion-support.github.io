@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Education  } from '@/types / resume';
 export interface EducationFormProps {
   resume_id: string;
@@ -15,3 +16,25 @@ export interface EducationFormFieldsProps {
   on_submit: (data: any) => Promise < void>;
   on_cancel: () => void;
 }
+=======
+
+import { Education } from '@/types/resume',;
+;
+export interface EducationFormProps {;
+  resumeId:string,;
+  educationEntries:Education[],;
+  onComplete:() => void,;
+  onBack:() => void;}
+;
+export interface EducationItemProps {;
+  education:Education,;
+  onEdit:(education:Education) => void,;
+  onDelete:(id:string) => void;
+}
+;
+export interface EducationFormFieldsProps {;
+  isEditing:boolean,;
+  onSubmit:(data:any) => Promise<void>,;
+  onCancel:() => void;
+} 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

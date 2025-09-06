@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 if (!userId) return;
     setLoading(true);
     setMessage('');
@@ -7,11 +8,52 @@ if (!userId) return;
     else setMessage(json.error || 'Failed to load');
     setLoading(false)
   };
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+export default function PrivacySettingsPage() {
+
+  const [userId, setUserId] = useState('')
+  const [optOut, setOptOut] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [message, setMessage] = useState('')
+=======
+import React, { useEffect, useState } from 'react',
+=======
+import React, { useEffect, useState } from 'react',;
+;
+=======
+import React, { useEffect, useState } from 'react',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function PrivacySettingsPage() {
+  const [userId, setUserId] = useState(''),
+  const [optOut, setOptOut] = useState(false),
+  const [loading, setLoading] = useState(false),
+  const [message, setMessage] = useState(''),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const load = async () => {
+    if (!userId) return
+    setLoading(true)
+    setMessage('')
+    const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`)
+    const json = await res.json()
+    if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut)
+    else setMessage(json.error |'Failed to load')
+    setLoading(false)
+<<<<<<< HEAD
+  }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const save = async () => {
     if (!userId) return
     setLoading(true)
     setMessage('')
     const res = await fetch('/api/fraud/settings/opt-out', {
+<<<<<<< HEAD
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, optOut })});
@@ -26,8 +68,40 @@ if (!userId) return;
   }, []);
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId);
-    load()
+=======
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ userId, optOut })})
+    const json = await res.json()
+    if (res.ok) setMessage('Saved')
+    else setMessage(json.error |'Save failed')
+    setLoading(false)
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  useEffect(() => {
+    const savedUser = localStorage.getItem('user-id')
+    if (savedUser) setUserId(savedUser)
+<<<<<<< HEAD
+  }, [])
+=======
+  }, []),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const onSaveUser = () => {
+    localStorage.setItem('user-id', userId)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    load()
+<<<<<<< HEAD
+  }
+<<<<<<< HEAD
+=======
+
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className="p-6 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>
@@ -41,14 +115,29 @@ if (!userId) return;
           <label htmlFor="optout">Opt-out of GPT content analysis (basic heuristics still apply)</label>
         </div>
         <div className="flex items-center gap-2">
+<<<<<<< HEAD
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
           {message && <div>{message}</div>}
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <button disabled={!userId |loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+          <button disabled={!userId |loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
+=======
+          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+          <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {message && <div>{message}</div>}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
+<<<<<<< HEAD
 }
 import React, { useEffect, useState } from 'react',
 ;
@@ -123,3 +212,33 @@ if (return, ) {
       </div>;
     </div>);
 }
+=======
+=======
+          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+          <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
+=======
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {message && <div>{message}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      </div>;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

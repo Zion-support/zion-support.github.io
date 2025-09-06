@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {useNotificationOperations} from './useNotificationOperations';
@@ -33,12 +34,57 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   // Load notifications when user changes;
   useEffect(() => {;
     notificationOps && notificationOps.fetchNotifications();
+=======
+import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useNotificationOperations } from './useNotificationOperations',;
+import { NotificationContextType } from './types',;
+;
+// Default context used when React type definitions are missing. Providing a;
+// fully-typed object here avoids TypeScript errors that occur when an untyped;
+// `createContext` call returns `{}` instead of the expected shape.;
+const defaultContext:NotificationContextType = {;
+  notifications:[],;
+  filteredNotifications:[],;
+  unreadCount:0,;
+  loading:false,;
+  filter:'all',;
+  markAsRead:async () => {},;
+  markAllAsRead:async () => {},;
+  dismissNotification:async () => {},;
+  setFilter:() => {},;
+  fetchNotifications:async () => {}},;
+;
+// Cast the default context value to avoid issues when React types are missing.;
+const NotificationContext = createContext(;
+  defaultContext as NotificationContextType;
+),;
+;
+export const useNotifications = ():NotificationContextType => {;
+  const context = useContext(NotificationContext) as NotificationContextType,;
+  if (!context) {;
+    throw new Error('useNotifications must be used within a NotificationProvider'),;
+  }
+  return context,;
+},;
+;
+export const NotificationProvider = ({ children } { children:ReactNode }):JSX.Element => {;
+  const { user } = useAuth(),;
+  const notificationOps = useNotificationOperations(user?.id),;
+  ;
+  // Load notifications when user changes;
+  useEffect(() => {;
+    notificationOps.fetchNotifications(),;
+    ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Set up real-time subscription for new notifications;
     if (user) {;
       const channel = supabase;
         .channel('notifications-changes');
         .on('postgres_changes', ;
           {;
+<<<<<<< HEAD
             event: '*', ;
             schema: 'public',;
             table: 'notifications',;
@@ -136,3 +182,59 @@ if ( {) {
     </NotificationContext.Provider>);
 }
 ;
+=======
+            event:'*', ;
+            schema:'public',;
+            table:'notifications',;
+            filter:`user_id=eq.${user.id}`;
+          },;
+          (payload) => {;
+            // // // console.log('Notification change received:', payload),;
+            notificationOps.fetchNotifications(),;
+          }
+        );
+        .subscribe(),;
+        ;
+      return () => {;
+        supabase.removeChannel(channel),;
+      },;
+    }
+  }, [user]),;
+  ;
+  return (;
+    <NotificationContext.Provider value={notificationOps}>;
+      {children}
+    </NotificationContext.Provider>;
+  ),;},
+ //Default context used when React type definitions are missing. Providing a //fully-typed object here avoids TypeScript errors that occur when an untyped //`createContext` call returns ` {
+  
+}` instead of the expected shape. const defaultContext: NotificationContextType = {
+  notifications: [], filteredNotifications: [], unreadCount: 0, loading: false, filter: 'all', markAsRead: async () => {
+  
+};
+markAllAsRead: async () => {
+  
+};
+dismissNotification: async () => {
+  
+};
+setFilter: () => {
+  
+};
+fetchNotifications: async () => {
+  
+}
+};
+//Cast the default context value to avoid issues when React types are missing. const NotificationContext = createContext (defaultContext as NotificationContextType);
+//Set up real-time subscription for new notifications if (user) {
+  const channel = supabase .channel ('notifications-changes') 
+}
+}
+}, [user]);
+return (<NotificationContext.Provider value= {
+  notificationOps 
+}> {
+  children 
+}</NotificationContext.Provider>) 
+};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

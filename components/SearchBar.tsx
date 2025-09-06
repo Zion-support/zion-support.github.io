@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +20,14 @@ class ErrorBoundary extends React.Component {
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next / link';
 ;
+=======
+import React, { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
@@ -145,6 +154,7 @@ url: '/it - services',
     setIsOpen(false),;
     inputRef && inputRef.current?.blur();
   }
+<<<<<<< HEAD
   };
   useEffect(() => {;
     const handleClickOutside = (event: MouseEvent) => {;
@@ -156,6 +166,28 @@ url: '/it - services',
     return () => {;
       document && document.removeEventListener('mousedown', handleClickOutside);
     };
+=======
+  const handleResultClick = () => {
+    setIsOpen(false)
+    setQuery('')
+  }
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+    setIsOpen(false)
+    inputRef.current?.blur()
+  }
+  }
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }, []);
   return (
     <div ref={searchRef} className="relative w-full max-w-md">;
@@ -190,15 +222,24 @@ url: '/it - services',
         )}
       </div>;
       {/* Search Results Dropdown */}
+<<<<<<< HEAD
       {isOpen && (;
         <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">;
           {results && results.length > 0 ? (;
             <div className="py-2">;
               {results && results.map((result, index) => (;
+=======
+      {isOpen && (
+        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
+          {results.length > 0 ? (
+            <div className="py-2">
+              {results.map((result, index) => (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Link
                   key={index}
                   href={result && result.url}
                   onClick={handleResultClick}
+<<<<<<< HEAD
                   className="block px-4 py-3 hover:bg-gray-50 transition-colors">;
                   <div className="flex items-start space-x-3">;
                     <div className="flex-shrink-0">;
@@ -223,12 +264,45 @@ url: '/it - services',
             <div className="px-4 py-3 text-sm text-gray-500">;
               No results found for &quot;{query}&quot;
             </div>;
+=======
+                  className="block px-4 py-3 hover:bg-gray-50 transition-colors"
+                >
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0">
+                      <div className={`w-2 h-2 rounded-full mt-2 ${
+                        result.type === 'service' ? 'bg-blue-500' :
+                        result.type === 'page' ? 'bg-green-500' : 'bg-purple-500'
+                      }`}></div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-gray-900 truncate">
+                        {result.title}
+                      </p>
+                      <p className="text-sm text-gray-500 truncate">
+                        {result.description}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          ) : query && !isLoading ? (
+            <div className="px-4 py-3 text-sm text-gray-500">
+              No results found for &quot;{query}&quot;
+            </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           ) : null}
         </div>;
       )}
+<<<<<<< HEAD
     </div>;
+=======
+    </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
 ;
   const handle_search = async (search_query: string) => {
     if () {) {
@@ -358,3 +432,10 @@ if ( {) {
 }
 ;
 export default SearchBar;
+=======
+=======
+};
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default SearchBar;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

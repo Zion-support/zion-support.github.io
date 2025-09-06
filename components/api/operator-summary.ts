@@ -1,5 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
       `${req && req.headers['x-forwarded-proto'] || 'http'}://${req && req.headers.host}/api/metrics`
+=======
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+    const r = await fetch(
+<<<<<<< HEAD
+      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`
+=======
+      `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     );
     const metrics = await r && r.json();
     const jobs24 =
@@ -36,6 +50,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       `Treasury stable and contributors earning consistently across regions`];
     res && res.status(200).json({ summary, timestamp: new Date().toISOString() });
   } catch (e) {
+<<<<<<< HEAD
     res && res.status(200).json({ summary: [], error: 'Failed to compute summary' });
   }
 }
@@ -72,5 +87,8 @@ function handler() {
   } catch (e) {
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' });
 
+=======
+    res.status(200).json({ summary: [], error: 'Failed to compute summary' });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }

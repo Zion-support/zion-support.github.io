@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 isLoading: fetchResumeOperations && fetchResumeOperations.isLoading || resumeActions && resumeActions.isLoading;
     error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
     resume: fetchResumeOperations && fetchResumeOperations.resume;
@@ -28,3 +29,26 @@ function useResumeBasic() {
     updateBasicInfo: resume_actions.updateBasicInfo,
     setActiveResume: resume_actions.setActiveResume}
 }
+=======
+
+import { useFetchResume } from './useFetchResume',;
+import { useResumeActions } from './useResumeActions',;
+;
+export function useResumeBasic() {;
+  const fetchResumeOperations = useFetchResume(),;
+  const resumeActions = useResumeActions(),;
+  ;
+  return {;
+    // From useFetchResume;
+    isLoading:fetchResumeOperations.isLoading || resumeActions.isLoading,;
+    error:fetchResumeOperations.error || resumeActions.error,;
+    resume:fetchResumeOperations.resume,;
+    fetchResume:fetchResumeOperations.fetchResume,;
+    ;
+    // From useResumeActions;
+    createResume:resumeActions.createResume,;
+    updateBasicInfo:resumeActions.updateBasicInfo,;
+    setActiveResume:resumeActions.setActiveResume},;
+} 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

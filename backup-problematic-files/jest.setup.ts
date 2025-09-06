@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 global && global.ResizeObserver = jest && jest.fn().mockImplementation(() => ({
   observe: jest && jest.fn(),
   unobserve: jest && jest.fn(),
@@ -11,6 +12,24 @@ global.ResizeObserver = (global as any).ResizeObserver || (() => ({
   unobserve: () => {},
   disconnect: () => {},
 }));
+=======
+<<<<<<< HEAD:jest.setup.ts
+// Jest setup file for testing environment
+import '@testing-library/jest-dom';
+=======
+// Jest.setup utility
+export const Jest.setup = () => {
+  // Implementation here
+  return null;
+};
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/jest.setup.ts
+// Mock global objects that might not be available in test environment
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn()
+  unobserve: jest.fn()
+  disconnect: jest.fn(),}));}));
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,

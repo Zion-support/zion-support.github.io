@@ -29,6 +29,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
@@ -37,6 +38,10 @@ function ensureStorage() {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
+=======
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function readEpisodes(): any[] {
   ensureStorage();
   return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
@@ -45,7 +50,9 @@ function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
   const id = uuidv4();
@@ -53,12 +60,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const _system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${_persona?.voice || 'Visionary'} tone, speak in ${_persona?.language || 'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 
+=======
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { persona, invitee, topic, operatorPrompt } = req.body |{}
+  const id = uuidv4();
+  const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 1) 7-10 concise interview questions mixing visionary and technical angles
 2) Time markers for: Intro, segment transitions, Closing CTA for Zion
 3) Full 15-minute script/transcript approximating 1800-2200 words, clearly indicating Host and Guest
 4) YouTube and Spotify descriptions
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
+<<<<<<< HEAD
       const completion = await openai && openai.chat.completions && completions.create({
         model: process && process.env.ZION_GPT_MODEL || 'gpt-4o-mini',
         messages: [
@@ -252,6 +270,10 @@ time_markers: generated.time_markers || {
       },
   const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`;
   let generated: any = null,
+=======
+  const user = `Guest: ${invitee?.name |''}\nBio: ${invitee?.bio |''}\nTopic: ${topic |''}\nOperator Prompt: ${operatorPrompt |''}\nStyle Sample: ${persona?.cloneStyleText |''}`;
+  let generated: any = null;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   try {
     const apiKey = process.env.OPENAI_API_KEY;
     let content: string,
@@ -290,6 +312,7 @@ time_markers: generated.time_markers || {
       return res.status(500).json({ error: 'Failed to generate structured content' });
     }
     const episodes = readEpisodes();
+<<<<<<< HEAD
     const episode = {
       id;
       createdAt: new Date().toISOString(), persona,
@@ -308,6 +331,7 @@ time_markers: generated.time_markers || {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
   };
 }
+<<<<<<< HEAD
       transcript: generated.transcript,
       youtube_description: generated.youtube_description || '',
       spotify_description: generated.spotify_description || '',
@@ -332,3 +356,18 @@ time_markers: generated.time_markers || {
   }
 
 }
+=======
+<<<<<<< HEAD
+}
+=======
+    const episode = {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+}
+=======
+    const episode = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

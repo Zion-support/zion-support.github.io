@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +17,16 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 "use client";
 "use client";
 import React, { useState, useEffect } from "react";
@@ -25,17 +36,55 @@ import Link from "next/link";
 import React, { useState, useEffect } from './react';
 import Link from './next / link';
 import {
+<<<<<<< HEAD
 'use client';
+=======
+<<<<<<< HEAD
+  Menu,
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+=======
+
+'use client';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
+<<<<<<< HEAD
   Phone,
+=======
+  Menu, 
+  X, 
+  Phone, 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Mail, 
+<<<<<<< HEAD
+  MapPin,
+  Brain,
+  Network,
+  Cloud,
+  ArrowRight
+} from 'lucide-react';
+=======
+>>>>>>> origin/main
+
+"use client";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import {
+=======
   Facebook, 
   Twitter, 
   Linkedin, 
+<<<<<<< HEAD
 Instagram, 
+=======
+  Instagram, 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   ChevronDown, 
   Menu, 
   X,
@@ -52,7 +101,14 @@ Instagram,
   GraduationCap,
   Factory,
   Truck,
+<<<<<<< HEAD
 CreditCard,
+=======
+<<<<<<< HEAD
+  CreditCard,
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Menu
   X
   ChevronDown
@@ -69,6 +125,7 @@ CreditCard,
   Factory
   Truck
   CreditCard
+<<<<<<< HEAD
 import {;
   Menu,;
   X,;
@@ -87,6 +144,14 @@ import {;
   Truck,;
   CreditCard,;
 } from "lucide-react";
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+  CreditCard,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from "lucide-react";
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function Header() {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -120,32 +185,338 @@ function Header() {
 ;
   const services_dropdown = [;
     {
+<<<<<<< HEAD
+=======
+      title: "Web Development"
+      description: "Custom websites and web applications"
+      href: "/services/web-development"
+      icon: Code
+    }
+    {
+      title: "Mobile Development"
+      description: "iOS and Android applications"
+      href: "/services/mobile-development"
+      icon: Smartphone
+    }
+    {
+      title: "Cloud Solutions"
+      description: "Scalable cloud infrastructure"
+      href: "/services/cloud-solutions"
+      icon: Cloud
+    }
+    {
+      title: "Database Management"
+      description: "Database design and optimization"
+      href: "/services/database-management"
+      icon: Database
+    }
+    {
+      title: "Security Services"
+      description: "Cybersecurity and data protection"
+      href: "/services/security"
+      icon: Shield
+    }
+    {
+      title: "Performance Optimization"
+      description: "Speed and efficiency improvements"
+      href: "/services/performance"
+      icon: Zap
+    }
+  ];
+  const solutionsDropdown = [
+    {
+      title: "Enterprise Solutions"
+      description: "Comprehensive business technology solutions"
+      href: "/solutions/enterprise"
+      icon: Building
+    }
+    {
+      title: "E-commerce Platforms"
+      description: "Online store development and management"
+      href: "/solutions/ecommerce"
+      icon: ShoppingCart
+    }
+    {
+      title: "Healthcare Technology"
+      description: "Specialized healthcare IT solutions"
+      href: "/solutions/healthcare"
+      icon: Heart
+    }
+    {
+      title: "Educational Platforms"
+      description: "Learning management systems"
+      href: "/solutions/education"
+      icon: GraduationCap
+    }
+  ];
+  const industriesDropdown = [
+    { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory }
+    { name: "Logistics", href: "/industries/logistics", icon: Truck }
+    { name: "Finance", href: "/industries/finance", icon: CreditCard }
+    { name: "Healthcare", href: "/industries/healthcare", icon: Heart }
+    { name: "Education", href: "/industries/education", icon: GraduationCap }
+    { name: "Retail", href: "/industries/retail", icon: ShoppingCart }
+  ];
+  const navigation = [
+    { name: "Home", href: "/" }
+    {
+      name: "Services"
+      href: "/services"
+      submenu: [
+        { name: "AI Services", href: "/ai-services", icon: Brain }
+        { name: "IT Services", href: "/it-services", icon: Network }
+        { name: "Micro SAAS", href: "/micro-saas", icon: Cloud }
+      ]
+    }
+    { name: "About", href: "/about" }
+    { name: "Services", href: "/services" }
+    { name: "Solutions", href: "/solutions" }
+    { name: "Industries", href: "/industries" }
+    { name: "Contact", href: "/contact" }
+
+  ];
+  const handleServiceClick = (href: string) => {
+    closeMenu();
+    window.location.href = href;
+  }
+  return (
+    <header className="bg-white shadow-lg sticky top-0 z-50">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
+            </Link>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+            <Link href="/" className="flex items-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
+                <Brain className="h-5 w-5 text-white" />
+              </div>
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+            </Link>
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
+            </Link>
+          </div>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+          {/* Desktop CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+            >
+              Get Started
+            </Link>
+          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden p-2 rounded-lg transition-colors duration-200 text-gray-700 hover:bg-gray-100"
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
+        {/* Mobile Menu */}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { 
+      name: 'Services', 
+      href: '/services', 
+      dropdown: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Cloud Solutions', href: '/solutions/cloud-migration' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Data Analytics', href: '/services/data-analytics' }
+      ]
+    },
+    { 
+      name: 'Solutions', 
+      href: '/solutions', 
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { name: 'Healthcare', href: '/solutions/healthcare' },
+        { name: 'Finance', href: '/solutions/finance' },
+        { name: 'Government', href: '/solutions/government' },
+        { name: 'Retail', href: '/solutions/retail' },
+        { name: 'Education', href: '/solutions/education' }
+      ]
+    },
+    { 
+      name: 'Industries', 
+      href: '/industries', 
+      dropdown: [
+        { name: 'Financial Services', href: '/industries/financial' },
+        { name: 'Healthcare', href: '/industries/healthcare' },
+        { name: 'Manufacturing', href: '/industries/manufacturing' },
+        { name: 'Retail', href: '/industries/retail' },
+        { name: 'Government', href: '/industries/government' }
+      ]
+    },
+    { 
+      name: 'Company', 
+      href: '/about', 
+      dropdown: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Case Studies', href: '/case-studies' }
+      ]
+    },
+    { 
+      name: 'Resources', 
+      href: '/resources', 
+      dropdown: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Tutorials', href: '/tutorials' },
+        { name: 'API Documentation', href: '/api-docs' }
+      ]
+    },
+    { name: 'Contact', href: '/contact' }
+  ];
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name);
+  };
+
+  return (
+    <header className="bg-white shadow-lg sticky top-0 z-50">
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm">
             <div className="flex items-center space-x-6 mb-2 md:mb-0">
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
-                <a href="tel:+13024640950" className="hover:text-blue-300">+1 302 464 0950</a>
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4" />
+                <span>+1 302 464 0950</span>
               </div>
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300">kleber@ziontechgroup.com</a>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <span className="text-blue-200">24/7 Support Available</span>
-              <div className="flex space-x-2">
-                <a href="#" className="hover:text-blue-300"><Facebook className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-blue-300"><Twitter className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-blue-300"><Linkedin className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-blue-300"><Instagram className="w-4 h-4" /></a>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4" />
+                <span>kleber@ziontechgroup.com</span>
               </div>
             </div>
+            <div className="flex items-center space-x-2">
+              <MapPin className="w-4 h-4" />
+              <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+            </div>
+<<<<<<< HEAD
           </div>
 {/* Desktop Navigation */}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+          </div>
+<<<<<<< HEAD
+=======
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <nav className="container mx-auto px-4 py-4">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">Z</span>
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>
+              <p className="text-sm text-gray-600">AI & Technology Solutions</p>
+            </div>
+          </Link>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          {/* Desktop Navigation */}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+          </div>
+          {/* Desktop Navigation */}
+<<<<<<< HEAD
+          <nav className="hidden lg:flex space-x-8">
+            {navigation.map((item) => (
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+          <nav className="hidden md:flex space-x-8">
+=======
+          <nav className="hidden lg:flex space-x-8">
+>>>>>>> origin/main
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="hidden lg:flex items-center space-x-8">
+<<<<<<< HEAD
             {/* Services Dropdown */}
             <div className="relative group">
               <button
@@ -176,12 +547,49 @@ function Header() {
                                 <p className="text-sm text-gray-600">{service.description}</p>
                               </div>
                             </div>
+=======
+            {navigation.map((item) => (
+              <div key={item.name} className="relative group">
+                <button
+                  onClick={() => item.dropdown && toggleDropdown(item.name)}
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                >
+                  <Link href={item.href}>{item.name}</Link>
+                  {item.dropdown && (
+                    <ChevronDown 
+                      className={`w-4 h-4 transition-transform duration-200 ${
+                        activeDropdown === item.name ? 'rotate-180' : ''
+                      }`} 
+                    />
+                  )}
+                </button>
+
+                {/* Dropdown Menu */}
+                {item.dropdown && (
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
+                      >
+                        {item.dropdown.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            {subItem.name}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           </Link>
                         ))}
-                      </div>
-                    </div>
-                  </motion.div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 )}
+<<<<<<< HEAD
               </AnimatePresence>
             </div>
             {/* Solutions Dropdown */}
@@ -202,20 +610,95 @@ function Header() {
                     className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border z-50"
                     onMouseEnter={() => setIsSolutionsOpen(true)}
                     onMouseLeave={() => setIsSolutionsOpen(false)}
+=======
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden bg-white shadow-lg"
+            >
+              <div className="px-4 py-6 space-y-4">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="block text-gray-700 hover:text-blue-600 font-medium"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >
-                    <div className="p-6">
-                      {solutionsDropdown.map((solution) => (
-                        <Link key={solution.title} href={solution.href} className="group block mb-4 last:mb-0">
-                          <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                            <solution.icon className="w-6 h-6 text-blue-600 mt-1" />
-                            <div>
-                              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{solution.title}</h3>
-                              <p className="text-sm text-gray-600">{solution.description}</p>
-                            </div>
-                          </div>
+                    {item.name}
+                  </Link>
+                ))}
+                <Link
+                  href="/contact"
+                  onClick={closeMenu}
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden mt-4 border-t border-gray-200 pt-4"
+            >
+              {navigation.map((item) => (
+                <div key={item.name} className="mb-2">
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={item.href}
+                      className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium py-2"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                    {item.dropdown && (
+                      <button
+                        onClick={() => toggleDropdown(item.name)}
+                        className="p-1"
+                      >
+                        <ChevronDown 
+                          className={`w-4 h-4 transition-transform duration-200 ${
+                            activeDropdown === item.name ? 'rotate-180' : ''
+                          }`} 
+                        />
+                      </button>
+                    )}
+                  </div>
+                  {item.dropdown && activeDropdown === item.name && (
+                    <div className="ml-4 mt-2 space-y-1">
+                      {item.dropdown.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {subItem.name}
                         </Link>
                       ))}
                     </div>
+<<<<<<< HEAD
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -253,6 +736,7 @@ function Header() {
             </div>
             {/* Regular Navigation Items */}
             {navigation.slice(0, 2).map((item) => (
+<<<<<<< HEAD
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 0);
@@ -366,6 +850,12 @@ function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">;
             {navigation && navigation.map((item) => (;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Link
                 key={item && item.name}
                 href={item && item.href}
@@ -373,18 +863,83 @@ function Header() {
                 {item && item.name}
               </Link>;
             ))}
+<<<<<<< HEAD
           </div>
           </nav>;
+=======
+<<<<<<< HEAD
+          </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-600">
+            <div className="flex items-center">
+              <Phone className="h-4 w-4 mr-1" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center">
+              <Mail className="h-4 w-4 mr-1" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+=======
+=======
+<<<<<<< HEAD
+          </nav>
+<<<<<<< HEAD
+=======
+          </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">;
             <Link
               href="/contact"
+<<<<<<< HEAD
         </div>
       </nav>
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">;
               Get Started;
             </Link>;
           </div>;
+=======
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+            >
+              Get Started
+            </Link>
+          </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        </div>
+<<<<<<< HEAD
+=======
+      </nav>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -394,8 +949,29 @@ function Header() {
             ) : (;
               <Menu className="h-6 w-6" />;
             )}
+<<<<<<< HEAD
           </button>;
         </div>;
+=======
+          </button>
+        </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      </nav>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
+              {navigation.map((item) => (
+                <div key={item.name}>
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isMenuOpen && (;
@@ -403,6 +979,7 @@ function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
               className="lg:hidden bg-white shadow-lg">;
               <div className="px-4 py-6 space-y-4">;
                 {navigation && navigation.map((item) => (;
@@ -413,10 +990,26 @@ function Header() {
                     className="block text-gray-700 hover:text-blue-600 font-medium">;
                     {item && item.name}
                   </Link>;
+=======
+              className="lg:hidden bg-white shadow-lg"
+            >
+              <div className="px-4 py-6 space-y-4">
+                {navigation.map((item) => (
+>>>>>>> origin/main
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="block text-gray-700 hover:text-blue-600 font-medium"
+                  >
+                    {item.name}
+                  </Link>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 ))}
                 <Link
                   href="/contact"
                   onClick={closeMenu}
+<<<<<<< HEAD
 className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200">;
                   Get Started;
                 </Link>;
@@ -426,6 +1019,33 @@ className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-
         </AnimatePresence>;
       </div>;
     </header>;
+=======
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+=======
+                  )}
+                </div>
+              ))}
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <Link
+                  href="/contact"
+                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                  onClick={() => setIsMenuOpen(false)}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                >
+                  Get Started
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+<<<<<<< HEAD
+      </div>
+    </header>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
       title: "Web Development",
       description: "Custom websites and web applications",
@@ -595,3 +1215,18 @@ className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-
       </div>;
     </header>);
 }
+<<<<<<< HEAD
+=======
+=======
+      </nav>
+    </header>
+  );
+};
+
+export default Header;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

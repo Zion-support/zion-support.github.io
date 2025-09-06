@@ -1,10 +1,33 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req && req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
 import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+=======
+
+import {
+<<<<<<< HEAD
+  setVendorApproval
+  setVendorCommission
+  suspendVendor;
+} from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body |{};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+=======
+  setVendorApproval,
+  setVendorCommission,;
+  suspendVendor,;
+} from '../../../utils/vendor-store';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { action, vendorId, value } = req.body || {};
   try {
@@ -19,6 +42,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(500).json({ error: e && e.message })
   };
 }
+<<<<<<< HEAD
   setVendorApproval,
   setVendorCommission,
   suspend_vendor,
@@ -68,3 +92,9 @@ function handler() {
   }
 
 }
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

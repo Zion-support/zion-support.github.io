@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 useEffect ( () => {;
   const load = async () => {;
   try {;
@@ -167,30 +168,135 @@ export default function PodcastIndexPage() {
                 {ep.audio?.mp3Url && (
                   <a href={ep.audio.mp3Url} className=&quot;px-3 py-2 bg-blue-600 text-white rounded&quot; download>
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+useEffect ( () => {
+  const load = async () => {
+  try {
+  if (loading) return <div>Loading episodes…</div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+    <div className='space-y-6'>
+      <div className='flex items-center justify-between'>
+        <h1 className='text-3xl font-bold'>Zion Podcast</h1>
+        <Link href='/studio/host' className='text-blue-600 underline'>
+          Create Episode
+        </Link>
+      </div>
+      {episodes.length === 0 && <p>No episodes yet.</p>}
+      <ul className='space-y-4'>
+        {episodes.map(ep => (
+          <li key={ep.id} className='border rounded p-4'>
+            <div className='flex items-center justify-between'>
+              <div>
+                <h2 className='text-xl font-semibold'>{ep.title}</h2>
+                <p className='text-sm text-gray-500'>
+                  Guest: {ep.inviteeName} ·{' '}
+                  {new Date(ep.createdAt).toLocaleString()}
+                </p>
+                {ep.summary && (
+                  <p className='mt-2 text-gray-700'>{ep.summary}</p>
+                )}
+              </div>
+              <div className='flex gap-3'>
+                {ep.audio?.mp3Url && (
+                  <a
+                    href={ep.audio.mp3Url}
+                    className='px-3 py-2 bg-blue-600 text-white rounded'
+                    download
+                  >                    MP3
+                  </a>
+                )}
+                {ep.audio?.wavUrl && (  if (loading) return <div>Loading episodes…</div>;
+
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <h1 className="text-3xl font-bold">Zion Podcast</h1>
+        <Link href="/studio/host" className="text-blue-600 underline">Create Episode</Link>
+      </div>
+      {episodes.length === 0 && <p>No episodes yet.</p>}
+      <ul className="space-y-4">
+        {episodes.map((ep) => (
+          <li key={ep.id} className="border rounded p-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-xl font-semibold">{ep.title}</h2>
+                <p className="text-sm text-gray-500">Guest: {ep.inviteeName} · {new Date(ep.createdAt).toLocaleString()}</p>
+                {ep.summary && <p className="mt-2 text-gray-700">{ep.summary}</p>}
+              </div>
+              <div className="flex gap-3">
+                {ep.audio?.mp3Url && (
+                  <a href={ep.audio.mp3Url} className="px-3 py-2 bg-blue-600 text-white rounded" download>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     MP3
                   </a>
                 )}
                 {ep.audio?.wavUrl && (
+<<<<<<< HEAD
 <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
+=======
+                  <a
+                    href={ep.audio.wavUrl}
+                    className='px-3 py-2 bg-gray-700 text-white rounded'
+                    download
+                  >                    WAV
+                  </a>
+                )}
+                {ep.audio?.mp4Url && (                  <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     WAV
                   </a>
                 )}
                 {ep.audio?.mp4Url && (
+<<<<<<< HEAD
 <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
+=======
+                  <a
+                    href={ep.audio.mp4Url}
+                    className='px-3 py-2 bg-purple-700 text-white rounded'
+                    download
+                  >                    MP4                  <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     MP4
                   </a>
                 )}
               </div>
             </div>
+<<<<<<< HEAD
 <div className="mt-3 flex gap-4">
+=======
+            <div className='mt-3 flex gap-4'>
+              <Link
+                href={`/media/podcast/${ep.id}`}
+                className='text-blue-600 underline'
+              >
+                View Transcript
+              </Link>            </div>            <div className="mt-3 flex gap-4">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Link href={`/media/podcast/${ep.id}`} className="text-blue-600 underline">View Transcript</Link>
             </div>
           </li>
         ))}
+<<<<<<< HEAD
       </ul>;
     </div>;
+=======
+      </ul>
+    </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
   // Check condition
 if (return <div > Loading episodes…</div>) {
   $2
@@ -283,3 +389,13 @@ if (return <div > Loading episodes…</div>) {
       </ul>;
     </div>);
 }
+=======
+;
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

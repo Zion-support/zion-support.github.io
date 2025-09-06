@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { defineConfig, devices } from '@playwright/test',;
 export default defineConfig({;
   testDir:'tests/e2e',;
@@ -32,8 +33,16 @@ export default defineConfig({;
   reporter:[;
     ['list'];
     baseURL: process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
+=======
+import { defineConfig, devices } from '@playwright/test';
+
+export default defineConfig({
+  testDir: "tests/e2e",
+  use: {
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     trace: 'on-first-retry'
-  }
+  },
   projects: [
 import { define_config, devices } from '@playwright / test';
 import { define_config, devices } from '@playwright / test',
@@ -83,8 +92,9 @@ import { define_config, devices } from '@playwright / test';
   },
   projects: [;
     {
-      name: "Desktop Chrome"
+      name: "Desktop Chrome",
       use: {
+<<<<<<< HEAD
         browser_name: 'chromium',
         channel: 'chrome';
 }
@@ -108,9 +118,35 @@ import { define_config, devices } from '@playwright / test';
         ...devices['Pixel 5'];
 }
     }
+=======
+        browserName: 'chromium',
+        channel: 'chrome'
+      }
+    },
     {
-      name: "Mobile Safari"
+      name: "Desktop Firefox",
       use: {
+        browserName: 'firefox'
+      }
+    },
+    {
+      name: "Desktop Safari",
+      use: {
+        browserName: 'webkit'
+      }
+    },
+    {
+      name: "Mobile Chrome",
+      use: {
+        browserName: 'chromium',
+        ...devices['Pixel 5']
+      }
+    },
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    {
+      name: "Mobile Safari",
+      use: {
+<<<<<<< HEAD
         browser_name: 'webkit',
         ...devices['i_phone 12'];
       }
@@ -122,3 +158,15 @@ import { define_config, devices } from '@playwright / test';
     ['list'],
     ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
 ];
+=======
+        browserName: 'webkit',
+        ...devices['iPhone 12']
+      }
+    }
+  ],
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
+  ]
+});
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

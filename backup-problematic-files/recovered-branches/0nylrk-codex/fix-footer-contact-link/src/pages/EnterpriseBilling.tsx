@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -37,6 +38,34 @@ export default function EnterpriseBilling() {;
       <SEO
         title="Enterprise Billing - Zion AI Marketplace"
         description="Manage your subscription, view invoice history, and download billing statements."
+=======
+
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+;
+export default function EnterpriseBilling() {;
+  const { user } = useAuth(),;
+  ;
+  // Check if user has billing permissions;
+  const hasBillingAccess = user?.role === "enterprise_admin" || ;
+                          (user?.permissions && user.permissions.includes('billing_access')),;
+  ;
+  if (!hasBillingAccess) {;
+    return <Navigate to="/unauthorized" />,;
+  }
+;
+  return (;
+    <ProtectedRoute>;
+      <SEO ;
+        title="Enterprise Billing - Zion AI Marketplace";
+        description="Manage your subscription, view invoice history, and download billing statements.";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       />;
       <Header />;
       <main className="min-h-screen bg-background">;
@@ -44,6 +73,7 @@ export default function EnterpriseBilling() {;
       </main>;
       <Footer />;
     </ProtectedRoute>;
+<<<<<<< HEAD
   );
 }
 import React from './react';
@@ -83,3 +113,13 @@ if ( {) {
       <Footer />;
     </ProtectedRoute>);
 }
+=======
+  ),;}
+ export default function EnterpriseBilling () {
+  const {
+  user 
+}= useAuth ();
+//Check if user has billing permissions 
+}Enterprise Billing - Zion AI Marketplace"description=" Manage your subscription, view invoice history, and download billing statements."/> <Header /> <main className=" min-h-screen bg-background" > <BillingDashboard /> </main> <Footer /> </ProtectedRoute>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from './react';
 import { Tabs, TabsList, TabsTrigger  } from '@/components / ui / tabs';
 ;
@@ -27,6 +28,27 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({;
     <div className="border-b border-zion-blue-light">;
       <Tabs
         defaultValue={filter} 
+=======
+
+import React from 'react',;
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+;
+export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system',;
+;
+interface NotificationFilterProps {;
+  filter:FilterType,;
+  onFilterChange:(filter:FilterType) => void;
+}
+;
+export const NotificationFilter:React.FC<NotificationFilterProps> = ({;
+  filter,;
+  onFilterChange;
+}) => {;
+  return (;
+    <div className="border-b border-zion-blue-light">;
+      <Tabs ;
+        defaultValue={filter} ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         onValueChange={(value) => onFilterChange(value as FilterType)}
       >;
         <TabsList className="bg-zion-blue-dark/30 grid grid-cols-5 h-9 w-full">;
@@ -38,6 +60,7 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({;
         </TabsList>;
       </Tabs>;
     </div>;
+<<<<<<< HEAD
   );
 };
 export const NotificationFilter: React.FC < NotificationFilterProps> = ({
@@ -71,3 +94,13 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
     </div>);
 }
 ;
+=======
+  ),;
+},; export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
+<Tabs defaultValue= {
+  filter 
+}onValueChange= {
+  (value) => onFilterChange (value as FilterType) 
+}> <TabsList className="bg-zion-blue-dark/30 grid grid-cols-5 h-9 w-full" > <TabsTrigger value="all" className="text-xs" >All</TabsTrigger> <TabsTrigger value="unread" className="text-xs" >Unread</TabsTrigger> <TabsTrigger value="onboarding" className="text-xs" >Onboarding</TabsTrigger> <TabsTrigger value="messages" className="text-xs" >Messages</TabsTrigger> <TabsTrigger value="system" className="text-xs" >System</TabsTrigger> </TabsList> </Tabs> </div>) 
+};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

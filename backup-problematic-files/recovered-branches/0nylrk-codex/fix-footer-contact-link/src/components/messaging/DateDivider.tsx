@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { format } from "date-fns";
 interface DateDividerProps {;
@@ -31,3 +32,25 @@ function DateDivider() {
       <div className="flex - 1 border - t border - zion - purple / 20"></div>;
     </div>);
 }
+=======
+
+import React from 'react',;
+import { format } from 'date-fns',;
+;
+interface DateDividerProps {;
+  date:Date;
+}
+;
+export function DateDivider({ date } DateDividerProps) {;
+  return (;
+    <div className="flex items-center my-4">;
+      <div className="flex-1 border-t border-zion-purple/20"></div>;
+      <div className="px-3 text-xs text-zion-slate">;
+        {format(date, 'MMM d, yyyy')}
+      </div>;
+      <div className="flex-1 border-t border-zion-purple/20"></div>;
+    </div>;
+  ),;}
+ </div> <div className="flex-1 border-t border-zion-purple/20" ></div> </div>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

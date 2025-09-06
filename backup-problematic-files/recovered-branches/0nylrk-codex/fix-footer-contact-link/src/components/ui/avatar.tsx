@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import * as React from 'react';
 const Avatar = React && React.forwardRef<;
@@ -5,14 +6,27 @@ const Avatar = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof AvatarPrimitive && AvatarPrimitive.Root>;
 ></typeof>(({ className, ...props }, ref) => (;
   <AvatarPrimitive&& AvatarPrimitive.Root
+=======
+import * as React from "react";
+import * as AvatarPrimitive from "@radix-ui/react-avatar";
+;
+import { cn } from "@/lib/utils";
+;
+const Avatar = React.forwardRef<;
+  React.ElementRef<typeof AvatarPrimitive.Root>,;
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>;
+>(({ className, ...props }, ref) => (;
+  <AvatarPrimitive.Root;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ref={ref}
-    className={cn(
-      'relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full'
-      className
+    className={cn(;
+      "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",;
+      className;
     )}
     {...props}
   />;
 ));
+<<<<<<< HEAD
 Avatar && Avatar.displayName = AvatarPrimitive && AvatarPrimitive.Root.displayName;
 const AvatarImage = React && React.forwardRef<;
   React && React.ElementRef<typeof AvatarPrimitive && AvatarPrimitive.Image>,;
@@ -50,14 +64,36 @@ const AvatarFallback = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof AvatarPri</typeof>mitive && mitive.Fallback>;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive&& AvatarPrimitive.Fallback
+=======
+Avatar.displayName = AvatarPrimitive.Root.displayName;
+;
+const AvatarImage = React.forwardRef<;
+  React.ElementRef<typeof AvatarPrimitive.Image>,;
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>;
+>(({ className, ...props }, ref) => (;
+  <AvatarPrimitive.Image;
     ref={ref}
-    className={cn(
-      'flex h-full w-full items-center justify-center rounded-full bg-muted'
-      className
+    className={cn("aspect-square h-full w-full", className)}
+    {...props}
+  />;
+));
+AvatarImage.displayName = AvatarPrimitive.Image.displayName;
+;
+const AvatarFallback = React.forwardRef<;
+  React.ElementRef<typeof AvatarPrimitive.Fallback>,;
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>;
+>(({ className, ...props }, ref) => (;
+  <AvatarPrimitive.Fallback;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    ref={ref}
+    className={cn(;
+      "flex h-full w-full items-center justify-center rounded-full bg-muted",;
+      className;
     )}
     {...props}
   />;
 ));
+<<<<<<< HEAD
 AvatarFallback && AvatarFallback.displayName = AvatarPrimitive && AvatarPrimitive.Fallback.displayName;
 export { Avatar, AvatarImage, AvatarFallback };
   />));
@@ -78,3 +114,25 @@ AvatarFallback.display_name = AvatarPrimitive.Fallback.display_name;
 ;
 export { Avatar, AvatarImage, AvatarFallback }
 ;
+=======
+AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
+;
+export { Avatar, AvatarImage, AvatarFallback }import * as React from "react" import * as AvatarPrimitive from "@radix-ui/react-avatar" const Avatar = React.forwardRef< React.ElementRef<typeof AvatarPrimitive.Root>;
+React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root> > ( ({
+  className, ...props 
+}, ref) => (<AvatarPrimitive.Root) 
+}{
+  ...props 
+}/>) ) Avatar.displayName = AvatarPrimitive.Root.displayName const AvatarImage = React.forwardRef< React.ElementRef<typeof AvatarPrimitive.Image>;
+React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image> > ( ({
+  className, ...props 
+}, ref) => (<AvatarPrimitive.Image />) ) AvatarImage.displayName = AvatarPrimitive.Image.displayName const AvatarFallback = React.forwardRef< React.ElementRef<typeof AvatarPrimitive.Fallback>;
+React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback> > ( ({
+  className, ...props 
+}, ref) => (<AvatarPrimitive.Fallback) 
+}{
+  ...props 
+}/>) ) AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName export {
+  Avatar, AvatarImage, AvatarFallback 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

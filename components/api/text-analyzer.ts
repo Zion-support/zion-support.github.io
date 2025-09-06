@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface TextAnalysisResult {
+<<<<<<< HEAD
     reading_time: number;
     speaking_time: number;
   }
@@ -83,6 +84,79 @@ try {
     }
     }
     // Basic statistics
+=======
+  text: string;
+  statistics: {
+    characters: number;
+    charactersNoSpaces: number;
+    words: number;
+    sentences: number;
+    paragraphs: number;
+    syllables: number;
+    readingTime: number;
+
+    speakingTime: number;
+  }
+
+  readability: {
+    fleschReadingEase: number;
+    fleschKincaidGrade: number;
+    gunningFog: number;
+    smog: number;
+    colemanLiau: number;
+    automatedReadability: number;
+
+    averageGrade: number;
+  }
+
+  sentiment: {
+    score: number;
+    label: 'very-negative' | 'negative' | 'neutral' | 'positive' | 'very-positive';
+    positiveWords: string[];
+
+    negativeWords: string[];
+  }
+  language: {
+    detectedLanguage: string;
+    confidence: number;
+    isEnglish: boolean;
+  }
+
+  keywords: {
+    topWords: Array<{ word: string; count: number; frequency: number }>;
+    bigrams: Array<{ phrase: string; count: number }>;
+    trigrams: Array<{ phrase: string; count: number }>;
+  };    topWords: Array<{ word: string, count: number, frequency: number }>;
+    bigrams: Array<{ phrase: string, count: number }>;
+    trigrams: Array<{ phrase: string, count: number }>
+  }
+}
+export default async function handler(
+
+  req: NextApiRequest
+
+  res: NextApiResponse<TextAnalysisResult | { error: string }>
+) {
+  if (req.method !== 'POST') {;
+    return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
+  }
+  try {
+    const { text } = req.body;
+
+    if (!text |typeof text !== 'string') {
+
+      return res.status(400).json({ error: 'Text is required' });
+    }
+    if (text.length > 10000) {
+      return res
+        .status(400)
+        .json({ error: 'Text too long (max 10,000 characters)' });    }      return res.status(400).json({ error: 'Text is required' })
+    }
+    if (text.length > 10000) {
+      return res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
+    // Basic statistics
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
     if (text && text.length > 10000) {
@@ -305,7 +379,15 @@ try {
     const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
+<<<<<<< HEAD
     const confidence = isEnglish ? 0 && 0.95 : 0 && 0.5;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const result: TextAnalysisResult = {
         fleschReadingEase: Math && Math.round(fleschReadingEase * 100) / 100,
         fleschKincaidGrade: Math && Math.round(fleschKincaidGrade * 100) / 100,
@@ -689,5 +771,18 @@ reading_time,
     console.error ('Text analysis error:', error);
     res.status (500).json ({ error: 'Internal server error' });
 
+<<<<<<< HEAD
+=======
+    res.status(500).json({ error: 'Internal server error' })
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
+=======
+<<<<<<< HEAD
+
+    const result: TextAnalysisResult = {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    const result: TextAnalysisResult = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

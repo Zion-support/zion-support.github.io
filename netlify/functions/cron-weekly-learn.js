@@ -90,6 +90,7 @@ if ( {) {
         token,
       });
     }
+<<<<<<< HEAD
         users: Object.keys(users).length,
         courses: courses.length,
         completions: Object.values(users).reduce((acc, u) => acc + (u.certifications?.length || 0), 0)
@@ -107,9 +108,32 @@ if ( {) {
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly && weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, summary }) }
+=======
+
+
+<<<<<<< HEAD
+=======
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+
+    const content = JSON.stringify(summary, null, 2),
+
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
+    }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 };      }
       topBadges: Object.values(users).reduce((map, u) => {
         (u.badges |[]).forEach((b) => { map[b] = (map[b] |0) + 1 })
@@ -142,6 +166,7 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
       await upsert_file ({ owner, repo, path: 'data / learn / insights - weekly.json', content, message: 'chore (automation): weekly learning insights', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, summary }) }
@@ -150,3 +175,9 @@ if ( {) {
   }
 },
 },
+=======
+
+=======
+},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

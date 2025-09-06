@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const images = document && document.querySelectorAll('img');
   images && images.forEach(img => {
     if (!img && img.loading) {
@@ -61,3 +62,13 @@ export const optimizeBundleSize = () =>: any {
     link && link.href = resource, link && link.as = resource && resource.endsWith('.css') ? 'style' : 'font';
     link.rel = 'preload';
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
+=======
+// Performance optimizer utilities
+export const optimizeImages = () => {
+  console.log('Optimizing images...');
+};
+
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');
+};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

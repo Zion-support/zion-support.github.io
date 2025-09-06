@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -16,10 +17,30 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 import React, { useEffect, useRef } from 'react';
+=======
+<<<<<<< HEAD
+
+canvas.width = window.innerWidth * (window.devicePixelRatio |1);
+canvas.height = window.innerHeight * (window.devicePixelRatio |1);
+=======
+canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
+canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+if (ctx) {
+export default function UltraFuturisticBackground2035({
+<<<<<<< HEAD
+  children
+=======
+  children,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode
 }
+<<<<<<< HEAD
  canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
 canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
 if (ctx) {;
@@ -36,11 +57,22 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+=======
+export default function UltraFuturisticBackground2035({ children }: UltraFuturisticBackground2035Props) {
+
+  useEffect(() => {;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     canvas.width = window.innerWidth * (window.devicePixelRatio |1);
     canvas.height = window.innerHeight * (window.devicePixelRatio |1);
     if (ctx) {
+<<<<<<< HEAD
     const prefersReducedMotion = window && window.matchMedia(;
       '(prefers-reduced-motion: reduce)';
     ).matches;    const prefersReducedMotion = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches,;
@@ -653,6 +685,16 @@ for (let i = 0; i < particleCount; i++) {;
       particles: any[],;
       currentIndex: number,;
       maxDistance: number,;
+=======
+      ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1);
+    let animationFrameId: number;
+    let particles: Array<{
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       opacity: number;
     ) => {      particles && particles.forEach((otherParticle, otherIndex) => {      ctx && ctx.fill();
     };
@@ -752,6 +794,7 @@ for (let i = 0; i < particleCount; i++) {;
             background: [
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)'
             ]
+<<<<<<< HEAD
       max_life: number;
     // Initialize particles with enhanced types;
     const init_particles = () =>: any {
@@ -1175,6 +1218,8 @@ if ( {) {
             background: [;
               'radial - gradient (circle at 20% 80%, rgba (139, 92, 246, 0.3) 0%, transparent 50%)radial - gradient (circle at 80% 20%, rgba (6, 182, 212, 0.3) 0%, transparent 50%)radial - gradient (circle at 40% 40%, rgba (236, 72, 153, 0.3) 0%, transparent 50%)radial - gradient (circle at 20% 80%, rgba (139, 92, 246, 0.3) 0%, transparent 50%)';
             ];
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           }}
           transition={{
             duration: 8
@@ -1188,10 +1233,21 @@ if ( {) {
             className='h-full w-full'
             style={{
               backgroundImage: `
+<<<<<<< HEAD
               linear-gradient(rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
             `,
               backgroundSize: '50px 50px',
+=======
+<<<<<<< HEAD
+              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px)
+=======
+              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
+            `
+              backgroundSize: '50px 50px'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             }}
           />        </div>        {/* Holographic grid effect */}
         <div className="absolute inset-0 opacity-20">;
@@ -1205,14 +1261,36 @@ if ( {) {
               linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
+<<<<<<< HEAD
           }} />;
         </div>;
+=======
+          }} />
+        </div>
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Canvas for animated particles */}
         <canvas
           ref={canvasRef}
           className="absolute inset-0 w-full h-full"
           style={{ filter: 'blur(0.5px)' }}
         />
+=======
+
+        {/* Canvas for animated particles */}
+        <canvas
+          ref={canvasRef}
+          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}
+
+          style={{ filter: 'blur(0.5px)' }}
+
+        />
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Floating neon orbs */}
         />;
         {/* Holographic grid effect */}
@@ -1246,8 +1324,18 @@ if ( {) {
         <motion.div;
           className='absolute top - 1/4 left - 1/4 w - 32 h - 32 rounded - full bg - gradient - to - r from - cyan - 400 to - blue - 500 opacity - 20';
           animate={{
+<<<<<<< HEAD
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],
+=======
+<<<<<<< HEAD
+            scale: [1, 1.2, 1]
+            opacity: [0.2, 0.4, 0.2]
+=======
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.4, 0.2],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             rotate: [0, 180, 360],          }}
           transition={{
             duration: 6,
@@ -1270,6 +1358,7 @@ if ( {) {
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2],
             rotate: [360, 180, 0],          }}
           transition={{
+<<<<<<< HEAD
             duration: 8
             repeat: Infinity
             ease: 'easeInOut',          }}
@@ -1307,7 +1396,109 @@ if ( {) {
             rotate: [360, 180, 0];
           }}
           transition={{
+<<<<<<< HEAD
             duration: 8,
             repeat: Infinity,
 />;
         {/* Quantum energy waves */}
+=======
+<<<<<<< HEAD
+            duration: 8
+            repeat: Infinity
+=======
+            duration: 8,
+            repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ease: 'easeInOut',            ease: 'easeInOut'
+          }}
+        />
+        {/* Quantum energy waves */}
+        <div className='absolute inset-0 overflow-hidden'>
+          <motion.div
+            className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent'
+            animate={{
+              y: [-100, 100, -100]
+              opacity: [0, 0.3, 0],            }}
+            transition={{
+              duration: 4
+              repeat: Infinity
+              ease: 'easeInOut',          <motion.div
+            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+            animate={{
+              y: [-100, 100, -100];
+              opacity: [0, 0.3, 0]
+<<<<<<< HEAD
+=======
+=======
+
+          }}
+        />
+
+        {/* Quantum energy waves */}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            }}
+            transition={{
+              duration: 4
+              repeat: Infinity
+              ease: 'easeInOut'
+            }}
+          />
+          <motion.div
+            className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent'
+            animate={{
+              y: [100, -100, 100]
+              opacity: [0, 0.3, 0],            }}
+            transition={{
+              duration: 6
+              repeat: Infinity
+              ease: 'easeInOut',            }}
+          />
+        </div>
+      </div>            }}
+          />
+          <motion.div
+            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent"
+            animate={{
+              y: [100, -100, 100];
+              opacity: [0, 0.3, 0]
+=======
+            duration: 8,
+            repeat: Infinity,
+
+          }}
+        />
+
+        {/* Quantum energy waves */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+            }}
+            transition={{
+              duration: 6
+              repeat: Infinity
+              ease: 'easeInOut',              ease: 'easeInOut'
+
+            }}
+          />
+        </div>
+<<<<<<< HEAD
+      </div>
+      {/* Render children */}
+      {children}
+    </>
+  );
+      {/* Render children */}
+      {children}
+    </>
+  )
+}
+=======
+      </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

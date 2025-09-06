@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+=======
+
+import { createContext } from "react",;
+import type { AuthContextType } from "@/types/auth",;
+;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Create the AuthContext and export it. We avoid providing a generic;
 // parameter to `createContext` because in environments where the React;
 // type definitions are unavailable, calling an untyped function with type;
 // arguments causes a TypeScript error (TS2347). Instead, we cast the;
 // default value so consumers still get some level of type safety.;
+<<<<<<< HEAD
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 import { create_context } from './react';
 import type { AuthContextType } from "@/types / auth";
@@ -12,3 +20,6 @@ import type { AuthContextType } from "@/types / auth";
 // arguments causes a TypeScript error (TS2347). Instead, we cast the;
 // default value so consumers still get some level of type safety.;
 export const AuthContext = create_context < AuthContextType | undefined>(undefined);
+=======
+export const AuthContext = createContext<AuthContextType | undefined>(undefined),; 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import '@testing - library / jest - dom',
 import { after_each, vi } from 'vitest',
 import { cleanup } from '@testing - library / react',
@@ -6,3 +7,14 @@ after_each (() => {
   cleanup (),
   vi.restoreAllMocks ();
 }),
+=======
+import '@testing-library/jest-dom',;
+import { afterEach, vi } from 'vitest',;
+import { cleanup } from '@testing-library/react',;
+;
+// Ensure React Testing Library cleans up and mocks are restored between tests;
+afterEach(() => {;
+  cleanup(),;
+  vi.restoreAllMocks(),;
+}),; 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

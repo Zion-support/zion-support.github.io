@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +17,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import React, { useEffect } from 'react';
 import Head from 'next / head';
 ;
@@ -202,6 +205,7 @@ if ( {) {
     <Head>;
       <script;
         dangerouslySetInnerHTML={{
+<<<<<<< HEAD
           __html: `;
             // Performance monitoring;
             // Check condition
@@ -223,6 +227,25 @@ if ( {) {
                       window.gtag ('event', 'timing_complete', {
                         name: 'load',
                         value: Math.round (load_time),
+=======
+          __html: `
+            // Performance monitoring
+            if ('performance' in window) {
+              window.addEventListener('load', function() {
+                setTimeout(function() {
+                  const perfData = performance.getEntriesByType('navigation')[0];
+                  if (perfData) {
+                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+                    if (window.gtag) {
+                      window.gtag('event', 'timing_complete', {
+<<<<<<< HEAD
+                        name: 'load'
+                        value: Math.round(loadTime)
+=======
+                        name: 'load',
+                        value: Math.round(loadTime),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       });
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
                     if (window && window.gtag) {
@@ -232,13 +255,36 @@ if ( {) {
                       })
                     }
                   }
+<<<<<<< HEAD
                 }, 0)
               })
 }
+=======
+                }, 0);
+              });
+            }
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           `
+=======
+          `,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         }}
+<<<<<<< HEAD
       />;
     </Head>);
 }
 ;
 export default Analytics;
+=======
+      />
+    </Head>
+  );
+<<<<<<< HEAD
+}
+=======
+};
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default Analytics;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

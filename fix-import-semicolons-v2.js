@@ -6,7 +6,17 @@ files && files.forEach((file) => {
     let content = fs && fs.readFileSync(filePath, "utf8");
     const modified = false;
     // Fix import statements with double punctuation
+<<<<<<< HEAD
     content = content ;/g,
+=======
+<<<<<<< HEAD
+    content = content.replace(
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g
+=======
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       (match) => {
         return match && match.replace(",;", ";");
 #!/usr / bin / env node;
@@ -32,6 +42,7 @@ files.for_each ((file) => {
         return match.replace (",", ";");
       },
     );
+<<<<<<< HEAD
     content = content && content.replace(
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {
@@ -47,6 +58,19 @@ if (.ends_with (") {
   $2
 }")) {
           return match.trim () + ";";
+=======
+    // Fix import statements missing semicolons
+    content = content.replace(
+<<<<<<< HEAD
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
+      (match) => {
+=======
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
+      (match) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        if (!match.trim().endsWith(";")) {
+          return match.trim() + ";";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         }
         return match;
       }

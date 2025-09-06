@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,6 +18,11 @@ class ErrorBoundary extends React.Component {
   }
 }
     .join("")};
+=======
+
+    .join("")};
+;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ,;
 // Function to extract display name from service name,;
 function getDisplayName(serviceName) {,;
@@ -27,6 +33,7 @@ function getDisplayName(serviceName) {,;
     .trim()};
 ,;
 // Fix remaining corrupted files,;
+<<<<<<< HEAD
 remainingCorruptedFiles && remainingCorruptedFiles.forEach(filePath => {,;
   try {,;
   const serviceName = getServiceName(filePath),;
@@ -42,25 +49,57 @@ remainingCorruptedFiles && remainingCorruptedFiles.forEach(filePath => {,;
     fs && fs.writeFileSync(filePath, content, "utf8"),;
     console && console.log(`✓ Fixed ${filePath}`)} catch (error) {,;
   console && console.error(`✗ Error fixing ${filePath} `, error && error.message)};
+=======
+remainingCorruptedFiles.forEach(filePath => {,;
+  try {,;
+  const serviceName = getServiceName(filePath),;
+    const displayName = getDisplayName(serviceName),;
+    console.log(`Fixing ${filePath}...`),;
+    // Ensure directory exists,;
+    const dir = path.dirname(filePath),;
+    if (!fs.existsSync(dir)) {,;
+  fs.mkdirSync(dir, { "recursive":true })};
+    ,;
+    // Write the fixed content,;
+    const content = servicePageTemplate(serviceName, displayName),;
+    fs.writeFileSync(filePath, content, "utf8"),;
+    console.log(`✓ Fixed ${filePath}`)} catch (error) {,;
+;
+  console.error(`✗ Error fixing ${filePath} `, error.message)};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ;  // Remove common prefixes and convert to readable format;
   return serviceName;
     .replace(/^AI/, "");
     .replace(/([A-Z])/g, " $1");
     .trim()};
+<<<<<<< HEAD
 // Fix remaining corrupted files;
 remainingCorruptedFiles && remainingCorruptedFiles.forEach(filePath => {;
   try {;
 remainingCorruptedFiles.forEach(filePath => {try {;
+=======
+;
+// Fix remaining corrupted files;
+remainingCorruptedFiles.forEach(filePath => {;
+  try {;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const serviceName = getServiceName(filePath);
     const displayName = getDisplayName(serviceName);
     console && console.log(`Fixing ${filePath}...`);
     // Ensure directory exists;
+<<<<<<< HEAD
     if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir, { "recursive": true })}
+=======
+    const dir = path.dirname(filePath);
+    if (!fs.existsSync(dir)) {;
+  fs.mkdirSync(dir, { "recursive": true })};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ;
     // Write the fixed content;
     const content = servicePageTemplate(serviceName, displayName);
     fs.writeFileSync(filePath, content, "utf8");
+<<<<<<< HEAD
     const dir = path && path.dirname(filePath);
     if (!fs && fs.existsSync(dir)) {;
   fs && fs.mkdirSync(dir, { "recursive": true })};
@@ -68,6 +107,9 @@ remainingCorruptedFiles.forEach(filePath => {try {;
     const content = servicePageTemplate(serviceName, displayName);
     fs && fs.writeFileSync(filePath, content, "utf8");
     console && console.log(`✓ Fixed ${filePath}`)} catch (error) {;,// Function to extract display name from service name,
+=======
+    console.log(`✓ Fixed ${filePath}`)} catch (error) {;,// Function to extract display name from service name,
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function getDisplayName(serviceName) {,
     .join ("")}
 ;
@@ -84,6 +126,7 @@ function getDisplayName() {,
     .trim ()}
 ,
 // Fix remaining corrupted files,
+<<<<<<< HEAD
     console.log(`✓ Fixed ${filePath}`)} catch (error) {
   console.error(`✗ Error fixing ${filePath}:`, error.message)}
 });
@@ -242,3 +285,21 @@ function getServiceName() { const file_name = path.basename (file_path, path.ext
 function getDisplayName() { return service_name; .replace (/^AI/, ""); .replace (/([A - Z])/g, " $1"); .trim ()} remainingCorruptedFiles.for_each (file_path => { try { const service_name = getServiceName (file_path); const display_name = getDisplayName (service_name); console.log (`Fixing ${file_path}...`); const dir = path.dirname (file_path); if () { fs.mkdir_sync (dir, { recursive: true })} ) {
   $2
 } const content = servicePageTemplate (service_name, display_name); fs.writeFileSync (file_path, content, "utf8"); console.log (`✓ Fixed ${file_path}`)} catch (error) { console.error (`✗ Error fixing ${file_path}:`, error.message)} }); console.log ("\\n_fixed all remaining issues!");
+=======
+remainingCorruptedFiles.forEach(filePath => {,
+  try {,
+  const serviceName = getServiceName(filePath),
+    const displayName = getDisplayName(serviceName),
+    console.log(`Fixing ${filePath}...`),
+    // Ensure directory exists,
+    const dir = path.dirname(filePath),
+    if (!fs.existsSync(dir)) {,
+  fs.mkdirSync(dir, { "recursive": true })};
+    ,
+    // Write the fixed content,
+    const content = servicePageTemplate(serviceName, displayName),
+    fs.writeFileSync(filePath, content, "utf8"),
+    console.log(`✓ Fixed ${filePath}`)} catch (error) {,
+
+    } catch (error) {_;};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

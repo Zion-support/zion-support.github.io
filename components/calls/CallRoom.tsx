@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +25,26 @@ import {;
   LocalParticipant,;
   createLocalTracks,;
   VideoPresets,;
+=======
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+
+import {
+<<<<<<< HEAD
+  Room
+  RoomEvent
+  RemoteParticipant
+  LocalParticipant
+  createLocalTracks
+  VideoPresets;
+=======
+  Room,
+  RoomEvent,
+  RemoteParticipant,
+  LocalParticipant,
+  createLocalTracks,;
+  VideoPresets,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
@@ -37,6 +58,7 @@ type Props = {;
   token: string;
   startMode: StartMode;
   onLeave?: (durationSec: number) => void;
+<<<<<<< HEAD
 };
 export default function CallRoom(): any ({;
   projectId,;
@@ -48,6 +70,31 @@ export default function CallRoom(): any ({;
   startMode,;
   onLeave,;
 }: Props) {;
+=======
+}
+export default function CallRoom({
+<<<<<<< HEAD
+  projectId
+  userId
+  displayName
+  roomName
+  serverUrl
+  token
+  startMode
+  onLeave
+}: Props) {
+=======
+  projectId,
+  userId,
+  displayName,
+  roomName,
+  serverUrl,
+  token,
+  startMode,
+  onLeave,
+}: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
@@ -56,6 +103,7 @@ import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
+<<<<<<< HEAD
 type Props = {;
   projectId: string,;
   userId: string,;
@@ -67,6 +115,25 @@ type Props = {;
   onLeave?: (durationSec: number) => void;
 };
 export default function CallRoom(): any ({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
+=======
+type Props = {
+  projectId: string
+  userId: string
+  displayName: string
+  roomName: string
+  serverUrl: string
+  token: string
+  startMode: StartMode
+  onLeave?: (durationSec: number) => void
+<<<<<<< HEAD
+}
+export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
+=======
+};
+
+export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
@@ -113,6 +180,7 @@ setRoom(r);
     for (const t of localTracks) {;
       await r && r.localParticipant.publishTrack(t);
     }
+<<<<<<< HEAD
     setRoom(r);
     setConnectedAt(Date && Date.now());
     rebuild(r);
@@ -160,13 +228,66 @@ setRoom(r);
   const handleLeave = () => {;
     if (room) {;
       room && room.disconnect();
+=======
+    await r.connect(serverUrl, token, {
+      autoSubscribe: true})
+    // publish local tracks
+    for (const t of localTracks) {
+      await r.localParticipant.publishTrack(t)
+    }
+    setRoom(r);
+    setConnectedAt(Date.now());
+    rebuild(r);
+    // eslint-disable-next-line react-hooks/exhaustive-deps  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [serverUrl, token, startMode]);
+  const rebuild = (current?: Room | null) => {
+    const r = current |room;
+    if (!r) return;
+    const list: Array<RemoteParticipant | LocalParticipant> = [
+      r.localParticipant
+      ...Array.from(r.participants.values())
+    ];
+    setParticipants(list);  };    const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant, ...Array.from(r.participants.values())];
+    setParticipants(list)
+  }
+  useEffect(() => {
+    connect();
+    return () => {
+      if (room) {
+        room.disconnect();
+      }
+    };  }, [connect]);
+  const handleLeave = () => {
+    if (room) {        room.disconnect()
+      }
+    }
+  }, [connect]);
+  const handleLeave = () => {
+    if (room) {
+<<<<<<< HEAD
+      room.disconnect();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
     const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
       : 0;
     onLeave?.(durationSec);  };      room && room.disconnect();
     }
+<<<<<<< HEAD
   };
+=======
+    const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
+    onLeave?.(durationSec)
+=======
+
+  };
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const gridCols = useMemo(() => {
     const count = participants.length |1;
     const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
@@ -190,6 +311,7 @@ setRoom(r);
       </div>
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
         {participants.map((p, idx) => (
+<<<<<<< HEAD
     <div className='min-h-screen bg-gray-950 text-gray-100 flex flex-col'>;
       <div className='p-4 flex items-center justify-between border-b border-gray-800'>;
         <div>;
@@ -202,6 +324,9 @@ setRoom(r);
       </div>;
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>;
         {participants && participants.map((p, idx) => (;
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <ParticipantTile
             key={String((p as any).sid |(p as any).identity) + idx}
             participant={p}
@@ -224,6 +349,7 @@ setRoom(r);
         ))}
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
   Room,
@@ -416,3 +542,18 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
       </div>;
     </div>);
 }
+=======
+);
+}
+=======
+
+        ))}
+      </div>
+    </div>
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

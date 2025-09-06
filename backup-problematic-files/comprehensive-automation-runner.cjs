@@ -6,6 +6,10 @@
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 class ComprehensiveAutomationRunner {
   constructor() {
     this.logDir = path.join(__dirname, 'automation', 'logs');
@@ -85,6 +89,7 @@ class ComprehensiveAutomationRunner {
     this.results.buildSuccess = buildSuccess;
     return buildSuccess;
   }
+
   async runTests() {
     this.log('🧪 Running comprehensive tests...');
     const testTasks = [
@@ -155,6 +160,7 @@ class DeploymentAutomation {
     }
   }
 }
+
 if (require.main === module) {
   const deployment = new DeploymentAutomation();
   deployment.deploy().catch(console.error);
@@ -337,9 +343,14 @@ module.exports = HealthCheckAutomation;`;
     }
   }
 }
+
 // Run if called directly
 if (require.main === module) {
   const runner = new ComprehensiveAutomationRunner();
   runner.run().catch(console.error);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 module.exports = ComprehensiveAutomationRunner;

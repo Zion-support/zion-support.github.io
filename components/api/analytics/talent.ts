@@ -1,6 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
     const talentId = (req && req.query.talentId as string) || null,
     const [viewsR, invitesR, appsR, tagsR] = await Promise && Promise.allSettled([
+=======
+import { createServerClient } from '../../../utils/supabase/server';
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {;
+    const supabase = createServerClient();
+    const talentId = (req.query.talentId as string) |null
+    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       supabase
         .from('profile_views')
         .select('id, talent_id')
@@ -153,6 +166,7 @@ function handler() {
         { label: 'ai', value: 1 },
       ],
     });
+<<<<<<< HEAD
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -195,4 +209,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   }
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+<<<<<<< HEAD
+=======
+}
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,12 +25,31 @@ import {;
   Award,;
   TrendingUp,;
   CheckCircle,;
+=======
+import React from 'react';
+
+import {
+<<<<<<< HEAD
+  Star
+  Quote
+  Users
+  Award
+  TrendingUp
+  CheckCircle;
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Star,
   Quote,
   Users,
   Award,
+<<<<<<< HEAD
   TrendingUp,
   CheckCircle,
+=======
+  TrendingUp,;
+  CheckCircle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from 'lucide-react';
 interface Testimonial {;
   id: string;
@@ -357,13 +377,52 @@ const EnhancedTestimonialsSection: React.FC = () => {;
               <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
               <p className="text-blue-300 font-medium">{stat.label}</p>
             </div>
+<<<<<<< HEAD
           ))}
         </div>
         {/* Testimonials Grid */}
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
+=======
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {testimonials.map(testimonial => (
+=======
+
+          ))}
+        </div>
+
+        {/* Testimonials Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {testimonials.map(testimonial => (
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <div
+              key={testimonial.id}
+              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+            >
+              {/* Quote Icon */}
+              <div className='absolute top-4 right-4 text-blue-400/20 group-hover:text-blue-400/40 transition-colors duration-300'>
+                <Quote className='w-8 h-8' />
+              </div>
+              {/* Content */}
+              <div className='p-8'>
+                {/* Rating */}
+                <div className='flex items-center gap-1 mb-4'>                  {renderStars(testimonial.rating)}
+                </div>
+                {/* Testimonial Text */}
+                <p className='text-white/80 text-sm leading-relaxed mb-6'>                  "{testimonial.content}"
+                </p>
+<<<<<<< HEAD
+                {/* Author Info */}            <div
+              key={testimonial.id}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
             >
               {/* Quote Icon */}
@@ -373,6 +432,7 @@ const EnhancedTestimonialsSection: React.FC = () => {;
               {/* Content */}
               <div className="p-8">;
                 {/* Rating */}
+<<<<<<< HEAD
                 <p className="text-white/80 text-sm leading-relaxed mb-6">
                   "{testimonial.content}"
                 </p>
@@ -493,6 +553,33 @@ const EnhancedTestimonialsSection: React.FC = () => {;
                       {testimonial.company}
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+=======
+                <div className="flex items-center gap-1 mb-4">
+                  {renderStars(testimonial.rating)}
+                </div>
+                {/* Testimonial Text */}
+                <p className='text-white/80 text-sm leading-relaxed mb-6'>                <p className="text-white/80 text-sm leading-relaxed mb-6">
+=======
+
+                {/* Author Info */}
+
+                  {renderStars(testimonial.rating)}
+                </div>
+
+                {/* Testimonial Text */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  "{testimonial.content}"
+                </p>
+                {/* Author Info */}
+<<<<<<< HEAD
+                <div className='flex items-center gap-4'>
+                  <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm'>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {testimonial.avatar}
                   </div>
                   <div className="flex-1">
@@ -505,9 +592,19 @@ const EnhancedTestimonialsSection: React.FC = () => {;
                 <div className="mt-4">
                   <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
                     {testimonial.category}
+=======
+
+                    {testimonial.category}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </span>
                 </div>
               </div>
+<<<<<<< HEAD
 <div className="flex items-center gap-1 mb-4">;
                   {renderStars(testimonial && testimonial.rating)}
                 </div>;
@@ -565,6 +662,49 @@ const EnhancedTestimonialsSection: React.FC = () => {;
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
                 Start Your Success Story;
               </a>;
+=======
+              {/* Hover Effect */}
+              <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />            </div>              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+            </div>
+<<<<<<< HEAD
+          ))}
+        </div>
+=======
+
+          ))}
+        </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* CTA Section */}
+        <div className='text-center mt-16'>
+          <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              Ready to Join Our Success Stories?
+            </h3>
+            <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
+              Experience the same transformative results that our clients have
+              achieved. Let's discuss how Zion Tech Group can accelerate your
+              innovation journey.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <a
+                href='mailto:kleber@ziontechgroup.com?subject=Client Success Story Discussion'
+                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'              >
+                Start Your Success Story
+              </a>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <a
                 href='tel:+13024640950'
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
@@ -604,7 +744,12 @@ const EnhancedTestimonialsSection: React.FC = () => {;
                 Start Your Success Story
               </a>
               <a
+<<<<<<< HEAD
 href="tel:+13024640950"
+=======
+                href='tel:+13024640950'
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                href="tel:+13024640950"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
                 Schedule a Call
@@ -612,6 +757,7 @@ href="tel:+13024640950"
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
                     </div>                  </div>;
                 </div>;
@@ -705,6 +851,15 @@ className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-400" />
               <span>Enterprise-grade security</span>
+=======
+        {/* Trust Indicators */}
+        <div className='mt-16 text-center'>
+          <div className='inline-flex items-center gap-8 text-white/60 text-sm'>
+            <div className='flex items-center gap-2'>
+              <CheckCircle className='w-4 h-4 text-green-400' />
+              <span>Enterprise-grade security</span>
+            </div>              <span>Enterprise-grade security</span>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
             <div className="flex items-center gap-2">
               <TrendingUp className="w-4 h-4 text-blue-400" />
@@ -718,6 +873,7 @@ className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 };
 export default EnhancedTestimonialsSection;  );
@@ -731,3 +887,27 @@ export default EnhancedTestimonialsSection);
 ;
 export default EnhancedTestimonialsSection;
 ;
+=======
+  );
+<<<<<<< HEAD
+}
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default EnhancedTestimonialsSection;  )
+}
+export default EnhancedTestimonialsSection;
+
+<<<<<<< HEAD
+=======
+export default EnhancedTestimonialsSection;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default EnhancedTestimonialsSection;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

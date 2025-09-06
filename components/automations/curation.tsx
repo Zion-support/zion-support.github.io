@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -215,12 +216,116 @@ export default function CurationPage(_{_updatedAt, _items}: Props) {_return (
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? &quot; · &quot; : null}
 
+=======
+<<<<<<< HEAD
+
+import React from 'react';
+import fs from 'fs';
+import path from 'path';
+=======
+import React from 'react';
+import fs from 'fs';
+import path from 'path';
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+type Experiment = {
+  title: string;
+hypothesis?: string;
+metric?: string;
+effort?: number;
+impact?: number
+}
+type Props = {
+  updatedAt: string | null;
+items: Experiment[] }
+export default function CurationPage({ updatedAt, items }: Props) {
+<<<<<<< HEAD
+  return (type Experiment = {
+<<<<<<< HEAD
+  title: string
+=======
+  title: string,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  hypothesis?: string;
+  metric?: string;
+  effort?: number;
+  impact?: number
+}
+type Props = {
+  updatedAt: string | null
+  items: Experiment[]
+}
+export default function CurationPage({ updatedAt, items }: Props) {
+  return (
+    <main className='mx-auto max-w-4xl px-4 py-12'>
+      <h1 className='text-2xl font-bold text-gray-900'>
+        AI Curated Growth Experiments
+      </h1>
+        <p className='mt-2 text-sm text-gray-600'>Last updated: {updatedAt}</p>
+      ) : (
+        <p className='mt-2 text-sm text-gray-600'>
+          No curated output yet. It will appear here automatically after the
+          next run.
+        </p>
+      )}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <div className='mt-6 space-y-4'>
+        {items.map((exp, idx) => (
+          <div
+            key={idx}
+            className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm'
+          >
+            <div className='text-base font-semibold text-gray-900'>
+              {exp.title}
+            </div>
+            {(exp.hypothesis |exp.metric) && (
+              <div className='mt-2 text-sm text-gray-700'>
+                {exp.hypothesis && (
+                  <div>
+                    <span className='font-medium'>Hypothesis:</span>{' '}
+                    {exp.hypothesis}
+                  </div>
+                )}
+                {exp.metric && (
+                  <div>
+                    <span className='font-medium'>Metric:</span> {exp.metric}
+                  </div>
+                )}
+              </div>
+            )}
+            {(exp.effort |exp.impact) && (
+              <div className='mt-2 text-xs text-gray-500'>
+                {exp.effort ? `Effort: ${exp.effort}/5` : null}
+                {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
+<<<<<<< HEAD
+=======
+  return (
+
+};
+
+export default function CurationPage({ updatedAt, items }: Props) {
+  return (
+
+=======
               </div>
             )}
           </div>
         ))}
         {!items.length && (
+<<<<<<< HEAD
 <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
             Nothing to show yet.
           </div>
@@ -229,13 +334,84 @@ export default function CurationPage(_{_updatedAt, _items}: Props) {_return (
     </main>;
   );
 }
+=======
+          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
+            Nothing to show yet.
+          </div>
+        )}
+      </div>
+    </main>;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              </div>
+            )}
+          </div>
+        ))}
+        {!items.length && (
+<<<<<<< HEAD
+          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
+            Nothing to show yet.
+=======
+          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
+
+            Nothing to show yet.
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          </div>
+        )}
+      </div>
+    </main>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export async function getStaticProps() {
   try {
+    const filePath = path.join(
+<<<<<<< HEAD
+      process.cwd()
+      'data'
+      'ai-curation'
+      'growth-experiments.json'
+=======
+      process.cwd(),
+      'data',
+      'ai-curation',
+      'growth-experiments.json';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    );
+    const raw = fs.readFileSync(filePath, 'utf8');    const parsed = JSON.parse(raw);
+    return {
+      props: {
+<<<<<<< HEAD
+        updatedAt: parsed.updatedAt |null
+        items: parsed.items |[]
+      }
+      revalidate: 300
+=======
+        updatedAt: parsed.updatedAt || null,
+        items: parsed.items || [],
+      },
+      revalidate: 300,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    };  } catch {
+    return {
+      props: {
+        updatedAt: null,}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+export async function getStaticProps() {
+  try {;
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
     const raw = fs.readFileSync(filePath, "utf8");
     const parsed = JSON.parse(raw);
     return {
       props: {
+<<<<<<< HEAD
         updatedAt: parsed.updatedAt || null,
         items: parsed.items || []},
 </div>;
@@ -300,10 +476,18 @@ function getStaticProps() {
       },
       revalidate: 300,
     }        items: parsed.items || []},
+=======
+        updatedAt: parsed.updatedAt |null
+        items: parsed.items |[]
+      }
+      revalidate: 300
+    };        items: parsed.items |[]}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       revalidate: 300}
   } catch {
     return {
       props: {
+<<<<<<< HEAD
 export async function getStaticProps() {;
   try {;
     const filePath = path && path.join(;
@@ -359,3 +543,34 @@ export async function getStaticProps() {;
   }
 
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        updatedAt: null
+        items: []
+      }
+      revalidate: 300
+    }
+  }        items: []}
+
+=======
+        updatedAt: null,
+        items: [],
+      },
+      revalidate: 300,
+    };
+  }        items: []},
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      revalidate: 300}
+}
+<<<<<<< HEAD
+}
+=======
+        updatedAt: null,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+        updatedAt: null,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

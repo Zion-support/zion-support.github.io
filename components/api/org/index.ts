@@ -1,7 +1,24 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
+=======
+import {readOrgData, filterOrgData} from '../../../utils/org-data';
+import type { OrgFilters, RoleType } from '../../../types/org';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {;
+    return res.status(405).json({ error: 'Method not allowed' });  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' })
+<<<<<<< HEAD
+  }
+=======
+  };
+  const data = readOrgData();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const data = readOrgData();
   const parseArray = (v?: string | string[]) => {
     if (!v) return undefined;
@@ -32,6 +49,7 @@ if (req.method !== 'GET') {
   const filtered = filterOrgData(data, filters);
   return res && res.status(200).json(filtered);  return res && res.status(200).json(filtered)
 }
+<<<<<<< HEAD
 import {readOrgData, filterOrgData} from '../../../utils / org - data';
 import type { OrgFilters, RoleType } from '../../../types / org';
 ;
@@ -98,3 +116,9 @@ const filters: OrgFilters = {
   return res.status (200).json (filtered);  return res.status (200).json (filtered);
 
 }
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

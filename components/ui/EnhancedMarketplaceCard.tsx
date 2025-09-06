@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +19,9 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
           <div className="h-12 w-12 rounded bg-gray-200" />)};
+=======
+          <div className="h-12 w-12 rounded bg-gray-200" />)}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
@@ -243,6 +247,7 @@ const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
   );
 }
 export default EnhancedMarketplaceCard;
+<<<<<<< HEAD
   on_favorite;
 }) => {
   return (
@@ -279,3 +284,6 @@ export default EnhancedMarketplaceCard;
 ;
 export default EnhancedMarketplaceCard;
 ;
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

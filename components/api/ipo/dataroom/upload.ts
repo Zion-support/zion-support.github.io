@@ -1,8 +1,24 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
+<<<<<<< HEAD
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import formidable from 'formidable';
+import fs from 'fs';
+import path from 'path';
+
+import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage';
+export const config = { api: { bodyParser: false } }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const form = formidable({ multiples: false });
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: 'Invalid form data' });
@@ -35,6 +51,7 @@ import path from 'path';
   });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
     res && res.status(200).json({ ok: true })
   })
+<<<<<<< HEAD
 }
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
@@ -80,3 +97,10 @@ function handler() {
   });
 
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

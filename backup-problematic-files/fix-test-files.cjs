@@ -1,5 +1,82 @@
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+// Function to fix common syntax errors in test files
+function fixTestFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    // Fix unterminated strings and syntax errors
+    content = content
+      // Fix unterminated import strings
+      .replace(/from 'react"$/gm, "from 'react';")
+      .replace(/from '@testing-library\/react"$/gm, "from '@testing-library/react';")
+      .replace(/from '@testing-library\/jest-dom$/gm, "from '@testing-library/jest-dom';")
+      .replace(/from '\.\.\/components\/[^"]*"$/gm, (match) => match.replace('"', "';"))
+      // Fix unterminated describe and test strings
+      .replace(/describe\('([^']*)"$/gm, "describe('$1', () => {")
+      .replace(/test\('([^']*)"$/gm, "test('$1', () => {")
+      // Fix JSX syntax errors
+      .replace(/<([A-Za-z]+)\s+\/\s+\/>/g, '<$1 />')
+      .replace(/<([A-Za-z]+)\s+\/\s+\/>/g, '<$1 />')
+      // Fix unterminated expect statements
+      .replace(/expect\([^)]*\)\.toBeInTheDocument\(\);'$/gm, 'expect($1).toBeInTheDocument();')
+      // Fix missing semicolons and closing braces
+      .replace(/}\)$/gm, '});')
+      .replace(/}\)$/gm, '});')
+      // Fix missing closing braces for describe blocks
+      .replace(/}\)$/gm, '});')
+      .replace(/}\)$/gm, '});');
+    // Write the fixed content back
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+// Get all test files in __tests__ directory
+const testDir = path.join(__dirname, '__tests__');
+const files = fs.readdirSync(testDir).filter(file => file.endsWith('.test.js'));
+console.log(`Found ${files.length} test files to fix`);
+let fixedCount = 0;
+files.forEach(file => {
+  const filePath = path.join(testDir, file);
+  if (fixTestFile(filePath)) {
+    fixedCount++;
+  }
+});
+console.log(`Fixed ${fixedCount} out of ${files.length} test files`);
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Function to fix malformed test files;
 function fixTestFile(filePath) {}
   try {}
@@ -89,6 +166,80 @@ files.forEach(file => {})
 });
 console.log(`Fixed ${fixedCount} malformed test files`);
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
+<<<<<<< HEAD
+=======
+=======
+}
+});
+`;`
+      fs.writeFileSync(filePath, fixedContent);
+      return true;
+    };
+    return false;
+  } catch (error) {}
+    console.error(`Error fixing file ${filePath}:`, error.message);
+    return false;
+  };
+};
+// Function to remove unused fireEvent imports;
+function removeUnusedFireEvent(filePath) {}
+  try {}
+    let content = fs.readFileSync(filePath, 'utf8');
+    // Check if fireEvent is imported but not used;
+    if (content.includes('fireEvent') && !content.includes('fireEvent(')) {}
+      console.log(`Removing unused fireEvent from: ${filePath}`);
+      // Remove fireEvent from import statement;
+      content = content.replace(/, fireEvent/g, '');
+      content = content.replace(/fireEvent, /g, '');
+      content = content.replace(/fireEvent/g, '');
+      fs.writeFileSync(filePath, content);
+      return true;
+    };
+    return false;
+  } catch (error) {}
+    console.error(`Error processing file ${filePath}:`, error.message);
+    return false;
+  };
+};
+// Get all test files;
+const testDir = path.join(__dirname, '__tests__');
+const files = fs.readdirSync(testDir);
+let fixedCount = 0;
+let fireEventCount = 0;
+files.forEach(file => {})
+  if (file.endsWith('.test.js')) {}
+    const filePath = path.join(testDir, file);
+    // Fix malformed files;
+    if (fixTestFile(filePath)) {}
+      fixedCount++;
+    };
+    // Remove unused fireEvent;
+    if (removeUnusedFireEvent(filePath)) {}
+      fireEventCount++;
+    };
+  };
+}
+});
+console.log(`Fixed ${fixedCount} malformed test files`);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+console.log(`Removed unused fireEvent from ${fireEventCount} files`);
+<<<<<<< HEAD
+=======
+console.log(`Removed unused fireEvent from ${fireEventCount} files`);
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const { execSync } = require('child_process');
 class TestFileFixer {
   constructor() {
@@ -164,4 +315,12 @@ if (require.main === module) {
     process.exit(fixedCount > 0 ? 0 : 1);
   });
 }
+<<<<<<< HEAD
 module.exports = TestFileFixer;
+=======
+
+module.exports = TestFileFixer;
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

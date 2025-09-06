@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,3 +19,17 @@ class ErrorBoundary extends React.Component {
 }
 import _React from 'react'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;
 import _React from 'react'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;
+=======
+import React from 'react';
+
+const QuantumComputing = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>QuantumComputing</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default QuantumComputing;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,4 +1,20 @@
 import type { NextPage } from 'next';
+<<<<<<< HEAD
+=======
+import Head from 'next/head';
+import { useRouter  } from 'next/router';
+import Link from 'next/link';
+import EnhancedLayout from '@/components/layout/EnhancedLayout';
+import equipment from '@/data/equipment.json';
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const EquipmentDetail: NextPage = () => {
   const router = useRouter()
   const { slug } = router.query as { slug?: string }
@@ -6,13 +22,17 @@ const EquipmentDetail: NextPage = () => {
   const item = items.find((e) => e.slug === slug);
   if (!item) {
     return (
+<<<<<<< HEAD
 
   if (!item) {_return (
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <EnhancedLayout>
         <Head>
           <title>Equipment Not Found - Zion Tech Solutions</title>
         </Head>
+<<<<<<< HEAD
         <div className="space-y-4">
           <h1 className="text-xl font-semibold">Equipment not found</h1>
           <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>
@@ -106,6 +126,21 @@ const EquipmentDetail: NextPage = () => {;
     </EnhancedLayout>;
   );
   }
+=======
+        <div className='space-y-4'>
+          <h1 className='text-xl font-semibold'>Equipment not found</h1>
+          <Link href='/products'>
+            <a className='text-blue-600 hover:underline'>Back to Equipment</a>
+          </Link>
+        </div>
+      </EnhancedLayout>
+    );  }        <div className="space-y-4">
+          <h1 className="text-xl font-semibold">Equipment not found</h1>
+          <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>
+        </div>
+      </EnhancedLayout>
+    )
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <EnhancedLayout>
       <Head>
@@ -130,7 +165,10 @@ const EquipmentDetail: NextPage = () => {;
             <a className="inline-flex items-center justify-center w-full px-4 py-2 rounded-md bg-blue-600 text-white hover: bg-blue-700">Request Quote</a>
           </Link>
           <Link href="/products"><a className="text-sm text-blue-600 hover:underline">Back to Equipment</a></Link>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         </aside>
       </div>
     </EnhancedLayout>
@@ -138,6 +176,7 @@ const EquipmentDetail: NextPage = () => {;
 }
 };
 export default EquipmentDetail;
+<<<<<<< HEAD
 import Head from 'next / head';
 import {use_router} from 'next / router';
 import Link from 'next / link';
@@ -233,3 +272,17 @@ if ( {) {
 ;
 export default EquipmentDetail;
 ;
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default EquipmentDetail;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export default EquipmentDetail;
+=======
+export default EquipmentDetail;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

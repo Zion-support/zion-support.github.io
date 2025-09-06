@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -42,12 +43,53 @@ class ErrorBoundary extends React.Component {
 }</motion && motion.div> {;
   /* General Application */ ;
 }<motion && motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion && motion.div> </div> </Layout>) ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+=======
+ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+=======
+ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+> <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
+  /* Company Culture */
+}<motion.div </div>) )
+}</div> </motion.div> {
+  /* Benefits */
+}<motion.div </div>) )
+}</div> </div> </motion.div> {
+  /* Job Openings */
+}<motion.div > <h2 className="text-3xl font-bold text-white text-center mb-8" >Open Positions</h2> key= {
+  dept.id
+}onClick= {
+  () => setSelectedDepartment (dept.id)
+}className= {
+  `px-4 py-2 rounded-lg font-medium transition-all duration-300 $ {
+  selectedDepartment === dept.id ? 'bg-blue-500 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+}`
+}> {
+  dept.name
+}</button>) )
+}</div> > <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4" > <div> </span> </div> </div> <a > Apply Now <ArrowRight className="w-5 h-5 ml-2" /> </a> </div> </li>) )
+}</ul> </div> </motion.div>) )
+}</div> We don't have any open positions in this department at the moment. Check back later or send us your resume for future opportunities. </p> </div>)
+}</motion.div> {
+  /* General Application */
+}<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 };export default CareersPage;import React, { useState } from 'react';
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
 import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckCircle, Briefcase} from 'lucide-react';
+<<<<<<< HEAD
 const filtered_jobs = selected_department === 'all' ? job_openings : job_openings.filter (job => job.department === selected_department);
 > <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - blue - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */;
@@ -94,6 +136,23 @@ function Careers() {
     { id: 'space - tech', name: 'Space Technology' },
     { id: 'sales', name: 'Sales & Business Development' },
     { id: 'marketing', name: 'Marketing' },
+=======
+<<<<<<< HEAD
+export default function Careers() {
+=======
+
+export default function Careers() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [selectedDepartment, setSelectedDepartment] = useState('all');
+  const departments = [
+    { id: 'all', name: 'All Departments' }
+    { id: 'engineering', name: 'Engineering' }
+    { id: 'ai-research', name: 'AI Research' }
+    { id: 'quantum', name: 'Quantum Computing' }
+    { id: 'space-tech', name: 'Space Technology' }
+    { id: 'sales', name: 'Sales & Business Development' }
+    { id: 'marketing', name: 'Marketing' }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     { id: 'operations', name: 'Operations' }
   ];
 ;
@@ -151,6 +210,7 @@ function Careers() {
       title: 'Business Development Manager'
       department: 'sales'
       location: 'Remote / Middletown, DE';
+<<<<<<< HEAD
 export default function Careers() {;
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const departments = [;
@@ -678,10 +738,112 @@ export default CareersPage;
                 </div>
                 <h3 className=&quot;text-lg font-bold text-white mb-3&quot;>{value.title}</h3>
                 <p className=&quot;text-gray-300 text-sm&quot;>{value.description}</p>
+=======
+      type: 'Full-time'
+      experience: '5+ years'
+      description: 'Drive business growth through strategic partnerships and client relationships.'
+      requirements: [
+        'Proven track record in B2B sales and business developmentExperience in technology or consulting industriesStrong networking and relationship-building skillsUnderstanding of emerging technologies and market trends'
+      ]
+    }
+  ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const companyValues = [
+    {
+      icon: <Brain className="w-8 h-8" />
+      title: 'Innovation First'
+      description: 'We push boundaries and explore new technologies to solve complex problems.'
+    }
+    {
+      icon: <Heart className="w-8 h-8" />
+      title: 'People Matter'
+      description: 'Our team is our greatest asset, and we invest in their growth and well-being.'
+    }
+    {
+      icon: <Globe className="w-8 h-8" />
+      title: 'Global Impact'
+      description: 'We create solutions that make a difference in the world.'
+    }
+    {
+      icon: <Star className="w-8 h-8" />
+      title: 'Excellence'
+      description: 'We strive for the highest quality in everything we do.'
+    }
+  ];
+  const benefits = [
+    'Competitive salary and equity packagesComprehensive health, dental, and vision insuranceFlexible work arrangements and remote work optionsProfessional development and training programsGenerous paid time off and holidays401(k) with company matchingModern technology and equipmentCollaborative and inclusive work environment'
+  ];
+  const filteredJobs = selectedDepartment === 'all'
+    ? jobOpenings
+    : jobOpenings.filter(job => job.department === selectedDepartment);
+  return (
+    <UltraFuturisticBackground>
+      <div className="min-h-screen">
+        <Head>
+          <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
+          <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
+        </Head>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <motion.div
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+            Join Our Team
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Be part of a team that's revolutionizing technology through AI, quantum computing, and space technology. Help us build the future.
+          </p>
+        </motion.div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Company Culture */}
+        <motion.div
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+        {/* Company Culture */}
+        <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Culture & Values</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {companyValues.map((value, index) => (
+              <div key={index} className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 text-center">
+                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400">
+                  {value.icon}
+                </div>
+                <h3 className="text-lg font-bold text-white mb-3">{value.title}</h3>
+                <p className="text-gray-300 text-sm">{value.description}</p>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>
             ))}
           </div>
         </motion.div>
+<<<<<<< HEAD
 
         {_/* Benefits */}
         <motion.div 
@@ -697,11 +859,38 @@ export default CareersPage;
                 <div key={index} className=&quot;flex items-center&quot;>
                   <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 flex-shrink-0&quot; />
                   <span className=&quot;text-gray-300&quot;>{benefit}</span>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Benefits */}
+        <motion.div
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+        {/* Benefits */}
+        <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
+          <div className="bg-gradient-to-br from-gray-900/40 to-purple-900/20 p-8 rounded-2xl border border-gray-600/20 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>
               ))}
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
 
         {_/* Job Openings */}
         <motion.div 
@@ -730,11 +919,58 @@ export default CareersPage;
 
           {/* Job Listings */}
           <div className=&quot;space-y-6&quot;>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Job Openings */}
+        <motion.div
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+        {/* Job Openings */}
+        <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>
+          {/* Department Filter */}
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            {departments.map((dept) => (
+              <button
+                key={dept.id}
+                onClick={() => setSelectedDepartment(dept.id)}
+                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                  selectedDepartment === dept.id
+                    ? 'bg-blue-500 text-white'
+                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+                }`}
+              >
+                {dept.name}
+              </button>
+            ))}
+          </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {/* Job Listings */}
+          <div className="space-y-6">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {filteredJobs.map((job) => (
               <motion.div
                 key={job.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 className=&quot;bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300&quot;
               >
                 <div className=&quot;flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4&quot;>
@@ -751,12 +987,31 @@ export default CareersPage;
                         {job.type}
                       </span>
                       <span className=&quot;bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full&quot;>
+=======
+                className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300"
+              >
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>
+                    <div className="flex flex-wrap gap-3 text-sm">
+                      <span className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">
+                        {departments.find(d => d.id === job.department)?.name}
+                      </span>
+                      <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full">
+                        {job.location}
+                      </span>
+                      <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full">
+                        {job.type}
+                      </span>
+                      <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         {job.experience}
                       </span>
                     </div>
                   </div>
                   <a
                     href={`/contact?position=${encodeURIComponent(job.title)}`}
+<<<<<<< HEAD
                     className=&quot;mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105&quot;
                   >
                     Apply Now
@@ -772,6 +1027,21 @@ export default CareersPage;
                     {job.requirements.map((req, index) => (
                       <li key={index} className=&quot;flex items-start text-sm text-gray-300&quot;>
                         <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0&quot; />
+=======
+                    className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                  >
+                    Apply Now
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </a>
+                </div>
+                <p className="text-gray-300 mb-4">{job.description}</p>
+                <div>
+                  <h4 className="text-white font-semibold mb-2">Requirements:</h4>
+                  <ul className="space-y-1">
+                    {job.requirements.map((req, index) => (
+                      <li key={index} className="flex items-start text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         {req}
                       </li>
                     ))}
@@ -780,6 +1050,7 @@ export default CareersPage;
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
 
           {filteredJobs.length === 0 && (
             <div className=&quot;text-center py-12&quot;>
@@ -787,11 +1058,20 @@ export default CareersPage;
               <h3 className=&quot;text-xl font-semibold text-gray-400 mb-2&quot;>No Open Positions</h3>
               <p className=&quot;text-gray-500&quot;>
                 We don't have any open positions in this department at the moment. 
+=======
+          {filteredJobs.length === 0 && (
+            <div className="text-center py-12">
+              <Briefcase className="w-16 h-16 text-gray-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-400 mb-2">No Open Positions</h3>
+              <p className="text-gray-500">
+                We don't have any open positions in this department at the moment.
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Check back later or send us your resume for future opportunities.
               </p>
             </div>
           )}
         </motion.div>
+<<<<<<< HEAD
 
         {_/* General Application */}
         <motion.div 
@@ -818,6 +1098,42 @@ export default CareersPage;
               <a 
                 href=&quot;/about&quot; 
                 className=&quot;inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300&quot;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* General Application */}
+        <motion.div
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+        {/* General Application */}
+        <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-white mb-4">Don't See the Right Fit?</h2>
+            <p className="text-gray-300 mb-6">
+              We're always looking for talented individuals to join our team.
+              Send us your resume and let's discuss how you can contribute to our mission.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Send Your Resume
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
+              <a
+                href="/about"
+                className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 Learn More About Us
               </a>
@@ -827,7 +1143,17 @@ export default CareersPage;
       </div>
     </Layout>
   )
+<<<<<<< HEAD
 },
 
 export default CareersPage
 
+=======
+}
+export default CareersPage;
+
+<<<<<<< HEAD
+=======
+export default CareersPage;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;}
 });
 console.log(`Fixed ${fixedCount} files`);
@@ -226,3 +227,20 @@ error_files.for_each (file => {
 }
 // Run the main function;
 main ().catch (console.error);
+=======
+}});
+
+;
+  };
+}),;
+console.log(`Fixed ${fixedCount} files`),;
+,;
+;};
+});
+console.log(`Fixed ${fixedCount} files`);
+;
+  };
+}),
+console.log(`Fixed ${fixedCount} files`),
+,
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

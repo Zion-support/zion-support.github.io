@@ -29,4 +29,8 @@ export default function ServiceProcessSteps({ }: ServiceProcessStepsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/services/PageSections/ServiceProcessSteps.jsx
 }
+=======
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src.disabled/src/components/services/PageSections/ServiceProcessSteps.jsx

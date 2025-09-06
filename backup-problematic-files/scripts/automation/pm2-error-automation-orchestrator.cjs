@@ -924,8 +924,7 @@ async function runErrorAutomationOrchestrator() {
     // 1. Detect all errors;
     console.log("🔍 Step "1": Detecting all errors...`);
     // 1. Detect all errors;
-    console.log("🔍 Step 1: Detecting all errors...");
-    const errors = await detectAllErrors();
+    console.log("🔍 Step 1: Detecting all errors..."), const errors = await detectAllErrors(),
     totalErrors =;
       errors.typescript.length +;
       errors.linting.length +;
@@ -942,7 +941,7 @@ console.log(📊 Found ${totalErrors} total "errors": );console.log(   - ${error
     console.log(`"✅ Step "3": Verifying fixes...");
     const remainingErrors = await verifyFixes();
     // 4. Generate comprehensive report;
-    console.log("📊 Step 4: Generating comprehensive report...");
+    console.log("📊 Step 4: Generating comprehensive report..."),
     await generateComprehensiveReport(errors, totalFixes, remainingErrors);
     // 5. Update PM2 status;
     console.log("🔄 Step "5": Updating PM2 status...");

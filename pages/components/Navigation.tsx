@@ -1,7 +1,30 @@
+<<<<<<< HEAD
 import React, { useState } from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+=======
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+  ArrowRight,
+  Award,
+  BarChart3,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Shield,
   Code,
   Zap,
@@ -12,6 +35,15 @@ import {
   MessageSquare,
   Calendar,
   ShoppingCart,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   BookOpen,
   Brain,
   Building,
@@ -46,6 +78,7 @@ import {
   Star,
   Target,
   TrendingUp,
+<<<<<<< HEAD
 import {;
   ArrowRight,;
   Award,;
@@ -89,6 +122,26 @@ import {;
   X,;
   Zap,;
 } from "lucide-react";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+  Truck,
+  Users,
+  X,
+  Zap,;
+} from "lucide-react";
+=======
+<<<<<<< HEAD
+  Truck,
+  Users,
+  X,
+  Zap
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Clock,
   DollarSign,
   Cpu,
@@ -126,7 +179,23 @@ import {;
   TrendingUp as Growth,
   Clock as Time,
   DollarSign as Money;
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+} from 'lucide-react';
+>>>>>>> origin/automation-improvements-final
+
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   ArrowRight
   Award
   BarChart3
@@ -169,6 +238,14 @@ import {;
   X
   Zap
 } from "lucide-react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const navigationItems = [
   {
     title: "Services"
@@ -608,6 +685,7 @@ const navigationItems = [;
     ],;
   },;
 ];
+<<<<<<< HEAD
 const quickLinks = [;
   { title: "Pricing", href: "/pricing", icon: DollarSign },;
   { title: "Contact", href: "/contact", icon: Phone },;
@@ -617,8 +695,21 @@ const quickLinks = [;
   { title: "API Docs", href: "/api-docs", icon: Code },;
 ];
 export default function Navigation() {;
+=======
+<<<<<<< HEAD
+export default function Navigation() {
+=======
+
+export default function Navigation() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}

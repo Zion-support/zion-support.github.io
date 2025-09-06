@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
@@ -6,3 +7,20 @@ describe('Basic Test', () => {
     expect(true).toBe(true);
   });
 });
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import EnhancedSidebar2025 from "./components/EnhancedSidebar2025" describe("EnhancedSidebar2025",() => {" test("renders without crashing",() => {" render(<EnhancedSidebar2025 / / />) expect(screen.getByTestId("enhancedsidebar2025")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<EnhancedSidebar2025 / / />) }) test("handles user interactions",() => {" render(<EnhancedSidebar2025 / / />) }) test("applies correct styling",() => {" render(<EnhancedSidebar2025 / / />) }) })'"'"
+import _React from 'react"  import '@testing-library/jest-dom import EnhancedSidebar2025 from '../components/EnhancedSidebar2025" describe('EnhancedSidebar2025',() => {' test('renders without crashing',() => {' render(<EnhancedSidebar2025 / / />) expect(screen.getByTestId("enhancedsidebar2025")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedSidebar2025 / / />) }) test('handles user interactions',() => {' render(<EnhancedSidebar2025 / / />) }) test('applies correct styling',() => {' render(<EnhancedSidebar2025 / / />) }) })
+=======
+<<<<<<< HEAD
+import _React from 'react"  import '@testing-library/jest-dom import EnhancedSidebar2025 from '../components/EnhancedSidebar2025" describe('EnhancedSidebar2025',() => {' test('renders without crashing',() => {' render(<EnhancedSidebar2025 / / />) expect(screen.getByTestId("enhancedsidebar2025")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedSidebar2025 / / />) }) test('handles user interactions',() => {' render(<EnhancedSidebar2025 / / />) }) test('applies correct styling',() => {' render(<EnhancedSidebar2025 / / />) }) })
+=======
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import EnhancedSidebar2025 from "./components/EnhancedSidebar2025" describe("EnhancedSidebar2025",() => {" test("renders without crashing",() => {" render(<EnhancedSidebar2025 / / />) expect(screen.getByTestId("enhancedsidebar2025")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<EnhancedSidebar2025 / / />) }) test("handles user interactions",() => {" render(<EnhancedSidebar2025 / / />) }) test("applies correct styling",() => {" render(<EnhancedSidebar2025 / / />) }) })'"'"
+import _React from 'react"  import '@testing-library/jest-dom import EnhancedSidebar2025 from '../components/EnhancedSidebar2025" describe('EnhancedSidebar2025',() => {' test('renders without crashing',() => {' render(<EnhancedSidebar2025 / / />) expect(screen.getByTestId("enhancedsidebar2025")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedSidebar2025 / / />) }) test('handles user interactions',() => {' render(<EnhancedSidebar2025 / / />) }) test('applies correct styling',() => {' render(<EnhancedSidebar2025 / / />) }) })
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,14 +1,49 @@
+<<<<<<< HEAD
 export default function CourseView() {
   const router = useRouter();
   const { courseId } = router.query as { courseId: string },
   const [course, setCourse] = useState<any>(null);
   const [progress, setProgress] = useState<any>({ percent: 0, completedLessons: [] }),
   const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useEffect, useMemo, useState  } from 'react';
+import { useRouter  } from 'next/router';
+import ProgressBar from '../../components/learn/ProgressBar',
+import Quiz from '../../components/learn/Quiz',
+import CertificatePreview from '../../components/learn/CertificatePreview';
+import CoachWidget from '../../components/learn/CoachWidget';
+export default function CourseView() {
+
+=======
+import {useEffect, useMemo, useState} from 'react';
+import {useRouter} from 'next/router';
+=======
+import { useEffect, useMemo, useState } from 'react';
+import { useRouter } from 'next/router';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+import ProgressBar from '../../components/learn/ProgressBar';
+import Quiz from '../../components/learn/Quiz';
+import CertificatePreview from '../../components/learn/CertificatePreview';
+import CoachWidget from '../../components/learn/CoachWidget';
+<<<<<<< HEAD
+export default function CourseView() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const router = useRouter();
+  const { courseId } = router.query as { courseId: string }
+  const [course, setCourse] = useState<any>(null);
+  const [progress, setProgress] = useState<any>({
+    percent: 0
+    completedLessons: []
+  });  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [finalPassed, setFinalPassed] = useState(false);
   useEffect(() => {
     if (!courseId) return;
     async function load() {
       const [courseResp, progResp] = await Promise.all([
+<<<<<<< HEAD
 export default function CourseView() {;
   const router = useRouter();
   const { courseId } = router && router.query as { courseId: string };
@@ -31,11 +66,23 @@ export default function CourseView() {;
         percent: 0,;
         completedLessons: [],;
       };
+=======
+        fetch(`/api/learn/courses/${courseId}`)
+        fetch(`/api/learn/progress?userId=demo-user`),      ]);
+      const courseData = await courseResp.json();
+      const progData = await progResp.json();
+      setCourse(courseData.course);
+      const cp = (progData.progress && progData.progress[courseId]) |{
+        percent: 0
+        completedLessons: []
+      }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       setProgress(cp);
       setCurrentLessonId(courseData?.course?.lessons?.[0]?.id |null);
     }
     load();
   }, [courseId]);
+<<<<<<< HEAD
         fetch(`/api/learn/courses/${courseId}`);
         fetch(`/api/learn/progress?userId=demo-user`)
       ]);
@@ -418,6 +465,209 @@ if (return <div > Loading...</div>) {
         </div>;
       </div>;
           <section className="lg:col-span-3 space-y-4">
+=======
+  const currentLesson = useMemo(
+    () => course?.lessons?.find((l: any) => l.id === currentLessonId)
+    [course, currentLessonId]
+  );
+  async function markLessonComplete(lessonId: string) {
+    const completedCount = (progress.completedLessons |[]).includes(lessonId)
+      ? (progress.completedLessons |[]).length
+      : (progress.completedLessons |[]).length + 1;
+    const percent = Math.round(
+      (completedCount / (course?.lessons?.length |1)) * 100
+    );
+    const resp = await fetch('/api/learn/progress', {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({
+        userId: 'demo-user'
+        courseId
+        lessonId
+        percent
+      })
+    });
+    const data = await resp.json();
+    setProgress(data.progress);  }
+  function onModuleQuizComplete(score: number) {
+    // For demo, simply mark as completed when quiz attempted
+    if (currentLessonId) markLessonComplete(currentLessonId);  }
+  async function onFinalQuizComplete(score: number) {
+    const needed = course?.finalQuiz?.passThreshold |0;
+    const passed = score >= needed;
+    setFinalPassed(passed);  }
+  if (!course) return <div>Loading...</div>;
+
+=======
+<<<<<<< HEAD
+import { useEffect, useMemo, useState } from 'react';
+import { useRouter } from 'next/router';
+import ProgressBar from '../../components/learn/ProgressBar';
+import Quiz from '../../components/learn/Quiz';
+import CertificatePreview from '../../components/learn/CertificatePreview';
+import CoachWidget from '../../components/learn/CoachWidget';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function CourseView(req, res) {
+  try {
+  const router = useRouter();
+  const { courseId } = router.query as { courseId: string };
+  const [course, setCourse] = useState<any>(null);
+  const [progress, setProgress] = useState<any>({ percent: 0, completedLessons: [] }),;
+  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+  const [finalPassed, setFinalPassed] = useState(false);
+  useEffect(() => {;
+    if (!courseId) return,;
+    async function load() {;
+      const [courseResp, progResp] = await Promise.all([;
+        fetch(`/api/learn/courses/${courseId}`);
+        fetch(`/api/learn/progress?userId=demo-user`);
+      ]),;
+      const courseData = await courseResp.json();
+      const progData = await progResp.json();
+      setCourse(courseData.course);
+      const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] },;
+      setProgress(cp);
+      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    load();
+  }, [courseId]),;
+  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]),;
+  async function markLessonComplete(lessonId: string) {;
+    const completedCount = (progress.completedLessons || []).includes(lessonId);
+      ? (progress.completedLessons || []).length;
+      : (progress.completedLessons || []).length + 1;
+    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100);
+    const resp = await fetch('/api/learn/progress', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON.stringify({ userId: 'demo-user', courseId, lessonId, percent });
+    }),;
+    const data = await resp.json();
+    setProgress(data.progress);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  function onModuleQuizComplete(score: number) {;
+    // For demo, simply mark as completed when quiz attempted;
+    if (currentLessonId) markLessonComplete(currentLessonId);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  async function onFinalQuizComplete(score: number) {;
+    const needed = course?.finalQuiz?.passThreshold || 0;
+    const passed = score >= needed;
+    setFinalPassed(passed);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (!course) return <div>Loading...</div>,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <div className="grid lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2 space-y-4">
+        <div>
+<<<<<<< HEAD
+          <h1 className='text-2xl font-semibold'>{course.title}</h1>
+          <div className='text-gray-500 text-sm'>
+            {course.category} • {course.level}
+          </div>
+          <div className='mt-3'>
+            <ProgressBar value={progress.percent |0} />
+            <div className='text-xs text-gray-500 mt-1'>
+              Progress: {progress.percent |0}%
+            </div>
+          </div>
+        </div>
+        <div className='grid lg:grid-cols-5 gap-4'>
+          <aside className='lg:col-span-2 border rounded p-3 h-max'>
+            <div className='font-medium mb-2'>Lessons</div>
+            <ul className='space-y-2'>
+              {course.lessons?.map((l: any) => (
+                <li key={l.id}>
+                  <button
+                    className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
+                    onClick={() => setCurrentLessonId(l.id)}
+                  >                    {l.title}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </aside>
+          <section className='lg:col-span-3 space-y-4'>
+=======
+          <h1 className="text-2xl font-semibold">{course.title}</h1>
+          <div className="text-gray-500 text-sm">{course.category} • {course.level}</div>
+          <div className="mt-3">
+            <ProgressBar value={progress.percent || 0} />
+            <div className="text-xs text-gray-500 mt-1">Progress: {progress.percent || 0}%</div>
+          </div>
+        </div>
+<<<<<<< HEAD
+        <div className='grid lg:grid-cols-5 gap-4'>
+          <aside className='lg:col-span-2 border rounded p-3 h-max'>
+            <div className='font-medium mb-2'>Lessons</div>
+            <ul className='space-y-2'>
+              {course.lessons?.map((l: any) => (
+                <li key={l.id}>
+<<<<<<< HEAD
+=======
+                  <button
+                    className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
+                    onClick={() => setCurrentLessonId(l.id)}
+                  >                    {l.title}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </aside>
+          <section className='lg:col-span-3 space-y-4'>
+=======
+        <div className="grid lg:grid-cols-5 gap-4">
+          <aside className="lg:col-span-2 border rounded p-3 h-max">
+            <div className="font-medium mb-2">Lessons</div>
+            <ul className="space-y-2">
+              {course.lessons?.map((l: any) => (
+                <li key={l.id}>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  <button className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick={() => setCurrentLessonId(l.id)}>
+                    {l.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </button>;
+                </li>;
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </ul>
+          </aside>
+          <section className="lg:col-span-3 space-y-4">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {currentLesson ? (
               <div className="border rounded p-4">
                 <div className="font-medium">{currentLesson.title}</div>
@@ -428,6 +678,7 @@ if (return <div > Loading...</div>) {
                   </div>
                 ) : (
                   <button className="mt-3 px-4 py-2 bg-green-600 text-white rounded" onClick={() => markLessonComplete(currentLesson.id)}>Mark Complete</button>
+<<<<<<< HEAD
                 )}
               </div>
             ) : (
@@ -461,3 +712,95 @@ if (return <div > Loading...</div>) {
 }
     </div>);
 ;
+=======
+                )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>
+            ) : (
+<<<<<<< HEAD
+              <div className='text-sm text-gray-500'>Select a lesson</div>
+            )}
+=======
+              <div className="text-sm text-gray-500">Select a lesson</div>
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+            {course.finalQuiz?.questions?.length ? (
+              <div className="border rounded p-4">
+                <div className="font-medium mb-2">Final Certification Quiz</div>
+                <Quiz questions={course.finalQuiz.questions} onComplete={onFinalQuizComplete} />
+                {finalPassed && (
+<<<<<<< HEAD
+                  <div className='mt-3 text-green-700'>
+                    Passed! You can download your certificate below.
+                  </div>                )}
+              </div>
+            ) : null}
+            {finalPassed && <CertificatePreview courseId={courseId} />}          </section>
+        </div>
+      </div>
+      <div className='space-y-4'>
+=======
+                  <div className="mt-3 text-green-700">Passed! You can download your certificate below.</div>
+                )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>;
+            ) : null  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+            {finalPassed && (;
+              <CertificatePreview courseId={courseId} />;
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </section>
+        </div>
+      </div>
+      <div className="space-y-4">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <CoachWidget />
+        <div className="border rounded p-3">
+          <div className="font-medium">Profile Boost</div>
+          <div className="text-sm text-gray-600 mt-1">Opt-in to boost your visibility in matches when certified skills apply.</div>
+          <button className="mt-2 px-3 py-2 bg-indigo-600 text-white rounded" onClick={() => alert('Preference saved (demo)')}>Enable Boost</button>
+        </div>
+      </div>
+    </div>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

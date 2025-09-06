@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
 interface UltraAdvancedFuturisticBackground2026Props {
   intensity?: 'low' | 'medium' | 'high' | 'extreme',
@@ -21,6 +22,35 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
   enableNeuralNetworks = true,;
   enableMultidimensional = true,;
   children,}) => {const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({;
+=======
+import React, { useEffect, useRef } from 'react';
+
+import { motion } from 'framer-motion';
+
+interface UltraAdvancedFuturisticBackground2026Props {
+  intensity?: 'low' | 'medium' | 'high' | 'extreme',
+  colorScheme?: 'neural-network' | 'quantum-field' | 'cyberpunk' | 'holographic' | 'multidimensional';
+  particleCount?: number;
+  animationSpeed?: number;
+  enableHolographic?: boolean;
+  enableQuantumEffects?: boolean;
+  enableNeuralNetworks?: boolean;
+  enableMultidimensional?: boolean;
+
+  children?: React.ReactNode;
+const UltraAdvancedFuturisticBackground2026: React.FC<
+  UltraAdvancedFuturisticBackground2026Props
+> = ({
+  intensity = 'high'
+  colorScheme = 'neural-network'
+  particleCount = 300
+  animationSpeed = 2.0
+  enableHolographic = true
+  enableQuantumEffects = true
+  enableNeuralNetworks = true
+  enableMultidimensional = true
+  children,}) => {const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   intensity = 'high';
   colorScheme = 'neural-network';
   particleCount = 300;
@@ -51,6 +81,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
     let neuralNodes: NeuralNode[] = [];
     let quantumFields: QuantumField[] = [];
     let holographicLayers: HolographicLayer[] = [];
+<<<<<<< HEAD
     if (!ctx) return;
     let animationFrameId: number,
     let particles: Particle[] = [];
@@ -175,11 +206,14 @@ if ( {) {
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     let animationFrameId: number
     let particles: Particle[] = []
     let neuralNodes: NeuralNode[] = []
     let quantumFields: QuantumField[] = []
     let holographicLayers: HolographicLayer[] = []
+<<<<<<< HEAD
 
     // Set canvas size
     const _resizeCanvas = () => {
@@ -205,6 +239,46 @@ if ( {) {
       alpha: number,
       life: number,
 this.maxLife = this.life
+=======
+    // Set canvas size
+    const resizeCanvas = () => {
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;        canvas.height = rect.height
+      }
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    // Particle class
+    class Particle {
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      color: string;
+      alpha: number;
+      life: number;
+      maxLife: number;      x: number
+      y: number
+      vx: number
+      vy: number
+      size: number
+      color: string
+      alpha: number
+      life: number
+      maxLife: number
+        this.x = x;
+        this.y = y;
+        this.vx = (Math.random() - 0.5) * 2 * animationSpeed;
+        this.vy = (Math.random() - 0.5) * 2 * animationSpeed;
+        this.size = Math.random() * 3 + 1;
+        this.color = getColorSchemeColor();
+        this.alpha = Math.random() * 0.8 + 0.2;
+        this.life = Math.random() * 100 + 50;
+        this.maxLife = this.life;      }        this.maxLife = this.life
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
       update() {
         this.x += this.vx;
@@ -228,6 +302,7 @@ this.maxLife = this.life
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
+<<<<<<< HEAD
       maxLife: number;      x: number,;
       y: number,;
       vx: number,;
@@ -274,6 +349,26 @@ this.maxLife = this.life
     }
     // Neural network node class;
     class NeuralNode {;
+=======
+<<<<<<< HEAD
+        ctx.restore();      }        ctx.restore()
+=======
+        ctx.restore();      }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+    }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    // Neural network node class
+    class NeuralNode {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       x: number;
       y: number;
       connections: NeuralNode[];
@@ -328,6 +423,7 @@ constructor(x: number, y: number) {
             ctx.beginPath();
             ctx.moveTo(this.x, this.y);
             ctx.lineTo(connection.x, connection.y);
+<<<<<<< HEAD
             ctx.stroke()
           }
         });
@@ -367,6 +463,34 @@ constructor(x: number, y: number) {
     }
     // Quantum field class;
     class QuantumField {;
+=======
+            ctx.stroke();
+          }
+        });
+<<<<<<< HEAD
+        ctx.restore();      }            ctx.stroke()
+          }
+        });
+        ctx.restore()
+<<<<<<< HEAD
+    }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        ctx.restore();      }
+
+      }
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    // Quantum field class
+    class QuantumField {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       x: number;
       y: number;
       radius: number;
@@ -405,11 +529,41 @@ constructor(x: number, y: number) {
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
+<<<<<<< HEAD
           ctx.stroke()
         }
         ctx.restore()
       }
+=======
+          ctx.stroke();
+        }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+        ctx.restore();      }          ctx.stroke()
+        }
+        ctx.restore()
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
+=======
+
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        ctx.restore();      }
+
+      }
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Holographic layer class
     class HolographicLayer {
       phase: number;      x: number,;
@@ -635,9 +789,40 @@ this.color = getColorSchemeColor()
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+        ctx.restore();      }        
+        ctx.beginPath();
+        ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
+        ctx.stroke();
+        
+        ctx.restore()
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        ctx.restore();      }
+<<<<<<< HEAD
+        ctx.beginPath();
+        ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
+        ctx.stroke();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         ctx.restore()
       }
     }
+=======
+
+      }
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
@@ -839,6 +1024,7 @@ Math.random() * canvas.width;
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
               ctx.stroke();
+<<<<<<< HEAD
       color: string;      x: number,;
       y: number,;
       width: number,;
@@ -1327,18 +1513,45 @@ if ( {) {
               ctx.line_to (other_particle.x, other_particle.y);
               ctx.stroke ();
               ctx.restore ();
+=======
+              ctx.restore();
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             }
           });
         });
       }
+<<<<<<< HEAD
       animationFrameId = requestAnimationFrame(animate);
               ctx.restore()
             }
+=======
+<<<<<<< HEAD
+      animationFrameId = requestAnimationFrame(animate);    };            }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           })
         })
       }
       animationFrameId = requestAnimationFrame(animate)
+<<<<<<< HEAD
     };
+=======
+    }
+=======
+
+      animationFrameId = requestAnimationFrame(animate);    };
+
+    };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     animate();
       />;
       {/* Additional visual effects */}
@@ -1393,7 +1606,51 @@ if ( {) {
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrameId)
     }
+<<<<<<< HEAD
   }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]);
+=======
+  }, [
+    intensity
+    colorScheme
+    particleCount
+    animationSpeed
+    enableHolographic
+    enableQuantumEffects
+    enableNeuralNetworks
+    enableMultidimensional
+  ]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    >
+      <canvas
+        ref={canvasRef}
+        className='absolute inset-0 w-full h-full'
+        style={{ zIndex: -1 }}
+      />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Additional visual effects */}
+      {enableMultidimensional && (
+        <div className='absolute inset-0 pointer-events-none'>
+          <motion.div
+            className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full'
+            animate={{
+              scale: [1, 1.2, 1]
+              rotate: [0, 180, 360]
+              opacity: [0.1, 0.3, 0.1],            }}
+            transition={{
+              duration: 8
+              repeat: Infinity
+              ease: 'easeInOut'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
       />;
       {/* Additional visual effects */}
@@ -1417,6 +1674,7 @@ if ( {) {
               rotate: [360, 180, 0],
               opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],            }}
             transition={{
+<<<<<<< HEAD
               duration: 10
               repeat: Infinity
               ease: 'easeInOut',            }}
@@ -1455,6 +1713,7 @@ ease: "easeInOut"
               opacity: [0.1, 0.3, 0.1];
             }}
             transition={{
+<<<<<<< HEAD
               duration: 10,
               repeat: Infinity,
 {children}
@@ -1476,3 +1735,45 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
 ;
 export default UltraAdvancedFuturisticBackground2026;
 ;
+=======
+<<<<<<< HEAD
+              duration: 10
+              repeat: Infinity
+=======
+              duration: 10,
+              repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              ease: 'easeInOut',              ease: "easeInOut"
+            }}
+          />
+        </div>
+      )}
+      {children}
+    </div>
+  );
+}
+export default UltraAdvancedFuturisticBackground2026;      {children}
+    </div>
+  )
+}
+export default UltraAdvancedFuturisticBackground2026;
+<<<<<<< HEAD
+
+=======
+              duration: 10,
+              repeat: Infinity,
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+            }}
+          />
+        </div>
+      )}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

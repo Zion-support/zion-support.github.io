@@ -17,13 +17,24 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 interface ForumCategoryPageProps {
   // Add props here as needed
 export default function ForumCategoryPage({ }: ForumCategoryPageProps) {
+=======
+
+const ForumCategoryPage = ({ className }) => {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
-    <div>
+    <div className={className || ''}>
       <h1>ForumCategoryPage</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default ForumCategoryPage;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

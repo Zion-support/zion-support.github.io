@@ -19,6 +19,7 @@ const Label = React.forward_ref<;
 import React from 'react';
 import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
+<<<<<<< HEAD
 import {cva, type, VariantProps} from "class-variance-authority";
 import {cn} from "@/lib/utils";
 const labelVariants = cva(;
@@ -30,11 +31,28 @@ const Label = React && React.forwardRef<;
     VariantProps<typeof labelVariants>;
 >(({ className, ...props }, ref) => (;
   <LabelPrimitive&& LabelPrimitive.Root
+=======
+import { cva, type VariantProps } from "class-variance-authority";
+;
+import { cn } from "@/lib/utils";
+;
+const labelVariants = cva(;
+  "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70";
+);
+;
+const Label = React.forwardRef<;
+  React.ElementRef<typeof LabelPrimitive.Root>,;
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &;
+    VariantProps<typeof labelVariants>;
+>(({ className, ...props }, ref) => (;
+  <LabelPrimitive.Root;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ref={ref}
     className={cn(labelVariants(), className)}
     {...props}
   />;
 ));
+<<<<<<< HEAD
 Label && Label.displayName = LabelPrimitive && LabelPrimitive.Root.displayName;
 export { Label }
   />));
@@ -42,3 +60,18 @@ Label.display_name = LabelPrimitive.Root.display_name;
 ;
 export { Label }
 ;
+=======
+Label.displayName = LabelPrimitive.Root.displayName;
+;
+export { Label } React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & VariantProps<typeof labelVariants> > ( ({
+  className, ...props 
+}, ref) => (<LabelPrimitive.Root ref= {
+  ref 
+}className= {
+  cn (labelVariants (), className) 
+}{
+  ...props 
+}/>) ) Label.displayName = LabelPrimitive.Root.displayName export {
+  Label 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

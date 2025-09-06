@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -38,6 +39,34 @@ import {;
   MapPin,;} from 'lucide-react';import { ;
   Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin;
 import { 
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react',
+=======
+import React, { useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Head from 'next/head';
+
+import { motion } from 'framer-motion';
+import {
+<<<<<<< HEAD
+  Check
+  Zap
+  Shield
+  Brain
+  Atom
+  Target
+  Rocket
+  Star
+  TrendingUp
+  Award
+  Users
+  ArrowRight
+  ExternalLink
+  Phone
+  Mail
+  MapPin;} from 'lucide-react';import {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -46,11 +75,68 @@ import { cuttingEdgeQuantumServices2025  } from '../data/2025-cutting-edge-quant
 import { cuttingEdgeEnterpriseITServices2025  } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
 const contactInfo = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
+=======
+<<<<<<< HEAD
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+=======
+  Check,
+  Zap,
+  Shield,
+  Brain,
+  Atom,
+  Target,
+  Rocket,
+  Star,
+  TrendingUp,
+  Award,
+  Users,
+  ArrowRight,
+  ExternalLink,
+  Phone,
+  Mail,;
+  MapPin,;} from 'lucide-react';import { 
+  Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
+import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
+  website: 'https://ziontechgroup.com',
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+visible: {
+  opacity: 1, transition: {
+  staggerChildren: 0.1
+}
+const itemVariants = {
+  hidden: {
+  y: 20, opacity: 0
+}
+visible: {
+  y: 0, opacity: 1, transition: {
+  duration: 0.5
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const pricingTiers = [
   {
     name: 'Starter'
@@ -126,6 +212,12 @@ const serviceCategories = [
     description: 'Innovative business solutions for modern enterprises'
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const stats = [
   {
     number: '25+'
@@ -154,8 +246,16 @@ const stats = [
   { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' }
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' }
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
+<<<<<<< HEAD
 ];
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function CuttingEdgePricing2025() {
+=======
+
+export default function CuttingEdgePricing2025() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [selectedCategory, setSelectedCategory] = useState('all');
   const allServices = [
 const contactInfo = {;
@@ -295,6 +395,7 @@ export default function CuttingEdgePricing2025() {;
     ...cuttingEdgeEnterpriseITServices2025;
     ...cuttingEdgeMicroSaasServices2025;
   ];
+<<<<<<< HEAD
   const filteredServices = selectedCategory === 'all' ;
     ? allServices ;
     : allServices && allServices.filter(service => service && service.category === selectedCategory);
@@ -479,6 +580,19 @@ function CuttingEdgePricing2025() {
     : all_services.filter (service => service.category === selected_category);
   const container_variants = {
     hidden: { opacity: 0 },
+=======
+  const filteredServices = selectedCategory === 'all'
+    ? allServices
+    : allServices.filter(service => service.category === selectedCategory);
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const containerVariants = {
+    hidden: { opacity: 0 }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     visible: {
       opacity: 1,
       transition: {
@@ -495,10 +609,46 @@ function CuttingEdgePricing2025() {
       coordinate_y: 0,
       opacity: 1,
       transition: {
+<<<<<<< HEAD
         />;
         <meta name='viewport' content='width=device-width, initial-scale=1' />;
         <link rel='icon' href='/favicon && favicon.ico' />      </Head>;
       <Layout>;
+=======
+<<<<<<< HEAD
+        duration: 0.5
+      }
+    },  };        duration: 0.5
+      }
+    }
+  }
+=======
+        duration: 0.5,
+      },
+    },  };
+
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+  return (
+    <>
+      <Head>
+        <title>
+          Cutting-Edge Pricing 2025 - Zion Tech Group | Future Technology
+          Solutions
+        </title>
+        <meta
+          name='description'
+          content='Discover competitive pricing for our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions.'
+        />
+        <meta
+          name='keywords'
+          content='cutting-edge pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SAAS pricing'
+        />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' href='/favicon.ico' />      </Head>
+      <Layout>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Hero Section */}
         <section className='relative overflow-hidden'>;
           <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>;
@@ -536,6 +686,7 @@ function CuttingEdgePricing2025() {
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+<<<<<<< HEAD
 
   const _filteredServices = selectedCategory === 'all' 
     ? allServices 
@@ -569,19 +720,32 @@ function CuttingEdgePricing2025() {
           <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black&quot;></div>
           <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32&quot;>
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 className="text-center"
             >
               <motion.h1
                 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
                 initial={{ opacity: 0, scale: 0.9 }}
+=======
+              className='text-center'
+            >
+              <motion.h1
+                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'              className="text-center"
+            >
+              <motion.h1
+                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
               >
                 Cutting-Edge
+<<<<<<< HEAD
 <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
                   Pricing 2025
                 </span>
@@ -625,6 +789,42 @@ className="text-center"
                 cutting-edge services are designed to give you a competitive;
                 advantage while maintaining affordability and value.;
               </motion && motion.p>;
+=======
+                <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>
+                  Pricing 2025
+                </span>
+              </motion.h1>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <motion.p
+                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
+                  Pricing 2025
+                </span>
+              </motion.h1>
+<<<<<<< HEAD
+              <motion.p
+=======
+              <motion.p 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+<<<<<<< HEAD
+                Experience revolutionary technology at competitive prices. Our
+                cutting-edge services are designed to give you a competitive
+                advantage while maintaining affordability and value.
+              </motion.p>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {/* Hero Stats */}
               <motion&& motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you 
@@ -633,12 +833,38 @@ className="text-center"
               {/* Hero Stats */}
               <motion&& motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
+=======
+=======
+
+                initial={{ opacity: 0, y: 20 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 {stats.map((stat, index) => (
+<<<<<<< HEAD
 <div key={index} className="text-center">
+=======
+                  <div key={index} className='text-center'>
+                    <div className='flex justify-center mb-2'>
+                      <div className='p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30'>
+                        <stat.icon className={`w-5 h-5 ${stat.color}`} />
+                      </div>
+                    </div>
+                    <div className='text-2xl md:text-3xl font-bold text-white mb-1'>
+                      {stat.number}
+                    </div>
+<<<<<<< HEAD
+                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>                  <div key={index} className="text-center">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <div className="flex justify-center mb-2">
                       <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
                         <stat.icon className={`w-5 h-5 ${stat.color}`} />
@@ -646,6 +872,7 @@ className="text-center"
                     </div>
                     <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.number}</div>
                     <div className="text-sm text-white/70">{stat.label}</div>
+<<<<<<< HEAD
                   </div>
                 ))}
               </motion && motion.div>;
@@ -657,14 +884,48 @@ className="text-center"
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
+=======
+=======
+                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
+
+                  </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Pricing Tiers Section */}
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -700,6 +961,34 @@ className="text-center"
             </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">;
                 <motion&& motion.div
+=======
+              className='text-center mb-16'
+            >
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+                <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>                  Flexible
+                </span>{' '}
+                Pricing Plans
+              </h2>              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                </span>{' '}
+                Pricing Plans
+              </h2>
+              <p className='text-xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
+                Choose the perfect plan for your business needs. All plans
+                include our cutting-edge technology and world-class support to
+                ensure your success.
+              </p>
+            </motion.div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>              {pricingTiers.map((tier, index) => (              <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+                Choose the perfect plan for your business needs. All plans include our cutting-edge technology
+                and world-class support to ensure your success.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -906,6 +1195,7 @@ className="text-center"
                       </span>
                     </div>
                   )}
+<<<<<<< HEAD
 <div className={`relative p-8 rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
                     tier.popular ? 'border-cyan-500/50 shadow-cyan-500/20' : ''
                   }`}>
@@ -913,6 +1203,43 @@ className="text-center"
                       <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${tier.color} mb-4`}>
                         {tier.icon}
                       </div>
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+                  <div
+                    className={`relative p-8 rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
+                      tier.popular
+                        ? 'border-cyan-500/50 shadow-cyan-500/20'
+                        : ''
+                    }`}
+                  >
+                    <div className='text-center mb-8'>
+                      <div
+                        className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${tier.color} mb-4`}
+                      >
+                        {tier.icon}
+                      </div>
+                      <h3 className='text-2xl font-bold text-white mb-2'>
+                        {tier.name}
+                      </h3>
+                      <p className='text-white/70 mb-6'>{tier.description}</p>
+                      <div className='text-4xl font-bold text-white mb-2'>
+                        ${tier.price}
+                        <span className='text-lg font-normal text-white/60'>
+                          /{tier.period}
+                        </span>
+                      </div>
+                    </div>
+                    <ul className='space-y-4 mb-8'>
+                      {tier.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className='flex items-start'>
+                          <Check className='w-5 h-5 text-cyan-400 mt-0.5 mr-3 flex-shrink-0' />
+                          <span className='text-white/80'>{feature}</span>                        </li>                        {tier.icon}
+                      </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                       <p className="text-white/70 mb-6">{tier.description}</p>
                       <div className="text-4xl font-bold text-white mb-2">
@@ -928,6 +1255,7 @@ className="text-center"
                         </li>
                       ))}
                     </ul>
+<<<<<<< HEAD
                         className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${tier && tier.color} mb-4`}>;
                         {tier && tier.icon}
                       </div>;
@@ -963,6 +1291,23 @@ className="text-center"
                         </li>;
                       ))}
                     </ul>;
+=======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        </li>
+
+                      ))}
+                    </ul>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <a
                       href={tier && tier.ctaLink}
                       className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
@@ -1001,6 +1346,7 @@ className="text-center"
                       }`}
                     >;
                       {tier.cta}
+<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
@@ -1009,14 +1355,50 @@ className="text-center"
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
+=======
+<<<<<<< HEAD
+                      <ArrowRight className='ml-2 w-4 h-4' />                    </a>                      <ArrowRight className="ml-2 w-4 h-4" />
+=======
+                      <ArrowRight className='ml-2 w-4 h-4' />                    </a>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Service Categories Section */}
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1054,7 +1436,47 @@ className="text-center"
             </motion.div>
 {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
+=======
+              className='text-center mb-16'
+            >
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+                <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>                  Service
+                </span>{' '}
+                Categories
+              </h2>
+              <p className='text-xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
+                Explore our comprehensive range of cutting-edge services across
+                multiple technology domains. Each category offers specialized
+                solutions for different business needs.              </p>
+            </motion.div>
+            {/* Category Filter */}
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>              <button              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                </span>{' '}
+                Categories
+              </h2>
+              <p className='text-xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
+                Explore our comprehensive range of cutting-edge services across
+                multiple technology domains. Each category offers specialized
+                solutions for different business needs.              <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+                Explore our comprehensive range of cutting-edge services across multiple technology domains.
+                Each category offers specialized solutions for different business needs.
+              </p>
+            </motion.div>
+            {/* Category Filter */}
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>            <div className="flex flex-wrap justify-center gap-4 mb-12">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <button
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 onClick={() => setSelectedCategory('all')}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
                   selectedCategory === 'all';
@@ -1066,18 +1488,47 @@ className="text-center"
               </button>
               {serviceCategories.map((category) => (
                 <button
+<<<<<<< HEAD
                   key={category && category.name}
                   onClick={() => setSelectedCategory(category && category.name)}
                   className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
                     selectedCategory === category && category.name;
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
                       : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  key={category.name}
+                  onClick={() => setSelectedCategory(category.name)}
+                  className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                    selectedCategory === category.name
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
+                      : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   }`}
                 >;
                   {category && category.name} ({category && category.services.length});
                 </button>;
               ))}
+<<<<<<< HEAD
             </div>;
+=======
+            </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {/* Services Grid */}
             <motion&& motion.div
               variants={containerVariants}
@@ -1248,12 +1699,34 @@ className="text-center"
                       </div>;
                     </div>;
                     {/* Tags */}
+<<<<<<< HEAD
                     <div className="flex flex-wrap gap-2 mb-4">
+=======
+                    <div className='flex flex-wrap gap-2 mb-4'>
+                      {service.tags.slice(0, 3).map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+<<<<<<< HEAD
+                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >                    <div className="flex flex-wrap gap-2 mb-4">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
+<<<<<<< HEAD
                         >
+=======
+=======
+                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
+
+                        >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           {tag}
                         </span>;
                       ))}
@@ -1293,8 +1766,23 @@ className="text-center"
                         <span className='text - sm font - normal text - white / 60'>;
                           /{service.pricing.starter.period}
                     </div>
+<<<<<<< HEAD
                     {/* Market Info */}
+<<<<<<< HEAD
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">
+=======
+                    <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
+=======
+
+                    {/* Market Info */}
+                    <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <span>Market: {service.marketSize}</span>
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
@@ -1346,12 +1834,25 @@ className="text-center"
                     </div>;
                   </div>;
                   {/* Hover Effect Overlay */}
+<<<<<<< HEAD
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />;
                 </motion && motion.div>;
                   {/* Hover Effect Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+=======
+                  <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
+<<<<<<< HEAD
             </motion && motion.div>;
           </div>;
         </section>;
@@ -1360,10 +1861,31 @@ className="text-center"
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
+=======
+            </motion.div>
+          </div>
+        </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1447,6 +1969,7 @@ className="text-center"
         </section>
       </Layout>
     </>
+<<<<<<< HEAD
 href={`mailto:${contactInfo && contactInfo.email}`}
                     className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300'>;
                     {contactInfo && contactInfo.email}
@@ -1644,3 +2167,19 @@ href={`mailto:${contactInfo && contactInfo.email}`}
       </Layout>;
     </>);
 }
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

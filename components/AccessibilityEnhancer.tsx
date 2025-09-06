@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const AccessibilityEnhancer: React.FC = () => {;
   useEffect(() => {;
     // Add skip link for keyboard navigation;
@@ -10,6 +11,22 @@ const AccessibilityEnhancer: React.FC = () => {;
       left: 6px, background: #000,;
       color: #fff, padding: 8px,;
       text-decoration: none, z-index: 1000,;
+=======
+<<<<<<< HEAD
+import React, { useEffect } from 'react';
+const AccessibilityEnhancer: React.FC = () => {
+  useEffect(() => {
+    // Add skip link for keyboard navigation
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content'
+    skipLink.className = 'sr-only focus: not-sr-only'
+    skipLink.style.cssText = `
+      position: absolute, top: -40px
+      left: 6px, background: #000
+      color: #fff, padding: 8px
+      text-decoration: none, z-index: 1000
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     `;
     document && document.body.insertBefore(skipLink, document && document.body.firstChild);
     // Focus management;
@@ -371,8 +388,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       <div id="main-content">{children}</div>;
     </>;
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default AccessibilityEnhancer;
+<<<<<<< HEAD
 ;
   const toggleHighContrast = () =>: any {
     const new_value = !isHighContrast;
@@ -440,3 +461,13 @@ export default AccessibilityEnhancer;
 ;
 export default AccessibilityEnhancer;
 ;
+=======
+=======
+};
+
+export default AccessibilityEnhancer;
+=======
+export default AccessibilityEnhancer;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

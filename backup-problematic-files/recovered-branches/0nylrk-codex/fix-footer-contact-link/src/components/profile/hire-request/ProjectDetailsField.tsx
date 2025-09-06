@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from './react';
 import { UseFormReturn  } from './react - hook - form';
 import {
@@ -40,20 +41,46 @@ function ProjectDetailsField() {
               placeholder="Describe your project, goals, and requirements";
               className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";
               {...field}
+=======
+
+import React from "react",;
+import { UseFormReturn } from "react-hook-form",;
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Textarea } from "@/components/ui/textarea",;
+import { FormValues } from "./useHireRequestForm",;
+;
+interface ProjectDetailsFieldProps {;
+  form:UseFormReturn<FormValues>;
+}
+;
+export function ProjectDetailsField({ form } ProjectDetailsFieldProps) {;
+  return (;
+    <FormField;
+      control={form.control}
+      name="projectOverview";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       render={({ field }) => (;
         <FormItem>;
           <FormLabel className="text-white">Project Overview</FormLabel>;
           <FormControl>;
+<<<<<<< HEAD
             <Textarea
               placeholder="Describe your project, goals, and requirements" 
               className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
               {...field} 
+=======
+            <Textarea ;
+              placeholder="Describe your project, goals, and requirements" ;
+              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]";
+              {...field} ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             />;
           </FormControl>;
           <FormMessage className="text-red-400" />;
         </FormItem>;
       )}
     />;
+<<<<<<< HEAD
   );
 }
             />;
@@ -62,3 +89,15 @@ function ProjectDetailsField() {
         </FormItem>)}
     />);
 }
+=======
+  ),;}
+ interface ProjectDetailsFieldProps {
+  form: UseFormReturn<FormValues> 
+}form 
+}: ProjectDetailsFieldProps) {
+  return (<FormField control= {
+  form.control 
+}<FormItem> <FormLabel className="text-white" >Project Overview</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
+}/>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const top = agendaItems && agendaItems.slice(0, 3);
@@ -7,6 +8,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json({ summary: baseSummary, provider: 'local' })
     }
     const apiKey = process && process.env.OPENAI_API_KEY;
+=======
+import { agendaItems } from '../../../../data/expo/agenda';
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {;
+    const top = agendaItems.slice(0, 3);
+    const baseSummary = `Highlights:\n- ${top.map(i => `${i.title} (${i.track})`).join('\n- ')}`;
+    const apiKey = process.env.OPENAI_API_KEY;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (!apiKey) {
       return res && res.status(200).json({ summary: baseSummary, provider: 'local' });    }      return res && res.status(200).json({ summary: baseSummary, provider: 'local' })
     }
@@ -36,6 +49,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(500).json({ error: e && e.message || 'Failed to generate highlights' })
   };
 }
+<<<<<<< HEAD
 import { agenda_items } from '../../../../data / expo / agenda';
 ;
 export default async /**
@@ -78,3 +92,9 @@ if ( {) {
   }
 
 }
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

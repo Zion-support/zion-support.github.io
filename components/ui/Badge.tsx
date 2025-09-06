@@ -80,6 +80,11 @@ export interface BadgeProps;
  */
 function Badge() {
   return (
+<<<<<<< HEAD
     <div className={cn (badge_variants ({ variant }), class_name)} {...props} />);
+=======
+    <div className={cn(badgeVariants({ variant }), className)} {...props} />;
+  );
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 export { Badge, badge_variants }

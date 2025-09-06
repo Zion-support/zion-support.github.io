@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -117,6 +118,8 @@ const industries = [;
 export default function DigitalTransformation() {;
 import React from 'react';
 import React from 'react';
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
@@ -215,6 +218,12 @@ const industries = [;
   { name: 'Education', icon: BookOpen, description: 'Digital learning platforms and student management' },;
   { name: 'Government', icon: Building, description: 'Citizen services and administrative efficiency' }
 ];
+<<<<<<< HEAD
+=======
+export default function DigitalTransformation() {
+import React from 'react';
+import React from 'react';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
@@ -256,6 +265,15 @@ export default function DigitalTransformationPage() {;
       description="Complete digital transformation solutions to modernize your business and drive innovation."">;
       <div className="min-h-screen bg-gray-50">";
   ];
+<<<<<<< HEAD
+=======
+  return (
+    <MainLayout
+      title="Digital Transformation Solutions - Zion Tech Group"
+      description="Transform your business with our comprehensive digital transformation services. AI, cloud, automation, and more."
+      keywords="digital transformation, business transformation, AI implementation, cloud migration, process optimization"
+    >
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 :pages/solutions/digital-transformation.tsx
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -289,6 +307,10 @@ export default function DigitalTransformationPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+              transition={{ duration: 0.8 }}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -361,6 +383,7 @@ export default function DigitalTransformationPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -373,6 +396,21 @@ export default function DigitalTransformationPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {transformationSteps && transformationSteps.map((step, index) => {;
                 const IconComponent = step && step.icon;
+=======
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Our Transformation Process
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We follow a proven methodology to ensure successful digital transformation that delivers measurable results.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {transformationSteps.map((step, index) => {
+                const IconComponent = step.icon;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 return (
                   <motion&& motion.div
                     key={index}
@@ -453,6 +491,7 @@ export default function DigitalTransformationPage() {;
                   </motion && motion.div>;
                 );
               })}
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
@@ -559,6 +598,8 @@ export default function DigitalTransformationPage() {;
             </div>
           </div>
         </section>
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>,
             </div>,;
           </div>;
@@ -650,6 +691,7 @@ export default function DigitalTransformationPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
@@ -761,6 +803,36 @@ export default function DigitalTransformationPage() {;
             </div>;
           </div>;
         </section>;
+=======
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Let our experts help you navigate your digital transformation journey with proven strategies and cutting-edge technology.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Get Free Consultation
+                </Link>
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                  View All Solutions
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
+            </div>
+          </div>
+        </section>
+            </div>
+          </div>
+        </section>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
@@ -807,4 +879,11 @@ export default function DigitalTransformationPage() {;
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
   );
+=======
+  );
+};
+
+export default Digital-transformation;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

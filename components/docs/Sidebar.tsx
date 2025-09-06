@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {ApiDocsSpec, Visibility} from '../../data / api - docs / types';
 interface SidebarProps {
 import {ApiDocsSpec, Visibility} from '../../data/api-docs/types';
@@ -19,10 +20,41 @@ export default function Sidebar(): any ({;
         <div className='text-xs text-high-contrast-muted'>Version</div>;
         <div className='flex gap-2 mt-2 flex-wrap'>;
           {spec && spec.versions.map(v => (;
+=======
+import React from 'react';
+import { ApiDocsSpec, Visibility } from '../../data/api-docs/types';
+interface SidebarProps {
+  spec: ApiDocsSpec;
+  activeEndpointId?: string;
+  onSelectEndpoint: (endpointId: string) => void;
+  selectedVersion: string;
+  onChangeVersion: (v: string) => void;
+  visibilityFilter: Visibility | 'all';
+
+  onChangeVisibility: (v: Visibility | 'all') => void;
+
+export default function Sidebar({
+  spec
+  activeEndpointId
+  onSelectEndpoint
+  selectedVersion
+  onChangeVersion
+  visibilityFilter
+  onChangeVisibility
+}: SidebarProps) {
+  return (
+    <aside className='w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary'>
+      <div>
+        <div className='text-lg font-semibold'>Zion OS API</div>
+        <div className='text-xs text-high-contrast-muted'>Version</div>
+        <div className='flex gap-2 mt-2 flex-wrap'>
+          {spec.versions.map(v => (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <button
               key={v}
               onClick={() => onChangeVersion(v)}
               className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}
+<<<<<<< HEAD
             >;
               {v}
 interface SidebarProps {
@@ -55,6 +87,46 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
           <option value="internal">Internal</option>
         </select>
       </div>
+=======
+            >
+              {v}
+            </button>          ))}        <div className="text-lg font-semibold">Zion OS API</div>
+        <div className="text-xs text-high-contrast-muted">Version</div>
+        <div className="flex gap-2 mt-2 flex-wrap">
+          {spec.versions.map((v) => (
+            <button key={v} onClick={() => onChangeVersion(v)} className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}>{v}</button>
+        </div>
+      </div>
+      <div>
+        <div className='text-xs text-high-contrast-muted mb-1'>
+          Publish Mode
+        </div>
+        <select
+          className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm'
+          value={visibilityFilter}
+          onChange={e => onChangeVisibility(e.target.value as any)}
+        >
+          <option value='all'>All</option>
+          <option value='public'>Public</option>
+          <option value='partner'>Partner-only</option>
+          <option value='internal'>Internal</option>
+        </select>
+      </div>
+      <nav className='space-y-3'>
+        {spec.sections.map(section => (
+          <div key={section.id}>
+            <div className='text-sm font-medium mb-1'>{section.title}</div>
+            <ul className='space-y-1'>
+              {section.endpoints
+                .filter(e => e.versions.includes(selectedVersion))
+                .filter(e =>
+                  visibilityFilter === 'all'
+                    ? true
+                    : e.visibility === visibilityFilter
+                )
+                .map(e => (                  <li key={e.id}>        </select>
+      </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <nav className="space-y-3">
         {spec.sections.map((section) => (
           <div key={section.id}>
@@ -65,6 +137,7 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
                 .filter((e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter)
                 .map((e) => (
                   <li key={e.id}>
+<<<<<<< HEAD
             </button>          ))}        <div className="text-lg font-semibold">Zion OS API</div>;
         <div className="text-xs text-high-contrast-muted">Version</div>;
         <div className="flex gap-2 mt-2 flex-wrap">;
@@ -111,10 +184,13 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
                 .filter((e) => visibilityFilter === 'all' ? true : e && e.visibility === visibilityFilter);
                 .map((e) => (;
                   <li key={e && e.id}>;
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <button
                       className={`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId === e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
                       onClick={() => onSelectEndpoint(e.id)}
                     >
+<<<<<<< HEAD
                       <span className="mr-2 inline-block w-10 text-center text-[10px] opacity-80">{e.method}</span>
                       <span className="font-mono">{e.path}</span>
                     </button>
@@ -239,6 +315,13 @@ function Sidebar() {
                     >
                       <span className=&quot;mr-2 inline-block w-10 text-center text-[10px] opacity-80&quot;>{e.method}</span>
                       <span className=&quot;font-mono&quot;>{e.path}</span>
+=======
+                      <span className='mr-2 inline-block w-10 text-center text-[10px] opacity-80'>
+                        {e.method}
+                      </span>
+                      <span className='font-mono'>{e.path}</span>                    </button>                      <span className="mr-2 inline-block w-10 text-center text-[10px] opacity-80">{e.method}</span>
+                      <span className="font-mono">{e.path}</span>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     </button>
                   </li>
                 ))}
@@ -246,7 +329,31 @@ function Sidebar() {
           </div>
         ))}
       </nav>
+<<<<<<< HEAD
     </aside>
   )
 
 }
+=======
+<<<<<<< HEAD
+    </aside>;
+  );
+}
+
+}
+}
+}
+}
+=======
+    </aside>
+  );
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

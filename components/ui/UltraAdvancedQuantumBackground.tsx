@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,10 +20,19 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
  canvas && canvas.width = window && window.innerWidth;
 canvas && canvas.height = window && window.innerHeight;
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 let animationFrameId: number;
 let particles: Particle[] = [];
 let quantumFields: QuantumField[] = [];
 let neuralNetworks: NeuralNetwork[] = [];
+<<<<<<< HEAD
 class Particle {;
   x: number;
 y: number;
@@ -35,19 +45,32 @@ let neural_networks: NeuralNetwork[] = [];
 class Particle {
   coordinate_x: number;
 coordinate_y: number;
+=======
+class Particle {
+  x: number;
+y: number;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 vx: number;
 vy: number;
 size: number;
 color: string;
 life: number;
+<<<<<<< HEAD
 max_life: number;
 constructor () {
   this.coordinate_x = Math.random () * canvas.width;
 this.coordinate_y = Math.random () * canvas.height;
+=======
+maxLife: number;
+constructor () {
+  this.x = Math.random () * canvas.width;
+this.y = Math.random () * canvas.height;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 this.vx = (Math.random () - 0.5) * 2;
 this.vy = (Math.random () - 0.5) * 2;
 this.size = Math.random () * 3 + 1;
 this.color = `hsl ($ {
+<<<<<<< HEAD
   Math.random () * 360;
 }, 70%, 60%) `;
 this.life = Math.random () * 100;
@@ -67,10 +90,23 @@ if ( {) {
   constructor () {
   this.coordinate_x = Math.random () * canvas.width;
 this.coordinate_y = Math.random () * canvas.height;
+=======
+  Math.random () * 360
+}, 70%, 60%) `;
+this.life = Math.random () * 100;
+this.maxLife = 100
+}if (this.x < 0 |this.x > canvas.width) this.vx *= -1;
+if (this.y < 0 |this.y > canvas.height) this.vy *= -1;
+if (this.life <= 0) {
+  constructor () {
+  this.x = Math.random () * canvas.width;
+this.y = Math.random () * canvas.height;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 this.radius = Math.random () * 100 + 50;
 this.intensity = Math.random () * 0.5 + 0.5;
 this.phase = Math.random () * Math.PI * 2;
 this.color = `hsl ($ {
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedQuantumBackgroundProps {
@@ -82,6 +118,16 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
   className = ''
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+=======
+  200 + Math.random () * 60
+}, 80%, 60%) `
+const UltraAdvancedQuantumBackground: React.FC<
+  UltraAdvancedQuantumBackgroundProps
+> = ({ children, className = '' }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({
+  children;
+  className = ''
+}) => {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -89,6 +135,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+<<<<<<< HEAD
 constructor () {;
   this && this.x = Math && Math.random () * canvas && canvas.width;
 this && this.y = Math && Math.random () * canvas && canvas.height;
@@ -145,11 +192,21 @@ if (return) {
     class Particle {
       coordinate_x: number;
       coordinate_y: number;
+=======
+    let animationFrameId: number;
+    let particles: Particle[] = [];
+    let quantumFields: QuantumField[] = [];
+    let neuralNetworks: NeuralNetwork[] = [];
+    class Particle {
+      x: number;
+      y: number;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       vx: number;
       vy: number;
       size: number;
       color: string;
       life: number;
+<<<<<<< HEAD
     let animationFrameId: number,
     let particles: Particle[] = [];
     let quantumFields: QuantumField[] = [];
@@ -178,6 +235,24 @@ if (return) {
       color: string,
       life: number,
 this.maxLife = 100
+=======
+      maxLife: number;      x: number
+      y: number
+      vx: number
+      vy: number
+      size: number
+      color: string
+      life: number
+      maxLife: number
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 2;
+        this.vy = (Math.random() - 0.5) * 2;
+        this.size = Math.random() * 3 + 1;
+        this.color = `hsl(${Math.random() * 360}, 70%, 60%)`;
+        this.life = Math.random() * 100;
+        this.maxLife = 100;      }        this.maxLife = 100
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
       update() {
         this.x += this.vx;
@@ -188,6 +263,7 @@ this.maxLife = 100
         if (this.life <= 0) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
+<<<<<<< HEAD
       maxLife: number;      x: number,;
       y: number,;
       vx: number,;
@@ -281,12 +357,33 @@ if (return) {
       intensity: number;
       phase: number;
       color: string;
+=======
+<<<<<<< HEAD
+          this.y = Math.random() * canvas.height;        }          this.y = Math.random() * canvas.height
+=======
+          this.y = Math.random() * canvas.height;        }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        }
+      }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      draw() {
+        if (!ctx) return;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         ctx.save();
         ctx.globalAlpha = this.life / this.maxLife;
         ctx.fillStyle = this.color;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
+<<<<<<< HEAD
         ctx.restore()
       }
     }
@@ -316,6 +413,38 @@ this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`
         this && this.phase = Math && Math.random() * Math && Math.PI * 2;
         this && this.color = `hsl(${200 + Math && Math.random() * 60}, 80%, 60%)`;
       }
+=======
+        ctx.restore();      }
+    }
+    class QuantumField {        ctx.restore()
+      }
+    }
+    class QuantumField {
+      x: number;
+      y: number;
+      radius: number;
+      intensity: number;
+      phase: number;
+      color: string;
+      x: number
+      y: number
+      radius: number
+      intensity: number
+      phase: number
+      color: string
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.radius = Math.random() * 100 + 50;
+        this.intensity = Math.random() * 0.5 + 0.5;
+        this.phase = Math.random() * Math.PI * 2;
+        this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`;
+      }
+      update() {
+        this.phase += 0.02;      }        this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`
+      }
+      update() {
+        this.phase += 0.02
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       draw() {
         if (!ctx) return;
         ctx.save();
@@ -325,6 +454,7 @@ this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.stroke();
+<<<<<<< HEAD
         ctx.restore()
       }
     class NeuralNetwork {;
@@ -426,6 +556,44 @@ if ( {) {
       nodes: { x: number, y: number, connections: number[] }[],
       connections: { from: number, to: number, weight: number }[],
       constructor() {
+=======
+        ctx.restore();      }
+    }
+    class NeuralNetwork {
+      nodes: { x: number; y: number; connections: number[] }[];
+      connections: { from: number; to: number; weight: number }[];
+        ctx.restore()
+      }
+    }
+    class NeuralNetwork {
+      nodes: { x: number; y: number; connections: number[] }[];
+      connections: { from: number; to: number; weight: number }[];
+      constructor() {
+        this.nodes = [];
+        this.connections = [];
+        // Create neural network structure
+        const layers = [5, 8, 6, 4];
+        let nodeIndex = 0;
+        layers.forEach((layerSize, layerIndex) => {
+          for (let i = 0; i < layerSize; i++) {
+            const x = (layerIndex / (layers.length - 1)) * canvas.width;
+            const y = (i / (layerSize - 1)) * canvas.height;
+            this.nodes.push({ x, y, connections: [] });
+            // Connect to previous layer
+            if (layerIndex > 0) {
+              const prevLayerStart = nodeIndex - layers[layerIndex - 1];
+              for (let j = 0; j < layers[layerIndex - 1]; j++) {
+                this.connections.push({
+                  from: prevLayerStart + j
+                  to: nodeIndex
+                  weight: Math.random()
+                });
+              }
+            }
+            nodeIndex++;
+          }
+        });      }      constructor() {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         this.nodes = [];
         this.connections = [];
         // Create neural network structure
@@ -445,6 +613,7 @@ if ( {) {
                   to: nodeIndex
                   weight: Math.random()
                 })
+<<<<<<< HEAD
         });      }      constructor() {;
         this && this.nodes = [];
         this && this.connections = [];
@@ -523,12 +692,15 @@ if ( {) {
         ctx.stroke(),
         ctx.restore()
       }
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               }
             }
             nodeIndex++
           }
         })
       }
+<<<<<<< HEAD
 
       update() {
         // Animate neural network
@@ -553,6 +725,54 @@ if ( {) {
 for (let i = 0, i < 8, i++) {
       quantumFields.push(new QuantumField())
     }
+=======
+      update() {
+        // Animate neural network
+        this.nodes.forEach((node, index) => {
+          node.x += (Math.random() - 0.5) * 0.5;
+          node.y += (Math.random() - 0.5) * 0.5;
+        });      }          node.y += (Math.random() - 0.5) * 0.5
+        })
+      }
+      draw() {
+        if (!ctx) return;
+        ctx.save();
+        // Draw connections
+        ctx.strokeStyle = 'rgba(100, 200, 255, 0.3)';
+        ctx.lineWidth = 1;
+        this.connections.forEach(connection => {
+          const from = this.nodes[connection.from];
+          const to = this.nodes[connection.to];
+          ctx.beginPath();
+          ctx.moveTo(from.x, from.y);
+          ctx.lineTo(to.x, to.y);
+          ctx.stroke();        });          ctx.stroke()
+        });
+        // Draw nodes
+        ctx.fillStyle = 'rgba(100, 200, 255, 0.8)';
+        this.nodes.forEach(node => {
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, 3, 0, Math.PI * 2);
+          ctx.fill();
+        });
+        ctx.restore();      }
+    }
+    // Initialize          ctx.fill()
+        });
+        ctx.restore()
+      }
+    }
+    // Initialize
+    for (let i = 0; i < 100; i++) {
+      particles.push(new Particle());
+    }
+    for (let i = 0; i < 8; i++) {
+      quantumFields.push(new QuantumField());    }    for (let i = 0, i < 100, i++) {
+      particles.push(new Particle())
+    }
+    for (let i = 0, i < 8, i++) {
+      quantumFields.push(new QuantumField())
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     neuralNetworks.push(new NeuralNetwork());
     const animate = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
@@ -560,22 +780,35 @@ for (let i = 0, i < 8, i++) {
       // Update and draw quantum fields
       quantumFields.forEach(field => {
         field.update();
+<<<<<<< HEAD
         field.draw()
+=======
+        field.draw();      });        field.draw()
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       });
       // Update and draw neural networks
       neuralNetworks.forEach(network => {
         network.update();
+<<<<<<< HEAD
         network.draw()
+=======
+        network.draw();      });        network.draw()
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       });
       // Update and draw particles
       particles.forEach(particle => {
         particle.update();
+<<<<<<< HEAD
         particle.draw()
+=======
+        particle.draw();      });        particle.draw()
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       });
       // Draw quantum entanglement effects
       ctx.save();
       ctx.strokeStyle = 'rgba(255, 100, 255, 0.3)';
       ctx.lineWidth = 1;
+<<<<<<< HEAD
       for (let i = 0, i < particles.length, i += 2) {
         if (i + 1 < particles.length) {
       update() {;
@@ -653,16 +886,36 @@ for (let i = 0, i < 8, i++) {
           const p2 = particles[i + 1];
       ctx && ctx.restore();
       animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate);
+=======
+      for (let i = 0; i < particles.length; i += 2) {        if (i + 1 < particles.length) {      for (let i = 0, i < particles.length, i += 2) {
+        if (i + 1 < particles.length) {
+          const p1 = particles[i];
+          const p2 = particles[i + 1];
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
+<<<<<<< HEAD
             ctx.stroke()
+=======
+<<<<<<< HEAD
+            ctx.stroke();          }            ctx.stroke()
+=======
+            ctx.stroke();          }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           }
         }
       }
       ctx.restore();
+<<<<<<< HEAD
       animationFrameId = requestAnimationFrame(animate)
     };
     animate();
@@ -881,18 +1134,64 @@ if ( {) {
         animate={{
           scale: [1, 1 && 1.2, 1],
           opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],
+=======
+      animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate)
+    }
+    animate();
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
+    }
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      cancelAnimationFrame(animationFrameId);
+    };  }, []);      cancelAnimationFrame(animationFrameId)
+    }
+  }, []);
+  return (
+    <div className={`relative min-h-screen overflow-hidden ${className}`}>
+      {/* Quantum Matrix Overlay */}
+      <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]' />
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]' />
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]' />
+      </div>
+      {/* Animated Quantum Grid */}
+      <div className='absolute inset-0 opacity-20'>
+        <div className='absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]' />
+        <div className='absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]' />      </div>
+      {/* Floating Quantum Elements */}
+      <motion.div
+        className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl'      {/* Animated Quantum Grid */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]" />
+      {/* Floating Quantum Elements */}
+      <motion.div
+        className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl'
+        animate={{
+          scale: [1, 1.2, 1]
+          opacity: [0.2, 0.4, 0.2]
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         }}
         transition={{
           duration: 4
           repeat: Infinity
           ease: 'easeInOut',        animate={{
+<<<<<<< HEAD
           scale: [1, 1 && 1.2, 1]
           opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2]}}
+=======
+          scale: [1, 1.2, 1];
+          opacity: [0.2, 0.4, 0.2]}}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         transition={{
           duration: 4
           repeat: Infinity
           ease: "easeInOut"
         }}
+<<<<<<< HEAD
       />;
       <motion&& motion.div
         className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl"
@@ -968,6 +1267,11 @@ ease: "easeInOut";
       />;
       <motion.div;
         className="absolute top - 40 right - 32 w - 24 h - 24 bg - gradient - to - r from - purple - 400 to - pink - 500 rounded - full opacity - 20 blur - xl";
+=======
+      />
+      <motion.div
+        className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         animate={{
           scale: [1, 1.3, 1];
           opacity: [0.2, 0.5, 0.2]}}
@@ -984,11 +1288,27 @@ ease: "easeInOut",
           scale: [1, 1.4, 1];
           opacity: [0.2, 0.6, 0.2]}}
         transition={{
+<<<<<<< HEAD
           duration: 6,
           repeat: Infinity,
 ease: 'easeInOut',
           delay: 2,          ease: "easeInOut",
           delay: 2;
+=======
+<<<<<<< HEAD
+          duration: 6
+          repeat: Infinity
+          ease: 'easeInOut'
+          delay: 2,          ease: "easeInOut"
+          delay: 2
+=======
+          duration: 6,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 2,
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         }}
         transition={{
           duration: 5
@@ -1013,7 +1333,19 @@ ease: 'easeInOut',
           repeat: Infinity
           ease: 'easeInOut'
           delay: 2,        }}
+<<<<<<< HEAD
       />;
+=======
+      />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -1022,6 +1354,7 @@ ease: 'easeInOut',
       />
       />;
       {/* Content Layer */}
+<<<<<<< HEAD
       <div className='relative z-10'>{children}</div>        className="absolute inset-0 w-full h-full opacity-60";
         style={{ zIndex: 1 }}
       />;
@@ -1038,6 +1371,10 @@ ease: 'easeInOut',
       />;
       {/* Content Layer */}
       <div className='relative z - 10'>{children}</div>;
+=======
+      <div className='relative z-10'>{children}</div>
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Quantum Energy Waves */}
       <div className='absolute bottom - 0 left - 0 right - 0 h - 32 overflow - hidden'>;
         <motion.div;
@@ -1064,6 +1401,7 @@ ease: 'easeInOut',
       </div>;
     </div>;
   );
+<<<<<<< HEAD
       <div className="relative z-10">
         {children}
       </div>
@@ -1091,6 +1429,33 @@ ease: 'linear',          }}
         />;
       </div>;
     </div>);
+=======
+<<<<<<< HEAD
+}
+export default UltraAdvancedQuantumBackground;            ease: "linear"
+=======
+};
+=======
+
+        style={{ zIndex: 1 }}
+      />
+
+      {/* Content Layer */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+export default UltraAdvancedQuantumBackground;            ease: "linear",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            delay: 2
+          }}
+        />
+      </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    </div>
+  );
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 ;
 export default UltraAdvancedQuantumBackground;            ease: "linear",
@@ -1105,4 +1470,26 @@ export default UltraAdvancedQuantumBackground);
 }
 ;
 export default UltraAdvancedQuantumBackground;
+<<<<<<< HEAD
 ;
+=======
+<<<<<<< HEAD
+
+=======
+
+        style={{ zIndex: 1 }}
+      />
+
+      {/* Content Layer */}
+
+          }}
+        />
+      </div>
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

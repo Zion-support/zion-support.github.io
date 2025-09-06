@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +20,18 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 export type EmptyStateProps = {;
 import React from './react';
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import React from "react";
+<<<<<<< HEAD
+export type EmptyStateProps = {;
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export type EmptyStateProps = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   emoji?: string;
   title: string;
   message: string;
@@ -32,6 +44,7 @@ export default function EmptyState(): any ({;
   action,;
 }: EmptyStateProps) {;
   return (
+<<<<<<< HEAD
     <div className="text-center py-12">;
       <div className="mx-auto h-24 w-24 rounded-full bg-gradient-to-br from-blue-600/20 to-indigo-600/20 flex items-center justify-center">;
         <span className="text-3xl">{emoji}</span>;
@@ -59,3 +72,23 @@ function EmptyState() {
   )
 
 }
+=======
+    <div className="text-center py-12">
+      <div className="mx-auto h-24 w-24 rounded-full bg-gradient-to-br from-blue-600/20 to-indigo-600/20 flex items-center justify-center">
+        <span className="text-3xl">{emoji}</span>
+      </div>
+      <h2 className="mt-4 text-lg font-semibold">{title}</h2>
+      <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{message}</p>
+      {action && <div className="mt-3">{action}</div>}
+<<<<<<< HEAD
+    </div>;
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  );
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

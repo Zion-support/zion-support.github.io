@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +17,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import Layout from '../../components/Layout';
 import {GraduationCap,, Users,, BookOpen,, Laptop,, Globe} from 'lucide-react';
 import React from 'react';
@@ -28,6 +31,7 @@ const features = [;
     icon: GraduationCap,;
     title: 'Learning Management Systems,',;
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
+<<<<<<< HEAD
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'',;
 import React from 'react';
 import Head from 'next/head';
@@ -64,6 +68,28 @@ const features = [;
     icon: GraduationCap,
     title: 'Learning Management Systems,',
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  GraduationCap, 
+  Users, 
+  BookOpen, 
+  Laptop, 
+  Globe, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
+const features = [
+  {
+    icon: GraduationCap,
+    title: 'Learning Management System',
+    description: 'Comprehensive LMS with course management and student tracking',
+    benefits: ['Course creation', 'Student management', 'Progress tracking', 'Assessments']
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   },
   {}
     icon: Users,
@@ -82,6 +108,22 @@ const features = [;
     description: 'Platforms for creating, managing, and delivering educational content and resources.',;
   },;
   {}
+<<<<<<< HEAD
+=======
+    icon: Globe,
+    title: 'Accessibility Solutions,',
+    description: 'ADA-compliant educational technology that ensures equal access for all students.'';
+    title: 'Learning Management Systems',
+    description: 'Comprehensive LMS platforms for online and blended learning'
+  },
+  {
+    icon: Users,
+    title: 'Student Information Systems',
+    description: 'Complete student data management and academic tracking'
+  },
+  {
+    icon: BookOpen,
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     title: 'Digital Content Management',
     description: 'Interactive digital content creation and distribution'
   },
@@ -183,6 +225,7 @@ export default function EducationSolutions() {
   }
 ];
 export default function EducationSolutionsPage() {
+<<<<<<< HEAD
     title: 'Virtual Classrooms,',
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
   },
@@ -335,6 +378,8 @@ export default function EducationSolutions() {;
   }
 ];
 export default function EducationSolutionsPage() {;
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <Layout
       title="Education Solutions - Zion Tech Group"
@@ -366,6 +411,7 @@ export default function EducationSolutionsPage() {;
             </div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -385,8 +431,11 @@ export default function EducationSolutionsPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
@@ -677,6 +726,7 @@ export default function EducationSolutionsPage() {;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
                   ))}
+<<<<<<< HEAD
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-indigo-600 to-blue-700 p-8 rounded-xl text-white">;
@@ -696,12 +746,34 @@ export default function EducationSolutionsPage() {;
                     {feature && feature.benefits.map((benefit, benefitIndex) => (;
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
+=======
+                </ul>
+              </div>
+              <div className="bg-gradient-to-r from-indigo-600 to-blue-700 p-8 rounded-xl text-white">
+                <h3 className="text-2xl font-bold mb-6">Ready to Transform Education?</h3>
+                <p className="text-lg mb-6">
+                  Let our education technology experts help you implement solutions
+                  that enhance learning and streamline operations.
+                </p>
+                <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
+                  Schedule Demo
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </button>
+              </div>
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                  <div className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         {benefit}
                       </div>;
                     ))}
                   </div>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">;
                     {feature && feature.title}
                   </h3>;
@@ -914,9 +986,12 @@ export default function EducationSolutionsPage() {;
             </div>;
           </div>;
         </section>;
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -942,6 +1017,7 @@ export default function EducationSolutionsPage() {;
     </Layout>
     </>
     </>
+<<<<<<< HEAD
     </Layout>
   );
         {/* CTA Section */}
@@ -975,3 +1051,9 @@ export default function EducationSolutionsPage() {;
     </>;
   ),;
 }
+=======
+  );
+};
+
+export default Education;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

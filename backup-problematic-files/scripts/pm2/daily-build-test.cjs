@@ -94,7 +94,7 @@ const generateTestReport = (testResults) => {}
       "total": testResults.passed + testResults.failed;
     },
     "build": {}
-      success: true;
+      success: true,
     };
   };
   // Save report;
@@ -139,4 +139,8 @@ main().catch(error => {})
   log(`Daily Build and Test Process "failed": ${error.message}`);
   process.exit(1);
 }
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

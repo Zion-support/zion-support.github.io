@@ -8,6 +8,7 @@ class HealthMonitor {
       { "name": 'Process Status', "command": 'ps aux | grep node' }
     ]}
   async runChecks() {
+    
     for (const check of this.checks) {
       try {
         const result = execSync(check.command, { "encoding": 'utf8' };);
@@ -17,4 +18,8 @@ class HealthMonitor {
     }
   }
 }
+<<<<<<< HEAD
 new HealthMonitor().runChecks();
+=======
+new HealthMonitor().runChecks();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

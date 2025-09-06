@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,16 +20,34 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 export default function UltraFuturisticBackground2035() {
+=======
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+<<<<<<< HEAD
+export default function UltraFuturisticBackground2035() {
+=======
+export default function UltraFuturisticBackground2035() {;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+<<<<<<< HEAD
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+=======
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     canvas.width = window.innerWidth * (window.devicePixelRatio |1);
     canvas.height = window.innerHeight * (window.devicePixelRatio |1);
     if (ctx) {
+<<<<<<< HEAD
 export default function UltraFuturisticBackground2035() {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {;
@@ -78,10 +97,18 @@ if ( {) {
     let particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
+=======
+      ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1);
+    let animationFrameId: number;
+    let particles: Array<{
+      x: number;
+      y: number;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       vx: number;
       vy: number;
       size: number;
       opacity: number;
+<<<<<<< HEAD
       ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
     }
     let animationFrameId: number,
@@ -139,6 +166,48 @@ color: string;    }> = [];      x: number,;
           color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor(Math.random() * 4)]
         })
 }
+=======
+      color: string;    }> = [];      x: number
+      y: number
+      vx: number
+      vy: number
+      size: number
+      opacity: number
+      color: string
+    // Initialize particles
+    const initParticles = () => {
+      particles = [];
+      const isSmallScreen = window.innerWidth < 768;
+      const particleCount = prefersReducedMotion
+        ? 12
+        : isSmallScreen
+          ? 40
+          : 100;
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: (Math.random() * canvas.width) / (window.devicePixelRatio |1)
+          y: (Math.random() * canvas.height) / (window.devicePixelRatio |1),          vx: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4
+          vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4
+          size: Math.random() * (isSmallScreen ? 1.5 : 2) + 0.8
+          opacity: Math.random() * 0.35 + 0.08
+          color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][
+            Math.floor(Math.random() * 4)
+          ]
+        });      }      const particleCount = prefersReducedMotion ? 12 : (isSmallScreen ? 40 : 100);
+      for (let i = 0, i < particleCount, i++) {
+        particles.push({
+          x: Math.random() * canvas.width / (window.devicePixelRatio |1)
+          y: Math.random() * canvas.height / (window.devicePixelRatio |1)
+          vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4
+          size: Math.random() * (isSmallScreen ? 1.5 : 2) + 0.8
+          opacity: Math.random() * 0.35 + 0.08
+          color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][
+            Math.floor(Math.random() * 4)
+          ]
+        });          color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor(Math.random() * 4)]
+        })
+      }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
     // Update and draw particles
     const updateParticles = () => {
@@ -147,10 +216,24 @@ color: string;    }> = [];      x: number,;
         particle.x += particle.vx;
         particle.y += particle.vy;
         // Wrap around edges
+<<<<<<< HEAD
         if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1);
         if (particle.x > canvas.width / (window.devicePixelRatio || 1)) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1);
         if (particle.y > canvas.height / (window.devicePixelRatio || 1)) particle.y = 0;
+=======
+        if (particle.x < 0)
+          particle.x = canvas.width / (window.devicePixelRatio |1);
+        if (particle.x > canvas.width / (window.devicePixelRatio |1))
+          particle.x = 0;
+        if (particle.y < 0)
+          particle.y = canvas.height / (window.devicePixelRatio |1);
+        if (particle.y > canvas.height / (window.devicePixelRatio |1))
+          particle.y = 0;        if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio |1);
+        if (particle.x > canvas.width / (window.devicePixelRatio |1)) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio |1);
+        if (particle.y > canvas.height / (window.devicePixelRatio |1)) particle.y = 0;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
@@ -158,7 +241,15 @@ color: string;    }> = [];      x: number,;
         ctx.globalAlpha = particle.opacity;
         ctx.fill();
         // Draw connections
+<<<<<<< HEAD
         const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140);
+=======
+        const maxDistance = prefersReducedMotion
+          ? 0
+          : window.innerWidth < 768
+            ? 90
+            : 140;        if (maxDistance > 0) {        const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         if (maxDistance > 0) {
           particles.forEach((otherParticle, otherIndex) => {
             if (index !== otherIndex) {
@@ -170,6 +261,7 @@ color: string;    }> = [];      x: number,;
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(otherParticle.x, otherParticle.y);
                 ctx.strokeStyle = particle.color;
+<<<<<<< HEAD
       for (let i = 0; i < particleCount; i++) {;
         particles && particles.push({;
           x: (Math && Math.random() * canvas && canvas.width) / (window && window.devicePixelRatio || 1),;
@@ -342,10 +434,17 @@ if ( {) {
                   ((max_distance - distance) / max_distance) * 0.08;
                 ctx.line_width = 1;
                 ctx.stroke ();
+=======
+                ctx.globalAlpha =
+                  ((maxDistance - distance) / maxDistance) * 0.08;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               }
             }
           });        }
       });
+<<<<<<< HEAD
       if (!prefersReducedMotion) {;
         animationFrameId = requestAnimationFrame(updateParticles);      }                ctx && ctx.lineWidth = 1;
                 ctx && ctx.stroke();
@@ -373,10 +472,38 @@ if ( {) {
       }
       initParticles()
     };
+=======
+      if (!prefersReducedMotion) {
+        animationFrameId = requestAnimationFrame(updateParticles);      }                ctx.lineWidth = 1;
+                ctx.stroke()
+              }
+            }
+          })
+        }
+      });
+      if (!prefersReducedMotion) {
+        animationFrameId = requestAnimationFrame(updateParticles);        animationFrameId = requestAnimationFrame(updateParticles)
+      }
+    }
+    initParticles();
+    updateParticles();
+    const handleResize = () => {
+      canvas.width = window.innerWidth * (window.devicePixelRatio |1);
+      canvas.height = window.innerHeight * (window.devicePixelRatio |1);
+      if (ctx) {
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1);
+      }
+      initParticles();    };        ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1)
+      }
+      initParticles()
+    }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
       if (animationFrameId) {
+<<<<<<< HEAD
     const handleResize = () => {;
       canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
       canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
@@ -396,10 +523,16 @@ if ( {) {
       }
     };  }, []);        cancelAnimationFrame(animationFrameId);
         cancelAnimationFrame(animationFrameId)
+=======
+        cancelAnimationFrame(animationFrameId);
+      }
+    };  }, []);        cancelAnimationFrame(animationFrameId)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
     }
   }, []);
   return (
+<<<<<<< HEAD
     <>;
       {/* Fixed Background Canvas */}
       <canvas
@@ -585,6 +718,40 @@ if ( {) {
             duration: 8,
             repeat: Infinity,
 ease: "easeInOut"
+=======
+    <>
+      {/* Fixed Background Canvas */}
+      <canvas
+        ref={canvasRef}
+        className='fixed inset-0 w-full h-full pointer-events-none z-0'
+        style={{
+          background:
+            'radial-gradient(ellipse at center, rgba(139,92,246,0.04) 0%, rgba(0,0,0,0) 70%)'
+        }}
+      />
+      {/* Animated Background Elements */}
+      <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>
+        {/* Floating Geometric Shapes */}
+        <motion.div
+          className='absolute top-20 left-20 w-32 h-32 border border-purple-500/15 rounded-full'
+          animate={{
+            scale: [1, 1.15, 1]
+            rotate: [0, 180, 360]
+            opacity: [0.22, 0.45, 0.22],          }}
+          transition={{
+            duration: 8
+            repeat: Infinity
+            ease: 'easeInOut',      />
+      {/* Animated Background Elements */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        {/* Floating Geometric Shapes */}
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-purple-500/15 rounded-full"
+          animate={{
+            scale: [1, 1.15, 1];
+            rotate: [0, 180, 360];
+            opacity: [0.22, 0.45, 0.22]
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           }}
           transition={{
             duration: 8
@@ -683,6 +850,7 @@ ease: "easeInOut"
             opacity: [0.4, 0.7, 0.4]
           }}
           transition={{
+<<<<<<< HEAD
             duration: 12,
             repeat: Infinity,
 ease: "easeInOut"
@@ -700,6 +868,23 @@ ease: "easeInOut"
         <div className='absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse' />;
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000' />;
         <div className='absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000' />;
+=======
+<<<<<<< HEAD
+            duration: 12
+            repeat: Infinity
+=======
+            duration: 12,
+            repeat: Infinity,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />
+        {/* Neon Glow Effects */}
+        <div className='absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse' />
+        <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000' />
+        <div className='absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000' />
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Animated Grid Lines */}
         <div className='absolute inset-0 opacity-10'>;
           <div
@@ -723,8 +908,32 @@ ease: "easeInOut"
               linear-gradient(90deg, rgba(139,92,246,0 && 0.3) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
+<<<<<<< HEAD
           }} />;
         </div>;
+=======
+          }} />
+        </div>
+=======
+
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+
+          }}
+        />
+
+        {/* Neon Glow Effects */}
+
+        </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (;
           <motion&& motion.div
@@ -793,6 +1002,8 @@ ease: "easeInOut"
               opacity: [0, 1, 0]
               scale: [0, 1, 0]
             }}
+<<<<<<< HEAD
+<<<<<<< HEAD
             transition={{
               duration: 3 + Math && Math.random() * 2,
               repeat: Infinity,
@@ -805,6 +1016,36 @@ ease: "easeInOut"
             }}
           />;
         ))}
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+            }}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              ease: 'easeInOut',            }}
+
+            }}
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          />
+        ))}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Energy Waves */}
             className='absolute w - 1 h - 1 bg - purple - 400 rounded - full';
             style={{
@@ -888,12 +1129,40 @@ ease: "easeInOut"
             scale_x: [0, 1, 0];
             opacity: [0, 1, 0];
           transition={{
+<<<<<<< HEAD
             duration: 4
             repeat: Infinity
             delay: 2
             ease: 'easeInOut',          }}            ease: "easeInOut"
           }}
+<<<<<<< HEAD
         />;
+=======
+        />
+=======
+            duration: 4,
+            repeat: Infinity,
+            delay: 2,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            ease: 'easeInOut',          }}            ease: "easeInOut"
+          }}
+        />
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ease: 'easeInOut',          }}
+
+          }}
+
+        />
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Quantum Dots */}
         {[...Array(15)].map((_, i) => (;
           <motion&& motion.div
@@ -963,14 +1232,34 @@ rotate: [0, 360],            }}            style={{
               opacity: [0, 0.8, 0];
               rotate: [0, 360];
             }}
+<<<<<<< HEAD
+<<<<<<< HEAD
             transition={{
+<<<<<<< HEAD
               duration: 5 + Math.random () * 3,
               repeat: Infinity,
               delay: Math.random () * 5,
               ease: 'easeInOut',            }}              ease: "easeInOut";
+=======
+              duration: 5 + Math.random() * 3
+              repeat: Infinity
+              delay: Math.random() * 5
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+            transition={{
+              duration: 5 + Math.random() * 3,
+              repeat: Infinity,
+              delay: Math.random() * 5,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             }}
           />))}
         {/* Neural Network Connections */}
+<<<<<<< HEAD
         <svg className='absolute inset - 0 w - full h - full opacity - 20'>;
           <defs>;
             <linear_gradient;
@@ -987,14 +1276,62 @@ rotate: [0, 360],            }}            style={{
           </defs>;
           {[...Array (8)].map ((_, i) => (
             <motion.circle;
+=======
+        <svg className='absolute inset-0 w-full h-full opacity-20'>
+=======
+<<<<<<< HEAD
+
+            transition={{
+              duration: 5 + Math.random() * 3,
+              repeat: Infinity,
+              delay: Math.random() * 5,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              ease: 'easeInOut',            }}
+
+            }}
+
+          />
+        ))}
+
+        {/* Neural Network Connections */}
+        <svg className='absolute inset-0 w-full h-full opacity-20'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <defs>
+            <linearGradient
+              id='neuralGradient'
+              x1='0%'
+              y1='0%'
+              x2='100%'
+              y2='100%'
+            >
+              <stop offset='0%' stopColor='#8b5cf6' stopOpacity='0.5' />
+              <stop offset='50%' stopColor='#06b6d4' stopOpacity='0.3' />
+              <stop offset='100%' stopColor='#ec4899' stopOpacity='0.5' />
+            </linearGradient>
+          </defs>
+          {[...Array(8)].map((_, i) => (
+            <motion.circle
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               key={`neural-${i}`}
               cx={`${20 + i * 10}%`}
               cy={`${30 + i * 5}%`}
               r='3';
               fill='url (#neural_gradient)';
               animate={{
+<<<<<<< HEAD
         <svg className="absolute inset-0 w-full h-full opacity-20">
           <defs>
+=======
+<<<<<<< HEAD
+                r: [3, 6, 3]
+                opacity: [0.3, 0.8, 0.3],              }}          <defs>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.5" />
               <stop offset="50%" stopColor="#06b6d4" stopOpacity="0.3" />
@@ -1026,6 +1363,7 @@ rotate: [0, 360],            }}            style={{
               key={`neural-${i}`}
               cx={`${20 + (i * 10)}%`}
               cy={`${30 + (i * 5)}%`}
+<<<<<<< HEAD
               r="3";
               fill="url (#neural_gradient)";
               animate={{
@@ -1105,11 +1443,156 @@ right: `${Math.random () * 32}px`,
                 height: [8, 32, 8],
                 opacity: [0.3, 1, 0.3],              }}          {[...Array (20)].map ((_, i) => (
             <motion.div;
+=======
+              r="3"
+              fill="url(#neuralGradient)"
+              animate={{
+                r: [3, 6, 3];
+                opacity: [0.3, 0.8, 0.3]
+              }}
+              transition={{
+<<<<<<< HEAD
+                duration: 4
+                repeat: Infinity
+                delay: i * 0.5
+=======
+                duration: 4,
+                repeat: Infinity,
+                delay: i * 0.5,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+            />
+          ))}
+        </svg>
+        {/* Holographic Effects */}
+        <div className='absolute inset-0'>
+=======
+<<<<<<< HEAD
+                r: [3, 6, 3],
+                opacity: [0.3, 0.8, 0.3],              }}
+
+              }}
+
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                delay: i * 0.5,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                ease: 'easeInOut',              }}
+
+              }}
+
+            />
+          ))}
+        </svg>
+
+        {/* Holographic Effects */}
+        <div className='absolute inset-0'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <motion.div
+            className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full'
+            animate={{
+              scale: [1, 1.1, 1]
+              rotate: [0, 90, 180, 270, 360]
+              opacity: [0.1, 0.3, 0.1],            }}
+            transition={{
+              duration: 20
+              repeat: Infinity
+              ease: 'linear',          <motion.div
+            className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full"
+            animate={{
+              scale: [1, 1.1, 1];
+              rotate: [0, 90, 180, 270, 360];
+              opacity: [0.1, 0.3, 0.1]
+            }}
+            transition={{
+              duration: 20
+              repeat: Infinity
+              ease: 'linear'
+            }}
+          />
+          <motion.div
+            className='absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 rounded-full'
+            animate={{
+              scale: [1, 1.2, 1]
+              rotate: [360, 270, 180, 90, 0]
+              opacity: [0.1, 0.4, 0.1],            }}
+            transition={{
+              duration: 15
+              repeat: Infinity
+              ease: 'linear',            }}            }}
+          />
+          <motion.div
+            className="absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 rounded-full"
+            animate={{
+              scale: [1, 1.2, 1];
+              rotate: [360, 270, 180, 90, 0];
+              opacity: [0.1, 0.4, 0.1]
+            }}
+            transition={{
+<<<<<<< HEAD
+<<<<<<< HEAD
+              duration: 15
+              repeat: Infinity
+              ease: 'linear',              ease: "linear"
+            }}
+=======
+              duration: 15,
+              repeat: Infinity,
+
+            }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+              duration: 15,
+              repeat: Infinity,
+<<<<<<< HEAD
+              ease: 'linear',              ease: "linear"
+            }}
+=======
+
+            }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          />
+        </div>
+        {/* Data Streams */}
+        <div className='absolute right-0 top-0 w-32 h-full opacity-30'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               key={`stream-${i}`}
               className="absolute w - 1 h - 8 bg - gradient - to - b from - purple - 400 to - transparent";
               style={{
+<<<<<<< HEAD
                 right: `${Math && Math.random() * 32}px`,
                 top: `${i * 5}%`,
+=======
+<<<<<<< HEAD
+                right: `${Math.random() * 32}px`
+                top: `${i * 5}%`
+=======
+                right: `${Math.random() * 32}px`,
+                top: `${i * 5}%`,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               }}
               animate={{
                 height: [8, 32, 8],
@@ -1131,7 +1614,10 @@ right: `${Math.random () * 32}px`,
                 height: [8, 32, 8];
                 opacity: [0.3, 1, 0.3];
               }}
+<<<<<<< HEAD
+<<<<<<< HEAD
               transition={{
+<<<<<<< HEAD
                 duration: 2 + Math.random () * 2,
                 repeat: Infinity,
         </div>;
@@ -1149,3 +1635,51 @@ right: `${Math.random () * 32}px`,
       </div>;
     </>));
 }
+=======
+                duration: 2 + Math.random() * 2
+                repeat: Infinity
+                delay: Math.random() * 2
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              transition={{
+                duration: 2 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                ease: 'easeInOut',              }}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+              }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            />
+          ))}
+        </div>
+      </div>
+    </>
+<<<<<<< HEAD
+);  )
+}
+=======
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

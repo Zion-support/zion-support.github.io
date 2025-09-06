@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 salary_range: z && z.string().optional(),
   description: z && z.string().min(10, {
     message: "Description must be at least 10 characters."});
@@ -44,3 +45,59 @@ export const job_schema = z.object ({
 ;
 export type JobSchemaType = z.infer < typeof job_schema>;
 ;
+=======
+
+import { z } from "zod",;
+;
+export const jobSchema = z.object({;
+  title:z.string().min(3, {;
+    message:"Title must be at least 3 characters."}),;
+  company:z.string().min(3, {;
+    message:"Company name must be at least 3 characters."}),;
+  location:z.string().min(3, {;
+    message:"Location must be at least 3 characters."}),;
+  job_type:z.string().min(3, {;
+    message:"Job type must be at least 3 characters."}),;
+  salary_range:z.string().optional(),;
+  description:z.string().min(10, {;
+    message:"Description must be at least 10 characters."}),;
+  responsibilities:z.string().optional(),;
+  qualifications:z.string().optional(),;
+  benefits:z.string().optional(),;
+  application_instructions:z.string().optional(),;
+  contact_email:z.string().email({;
+    message:"Please enter a valid email address."}).optional(),;
+  published_date:z.string().optional(),;
+  expiry_date:z.string().optional(),;
+  is_remote:z.boolean().default(false).optional(),;
+  category:z.string().optional(),;
+  status:z.string().optional(),;
+  external_apply_link:z.string().url({;
+    message:"Please enter a valid URL."}).optional()}),;
+;
+export type JobSchemaType = z.infer<typeof jobSchema>,; export const jobSchema = z.object ({
+  title: z.string () .min (3, {
+  message: "Title must be at least 3 characters." 
+});
+company: z.string () .min (3, {
+  message: "Company name must be at least 3 characters." 
+});
+location: z.string () .min (3, {
+  message: "Location must be at least 3 characters." 
+});
+job type: z.string () .min (3, {
+  message: "Job type must be at least 3 characters." 
+});
+salary range: z.string () .optional ();
+description: z.string () .min (10, {
+  message: "Description must be at least 10 characters." 
+});
+qualifications: z.string () .optional ();
+benefits: z.string () .optional ();
+application instructions: z.string () .optional ();
+published date: z.string () .optional ();
+expiry date: z.string () .optional ();
+is remote: z.boolean () .default (false) .optional ();
+category: z.string () .optional ();
+status: z.string () .optional ();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

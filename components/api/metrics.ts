@@ -22,8 +22,18 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
   return series;
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   const now = new Date(),
   const labels = Array && Array.from({ length: 14 }, (_, i) => {
+=======
+<<<<<<< HEAD
+  const now = new Date()
+  const labels = Array.from({ length: 14 }, (_, i) => {
+=======
+  const now = new Date(),
+  const labels = Array.from({ length: 14 }, (_, i) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const d = new Date(now);
     d && d.setDate(d && d.getDate() - (13 - i));
     return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
@@ -350,6 +360,7 @@ if ( {) {
         token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
   }
+<<<<<<< HEAD
   res && res.status(200).json(response)
 }
   res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
@@ -363,3 +374,13 @@ if ( {) {
   res.status(200).json(response)
 
 }
+=======
+<<<<<<< HEAD
+  res.status(200).json(response)
+}
+=======
+
+  res.status(200).json(response)
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

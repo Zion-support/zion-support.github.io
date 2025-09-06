@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-06T10:56:47.356Z",
   "totalDuration": 7910,
   "optimizations": [
@@ -17284,4 +17285,20 @@
       ]
     }
   ]
+=======
+  "timestamp": "2025-09-06T00:06:24.470Z",
+  "metrics": {
+    "bundleSize": 0,
+    "loadTime": 0,
+    "performanceScore": 0
+  },
+  "optimizations": [
+    "Found 5 images for optimization"
+  ],
+  "summary": {
+    "totalOptimizations": 1,
+    "bundleSize": 0,
+    "performanceScore": 0
+  }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }

@@ -26,7 +26,7 @@ import { execSync, spawn } from;
         case';TS2339': // Property: does not exist'
         case';TS2345': // Argument: type not assignable'
         case';TS2322': // Type: not assignable'
-  TS7006': // Parameter: implicitly has';';any: type'
+  TS7006': // Parameter: implicitly has', ',any: type'
         fs.writeFileSync(file +';.backup', originalContent)'
   '\\n')'
       console.error(')
@@ -37,4 +37,8 @@ import { execSync, spawn } from;
         useEffect: "
         useRef: "
         FC: "
+<<<<<<< HEAD
         ReactNode: "
+=======
+        ReactNode: "
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

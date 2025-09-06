@@ -7,6 +7,7 @@ try {
 	console.error('[pre-build-health-check] Failed:', e);
 	process.exit(0);
 }
+<<<<<<< HEAD
 #!/usr/bin/env node
 // Minimal pre-build health check to unblock CI builds.
 // Extensible: add real checks as needed.
@@ -17,3 +18,5 @@ try {
 	console.warn('[pre-build] Non-fatal issue:', err?.message || err);
 	process.exit(0);
 }
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

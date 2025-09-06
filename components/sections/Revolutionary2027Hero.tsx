@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -127,6 +128,26 @@ const Revolutionary2027Hero = () => {;
           key={index}
           className={`absolute ${item && item.position} text-purple-400/30`}
           animate={{
+=======
+import React from 'react';
+
+import { motion } from 'framer-motion';
+import {
+<<<<<<< HEAD
+  ArrowRight
+  Brain
+  Rocket
+  TestTube
+  Globe
+  Microscope
+  Lock
+  Star
+  TrendingUp
+  Zap
+  Sparkles
+  Atom;
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   ArrowRight,
   Brain,
   Rocket,
@@ -137,6 +158,7 @@ const Revolutionary2027Hero = () => {;
   Star,
   TrendingUp,
   Zap,
+<<<<<<< HEAD
   Sparkles,
   Atom,
 } from 'lucide-react';
@@ -299,10 +321,101 @@ const Revolutionary2027Hero = () =>: any {
 
       {_/* Floating Icons */}
       {_floatingIcons.map(_(item, _index) => (
+=======
+  Sparkles,;
+  Atom,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from 'lucide-react';
+import Link from 'next/link';import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react';
+import Link from 'next/link';
+const Revolutionary2027Hero = () => {
+  const floatingIcons = [
+    { icon: Brain, delay: 0, position: 'top-20 left-20' }
+    { icon: Rocket, delay: 0.5, position: 'top-40 right-32' }
+    { icon: TestTube, delay: 1, position: 'bottom-40 left-32' }
+    { icon: Globe, delay: 1.5, position: 'bottom-20 right-20' }
+    { icon: Microscope, delay: 2, position: 'top-1/2 left-10' }
+    { icon: Lock, delay: 2.5, position: 'top-1/2 right-10' }
+    { icon: Atom, delay: 3, position: 'bottom-1/3 left-1/2' }
+    { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' },  ];    { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' }
+  ];
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+<<<<<<< HEAD
+        staggerChildren: 0.1
+      }
+    },  };        staggerChildren: 0.1
+      }
+    }
+  }
+=======
+        staggerChildren: 0.1,
+      },
+    },  };
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 }
+    visible: {
+      opacity: 1
+      y: 0
+      transition: {
+        duration: 0.8
+        ease: 'easeOut' as const
+      }
+    }
+  }
+  return (
+    <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900'>
+      {/* Enhanced Background Effects */}
+      <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.15),transparent_50%)]'></div>
+      <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0.1),transparent_50%)]'></div>
+      <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.08),transparent_50%)]'></div>
+      {/* Animated Grid Pattern */}
+      <div className='absolute inset-0 opacity-20'>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  }
+=======
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  };
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
+      {/* Enhanced Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.15),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.08),transparent_50%)]"></div>
+      {/* Animated Grid Pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+      </div>
+=======
+<<<<<<< HEAD
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>
+
+      </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Floating Icons */}
+      {floatingIcons.map((item, index) => (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <motion.div
           key={index}
           className={`absolute ${item.position} text-purple-400/30`}
           animate={{
+<<<<<<< HEAD
             y: [0, -20, 0],
             rotate: [0, 5, -5, 0]}}
           transition={{
@@ -313,10 +426,107 @@ const Revolutionary2027Hero = () =>: any {
           }}
         >
           <item.icon className=&quot;w-8 h-8&quot; />
+=======
+            y: [0, -20, 0]
+            rotate: [0, 5, -5, 0]
+          }}          transition={{
+            duration: 4
+            delay: item.delay
+            repeat: Infinity
+            ease: 'easeInOut'
+          }}
+        >
+          <item.icon className='w-8 h-8' />        </motion.div>
+      ))}
+      {/* Main Content */}
+<<<<<<< HEAD
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            y: [0, -20, 0];
+            rotate: [0, 5, -5, 0]}}
+          transition={{
+            duration: 4
+            delay: item.delay
+            repeat: Infinity
+            ease: 'easeInOut'
+=======
+<<<<<<< HEAD
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            y: [0, -20, 0];
+            rotate: [0, 5, -5, 0]}}
+=======
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+          transition={{
+            duration: 4,
+            delay: item.delay,
+            repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'easeInOut',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }}
+        >
+          <item.icon className='w-8 h-8' />            ease: "easeInOut"
+          }}
+        >
+          <item.icon className="w-8 h-8" />
+      ))}
+      {/* Main Content */}
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+<<<<<<< HEAD
+        <motion.div
+          variants={containerVariants}
+          initial='hidden'
+          animate='visible'
+          className='space-y-8'
+        >
+          {/* Main Heading */}
+          <motion.div variants={itemVariants} className='space-y-6'>
+            <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight'>
+              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                Future
+              </span>
+              <br />
+              <span className='text-white'>is Now</span>
+            </h1>
+            <div className='flex items-center justify-center space-x-4 text-2xl md:text-3xl text-gray-300'>
+              <span>2027</span>
+              <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
+              <span>Revolutionary</span>
+              <div className='w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full'></div>              <span>Technology</span>        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="space-y-8"
+        >
+          {/* Main Heading */}
+          <motion.div variants={itemVariants} className="space-y-6">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Future
+              </span>
+              <br />
+              <span className="text-white">is Now</span>
+            </h1>
+            <div className="flex items-center justify-center space-x-4 text-2xl md:text-3xl text-gray-300">
+              <span>2027</span>
+              <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
+              <span>Revolutionary</span>
+              <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+=======
+<<<<<<< HEAD
+
+          transition={{
+            duration: 4,
+            delay: item.delay,
+            repeat: Infinity,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         </motion.div>
       ))}
 
       {/* Main Content */}
+<<<<<<< HEAD
       <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
         <motion.div
           variants={containerVariants}
@@ -351,6 +561,25 @@ const Revolutionary2027Hero = () =>: any {
             </p>
           </motion.div>
 {/* Key Features */}          <motion.div variants={itemVariants} className="max-w-4xl mx-auto">
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <span>Technology</span>
+            </div>
+          </motion.div>
+          {/* Subtitle */}
+          <motion.div variants={itemVariants} className='max-w-4xl mx-auto'>
+            <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed'>
+              Experience the next generation of AI, quantum computing, and
+              emerging technologies. Transform your business with solutions that
+              were once science fiction.            </p>
+          </motion.div>
+          {/* Key Features */}          <motion.div variants={itemVariants} className="max-w-4xl mx-auto">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed">
               Experience the next generation of AI, quantum computing, and emerging technologies.
               Transform your business with solutions that were once science fiction.
@@ -508,6 +737,7 @@ const Revolutionary2027Hero = () =>: any {
           </motion.div>
         </motion.div>
       </div>
+<<<<<<< HEAD
 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>;
             <div className='text-center'>;
               <div className='text-3xl md:text-4xl font-bold text-white mb-2'>;
@@ -774,15 +1004,56 @@ ease: 'easeInOut',
               duration: 2,
               repeat: Infinity,
               ease: "easeInOut";
-            }}
+=======
+      {/* Scroll Indicator */}
+      <motion.div
+        className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
+        animate={{
+          y: [0, 10, 0]
+        }}
+        transition={{
+          duration: 2
+          repeat: Infinity
+          ease: 'easeInOut'
+        }}
+      >
+        <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>
+          <motion.div
+            className='w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-2'
+            animate={{
+              y: [0, 12, 0],        animate={{
+          y: [0, 10, 0]}}
+        transition={{
+          duration: 2
+          repeat: Infinity
+          ease: "easeInOut"
+        }}
+      >
+        <div className="w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center">
+          <motion.div
+            className="w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-2"
+            animate={{
+              y: [0, 12, 0]}}
             transition={{
               duration: 2
               repeat: Infinity
+              ease: "easeInOut"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            }}
+            transition={{
+<<<<<<< HEAD
+              duration: 2
+              repeat: Infinity
+=======
+              duration: 2,
+              repeat: Infinity,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ease: 'easeInOut',            }}
           />;
         </div>;
       </motion && motion.div>;
       {/* Particle Effects */}
+<<<<<<< HEAD
           />;
         </div>;
       </motion.div>;
@@ -790,11 +1061,34 @@ ease: 'easeInOut',
       <div className='absolute inset - 0 pointer - events - none'>;
         {[...Array (20)].map ((_, i) => (
           <motion.div;
+=======
+      <div className='absolute inset-0 pointer-events-none'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             key={i}
             className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full';
             style={{
+<<<<<<< HEAD
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`,
+=======
+<<<<<<< HEAD
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`
+=======
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             }}            animate={{
               y: [0, -100]
               opacity: [0, 1, 0]
@@ -808,6 +1102,7 @@ ease: 'easeInOut',
       </div>;
     </section>;
   );
+<<<<<<< HEAD
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -823,10 +1118,16 @@ ease: 'easeInOut',
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2}}
+=======
+}
+export default Revolutionary2027Hero;              delay: Math.random() * 2}}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           />
         ))}
       </div>
+<<<<<<< HEAD
     </section>
+<<<<<<< HEAD
   )
 };
 export default Revolutionary2027Hero;              delay: Math && Math.random() * 2}}
@@ -834,11 +1135,14 @@ export default Revolutionary2027Hero;              delay: Math && Math.random() 
         ))}
       </div>;
     </section>;
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
 };
 export default Revolutionary2027Hero;  );
 };
 export default Revolutionary2027Hero;
+<<<<<<< HEAD
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
             }}            animate={{
@@ -865,3 +1169,15 @@ export default Revolutionary2027Hero);
 ;
 export default Revolutionary2027Hero;
 ;
+=======
+<<<<<<< HEAD
+
+=======
+    </section>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </section>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -426,6 +426,7 @@ const ServicesIndex: NextPage = () => {;
   ];
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
+<<<<<<< HEAD
 const services = [;
   {;
     id: 'ai-development',;
@@ -873,6 +874,14 @@ const ServicesIndex: NextPage = () => {;
       link: "/services/ai-automation";
     }
   ];
+=======
+
+interface IndexProps {
+  className?: string;
+}
+
+export default function ServicesIndex() {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>
       <Head>
@@ -880,6 +889,7 @@ const ServicesIndex: NextPage = () => {;
         <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
         <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
       </Head>
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 const services = [;
@@ -932,6 +942,8 @@ export default function ServicesIndex() {;
         <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />;
         <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />;
       </Head>;
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
         <div className="container mx-auto px-4">;
@@ -1131,11 +1143,20 @@ export default function ServicesIndex() {;
                   {service && service.features.map((feature, idx) => (;
                     <li key={idx} className="mb-1">• {feature}</li>;
                   ))}
+<<<<<<< HEAD
                 </ul>;
                 <div className="flex justify-between items-center">;
                   <span className="text-lg font-semibold text-green-600">{service && service.pricing}</span>;
                   <Link href={service && service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">;
       <div className="min-h-screen bg-gray-50">;
+=======
+                </ul>
+                <div className="flex justify-between items-center">
+                  <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
+                  <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
+
+      <div className="min-h-screen bg-gray-50">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="max-w-7xl mx-auto px-4">;
@@ -1178,6 +1199,7 @@ export default function ServicesIndex() {;
                     ))}
                   </div>;
                   <Link
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -1381,6 +1403,11 @@ export default function ServicesIndex() {;
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
                   <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
+=======
+                    href={service.link}
+                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     Learn More
                   </Link>
                 </div>
@@ -1388,6 +1415,7 @@ export default function ServicesIndex() {;
             ))}
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
@@ -1406,6 +1434,7 @@ export default function ServicesIndex() {;
   );
 };
 export default ServicesIndex;
+<<<<<<< HEAD
                     Learn More
                   </Link>
                 </div>
@@ -1726,3 +1755,14 @@ export default ServicesIndex;
       </div>;
     </>;
   );
+=======
+export default ServicesIndex;
+      </div>
+    </>
+  );
+}
+      </div>
+    </>
+  );
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

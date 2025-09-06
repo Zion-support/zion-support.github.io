@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 ;}
 }
@@ -50,3 +51,12 @@ const { BundleAnalyzerPlugin } = require ("webpack - bundle - analyzer"); module
 if ( { config.plugins.push () {
   $2
 } new BundleAnalyzerPlugin ({ analyzer_mode: "static", open_analyzer: false, report_filename: "bundle - analysis.html", }))} return config} }
+=======
+};
+;
+,;
+;};
+;
+};
+,
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

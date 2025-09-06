@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { check_online, safe_fetch } from '@/integrations / supabase / client';
 import { vi } from 'vitest';
 // Test that check_online returns false when navigator is offline;
@@ -14,3 +15,25 @@ it ('safe_fetch throws when fetch rejects', async () => {
   vi.spy_on (global, 'fetch').mockRejectedValue (new Error ('Network error'));
   await expect (safe_fetch ('https: //example.com')).rejects.to_throw ('Failed to connect to Supabase');
 ;
+=======
+import { checkOnline, safeFetch } from '@/integrations/supabase/client',;
+import { vi } from 'vitest',;
+;
+// Test that checkOnline returns false when navigator is offline;
+it('checkOnline returns false when navigator is offline', async () => {;
+  Object.defineProperty(window, 'navigator', {;
+    value:{ onLine:false },;
+    writable:true}),;
+  const result = await checkOnline(),;
+  expect(result).toBe(false),;
+}),;
+;
+// Test that safeFetch throws custom error when fetch fails;
+it('safeFetch throws when fetch rejects', async () => {;
+  Object.defineProperty(window, 'navigator', {;
+    value:{ onLine:true },;
+    writable:true}),;
+  vi.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error')),;
+  await expect(safeFetch('https://example.com')).rejects.toThrow('Failed to connect to Supabase');
+}),; 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -12,11 +13,19 @@ const customJestConfig = {
   testMatch: [
     '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
     '**/*.smoke.(js|jsx|ts|tsx)'
+=======
+module.exports = {
+  testEnvironment: 'jsdom',
+  testMatch: [
+    '**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
+    '**/*.(test|spec).(js|jsx|ts|tsx)'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   ],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/.next/',
     '/out/',
+<<<<<<< HEAD
     '/dist/',
     '/recovered-branches/',
     '/src_backup/',
@@ -40,3 +49,21 @@ const customJestConfig = {
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 module.exports = createJestConfig(customJestConfig)
+=======
+    '/dist/'
+  ],
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/*.stories.{js,jsx,ts,tsx}'
+  ],
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/$1'
+  },
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
+  },
+
+};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

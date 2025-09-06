@@ -48,10 +48,32 @@ exports && exports.handler = async function () {
       totalCommits: commits && commits.length,
       authors: Object && Object.entries(byAuthor)
         .map(([name, count]) => ({ name, count }))
+<<<<<<< HEAD
         .sort((a, b) => b && b.count - a && a.count),
     // Check condition
 if ( {) {
   $2
+=======
+        .sort((a, b) => b.count - a.count)
+      messages
+    }
+    await upsertFile({
+      owner
+      repo
+      path: 'data/reports/changelog/weekly-changelog.json'
+      content: JSON.stringify(summary, null, 2)
+      message: 'chore(automation): weekly changelog summary'
+      token
+    });
+    return {
+      statusCode: 200
+      body: JSON.stringify({ ok: true, commits: commits.length })
+    }
+  } catch (e) {
+<<<<<<< HEAD
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
       return {
         status_code: 200,
@@ -133,9 +155,24 @@ exports.handler = async function() {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 }
+<<<<<<< HEAD
     await upsert_file ({ owner, repo, path: 'data / reports / changelog / weekly - changelog.json', content: JSON.stringify (summary, null, 2), message: 'chore (automation): weekly changelog summary', token }),
     return { status_code: 200, body: JSON.stringify ({ ok: true, commits: commits.length }) }
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 },
+=======
+
+=======
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+  }
+};
+    await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token }),
+    return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

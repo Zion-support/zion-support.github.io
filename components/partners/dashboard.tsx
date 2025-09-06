@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { useEffect, useState } from "react";
 import Head from "next/head";
@@ -11,6 +12,64 @@ export default function PartnerDashboard() {;
     if (saved) setToken(saved)
   }, []);
   async function getToken() {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useEffect, useState } from "react";
+=======
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+export default function PartnerDashboard() {;
+  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);import { useEffect, useState } from "react";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import Head from "next/head";
+export default function PartnerDashboard() {;
+  const [apiKey, setApiKey] = useState("");
+<<<<<<< HEAD
+  const [token, setToken] = useState<string | null>(null),
+  const [usage, setUsage] = useState<any>(null),
+=======
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+=======
+=======
+
+export default function PartnerDashboard() {
+  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
+
+  const [token, setToken] = useState<string | null>(null);
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const [usage, setUsage] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+export default function PartnerDashboard() {
+  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
+
+  const [token, setToken] = useState<string | null>(null);
+
+  const [usage, setUsage] = useState<any>(null);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+
+    const saved = localStorage.getItem('zion_partner_token');
+    if (saved) setToken(saved);
+  }, []);
+  async function getToken() {
+    const res = await fetch('/api/partners/token', {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ apiKey })
+    });
+    const data = await res.json();
+    if (data.token) {
+      localStorage.setItem('zion_partner_token', data.token);
+      setToken(data.token);    }  }, []);
+  async function getToken() {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const res = await fetch("/api/partners/token", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -19,6 +78,7 @@ export default function PartnerDashboard() {;
     if (data.token) {
       localStorage.setItem("zion_partner_token", data.token);
       setToken(data.token)
+<<<<<<< HEAD
   useEffect(() => {;
     const saved = localStorage && localStorage.getItem('zion_partner_token');
     if (saved) setToken(saved);
@@ -50,6 +110,31 @@ export default function PartnerDashboard() {;
       headers: token ? { Authorization: `Bearer ${token}` } : {}}),
     const data = await res.json();
     setUsage(data.summary || null);
+=======
+    }
+  }
+  async function fetchUsage() {
+    setLoading(true);
+    const res = await fetch('/api/partners/usage', {
+      headers: token ? { Authorization: `Bearer ${token}` } : {}
+    });
+    const data = await res.json();
+    setUsage(data.summary |null);
+    setLoading(false);
+  }
+  async function regenerateKey() {
+    const res = await fetch('/api/partners/key', {
+      method: 'POST'
+      headers: token ? { Authorization: `Bearer ${token}` } : {}
+    });
+    const data = await res.json();
+    if (data.apiKey) {
+      alert(`New API Key: ${data.apiKey}`);    }
+  }
+  return (
+    <div className='min-h-screen bg-gray-50 text-gray-900'>    const data = await res.json();
+    setUsage(data.summary |null);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     setLoading(false)
   }
   async function regenerateKey() {
@@ -57,6 +142,7 @@ export default function PartnerDashboard() {;
       method: "POST"
       headers: token ? { Authorization: `Bearer ${token}` } : {}})
     const data = await res.json();
+<<<<<<< HEAD
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`)
     <div className='min-h-screen bg-gray-50 text-gray-900'>    const data = await res && res.json();
@@ -170,6 +256,23 @@ export default function PartnerDashboard() {;
       <div className="max-w-5xl mx-auto py-12 px-4">
         <h1 className="text-3xl font-semibold mb-2">Partner Dashboard</h1>
 <p className="text-gray-600 mb-6">Manage access, view usage, and download SDKs.</p>
+=======
+
+    if (data.apiKey) {
+      alert(`New API Key: ${data.apiKey}`)
+    }
+  }
+  return (
+<<<<<<< HEAD
+    <div className='min-h-screen bg-gray-50 text-gray-900'>
+        <title>Zion Partner Dashboard</title>
+      </Head>
+      <div className='max-w-5xl mx-auto py-12 px-4'>
+        <h1 className='text-3xl font-semibold mb-2'>Partner Dashboard</h1>
+        <p className='text-gray-600 mb-6'>
+          Manage access, view usage, and download SDKs.
+        </p>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {!token && (
           <div className="bg-white p-6 rounded-lg shadow mb-8">
             <h2 className="text-lg font-medium mb-3">Authenticate</h2>
@@ -194,6 +297,7 @@ export default function PartnerDashboard() {;
                 <div className="mt-3">
                   <p className="font-medium">By Endpoint</p>
                   <ul className="list-disc ml-6">
+<<<<<<< HEAD
 {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
                       <li key={k}>{k}: {v as any}</li>
             </button>;
@@ -229,11 +333,25 @@ export default function PartnerDashboard() {;
           </div>;
         </div>;
               <p className="text-gray-500 text-sm">No usage yet.</p>;
+=======
+                    {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
+                      <li key={k}>{k}: {v as any}</li>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     ))}
+=======
+
+                    ))}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </ul>
                 </div>
               </div>
             ) : (
+<<<<<<< HEAD
               <p className="text-gray-500 text-sm">No usage yet.</p>
             )}
 </div>;
@@ -266,10 +384,42 @@ export default function PartnerDashboard() {;
           <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</a>
           <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>
         </div>
+=======
+              <p className='text-gray-500 text-sm'>No usage yet.</p>            )}
+          </div>
+        </div>
+              <p className="text-gray-500 text-sm">No usage yet.</p>
+            )}
+          </div>
+<<<<<<< HEAD
+        </div>
+        <div className='bg-white p-6 rounded-lg shadow mt-6'>
+          <h3 className='font-medium mb-2'>SDKs</h3>
+          <a
+            className='text-blue-600 underline mr-4'
+            href='/api/partners/sdk?type=rest'
+          >
+            REST SDK
+          </a>
+          <a
+            className='text-blue-600 underline'
+            href='/api/partners/sdk?type=graphql'
+          >
+            GraphQL SDK
+          </a>        </div>
+      </div>
+    </div>
+  );
+}        <div className="bg-white p-6 rounded-lg shadow mt-6">
+          <h3 className="font-medium mb-2">SDKs</h3>
+          <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</a>
+          <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       </div>
     </div>
 );
 }
+<<<<<<< HEAD
 import Head from 'next / head';
 export default /**
  * PartnerDashboard - Function description
@@ -481,3 +631,12 @@ if ( {) {
       </div>;
     </div>);
 }
+=======
+=======
+        </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

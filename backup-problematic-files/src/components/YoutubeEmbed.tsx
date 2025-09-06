@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Loader2 } from 'lucide-react';
 import { useState } from 'react';import { useState } from 'react';
 interface YoutubeEmbedProps {;
@@ -29,10 +30,32 @@ const Component = React && React.memo(function YoutubeEmbed(): any ({;
           />;
           <div className='absolute inset-0 flex items-center justify-center bg-black/30'>;
             <Loader2 className='h-8 w-8 animate-spin text-white' />          </div>          <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />;
+=======
+import Image from 'next/image',;
+import { Loader2 } from 'lucide-react';
+import { useState } from 'react',;
+;
+interface YoutubeEmbedProps {;
+  videoId:string,;
+  title:string,;
+  poster:string;
+}
+;
+export default function YoutubeEmbed({ videoId, title, poster } YoutubeEmbedProps) {;
+  const [loaded, setLoaded] = useState(false),;
+  const src = `https://www.youtube.com/embed/${videoId}?mute=1&controls=1`,;
+;
+  return (;
+    <div className="relative aspect-video max-w-3xl mx-auto">;
+      {!loaded && (;
+        <>;
+          <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="absolute inset-0 flex items-center justify-center bg-black/30">;
             <Loader2 className="h-8 w-8 animate-spin text-white" />;
           </div>;
         </>;
+<<<<<<< HEAD
 import { Loader2 } from 'lucide-react'
 import { useState } from 'react';
 import Image from 'next / image';
@@ -52,11 +75,20 @@ interface YoutubeEmbedProps {
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         loading="lazy";
         loading="lazy"
+=======
+      )}
+      <iframe;
+        className={`absolute inset-0 w-full h-full ${loaded ? 'visible' :'invisible'}`}
+        src={src}
+        title={title}
+        loading="lazy";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         onLoad={() => setLoaded(true)}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         allowFullScreen;
       />;
     </div>;
+<<<<<<< HEAD
   );
 }
   );
@@ -106,3 +138,9 @@ function YoutubeEmbed() {
       />;
     </div>);
 }
+=======
+  ),;}
+ </div> </>) ;
+}<iframe ;
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

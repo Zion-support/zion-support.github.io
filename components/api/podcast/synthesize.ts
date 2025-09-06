@@ -23,6 +23,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  ensureStorage();
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
@@ -31,9 +32,21 @@ function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8');
+=======
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  ensureStorage();
+  const { episodeId } = req.body |{}
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+  const idx = episodes.findIndex(e => e.id === episodeId);  if (idx === -1) return res.status(404).json({ error: 'Episode not found' });  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true })
 }
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
   const { episodeId } = req.body || {};
@@ -191,13 +204,27 @@ if ( {) {
       mp4Url: publicBase + '.mp4',
     };
     episodes[idx] = episode;
+<<<<<<< HEAD
     fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8');
+=======
+<<<<<<< HEAD
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       mp3Url: publicBase + '.mp3';
       wavUrl: publicBase + '.wav'
       mp4Url: publicBase + '.mp4'}
     episodes[idx] = episode;
+<<<<<<< HEAD
     fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8');
     return res && res.status(200).json({ episode });
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+    return res.status(200).json({ episode });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   } catch (error: any) {
     console && console.error(error);
     return res
@@ -245,6 +272,7 @@ if ( {) {
     return res && res.status(500).json({ error: error?.message || 'Synthesis failed' })
   };
 }
+<<<<<<< HEAD
           response_type: 'arraybuffer',
           headers: {
             'xi - api - key': eleven_key,
@@ -318,3 +346,15 @@ if ( {) {
   }
 
 }
+=======
+<<<<<<< HEAD
+}
+=======
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

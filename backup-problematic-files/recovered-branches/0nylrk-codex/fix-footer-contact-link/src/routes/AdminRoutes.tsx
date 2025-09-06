@@ -1,5 +1,112 @@
+<<<<<<< HEAD
 // Admin Pages;
 import QuoteManager from "@/pages/admin/QuoteManager";
+=======
+
+import { Fragment } from "react",;
+import { Route, Routes } from "react-router-dom",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+;
+// Admin Pages;
+import QuoteManager from "@/pages/admin/QuoteManager",;
+import ReviewsModeration from "@/pages/admin/ReviewsModeration",;
+import WhitelabelManager from "@/pages/admin/WhitelabelManager",;
+import PartnerManager from "@/pages/admin/PartnerManager",;
+import AppMetadataManager from "@/pages/admin/AppMetadataManager",;
+import SupportRequests from "@/pages/admin/SupportRequests",;
+import FraudDetection from "@/pages/admin/FraudDetection",;
+import TokenManager from "@/pages/admin/TokenManager",;
+import IntegrationsPage from "@/pages/admin/IntegrationsPage",;
+;
+const AdminRoutes = () => {;
+  return (;
+    <Routes>;
+      <Route;
+        path="/admin/quotes";
+        element={;
+          <ProtectedRoute adminOnly={true}>;
+            <QuoteManager />;
+          </ProtectedRoute>;
+        }
+      />;
+      ;
+      <Route;
+        path="/admin/reviews";
+        element={;
+          <ProtectedRoute adminOnly={true}>;
+            <ReviewsModeration />;
+          </ProtectedRoute>;
+        }
+      />;
+      ;
+      <Route;
+        path="/admin/whitelabel";
+        element={;
+          <ProtectedRoute adminOnly={true}>;
+            <WhitelabelManager />;
+          </ProtectedRoute>;
+        }
+      />;
+      ;
+      <Route;
+        path="/admin/partners";
+        element={;
+          <ProtectedRoute adminOnly={true}>;
+            <PartnerManager />;
+          </ProtectedRoute>;
+        }
+      />;
+      ;
+      <Route;
+        path="/admin/app-metadata";
+        element={;
+          <ProtectedRoute adminOnly={true}>;
+            <AppMetadataManager />;
+          </ProtectedRoute>;
+        }
+      />;
+      ;
+      <Route;
+        path="/admin/support-requests";
+        element={;
+          <ProtectedRoute adminOnly={true}>;
+            <SupportRequests />;
+          </ProtectedRoute>;
+        }
+      />;
+      ;
+      <Route;
+        path="/admin/fraud-detection";
+        element={;
+          <ProtectedRoute adminOnly={true}>;
+            <FraudDetection />;
+          </ProtectedRoute>;
+        }
+      />;
+      ;
+      <Route;
+        path="/admin/tokens";
+        element={;
+          <ProtectedRoute adminOnly={true}>;
+            <TokenManager />;
+          </ProtectedRoute>;
+        }
+      />;
+      ;
+      <Route;
+        path="/admin/integrations";
+        element={;
+          <ProtectedRoute adminOnly={true}>;
+            <IntegrationsPage />;
+          </ProtectedRoute>;
+        }
+      />;
+    </Routes>;
+  ),;
+},;
+;
+export default AdminRoutes,; //Admin Pages import QuoteManager from "@/pages/admin/QuoteManager";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import ReviewsModeration from "@/pages/admin/ReviewsModeration";
 import WhitelabelManager from "@/pages/admin/WhitelabelManager";
 import PartnerManager from "@/pages/admin/PartnerManager";
@@ -8,6 +115,7 @@ import SupportRequests from "@/pages/admin/SupportRequests";
 import FraudDetection from "@/pages/admin/FraudDetection";
 import TokenManager from "@/pages/admin/TokenManager";
 import IntegrationsPage from "@/pages/admin/IntegrationsPage";
+<<<<<<< HEAD
 const AdminRoutes = () => {;
   return (
     <Routes>;
@@ -180,3 +288,20 @@ const AdminRoutes = () =>: any {
 ;
 export default AdminRoutes;
 ;
+=======
+<Routes> <Route path="/admin/quotes" element= {
+  <ProtectedRoute adminOnly= {
+  true 
+}> <QuoteManager /> </ProtectedRoute> 
+}/> <Route <ReviewsModeration /> </ProtectedRoute> 
+}/> <Route <WhitelabelManager /> </ProtectedRoute> 
+}/> <Route <PartnerManager /> </ProtectedRoute> 
+}/> <Route <AppMetadataManager /> </ProtectedRoute> 
+}/> <Route <SupportRequests /> </ProtectedRoute> 
+}/> <Route <FraudDetection /> </ProtectedRoute> 
+}/> <Route <TokenManager /> </ProtectedRoute> 
+}/> <Route <IntegrationsPage /> </ProtectedRoute> 
+}/> </Routes>) 
+};
+export default AdminRoutes;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

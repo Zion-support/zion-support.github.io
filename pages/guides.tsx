@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -16,11 +17,17 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import {;
@@ -221,6 +228,428 @@ import {;
   SleepyFace2,;
   YawningFace2,;
   DizzyFace2,;
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+import React from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from './components/Layout';
+<<<<<<< HEAD
+=======
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Layout from "./components/Layout";
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+import {
+<<<<<<< HEAD
+  BookOpen
+  Clock
+  User
+  ArrowRight
+  CheckCircle
+  Star
+  Play
+  Download
+  ExternalLink
+  Code
+  Database
+  Cloud
+  Shield
+  Zap
+  Brain
+  Globe
+  Smartphone
+  Monitor
+  Server
+  Bot
+  Microscope
+  Layers
+  Workflow
+  FileText
+  Image
+  Video
+  Music
+  Palette
+  Search
+  Filter
+  Settings
+  Wrench
+  Cog
+  Activity
+  PieChart
+  BarChart
+  TrendingUp
+  DollarSign
+  ShoppingCart
+  Home
+  Trash2
+  Camera
+  Heart
+  ClipboardList
+  TreePine
+  Droplets
+  Award
+  Building
+  Rocket
+  Lightbulb
+  Target
+  Users
+  Phone
+  Mail
+  MapPin
+  MessageSquare
+  HelpCircle
+  Info
+  AlertCircle
+  CheckCircle2
+  XCircle
+  Plus
+  Minus
+  ChevronUp
+  ChevronRight
+  ChevronLeft
+  ChevronDown
+  ArrowUp
+  ArrowDown
+  ArrowLeft
+  Pause
+  Stop
+  SkipForward
+  SkipBack
+  Volume2
+  VolumeX
+  Maximize
+  Minimize
+  RotateCcw
+  RotateCw
+  RefreshCw
+  Upload
+  Share
+  Copy
+  Edit
+  Trash
+  Save
+  Lock
+  Unlock
+  EyeOff
+  Bell
+  BellOff
+  Star as StarIcon
+  Heart as HeartIcon
+  ThumbsUp
+  ThumbsDown
+  MessageCircle
+  Send
+  Paperclip
+  Smile
+  Frown
+  Meh
+  Laugh
+  Angry
+  Sad
+  Surprised
+  Wink
+  Kiss
+  Tongue
+  Wink2
+  KissWinkHeart
+  KissClosedEyes
+  StuckOutTongue
+  StuckOutTongueWinkingEye
+  StuckOutTongueClosedEyes
+  Disappointed
+  Worried
+  Angry2
+  Rage
+  Cry
+  Scream
+  Confounded
+  Hugging
+  Smirk
+  NoMouth
+  NeutralFace
+  Expressionless
+  Unamused
+  RollingEyes
+  Thinking
+  LyingFace
+  HandOverMouth
+  ShushingFace
+  ExplodingHead
+  CowboyHatFace
+  DisguisedFace
+  Sunglasses
+  NerdFace
+  MonocleFace
+  Confused
+  WorriedFace
+  SlightlyFrowningFace
+  OpenMouth
+  Hushed
+  Astonished
+  Flushed
+  PleadingFace
+  FrowningFace
+  AnguishedFace
+  FearfulFace
+  ColdSweat
+  DisappointedRelieved
+  CryFace
+  LoudlyCryingFace
+  ScreamFace
+  StuckOutTongueFace
+  DroolingFace
+  UnamusedFace
+  SweatSmile
+  Sweat
+  WearyFace
+  TiredFace
+  SleepyFace
+  YawningFace
+  DizzyFace
+  ExplodingHeadFace
+  CowboyHatFace2
+  DisguisedFace2
+  SunglassesFace
+  NerdFace2
+  MonocleFace2
+  ConfusedFace
+  WorriedFace2
+  SlightlyFrowningFace2
+  OpenMouthFace
+  HushedFace
+  AstonishedFace
+  FlushedFace
+  PleadingFace2
+  FrowningFace2
+  AnguishedFace2
+  FearfulFace2
+  ColdSweatFace
+  DisappointedRelievedFace
+  CryFace2
+  LoudlyCryingFace2
+  ScreamFace2
+  StuckOutTongueFace2
+  DroolingFace2
+  UnamusedFace2
+  SweatSmileFace
+  SweatFace
+  WearyFace2
+  TiredFace2
+  SleepyFace2
+  YawningFace2
+  DizzyFace2
+=======
+  BookOpen,
+  Clock,
+  User,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Play,
+  Download,
+  ExternalLink,
+  Code,
+  Database,
+  Cloud,
+  Shield,
+  Zap,
+  Brain,
+  Globe,
+  Smartphone,
+  Monitor,
+  Server,
+  Bot,
+  Microscope,
+  Layers,
+  Workflow,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Palette,
+  Search,
+  Filter,
+  Settings,
+  Wrench,
+  Cog,
+  Activity,
+  PieChart,
+  BarChart,
+  TrendingUp,
+  DollarSign,
+  ShoppingCart,
+  Home,
+  Trash2,
+  Camera,
+  Heart,
+  ClipboardList,
+  TreePine,
+  Droplets,
+  Award,
+  Building,
+  Rocket,
+  Lightbulb,
+  Target,
+  Users,
+  Phone,
+  Mail,
+  MapPin,
+  MessageSquare,
+  HelpCircle,
+  Info,
+  AlertCircle,
+  CheckCircle2,
+  XCircle,
+  Plus,
+  Minus,
+  ChevronUp,
+  ChevronRight,
+  ChevronLeft,
+  ChevronDown,
+  ArrowUp,
+  ArrowDown,
+  ArrowLeft,
+  Pause,
+  Stop,
+  SkipForward,
+  SkipBack,
+  Volume2,
+  VolumeX,
+  Maximize,
+  Minimize,
+  RotateCcw,
+  RotateCw,
+  RefreshCw,
+  Upload,
+  Share,
+  Copy,
+  Edit,
+  Trash,
+  Save,
+  Lock,
+  Unlock,
+  EyeOff,
+  Bell,
+  BellOff,
+  Star as StarIcon,
+  Heart as HeartIcon,
+  ThumbsUp,
+  ThumbsDown,
+  MessageCircle,
+  Send,
+  Paperclip,
+  Smile,
+  Frown,
+  Meh,
+  Laugh,
+  Angry,
+  Sad,
+  Surprised,
+  Wink,
+  Kiss,
+  Tongue,
+  Wink2,
+  KissWinkHeart,
+  KissClosedEyes,
+  StuckOutTongue,
+  StuckOutTongueWinkingEye,
+  StuckOutTongueClosedEyes,
+  Disappointed,
+  Worried,
+  Angry2,
+  Rage,
+  Cry,
+  Scream,
+  Confounded,
+  Hugging,
+  Smirk,
+  NoMouth,
+  NeutralFace,
+  Expressionless,
+  Unamused,
+  RollingEyes,
+  Thinking,
+  LyingFace,
+  HandOverMouth,
+  ShushingFace,
+  ExplodingHead,
+  CowboyHatFace,
+  DisguisedFace,
+  Sunglasses,
+  NerdFace,
+  MonocleFace,
+  Confused,
+  WorriedFace,
+  SlightlyFrowningFace,
+  OpenMouth,
+  Hushed,
+  Astonished,
+  Flushed,
+  PleadingFace,
+  FrowningFace,
+  AnguishedFace,
+  FearfulFace,
+  ColdSweat,
+  DisappointedRelieved,
+  CryFace,
+  LoudlyCryingFace,
+  ScreamFace,
+  StuckOutTongueFace,
+  DroolingFace,
+  UnamusedFace,
+  SweatSmile,
+  Sweat,
+  WearyFace,
+  TiredFace,
+  SleepyFace,
+  YawningFace,
+  DizzyFace,
+  ExplodingHeadFace,
+  CowboyHatFace2,
+  DisguisedFace2,
+  SunglassesFace,
+  NerdFace2,
+  MonocleFace2,
+  ConfusedFace,
+  WorriedFace2,
+  SlightlyFrowningFace2,
+  OpenMouthFace,
+  HushedFace,
+  AstonishedFace,
+  FlushedFace,
+  PleadingFace2,
+  FrowningFace2,
+  AnguishedFace2,
+  FearfulFace2,
+  ColdSweatFace,
+  DisappointedRelievedFace,
+  CryFace2,
+  LoudlyCryingFace2,
+  ScreamFace2,
+  StuckOutTongueFace2,
+  DroolingFace2,
+  UnamusedFace2,
+  SweatSmileFace,
+  SweatFace,
+  WearyFace2,
+  TiredFace2,
+  SleepyFace2,
+  YawningFace2,
+  DizzyFace2,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from "lucide-react";
 const guides = [;
   {;
@@ -323,7 +752,20 @@ const categories = [;
   { name: "Database", count: 1, icon: Database },;
   { name: "Performance", count: 1, icon: Zap },;
 ];
+<<<<<<< HEAD
 export default function GuidesPage() {;
+=======
+<<<<<<< HEAD
+export default function GuidesPage() {
+=======
+
+interface GuidesProps {
+  className?: string;
+}
+
+const Guides: React.FC<GuidesProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <Layout>;
       <Head>;
@@ -993,6 +1435,7 @@ export default function GuidesPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
       </div>
     </Layout>
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center">;
@@ -1004,6 +1447,15 @@ export default function GuidesPage() {
           </div>;
         </section>;
       </div>;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+      </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </Layout>;
   );
                       </span>;

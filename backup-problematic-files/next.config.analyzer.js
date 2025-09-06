@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 ;}
 }
@@ -71,3 +72,12 @@ const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer'); module
 const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer'); module.exports = { webpack: (config, { is_server }) => { if ()} return config) { { config.plugins.push ( new BundleAnalyzerPlugin ({ analyzer_mode: 'static', open_analyzer: false, report_filename: is_server ? '../analyze / server.html' : './analyze / client.html', }) )} return config}}, }) {
   $2
 }
+=======
+};
+;
+,;
+;};
+;
+};
+,
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

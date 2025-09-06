@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +19,19 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 export default function InvestorsPage() {;
+=======
+import React from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function InvestorsPage() {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -52,11 +66,19 @@ export default function InvestorsPage() {;
         </div>;
         <div className='pt-4 text-slate-300'>;
           Contact IR:{' '}
+<<<<<<< HEAD
           <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
             kleber@ziontechgroup && ziontechgroup.com;
           </a>;
         </div>;
       </div>;
+=======
+          <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
+            kleber@ziontechgroup.com
+          </a>
+        </div>
+      </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </div>;
   );	return (
 export default function InvestorsPage() {
@@ -94,8 +116,10 @@ export default function InvestorsPage() {
 
 			</div>
 		</div>
+<<<<<<< HEAD
 	)
 }
+<<<<<<< HEAD
 <div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">;
 			<Head>;
 				<title>Investors | Zion Tech Group</title>;
@@ -179,3 +203,9 @@ function InvestorsPage() {
   </div>),
 }
 
+=======
+=======
+	),
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

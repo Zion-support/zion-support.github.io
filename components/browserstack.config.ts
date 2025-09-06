@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
+=======
+import { defineConfig, devices } from @playwright/test';
+default defineConfig({
+  testDir: tests/e2e',  use: {
+    baseURL: process.env.PLAYWRIGHT_BASE_URL |http://localhost:3000',    trace: on-first-retry'}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   projects: [
       name: Desktop Chrome',      use: {
         browserName: chromium',        channel: chrome'}
@@ -14,6 +21,7 @@ baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',  
     {
       name: Mobile Chrome',      use: {
         browserName: chromium',        ...devices['Pixel 5']}
+<<<<<<< HEAD
 import { define_config, devices } from @playwright / test';
 default define_config ({
   test_dir: tests / e2e',  use: {
@@ -65,3 +73,18 @@ default define_config ({
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
 }),
 
+=======
+    }
+    {
+      name: Mobile Safari',      use: {
+        browserName: webkit',        ...devices['iPhone 12']}
+    }
+  ];
+  reporter: [
+    ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
+<<<<<<< HEAD
+});
+=======
+});
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

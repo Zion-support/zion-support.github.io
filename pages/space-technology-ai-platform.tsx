@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -124,10 +125,127 @@ function SpaceTechnologyAIPlatform() {
     'Maxar ($5000 - 50000 / month)',
     'Planet Labs ($1000 - 10000 / month)',
     'Airbus Defence ($10000 - 100000 / month)',
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {Satellite, ArrowRight, CheckCircle, Star, TrendingUp, Globe, Zap, Shield, Users, Rocket, Phone, Mail, MapPin, Brain, Sparkles,} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from 'react',
+import Head from 'next/head',
+<<<<<<< HEAD
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Satellite, ArrowRight, CheckCircle, Star, TrendingUp;
+  Globe, Zap, Shield, Users, Rocket;
+  Phone, Mail, MapPin, Brain, Sparkles
+ } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
+=======
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import {
+  Satellite, ArrowRight, CheckCircle, Star, TrendingUp,
+  Globe, Zap, Shield, Users, Rocket,
+  Phone, Mail, MapPin, Brain, Sparkles
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026',
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function SpaceTechnologyAIPlatform() {
+
+  const contactInfo = {
+<<<<<<< HEAD
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
+  }
+  const features = [
+    'AI-powered satellite operations'
+    'Autonomous space exploration'
+    'Space data analytics'
+    'Satellite constellation management'
+    'Space debris tracking'
+    'Real-time monitoring'
+    'Predictive maintenance'
+    'Mission planning tools'
+    'API access'
+    'Expert consultation'
+  ];
+  const useCases = [
+    'Satellite operations'
+    'Space exploration'
+    'Earth observation'
+    'Space debris monitoring'
+    'Mission planning'
+    'Space research'
+  ];
+  const integrations = [
+    'NASA APIs'
+    'ESA APIs'
+    'Satellite ground stations'
+    'GIS systems'
+    'Slack'
+    'Microsoft Teams'
+    'Custom applications'
+  ];
+  const competitors = [
+    'Maxar ($5000-50000/month)'
+    'Planet Labs ($1000-10000/month)'
+    'Airbus Defence ($10000-100000/month)'
+    'Lockheed Martin'
+    'Boeing'
+    'Northrop Grumman'
+  ];
+
+=======
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
+    website: 'https://ziontechgroup.com',;
+  };
+
+=======
+    website: 'https://ziontechgroup.com'
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const features = [
+    'AI-powered satellite operationsAutonomous space explorationSpace data analyticsSatellite constellation managementSpace debris trackingReal-time monitoringPredictive maintenanceMission planning tools',
+    'API accessExpert consultation'
+  ],
+  const useCases = [
+    'Satellite operationsSpace explorationEarth observationSpace debris monitoringMission planningSpace research'
+  ],
+  const integrations = [
+    'NASA APIsESA APIsSatellite ground stationsGIS systemsSlackMicrosoft TeamsCustom applications'
+  ],
+  const competitors = [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    'Maxar ($5000-50000/month)',
+    'Planet Labs ($1000-10000/month)',
+    'Airbus Defence ($10000-100000/month)',
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     'Lockheed Martin',
     'Boeing',
     'Northrop Grumman',
   ];
+<<<<<<< HEAD
 ;
     >;
       <div className='min - h-screen'>;
@@ -416,85 +534,452 @@ function SpaceTechnologyAIPlatform() {
                 </div>
                 <div className=&quot;flex items-center space-x-2&quot;>
                   <Users className=&quot;w-5 h-5 text-blue-400&quot; />
+=======
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    'Maxar ($5000-50000/month)Planet Labs ($1000-10000/month)Airbus Defence ($10000-100000/month)Lockheed MartinBoeingNorthrop Grumman'
+  ],
+  return (
+    <UltraAdvancedFuturisticBackground
+      intensity="extreme"
+      colorScheme="neural-network"
+      particleCount={500  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      animationSpeed={2.5  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      enableHolographic={true  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      enableQuantumEffects={true  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      enableNeuralNetwork={true  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    >
+      <div className="min-h-screen">
+        <Head>
+          <title>Space Technology AI Platform - Zion Tech Group</title>
+<<<<<<< HEAD
+          <meta
+            name='description'
+            content='Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis.'
+          />
+          <meta
+            name='keywords'
+            content='space technology, AI space exploration, satellite operations, space data analytics, autonomous space systems'
+          />
+          <meta name='author' content='Zion Tech Group' />
+          <meta
+            property='og:title'
+            content='Space Technology AI Platform - Zion Tech Group'
+          />
+          <meta
+            property='og:description'
+            content='AI-powered space exploration and satellite operations'
+          />
+          <meta
+            property='og:url'
+            content='https://ziontechgroup.com/space-technology-ai-platform'
+          />
+          <link
+            rel='canonical'
+            href='https://ziontechgroup.com/space-technology-ai-platform'
+          />        </Head>
+        <EnhancedNavigation2026 />
+        {/* Hero Section */}
+        <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-indigo-900/30'></div>
+          <div className='max-w-7xl mx-auto relative z-10'>            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'
+=======
+          <meta name="description" content="Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis." />
+          <meta name="keywords" content="space technology, AI space exploration, satellite operations, space data analytics, autonomous space systems" />
+          <meta name="author" content="Zion Tech Group" />
+          <meta property="og:title" content="Space Technology AI Platform - Zion Tech Group" />
+          <meta property="og:description" content="AI-powered space exploration and satellite operations" />
+          <meta property="og:url" content="https://ziontechgroup.com/space-technology-ai-platform" />
+          <link rel="canonical" href="https://ziontechgroup.com/space-technology-ai-platform" />
+        </Head>
+        <EnhancedNavigation2026 />
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-indigo-900/30"></div>
+          <div className="max-w-7xl mx-auto relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            >
+              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6">
+                <Sparkles className="w-4 h-4 text-blue-400" />
+                <span className="text-blue-300 text-sm font-medium">2026 Revolutionary Innovation</span>
+              </div>
+<<<<<<< HEAD
+              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
+                <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent'>
+=======
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  Space Technology
+                </span>
+                <br />
+                <span className="text-white">AI Platform</span>
+              </h1>
+<<<<<<< HEAD
+              <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
+                Revolutionary AI platform that combines space technology with
+<<<<<<< HEAD
+                artificial intelligence to enable autonomous space exploration
+=======
+                artificial intelligence to enable autonomous space exploration,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                satellite operations, and space data analysis.
+              </p>
+              <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12'>
+=======
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+                Revolutionary AI platform that combines space technology with artificial intelligence to enable
+                autonomous space exploration, satellite operations, and space data analysis.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                <motion.div
+                  whileHover={{ scale: 1.05 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileTap={{ scale: 0.95 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200"
+                >
+                  <span className="text-2xl font-bold">$3,999</span>
+                  <span>/month</span>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileTap={{ scale: 0.95 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"
+                >
+                  <span>7-Day Free Trial</span>
+                  <ArrowRight className="w-5 h-5" />
+                </motion.div>
+              </div>
+<<<<<<< HEAD
+              <div className='flex items-center justify-center space-x-8 text-gray-400'>
+                <div className='flex items-center space-x-2'>
+                  <CheckCircle className='w-5 h-5 text-green-400' />
+=======
+              <div className="flex items-center justify-center space-x-8 text-gray-400">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  <span>1-month setup</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Shield className="w-5 h-5 text-blue-400" />
+                  <span>Enterprise security</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Users className="w-5 h-5 text-blue-400" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <span>120+ customers</span>
                 </div>
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div
+=======
+<<<<<<< HEAD
+        {/* Features Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
+          <div className='max-w-7xl mx-auto'>            <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className=&quot;text-center mb-16&quot;
+=======
+              className='text-center mb-16'
+=======
+        {/* Features Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
-              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
-                <span className=&quot;bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent&quot;>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
                   Revolutionary Features
                 </span>
               </h2>
-              <p className=&quot;text-gray-300 text-xl max-w-3xl mx-auto&quot;>
+              <p className="text-gray-300 text-xl max-w-3xl mx-auto">
                 Experience the future of space technology with AI-powered operations and autonomous exploration
               </p>
             </motion.div>
+<<<<<<< HEAD
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {features.map((feature, index) => (
+=======
+<<<<<<< HEAD
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <motion.div
                   key={feature}
                   initial={{ opacity: 0, scale: 0.8, y: 20 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
                   className=&quot;group relative&quot;
+=======
+                  className='group relative'
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="group relative"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 >
-                  <div className=&quot;absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500&quot;></div>
-                  <div className=&quot;relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300&quot;>
-                    <div className=&quot;w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4&quot;>
-                      <Satellite className=&quot;w-6 h-6 text-white&quot; />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                  <div className="relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4">
+                      <Satellite className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{feature}</h3>
-                    <p className=&quot;text-gray-400&quot;>
+                    <h3 className="text-xl font-bold text-white mb-3">{feature}</h3>
+                    <p className="text-gray-400">
                       Advanced AI-powered {feature.toLowerCase()} for enhanced space operations and exploration.
                     </p>
                   </div>
                 </motion.div>
+<<<<<<< HEAD
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* Market Position Section */}
         <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative&quot;>
           <div className=&quot;max-w-7xl mx-auto&quot;>
             <motion.div
+=======
+        {/* Market Position Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
+          <div className='max-w-7xl mx-auto'>            <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className=&quot;text-center mb-16&quot;
+=======
+              className='text-center mb-16'
+=======
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </div>;
+        </section>;
+        {/* Market Position Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
-              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
-                <span className=&quot;bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent&quot;>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                   Market Leadership
                 </span>
               </h2>
-              <p className=&quot;text-gray-300 text-xl max-w-3xl mx-auto&quot;>
+              <p className="text-gray-300 text-xl max-w-3xl mx-auto">
                 Competitive pricing with superior features and AI-powered capabilities
               </p>
             </motion.div>
+<<<<<<< HEAD
 
             <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12&quot;>
               <motion.div
+=======
+<<<<<<< HEAD
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>              <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className=&quot;space-y-6&quot;
               >
                 <h3 className=&quot;text-2xl font-bold text-white mb-6&quot;>Competitive Analysis</h3>
@@ -514,11 +999,68 @@ function SpaceTechnologyAIPlatform() {
                 </div>
               </motion.div>
 
+=======
+                className='space-y-6'
+=======
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="space-y-6"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              >
+                <h3 className="text-2xl font-bold text-white mb-6">Competitive Analysis</h3>
+                <div className="space-y-4">
+                  {competitors.map((competitor, index) => (
+                    <div key={index} className="flex items-center space-x-3 p-4 bg-black/20 rounded-xl border border-gray-700">
+                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                      <span className="text-gray-300">{competitor}</span>
+                    </div>
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </div>
+<<<<<<< HEAD
+                <div className='p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl border border-green-500/30'>
+                  <div className='flex items-center space-x-3'>
+                    <div className='w-3 h-3 bg-green-500 rounded-full'></div>
+                    <span className='text-green-300 font-semibold'>
+                      Our Advantage: AI integration, comprehensive platform
+                      affordable pricing
+                    </span>                  </div>
+                </div>
+              </motion.div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className=&quot;space-y-6&quot;
               >
                 <h3 className=&quot;text-2xl font-bold text-white mb-6&quot;>Market Statistics</h3>
@@ -539,12 +1081,79 @@ function SpaceTechnologyAIPlatform() {
                     <div className=&quot;text-3xl font-bold text-yellow-400 mb-2&quot;>24</div>
                     <div className=&quot;text-yellow-300 text-sm&quot;>Months to ROI</div>
 
+=======
+                className='space-y-6'
+=======
+                <div className="p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl border border-green-500/30">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span className="text-green-300 font-semibold">Our Advantage: AI integration, comprehensive platform, affordable pricing</span>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className='space-y-6'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                initial={{ opacity: 0, x: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="space-y-6"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              >
+                <h3 className="text-2xl font-bold text-white mb-6">Market Statistics</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="p-6 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-xl border border-blue-500/30 text-center">
+                    <div className="text-3xl font-bold text-blue-400 mb-2">$447.5B</div>
+                    <div className="text-blue-300 text-sm">Market Size</div>
+                  </div>
+                  <div className="p-6 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl border border-purple-500/30 text-center">
+                    <div className="text-3xl font-bold text-purple-400 mb-2">350%</div>
+                    <div className="text-purple-300 text-sm">Annual Growth</div>
+                  </div>
+                  <div className="p-6 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl border border-green-500/30 text-center">
+                    <div className="text-3xl font-bold text-green-400 mb-2">800%</div>
+                    <div className="text-green-300 text-sm">Average ROI</div>
+                  </div>
+                  <div className="p-6 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 rounded-xl border border-yellow-500/30 text-center">
+                    <div className="text-3xl font-bold text-yellow-400 mb-2">24</div>
+                    <div className="text-yellow-300 text-sm">Months to ROI</div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </div>
                 </div>
               </motion.div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 className='space-y-6'>;
                 <h3 className='text-2xl font-bold text-white mb-6'>;
                   Market Statistics;
@@ -585,10 +1194,17 @@ className='space-y-6'>;
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
+=======
+<<<<<<< HEAD
+        {/* Use Cases Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
+          <div className='max-w-7xl mx-auto'>            <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>;
@@ -622,6 +1238,44 @@ className='space-y-6'>;
                   </div>;
                 </motion && motion.div>;
               className="text-center mb-16"
+=======
+              className='text-center mb-16'
+=======
+        {/* Use Cases Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -632,15 +1286,59 @@ className='space-y-6'>;
                 Transform every aspect of space operations with AI-powered intelligence
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
+=======
+<<<<<<< HEAD
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases.map((useCase, index) => (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <motion.div
                   key={useCase}
                   initial={{ opacity: 0, scale: 0.8, y: 20 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 className="group relative"
+=======
+                  className='group relative'
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {useCases.map((useCase, index) => (
+                <motion.div
+                  key={useCase  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="group relative"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">
@@ -653,7 +1351,9 @@ className="group relative"
                     </p>
                   </div>
                 </motion.div>
+<<<<<<< HEAD
               ))}
+<<<<<<< HEAD
 </div>;
           </div>;
         </section>;
@@ -666,6 +1366,61 @@ className="group relative"
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+=======
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+=======
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </div>;
+        </section>;
+        {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            >
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
                   Ready to Explore the Cosmos?
@@ -674,28 +1429,94 @@ className="group relative"
               <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
                 Join 120+ space companies already leveraging our Space Technology AI Platform to achieve unprecedented exploration capabilities and operational efficiency.
               </p>
+<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
                 <motion.a
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
 className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200"
+=======
+<<<<<<< HEAD
+              <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8'>                <motion.a
+                  href={`tel:${contactInfo.mobile}`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200'
+=======
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
+                <motion.a
+                  href={`tel:${contactInfo.mobile}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileHover={{ scale: 1.05 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileTap={{ scale: 0.95 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call {contactInfo.mobile}</span>
                 </motion.a>
                 <motion.a
+<<<<<<< HEAD
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
 className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"
+=======
+                  href={`mailto:${contactInfo.email}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileHover={{ scale: 1.05 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileTap={{ scale: 0.95 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 >
                   <Mail className="w-5 h-5" />
                   <span>Email Us</span>
                 </motion.a>
               </div>
+<<<<<<< HEAD
               <div className="p-6 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20 rounded-2xl border border-blue-500/20">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+=======
+<<<<<<< HEAD
+              <div className='p-6 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20 rounded-2xl border border-blue-500/20'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
+=======
+              <div className="p-6 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20 rounded-2xl border border-blue-500/20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div>
                     <Phone className="w-6 h-6 text-blue-400 mx-auto mb-2" />
                     <p className="text-white font-medium">{contactInfo.mobile}</p>
@@ -715,6 +1536,7 @@ className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 tex
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -937,3 +1759,25 @@ transition={{ duration: 0 && 0.6 }}
       </div>;
     </UltraAdvancedFuturisticBackground>);
 ;
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

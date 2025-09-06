@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +17,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import Layout from '../../components/Layout';
 import {Heart,, Shield,, Database,, Users,, Activity} from 'lucide-react';
 import React from 'react';
@@ -50,6 +53,7 @@ import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } fro
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 import {motion} from 'framer-motion';
 import {Heart,, Shield,, Database,, Users,, Activity,, CheckCircle,, ArrowRight} from 'lucide-react';
 import Layout from '../../components/Layout';
@@ -116,6 +120,19 @@ const features = [;
     description: 'AI-powered analytics for population health management and predictive insights.'';
 import Layout from '../../components/Layout';
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
+=======
+import { motion } from 'framer-motion';
+import { 
+  Heart, 
+  Shield, 
+  Database, 
+  Users, 
+  Activity, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const features = [
   {
     icon: Heart,
@@ -249,6 +266,7 @@ const benefits = [;
   'Better resource utilization',;
   'Real-time health monitoring and alerts';
 ];
+<<<<<<< HEAD
 export default function HealthcareSolutions() {;
     title: 'Provider Management',;
     description: 'Comprehensive provider and staff management solutions',;
@@ -256,6 +274,16 @@ export default function HealthcareSolutions() {;
   }
 ];
 export default function HealthcareSolutionsPage() {;
+=======
+export default function HealthcareSolutions() {
+    title: 'Provider Management',
+    description: 'Comprehensive provider and staff management solutions',
+    benefits: ['Provider profiles', 'Scheduling', 'Communication', 'Performance tracking']
+  }
+];
+
+export default function HealthcareSolutionsPage() {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <Layout
       title="Healthcare Solutions - Zion Tech Group"
@@ -473,6 +501,7 @@ export default function HealthcareSolutions() {;
             </div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -491,8 +520,11 @@ export default function HealthcareSolutions() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
@@ -661,6 +693,7 @@ export default function HealthcareSolutions() {;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
                   ))}
+<<<<<<< HEAD
                 </ul>;
               </div>;
               <div className="bg-gradient-to-r from-green-600 to-blue-700 p-8 rounded-xl text-white">;
@@ -680,12 +713,34 @@ export default function HealthcareSolutions() {;
                     {feature && feature.benefits.map((benefit, benefitIndex) => (;
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
+=======
+                </ul>
+              </div>
+              <div className="bg-gradient-to-r from-green-600 to-blue-700 p-8 rounded-xl text-white">
+                <h3 className="text-2xl font-bold mb-6">Ready to Transform Healthcare?</h3>
+                <p className="text-lg mb-6">
+                  Let our healthcare technology experts help you implement solutions that improve
+                  patient care and operational efficiency.
+                </p>
+                <button className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
+                  Schedule Demo
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </button>
+              </div>
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                  <div className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         {benefit}
                       </div>;
                     ))}
                   </div>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">;
                     {feature && feature.title}
                   </h3>;
@@ -898,9 +953,12 @@ export default function HealthcareSolutions() {;
             </div>;
           </div>;
         </section>;
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -926,6 +984,7 @@ export default function HealthcareSolutions() {;
     </Layout>
     </>
     </>
+<<<<<<< HEAD
     </Layout>
   );
         {/* CTA Section */}
@@ -959,3 +1018,9 @@ export default function HealthcareSolutions() {;
     </>;
   ),;
 }
+=======
+  );
+};
+
+export default Healthcare;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

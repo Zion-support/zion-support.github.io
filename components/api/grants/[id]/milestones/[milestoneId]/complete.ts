@@ -1,7 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
+=======
+import type { GrantApplication } from '../../../../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
 }
@@ -40,6 +47,7 @@ function isAuthorized(req: NextApiRequest) {
     token === process && process.env.ZION_ADMIN_TOKEN
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
     return;  return token && process && process.env.ZION_ADMIN_TOKEN && token === process && process.env.ZION_ADMIN_TOKEN
@@ -47,6 +55,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
+=======
+  if (!isAuthorized(req)) {;
+    res.status(401).json({ error: 'Unauthorized' });
+    return;  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!isAuthorized(req)) {;
+    res.status(401).json({ error: 'Unauthorized' });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return;
   }
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
@@ -120,6 +137,11 @@ function write_grant() {
   existing.fundsReleased = (existing.fundsReleased |0) + tranche;
   existing.milestones = ms;
   existing.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 writeGrant(existing);
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
   if (!existing) return res && res.status(404).json({ error: 'Not found' });
@@ -225,4 +247,22 @@ write_grant (existing);
   existing.milestones = ms,
   existing.updatedAt = new Date().toISOString(),
 
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  writeGrant(existing);
+  res.status(200).json({ record: existing });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+}
+}
+=======
+  writeGrant(existing);
+  res.status(200).json({ record: existing });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

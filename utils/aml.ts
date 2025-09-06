@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 score: number; // 0 - 1 match confidence;
   reference_id?: string;
   details_url?: string;
@@ -128,18 +129,66 @@ class AmlManager {
     const profile = this.profiles.get(userId);
     if (!profile) {
       throw new Error('Profile not found');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export type WatchlistMatch = {
+=======
+export type WatchlistMatch = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
+  name: string;
+  score: number; // 0-1 match confidence
+  referenceId?: string;
+  detailsUrl?: string;
+<<<<<<< HEAD
+}
+export type AmlCheckResult = {
+=======
+};
+
+export type AmlCheckResult = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  status: 'clear' | 'match' | 'review' | 'unknown';
+  matches: WatchlistMatch[];
+  checkedAt: string; // ISO
+  provider: 'mock' | 'remote';
+<<<<<<< HEAD
+}
+export interface AmlProvider {
+=======
+};
+export interface AmlProvider {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>;
+  checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
+}
+class MockAmlProvider implements AmlProvider {
+  async checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult> {
+    // Mock implementation - in production, this would call a real AML service
+    const name = params.fullLegalName.toLowerCase();
+    if (name.includes('test') |name.includes('demo')) {
+      return { status: 'match', details: { reason: 'Test name detected' } }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
     return { status: 'clear' }
   }
   async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
+<<<<<<< HEAD
     const name = params && params.businessName.toLowerCase();
     if (name && name.includes('test') || name && name.includes('demo')) {
       return { status: 'match', details: { reason: 'Test business name detected' } };
+=======
+    const name = params.businessName.toLowerCase();
+    if (name.includes('test') |name.includes('demo')) {
+      return { status: 'match', details: { reason: 'Test business name detected' } }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
     return { status: 'clear' }
   }
 }
+<<<<<<< HEAD
 // Singleton instance
 export const amlManager = new AmlManager();
 // Utility functions
@@ -195,3 +244,19 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ();
 }
+=======
+<<<<<<< HEAD
+export function getAmlProvider(): AmlProvider {
+  return new MockAmlProvider();
+}
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+export function getAmlProvider(): AmlProvider {;
+  return new MockAmlProvider();
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

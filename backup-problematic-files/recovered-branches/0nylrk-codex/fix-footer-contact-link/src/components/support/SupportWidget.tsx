@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {ChatBotPanel} from "./ChatBotPanel";
@@ -12,6 +13,25 @@ export function SupportWidget() {;
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button
+=======
+
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { ChatBotPanel } from "./ChatBotPanel",;
+import { MessageSquare, Info, X } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { useTheme } from "@/hooks/useTheme",;
+;
+export function SupportWidget() {;
+  const [isOpen, setIsOpen] = useState(false),;
+  const { theme } = useTheme(),;
+  ;
+  return (;
+    <>;
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (;
+        <Button;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           onClick={() => setIsOpen(true)}
           size="icon";
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
@@ -20,8 +40,10 @@ export function SupportWidget() {;
           <MessageSquare className="h-6 w-6" />;
         </Button>;
       )}
+      ;
       {/* Support panel */}
       {isOpen && (;
+<<<<<<< HEAD
         <div
           className={cn(
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col"
@@ -34,23 +56,53 @@ export function SupportWidget() {;
             <div className="flex items-center">;
               <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />;
               <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>;
+=======
+        <div ;
+          className={cn(;
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",;
+            theme === "dark" ;
+              ? "bg-zion-blue-dark border border-zion-blue-light" ;
+              :"bg-white border border-gray-200";
+          )}
+          style={{ height:"600px", maxHeight:"80vh" }}
+        >;
+          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;
+            <div className="flex items-center">;
+              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />;
+              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" :"text-gray-800")}>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Zion Support;
               </h3>;
             </div>;
             <div className="flex items-center gap-2">;
+<<<<<<< HEAD
               <Button
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
                 onClick={() => window && window.location.href = "/help"}
+=======
+              <Button;
+                variant="ghost";
+                size="icon";
+                className="h-8 w-8 rounded-full";
+                onClick={() => window.location.href = "/help"}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 aria-label="Help center";
               >;
                 <Info className="h-5 w-5" />;
               </Button>;
+<<<<<<< HEAD
               <Button
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
+=======
+              <Button;
+                variant="ghost";
+                size="icon";
+                className="h-8 w-8 rounded-full";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 onClick={() => setIsOpen(false)}
                 aria-label="Close support";
               >;
@@ -58,10 +110,15 @@ export function SupportWidget() {;
               </Button>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
+          ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <ChatBotPanel />;
         </div>;
       )}
     </>;
+<<<<<<< HEAD
   );
 }
 import React, { useState } from './react';
@@ -131,3 +188,23 @@ function SupportWidget() {
         </div>)}
     </>);
 }
+=======
+  ),;}
+ export function SupportWidget () {
+  const [isOpen, setIsOpen] = useState (false);
+const {
+  theme 
+}= useTheme ();
+/* Fixed button in the bottom right */ 
+}{
+  !isOpen && (<Button onClick= {
+  () => setIsOpen (true) 
+}size="icon" className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50" aria-label="Open support" > <MessageSquare className="h-6 w-6" /> </Button>) 
+}{
+  /* Support panel */ 
+}{
+  isOpen && (<div className= {
+  cn (Zion Support </h3> </div> <div className="flex items-center gap-2" > <Button > <Info className="h-5 w-5" /> </Button> <Button > <X className="h-5 w-5" /> </Button> </div> </div> <ChatBotPanel /> </div>) 
+}</>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

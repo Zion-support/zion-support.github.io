@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components/ui/dialog';
 import {AIEnhancementPanel} from './AIEnhancementPanel';
@@ -23,12 +24,51 @@ export function AIEnhancementDialog(): any ({;
     onClose();
   };
   return (
+=======
+
+import React from 'react',;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle} from '@/components/ui/dialog',;
+import { AIEnhancementPanel } from './AIEnhancementPanel',;
+import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+;
+interface AIEnhancementDialogProps {;
+  title:string,;
+  isOpen:boolean,;
+  onClose:() => void,;
+  onApply:(content:string) => void,;
+  defaultOptions:AIEnhancementOptions,;
+  initialContent?:string;
+}
+;
+export function AIEnhancementDialog({;
+  title,;
+  isOpen,;
+  onClose,;
+  onApply,;
+  defaultOptions,;
+  initialContent;
+} AIEnhancementDialogProps) {;
+  const handleApply = (content:string) => {;
+    onApply(content),;
+    onClose();
+  },;
+;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;
       <DialogContent className="max-w-3xl">;
         <DialogHeader>;
           <DialogTitle>{title}</DialogTitle>;
         </DialogHeader>;
+<<<<<<< HEAD
         <AIEnhancementPanel
+=======
+        <AIEnhancementPanel;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           title={title}
           defaultOptions={defaultOptions}
           onApply={handleApply}
@@ -36,6 +76,7 @@ export function AIEnhancementDialog(): any ({;
         />;
       </DialogContent>;
     </Dialog>;
+<<<<<<< HEAD
   );
 }
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';
@@ -73,3 +114,18 @@ function AIEnhancementDialog() {
       </DialogContent>;
     </Dialog>);
 }
+=======
+  ),;}
+ <DialogHeader> <DialogTitle> {
+  title 
+}</DialogTitle> </DialogHeader> <AIEnhancementPanel title= {
+  title 
+}defaultOptions= {
+  defaultOptions 
+}onApply= {
+  handleApply 
+}initialContent= {
+  initialContent 
+}/> </DialogContent> </Dialog>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

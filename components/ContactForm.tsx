@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -193,6 +194,49 @@ const ContactForm: React.FC = () => {;
         phone: '',
         service: '',
 message: '',
+=======
+import React, { useState } from 'react';
+import LoadingSpinner from './LoadingSpinner';
+interface FormData {
+  name: string, email: string
+  company: string, phone: string
+  service: string
+  message: string
+}
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
+    name: ''
+    email: ''
+    company: ''
+    phone: ''
+    service: ''
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev
+      [name]: value
+    }));
+  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    try {
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setSubmitStatus('success');
+      setFormData({
+        name: ''
+        email: ''
+        company: ''
+        phone: ''
+        service: ''
+        message: ''
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       });
 ;
       setSubmitStatus ('success');
@@ -313,7 +357,9 @@ message: '',
       </form>;
     </div>;
   );
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
         <div>;
           <label html_for="message" className="block text - sm font - medium text - gray - 700 mb - 2">;
             Message *;
@@ -346,3 +392,10 @@ message: '',
 }
 ;
 export default ContactForm;
+=======
+=======
+};
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default ContactForm;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

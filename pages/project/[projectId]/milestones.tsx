@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -44,12 +45,93 @@ export default function ProjectMilestonesPage() {;
   return 'client'
 }
 export default function ProjectMilestonesPage() {
+=======
+import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useRouter  } from 'next/router';
+import Head from 'next/head',
+import MilestoneForm from '../../../components/monetization/MilestoneForm',
+=======
+import {useRouter} from 'next/router';
+=======
+import { useRouter } from 'next/router';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+import Head from 'next/head';
+import MilestoneForm from '../../../components/monetization/MilestoneForm';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import MilestoneCard from '../../../components/monetization/MilestoneCard';
+
+import { Milestone } from '../../../utils/types/milestones';
+<<<<<<< HEAD
+import {
+  createMilestone
+  fetchMilestones
+  updateMilestoneStatus;
+=======
+<<<<<<< HEAD
+import {
+  createMilestone,
+  fetchMilestones,;
+  updateMilestoneStatus,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '../../../utils/api/milestones-client';
+function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
+  if (typeof window === 'undefined') return 'client';
+  const url = new URL(window.location.href);
+  const r = url.searchParams.get('role');
+  if (r === 'talent' |r === 'admin') return r;
+  return 'client';
+export default function ProjectMilestonesPage() {;
+  const router = useRouter();
+  const { 'project-id': projectId } = router.query as any;
+  const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>
+    getRoleFromEnvOrQuery()
+  );  const [milestones, setMilestones] = useState<Milestone[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  useEffect(() => {
+    setRole(getRoleFromEnvOrQuery());  }, []);
+  // Demo cookie-based auth to hit API successfully
+  useEffect(() => {
+    if (!role) return;
+    try {
+      const userId =
+        role === 'talent'
+          ? 'talent-1'
+          : role === 'client'
+            ? 'client-1'
+            : 'client-1';
+      document.cookie = `x-user-id=${userId}; path=/`;
+      document.cookie = `x-user-role=${role}; path=/`;    } catch {}
+  }, [role]);
+  useEffect(() => {
+    if (!projectId) return;
+=======
+<<<<<<< HEAD
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import MilestoneForm from '../../../components/monetization/MilestoneForm';
+import MilestoneCard from '../../../components/monetization/MilestoneCard';
+import { Milestone } from '../../../utils/types/milestones';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
+function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {;
+  if (typeof window === 'undefined') return 'client',;
+  const url = new URL(window.location.href);
+  const r = url.searchParams.get('role');
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+export default function ProjectMilestonesPage(req, res) {
+  try {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const router = useRouter();
   const { 'project-id': projectId } = router.query as any;
   const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() => getRoleFromEnvOrQuery());
   const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
   useEffect(() => {
     setRole(getRoleFromEnvOrQuery())
   }, []);
@@ -64,10 +146,36 @@ export default function ProjectMilestonesPage() {
   }, [role]);
   useEffect(() => {;
     if (!projectId) return;
+=======
+  useEffect(() => {;
+    setRole(getRoleFromEnvOrQuery());
+  }, []),;
+  // Demo cookie-based auth to hit API successfully;
+  useEffect(() => {;
+    if (!role) return,;
+    try {
+      const userId = role === 'talent' ? 'talent-1' : role === 'client' ? 'client-1' : 'client-1';
+      document.cookie = `x-user-id=${userId}, path=/`,;
+      document.cookie = `x-user-role=${role}, path=/`;
+    } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [role]),;
+  useEffect(() => {;
+    if (!projectId) return,;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     let cancelled = false;
     (async () => {;
       setLoading(true);
       setError(null);
+<<<<<<< HEAD
       try {;
         const data = await fetchMilestones(projectId as string);
         if (!cancelled) setMilestones(data && data.milestones || []);
@@ -186,18 +294,75 @@ if (return) {
     return () => {
       cancelled = true
     }
+=======
+      try {
+        const data = await fetchMilestones(projectId as string);
+<<<<<<< HEAD
+        if (!cancelled) setMilestones(data.milestones |[]);
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message |'Failed to load milestones');
+      } finally {
+=======
+        if (!cancelled) setMilestones(data.milestones || []);
+      } catch (error) {
+        if (!cancelled) setError(e?.message || 'Failed to load milestones');
+      } finally {;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        if (!cancelled) setLoading(false);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    })();
+    return () => {;
+      cancelled = true;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+=======
+    };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }, [projectId]);
   const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
+<<<<<<< HEAD
     setMilestones((prev) => [res.milestone, ...prev])
   };
+=======
+<<<<<<< HEAD
+    setMilestones(prev => [res.milestone, ...prev]);  }
+=======
+    setMilestones(prev => [res.milestone, ...prev]);  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [projectId]),
+  const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {
+    if (!projectId) return,
+    const res = await createMilestone(projectId as string, payload),
+    setMilestones((prev) => [res.milestone, ...prev])
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
   ) => {
     if (!projectId) return
     const map: Record<string, string> = {
+<<<<<<< HEAD
     setMilestones(prev => [res && res.milestone, ...prev]);  };
   const handleAction = async (;
     action: 'in_progress' | 'submitted' | 'approved' | 'paid',;
@@ -210,10 +375,19 @@ if (return) {
       approved: 'Approved',;
       paid: 'Paid',;
     };
+=======
+<<<<<<< HEAD
+      in_progress: 'In Progress'
+      submitted: 'Submitted'
+      approved: 'Approved'
+      paid: 'Paid'
+    }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const status = map[action];
     const res = await updateMilestoneStatus(projectId as string, milestoneId, {;
       status,;
     });
+<<<<<<< HEAD
     setMilestones(prev =>;
       prev && prev.map(m => (m && m.id === milestoneId ? res && res.milestone : m));
     );  };
@@ -224,24 +398,60 @@ if (return) {
         <meta
           name='description'
           content='Track project deliverables and milestone payments'
+=======
+    setMilestones(prev =>
+      prev.map(m => (m.id === milestoneId ? res.milestone : m))
+    );  }
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       in_progress: 'In Progress',
       submitted: 'Submitted',
       approved: 'Approved',
       paid: 'Paid'},
+<<<<<<< HEAD
     const status = map[action];
     const res = await updateMilestoneStatus(projectId as string, milestoneId, { status });
     setMilestones((prev) => prev.map((m) => (m.id === milestoneId ? res.milestone : m)))
   };
+=======
+    const status = map[action],
+    const res = await updateMilestoneStatus(projectId as string, milestoneId, { status }),
+    setMilestones((prev) => prev.map((m) => (m.id === milestoneId ? res.milestone : m)))
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div>
       <Head>
         <title>Project Milestones</title>
+<<<<<<< HEAD
 <meta name="description" content="Track project deliverables and milestone payments" />
       </Head>
+=======
+        <meta name="description" content="Track project deliverables and milestone payments" />
+      </Head>
+<<<<<<< HEAD
+      <div className='max-w-5xl mx-auto px-4 py-8'>
+        <div className='mb-6'>
+          <h1 className='text-2xl font-bold'>Milestones</h1>
+          <p className='text-sm text-gray-600'>
+            Project: {projectId as string}
+          </p>
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div className="max-w-5xl mx-auto px-4 py-8">
         <div className="mb-6">
           <h1 className="text-2xl font-bold">Milestones</h1>
           <p className="text-sm text-gray-600">Project: {projectId as string}</p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         </div>
         {role !== 'talent' && (
           <div className="mb-8 p-4 rounded bg-gray-50 border">
@@ -251,6 +461,7 @@ if (return) {
             </div>
             <MilestoneForm onSubmit={handleCreate} />
           </div>
+<<<<<<< HEAD
         />;
       </Head>;
       <div className='max-w-5xl mx-auto px-4 py-8'>;
@@ -373,12 +584,97 @@ if (return, ) {
             ))}
           </div>
         )}
+=======
+<<<<<<< HEAD
+        )}
+        {loading && <div>Loading milestones...</div>}
+        {error && <div className='text-red-600'>{error}</div>}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+        {loading && <div>Loading milestones...</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        {error && <div className="text-red-600">{error}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {!loading && !error && (
+          <div className="space-y-4">
+            {milestones.length === 0 && (
+<<<<<<< HEAD
+              <div className='text-gray-600'>
+                No milestones yet.{' '}
+                {role !== 'talent' ? 'Create the first one.' : ''}
+              </div>
+            )}
+            {milestones.map(m => (
+              <MilestoneCard
+                key={m.id}
+                milestone={m}
+                projectId={String(projectId)}
+                role={role}
+                onAction={handleAction}
+              />            ))}
+          </div>
+        )}
+        <div className='mt-12 text-xs text-gray-500'>
+          Integration hooks ready: on Approved &rarr; trigger payout intent; on
+          Paid &rarr; capture via Stripe/PayPal/Escrow.
+        </div>
+      </div>
+    </div>
+);
+<<<<<<< HEAD
+=======
+
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+              <div className="text-gray-600">No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            {milestones.map((m) => (;
+              <MilestoneCard key={m.id} milestone={m} projectId={String(projectId)} role={role} onAction={handleAction} />;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="mt-12 text-xs text-gray-500">
           Integration hooks ready: on Approved &rarr, trigger payout intent, on Paid &rarr, capture via Stripe/PayPal/Escrow.
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
           </div>)}
         <div className='mt - 12 text - xs text - gray - 500'>;
@@ -388,3 +684,22 @@ if (return, ) {
       </div>;
     </div>);
 ;
+=======
+;
+        <div className="mt-12 text-xs text-gray-500">;
+          Integration hooks ready: on Approved &rarr, trigger payout intent, on Paid &rarr, capture via Stripe/PayPal/Escrow.;
+        </div>;
+      </div>;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

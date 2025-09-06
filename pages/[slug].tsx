@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -61,10 +62,66 @@ if (return undefined) {
       try {
         const url = new URL (s.link);
         return url.pathname.replace (/^\/+|\/+$/g, '') === slug.replace (/^\/+|\/+$/g, '');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Button from '../components/ui/Button',
+=======
+import React, { useMemo } from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+import {GetStaticPaths, GetStaticProps} from 'next';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Button from '../components/ui/Button';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import Card from '../components/ui/Card';
+
+import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
+type Service = typeof enhancedRealMicroSaasServices[number];
+const service = useMemo(() => {
+  if (!slug) return undefined;
+  const all: any[] = ([] as any[])
+      .concat(
+        enhancedRealMicroSaasServices as any
+        extraServices as any
+        additionalEnhancedServices as any
+        innovativeAIServices as any
+        quantumSpaceServices as any
+        enterpriseITServices as any
+        newRealServices as any
+        marketReadyServices as any
+        realMarketServices as any
+        new2025Services as any
+        newRealInnovations as any
+        emergingTechnologyServices as any
+        comprehensiveITSolutions as any
+        marketValidatedServices as any
+        curatedMarketServices as any
+        cuttingEdgeITServices as any
+        nextGenerationAIServices as any
+        nextGenAIServices as any
+        industryRealServices as any
+        professionalServices as any
+        realEnterpriseServices2025 as any
+        augmentedServicesBatch3 as any
+        real2025Q3Additions as any
+        realQ4Services2025 as any,        require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
+      );
+    const byLink = all.find(s => {
+      try {
+        const url = new URL(s.link);
+        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       } catch {
         return false;
       }
     });
+<<<<<<< HEAD
     // Check condition
 if (return by_link) {
   $2
@@ -81,6 +138,50 @@ function getAllServices(): any (): Service[] {;
 		.concat(verified2025Additions as unknown as Service[]);
 		.concat(realServicesQ12025 as unknown as Service[]);
 		.concat(realEnterpriseServices2025 as unknown as Service[]);
+=======
+    if (byLink) return byLink;
+  }, [slug]);
+=======
+import React, { useMemo } from 'react';
+import Head from 'next/head';
+=======
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { extraServices } from '../data/extra-services';
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { newlyAddedServices } from '../data/newly-added-services';
+import { new2025Services } from '../data/new-2025-services';
+import { marketValidatedServices } from '../data/market-validated-services';
+import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
+import { realServicesQ32025 } from '../data/real-services-q3-2025';
+import { realQ4Services2025, real2025Q4Additions } from '../data/real-2025-q4-additions';
+import { real2026Q1Additions } from '../data/real-2026-q1-additions';
+import fs from 'fs';
+import path from 'path';
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+type Service = typeof enhancedRealMicroSaasServices[number];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+function getAllServices(): Service[] {
+  return enhancedRealMicroSaasServices
+    .concat(extraServices as Service[], additionalEnhancedServices as Service[])
+    .concat(newlyAddedServices as unknown as Service[])
+    .concat(curatedMarketServices as Service[])
+    .concat(new2025Services as unknown as Service[])
+		.concat(marketValidatedServices as unknown as Service[]);
+		.concat(moreRealServices2025 as unknown as Service[])
+		.concat(verified2025Additions as unknown as Service[])
+		.concat(realServicesQ12025 as unknown as Service[])
+		.concat(realEnterpriseServices2025 as unknown as Service[])
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[]);
 		.concat(realMarketAugmentations2025 as unknown as Service[]);
 		.concat(additionalLiveServices2025 as unknown as Service[]);
@@ -91,7 +192,21 @@ function getAllServices(): any (): Service[] {;
 		.concat(realQ4Services2025 as unknown as Service[]);
 		.concat(real2025Q4Additions as unknown as Service[]);
 		.concat(realMarketServicesExtended as unknown as Service[]);
+<<<<<<< HEAD
 		.concat(real2026Q1Additions as unknown as Service[]);
+=======
+	return enhancedRealMicroSaasServices
+		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
+		.concat(newlyAddedServices as unknown as Service[])
+		.concat(new2025Services as unknown as Service[])
+		.concat(marketValidatedServices as unknown as Service[])
+		.concat(verifiedRealServices2025Batch2 as unknown as Service[])
+		.concat(realServicesQ32025 as unknown as Service[])
+		.concat(realQ4Services2025 as unknown as Service[])
+		.concat(real2025Q4Additions as unknown as Service[])
+		.concat(real2026Q1Additions as unknown as Service[]);
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 		.concat(real2026Additions as unknown as Service[]);
 		.concat(added2026Q2Services as unknown as Service[]);
 		.concat(real2026Q3Additions as unknown as Service[]);
@@ -99,6 +214,7 @@ function getAllServices(): any (): Service[] {;
 		.concat(real2026Q4NewServices as unknown as Service[]);
 		.concat(real2027Q1Additions as unknown as Service[]);
 		.concat(newSaasItAiServices2025 as unknown as Service[]);
+<<<<<<< HEAD
 function toSlug(): any (value: string): string {;
 	return value && value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 function getExistingRootPageSlugs(): any (): Set<string> {;
@@ -240,6 +356,81 @@ function getExistingRootPageSlugs(): Set<string> {
 	const pagesDir = path.join(process.cwd(), 'pages');
 	const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
 	const reserved = new Set<string>(['apireportsservices']);
+=======
+function toSlug(value: string): string {
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+function getExistingRootPageSlugs(): Set<string> {
+	const pagesDir = path.join(process.cwd(), 'pages')
+	const entries = fs.readdirSync(pagesDir, { withFileTypes: true })
+	const reserved = new Set<string>(['apireportsservices'])
+	const slugs = new Set<string>()
+		}
+		// Directories at root (folder routes);
+		if (entry.isDirectory()) {slugs.add(entry.name);
+	}
+	return slugs;
+export async function getStaticPaths() {
+<<<<<<< HEAD
+	const services = getAllServices()
+	const slugs = new Set<string>()
+	 }))
+=======
+	const services = getAllServices(),
+	const slugs = new Set<string>(),
+	 })),;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+		fallback: false;
+	}
+export async function getStaticProps() {
+	const services = getAllServices()
+	const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '')
+	let service: Service | undefined = services.find((s) => toSlug(s.id |'') === incomingSlug |toSlug(s.name |'') === incomingSlug)
+	if (!service) {return { notFound: true }
+	}
+	return {props: { service }
+	}
+<<<<<<< HEAD
+export default function RootServiceDetailPage({ service }: { service: Service }) {const canonical = `https://ziontechgroup.com/${toSlug(service.id |service.name |'')}`,	return (
+=======
+
+;
+export default function RootServiceDetailPage({ service }: { service: Service }) {;
+	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`,	return (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+function toSlug(value: string): string {
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+function getExistingRootPageSlugs(): Set<string> {
+	const pagesDir = path.join(process.cwd(), 'pages');
+	const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
+	const reserved = new Set<string>(['apireports', 'services']);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 	const slugs = new Set<string>();
 	for (const entry of entries) {
 		if (entry.name.startsWith('_')) continue;
@@ -250,6 +441,7 @@ function getExistingRootPageSlugs(): Set<string> {
 			if (m) {
 				const base = m[1];
 				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {
+<<<<<<< HEAD
 					slugs.add(base)
 				}
 			}
@@ -262,17 +454,122 @@ function getExistingRootPageSlugs(): Set<string> {
 	return slugs
 }
 export async function getStaticPaths() {
+=======
+					slugs.add(base);
+				  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+		  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+		// Directories at root (folder routes)
+		if (entry.isDirectory()) {
+			slugs.add(entry.name);
+		  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+	  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+	return slugs;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export async function getStaticPaths(req, res) {
+  try {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 	const services = getAllServices();
 	const slugs = new Set<string>();
 	for (const s of services) {
 		if (s.id) slugs.add(toSlug(s.id));
+<<<<<<< HEAD
 		else if (s.name) slugs.add(toSlug(s.name))
 	}
+=======
+		else if (s.name) slugs.add(toSlug(s.name));
+	  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 	const existing = getExistingRootPageSlugs();
 	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug));
 	return {
 		paths: filtered.map((slug) => ({ params: { slug } })),
 		fallback: false
+<<<<<<< HEAD
 	}
 }
 export async function getStaticProps({ params }: { params: { slug: string } }) {
@@ -285,10 +582,81 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 	return {
 		props: { service }
 	}
+=======
+	};
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export async function getStaticProps(req, res) {
+  try {
+	const services = getAllServices();
+	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
+	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+	if (!service) {
+		return { notFound: true };
+	  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+	return {
+		props: { service   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+	};
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 export default function RootServiceDetailPage({ service }: { service: Service }) {
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`;
 	return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
@@ -306,11 +674,24 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 					dangerouslySetInnerHTML={{
 						__html: JSON && JSON.stringify(
 							{
+<<<<<<< HEAD
 								"@context": "https: //schema.org", "@type": "Service",
+=======
+<<<<<<< HEAD
+								"@context": "https://schema.org"
+								"@type": "Service",								name: service.name
+								description: service.tagline |service.description
+								url: canonical
+=======
+								"@context": "https://schema.org",
+								"@type": "Service",
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 								name: service.name,
 								description: service.tagline || service.description,
 								url: canonical,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 								provider: {
+<<<<<<< HEAD
 									"@type": "Organization";
 									name: "Zion Tech Group",
 									url: "https://ziontechgroup.com"
@@ -341,6 +722,32 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
 							<p className="text-gray-300 leading-relaxed">{service.description}</p>
 						</Card>
+=======
+									"@type": "Organization"
+									name: "Zion Tech Group"
+									url: "https://ziontechgroup.com"
+<<<<<<< HEAD
+=======
+								},
+								offers: {
+									"@type": "Offer",
+									price: (service.price || '').replace(/[^0-9.]/g, ''),
+									priceCurrency: "USD",
+									availability: "https://schema.org/InStock"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+								}
+								offers: {
+									"@type": "Offer"
+									price: (service.price |'').replace(/[^0-9.]/g, ''),									priceCurrency: "USD"
+									availability: "https://schema.org/InStock"
+								}
+							}
+							null;
+							2;
+							);}
+				/>;			</Head>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {/* Service Details */}
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <Card className="p-8">
@@ -376,23 +783,143 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
               </ul>
             </Card>
           </div>
+<<<<<<< HEAD
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
 								{(service.features |[]).slice(0, 12).map((f: string) => (
+<<<<<<< HEAD
+=======
+=======
+								},
+								offers: {
+									"@type": "Offer",
+									price: (service.price || '').replace(/[^0-9.]/g, ''),
+									priceCurrency: "USD",
+									availability: "https://schema.org/InStock"
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+								  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+							},
+							null,
+							2
+							)
+						}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+				/>
+			</Head>
+			<div className="container mx-auto px-4 py-16">
+				<div className="text-center mb-10">
+					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+						{service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+					</h1>
+					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
+				</div>
+				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+					<div className="lg:col-span-2 space-y-6">
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
+							<p className="text-gray-300 leading-relaxed">{service.description}</p>
+						</Card>
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
+							<ul className="space-y-2 text-gray-300">
+								{(service.features || []).slice(0, 12).map((f: string) => (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
 									</li>
-								))}
+								))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 							</ul>
 						</Card>
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
 							<div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
 								{(service.integrations |[]).slice(0, 12).map((i: string) => (
 									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
 								))}
+=======
+								{(service.integrations || []).slice(0, 12).map((i: string) => (
+									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+								))}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+								))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 							</div>
 						</Card>
 					</div>
@@ -403,7 +930,19 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							<div className="mt-4 space-y-3">
 								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Phone className="w-4 h-4" /> +1 302 464 0950
+<<<<<<< HEAD
 								</a>
+=======
+<<<<<<< HEAD
+								</Link>
+=======
+								</a>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
 								</a>
@@ -417,7 +956,14 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 						</Card>
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
+<<<<<<< HEAD
 							<a href={service.link |canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
+<<<<<<< HEAD
+=======
+=======
+							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
 						</Card>
@@ -425,6 +971,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+<<<<<<< HEAD
 								"@context": "https://schema && schema.org",
 								"@type": "Service",								name: service && service.name,
 								description: service && service.tagline || service && service.description,
@@ -721,3 +1268,36 @@ const canonical = `https://ziontechgroup.com/${to_slug (service.id || service.na
   </UltraFuturisticBackground>);
 ;
 ;
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+;
+
+}
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

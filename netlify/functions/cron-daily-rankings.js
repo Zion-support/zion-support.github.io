@@ -126,10 +126,28 @@ if ( {) {
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/marketplace/rankings-daily && daily.json', content, message: 'chore(automation): daily rankings update', token })
     }
+<<<<<<< HEAD
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, topCount: top && top.length }) }
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+<<<<<<< HEAD
 }
 },
 },
+=======
+<<<<<<< HEAD
+
+}
+
+=======
+},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

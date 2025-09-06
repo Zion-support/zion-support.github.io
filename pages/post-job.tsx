@@ -1,7 +1,36 @@
+<<<<<<< HEAD
 e.preventDefault();
     setError(null);
     if (!title || !description || !category || !clientEmail) {
       setError('Please fill in all required fields.');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+=======
+import { useState } from 'react',;
+import { useRouter } from 'next/router',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function PostJobPage() {
+  const router = useRouter()
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  const [category, setCategory] = useState('')
+  const [skills, setSkills] = useState<string>('')
+  const [budgetMinUsd, setBudgetMinUsd] = useState<string>('')
+  const [budgetMaxUsd, setBudgetMaxUsd] = useState<string>('')
+  const [deliveryDeadlineIso, setDeliveryDeadlineIso] = useState<string>('')
+  const [clientEmail, setClientEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    setError(null)
+    if (!title |!description |!category |!clientEmail) {
+      setError('Please fill in all required fields.')
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       return
     }
     try {
@@ -29,11 +58,99 @@ e.preventDefault();
     } finally {
       setIsSubmitting(false),
     }
+<<<<<<< HEAD
   }
   return (
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
       {error && <p className="text-red-600 mb-3">{error}</p>}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+export default function PostJobPage(req, res) {
+  try {
+  const router = useRouter();
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
+  const [skills, setSkills] = useState<string>('');
+  const [budgetMinUsd, setBudgetMinUsd] = useState<string>('');
+  const [budgetMaxUsd, setBudgetMaxUsd] = useState<string>('');
+  const [deliveryDeadlineIso, setDeliveryDeadlineIso] = useState<string>('');
+  const [clientEmail, setClientEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  async function handleSubmit(e: React.FormEvent) {;
+    e.preventDefault(),;
+    setError(null);
+    if (!title || !description || !category || !clientEmail) {;
+      setError('Please fill in all required fields.');
+      return;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+}
+;
+    try {
+      setIsSubmitting(true);
+      const res = await fetch('/api/jobs', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({;
+          title,;
+          description,;
+          category,;
+          requiredSkills: skills;
+            .split();
+            .map((s) => s.trim());
+            .filter(Boolean);
+          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,;
+          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,;
+          deliveryDeadlineIso: deliveryDeadlineIso || undefined,;
+          clientEmail})}),;
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to post job');
+      router.push(`/client/dashboard`);
+    } catch (error) {
+      setError(err.message || 'Something went wrong');
+    } finally {;
+      setIsSubmitting(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return (
+    <div className="max-w-2xl mx-auto">
+      <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {error && <p className="text-red-600 mb-3">{error}</p>}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {error && <p className="text-red-600 mb-3">{error}</p>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Project Title *</label>
@@ -71,6 +188,7 @@ e.preventDefault();
         </div>
         <div className="pt-2">
           <button type="submit" className="px-4 py-2 rounded bg-black text-white disabled:opacity-50" disabled={isSubmitting}>
+<<<<<<< HEAD
         </div>
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
           <div>
@@ -93,12 +211,17 @@ e.preventDefault();
         <div className=&quot;pt-2&quot;>
           <button type=&quot;submit&quot; className=&quot;px-4 py-2 rounded bg-black text-white disabled:opacity-50&quot; disabled={isSubmitting}>
 
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {isSubmitting ? 'Posting…' : 'Post Job'}
           </button>
         </div>
       </form>
     </div>
+<<<<<<< HEAD
   )
+<<<<<<< HEAD
 }
 import { useState } from 'react',
 import { use_router } from 'next / router',
@@ -205,3 +328,31 @@ if ( {) {
       </form>;
     </div>);
 }
+=======
+=======
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            {isSubmitting ? 'Posting…' : 'Post Job'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </button>;
+        </div>;
+      </form>;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

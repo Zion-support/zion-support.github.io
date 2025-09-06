@@ -1,15 +1,37 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 const cookie = req && req.headers.cookie || '';
   const match = cookie
     .split(';')
     .map(c => c && c.trim())
     .find(c => c && c.startsWith('user_id='));
   if (match) return decodeURIComponent(match && match.split('=')[1]);
+=======
+import { supabase } from '../../../utils/supabase/client';
+import {
+<<<<<<< HEAD
+  NotificationItem
+  NotificationType;
+=======
+  NotificationItem,;
+  NotificationType,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '../../../utils/notifications';
+function getUserId(req: NextApiRequest): string {
+
+  const cookie = req.headers.cookie |'';
+  const match = cookie
+    .split(';')
+    .map(c => c.trim())
+    .find(c => c.startsWith('user_id='));
+  if (match) return decodeURIComponent(match.split('=')[1]);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return 'demo-user-1';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 import { supabase } from '../../../utils / supabase / client';
 import {
   NotificationItem,
@@ -41,14 +63,31 @@ function handler() {
 import { NotificationItem, NotificationType } from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie || '';
+=======
+  try {;
+    const userId = getUserId(req);
+    const {
+      filter = 'all'
+      countOnly
+      limit = '50'
+      offset = '0'
+    } = req.query as Record<string, string>;function getUserId(req: NextApiRequest): string {
+  const cookie = req.headers.cookie |'';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
   if (match) return decodeURIComponent(match.split('=')[1]);
   return 'demo-user-1'
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   try {
     const userId = getUserId(req);
     const { filter = 'all', countOnly, limit = '50', offset = '0' } = req && req.query as Record<string, string>;
+=======
+  try {;
+    const userId = getUserId(req);
+    const { filter = 'all', countOnly, limit = '50', offset = '0' } = req.query as Record<string, string>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // If countOnly, return unread count quickly
     if (countOnly === 'true') {
       const { data, error } = await supabase
@@ -57,6 +96,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         .eq('user_id', userId)
         .eq('read_status', false);
       if (error) {
+<<<<<<< HEAD
         // Fallback to 0 on error (e && e.g., table missing)
         return res && res.status(200).json({ count: 0 });
       }
@@ -78,6 +118,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (!count) {
         const { count: exactCount } = await supabase
 .from('notifications')
+=======
+        // Fallback to 0 on error (e.g., table missing)
+        return res.status(200).json({ count: 0 });
+      }
+      const count = (data as any)?.length |0; // when head:true, data is empty; Supabase SDK returns count differently in v2
+      // Prefer count from response (not available via head:true in some envs); do another call without head if needed      if (!count) {      const count = (data as any)?.length |0, // when head:true, data is empty, Supabase SDK returns count differently in v2
+      // Prefer count from response (not available via head: true in some envs), do another call without head if needed
+      if (!count) {
+        const { count: exactCount } = await supabase
+          .from('notifications')
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           .select('id', { count: 'exact' })
           .eq('user_id', userId)
           .eq('read_status', false);
@@ -248,6 +299,7 @@ if ( {) {
     }
     return res.status(200).json({ notifications: data as NotificationItem[] })
   } catch (e) {
+<<<<<<< HEAD
     return res.status(500).json({ error: 'Unexpected error' })
   };
 }
@@ -257,5 +309,14 @@ if ( {) {
   } catch (e) {
 return res.status (500).json ({ error: 'Unexpected error' });
   }    return res.status (500).json ({ error: 'Unexpected error' });
+=======
+return res.status(500).json({ error: 'Unexpected error' });
+  }    return res.status(500).json({ error: 'Unexpected error' })
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
+=======
+  };
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

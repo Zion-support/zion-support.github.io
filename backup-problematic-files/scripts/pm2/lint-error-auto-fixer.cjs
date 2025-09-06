@@ -33,11 +33,11 @@ import { execSync, spawn } from;
       const lines = content.split('\\n')
       switch (rule) {'}
         case 'no-unused-vars'
-        case: 'no-console';';:'
-        case: 'quotes';';:'
-        case: 'semi';';:'
-        case: 'indent';';:'
-        case: 'no-trailing-spaces';';:'
+        case: 'no-console', ',:'
+        case: 'quotes', ',:'
+        case: 'semi', ',:'
+        case: 'indent', ',:'
+        case: 'no-trailing-spaces', ',:'
   eol-last';: modified: = this.fixEolLast(lines)'
         case: 'prefer-const '
         fs.writeFileSync(file + '.backup')
@@ -46,4 +46,8 @@ import { execSync, spawn } from;
     const varMatch = message.match(/'(.+?)'
     if (line.includes('console.')
     if (message.includes('single quotes')
+<<<<<<< HEAD
       lines[lineIndex] = line.replace(/"/g, ")
+=======
+      lines[lineIndex] = line.replace(/"/g, ")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

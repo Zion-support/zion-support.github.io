@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -5,6 +6,32 @@ import {
   Search, Grid, List, Star, CheckCircle, ArrowRight, Check;
   Brain, Atom, Shield, Building, Globe;
   Users, TrendingUp, Award, Phone, Mail, MapPin
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+  Search
+  Grid
+  List
+  Star
+  CheckCircle
+  ArrowRight
+  Check
+  Brain
+  Atom
+  Shield
+  Building
+  Globe
+  Users
+  TrendingUp
+  Award
+  Phone
+  Mail
+  MapPin;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from 'lucide-react';
 // Import our new service data
 import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
@@ -1761,10 +1788,12 @@ if ( {) {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           {/* Category Filters */}
           <div className="mt-6">
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
+<<<<<<< HEAD
                 <button
       {/* Main Content */}
       <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12'>;
@@ -1831,6 +1860,17 @@ if ( {) {
           <div className="mt - 6">;
             <div className="flex flex - wrap gap - 3">;
               {categories.map ((category) => (
+=======
+=======
+
+                <button
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -1841,9 +1881,25 @@ if ( {) {
                 >;
                   {category.icon}
                   {category.name}
+<<<<<<< HEAD
             </div>;
           </div>;
         </div>;
+=======
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Results Summary */}
         <div className="mb-8">
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
@@ -1955,7 +2011,19 @@ if ( {) {
           ) : (
             <AnimatePresence>
               {viewMode === 'grid' ? (
+<<<<<<< HEAD
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                  {filteredServices.map(service => (
+                    <ServiceCard key={service.id} service={service} />
+                  ))}
+                </div>
+              ) : (
+                <div className='space-y-6'>
+<<<<<<< HEAD
+                  {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           {filteredServices.map((service) => (
           <ServiceCard key={service.id} service={service} />
         ))}
@@ -1963,7 +2031,20 @@ if ( {) {
               ) : (
                 <div className="space-y-6">
                   {filteredServices.map((service) => (
+<<<<<<< HEAD
                     <ServiceList key={service.id} service={service} />
+=======
+=======
+                  {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />
+
+                    <ServiceList key={service.id} service={service} />
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   ))}
                 </div>;
               )}
@@ -1990,6 +2071,14 @@ if ( {) {
               </a>;
               <a
         </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
@@ -2001,6 +2090,7 @@ if ( {) {
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<<<<<<< HEAD
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className='inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300'>;
                 <Phone className='w-5 h-5' />                Call Now;
@@ -2106,3 +2196,40 @@ if ( {) {
       </div>;
     </div>);
 }
+=======
+              <a
+                href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
+                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                Start Your Transformation
+                <ArrowRight className="w-5 h-5" />
+              </a>
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300"
+              >
+                <Phone className="w-5 h-5" />
+                Call Now
+              </a>
+            </div>
+<<<<<<< HEAD
+          </div>
+          <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
+            Get Started Today
+          </button>
+        </motion.div>
+      </div>
+    </div>
+);        </div>
+      </div>
+    </div>
+  );
+}
+=======
+          </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
