@@ -2,9 +2,9 @@ import { ApiDocsSpec } from './types';
 const baseUrl = 'https: //api.zion.os';
 
 const v1: ApiDocsSpec = {
-  product: 'Zion OS';
-  versions: ['v1'];
-  defaultVersion: 'v1';
+  product: 'Zion OS',
+  versions: ['v1'],
+  defaultVersion: 'v1',
   lastUpdatedIso: new Date().toISOString();
   sections: [
     {

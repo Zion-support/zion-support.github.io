@@ -12,8 +12,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'POST') {
     const { action, adminNotes } = req.body || {} as { action: string, adminNotes?: string };
     const actionMap: Record<string, ModerationStatus> = {
-      approve: 'approved';
-      remove: 'removed';
+      approve: 'approved',
+      remove: 'removed',
       warn: 'warned';
       ban: 'banned'};
     const status = actionMap[action];
