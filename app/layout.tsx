@@ -1,79 +1,62 @@
-<<<<<<< HEAD
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+import React from 'react';
+import Link from 'next/link';
+import './global-styles.css';
 
-const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Leading AI and Technology Solutions',
-  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
-  keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
+export const metadata = {
+  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
+  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software',
   authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  robots: 'index, follow',
   openGraph: {
-    title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Leading AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI and technology solutions.',
-    images: ['/og-image.jpg'],
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
   },
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#000000',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
 };
 
-=======
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - AI-Powered Solutions',
-  description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services.',
-  keywords: 'AI solutions, business automation, digital transformation, software development, tech consulting',
-}
-
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-<<<<<<< HEAD
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#1f2937" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body className="min-h-screen bg-gray-50 text-gray-900 antialiased">
+        <div id="root">
+          {children}
+        </div>
       </body>
     </html>
   );
-=======
-        {children}
-      </body>
-    </html>
-  )
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
 }
