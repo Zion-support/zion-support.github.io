@@ -1,0 +1,16 @@
+
+
+const React from "react"; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };'`'"`
+
+import _React from 'react'; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
+
+import _React from 'react'; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
+
+import _React from 'react'; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
+<<<<<<< HEAD
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/src/components/ui/badge.jsx
+=======
+
+import _React from 'react'; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

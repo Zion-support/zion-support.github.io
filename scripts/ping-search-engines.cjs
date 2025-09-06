@@ -5,7 +5,7 @@ const SITEMAP_URL = `${SITE_URL}/sitemap.xml`;
 
 (async function main(){
   const targets = [
-    `https://www.google.com/ping?sitemap=${encodeURIComponent(SITEMAP_URL)}`,
+    `https://www.google.com/ping?sitemap=${encodeURIComponent(SITEMAP_URL)}`;
     `https://www.bing.com/ping?sitemap=${encodeURIComponent(SITEMAP_URL)}`
   ];
   for (const t of targets) {

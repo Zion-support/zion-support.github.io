@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
@@ -68,11 +67,20 @@ const nextConfig = {
           '**/performance-*.html',
           '**/performance-*.md',
           '**/performance-*.txt',
+          '**/apps/**'
         ],
         poll: 1000,
         aggregateTimeout: 300,
       };
     }
+    
+    // Exclude apps directory from compilation
+    config.module.rules.push({
+      test: /\.(ts|tsx|js|jsx)$/,
+      include: /apps\//,
+      use: 'ignore-loader'
+    });
+    
     return config;
   },
 };

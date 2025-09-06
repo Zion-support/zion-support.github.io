@@ -1,4 +1,12 @@
 {
+<<<<<<< HEAD
+  "timestamp": "2025-09-05T01:24:11.708Z",
+  "totalDuration": "61s",
+  "results": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 60590,
+=======
 
   "timestamp": "2025-09-05T15:05:30.907Z",
   "totalDuration": "86s",
@@ -6,16 +14,43 @@
     "dependencyFix": {
       "success": true,
       "duration": 79551,
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       "errors": []
     },
     "typescriptFix": {
       "success": false,
+<<<<<<< HEAD
+      "duration": 19,
+=======
       "duration": 25,
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       "errors": [
         "Command failed: node automation/typescript-fixer.cjs"
       ]
     },
     "healthCheck": {
+<<<<<<< HEAD
+      "success": true,
+      "duration": 25,
+      "errors": []
+    },
+    "securityScan": {
+      "success": true,
+      "duration": 581,
+      "errors": []
+    },
+    "performanceOptimize": {
+      "success": true,
+      "duration": 23,
+      "errors": []
+    },
+    "buildTest": {
+      "success": false,
+      "duration": 103,
+      "errors": [
+        "Command failed: npm run build"
+      ]
+=======
       "success": false,
       "duration": 26,
       "errors": [
@@ -43,14 +78,21 @@
         "Command failed: npm run build"
       ]
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     }
   },
   "summary": {
     "totalPhases": 6,
+<<<<<<< HEAD
+    "successfulPhases": 4,
+    "failedPhases": 2,
+    "overallSuccess": false
+=======
 
     "successfulPhases": 1,
     "failedPhases": 5,
     "overallSuccess": false
 
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
   }
 }

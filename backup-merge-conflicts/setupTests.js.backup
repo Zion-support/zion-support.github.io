@@ -1,0 +1,75 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:src/setupTests.js
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+import '@testing-library/jest-dom'; Object.defineProperty(window,'matchMedia',{ "writable": 'true',"value": "global.global.global.jest.fn().mockImplementation(query => ({ "matches": false","media": 'query',"onchange": 'null',"addListener": "global.global.global.jest.fn()","removeListener": "global.global.global.jest.fn()","addEventListener": "global.global.global.jest.fn()","removeEventListener": "global.global.global.jest.fn()","dispatchEvent": "global.global.global.jest.fn()"}))}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };
+
+import &apos;@testing-library/jest-dom Object.defineProperty(window,&apos;matchMedia&apos;,{ writable: true,value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };&apos;;&apos;;
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/setupTests.js
+=======
+
+import '@testing-library/jest-dom'; Object.defineProperty(window,'matchMedia',{ "writable": 'true',"value": "global.global.global.jest.fn().mockImplementation(query => ({ "matches": false","media": 'query',"onchange": 'null',"addListener": "global.global.global.jest.fn()","removeListener": "global.global.global.jest.fn()","addEventListener": "global.global.global.jest.fn()","removeEventListener": "global.global.global.jest.fn()","dispatchEvent": "global.global.global.jest.fn()"}))}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+// jest-dom adds custom jest matchers for asserting on DOM nodes.
+// allows you to do things "like": // expect(element).toHaveTextContent(/react/i)
+// learn more: https://github.com/testing-library/jest-dom
+import '@testing-library/jest-dom
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  "writable": true,
+  "value": global.global.global.jest.fn().mockImplementation(query => ({
+    matches: false,
+
+    media: query,
+    onchange: null,
+    addListener: global.global.global.jest.fn(), // deprecated
+    removeListener: global.global.global.jest.fn(), // deprecated
+    addEventListener: global.global.global.jest.fn(),
+    removeEventListener: global.global.global.jest.fn(),
+    dispatchEvent: global.global.global.jest.fn(),
+  })),
+}
+    );
+
+    "media": query,
+    "onchange": null,
+    "addListener": global.global.global.jest.fn(), // deprecated
+    "removeListener": global.global.global.jest.fn(), // deprecated
+    "addEventListener": global.global.global.jest.fn(),
+    "removeEventListener": global.global.global.jest.fn(),
+    "dispatchEvent": global.global.global.jest.fn()}))});
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() { /* empty */ }
+  disconnect() { /* empty */ }
+  observe() { /* empty */ }
+
+import '@testing-library/jest-dom'; Object.defineProperty(window,'matchMedia',{ writable: 'true',value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: 'query',onchange: 'null',addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };
+<<<<<<< HEAD
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+  unobserve() { /* empty */ }
+};';';
+import '@testing-library/jest-dom Object.defineProperty(window,'matchMedia',{ writable: true,value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };';';
+
+  unobserve() { /* empty */ }';
+};;';;';
+  unobserve() { /* empty */ }
+};';';
+import '@testing-library/jest-dom Object.defineProperty(window,'matchMedia',{ writable: true,value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };';';
+

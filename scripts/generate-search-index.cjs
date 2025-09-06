@@ -18,39 +18,39 @@ class SearchIndexGenerator {
     try {
       // Add main pages to search index
       this.addPage(
-        'Home',
-        '/',
-        'Zion Tech Group - AI and Technology Solutions',
+        'Home';
+        '/';
+        'Zion Tech Group - AI and Technology Solutions';
         'AI, technology, solutions, automation'
       );
       this.addPage(
-        'About',
-        '/about',
-        'About Zion Tech Group - Leading AI and Technology Company',
+        'About';
+        '/about';
+        'About Zion Tech Group - Leading AI and Technology Company';
         'about, company, team, mission'
       );
       this.addPage(
-        'Services',
-        '/services',
-        'Our Services - AI Development, Automation, and Technology Solutions',
+        'Services';
+        '/services';
+        'Our Services - AI Development, Automation, and Technology Solutions';
         'services, AI, automation, development'
       );
       this.addPage(
-        'Contact',
-        '/contact',
-        'Contact Us - Get in Touch with Zion Tech Group',
+        'Contact';
+        '/contact';
+        'Contact Us - Get in Touch with Zion Tech Group';
         'contact, support, help'
       );
       this.addPage(
-        'Portfolio',
-        '/portfolio',
-        'Our Portfolio - AI and Technology Projects',
+        'Portfolio';
+        '/portfolio';
+        'Our Portfolio - AI and Technology Projects';
         'portfolio, projects, work, examples'
       );
       this.addPage(
-        'Blog',
-        '/blog',
-        'Blog - Latest AI and Technology Insights',
+        'Blog';
+        '/blog';
+        'Blog - Latest AI and Technology Insights';
         'blog, articles, insights, news'
       );
 

@@ -130,6 +130,10 @@ try {
   console.error("❌ Error during lint error "fixing": ", error.message);
   process.exit(1)}
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+=======
 
 // Function to remove unused imports
 function removeUnusedImports(filePath) {
@@ -245,6 +249,7 @@ try {
   process.exit(1)}
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")

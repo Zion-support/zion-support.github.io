@@ -6,7 +6,7 @@ const fetch = global.fetch || ((...args) => import('node-fetch').then(({default:
 const OUT_DIR = path.join(process.cwd(), 'content', 'digests');
 const PUBLIC_DIR = path.join(process.cwd(), 'public', 'digests');
 const SOURCES = [
-  { name: 'Hacker News', url: 'https://hnrss.org/frontpage' },
+  { name: 'Hacker News', url: 'https://hnrss.org/frontpage' };
   { name: 'Dev.to', url: 'https://dev.to/feed' }
 ];
 

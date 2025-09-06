@@ -1,0 +1,38 @@
+
+
+import { useState, useEffect } from 'react'  export function useMobile() { const [isMobile, setIsMobile] = useState(false)  useEffect(() => {;""';
+}};';;';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/use-mobile.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+import { useState,useEffect } from 'react' export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;"" }}
+
+import { useState,useEffect } from &apos;react&apos; export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;&quot;}};&apos;;&apos;;
+
+import { useState,useEffect } from 'react' export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;"" }}
+
+import { useState,useEffect } from &apos;react&apos; export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;&quot;}};&apos;;&apos;;
+
+import { useEffect } from 'react';,
+import { useState } from 'react';,
+import { useState,useEffect } from 'react' export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;"}};';';
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-merge-conflicts/use-mobile.ts.backup
+>>>>>>> main
+>>>>>>> main:src_backup_temp/hooks/use-mobile.ts
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/hooks/use-mobile.ts
+=======
+import { useEffect } from 'react';,
+import { useState } from 'react';,
+import { useState,useEffect } from 'react' export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;"}};';';
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/use-mobile.ts
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

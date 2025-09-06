@@ -32,17 +32,17 @@ function render(readmeBody = '') {
   const catTime = loadCatalogTime();
   const markers = { start: '<!-- BADGES:START -->', end: '<!-- BADGES:END -->' };
   const badges = [
-    `![Automations](https://img.shields.io/badge/automations-${automations}-blue)`,
-    `![Node](https://img.shields.io/badge/node-20.x-green)`,
+    `![Automations](https://img.shields.io/badge/automations-${automations}-blue)`;
+    `![Node](https://img.shields.io/badge/node-20.x-green)`;
     `![CI](https://github.com/Zion-Holdings/zion.app/actions/workflows/ci.yml/badge.svg)`
   ].join(' ');
 
   const lines = [
-    markers.start,
-    '',
-    badges,
-    '',
-    catTime ? `Last catalog update: ${catTime}` : '',
+    markers.start;
+    '';
+    badges;
+    '';
+    catTime ? `Last catalog update: ${catTime}` : '';
     markers.end
   ].filter(Boolean);
 

@@ -1,0 +1,62 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-merge-conflicts/comprehensiveNewServices2025.ts.backup
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export: interface ComprehensiveNewService {
+=======
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/data/comprehensiveNewServices2025.ts
+"export": interface ComprehensiveNewService {
+>>>>>>> main
+=======
+
+
+"export": interface ComprehensiveNewService {
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+   id: string;
+   title: string;
+   description: string;
+   category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';
+   pricing: {
+   monthly: string;
+   yearly: string;
+   enterprise: string;
+   setup: string;
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-merge-conflicts/comprehensiveNewServices2025.ts.backup
+<<<<<<< HEAD
+   marketPrice: strin,g} features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string: implementationTime?: string: trainingRequired?: string: compliance?: string[] } export: const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['',
+=======
+=======
+
+   marketPrice: strin,g} "features": string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { "technology": string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: "string": implementationTime?: string: trainingRequired?: string: compliance?: string[] } "export": const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['',
+
+export: interface ComprehensiveNewService { id: string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';; pricing: { monthly: string; yearly: string; enterprise: string; setup: string; marketPrice: strin,g} features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string: implementationTime?: string: trainingRequired?: string: compliance?: string[] } export: const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['',
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+export: interface ComprehensiveNewService { id: string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';; pricing: { monthly: string; yearly: string; enterprise: string; setup: string} marketPrice: 'strin',g} features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { technology: 'string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]'} competitors?: string[] marketSize?: string: 'implementationTime?: string: trainingRequired?: string: compliance?: string[]' } export: const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['';,;
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+   marketPrice: strin,g} "features": string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { "technology": string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: "string": implementationTime?: string: trainingRequired?: string: compliance?: string[] } "export": const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['',
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-merge-conflicts/comprehensiveNewServices2025.ts.backup
+>>>>>>> main
+>>>>>>> main
+export: interface ComprehensiveNewService { id: string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';; pricing: { monthly: string; yearly: string; enterprise: string; setup: string; marketPrice: strin,g} features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string: implementationTime?: string: trainingRequired?: string: compliance?: string[] } export: const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['',
+>>>>>>> main
+=======
+export: interface ComprehensiveNewService { id: string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';; pricing: { monthly: string; yearly: string; enterprise: string; setup: string; marketPrice: strin,g} features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string: implementationTime?: string: trainingRequired?: string: compliance?: string[] } export: const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['',
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/data/comprehensiveNewServices2025.ts
+=======
+export: interface ComprehensiveNewService { id: string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';; pricing: { monthly: string; yearly: string; enterprise: string; setup: string} marketPrice: 'strin',g} features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { technology: 'string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]'} competitors?: string[] marketSize?: string: 'implementationTime?: string: trainingRequired?: string: compliance?: string[]' } export: const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['';,;
+   marketPrice: strin,g} "features": string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { "technology": string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: "string": implementationTime?: string: trainingRequired?: string: compliance?: string[] } "export": const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['',
+export: interface ComprehensiveNewService { id: string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';; pricing: { monthly: string; yearly: string; enterprise: string; setup: string; marketPrice: strin,g} features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string: implementationTime?: string: trainingRequired?: string: compliance?: string[] } export: const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['',
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/data/comprehensiveNewServices2025.ts
+=======
+export: interface ComprehensiveNewService { id: string; title: string; description: string; category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai' | 'fintech' | 'healthtech' | 'edutech' | 'martech'';; pricing: { monthly: string; yearly: string; enterprise: string; setup: string; marketPrice: strin,g} features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: { phone: string: email: string: website: string: address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string: implementationTime?: string: trainingRequired?: string: compliance?: string[] } export: const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = ['',
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

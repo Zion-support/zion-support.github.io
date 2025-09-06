@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    const content = fs.readFileSync(filePath, 'utf8')
+    const corruptionPatterns = [/import.*from.*['']
+      /import.*\{.*\}.*from.*['']
+      /['"]"use"
+    .replace(/import.*from.*['"]react;['"]/g, ")
+    .replace(/import.*\{.*\}.*from.*['')]
+      return match.replace(/['"]react;['"]/, ")
+    .replace(/['"]"use": client['"]/, '"use client")
+    .replace(/"declare")
+    .replace(/script1\."async")
+    .replace(/script1\."src")
+    .replace(/['"]react;['"]/g, ")
+    .replace(/['"]framer-motion;['"]/g, ")
+    .replace(/['"]lucide-react;['"]/g, ")
+=======
 const fs = require('fs');
 const path = require('path');
 
@@ -67,8 +86,7 @@ const: AccessibilityEnhancer: React.FC = () => {
   return null;
 };
 
-export default AccessibilityEnhancer;`,
-
+export default AccessibilityEnhancer;`;
   'components/OptimizedImage.tsx': `import React from 'react';
 import Image from 'next/image';
 
@@ -104,8 +122,7 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
 };
 
-export default OptimizedImage;`,
-
+export default OptimizedImage;`;
   'components/ContactForm.tsx': `import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -134,8 +151,8 @@ const: ContactForm: React.FC = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
-      [name]: value,
+      ...prev;
+      [name]: value;
     }));
   };
 
@@ -297,3 +314,4 @@ Object.entries(corruptedFiles).forEach(([filePath, content]) => {
 });
 
 console.log('Fixed corrupted files');
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

@@ -1,0 +1,16 @@
+
+
+const React,{ useState } from "react"; import { useState } from "react"; export default function Page() { return; }; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} """""
+
+import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
+
+import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
+
+import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
+<<<<<<< HEAD
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/src/components/profile/AvatarUpload.jsx
+=======
+
+import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

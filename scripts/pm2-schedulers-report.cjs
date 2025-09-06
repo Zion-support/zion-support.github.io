@@ -54,32 +54,32 @@ class PM2SchedulersReport {
     
     const processes = await this.getPM2Status();
     const report = {
-      generated: new Date().toISOString(),
+      generated: new Date().toISOString();
       summary: {
-        total: processes.length,
-        running: 0,
-        stopped: 0,
-        errored: 0,
+        total: processes.length;
+        running: 0;
+        stopped: 0;
+        errored: 0;
         restarts: 0
-      },
-      processes: [],
+      };
+      processes: [];
       recommendations: []
     };
 
     for (const process of processes) {
       const processInfo = {
-        name: process.name,
-        id: process.pm_id,
-        status: process.pm2_env.status,
-        uptime: process.pm2_env.pm_uptime,
-        restarts: process.pm2_env.restart_time,
-        memory: process.monit.memory,
-        cpu: process.monit.cpu,
-        pid: process.pid,
+        name: process.name;
+        id: process.pm_id;
+        status: process.pm2_env.status;
+        uptime: process.pm2_env.pm_uptime;
+        restarts: process.pm2_env.restart_time;
+        memory: process.monit.memory;
+        cpu: process.monit.cpu;
+        pid: process.pid;
         pm2_env: {
-          instances: process.pm2_env.instances,
-          exec_mode: process.pm2_env.exec_mode,
-          node_version: process.pm2_env.node_version,
+          instances: process.pm2_env.instances;
+          exec_mode: process.pm2_env.exec_mode;
+          node_version: process.pm2_env.node_version;
           pm_cwd: process.pm2_env.pm_cwd
         }
       };
@@ -101,24 +101,24 @@ class PM2SchedulersReport {
       // Generate recommendations
       if (process.pm2_env.restart_time > 10) {
         report.recommendations.push({
-          process: process.name,
-          issue: 'High restart count',
+          process: process.name;
+          issue: 'High restart count';
           recommendation: 'Investigate why this process keeps restarting'
         });
       }
 
       if (process.monit.memory > 500 * 1024 * 1024) { // 500MB
         report.recommendations.push({
-          process: process.name,
-          issue: 'High memory usage',
+          process: process.name;
+          issue: 'High memory usage';
           recommendation: 'Consider memory optimization or increase memory limit'
         });
       }
 
       if (process.monit.cpu > 80) {
         report.recommendations.push({
-          process: process.name,
-          issue: 'High CPU usage',
+          process: process.name;
+          issue: 'High CPU usage';
           recommendation: 'Investigate CPU-intensive operations'
         });
       }
@@ -127,16 +127,16 @@ class PM2SchedulersReport {
     // Add general recommendations
     if (report.summary.errored > 0) {
       report.recommendations.push({
-        process: 'System',
-        issue: 'Processes in error state',
+        process: 'System';
+        issue: 'Processes in error state';
         recommendation: 'Check PM2 logs and restart failed processes'
       });
     }
 
     if (report.summary.restarts > 50) {
       report.recommendations.push({
-        process: 'System',
-        issue: 'High restart frequency',
+        process: 'System';
+        issue: 'High restart frequency';
         recommendation: 'Review process stability and error handling'
       });
     }

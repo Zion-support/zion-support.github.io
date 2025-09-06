@@ -1,0 +1,3 @@
+ </div>) ) 
+}</div> </section> <section className="space-y-4" id="grants" > <h2 className="text-2xl font-semibold" >Grants Issued</h2> <p className="text-gray-600 dark:text-gray-300" >Cross-multiverse grants across chains, rollups, and alternate compute realms.</p> <ul className="list-disc list-inside space-y-2 text-sm" > <li>Seed safety tooling and evals R&D — Milestone 1 (Pending) </li> <li>Open dataset creation for multilingual benchmarks — Milestone 0 (Planned) </li> <li>Agent interoperability standards and sandbox — RFP (Open) </li> </ul> </section> </section> </div> </>) 
+}

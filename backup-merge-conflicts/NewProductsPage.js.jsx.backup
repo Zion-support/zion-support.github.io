@@ -1,0 +1,14 @@
+
+
+const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { NEW_PRODUCTS } from "@/data/newProductsData"; const CATEGORY_FILTERS = Array.from(new Set(NEW_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function NewProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage };'"'"
+
+const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { NEW_PRODUCTS } from "@/data/newProductsData"; const CATEGORY_FILTERS = Array.from(new Set(NEW_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function NewProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage };'"'"
+
+const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { NEW_PRODUCTS } from "@/data/newProductsData"; const CATEGORY_FILTERS = Array.from(new Set(NEW_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function NewProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage };'"'"
+<<<<<<< HEAD
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/src/pages.disabled/NewProductsPage.js.jsx
+=======
+
+const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { NEW_PRODUCTS } from "@/data/newProductsData"; const CATEGORY_FILTERS = Array.from(new Set(NEW_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function NewProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage }; export { CATEGORY_FILTERS,NewProductsPage };'"'"
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

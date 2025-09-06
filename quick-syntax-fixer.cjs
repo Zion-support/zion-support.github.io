@@ -61,14 +61,14 @@ class QuickSyntaxFixer {
 
     // Fix critical files first
     const criticalFiles = [
-      'components/AccessibilityEnhancer.tsx',
-      '.eslintrc.js',
-      'ecosystem.config.cjs',
-      'run-automation-suite.cjs',
-      'scripts/fix-syntax-errors.cjs',
-      'scripts/performance-monitor.cjs',
-      'scripts/security-audit.cjs',
-      'scripts/health-check.cjs',
+      'components/AccessibilityEnhancer.tsx';
+      '.eslintrc.js';
+      'ecosystem.config.cjs';
+      'run-automation-suite.cjs';
+      'scripts/fix-syntax-errors.cjs';
+      'scripts/performance-monitor.cjs';
+      'scripts/security-audit.cjs';
+      'scripts/health-check.cjs';
     ];
 
     let fixedCount = 0;
@@ -90,3 +90,17 @@ if (require.main === module) {
 }
 
 module.exports = QuickSyntaxFixer;
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+      let content = fs.readFileSync(filePath, 'utf8')
+        .replace(/(\w+):\s*([^,]+),/g, '$"1"
+        .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
+        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
