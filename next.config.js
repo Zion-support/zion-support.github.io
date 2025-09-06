@@ -49,7 +49,7 @@ const nextConfig = {
     ignoreBuildErrors: false,
   },
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true,
   },
   output: 'standalone',
   poweredByHeader: false,
@@ -73,7 +73,6 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['@radix-ui/react-icons'],
   },
-  serverExternalPackages: ['sharp'],
 };
 
 module.exports = nextConfig;

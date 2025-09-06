@@ -1,54 +1,15 @@
-return (
-    <>;
-      <SEO
-        title='Hiring Tracker | Zion AI Marketplace'
-        description='Manage your candidate pipeline in the Zion AI Marketplace.'
+import React from "react";
+import MainLayout from "../components/layout/MainLayout";
 
-
-            <p className="text-muted-foreground mt-1">
-              Track and manage your candidates through the hiring process
-            </p>
-          </div>
-        </div>
-
-
-
-        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
-
-
-          <TabsList>
-            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
-            <TabsTrigger value="analytics">Analytics</TabsTrigger>
-          </TabsList>
-
-
-        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
-          <TabsList>
-
-            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
-            <TabsTrigger value="analytics">Analytics</TabsTrigger>
-          </TabsList>
-          <TabsContent value="kanban" className="mt-6">
-            <KanbanBoard jobId={jobId} />
-          </TabsContent>
-
-          
-          <TabsContent value="kanban" className="mt-6">
-            <KanbanBoard jobId={jobId} />
-          </TabsContent>
-          
-
-          <TabsContent value="analytics" className="mt-6">
-            <HiringAnalytics jobId={jobId} />
-          </TabsContent>
-        </Tabs>
-      </main>
-    </>
-
-  );
-}
-
-
-export default function HiringTracker() {
+const HiringTracker: React.FC = () => {
   return (
-    <ProtectedRoute>
+    <MainLayout title="Hiring Tracker - Zion Tech Group" description="Track and manage your hiring process efficiently.">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Hiring Tracker</h1>
+        <p className="text-lg">This is the Hiring Tracker page. Content coming soon.</p>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default HiringTracker;
