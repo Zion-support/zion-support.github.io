@@ -7,7 +7,6 @@ export const metadata = {
   keywords: 'invoice automation, smart invoicing, AI billing, payment tracking, financial analytics, invoice generator'
 };
 
-export default function SmartInvoiceGeneratorPage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
@@ -24,15 +23,13 @@ export default function SmartInvoiceGeneratorPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="#contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Started
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              >Get Started</Link>
               </Link>
               <Link
                 href="#features"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Learn More
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+              >Learn More</Link>
               </Link>
             </div>
           </div>
@@ -84,26 +81,71 @@ export default function SmartInvoiceGeneratorPage() {
           </p>
           <Link
             href="/contact"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Start Your Free Trial
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+          >Start Your Free Trial</Link>
           </Link>
         </div>
       </div>
     </div>
   );
 }
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <TestimonialCard
+            quote="Smart Invoice Generator has revolutionized our billing process. We're saving 10 hours per week and getting paid 40% faster."
+            author="Sarah Johnson"
+            role="CEO, Creative Agency"
+            company="Design Studio Pro"
+          />
+          <TestimonialCard
+            quote="The AI features are incredible. It automatically detects errors and suggests improvements. Our invoice accuracy is now 99%."
+            author="Michael Chen"
+            role="CFO, Tech Startup"
+            company="InnovateTech Solutions"
+          />
+          <TestimonialCard
+            quote="As a freelancer, this tool has been a game-changer. I can create professional invoices in seconds and track everything easily."
+            author="Emily Rodriguez"
+            role="Freelance Designer"
+            company="Independent Contractor"
+          />
+        </div>
+      </section>
 
-function FeatureCard({
-  icon,
-  title,
-  description,
-  benefits,
+      {/* Contact CTA */}
+      <section className="py-12 bg-green-600 rounded-lg text-white text-center">
+        <h2 className="text-3xl font-bold mb-4">
+          Ready to Transform Your Billing?
+        </h2>
+        <p className="text-xl mb-8 max-w-2xl mx-auto">
+          Join thousands of businesses using our smart invoicing platform to get
+          paid faster and work more efficiently.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=Smart Invoice Generator Demo Request"
+            className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          >
+            Start Free Trial
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
+        <div className="mt-8 text-sm">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+          <p>Email: kleber@ziontechgroup.com</p>
+        </div>
+      </section>
+    </div>
+  );
+}
+
 }: {
-  icon: string;
-  title: string;
-  description: string;
-  benefits: string[];
 }) {
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
@@ -122,28 +164,11 @@ function FeatureCard({
   );
 }
 
-function PricingCard({
-  name,
-  price,
-  period,
-  description,
-  features,
-  cta,
-  popular,
 }: {
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  cta: string;
-  popular: boolean;
 }) {
   return (
     <div
       className={`relative p-8 rounded-lg border-2 ${popular ? "border-green-500 bg-green-50" : "border-gray-200 bg-white"} shadow-lg`}
-    >
-      {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
             Most Popular
@@ -164,7 +189,7 @@ function PricingCard({
             <svg
               className="w-5 h-5 text-green-500 mr-3"
               fill="currentColor"
-              viewBox="0 0 20 20"
+              viewBox="0 0 20 20">
             >
               <path
                 fillRule="evenodd"
@@ -178,26 +203,14 @@ function PricingCard({
       </ul>
       <a
         href="mailto:kleber@ziontechgroup.com?subject=Smart Invoice Generator - {name} Plan"
-        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-          popular
-            ? "bg-green-600 text-white hover:bg-green-700"
-            : "bg-gray-900 text-white hover:bg-gray-800"
         }`}
-      >
         {cta}
       </a>
     </div>
   );
 }
 
-function MetricCard({
-  number,
-  label,
-  description,
 }: {
-  number: string;
-  label: string;
-  description: string;
 }) {
   return (
     <div className="text-center p-6 bg-white rounded-lg shadow-md border border-gray-200">
@@ -208,16 +221,7 @@ function MetricCard({
   );
 }
 
-function UseCaseCard({
-  icon,
-  title,
-  description,
-  benefits,
 }: {
-  icon: string;
-  title: string;
-  description: string;
-  benefits: string[];
 }) {
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
@@ -236,16 +240,7 @@ function UseCaseCard({
   );
 }
 
-function TestimonialCard({
-  quote,
-  author,
-  role,
-  company,
 }: {
-  quote: string;
-  author: string;
-  role: string;
-  company: string;
 }) {
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">

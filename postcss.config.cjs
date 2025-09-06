@@ -1,6 +1,7 @@
 module.exports = {
   plugins: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:postcss.config.cjs
     tailwindcss: {},
 ========
@@ -30,3 +31,8 @@ module.exports = {
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> 205f16ce4ac3a8c2ac0b2e278708c4357550db22
+=======
+    autoprefixer: {},
+  },
+}
+>>>>>>> main

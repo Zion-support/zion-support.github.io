@@ -7,7 +7,6 @@ export const metadata = {
   keywords: 'AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meetings'
 };
 
-export default function AIMeetingAssistantPage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
@@ -21,15 +20,15 @@ export default function AIMeetingAssistantPage() {
           automatic action item extraction.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/contact"
-            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=AI Meeting Assistant Demo"
+            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
           >
-            Get Started
-          </Link>
-          <Link
-            href="#demo"
-            className="border border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
+            Try Free Demo
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors">
           >
             Watch Demo
           </Link>
@@ -84,9 +83,8 @@ export default function AIMeetingAssistantPage() {
           <Link
             href="/contact"
             className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-          >
-            Get Started
-          </Link>
+            >
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <TestimonialCard
@@ -122,7 +120,7 @@ export default function AIMeetingAssistantPage() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="mailto:kleber@ziontechgroup.com?subject=AI Meeting Assistant Demo Request"
-            className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
           >
             Start Your Free Trial
           </a>
