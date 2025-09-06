@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const DevopsAutomationChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const DevopsAutomationChat = () => {return (;
     <div>;
       <Head>;
         <title>DevopsAutomationChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const DevopsAutomationChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default DevopsAutomationChat;

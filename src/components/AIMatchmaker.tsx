@@ -10,7 +10,7 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 interface AIMatchmakerProps {
   serviceType?: string
 onMatchSelect?: (match: any) => void
-className?: string 
+className?: string
 }if (!query.trim () ) {
   toast ({
   return
@@ -20,22 +20,21 @@ serviceType
 3)
 }catch (error) {'
   logErrorToProduction ('Error during AI matching:', {
-  data: error 
+  data: error
 })
 toast ({
-  //Set empty matches to show no results found UI setMatches ([]) 
+  //Set empty matches to show no results found UI setMatches ([])
 }finally {
   setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 interface AIMatchmakerProps {
-  serviceType?: string,
-  onMatchSelect?: (match: any,) => void,
+  serviceType?: string
+  onMatchSelect?: (match: any,) => void
   className?: string
 }
-
 export function AIMatchmaker({
-  serviceType = '',
-  onMatchSelect,
-  className,
+  serviceType = ''
+  onMatchSelect
+  className
 }: AIMatchmakerProps) {
   const [query, setQuery] = useState('')
   const [isMatchmaking, setIsMatchmaking] = useState(false)
@@ -44,13 +43,12 @@ export function AIMatchmaker({
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
-        title: 'Please enter a description',
-        description: "Tell us what you're looking for so we can find matches.",
-        variant: 'destructive',
+        title: 'Please enter a description'
+        description: "Tell us what you're looking for so we can find matches."
+        variant: 'destructive'
       })
       return
     }
-
     setIsMatchmaking(true)
     setHasSearched(true)
     try {
@@ -60,16 +58,16 @@ export function AIMatchmaker({
       logInfo('AI matching results:', { data: results })
       setMatches(results)
       toast({
-        title: 'Matches Found',
-        description: `Found ${results.length} matches based on your description.`,
+        title: 'Matches Found'
+        description: `Found ${results.length} matches based on your description.`
       })
     } catch (error) {
       logErrorToProduction('Error during AI matching:', { data: error })
       toast({
-        title: 'Matching Error',
+        title: 'Matching Error'
         description:
-          "We couldn't find matches for your request. Please try again.",
-        variant: 'destructive',
+          "We couldn't find matches for your request. Please try again."
+        variant: 'destructive'
       })
       // Set empty matches to show no results found UI
       setMatches([])
@@ -79,7 +77,7 @@ export function AIMatchmaker({
   }
   const handleItemSelect = (item: any) => {    if (onMatchSelect) {
       // Find the original MatchResult that contains this item
-      const matchResult = matches.find(match => match.item.id === item.id),
+      const matchResult = matches.find(match => match.item.id === item.id)
       if (matchResult) {
         onMatchSelect(matchResult)
       }
@@ -123,7 +121,6 @@ export function AIMatchmaker({
               )}
             </Button>
           </div>
-
           {hasSearched && (
             <AIMatchingResults
               matches={matchItems}

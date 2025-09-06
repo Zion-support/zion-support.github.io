@@ -1,34 +1,32 @@
 import React from 'react';
 import Head from 'next/head';
 import {
-  Check,
-  ShieldCheck,
-  TrendingUp,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,;
+  Check
+  ShieldCheck
+  TrendingUp
+  Clock
+  Phone
+  Mail
+  MapPin
+  ExternalLink;
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 export default function AIEvalsPage() {
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  };
-
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
+  }
   const features = [
-    'Golden datasets and synthetic evals',
-    'Hallucination and grounding score',
-    'Toxicity, bias and safety metrics',
-    'LLM version comparison reports',
-    'CI quality gates and webhooks',
-    'Latency and cost KPIs with budgets',
+    'Golden datasets and synthetic evals'
+    'Hallucination and grounding score'
+    'Toxicity, bias and safety metrics'
+    'LLM version comparison reports'
+    'CI quality gates and webhooks'
+    'Latency and cost KPIs with budgets'
   ];
-
   return (
     <QuantumHolographicMatrixBackground>
       <Head>
@@ -39,7 +37,6 @@ export default function AIEvalsPage() {
         />
         <link rel='canonical' href='https://ziontechgroup.com/ai-evals' />
       </Head>
-
       <section className='min-h-screen pt-28 pb-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-12'>
@@ -51,7 +48,6 @@ export default function AIEvalsPage() {
               safe, trustworthy AI.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10'>
             <Card className='lg:col-span-2 bg-black/30 border border-cyan-500/30'>
               <div className='p-6'>
@@ -94,7 +90,6 @@ export default function AIEvalsPage() {
               </div>
             </Card>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12'>
             <Card className='p-6 bg-black/30 border border-purple-500/30'>
               <h3 className='text-lg font-semibold mb-2'>
@@ -120,7 +115,6 @@ export default function AIEvalsPage() {
               </p>
             </Card>
           </div>
-
           <div className='bg-black/20 border border-cyan-500/30 rounded-2xl p-6'>
             <h3 className='text-xl font-semibold text-white mb-4 text-center'>
               Contact

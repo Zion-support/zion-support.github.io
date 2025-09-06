@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const CybersecurityChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const CybersecurityChat = () => {return (;
     <div>;
       <Head>;
         <title>CybersecurityChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const CybersecurityChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default CybersecurityChat;

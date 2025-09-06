@@ -7,19 +7,18 @@ function sanitizeCode(input: string): string {
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "");
 }
-
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {
   if (req.method !== "POST") return res.status($1).json({ $2 });
-  const { name, niche, socials, payout_method, desired_code } = req.body || {};
-  if (!name || !desired_code) return res.status($1).json({ $2 });
+  const { name, niche, socials, payout_method, desired_code } = req.body |{}
+  if (!name |!desired_code) return res.status($1).json({ $2 });
   const code = sanitizeCode(desired_code);
   if (!code) return res.status($1).json({ $2 });
   const usingPlaceholder =
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
+    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
       "placeholder-key";
   try {
     if (usingPlaceholder) {
@@ -27,7 +26,6 @@ export default async function handler(
         .status(200)
         .json({ ok: true, code, status: "pending", mock: true });
     }
-
     const supabase = getServerSupabase();
     const { data: existing, error: existingErr } = await supabase
       .from("partners")
@@ -37,13 +35,13 @@ export default async function handler(
     if (existingErr) return res.status($1).json({ $2 });
     if (existing) return res.status($1).json({ $2 });
     const { error } = await supabase.from("partners").insert({
-      code,
-      name,
-      niche: niche || null,
-      socials: socials || null,
-      payout_method: payout_method || null,
-      status: "pending",
-      commission_rate: 0.15,
+      code
+      name
+      niche: niche |null
+      socials: socials |null
+      payout_method: payout_method |null
+      status: "pending"
+      commission_rate: 0.15
     });
     if (error) return res.status(500).json({ error: "Database error" });
     return res.status(200).json({ ok: true, code, status: "pending" });

@@ -12,17 +12,16 @@ import {Link} from "react-router-dom";
 export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
   const { isAuthenticated } = useAuth();
-  
   return (
     <>
-      <SEO 
-        title="Zion Hire AI - White-labeled AI Recruiting Assistant" 
+      <SEO
+        title="Zion Hire AI - White-labeled AI Recruiting Assistant"
         description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience."
       />
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section 
+        <section
           className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24"
           style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
         >
@@ -33,12 +32,12 @@ export default function ZionHireAI() {
                   {isWhitelabel ? `${brandName} Recruiting Assistant` : "Zion Hire AI"}
                 </h1>
                 <p className="text-lg text-zion-slate-light max-w-[600px]">
-                  Empower your team with AI-driven talent acquisition. Streamline your hiring process, 
+                  Empower your team with AI-driven talent acquisition. Streamline your hiring process
                   improve candidate matches, and enhance the applicant experience.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-zion-purple hover:bg-zion-purple-light text-white"
                     asChild
                   >
@@ -46,8 +45,8 @@ export default function ZionHireAI() {
                       Get Started <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     size="lg"
                     className="bg-transparent border-white text-white hover:bg-white/10"
                     asChild
@@ -69,18 +68,16 @@ export default function ZionHireAI() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md: px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight">Powerful AI Hiring Tools</h2>
               <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
-                Our comprehensive suite of AI-powered hiring tools help you streamline your recruiting process,
+                Our comprehensive suite of AI-powered hiring tools help you streamline your recruiting process
                 find better candidates, and make data-driven decisions.
               </p>
             </div>
-            
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card className="bg-card border border-border">
                 <CardHeader>
@@ -107,7 +104,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-              
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <PenTool className="h-10 w-10 text-zion-purple mb-2" />
@@ -133,7 +129,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-              
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
@@ -159,7 +154,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-              
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <Globe className="h-10 w-10 text-zion-purple mb-2" />
@@ -185,7 +179,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-              
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <BarChart3 className="h-10 w-10 text-zion-purple mb-2" />
@@ -211,7 +204,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-              
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <Shield className="h-10 w-10 text-zion-purple mb-2" />
@@ -240,17 +232,16 @@ export default function ZionHireAI() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="bg-zion-blue-dark py-16">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-8">
-              Join leading companies using Zion Hire AI to find better talent faster, 
+              Join leading companies using Zion Hire AI to find better talent faster
               reduce time-to-hire, and improve candidate experience.
             </p>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-zion-purple hover: bg-zion-purple-light text-white"
               asChild
             >

@@ -13,33 +13,32 @@ interface AIMatchingResultsProps {
   isLoading?: boolean
   projectDescription?: string
   serviceType?: string;interface AIMatchingResultsProps {
-  matches: MatchResultItem[],
-  onSelectMatch?: (match: MatchResultItem,) => void,
-  isLoading?: boolean,
-  projectDescription?: string,
+  matches: MatchResultItem[]
+  onSelectMatch?: (match: MatchResultItem,) => void
+  isLoading?: boolean
+  projectDescription?: string
   serviceType?: string
 }
-
 export function AIMatchingResults({
-  matches,
-  onSelectMatch,
-  isLoading = false,
-  projectDescription = '',
-  serviceType: _serviceType = '',
+  matches
+  onSelectMatch
+  isLoading = false
+  projectDescription = ''
+  serviceType: _serviceType = ''
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState('all')
   // Group matches by category
   const categories = {
-    all: matches,
+    all: matches
     talent: matches.filter(match =>
       match.category.toLowerCase().includes('talent')
-    ),
+    )
     services: matches.filter(match =>
       match.category.toLowerCase().includes('service')
-    ),
+    )
     equipment: matches.filter(match =>
       match.category.toLowerCase().includes('equipment')
-    ),
+    )
   }
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
@@ -60,7 +59,6 @@ export function AIMatchingResults({
       </div>
     )
   }
-
   if (matches.length === 0) {
     return (
       <Card className='bg-zion-blue-dark border-zion-blue-light text-center p-6'>
@@ -81,7 +79,6 @@ export function AIMatchingResults({
       </Card>
     )
   }
-
   return (
     <div className='space-y-4'>
       <Tabs
@@ -116,7 +113,6 @@ export function AIMatchingResults({
             Equipment ({categories.equipment.length})
           </TabsTrigger>
         </TabsList>
-
         {Object.entries(categories).map(([tab, items]) => (
           <TabsContent key={tab} value={tab} className='mt-4 space-y-3'>
             {items.length > 0 ? (
@@ -126,7 +122,7 @@ export function AIMatchingResults({
                     <div className='flex'>
                       <div
                         className={cn(
-                          'w-2',
+                          'w-2'
                           match.category.toLowerCase().includes('talent')
                             ? 'bg-zion-cyan'
                             : match.category.toLowerCase().includes('service')
@@ -148,7 +144,6 @@ export function AIMatchingResults({
                               </AvatarFallback>
                             )}
                           </Avatar>
-
                           <div className='flex-1'>
                             <div className='flex justify-between'>
                               <div>
@@ -174,7 +169,6 @@ export function AIMatchingResults({
                                 </div>
                               )}
                             </div>
-
                             <div className='mt-2 flex flex-wrap gap-1'>
                               <Badge variant='outline'>{match.category}</Badge>
                               {match.skills &&

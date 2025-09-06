@@ -1,17 +1,14 @@
-import fs from 'fs',;
-import path from 'path',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-export async function getStaticProps() {;
+import fs from 'fs';
+import path from 'path';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+export async function getStaticProps() {
   const dir = path.join(process.cwd(), 'datareportseconomybacktests');
   let runs: string[] = [];
-  if (fs.existsSync(dir)) {;
-    runs = fs.readdirSync(dir).filter((f) => f.startsWith('backtest-') && f.endsWith('.csv')).sort().reverse();
+  if (fs.existsSync(dir)) {runs = fs.readdirSync(dir).filter((f) => f.startsWith('backtest-') && f.endsWith('.csv')).sort().reverse();
   }
   return { props: { runs } }
 }
-;
-export default function BacktestsPage({ runs }: { runs: string[] }) {;
-  return (;
+export default function BacktestsPage({ runs }: { runs: string[] }) {return (;
     <EnhancedLayout>;
       <div className="space-y-6">;
         <h1 className="text-2xl font-semibold">Economy Backtests</h1>;

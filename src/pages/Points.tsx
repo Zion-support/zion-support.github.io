@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import {
-  Gift,
-  Star,
-  Users,
-  ShoppingBag,
-  MessageSquare,
-  TrendingUp,
-  History,
+  Gift
+  Star
+  Users
+  ShoppingBag
+  MessageSquare
+  TrendingUp
+  History
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle;
 } from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
@@ -35,7 +35,6 @@ export default function PointsPage() {
   const { ledger, balance, loading, fetchLedger } = usePoints();
   const [loginOpen, setLoginOpen] = useState(false);
   const [redeeming, setRedeeming] = useState(false);
-
   async function handleRedeem(reward: {
     id: string;
     cost: number;
@@ -45,13 +44,13 @@ export default function PointsPage() {
     setRedeeming(true);
     try {
       await fetch('/api/points/redeem', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          userId: user.id,
-          cost: reward.cost,
-          reward: reward.title,
-        }),
+          userId: user.id
+          cost: reward.cost
+          reward: reward.title
+        })
       });
       await fetchLedger();
     } finally {
@@ -61,65 +60,61 @@ export default function PointsPage() {
       setRedeeming(false)
     }
   }
-
   const earningOpportunities = [
     {
-      icon: <Users className='h-5 w-5' />,
-      title: 'Sign Up & Profile Setup',
-      description: 'Complete your profile and verify your email',
-      points: '50 pts',
-      action: isAuthenticated ? '✓ Completed' : 'Get Started',
-    },
-      icon: <ShoppingBag className='h-5 w-5' />,
-      title: 'First Purchase',
-      description: 'Make your first purchase on the marketplace',
-      points: '100 pts',
-      action: 'Browse Marketplace',
-    },
+      icon: <Users className='h-5 w-5' />
+      title: 'Sign Up & Profile Setup'
+      description: 'Complete your profile and verify your email'
+      points: '50 pts'
+      action: isAuthenticated ? '✓ Completed' : 'Get Started'
+    }
+      icon: <ShoppingBag className='h-5 w-5' />
+      title: 'First Purchase'
+      description: 'Make your first purchase on the marketplace'
+      points: '100 pts'
+      action: 'Browse Marketplace'
+    }
     {
-      icon: <MessageSquare className='h-5 w-5' />,
-      title: 'Community Engagement',
-      description: 'Post in the community or comment on discussions',
-      points: '25 pts per post',
-      action: 'Join Community',
-    },
+      icon: <MessageSquare className='h-5 w-5' />
+      title: 'Community Engagement'
+      description: 'Post in the community or comment on discussions'
+      points: '25 pts per post'
+      action: 'Join Community'
+    }
     {
-      icon: <Users className='h-5 w-5' />,
-      title: 'Refer Friends',
-      description: 'Invite friends to join Zion marketplace',
-      points: '200 pts per referral',
-      action: 'Share Referral Link',
+      icon: <Users className='h-5 w-5' />
+      title: 'Refer Friends'
+      description: 'Invite friends to join Zion marketplace'
+      points: '200 pts per referral'
+      action: 'Share Referral Link'
     },  ];
-
   const upcomingRewards = [
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
-      description: "Invite friends to join Zion marketplace",
-      points: "200 pts per referral",
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends"
+      description: "Invite friends to join Zion marketplace"
+      points: "200 pts per referral"
       action: "Share Referral Link"
     }
-
   const upcomingRewards = [
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' }
     {
-      id: 'premium1',
-      title: 'Premium Features (1 month)',
-      cost: 1000,
-      category: 'Subscription',
-    },
+      id: 'premium1'
+      title: 'Premium Features (1 month)'
+      cost: 1000
+      category: 'Subscription'
+    }
     {
-      id: 'swag',
-      title: 'Zion Swag Pack',
-      cost: 1500,
-      category: 'Merchandise',
-    },
+      id: 'swag'
+      title: 'Zion Swag Pack'
+      cost: 1500
+      category: 'Merchandise'
+    }
     {
-      id: 'coupon25',
-      title: '$25 Off Coupon',
-      cost: 2000,
-      category: 'Discount',
-    },
-    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },
-
+      id: 'coupon25'
+      title: '$25 Off Coupon'
+      cost: 2000
+      category: 'Discount'
+    }
+    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
   if (!isAuthenticated) {
     return (
       <>
@@ -139,7 +134,6 @@ export default function PointsPage() {
               Join Now to Start Earning
             </Button>
           </div>
-
           <div className='grid md:grid-cols-2 gap-8 mb-12'>
             <Card>
               <CardHeader>
@@ -177,7 +171,6 @@ export default function PointsPage() {
                 ))}
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader>
                 <CardTitle className='flex items-center gap-2'>
@@ -214,7 +207,6 @@ export default function PointsPage() {
               </CardContent>
             </Card>
           </div>
-
           <Card className='text-center'>
             <CardContent className='pt-6'>
               <Star className='h-12 w-12 text-primary mx-auto mb-4' />
@@ -239,7 +231,6 @@ export default function PointsPage() {
       </>
     );
   }
-
   return (
     <div className='container py-10 max-w-4xl'>
       <div className='text-center mb-8'>
@@ -259,7 +250,6 @@ export default function PointsPage() {
           </p>
         )}
       </div>
-
       <div className='grid md:grid-cols-2 gap-8 mb-12'>
         <Card>
           <CardHeader>
@@ -306,7 +296,6 @@ export default function PointsPage() {
             ))}
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
@@ -364,7 +353,6 @@ export default function PointsPage() {
           </CardContent>
         </Card>
       </div>
-
       <Card>
         <CardHeader>
           <CardTitle className='flex items-center gap-2'>
@@ -388,11 +376,11 @@ export default function PointsPage() {
                   >
                     <div>
                       <p className='font-medium capitalize'>
-                        {entry.reason || 'adjustment'}
+                        {entry.reason |'adjustment'}
                       </p>
                       <p className='text-xs text-muted-foreground'>
                         {formatDistanceToNow(new Date(entry.created_at), {
-                          addSuffix: true,
+                          addSuffix: true
                         })}
                       </p>
                     </div>
@@ -413,7 +401,6 @@ export default function PointsPage() {
           )}
         </CardContent>
       </Card>
-
       <Card className='text-center'>
         <CardContent className='pt-6'>
           <Star className='h-12 w-12 text-primary mx-auto mb-4' />
@@ -443,4 +430,3 @@ export default function PointsPage() {
     </div>
   );
 }
-;

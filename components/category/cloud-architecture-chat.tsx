@@ -11,7 +11,6 @@ const CloudArchitectureChat: NextPage = () => {
           content="CloudArchitectureChat blog post"
         />{" "}
       </Head>
-
       <main>
         <h1>CloudArchitectureChat</h1>
         <p>Blog content coming soon...</p>
@@ -19,6 +18,5 @@ const CloudArchitectureChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default CloudArchitectureChat;

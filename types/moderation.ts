@@ -1,5 +1,4 @@
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-
 export interface ModerationAction {
   id: string;
   type: 'approve' | 'remove' | 'warn' | 'ban';
@@ -7,9 +6,8 @@ export interface ModerationAction {
   targetType: 'post' | 'comment' | 'user';
   adminId: string;
   reason?: string;
-  createdAt: string,
+  createdAt: string
 }
-
 export interface ModerationFlag {
   id: string;
   type: 'spam' | 'inappropriate' | 'harassment' | 'other';
@@ -20,5 +18,5 @@ export interface ModerationFlag {
   status: ModerationStatus;
   createdAt: string;
   updatedAt: string;
-  adminNotes?: string,
+  adminNotes?: string
 }

@@ -23,19 +23,19 @@ export default function ZeroTrustSecurityPlatformPage() {
         implementationWeeks='4-8 weeks'
         roiNote='Reduce breach impact and lateral movement risk; meet compliance faster'
         features={[
-          'Policy-as-code and enforcement',
-          'Identity-aware proxies and device posture',
-          'Microsegmentation and service mesh integration',
-          'Continuous authentication and authorization',
-          'Visibility and audit for compliance',
-          'Rollout playbooks and migration kits',
+          'Policy-as-code and enforcement'
+          'Identity-aware proxies and device posture'
+          'Microsegmentation and service mesh integration'
+          'Continuous authentication and authorization'
+          'Visibility and audit for compliance'
+          'Rollout playbooks and migration kits'
         ]}
         industries={[
-          'Enterprise IT',
-          'Financial Services',
-          'Healthcare',
-          'SaaS',
-          'Public Sector',
+          'Enterprise IT'
+          'Financial Services'
+          'Healthcare'
+          'SaaS'
+          'Public Sector'
         ]}
         canonical='https: //ziontechgroup.com/zero-trust-security-platform'
       />

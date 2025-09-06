@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import {
-  LineChart,
-  BarChart,
-  DonutChart,;
+  LineChart
+  BarChart
+  DonutChart;
 } from '../components/salary/InsightCharts';
 type InsightResponse = {
   recommendedHourlyUsd: number;
@@ -14,17 +14,16 @@ type InsightResponse = {
   trendMonthly: { label: string; value: number }[];
   regionalComparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
-  gptRecommendation?: string;};  recommendedHourlyUsd: number,
-  recommendedMonthlyUsd: number,
-  medianHourlyUsd: number,
-  minHourlyUsd: number,
-  maxHourlyUsd: number,
-  confidence: number,
-  trendMonthly: { label: string, value: number }[],
-  regionalComparison: { region: string, medianHourlyUsd: number }[],
-  tags: string[],
+  gptRecommendation?: string;};  recommendedHourlyUsd: number
+  recommendedMonthlyUsd: number
+  medianHourlyUsd: number
+  minHourlyUsd: number
+  maxHourlyUsd: number
+  confidence: number
+  trendMonthly: { label: string, value: number }[]
+  regionalComparison: { region: string, medianHourlyUsd: number }[]
+  tags: string[]
   gptRecommendation?: string
-
 export default function SalaryInsightsPage() {
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
@@ -42,7 +41,6 @@ export default function SalaryInsightsPage() {
   const [data, setData] = useState<InsightResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
   useEffect(() => {
     // Lightweight login check via Supabase client if available; otherwise public mode    (async () => {
       try {
@@ -62,60 +60,57 @@ export default function SalaryInsightsPage() {
       }
     })()
   }, []);
-
   async function fetchInsights() {
     setLoading(true);
     setError(null);
     try {
       const res = await fetch('/api/salary-insights', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          roleTitle,
+          roleTitle
           skills: skills
             .split(',')
             .map(s => s.trim())
-            .filter(Boolean),
-          region,
-          experienceLevel,
-          remote,
-          employmentType,
-        }),
+            .filter(Boolean)
+          region
+          experienceLevel
+          remote
+          employmentType
+        })
       });
       if (!res.ok) throw new Error('Failed to fetch insights');
       const json = (await res.json()) as InsightResponse;
       setData(json);
     } catch (e: any) {
-      setError(e.message || 'Unexpected error');
+      setError(e.message |'Unexpected error');
     } finally {
       setLoading(false);    }      if (!res.ok) throw new Error('Failed to fetch insights');
       const json = (await res.json()) as InsightResponse;
       setData(json)
     } catch (e: any) {
-      setError(e.message || 'Unexpected error')
+      setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
     }
   }
-
   useEffect(() => {
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   function saveInsight() {
     const payload = {
-      createdAt: new Date().toISOString(),
+      createdAt: new Date().toISOString()
       input: {
-        roleTitle,
-        skills,
-        region,
-        experienceLevel,
-        remote,
-        employmentType,
-      },
-      output: data,
-    };    (async () => {    const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data },
+        roleTitle
+        skills
+        region
+        experienceLevel
+        remote
+        employmentType
+      }
+      output: data
+    };    (async () => {    const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data }
     (async () => {
       try {
         const { supabase } = await import('../utils/supabase/client');
@@ -123,8 +118,8 @@ export default function SalaryInsightsPage() {
         if (user.data.user) {
           // Attempt to save to Supabase if table exists
           await supabase.from('salary_insights').insert({
-            user_id: user.data.user.id,
-            payload,
+            user_id: user.data.user.id
+            payload
           });
           alert('Insight saved to your profile');
           return;
@@ -138,36 +133,32 @@ export default function SalaryInsightsPage() {
       }
       try {
         const key = 'zion.salary-insights.history';
-        const history = JSON.parse(localStorage.getItem(key) || '[]');
+        const history = JSON.parse(localStorage.getItem(key) |'[]');
         history.unshift(payload);
         localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));
         alert('Insight saved locally');
       } catch {}
     })();
   }
-
   const donutData = useMemo(() => {
     if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
     })()
   }
-
   const donutData = useMemo(() => {
-    if (!data) return [] as { label: string, value: number }[],
+    if (!data) return [] as { label: string, value: number }[]
     const min = data.minHourlyUsd;
     const median = data.medianHourlyUsd;
     const max = data.maxHourlyUsd;
     const lower = Math.max(0, median - min);
     const upper = Math.max(0, max - median);
     return [
-      { label: 'Below Median', value: lower || 1 },
-      { label: 'Median', value: median || 1 },
-      { label: 'Above Median', value: upper || 1 },
+      { label: 'Below Median', value: lower |1 }
+      { label: 'Median', value: median |1 }
+      { label: 'Above Median', value: upper |1 }
     ];  }, [data]);
-
   return (
-    <div>      { label: 'Above Median', value: upper || 1 }]
+    <div>      { label: 'Above Median', value: upper |1 }]
   }, [data]);
-
   return (
     <div>
       <div className='relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow'>
@@ -179,7 +170,6 @@ export default function SalaryInsightsPage() {
         </div>
         <div className='absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl' />
       </div>
-
       <div className='mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6'>
         <div className='lg:col-span-1 space-y-4'>
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
@@ -191,7 +181,6 @@ export default function SalaryInsightsPage() {
               className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
               placeholder='e.g., Senior AI Engineer'
             />
-
             <label className='block text-sm mt-3 mb-2'>Skills</label>
             <input
               value={skills}
@@ -199,7 +188,6 @@ export default function SalaryInsightsPage() {
               className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
               placeholder='Comma-separated'
             />
-
             <label className='block text-sm mt-3 mb-2'>Region</label>
             <input
               value={region}
@@ -207,7 +195,6 @@ export default function SalaryInsightsPage() {
               className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
               placeholder='City, Country'
             />
-
             <div className='grid grid-cols-2 gap-3 mt-3'>
               <div>
                 <label className='block text-sm mb-2'>Experience</label>
@@ -218,20 +205,16 @@ export default function SalaryInsightsPage() {
                 >                  <option>Junior</option>        </div>
         <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
       </div>
-
       <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-1 space-y-4">
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h2 className="font-medium mb-3">Filters</h2>
             <label className="block text-sm mb-2" htmlFor="input-Role title">Role title</label>
             <input value={roleTitle} onChange={(e) => setRoleTitle(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="e.g., Senior AI Engineer" />
-
             <label className="block text-sm mt-3 mb-2" htmlFor="input-Skills">Skills</label>
             <input value={skills} onChange={(e) => setSkills(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="Comma-separated" />
-
             <label className="block text-sm mt-3 mb-2" htmlFor="input-Region">Region</label>
             <input value={region} onChange={(e) => setRegion(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="City, Country" />
-
             <div className="grid grid-cols-2 gap-3 mt-3">
               <div>
                 <label className="block text-sm mb-2" htmlFor="input-Experience">Experience</label>
@@ -261,7 +244,6 @@ export default function SalaryInsightsPage() {
                   <option value="full-time">Full-time</option>
               </div>
             </div>
-
             <div className='flex items-center gap-2 mt-3'>
               <input
                 id='remote'
@@ -273,7 +255,6 @@ export default function SalaryInsightsPage() {
                 Remote role
               </label>
             </div>
-
             {!isLoggedIn && (
               <div className='mt-3 text-xs text-gray-500'>                Advanced filters are available when you sign in.
               </div>
@@ -282,13 +263,11 @@ export default function SalaryInsightsPage() {
               <input id="remote" type="checkbox" checked={remote} onChange={(e) => setRemote(e.target.checked)} />
               <label htmlFor="remote" className="text-sm" htmlFor="input-Remote role">Remote role</label>
             </div>
-
             {!isLoggedIn && (
               <div className="mt-3 text-xs text-gray-500">
                 Advanced filters are available when you sign in.
               </div>
             )}
-
             <button
               onClick={fetchInsights}
               disabled={loading}
@@ -300,7 +279,6 @@ export default function SalaryInsightsPage() {
               {loading ? 'Calculating…' : 'Update Insights'}
             </button>
           </div>
-
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
             <h3 className='font-medium mb-2'>Actions</h3>
             <div className='flex flex-col gap-2'>
@@ -326,7 +304,6 @@ export default function SalaryInsightsPage() {
               </button>            </div>
           </div>
         </div>
-
         <div className='lg:col-span-2 space-y-6'>          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h3 className="font-medium mb-2">Actions</h3>
             <div className="flex flex-col gap-2">
@@ -335,13 +312,11 @@ export default function SalaryInsightsPage() {
               <button onClick={() => alert('This would suggest a resume rate optimization.')} className="rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700">Optimize Resume Rate</button>
           </div>
         </div>
-
         <div className='lg:col-span-2 space-y-6'>
             <div className='rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm'>
               {error}
             </div>
           )}
-
           <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <div className='text-xs text-gray-500'>Recommended Hourly</div>
@@ -368,7 +343,6 @@ export default function SalaryInsightsPage() {
               </div>
             </div>
           </div>
-
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
             <h3 className='font-medium mb-3'>Trend: Last 12 months</h3>
             {data ? (
@@ -377,15 +351,14 @@ export default function SalaryInsightsPage() {
               <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />
             )}
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <h3 className='font-medium mb-3'>Regional comparison</h3>
               {data ? (
                 <BarChart
                   data={data.regionalComparison.map(r => ({
-                    label: r.region,
-                    value: r.medianHourlyUsd,
+                    label: r.region
+                    value: r.medianHourlyUsd
                   }))}
                 />
               ) : (
@@ -415,7 +388,6 @@ export default function SalaryInsightsPage() {
                 </table>
               )}
             </div>
-
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <h3 className='font-medium mb-3'>Distribution</h3>
               {data ? (
@@ -423,8 +395,8 @@ export default function SalaryInsightsPage() {
                   <DonutChart
                     slices={
                       donutData.map((d, i) => ({
-                        label: d.label,
-                        value: d.value,
+                        label: d.label
+                        value: d.value
                       })) as any
                     }
                   />
@@ -451,7 +423,6 @@ export default function SalaryInsightsPage() {
               )}
             </div>
           </div>
-
           {data?.gptRecommendation && (
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <h3 className='font-medium mb-2'>GPT Recommendation</h3>
@@ -459,13 +430,11 @@ export default function SalaryInsightsPage() {
                 {data.gptRecommendation}
               </p>            </div>
           )}
-
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
             </div>
           )}
-
           {data && (
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <h3 className='font-medium mb-3'>Signals</h3>

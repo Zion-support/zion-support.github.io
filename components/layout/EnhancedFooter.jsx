@@ -1,9 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-
 const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear();
-
   return (
     <footer className='bg-gray-900 text-white'>
       {/* Main Footer Content */}
@@ -19,10 +17,9 @@ const EnhancedFooter = () => {
             </div>
             <p className='text-gray-300 mb-6 max-w-md'>
               Leading technology solutions provider helping businesses transform
-              their digital presence with cutting-edge AI, cloud architecture,
+              their digital presence with cutting-edge AI, cloud architecture
               and innovative development services.            </p>const EnhancedFooter = () => {
-  const currentYear = new Date().getFullYear(),
-
+  const currentYear = new Date().getFullYear()
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
@@ -37,11 +34,10 @@ const EnhancedFooter = () => {
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Leading technology solutions provider helping businesses transform their digital presence 
+              Leading technology solutions provider helping businesses transform their digital presence
               with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
           </div>
-
           {/* Services */}
           <div>
             <h3 className='text-lg font-semibold mb-4'>Services</h3>
@@ -84,7 +80,6 @@ const EnhancedFooter = () => {
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Blockchain Solutions</Link></li>
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>
           </div>
-
           {/* Company */}
           <div>
             <h3 className='text-lg font-semibold mb-4'>Company</h3>
@@ -129,7 +124,6 @@ const EnhancedFooter = () => {
           </div>
         </div>
       </div>
-
       {/* Bottom Footer */}
       <div className='border-t border-gray-700 py-6'>
         <div className='container mx-auto px-4'>
@@ -142,8 +136,6 @@ const EnhancedFooter = () => {
       </div>
     </footer>
 );
-};
-
-export default EnhancedFooter;},
-
+}
+export default EnhancedFooter;}
 export default EnhancedFooter;

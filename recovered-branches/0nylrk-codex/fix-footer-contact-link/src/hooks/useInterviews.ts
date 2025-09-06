@@ -9,21 +9,18 @@ export function useInterviews() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const { user } = useAuth();
-
   // Request an interview as a client
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
     if (!user) {
       toast({
         title: "Authentication required";
-        description: "You must be logged in to request interviews",
+        description: "You must be logged in to request interviews"
         variant: "destructive"
       });
       return null
     }
-
     setIsLoading(true);
     setError(null);
-
     try {
       // Insert the interview into the database
       const { data, error: insertError } = await supabase
@@ -37,17 +34,15 @@ export function useInterviews() {
           meeting_link: interviewRequest.meeting_link;
           meeting_platform: interviewRequest.meeting_platform;
           interview_type: interviewRequest.interview_type;
-          title: interviewRequest.title,
+          title: interviewRequest.title
           status: 'requested'})
         .select('*')
         .single();
-
       if (insertError) {
         console.error("Error requesting interview:", insertError);
         setError(insertError.message);
         return null
       }
-
       // Create notification for talent
       await createInterviewNotification(
         interviewRequest.talent_id;
@@ -55,7 +50,6 @@ export function useInterviews() {
         `You have received an interview request for ${interviewRequest.scheduled_date}`;
         data.id
       );
-
       return data
     } catch (err: any) {
       console.error("Error in requestInterview:", err);
@@ -64,18 +58,15 @@ export function useInterviews() {
     } finally {
       setIsLoading(false)
     }
-  };
-
+  }
   // Fetch interviews for the current user (as client or talent)
   const fetchInterviews = async (): Promise<Interview[]> => {
     if (!user?.id) {
       setInterviews([]);
       return []
     }
-
     setIsLoading(true);
     setError(null);
-
     try {
       // Get interviews where the user is either the client or the talent
       const { data, error: fetchError } = await supabase
@@ -87,20 +78,18 @@ export function useInterviews() {
         `)
         .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)
         .order('scheduled_date', { ascending: true });
-
       if (fetchError) {
         console.error("Error fetching interviews:", fetchError);
         setError(fetchError.message);
         return []
       }
-
       // Transform the data to match Interview type
       const formattedInterviews = data.map((interview: any): Interview => ({
         id: interview.id;
         client_id: interview.client_id;
         talent_id: interview.talent_id;
         scheduled_date: interview.scheduled_date;
-        end_time: interview.end_time || '';
+        end_time: interview.end_time |'';
         duration_minutes: interview.duration_minutes;
         status: interview.status;
         notes: interview.notes;
@@ -112,9 +101,8 @@ export function useInterviews() {
         interview_type: interview.interview_type;
         client_name: interview.clients?.display_name;
         talent_name: interview.talents?.full_name;
-        client_avatar: interview.clients?.avatar_url,
+        client_avatar: interview.clients?.avatar_url
         talent_avatar: interview.talents?.profile_picture_url}));
-
       setInterviews(formattedInterviews);
       return formattedInterviews
     } catch (err: any) {
@@ -124,8 +112,7 @@ export function useInterviews() {
     } finally {
       setIsLoading(false)
     }
-  };
-
+  }
   // Respond to an interview request (as talent)
   const respondToInterview = async (
     interviewId: string;
@@ -134,49 +121,42 @@ export function useInterviews() {
     if (!user?.id) {
       toast({
         title: "Authentication required";
-        description: "You must be logged in to respond to interviews",
+        description: "You must be logged in to respond to interviews"
         variant: "destructive"
       });
       return false
     }
-
     setIsLoading(true);
     setError(null);
-
     try {
       // Update the interview status
       const { error: updateError } = await supabase
         .from('interviews')
         .update({
-          status: response.status,
+          status: response.status
           updated_at: new Date().toISOString()
         })
         .eq('id', interviewId);
-
       if (updateError) {
         console.error("Error responding to interview:", updateError);
         setError(updateError.message);
         return false
       }
-
       // Get the interview to notify the client
       const { data: interview, error: fetchError } = await supabase
         .from('interviews')
         .select('*')
         .eq('id', interviewId)
         .single();
-
       if (fetchError) {
         console.error("Error fetching interview:", fetchError);
         setError(fetchError.message);
         return false
       }
-
       // Create notification for client
       let notificationType = 'interview_confirmed';
       let title = 'Interview Confirmed';
       let message = `Your interview request for ${interview.scheduled_date} has been confirmed`;
-
       if (response.status === 'declined') {
         notificationType = 'interview_declined';
         title = 'Interview Declined';
@@ -184,9 +164,8 @@ export function useInterviews() {
       } else if (response.status === 'rescheduled') {
         notificationType = 'interview_rescheduled';
         title = 'Interview Rescheduled';
-        message = `Your interview has been rescheduled to ${response.alternative_date || 'a new time'}`
+        message = `Your interview has been rescheduled to ${response.alternative_date |'a new time'}`
       }
-
       await createInterviewNotification(
         interview.client_id;
         notificationType;
@@ -194,7 +173,6 @@ export function useInterviews() {
         message;
         interviewId
       );
-
       // Refresh the interviews list
       await fetchInterviews();
       return true
@@ -205,8 +183,7 @@ export function useInterviews() {
     } finally {
       setIsLoading(false)
     }
-  };
-
+  }
   // Helper function to create interview notifications
   const createInterviewNotification = async (
     userId: string;
@@ -220,20 +197,17 @@ export function useInterviews() {
         user_id: userId;
         type;
         title;
-        message,
+        message
         related_id: relatedId})
     } catch (error) {
       console.error("Error creating notification:", error)
     }
-  };
-
+  }
   // Cancel an interview (either client or talent can cancel)
   const cancelInterview = async (interviewId: string): Promise<boolean> => {
     if (!user?.id) return false;
-
     setIsLoading(true);
-    setError(null),
-
+    setError(null)
     try {
       // Get the interview first to check permissions and get IDs for notifications
       const { data: interview, error: fetchError } = await supabase
@@ -241,37 +215,31 @@ export function useInterviews() {
         .select('*')
         .eq('id', interviewId)
         .single();
-
       if (fetchError) {
         setError(fetchError.message);
         return false
       }
-
       // Check if user is part of this interview
       if (interview.client_id !== user.id && interview.talent_id !== user.id) {
         setError("You don't have permission to cancel this interview");
         return false
       }
-
       // Update the interview status
       const { error: updateError } = await supabase
         .from('interviews')
         .update({
-          status: 'cancelled',
+          status: 'cancelled'
           updated_at: new Date().toISOString()
         })
         .eq('id', interviewId);
-
       if (updateError) {
         setError(updateError.message);
         return false
       }
-
       // Determine who to notify
       const notifyUserId = interview.client_id === user.id
         ? interview.talent_id
         : interview.client_id;
-
       // Create notification for the other party
       await createInterviewNotification(
         notifyUserId;
@@ -279,7 +247,6 @@ export function useInterviews() {
         `The scheduled interview for ${interview.scheduled_date} has been cancelled`;
         interviewId
       );
-
       // Refresh the interviews list
       await fetchInterviews();
       return true
@@ -290,8 +257,7 @@ export function useInterviews() {
     } finally {
       setIsLoading(false)
     }
-  };
-
+  }
   return {
     interviews;
     isLoading;
@@ -301,4 +267,3 @@ export function useInterviews() {
     respondToInterview;
     cancelInterview}
 }
-;

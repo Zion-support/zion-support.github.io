@@ -6,68 +6,62 @@ import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
 export default function CourseView() {
   const router = useRouter();
-  const { courseId } = router.query as { courseId: string };
+  const { courseId } = router.query as { courseId: string }
   const [course, setCourse] = useState<any>(null);
   const [progress, setProgress] = useState<any>({
-    percent: 0,
-    completedLessons: [],
+    percent: 0
+    completedLessons: []
   });  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
   const [finalPassed, setFinalPassed] = useState(false);
-
   useEffect(() => {
     if (!courseId) return;
     async function load() {
       const [courseResp, progResp] = await Promise.all([
-        fetch(`/api/learn/courses/${courseId}`),
+        fetch(`/api/learn/courses/${courseId}`)
         fetch(`/api/learn/progress?userId=demo-user`),      ]);
       const courseData = await courseResp.json();
       const progData = await progResp.json();
       setCourse(courseData.course);
-      const cp = (progData.progress && progData.progress[courseId]) || {
-        percent: 0,
-        completedLessons: [],
-      };
+      const cp = (progData.progress && progData.progress[courseId]) |{
+        percent: 0
+        completedLessons: []
+      }
       setProgress(cp);
-      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null);
+      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id |null);
     }
     load();
   }, [courseId]);
-
   const currentLesson = useMemo(
-    () => course?.lessons?.find((l: any) => l.id === currentLessonId),
+    () => course?.lessons?.find((l: any) => l.id === currentLessonId)
     [course, currentLessonId]
   );
   async function markLessonComplete(lessonId: string) {
-    const completedCount = (progress.completedLessons || []).includes(lessonId)
-      ? (progress.completedLessons || []).length
-      : (progress.completedLessons || []).length + 1;
+    const completedCount = (progress.completedLessons |[]).includes(lessonId)
+      ? (progress.completedLessons |[]).length
+      : (progress.completedLessons |[]).length + 1;
     const percent = Math.round(
-      (completedCount / (course?.lessons?.length || 1)) * 100
+      (completedCount / (course?.lessons?.length |1)) * 100
     );
     const resp = await fetch('/api/learn/progress', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({
-        userId: 'demo-user',
-        courseId,
-        lessonId,
-        percent,
-      }),
+        userId: 'demo-user'
+        courseId
+        lessonId
+        percent
+      })
     });
     const data = await resp.json();
     setProgress(data.progress);  }
-
   function onModuleQuizComplete(score: number) {
     // For demo, simply mark as completed when quiz attempted
     if (currentLessonId) markLessonComplete(currentLessonId);  }
-
   async function onFinalQuizComplete(score: number) {
-    const needed = course?.finalQuiz?.passThreshold || 0;
+    const needed = course?.finalQuiz?.passThreshold |0;
     const passed = score >= needed;
     setFinalPassed(passed);  }
-
   if (!course) return <div>Loading...</div>;
-
   return (
     <div className='grid lg:grid-cols-3 gap-6'>
       <div className='lg:col-span-2 space-y-4'>
@@ -77,13 +71,12 @@ export default function CourseView() {
             {course.category} • {course.level}
           </div>
           <div className='mt-3'>
-            <ProgressBar value={progress.percent || 0} />
+            <ProgressBar value={progress.percent |0} />
             <div className='text-xs text-gray-500 mt-1'>
-              Progress: {progress.percent || 0}%
+              Progress: {progress.percent |0}%
             </div>
           </div>
         </div>
-
         <div className='grid lg:grid-cols-5 gap-4'>
           <aside className='lg:col-span-2 border rounded p-3 h-max'>
             <div className='font-medium mb-2'>Lessons</div>
@@ -99,7 +92,6 @@ export default function CourseView() {
               ))}
             </ul>
           </aside>
-
           <section className='lg:col-span-3 space-y-4'>
             {currentLesson ? (
               <div className='border rounded p-4'>
@@ -126,7 +118,6 @@ export default function CourseView() {
             ) : (
               <div className='text-sm text-gray-500'>Select a lesson</div>
             )}
-
             {course.finalQuiz?.questions?.length ? (
               <div className='border rounded p-4'>
                 <div className='font-medium mb-2'>Final Certification Quiz</div>
@@ -140,11 +131,9 @@ export default function CourseView() {
                   </div>                )}
               </div>
             ) : null}
-
             {finalPassed && <CertificatePreview courseId={courseId} />}          </section>
         </div>
       </div>
-
       <div className='space-y-4'>
         <CoachWidget />
         <div className='border rounded p-3'>

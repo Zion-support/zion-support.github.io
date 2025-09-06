@@ -3,10 +3,10 @@ import { Header } from '@/components/Header'
 import { NextSeo } from '@/components/NextSeo'
 import { Globe, MapPin } from 'lucide-react'
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger
 } from '@/components/ui/tooltip'
 interface Instance {
   id: number
@@ -20,38 +20,38 @@ interface Instance {
   region: string
 const INSTANCES: Instance[] = [
   {
-    id: 1,
-    name: 'Zion LATAM',
-    lat: -15,
-    lng: -70,
-    talent: 120,
-    governance: 'hybrid',
-    votesPassed: 5,
-    votesPending: 1,
-    region: 'Latin America',
-  },
+    id: 1
+    name: 'Zion LATAM'
+    lat: -15
+    lng: -70
+    talent: 120
+    governance: 'hybrid'
+    votesPassed: 5
+    votesPending: 1
+    region: 'Latin America'
+  }
   {
-    id: 2,
-    name: 'Zion Health',
-    lat: 37,
-    lng: -95,
-    talent: 200,
-    governance: 'admin',
-    votesPassed: 8,
-    votesPending: 2,
-    region: 'North America',
-  },
+    id: 2
+    name: 'Zion Health'
+    lat: 37
+    lng: -95
+    talent: 200
+    governance: 'admin'
+    votesPassed: 8
+    votesPending: 2
+    region: 'North America'
+  }
   {
-    id: 3,
-    name: 'Zion Law',
-    lat: 51,
-    lng: 10,
-    talent: 150,
-    governance: 'vote',
-    votesPassed: 12,
-    votesPending: 3,
-    region: 'Europe',
-  },
+    id: 3
+    name: 'Zion Law'
+    lat: 51
+    lng: 10
+    talent: 150
+    governance: 'vote'
+    votesPassed: 12
+    votesPending: 3
+    region: 'Europe'
+  }
 ]
 interface FeedItem {
   id: number
@@ -61,13 +61,13 @@ export default function GlobalMapPage() {
   useEffect((,) => {
     const interval = setInterval((,) => {
       const messages = [
-        'ZionGPT upgraded to v1.7 in Egypt',
-        'Proposal #121 passed in Zion DevOps',
-        'New franchise deployed: Zion Indonesia',
+        'ZionGPT upgraded to v1.7 in Egypt'
+        'Proposal #121 passed in Zion DevOps'
+        'New franchise deployed: Zion Indonesia'
       ]
       const id = Date.now()
       const text =
-        messages[Math.floor(Math.random() * messages.length)] ||
+        messages[Math.floor(Math.random() * messages.length)] |
         'System update in progress'
       setFeed(f => [{ id, text }, ...f].slice(0, 5))
     }, 5000)
@@ -80,7 +80,6 @@ export default function GlobalMapPage() {
     const y = ((90 - lat) / 180) * height
     return { x, y }
   }
-
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5)
   return (
     <div className='min-h-screen bg-background'>
@@ -154,7 +153,4 @@ export default function GlobalMapPage() {
     </div>
   )
 }
-
 }
-
-;

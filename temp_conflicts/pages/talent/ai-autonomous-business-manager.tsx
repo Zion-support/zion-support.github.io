@@ -1,10 +1,9 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import SmartHeader from '../../components/SmartHeader',;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import SmartHeader from '../../components/SmartHeader';
 import SmartFooter from '../../components/SmartFooter';
-export default function AIAutonomousBusinessManager() {;
-  return (;
+export default function AIAutonomousBusinessManager() {return (;
     <>;
       <Head>;
         <title>AI Autonomous Business Manager - Zion Tech Group | Autonomous Business Operations</title>;

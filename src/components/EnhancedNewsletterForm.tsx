@@ -21,28 +21,27 @@ export function EnhancedNewsletterForm() {
       toast.error('Invalid email')
       return
     }
-
     setIsSubmitting(true)
     try {
       const res = await fetch('/api/newsletter', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: trimmed }),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ email: trimmed })
       })
       const data = await res.json().catch(() => ({}))
       if (res.ok) {
         // Handle different success statuses
         if (data.status === 'already_subscribed') {
-          toast.success(data.message || "You're already subscribed!")
+          toast.success(data.message |"You're already subscribed!")
         } else {
-          toast.success(data.message || 'Thanks for subscribing!')
+          toast.success(data.message |'Thanks for subscribing!')
         }
         setIsSubmitted(true)
         setEmail('')
       } else {
         // Handle error responses
         logErrorToProduction('Newsletter subscription failed:', { data: data })
-        toast.error(data.error || 'Subscription failed. Please try again.')
+        toast.error(data.error |'Subscription failed. Please try again.')
       }
     } catch (err: any) {
       logErrorToProduction('Newsletter subscription error:', { data: err })
@@ -65,7 +64,6 @@ export function EnhancedNewsletterForm() {
           </p>
         </div>
       </div>
-
       {isSubmitted ? (
         <div className='text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40'>
           <p className='text-white font-medium'>Thank you for subscribing!</p>
@@ -102,7 +100,6 @@ export function EnhancedNewsletterForm() {
           </Button>
         </form>
       )}
-
       <div className='mt-4 flex items-center text-xs text-zion-slate-light'>
         <div className='flex -space-x-1 mr-2'>
           {[...Array(3)].map((_, i) => (

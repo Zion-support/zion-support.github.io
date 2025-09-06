@@ -1,46 +1,40 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import {;
-  TrendingUp, Brain, Shield, Zap, Target,;
-  BarChart3, Cpu, Globe, Users, Award,;
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {TrendingUp, Brain, Shield, Zap, Target;
+  BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin;
-} from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+const contactInfo = {mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup.com';
-},;
+}
 const features = [;
   'Quantum-enhanced market prediction algorithmsReal-time market data processingAI-powered risk assessmentMulti-asset portfolio optimizationRegulatory compliance automationBacktesting and simulation engineCustom strategy builderPerformance analytics dashboard';
-],;
+];
 const pricingPlans = [;
-  {;
-    name: 'Starter',;
-    price: 199,;
-    period: 'month',;
-    features: ['Basic algorithms5 asset classesDaily rebalancingStandard support'],;
+  {name: 'Starter';
+    price: 199;
+    period: 'month';
+    features: ['Basic algorithms5 asset classesDaily rebalancingStandard support'];
     popular: false;
-  },;
-  {;
-    name: 'Professional',;
-    price: 499,;
-    period: 'month',;
-    features: ['Advanced algorithmsAll asset classesReal-time rebalancingCustom strategiesPriority support'],;
+  }
+  {name: 'Professional';
+    price: 499;
+    period: 'month';
+    features: ['Advanced algorithmsAll asset classesReal-time rebalancingCustom strategiesPriority support'];
     popular: true;
-  },;
-  {;
-    name: 'Enterprise',;
-    price: 1299,;
-    period: 'month',;
-    features: ['Quantum algorithmsWhite-label solutionAPI accessDedicated supportCustom integrations'],;
+  }
+  {name: 'Enterprise';
+    price: 1299;
+    period: 'month';
+    features: ['Quantum algorithmsWhite-label solutionAPI accessDedicated supportCustom integrations'];
     popular: false;
   }
 ];
-export default function QuantumTradingAlgorithm() {;
-  return (;
+export default function QuantumTradingAlgorithm() {return (;
     <Layout>;
       <Head>;
         <title>Quantum Trading Algorithm Pro | Zion Tech Group</title>;
@@ -166,8 +160,7 @@ export default function QuantumTradingAlgorithm() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-gradient-to-br from-green-500/10 to-emerald-500/10 border rounded-2xl p-8 ${;
-                  plan.popular;
+                className={`relative bg-gradient-to-br from-green-500/10 to-emerald-500/10 border rounded-2xl p-8 ${plan.popular;
                     ? 'border-green-500/50 scale-105';
                     : 'border-green-500/20';
                 }`}
@@ -179,7 +172,6 @@ export default function QuantumTradingAlgorithm() {;
                     </span>;
                   </div>;
                 )}
-;
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>;
                   <div className="text-4xl font-bold text-white mb-2">;

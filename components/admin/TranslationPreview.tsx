@@ -1,12 +1,10 @@
-import React, { useState } from 'react',;
-import { useAutoTranslate } from '../../hooks/useAutoTranslate',;
-const defaultTargets = ['enptesar'],
-
+import React, { useState } from 'react';
+import { useAutoTranslate } from '../../hooks/useAutoTranslate';
+const defaultTargets = ['enptesar']
 export default function TranslationPreview() {
-  const [text, setText] = useState(''),
-  const [targets, setTargets] = useState<string[]>(defaultTargets),
-  const { translations, loading, error } = useAutoTranslate(text, targets),
-
+  const [text, setText] = useState('')
+  const [targets, setTargets] = useState<string[]>(defaultTargets)
+  const { translations, loading, error } = useAutoTranslate(text, targets)
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-semibold">Translation Preview</h2>
@@ -22,11 +20,11 @@ export default function TranslationPreview() {
           <div key={lng} className="border rounded p-3">
             <div className="text-xs uppercase opacity-70 mb-2">{lng}</div>
             <div className="whitespace-pre-wrap text-sm min-h-[4rem]">
-              {translations[lng] || (lng === 'en' ? text : '')}
+              {translations[lng] |(lng === 'en' ? text : '')}
             </div>
           </div>
         ))}
       </div>
     </div>
   )
-};
+}

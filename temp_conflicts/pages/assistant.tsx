@@ -1,17 +1,13 @@
-import { useEffect, useMemo, useState } from 'react',;
+import { useEffect, useMemo, useState } from 'react';
 interface Message { role: 'user' | 'assistant', content: string }
-;
-export default function Assistant() {;
-  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams(),;
-  const tenantId = params.get('tenantId') || '',;
-  const brand = params.get('brand') || 'Zion AI',;
+export default function Assistant() {const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
+  const tenantId = params.get('tenantId') |'';
+  const brand = params.get('brand') |'Zion AI';
   const [messages, setMessages] = useState<Message[]>([;
-    { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]),;
-  const [input, setInput] = useState(''),;
-  const faqs: Record<string string> = useMemo(() => ({;
-    'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []),;
-  async function handleAsk(question: string) {;
-    const lower = question.toLowerCase(),;
+    { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
+  const [input, setInput] = useState('');
+  const faqs: Record<string string> = useMemo(() => ({'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
+  async function handleAsk(question: string) {const lower = question.toLowerCase();
     const faq = Object.keys(faqs).find(key => lower.includes(key));
     if (faq) {;
       setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: faqs[faq] }]);
@@ -20,7 +16,6 @@ export default function Assistant() {;
     // Basic fallback;
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
   }
-;
   return (;
     <div className="min-h-full h-full w-full flex flex-col bg-white">;
       <div className="px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2">;

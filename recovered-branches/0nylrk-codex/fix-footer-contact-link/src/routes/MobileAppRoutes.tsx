@@ -12,6 +12,5 @@ const MobileAppRoutes = () => {
       <Route path="/open-app" element={<OpenAppRedirect />} />
     </Routes>
   )
-};
-
+}
 export default MobileAppRoutes;

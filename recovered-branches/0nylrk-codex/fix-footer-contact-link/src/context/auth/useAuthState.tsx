@@ -8,7 +8,6 @@ export function useAuthState() {
   const [user, setUser] = useState<UserProfile | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [onboardingStep, setOnboardingStep] = useState<string | null>(null);
-  
   return {
     user;
     setUser;
@@ -18,4 +17,3 @@ export function useAuthState() {
     setOnboardingStep
   }
 }
-;

@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const MicroservicesArchitectureBenefitsAndChallengesChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const MicroservicesArchitectureBenefitsAndChallengesChat = () => {return (;
     <div>;
       <Head>;
         <title>MicroservicesArchitectureBenefitsAndChallengesChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const MicroservicesArchitectureBenefitsAndChallengesChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default MicroservicesArchitectureBenefitsAndChallengesChat;

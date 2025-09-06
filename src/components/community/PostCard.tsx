@@ -2,7 +2,6 @@ import React from 'react'
 import {formatDistanceToNow} from "date-fns"
 import Link from "next/link"
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
-
 import { formatDistanceToNow } from "date-fns"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -12,13 +11,11 @@ import { cn } from "@/lib/utils"
 import { ForumPost } from "@/types/community"
 import { logInfo } from '@/utils/productionLogger'
 interface PostCardProps {
-  post: ForumPost,
+  post: ForumPost
   compact?: boolean
 }
-
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
-
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   return (
     <Card data-testid="post-card" className={cn(
       "transition-shadow hover:shadow-md"

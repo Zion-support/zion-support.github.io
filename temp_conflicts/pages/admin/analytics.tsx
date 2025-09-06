@@ -1,21 +1,19 @@
-import React, { useEffect, useMemo, useState } from 'react',;
-import SimpleLineChart from '../../components/charts/SimpleLineChart',;
-import SimpleBarChart from '../../components/charts/SimpleBarChart',;
-import SimpleDoughnutChart from '../../components/charts/SimpleDoughnutChart',;
-import { KpiBadge } from '../../components/ui/InteractiveStats',;
-import { exportCsv, exportSvgAsPng } from '../../utils/exporters',;
-import useRole from '../../hooks/useRole',;
-export default function AdminAnalyticsPage() {;
-  const [data, setData] = useState<any>(null),;
-  const { role, loading } = useRole(),;
-  useEffect(() => {;
-    fetch('/api/analytics/admin').then(r => r.json()).then(setData).catch(() => setData(null));
-  }, []),;
-  if (loading) return <div>Loading...</div>,;
-  if (role !== 'admin') return <div>Unauthorized</div>,;
-  const totals = data?.totals || {},;
-  const geo = data?.geo || [],;
-  const topCategories = data?.topCategories || [];
+import React, { useEffect, useMemo, useState } from 'react';
+import SimpleLineChart from '../../components/charts/SimpleLineChart';
+import SimpleBarChart from '../../components/charts/SimpleBarChart';
+import SimpleDoughnutChart from '../../components/charts/SimpleDoughnutChart';
+import { KpiBadge } from '../../components/ui/InteractiveStats';
+import { exportCsv, exportSvgAsPng } from '../../utils/exporters';
+import useRole from '../../hooks/useRole';
+export default function AdminAnalyticsPage() {const [data, setData] = useState<any>(null);
+  const { role, loading } = useRole();
+  useEffect(() => {fetch('/api/analytics/admin').then(r => r.json()).then(setData).catch(() => setData(null));
+  }, []);
+  if (loading) return <div>Loading...</div>;
+  if (role !== 'admin') return <div>Unauthorized</div>;
+  const totals = data?.totals |{}
+  const geo = data?.geo |[];
+  const topCategories = data?.topCategories |[];
   const lineSeries = useMemo(() => [{ label: 'Jobs Filled', points: Array.from({ length: 12 }, (_, i) => ({ x: i + 1, y: Math.round(Math.random() * 10) })) }], []);
   return (;
     <div className="space-y-6">;
@@ -50,7 +48,7 @@ export default function AdminAnalyticsPage() {;
         <div className="rounded-2xl border border-black/5 dark:border-white/10 p-4">;
           <h2 className="font-semibold mb-2">Referral Conversions</h2>;
           <SimpleDoughnutChart;
-            data={[{ label: 'Converted', value: data?.referralConversions || 0 }, { label: 'Others', value: Math.max((totals.totalUsers || 0) - (data?.referralConversions || 0), 0) }]}
+            data={[{ label: 'Converted', value: data?.referralConversions |0 }, { label: 'Others', value: Math.max((totals.totalUsers |0) - (data?.referralConversions |0), 0) }]}
             onExportCsv={(rows) => exportCsv('admin-referrals.csv', rows)}
             onExportPng={(svg) => exportSvgAsPng('admin-referrals.png', svg)}
           />;

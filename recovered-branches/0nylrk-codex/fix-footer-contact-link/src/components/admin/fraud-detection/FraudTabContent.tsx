@@ -4,7 +4,6 @@ import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 interface FraudTabContentProps {
   tabValue: string
 }
-
 export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {
   switch(tabValue) {
     case 'pending':
@@ -17,7 +16,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           </p>
         </div>
       );
-    
     case 'dangerous':
       return (
         <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">
@@ -28,7 +26,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           </p>
         </div>
       );
-    
     case 'actioned':
       return (
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">
@@ -38,9 +35,8 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows flags where action has already been taken.
           </p>
         </div>
-      ),
-    
+      )
     default:
       return null
   }
-};
+}

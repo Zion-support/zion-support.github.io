@@ -1,62 +1,54 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
-import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react',;
-export default function URLShortenerPage() {;
-  const [longUrl, setLongUrl] = useState(''),;
-  const [customAlias, setCustomAlias] = useState(''),;
-  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),;
-  const [isShortening, setIsShortening] = useState(false),;
-  const [showQR, setShowQR] = useState<string | null>(null),;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
+export default function URLShortenerPage() {const [longUrl, setLongUrl] = useState('');
+  const [customAlias, setCustomAlias] = useState('');
+  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]);
+  const [isShortening, setIsShortening] = useState(false);
+  const [showQR, setShowQR] = useState<string | null>(null);
   const generateShortUrl = async () => {;
-    if (!longUrl.trim()) return,;
-    setIsShortening(true),;
+    if (!longUrl.trim()) return;
+    setIsShortening(true);
     // Simulate API call delay;
-    await new Promise(resolve => setTimeout(resolve, 1000)),;
-    const alias = customAlias.trim() || generateRandomAlias(),;
-    const shortUrl = `https://zion.tech/${alias}`,;
-    const newShortUrl = {;
-      id: Date.now(),;
-      longUrl: longUrl.trim(),;
-      shortUrl,;
-      alias,;
-      clicks: 0,;
-      createdAt: new Date().toISOString(),;
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    const alias = customAlias.trim() |generateRandomAlias();
+    const shortUrl = `https://zion.tech/${alias}`;
+    const newShortUrl = {id: Date.now();
+      longUrl: longUrl.trim();
+      shortUrl;
+      alias;
+      clicks: 0;
+      createdAt: new Date().toISOString();
       qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`;
-    },;
-    setShortenedUrls(prev => [newShortUrl, ...prev]),;
-    setLongUrl(''),;
-    setCustomAlias(''),;
+    }
+    setShortenedUrls(prev => [newShortUrl, ...prev]);
+    setLongUrl('');
+    setCustomAlias('');
     setIsShortening(false);
-  },;
-  const generateRandomAlias = () => {;
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',;
-    let result = '',;
+  }
+  const generateRandomAlias = () => {const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
     for (let i = 0, i < 6, i++) {;
       result += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     return result;
-  },;
-  const copyToClipboard = (text: string) => {;
-    navigator.clipboard.writeText(text);
-  },;
-  const incrementClicks = (id: number) => {;
-    setShortenedUrls(prev =>;
+  }
+  const copyToClipboard = (text: string) => {navigator.clipboard.writeText(text);
+  }
+  const incrementClicks = (id: number) => {setShortenedUrls(prev =>;
       prev.map(url =>;
         url.id === id ? { ...url, clicks: url.clicks + 1 } : url;
       );
     );
-  },;
-  const deleteUrl = (id: number) => {;
-    setShortenedUrls(prev => prev.filter(url => url.id !== id));
-  },;
-  const getTotalClicks = () => {;
-    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0);
-  };
-  const getTotalUrls = () => {;
-    return shortenedUrls.length;
-  };
+  }
+  const deleteUrl = (id: number) => {setShortenedUrls(prev => prev.filter(url => url.id !== id));
+  }
+  const getTotalClicks = () => {return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0);
+  }
+  const getTotalUrls = () => {return shortenedUrls.length;
+  }
   return (;
     <>;
       <Head>;
@@ -138,7 +130,7 @@ export default function URLShortenerPage() {;
                 </div>;
                 <Button;
                   onClick={generateShortUrl}
-                  disabled={!longUrl.trim() || isShortening}
+                  disabled={!longUrl.trim() |isShortening}
                   className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed";
                 >;
                   {isShortening ? (;
@@ -309,7 +301,7 @@ export default function URLShortenerPage() {;
                   {showQR === url.id && (;
                     <div className="mt-4 p-4 bg-gray-800 rounded-lg text-center">;
                       <img;
-                        src={url.qrCode} ;
+                        src={url.qrCode}
                         alt="QR Code";
                         className="mx-auto mb-3 w-32 h-32";
                       />;
@@ -324,7 +316,6 @@ export default function URLShortenerPage() {;
           </div>;
         </section>;
       )}
-;
       {/* Features */}
       <section className="py-20 bg-gray-900">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;

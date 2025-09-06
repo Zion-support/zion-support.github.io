@@ -24,35 +24,31 @@ const serviceProfileSchema = z.object({
   location: z.string().min(2, "Location is required");
   services: z.string().min(2, "Enter at least one service");
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-    message: "Rate must be a number"}),
+    message: "Rate must be a number"})
   availability: z.enum(["available", "limited", "unavailable"]);
-  enhancedProfile: z.boolean().default(true),
-  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()}),
-
+  enhancedProfile: z.boolean().default(true)
+  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()})
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
-
 export function ServiceProviderRegistrationForm() {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [serviceTags, setServiceTags] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),
+  const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null)
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
-  
   // Initialize form with default values
   const form = useForm<ServiceFormValues>({
-    resolver: zodResolver(serviceProfileSchema),
+    resolver: zodResolver(serviceProfileSchema)
     defaultValues: {
-      name: user?.displayName || "",
-      title: "",
-      bio: "",
-      location: "",
-      services: "",
-      hourlyRate: "",
-      availability: "available",
-      enhancedProfile: true,
-      website: ""}}),
-
+      name: user?.displayName |""
+      title: ""
+      bio: ""
+      location: ""
+      services: ""
+      hourlyRate: ""
+      availability: "available"
+      enhancedProfile: true
+      website: ""}})
   // Handle adding service tags
   const handleAddService = () => {
     const serviceInput = form.getValues("services");
@@ -60,137 +56,118 @@ export function ServiceProviderRegistrationForm() {
       setServiceTags([...serviceTags, serviceInput]);
       form.setValue("services", "")
     }
-  };
-
+  }
   // Handle removing service tags
   const handleRemoveService = (service: string) => {
     setServiceTags(serviceTags.filter((s) => s !== service))
-  };
-
+  }
   // Handle key press in services input (add on enter)
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
-      e.preventDefault(),
+      e.preventDefault()
       handleAddService()
     }
-  };
-
+  }
   // Handle avatar upload
   const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      const reader = new FileReader(),
+      const reader = new FileReader()
       reader.onloadend = () => {
         setUploadedAvatar(reader.result as string)
-      };
+      }
       reader.readAsDataURL(file)
     }
-  };
-
+  }
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
     const formData = form.getValues();
-    if (!formData.bio || formData.bio.length < 20) {
+    if (!formData.bio |formData.bio.length < 20) {
       toast({
-        title: "More information needed",
-        description: "Please provide at least a detailed bio before generating enhanced content."}),
+        title: "More information needed"
+        description: "Please provide at least a detailed bio before generating enhanced content."})
       return
     }
-
     try {
       setIsGenerating(true);
-
       // Call the Supabase Edge Function
       const { data, error } = await supabase.functions.invoke('service-profile-enhancer', {
         body: {
           providerData: {
-            name: formData.name,
-            title: formData.title,
-            bio: formData.bio,
-            services: serviceTags,
+            name: formData.name
+            title: formData.title
+            bio: formData.bio
+            services: serviceTags
             location: formData.location
           }
         }
       });
-
       if (error) {
         throw new Error(error.message)
       }
-
-      setGeneratedContent(data as { summary: string, services: string[] }),
-      
+      setGeneratedContent(data as { summary: string, services: string[] })
       toast({
-        title: "Enhanced Profile Generated",
+        title: "Enhanced Profile Generated"
         description: "AI has created a professional bio and suggested additional services for your profile."})
-      
     } catch (error: any) {
       console.error("Error generating enhanced profile:", error);
       toast({
-        title: "Generation failed",
-        description: error.message || "There was an error generating your enhanced profile. Please try again.",
+        title: "Generation failed"
+        description: error.message |"There was an error generating your enhanced profile. Please try again."
         variant: "destructive"})
     } finally {
       setIsGenerating(false)
     }
-  };
-
+  }
   // Apply generated content to form
   const applyGeneratedContent = () => {
     if (generatedContent) {
       form.setValue("bio", generatedContent.summary);
-      
       if (generatedContent.services && generatedContent.services.length > 0) {
         const newServices = generatedContent.services.filter(
           service => typeof service === 'string' && service && !serviceTags.includes(service)
         );
-        
         if (newServices.length > 0) {
           setServiceTags([...serviceTags, ...newServices])
         }
       }
     }
-  };
-
+  }
   // Handle form submission
   const onSubmit = async (values: ServiceFormValues) => {
     if (serviceTags.length === 0) {
       toast({
-        title: "Services required",
-        description: "Please add at least one service to your profile.",
-        variant: "destructive"}),
+        title: "Services required"
+        description: "Please add at least one service to your profile."
+        variant: "destructive"})
       return
     }
-
     setIsSubmitting(true);
-
     try {
       // For actual implementation with Supabase
       if (!user?.id) {
         throw new Error("User not authenticated")
       }
-      
       // Enhance profile if not already done
       let finalSummary = values.bio;
       let finalServices = serviceTags;
-      
       if (values.enhancedProfile && !generatedContent) {
         try {
           const { data: aiData } = await supabase.functions.invoke('service-profile-enhancer', {
             body: {
               providerData: {
-                name: values.name,
-                title: values.title,
-                bio: values.bio,
-                services: serviceTags,
+                name: values.name
+                title: values.title
+                bio: values.bio
+                services: serviceTags
                 location: values.location
               }
             }
           });
-          
           if (aiData) {
-            finalSummary = (aiData as any).summary || values.bio;
+            finalSummary = (aiData as any).summary |values.bio;
             // Merge AI suggested services with user-provided services
-            const aiServices = (aiData as any).services || [];
+            const aiServices = (aiData as any).services |[];
             finalServices = [...new Set([...serviceTags, ...aiServices])]
           }
         } catch (error) {
@@ -201,52 +178,45 @@ export function ServiceProviderRegistrationForm() {
         finalSummary = generatedContent.summary;
         finalServices = [...new Set([...serviceTags, ...generatedContent.services])]
       }
-
       // Get user email for notification
-      const { data: userData } = await supabase.auth.getUser(),
+      const { data: userData } = await supabase.auth.getUser()
       const userEmail = userData.user?.email;
-
       // Create the service profile
       const { data: profileData, error } = await supabase
         .from('profiles')
         .update({
-          display_name: values.name,
-          bio: finalSummary,
+          display_name: values.name
+          bio: finalSummary
           user_type: "creator", // Set as service provider
-          profile_complete: true,
-          updated_at: new Date().toISOString(),
-          headline: values.title,
+          profile_complete: true
+          updated_at: new Date().toISOString()
+          headline: values.title
           // Additional fields that might be in profiles table
         })
         .eq('id', user.id)
         .select();
-
       if (error) throw error;
-
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
-
       /*
       const { error: serviceError } = await supabase
         .from('service_profiles')
         .insert({
-          user_id: user.id,
-          services: finalServices,
-          hourly_rate: Number(values.hourlyRate),
-          availability_status: values.availability,
-          location: values.location,
-          website: values.website || null}),
-
+          user_id: user.id
+          services: finalServices
+          hourly_rate: Number(values.hourlyRate)
+          availability_status: values.availability
+          location: values.location
+          website: values.website |null})
       if (serviceError) throw serviceError;
       */
-
       // Send notification email if available
       if (userEmail && values.enhancedProfile) {
         try {
           await supabase.functions.invoke('send-email', {
             body: {
-              to: userEmail,
-              subject: "Your Zion Service Profile Is Ready",
+              to: userEmail
+              subject: "Your Zion Service Profile Is Ready"
               html: `
               <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">
                 <h2 style="color: #6D28D9,">Service Profile Created!</h2>
@@ -265,27 +235,23 @@ export function ServiceProviderRegistrationForm() {
           // Continue with submission even if email fails
         }
       }
-      
       toast({
-        title: "Profile Created Successfully",
-        description: "Your service provider profile has been published and is now visible in the directory."}),
-
+        title: "Profile Created Successfully"
+        description: "Your service provider profile has been published and is now visible in the directory."})
       // Redirect to service provider dashboard or profile page
       setTimeout(() => {
         window.location.href = "/service-dashboard"
       }, 1500)
-      
     } catch (error: any) {
       console.error("Error creating profile:", error);
       toast({
-        title: "Error Creating Profile",
-        description: error.message || "There was an error creating your profile. Please try again.",
+        title: "Error Creating Profile"
+        description: error.message |"There was an error creating your profile. Please try again."
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)
     }
-  };
-
+  }
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -295,7 +261,6 @@ export function ServiceProviderRegistrationForm() {
             Showcase your services and expertise to potential clients.
           </CardDescription>
         </CardHeader>
-
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <CardContent className="space-y-8">
@@ -325,7 +290,6 @@ export function ServiceProviderRegistrationForm() {
                       )}
                     />
                   </div>
-
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
@@ -348,7 +312,6 @@ export function ServiceProviderRegistrationForm() {
                       )}
                     />
                   </div>
-
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
@@ -371,7 +334,6 @@ export function ServiceProviderRegistrationForm() {
                       )}
                     />
                   </div>
-
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
@@ -395,7 +357,6 @@ export function ServiceProviderRegistrationForm() {
                     />
                   </div>
                 </div>
-                
                 {/* Upload Avatar */}
                 <div className="space-y-2">
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>
@@ -415,7 +376,6 @@ export function ServiceProviderRegistrationForm() {
                         </div>
                       )}
                     </div>
-
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
                       <Upload className="mr-2 h-4 w-4" />
                       <span>Upload Photo</span>
@@ -432,9 +392,7 @@ export function ServiceProviderRegistrationForm() {
                   </p>
                 </div>
               </div>
-
               <Separator className="bg-zion-blue-light/50" />
-
               {/* Bio Section */}
               <div className="space-y-4">
                 <h3 className="text-lg font-medium text-white">Service Description</h3>
@@ -453,12 +411,11 @@ export function ServiceProviderRegistrationForm() {
                       </FormControl>
                       <FormMessage className="text-red-400" />
                       <FormDescription className="text-zion-slate">
-                        {field.value?.length || 0}/1000 characters
+                        {field.value?.length |0}/1000 characters
                       </FormDescription>
                     </FormItem>
                   )}
                 />
-                
                 {/* AI Enhancement Option */}
                 <FormField
                   control={form.control}
@@ -484,7 +441,6 @@ export function ServiceProviderRegistrationForm() {
                     </FormItem>
                   )}
                 />
-                
                 {form.watch("enhancedProfile") && (
                   <div className="flex justify-end">
                     <Button
@@ -499,7 +455,6 @@ export function ServiceProviderRegistrationForm() {
                     </Button>
                   </div>
                 )}
-
                 {/* Generated Content Display */}
                 {generatedContent && (
                   <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
@@ -517,13 +472,11 @@ export function ServiceProviderRegistrationForm() {
                         <Check className="mr-1 h-3 w-3" /> Apply
                       </Button>
                     </div>
-                    
                     <div className="space-y-4">
                       <div>
                         <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>
                         <p className="text-zion-slate italic">{generatedContent.summary}</p>
                       </div>
-                      
                       {generatedContent.services && generatedContent.services.length > 0 && (
                         <div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>
@@ -543,9 +496,7 @@ export function ServiceProviderRegistrationForm() {
                   </div>
                 )}
               </div>
-
               <Separator className="bg-zion-blue-light/50" />
-
               {/* Services and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Services Section */}
@@ -582,7 +533,6 @@ export function ServiceProviderRegistrationForm() {
                       </FormItem>
                     )}
                   />
-
                   <div className="flex flex-wrap gap-2 mt-2">
                     {serviceTags.map(service => (
                       <Badge
@@ -604,7 +554,6 @@ export function ServiceProviderRegistrationForm() {
                     )}
                   </div>
                 </div>
-
                 {/* Pricing and Availability Section */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>
@@ -631,7 +580,6 @@ export function ServiceProviderRegistrationForm() {
                       </FormItem>
                     )}
                   />
-
                   <FormField
                     control={form.control}
                     name="availability"
@@ -654,7 +602,6 @@ export function ServiceProviderRegistrationForm() {
                                 Available for Work
                               </label>
                             </div>
-
                             <div className="flex items-center space-x-2">
                               <input
                                 type="radio"
@@ -669,7 +616,6 @@ export function ServiceProviderRegistrationForm() {
                                 Limited Availability
                               </label>
                             </div>
-
                             <div className="flex items-center space-x-2">
                               <input
                                 type="radio"
@@ -693,7 +639,6 @@ export function ServiceProviderRegistrationForm() {
                 </div>
               </div>
             </CardContent>
-
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
                 <Button
@@ -703,7 +648,7 @@ export function ServiceProviderRegistrationForm() {
                 >
                   Save as Draft
                 </Button>
-                <Button 
+                <Button
                   type="submit"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                   disabled={isSubmitting}
@@ -718,4 +663,3 @@ export function ServiceProviderRegistrationForm() {
     </div>
   )
 }
-;

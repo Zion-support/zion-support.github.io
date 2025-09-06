@@ -1,63 +1,57 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import { motion } from 'framer-motion',;
-import {;
-  Brain, Star, Users, TrendingUp, Zap, Shield,;
-  CheckCircle, Clock, Award, Target, Globe, Sparkles,;
-  Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb,;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import {Brain, Star, Users, TrendingUp, Zap, Shield;
+  CheckCircle, Clock, Award, Target, Globe, Sparkles;
+  Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
   ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon;
-} from 'lucide-react',;
-const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
+} from 'lucide-react';
+const contactInfo = {mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup.com';
-},;
+}
 const features = [;
-  'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion trainingMindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness exploration',;
+  'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion trainingMindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness exploration';
   'Spiritual growth pathwaysPersonal transformation tracking';
-],;
+];
 const useCases = [;
-  'Personal development and growthProfessional leadership trainingTherapeutic and healing practicesEducational enhancementCorporate wellness programsMental health supportSpiritual developmentCreative arts enhancement',;
+  'Personal development and growthProfessional leadership trainingTherapeutic and healing practicesEducational enhancementCorporate wellness programsMental health supportSpiritual developmentCreative arts enhancement';
   'Relationship improvementStress management and resilience';
-],;
+];
 const technology = [;
-  'Advanced AI algorithmsMachine learning modelsNatural language processingEmotional recognition systemsBiometric feedback integrationVirtual reality experiencesAugmented reality overlaysBrain-computer interfaces',;
+  'Advanced AI algorithmsMachine learning modelsNatural language processingEmotional recognition systemsBiometric feedback integrationVirtual reality experiencesAugmented reality overlaysBrain-computer interfaces';
   'Quantum computing integrationBlockchain security';
-],;
+];
 const integrations = [;
-  'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks',;
+  'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps';
-],;
+];
 const testimonials = [;
-  {;
-    name: 'Dr. Sarah Chen',;
-    role: 'Clinical Psychologist',;
-    company: 'Mindful Wellness Center',;
-    content: 'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self-awareness and empathy.',;
-    rating: 5,;
+  {name: 'Dr. Sarah Chen';
+    role: 'Clinical Psychologist';
+    company: 'Mindful Wellness Center';
+    content: 'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self-awareness and empathy.';
+    rating: 5;
     avatar: '👩‍⚕️';
-  },;
-  {;
-    name: 'Michael Rodriguez',;
-    role: 'CEO',;
-    company: 'InnovateTech Solutions',;
-    content: 'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.',;
-    rating: 5,;
+  }
+  {name: 'Michael Rodriguez';
+    role: 'CEO';
+    company: 'InnovateTech Solutions';
+    content: 'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.';
+    rating: 5;
     avatar: '👨‍💼';
-  },;
-  {;
-    name: 'Dr. Emily Watson',;
-    role: 'Research Director',;
-    company: 'Consciousness Research Institute',;
-    content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.',;
-    rating: 5,;
+  }
+  {name: 'Dr. Emily Watson';
+    role: 'Research Director';
+    company: 'Consciousness Research Institute';
+    content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.';
+    rating: 5;
     avatar: '👩‍🔬';
   }
-],;
-export default function AIConsciousnessEvolution2025() {;
-  return (;
+];
+export default function AIConsciousnessEvolution2025() {return (;
     <Layout>;
       <Head>;
         <title>AI Consciousness Evolution Platform 2025 - Zion Tech Group</title>;
@@ -77,16 +71,13 @@ export default function AIConsciousnessEvolution2025() {;
             <motion.div;
               key={i}
               className="absolute w-2 h-2 bg-purple-400 rounded-full opacity-30";
-              animate={{;
-                x: [0, 100, 0],;
-                y: [0, -100, 0],;
+              animate={{x: [0, 100, 0];
+                y: [0, -100, 0];
                 opacity: [0.3, 0.8, 0.3]}}
-              transition={{;
-                duration: 8 + i * 2,;
-                repeat: Infinity,;
+              transition={{duration: 8 + i * 2;
+                repeat: Infinity;
                 delay: i * 0.3}}
-              style={{;
-                left: `${Math.random() * 100}%`,;
+              style={{left: `${Math.random() * 100}%`;
                 top: `${Math.random() * 100}%`}}
             />;
           ))}
@@ -121,9 +112,9 @@ export default function AIConsciousnessEvolution2025() {;
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">;
               {[;
-                { label: 'Success Rate', value: '94%', icon: <Award className="w-8 h-8" /> },;
-                { label: 'Active Users', value: '12.5K+', icon: <Users className="w-8 h-8" /> },;
-                { label: 'Improvement', value: '300%', icon: <TrendingUp className="w-8 h-8" /> },;
+                { label: 'Success Rate', value: '94%', icon: <Award className="w-8 h-8" /> }
+                { label: 'Active Users', value: '12.5K+', icon: <Users className="w-8 h-8" /> }
+                { label: 'Improvement', value: '300%', icon: <TrendingUp className="w-8 h-8" /> }
                 { label: 'Satisfaction', value: '4.9/5', icon: <Star className="w-8 h-8" /> }
               ].map((stat, index) => (;
                 <motion.div;
@@ -227,22 +218,19 @@ export default function AIConsciousnessEvolution2025() {;
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {[;
-              {;
-                step: '01',;
-                title: 'AI Assessment',;
-                description: 'Our AI analyzes your current consciousness level and creates a personalized development plan.',;
+              {step: '01';
+                title: 'AI Assessment';
+                description: 'Our AI analyzes your current consciousness level and creates a personalized development plan.';
                 icon: <Brain className="w-12 h-12" />;
-              },;
-              {;
-                step: '02',;
-                title: 'Personalized Training',;
-                description: 'AI-generated exercises and experiences tailored to your specific needs and goals.',;
+              }
+              {step: '02';
+                title: 'Personalized Training';
+                description: 'AI-generated exercises and experiences tailored to your specific needs and goals.';
                 icon: <Target className="w-12 h-12" />;
-              },;
-              {;
-                step: '03',;
-                title: 'Continuous Evolution',;
-                description: 'Real-time feedback and adaptation ensure continuous growth and development.',;
+              }
+              {step: '03';
+                title: 'Continuous Evolution';
+                description: 'Real-time feedback and adaptation ensure continuous growth and development.';
                 icon: <TrendingUp className="w-12 h-12" />;
               }
             ].map((step, index) => (;
@@ -418,34 +406,31 @@ export default function AIConsciousnessEvolution2025() {;
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {[;
-              {;
-                name: 'Starter',;
-                price: '$99',;
-                period: '/month',;
-                description: 'Perfect for individuals beginning their consciousness journey',;
+              {name: 'Starter';
+                price: '$99';
+                period: '/month';
+                description: 'Perfect for individuals beginning their consciousness journey';
                 features: [;
                   'Basic AI assessment10 consciousness exercisesProgress trackingEmail supportMobile app access';
-                ],;
+                ];
                 popular: false;
-              },;
-              {;
-                name: 'Professional',;
-                price: '$299',;
-                period: '/month',;
-                description: 'Advanced features for serious consciousness development',;
+              }
+              {name: 'Professional';
+                price: '$299';
+                period: '/month';
+                description: 'Advanced features for serious consciousness development';
                 features: [;
                   'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority supportAdvanced analyticsIntegration with wearablesGroup sessions';
-                ],;
+                ];
                 popular: true;
-              },;
-              {;
-                name: 'Enterprise',;
-                price: '$799',;
-                period: '/month',;
-                description: 'Complete solution for organizations and teams',;
+              }
+              {name: 'Enterprise';
+                price: '$799';
+                period: '/month';
+                description: 'Complete solution for organizations and teams';
                 features: [;
                   'Everything in ProfessionalTeam managementCustom integrationsDedicated supportWhite-label optionsAdvanced reportingAPI access';
-                ],;
+                ];
                 popular: false;
               }
             ].map((plan, index) => (;
@@ -455,8 +440,7 @@ export default function AIConsciousnessEvolution2025() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${;
-                  plan.popular;
+                className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${plan.popular;
                     ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20';
                     : 'border-purple-500/20';
                 }`}
@@ -468,7 +452,6 @@ export default function AIConsciousnessEvolution2025() {;
                     </span>;
                   </div>;
                 )}
-;
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <div className="mb-4">;
@@ -485,8 +468,7 @@ export default function AIConsciousnessEvolution2025() {;
                     </li>;
                   ))}
                 </ul>;
-                <button className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${;
-                  plan.popular;
+                <button className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${plan.popular;
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105';
                     : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white';
                 }`}>;
@@ -525,8 +507,8 @@ export default function AIConsciousnessEvolution2025() {;
             {/* Contact Info */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">;
               {[;
-                { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile };
-                { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email };
+                { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile }
+                { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email }
                 { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
               ].map((contact, index) => (;
                 <motion.div;

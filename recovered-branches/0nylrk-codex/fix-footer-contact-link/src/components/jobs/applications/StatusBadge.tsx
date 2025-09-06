@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 interface StatusBadgeProps {
   status: ApplicationStatus;
 }
-
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
     case "new":

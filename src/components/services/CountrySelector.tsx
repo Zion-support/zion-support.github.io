@@ -1,37 +1,36 @@
 import { useState, useEffect } from 'react'
 import { Globe } from 'lucide-react'
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
 } from '@/components/ui/select'
-  CountryPricing,
-  onsiteServicePricing,
+  CountryPricing
+  onsiteServicePricing
 } from '@/data/onsiteServicePricing'
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void
   selectedCountry: CountryPricing | null
 export function CountrySelector({
-  onCountryChange,
-  selectedCountry,
+  onCountryChange
+  selectedCountry
 }: CountrySelectorProps) {
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
-  onCountryChange: (country: CountryPricing | null,) => void,
+  onCountryChange: (country: CountryPricing | null,) => void
   selectedCountry: CountryPricing | null
 }
-
   // Set top/popular countries
   useEffect(() => {
     const popular = [
-      'United States',
-      'United Kingdom',
-      'Canada',
-      'Germany',
-      'Australia',
-      'Japan',
-      'Singapore',
+      'United States'
+      'United Kingdom'
+      'Canada'
+      'Germany'
+      'Australia'
+      'Japan'
+      'Singapore'
     ]
     const top = onsiteServicePricing
       .filter(item => popular.includes(item.country))
@@ -41,7 +40,7 @@ export function CountrySelector({
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
     const country =
-      onsiteServicePricing.find(item => item.country === countryName) || null
+      onsiteServicePricing.find(item => item.country === countryName) |null
     onCountryChange(country)
   }
   return (
@@ -52,7 +51,6 @@ export function CountrySelector({
           ? `IT Onsite Service in ${selectedCountry.country}`
           : 'Select Country for IT Onsite Service'}
       </h3>
-
       <Select
         onValueChange={handleCountryChange}
         value={selectedCountry?.country}      >
@@ -104,4 +102,3 @@ export function CountrySelector({
     </div>
   )
 }
-;

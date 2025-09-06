@@ -1,82 +1,76 @@
-import React, { useState } from 'react',;
-import SEO from '../components/SEO',;
-import { motion } from 'framer-motion',;
-import {;
-  Brain, Building, Target, Cpu, Shield,;
-  Check, Phone, Mail, MapPin,;
+import React, { useState } from 'react';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+import {Brain, Building, Target, Cpu, Shield;
+  Check, Phone, Mail, MapPin;
   TrendingUp, Zap, Globe;
-} from 'lucide-react',;
+} from 'lucide-react';
 // Import our new service data;
-import { advancedBusinessIntelligenceServices2025 } from '../data/2025-advanced-business-intelligence-services',;
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services',;
-import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services',;
-import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions',;
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services',;
-import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services',;
-import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services',;
-import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services',;
-import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions',;
-import { emergingTechnologyServices } from '../data/2025-emerging-technology-services',;
-const ComprehensiveServicesShowcase2025 = () => {;
-  const [activeTab, setActiveTab] = useState('all'),;
+import { advancedBusinessIntelligenceServices2025 } from '../data/2025-advanced-business-intelligence-services';
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
+import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services';
+import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services';
+import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services';
+import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions';
+import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
+const ComprehensiveServicesShowcase2025 = () => {const [activeTab, setActiveTab] = useState('all');
   const allServices = [;
-    ...advancedBusinessIntelligenceServices2025,;
-    ...advancedAIAutomationServices2025,;
-    ...innovative2025ITInfrastructureServices,;
-    ...innovativeMicroSaasSolutions2025,;
+    ...advancedBusinessIntelligenceServices2025;
+    ...advancedAIAutomationServices2025;
+    ...innovative2025ITInfrastructureServices;
+    ...innovativeMicroSaasSolutions2025;
     ...cuttingEdgeAIServices2025;
-  ],;
+  ];
 // Helper function to get service pricing;
 const getServicePricing = (service: any) => {;
-  if (service.pricing?.starter) return service.pricing.starter,;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`,;
-  if (typeof service.price === 'string') return service.price,;
+  if (service.pricing?.starter) return service.pricing.starter;
+  if (service.price?.monthly) return `$${service.price.monthly}/month`;
+  if (typeof service.price === 'string') return service.price;
   return 'Contact for pricing';
-},;
+}
 // Helper function to get service features;
-const getServiceFeatures = (service: any) => {;
-  return service.keyFeatures || service.features || [];
-},;
+const getServiceFeatures = (service: any) => {return service.keyFeatures |service.features |[];
+}
 // Helper function to get service setup time;
-const getServiceSetupTime = (service: any) => {;
-  if (service.setupTime) return service.setupTime,;
-  if (service.pricing?.setupTime) return service.pricing.setupTime,;
-  if (service.price?.setupTime) return service.price.setupTime,;
+const getServiceSetupTime = (service: any) => {if (service.setupTime) return service.setupTime;
+  if (service.pricing?.setupTime) return service.pricing.setupTime;
+  if (service.price?.setupTime) return service.price.setupTime;
   return 'N/A';
-},;
+}
 // Helper function to get service trial days;
-const getServiceTrialDays = (service: any) => {;
-  if (service.trialDays) return service.trialDays,;
-  if (service.pricing?.trialDays) return service.pricing.trialDays,;
-  if (service.price?.trialDays) return service.price.trialDays,;
+const getServiceTrialDays = (service: any) => {if (service.trialDays) return service.trialDays;
+  if (service.pricing?.trialDays) return service.pricing.trialDays;
+  if (service.price?.trialDays) return service.price.trialDays;
   return 'N/A';
-},;
+}
 // All services combined;
 const allServices = [;
-  ...advancedAIMLServices,;
-  ...advancedCybersecurityServices,;
-      ...advancedCloudDevOpsServices2025,;
-  ...industrySpecificSolutions,;
+  ...advancedAIMLServices;
+  ...advancedCybersecurityServices;
+      ...advancedCloudDevOpsServices2025;
+  ...industrySpecificSolutions;
   ...emergingTechnologyServices;
-],;
+];
   const categories = [;
-    { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5" /> },;
-    { id: 'business-intelligence', name: 'Business Intelligence', icon: <TrendingUp className="w-5 h-5" /> },;
-    { id: 'ai-automation', name: 'AI Automation', icon: <Brain className="w-5 h-5" /> },;
-    { id: 'it-infrastructure', name: 'IT Infrastructure', icon: <Building className="w-5 h-5" /> },;
-    { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> },;
+    { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5" /> }
+    { id: 'business-intelligence', name: 'Business Intelligence', icon: <TrendingUp className="w-5 h-5" /> }
+    { id: 'ai-automation', name: 'AI Automation', icon: <Brain className="w-5 h-5" /> }
+    { id: 'it-infrastructure', name: 'IT Infrastructure', icon: <Building className="w-5 h-5" /> }
+    { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> }
     { id: 'ai-services', name: 'AI Services', icon: <Cpu className="w-5 h-5" /> }
-  ],;
+  ];
   const filteredServices = activeTab === 'all';
     ? allServices;
-    : allServices.filter(service => {;
-        if (activeTab === 'business-intelligence') return service.category?.includes('Business Intelligence') || service.category?.includes('Analytics'),;
-        if (activeTab === 'ai-automation') return service.category?.includes('AI Automation'),;
-        if (activeTab === 'it-infrastructure') return service.category?.includes('IT Infrastructure'),;
-        if (activeTab === 'micro-saas') return service.category?.includes('Micro SAAS'),;
-        if (activeTab === 'ai-services') return service.category?.includes('AI Services'),;
+    : allServices.filter(service => {if (activeTab === 'business-intelligence') return service.category?.includes('Business Intelligence') |service.category?.includes('Analytics');
+        if (activeTab === 'ai-automation') return service.category?.includes('AI Automation');
+        if (activeTab === 'it-infrastructure') return service.category?.includes('IT Infrastructure');
+        if (activeTab === 'micro-saas') return service.category?.includes('Micro SAAS');
+        if (activeTab === 'ai-services') return service.category?.includes('AI Services');
         return true;
-      }),;
+      });
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">;
       <SEO;
@@ -147,8 +141,7 @@ const allServices = [;
               <button;
                 key={category.id}
                 onClick={() => setActiveTab(category.id)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${;
-                  activeTab === category.id;
+                className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${activeTab === category.id;
                     ? 'bg-blue-600 text-white border-blue-600';
                     : 'bg-white text-gray-700 border-gray-300 hover:border-blue-300 hover:text-blue-600';
                 }`}
@@ -239,14 +232,14 @@ const allServices = [;
                   {/* CTA Button */}
                   <div className="flex flex-col gap-2">;
                     <a;
-                      href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
+                      href={`mailto:${(service as any).contact |'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2";
                     >;
                       <Mail className="w-4 h-4" />;
                       Get Started;
                     </a>;
                     <a;
-                      href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
+                      href={`tel:${(service as any).mobile |'+1 302 464 0950'}`}
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2";
                     >;
                       <Phone className="w-4 h-4" />;
@@ -303,7 +296,7 @@ const allServices = [;
                           {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
                         </span>;
                         <span className="text-gray-500">;
-                          {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
+                          {typeof service.price === 'string' ? (service as any).period |'/month' : '/month'}
                         </span>;
                       </div>;
                       {/* Features */}
@@ -355,7 +348,7 @@ const allServices = [;
                               {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
                             </span>;
                             <span className="text-gray-500">;
-                              {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
+                              {typeof service.price === 'string' ? (service as any).period |'/month' : '/month'}
                             </span>;
                           </div>;
                           <div className="mb-4">;
@@ -508,5 +501,5 @@ const allServices = [;
       </section>;
     </div>;
   );
-},;
+}
 export default ComprehensiveServicesShowcase2025;

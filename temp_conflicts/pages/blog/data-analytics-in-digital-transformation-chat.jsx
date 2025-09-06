@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const DataAnalyticsInDigitalTransformationChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const DataAnalyticsInDigitalTransformationChat = () => {return (;
     <div>;
       <Head>;
         <title>DataAnalyticsInDigitalTransformationChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const DataAnalyticsInDigitalTransformationChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default DataAnalyticsInDigitalTransformationChat;

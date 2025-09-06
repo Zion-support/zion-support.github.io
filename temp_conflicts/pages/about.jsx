@@ -1,55 +1,47 @@
 
-import Head from 'next/head',;
-import EnhancedLayout from '../components/layout/EnhancedLayout',;
-const About = () => {;
-  const values = [;
+import Head from 'next/head';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+const About = () => {const values = [;
     {;
-      title: "Innovation",;
-      description: "We constantly push the boundaries of technology to deliver cutting-edge solutions.",;
+      title: "Innovation";
+      description: "We constantly push the boundaries of technology to deliver cutting-edge solutions.";
       icon: "🚀";
-    },;
-    {;
-      title: "Excellence",;
-      description: "We maintain the highest standards of quality in everything we do.",;
+    }
+    {title: "Excellence";
+      description: "We maintain the highest standards of quality in everything we do.";
       icon: "⭐";
-    },;
-    {;
-      title: "Collaboration",;
-      description: "We work closely with our clients to ensure their success is our success.",;
+    }
+    {title: "Collaboration";
+      description: "We work closely with our clients to ensure their success is our success.";
       icon: "🤝";
-    },;
-    {;
-      title: "Integrity",;
-      description: "We operate with transparency, honesty, and ethical business practices.",;
+    }
+    {title: "Integrity";
+      description: "We operate with transparency, honesty, and ethical business practices.";
       icon: "🔒";
     }
-  ],;
+  ];
   const team = [;
-    {;
-      name: "Sarah Johnson",;
-      role: "Chief Technology Officer",;
-      expertise: "AI/ML, Cloud Architecture",;
+    {name: "Sarah Johnson";
+      role: "Chief Technology Officer";
+      expertise: "AI/ML, Cloud Architecture";
       experience: "15+ years";
-    },;
-    {;
-      name: "Michael Chen",;
-      role: "Head of Engineering",;
-      expertise: "Full-Stack Development, DevOps",;
+    }
+    {name: "Michael Chen";
+      role: "Head of Engineering";
+      expertise: "Full-Stack Development, DevOps";
       experience: "12+ years";
-    },;
-    {;
-      name: "Emily Rodriguez",;
-      role: "Lead Data Scientist",;
-      expertise: "Data Analytics, Machine Learning",;
+    }
+    {name: "Emily Rodriguez";
+      role: "Lead Data Scientist";
+      expertise: "Data Analytics, Machine Learning";
       experience: "10+ years";
-    },;
-    {;
-      name: "David Kim",;
-      role: "Solutions Architect",;
-      expertise: "Cloud Solutions, Blockchain",;
+    }
+    {name: "David Kim";
+      role: "Solutions Architect";
+      expertise: "Cloud Solutions, Blockchain";
       experience: "14+ years";
     }
-  ],;
+  ];
   return (;
     <EnhancedLayout>;
       <Head>;
@@ -170,5 +162,5 @@ const About = () => {;
       </main>;
     </EnhancedLayout>;
   );
-},;
+}
 export default About;

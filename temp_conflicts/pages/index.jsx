@@ -1,34 +1,31 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-import EnhancedLayout from '../components/layout/EnhancedLayout',;
-const Home = () => {;
-  const features = [;
+import Head from 'next/head';
+import Link from 'next/link';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+const Home = () => {const features = [;
     {;
-      title: "AI Development",;
-      description: "Custom AI solutions and machine learning models for your business needs.",;
-      icon: "🤖",;
+      title: "AI Development";
+      description: "Custom AI solutions and machine learning models for your business needs.";
+      icon: "🤖";
       href: "/services/ai-development";
-    },;
-    {;
-      title: "Cloud Architecture",;
-      description: "Scalable cloud solutions and infrastructure design for modern applications.",;
-      icon: "☁️",;
+    }
+    {title: "Cloud Architecture";
+      description: "Scalable cloud solutions and infrastructure design for modern applications.";
+      icon: "☁️";
       href: "/services/cloud-services";
-    },;
-    {;
-      title: "Digital Transformation",;
-      description: "End-to-end digital transformation services to modernize your business.",;
-      icon: "🚀",;
+    }
+    {title: "Digital Transformation";
+      description: "End-to-end digital transformation services to modernize your business.";
+      icon: "🚀";
       href: "/services";
     }
-  ],;
+  ];
   const stats = [;
-    { number: "100+", label: "Happy Clients" },;
-    { number: "500+", label: "Projects Completed" },;
-    { number: "50+", label: "Team Members" },;
+    { number: "100+", label: "Happy Clients" }
+    { number: "500+", label: "Projects Completed" }
+    { number: "50+", label: "Team Members" }
     { number: "5+", label: "Years of Excellence" }
-  ],;
+  ];
   return (;
     <EnhancedLayout>;
       <Head>;
@@ -116,5 +113,5 @@ const Home = () => {;
       </section>;
     </EnhancedLayout>;
   );
-},;
+}
 export default Home;

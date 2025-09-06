@@ -1,7 +1,6 @@
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-const Page: NextPage = () => {;
-  return (;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+const Page: NextPage = () => {return (;
     <>;
       <Head>;
         <title>Auto Update 2025-08-23T23-56-48-824Z</title>;
@@ -13,5 +12,5 @@ const Page: NextPage = () => {;
       </div>;
     </>;
   );
-},;
+}
 export default Page;

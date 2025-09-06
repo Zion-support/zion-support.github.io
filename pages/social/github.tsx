@@ -3,7 +3,7 @@ import Head from 'next/head';
 export default function GitHubRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.location.replace('https: //github.com/Zion-Holdings'),
+      window.location.replace('https: //github.com/Zion-Holdings')
     }
   }, []);
   return (

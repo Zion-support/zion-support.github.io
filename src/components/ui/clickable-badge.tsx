@@ -7,10 +7,10 @@ export interface ClickableBadgeProps
   onRemove?: () => void
   variant?: 'default' | 'secondary' | 'destructive' | 'outline'
 export function ClickableBadge({
-  children,
-  className,
-  variant = 'default',
-  onRemove,
+  children
+  className
+  variant = 'default'
+  onRemove
   ...props
 }: ClickableBadgeProps) {
       >
@@ -19,7 +19,6 @@ export function ClickableBadge({
         <button
           type='button'
           onClick={e => {
-
 import React from "react"
 import { cn } from "@/lib/utils"
 import { badgeVariants } from "@/components/ui/badge-variants"
@@ -27,7 +26,6 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
   onRemove?: () => void
   variant?: "default" | "secondary" | "destructive" | "outline"
 }
-
 export function ClickableBadge({
   children
   className

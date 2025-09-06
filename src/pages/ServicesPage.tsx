@@ -1,5 +1,4 @@
 
-
     allServices = [...allServices, ...newServices]
     let filteredServices = allServices
 }
@@ -18,7 +17,7 @@ const ServicesPage: React.FC = () => {
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
             <p className="text-gray-600 mb-6">
-              Cutting-edge artificial intelligence solutions including machine learning,
+              Cutting-edge artificial intelligence solutions including machine learning
               natural language processing, and intelligent automation.
             </p>
             <a href="/ai-services" className="text-blue-600 hover:text-blue-700 font-semibold">
@@ -28,7 +27,7 @@ const ServicesPage: React.FC = () => {
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>
             <p className="text-gray-600 mb-6">
-              Comprehensive IT infrastructure, cloud migration, cybersecurity,
+              Comprehensive IT infrastructure, cloud migration, cybersecurity
               and digital transformation solutions.
             </p>
             <a href="/it-services" className="text-blue-600 hover:text-blue-700 font-semibold">
@@ -38,7 +37,7 @@ const ServicesPage: React.FC = () => {
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>
             <p className="text-gray-600 mb-6">
-              Innovative, focused software solutions that solve specific business 
+              Innovative, focused software solutions that solve specific business
               problems with minimal overhead.
             </p>
             <a href="/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold">
@@ -52,4 +51,3 @@ const ServicesPage: React.FC = () => {
 }
 export default ServicesPage
 }
-;

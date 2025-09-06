@@ -1,61 +1,52 @@
 
-import Head from 'next/head',;
-import { useState } from 'react',;
-import EnhancedLayout from '../components/layout/EnhancedLayout',;
-const Contact = () => {;
-  const [formData, setFormData] = useState({;
-    name: '',;
-    email: '',;
-    company: '',;
-    phone: '',;
-    service: '',;
+import Head from 'next/head';
+import { useState } from 'react';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+const Contact = () => {const [formData, setFormData] = useState({;
+    name: '';
+    email: '';
+    company: '';
+    phone: '';
+    service: '';
     message: '';
-  }),;
-  const handleSubmit = (e) => {;
-    e.preventDefault(),;
+  });
+  const handleSubmit = (e) => {e.preventDefault();
     // Handle form submission here;
     // // // console.log('Form submitted:', formData);
-  },;
-  const handleChange = (e) => {;
-    setFormData({;
-      ...formData,;
+  }
+  const handleChange = (e) => {setFormData({;
+      ...formData;
       [e.target.name]: e.target.value;
     });
-  },;
+  }
   const contactInfo = [;
-    {;
-      title: "General Inquiries",;
-      email: "info@ziontechgroup.com",;
+    {title: "General Inquiries";
+      email: "info@ziontechgroup.com";
       phone: "+1 (555) 123-4567";
-    },;
-    {;
-      title: "Sales & Partnerships",;
-      email: "sales@ziontechgroup.com",;
+    }
+    {title: "Sales & Partnerships";
+      email: "sales@ziontechgroup.com";
       phone: "+1 (555) 123-4568";
-    },;
-    {;
-      title: "Technical Support",;
-      email: "support@ziontechgroup.com",;
+    }
+    {title: "Technical Support";
+      email: "support@ziontechgroup.com";
       phone: "+1 (555) 123-4569";
     }
-  ],;
+  ];
   const offices = [;
-    {;
-      city: "San Francisco",;
-      address: "123 Innovation Drive, San Francisco, CA 94105",;
+    {city: "San Francisco";
+      address: "123 Innovation Drive, San Francisco, CA 94105";
       phone: "+1 (555) 123-4567";
-    },;
-    {;
-      city: "New York",;
-      address: "456 Tech Avenue, New York, NY 10001",;
+    }
+    {city: "New York";
+      address: "456 Tech Avenue, New York, NY 10001";
       phone: "+1 (555) 123-4568";
-    },;
-    {;
-      city: "London",;
-      address: "789 Digital Street, London, UK EC1A 1BB",;
+    }
+    {city: "London";
+      address: "789 Digital Street, London, UK EC1A 1BB";
       phone: "+44 20 1234 5678";
     }
-  ],;
+  ];
   return (;
     <EnhancedLayout>;
       <Head>;
@@ -240,5 +231,5 @@ const Contact = () => {;
       </main>;
     </EnhancedLayout>;
   );
-},;
+}
 export default Contact;

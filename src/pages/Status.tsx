@@ -1,11 +1,10 @@
 import { logWarn } from '@/utils/productionLogger'
 interface ServiceStatus {
-  name: string,
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance',
-  description: string,
+  name: string
+  status: 'operational' | 'degraded' | 'outage' | 'maintenance'
+  description: string
   lastChecked: string
 }
-
         return <CheckCircle className="h-5 w-5 text-green-500" />
         return <Clock className="h-5 w-5 text-blue-500" />
       default:
@@ -14,4 +13,3 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 }
   )
 }
-;

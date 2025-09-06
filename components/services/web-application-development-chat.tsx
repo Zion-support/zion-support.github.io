@@ -11,7 +11,6 @@ const WebApplicationDevelopmentChat: NextPage = () => {
           content="WebApplicationDevelopmentChat service"
         />{" "}
       </Head>
-
       <main>
         <h1>WebApplicationDevelopmentChat</h1>
         <p>Service details coming soon...</p>
@@ -19,6 +18,5 @@ const WebApplicationDevelopmentChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default WebApplicationDevelopmentChat;

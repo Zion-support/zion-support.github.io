@@ -8,7 +8,6 @@ import {useTheme} from "@/hooks/useTheme";
 export function SupportWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
-  
   return (
     <>
       {/* Fixed button in the bottom right */}
@@ -22,14 +21,13 @@ export function SupportWidget() {
           <MessageSquare className="h-6 w-6" />
         </Button>
       )}
-      
       {/* Support panel */}
       {isOpen && (
-        <div 
+        <div
           className={cn(
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
-            theme === "dark" 
-              ? "bg-zion-blue-dark border border-zion-blue-light" 
+            theme === "dark"
+              ? "bg-zion-blue-dark border border-zion-blue-light"
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}
@@ -62,11 +60,9 @@ export function SupportWidget() {
               </Button>
             </div>
           </div>
-          
           <ChatBotPanel />
         </div>
       )}
     </>
   )
 }
-;

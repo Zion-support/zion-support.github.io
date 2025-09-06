@@ -1,6 +1,4 @@
 
-
     let filteredTalents = allTalents
     }
 }
-;

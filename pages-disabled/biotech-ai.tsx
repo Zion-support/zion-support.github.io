@@ -7,7 +7,6 @@ import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-se
 export default function IncidentAutomationSuitePage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
   if (!service) return null;
-
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
       <Head>
@@ -51,5 +50,3 @@ export default function IncidentAutomationSuitePage() {
     </UltraFuturisticBackground>
   )
 }
-
-;

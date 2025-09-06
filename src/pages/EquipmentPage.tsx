@@ -1,7 +1,5 @@
 
-
 }
-
 // Main export with error boundary
 export default function EquipmentPage() {
   return (
@@ -10,4 +8,3 @@ export default function EquipmentPage() {
     </EquipmentErrorBoundary>
   )
 }
-;

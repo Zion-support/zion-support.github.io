@@ -1,8 +1,7 @@
-import React from 'react',;
-import SEO from '../components/SEO',;
-import { Check, ExternalLink } from 'lucide-react',;
-export default function SecretsRotationAutomationPage() {;
-	const features = [;
+import React from 'react';
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
+export default function SecretsRotationAutomationPage() {const features = [;
 		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support';
 	];
 	return (;

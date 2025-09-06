@@ -1,103 +1,94 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
-import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react',;
-export default function CodeQualityCheckerPage() {;
-  const [isAnalyzing, setIsAnalyzing] = useState(false),;
-  const [analysisResults, setAnalysisResults] = useState(null),;
-  const [codeInput, setCodeInput] = useState(''),;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
+export default function CodeQualityCheckerPage() {const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisResults, setAnalysisResults] = useState(null);
+  const [codeInput, setCodeInput] = useState('');
   const features = [;
     {;
-      icon: <Code className="w-8 h-8 text-white" />,;
-      title: 'Multi-Language Support',;
-      description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.',;
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',;
-      gradient: 'from-teal-400 to-cyan-500'},;
-    {;
-      icon: <CheckCircle className="w-8 h-8 text-white" />,;
-      title: 'Code Quality Metrics',;
-      description: 'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.',;
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',;
-      gradient: 'from-green-400 to-emerald-500'},;
-    {;
-      icon: <Zap className="w-8 h-8 text-white" />,;
-      title: 'Real-Time Analysis',;
-      description: 'Instant code quality feedback with detailed explanations and improvement suggestions.',;
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',;
-      gradient: 'from-orange-400 to-red-500'},;
-    {;
-      icon: <Shield className="w-8 h-8 text-white" />,;
-      title: 'Security Scanning',;
-      description: 'Automated detection of security vulnerabilities, dependency issues, and best practice violations.',;
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',;
-      gradient: 'from-purple-400 to-indigo-500'}],;
+      icon: <Code className="w-8 h-8 text-white" />;
+      title: 'Multi-Language Support';
+      description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.';
+      color: 'bg-gradient-to-br from-teal-500 to-cyan-600';
+      gradient: 'from-teal-400 to-cyan-500'}
+    {icon: <CheckCircle className="w-8 h-8 text-white" />;
+      title: 'Code Quality Metrics';
+      description: 'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.';
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
+      gradient: 'from-green-400 to-emerald-500'}
+    {icon: <Zap className="w-8 h-8 text-white" />;
+      title: 'Real-Time Analysis';
+      description: 'Instant code quality feedback with detailed explanations and improvement suggestions.';
+      color: 'bg-gradient-to-br from-orange-500 to-red-600';
+      gradient: 'from-orange-400 to-red-500'}
+    {icon: <Shield className="w-8 h-8 text-white" />;
+      title: 'Security Scanning';
+      description: 'Automated detection of security vulnerabilities, dependency issues, and best practice violations.';
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600';
+      gradient: 'from-purple-400 to-indigo-500'}];
   const supportedLanguages = [;
-    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checksReact best practices'] },;
-    { name: 'Python', icon: '🐍', features: ['PEP 8 complianceType hintsSecurity scanning'] },;
-    { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyleSonarQube integration'] },;
-    { name: 'C++', icon: '⚙️', features: ['Clang-tidyStatic analysisMemory leak detection'] },;
-    { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vetPerformance analysis'] },;
+    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checksReact best practices'] }
+    { name: 'Python', icon: '🐍', features: ['PEP 8 complianceType hintsSecurity scanning'] }
+    { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyleSonarQube integration'] }
+    { name: 'C++', icon: '⚙️', features: ['Clang-tidyStatic analysisMemory leak detection'] }
+    { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vetPerformance analysis'] }
     { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
-  ],;
+  ];
   const pricing = [;
-    {;
-      name: 'Developer',;
-      price: '$29',;
-      period: '/month',;
-      description: 'Perfect for individual developers and small projects',;
+    {name: 'Developer';
+      price: '$29';
+      period: '/month';
+      description: 'Perfect for individual developers and small projects';
       features: [;
         '100 code analyses/monthBasic quality metrics5 programming languagesEmail supportBasic reportingCommunity rules';
-      ],;
-      popular: false;
-    },;
-    {;
-      name: 'Team',;
-      price: '$79',;
-      period: '/month',;
-      description: 'Ideal for development teams and growing companies',;
-      features: [;
-        '500 code analyses/monthAdvanced quality metricsAll programming languagesPriority supportAdvanced reportingCustom rulesTeam collaborationAPI access';
-      ],;
-      popular: true;
-    },;
-    {;
-      name: 'Enterprise',;
-      price: '$199',;
-      period: '/month',;
-      description: 'For large organizations with complex codebases',;
-      features: [;
-        'Unlimited analysesEnterprise metricsCustom language support24/7 dedicated supportCustom reportingWhite-label optionsOn-premise deploymentCustom integrations';
-      ],;
+      ];
       popular: false;
     }
-  ],;
-  const handleAnalyzeCode = async () => {;
-    if (!codeInput.trim()) return,;
-    setIsAnalyzing(true),;
+    {name: 'Team';
+      price: '$79';
+      period: '/month';
+      description: 'Ideal for development teams and growing companies';
+      features: [;
+        '500 code analyses/monthAdvanced quality metricsAll programming languagesPriority supportAdvanced reportingCustom rulesTeam collaborationAPI access';
+      ];
+      popular: true;
+    }
+    {name: 'Enterprise';
+      price: '$199';
+      period: '/month';
+      description: 'For large organizations with complex codebases';
+      features: [;
+        'Unlimited analysesEnterprise metricsCustom language support24/7 dedicated supportCustom reportingWhite-label optionsOn-premise deploymentCustom integrations';
+      ];
+      popular: false;
+    }
+  ];
+  const handleAnalyzeCode = async () => {if (!codeInput.trim()) return;
+    setIsAnalyzing(true);
     // Simulate code analysis;
     setTimeout(() => {;
       setAnalysisResults({;
-        language: 'JavaScript',;
-        qualityScore: 85,;
+        language: 'JavaScript';
+        qualityScore: 85;
         issues: [;
-          { type: 'warning', message: 'Consider using const instead of let for variables that are not reassigned', line: 5, severity: 'medium' },;
-          { type: 'info', message: 'Function is quite long (25 lines). Consider breaking it into smaller functions', line: 12, severity: 'low' },;
+          { type: 'warning', message: 'Consider using const instead of let for variables that are not reassigned', line: 5, severity: 'medium' }
+          { type: 'info', message: 'Function is quite long (25 lines). Consider breaking it into smaller functions', line: 12, severity: 'low' }
           { type: 'error', message: 'Missing semicolon at end of statement', line: 18, severity: 'high' }
-        ],;
-        metrics: {;
-          complexity: 'Medium',;
-          maintainability: 'Good',;
-          testCoverage: '85%',;
+        ];
+        metrics: {complexity: 'Medium';
+          maintainability: 'Good';
+          testCoverage: '85%';
           securityScore: '92%';
-        },;
+        }
         recommendations: [;
           'Use const for immutable variables to improve code clarityBreak down large functions into smaller, more focused functionsAdd proper error handling for better robustnessConsider adding JSDoc comments for better documentation';
         ];
-      }),;
+      });
       setIsAnalyzing(false);
     }, 3000);
-  };
+  }
   return (;
     <>;
       <Head>;
@@ -136,7 +127,7 @@ export default function CodeQualityCheckerPage() {;
               onClick={handleAnalyzeCode}
               size="lg";
               className="w-full mt-4 bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white shadow-2xl hover-glow";
-              disabled={isAnalyzing || !codeInput.trim()}
+              disabled={isAnalyzing |!codeInput.trim()}
             >;
               {isAnalyzing ? (;
                 <>;
@@ -337,7 +328,6 @@ export default function CodeQualityCheckerPage() {;
           </div>;
         </section>;
       )}
-;
       {/* Pricing Section */}
       <section id="pricing" className="section-padding bg-gradient-cursor">;
         <div className="container-cursor">;
@@ -363,7 +353,6 @@ export default function CodeQualityCheckerPage() {;
                     </span>;
                   </div>;
                 )}
-;
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>;
                   <div className="mb-6">;

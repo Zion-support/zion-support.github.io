@@ -6,7 +6,6 @@ export default function GlobalSearchBar() {
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [open, setOpen] = useState(false);
   const controller = useRef<AbortController | null>(null);
-
   useEffect(() => {
     if (!query) {
       setSuggestions([]);
@@ -17,58 +16,54 @@ export default function GlobalSearchBar() {
     const run = async () => {
       try {
         const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
-          signal: controller.current!.signal,
+          signal: controller.current!.signal
         });
         const j = await r.json();
-        setSuggestions(j.suggestions || []);
+        setSuggestions(j.suggestions |[]);
         setOpen(true);
       } catch {}
-    };
+    }
     const id = setTimeout(run, 150);
     return () => clearTimeout(id);  }, [query]);        const j = await r.json();
-        setSuggestions(j.suggestions || []);
+        setSuggestions(j.suggestions |[]);
         setOpen(true)
       } catch {}
-    };
+    }
     const id = setTimeout(run, 150);
     return () => clearTimeout(id)
   }, [query]);
-
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!query.trim()) return;
     fetch('/api/telemetry/search', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ q: query }),
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ q: query })
     }).catch(() => {});
     router.push(`/search?q=${encodeURIComponent(query)}`);
-    setOpen(false);  };
-
+    setOpen(false);  }
   const startVoice = () => {
     if (typeof window === 'undefined') return;
     const Speech: any =
-      (window as any).SpeechRecognition ||
-      (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
+      (window as any).SpeechRecognition |
+      (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {})
     router.push(`/search?q=${encodeURIComponent(query)}`);
     setOpen(false)
-  };
-
+  }
   const startVoice = () => {
     if (typeof window === 'undefined') return;
     const Speech: any =
-      (window as any).SpeechRecognition ||
-      (window as any).webkitSpeechRecognition;    const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
+      (window as any).SpeechRecognition |
+      (window as any).webkitSpeechRecognition;    const Speech: any = (window as any).SpeechRecognition |(window as any).webkitSpeechRecognition
     if (!Speech) return;
     const rec = new Speech();
     rec.lang = 'en-US';
     rec.onresult = (e: any) => {
-      const transcript = e.results?.[0]?.[0]?.transcript || '';
+      const transcript = e.results?.[0]?.[0]?.transcript |'';
       if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
-    };
+    }
     rec.start();
-  };
-
+  }
     >
       <input
         value={query}
@@ -106,10 +101,9 @@ export default function GlobalSearchBar() {
                     setOpen(false);
                     router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
-                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    };
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
     rec.start()
-  };
-
+  }
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">
       <input

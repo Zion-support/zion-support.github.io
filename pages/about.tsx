@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../components/Layout";
-
 export default function About() {
   return (
     <Layout
@@ -14,7 +13,7 @@ export default function About() {
               About Zion Tech Group
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Leading technology solutions provider specializing in AI,
+              Leading technology solutions provider specializing in AI
               cybersecurity, and digital transformation.
             </p>
           </div>

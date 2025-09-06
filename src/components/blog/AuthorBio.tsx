@@ -11,7 +11,6 @@ export function AuthorBio({ author }: AuthorBioProps) {
 interface AuthorBioProps {
   author: BlogAuthor
 }
-
 export function AuthorBio({ author }: AuthorBioProps) {
   if (!author.bio) return null
   return (
@@ -51,12 +50,12 @@ export function AuthorBio({ author }: AuthorBioProps) {
     </div>
   )
 }/> <div> <p className="font-medium text-lg" > {
-  author.name 
+  author.name
 }</p> {"
   author.title && <p className="text-sm text-muted-foreground mb-2" > {
-  author.title 
-}</p> 
+  author.title
+}</p>
 }<p> {
-  author.bio 
-}</p> 
+  author.bio
+}</p>
 }'"}

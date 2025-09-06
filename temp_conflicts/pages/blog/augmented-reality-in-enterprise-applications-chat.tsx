@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const AugmentedRealityInEnterpriseApplicationsChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const AugmentedRealityInEnterpriseApplicationsChat = () => {return (;
     <div>;
       <Head>;
         <title>AugmentedRealityInEnterpriseApplicationsChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const AugmentedRealityInEnterpriseApplicationsChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default AugmentedRealityInEnterpriseApplicationsChat;

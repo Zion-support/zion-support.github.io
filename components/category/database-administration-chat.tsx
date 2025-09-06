@@ -11,7 +11,6 @@ const DatabaseAdministrationChat: NextPage = () => {
           content="DatabaseAdministrationChat blog post"
         />{" "}
       </Head>
-
       <main>
         <h1>DatabaseAdministrationChat</h1>
         <p>Blog content coming soon...</p>
@@ -19,6 +18,5 @@ const DatabaseAdministrationChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default DatabaseAdministrationChat;

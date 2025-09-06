@@ -1,16 +1,15 @@
-import React from 'react',;
-import Head from 'next/head',;
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
-import { Button } from '../components/ui/Button',;
-import Card from '../components/ui/Card',;
-import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react',;
-export default function AuditLogVaultPage() {;
-  const contactInfo = {;
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import { Button } from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react';
+export default function AuditLogVaultPage() {const contactInfo = {;
+    mobile: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 1008 Middletown DE 19709';
     website: 'https://ziontechgroup.com';
-  };
+  }
   const features = [;
     'Append-only, tamper-evident storageFlexible retention and legal holdsCryptographic digests and attestationsFine-grained search and export bundlesChain-of-custody and access reviewsAlerts for risky access patterns';
   ];
@@ -60,4 +59,3 @@ export default function AuditLogVaultPage() {;
     </UltraFuturisticBackground>;
   );
 }
-;

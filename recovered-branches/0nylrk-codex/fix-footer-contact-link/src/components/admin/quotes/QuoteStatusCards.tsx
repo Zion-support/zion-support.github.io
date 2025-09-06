@@ -8,11 +8,10 @@ interface QuoteStatusCardsProps {
     responded: number;
     accepted: number;
     closed: number;
-  };
+  }
 }
-
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
-  statusCounts,
+  statusCounts
 }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
@@ -29,7 +28,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
           </p>
         </CardContent>
       </Card>
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -43,7 +41,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
           </p>
         </CardContent>
       </Card>
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -57,7 +54,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
           </p>
         </CardContent>
       </Card>
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -71,7 +67,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
           </p>
         </CardContent>
       </Card>
-
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -87,4 +82,4 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
       </Card>
     </div>
   );
-};
+}

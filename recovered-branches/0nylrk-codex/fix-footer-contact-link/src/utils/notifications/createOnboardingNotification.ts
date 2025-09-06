@@ -13,7 +13,6 @@ export async function createOnboardingNotification({
   let message = '';
   let actionUrl = '';
   let actionText = '';
-  
   if (userRole === 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':
@@ -57,15 +56,13 @@ export async function createOnboardingNotification({
         break
     }
   }
-  
   return createNotification({
     userId;
     title;
     message;
     type: 'onboarding';
     sendEmail: false;
-    actionUrl,
+    actionUrl
     actionText
   })
 }
-;

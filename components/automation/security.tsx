@@ -1,4 +1,4 @@
-};
+}
 </pre> </div>)
 export default function SecurityAudit({ report }: Props) {
   return (

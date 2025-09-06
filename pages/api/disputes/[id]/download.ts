@@ -3,19 +3,18 @@ import fs from "fs";
 import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
 import {
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,
+  parseUserFromRequest
+  ensureInvolvedOrAdmin
 } from "../../../../utils/auth";
-
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {
-  const { id, fileName } = req.query as { id?: string; fileName?: string };
+  const { id, fileName } = req.query as { id?: string; fileName?: string }
   if (
-    !id ||
-    !fileName ||
-    typeof id !== "string" ||
+    !id |
+    !fileName |
+    typeof id !== "string" |
     typeof fileName !== "string"
   ) {
     return res.status(400).json({ error: "Invalid parameters" });
@@ -26,7 +25,7 @@ export default async function handler(
   try {
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
   } catch (e: any) {
-    return res.status(e.statusCode || 403).json({ error: "Forbidden" });
+    return res.status(e.statusCode |403).json({ error: "Forbidden" });
   }
   const att = dispute.attachments.find((a) => a.fileName === fileName);
   if (!att) return res.status($1).json({ $2 });
@@ -34,8 +33,8 @@ export default async function handler(
   res.setHeader("Content-Type", att.mimeType);
   res.setHeader("Content-Length", String(stat.size));
   res.setHeader(
-    "Content-Disposition",
-    `attachment; filename="${path.basename(att.fileName)}"`,
+    "Content-Disposition"
+    `attachment; filename="${path.basename(att.fileName)}"`
   );
   const stream = fs.createReadStream(att.path);
   stream.pipe(res);

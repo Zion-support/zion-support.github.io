@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const CloudMigrationServicesChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const CloudMigrationServicesChat = () => {return (;
     <div>;
       <Head>;
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const CloudMigrationServicesChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default CloudMigrationServicesChat;

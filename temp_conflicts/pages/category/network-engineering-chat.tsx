@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const NetworkEngineeringChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const NetworkEngineeringChat = () => {return (;
     <div>;
       <Head>;
         <title>NetworkEngineeringChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const NetworkEngineeringChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default NetworkEngineeringChat;

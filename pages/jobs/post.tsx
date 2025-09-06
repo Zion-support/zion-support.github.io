@@ -5,9 +5,7 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
       <Head>
         <title>Post a Job - Zion</title>
       </Head>
-
       <h1 className='text-2xl font-semibold'>Post a Job</h1>
-
       <div className='grid md:grid-cols-2 gap-6'>
         <form className='space-y-4'>
           <div>
@@ -54,14 +52,13 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
             <EnhancedButton type='submit'>Post Job</EnhancedButton>
           </div>
         </form>
-
         <aside className='border rounded-md p-4'>
           <h2 className='font-semibold mb-2'>Preview</h2>
           {preview ? (
             <div className='space-y-2'>
               <div>
                 <div className='text-sm opacity-70'>Title</div>
-                <div className='font-medium'>{title || 'Untitled job'}</div>
+                <div className='font-medium'>{title |'Untitled job'}</div>
               </div>
               <div>
                 <div className='text-sm opacity-70'>Budget</div>
@@ -72,7 +69,7 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
               <div>
                 <div className='text-sm opacity-70'>Description</div>
                 <p className='whitespace-pre-wrap'>
-                  {description || 'No description provided.'}
+                  {description |'No description provided.'}
                 </p>
               </div>
             </div>
@@ -84,6 +81,5 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
       </div>
     </div>
   );
-};
-
+}
 export default PostJob;

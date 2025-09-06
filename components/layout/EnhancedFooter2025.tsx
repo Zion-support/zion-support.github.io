@@ -2,159 +2,151 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  ArrowRight,
-  Brain,
-  Atom,
-  Shield,
-  Rocket,
-  Target,
-  Microscope,
-  Zap,
-  Globe,
-  Database,
-  Lock,
-  Cloud,
-  BarChart3,
-  Twitter,
-  Linkedin,
-  Github,
-  Youtube,
-  Instagram,;} from 'lucide-react';import { 
+  Phone
+  Mail
+  MapPin
+  Star
+  ArrowRight
+  Brain
+  Atom
+  Shield
+  Rocket
+  Target
+  Microscope
+  Zap
+  Globe
+  Database
+  Lock
+  Cloud
+  BarChart3
+  Twitter
+  Linkedin
+  Github
+  Youtube
+  Instagram;} from 'lucide-react';import {
   Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
   Twitter, Linkedin, Github, Youtube, Instagram
-
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-};
-
+}
 const serviceCategories = [
   {
-    title: 'AI & Consciousness',
-    icon: Brain,
+    title: 'AI & Consciousness'
+    icon: Brain
     services: [
       {
-        name: 'AI Consciousness Evolution',
-        href: '/ai-consciousness-evolution-2029',
-      },
-      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' },
+        name: 'AI Consciousness Evolution'
+        href: '/ai-consciousness-evolution-2029'
+      }
+      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' }
       {
-        name: 'Multimodal AI Orchestrator',
-        href: '/multimodal-ai-orchestrator',
-      },
-      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
-      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
-    ],
-  },  {      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' },
-      { name: 'Multimodal AI Orchestrator', href: '/multimodal-ai-orchestrator' },
-      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
+        name: 'Multimodal AI Orchestrator'
+        href: '/multimodal-ai-orchestrator'
+      }
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' }
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' }
     ]
-  };
+  },  {      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' }
+      { name: 'Multimodal AI Orchestrator', href: '/multimodal-ai-orchestrator' }
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' }
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' }
+    ]
+  }
   {
-    title: 'Quantum & Emerging Tech',
-    icon: Atom,
+    title: 'Quantum & Emerging Tech'
+    icon: Atom
     services: [
-      { name: 'Space Mining Platform', href: '/space-mining-platform' },
-      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' },
-      { name: 'Brain-Computer Interface', href: '/brain-computer-interface' },
-      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
-      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' },
-    ],
+      { name: 'Space Mining Platform', href: '/space-mining-platform' }
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' }
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface' }
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' }
+      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' }
+    ]
   },  {
-    title: 'Enterprise IT',
-    icon: Shield,
+    title: 'Enterprise IT'
+    icon: Shield
     services: [      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' }
     ]
-  };
+  }
   {
-    title: 'Enterprise IT',
-    icon: Shield,
+    title: 'Enterprise IT'
+    icon: Shield
     services: [
       {
-        name: 'Quantum Cloud Infrastructure',
-        href: '/quantum-cloud-infrastructure',
-      },
+        name: 'Quantum Cloud Infrastructure'
+        href: '/quantum-cloud-infrastructure'
+      }
       {
-        name: 'Edge Computing Orchestrator',
-        href: '/edge-computing-orchestrator',
-      },
+        name: 'Edge Computing Orchestrator'
+        href: '/edge-computing-orchestrator'
+      }
       {
-        name: 'Zero Trust Security Platform',
-        href: '/zero-trust-security-platform',
-      },
+        name: 'Zero Trust Security Platform'
+        href: '/zero-trust-security-platform'
+      }
       {
-        name: 'Blockchain Enterprise Platform',
-        href: '/blockchain-enterprise-platform',
-      },
-      { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
-    ],
-  },  {      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' },
-      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestrator' },
-      { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' },
-      { name: 'Blockchain Enterprise Platform', href: '/blockchain-enterprise-platform' },
+        name: 'Blockchain Enterprise Platform'
+        href: '/blockchain-enterprise-platform'
+      }
       { name: 'AI-Powered DevOps', href: '/ai-powered-devops' }
     ]
-  };
-    title: 'Micro SAAS',
-    icon: Target,
+  },  {      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }
+      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestrator' }
+      { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' }
+      { name: 'Blockchain Enterprise Platform', href: '/blockchain-enterprise-platform' }
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops' }
+    ]
+  }
+    title: 'Micro SAAS'
+    icon: Target
     services: [
-      { name: 'AI Content Factory Pro', href: '/ai-content-factory' },
-      { name: 'Quantum CRM Suite', href: '/quantum-crm' },
-      { name: 'CyberShield Pro', href: '/cyber-shield-pro' },
-      { name: 'DataVault Hub', href: '/data-vault-hub' },
-      { name: 'DevOps Automation Studio', href: '/devops-automation-studio' },
-    ],
+      { name: 'AI Content Factory Pro', href: '/ai-content-factory' }
+      { name: 'Quantum CRM Suite', href: '/quantum-crm' }
+      { name: 'CyberShield Pro', href: '/cyber-shield-pro' }
+      { name: 'DataVault Hub', href: '/data-vault-hub' }
+      { name: 'DevOps Automation Studio', href: '/devops-automation-studio' }
+    ]
   },];      { name: 'DevOps Automation Studio', href: '/devops-automation-studio' }
     ]
   }
 ];
-
 const companyLinks = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'News', href: '/news' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'About Us', href: '/about' }
+  { name: 'Careers', href: '/careers' }
+  { name: 'News', href: '/news' }
+  { name: 'Case Studies', href: '/case-studies' }
+  { name: 'Blog', href: '/blog' }
   { name: 'Resources', href: '/resources' },];  { name: 'Resources', href: '/resources' }
 ];
-
 const legalLinks = [
-  { name: 'Privacy Policy', href: '/privacy' },
-  { name: 'Terms of Service', href: '/terms' },
-  { name: 'Cookie Policy', href: '/cookies' },
+  { name: 'Privacy Policy', href: '/privacy' }
+  { name: 'Terms of Service', href: '/terms' }
+  { name: 'Cookie Policy', href: '/cookies' }
   { name: 'GDPR Compliance', href: '/gdpr' },];  { name: 'GDPR Compliance', href: '/gdpr' }
 ];
-
 const socialLinks = [
-  { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },
-  { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-600' },
-  { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' },
-  { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },
+  { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' }
+  { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-600' }
+  { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
+  { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' }
   {
-    name: 'Instagram',
-    href: '#',
-    icon: Instagram,
-    color: 'hover:text-pink-400',
+    name: 'Instagram'
+    href: '#'
+    icon: Instagram
+    color: 'hover:text-pink-400'
   },];  { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' }
 ];
-
 const EnhancedFooter2025: React.FC = () => {
-  const currentYear = new Date().getFullYear(),
-
+  const currentYear = new Date().getFullYear()
   return (
     <footer className='relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-gray-800/50'>
       {/* Background Effects */}
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5'></div>
-
       <div className='relative z-10'>
         {/* Main Footer Content */}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
@@ -174,13 +166,11 @@ const EnhancedFooter2025: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <p className='text-gray-400 mb-6 leading-relaxed'>
                 Leading the future with revolutionary AI, quantum computing, and
                 emerging technology solutions that transform businesses
                 worldwide.
               </p>
-
               {/* Contact Info */}
               <div className='space-y-3'>
                 <div className='flex items-center space-x-3 text-gray-300'>
@@ -205,7 +195,6 @@ const EnhancedFooter2025: React.FC = () => {
                   <MapPin className='w-4 h-4 text-pink-400' />
                   <span className='text-sm'>{contactInfo.address}</span>                </div>      {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
-      
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -223,11 +212,9 @@ const EnhancedFooter2025: React.FC = () => {
                   <div className="text-sm text-gray-400">Future Technology Solutions</div>
                 </div>
               </div>
-              
               <p className="text-gray-400 mb-6 leading-relaxed">
                 Leading the future with revolutionary AI, quantum computing, and emerging technology solutions that transform businesses worldwide.
               </p>
-
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -248,7 +235,6 @@ const EnhancedFooter2025: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Service Categories */}
             {serviceCategories.map((category, index) => (
               <motion.div
@@ -267,7 +253,6 @@ const EnhancedFooter2025: React.FC = () => {
                     {category.title}
                   </h3>
                 </div>
-
                 <div className='space-y-2'>
                   {category.services.map(service => (
                     <Link
@@ -280,7 +265,6 @@ const EnhancedFooter2025: React.FC = () => {
                   </div>
                   <h3 className="text-lg font-semibold text-white">{category.title}</h3>
                 </div>
-                
                 <div className="space-y-2">
                   {category.services.map((service) => (
                     <Link
@@ -295,7 +279,6 @@ const EnhancedFooter2025: React.FC = () => {
               </motion.div>
             ))}
           </div>
-
           {/* Additional Links */}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
             {/* Company Links */}
@@ -321,7 +304,6 @@ const EnhancedFooter2025: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Legal Links */}
             <div>
               <h4 className='text-white font-semibold mb-4'>Legal</h4>
@@ -342,7 +324,6 @@ const EnhancedFooter2025: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Social Links */}
             <div>
               <h4 className='text-white font-semibold mb-4'>Follow Us</h4>
@@ -363,7 +344,6 @@ const EnhancedFooter2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Newsletter Section */}
         <div className='border-t border-gray-800/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
@@ -391,7 +371,6 @@ const EnhancedFooter2025: React.FC = () => {
               </motion.p>              >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
-              
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -417,7 +396,6 @@ const EnhancedFooter2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Bar */}
         <div className='border-t border-gray-800/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -425,10 +403,8 @@ const EnhancedFooter2025: React.FC = () => {
               <div className='text-gray-400 text-sm'>
                 © {currentYear} Zion Tech Group. All rights reserved.
               </div>
-
               <div className='flex items-center space-x-6 text-sm text-gray-400'>                © {currentYear} Zion Tech Group. All rights reserved.
               </div>
-              
               <div className="flex items-center space-x-6 text-sm text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -450,9 +426,7 @@ const EnhancedFooter2025: React.FC = () => {
       </div>
     </footer>
   );
-};
-
+}
 export default EnhancedFooter2025;  )
-};
-
+}
 export default EnhancedFooter2025;

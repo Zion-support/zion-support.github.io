@@ -5,5 +5,4 @@ export interface Application {
   status: 'applied' | 'skipped' | 'pending';
   createdAtIso: string;
 }
-
 export type UserRole = 'admin' | 'user' | 'guest';

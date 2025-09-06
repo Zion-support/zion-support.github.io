@@ -19,17 +19,17 @@ interface ListingScoreCardProps {
   reviewCount?: number
   className?: string
 export function ListingScoreCard({
-  title,
-  description,
-  image,
-  category,
-  tags,
-  author,
-  authorImage,
-  aiScore,
-  rating = 0,
-  reviewCount = 0,
-  className,
+  title
+  description
+  image
+  category
+  tags
+  author
+  authorImage
+  aiScore
+  rating = 0
+  reviewCount = 0
+  className
 }: ListingScoreCardProps) {
   const [mainImageError, setMainImageError] = useState(false)
   const [authorImageError, setAuthorImageError] = useState(false)
@@ -47,12 +47,11 @@ export function ListingScoreCard({
             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' // General sizes          />
         </div>
       )}
-      {(!image || mainImageError) && ( // Fallback if no image or error
+      {(!image |mainImageError) && ( // Fallback if no image or error
         <div className='h-48 w-full overflow-hidden bg-zion-blue-light/10 flex items-center justify-center'>
           <span className='text-zion-slate-light text-sm'>No Image</span>
         </div>
       )}
-
       <div className='flex flex-col p-4 flex-grow'>
         <div className='mb-2 flex items-center justify-between'>
           <Badge
@@ -61,7 +60,7 @@ export function ListingScoreCard({
           >
             {category}
           </Badge>
-          {aiScore === undefined || aiScore === null ? (
+          {aiScore === undefined |aiScore === null ? (
             <div className='text-xs italic text-zion-slate-light'>
               Beta – simulated results
             </div>
@@ -80,7 +79,6 @@ export function ListingScoreCard({
         <p className='text-zion-slate mb-4 flex-grow line-clamp-2'>
           {description}
         </p>
-
         {rating > 0 && (
           <div className='flex items-center gap-1 mb-4'>
             <div className='flex'>
@@ -88,7 +86,7 @@ export function ListingScoreCard({
                 <StarIcon
                   key={star}
                   className={cn(
-                    'h-4 w-4',
+                    'h-4 w-4'
                     star <= Math.round(rating)
                       ? 'text-zion-cyan fill-zion-cyan'
                       : 'text-zion-slate-light'
@@ -100,7 +98,6 @@ export function ListingScoreCard({
             </span>
           </div>
         )}
-
         {tags && tags.length > 0 && (
           <div className='flex flex-wrap gap-2 mb-4'>
             {tags.map((tag, i) => (
@@ -113,11 +110,9 @@ export function ListingScoreCard({
             ))}
           </div>
         )}
-
         <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>
           Request Quote
         </Button>
-
         {author && (
           <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
             {authorImage && !authorImageError ? (
@@ -143,4 +138,3 @@ export function ListingScoreCard({
     </div>
   )
 }
-;

@@ -1,7 +1,6 @@
 
-import Head from 'next/head',;
-const AiPoweredBusinessSolutionsDiscussion = () => {;
-  return (;
+import Head from 'next/head';
+const AiPoweredBusinessSolutionsDiscussion = () => {return (;
     <div>;
       <Head>;
         <title>AiPoweredBusinessSolutionsDiscussion - Zion Tech Solutions</title>;
@@ -13,5 +12,5 @@ const AiPoweredBusinessSolutionsDiscussion = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default AiPoweredBusinessSolutionsDiscussion;

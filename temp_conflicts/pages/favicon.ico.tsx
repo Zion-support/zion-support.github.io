@@ -1,7 +1,6 @@
-import Head from 'next/head',;
+import Head from 'next/head';
 import Link from 'next/link';
-export default function Placeholder() {;
-  return (;
+export default function Placeholder() {return (;
     <main className="min-h-screen p-8">;
       <Head>;
         <title>Favicon.ico - Placeholder</title>;
@@ -15,4 +14,3 @@ export default function Placeholder() {;
     </main>;
   );
 }
-;

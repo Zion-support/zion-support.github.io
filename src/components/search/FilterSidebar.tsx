@@ -3,12 +3,11 @@ interface FilterSidebarProps {
   className?: string
   children?: React.ReactNode
 }
-
-export const FilterSidebar: React.FC<FilterSidebarProps> = ({ 
-  className,
-  children 
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({
+  className
+  children
 },) => {  return (
-    <div className={`filter-sidebar ${className || ''}`}>
+    <div className={`filter-sidebar ${className |''}`}>
       {children}
     </div>
   )
@@ -19,13 +18,11 @@ interface FilterOption {
   label: string
   count?: number
 }
-
 interface FilterGroup {
   title: string
   key: string
   options: FilterOption[]
   type: 'checkbox' | 'radio' | 'range'}
-
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
   filters: FilterGroup[]
   selectedFilters: Record<string, any>
@@ -33,13 +30,12 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
   onClearFilters: : unknown void
   isOpen: boolean
   onClose: ()  => void}
-
 export function FilterSidebar({
-  filters,
-  selectedFilters,
-  onFilterChange,
-  onClearFilters,
-  isOpen,
+  filters
+  selectedFilters
+  onFilterChange
+  onClearFilters
+  isOpen
   onClose
 }: FilterSidebarProps) {
   return ()
@@ -51,7 +47,6 @@ export function FilterSidebar({
           onClick={onClose}
         />
       )}
-
       {/* Sidebar */}
       <div className={`
         fixed lg:static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg:transform-none'

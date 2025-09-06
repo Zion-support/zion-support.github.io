@@ -16,7 +16,6 @@ const CommunityRoutes = () => {
       <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
       <Route path="/community/post/:postId" element={<ForumPostPage />} />
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
-      
       {/* Protected routes */}
       <Route
         path="/community/create"
@@ -36,6 +35,5 @@ const CommunityRoutes = () => {
       />
     </Routes>
   )
-};
-
+}
 export default CommunityRoutes;

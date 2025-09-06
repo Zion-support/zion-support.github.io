@@ -1,48 +1,42 @@
-import React, { useEffect, useMemo, useState } from "react",;
-import { supabase } from "../../utils/supabase/client",;
-import { AnimatePresence, motion } from "framer-motion",;
-type TalentSuggestion = {;
-  id: string,;
-  match_type?: "talent_for_job" | string,;
-  job_id: string,;
-  job_title: string,;
-  client_id: string,;
-  talent_id: string,;
-  talent_name: string,;
-  talent_title?: string,;
-  talent_photo_url?: string,;
-  summary?: string,;
-  skills?: string[],;
-  hourly_rate?: number,;
-  status?: "new" | "viewed" | "applied" | "declined" | "pending" | string | null,;
-  score?: number,;
+import React, { useEffect, useMemo, useState } from "react";
+import { supabase } from "../../utils/supabase/client";
+import { AnimatePresence, motion } from "framer-motion";
+type TalentSuggestion = {id: string;
+  match_type?: "talent_for_job" | string;
+  job_id: string;
+  job_title: string;
+  client_id: string;
+  talent_id: string;
+  talent_name: string;
+  talent_title?: string;
+  talent_photo_url?: string;
+  summary?: string;
+  skills?: string[];
+  hourly_rate?: number;
+  status?: "new" | "viewed" | "applied" | "declined" | "pending" | string | null;
+  score?: number;
   created_at?: string;
-},;
-interface JobGroup {;
-  jobId: string,;
-  jobTitle: string,;
+}
+interface JobGroup {jobId: string;
+  jobTitle: string;
   suggestions: TalentSuggestion[];
 }
-;
 const SUGGESTION_TABLE_ENV =;
-  process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || "ai_matches",;
-const MAX_SUGGESTIONS_PER_JOB = 5,;
+  process.env.NEXT_PUBLIC_AI_MATCHES_TABLE |"ai_matches";
+const MAX_SUGGESTIONS_PER_JOB = 5;
 const badge = (;
   <span className="ml-2 inline-flex items-center rounded-full bg-indigo-600/10 px-2 py-0.5 text-xs font-medium text-indigo-600 ring-1 ring-inset ring-indigo-600/20">;
     Matched by AI;
   </span>;
-),;
-function InviteModal({;
-  open,;
-  onClose,;
-  talent,;
-  jobTitle}: {;
-  open: boolean,;
-  onClose: () => void,;
-  talent: TalentSuggestion | null,;
+);
+function InviteModal({open;
+  onClose;
+  talent;
+  jobTitle}: {open: boolean;
+  onClose: () => void;
+  talent: TalentSuggestion | null;
   jobTitle: string | null;
-}) {;
-  if (!open || !talent) return null,;
+}) {if (!open |!talent) return null;
   return (;
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">;
       <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-xl">;
@@ -56,7 +50,7 @@ function InviteModal({;
           <div className="flex items-center gap-3">;
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img;
-              src={talent.talent_photo_url || "/default-avatar.svg"}
+              src={talent.talent_photo_url |"/default-avatar.svg"}
               alt={talent.talent_name}
               className="h-10 w-10 rounded-full object-cover ring-2 ring-indigo-500/20";
             />;
@@ -72,7 +66,7 @@ function InviteModal({;
               Job;
             </label>;
             <input;
-              value={jobTitle || ""}
+              value={jobTitle |""}
               readOnly;
               className="w-full rounded-md border border-gray-200 bg-gray-50 px-3 py-2 text-sm";
             />;
@@ -105,127 +99,111 @@ function InviteModal({;
     </div>;
   );
 }
-;
-export default function ClientDashboardSuggestedTalents() {;
-  const [userId, setUserId] = useState<string | null>(null),;
-  const [loading, setLoading] = useState(true),;
-  const [groups, setGroups] = useState<JobGroup[]>([]),;
-  const [inviteOpen, setInviteOpen] = useState(false),;
+export default function ClientDashboardSuggestedTalents() {const [userId, setUserId] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [groups, setGroups] = useState<JobGroup[]>([]);
+  const [inviteOpen, setInviteOpen] = useState(false);
   const [inviteTalent, setInviteTalent] = useState<TalentSuggestion | null>(;
     null;
-  ),;
-  const [inviteJobTitle, setInviteJobTitle] = useState<string | null>(null),;
+  );
+  const [inviteJobTitle, setInviteJobTitle] = useState<string | null>(null);
   useEffect(() => {;
-    let mounted = true,;
+    let mounted = true;
     async function init() {;
       try {;
-        const { data } = await supabase.auth.getUser(),;
-        const currentUserId = data.user?.id || null,;
-        if (!mounted) return,;
-        setUserId(currentUserId),;
-        if (!currentUserId) {;
-          setGroups([]),;
-          setLoading(false),;
+        const { data } = await supabase.auth.getUser();
+        const currentUserId = data.user?.id |null;
+        if (!mounted) return;
+        setUserId(currentUserId);
+        if (!currentUserId) {setGroups([]);
+          setLoading(false);
           return;
         }
-        await fetchSuggestions(currentUserId),;
+        await fetchSuggestions(currentUserId);
         setupRealtime(currentUserId);
-      } finally {;
-        if (mounted) setLoading(false);
+      } finally {if (mounted) setLoading(false);
       }
     }
-;
-    init(),;
-    return () => {;
-      mounted = false;
-    },;
+    init();
+    return () => {mounted = false;
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps;
-  }, []),;
-  const fetchSuggestions = async (currentUserId: string) => {;
-    setLoading(true),;
+  }, []);
+  const fetchSuggestions = async (currentUserId: string) => {setLoading(true);
     const { data, error } = await supabase;
       .from<TalentSuggestion>(SUGGESTION_TABLE_ENV);
       .select(;
         [;
-          "id",;
-          "match_type",;
-          "job_id",;
-          "job_title",;
-          "client_id",;
-          "talent_id",;
-          "talent_name",;
-          "talent_title",;
-          "talent_photo_url",;
-          "summary",;
-          "skills",;
-          "hourly_rate",;
-          "status",;
-          "score",;
+          "id";
+          "match_type";
+          "job_id";
+          "job_title";
+          "client_id";
+          "talent_id";
+          "talent_name";
+          "talent_title";
+          "talent_photo_url";
+          "summary";
+          "skills";
+          "hourly_rate";
+          "status";
+          "score";
           "created_at"].join(",");
       );
       .eq("client_id", currentUserId);
       .or("match_type.eq.talent_for_job,match_type.is.null");
       .order("score", { ascending: false });
-      .order("created_at", { ascending: false }),;
-    if (error) {;
-      // fail softly;
-      setGroups([]),;
-      setLoading(false),;
+      .order("created_at", { ascending: false });
+    if (error) {// fail softly;
+      setGroups([]);
+      setLoading(false);
       return;
     }
-;
-    const grouped = groupByJob(data || []),;
-    setGroups(grouped),;
+    const grouped = groupByJob(data |[]);
+    setGroups(grouped);
     setLoading(false);
-  },;
-  const setupRealtime = (currentUserId: string) => {;
-    const channel = supabase;
+  }
+  const setupRealtime = (currentUserId: string) => {const channel = supabase;
       .channel(`ai-matches-client-${currentUserId}`);
       .on(;
-        "postgres_changes",;
-        {;
-          event: "INSERT",;
-          schema: "public",;
-          table: SUGGESTION_TABLE_ENV,;
-          filter: `client_id=eq.${currentUserId}`},;
+        "postgres_changes";
+        {event: "INSERT";
+          schema: "public";
+          table: SUGGESTION_TABLE_ENV;
+          filter: `client_id=eq.${currentUserId}`}
         () => fetchSuggestions(currentUserId);
       );
-      .subscribe(),;
+      .subscribe();
     // Optional: listen for updates to status;
     supabase;
       .channel(`ai-matches-client-upd-${currentUserId}`);
       .on(;
-        "postgres_changes",;
-        {;
-          event: "UPDATE",;
-          schema: "public",;
-          table: SUGGESTION_TABLE_ENV,;
-          filter: `client_id=eq.${currentUserId}`},;
+        "postgres_changes";
+        {event: "UPDATE";
+          schema: "public";
+          table: SUGGESTION_TABLE_ENV;
+          filter: `client_id=eq.${currentUserId}`}
         () => fetchSuggestions(currentUserId);
       );
-      .subscribe(),;
-    return () => {;
-      supabase.removeChannel(channel);
+      .subscribe();
+    return () => {supabase.removeChannel(channel);
     }
-  },;
-  const groupByJob = (rows: TalentSuggestion[]): JobGroup[] => {;
-    const byJob = new Map<string JobGroup>(),;
+  }
+  const groupByJob = (rows: TalentSuggestion[]): JobGroup[] => {const byJob = new Map<string JobGroup>();
     for (const row of rows) {;
-      const key = row.job_id,;
-      if (!key) continue,;
-      const group = byJob.get(key) || {;
-        jobId: key,;
-        jobTitle: row.job_title || "Untitled Job",;
-        suggestions: []},;
-      if (group.suggestions.length < MAX_SUGGESTIONS_PER_JOB) {;
-        group.suggestions.push(row);
+      const key = row.job_id;
+      if (!key) continue;
+      const group = byJob.get(key) |{;
+        jobId: key;
+        jobTitle: row.job_title |"Untitled Job";
+        suggestions: []}
+      if (group.suggestions.length < MAX_SUGGESTIONS_PER_JOB) {group.suggestions.push(row);
       }
       byJob.set(key, group);
     }
     return Array.from(byJob.values());
-  },;
-  const content = useMemo(() => {;
-    if (loading) {;
+  }
+  const content = useMemo(() => {if (loading) {;
       return (;
         <div className="space-y-4">;
           <div className="h-6 w-40 animate-pulse rounded bg-gray-200" />;
@@ -240,17 +218,13 @@ export default function ClientDashboardSuggestedTalents() {;
         </div>;
       );
     }
-;
-    if (!userId) {;
-      return (;
+    if (!userId) {return (;
         <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-amber-800">;
           Please sign in to view AI-suggested talents for your jobs.;
         </div>;
       );
     }
-;
-    if (!groups.length) {;
-      return (;
+    if (!groups.length) {return (;
         <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">;
           <div className="mb-1 text-lg font-medium">;
             No suggestions yet — check back soon or explore manually;
@@ -261,7 +235,6 @@ export default function ClientDashboardSuggestedTalents() {;
         </div>;
       );
     }
-;
     return (;
       <div className="space-y-10">;
         {groups.map((group) => (;
@@ -284,7 +257,7 @@ export default function ClientDashboardSuggestedTalents() {;
                     <div className="flex items-center gap-3">;
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img;
-                        src={s.talent_photo_url || "/default-avatar.svg"}
+                        src={s.talent_photo_url |"/default-avatar.svg"}
                         alt={s.talent_name}
                         className="h-12 w-12 rounded-full object-cover ring-2 ring-indigo-500/10";
                       />;
@@ -326,8 +299,7 @@ export default function ClientDashboardSuggestedTalents() {;
                         {s.hourly_rate ? `$${s.hourly_rate}/hr` : "Rate N/A"}
                       </div>;
                       <button;
-                        onClick={() => {;
-                          setInviteTalent(s),;
+                        onClick={() => {setInviteTalent(s);
                           setInviteJobTitle(group.jobTitle);
                           setInviteOpen(true);
                         }}
@@ -354,7 +326,6 @@ export default function ClientDashboardSuggestedTalents() {;
         </p>;
       </div>;
       {content}
-;
       <InviteModal;
         open={inviteOpen}
         onClose={() => setInviteOpen(false)}

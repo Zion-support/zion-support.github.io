@@ -1,7 +1,6 @@
 
-import Head from 'next/head',;
-const Index = () => {;
-  return (;
+import Head from 'next/head';
+const Index = () => {return (;
     <div>;
       <Head>;
         <title>Index - Zion Tech Solutions</title>;
@@ -13,5 +12,5 @@ const Index = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default Index;

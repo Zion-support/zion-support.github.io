@@ -2,4 +2,3 @@
   const total = 5
 }
 }
-;

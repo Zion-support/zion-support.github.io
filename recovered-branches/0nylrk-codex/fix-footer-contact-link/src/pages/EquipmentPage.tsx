@@ -14,6 +14,5 @@ const EquipmentPage = () => {
       </div>
     </div>
   )
-};
-
+}
 export default EquipmentPage;

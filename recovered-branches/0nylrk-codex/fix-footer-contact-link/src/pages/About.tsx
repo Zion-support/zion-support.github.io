@@ -6,9 +6,9 @@ import {GradientHeading} from "@/components/GradientHeading";
 export default function About() {
   return (
     <>
-      <SEO 
-        title="About Zion - The Future of AI & Tech Marketplace" 
-        description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
+      <SEO
+        title="About Zion - The Future of AI & Tech Marketplace"
+        description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence."
         keywords="about Zion, AI marketplace, tech platform, mission, vision, team"
         canonical="https://app.ziontechgroup.com/about"
       />
@@ -21,58 +21,55 @@ export default function About() {
               The world's first free marketplace dedicated to high-tech and artificial intelligence
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
               <p className="text-zion-slate-light text-lg mb-6">
-                At Zion, we're on a mission to democratize access to cutting-edge AI and technology solutions. 
+                At Zion, we're on a mission to democratize access to cutting-edge AI and technology solutions.
                 We believe that innovation thrives when barriers are removed and connections are made.
               </p>
               <p className="text-zion-slate-light text-lg mb-6">
-                Our platform brings together talented AI specialists, innovative companies, and the latest 
+                Our platform brings together talented AI specialists, innovative companies, and the latest
                 technological solutions in one seamless ecosystem.
               </p>
               <p className="text-zion-slate-light text-lg">
-                By connecting talent with opportunity and innovation with implementation, we're creating 
+                By connecting talent with opportunity and innovation with implementation, we're creating
                 a global community where the future of technology is being built today.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600" 
-                alt="Team collaboration" 
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600"
+                alt="Team collaboration"
                 className="object-cover w-full h-full"
               />
             </div>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 lg:flex-row-reverse">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
               <p className="text-zion-slate-light text-lg mb-6">
-                We envision a world where AI and technology are accessible to all, regardless of geographical 
-                or financial constraints. A world where the best minds can collaborate to solve the most 
+                We envision a world where AI and technology are accessible to all, regardless of geographical
+                or financial constraints. A world where the best minds can collaborate to solve the most
                 challenging problems.
               </p>
               <p className="text-zion-slate-light text-lg mb-6">
-                Zion is building that world by creating a transparent, ethical, and inclusive platform 
+                Zion is building that world by creating a transparent, ethical, and inclusive platform
                 that puts people at the center of technological advancement.
               </p>
               <p className="text-zion-slate-light text-lg">
-                Our goal is to become the premier destination for AI and tech innovation, fostering 
+                Our goal is to become the premier destination for AI and tech innovation, fostering
                 a community that shapes the future of how we live, work, and interact with technology.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden lg:order-first">
-              <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600" 
-                alt="Tech innovation" 
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600"
+                alt="Tech innovation"
                 className="object-cover w-full h-full"
               />
             </div>
           </div>
-          
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -87,7 +84,6 @@ export default function About() {
                   We embrace cutting-edge technologies and creative thinking to push the boundaries of what's possible.
                 </p>
               </div>
-              
               <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
                 <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                   <svg className="w-8 h-8 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +95,6 @@ export default function About() {
                   We believe in the power of collaboration and fostering an inclusive ecosystem where everyone can thrive.
                 </p>
               </div>
-              
               <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
                 <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                   <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

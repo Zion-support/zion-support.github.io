@@ -6,34 +6,26 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null);
   const [disputeId, setDisputeId] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const checkDispute = async () => {
       if (!projectId && !milestoneId) {
         setIsLoading(false);
         return
       }
-
       try {
         setIsLoading(true);
-        
         let query = supabase
           .from("disputes")
           .select("id, status")
           .eq("project_id", projectId);
-        
         // If milestone ID is provided, filter by that too
         if (milestoneId) {
           query = query.eq("milestone_id", milestoneId)
         }
-        
         // Order by status priority: open, under_review, resolved, closed
         query = query.order("status", { ascending: true });
-        
         const { data, error } = await query;
-        
         if (error) throw error;
-        
         if (data && data.length > 0) {
           // Get the first dispute (highest priority based on status)
           setIsUnderDispute(true);
@@ -52,16 +44,13 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
       } finally {
         setIsLoading(false)
       }
-    };
-    
+    }
     checkDispute()
   }, [projectId, milestoneId]);
-
-  return { 
-    isUnderDispute, 
-    disputeStatus, 
+  return {
+    isUnderDispute
+    disputeStatus
     disputeId;
-    isLoading 
+    isLoading
   }
 }
-;

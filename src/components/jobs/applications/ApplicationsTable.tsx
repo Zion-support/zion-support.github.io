@@ -2,12 +2,12 @@ import { format } from 'date-fns'
 import { JobApplication } from '@/types/jobs'
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
 import { ClickableBadge } from '@/components/ui/clickable-badge'
-import {  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
+import {  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
 } from '@/components/ui/table'
 import { ApplicationActions } from './ApplicationActions'
 import { StatusBadge } from './StatusBadge'
@@ -16,7 +16,6 @@ import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmat
 import React, { useState } from 'react'; // Import React and useState
 import { toast } from '@/hooks/use-toast'
 import Image from 'next/image'; // Import next/image
-
 interface ApplicationsTableProps {
   applications: JobApplication[]
   processingId: string | null
@@ -25,25 +24,23 @@ interface ApplicationsTableProps {
   onViewScore: (application: JobApplication) => void
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({
-  application,
+  application
 }: {
   application: JobApplication
 }) => {
   const [avatarError, setAvatarError] = useState(false)
-  const talentName = application.talent_profile?.full_name || 'Candidate'
+  const talentName = application.talent_profile?.full_name |'Candidate'
 interface ApplicationsTableProps {
-  applications: JobApplication[],
-  processingId: string | null,
-  onViewApplication: (applicationId: string,) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: string,) => Promise<void>,
+  applications: JobApplication[]
+  processingId: string | null
+  onViewApplication: (applicationId: string,) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: string,) => Promise<void>
   onViewScore: (application: JobApplication,) => void
 }
-
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
-  const [avatarError, setAvatarError] = useState(false),
-  const talentName = application.talent_profile?.full_name || "Candidate",
-
+  const [avatarError, setAvatarError] = useState(false)
+  const talentName = application.talent_profile?.full_name |"Candidate"
   return (
     <AvatarPrimitive className='h-8 w-8'>
       {' '}
@@ -64,11 +61,11 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
   )
 }
 export function ApplicationsTable({
-  applications,
-  processingId,
-  onViewApplication,
-  onStatusChange,
-  onViewScore,
+  applications
+  processingId
+  onViewApplication
+  onStatusChange
+  onViewScore
 }: ApplicationsTableProps) {
   const [hireModalOpen, setHireModalOpen] = useState(false)
   const [selectedApplication, setSelectedApplication] =
@@ -79,8 +76,8 @@ export function ApplicationsTable({
   }
   const handleHireConfirmed = () => {
     toast({
-      title: 'Hiring process initiated',
-      description: 'Offer has been sent to the talent.',
+      title: 'Hiring process initiated'
+      description: 'Offer has been sent to the talent.'
     })
   }
   return (
@@ -106,10 +103,10 @@ export function ApplicationsTable({
                     {/* Use sub-component */}
                     <div>
                       <div className='font-medium'>
-                        {application.talent_profile?.full_name || 'Candidate'}
+                        {application.talent_profile?.full_name |'Candidate'}
                       </div>
                       <div className='text-xs text-muted-foreground mt-0.5'>
-                        {application.talent_profile?.professional_title ||
+                        {application.talent_profile?.professional_title |
                           'Applicant'}
                       </div>
                     </div>
@@ -157,56 +154,55 @@ export function ApplicationsTable({
           </TableBody>
         </Table>
       </div>
-
       <HireConfirmationModal
         isOpen = {hireModalOpen,}
         onClose = {() => setHireModalOpen(false),}
-        application = {selectedApplication || undefined,}
+        application = {selectedApplication |undefined,}
         onConfirm = {handleHireConfirmed,}
       />
     </>
   )
-  /* Using Renamed AvatarPrimitive */ 
+  /* Using Renamed AvatarPrimitive */
 }{
   application.talent profile?.profile picture url && !avatarError ? (<Image src= {
-  application.talent profile.profile picture url 
+  application.talent profile.profile picture url
 }alt= {
-  talentName 
+  talentName
 }width= {
-  32 
+  32
 }//for h-8 w-8 height= {
   32 "
 }//for h-8 w-8 className="rounded-full object-cover" onError= {
-  () => setAvatarError (true) 
+  () => setAvatarError (true)
 }priority= {
   false "
-}h-4 w-4"/>) 
-}</AvatarPrimitive>) 
+}h-4 w-4"/>)
+}</AvatarPrimitive>)
 };"
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {
-  application.id 
+  application.id
 }> <TableCell> </div> </div> </div> </TableCell> onClick={
-  () => onViewScore (application) 
+  () => onViewScore (application)
 }> {
   application.match score "
 }% </ClickableBadge>) : (<span className="text-muted-foreground text-sm" >Not scored</span>) "
 }</TableCell> <TableCell className="text-right" > <div className="flex items-center justify-end gap-2" > <ClickableBadge > <Briefcase className="h-3 w-3 mr-1" /> Hire </ClickableBadge> <ApplicationActions application= {
-  application 
+  application
 }processingId= {
-  processingId 
+  processingId
 }onViewApplication= {
-  onViewApplication 
+  onViewApplication
 }onStatusChange= {
-  onStatusChange 
-}/> </div> </TableCell> </TableRow>) ) 
+  onStatusChange
+}/> </div> </TableCell> </TableRow>) )
 }</TableBody> </Table> </div> <HireConfirmationModal isOpen= {
-  hireModalOpen 
+  hireModalOpen
 }onClose= {
-  () => setHireModalOpen (false) 
+  () => setHireModalOpen (false)
 }application= {
-  selectedApplication || undefined 
+  selectedApplication |undefined
 }onConfirm= {
-  handleHireConfirmed 
-}/> </>) 
+  handleHireConfirmed
+}/> </>)
 }'"}

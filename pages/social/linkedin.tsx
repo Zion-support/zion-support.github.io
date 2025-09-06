@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
-
 export default function LinkedInRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -9,7 +8,6 @@ export default function LinkedInRedirect() {
       );
     }
   }, []);
-
   return (
     <>
       <Head>

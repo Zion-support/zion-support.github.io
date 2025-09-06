@@ -2,110 +2,102 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Shield,;
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Atom
+  Shield;
 } from 'lucide-react';
 interface UltraFuturisticNavigationProps {
   className?: string;
-
 export default function UltraFuturisticNavigation({
-  className = '',
+  className = ''
 }: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
 interface UltraFuturisticNavigationProps {
   className?: string
 }
-
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-    };
-
+    }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 20)
-    };
-
+    }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-
   const navigationItems = [
     {
-      name: 'Services',
-      href: '/services',
-      hasDropdown: true,
+      name: 'Services'
+      href: '/services'
+      hasDropdown: true
       dropdownItems: [
         {
-          name: 'AI & Machine Learning',
-          href: '/services/ai-ml',
-          icon: Brain,
-          color: 'from-purple-500 to-pink-600',
-        },
+          name: 'AI & Machine Learning'
+          href: '/services/ai-ml'
+          icon: Brain
+          color: 'from-purple-500 to-pink-600'
+        }
         {
-          name: 'Quantum Computing',
-          href: '/services/quantum',
-          icon: Atom,
-          color: 'from-cyan-500 to-blue-600',
-        },
+          name: 'Quantum Computing'
+          href: '/services/quantum'
+          icon: Atom
+          color: 'from-cyan-500 to-blue-600'
+        }
         {
-          name: 'Cybersecurity',
-          href: '/services/cybersecurity',
-          icon: Shield,
-          color: 'from-red-500 to-pink-600',
-        },
+          name: 'Cybersecurity'
+          href: '/services/cybersecurity'
+          icon: Shield
+          color: 'from-red-500 to-pink-600'
+        }
         {
-          name: 'IT Solutions',
-          href: '/services/it-solutions',
-          icon: Rocket,
-          color: 'from-green-500 to-emerald-600',
-        },
+          name: 'IT Solutions'
+          href: '/services/it-solutions'
+          icon: Rocket
+          color: 'from-green-500 to-emerald-600'
+        }
         {
-          name: 'View All Services',
-          href: '/services',
-          icon: Rocket,
-          color: 'from-gray-500 to-gray-600',
-        },
-      ],
-    },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Pricing', href: '/pricing' },  ];        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, color: 'from-purple-500 to-pink-600' },
-        { name: 'Quantum Computing', href: '/services/quantum', icon: Atom, color: 'from-cyan-500 to-blue-600' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-red-500 to-pink-600' },
-        { name: 'IT Solutions', href: '/services/it-solutions', icon: Rocket, color: 'from-green-500 to-emerald-600' },
+          name: 'View All Services'
+          href: '/services'
+          icon: Rocket
+          color: 'from-gray-500 to-gray-600'
+        }
+      ]
+    }
+    { name: 'Solutions', href: '/solutions' }
+    { name: 'About', href: '/about' }
+    { name: 'Contact', href: '/contact' }
+    { name: 'Pricing', href: '/pricing' },  ];        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, color: 'from-purple-500 to-pink-600' }
+        { name: 'Quantum Computing', href: '/services/quantum', icon: Atom, color: 'from-cyan-500 to-blue-600' }
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-red-500 to-pink-600' }
+        { name: 'IT Solutions', href: '/services/it-solutions', icon: Rocket, color: 'from-green-500 to-emerald-600' }
         { name: 'View All Services', href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600' }
       ]
-    };
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    }
+    { name: 'Solutions', href: '/solutions' }
+    { name: 'About', href: '/about' }
+    { name: 'Contact', href: '/contact' }
     { name: 'Pricing', href: '/pricing' }
-
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  };
-
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  }
     >
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-20'>          {/* Logo */}  return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled 
-        ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
+      isScrolled
+        ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl'
         : 'bg-transparent'
     } ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,7 +119,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                 Revolutionary Technology
               </div>            </div>
           </motion.div>
-
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
             {navigationItems.map((item, index) => (
@@ -142,7 +133,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
               <div className="text-xs text-gray-400 -mt-1">Revolutionary Technology</div>
             </div>
           </motion.div>
-
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
             {navigationItems.map((item, index) => (
@@ -160,7 +150,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                     </button>                      <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
                     </button>
-                    
                     {/* Dropdown Menu */}
                     <AnimatePresence>
                       {activeDropdown === item.name && (
@@ -229,7 +218,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
               </div>
             ))}
           </div>
-
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>
             {/* Contact Info */}
@@ -242,7 +230,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                 <Phone className="w-4 h-4 text-cyan-400" />
               </div>
             </div>
-
             {/* CTA Button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
@@ -258,7 +245,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
               </Link>
             </motion.div>
           </div>
-
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>
             <button
@@ -278,7 +264,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -315,7 +300,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                           }`}
                         />
                       </button>
-                      
                       {activeDropdown === item.name && (
                         <motion.div
                           initial={{ opacity: 0, y: -10 }}
@@ -366,7 +350,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                   )}
                 </div>
               ))}
-
               {/* Mobile Contact Info */}
               <div className='pt-6 border-t border-gray-700/50 space-y-3'>
                 <div className='flex items-center space-x-3 text-gray-300'>
@@ -381,7 +364,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-sm'>{contactInfo.address}</span>                </div>
               </div>
-
               {/* Mobile CTA */}
               <div className='pt-4'>                  <span>{contactInfo.mobile}</span>
                 </div>
@@ -394,7 +376,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                   <span className="text-sm">{contactInfo.address}</span>
                 </div>
               </div>
-
               {/* Mobile CTA */}
               <div className='pt-4'>
                 <Link

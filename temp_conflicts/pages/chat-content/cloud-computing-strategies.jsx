@@ -1,7 +1,6 @@
 
-import Head from 'next/head',;
-const CloudComputingStrategies = () => {;
-  return (;
+import Head from 'next/head';
+const CloudComputingStrategies = () => {return (;
     <div>;
       <Head>;
         <title>CloudComputingStrategies - Zion Tech Solutions</title>;
@@ -13,5 +12,5 @@ const CloudComputingStrategies = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default CloudComputingStrategies;

@@ -11,7 +11,6 @@ const AiModelDevelopmentChat: NextPage = () => {
           content="AiModelDevelopmentChat service"
         />{" "}
       </Head>
-
       <main>
         <h1>AiModelDevelopmentChat</h1>
         <p>Service details coming soon...</p>
@@ -19,6 +18,5 @@ const AiModelDevelopmentChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default AiModelDevelopmentChat;

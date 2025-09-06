@@ -3,20 +3,20 @@ import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
 import { useWhitelabel } from '@/context/WhitelabelContext'
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-  ArrowRight,
-  Briefcase,
-  PenTool,
-  BarChart3,
-  Users,
-  Shield,
-  Globe,
+  ArrowRight
+  Briefcase
+  PenTool
+  BarChart3
+  Users
+  Shield
+  Globe
 } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth'
 import Link from 'next/link'
@@ -37,7 +37,7 @@ export default function ZionHireAI() {
           style={
             primaryColor
               ? {
-                  backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))`,
+                  backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))`
                 }
               : {}
           }
@@ -91,7 +91,6 @@ export default function ZionHireAI() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className='py-16 bg-background'>
           <div className='container mx-auto px-4 md:px-6'>
@@ -104,7 +103,6 @@ export default function ZionHireAI() {
                 streamline your recruiting process, find better candidates, and
                 make data-driven decisions.
             </div>
-
             <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
               <Card className='bg-card border border-border'>
                 <CardHeader>
@@ -139,7 +137,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-
               <Card className='bg-card border border-border'>
                 <CardHeader>
                   <PenTool className='h-10 w-10 text-zion-purple mb-2' />
@@ -171,7 +168,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-
               <Card className='bg-card border border-border'>
                 <CardHeader>
                   <Users className='h-10 w-10 text-zion-purple mb-2' />
@@ -203,7 +199,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-
               <Card className='bg-card border border-border'>
                 <CardHeader>
                   <Globe className='h-10 w-10 text-zion-purple mb-2' />
@@ -254,7 +249,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-
               <Card className='bg-card border border-border'>                <CardHeader>
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Candidate Matchmaker</CardTitle>
@@ -282,7 +276,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-
               <Card className='bg-card border border-border'>                <CardHeader>
                   <Globe className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Embeddable Widget</CardTitle>
@@ -310,7 +303,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-
               <Card className='bg-card border border-border'>
                 <CardHeader>
                   <BarChart3 className='h-10 w-10 text-zion-purple mb-2' />
@@ -343,7 +335,6 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-
               <Card className='bg-card border border-border'>
                 <CardHeader>
                   <Shield className='h-10 w-10 text-zion-purple mb-2' />
@@ -397,7 +388,6 @@ export default function ZionHireAI() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className='bg-zion-blue-dark py-16'>
           <div className='container mx-auto px-4 md:px-6 text-center'>
@@ -414,8 +404,8 @@ export default function ZionHireAI() {
               asChild
             >
               <Link href='/enterprise/demo'>Schedule a Demo</Link>            </Button>            </p>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-zion-purple hover: bg-zion-purple-light text-white"
               asChild
             >
@@ -429,4 +419,3 @@ export default function ZionHireAI() {
     </>
   )
 }
-;

@@ -1,10 +1,10 @@
 import React from 'react'
 import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+  CardTitle
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -27,27 +27,26 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 interface MilestoneCardProps {
-  id: string,
-  projectId: string,
-  title: string,
-  description?: string,
-  amount: number,
-  status: string,
-  dueDate?: string,
-  onApprove?: (id: string,) => Promise<void>,
+  id: string
+  projectId: string
+  title: string
+  description?: string
+  amount: number
+  status: string
+  dueDate?: string
+  onApprove?: (id: string,) => Promise<void>
   onReject?: (id: string,) => Promise<void>
 }
-
 export function MilestoneCard({
-  id,
-  projectId,
-  title,
-  description,
-  amount,
-  status,
-  dueDate,
-  onApprove,
-  onReject,
+  id
+  projectId
+  title
+  description
+  amount
+  status
+  dueDate
+  onApprove
+  onReject
 }: MilestoneCardProps) {
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id)
   function getStatusBadgeColor() {
@@ -64,7 +63,6 @@ export function MilestoneCard({
         return 'bg-gray-500'
     }
   }
-
   return (
     <Card>
       <CardHeader className='pb-2'>
@@ -76,7 +74,6 @@ export function MilestoneCard({
               </p>
             )}
           </div>  }
-  
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -100,20 +97,17 @@ export function MilestoneCard({
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
               {status.replace('_ ')}
             </Badge>
-            
               <DisputeStatusBadge status={disputeStatus} />
             )}
           </div>
         </div>
       </CardHeader>
-
       <CardContent className='pb-2'>
         {description && <p className='text-muted-foreground'>{description}</p>}
         <div className='mt-4'>
           <p className='text-xl font-bold'>${amount.toFixed(2)}</p>
         </div>
       </CardContent>
-
       <CardFooter className='pt-2 flex justify-between'>
         <div>
           {status !== 'completed' && status !== 'rejected' && (
@@ -121,7 +115,7 @@ export function MilestoneCard({
               projectId={projectId}
               milestoneId={id}
               variant='ghost'
-              size='sm'            <RaiseDisputeButton 
+              size='sm'            <RaiseDisputeButton
               projectId = {projectId,}
               milestoneId = {id,}
               variant="ghost"
@@ -129,18 +123,15 @@ export function MilestoneCard({
             />
           )}
         </div>
-
         <div className='flex gap-2'>
           {status === 'pending' && onReject && !isUnderDispute && (
             <Button variant='outline' size='sm' onClick={() => onReject(id)}>
               <X className='h-4 w-4 mr-1' /> Reject            </Button>
           )}
-
           {status === 'pending' && onApprove && !isUnderDispute && (
             <Button variant='default' size='sm' onClick={() => onApprove(id)}>
               <Check className='h-4 w-4 mr-1' /> Approve            </Button>
           )}
-
           {isUnderDispute && (
             <Button variant='outline' size='sm' disabled>              Actions frozen due to dispute            <Button variant="outline" size="sm" disabled>
               Actions frozen due to dispute

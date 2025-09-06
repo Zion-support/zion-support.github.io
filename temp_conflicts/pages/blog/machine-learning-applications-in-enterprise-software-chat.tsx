@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const MachineLearningApplicationsInEnterpriseSoftwareChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const MachineLearningApplicationsInEnterpriseSoftwareChat = () => {return (;
     <div>;
       <Head>;
         <title>MachineLearningApplicationsInEnterpriseSoftwareChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const MachineLearningApplicationsInEnterpriseSoftwareChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default MachineLearningApplicationsInEnterpriseSoftwareChat;

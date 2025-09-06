@@ -2,86 +2,84 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import {
-  Rocket,
-  Zap,
-  Shield,
-  Cpu,
-  Database,
-  Users,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Clock,
-  TrendingUp,
-  Globe,;
+  Rocket
+  Zap
+  Shield
+  Cpu
+  Database
+  Users
+  ArrowRight
+  CheckCircle
+  Star
+  Clock
+  TrendingUp
+  Globe;
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function DigitalTransformationPage() {
   const services = [
     {
-      title: 'Digital Strategy & Roadmap',
+      title: 'Digital Strategy & Roadmap'
       description:
-        'Comprehensive digital transformation strategy and implementation planning',
+        'Comprehensive digital transformation strategy and implementation planning'
       features: [
-        'Technology Assessment',
-        'Change Management',
-        'ROI Planning',
-        'Implementation Roadmap',
-      ],
-      price: 'From $15,000',
-      icon: Rocket,
-      color: 'from-yellow-500 to-orange-500',
-    },
+        'Technology Assessment'
+        'Change Management'
+        'ROI Planning'
+        'Implementation Roadmap'
+      ]
+      price: 'From $15,000'
+      icon: Rocket
+      color: 'from-yellow-500 to-orange-500'
+    }
     {
-      title: 'Legacy System Modernization',
-      description: 'Transform outdated systems into modern, scalable solutions',
+      title: 'Legacy System Modernization'
+      description: 'Transform outdated systems into modern, scalable solutions'
       features: [
-        'System Analysis',
-        'Migration Planning',
-        'Data Migration',
-        'Performance Optimization',
-      ],
-      price: 'From $25,000',
-      icon: Cpu,
-      color: 'from-blue-500 to-cyan-500',
-    },
+        'System Analysis'
+        'Migration Planning'
+        'Data Migration'
+        'Performance Optimization'
+      ]
+      price: 'From $25,000'
+      icon: Cpu
+      color: 'from-blue-500 to-cyan-500'
+    }
     {
-      title: 'Process Automation',
+      title: 'Process Automation'
       description:
-        'AI-powered automation for improved efficiency and productivity',
+        'AI-powered automation for improved efficiency and productivity'
       features: [
-        'Workflow Analysis',
-        'RPA Implementation',
-        'Integration',
-        'Monitoring',
-      ],
-      price: 'From $12,000',
-      icon: Zap,
-      color: 'from-purple-500 to-pink-500',
-    },
+        'Workflow Analysis'
+        'RPA Implementation'
+        'Integration'
+        'Monitoring'
+      ]
+      price: 'From $12,000'
+      icon: Zap
+      color: 'from-purple-500 to-pink-500'
+    }
     {
-      title: 'Change Management',
-      description: 'Comprehensive change management and training programs',
+      title: 'Change Management'
+      description: 'Comprehensive change management and training programs'
       features: [
-        'Stakeholder Engagement',
-        'Training Programs',
-        'Communication Strategy',
-        'Success Metrics',
-      ],
-      price: 'From $8,000',
-      icon: Users,
-      color: 'from-emerald-500 to-teal-500',
-    },
+        'Stakeholder Engagement'
+        'Training Programs'
+        'Communication Strategy'
+        'Success Metrics'
+      ]
+      price: 'From $8,000'
+      icon: Users
+      color: 'from-emerald-500 to-teal-500'
+    }
   ];
-
   const stats = [
-    { number: '500+', label: 'Transformations Completed', icon: Rocket },
-    { number: '40%', label: 'Average Cost Reduction', icon: TrendingUp },
-    { number: '300%', label: 'ROI Improvement', icon: Star },
-    { number: '24/7', label: 'Support Available', icon: Clock },
+    { number: '500+', label: 'Transformations Completed', icon: Rocket }
+    { number: '40%', label: 'Average Cost Reduction', icon: TrendingUp }
+    { number: '300%', label: 'ROI Improvement', icon: Star }
+    { number: '24/7', label: 'Support Available', icon: Clock }
   ];
-
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
@@ -102,9 +100,7 @@ export default function DigitalTransformationPage() {
           rel='canonical'
           href='https://ziontechgroup.com/services/transformation'
         />      </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
@@ -120,7 +116,6 @@ export default function DigitalTransformationPage() {
               End-to-end digital transformation solutions that modernize your
               business            </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -138,7 +133,6 @@ export default function DigitalTransformationPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -162,7 +156,6 @@ export default function DigitalTransformationPage() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -180,7 +173,6 @@ export default function DigitalTransformationPage() {
               business operations
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -221,7 +213,6 @@ export default function DigitalTransformationPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -247,26 +238,20 @@ export default function DigitalTransformationPage() {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
-),
-
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
+)
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
   {
-  opacity: 0, y: 30 
-
+  opacity: 0, y: 30
 }whileInView= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8 
-
+  duration: 0.8
 }viewport= {
   {
-  once: true 
-
+  once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth. </p> Transformation Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Success Stories </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)

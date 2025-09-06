@@ -10,17 +10,16 @@ import {format} from "date-fns";
 import type { DateRange } from "@/types/dateRange";
 import type { QuoteStatus } from "@/types/quotes";
 interface QuotesFilterProps {
-  searchQuery: string,
-  setSearchQuery: (value: string) => void,
-  statusFilter: QuoteStatus | 'all',
-  setStatusFilter: (value: QuoteStatus | 'all') => void,
-  archiveFilter: 'active' | 'archived' | 'all',
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,
-  dateRange: DateRange | undefined,
-  setDateRange: (range: DateRange | undefined) => void,
+  searchQuery: string
+  setSearchQuery: (value: string) => void
+  statusFilter: QuoteStatus | 'all'
+  setStatusFilter: (value: QuoteStatus | 'all') => void
+  archiveFilter: 'active' | 'archived' | 'all'
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
+  dateRange: DateRange | undefined
+  setDateRange: (range: DateRange | undefined) => void
   onReset: () => void
 }
-
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   searchQuery;
   setSearchQuery;
@@ -29,7 +28,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   archiveFilter;
   setArchiveFilter;
   dateRange;
-  setDateRange,
+  setDateRange
   onReset
 }) => {
   return (
@@ -44,7 +43,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          
           <div>
             <p className="text-zion-slate-light text-sm mb-2">Status</p>
             <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>
@@ -61,7 +59,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               </SelectContent>
             </Select>
           </div>
-          
           <div>
             <p className="text-zion-slate-light text-sm mb-2">Archive</p>
             <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>
@@ -75,7 +72,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               </SelectContent>
             </Select>
           </div>
-          
           <div>
             <p className="text-zion-slate-light text-sm mb-2">Date Range</p>
             <Popover>
@@ -112,10 +108,9 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             </Popover>
           </div>
         </div>
-        
         <div className="mt-4 flex justify-end">
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             onClick={onReset}
             className="border-zion-blue-light text-zion-slate-light"
           >
@@ -125,4 +120,4 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
       </CardContent>
     </Card>
   )
-};
+}

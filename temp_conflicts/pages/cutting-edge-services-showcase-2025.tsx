@@ -1,103 +1,92 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import {;
-  Brain, Atom, Shield, Rocket, Star, Award, TrendingUp,;
-  CheckCircle, ArrowRight, Zap, Target, Microscope,;
-  Lock, Cloud, BarChart3, Settings, Eye, Code, Palette,;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
+  CheckCircle, ArrowRight, Zap, Target, Microscope;
+  Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
   Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin;
-} from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services',;
-import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services',;
-import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it',;
-import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas',;
-const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
+import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+const contactInfo = {mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup.com';
-},;
+}
 const heroStats = [;
-  { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> },;
-  { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },;
-  { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },;
+  { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> }
+  { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> }
+  { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> }
   { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> }
-],;
+];
 const serviceCategories = [;
-  {;
-    title: 'AI & Consciousness',;
-    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',;
-    services: cuttingEdgeAIServices2025,;
-    icon: Brain,;
-    color: 'from-violet-500 to-purple-600',;
-    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',;
+  {title: 'AI & Consciousness';
+    description: 'Revolutionary AI platforms with consciousness and emotional intelligence';
+    services: cuttingEdgeAIServices2025;
+    icon: Brain;
+    color: 'from-violet-500 to-purple-600';
+    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600';
     count: cuttingEdgeAIServices2025.length;
-  },;
-  {;
-    title: 'Quantum & Emerging Tech',;
-    description: 'Breakthrough quantum computing and space technology solutions',;
-    services: cuttingEdgeQuantumServices2025,;
-    icon: Atom,;
-    color: 'from-indigo-500 to-blue-600',;
-    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600',;
+  }
+  {title: 'Quantum & Emerging Tech';
+    description: 'Breakthrough quantum computing and space technology solutions';
+    services: cuttingEdgeQuantumServices2025;
+    icon: Atom;
+    color: 'from-indigo-500 to-blue-600';
+    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600';
     count: cuttingEdgeQuantumServices2025.length;
-  },;
-  {;
-    title: 'Enterprise IT',;
-    description: 'Advanced enterprise infrastructure and security solutions',;
-    services: cuttingEdgeEnterpriseITServices2025,;
-    icon: Shield,;
-    color: 'from-blue-500 to-cyan-600',;
-    gradient: 'bg-gradient-to-r from-blue-500 to-cyan-600',;
+  }
+  {title: 'Enterprise IT';
+    description: 'Advanced enterprise infrastructure and security solutions';
+    services: cuttingEdgeEnterpriseITServices2025;
+    icon: Shield;
+    color: 'from-blue-500 to-cyan-600';
+    gradient: 'bg-gradient-to-r from-blue-500 to-cyan-600';
     count: cuttingEdgeEnterpriseITServices2025.length;
-  },;
-  {;
-    title: 'Micro SAAS',;
-    description: 'Innovative business solutions for modern enterprises',;
-    services: cuttingEdgeMicroSaasServices2025,;
-    icon: Rocket,;
-    color: 'from-teal-500 to-emerald-600',;
-    gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600',;
+  }
+  {title: 'Micro SAAS';
+    description: 'Innovative business solutions for modern enterprises';
+    services: cuttingEdgeMicroSaasServices2025;
+    icon: Rocket;
+    color: 'from-teal-500 to-emerald-600';
+    gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600';
     count: cuttingEdgeMicroSaasServices2025.length;
   }
-],;
-export default function CuttingEdgeServicesShowcase2025() {;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
+];
+export default function CuttingEdgeServicesShowcase2025() {const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const allServices = [;
-    ...cuttingEdgeAIServices2025,;
-    ...cuttingEdgeQuantumServices2025,;
-    ...cuttingEdgeEnterpriseITServices2025,;
+    ...cuttingEdgeAIServices2025;
+    ...cuttingEdgeQuantumServices2025;
+    ...cuttingEdgeEnterpriseITServices2025;
     ...cuttingEdgeMicroSaasServices2025;
-  ],;
+  ];
   const filteredServices = allServices.filter(service => {;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),;
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |;
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  }),;
-  const containerVariants = {;
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
+  });
+  const containerVariants = {hidden: { opacity: 0 }
+    visible: {opacity: 1;
       transition: {;
         staggerChildren: 0.1;
       }
     }
-  },;
-  const itemVariants = {;
-    hidden: { y: 20, opacity: 0 },;
-    visible: {;
-      y: 0,;
-      opacity: 1,;
+  }
+  const itemVariants = {hidden: { y: 20, opacity: 0 }
+    visible: {y: 0;
+      opacity: 1;
       transition: {;
         duration: 0.5;
       }
     }
-  };
+  }
   return (;
     <>;
       <Head>;
@@ -206,8 +195,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <div className="flex flex-wrap gap-2">;
                 <button;
                   onClick={() => setSelectedCategory('all')}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
-                    selectedCategory === 'all';
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === 'all';
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
                       : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
                   }`}
@@ -218,8 +206,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   <button;
                     key={category.title}
                     onClick={() => setSelectedCategory(category.title)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
-                      selectedCategory === category.title;
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category.title;
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
                         : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
                     }`}
@@ -232,8 +219,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <div className="flex items-center gap-2">;
                 <button;
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-lg transition-all duration-300 ${;
-                    viewMode === 'grid';
+                  className={`p-2 rounded-lg transition-all duration-300 ${viewMode === 'grid';
                       ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50';
                       : 'bg-black/50 text-white/70 hover:text-white hover:bg-black/70';
                   }`}
@@ -242,8 +228,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 </button>;
                 <button;
                   onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-lg transition-all duration-300 ${;
-                    viewMode === 'list';
+                  className={`p-2 rounded-lg transition-all duration-300 ${viewMode === 'list';
                       ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50';
                       : 'bg-black/50 text-white/70 hover:text-white hover:bg-black/70';
                   }`}
@@ -268,8 +253,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 <motion.div;
                   key={service.id}
                   variants={itemVariants}
-                  className={`group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${;
-                    viewMode === 'list' ? 'flex flex-col lg:flex-row' : '';
+                  className={`group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${viewMode === 'list' ? 'flex flex-col lg:flex-row' : '';
                   }`}
                 >;
                   {/* Service Header */}
@@ -366,8 +350,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>;
                 <button;
-                  onClick={() => {;
-                    setSearchTerm('');
+                  onClick={() => {setSearchTerm('');
                     setSelectedCategory('all');
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";

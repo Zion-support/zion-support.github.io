@@ -7,7 +7,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
-    isLoaded: false,
+    isLoaded: false
     hasError: false
   });
   useEffect(() => {
@@ -21,16 +21,16 @@ export default function Home() {
       <div className="min-h-screen bg-slate-950 flex items-center justify-center">
         <div className="text-center text-white">
           <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
-          <button 
-            onClick={() => window.location.reload()} 
+          <button
+            onClick={() => window.location.reload()}
             className="px-4 py-2 bg-blue-600 rounded-lg hover: bg-blue-700"
           >
             Reload Page
           </button>
         </div>
       </div>
-    ),
-  };
+    )
+  }
   return (;
     <>;
       <Head>;
@@ -57,28 +57,25 @@ export default function Home() {
         <meta name="twitter:creator" content="@ziontechgroup" />;
         <script;
           type="application/ld+json";
-          dangerouslySetInnerHTML={{;
-            __html:JSON.stringify({;
-              "@context":"https://schema.org",;
-              "@type":"Organization",;
-              "name":"Zion Tech Group",;
-              "url":contact.site,;
-              "logo":`${contact.site}/favicon.svg`,;
-              "description":"Leading provider of micro SaaS products, AI services, and IT solutions",;
-              "address":{;
-                "@type":"PostalAddress",;
-                "streetAddress":"364 E Main St STE 1008",;
-                "addressLocality":"Middletown",;
-                "addressRegion":"DE",;
-                "postalCode":"19709",;
+          dangerouslySetInnerHTML={{__html:JSON.stringify({;
+              "@context":"https://schema.org";
+              "@type":"Organization";
+              "name":"Zion Tech Group";
+              "url":contact.site;
+              "logo":`${contact.site}/favicon.svg`;
+              "description":"Leading provider of micro SaaS products, AI services, and IT solutions";
+              "address":{"@type":"PostalAddress";
+                "streetAddress":"364 E Main St STE 1008";
+                "addressLocality":"Middletown";
+                "addressRegion":"DE";
+                "postalCode":"19709";
                 "addressCountry":"US";
-              },;
-              "contactPoint":{;
-                "@type":"ContactPoint",;
-                "telephone":contact.phone,;
-                "contactType":"customer service",;
+              }
+              "contactPoint":{"@type":"ContactPoint";
+                "telephone":contact.phone;
+                "contactType":"customer service";
                 "email":contact.email;
-              },;
+              }
               "sameAs":[contact.site];
             });
           }}
@@ -100,7 +97,7 @@ export default function Home() {
               Innovative Micro SaaS, AI Services & IT Solutions;
             </p>;
             <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState.isLoaded ? 'opacity-100 translate-y-0' :'opacity-0 translate-y-8'}`}>;
-              We deliver cutting-edge technology solutions with 150+ micro SaaS products, ;
+              We deliver cutting-edge technology solutions with 150+ micro SaaS products;
               100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization ;
               to AI automation, quantum computing to blockchain solutions, we help businesses scale ;
               efficiently and securely in the digital age.;
@@ -157,7 +154,7 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-colors">;
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3>;
                 <p className="text-slate-300 mb-6">;
-                  Innovative, focused software solutions including AI-Powered Video Clip Maker, ;
+                  Innovative, focused software solutions including AI-Powered Video Clip Maker;
                   Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -174,7 +171,7 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">;
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>;
                 <p className="text-slate-300 mb-6">;
-                  Advanced artificial intelligence solutions including autonomous AI agents, ;
+                  Advanced artificial intelligence solutions including autonomous AI agents;
                   financial trading systems, legal document analysis, and 40+ more AI-powered services.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -191,7 +188,7 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">;
                 <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3>;
                 <p className="text-slate-300 mb-6">;
-                  Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions, ;
+                  Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions;
                   DevSecOps automation, and 40+ more enterprise-grade services.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -239,8 +236,7 @@ export default function Home() {
         </Suspense>;
         {/* <PerformanceMonitor ;          showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
-          onThresholdExceeded={(metrics) => {;
-            console.warn('Performance thresholds exceeded:', metrics);
+          onThresholdExceeded={(metrics) => {console.warn('Performance thresholds exceeded:', metrics);
           }}
         /> */}
       </ErrorBoundary>;
@@ -248,7 +244,6 @@ export default function Home() {
   );}
 import React from 'react';
 import { Button } from '@/components/ui/button';
-
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -268,7 +263,6 @@ export default function HomePage() {
 }
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -285,7 +279,6 @@ export default function HomePage() {
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
@@ -320,7 +313,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* Featured Services */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -337,7 +329,6 @@ export default function HomePage() {
                 Our most popular and effective technology solutions
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
                 <motion.div
@@ -363,7 +354,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -380,7 +370,6 @@ export default function HomePage() {
 We deliver exceptional results through innovation, expertise, and dedication
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
                 <motion.div
@@ -400,7 +389,6 @@ We deliver exceptional results through innovation, expertise, and dedication
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

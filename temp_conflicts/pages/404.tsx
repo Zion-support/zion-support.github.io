@@ -1,15 +1,14 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import { Home, Search, ArrowLeft, AlertTriangle, Map, Users, Rocket } from 'lucide-react',;
-export default function Custom404() {;
-  const quickLinks = [;
-    { href: '/', label: '🏠 Home', icon: Home },;
-    { href: '/services', label: '🚀 Services', icon: Rocket },;
-    { href: '/explore', label: '🔍 Explore', icon: Search },;
-    { href: '/about', label: '👥 About', icon: Users },;
-    { href: '/sitemap', label: '🗺️ Sitemap', icon: Map }],;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Home, Search, ArrowLeft, AlertTriangle, Map, Users, Rocket } from 'lucide-react';
+export default function Custom404() {const quickLinks = [;
+    { href: '/', label: '🏠 Home', icon: Home }
+    { href: '/services', label: '🚀 Services', icon: Rocket }
+    { href: '/explore', label: '🔍 Explore', icon: Search }
+    { href: '/about', label: '👥 About', icon: Users }
+    { href: '/sitemap', label: '🗺️ Sitemap', icon: Map }];
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center px-6">;
       <Head>;
@@ -80,8 +79,8 @@ export default function Custom404() {;
           </h3>;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">;
             {[;
-              { href: '/ai-business-intelligence', label: 'AI Business Intelligence', desc: 'Transform data into actionable insights' };
-              { href: '/quantum-cybersecurity', label: 'Quantum Cybersecurity', desc: 'Future-proof security solutions' };
+              { href: '/ai-business-intelligence', label: 'AI Business Intelligence', desc: 'Transform data into actionable insights' }
+              { href: '/quantum-cybersecurity', label: 'Quantum Cybersecurity', desc: 'Future-proof security solutions' }
               { href: '/edge-computing-orchestration', label: 'Edge Computing', desc: 'Advanced edge optimization platform' }].map((service, index) => (;
               <motion.div;
                 key={service.href}
@@ -157,4 +156,3 @@ export default function Custom404() {;
     </div>;
   );
 }
-;

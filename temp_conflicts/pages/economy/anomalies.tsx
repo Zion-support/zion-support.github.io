@@ -1,17 +1,14 @@
-import fs from 'fs',;
-import path from 'path',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-export async function getStaticProps() {;
+import fs from 'fs';
+import path from 'path';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+export async function getStaticProps() {
   const dir = path.join(process.cwd(), 'datareportseconomyanomalies');
   let files: string[] = [];
-  if (fs.existsSync(dir)) {;
-    files = fs.readdirSync(dir).filter((f) => f.endsWith('.md')).sort().reverse();
+  if (fs.existsSync(dir)) {files = fs.readdirSync(dir).filter((f) => f.endsWith('.md')).sort().reverse();
   }
   return { props: { files } }
 }
-;
-export default function AnomaliesPage({ files }: { files: string[] }) {;
-  return (;
+export default function AnomaliesPage({ files }: { files: string[] }) {return (;
     <EnhancedLayout>;
       <div className="space-y-6">;
         <h1 className="text-2xl font-semibold">Economy Anomalies</h1>;

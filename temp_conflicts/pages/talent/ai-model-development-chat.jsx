@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const AiModelDevelopmentChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const AiModelDevelopmentChat = () => {return (;
     <div>;
       <Head>;
         <title>AiModelDevelopmentChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const AiModelDevelopmentChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default AiModelDevelopmentChat;

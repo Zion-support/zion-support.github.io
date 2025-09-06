@@ -1,97 +1,88 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-const Blog = () => {;
-  const featuredPosts = [;
+import Head from 'next/head';
+import Link from 'next/link';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+const Blog = () => {const featuredPosts = [;
     {;
-      title: "The Future of AI in Enterprise: 2024 Trends and Predictions",;
-      excerpt: "Discover how artificial intelligence is reshaping enterprise operations and what to expect in the coming year.",;
-      category: "Artificial Intelligence",;
-      readTime: "8 min read",;
-      date: "January 15, 2024",;
-      image: "🤖",;
+      title: "The Future of AI in Enterprise: 2024 Trends and Predictions";
+      excerpt: "Discover how artificial intelligence is reshaping enterprise operations and what to expect in the coming year.";
+      category: "Artificial Intelligence";
+      readTime: "8 min read";
+      date: "January 15, 2024";
+      image: "🤖";
       href: "/blog/ai-enterprise-trends-2024";
-    },;
-    {;
-      title: "Cloud Migration Strategies: A Comprehensive Guide for Businesses",;
-      excerpt: "Learn the best practices for migrating your infrastructure to the cloud while minimizing risks and maximizing benefits.",;
-      category: "Cloud Computing",;
-      readTime: "12 min read",;
-      date: "January 10, 2024",;
-      image: "☁️",;
+    }
+    {title: "Cloud Migration Strategies: A Comprehensive Guide for Businesses";
+      excerpt: "Learn the best practices for migrating your infrastructure to the cloud while minimizing risks and maximizing benefits.";
+      category: "Cloud Computing";
+      readTime: "12 min read";
+      date: "January 10, 2024";
+      image: "☁️";
       href: "/blog/cloud-migration-strategies-guide";
-    },;
-    {;
-      title: "Blockchain Beyond Cryptocurrency: Real-World Business Applications",;
-      excerpt: "Explore how blockchain technology is revolutionizing industries beyond finance, from supply chain to healthcare.",;
-      category: "Blockchain",;
-      readTime: "10 min read",;
-      date: "January 5, 2024",;
-      image: "🔗",;
+    }
+    {title: "Blockchain Beyond Cryptocurrency: Real-World Business Applications";
+      excerpt: "Explore how blockchain technology is revolutionizing industries beyond finance, from supply chain to healthcare.";
+      category: "Blockchain";
+      readTime: "10 min read";
+      date: "January 5, 2024";
+      image: "🔗";
       href: "/blog/blockchain-business-applications";
     }
-  ],;
+  ];
   const recentPosts = [;
-    {;
-      title: "5G Technology and Its Impact on IoT Applications",;
-      excerpt: "How the next generation of wireless technology is enabling new IoT possibilities.",;
-      category: "IoT",;
-      readTime: "6 min read",;
-      date: "January 12, 2024",;
+    {title: "5G Technology and Its Impact on IoT Applications";
+      excerpt: "How the next generation of wireless technology is enabling new IoT possibilities.";
+      category: "IoT";
+      readTime: "6 min read";
+      date: "January 12, 2024";
       href: "/blog/5g-technology-iot-impact";
-    },;
-    {;
-      title: "Cybersecurity Trends for 2024 and Beyond",;
-      excerpt: "Stay ahead of emerging threats with our analysis of cybersecurity trends.",;
-      category: "Cybersecurity",;
-      readTime: "7 min read",;
-      date: "January 8, 2024",;
+    }
+    {title: "Cybersecurity Trends for 2024 and Beyond";
+      excerpt: "Stay ahead of emerging threats with our analysis of cybersecurity trends.";
+      category: "Cybersecurity";
+      readTime: "7 min read";
+      date: "January 8, 2024";
       href: "/blog/cybersecurity-trends-2024";
-    },;
-    {;
-      title: "Data Analytics in Digital Transformation",;
-      excerpt: "Leverage data analytics to drive successful digital transformation initiatives.",;
-      category: "Data Analytics",;
-      readTime: "9 min read",;
-      date: "January 3, 2024",;
+    }
+    {title: "Data Analytics in Digital Transformation";
+      excerpt: "Leverage data analytics to drive successful digital transformation initiatives.";
+      category: "Data Analytics";
+      readTime: "9 min read";
+      date: "January 3, 2024";
       href: "/blog/data-analytics-digital-transformation";
-    },;
-    {;
-      title: "DevOps Automation Strategies for Modern Teams",;
-      excerpt: "Streamline your development workflow with proven DevOps automation techniques.",;
-      category: "DevOps",;
-      readTime: "11 min read",;
-      date: "December 28, 2023",;
+    }
+    {title: "DevOps Automation Strategies for Modern Teams";
+      excerpt: "Streamline your development workflow with proven DevOps automation techniques.";
+      category: "DevOps";
+      readTime: "11 min read";
+      date: "December 28, 2023";
       href: "/blog/devops-automation-strategies";
-    },;
-    {;
-      title: "Machine Learning Applications in Enterprise Software",;
-      excerpt: "Real-world examples of how ML is transforming enterprise applications.",;
-      category: "Machine Learning",;
-      readTime: "8 min read",;
-      date: "December 25, 2023",;
+    }
+    {title: "Machine Learning Applications in Enterprise Software";
+      excerpt: "Real-world examples of how ML is transforming enterprise applications.";
+      category: "Machine Learning";
+      readTime: "8 min read";
+      date: "December 25, 2023";
       href: "/blog/machine-learning-enterprise-applications";
-    },;
-    {;
-      title: "Microservices Architecture: Benefits and Challenges",;
-      excerpt: "Understanding the trade-offs of microservices and when to adopt them.",;
-      category: "Architecture",;
-      readTime: "10 min read",;
-      date: "December 20, 2023",;
+    }
+    {title: "Microservices Architecture: Benefits and Challenges";
+      excerpt: "Understanding the trade-offs of microservices and when to adopt them.";
+      category: "Architecture";
+      readTime: "10 min read";
+      date: "December 20, 2023";
       href: "/blog/microservices-architecture-benefits-challenges";
     }
-  ],;
+  ];
   const categories = [;
-    { name: "Artificial Intelligence", count: 15, icon: "🤖" },;
-    { name: "Cloud Computing", count: 12, icon: "☁️" },;
-    { name: "Blockchain", count: 8, icon: "🔗" },;
-    { name: "Cybersecurity", count: 10, icon: "🛡️" },;
-    { name: "Data Analytics", count: 9, icon: "📊" },;
-    { name: "DevOps", count: 7, icon: "⚙️" },;
-    { name: "IoT", count: 6, icon: "🌐" },;
+    { name: "Artificial Intelligence", count: 15, icon: "🤖" }
+    { name: "Cloud Computing", count: 12, icon: "☁️" }
+    { name: "Blockchain", count: 8, icon: "🔗" }
+    { name: "Cybersecurity", count: 10, icon: "🛡️" }
+    { name: "Data Analytics", count: 9, icon: "📊" }
+    { name: "DevOps", count: 7, icon: "⚙️" }
+    { name: "IoT", count: 6, icon: "🌐" }
     { name: "Machine Learning", count: 11, icon: "🧠" }
-  ],;
+  ];
   return (;
     <EnhancedLayout>;
       <Head>;
@@ -180,7 +171,7 @@ const Blog = () => {;
               <div className="space-y-3">;
                 {categories.map((category, index) => (;
                   <Link;
-                    key={index} ;
+                    key={index}
                     href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
                     className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50 transition-colors";
                   >;
@@ -225,5 +216,5 @@ const Blog = () => {;
       </main>;
     </EnhancedLayout>;
   );
-},;
+}
 export default Blog;

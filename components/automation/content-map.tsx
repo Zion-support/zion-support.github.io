@@ -1,6 +1,6 @@
-};
-) ) 
-}</ul> </section> <section>) ) 
+}
+) )
+}</ul> </section> <section>) )
 }</ul> </section> </div>)
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
@@ -19,7 +19,7 @@ export default function ContentMap({ report }: Props) {
         <h2 className="font-semibold mb-2">Pages by Section</h2>
         <ul className="text-sm space-y-1">
           {sections.map(([sec, n]) => (
-            <li key={sec} className="flex justify-between"><span>{sec || 'root'}</span><span className="text-gray-500">{n}</span></li>
+            <li key={sec} className="flex justify-between"><span>{sec |'root'}</span><span className="text-gray-500">{n}</span></li>
           ))}
         </ul>
       </section>

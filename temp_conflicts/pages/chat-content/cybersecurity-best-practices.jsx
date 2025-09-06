@@ -1,7 +1,6 @@
 
-import Head from 'next/head',;
-const CybersecurityBestPractices = () => {;
-  return (;
+import Head from 'next/head';
+const CybersecurityBestPractices = () => {return (;
     <div>;
       <Head>;
         <title>CybersecurityBestPractices - Zion Tech Solutions</title>;
@@ -13,5 +12,5 @@ const CybersecurityBestPractices = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default CybersecurityBestPractices;

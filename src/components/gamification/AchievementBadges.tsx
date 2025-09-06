@@ -10,16 +10,14 @@ interface AchievementBadgesProps {
   achievements: Achievement[]
 }
 export interface Achievement {
-  id: string,
-  title: string,
-  description: string,
+  id: string
+  title: string
+  description: string
   achieved: boolean
 }
-
 interface AchievementBadgesProps {
   achievements: Achievement[]
 }
-
 export function AchievementBadges({ achievements }: AchievementBadgesProps) {
   return (
     <Card>

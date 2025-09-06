@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from '../components/Layout';
-
 export default function TestPage() {
   return (
     <Layout title="Test Page">

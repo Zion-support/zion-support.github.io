@@ -5,29 +5,25 @@ export type PaginationProps = {
   pageSize: number;
   total: number;
   onChange: (nextPage: number) => void;
-};
-
+}
 export default function Pagination({
-  page,
-  pageSize,
-  total,
-  onChange,
+  page
+  pageSize
+  total
+  onChange
 }: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
-  page: number,
-  pageSize: number,
-  total: number,
+  page: number
+  pageSize: number
+  total: number
   onChange: (nextPage: number) => void
-};
-
+}
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
-
   const goTo = (p: number) => {
     if (p >= 1 && p <= totalPages) onChange(p);
-  };
-
+  }
   return (
     <div className='flex items-center justify-between gap-2 mt-4'>
       <EnhancedButton
@@ -50,8 +46,7 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
       </EnhancedButton>
     </div>
   );
-}  };
-
+}  }
   return (
     <div className="flex items-center justify-between gap-2 mt-4">
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>
@@ -73,22 +68,18 @@ interface PaginationProps {
   baseUrl: string;
   className?: string;
 }
-
-const Pagination: React.FC<PaginationProps> = ({ ;
-  currentPage,
-  totalPages,
-  baseUrl,
+const Pagination: React.FC<PaginationProps> = ({currentPage
+  totalPages
+  baseUrl
   className = '' ;
 }) => {
-  const getPageNumbers = () => {;
-    const pages = [];
+  const getPageNumbers = () => {const pages = [];
     const maxVisiblePages = 5;
     if (totalPages <= maxVisiblePages) {;
       for (let i = 1; i <= totalPages; i++) {;
         pages.push(i);
 }
-    } else {;
-      const startPage = Math.max(1, currentPage - 2);
+    } else {const startPage = Math.max(1, currentPage - 2);
       const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
       if (startPage > 1) {;
         pages.push(1);
@@ -96,21 +87,16 @@ const Pagination: React.FC<PaginationProps> = ({ ;
           pages.push('...');
 }
       }
-
-      for (let i = startPage; i <= endPage; i++) {;
-        pages.push(i);
+      for (let i = startPage; i <= endPage; i++) {pages.push(i);
 }
-
-      if (endPage < totalPages) {;
-        if (endPage < totalPages - 1) {;
+      if (endPage < totalPages) {if (endPage < totalPages - 1) {;
           pages.push('...');
 }
         pages.push(totalPages);
 }
     }
-
     return pages;
-};
+}
   if (totalPages <= 1) return null;
   return (;
     <nav className={`flex items-center justify-center space-x-2 ${className}`}>;
@@ -128,26 +114,22 @@ const Pagination: React.FC<PaginationProps> = ({ ;
           Previous;
         </span>;
       )}
-
       {/* Page Numbers */}
       <div className="flex items-center space-x-1">;
-        {getPageNumbers().map((page, index) => {;
-          if (page === '...') {;
+        {getPageNumbers().map((page, index) => {if (page === '...') {;
             return (;
               <span key={index} className="px-3 py-2 text-sm text-gray-500">;
                 ...;
               </span>;
             );
 }
-
           const pageNumber = page as number;
           const isCurrentPage = pageNumber === currentPage;
           return (;
             <Link;
               key={pageNumber}
               href={`${baseUrl}?page=${pageNumber}`}
-              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${;
-                isCurrentPage;
+              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${isCurrentPage;
                   ? 'bg-blue-600 text-white border border-blue-600';
                   : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-900';
 }`}
@@ -157,7 +139,6 @@ const Pagination: React.FC<PaginationProps> = ({ ;
           );
 })}
       </div>;
-
       {/* Next Button */}
       {currentPage < totalPages ? (;
         <Link;
@@ -174,6 +155,6 @@ const Pagination: React.FC<PaginationProps> = ({ ;
       )}
     </nav>;
   );
-};
+}
 export default Pagination;
 }

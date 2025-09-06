@@ -1,11 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
-
 async function fetchFromGitHub() {
   try {
     const response = await fetch(
-      "https://api.github.com/repos/Zion-Holdings/zion.app/contents/data/homepage.json",
+      "https://api.github.com/repos/Zion-Holdings/zion.app/contents/data/homepage.json"
     );
     if (!response.ok) return null;
     const data = await response.json();
@@ -14,10 +13,9 @@ async function fetchFromGitHub() {
     return null;
   }
 }
-
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method not allowed" });
@@ -31,7 +29,6 @@ export default async function handler(
   } catch {
     // fall back to remote
   }
-
   const remote = await fetchFromGitHub();
   if (remote) return res.status(200).json(remote);
   return res.status(200).json(null);

@@ -5,7 +5,6 @@ import { cn } from '@/lib/utils'
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string
 }
-
 const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
   ({ className, size = 24, ...props }, ref,) => (
     <Loader2
@@ -16,7 +15,6 @@ const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
       height = {size,}
     />
   )
-),
-Spinner.displayName = 'Spinner',
-export default Spinner,
-;
+)
+Spinner.displayName = 'Spinner'
+export default Spinner;

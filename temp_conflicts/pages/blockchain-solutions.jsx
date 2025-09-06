@@ -1,7 +1,6 @@
 
-import Head from 'next/head',;
-const BlockchainSolutions = () => {;
-  return (;
+import Head from 'next/head';
+const BlockchainSolutions = () => {return (;
     <div>;
       <Head>;
         <title>BlockchainSolutions - Zion Tech Solutions</title>;
@@ -13,5 +12,5 @@ const BlockchainSolutions = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default BlockchainSolutions;

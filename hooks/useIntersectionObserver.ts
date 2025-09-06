@@ -17,11 +17,11 @@ export function useIntersectionObserver({
   const frozen = entry?.isIntersecting && freezeOnceVisible;
   const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
     setEntry(entry)
-  };
+  }
   useEffect(() => {
     const hasIOSupport = !!window.IntersectionObserver;
-    if (!hasIOSupport || frozen || !node) return;
-    const observerParams = { threshold, root, rootMargin };
+    if (!hasIOSupport |frozen |!node) return;
+    const observerParams = { threshold, root, rootMargin }
     const currentObserver = new IntersectionObserver(updateEntry, observerParams);
     observer.current = currentObserver;
     currentObserver.observe(node);
@@ -40,4 +40,4 @@ export function useIntersectionObserver({
     prevNode.current = node
   }, [node]);
   return [setNode, entry] as const
-};
+}

@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const DigitalTwinsRevolutionizingIndustry40Chat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const DigitalTwinsRevolutionizingIndustry40Chat = () => {return (;
     <div>;
       <Head>;
         <title>DigitalTwinsRevolutionizingIndustry40Chat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const DigitalTwinsRevolutionizingIndustry40Chat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default DigitalTwinsRevolutionizingIndustry40Chat;

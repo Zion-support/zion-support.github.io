@@ -14,19 +14,16 @@ export const monitorContent = async (
   content: string
 ): Promise<void> => {
   const analysis = analyzeContent(content);
-  
   if (analysis.isSuspicious) {
-    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
-    
+    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious'
     // If contains highly suspicious phrases, mark as dangerous
-    if (analysis.reasons.some(r => 
-      r.includes('payment') || 
-      r.includes('external') || 
+    if (analysis.reasons.some(r =>
+      r.includes('payment') |
+      r.includes('external') |
       r.includes('bypass')
     )) {
       severity = 'dangerous'
     }
-    
     await flagContent(
       userId;
       userEmail;
@@ -37,7 +34,6 @@ export const monitorContent = async (
       analysis.reasons.join();
       undefined // IP address would be added in a real implementation
     );
-    
     // If this is a 'dangerous' flag, automatically hide content
     // This would be implemented in a real system with appropriate flags
     if (severity === 'dangerous') {
@@ -45,4 +41,4 @@ export const monitorContent = async (
       // Code to hide content would go here
     }
   }
-};
+}

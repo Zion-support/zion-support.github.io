@@ -1,116 +1,107 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
-import {;
-  Brain, Shield, Rocket, Cpu, Database, Atom, Users,;
-  Award, ExternalLink, Github, Globe, Zap, Star, CheckCircle,;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+import {Brain, Shield, Rocket, Cpu, Database, Atom, Users;
+  Award, ExternalLink, Github, Globe, Zap, Star, CheckCircle;
   TrendingUp, BarChart3, Cloud, Network, Filter, Search, Building;
-} from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-export default function PortfolioPage() {;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [searchTerm, setSearchTerm] = useState(''),;
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+export default function PortfolioPage() {const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
   const categories = [;
-    { id: 'all', name: 'All Projects', icon: Globe },;
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain },;
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom },;
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },;
-    { id: 'space', name: 'Space Technology', icon: Rocket },;
-    { id: 'edge', name: 'Edge Computing', icon: Cpu },;
+    { id: 'all', name: 'All Projects', icon: Globe }
+    { id: 'ai', name: 'AI & Machine Learning', icon: Brain }
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom }
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield }
+    { id: 'space', name: 'Space Technology', icon: Rocket }
+    { id: 'edge', name: 'Edge Computing', icon: Cpu }
     { id: 'enterprise', name: 'Enterprise Solutions', icon: Building }
-  ],;
+  ];
   const projects = [;
-    {;
-      id: 1,;
-      title: 'AI-Powered Business Intelligence Platform',;
-      category: 'ai',;
-      client: 'Fortune 500 Financial Services',;
-      description: 'Developed a comprehensive AI-driven analytics platform that processes real-time financial data, providing predictive insights and automated reporting.',;
-      technologies: ['PythonTensorFlowReactAWSPostgreSQL'],;
-      results: ['40% increase in decision speed25% reduction in operational costs99.9% uptime'],;
-      image: '/api/placeholder/600/400',;
-      link: '#',;
-      github: '#',;
+    {id: 1;
+      title: 'AI-Powered Business Intelligence Platform';
+      category: 'ai';
+      client: 'Fortune 500 Financial Services';
+      description: 'Developed a comprehensive AI-driven analytics platform that processes real-time financial data, providing predictive insights and automated reporting.';
+      technologies: ['PythonTensorFlowReactAWSPostgreSQL'];
+      results: ['40% increase in decision speed25% reduction in operational costs99.9% uptime'];
+      image: '/api/placeholder/600/400';
+      link: '#';
+      github: '#';
       featured: true;
-    },;
-    {;
-      id: 2,;
-      title: 'Quantum-Resistant Cybersecurity Framework',;
-      category: 'cybersecurity',;
-      client: 'Government Defense Agency',;
-      description: 'Built a next-generation cybersecurity framework using quantum-resistant encryption algorithms and AI-powered threat detection.',;
-      technologies: ['RustPost-Quantum CryptographyAI/MLKubernetesZero Trust'],;
-      results: ['Quantum-resistant encryptionReal-time threat detectionZero security breaches'],;
-      image: '/api/placeholder/600/400',;
-      link: '#',;
-      github: '#',;
+    }
+    {id: 2;
+      title: 'Quantum-Resistant Cybersecurity Framework';
+      category: 'cybersecurity';
+      client: 'Government Defense Agency';
+      description: 'Built a next-generation cybersecurity framework using quantum-resistant encryption algorithms and AI-powered threat detection.';
+      technologies: ['RustPost-Quantum CryptographyAI/MLKubernetesZero Trust'];
+      results: ['Quantum-resistant encryptionReal-time threat detectionZero security breaches'];
+      image: '/api/placeholder/600/400';
+      link: '#';
+      github: '#';
       featured: true;
-    },;
-    {;
-      id: 3,;
-      title: 'Satellite Constellation Management System',;
-      category: 'space',;
-      client: 'Space Exploration Startup',;
-      description: 'Designed and implemented an autonomous satellite constellation management system with AI-powered mission planning and resource optimization.',;
-      technologies: ['PythonAI/MLSatellite APIsReal-time ProcessingCloud Infrastructure'],;
-      results: ['Autonomous mission planning30% fuel efficiency improvement24/7 monitoring'],;
-      image: '/api/placeholder/600/400',;
-      link: '#',;
-      github: '#',;
-      featured: false;
-    },;
-    {;
-      id: 4,;
-      title: 'Edge Computing Orchestration Platform',;
-      category: 'edge',;
-      client: 'IoT Manufacturing Company',;
-      description: 'Created a distributed edge computing platform that manages thousands of IoT devices with intelligent load balancing and real-time analytics.',;
-      technologies: ['KubernetesEdge ComputingIoT ProtocolsReal-time AnalyticsMicroservices'],;
-      results: ['50% reduction in latencyScalable to 10k+ devices99.99% reliability'],;
-      image: '/api/placeholder/600/400',;
-      link: '#',;
-      github: '#',;
-      featured: false;
-    },;
-    {;
-      id: 5,;
-      title: 'Neural Interface Development Kit',;
-      category: 'ai',;
-      client: 'Medical Research Institute',;
-      description: 'Developed a comprehensive toolkit for building brain-computer interfaces with advanced signal processing and AI pattern recognition.',;
-      technologies: ['PythonSignal ProcessingAI/MLReal-time SystemsMedical Standards'],;
-      results: ['Advanced BCI capabilitiesReal-time processingMedical compliance'],;
-      image: '/api/placeholder/600/400',;
-      link: '#',;
-      github: '#',;
-      featured: false;
-    },;
-    {;
-      id: 6,;
-      title: 'Enterprise Digital Transformation Suite',;
-      category: 'enterprise',;
-      client: 'Global Manufacturing Corporation',;
-      description: 'Delivered a comprehensive digital transformation solution including process automation, data analytics, and AI-powered decision support.',;
-      technologies: ['Digital TwinsAI/MLProcess AutomationData AnalyticsCloud Migration'],;
-      results: ['60% process efficiency improvement$2M annual cost savingsComplete digital transformation'],;
-      image: '/api/placeholder/600/400',;
-      link: '#',;
-      github: '#',;
+    }
+    {id: 3;
+      title: 'Satellite Constellation Management System';
+      category: 'space';
+      client: 'Space Exploration Startup';
+      description: 'Designed and implemented an autonomous satellite constellation management system with AI-powered mission planning and resource optimization.';
+      technologies: ['PythonAI/MLSatellite APIsReal-time ProcessingCloud Infrastructure'];
+      results: ['Autonomous mission planning30% fuel efficiency improvement24/7 monitoring'];
+      image: '/api/placeholder/600/400';
+      link: '#';
+      github: '#';
       featured: false;
     }
-  ],;
-  const filteredProjects = projects.filter(project => {;
-    const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory,;
-    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         project.client.toLowerCase().includes(searchTerm.toLowerCase()),;
+    {id: 4;
+      title: 'Edge Computing Orchestration Platform';
+      category: 'edge';
+      client: 'IoT Manufacturing Company';
+      description: 'Created a distributed edge computing platform that manages thousands of IoT devices with intelligent load balancing and real-time analytics.';
+      technologies: ['KubernetesEdge ComputingIoT ProtocolsReal-time AnalyticsMicroservices'];
+      results: ['50% reduction in latencyScalable to 10k+ devices99.99% reliability'];
+      image: '/api/placeholder/600/400';
+      link: '#';
+      github: '#';
+      featured: false;
+    }
+    {id: 5;
+      title: 'Neural Interface Development Kit';
+      category: 'ai';
+      client: 'Medical Research Institute';
+      description: 'Developed a comprehensive toolkit for building brain-computer interfaces with advanced signal processing and AI pattern recognition.';
+      technologies: ['PythonSignal ProcessingAI/MLReal-time SystemsMedical Standards'];
+      results: ['Advanced BCI capabilitiesReal-time processingMedical compliance'];
+      image: '/api/placeholder/600/400';
+      link: '#';
+      github: '#';
+      featured: false;
+    }
+    {id: 6;
+      title: 'Enterprise Digital Transformation Suite';
+      category: 'enterprise';
+      client: 'Global Manufacturing Corporation';
+      description: 'Delivered a comprehensive digital transformation solution including process automation, data analytics, and AI-powered decision support.';
+      technologies: ['Digital TwinsAI/MLProcess AutomationData AnalyticsCloud Migration'];
+      results: ['60% process efficiency improvement$2M annual cost savingsComplete digital transformation'];
+      image: '/api/placeholder/600/400';
+      link: '#';
+      github: '#';
+      featured: false;
+    }
+  ];
+  const filteredProjects = projects.filter(project => {const matchesCategory = selectedCategory === 'all' |project.category === selectedCategory;
+    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) |;
+                         project.description.toLowerCase().includes(searchTerm.toLowerCase()) |;
+                         project.client.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
-  }),;
+  });
   const stats = [;
-    { number: '100+', label: 'Projects Delivered', icon: CheckCircle },;
-    { number: '50+', label: 'Enterprise Clients', icon: Users },;
-    { number: '99.9%', label: 'Client Satisfaction', icon: Star },;
+    { number: '100+', label: 'Projects Delivered', icon: CheckCircle }
+    { number: '50+', label: 'Enterprise Clients', icon: Users }
+    { number: '99.9%', label: 'Client Satisfaction', icon: Star }
     { number: '$500M+', label: 'Value Delivered', icon: TrendingUp }
   ];
   return (;
@@ -176,8 +167,7 @@ export default function PortfolioPage() {;
                 <button;
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-full border transition-all duration-300 ${;
-                    selectedCategory === category.id;
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-full border transition-all duration-300 ${selectedCategory === category.id;
                       ? 'bg-blue-600 border-blue-500 text-white';
                       : 'border-white/20 text-white/70 hover:border-white/40 hover:text-white';
                   }`}
@@ -219,8 +209,7 @@ export default function PortfolioPage() {;
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden hover:border-white/20 transition-all duration-300 ${;
-                    project.featured ? 'ring-2 ring-blue-500/50' : '';
+                  className={`bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden hover:border-white/20 transition-all duration-300 ${project.featured ? 'ring-2 ring-blue-500/50' : '';
                   }`}
                 >;
                   {/* Project Image */}

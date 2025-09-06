@@ -4,14 +4,14 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
+  AlertDialog
+  AlertDialogAction
+  AlertDialogCancel
+  AlertDialogContent
+  AlertDialogDescription
+  AlertDialogFooter
+  AlertDialogHeader
+  AlertDialogTitle
 } from '@/components/ui/alert-dialog'
 import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'
 import Image from 'next/image'
@@ -21,11 +21,10 @@ interface ProjectCardProps {
   onEdit: (project: PortfolioProject) => void
   onDelete: (projectId: string) => void; import Image from 'next/image'
 interface ProjectCardProps {
-  project: PortfolioProject,
-  onEdit: (project: PortfolioProject,) => void,
+  project: PortfolioProject
+  onEdit: (project: PortfolioProject,) => void
   onDelete: (projectId: string,) => void
 }
-
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false)
   const handleDelete = () => {
@@ -55,17 +54,14 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </div>
         )}
       </div>
-
       <CardContent className='flex-grow pt-6'>
         <div className='space-y-2'>
           <h3 className='font-semibold text-lg'>{project.title}</h3>
-
           {project.description && (
             <p className='text-sm text-muted-foreground line-clamp-3'>
               {project.description}
             </p>
           )}
-
           {project.technologies && project.technologies.length > 0 && (
             <div className='flex flex-wrap gap-1 mt-2'>
               {project.technologies.map((tech, index) => (
@@ -77,15 +73,12 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </div>
         )}
       </div>
-      
       <CardContent className="flex-grow pt-6">
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">{project.title}</h3>
-          
           {project.description && (
             <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
           )}
-          
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
               {project.technologies.map((tech, index) => (
@@ -97,7 +90,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           )}
         </div>
       </CardContent>
-
       <CardFooter className='flex justify-between border-t bg-muted/40 p-4'>
         <div className='flex gap-2'>
           {project.github_url && (
@@ -118,7 +110,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               </Button>
             </a>
           )}
-
           {project.demo_url && (
             <a
               href={project.demo_url}
@@ -136,7 +127,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             </a>
           )}
         </div>
-
         <div className='flex gap-2'>
           <Button
             variant='ghost'
@@ -155,7 +145,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </Button>
         </div>
       </CardFooter>
-      
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -186,4 +175,3 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
     </Card>
   )
 }
-;

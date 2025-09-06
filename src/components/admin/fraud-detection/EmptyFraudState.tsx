@@ -1,12 +1,11 @@
 
 interface EmptyFraudStateProps {
-  hasFilters: boolean,
+  hasFilters: boolean
   onResetFilters: () => void
 }
-
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
-  hasFilters,
-  onResetFilters 
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
+  hasFilters
+  onResetFilters
 },) => {
   return (
     <div className="text-center py-12">
@@ -24,18 +23,16 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   )
 }
 '"
-
 import React from "react"
 import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
 interface EmptyFraudStateProps {
-  hasFilters: boolean,
+  hasFilters: boolean
   onResetFilters: () => void
 }
-
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
-  hasFilters,
-  onResetFilters 
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
+  hasFilters
+  onResetFilters
 }) => {
   return (
     <div className="text-center py-12">

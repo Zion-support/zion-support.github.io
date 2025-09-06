@@ -8,10 +8,9 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
   const [businessReg, setBusinessReg] = useState('');
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<string>('');
-
   const progress = useMemo(() => {
     if (!profile) return 0;
-    const uploaded = new Set((profile.documents || []).map(d => d.kind));
+    const uploaded = new Set((profile.documents |[]).map(d => d.kind));
     const required = requiredDocs.length;
     const have = Array.from(uploaded).filter(k =>
       requiredDocs.includes(k as any)
@@ -20,65 +19,60 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
     const submitted = profile.status === 'submitted' ? 90 : 0;
     const approved = profile.status === 'approved' ? 100 : 0;
     return Math.max(base, submitted, approved);  }, [profile, requiredDocs]);
-
   async function start() {
     setBusy(true);
     setMessage('');
     const res = await fetch('/api/kyc/start', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({
-        userId,
-        role,
-        fullLegalName,
-        businessName,
-        businessRegistrationNumber: businessReg,
-      }),
+        userId
+        role
+        fullLegalName
+        businessName
+        businessRegistrationNumber: businessReg
+      })
     });    const data = await res.json();
     if (data.ok) {
       setProfile(data.profile);
       setRequiredDocs(data.requiredDocuments);
       setOptionalDocs(data.optionalDocuments);
     } else {
-      setMessage(data.error || 'Failed to start');
+      setMessage(data.error |'Failed to start');
     }
     setBusy(false);  }
-
   async function upload(kind: KycDocumentMeta['kind']) {
-    const filename = prompt(`Enter filename for ${kind}`) || '';
+    const filename = prompt(`Enter filename for ${kind}`) |'';
     if (!filename) return;
     setBusy(true);
     const res = await fetch('/api/kyc/upload', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, kind, filename }),
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ userId, kind, filename })
     });
     const data = await res.json();
     if (data.ok) {
       setProfile(data.profile);
     } else {
-      setMessage(data.error || 'Upload failed');
+      setMessage(data.error |'Upload failed');
     }
     setBusy(false);  }
-
   async function submit() {
     setBusy(true);
     const res = await fetch('/api/kyc/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId }),
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ userId })
     });
     const data = await res.json();
     if (data.ok) {
       setProfile(data.profile);
       setMessage('Submitted. AML check performed.');
     } else {
-      setMessage(data.error || 'Submit failed');
+      setMessage(data.error |'Submit failed');
     }
     setBusy(false);  }
-
-  const labels = getBadgeLabels(profile || undefined);
-
+  const labels = getBadgeLabels(profile |undefined);
   return (
     <>
       <Head>
@@ -94,12 +88,10 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
         <p className='text-sm text-gray-600 mb-6'>
           Guided step-by-step KYC/AML verification with progress tracking.
         </p>
-
         {labels.length > 0 && (
           <div className='mb-4'>            <VerifiedBadge labels={labels} />
           </div>
         )}
-
         <div className='mb-6 grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div>
             <label className='block text-sm font-medium'>User ID</label>
@@ -152,7 +144,6 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
             </>
           )}
         </div>
-
         <div className='mb-6'>
           <button
             disabled={busy}
@@ -162,7 +153,6 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
             Start/Update
           </button>
         </div>
-
         {profile && (
           <div className='space-y-6'>
             <div>
@@ -179,15 +169,13 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
                   style={{ width: `${progress}%` }}
                 />              </div>
             </div>
-
             <section>
               <h2 className='font-semibold mb-2'>Required documents</h2>
               <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
                 {requiredDocs.map(k => {
-                  const hasIt = (profile.documents || []).some(
+                  const hasIt = (profile.documents |[]).some(
                     d => d.kind === k
                   );
-                  
                     >
                       <div>
                         <div className='text-sm font-medium'>{k}</div>
@@ -206,16 +194,14 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
                   );                })}
               </div>
             </section>
-
             {optionalDocs.length > 0 && (
               <section>
                 <h2 className='font-semibold mb-2'>Optional documents</h2>
                 <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
                   {optionalDocs.map(k => {
-                    const hasIt = (profile.documents || []).some(
+                    const hasIt = (profile.documents |[]).some(
                       d => d.kind === k
                     );
-                    
                       >
                         <div>
                           <div className='text-sm font-medium'>{k}</div>
@@ -235,12 +221,11 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
                 </div>
               </section>
             )}
-
             <div>
               <button
                 disabled={
-                  busy ||
-                  profile.status === 'submitted' ||
+                  busy |
+                  profile.status === 'submitted' |
                   profile.status === 'approved'
                 }
                 onClick={submit}
@@ -249,7 +234,6 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
                 Submit for review
               </button>
             </div>
-
             {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
         )}
       </main>

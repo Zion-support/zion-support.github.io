@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const DevopsAutomationStrategiesForModernTeamsChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const DevopsAutomationStrategiesForModernTeamsChat = () => {return (;
     <div>;
       <Head>;
         <title>DevopsAutomationStrategiesForModernTeamsChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const DevopsAutomationStrategiesForModernTeamsChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default DevopsAutomationStrategiesForModernTeamsChat;

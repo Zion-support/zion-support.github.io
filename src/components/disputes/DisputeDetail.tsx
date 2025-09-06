@@ -5,21 +5,21 @@ import { logErrorToProduction } from '@/utils/productionLogger'; import { useRou
 import { useDisputes } from "@/hooks/useDisputes"
 import {logErrorToProduction} from '@/utils/productionLogger'
 import {
-  Dispute,
-  disputeReasonLabels,
-  DisputeMessage,
-  DisputeStatus,
-  ResolutionType,
+  Dispute
+  disputeReasonLabels
+  DisputeMessage
+  DisputeStatus
+  ResolutionType
 } from '@/types/disputes'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
@@ -34,11 +34,11 @@ export function DisputeDetail() {
   const { disputeId } = router.query as { disputeId?: string }
   const { user } = useAuth()
   const {
-    getDisputeById,
-    updateDisputeStatus,
-    resolveDispute,
-    getDisputeMessages,
-    addDisputeMessage,
+    getDisputeById
+    updateDisputeStatus
+    resolveDispute
+    getDisputeMessages
+    addDisputeMessage
   } = useDisputes()
   const [dispute, setDispute] = useState<Dispute | null>(null)
   const [messages, setMessages] = useState<DisputeMessage[]>([])
@@ -50,8 +50,8 @@ export function DisputeDetail() {
     summary: string
     resolution_type: ResolutionType
   }>({
-    summary: '',
-    resolution_type: 'compromise',
+    summary: ''
+    resolution_type: 'compromise'
   })
   const [activeTab, setActiveTab] = useState('overview')
   // Check if user is admin (placeholder - implement proper admin check)
@@ -95,25 +95,24 @@ export function DisputeDetail() {
       toast.error('Please provide a resolution summary')
       return
     }
-
     const success = await resolveDispute(disputeId, {
-      summary: resolution.summary,
+      summary: resolution.summary
       resolution_type:
-        (resolution.resolution_type as ResolutionType) || 'compromise',
+        (resolution.resolution_type as ResolutionType) |'compromise'
     })
     if (success && dispute) {
       setDispute({
-        ...dispute,
-        resolution_summary: resolution.summary,
-        resolution_type: resolution.resolution_type,
-        resolved_at: new Date().toISOString(),
+        ...dispute
+        resolution_summary: resolution.summary
+        resolution_type: resolution.resolution_type
+        resolved_at: new Date().toISOString()
       })
     } else {
       toast.error('Failed to resolve dispute')
     }
   }
   const handleSendMessage = async () => {
-    if (!disputeId || !message.trim()) return
+    if (!disputeId |!message.trim()) return
     setIsSending(true)
     try {
       const success = await addDisputeMessage(disputeId, message, isAdmin)
@@ -137,7 +136,6 @@ export function DisputeDetail() {
       </div>
     )
   }
-
   if (!dispute) {
     return (
       <div className='p-8 text-center'>
@@ -150,7 +148,6 @@ export function DisputeDetail() {
       </div>
     )
   }
-
   const getStatusBadgeVariant = (status: DisputeStatus,) => {
     switch (status) {
       case 'open':
@@ -177,12 +174,11 @@ export function DisputeDetail() {
           </div>
           <p className='text-muted-foreground'>
             Reported{' '}
-            {formatDistanceToNow(new Date(dispute?.created_at || ''), {
-              addSuffix: true,
+            {formatDistanceToNow(new Date(dispute?.created_at |''), {
+              addSuffix: true
             })}
           </p>
         </div>
-
         <div className='flex gap-2'>
           <Button
             variant='outline'
@@ -196,7 +192,6 @@ export function DisputeDetail() {
           )}
         </div>
       </div>
-
       {dispute.status === 'resolved' && dispute.resolution_summary && (
         <Alert className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900'>
           <Check className='h-4 w-4' />
@@ -204,7 +199,6 @@ export function DisputeDetail() {
           <AlertDescription>{dispute.resolution_summary}</AlertDescription>
         </Alert>
       )}
-
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
         <div className='lg:col-span-2'>
           <Tabs value={activeTab} onValueChange={setActiveTab}>
@@ -214,7 +208,6 @@ export function DisputeDetail() {
               <TabsTrigger value='attachments'>Attachments</TabsTrigger>
               {isAdmin && <TabsTrigger value='admin'>Admin Notes</TabsTrigger>}
             </TabsList>
-
             <TabsContent value='overview' className='space-y-6'>
               <Card>
                 <CardHeader>
@@ -231,20 +224,17 @@ export function DisputeDetail() {
                         dispute.reason_code}
                     </p>
                   </div>
-
                   <div>
                     <h3 className='font-medium'>Description</h3>
                     <p className='whitespace-pre-wrap'>{dispute.description}</p>
                   </div>
-
                   <div>
                     <h3 className='font-medium'>Project</h3>
-                    <p>{dispute.project?.title || 'Unknown Project'}</p>
+                    <p>{dispute.project?.title |'Unknown Project'}</p>
                     <p className='text-sm text-muted-foreground'>
                       {dispute.project?.scope_summary}
                     </p>
                   </div>
-
                   {dispute.milestone_id && (
                     <div>
                       <h3 className='font-medium'>Related Milestone</h3>
@@ -253,7 +243,6 @@ export function DisputeDetail() {
                       </p>
                     </div>
                   )}
-
                   <div>
                     <h3 className='font-medium'>Timeline</h3>
                     <ul className='space-y-2 mt-2'>
@@ -267,12 +256,11 @@ export function DisputeDetail() {
                         <span>
                           Created on{' '}
                           {format(
-                            new Date(dispute.created_at),
+                            new Date(dispute.created_at)
                             "MMM d, yyyy 'at' h:mm a"
                           )}
                         </span>
                       </li>
-
                       {dispute.status !== 'open' && (
                         <li className='flex gap-2 items-center'>
                           <Badge
@@ -284,7 +272,6 @@ export function DisputeDetail() {
                           <span>Under review</span>
                         </li>
                       )}
-
                       {dispute.resolved_at && (
                         <li className='flex gap-2 items-center'>
                           <Badge
@@ -296,7 +283,7 @@ export function DisputeDetail() {
                           <span>
                             Resolved on{' '}
                             {format(
-                              new Date(dispute.resolved_at),
+                              new Date(dispute.resolved_at)
                               "MMM d, yyyy 'at' h:mm a"
                             )}
                           </span>
@@ -306,7 +293,6 @@ export function DisputeDetail() {
                   </div>
                 </CardContent>
               </Card>
-
               {dispute.status === 'resolved' && (
                 <Card>
                   <CardHeader>
@@ -316,7 +302,6 @@ export function DisputeDetail() {
                     <p className='whitespace-pre-wrap'>
                       {dispute.resolution_summary}
                     </p>
-
                     {dispute.resolution_type && (
                       <div className='mt-4'>
                         <Badge>
@@ -329,7 +314,6 @@ export function DisputeDetail() {
                 </Card>
               )}
             </TabsContent>
-
             <TabsContent value='messages' className='space-y-6'>
               <Card>
                 <CardHeader>
@@ -363,22 +347,22 @@ export function DisputeDetail() {
                                     <AvatarImage
                                       src={msg.user_profile?.avatar_url}
                                       alt={
-                                        msg.user_profile?.display_name ||
+                                        msg.user_profile?.display_name |
                                         'User avatar'
                                       }
                                     />
                                     <AvatarFallback>
-                                      {msg.user_profile?.display_name?.[0] ||
+                                      {msg.user_profile?.display_name?.[0] |
                                         '?'}
                                     </AvatarFallback>
                                   </Avatar>
                                   <span className='text-sm font-medium'>
-                                    {msg.user_profile?.display_name ||
+                                    {msg.user_profile?.display_name |
                                       'Unknown User'}
                                   </span>
                                   <span className='text-xs opacity-70'>
                                     {format(
-                                      new Date(msg.created_at),
+                                      new Date(msg.created_at)
                                       'MMM d, h:mm a'
                                     )}
                                   </span>
@@ -404,7 +388,7 @@ export function DisputeDetail() {
                     <div className='flex justify-end'>
                       <Button
                         onClick={handleSendMessage}
-                        disabled={isSending || !message.trim()}
+                        disabled={isSending |!message.trim()}
                       >
                         {isSending ? 'Sending...' : 'Send Message'}
                       </Button>
@@ -413,7 +397,6 @@ export function DisputeDetail() {
                 </CardFooter>
               </Card>
             </TabsContent>
-
             <TabsContent value='attachments'>
               <Card>
                 <CardHeader>
@@ -432,7 +415,6 @@ export function DisputeDetail() {
                 </CardContent>
               </Card>
             </TabsContent>
-
             {isAdmin && (
               <TabsContent value='admin' className='space-y-6'>
                 <Card>
@@ -468,7 +450,6 @@ export function DisputeDetail() {
                         </Button>
                       </div>
                     </div>
-
                     {dispute.status !== 'resolved' && (
                       <div>
                         <h3 className='font-medium mb-2'>Resolve Dispute</h3>
@@ -478,12 +459,11 @@ export function DisputeDetail() {
                             value={resolution.summary}
                             onChange={e =>
                               setResolution({
-                                ...resolution,
-                                summary: e.target.value,
+                                ...resolution
+                                summary: e.target.value
                               })
                             }
                             className='min-h-[100px]'                          />
-
                           <div className='grid grid-cols-2 gap-4'>
                             <div>
                               <label className='text-sm font-medium mb-1 block'>
@@ -491,12 +471,12 @@ export function DisputeDetail() {
                               </label>
                               <select
                                 className='w-full p-2 border rounded'
-                                value={resolution.resolution_type || ''}
+                                value={resolution.resolution_type |''}
                                 onChange={e =>
                                   setResolution({
-                                    ...resolution,
+                                    ...resolution
                                     resolution_type: e.target
-                                      .value as ResolutionType,
+                                      .value as ResolutionType
                                   })
                                 }                              >
                                 <option value='client_favor'>
@@ -510,14 +490,12 @@ export function DisputeDetail() {
                               </select>
                             </div>
                           </div>
-
                           <Button onClick={handleResolveDispute}>
                             Resolve Dispute
                           </Button>
                         </div>
                       </div>
                     )}
-
                     <div>
                       <h3 className='font-medium mb-2'>Admin Notes</h3>
                       <div className='space-y-4 max-h-[300px] overflow-y-auto p-2'>
@@ -534,22 +512,22 @@ export function DisputeDetail() {
                                     <AvatarImage
                                       src={msg.user_profile?.avatar_url}
                                       alt={
-                                        msg.user_profile?.display_name ||
+                                        msg.user_profile?.display_name |
                                         'Admin avatar'
                                       }
                                     />
                                     <AvatarFallback>
-                                      {msg.user_profile?.display_name?.[0] ||
+                                      {msg.user_profile?.display_name?.[0] |
                                         'A'}
                                     </AvatarFallback>
                                   </Avatar>
                                   <span className='text-sm font-medium'>
-                                    {msg.user_profile?.display_name || 'Admin'}
+                                    {msg.user_profile?.display_name |'Admin'}
                                   </span>
                                 </div>
                                 <span className='text-xs opacity-70'>
                                   {format(
-                                    new Date(msg.created_at),
+                                    new Date(msg.created_at)
                                     'MMM d, h:mm a'
                                   )}                                </span>
                               </div>
@@ -558,16 +536,13 @@ export function DisputeDetail() {
                               </p>
                             </div>
                           ))}
-
                         {!messages.some(msg => msg.is_admin_note) && (
                           <p className='text-sm text-muted-foreground italic'>
                             No admin notes yet
                           </p>
                         )}
                       </div>
-
                       <Separator className='my-4' />
-
                       <div className='space-y-4'>
                         <Textarea
                           placeholder='Add an admin note (only visible to administrators)...'
@@ -578,8 +553,8 @@ export function DisputeDetail() {
                           onClick={() => {
                             if (adminNote.trim()) {
                               addDisputeMessage(
-                                disputeId!,
-                                adminNote,
+                                disputeId!
+                                adminNote
                                 true
                               ).then(() => {
                                 getDisputeMessages(disputeId!).then(
@@ -599,7 +574,6 @@ export function DisputeDetail() {
             )}
           </Tabs>
         </div>
-
         <div className='space-y-6'>
           <Card>
             <CardHeader>
@@ -611,7 +585,7 @@ export function DisputeDetail() {
                   <AvatarImage
                     src={dispute.client_profile?.avatar_url}
                     alt={
-                      dispute.client_profile?.display_name || 'Client avatar'
+                      dispute.client_profile?.display_name |'Client avatar'
                     }
                   />
                   <AvatarFallback>C</AvatarFallback>
@@ -619,21 +593,19 @@ export function DisputeDetail() {
                 <div>
                   <p className='font-medium'>Client</p>
                   <p className='text-sm text-muted-foreground'>
-                    {dispute.client_profile?.display_name || 'Unknown Client'}
+                    {dispute.client_profile?.display_name |'Unknown Client'}
                   </p>
                 </div>
               </div>
-
               <div className='flex justify-center'>
                 <ArrowDown className='h-6 w-6 text-muted-foreground' />
               </div>
-
               <div className='flex items-start gap-4'>
                 <Avatar className='h-10 w-10'>
                   <AvatarImage
                     src={dispute.talent_profile?.avatar_url}
                     alt={
-                      dispute.talent_profile?.display_name || 'Talent avatar'
+                      dispute.talent_profile?.display_name |'Talent avatar'
                     }
                   />
                   <AvatarFallback>T</AvatarFallback>
@@ -641,13 +613,12 @@ export function DisputeDetail() {
                 <div>
                   <p className='font-medium'>Talent</p>
                   <p className='text-sm text-muted-foreground'>
-                    {dispute.talent_profile?.display_name || 'Unknown Talent'}
+                    {dispute.talent_profile?.display_name |'Unknown Talent'}
                   </p>
                 </div>
               </div>
             </CardContent>
           </Card>
-
           <Card>
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
@@ -701,91 +672,90 @@ if (success && dispute) {
   ...dispute
 resolution summary: resolution.summary
 resolution type: resolution.resolution type
-resolved at: new Date () .toISOString () 
-}) 
+resolved at: new Date () .toISOString ()
+})
 }else {
 }
 const handleSendMessage = async () => {
-  if (!disputeId || !message.trim () ) return
+  if (!disputeId |!message.trim () ) return
 try {
 }catch (error) {
   logErrorToProduction ('Error sending message:', {
-  data: error 
-}) 
+  data: error
+})
 }finally {
-  setIsSending (false) 
+  setIsSending (false)
 }
 if (isLoading) {"
-  return (<div className=" p-8 text-center"> <div className=" w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div> <p>Loading dispute details...</p> </div>) 
+  return (<div className=" p-8 text-center"> <div className=" w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div> <p>Loading dispute details...</p> </div>)
 }if (!dispute) {"
   return (<div className=" p-8 text-center"> () => router.push (" /dashboard/disputes") "
-}className=" mt-4"> Back to Disputes </Button> </div>) 
+}className=" mt-4"> Back to Disputes </Button> </div>)
 };"
 container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center justify-between gap-4" > <div> Start Review </Button>) "
 }</div> </div> <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900"> <Check className="h-4 w-4" /> <AlertTitle>This dispute has been resolved</AlertTitle> <AlertDescription> {
-  dispute.resolution summary 
+  dispute.resolution summary
 }</AlertDescription> </Alert>) "
 }<div className="grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className="lg:col-span-2"> </TabsList> <TabsContent value="overview" className="space-y-6"> <Card> <CardHeader> <CardTitle>Dispute Details</CardTitle> <CardDescription>Information about this dispute case</CardDescription> </CardHeader> <CardContent className="space-y-4"> <div> <h3 className="font-medium">Reason</h3> <p> {
   disputeReasonLabels[ dispute.reason code ] ?? dispute.reason code "
 }</p> </div> <div> <h3 className="font-medium">Description</h3> <p className="whitespace-pre-wrap"> {
-  dispute.description 
+  dispute.description
 }</p> </div> <div> </div> {"
   dispute.milestone id && (<div> <h3 className="font-medium">Related Milestone</h3> <p className="text-sm">Milestone ID: {
-  dispute.milestone id 
+  dispute.milestone id
 }</p> </div>) "
-}<div> <h3 className="font-medium">Timeline</h3> <ul className="space-y-2 mt-2"> <span>Under review</span> </li>) 
+}<div> <h3 className="font-medium">Timeline</h3> <ul className="space-y-2 mt-2"> <span>Under review</span> </li>)
 }</li>) "
 }</ul> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Resolution</CardTitle> </CardHeader> <CardContent> <p className="whitespace-pre-wrap"> {
-  dispute.resolution summary 
-}</p> </Badge> </div>) 
+  dispute.resolution summary
+}</p> </Badge> </div>)
 }</CardContent> </Card>) "
 }</TabsContent> <TabsContent value="messages" className="space-y-6"> <Card> <CardHeader> <CardTitle>Messages</CardTitle> <CardDescription>Communication regarding this dispute</CardDescription> </CardHeader> <CardContent> <div className="space-y-6 max-h-[600px] overflow-y-auto p-2"> {"
-  messages.length === 0 ? (<div className="text-center py-12"> <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" /> <p className="text-muted-foreground">No messages yet</p> </div>) : (messages .filter (msg => !msg.is admin note) 
+  messages.length === 0 ? (<div className="text-center py-12"> <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" /> <p className="text-muted-foreground">No messages yet</p> </div>) : (messages .filter (msg => !msg.is admin note)
 }> <div className= {
   `max-w-[80%] $ {'
-  isCurrentUser ? 'bg-primary text-primary-foreground' : 'bg-muted' 
+  isCurrentUser ? 'bg-primary text-primary-foreground' : 'bg-muted'
 }p-4 rounded-lg` "
 }> <div className="flex items-center gap-2 mb-2"> <Avatar className="h-6 w-6"> <AvatarImage src= {
-  msg.user profile?.avatar url 
+  msg.user profile?.avatar url
 }alt= {"
-  msg.user profile?.display name || "User avatar" 
+  msg.user profile?.display name |"User avatar"
 }/> <AvatarFallback> {'
-  msg.user profile?.display name?.[0] || '?' "
+  msg.user profile?.display name?.[0] |'?' "
 }</AvatarFallback> </Avatar> <span className="text-sm font-medium"> {'
-  msg.user profile?.display name || 'Unknown User' "
+  msg.user profile?.display name |'Unknown User' "
 }</span> <span className="text-xs opacity-70"> {'
   format (new Date (msg.created at),  'MMM d, h:mm a') "
 }</span> </div> <p className="whitespace-pre-wrap"> {
-  msg.message 
-}</p> </div> </div>) 
+  msg.message
+}</p> </div> </div>)
 }) ) "
 }</div> </CardContent> <CardFooter> <div className="w-full space-y-4" > <Textarea className="min-h-[100px]" disabled= {
   isSending "
 }/> </Button> </div> </div> </CardFooter> </Card> </TabsContent> <TabsContent value="attachments"> <Card> <CardHeader> <CardTitle>Attachments</CardTitle> <CardDescription>Files related to this dispute</CardDescription> </CardHeader> <CardContent> <div className="text-center py-12"> <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" /> <p className="text-muted-foreground" >No attachments available</p> </div> </CardContent> </Card> </TabsContent> <Card> <CardHeader> <CardTitle>Admin Actions</CardTitle> <CardDescription>Handle this dispute as an administrator</CardDescription> </CardHeader> <CardContent className="space-y-6"> <div> <h3 className="font-medium mb-2">Change Status</h3> <div className="flex gap-2" > <Button > Mark as Open </Button> <Button > Mark as Under Review </Button> <Button > Close Dispute </Button> </div> </div> <h3 className="font-medium mb-2">Resolve Dispute</h3> <div className="space-y-4" > <Textarea placeholder="Enter resolution summary..." value= {
-  resolution.summary 
+  resolution.summary
 }onChange= {
   (e) => setResolution ({
-  ...resolution, summary: e.target.value 
+  ...resolution, summary: e.target.value
 }) '"
 }className="min-h-[100px]" /> <div className="grid grid-cols-2 gap-4"> <div> <label className="text-sm font-medium mb-1 block">Resolution Type</label> <select > <option value="client favor" >In Client's Favor</option> <option value="talent favor" >In Talent's Favor</option> <option value="compromise" >Compromise</option> <option value="dismissed" >Dismissed</option> </select> </div> </div> <Button onClick={
-  handleResolveDispute 
-}>Resolve Dispute</Button> </div> </div>) 
+  handleResolveDispute
+}>Resolve Dispute</Button> </div> </div>)
 }<div> <AvatarFallback> {'
-  msg.user profile?.display name?.[0] || 'A' 
+  msg.user profile?.display name?.[0] |'A'
 }</AvatarFallback> </Avatar>) "
-}</div> <Separator className="my-4" /> <div className="space-y-4" > <Textarea 
+}</div> <Separator className="my-4" /> <div className="space-y-4" > <Textarea
 }> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>) "
 }</Tabs> </div> <div className="space-y-6"> <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> <CardContent className="space-y-6"> <div className="flex items-start gap-4"> <Avatar className="h-10 w-10"> <AvatarImage src= {
-  dispute.client profile?.avatar url 
+  dispute.client profile?.avatar url
 }alt= {"
-  dispute.client profile?.display name || "Client avatar" "
+  dispute.client profile?.display name |"Client avatar" "
 }/> <AvatarFallback>C</AvatarFallback> </Avatar> <div> <p className="font-medium">Client</p> </p> </div> </div> <div className="flex justify-center"> <ArrowDown className="h-6 w-6 text-muted-foreground" /> </div> <div className="flex items-start gap-4"> <Avatar className="h-10 w-10"> <AvatarImage src= {
-  dispute.talent profile?.avatar url 
+  dispute.talent profile?.avatar url
 }alt= {"
-  dispute.talent profile?.display name || "Talent avatar" "
+  dispute.talent profile?.display name |"Talent avatar" "
 }/> <AvatarFallback>T</AvatarFallback> </Avatar> <div> <p className="font-medium">Talent</p> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> <CardContent className="space-y-4 text-sm"> <div className="flex justify-between"> <span className="font-medium">Case ID:</span> <span className="font-mono"> {
   dispute.id "
-}</span> </div> <div className="flex justify-between"> </div> </CardContent> </Card> </div> </div> </div>) 
+}</span> </div> <div className="flex justify-between"> </div> </CardContent> </Card> </div> </div> </div>)
 }'"  )
 }
-;

@@ -2,16 +2,15 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { ExperienceFilterProps } from "@/types/filters";
 export function ExperienceFilter({
-  experienceRange,
-  setExperienceRange,
-  expanded,
-  toggleSection,
-  isMobileFilterOpen,
+  experienceRange
+  setExperienceRange
+  expanded
+  toggleSection
+  isMobileFilterOpen
 }: ExperienceFilterProps) {
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0], values[1]]);
-  };
-
+  }
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -25,7 +24,6 @@ export function ExperienceFilter({
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-
       {expanded && (
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">

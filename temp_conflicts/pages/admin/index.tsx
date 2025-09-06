@@ -1,6 +1,5 @@
 import AdminTable from '../../components/admin/AdminTable';
-export default function AdminDashboard() {;
-  return (;
+export default function AdminDashboard() {return (;
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">Admin</h1>;
       <ul className="list-disc pl-6">;
@@ -10,4 +9,3 @@ export default function AdminDashboard() {;
     </div>;
   );
 }
-;

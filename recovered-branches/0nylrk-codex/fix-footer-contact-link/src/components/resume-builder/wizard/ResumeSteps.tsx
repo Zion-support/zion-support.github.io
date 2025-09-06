@@ -5,11 +5,10 @@ interface ResumeStepsProps {
   activeTab: string;
   onChange: (value: string) => void;
 }
-
 export const ResumeSteps = ({
-  steps,
-  activeTab,
-  onChange,
+  steps
+  activeTab
+  onChange
 }: ResumeStepsProps) => {
   return (
     <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
@@ -20,4 +19,4 @@ export const ResumeSteps = ({
       ))}
     </TabsList>
   );
-};
+}

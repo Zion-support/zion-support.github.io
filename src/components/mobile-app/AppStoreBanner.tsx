@@ -21,7 +21,7 @@ export const AppStoreBanner: React.FC = () => {
     safeStorage.setItem("appBannerDismissed", "true")
   }
   // Only render on mobile devices
-  if (!isMobile || !isVisible) return null
+  if (!isMobile |!isVisible) return null
   return (
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
       <div className="flex items-center">
@@ -31,8 +31,8 @@ export const AppStoreBanner: React.FC = () => {
           <p className="text-xs text-gray-300">Get the full experience on our app</p>
         </div>
         <div className="flex items-center gap-3">
-          <a 
-            href="/open-app" 
+          <a
+            href="/open-app"
             className="px-4 py-1 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium"
           >
             View
@@ -49,6 +49,5 @@ export const AppStoreBanner: React.FC = () => {
     </div>
   )
 }
-'"},
-
+'"}
 }

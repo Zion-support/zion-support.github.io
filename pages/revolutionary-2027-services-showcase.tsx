@@ -1,58 +1,52 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
-
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Search,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Mail,
-  Phone,
-  MapPin,
-  MessageSquare,
-  Globe,;
+  Search
+  CheckCircle
+  ArrowRight
+  Rocket
+  Mail
+  Phone
+  MapPin
+  MessageSquare
+  Globe;
 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import {revolutionary2027AIServices} from '../data/revolutionary-2027-ai-services';
 import {revolutionary2027ITServices} from '../data/revolutionary-2027-it-services';
 import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-micro-saas';
-
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
+    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount }
     {
-      id: 'quantum',
-      name: 'Quantum Services',
-      icon: '⚛️',
-      count: quantumCount,
-    },
-    { id: 'it', name: 'IT Infrastructure', icon: '⚙️', count: itCount },
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
+      id: 'quantum'
+      name: 'Quantum Services'
+      icon: '⚛️'
+      count: quantumCount
+    }
+    { id: 'it', name: 'IT Infrastructure', icon: '⚙️', count: itCount }
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount }
     {
-      id: 'holographic',
-      name: 'Holographic',
-      icon: '🎭',
-      count: holographicCount,
+      id: 'holographic'
+      name: 'Holographic'
+      icon: '🎭'
+      count: holographicCount
     },  ];
-
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'under-500', name: 'Under $500', range: 'Under $500' },
-    { id: '500-2000', name: '$500 - $2,000', range: '$500 - $2,000' },
-    { id: '2000-10000', name: '$2,000 - $10,000', range: '$2,000 - $10,000' },
+    { id: 'all', name: 'All Prices', range: 'All' }
+    { id: 'under-500', name: 'Under $500', range: 'Under $500' }
+    { id: '500-2000', name: '$500 - $2,000', range: '$500 - $2,000' }
+    { id: '2000-10000', name: '$2,000 - $10,000', range: '$2,000 - $10,000' }
     { id: 'over-10000', name: 'Over $10,000', range: 'Over $10,000' },  ];
-
   const sortOptions = [
-    { id: 'name', name: 'Name' },
-    { id: 'price', name: 'Price' },
-    { id: 'rating', name: 'Rating' },
-    { id: 'customers', name: 'Customers' },
+    { id: 'name', name: 'Name' }
+    { id: 'price', name: 'Price' }
+    { id: 'rating', name: 'Rating' }
+    { id: 'customers', name: 'Customers' }
     { id: 'launchDate', name: 'Launch Date' },  ];
-
   const filteredServices = useMemo(() => {
     let filtered = allServices;
-
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
@@ -61,21 +55,20 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
           return service.category.includes('Quantum');
         if (selectedCategory === 'it')
           return (
-            service.category.includes('IT') ||
+            service.category.includes('IT') |
             service.category.includes('Infrastructure')
           );
         if (selectedCategory === 'micro-saas')
           return (
-            service.category.includes('Micro SaaS') ||
-            service.category.includes('Marketing') ||
-            service.category.includes('Legal') ||
+            service.category.includes('Micro SaaS') |
+            service.category.includes('Marketing') |
+            service.category.includes('Legal') |
             service.category.includes('Health')
           );
         if (selectedCategory === 'holographic')
           return service.category.includes('Holographic');
         return true;
       });    }
-
     // Price range filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
@@ -88,18 +81,16 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
         if (selectedPriceRange === 'over-10000') return price >= 10000;
         return true;
       });    }
-
     // Search filter
     if (searchTerm) {
       filtered = filtered.filter(
         service =>
-          service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
           service.description
             .toLowerCase()
-            .includes(searchTerm.toLowerCase()) ||
+            .includes(searchTerm.toLowerCase()) |
           service.category.toLowerCase().includes(searchTerm.toLowerCase())
       );    }
-
     // Sort
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -115,23 +106,20 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
           return (
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
           );
-        default: return a.name.localeCompare(b.name),
+        default: return a.name.localeCompare(b.name)
       }
     });
-
     return filtered;  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
-
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',  };
-
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  }
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
       <Head>
         <title>
-          Revolutionary 2027 Services Showcase - Zion Tech Group |
+          Revolutionary 2027 Services Showcase - Zion Tech Group
           Next-Generation AI, Quantum & Technology Solutions
         </title>
         <meta
@@ -156,7 +144,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
           href='https://ziontechgroup.com/revolutionary-2027-services-showcase'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='pt-24 pb-16 px-4 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto text-center relative z-10'>          <motion.div
@@ -171,11 +158,10 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
               Services Showcase
             </h2>
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Experience the future of technology with our revolutionary AI,
+              Experience the future of technology with our revolutionary AI
               Quantum Computing, and Next-Generation IT services. Each solution
               delivers measurable ROI and transforms industries.
             </p>
-
             {/* Contact Information */}
             <div className='flex flex-wrap items-center justify-center gap-6 text-center mb-8'>
               <motion.div
@@ -204,7 +190,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   {contactInfo.address}
                 </span>              </motion.div>
             </div>
-
             {/* CTA Buttons */}
             <div className='flex flex-wrap items-center justify-center gap-4'>
               <a
@@ -224,7 +209,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filters */}
       <section className='py-8 px-4'>
         <div className='max-w-7xl mx-auto'>
@@ -239,7 +223,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full pl-12 pr-4 py-4 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'              />
             </div>
-
             {/* Filters */}
             <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
               {/* Category Filter */}
@@ -258,7 +241,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   ))}
                 </select>
               </div>
-
               {/* Price Range Filter */}
               <div>
                 <label className='block text-sm font-medium text-gray-300 mb-2'>
@@ -275,7 +257,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   ))}
                 </select>
               </div>
-
               {/* Sort By */}
               <div>
                 <label className='block text-sm font-medium text-gray-300 mb-2'>
@@ -292,7 +273,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   ))}
                 </select>
               </div>
-
               {/* Results Count */}
               <div className='flex items-end'>
                 <div className='text-gray-300'>
@@ -310,7 +290,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='py-12 px-4'>
         <div className='max-w-7xl mx-auto'>
@@ -336,13 +315,11 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                             </div>
                           )}
                         </div>
-
                         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                           {service.name}
                         </h3>
                         <p className='text-gray-300 text-sm mb-3 line-clamp-2'>                          {service.tagline}
                         </p>
-
                         {/* Price */}
                         <div className='flex items-baseline gap-2 mb-4'>
                           <span className='text-3xl font-bold text-white'>
@@ -352,11 +329,9 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                             {service.period}
                           </span>
                         </div>
-
                         {/* Description */}
                         <p className='text-gray-300 text-sm mb-4 line-clamp-3'>                          {service.description}
                         </p>
-
                         {/* Features */}
                         <div className='mb-4'>
                           <h4 className='text-sm font-semibold text-gray-200 mb-2'>
@@ -377,7 +352,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                                 </li>
                               ))}                          </ul>
                         </div>
-
                         {/* Stats */}
                         <div className='grid grid-cols-3 gap-4 mb-4 text-center'>
                           <div>
@@ -400,7 +374,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                             </div>
                             <div className='text-xs text-gray-400'>Reviews</div>                          </div>
                         </div>
-
                         {/* Category Badge */}
                         <div className='mb-4'>
                           <span
@@ -408,7 +381,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                           >                            {service.category}
                           </span>
                         </div>
-
                         {/* Action Buttons */}
                         <div className='flex gap-2'>
                           <a
@@ -456,7 +428,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
           </AnimatePresence>
         </div>
       </section>
-
       {/* Contact CTA Section */}
       <section className='py-16 px-4'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div
@@ -474,7 +445,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
               services. Each solution is designed to deliver measurable ROI and
               competitive advantage.
             </p>
-
             <div className='flex flex-wrap items-center justify-center gap-6 mb-8'>
               <div className='flex items-center gap-2 text-cyan-400'>
                 <Phone className='w-5 h-5' />
@@ -491,7 +461,6 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                 </span>
               </div>
             </div>
-
             <div className='flex flex-wrap items-center justify-center gap-4'>
               <a
                 href='/contact'

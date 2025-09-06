@@ -21,17 +21,15 @@ export function OnChainExport() {
       const ethereum = (window as any).ethereum
       if (!ethereum) {
         toast({
-          title: "Wallet not detected",
-          description: "Please install MetaMask or another Ethereum wallet to use this feature",
+          title: "Wallet not detected"
+          description: "Please install MetaMask or another Ethereum wallet to use this feature"
           variant: "destructive"
         })
         return
       }
-      
       // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
       const address = accounts[0]
 }
   )
 }
-;

@@ -6,14 +6,14 @@ import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import {
-  ShoppingCart,
-  Star,
-  Truck,
-  Shield,
-  RotateCcw,
-  Clock,
-  AlertTriangle,
-  ArrowLeft,
+  ShoppingCart
+  Star
+  Truck
+  Shield
+  RotateCcw
+  Clock
+  AlertTriangle
+  ArrowLeft
 } from 'lucide-react'
 import { toast } from '@/hooks/use-toast'
 import { useAuth } from '@/hooks/useAuth'
@@ -35,7 +35,7 @@ import { useCurrency } from '@/hooks/useCurrency'
 import { logErrorToProduction } from '@/utils/productionLogger'
 interface EquipmentSpecification {
   name: string
-value: string 
+value: string
 }interface EquipmentDetails {
   id: string
 name: string
@@ -53,40 +53,40 @@ expectedShipping?: string
 specifications: EquipmentSpecification[]
 features: string[]
 warranty?: string
-returnPolicy?: string 
+returnPolicy?: string
 }return {
-  id: item.id, name: item.title, description: item.description, brand: item.brand || 'Unknown', category: item.category, subcategory: item.subcategory, images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item.price || 0, currency: item.currency || '$', rating: item.rating, reviewCount: item.reviewCount, inStock: item.availability === 'In Stock' || !item.availability, expectedShipping: item.availability || 'In Stock',  specifications: (item.specifications || []) .map ( (spec) => ({'
-  name: spec, value: '' 
+  id: item.id, name: item.title, description: item.description, brand: item.brand |'Unknown', category: item.category, subcategory: item.subcategory, images: item.images |['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item.price |0, currency: item.currency |'$', rating: item.rating, reviewCount: item.reviewCount, inStock: item.availability === 'In Stock' |!item.availability, expectedShipping: item.availability |'In Stock',  specifications: (item.specifications |[]) .map ( (spec) => ({'
+  name: spec, value: ''
 }) )
-features: item.tags || [];'
+features: item.tags |[];'
 warranty: '1 Year Manufacturer Warranty';'
-returnPolicy: '30-day return policy' 
+returnPolicy: '30-day return policy'
 // Convert ProductListing to EquipmentDetails format
 function convertProductListingToEquipmentDetails(
   item: ProductListing
 ): EquipmentDetails {
   return {
-    id: item.id,
-    name: item.title,
-    description: item.description,
-    brand: item.brand || 'Unknown',
-    category: item.category,
-    subcategory: item.subcategory,
-    images: item.images || [
-      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',
-    ],
-    price: item.price || 0,
-    currency: item.currency || '$',
-    rating: item.rating,
-    reviewCount: item.reviewCount,
-    inStock: item.availability === 'In Stock' || !item.availability,
-    expectedShipping: item.availability || 'In Stock',
-    specifications: (item.specifications || []).map(spec => ({
-      name: spec,
-      value: '',    })),
-    features: item.tags || [],
-    warranty: '1 Year Manufacturer Warranty',
-    returnPolicy: '30-day return policy',
+    id: item.id
+    name: item.title
+    description: item.description
+    brand: item.brand |'Unknown'
+    category: item.category
+    subcategory: item.subcategory
+    images: item.images |[
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
+    ]
+    price: item.price |0
+    currency: item.currency |'$'
+    rating: item.rating
+    reviewCount: item.reviewCount
+    inStock: item.availability === 'In Stock' |!item.availability
+    expectedShipping: item.availability |'In Stock'
+    specifications: (item.specifications |[]).map(spec => ({
+      name: spec
+      value: '',    }))
+    features: item.tags |[]
+    warranty: '1 Year Manufacturer Warranty'
+    returnPolicy: '30-day return policy'
   }
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
@@ -94,7 +94,7 @@ export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
     (acc, item) => {
       acc[item.id] = convertProductListingToEquipmentDetails(item)
       return acc
-    },
+    }
     {} as { [key: string]: EquipmentDetails }
   )
 export default function EquipmentDetail() {
@@ -116,7 +116,6 @@ export default function EquipmentDetail() {
         setError('No equipment ID provided')
         return
       }
-
       try {
         setLoading(true)
         setError(null)
@@ -127,7 +126,6 @@ export default function EquipmentDetail() {
           setLoading(false)
           return
         }
-
         // Try to get from sessionStorage (for dynamically generated equipment)
         if (typeof window !== 'undefined') {
           try {
@@ -145,18 +143,16 @@ export default function EquipmentDetail() {
                   storedData as ProductListing
                 )
               }
-
               setEquipment(equipmentData)
               setLoading(false)
               return
             }
           } catch (storageError) {
             logErrorToProduction('Error reading from sessionStorage:', {
-              data: storageError,
+              data: storageError
             })
           }
         }
-
         // If not found anywhere, set error
         setError('Equipment not found')
         setLoading(false)
@@ -166,39 +162,37 @@ export default function EquipmentDetail() {
         setLoading(false)
       }
     }
-
     loadEquipment()
   }, [id])
   const handleAddToCart = async () => {
-    if (!equipment || !isAuthenticated) {
+    if (!equipment |!isAuthenticated) {
       toast({
-        title: 'Authentication Required',
-        description: 'Please log in to add items to cart',
-        variant: 'destructive',
+        title: 'Authentication Required'
+        description: 'Please log in to add items to cart'
+        variant: 'destructive'
       })
       return
     }
-
     setIsAdding(true)
     try {
       dispatch({
-        type: 'ADD_ITEM',
+        type: 'ADD_ITEM'
         payload: {
-          id: equipment.id,
-          name: equipment.name,
-          price: equipment.price,
-          quantity,
-        },
+          id: equipment.id
+          name: equipment.name
+          price: equipment.price
+          quantity
+        }
       })
       toast({
-        title: 'Added to Cart',
-        description: `${equipment.name} has been added to your cart.`,
+        title: 'Added to Cart'
+        description: `${equipment.name} has been added to your cart.`
       })
     } catch (error) {
       toast({
-        title: 'Error',
-        description: 'Failed to add item to cart. Please try again.',
-        variant: 'destructive',
+        title: 'Error'
+        description: 'Failed to add item to cart. Please try again.'
+        variant: 'destructive'
       })
     } finally {
       setIsAdding(false)
@@ -223,9 +217,8 @@ export default function EquipmentDetail() {
       </>
     )
   }
-
   // Error state
-  if (error || !equipment) {
+  if (error |!equipment) {
     return (
       <>
         <NextSeo
@@ -248,7 +241,7 @@ export default function EquipmentDetail() {
               <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
                 {error === 'Equipment not found'
                   ? "The equipment you're looking for doesn't exist or has been removed."
-                  : error ||
+                  : error |
                     "We couldn't load the equipment details. Please try again."}
               </p>
               <div className='space-x-4'>
@@ -271,19 +264,18 @@ export default function EquipmentDetail() {
       </>
     )
   }
-
   return (
     <>
       <NextSeo
         title={`${equipment.name} - Zion Marketplace`}
         description = {equipment.description,}
         openGraph={{
-          title: `${equipment.name} - Zion Marketplace`,
-          description: equipment.description,
+          title: `${equipment.name} - Zion Marketplace`
+          description: equipment.description
           images:
             equipment.images.length > 0 && equipment.images[0]
               ? [{ url: equipment.images[0] }]
-              : undefined,
+              : undefined
         }}
       />
       <div className='min-h-screen bg-zion-blue py-8 px-4'>
@@ -302,7 +294,6 @@ export default function EquipmentDetail() {
             <span className='mx-2 text-zion-slate-light'>/</span>
             <span className='text-zion-slate-light'>{equipment.name}</span>
           </motion.nav>
-
           <div className='grid lg:grid-cols-2 gap-12'>
             {/* Images */}
             <motion.div
@@ -317,14 +308,13 @@ export default function EquipmentDetail() {
               >
                 <ImageWithRetry
                   src={
-                    equipment.images[selectedImageIndex] ||
-                    equipment.images[0] ||
+                    equipment.images[selectedImageIndex] |
+                    equipment.images[0] |
                     'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
                   }
                   alt={equipment.name}
                   className='object-cover'                />
               </AspectRatio>
-
               {equipment.images.length > 1 && (
                 <div className='grid grid-cols-4 gap-2'>
                   {equipment.images.map((image, index) => (                    <button
@@ -346,7 +336,6 @@ export default function EquipmentDetail() {
                 </div>
               )}
             </motion.div>
-
             {/* Product Details */}
             <motion.div
               className='space-y-6'
@@ -370,11 +359,9 @@ export default function EquipmentDetail() {
                     {equipment.brand}
                   </Badge>
                 </div>
-
                 <h1 className='text-3xl font-bold text-white'>
                   {equipment.name}
                 </h1>
-
                 {equipment.rating && (
                   <div className='flex items-center gap-2'>
                     <div className='flex items-center'>
@@ -395,7 +382,6 @@ export default function EquipmentDetail() {
                   </div>
                 )}
               </div>
-
               {/* Price */}
               <div className='bg-zion-blue-light rounded-lg p-4'>
                 <div className='text-3xl font-bold text-zion-cyan mb-2'>
@@ -412,7 +398,6 @@ export default function EquipmentDetail() {
                   </span>
                 </div>
               </div>
-
               {/* Description */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-semibold text-white'>
@@ -422,7 +407,6 @@ export default function EquipmentDetail() {
                   {equipment.description}
                 </p>
               </div>
-
               {/* Specifications */}
               {equipment.specifications.length > 0 && (
                 <div className='space-y-4'>
@@ -439,13 +423,12 @@ export default function EquipmentDetail() {
                           {spec.name}
                         </span>
                         <span className='text-white'>
-                          {spec.value || 'Enterprise Grade'}
+                          {spec.value |'Enterprise Grade'}
                         </span>                      </div>
                     ))}
                   </div>
                 </div>
               )}
-
               {/* Add to Cart */}
               <div className='space-y-4 pt-6 border-t border-zion-blue-light'>
                 <div className='flex items-center gap-4'>
@@ -470,10 +453,9 @@ export default function EquipmentDetail() {
                     </Button>
                   </div>
                 </div>
-
                 <Button
                   onClick={handleAddToCart}
-                  disabled={isAdding || !equipment.inStock}
+                  disabled={isAdding |!equipment.inStock}
                   size='lg'
                   variant='outline'
                   className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'
@@ -482,7 +464,6 @@ export default function EquipmentDetail() {
                   {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
                 </Button>
               </div>
-
               {/* Additional Info */}
               <div className='space-y-4 border-t border-zion-blue-light pt-4'>
                 {/* Shipping */}
@@ -497,7 +478,6 @@ export default function EquipmentDetail() {
                     </p>
                   </div>
                 </div>
-
                 {/* Warranty */}
                 {equipment.warranty && (
                   <div className='flex gap-3 text-zion-slate-light'>
@@ -508,7 +488,6 @@ export default function EquipmentDetail() {
                     </div>
                   </div>
                 )}
-
                 {/* Return Policy */}
                 {equipment.returnPolicy && (
                   <div className='flex gap-3 text-zion-slate-light'>
@@ -527,53 +506,51 @@ export default function EquipmentDetail() {
     </>
   )
 }finally {
-  setIsAdding (false) 
+  setIsAdding (false)
 }
 const inCart = items.some (item => item.id === equipment?.id)
-return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4" ></div> <p className="text-zion-slate-light" >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error || !equipment) {'"
-  return (<> <NextSeo title="Equipment Not Found" description="The equipment you're looking for doesn't exist or has been removed." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <motion.div </p> <div className="space-x-4" > <Button > <ArrowLeft className="h-4 w-4 mr-2" /> Go Back </Button> <Button 
+return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4" ></div> <p className="text-zion-slate-light" >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error |!equipment) {'"
+  return (<> <NextSeo title="Equipment Not Found" description="The equipment you're looking for doesn't exist or has been removed." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <motion.div </p> <div className="space-x-4" > <Button > <ArrowLeft className="h-4 w-4 mr-2" /> Go Back </Button> <Button
 }return (<> <NextSeo title= {
   `$ {
-  equipment.name 
-}- Zion Marketplace` 
+  equipment.name
+}- Zion Marketplace`
 }description= {
-  equipment.description 
+  equipment.description
 }openGraph= {
   {
   title: `$ {
-  equipment.name 
+  equipment.name
 }- Zion Marketplace`, description: equipment.description, images: equipment.images.length > 0 && equipment.images[0] ? [ {
-  url: equipment.images[0] 
-}] : undefined 
+  url: equipment.images[0]
+}] : undefined
 }/> key= {
-  index 
+  index
 }onClick={
-  () => setSelectedImageIndex (index) 
+  () => setSelectedImageIndex (index)
 }className= {
   `aspect-square rounded-md overflow-hidden border-2 transition-all $ {'
-  selectedImageIndex === index ? 'border-zion-cyan' : 'border-transparent hover:border-zion-slate-light' 
-}` 
-}> <ImageWithRetry /> </button>) ) 
-}</div>) 
+  selectedImageIndex === index ? 'border-zion-cyan' : 'border-transparent hover:border-zion-slate-light'
+}`
+}> <ImageWithRetry /> </button>) )
+}</div>)
 }</motion.div> {
-  /* Product Details */ 
+  /* Product Details */
 }<motion.div <Star key= {
-  i 
+  i
 }className= {
   `h-4 w-4 $ {'
-  i < Math.floor (equipment.rating!) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light' 
-}` 
-}/>) ) 
-}</div> </span> </div>) 
-}</div> </span> </div> </div> </div>) ) 
+  i < Math.floor (equipment.rating!) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light'
+}`
+}/>) )
+}</div> </span> </div>)
+}</div> </span> </div> </div> </div>) )
 }</div> </div>) "
 }> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {
-  equipment.warranty 
+  equipment.warranty
 }</p> </div> </div>) "
 }<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {
-  equipment.returnPolicy 
-}</p> </div> </div>) 
-}</div> </motion.div> </div> </div> </div> </>) 
+  equipment.returnPolicy
+}</p> </div> </div>)
+}</div> </motion.div> </div> </div> </div> </>)
 }'"}
-
-;

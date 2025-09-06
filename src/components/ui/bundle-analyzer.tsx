@@ -19,12 +19,11 @@ interface ChunkInfo {
   cached: boolean
 export function BundleAnalyzer() {
   const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
   if (!isAllowed) {
     return null
   }
-
   const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
   const [chunks, setChunks] = useState<ChunkInfo[]>([])
   const [isVisible, setIsVisible] = useState(false)
@@ -33,7 +32,7 @@ export function BundleAnalyzer() {
   useEffect((,) => {
     // Only show in development or when explicitly enabled
     const show =
-      process.env.NODE_ENV === 'development' ||
+      process.env.NODE_ENV === 'development' |
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
     if (!show) return
@@ -51,24 +50,23 @@ export function BundleAnalyzer() {
       const scriptEntries = resourceEntries.filter(
         entry =>
           entry.name.includes('/_next/static/') &&
-          (entry.name.endsWith('.js') || entry.name.endsWith('.css'))
+          (entry.name.endsWith('.js') |entry.name.endsWith('.css'))
       )
       // Calculate bundle information
       let totalSize = 0
       let totalLoadTime = 0
       const chunkData: ChunkInfo[] = []
-      const chunkData: ChunkInfo[] = [],
-
+      const chunkData: ChunkInfo[] = []
       scriptEntries.forEach(entry => {
-        const size = entry.transferSize || entry.encodedBodySize || 0
+        const size = entry.transferSize |entry.encodedBodySize |0
         const loadTime = entry.responseEnd - entry.requestStart
         const cached = entry.transferSize === 0
         totalLoadTime += loadTime
         chunkData.push({
-          name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
-          size,
-          loadTime,
-          cached,
+          name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
+          size
+          loadTime
+          cached
         })
       })
       // Estimate gzipped size (roughly 70% of original)
@@ -76,11 +74,11 @@ export function BundleAnalyzer() {
       const cacheHitRate =
         chunkData.filter(chunk => chunk.cached).length / chunkData.length
       setBundleInfo({
-        totalSize,
-        gzippedSize,
-        chunkCount: chunkData.length,
-        loadTime: totalLoadTime / chunkData.length,
-        cacheHitRate: cacheHitRate * 100,
+        totalSize
+        gzippedSize
+        chunkCount: chunkData.length
+        loadTime: totalLoadTime / chunkData.length
+        cacheHitRate: cacheHitRate * 100
       })
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
@@ -111,7 +109,6 @@ export function BundleAnalyzer() {
   if (!shouldShow) {
     return null
   }
-
   if (!isVisible) {
     return (
       <div className='fixed bottom-20 right-4 z-50'>
@@ -126,7 +123,6 @@ export function BundleAnalyzer() {
       </div>
     )
   }
-
   return (
     <div className='fixed bottom-20 right-4 z-50 w-96'>
       <Card className='bg-background/95 backdrop-blur-sm border shadow-lg'>
@@ -182,7 +178,6 @@ export function BundleAnalyzer() {
                   </Badge>
                 </div>
               </div>
-
               <div>
                 <div className='flex justify-between items-center text-xs mb-1'>
                   <span>Cache Hit Rate</span>
@@ -190,7 +185,6 @@ export function BundleAnalyzer() {
                 </div>
                 <Progress value={bundleInfo.cacheHitRate} className='h-2' />
               </div>
-
               <div>
                 <div className='text-xs font-medium mb-2'>Largest Chunks:</div>
                 <div className='space-y-1'>
@@ -224,7 +218,6 @@ export function BundleAnalyzer() {
                   ))}
                 </div>
               </div>
-
               {bundleInfo.totalSize > 1000000 && (
                 <div className='flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs'>
                   <AlertTriangle className='w-3 h-3 text-yellow-600' />
@@ -243,4 +236,4 @@ export function BundleAnalyzer() {
       </Card>
     </div>
   )
-} 
+}

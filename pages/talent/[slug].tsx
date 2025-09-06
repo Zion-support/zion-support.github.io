@@ -7,18 +7,15 @@ import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
 const TalentProfile: NextPage = () => {
   const router = useRouter();
   const { slug } = router.query;
-
   const [responseLog, setResponseLog] = useState<
     Array<{ action: "Accept" | "Decline" | "Negotiate"; at: string }>
   >([]);
-
   const handleRespond = (action: "Accept" | "Decline" | "Negotiate") => {
     setResponseLog((prev) => [
-      ...prev,
-      { action, at: new Date().toISOString() },
+      ...prev
+      { action, at: new Date().toISOString() }
     ]);
-  };
-
+  }
   return (
     <div className="space-y-6 pb-20">
       {" "}
@@ -60,7 +57,6 @@ const TalentProfile: NextPage = () => {
               Experienced developer specializing in React, Next.js, and Node.js.
             </p>
           </div>
-
           <div className="border rounded-md p-4">
             <h2 className="font-semibold mb-2">Testimonials</h2>
             <MicroTestimonial
@@ -69,7 +65,6 @@ const TalentProfile: NextPage = () => {
             />
           </div>
         </div>
-
         <aside className="space-y-4">
           <div className="border rounded-md p-4">
             <h3 className="font-semibold mb-2">Response Log</h3>
@@ -91,6 +86,5 @@ const TalentProfile: NextPage = () => {
       </section>
     </div>
   );
-};
-
+}
 export default TalentProfile;

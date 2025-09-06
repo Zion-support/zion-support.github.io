@@ -1,16 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
-
 const CERTS_FILE = path.join(
-  process.cwd(),
-  'data',
-  'certifications',
+  process.cwd()
+  'data'
+  'certifications'
   'certifications.json'
 );
-
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method !== 'GET') {
@@ -30,5 +28,5 @@ export default async function handler(
     return res.status(200).json({ certifications })
   } catch (e) {
     return res.status(500).json({ error: "Failed to load certifications" })
-};
+}
 }

@@ -13,7 +13,6 @@ import {logErrorToProduction} from '@/utils/productionLogger'
 interface TranslatableJobFormProps {
   onSubmit: (formData: any) => void
   isSubmitting?: boolean }
-
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
   const { t } = useTranslation()
   const { translateContent, isTranslating } = useTranslationService()
@@ -21,10 +20,10 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage)
   // Form fields with translations
   const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
-    en: "",
-    es: "",
-    fr: "",
-    pt: "",
+    en: ""
+    es: ""
+    fr: ""
+    pt: ""
     ar: ""
   })
     ar: ""
@@ -41,22 +40,22 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         content = requirements[lang]
         sourceLanguage = lang
         break
-        title: t('translation.no_content'),
-        description: t('translation.add_content_first'),
+        title: t('translation.no_content')
+        description: t('translation.add_content_first')
         variant: "destructive"
       })
       return
           variant: "destructive"
       })
       return
-        title: t('translation.translation_success'),
+        title: t('translation.translation_success')
         description: t('translation.content_translated')
       })
     } catch (error) {
       logErrorToProduction('Error translating ${field}:', { data: error })
       toast({
-        title: t('translation.translation_failed'),
-        description: error instanceof Error ? error.message : t('translation.unknown_error'),
+        title: t('translation.translation_failed')
+        description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"
       })
     }
@@ -67,4 +66,3 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 }
   )
 }
-;

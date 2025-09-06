@@ -18,7 +18,7 @@ export async function createSystemNotification({
     message;
     type: 'system';
     sendEmail;
-    actionUrl,
+    actionUrl
     actionText
   })
 }

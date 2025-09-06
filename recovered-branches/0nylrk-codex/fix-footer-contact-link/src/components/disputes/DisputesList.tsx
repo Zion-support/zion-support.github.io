@@ -9,22 +9,19 @@ import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
 type DisputesListProps = {
-  disputes: Dispute[],
+  disputes: Dispute[]
   isLoading: boolean
-};
-
+}
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
-
-  const filteredDisputes = statusFilter === "all" 
-    ? disputes 
+  const filteredDisputes = statusFilter === "all"
+    ? disputes
     : disputes.filter(dispute => dispute.status === statusFilter);
-
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default";
       case "under_review":
-        return "secondary",
+        return "secondary"
       case "resolved":
         return "outline", // Changed from "success" to "outline"
       case "closed":
@@ -32,8 +29,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
       default:
         return "default"
     }
-  };
-
+  }
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -71,7 +67,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
       </div>
     )
   }
-
   if (disputes.length === 0) {
     return (
       <div className="text-center py-12 border rounded-md bg-muted/20">
@@ -83,7 +78,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
       </div>
     )
   }
-
   return (
     <div className="space-y-4">
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
@@ -123,7 +117,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           Closed
         </Button>
       </div>
-
       <div className="border rounded-md overflow-hidden">
         <Table>
           <TableHeader>
@@ -143,15 +136,15 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                   {dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>
-                  {dispute.project?.title || "Unknown Project"}
+                  {dispute.project?.title |"Unknown Project"}
                 </TableCell>
                 <TableCell>
                   <div className="flex flex-col text-sm">
                     <span>
-                      Client: {dispute.client_profile?.display_name || "Unknown Client"}
+                      Client: {dispute.client_profile?.display_name |"Unknown Client"}
                     </span>
                     <span>
-                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
+                      Talent: {dispute.talent_profile?.display_name |"Unknown Talent"}
                     </span>
                   </div>
                 </TableCell>
@@ -176,4 +169,3 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
     </div>
   )
 }
-;

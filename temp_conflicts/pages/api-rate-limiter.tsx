@@ -1,84 +1,77 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
-import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react',;
-export default function APIRateLimiterPage() {;
-  const [endpoint, setEndpoint] = useState(''),;
-  const [rateLimit, setRateLimit] = useState('100'),;
-  const [timeWindow, setTimeWindow] = useState('1m'),;
-  const [testResults, setTestResults] = useState<any[]>([]),;
-  const [isTesting, setIsTesting] = useState(false),;
-  const [apiKey, setApiKey] = useState(''),;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+export default function APIRateLimiterPage() {const [endpoint, setEndpoint] = useState('');
+  const [rateLimit, setRateLimit] = useState('100');
+  const [timeWindow, setTimeWindow] = useState('1m');
+  const [testResults, setTestResults] = useState<any[]>([]);
+  const [isTesting, setIsTesting] = useState(false);
+  const [apiKey, setApiKey] = useState('');
   const timeWindows = [;
-    { value: '1s', label: '1 Second', description: 'Per second rate limiting' },;
-    { value: '1m', label: '1 Minute', description: 'Per minute rate limiting' },;
-    { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' },;
+    { value: '1s', label: '1 Second', description: 'Per second rate limiting' }
+    { value: '1m', label: '1 Minute', description: 'Per minute rate limiting' }
+    { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' }
     { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
-  ],;
+  ];
   const rateLimits = [;
-    { value: '10', label: '10 requests', description: 'Very strict' },;
-    { value: '100', label: '100 requests', description: 'Standard' },;
-    { value: '1000', label: '1000 requests', description: 'High volume' },;
+    { value: '10', label: '10 requests', description: 'Very strict' }
+    { value: '100', label: '100 requests', description: 'Standard' }
+    { value: '1000', label: '1000 requests', description: 'High volume' }
     { value: '10000', label: '10000 requests', description: 'Enterprise' }
-  ],;
-  const generateApiKey = () => {;
-    const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36),;
+  ];
+  const generateApiKey = () => {const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
     setApiKey(key);
-  },;
-  const testRateLimiting = async () => {;
-    if (!endpoint.trim() || !rateLimit || !timeWindow) return,;
-    setIsTesting(true),;
-    setTestResults([]),;
-    const limit = parseInt(rateLimit),;
-    const results = [],;
+  }
+  const testRateLimiting = async () => {if (!endpoint.trim() |!rateLimit |!timeWindow) return;
+    setIsTesting(true);
+    setTestResults([]);
+    const limit = parseInt(rateLimit);
+    const results = [];
     // Simulate API calls to test rate limiting;
     for (let i = 1, i <= limit + 5, i++) {;
-      await new Promise(resolve => setTimeout(resolve, 100)),;
-      const isAllowed = i <= limit,;
-      const status = isAllowed ? 'success' : 'rate_limited',;
-      const statusCode = isAllowed ? 200 : 429,;
+      await new Promise(resolve => setTimeout(resolve, 100));
+      const isAllowed = i <= limit;
+      const status = isAllowed ? 'success' : 'rate_limited';
+      const statusCode = isAllowed ? 200 : 429;
       results.push({;
-        request: i,;
-        timestamp: new Date().toLocaleTimeString(),;
-        status,;
-        statusCode,;
-        responseTime: Math.random() * 100 + 50,;
+        request: i;
+        timestamp: new Date().toLocaleTimeString();
+        status;
+        statusCode;
+        responseTime: Math.random() * 100 + 50;
         headers: {;
-          'X-RateLimit-Limit': limit,;
-          'X-RateLimit-Remaining': Math.max(0, limit - i),;
+          'X-RateLimit-Limit': limit;
+          'X-RateLimit-Remaining': Math.max(0, limit - i);
           'X-RateLimit-Reset': new Date(Date.now() + 60000).toISOString();
         }
-      }),;
+      });
       if (!isAllowed) break;
     }
-;
-    setTestResults(results),;
+    setTestResults(results);
     setIsTesting(false);
-  },;
-  const copyToClipboard = (text: string) => {;
-    navigator.clipboard.writeText(text);
-  },;
-  const getStatusIcon = (status: string) => {;
-    switch (status) {;
+  }
+  const copyToClipboard = (text: string) => {navigator.clipboard.writeText(text);
+  }
+  const getStatusIcon = (status: string) => {switch (status) {;
       case 'success':;
-        return <CheckCircle className="w-5 h-5 text-green-400" />,;
+        return <CheckCircle className="w-5 h-5 text-green-400" />;
       case 'rate_limited':;
-        return <AlertTriangle className="w-5 h-5 text-red-400" />,;
+        return <AlertTriangle className="w-5 h-5 text-red-400" />;
       default:;
         return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
     }
-  },;
-  const getStatusColor = (status: string) => {;
-    switch (status) {;
+  }
+  const getStatusColor = (status: string) => {switch (status) {;
       case 'success':;
-        return 'text-green-400',;
+        return 'text-green-400';
       case 'rate_limited':;
-        return 'text-red-400',;
+        return 'text-red-400';
       default:;
         return 'text-yellow-400';
     }
-  },;
+  }
   return (;
     <>;
       <Head>;
@@ -100,7 +93,7 @@ export default function APIRateLimiterPage() {;
             API Rate Limiter;
           </h1>;
           <p className="text-xl text-green-200 max-w-4xl mx-auto leading-relaxed">;
-            Protect your APIs from abuse with intelligent rate limiting. Ensure fair usage, prevent DDoS attacks,;
+            Protect your APIs from abuse with intelligent rate limiting. Ensure fair usage, prevent DDoS attacks;
             and maintain optimal performance for all your users with our enterprise-grade rate limiting solution.;
           </p>;
         </div>;
@@ -147,8 +140,7 @@ export default function APIRateLimiterPage() {;
                       <button;
                         key={limit.value}
                         onClick={() => setRateLimit(limit.value)}
-                        className={`p-3 rounded-lg border text-left transition-all ${;
-                          rateLimit === limit.value;
+                        className={`p-3 rounded-lg border text-left transition-all ${rateLimit === limit.value;
                             ? 'border-green-500 bg-green-500/10 text-green-300';
                             : 'border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white';
                         }`}
@@ -169,8 +161,7 @@ export default function APIRateLimiterPage() {;
                       <button;
                         key={window.value}
                         onClick={() => setTimeWindow(window.value)}
-                        className={`p-3 rounded-lg border text-left transition-all ${;
-                          timeWindow === window.value;
+                        className={`p-3 rounded-lg border text-left transition-all ${timeWindow === window.value;
                             ? 'border-green-500 bg-green-500/10 text-green-300';
                             : 'border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white';
                         }`}
@@ -204,7 +195,7 @@ export default function APIRateLimiterPage() {;
                 </div>;
                 <Button;
                   onClick={testRateLimiting}
-                  disabled={!endpoint.trim() || !rateLimit || !timeWindow || isTesting}
+                  disabled={!endpoint.trim() |!rateLimit |!timeWindow |isTesting}
                   className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed";
                 >;
                   {isTesting ? (;
@@ -244,8 +235,7 @@ export default function APIRateLimiterPage() {;
                   {testResults.map((result, index) => (;
                     <div;
                       key={index}
-                      className={`p-4 rounded-lg border ${;
-                        result.status === 'success' ? 'border-green-500/30 bg-green-500/10' : 'border-red-500/30 bg-red-500/10';
+                      className={`p-4 rounded-lg border ${result.status === 'success' ? 'border-green-500/30 bg-green-500/10' : 'border-red-500/30 bg-red-500/10';
                       }`}
                     >;
                       <div className="flex items-center justify-between mb-2">;
@@ -365,39 +355,35 @@ export default function APIRateLimiterPage() {;
               </h3>;
               <div className="bg-gray-900 p-4 rounded-lg overflow-x-auto">;
                 <pre className="text-sm text-gray-300">;
-{`const axios = require('axios'),;
-const apiKey = '${apiKey || 'your_api_key_here'}',;
-const endpoint = '${endpoint || '/api/users'}',;
+{`const axios = require('axios');
+const apiKey = '${apiKey |'your_api_key_here'}';
+const endpoint = '${endpoint |'/api/users'}';
 // Make API request with rate limiting;
-const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {;
-  headers: {;
-    'Authorization': \`Bearer \${apiKey}\`,;
+const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {headers: {;
+    'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}';
   }
-}),;
-// // // console.log('Response:', response.data),;
-// // // console.log('Rate Limit Info:', {;
-  limit: response.headers['x-ratelimit-limit'],;
-  remaining: response.headers['x-ratelimit-remaining'],;
+});
+// // // console.log('Response:', response.data);
+// // // console.log('Rate Limit Info:', {limit: response.headers['x-ratelimit-limit'];
+  remaining: response.headers['x-ratelimit-remaining'];
   reset: response.headers['x-ratelimit-reset'];
 }),`}
                 </pre>;
               </div>;
               <Button;
-                onClick={() => copyToClipboard(`const axios = require('axios'),;
-const apiKey = '${apiKey || 'your_api_key_here'}',;
-const endpoint = '${endpoint || '/api/users'}',;
+                onClick={() => copyToClipboard(`const axios = require('axios');
+const apiKey = '${apiKey |'your_api_key_here'}';
+const endpoint = '${endpoint |'/api/users'}';
 // Make API request with rate limiting;
-const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {;
-  headers: {;
-    'Authorization': \`Bearer \${apiKey}\`,;
+const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {headers: {;
+    'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}';
   }
-}),;
-// // // console.log('Response:', response.data),;
-// // // console.log('Rate Limit Info:', {;
-  limit: response.headers['x-ratelimit-limit'],;
-  remaining: response.headers['x-ratelimit-remaining'],;
+});
+// // // console.log('Response:', response.data);
+// // // console.log('Rate Limit Info:', {limit: response.headers['x-ratelimit-limit'];
+  remaining: response.headers['x-ratelimit-remaining'];
   reset: response.headers['x-ratelimit-reset'];
 }),`)}
                 variant="outline";
@@ -416,41 +402,35 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {;
               <div className="bg-gray-900 p-4 rounded-lg overflow-x-auto">;
                 <pre className="text-sm text-gray-300">;
 {`import requests;
-api_key = '${apiKey || 'your_api_key_here'}';
-endpoint = '${endpoint || '/api/users'}';
+api_key = '${apiKey |'your_api_key_here'}';
+endpoint = '${endpoint |'/api/users'}';
 # Make API request with rate limiting;
-headers = {;
-    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}';
+headers = {'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}';
 }
-;
 response = requests.get(;
-    f'https://api.zion.tech{endpoint}',;
+    f'https://api.zion.tech{endpoint}';
     headers=headers;
 );
 print('Response:', response.json());
-print('Rate Limit Info:', {;
-    'limit': response.headers.get('x-ratelimit-limit'),;
-    'remaining': response.headers.get('x-ratelimit-remaining'),;
+print('Rate Limit Info:', {'limit': response.headers.get('x-ratelimit-limit');
+    'remaining': response.headers.get('x-ratelimit-remaining');
     'reset': response.headers.get('x-ratelimit-reset');
 })`}
                 </pre>;
               </div>;
               <Button;
                 onClick={() => copyToClipboard(`import requests;
-api_key = '${apiKey || 'your_api_key_here'}';
-endpoint = '${endpoint || '/api/users'}';
+api_key = '${apiKey |'your_api_key_here'}';
+endpoint = '${endpoint |'/api/users'}';
 # Make API request with rate limiting;
-headers = {;
-    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}';
+headers = {'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}';
 }
-;
 response = requests.get(;
-    f'https://api.zion.tech{endpoint}',;
+    f'https://api.zion.tech{endpoint}';
     headers=headers;
 );
 print('Response:', response.json());
-print('Rate Limit Info:', {;
-    'limit': response.headers.get('x-ratelimit-limit');
+print('Rate Limit Info:', {'limit': response.headers.get('x-ratelimit-limit');
     'remaining': response.headers.get('x-ratelimit-remaining');
     'reset': response.headers.get('x-ratelimit-reset');
 })`)}

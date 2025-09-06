@@ -1,68 +1,61 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
-import {;
-  ArrowRight, Check, Star, Users, Zap, Shield, Globe,;
-  TrendingUp, Award, Clock, CheckCircle, ExternalLink,;
-  Brain, Atom, Rocket, Cpu, Database, Target, Sparkles,;
-  ChevronRight, Search, Filter, Grid, List, Phone, Mail, MapPin,;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+import {ArrowRight, Check, Star, Users, Zap, Shield, Globe;
+  TrendingUp, Award, Clock, CheckCircle, ExternalLink;
+  Brain, Atom, Rocket, Cpu, Database, Target, Sparkles;
+  ChevronRight, Search, Filter, Grid, List, Phone, Mail, MapPin;
   DollarSign, Target as TargetIcon, BarChart3, Users as UsersIcon;
-} from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-import { advancedMicroSaasServices2026 } from '../data/2026-advanced-micro-saas-expansion',;
-import { specializedIndustrySolutions2026 } from '../data/2026-specialized-industry-solutions',;
-export default function ServicesAdvertising2026() {;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedService, setSelectedService] = useState<string | null>(null),;
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { advancedMicroSaasServices2026 } from '../data/2026-advanced-micro-saas-expansion';
+import { specializedIndustrySolutions2026 } from '../data/2026-specialized-industry-solutions';
+export default function ServicesAdvertising2026() {const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedService, setSelectedService] = useState<string | null>(null);
   // Combine all services;
-  const allServices = [...advancedMicroSaasServices2026, ...specializedIndustrySolutions2026],;
+  const allServices = [...advancedMicroSaasServices2026, ...specializedIndustrySolutions2026];
   const categories = [;
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },;
-    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length },;
-    { id: 'Quantum Computing & AI', name: 'Quantum AI', icon: '⚛️', count: allServices.filter(s => s.category === 'Quantum Computing & AI').length },;
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices.filter(s => s.category === 'Cybersecurity').length },;
-    { id: 'Edge Computing & IoT', name: 'Edge & IoT', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing & IoT').length },;
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices.filter(s => s.category === 'Healthcare AI').length },;
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: allServices.filter(s => s.category === 'Blockchain & DeFi').length },;
-    { id: 'Space Technology', name: 'Space Tech', icon: '🛰️', count: allServices.filter(s => s.category === 'Space Technology').length },;
-    { id: 'Neural Technology & BCI', name: 'Neural Tech', icon: '🧬', count: allServices.filter(s => s.category === 'Neural Technology & BCI').length },;
-    { id: 'DevOps & Infrastructure', name: 'DevOps', icon: '⚙️', count: allServices.filter(s => s.category === 'DevOps & Infrastructure').length },;
-    { id: 'Financial Technology', name: 'FinTech', icon: '💰', count: allServices.filter(s => s.category === 'Financial Technology').length },;
-    { id: 'Energy & Sustainability', name: 'Energy', icon: '⚡', count: allServices.filter(s => s.category === 'Energy & Sustainability').length },;
-    { id: 'Transportation & Logistics', name: 'Logistics', icon: '🚚', count: allServices.filter(s => s.category === 'Transportation & Logistics').length },;
-    { id: 'Education Technology', name: 'EdTech', icon: '🎓', count: allServices.filter(s => s.category === 'Education Technology').length },;
-    { id: 'Real Estate Technology', name: 'PropTech', icon: '🏠', count: allServices.filter(s => s.category === 'Real Estate Technology').length },;
-    { id: 'Legal Technology', name: 'LegalTech', icon: '⚖️', count: allServices.filter(s => s.category === 'Legal Technology').length },;
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
+    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length }
+    { id: 'Quantum Computing & AI', name: 'Quantum AI', icon: '⚛️', count: allServices.filter(s => s.category === 'Quantum Computing & AI').length }
+    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices.filter(s => s.category === 'Cybersecurity').length }
+    { id: 'Edge Computing & IoT', name: 'Edge & IoT', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing & IoT').length }
+    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices.filter(s => s.category === 'Healthcare AI').length }
+    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: allServices.filter(s => s.category === 'Blockchain & DeFi').length }
+    { id: 'Space Technology', name: 'Space Tech', icon: '🛰️', count: allServices.filter(s => s.category === 'Space Technology').length }
+    { id: 'Neural Technology & BCI', name: 'Neural Tech', icon: '🧬', count: allServices.filter(s => s.category === 'Neural Technology & BCI').length }
+    { id: 'DevOps & Infrastructure', name: 'DevOps', icon: '⚙️', count: allServices.filter(s => s.category === 'DevOps & Infrastructure').length }
+    { id: 'Financial Technology', name: 'FinTech', icon: '💰', count: allServices.filter(s => s.category === 'Financial Technology').length }
+    { id: 'Energy & Sustainability', name: 'Energy', icon: '⚡', count: allServices.filter(s => s.category === 'Energy & Sustainability').length }
+    { id: 'Transportation & Logistics', name: 'Logistics', icon: '🚚', count: allServices.filter(s => s.category === 'Transportation & Logistics').length }
+    { id: 'Education Technology', name: 'EdTech', icon: '🎓', count: allServices.filter(s => s.category === 'Education Technology').length }
+    { id: 'Real Estate Technology', name: 'PropTech', icon: '🏠', count: allServices.filter(s => s.category === 'Real Estate Technology').length }
+    { id: 'Legal Technology', name: 'LegalTech', icon: '⚖️', count: allServices.filter(s => s.category === 'Legal Technology').length }
     { id: 'Manufacturing Technology', name: 'Manufacturing', icon: '🏭', count: allServices.filter(s => s.category === 'Manufacturing Technology').length }
-  ],;
-  const filteredServices = allServices.filter(service => {;
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),;
+  ];
+  const filteredServices = allServices.filter(service => {const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |;
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
-  }),;
-  const containerVariants = {;
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
+  });
+  const containerVariants = {hidden: { opacity: 0 }
+    visible: {opacity: 1;
       transition: {;
         staggerChildren: 0.1;
       }
     }
-  },;
-  const itemVariants = {;
-    hidden: { opacity: 0, y: 20 },;
-    visible: {;
-      opacity: 1,;
-      y: 0,;
+  }
+  const itemVariants = {hidden: { opacity: 0, y: 20 }
+    visible: {opacity: 1;
+      y: 0;
       transition: {;
         duration: 0.5;
       }
     }
-  },;
+  }
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">;
       <Head>;
@@ -145,7 +138,7 @@ export default function ServicesAdvertising2026() {;
               Market Overview & Competitive Advantage;
             </h2>;
             <p className="text-xl text-white/70 max-w-3xl mx-auto">;
-              Our services are positioned to dominate emerging markets with superior technology,;
+              Our services are positioned to dominate emerging markets with superior technology;
               competitive pricing, and proven results that outperform industry standards.;
             </p>;
           </motion.div>;
@@ -222,8 +215,7 @@ export default function ServicesAdvertising2026() {;
                 <button;
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-3 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${;
-                    selectedCategory === category.id;
+                  className={`px-3 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${selectedCategory === category.id;
                       ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg';
                       : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white';
                   }`}
@@ -421,8 +413,7 @@ export default function ServicesAdvertising2026() {;
               className="bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto";
               onClick={(e) => e.stopPropagation()}
             >;
-              {selectedService && (() => {;
-                const service = allServices.find(s => s.id === selectedService);
+              {selectedService && (() => {const service = allServices.find(s => s.id === selectedService);
                 if (!service) return null;
                 return (;
                   <div className="p-8">;

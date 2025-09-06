@@ -1,53 +1,49 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import { Scale, CheckCircle, Globe, Shield, FileText, Users, Mail, Phone, MapPin } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-export default function Compliance() {;
-  const complianceFrameworks = [;
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Scale, CheckCircle, Globe, Shield, FileText, Users, Mail, Phone, MapPin } from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+export default function Compliance() {const complianceFrameworks = [;
     {;
-      id: 'soc2',;
-      title: 'SOC 2 Type II',;
-      icon: Shield,;
-      description: 'Annual audits of security, availability, and confidentiality controls',;
+      id: 'soc2';
+      title: 'SOC 2 Type II';
+      icon: Shield;
+      description: 'Annual audits of security, availability, and confidentiality controls';
       details: [;
         'Independent third-party auditingSecurity controls assessmentAvailability and processing integrityConfidentiality safeguardsAnnual compliance reporting';
       ];
-    },;
-    {;
-      id: 'iso27001',;
-      title: 'ISO 27001',;
-      icon: Scale,;
-      description: 'International standard for information security management',;
+    }
+    {id: 'iso27001';
+      title: 'ISO 27001';
+      icon: Scale;
+      description: 'International standard for information security management';
       details: [;
         'Information security management system (ISMS)Risk assessment and managementSecurity policy implementationContinuous improvement processesRegular certification audits';
       ];
-    },;
-    {;
-      id: 'gdpr',;
-      title: 'GDPR Compliance',;
-      icon: Globe,;
-      description: 'European Union data protection regulation compliance',;
+    }
+    {id: 'gdpr';
+      title: 'GDPR Compliance';
+      icon: Globe;
+      description: 'European Union data protection regulation compliance';
       details: [;
         'Data protection by design and defaultIndividual rights managementData processing agreementsPrivacy impact assessmentsBreach notification procedures';
       ];
-    },;
-    {;
-      id: 'hipaa',;
-      title: 'HIPAA Compliance',;
-      icon: Users,;
-      description: 'Healthcare information privacy and security standards',;
+    }
+    {id: 'hipaa';
+      title: 'HIPAA Compliance';
+      icon: Users;
+      description: 'Healthcare information privacy and security standards';
       details: [;
         'Protected health information (PHI) safeguardsBusiness associate agreementsAccess controls and audit logsWorkforce training programsIncident response procedures';
       ];
     }
-  ],;
+  ];
   const additionalCompliance = [;
-    { name: 'PCI DSS', description: 'Payment card industry data security standard' },;
-    { name: 'CCPA', description: 'California Consumer Privacy Act compliance' },;
-    { name: 'FERPA', description: 'Family Educational Rights and Privacy Act' },;
-    { name: 'FISMA', description: 'Federal Information Security Management Act' };
+    { name: 'PCI DSS', description: 'Payment card industry data security standard' }
+    { name: 'CCPA', description: 'California Consumer Privacy Act compliance' }
+    { name: 'FERPA', description: 'Family Educational Rights and Privacy Act' }
+    { name: 'FISMA', description: 'Federal Information Security Management Act' }
     { name: 'FedRAMP', description: 'Federal Risk and Authorization Management Program' }
   ];
   return (;

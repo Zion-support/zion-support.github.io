@@ -39,9 +39,9 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
           visibility: visible
         }
         .print-section {
-          position: absolute,
-          left: 0,
-          top: 0,
+          position: absolute
+          left: 0
+          top: 0
           width: 100%
         }
         .no-print {
@@ -61,12 +61,10 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
       <Button variant='outline' onClick={onBack} className='gap-2 no-print'>
         <ArrowLeft className='h-4 w-4' />        Back
       </Button>
-
       <div
         className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}
       >
         <PdfExportButton resume={resume} />
-
         <Button
           variant='outline'
           onClick={handleBrowserPrint}
@@ -75,9 +73,8 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
           <FileText className='h-4 w-4' />
           Print
         </Button>
-
         <Button variant='outline' className='gap-2'>
-          <Link className='h-4 w-4' />          Add to Profile        
+          <Link className='h-4 w-4' />          Add to Profile
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
           Add to Profile

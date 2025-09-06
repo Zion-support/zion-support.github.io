@@ -1,50 +1,50 @@
 import { GradientHeading } from './GradientHeading'
 import {
-  Server,
-  HardDrive,
-  Network,
-  Clock,
-  Recycle,
-  Truck,
+  Server
+  HardDrive
+  Network
+  Clock
+  Recycle
+  Truck
 } from 'lucide-react'
 import { Button } from './ui/button'
 const services = [
   {
-    title: 'Servers',
+    title: 'Servers'
     description:
-      'Enterprise-grade servers for any workload with 24/7 maintenance and support',
-    icon: <Server className='h-10 w-10' />,
-  },
+      'Enterprise-grade servers for any workload with 24/7 maintenance and support'
+    icon: <Server className='h-10 w-10' />
+  }
   {
-    title: 'Storage',
+    title: 'Storage'
     description:
-      'Scalable storage solutions from SSDs to large-scale enterprise storage systems',
-    icon: <HardDrive className='h-10 w-10' />,
-  },
+      'Scalable storage solutions from SSDs to large-scale enterprise storage systems'
+    icon: <HardDrive className='h-10 w-10' />
+  }
   {
-    title: 'Networking',
+    title: 'Networking'
     description:
-      'Connectivity solutions including switches, routers, and network security devices',
-    icon: <Network className='h-10 w-10' />,
-  },
+      'Connectivity solutions including switches, routers, and network security devices'
+    icon: <Network className='h-10 w-10' />
+  }
   {
-    title: '24x7x365 Support',
+    title: '24x7x365 Support'
     description:
-      'Around-the-clock technical support with rapid response times guaranteed',
-    icon: <Clock className='h-10 w-10' />,
-  },
+      'Around-the-clock technical support with rapid response times guaranteed'
+    icon: <Clock className='h-10 w-10' />
+  }
   {
-    title: 'Recycling Services',
+    title: 'Recycling Services'
     description:
-      'Sustainable disposal and recycling of IT equipment following eco-friendly practices',
-    icon: <Recycle className='h-10 w-10' />,
-  },
+      'Sustainable disposal and recycling of IT equipment following eco-friendly practices'
+    icon: <Recycle className='h-10 w-10' />
+  }
   {
-    title: 'Equipment Rentals',
+    title: 'Equipment Rentals'
     description:
-      'Flexible rental options for temporary projects and scaling requirements',
-    icon: <Truck className='h-10 w-10' />,
-  },
+      'Flexible rental options for temporary projects and scaling requirements'
+    icon: <Truck className='h-10 w-10' />
+  }
 ]
 export function GlobalServiceSection() {
   return (
@@ -57,7 +57,6 @@ export function GlobalServiceSection() {
             solutions for businesses of all sizes
           </p>
         </div>
-
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {services.map((service, index) => (
             <div
@@ -73,7 +72,6 @@ export function GlobalServiceSection() {
               </p>            </div>
           ))}
         </div>
-
         <div className='flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>            Get Your Free Commercial Proposal        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
@@ -85,7 +83,6 @@ export function GlobalServiceSection() {
               <p className="text-zion-slate-light mb-4">{service.description}</p>
           ))}
         </div>
-
         <div className='flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>        <div className="flex justify-center mt-12">
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
@@ -96,4 +93,3 @@ export function GlobalServiceSection() {
     </section>
   )
 }
-;

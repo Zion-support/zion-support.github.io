@@ -1,11 +1,10 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone } from 'lucide-react',;
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-import Button from '../components/ui/Button',;
-import { extraServices } from '../data/extra-services',;
-export default function MDMPage() {;
-  const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
+import React from 'react';
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { extraServices } from '../data/extra-services';
+export default function MDMPage() {const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
   if (!service) return null;
   return (;
     <UltraAdvancedFuturisticBackground>;
@@ -50,4 +49,3 @@ export default function MDMPage() {;
     </UltraAdvancedFuturisticBackground>;
   );
 }
-;

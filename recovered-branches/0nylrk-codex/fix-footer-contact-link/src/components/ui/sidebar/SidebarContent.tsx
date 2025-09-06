@@ -4,10 +4,9 @@ interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   children?: React.ReactNode;
 }
-
 export function SidebarContent({
-  className,
-  children,
+  className
+  children
   ...props
 }: SidebarContentProps) {
   return (

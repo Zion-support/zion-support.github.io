@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const CybersecurityTrendsFor2024AndBeyondChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const CybersecurityTrendsFor2024AndBeyondChat = () => {return (;
     <div>;
       <Head>;
         <title>CybersecurityTrendsFor2024AndBeyondChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const CybersecurityTrendsFor2024AndBeyondChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default CybersecurityTrendsFor2024AndBeyondChat;

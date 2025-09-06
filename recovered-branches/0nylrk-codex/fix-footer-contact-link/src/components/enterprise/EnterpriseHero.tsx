@@ -14,7 +14,7 @@ export function EnterpriseHero() {
               </GradientHeading>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Scale your talent acquisition with a custom-branded hiring portal,
+              Scale your talent acquisition with a custom-branded hiring portal
               dedicated talent pool, and powerful admin controls.
             </p>
             <div className="flex flex-col sm: flex-row gap-4">

@@ -9,9 +9,9 @@ interface ProfileContactProps {
   profileName: string
   profileType: 'service' | 'talent'
 export function ProfileContact({
-  email,
-  profileName,
-  profileType,
+  email
+  profileName
+  profileType
 }: ProfileContactProps) {
   const [message, setMessage] = useState('')
   const [subject, setSubject] = useState('')
@@ -24,8 +24,8 @@ export function ProfileContact({
       setIsSending(false)
       setMessage('')
       setSubject('');      toast({
-        title: 'Message Sent',
-        description: `Your message has been sent to ${profileName}.`,
+        title: 'Message Sent'
+        description: `Your message has been sent to ${profileName}.`
       })
     }, 1000)
   }
@@ -35,7 +35,6 @@ export function ProfileContact({
         <Mail className='mr-2 h-5 w-5 text-zion-cyan' />
         Contact
       </h3>
-
       {email && (
         <div className='mb-4 text-zion-slate-light'>
           <span className='block'>Email: </span>
@@ -43,14 +42,13 @@ export function ProfileContact({
             href={`mailto:${email}`}
             className='text-zion-cyan hover:underline truncate block'          >        <div className="mb-4 text-zion-slate-light">
           <span className="block">Email: </span>
-          <a 
-            href={`mailto:${email}`} 
+          <a
+            href={`mailto:${email}`}
             className="text-zion-cyan hover:underline truncate block"
             {email}
           </a>
         </div>
       )}
-
       <form onSubmit={handleSendMessage}>
         <div className='space-y-4'>
           <div>
@@ -85,8 +83,8 @@ export function ProfileContact({
             disabled={isSending}              required
             />
           </div>
-          <Button 
-            type="submit" 
+          <Button
+            type="submit"
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled = {isSending,}
           >
@@ -101,7 +99,7 @@ export function ProfileContact({
     </div>
   )
   `mailto:$ {
-  email 
+  email
 }` "
-}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>) 
+}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)
 }'"}

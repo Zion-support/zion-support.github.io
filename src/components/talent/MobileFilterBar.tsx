@@ -7,9 +7,9 @@ interface MobileFilterBarProps {
   setSearchTerm: (value: string) => void
   setIsMobileFilterOpen: (isOpen: boolean) => void
 export function MobileFilterBar({
-  searchTerm,
-  setSearchTerm,
-  setIsMobileFilterOpen,
+  searchTerm
+  setSearchTerm
+  setIsMobileFilterOpen
 }: MobileFilterBarProps) {
   return (
     <div className='lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4'>
@@ -20,7 +20,6 @@ export function MobileFilterBar({
         <Sliders className='h-4 w-4' />
         Filter Talents
       </Button>
-
       <div className='relative mt-4'>
         <label htmlFor='mobile-talent-search' className='sr-only'>
           Search talents

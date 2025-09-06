@@ -3,11 +3,11 @@ import { useForm, ControllerRenderProps } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormMessage
 } from '@/components/ui/form'
 import { Card, CardContent } from '@/components/ui/card'
 interface ReplyFormProps {
@@ -19,8 +19,8 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const form = useForm<ReplyFormValues>({
     defaultValues: {
-      content: '',
-    },
+      content: ''
+    }
   })
   const handleSubmit = async (values: ReplyFormValues) => {
     setIsSubmitting(true);    try {
@@ -39,7 +39,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
               control={form.control}
               name='content'
               render={({
-                field,
+                field
               }: {
                 field: ControllerRenderProps<ReplyFormValues, 'content'>
               }) => (                <FormItem>

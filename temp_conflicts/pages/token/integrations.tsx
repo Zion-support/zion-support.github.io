@@ -1,37 +1,32 @@
-import dynamic from 'next/dynamic',;
-import React, { useEffect, useState } from 'react',;
-import { useWallet } from '../../hooks/useWallet',;
-import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins',;
-import { CHAINS } from '../../utils/chains',;
-const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),;
-export default function TokenIntegrationsPage() {;
-  const { account, connect } = useWallet(),;
-  const [region, setRegion] = useState(''),;
-  const [stake, setStake] = useState(''),;
-  const [suggestion, setSuggestion] = useState<any>(null),;
-  const [rewards, setRewards] = useState<DepinReward[] | null>(null),;
-  const [depinsSyncing, setDepinsSyncing] = useState(false),;
-  async function syncDepin() {;
-    if (!account) {;
-      await connect(),;
+import dynamic from 'next/dynamic';
+import React, { useEffect, useState } from 'react';
+import { useWallet } from '../../hooks/useWallet';
+import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
+import { CHAINS } from '../../utils/chains';
+const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false });
+export default function TokenIntegrationsPage() {const { account, connect } = useWallet();
+  const [region, setRegion] = useState('');
+  const [stake, setStake] = useState('');
+  const [suggestion, setSuggestion] = useState<any>(null);
+  const [rewards, setRewards] = useState<DepinReward[] | null>(null);
+  const [depinsSyncing, setDepinsSyncing] = useState(false);
+  async function syncDepin() {if (!account) {;
+      await connect();
       return;
     }
-    setDepinsSyncing(true),;
-    const acts = await fetchDepinActivities(account),;
-    const r = calculateRewards(acts),;
-    setRewards(r),;
+    setDepinsSyncing(true);
+    const acts = await fetchDepinActivities(account);
+    const r = calculateRewards(acts);
+    setRewards(r);
     setDepinsSyncing(false);
   }
-;
-  async function runOperator() {;
-    const res = await fetch('/api/operator/suggest-chain', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
+  async function runOperator() {const res = await fetch('/api/operator/suggest-chain', {;
+      method: 'POST';
+      headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ region, stakeUsd: stake })});
     const data = await res.json();
     setSuggestion(data);
   }
-;
   return (;
     <div className="space-y-8">;
       <section className="space-y-2">;
@@ -95,4 +90,3 @@ export default function TokenIntegrationsPage() {;
     </div>;
   );
 }
-;

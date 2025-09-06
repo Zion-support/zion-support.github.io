@@ -22,13 +22,11 @@ interface ReviewFormValues {
   would_work_again?: boolean
   is_anonymous?: boolean
 }
-
 interface ReviewFormProps {
-  projectId: string,
-  revieweeId: string,
-  revieweeName: string,
-  onSubmit: (data: any) => Promise<boolean>, 
+  projectId: string
+  revieweeId: string
+  revieweeName: string
+  onSubmit: (data: any) => Promise<boolean>
   }
   )
 }
-;

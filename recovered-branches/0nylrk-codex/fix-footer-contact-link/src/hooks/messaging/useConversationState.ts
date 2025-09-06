@@ -11,7 +11,6 @@ export function useConversationState() {
   const [unreadCount, setUnreadCount] = useState(0);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-
   return {
     // State
     messages;
@@ -27,4 +26,3 @@ export function useConversationState() {
     isLoading;
     setIsLoading}
 }
-;

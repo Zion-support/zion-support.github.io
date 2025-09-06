@@ -1,110 +1,98 @@
-import React from 'react',;
-import SEO from '../components/SEO',;
-import Layout from '../components/layout/Layout',;
-import { motion } from 'framer-motion',;
-import {;
-  Star, Brain, Atom, Shield, Zap, TrendingUp, Globe,;
-  Rocket, Lock, Palette, Factory, Database, Cloud,;
+import React from 'react';
+import SEO from '../components/SEO';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import {Star, Brain, Atom, Shield, Zap, TrendingUp, Globe;
+  Rocket, Lock, Palette, Factory, Database, Cloud;
   Cpu, Eye, Target, Users, BarChart3;
-} from 'lucide-react',;
-import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch',;
-const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {;
-  const categories = [;
-    { name: 'AI & Marketing', icon: Brain, color: 'from-purple-500 to-pink-500' },;
-    { name: 'Quantum & Finance', icon: Atom, color: 'from-cyan-500 to-blue-500' },;
-    { name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500' },;
-    { name: 'Metaverse & AI', icon: Globe, color: 'from-green-500 to-teal-500' },;
-    { name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },;
-    { name: 'Supply Chain & AI', icon: Factory, color: 'from-yellow-500 to-orange-500' },;
-    { name: 'Quantum & Healthcare', icon: Cpu, color: 'from-violet-500 to-purple-500' },;
-    { name: 'AI & Creativity', icon: Palette, color: 'from-pink-500 to-rose-500' },;
+} from 'lucide-react';
+import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
+const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {const categories = [;
+    { name: 'AI & Marketing', icon: Brain, color: 'from-purple-500 to-pink-500' }
+    { name: 'Quantum & Finance', icon: Atom, color: 'from-cyan-500 to-blue-500' }
+    { name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500' }
+    { name: 'Metaverse & AI', icon: Globe, color: 'from-green-500 to-teal-500' }
+    { name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' }
+    { name: 'Supply Chain & AI', icon: Factory, color: 'from-yellow-500 to-orange-500' }
+    { name: 'Quantum & Healthcare', icon: Cpu, color: 'from-violet-500 to-purple-500' }
+    { name: 'AI & Creativity', icon: Palette, color: 'from-pink-500 to-rose-500' }
     { name: 'AI & Robotics', icon: Database, color: 'from-emerald-500 to-green-500' }
-  ],;
+  ];
 // Import existing services for comprehensive showcase;
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',;
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
 // Combine all services;
 const allServices = [;
-  ...innovativeMicroSaas2025ExpansionV2,;
-  ...emergingTechInnovations2025,;
+  ...innovativeMicroSaas2025ExpansionV2;
+  ...emergingTechInnovations2025;
   ...realMicroSaasServices2025;
-],;
+];
 // Service categories;
 const serviceCategories = [;
-  'All ServicesAI & Machine LearningQuantum ComputingCybersecurityHealthcare & BiotechFinance & InvestmentSupply Chain & LogisticsManufacturing & Industry 4.0',;
-  'Space TechnologyBlockchain & Web3Education & LearningLegal & ComplianceEnergy & SustainabilityAutonomous VehiclesIoT & Edge ComputingMetaverse & VR',;
+  'All ServicesAI & Machine LearningQuantum ComputingCybersecurityHealthcare & BiotechFinance & InvestmentSupply Chain & LogisticsManufacturing & Industry 4.0';
+  'Space TechnologyBlockchain & Web3Education & LearningLegal & ComplianceEnergy & SustainabilityAutonomous VehiclesIoT & Edge ComputingMetaverse & VR';
   'Neuroscience & BCI';
-],;
+];
 // Helper function to get service category;
-const getServiceCategory = (service: any) => {;
-  if (service.category) return service.category,;
-  if (service.type) return service.type,;
+const getServiceCategory = (service: any) => {if (service.category) return service.category;
+  if (service.type) return service.type;
   return 'Other';
-},;
+}
 // Helper function to get service pricing;
-const getServicePricing = (service: any) => {;
-  if (service.pricing?.starter) return service.pricing.starter,;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`,;
+const getServicePricing = (service: any) => {if (service.pricing?.starter) return service.pricing.starter;
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+  if (service.price?.monthly) return `$${service.price.monthly}/month`;
   return 'Contact for pricing';
-},;
+}
 // Helper function to get service features;
-const getServiceFeatures = (service: any) => {;
-  if (service.features) return service.features,;
-  if (service.keyFeatures) return service.keyFeatures,;
+const getServiceFeatures = (service: any) => {if (service.features) return service.features;
+  if (service.keyFeatures) return service.keyFeatures;
   return [];
-},;
+}
 // Helper function to get service description;
-const getServiceDescription = (service: any) => {;
-  if (service.description) return service.description,;
-  if (service.tagline) return service.tagline,;
+const getServiceDescription = (service: any) => {if (service.description) return service.description;
+  if (service.tagline) return service.tagline;
   return '';
-},;
-export default function Comprehensive2025InnovativeServicesShowcase() {;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('All Services'),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity'),;
+}
+export default function Comprehensive2025InnovativeServicesShowcase() {const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All Services');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   // Filter and sort services;
   const filteredServices = allServices;
     .filter(service => {;
-      const serviceName = (service as any).title || (service as any).name || '',;
-      const matchesSearch = serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase()) || false,;
-      const matchesCategory = selectedCategory === 'All Services' ||;
-                             getServiceCategory(service).includes(selectedCategory.split(' ')[0]),;
+      const serviceName = (service as any).title |(service as any).name |'';
+      const matchesSearch = serviceName.toLowerCase().includes(searchTerm.toLowerCase()) |;
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |;
+                           (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase()) |false;
+      const matchesCategory = selectedCategory === 'All Services' |;
+                             getServiceCategory(service).includes(selectedCategory.split(' ')[0]);
       return matchesSearch && matchesCategory;
     });
-    .sort((a, b) => {;
-      const aName = (a as any).title || (a as any).name || '',;
-      const bName = (b as any).title || (b as any).name || '',;
+    .sort((a, b) => {const aName = (a as any).title |(a as any).name |'';
+      const bName = (b as any).title |(b as any).name |'';
       switch (sortBy) {;
         case 'name':;
-          return aName.localeCompare(bName),;
+          return aName.localeCompare(bName);
         case 'price':;
-          return ((a as any).price?.monthly || 0) - ((b as any).price?.monthly || 0),;
+          return ((a as any).price?.monthly |0) - ((b as any).price?.monthly |0);
         case 'rating':;
-          return ((b as any).rating || 0) - ((a as any).rating || 0),;
+          return ((b as any).rating |0) - ((a as any).rating |0);
         case 'popularity':;
-        default: return ((b as any).customers || 0) - ((a as any).customers || 0);
+        default: return ((b as any).customers |0) - ((a as any).customers |0);
       }
-    }),;
-  const containerVariants = {;
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
+    });
+  const containerVariants = {hidden: { opacity: 0 }
+    visible: {opacity: 1;
       transition: {;
         staggerChildren: 0.1;
       }
     }
-  const getCategoryIcon = (category: string) => {;
-    const cat = categories.find(c => c.name === category),;
+  const getCategoryIcon = (category: string) => {const cat = categories.find(c => c.name === category);
     return cat ? cat.icon : Star;
-  },;
-  const getCategoryColor = (category: string) => {;
-    const cat = categories.find(c => c.name === category),;
+  }
+  const getCategoryColor = (category: string) => {const cat = categories.find(c => c.name === category);
     return cat ? cat.color : 'from-gray-500 to-gray-600';
-  },;
+  }
   return (;
     <Layout>;
       <SEO;
@@ -197,8 +185,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
             </p>;
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {categories.map((category, index) => {;
-              const IconComponent = category.icon,;
+            {categories.map((category, index) => {const IconComponent = category.icon;
               return (;
                 <motion.div;
                   key={category.name}
@@ -243,8 +230,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
             </p>;
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {innovative2025MicroSaasBatch.filter(service => service.popular).map((service, index) => {;
-              const IconComponent = getCategoryIcon(service.category),;
+            {innovative2025MicroSaasBatch.filter(service => service.popular).map((service, index) => {const IconComponent = getCategoryIcon(service.category);
               return (;
                 <motion.div;
                   key={service.id}
@@ -261,7 +247,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
                         Popular;
                       </div>;
                     )}
-;
                     <div className="text-center mb-6">;
                       <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br ${getCategoryColor(service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-4xl`}>;
                         {service.icon}
@@ -273,7 +258,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
                       </div>;
                     </div>;
                     <span className="text-gray-300 text-sm">;
-                      {(service as any).rating || 0} ({(service as any).reviews || 0} reviews);
+                      {(service as any).rating |0} ({(service as any).reviews |0} reviews);
                     </span>;
                   </div>;
                 </div>;
@@ -345,8 +330,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
             </p>;
           </motion.div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {innovative2025MicroSaasBatch.map((service, index) => {;
-              const IconComponent = getCategoryIcon(service.category),;
+            {innovative2025MicroSaasBatch.map((service, index) => {const IconComponent = getCategoryIcon(service.category);
               return (;
                 <motion.div;
                   key={service.id}
@@ -419,5 +403,5 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
       </section>;
     </Layout>;
   );
-};
+}
 export default Comprehensive2025InnovativeServicesShowcase;

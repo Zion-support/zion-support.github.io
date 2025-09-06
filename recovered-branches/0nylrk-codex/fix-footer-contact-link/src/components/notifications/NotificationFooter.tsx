@@ -4,17 +4,14 @@ import { useNavigate } from "react-router-dom";
 interface NotificationFooterProps {
   onClose: () => void;
 }
-
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({
-  onClose,
+  onClose
 }) => {
   const navigate = useNavigate();
-
   const handleViewAll = () => {
     onClose();
     navigate("/notifications");
-  };
-
+  }
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">
       <Button
@@ -27,4 +24,4 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
       </Button>
     </div>
   );
-};
+}

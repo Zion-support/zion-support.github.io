@@ -1,12 +1,11 @@
           if (index < currentStep) status = "complete"
           if (index === currentStep) status = "current"
 interface StepProps {
-  status: "incomplete" | "current" | "complete",
-  label: string,
+  status: "incomplete" | "current" | "complete"
+  label: string
   description?: string
   className?: string
 }
-
 export function Step({
   status
   label
@@ -40,12 +39,11 @@ export function Step({
           </span>
         )}
       </div>
-
       <div className="ml-4 min-w-0">
         <h3
           className={cn("text-sm font-medium", {
             "text-zion-slate-light": status === "incomplete"
-            "text-white": status === "current" || status === "complete"})}
+            "text-white": status === "current" |status === "complete"})}
         >
           {label}
         </h3>
@@ -56,13 +54,11 @@ export function Step({
     </li>
   )
 }
-
 interface StepsProps {
-  currentStep: number,
+  currentStep: number
   className?: string
   children: React.ReactNode
 }
-
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children)
   return (
@@ -70,14 +66,13 @@ export function Steps({ currentStep, className, children }: StepsProps) {
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
           if (!React.isValidElement(child)) return null
-          let status: "incomplete" | "current" | "complete" = "incomplete",
+          let status: "incomplete" | "current" | "complete" = "incomplete"
           if (index < currentStep) status = "complete"
           if (index === currentStep) status = "current"
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
       </ol>
-      
       <div className="hidden md:flex md:mt-4">
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
@@ -89,5 +84,5 @@ export function Steps({ currentStep, className, children }: StepsProps) {
       </div>
     </div>
   )
-}/> </div> </div> </div>) 
+}/> </div> </div> </div>)
 }"}

@@ -10,7 +10,6 @@ export function useTalentProfile(id: string | undefined) {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
-
   useEffect(() => {
     const fetchProfile = async () => {
       if (!id) {
@@ -18,16 +17,13 @@ export function useTalentProfile(id: string | undefined) {
         setIsLoading(false);
         return
       }
-
       setIsLoading(true);
       setError(null);
-      
       try {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
         setTimeout(() => {
           const foundProfile = MOCK_TALENTS.find(talent => talent.id === id);
-          
           if (foundProfile) {
             setProfile(convertProfileToTalentProfile(foundProfile))
           } else {
@@ -50,10 +46,8 @@ export function useTalentProfile(id: string | undefined) {
         setError("Failed to load profile data");
         setIsLoading(false)
       }
-    };
-
+    }
     fetchProfile()
   }, [id]);
-
   return { profile, isLoading, error, mockProfileData }
 }

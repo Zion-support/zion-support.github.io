@@ -15,19 +15,19 @@ export function SocialShareSection() {
   // Social sharing functions
   const shareToTwitter = () => {
     window.open(
-      `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`,
+      `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
     )
   }
   const shareToFacebook = () => {
     window.open(
-      `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
+      `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`
       '_blank'
     )
   }
   const shareToLinkedIn = () => {
     window.open(
-      `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+      `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`
       '_blank'
     )
   }
@@ -35,43 +35,43 @@ export function SocialShareSection() {
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => {        toast({
-          title: 'Link Copied!',
-          description: 'The link has been copied to your clipboard',
+          title: 'Link Copied!'
+          description: 'The link has been copied to your clipboard'
         })
       })
       .catch((,) => {
         toast({
-          title: t('errors.failed_to_copy'),
-          description: 'Please try again or copy the URL manually',
-          variant: 'destructive',
+          title: t('errors.failed_to_copy')
+          description: 'Please try again or copy the URL manually'
+          variant: 'destructive'
         })
       })
   }
   const shareLinks = [
     {
-      name: 'Twitter',
-      icon: <Twitter className='h-5 w-5' aria-hidden='true' />,
-      color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/80',
-      onClick: shareToTwitter,
-    },
+      name: 'Twitter'
+      icon: <Twitter className='h-5 w-5' aria-hidden='true' />
+      color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/80'
+      onClick: shareToTwitter
+    }
     {
-      name: 'Facebook',
-      icon: <Facebook className='h-5 w-5' aria-hidden='true' />,
-      color: 'bg-[#4267B2] hover:bg-[#4267B2]/80',
-      onClick: shareToFacebook,
-    },
+      name: 'Facebook'
+      icon: <Facebook className='h-5 w-5' aria-hidden='true' />
+      color: 'bg-[#4267B2] hover:bg-[#4267B2]/80'
+      onClick: shareToFacebook
+    }
     {
-      name: 'LinkedIn',
-      icon: <Linkedin className='h-5 w-5' aria-hidden='true' />,
-      color: 'bg-[#0077B5] hover:bg-[#0077B5]/80',
-      onClick: shareToLinkedIn,
-    },
+      name: 'LinkedIn'
+      icon: <Linkedin className='h-5 w-5' aria-hidden='true' />
+      color: 'bg-[#0077B5] hover:bg-[#0077B5]/80'
+      onClick: shareToLinkedIn
+    }
     {
-      name: 'Copy Link',
-      icon: <Link className='h-5 w-5' aria-hidden='true' />,
-      color: 'bg-zion-blue-dark hover:bg-zion-blue-dark/80',
-      onClick: copyLinkToClipboard,
-    },
+      name: 'Copy Link'
+      icon: <Link className='h-5 w-5' aria-hidden='true' />
+      color: 'bg-zion-blue-dark hover:bg-zion-blue-dark/80'
+      onClick: copyLinkToClipboard
+    }
   ]
   return (
     <section className='py-12 bg-zion-blue'>
@@ -110,7 +110,6 @@ export function SocialShareSection() {
   title: t ('errors.failed to copy')
 })
 }
-}</div> </div> </div> </section>) 
+}</div> </div> </div> </section>)
 }'"
 }
-;

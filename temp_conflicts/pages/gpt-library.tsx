@@ -1,7 +1,6 @@
-import React from 'react',;
+import React from 'react';
 import Head from 'next/head';
-export default function GPTLibraryPage() {;
-  return (;
+export default function GPTLibraryPage() {return (;
     <>;
       <Head>;
         <title>GPT Library - Zion Tech Group</title>;
@@ -19,4 +18,3 @@ export default function GPTLibraryPage() {;
     </>;
   );
 }
-;

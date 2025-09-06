@@ -9,7 +9,7 @@ import { SEO } from './SEO'
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}
-const resolvePath = (path: string): string => pathMap[path] ?? path,
+const resolvePath = (path: string): string => pathMap[path] ?? path
 export const SitemapPage: React.FC = () => {
   return (
     <>
@@ -21,7 +21,6 @@ export const SitemapPage: React.FC = () => {
       />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
@@ -43,15 +42,14 @@ export const SitemapPage: React.FC = () => {
               }
             </ul>
           </div>
-          
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires talent or creator account</p>
             <ul className="space-y-2">
               {completeSitemap
-                .filter(route => 
-                  route.requiredRoles?.includes('jobSeeker') || 
+                .filter(route =>
+                  route.requiredRoles?.includes('jobSeeker') |
                   route.requiredRoles?.includes('creator')
                 )
                 .map(route => (
@@ -68,15 +66,14 @@ export const SitemapPage: React.FC = () => {
               }
             </ul>
           </div>
-          
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires employer or buyer account</p>
             <ul className="space-y-2">
               {completeSitemap
-                .filter(route => 
-                  route.requiredRoles?.includes('employer') || 
+                .filter(route =>
+                  route.requiredRoles?.includes('employer') |
                   route.requiredRoles?.includes('buyer')
                 )
                 .map(route => (
@@ -93,16 +90,15 @@ export const SitemapPage: React.FC = () => {
               }
             </ul>
           </div>
-          
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires any account type</p>
             <ul className="space-y-2">
               {completeSitemap
-                .filter(route => 
-                  route.requiredAuth && 
-                  (!route.requiredRoles || route.requiredRoles.length === 0)
+                .filter(route =>
+                  route.requiredAuth &&
+                  (!route.requiredRoles |route.requiredRoles.length === 0)
                 )
                 .map(route => (
                   <li key={route.path}>
@@ -118,14 +114,13 @@ export const SitemapPage: React.FC = () => {
               }
             </ul>
           </div>
-          
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires admin account</p>
             <ul className="space-y-2">
               {completeSitemap
-                .filter(route => 
+                .filter(route =>
                   route.requiredRoles?.includes('admin')
                 )
                 .map(route => (
@@ -142,7 +137,6 @@ export const SitemapPage: React.FC = () => {
               }
             </ul>
           </div>
-          
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
@@ -163,47 +157,46 @@ export const SitemapPage: React.FC = () => {
     </>
   )
 }
-'"},
-
+'"}
   const sitemapData = [{
-      title: 'Main Pages',
+      title: 'Main Pages'
       links: [
-        { name: 'Home', url: '/' },
-        { name: 'About', url: '/about' },
-        { name: 'Services', url: '/services' },
-        { name: 'Contact', url: '/contact' },
-        { name: 'Blog', url: '/blog' },
-        { name: 'Careers', url: '/careers' },
+        { name: 'Home', url: '/' }
+        { name: 'About', url: '/about' }
+        { name: 'Services', url: '/services' }
+        { name: 'Contact', url: '/contact' }
+        { name: 'Blog', url: '/blog' }
+        { name: 'Careers', url: '/careers' }
       ]
-},
+}
     {
-      title: 'Services',
-      links: [{ name: 'AI Services', url: '/services / ai' },
-        { name: 'IT Services', url: '/services / it' },
-        { name: 'Cloud Solutions', url: '/services / cloud' },
-        { name: 'Cybersecurity', url: '/services / cybersecurity' },
-        { name: 'Digital Transformation', url: '/services / digital - transformation' },
+      title: 'Services'
+      links: [{ name: 'AI Services', url: '/services / ai' }
+        { name: 'IT Services', url: '/services / it' }
+        { name: 'Cloud Solutions', url: '/services / cloud' }
+        { name: 'Cybersecurity', url: '/services / cybersecurity' }
+        { name: 'Digital Transformation', url: '/services / digital - transformation' }
       ]
-},
+}
     {
-      title: 'Solutions',
-      links: [{ name: 'Enterprise', url: '/solutions / enterprise' },
-        { name: 'Healthcare', url: '/solutions / healthcare' },
-        { name: 'Financial Services', url: '/solutions / financial' },
-        { name: 'Manufacturing', url: '/solutions / manufacturing' },
+      title: 'Solutions'
+      links: [{ name: 'Enterprise', url: '/solutions / enterprise' }
+        { name: 'Healthcare', url: '/solutions / healthcare' }
+        { name: 'Financial Services', url: '/solutions / financial' }
+        { name: 'Manufacturing', url: '/solutions / manufacturing' }
       ]
-},
+}
     {
-      title: 'Resources',
-      links: [{ name: 'Case Studies', url: '/case - studies' },
-        { name: 'White Papers', url: '/white - papers' },        { name: 'Webinars', url: '/webinars' },
-        { name: 'Documentation', url: '/docs' },
-        { name: 'API Reference', url: '/api' },
+      title: 'Resources'
+      links: [{ name: 'Case Studies', url: '/case - studies' }
+        { name: 'White Papers', url: '/white - papers' },        { name: 'Webinars', url: '/webinars' }
+        { name: 'Documentation', url: '/docs' }
+        { name: 'API Reference', url: '/api' }
       ]}
         { name: 'Case Studies', url: '/case-studies' },'
         { name: 'White Papers', url: '/white-papers' },'
         { name: 'Webinars', url: '/webinars' },'
-        { name: 'Documentation', url: '/docs' },'        { name: 'API Reference', url: '/api' },
+        { name: 'Documentation', url: '/docs' },'        { name: 'API Reference', url: '/api' }
       ]}
   ]
   return (<div className="min - h-screen bg-slate - 900 text-white py-16">

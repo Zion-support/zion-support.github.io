@@ -5,42 +5,41 @@ export default function ITSupportPage() {
   const benefits = [
     {import React from "react"
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
-
 import React from "react"
 export default function ITSupportPage() {
   const benefits = [
     {
-      title: '24/7 Assistance',
+      title: '24/7 Assistance'
       description:
-        'Our experts are available around the clock to keep your systems running.',
-      icon: <Clock className='h-8 w-8' />,
-    },
+        'Our experts are available around the clock to keep your systems running.'
+      icon: <Clock className='h-8 w-8' />
+    }
     {
-      title: 'Certified Professionals',
+      title: 'Certified Professionals'
       description:
-        'Work with seasoned technicians experienced in modern IT infrastructures.',
-      icon: <ShieldCheck className='h-8 w-8' />,
-    },
+        'Work with seasoned technicians experienced in modern IT infrastructures.'
+      icon: <ShieldCheck className='h-8 w-8' />
+    }
     {
-      title: 'Multi-Channel Support',
+      title: 'Multi-Channel Support'
       description:
-        'Get help via phone, chat, or onsite visits tailored to your needs.',
-      icon: <Phone className='h-8 w-8' />,
-    },
+        'Get help via phone, chat, or onsite visits tailored to your needs.'
+      icon: <Phone className='h-8 w-8' />
+    }
   ]
   const testimonials = [
     {
-      name: 'Lisa Wong',
-      role: 'Operations Manager',
-      text: "Zion's support team resolved our network outage within hours and saved us from a major downtime.",
-      avatar: '/placeholder.svg',
-    },
+      name: 'Lisa Wong'
+      role: 'Operations Manager'
+      text: "Zion's support team resolved our network outage within hours and saved us from a major downtime."
+      avatar: '/placeholder.svg'
+    }
     {
-      name: 'Carlos Diaz',
-      role: 'IT Lead',
-      text: 'Professional and responsive. Their technicians feel like an extension of our own team.',
-      avatar: '/placeholder.svg',
-    },
+      name: 'Carlos Diaz'
+      role: 'IT Lead'
+      text: 'Professional and responsive. Their technicians feel like an extension of our own team.'
+      avatar: '/placeholder.svg'
+    }
   ]
     return (
     <ServiceLandingTemplate
@@ -60,4 +59,3 @@ export default function ITSupportPage() {
     />
   )
 }
-;

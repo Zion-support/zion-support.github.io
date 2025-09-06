@@ -23,7 +23,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/reviews"
         element={
@@ -32,7 +31,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/whitelabel"
         element={
@@ -41,7 +39,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/partners"
         element={
@@ -50,7 +47,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/app-metadata"
         element={
@@ -59,7 +55,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/support-requests"
         element={
@@ -68,7 +63,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/fraud-detection"
         element={
@@ -77,7 +71,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/tokens"
         element={
@@ -86,7 +79,6 @@ const AdminRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
       <Route
         path="/admin/integrations"
         element={
@@ -97,6 +89,5 @@ const AdminRoutes = () => {
       />
     </Routes>
   )
-};
-
+}
 export default AdminRoutes;

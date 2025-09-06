@@ -5,10 +5,9 @@ interface SidebarGroupContentProps
   className?: string;
   children?: React.ReactNode;
 }
-
 export function SidebarGroupContent({
-  className,
-  children,
+  className
+  children
   ...props
 }: SidebarGroupContentProps) {
   return (

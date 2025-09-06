@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const NetworkSecurityChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const NetworkSecurityChat = () => {return (;
     <div>;
       <Head>;
         <title>NetworkSecurityChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const NetworkSecurityChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default NetworkSecurityChat;

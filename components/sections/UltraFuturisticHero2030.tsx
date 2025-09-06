@@ -2,83 +2,78 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
-  ArrowRight,
-  Zap,
-  Brain,
-  Atom,
-  Rocket,
-  Star,
-  TrendingUp,
-  Shield,
-  Globe,
-  Cpu,
-  Sparkles,
-  Play,
-  CheckCircle,
-  Award,
-  Users,
-  Clock,
-  Phone,
-  Mail,;} from 'lucide-react';import {
-  ArrowRight, Zap, Brain, Atom, Rocket, Star, 
+  ArrowRight
+  Zap
+  Brain
+  Atom
+  Rocket
+  Star
+  TrendingUp
+  Shield
+  Globe
+  Cpu
+  Sparkles
+  Play
+  CheckCircle
+  Award
+  Users
+  Clock
+  Phone
+  Mail;} from 'lucide-react';import {
+  ArrowRight, Zap, Brain, Atom, Rocket, Star
   TrendingUp, Shield, Globe, Cpu, Sparkles;
   Play, CheckCircle, Award, Users, Clock, Phone, Mail
-
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-};
-
+}
 const features = [
   {
-    icon: Brain,
-    title: 'AI Consciousness',
-    description: 'Develop genuine AI consciousness and emotional intelligence',
-  },
+    icon: Brain
+    title: 'AI Consciousness'
+    description: 'Develop genuine AI consciousness and emotional intelligence'
+  }
   {
-    icon: Atom,
-    title: 'Quantum Computing',
+    icon: Atom
+    title: 'Quantum Computing'
     description: 'Leverage quantum algorithms for exponential performance',  {
-    icon: Atom,
-    title: 'Quantum Computing',
+    icon: Atom
+    title: 'Quantum Computing'
     description: 'Leverage quantum algorithms for exponential performance'
-  };
+  }
   {
-    icon: Rocket,
-    title: 'Space Technology',
+    icon: Rocket
+    title: 'Space Technology'
     description: 'Automated space exploration and resource utilization'
-  };
+  }
   {
-    icon: Shield,
-    title: 'Quantum Security',
-    description: 'Unbreakable encryption with quantum key distribution',
-  },
+    icon: Shield
+    title: 'Quantum Security'
+    description: 'Unbreakable encryption with quantum key distribution'
+  }
   {
-    icon: Rocket,
-    title: 'Space Technology',
-    description: 'Automated space exploration and resource utilization',
-  },
+    icon: Rocket
+    title: 'Space Technology'
+    description: 'Automated space exploration and resource utilization'
+  }
   {
-    icon: Shield,
-    title: 'Quantum Security',
-    description: 'Unbreakable encryption with quantum key distribution',
+    icon: Shield
+    title: 'Quantum Security'
+    description: 'Unbreakable encryption with quantum key distribution'
   },];    description: 'Unbreakable encryption with quantum key distribution'
   }
 ];
-
 const stats = [
-  { number: '500+', label: 'Active Clients', icon: Users },
-  { number: '99.9%', label: 'Uptime SLA', icon: Clock },
-  { number: '24/7', label: 'Support', icon: Shield },
+  { number: '500+', label: 'Active Clients', icon: Users }
+  { number: '99.9%', label: 'Uptime SLA', icon: Clock }
+  { number: '24/7', label: 'Support', icon: Shield }
   { number: '2030', label: 'Future Ready', icon: Star },];
-
 export default function UltraFuturisticHero2030() {
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>  { number: '2030', label: 'Future Ready', icon: Star }
 ];
-
 export default function UltraFuturisticHero2030() {
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
@@ -88,14 +83,12 @@ export default function UltraFuturisticHero2030() {
         <div className='absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl'></div>
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl'></div>
       </div>
-
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}      {/* Background Glow Effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
         <motion.div
@@ -115,7 +108,6 @@ export default function UltraFuturisticHero2030() {
             <Sparkles className="w-4 h-4 mr-2" />
             Welcome to 2030 - The Future is Now
           </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -128,7 +120,6 @@ export default function UltraFuturisticHero2030() {
               Zion Tech Group
             </span>
           </motion.h1>
-
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -152,21 +143,19 @@ export default function UltraFuturisticHero2030() {
             <span className="text-purple-400 font-semibold">AI Consciousness</span>,{' '}
             <span className="text-cyan-400 font-semibold">Quantum Computing</span>, and{' '}
             <span className="text-emerald-400 font-semibold">Space Technology</span>
-
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             className='text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto'
           >
-            Transform your business with cutting-edge micro SAAS solutions,
+            Transform your business with cutting-edge micro SAAS solutions
             enterprise IT services, and revolutionary AI platforms that define
             the next decade of technological innovation.          </motion.p>            className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto"
           >
             Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation.
           </motion.p>
         </motion.div>
-
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -184,7 +173,6 @@ export default function UltraFuturisticHero2030() {
             </span>
             <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
           </Link>
-
           <Link
             href='/services'
             className='group px-8 py-4 border-2 border-purple-500/30 text-purple-300 font-semibold rounded-2xl text-lg hover:bg-purple-500/10 hover:border-purple-500/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
@@ -202,7 +190,6 @@ export default function UltraFuturisticHero2030() {
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
-
           <Link
             href="/services"
             className="group px-8 py-4 border-2 border-purple-500/30 text-purple-300 font-semibold rounded-2xl text-lg hover:bg-purple-500/10 hover:border-purple-500/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
@@ -213,7 +200,6 @@ export default function UltraFuturisticHero2030() {
             </span>
           </Link>
         </motion.div>
-
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -244,7 +230,6 @@ export default function UltraFuturisticHero2030() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -275,7 +260,6 @@ export default function UltraFuturisticHero2030() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Contact Information */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -320,7 +304,6 @@ export default function UltraFuturisticHero2030() {
             </div>
           </div>
         </motion.div>
-
         {/* Trust Indicators */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -360,41 +343,40 @@ export default function UltraFuturisticHero2030() {
           </div>
         </motion.div>
       </div>
-
       {/* Floating Elements */}
       <div className='absolute inset-0 pointer-events-none'>
         <motion.div
           className='absolute top-20 right-20 w-2 h-2 bg-purple-400 rounded-full'
           animate={{
-            scale: [1, 2, 1],
-            opacity: [0.5, 1, 0.5],
+            scale: [1, 2, 1]
+            opacity: [0.5, 1, 0.5]
           }}
           transition={{
-            duration: 3,
-            repeat: Infinity,
+            duration: 3
+            repeat: Infinity
             ease: 'easeInOut',          }}
         />
         <motion.div
           className='absolute bottom-32 left-32 w-3 h-3 bg-cyan-400 rounded-full'
           animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.3, 0.8, 0.3],
+            scale: [1, 1.5, 1]
+            opacity: [0.3, 0.8, 0.3]
           }}
           transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut',
+            duration: 4
+            repeat: Infinity
+            ease: 'easeInOut'
           }}
         />
         <motion.div
           className='absolute top-1/2 right-1/4 w-1 h-1 bg-emerald-400 rounded-full'
           animate={{
-            scale: [1, 3, 1],
-            opacity: [0.2, 0.6, 0.2],
+            scale: [1, 3, 1]
+            opacity: [0.2, 0.6, 0.2]
           }}
           transition={{
-            duration: 5,
-            repeat: Infinity,
+            duration: 5
+            repeat: Infinity
             ease: 'easeInOut',          }}
         />
       </div>

@@ -3,7 +3,7 @@ import Head from 'next/head';
 export default function InstagramRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.location.replace('https: //instagram.com/ziontechgroup'),
+      window.location.replace('https: //instagram.com/ziontechgroup')
     }
   }, []);
   return (

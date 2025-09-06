@@ -8,12 +8,11 @@ export interface MessageTabProps {
   proposalLink: string;
   setProposalLink: (link: string) => void;
 }
-
 export function MessageTab({
-  message,
-  setMessage,
-  proposalLink,
-  setProposalLink,
+  message
+  setMessage
+  proposalLink
+  setProposalLink
 }: MessageTabProps) {
   return (
     <div className="space-y-4">
@@ -29,7 +28,6 @@ export function MessageTab({
           placeholder="Write a message to the job poster..."
         />
       </div>
-
       <div>
         <Label htmlFor="proposalLink" className="text-white">
           Link to Proposal/Portfolio (Optional)

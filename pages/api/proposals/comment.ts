@@ -10,10 +10,9 @@ async function ensure() {
     await fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 });
   }
 }
-
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {
   await ensure();
   if (req.method === "GET") {
@@ -21,16 +20,16 @@ export default async function handler(
     return res.status(200).json(data);
   }
   if (req.method === "POST") {
-    const body = req.body || {};
+    const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
     const comment = {
-      id: Date.now().toString(),
-      proposalId: body.proposalId,
-      region: body.region || "Global",
-      author: body.author || "anon",
-      text: body.text || "",
-      createdAt: new Date().toISOString(),
-    };
+      id: Date.now().toString()
+      proposalId: body.proposalId
+      region: body.region |"Global"
+      author: body.author |"anon"
+      text: body.text |""
+      createdAt: new Date().toISOString()
+    }
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);

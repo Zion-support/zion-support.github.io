@@ -10,29 +10,22 @@ export const useLoadMilestones = (projectId?: string) => {
   const [activities, setActivities] = useState<Record<string, MilestoneActivity[]>>({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
   const fetchMilestones = async () => {
     if (!projectId) {
       setIsLoading(false);
       return
     }
-    
     try {
       setIsLoading(true);
-      
       const { data: milestonesData, error: milestonesError } = await supabase
         .from('project_milestones')
         .select('*')
         .eq('project_id', projectId)
         .order('due_date', { ascending: true });
-      
       if (milestonesError) throw milestonesError;
-      
       setMilestones(milestonesData);
-      
       // Fetch activities for each milestone
-      const activitiesMap: Record<string, MilestoneActivity[]> = {};
-      
+      const activitiesMap: Record<string, MilestoneActivity[]> = {}
       for (const milestone of milestonesData) {
         const { data: activitiesData, error: activitiesError } = await supabase
           .from('milestone_activities')
@@ -42,30 +35,25 @@ export const useLoadMilestones = (projectId?: string) => {
           `)
           .eq('milestone_id', milestone.id)
           .order('created_at', { ascending: false });
-          
         if (activitiesError) throw activitiesError;
-        
-        activitiesMap[milestone.id] = activitiesData || []
+        activitiesMap[milestone.id] = activitiesData |[]
       }
-      
       setActivities(activitiesMap);
       setError(null)
     } catch (err: any) {
       console.error("Error fetching milestones:", err);
-      setError("Failed to fetch milestones: " + err.message),
+      setError("Failed to fetch milestones: " + err.message)
       toast.error("Failed to fetch milestones")
     } finally {
       setIsLoading(false)
     }
-  };
-
+  }
   // Fetch milestones when component mounts or projectId changes
   useEffect(() => {
     if (projectId) {
       fetchMilestones()
     }
   }, [projectId]);
-
   return {
     milestones;
     activities;
@@ -73,4 +61,4 @@ export const useLoadMilestones = (projectId?: string) => {
     error;
     refetch: fetchMilestones
   }
-};
+}

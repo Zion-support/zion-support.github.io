@@ -11,7 +11,6 @@ const BusinessIntelligenceChat: NextPage = () => {
           content="BusinessIntelligenceChat blog post"
         />{" "}
       </Head>
-
       <main>
         <h1>BusinessIntelligenceChat</h1>
         <p>Blog content coming soon...</p>
@@ -19,6 +18,5 @@ const BusinessIntelligenceChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default BusinessIntelligenceChat;

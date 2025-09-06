@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const SystemAdministrationChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const SystemAdministrationChat = () => {return (;
     <div>;
       <Head>;
         <title>SystemAdministrationChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const SystemAdministrationChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default SystemAdministrationChat;

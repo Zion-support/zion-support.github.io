@@ -12,16 +12,15 @@ import {MobileJobPost} from "./pages/MobileJobPost";
 import {useAuth} from "@/hooks/useAuth";
 export function MobileApp() {
   const { isAuthenticated } = useAuth();
-  
   return (
     <MobileThemeProvider>
       <Routes>
         <Route path="/onboarding" element={<MobileOnboarding />} />
-        <Route 
-          path="/" 
+        <Route
+          path="/"
           element={
             isAuthenticated ? <MobileHome /> : <Navigate to="/onboarding" />
-          } 
+          }
         />
         <Route path="/browse" element={<MobileBrowse />} />
         <Route path="/projects" element={<MobileProjects />} />

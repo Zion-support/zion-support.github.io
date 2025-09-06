@@ -6,7 +6,7 @@ type Provider = 'google' | 'github' | 'facebook' | 'credentials'
 interface AuthButtonsProps {
   providers?: Provider[]
 export function AuthButtons({
-  providers = ['google', 'github', 'facebook', 'credentials'],
+  providers = ['google', 'github', 'facebook', 'credentials']
 }: AuthButtonsProps) {
   const [loadingProvider, setLoadingProvider] = useState<string | null>(null)
   const handleSignIn = async (provider: Provider) => {
@@ -106,4 +106,3 @@ export function AuthButtons({
     </div>
   )
 }
-;

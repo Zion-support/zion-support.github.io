@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const DataPipelineEngineeringChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const DataPipelineEngineeringChat = () => {return (;
     <div>;
       <Head>;
         <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const DataPipelineEngineeringChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default DataPipelineEngineeringChat;

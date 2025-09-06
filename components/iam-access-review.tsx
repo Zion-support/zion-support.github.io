@@ -10,7 +10,6 @@ export default function IAMAccessReviewPage() {
   );  if (!service) return null;export default function IAMAccessReviewPage() {
   const service = extraServices.find(s => s.link.endsWith('/iam-access-review'));
   if (!service) return null;
-
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -97,5 +96,3 @@ export default function IAMAccessReviewPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
-
-;

@@ -11,4 +11,4 @@ export const formatDate = (dateString: string): string => {
   } catch (e) {
     return dateString
   }
-};
+}

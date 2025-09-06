@@ -6,17 +6,16 @@ import {Filter, X, Star} from "lucide-react";
 import {FilterOptions} from "@/types/search";
 interface FilterSidebarProps {
   filters: {
-    selectedProductTypes: string[],
-    selectedLocations: string[],
-    selectedAvailability: string[],
+    selectedProductTypes: string[]
+    selectedLocations: string[]
+    selectedAvailability: string[]
     selectedRating: number | null
-  };
-  filterOptions: FilterOptions,
-  onFilterChange: (filterType: string, value: string) => void,
-  onRatingChange: (rating: number | null) => void,
+  }
+  filterOptions: FilterOptions
+  onFilterChange: (filterType: string, value: string) => void
+  onRatingChange: (rating: number | null) => void
   onClearFilters: () => void
 }
-
 export function FilterSidebar({
   filters;
   filterOptions;
@@ -30,8 +29,8 @@ export function FilterSidebar({
         <h3 className="text-lg font-medium text-white flex items-center">
           <Filter className="mr-2 h-5 w-5" /> Filters
         </h3>
-        <Button 
-          variant="outline" 
+        <Button
+          variant="outline"
           size="sm"
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           onClick={onClearFilters}
@@ -39,7 +38,6 @@ export function FilterSidebar({
           Clear All
         </Button>
       </div>
-      
       {/* Product Type Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -48,13 +46,13 @@ export function FilterSidebar({
         <div className="space-y-2">
           {filterOptions.productTypes.map((type) => (
             <div key={type.value} className="flex items-center space-x-2">
-              <Checkbox 
-                id={`type-${type.value}`} 
+              <Checkbox
+                id={`type-${type.value}`}
                 checked={filters.selectedProductTypes.includes(type.value)}
                 onCheckedChange={() => onFilterChange('productTypes', type.value)}
                 className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
-              <label 
+              <label
                 htmlFor={`type-${type.value}`}
                 className="text-sm text-zion-slate-light cursor-pointer hover:text-white"
               >
@@ -64,7 +62,6 @@ export function FilterSidebar({
           ))}
         </div>
       </div>
-      
       {/* Location Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -73,13 +70,13 @@ export function FilterSidebar({
         <div className="space-y-2 max-h-40 overflow-y-auto pr-2">
           {filterOptions.locations.map((location) => (
             <div key={location.value} className="flex items-center space-x-2">
-              <Checkbox 
-                id={`location-${location.value}`} 
+              <Checkbox
+                id={`location-${location.value}`}
                 checked={filters.selectedLocations.includes(location.value)}
                 onCheckedChange={() => onFilterChange('locations', location.value)}
                 className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
-              <label 
+              <label
                 htmlFor={`location-${location.value}`}
                 className="text-sm text-zion-slate-light cursor-pointer hover:text-white"
               >
@@ -89,7 +86,6 @@ export function FilterSidebar({
           ))}
         </div>
       </div>
-      
       {/* Availability Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -98,13 +94,13 @@ export function FilterSidebar({
         <div className="space-y-2">
           {filterOptions.availabilityOptions.map((availability) => (
             <div key={availability.value} className="flex items-center space-x-2">
-              <Checkbox 
-                id={`availability-${availability.value}`} 
+              <Checkbox
+                id={`availability-${availability.value}`}
                 checked={filters.selectedAvailability.includes(availability.value)}
                 onCheckedChange={() => onFilterChange('availability', availability.value)}
                 className="text-zion-purple data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
-              <label 
+              <label
                 htmlFor={`availability-${availability.value}`}
                 className="text-sm text-zion-slate-light cursor-pointer hover:text-white"
               >
@@ -114,7 +110,6 @@ export function FilterSidebar({
           ))}
         </div>
       </div>
-      
       {/* Rating Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -128,8 +123,8 @@ export function FilterSidebar({
               size="sm"
               onClick={() => onRatingChange(rating)}
               className={`${
-                filters.selectedRating === rating 
-                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple" 
+                filters.selectedRating === rating
+                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple"
                   : "border-zion-blue-light text-zion-slate-light"
               }`}
             >

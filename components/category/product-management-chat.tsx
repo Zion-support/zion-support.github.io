@@ -11,6 +11,5 @@ import Seo from '../../components/seo/Seo';
       </main>
     </div>
   )
-};
-
+}
 export default ProductManagementChat;

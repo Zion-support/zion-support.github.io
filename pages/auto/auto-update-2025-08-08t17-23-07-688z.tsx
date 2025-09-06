@@ -5,7 +5,6 @@ import Head from 'next/head';
         <p>This page is under construction.</p>
       </main>
     </div>
-  ),
-};
-
+  )
+}
 export default AutoUpdate20250808t172307688z;

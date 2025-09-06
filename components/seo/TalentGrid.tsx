@@ -4,32 +4,28 @@ import type { TalentProfile } from "../../data/talent";
 type Props = {
   region?: string;
   service?: string;
-};
-
+}
 function matchesRegion(profile: TalentProfile, region?: string) {
   if (!region) return true;
   const r = region.toLowerCase();
   return profile.location.toLowerCase().includes(r);
 }
-
 function matchesService(profile: TalentProfile, service?: string) {
   if (!service) return true;
   const s = service.toLowerCase();
   return (
-    profile.title.toLowerCase().includes(s) ||
+    profile.title.toLowerCase().includes(s) |
     profile.skills.some((sk) => sk.toLowerCase().includes(s))
   );
 }
-
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () =>
       TALENT_PROFILES.filter(
-        (p) => matchesRegion(p, region) && matchesService(p, service),
-      ),
-    [region, service],
+        (p) => matchesRegion(p, region) && matchesService(p, service)
+      )
+    [region, service]
   );
-
   if (items.length === 0) {
     return (
       <div className="text-sm text-gray-400">
@@ -37,7 +33,6 @@ export default function TalentGrid({ region, service }: Props) {
       </div>
     );
   }
-
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {items.map((p) => (

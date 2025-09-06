@@ -1,79 +1,66 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import {;
-  Brain, Shield, Rocket, Cpu, Database, Atom, Users, Award,;
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {Brain, Shield, Rocket, Cpu, Database, Atom, Users, Award;
   Globe, Target, Star, CheckCircle, TrendingUp, Lightbulb;
-} from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-export default function AboutPage() {;
-  const values = [;
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+export default function AboutPage() {const values = [;
     {;
-      icon: Brain,;
-      title: "Innovation First",;
+      icon: Brain;
+      title: "Innovation First";
       description: "We push the boundaries of what's possible with cutting-edge AI and quantum technologies";
-    },;
-    {;
-      icon: Shield,;
-      title: "Trust & Security",;
+    }
+    {icon: Shield;
+      title: "Trust & Security";
       description: "Enterprise-grade security and privacy protection for all our solutions";
-    },;
-    {;
-      icon: Users,;
-      title: "Human-Centric",;
+    }
+    {icon: Users;
+      title: "Human-Centric";
       description: "Technology that empowers people and enhances human capabilities";
-    },;
-    {;
-      icon: Globe,;
-      title: "Global Impact",;
+    }
+    {icon: Globe;
+      title: "Global Impact";
       description: "Solutions that address real-world challenges across industries and borders";
     }
-  ],;
+  ];
   const milestones = [;
-    {;
-      year: "2025",;
-      title: "AI Autonomous Ecosystem Launch",;
+    {year: "2025";
+      title: "AI Autonomous Ecosystem Launch";
       description: "Revolutionary autonomous AI solutions that adapt and evolve";
-    },;
-    {;
-      year: "2024",;
-      title: "Quantum Computing Breakthrough",;
+    }
+    {year: "2024";
+      title: "Quantum Computing Breakthrough";
       description: "Advanced quantum neural networks and consciousness capabilities";
-    },;
-    {;
-      year: "2023",;
-      title: "Edge Computing Platform",;
+    }
+    {year: "2023";
+      title: "Edge Computing Platform";
       description: "Intelligent edge orchestration and IoT management solutions";
-    },;
-    {;
-      year: "2022",;
-      title: "Company Foundation",;
+    }
+    {year: "2022";
+      title: "Company Foundation";
       description: "Zion Tech Group established with vision for autonomous innovation";
     }
-  ],;
+  ];
   const team = [;
-    {;
-      name: "Dr. Sarah Chen",;
-      role: "Chief AI Officer",;
+    {name: "Dr. Sarah Chen";
+      role: "Chief AI Officer";
       expertise: "Quantum AI, Neural Networks, Consciousness Research";
-    },;
-    {;
-      name: "Marcus Rodriguez",;
-      role: "Chief Technology Officer",;
+    }
+    {name: "Marcus Rodriguez";
+      role: "Chief Technology Officer";
       expertise: "Edge Computing, IoT, Autonomous Systems";
-    },;
-    {;
-      name: "Dr. Elena Petrova",;
-      role: "Chief Quantum Officer",;
+    }
+    {name: "Dr. Elena Petrova";
+      role: "Chief Quantum Officer";
       expertise: "Quantum Computing, Cryptography, Materials Science";
-    },;
-    {;
-      name: "Alex Thompson",;
-      role: "Chief Innovation Officer",;
+    }
+    {name: "Alex Thompson";
+      role: "Chief Innovation Officer";
       expertise: "Emerging Technologies, Strategic Innovation, R&D";
     }
-  ],;
+  ];
   return (;
     <>;
       <Head>;
@@ -99,7 +86,7 @@ export default function AboutPage() {;
                 About Zion Tech Group;
               </h1>;
               <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed">;
-                Pioneering the future of autonomous technology through revolutionary AI,;
+                Pioneering the future of autonomous technology through revolutionary AI;
                 quantum computing, and consciousness evolution platforms.;
               </p>;
             </motion.div>;
@@ -219,8 +206,7 @@ export default function AboutPage() {;
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className={`flex flex-col lg:flex-row items-center gap-8 ${;
-                    index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse';
+                  className={`flex flex-col lg:flex-row items-center gap-8 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse';
                   }`}
                 >;
                   <div className="lg:w-1/2">;
@@ -323,4 +309,3 @@ export default function AboutPage() {;
     </>;
   );
 }
-;

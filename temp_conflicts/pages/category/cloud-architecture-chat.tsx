@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const CloudArchitectureChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const CloudArchitectureChat = () => {return (;
     <div>;
       <Head>;
         <title>CloudArchitectureChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const CloudArchitectureChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default CloudArchitectureChat;

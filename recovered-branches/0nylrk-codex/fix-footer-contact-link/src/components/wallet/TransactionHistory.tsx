@@ -8,7 +8,6 @@ import {Badge} from "@/components/ui/badge";
 import {formatDistanceToNow} from "date-fns";
 export function TransactionHistory() {
   const { transactions, loading } = useWallet();
-
   if (loading) {
     return (
       <Card>
@@ -19,10 +18,8 @@ export function TransactionHistory() {
       </Card>
     )
   }
-
   const earnTransactions = transactions.filter(tx => tx.transaction_type === 'earn');
   const burnTransactions = transactions.filter(tx => tx.transaction_type === 'burn');
-
   return (
     <Card>
       <CardHeader>
@@ -44,7 +41,7 @@ export function TransactionHistory() {
                   {earnTransactions.map(tx => (
                     <div key={tx.id} className="flex items-center justify-between py-2 border-b">
                       <div>
-                        <p className="font-medium">{tx.reason || "Token reward"}</p>
+                        <p className="font-medium">{tx.reason |"Token reward"}</p>
                         <p className="text-xs text-muted-foreground">
                           {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
                         </p>
@@ -67,7 +64,7 @@ export function TransactionHistory() {
                   {burnTransactions.map(tx => (
                     <div key={tx.id} className="flex items-center justify-between py-2 border-b">
                       <div>
-                        <p className="font-medium">{tx.reason || "Feature purchase"}</p>
+                        <p className="font-medium">{tx.reason |"Feature purchase"}</p>
                         <p className="text-xs text-muted-foreground">
                           {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
                         </p>

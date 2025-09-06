@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const TheRiseOfEdgeComputingInIotApplicationsChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const TheRiseOfEdgeComputingInIotApplicationsChat = () => {return (;
     <div>;
       <Head>;
         <title>TheRiseOfEdgeComputingInIotApplicationsChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const TheRiseOfEdgeComputingInIotApplicationsChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default TheRiseOfEdgeComputingInIotApplicationsChat;

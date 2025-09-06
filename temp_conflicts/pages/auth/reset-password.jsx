@@ -1,7 +1,6 @@
 
-import Head from 'next/head',;
-const ResetPassword = () => {;
-  return (;
+import Head from 'next/head';
+const ResetPassword = () => {return (;
     <div>;
       <Head>;
         <title>ResetPassword - Zion Tech Solutions</title>;
@@ -13,5 +12,5 @@ const ResetPassword = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default ResetPassword;

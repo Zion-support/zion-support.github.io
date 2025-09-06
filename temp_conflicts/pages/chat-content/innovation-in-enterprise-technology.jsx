@@ -1,7 +1,6 @@
 
-import Head from 'next/head',;
-const InnovationInEnterpriseTechnology = () => {;
-  return (;
+import Head from 'next/head';
+const InnovationInEnterpriseTechnology = () => {return (;
     <div>;
       <Head>;
         <title>InnovationInEnterpriseTechnology - Zion Tech Solutions</title>;
@@ -13,5 +12,5 @@ const InnovationInEnterpriseTechnology = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default InnovationInEnterpriseTechnology;

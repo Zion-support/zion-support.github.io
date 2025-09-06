@@ -1,46 +1,40 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import {;
-  TrendingUp, Brain, Shield, Zap, Target,;
-  BarChart3, Cpu, Globe, Users, Award,;
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {TrendingUp, Brain, Shield, Zap, Target;
+  BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin;
-} from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+const contactInfo = {mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup.com';
-},;
+}
 const features = [;
   'Multi-chain DeFi aggregationAutomated yield optimizationLiquidity pool managementCross-chain bridge servicesSmart contract auditingDeFi analytics dashboardMobile app integrationStaking and governance';
-],;
+];
 const pricingPlans = [;
-  {;
-    name: 'Starter',;
-    price: 29,;
-    period: 'month',;
-    features: ['Basic DeFi tools3 blockchain networksYield trackingStandard support'],;
+  {name: 'Starter';
+    price: 29;
+    period: 'month';
+    features: ['Basic DeFi tools3 blockchain networksYield trackingStandard support'];
     popular: false;
-  },;
-  {;
-    name: 'Professional',;
-    price: 99,;
-    period: 'month',;
-    features: ['Advanced DeFi toolsAll major networksAutomated strategiesAnalyticsPriority support'],;
+  }
+  {name: 'Professional';
+    price: 99;
+    period: 'month';
+    features: ['Advanced DeFi toolsAll major networksAutomated strategiesAnalyticsPriority support'];
     popular: true;
-  },;
-  {;
-    name: 'Enterprise',;
-    price: 299,;
-    period: 'month',;
-    features: ['Custom DeFi solutionsWhite-label platformAPI accessPriority supportCustom integrations'],;
+  }
+  {name: 'Enterprise';
+    price: 299;
+    period: 'month';
+    features: ['Custom DeFi solutionsWhite-label platformAPI accessPriority supportCustom integrations'];
     popular: false;
   }
 ];
-export default function DeFiNexusPlatform() {;
-  return (;
+export default function DeFiNexusPlatform() {return (;
     <Layout>;
       <Head>;
         <title>DeFi Nexus Platform | Zion Tech Group</title>;
@@ -166,8 +160,7 @@ export default function DeFiNexusPlatform() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-gradient-to-br from-green-500/10 to-emerald-500/10 border rounded-2xl p-8 ${;
-                  plan.popular;
+                className={`relative bg-gradient-to-br from-green-500/10 to-emerald-500/10 border rounded-2xl p-8 ${plan.popular;
                     ? 'border-green-500/50 scale-105';
                     : 'border-green-500/20';
                 }`}
@@ -179,7 +172,6 @@ export default function DeFiNexusPlatform() {;
                     </span>;
                   </div>;
                 )}
-;
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>;
                   <div className="text-4xl font-bold text-white mb-2">;

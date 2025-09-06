@@ -10,14 +10,14 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   (
     {
-      title,
-      icon,
-      defaultExpanded = true,
-      showChevron = true,
-      className,
-      children,
+      title
+      icon
+      defaultExpanded = true
+      showChevron = true
+      className
+      children
       ...props
-    },
+    }
     ref
   ) => {
     const [expanded, setExpanded] = React.useState(defaultExpanded)
@@ -36,7 +36,7 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
             {showChevron && (
               <ChevronDown
                 className={cn(
-                  'h-4 w-4 transition-transform',
+                  'h-4 w-4 transition-transform'
                   expanded ? 'rotate-0' : '-rotate-90'
                 )}              />
             )}

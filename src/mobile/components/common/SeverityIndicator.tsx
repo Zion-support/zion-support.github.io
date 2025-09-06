@@ -1,17 +1,15 @@
 
-
 interface SeverityIndicatorProps {
-  severity: "safe" | "suspicious" | "dangerous",
+  severity: "safe" | "suspicious" | "dangerous"
   showIcon?: boolean
   showText?: boolean
   size?: "sm" | "md" | "lg"
   className?: string
 }
-
-export function SeverityIndicator({ 
-  severity, 
-  showIcon = true, 
-  showText = true, 
+export function SeverityIndicator({
+  severity
+  showIcon = true
+  showText = true
   size = "md"
       default:
         return <CheckCircle className={cn(
@@ -27,4 +25,3 @@ export function SeverityIndicator({
     </div>
   )
 }
-;

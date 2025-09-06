@@ -1,6 +1,5 @@
 import Head from 'next/head';
-export default function Page() {;
-  return (;
+export default function Page() {return (;
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Guide — Cloud Improving Implementation</title>;
@@ -17,4 +16,3 @@ export default function Page() {;
     </div>;
   );
 }
-;

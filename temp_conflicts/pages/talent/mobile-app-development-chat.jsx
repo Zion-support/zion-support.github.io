@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const MobileAppDevelopmentChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const MobileAppDevelopmentChat = () => {return (;
     <div>;
       <Head>;
         <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const MobileAppDevelopmentChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default MobileAppDevelopmentChat;

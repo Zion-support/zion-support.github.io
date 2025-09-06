@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
-  GeneratedMilestone,
-  MilestoneInput,
-  useMilestoneGenerator,
+  GeneratedMilestone
+  MilestoneInput
+  useMilestoneGenerator
 } from '@/hooks/useMilestoneGenerator'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Loader2, Sparkles, Check } from 'lucide-react'; import { Badge } from '@/components/ui/badge'
@@ -21,40 +21,9 @@ interface MilestoneSuggestionsProps {
   startDate: Date
   endDate?: Date
   projectType: string
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;  projectType: string,
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;  projectType: string
   onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void
 }
-
-export function MilestoneSuggestions({
-  projectName,
-  scopeSummary,
-  startDate,
-  endDate,
-  projectType,
-  onMilestonesGenerated,
-}: MilestoneSuggestionsProps) {
-  const { generateMilestones, generatedMilestones, isGenerating } =
-    useMilestoneGenerator()
-  const [showSuggestions, setShowSuggestions] = useState(false)
-  const handleGenerateMilestones = async () => {
-    const input: MilestoneInput = {
-      scope: `${projectName}: ${scopeSummary}`,
-      startDate: startDate.toISOString(),
-      endDate: endDate ? endDate.toISOString() : null,
-      projectType: projectType || 'Other',
-    }
-    const milestones = await generateMilestones(input)
-    if (milestones.length > 0) {
-      setShowSuggestions(true)
-      if (onMilestonesGenerated) {
-        onMilestonesGenerated(milestones) }  projectName: string,
-  scopeSummary: string,
-  startDate: Date,
-  endDate?: Date
-  projectType: string,
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
-}
-
 export function MilestoneSuggestions({
   projectName
   scopeSummary
@@ -62,13 +31,40 @@ export function MilestoneSuggestions({
   endDate
   projectType
   onMilestonesGenerated
-
-}: MilestoneSuggestionsProps) { const { generateMilestones, generatedMilestones, isGenerating  } = useMilestoneGenerator(),
-  const [ showSuggestions, setShowSuggestions ] = useState(false),
-
+}: MilestoneSuggestionsProps) {
+  const { generateMilestones, generatedMilestones, isGenerating } =
+    useMilestoneGenerator()
+  const [showSuggestions, setShowSuggestions] = useState(false)
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
-      scope: `${projectName}: ${scopeSummary}`,
+      scope: `${projectName}: ${scopeSummary}`
+      startDate: startDate.toISOString()
+      endDate: endDate ? endDate.toISOString() : null
+      projectType: projectType |'Other'
+    }
+    const milestones = await generateMilestones(input)
+    if (milestones.length > 0) {
+      setShowSuggestions(true)
+      if (onMilestonesGenerated) {
+        onMilestonesGenerated(milestones) }  projectName: string
+  scopeSummary: string
+  startDate: Date
+  endDate?: Date
+  projectType: string
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
+}
+export function MilestoneSuggestions({
+  projectName
+  scopeSummary
+  startDate
+  endDate
+  projectType
+  onMilestonesGenerated
+}: MilestoneSuggestionsProps) { const { generateMilestones, generatedMilestones, isGenerating  } = useMilestoneGenerator()
+  const [ showSuggestions, setShowSuggestions ] = useState(false)
+  const handleGenerateMilestones = async () => {
+    const input: MilestoneInput = {
+      scope: `${projectName}: ${scopeSummary}`
         onMilestonesGenerated(milestones)
       }
     }
@@ -85,7 +81,7 @@ export function MilestoneSuggestions({
         <Button
           variant='outline'
           onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scopeSummary || !startDate}
+          disabled={isGenerating |!scopeSummary |!startDate}
           className='w-full'        >
           {isGenerating ? (
             <>
@@ -97,7 +93,7 @@ export function MilestoneSuggestions({
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
           variant="outline"
           onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scopeSummary || !startDate}
+          disabled={isGenerating |!scopeSummary |!startDate}
           className="w-full"
         >
           {isGenerating ? (
@@ -113,7 +109,6 @@ export function MilestoneSuggestions({
           )}
         </Button>
       )}
-
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className='pb-3'>
@@ -167,7 +162,6 @@ export function MilestoneSuggestions({
                   </div>
                 </div>
               ))}
-
               <div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>
                 <Check className='h-4 w-4 mr-1 text-green-500' />                These milestones will be added to your contract              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
                 <Check className="h-4 w-4 mr-1 text-green-500" />
@@ -181,11 +175,11 @@ export function MilestoneSuggestions({
   )
 }
 <Button variant="outline" onClick={
-  handleGenerateMilestones 
+  handleGenerateMilestones
 }> {"
-  isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>) 
-}</Button>) 
+  isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>)
+}</Button>)
 }AI-Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) "
-}<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) 
-}</div>) 
+}<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)
+}</div>)
 }"}

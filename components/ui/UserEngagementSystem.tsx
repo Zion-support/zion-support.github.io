@@ -4,13 +4,12 @@ export type EmptyStateProps = {
   title: string;
   message: string;
   action?: React.ReactNode;
-};
-
+}
 export default function EmptyState({
-  emoji = "✨",
-  title,
-  message,
-  action,
+  emoji = "✨"
+  title
+  message
+  action
 }: EmptyStateProps) {
   return (
     <div className="text-center py-12">

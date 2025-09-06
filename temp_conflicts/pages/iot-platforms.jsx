@@ -1,7 +1,6 @@
 
-import Head from 'next/head',;
-const IotPlatforms = () => {;
-  return (;
+import Head from 'next/head';
+const IotPlatforms = () => {return (;
     <div>;
       <Head>;
         <title>IotPlatforms - Zion Tech Solutions</title>;
@@ -13,5 +12,5 @@ const IotPlatforms = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default IotPlatforms;

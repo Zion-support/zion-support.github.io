@@ -7,7 +7,6 @@ export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
   const googlePlayUrl = "#"; // Replace with actual Google Play URL when available
-
   return (
     <section className="relative bg-gradient-to-r from-zion-blue-dark to-zion-purple py-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-8">
@@ -20,14 +19,12 @@ export const MobileAppHero: React.FC = () => {
               Find top AI talent or global IT jobs on the go. The power of
               Zion's AI matching, now available on your mobile device.
             </p>
-
             <div className="mb-8">
               <AppStoreButtons
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
             </div>
-
             <Link to="/open-app">
               <Button
                 variant="outline"
@@ -39,7 +36,6 @@ export const MobileAppHero: React.FC = () => {
               </Button>
             </Link>
           </div>
-
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
@@ -51,4 +47,4 @@ export const MobileAppHero: React.FC = () => {
       </div>
     </section>
   );
-};
+}

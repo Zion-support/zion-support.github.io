@@ -1,18 +1,17 @@
 import Link from "next/link";
-
 export default function ReportProblemButton({
-  projectId,
-  entityType,
-  entityId,
+  projectId
+  entityType
+  entityId
 }: {
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
 }) {
   const query = new URLSearchParams({
-    projectId,
-    ...(entityType ? { entityType } : {}),
-    ...(entityId ? { entityId } : {}),
+    projectId
+    ...(entityType ? { entityType } : {})
+    ...(entityId ? { entityId } : {})
   });
   return (
     <Link href={`/disputes/new?${query.toString()}`}>
@@ -24,18 +23,18 @@ export default function ReportProblemButton({
   );
 }
 export default function ReportProblemButton({
-  projectId,
-  entityType,
-  entityId,
+  projectId
+  entityType
+  entityId
 }: {
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
 }) {
   const query = new URLSearchParams({
-    projectId,
-    ...(entityType ? { entityType } : {}),
-    ...(entityId ? { entityId } : {}),
+    projectId
+    ...(entityType ? { entityType } : {})
+    ...(entityId ? { entityId } : {})
   });
   return (
     <Link href={`/disputes/new?${query.toString()}`}>

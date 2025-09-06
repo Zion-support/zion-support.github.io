@@ -1,7 +1,5 @@
 import React from 'react';
-
-type ProgressBarProps = { value: number };
-
+type ProgressBarProps = { value: number }
 export default function ProgressBar({ value }: ProgressBarProps) {
   const pct = Math.max(0, Math.min(100, value));
   return (

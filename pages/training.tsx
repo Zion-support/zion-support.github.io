@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from '../components/Layout';
-
 export default function Training() {
   return (
     <Layout
@@ -23,9 +22,8 @@ export default function Training() {
     </Layout>
   );
 }
-};
+}
   )
-};
-
+}
 export default Training;
 };export default Training;

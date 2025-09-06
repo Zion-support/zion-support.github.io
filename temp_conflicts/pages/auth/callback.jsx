@@ -1,7 +1,6 @@
 
-import Head from 'next/head',;
-const Callback = () => {;
-  return (;
+import Head from 'next/head';
+const Callback = () => {return (;
     <div>;
       <Head>;
         <title>Callback - Zion Tech Solutions</title>;
@@ -13,5 +12,5 @@ const Callback = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default Callback;

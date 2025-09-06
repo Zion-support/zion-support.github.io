@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const QualityAssuranceChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const QualityAssuranceChat = () => {return (;
     <div>;
       <Head>;
         <title>QualityAssuranceChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const QualityAssuranceChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default QualityAssuranceChat;

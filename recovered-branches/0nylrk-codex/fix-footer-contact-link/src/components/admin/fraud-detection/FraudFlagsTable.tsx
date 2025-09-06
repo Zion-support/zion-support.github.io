@@ -7,18 +7,17 @@ import {SeverityDisplay} from "./SeverityDisplay";
 import {ActionButtons} from "./ActionButtons";
 import {EmptyFraudState} from "./EmptyFraudState";
 interface FraudFlagsTableProps {
-  flags: FraudFlag[],
-  isLoading: boolean,
-  hasFilters: boolean,
-  resetFilters: () => void,
+  flags: FraudFlag[]
+  isLoading: boolean
+  hasFilters: boolean
+  resetFilters: () => void
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
-
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   flags;
   isLoading;
   hasFilters;
-  resetFilters,
+  resetFilters
   onAction
 }) => {
   if (isLoading) {
@@ -28,11 +27,9 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
       </div>
     )
   }
-
   if (flags.length === 0) {
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }
-
   return (
     <Table>
       <TableHeader>
@@ -55,7 +52,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
               <SeverityDisplay severity={flag.severity} />
             </TableCell>
             <TableCell className="font-medium">
-              {flag.user_email || flag.user_id.substring(0, 8)}
+              {flag.user_email |flag.user_id.substring(0, 8)}
             </TableCell>
             <TableCell className="max-w-xs truncate">
               {flag.content_excerpt}
@@ -65,7 +62,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
             </TableCell>
             <TableCell className="max-w-xs truncate">{flag.reason}</TableCell>
             <TableCell className="max-w-xs truncate">
-              {flag.gpt_explanation || (
+              {flag.gpt_explanation |(
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
               )}
             </TableCell>
@@ -86,10 +83,10 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
               </Badge>
             </TableCell>
             <TableCell>
-              <ActionButtons 
-                flagId={flag.id} 
-                status={flag.status} 
-                onAction={onAction} 
+              <ActionButtons
+                flagId={flag.id}
+                status={flag.status}
+                onAction={onAction}
               />
             </TableCell>
           </TableRow>
@@ -97,4 +94,4 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
       </TableBody>
     </Table>
   )
-};
+}

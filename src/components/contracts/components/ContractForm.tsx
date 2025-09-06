@@ -18,18 +18,15 @@ const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required")
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters")
   startDate: z.date({
-    required_error: "Start date is required"}),
-  endDate: z.date().optional(),
+    required_error: "Start date is required"})
+  endDate: z.date().optional()
   paymentTerms: z.enum(["hourly", "fixed", "milestone"])
   paymentAmount: z.string().min(1, "Payment amount is required")
-  additionalClauses: z.array(z.string()).optional()}),
-
+  additionalClauses: z.array(z.string()).optional()})
 export type ContractFormValues = z.infer<typeof formSchema>
-        values, 
-        talent, 
-        clientName, 
-  
+        values
+        talent
+        clientName
 }
   )
 }
-;

@@ -22,4 +22,4 @@ export {
   EnterpriseRoutes;
   CommunityRoutes;
   DeveloperRoutes
-};
+}

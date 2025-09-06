@@ -1,130 +1,104 @@
-import { useMemo, useState } from 'react',;
-import { motion, AnimatePresence } from 'framer-motion',;
-interface FileData {;
-  name: string,;
-  type: string,;
-  size: number,;
+import { useMemo, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+interface FileData {name: string;
+  type: string;
+  size: number;
   base64: string, // data URL;
 }
-;
-interface OnboardingFormData {;
-  fullName: string,;
-  professionalTitle: string,;
-  profilePicture?: FileData | null,;
-  bio: string,;
-  projects: string,;
+interface OnboardingFormData {fullName: string;
+  professionalTitle: string;
+  profilePicture?: FileData | null;
+  bio: string;
+  projects: string;
   yearsOfExperience: string, // keep as string for input, convert on submit;
-  skills: string,;
-  tools: string,;
-  availability: 'Full-time' | 'Part-time' | 'Project-based' | '',;
-  timezone: string,;
-  hourlyRate?: string,;
-  portfolioLinks?: string,;
+  skills: string;
+  tools: string;
+  availability: 'Full-time' | 'Part-time' | 'Project-based' | '';
+  timezone: string;
+  hourlyRate?: string;
+  portfolioLinks?: string;
   cvFile?: FileData | null;
 }
-;
 const steps = [;
-  'Basic InfoExperienceSkills & TechAvailability'] as const,;
-type StepKey = typeof steps[number],;
-const containerVariants = {;
-  initial: { opacity: 0, y: 16 },;
-  animate: { opacity: 1, y: 0 },;
-  exit: { opacity: 0, y: -16 }},;
-function useInitialFormState(): OnboardingFormData {;
-  return {;
-    fullName: '',;
-    professionalTitle: '',;
-    profilePicture: null,;
-    bio: '',;
-    projects: '',;
-    yearsOfExperience: '',;
-    skills: '',;
-    tools: '',;
-    availability: '',;
-    timezone: '',;
-    hourlyRate: '',;
-    portfolioLinks: '',;
+  'Basic InfoExperienceSkills & TechAvailability'] as const;
+type StepKey = typeof steps[number];
+const containerVariants = {initial: { opacity: 0, y: 16 }
+  animate: { opacity: 1, y: 0 }
+  exit: { opacity: 0, y: -16 }}
+function useInitialFormState(): OnboardingFormData {return {;
+    fullName: '';
+    professionalTitle: '';
+    profilePicture: null;
+    bio: '';
+    projects: '';
+    yearsOfExperience: '';
+    skills: '';
+    tools: '';
+    availability: '';
+    timezone: '';
+    hourlyRate: '';
+    portfolioLinks: '';
     cvFile: null}
 }
-;
-async function fileToBase64(file: File): Promise<FileData> {;
-  const toBase64 = (fileInner: File) =>;
+async function fileToBase64(file: File): Promise<FileData> {const toBase64 = (fileInner: File) =>;
     new Promise<string>((resolve, reject) => {;
-      const reader = new FileReader(),;
-      reader.readAsDataURL(fileInner),;
-      reader.onload = () => resolve(reader.result as string),;
+      const reader = new FileReader();
+      reader.readAsDataURL(fileInner);
+      reader.onload = () => resolve(reader.result as string);
       reader.onerror = (error) => reject(error);
-    }),;
-  const base64 = await toBase64(file),;
-  return {;
-    name: file.name,;
-    type: file.type,;
-    size: file.size,;
+    });
+  const base64 = await toBase64(file);
+  return {name: file.name;
+    type: file.type;
+    size: file.size;
     base64}
 }
-;
-export default function TalentOnboardingPage() {;
-  const [stepIndex, setStepIndex] = useState(0),;
-  const [formData, setFormData] = useState<OnboardingFormData>(useInitialFormState),;
-  const [submitting, setSubmitting] = useState(false),;
-  const [submitted, setSubmitted] = useState(false),;
-  const [errorMessage, setErrorMessage] = useState<string | null>(null),;
-  const currentStep: StepKey = steps[stepIndex],;
-  const progressPercent = useMemo(() => ((stepIndex + 1) / steps.length) * 100, [stepIndex]),;
+export default function TalentOnboardingPage() {const [stepIndex, setStepIndex] = useState(0);
+  const [formData, setFormData] = useState<OnboardingFormData>(useInitialFormState);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const currentStep: StepKey = steps[stepIndex];
+  const progressPercent = useMemo(() => ((stepIndex + 1) / steps.length) * 100, [stepIndex]);
   function nextStep() {;
     if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1);
   }
-  function prevStep() {;
-    if (stepIndex > 0) setStepIndex(stepIndex - 1);
+  function prevStep() {if (stepIndex > 0) setStepIndex(stepIndex - 1);
   }
-;
-  function update<K extends keyof OnboardingFormData>(key: K, value: OnboardingFormData[K]) {;
-    setFormData((prev) => ({ ...prev, [key]: value }));
+  function update<K extends keyof OnboardingFormData>(key: K, value: OnboardingFormData[K]) {setFormData((prev) => ({ ...prev, [key]: value }));
   }
-;
-  function requiredMissingForStep(): string | null {;
-    if (currentStep === 'Basic Info') {;
-      if (!formData.fullName.trim()) return 'Full Name is required.',;
+  function requiredMissingForStep(): string | null {if (currentStep === 'Basic Info') {;
+      if (!formData.fullName.trim()) return 'Full Name is required.';
       if (!formData.professionalTitle.trim()) return 'Professional Title is required.';
     }
-    if (currentStep === 'Experience') {;
-      if (!formData.bio.trim()) return 'Short Bio is required.',;
+    if (currentStep === 'Experience') {if (!formData.bio.trim()) return 'Short Bio is required.';
       if (!formData.yearsOfExperience.trim()) return 'Years of Experience is required.';
     }
-    if (currentStep === 'Skills & Tech') {;
-      if (!formData.skills.trim()) return 'Please list at least one skill.';
+    if (currentStep === 'Skills & Tech') {if (!formData.skills.trim()) return 'Please list at least one skill.';
     }
-    if (currentStep === 'Availability') {;
-      if (!formData.availability) return 'Please select your current availability.',;
+    if (currentStep === 'Availability') {if (!formData.availability) return 'Please select your current availability.';
       if (!formData.timezone.trim()) return 'Preferred Timezone is required.';
     }
     return null;
   }
-;
-  async function handleSubmit() {;
-    const missing = requiredMissingForStep(),;
+  async function handleSubmit() {const missing = requiredMissingForStep();
     if (missing) {;
-      setErrorMessage(missing),;
+      setErrorMessage(missing);
       return;
     }
-    setErrorMessage(null),;
-    setSubmitting(true),;
-    try {;
-      const response = await fetch('/api/talent/onboard', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({ ...formData })}),;
-      if (!response.ok) throw new Error('Submission failed'),;
+    setErrorMessage(null);
+    setSubmitting(true);
+    try {const response = await fetch('/api/talent/onboard', {;
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ ...formData })});
+      if (!response.ok) throw new Error('Submission failed');
       setSubmitted(true);
-    } catch (err) {;
-      setErrorMessage('Submission failed. Please try again.');
-    } finally {;
-      setSubmitting(false);
+    } catch (err) {setErrorMessage('Submission failed. Please try again.');
+    } finally {setSubmitting(false);
     }
   }
-;
-  if (submitted) {;
-    return (;
+  if (submitted) {return (;
       <div className="min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-6">;
         <div className="max-w-xl w-full bg-glass/60 rounded-2xl p-8 shadow-xl border border-[var(--border-primary)] animate-fade-in">;
           <div className="text-center space-y-3">;
@@ -135,7 +109,6 @@ export default function TalentOnboardingPage() {;
       </div>;
     );
   }
-;
   return (;
     <div className="min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-4 md:p-8">;
       <div className="w-full max-w-3xl">;
@@ -151,7 +124,6 @@ export default function TalentOnboardingPage() {;
             {errorMessage}
           </div>;
         )}
-;
         <div className="bg-glass/60 rounded-2xl p-6 md:p-8 shadow-xl border border-[var(--border-primary)]">;
           <AnimatePresence mode="wait">;
             {currentStep === 'Basic Info' && (;
@@ -184,7 +156,6 @@ export default function TalentOnboardingPage() {;
                 </div>;
               </motion.div>;
             )}
-;
             {currentStep === 'Experience' && (;
               <motion.div key="step-experience" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>;
                 <div className="grid grid-cols-1 gap-4 md:gap-6">;
@@ -214,7 +185,6 @@ export default function TalentOnboardingPage() {;
                 </div>;
               </motion.div>;
             )}
-;
             {currentStep === 'Skills & Tech' && (;
               <motion.div key="step-skills" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>;
                 <div className="grid grid-cols-1 gap-4 md:gap-6">;
@@ -236,7 +206,6 @@ export default function TalentOnboardingPage() {;
                 </div>;
               </motion.div>;
             )}
-;
             {currentStep === 'Availability' && (;
               <motion.div key="step-availability" variants={containerVariants} initial="initial" animate="animate" exit="exit" transition={{ duration: 0.3 }}>;
                 <div className="grid grid-cols-1 gap-4 md:gap-6">;
@@ -267,14 +236,14 @@ export default function TalentOnboardingPage() {;
                     label="Hourly Rate (optional)";
                     type="number";
                     min={0}
-                    value={formData.hourlyRate || ''}
+                    value={formData.hourlyRate |''}
                     onChange={(v) => update('hourlyRate', v)}
                   />;
                   <FloatingInput;
                     id="portfolioLinks";
                     label="Portfolio Links (optional)";
                     placeholder="e.g., https://github.com/you, https://your-site.com";
-                    value={formData.portfolioLinks || ''}
+                    value={formData.portfolioLinks |''}
                     onChange={(v) => update('portfolioLinks', v)}
                   />;
                   <FileUpload;
@@ -301,13 +270,12 @@ export default function TalentOnboardingPage() {;
               <button;
                 type="button";
                 className="px-6 py-2 rounded-lg bg-[var(--text-accent)] text-black font-medium shadow-md hover: shadow-lg transition-all disabled:opacity-50";
-                onClick={() => {;
-                  const missing = requiredMissingForStep(),;
+                onClick={() => {const missing = requiredMissingForStep();
                   if (missing) {;
-                    setErrorMessage(missing),;
+                    setErrorMessage(missing);
                     return;
                   }
-                  setErrorMessage(null),;
+                  setErrorMessage(null);
                   nextStep();
                 }}
               >;
@@ -329,18 +297,15 @@ export default function TalentOnboardingPage() {;
     </div>;
   );
 }
-;
-function FloatingInput(props: {;
-  id: string,;
-  label: string,;
-  value: string,;
-  onChange: (value: string) => void,;
-  placeholder?: string,;
-  type?: string,;
-  min?: number,;
+function FloatingInput(props: {id: string;
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
+  type?: string;
+  min?: number;
   required?: boolean;
-}) {;
-  const { id, label, value, onChange, placeholder, type = 'text', min, required } = props,;
+}) {const { id, label, value, onChange, placeholder, type = 'text', min, required } = props;
   return (;
     <div className="relative">;
       <input;
@@ -360,16 +325,13 @@ function FloatingInput(props: {;
     </div>;
   );
 }
-;
-function FloatingTextarea(props: {;
-  id: string,;
-  label: string,;
-  value: string,;
-  onChange: (value: string) => void,;
-  placeholder?: string,;
+function FloatingTextarea(props: {id: string;
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
   required?: boolean;
-}) {;
-  const { id, label, value, onChange, placeholder, required } = props,;
+}) {const { id, label, value, onChange, placeholder, required } = props;
   return (;
     <div className="relative">;
       <textarea;
@@ -388,16 +350,13 @@ function FloatingTextarea(props: {;
     </div>;
   );
 }
-;
-function FileUpload(props: {;
-  id: string,;
-  label: string,;
-  accept?: string,;
-  fileData: FileData | null | undefined,;
+function FileUpload(props: {id: string;
+  label: string;
+  accept?: string;
+  fileData: FileData | null | undefined;
   onFileChange: (file: FileData | null) => void;
-}) {;
-  const { id, label, accept, fileData, onFileChange } = props,;
-  const [localError, setLocalError] = useState<string | null>(null),;
+}) {const { id, label, accept, fileData, onFileChange } = props;
+  const [localError, setLocalError] = useState<string | null>(null);
   return (;
     <div>;
       <label htmlFor={id} className="block text-sm mb-2 text-high-contrast-secondary">{label}</label>;
@@ -406,18 +365,15 @@ function FileUpload(props: {;
         type="file";
         accept={accept}
         className="block w-full text-sm text-high-contrast-secondary file: mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-[var(--text-accent)] file:text-black hover:file:bg-[var(--text-accent)]/90";
-        onChange={async (e) => {;
-          const file = e.target.files?.[0],;
+        onChange={async (e) => {const file = e.target.files?.[0];
           if (!file) {;
-            onFileChange(null),;
+            onFileChange(null);
             return;
           }
-          try {;
-            const base64 = await fileToBase64(file);
+          try {const base64 = await fileToBase64(file);
             onFileChange(base64);
             setLocalError(null);
-          } catch (err) {;
-            setLocalError('Failed to read file.');
+          } catch (err) {setLocalError('Failed to read file.');
           }
         }}
       />;

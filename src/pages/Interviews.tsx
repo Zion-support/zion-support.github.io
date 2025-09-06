@@ -12,9 +12,8 @@ function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews()
   const [activeTab, setActiveTab] = useState('upcoming')
   useEffect(() => {function InterviewsContent() {
-  const { interviews, isLoading, fetchInterviews } = useInterviews(),
-  const [activeTab, setActiveTab] = useState("upcoming"),
-  
+  const { interviews, isLoading, fetchInterviews } = useInterviews()
+  const [activeTab, setActiveTab] = useState("upcoming")
   useEffect((,) => {
     // Modified to handle Promise<Interview[]> return type
     const loadInterviews = async () => {
@@ -44,7 +43,7 @@ function InterviewsContent() {
   const pastInterviews = interviews.filter(interview => {
     const interviewDate = parseISO(interview.scheduled_date)
     return (
-      !isAfter(interviewDate, now) ||
+      !isAfter(interviewDate, now) |
       ['completed', 'declined', 'cancelled'].includes(interview.status)
     )
   })
@@ -105,7 +104,6 @@ function InterviewsContent() {
             </p>
           </div>
         </div>
-
         <Tabs
           defaultValue={activeTab}
           onValueChange={setActiveTab}
@@ -131,7 +129,6 @@ function InterviewsContent() {
             </TabsTrigger>
             <TabsTrigger value='past'>Past</TabsTrigger>
           </TabsList>
-
           <TabsContent value='upcoming' className='space-y-6'>
             {isLoading ? (
               <div className='flex justify-center py-12'>
@@ -151,7 +148,6 @@ function InterviewsContent() {
               </div>
             )}
           </TabsContent>
-
           <TabsContent value='pending' className='space-y-6'>
             {isLoading ? (
               <div className='flex justify-center py-12'>
@@ -172,7 +168,6 @@ function InterviewsContent() {
               </div>
             )}
           </TabsContent>
-
           <TabsContent value='past' className='space-y-6'>
             {isLoading ? (
               <div className='flex justify-center py-12'>
@@ -202,4 +197,3 @@ export default function Interviews() {
   )
 }
 }
-;

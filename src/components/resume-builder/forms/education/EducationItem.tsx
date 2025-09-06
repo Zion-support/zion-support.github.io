@@ -7,9 +7,9 @@ import { Edit, Trash2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { EducationItemProps } from './types'
 export function EducationItem({
-  education,
-  onEdit,
-  onDelete,
+  education
+  onEdit
+  onDelete
 }: EducationItemProps) {
   return (
     <Card className='bg-muted/40'>

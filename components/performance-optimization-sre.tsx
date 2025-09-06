@@ -10,7 +10,6 @@ export default function PerformanceOptimizationSREPage() {
   );  if (!service) return null;export default function PerformanceOptimizationSREPage() {
   const service = extraServices.find(s => s.link.endsWith('/performance-optimization-sre'));
   if (!service) return null;
-
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -97,5 +96,3 @@ export default function PerformanceOptimizationSREPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
-
-;

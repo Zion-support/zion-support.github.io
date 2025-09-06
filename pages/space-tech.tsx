@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import Layout from "../components/layout/Layout";
-
 return (
   <Layout>
     <Head>
@@ -34,7 +33,6 @@ return (
             </a>{" "}
           </div>
         </header>
-
         <section>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
             Capabilities
@@ -51,7 +49,6 @@ return (
             ))}
           </div>
         </section>
-
         <section className="text-center">
           <a
             href="/space-technology"

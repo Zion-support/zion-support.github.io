@@ -7,7 +7,6 @@ import { HELP_CATEGORIES } from "./help-content"
 interface HelpArticleViewProps {
   articleId: string
 }
-
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
   // Find the article in all categories
@@ -19,16 +18,13 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
       break
     }
   }
-  
   if (!article) {
     return <div>Article not found</div>
   }
-  
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type)
   return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
+    year: "numeric"
+    month: "long"
     day: "numeric", })
 }
-;

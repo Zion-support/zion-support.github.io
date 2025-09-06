@@ -9,33 +9,30 @@ interface AppStoreButtonsProps {
   onAppStoreClick?: () => void
   onGooglePlayClick?: () => void
 }
-
-export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   className
   appStoreUrl = "#"
   googlePlayUrl = "#"
-};  className,
-  appStoreUrl = "#",
-  googlePlayUrl = "#",
-  onAppStoreClick,
+};  className
+  appStoreUrl = "#"
+  googlePlayUrl = "#"
+  onAppStoreClick
   onGooglePlayClick
 },) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
-    if (!appStoreUrl || appStoreUrl === "#") {
-      e.preventDefault(),
-      logInfo("App Store download clicked"),
+    if (!appStoreUrl |appStoreUrl === "#") {
+      e.preventDefault()
+      logInfo("App Store download clicked")
       onAppStoreClick?.()
     }
-  },
-
+  }
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
-    if (!googlePlayUrl || googlePlayUrl === "#") {
-      e.preventDefault(),
-      logInfo("Google Play download clicked"),
+    if (!googlePlayUrl |googlePlayUrl === "#") {
+      e.preventDefault()
+      logInfo("Google Play download clicked")
       onGooglePlayClick?.()
     }
-  },
-
+  }
   return (
     <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
       <a
@@ -52,7 +49,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
           <div className="text-xl font-semibold">App Store</div>
         </div>
       </a>
-
       <a
         href = {googlePlayUrl,}
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
@@ -80,5 +76,4 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       </a>
     </div>
   )
-},
-;
+}

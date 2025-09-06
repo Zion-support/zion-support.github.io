@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const DatabaseDesignChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const DatabaseDesignChat = () => {return (;
     <div>;
       <Head>;
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const DatabaseDesignChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default DatabaseDesignChat;

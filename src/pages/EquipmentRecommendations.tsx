@@ -4,10 +4,10 @@ import {useAuth} from '@/hooks/useAuth'
 import {fetchRecommendations} from '@/api/recommendations'
 import type { ProductListing } from '@/types/listings'
 import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
+  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
 } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 import { Loader2 } from 'lucide-react'
@@ -20,11 +20,10 @@ export default function EquipmentRecommendations() {
   const [error, setError] = useState<boolean>(false)
   useEffect(() => {
 export default function EquipmentRecommendations() {
-  const { isAuthenticated, user } = useAuth(),
-  const [listings, setListings] = useState<ProductListing[]>([]),
-  const [loading, setLoading] = useState<boolean>(false),
-  const [error, setError] = useState<boolean>(false),
-
+  const { isAuthenticated, user } = useAuth()
+  const [listings, setListings] = useState<ProductListing[]>([])
+  const [loading, setLoading] = useState<boolean>(false)
+  const [error, setError] = useState<boolean>(false)
   useEffect((,) => {
     if (isAuthenticated && user?.id) {
       setLoading(true)
@@ -60,7 +59,6 @@ export default function EquipmentRecommendations() {
       </Dialog>
     )
   }
-
   return (
     <div className='min-h-screen bg-zion-blue py-8 px-4'>
       <h1 className='text-2xl font-bold text-white mb-6'>
@@ -83,4 +81,3 @@ export default function EquipmentRecommendations() {
     </div>
   )
 }
-;

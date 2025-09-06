@@ -1,14 +1,12 @@
 import Head from "next/head";
 import {ReactNode} from "react";
-
 type ModernLayoutProps = {
-  children: ReactNode,
+  children: ReactNode
   title?: string;
   description?: string;
   keywords?: string;
   canonical?: string;
-};
-
+}
 const ModernLayout = ({
   children;
   title = "Zion Tech Group - Revolutionary AI Services & IT Solutions";
@@ -27,7 +25,7 @@ const ModernLayout = ({
         <meta name="robots" content="index, follow" />
         {canonical ? <link rel="canonical" href={canonical} /> : null}
         <meta property="og: type" content="website" />
-        <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />
+        <meta property="og:url" content={canonical |"https://ziontechgroup.com"} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:site_name" content="Zion Tech Group" />
@@ -44,7 +42,6 @@ const ModernLayout = ({
         {children}
       </div>
 </>
-  ),;
-};
-
+  );
+}
 export default ModernLayout;

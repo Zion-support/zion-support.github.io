@@ -1,35 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
-
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
         setIsVisible(true);
       } else {
         setIsVisible(false);      }
-    };
-
+    }
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true)
       } else {
         setIsVisible(false)
       }
-    };
-
+    }
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);    return () => window.removeEventListener('scroll', toggleVisibility)
   }, []);
-
   const scrollToTop = () => {
     window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
+      top: 0
+      behavior: 'smooth'
     });  };      behavior: 'smooth'})
-  };
-
+  }
   return (
     <>
       {isVisible && (
@@ -68,9 +62,7 @@ export default function ScrollToTop() {
       )}
     </>
   );
-};
-
+}
 export default ScrollToTop;  )
-};
-
+}
 export default ScrollToTop;

@@ -6,7 +6,6 @@ export interface HelpArticle {
   lastUpdated: string;
   tags: string[];
 }
-
 export interface HelpCategory {
   id: string;
   name: string;
@@ -14,7 +13,6 @@ export interface HelpCategory {
   icon: ReactNode;
   articles: HelpArticle[];
 }
-
 export interface SupportTicket {
   id: string;
   userId: string;

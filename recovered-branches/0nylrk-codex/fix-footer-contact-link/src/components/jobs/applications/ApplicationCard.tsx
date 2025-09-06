@@ -12,15 +12,12 @@ import {toast} from "sonner";
 interface ApplicationCardProps {
   application: JobApplication
 }
-
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false);
-
   const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info("Resume download functionality will be implemented soon")
-  };
-
+  }
   const renderActionButtons = () => {
     switch (application.status) {
       case "shortlisted": return (
@@ -45,18 +42,17 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           <Button variant="outline" size="sm">
             <HelpCircle className="h-4 w-4 mr-1" /> View Feedback
           </Button>
-        ),
+        )
       default:
         return null
     }
-  };
-
+  }
   return (
     <Card className="overflow-hidden">
       <CardHeader className="pb-3">
         <div className="flex justify-between items-start">
           <div>
-            <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>
+            <CardTitle>{application.job?.title |"Unknown Job"}</CardTitle>
             <div className="text-sm text-muted-foreground mt-1">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </div>
@@ -64,10 +60,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           <StatusBadge status={application.status} />
         </div>
       </CardHeader>
-      
       <CardContent className="pb-3">
         <ApplicationProgress status={application.status} className="my-4" />
-        
         {expanded && (
           <div className="mt-4 space-y-3">
             {application.cover_letter && (
@@ -76,13 +70,12 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
                 <p className="text-sm text-muted-foreground">{application.cover_letter}</p>
               </div>
             )}
-            
             {application.resume && (
               <div className="border rounded-md p-3 bg-muted/20">
                 <div className="flex justify-between items-center">
                   <div className="flex items-center">
                     <FileText className="h-4 w-4 mr-2 text-blue-500" />
-                    <span className="text-sm font-medium">{application.resume.title || "Resume"}</span>
+                    <span className="text-sm font-medium">{application.resume.title |"Resume"}</span>
                   </div>
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>
                     <Download className="h-3 w-3 mr-1" /> Download
@@ -90,7 +83,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
                 </div>
               </div>
             )}
-            
             {application.match_score && (
               <div>
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>
@@ -105,7 +97,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           </div>
         )}
       </CardContent>
-      
       <CardFooter className="flex flex-col gap-3 pt-0">
         <div className="flex justify-between items-center w-full">
           <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>
@@ -113,8 +104,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           </Button>
           <div className="flex gap-2">
             {renderActionButtons()}
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               size="sm"
               asChild
             >
@@ -124,9 +115,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             </Button>
           </div>
         </div>
-        
-        <Button 
-          variant="secondary" 
+        <Button
+          variant="secondary"
           size="sm"
           className="w-full"
           asChild
@@ -139,4 +129,3 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
     </Card>
   )
 }
-;

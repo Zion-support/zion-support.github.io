@@ -15,12 +15,12 @@ export const NavigationButtons = ({
       {onBack && (
         <Button variant='outline' onClick={onBack}>
 export const NavigationButtons = ({
-  onBack,
-  onNext,
-  isNextDisabled = false,
-  backLabel = 'Back',
-  nextLabel = 'Next',
-  isLoading = false,
+  onBack
+  onNext
+  isNextDisabled = false
+  backLabel = 'Back'
+  nextLabel = 'Next'
+  isLoading = false
 }: NavigationButtonsProps) => {
   return (
     <div className='flex justify-between'>
@@ -35,7 +35,7 @@ export const NavigationButtons = ({
         </Button>
       )}
       {onNext && (
-        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
+        <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
           {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}          {nextLabel}
         </Button>
       )}

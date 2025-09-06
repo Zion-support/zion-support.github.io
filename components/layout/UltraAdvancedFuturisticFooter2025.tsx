@@ -1,392 +1,377 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  Mail,
-  Phone,
-  MapPin,
-  Globe,
-  Twitter,
-  Linkedin,
-  Github,
-  ArrowUp,
-  Crown,
-  Zap,
-  Brain,
-  Rocket,
-  Shield,
-  Users,
-  BookOpen,
-  Briefcase,
-  Atom,;
+  Mail
+  Phone
+  MapPin
+  Globe
+  Twitter
+  Linkedin
+  Github
+  ArrowUp
+  Crown
+  Zap
+  Brain
+  Rocket
+  Shield
+  Users
+  BookOpen
+  Briefcase
+  Atom;
 } from 'lucide-react';
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
-
 interface FooterLink {
   label: string;
   href: string;
   description?: string;
   external?: boolean;
-
 interface FooterSection {
   title: string;
   links: FooterLink[];} from 'lucide-react';
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
 interface FooterLink {
-  label: string,
-  href: string,
+  label: string
+  href: string
   description?: string;
   external?: boolean
 }
-
 interface FooterSection {
-  title: string,
+  title: string
   links: FooterLink[]
 }
-
 const footerSections: FooterSection[] = [
   {
-    title: 'Services',
+    title: 'Services'
     links: [
       {
-        label: 'AI & Machine Learning',
-        href: '/ai-services',
-        description: 'Advanced AI solutions',
-      },
+        label: 'AI & Machine Learning'
+        href: '/ai-services'
+        description: 'Advanced AI solutions'
+      }
       {
-        label: 'Quantum Computing',
-        href: '/quantum-computing',
-        description: 'Next-gen quantum tech',
-      },
+        label: 'Quantum Computing'
+        href: '/quantum-computing'
+        description: 'Next-gen quantum tech'
+      }
       {
-        label: 'Space Technology',
-        href: '/space-tech',
-        description: 'Innovative space solutions',
-      },
+        label: 'Space Technology'
+        href: '/space-tech'
+        description: 'Innovative space solutions'
+      }
       {
-        label: 'Q4 2025 Innovation',
-        href: '/innovative-2025-q4-showcase',
-        description: 'Latest revolutionary services',
-      },
+        label: 'Q4 2025 Innovation'
+        href: '/innovative-2025-q4-showcase'
+        description: 'Latest revolutionary services'
+      }
       {
-        label: 'Pricing Guide',
-        href: '/comprehensive-pricing-2025-q4',
-        description: 'Comprehensive pricing',
-      },
+        label: 'Pricing Guide'
+        href: '/comprehensive-pricing-2025-q4'
+        description: 'Comprehensive pricing'
+      }
       {
-        label: 'Cybersecurity',
-        href: '/cybersecurity',
-        description: 'Enterprise security',
-      },
+        label: 'Cybersecurity'
+        href: '/cybersecurity'
+        description: 'Enterprise security'
+      }
       {
-        label: 'Cloud Solutions',
-        href: '/cloud-platform',
-        description: 'Scalable cloud infrastructure',
-      },
+        label: 'Cloud Solutions'
+        href: '/cloud-platform'
+        description: 'Scalable cloud infrastructure'
+      }
       {
-        label: 'View All Services',
-        href: '/services',
-        description: 'Complete service portfolio',
-      },
-    ],
-  },
+        label: 'View All Services'
+        href: '/services'
+        description: 'Complete service portfolio'
+      }
+    ]
+  }
   {
-    title: 'Solutions',
+    title: 'Solutions'
     links: [
       {
-        label: 'Healthcare & Biotech',
-        href: '/healthcare-solutions',
-        description: 'Medical technology',
-      },
+        label: 'Healthcare & Biotech'
+        href: '/healthcare-solutions'
+        description: 'Medical technology'
+      }
       {
-        label: 'Financial Services',
-        href: '/solutions?industry=financial',
-        description: 'Fintech solutions',
-      },
+        label: 'Financial Services'
+        href: '/solutions?industry=financial'
+        description: 'Fintech solutions'
+      }
       {
-        label: 'Manufacturing',
-        href: '/solutions?industry=manufacturing',
-        description: 'Industry 4.0',
-      },
+        label: 'Manufacturing'
+        href: '/solutions?industry=manufacturing'
+        description: 'Industry 4.0'
+      }
       {
-        label: 'Retail & E-commerce',
-        href: '/solutions?industry=retail',
-        description: 'Digital commerce',
-      },
+        label: 'Retail & E-commerce'
+        href: '/solutions?industry=retail'
+        description: 'Digital commerce'
+      }
       {
-        label: 'Government',
-        href: '/solutions?industry=government',
-        description: 'Public sector',
-      },
+        label: 'Government'
+        href: '/solutions?industry=government'
+        description: 'Public sector'
+      }
       {
-        label: 'Education',
-        href: '/solutions?industry=education',
-        description: 'EdTech solutions',
-      },
+        label: 'Education'
+        href: '/solutions?industry=education'
+        description: 'EdTech solutions'
+      }
   {
-    title: 'Solutions',
+    title: 'Solutions'
     links: [
-      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' },
-      { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' },
-      { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' },
-      { label: 'Retail & E-commerce', href: '/solutions?industry=retail', description: 'Digital commerce' },
-      { label: 'Government', href: '/solutions?industry=government', description: 'Public sector' },
+      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' }
+      { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' }
+      { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' }
+      { label: 'Retail & E-commerce', href: '/solutions?industry=retail', description: 'Digital commerce' }
+      { label: 'Government', href: '/solutions?industry=government', description: 'Public sector' }
       { label: 'Education', href: '/solutions?industry=education', description: 'EdTech solutions' }
     ]
-  };
+  }
   {
-    title: 'Company',
+    title: 'Company'
     links: [
-      { label: 'About Us', href: '/about', description: 'Our mission and values' },
-      { label: 'Careers', href: '/careers', description: 'Join our team' },
-      { label: 'Contact', href: '/contact', description: 'Get in touch' },
-    ],
-  },
-  {
-    title: 'Company',
-    links: [
-      {
-        label: 'About Us',
-        href: '/about',
-        description: 'Our mission and values',
-      },
-      { label: 'Careers', href: '/careers', description: 'Join our team' },
-      { label: 'Contact', href: '/contact', description: 'Get in touch' },
-    ],
-  },  {
-    title: 'Resources',
-    links: [
-      { label: 'Blog', href: '/blog', description: 'Industry insights' },  {
-    title: 'Solutions',
-    links: [
-      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' },
-      { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' },
-      { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' },
-      { label: 'Retail & E-commerce', href: '/solutions?industry=retail', description: 'Digital commerce' },
-      { label: 'Government', href: '/solutions?industry=government', description: 'Public sector' },
-      { label: 'Education', href: '/solutions?industry=education', description: 'EdTech solutions' }
-    ]
-  };
-  {
-    title: 'Company',
-    links: [
-      { label: 'About Us', href: '/about', description: 'Our mission and values' },
-      { label: 'Careers', href: '/careers', description: 'Join our team' },
+      { label: 'About Us', href: '/about', description: 'Our mission and values' }
+      { label: 'Careers', href: '/careers', description: 'Join our team' }
       { label: 'Contact', href: '/contact', description: 'Get in touch' }
     ]
-  };
+  }
   {
-    title: 'Resources',
-    links: [
-      { label: 'Blog', href: '/blog', description: 'Industry insights' },
-      {
-        label: 'White Papers',
-        href: '/white-papers',
-        description: 'In-depth research',
-      },
-      {
-        label: 'Webinars',
-        href: '/webinars',
-        description: 'Educational content',
-      },
-      {
-        label: 'Documentation',
-        href: '/docs',
-        description: 'Technical guides',
-      },
-      {
-        label: 'Case Studies',
-        href: '/case-studies',
-        description: 'Success stories',
-      },
-      { label: 'Support', href: '/support', description: 'Help & assistance' },
-    ],
-  },
-  {
-    title: 'Industries',
+    title: 'Company'
     links: [
       {
-        label: 'Healthcare',
-        href: '/healthcare-solutions',
-        description: 'Medical technology',
-      },
+        label: 'About Us'
+        href: '/about'
+        description: 'Our mission and values'
+      }
+      { label: 'Careers', href: '/careers', description: 'Join our team' }
+      { label: 'Contact', href: '/contact', description: 'Get in touch' }
+    ]
+  },  {
+    title: 'Resources'
+    links: [
+      { label: 'Blog', href: '/blog', description: 'Industry insights' },  {
+    title: 'Solutions'
+    links: [
+      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' }
+      { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' }
+      { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' }
+      { label: 'Retail & E-commerce', href: '/solutions?industry=retail', description: 'Digital commerce' }
+      { label: 'Government', href: '/solutions?industry=government', description: 'Public sector' }
+      { label: 'Education', href: '/solutions?industry=education', description: 'EdTech solutions' }
+    ]
+  }
+  {
+    title: 'Company'
+    links: [
+      { label: 'About Us', href: '/about', description: 'Our mission and values' }
+      { label: 'Careers', href: '/careers', description: 'Join our team' }
+      { label: 'Contact', href: '/contact', description: 'Get in touch' }
+    ]
+  }
+  {
+    title: 'Resources'
+    links: [
+      { label: 'Blog', href: '/blog', description: 'Industry insights' }
       {
-        label: 'Finance',
-        href: '/financial-solutions',
-        description: 'Fintech solutions',
-      },
+        label: 'White Papers'
+        href: '/white-papers'
+        description: 'In-depth research'
+      }
       {
-        label: 'Manufacturing',
-        href: '/manufacturing-ai-solutions',
-        description: 'Industry 4.0',
-      },
+        label: 'Webinars'
+        href: '/webinars'
+        description: 'Educational content'
+      }
       {
-        label: 'Government',
-        href: '/government-technology-solutions',
-        description: 'Public sector',
-      },
+        label: 'Documentation'
+        href: '/docs'
+        description: 'Technical guides'
+      }
       {
-        label: 'Education',
-        href: '/education-technology-solutions',
-        description: 'EdTech solutions',
-      },
-    ],
-  },
+        label: 'Case Studies'
+        href: '/case-studies'
+        description: 'Success stories'
+      }
+      { label: 'Support', href: '/support', description: 'Help & assistance' }
+    ]
+  }
+  {
+    title: 'Industries'
+    links: [
+      {
+        label: 'Healthcare'
+        href: '/healthcare-solutions'
+        description: 'Medical technology'
+      }
+      {
+        label: 'Finance'
+        href: '/financial-solutions'
+        description: 'Fintech solutions'
+      }
+      {
+        label: 'Manufacturing'
+        href: '/manufacturing-ai-solutions'
+        description: 'Industry 4.0'
+      }
+      {
+        label: 'Government'
+        href: '/government-technology-solutions'
+        description: 'Public sector'
+      }
+      {
+        label: 'Education'
+        href: '/education-technology-solutions'
+        description: 'EdTech solutions'
+      }
+    ]
+  }
 ];
-
 const socialLinks = [
   {
-    icon: <Linkedin className='w-5 h-5' />,
-    href: 'https://linkedin.com/company/ziontechgroup',
-    label: 'LinkedIn',
-    external: true,
-  },
+    icon: <Linkedin className='w-5 h-5' />
+    href: 'https://linkedin.com/company/ziontechgroup'
+    label: 'LinkedIn'
+    external: true
+  }
   {
-    icon: <Twitter className='w-5 h-5' />,
-    href: 'https://twitter.com/ziontechgroup',
-    label: 'Twitter',
-    external: true,
-  },
+    icon: <Twitter className='w-5 h-5' />
+    href: 'https://twitter.com/ziontechgroup'
+    label: 'Twitter'
+    external: true
+  }
   {
-    icon: <Github className='w-5 h-5' />,
-    href: 'https://github.com/ziontechgroup',
-    label: 'GitHub',
-    external: true,
-  },
+    icon: <Github className='w-5 h-5' />
+    href: 'https://github.com/ziontechgroup'
+    label: 'GitHub'
+    external: true
+  }
 ];
-
 const quickLinks = [
-  { name: 'About Us', href: '/about', icon: <Users className='w-4 h-4' /> },
-  { name: 'Contact', href: '/contact', icon: <Phone className='w-4 h-4' /> },
+  { name: 'About Us', href: '/about', icon: <Users className='w-4 h-4' /> }
+  { name: 'Contact', href: '/contact', icon: <Phone className='w-4 h-4' /> }
   {
-    name: 'Support',
-    href: '/support',
-    icon: <HelpCircle className='w-4 h-4' />,
-  },
+    name: 'Support'
+    href: '/support'
+    icon: <HelpCircle className='w-4 h-4' />
+  }
   {
-    name: 'Documentation',
-    href: '/docs',
-    icon: <FileText className='w-4 h-4' />,
-  },
-  { name: 'API Reference', href: '/api', icon: <Code className='w-4 h-4' /> },
+    name: 'Documentation'
+    href: '/docs'
+    icon: <FileText className='w-4 h-4' />
+  }
+  { name: 'API Reference', href: '/api', icon: <Code className='w-4 h-4' /> }
   { name: 'Status', href: '/status', icon: <TrendingUp className='w-4 h-4' /> },];
-
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });  };  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
-  { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> },
-  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
-  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
-  { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },
+    window.scrollTo({ top: 0, behavior: 'smooth' });  };  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> }
+  { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> }
+  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }
+  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> }
+  { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> }
   { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
-
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });    window.scrollTo({ top: 0, behavior: 'smooth' })
-  };
-
+  }
   const footerSections = [
     {
-      title: 'Services',
+      title: 'Services'
       items: [
-        { label: 'AI & Machine Learning', href: '/ai-services' },
-        { label: 'Quantum Computing', href: '/quantum-computing' },
-        { label: 'Space Technology', href: '/space-tech' },
-        { label: 'Cybersecurity', href: '/cybersecurity' },
-        { label: '2040 Services', href: '/innovative-2040-services-showcase' },
-      ],
+        { label: 'AI & Machine Learning', href: '/ai-services' }
+        { label: 'Quantum Computing', href: '/quantum-computing' }
+        { label: 'Space Technology', href: '/space-tech' }
+        { label: 'Cybersecurity', href: '/cybersecurity' }
+        { label: '2040 Services', href: '/innovative-2040-services-showcase' }
+      ]
     },    {        { label: '2040 Services', href: '/innovative-2040-services-showcase' }
       ]
-    };
+    }
     {
-      title: 'Solutions',
+      title: 'Solutions'
       items: [
-        { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
-        { label: 'Micro SAAS', href: '/micro-saas' },
-        { label: 'IT Services', href: '/it-services' },
-        { label: 'Innovation Lab', href: '/innovation-lab' },
-        { label: 'Research & Development', href: '/research-development' },
-      ],
+        { label: 'Enterprise Solutions', href: '/enterprise-solutions' }
+        { label: 'Micro SAAS', href: '/micro-saas' }
+        { label: 'IT Services', href: '/it-services' }
+        { label: 'Innovation Lab', href: '/innovation-lab' }
+        { label: 'Research & Development', href: '/research-development' }
+      ]
     },    {        { label: 'Research & Development', href: '/research-development' }
       ]
-    };
+    }
     {
-      title: 'Company',
+      title: 'Company'
       items: [
-        { label: 'About Us', href: '/about' },
-        { label: 'Our Team', href: '/team' },
-        { label: 'Careers', href: '/careers' },
-        { label: 'Investors', href: '/investors' },
-        { label: 'Press & Media', href: '/press' },
-      ],
+        { label: 'About Us', href: '/about' }
+        { label: 'Our Team', href: '/team' }
+        { label: 'Careers', href: '/careers' }
+        { label: 'Investors', href: '/investors' }
+        { label: 'Press & Media', href: '/press' }
+      ]
     },    {        { label: 'Press & Media', href: '/press' }
       ]
-    };
+    }
     {
-      title: 'Resources',
+      title: 'Resources'
       items: [
-        { label: 'Blog', href: '/blog' },
-        { label: 'Case Studies', href: '/case-studies' },
-        { label: 'White Papers', href: '/white-papers' },
-        { label: 'Documentation', href: '/docs' },
-        { label: 'Support', href: '/support' },
-      ],
-    },
+        { label: 'Blog', href: '/blog' }
+        { label: 'Case Studies', href: '/case-studies' }
+        { label: 'White Papers', href: '/white-papers' }
+        { label: 'Documentation', href: '/docs' }
+        { label: 'Support', href: '/support' }
+      ]
+    }
   ];
-
   const socialLinks = [
     {
-      icon: Twitter,
-      href: 'https://twitter.com/ziontechgroup',
-      label: 'Twitter',
-    },
+      icon: Twitter
+      href: 'https://twitter.com/ziontechgroup'
+      label: 'Twitter'
+    }
     {
-      icon: Linkedin,
-      href: 'https://linkedin.com/company/ziontechgroup',
-      label: 'LinkedIn',
-    },
-    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
+      icon: Linkedin
+      href: 'https://linkedin.com/company/ziontechgroup'
+      label: 'LinkedIn'
+    }
+    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' }
     { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' },  ];  ];
-
   const socialLinks = [
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
+    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' }
+    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' }
+    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' }
     { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' }
   ];
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
-        staggerChildren: 0.1,
-      },
+        staggerChildren: 0.1
+      }
     },  };        staggerChildren: 0.1
       }
     }
-  };
-
+  }
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 }
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0
+      opacity: 1
       transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
+        duration: 0.5
+      }
+    }
+  }
   return (
     <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>
       {/* Animated Background Elements */}
       <div className='absolute inset-0 -z-10'>        {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (
           <motion.div
-            key={i}  };
-
+            key={i}  }
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
       {/* Animated Background Elements */}
@@ -397,35 +382,33 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
             key={i}
             className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full'
             animate={{
-              x: [0, Math.random() * 1000, 0],
-              y: [0, Math.random() * 1000, 0],
-              opacity: [0, 0.6, 0],
-              scale: [0, 1, 0],
+              x: [0, Math.random() * 1000, 0]
+              y: [0, Math.random() * 1000, 0]
+              opacity: [0, 0.6, 0]
+              scale: [0, 1, 0]
             }}            transition={{
-              duration: 15 + Math.random() * 10,
-              repeat: -1,
-              delay: Math.random() * 8,
+              duration: 15 + Math.random() * 10
+              repeat: -1
+              delay: Math.random() * 8
               ease: 'easeInOut',              x: [0, Math.random() * 1000, 0];
               y: [0, Math.random() * 1000, 0];
               opacity: [0, 0.6, 0];
               scale: [0, 1, 0]}}
-              duration: 15 + Math.random() * 10,
-              repeat: -1,
-              delay: Math.random() * 8,
-              ease: 'easeInOut',
+              duration: 15 + Math.random() * 10
+              repeat: -1
+              delay: Math.random() * 8
+              ease: 'easeInOut'
             }}
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`
             }}
           />
         ))}
-
         {/* Gradient Overlays */}
         <div className='absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent'></div>
         <div className='absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900'></div>
       </div>
-
       <div className='relative z-10'>
         {/* Main Footer Content */}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
@@ -454,19 +437,16 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <p className='text-gray-300 mb-6 leading-relaxed'>
-                Pioneering the future with revolutionary AI consciousness,
+                Pioneering the future with revolutionary AI consciousness
                 quantum computing, and autonomous systems. Transforming
                 businesses through next-generation technology.
               </p>
-
               <p className='text-gray-300 leading-relaxed mb-6 max-w-md'>
-                Leading provider of innovative technology solutions,
+                Leading provider of innovative technology solutions
                 specializing in AI, automation, and future-ready services. We
                 help businesses transform and thrive in the digital age.
               </p>
-
               {/* Contact Info */}
               <div className='space-y-3'>
                 <div className='flex items-center space-x-3 text-gray-300'>
@@ -488,17 +468,15 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                     className='hover:text-white transition-colors duration-200'
                   >                    ziontechgroup.com            }}
             style={{
-              left: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
             }}
           />
         ))}
-        
         {/* Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900"></div>
       </div>
-
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -525,16 +503,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                   <p className="text-sm text-gray-400">Future Technology Solutions</p>
                 </div>
               </div>
-              
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Pioneering the future with revolutionary AI consciousness, quantum computing, and autonomous systems. Transforming businesses through next-generation technology.
               </p>
-              
               <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
-                Leading provider of innovative technology solutions, specializing in AI, automation, and future-ready services. 
+                Leading provider of innovative technology solutions, specializing in AI, automation, and future-ready services.
                 We help businesses transform and thrive in the digital age.
               </p>
-
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -557,7 +532,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <motion.div key={section.title} variants={itemVariants}>
@@ -598,7 +572,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
-
           {/* Social Links & Newsletter */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -640,7 +613,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                   </motion.a>
                 ))}
               </div>
-
               {/* Newsletter Signup */}
               <div className='flex-1 max-w-md'>
                 <h5 className='text-lg font-semibold text-white mb-3'>
@@ -676,7 +648,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
             </div>
           </motion.div>
         </div>
-
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -688,14 +659,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
               <div className='text-gray-400 text-sm'>
-                © 2024 Zion Tech Group. All rights reserved. |
+                © 2024 Zion Tech Group. All rights reserved.
                 <Link
                   href='/privacy'
                   className='hover:text-white transition-colors duration-200 ml-2'
                 >
                   Privacy Policy
                 </Link>{' '}
-                |
                 <Link
                   href='/terms'
                   className='hover:text-white transition-colors duration-200 ml-2'
@@ -703,7 +673,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                   Terms of Service
                 </Link>
               </div>
-
               <div className='flex items-center space-x-4 text-gray-400 text-sm'>
                 <span>Powered by</span>
                 <div className='flex items-center space-x-2'>
@@ -725,7 +694,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
           </div>
         </motion.div>
       </div>
-
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
@@ -740,11 +708,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       </motion.button>
     </footer>
   );
-};
-
+}
 export default UltraAdvancedFuturisticFooter2025;      </motion.button>
     </footer>
   )
-};
-
+}
 export default UltraAdvancedFuturisticFooter2025;

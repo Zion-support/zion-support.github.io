@@ -1,269 +1,251 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-  Search,
-  Grid,
-  List,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Check,
-  Brain,
-  Atom,
-  Shield,
-  Building,
-  Globe,
-  Users,
-  TrendingUp,
-  Award,
-  Phone,
-  Mail,
-  MapPin,;
+  Search
+  Grid
+  List
+  Star
+  CheckCircle
+  ArrowRight
+  Check
+  Brain
+  Atom
+  Shield
+  Building
+  Globe
+  Users
+  TrendingUp
+  Award
+  Phone
+  Mail
+  MapPin;
 } from 'lucide-react';
-
 // Mock service data
 const advancedEnterpriseServices2025 = [
   {
-    id: "enterprise-1",
-    title: "Enterprise AI Solutions",
-    description: "Comprehensive AI implementation for large enterprises",
-    category: "enterprise",
-    price: "$50,000+",
-    rating: 4.9,
-    tags: ["AI", "Machine Learning", "Enterprise"],
-    color: "from-blue-500 to-purple-500",
-    icon: "🤖",
-  },
+    id: "enterprise-1"
+    title: "Enterprise AI Solutions"
+    description: "Comprehensive AI implementation for large enterprises"
+    category: "enterprise"
+    price: "$50,000+"
+    rating: 4.9
+    tags: ["AI", "Machine Learning", "Enterprise"]
+    color: "from-blue-500 to-purple-500"
+    icon: "🤖"
+  }
 ];
-
 const innovativeMicroSaasExpansion2025 = [
   {
-    id: "micro-1",
-    title: "Micro SaaS Platform",
-    description: "Lightweight SaaS solutions for small businesses",
-    category: "micro-saas",
-    price: "$99/month",
-    rating: 4.7,
-    tags: ["SaaS", "Micro Services", "Cloud"],
-    color: "from-green-500 to-teal-500",
-    icon: "⚡",
-  },
+    id: "micro-1"
+    title: "Micro SaaS Platform"
+    description: "Lightweight SaaS solutions for small businesses"
+    category: "micro-saas"
+    price: "$99/month"
+    rating: 4.7
+    tags: ["SaaS", "Micro Services", "Cloud"]
+    color: "from-green-500 to-teal-500"
+    icon: "⚡"
+  }
 ];
-
 const cuttingEdgeITInfrastructureServices = [
   {
-    id: "infra-1",
-    title: "Cloud Infrastructure",
-    description: "Scalable cloud infrastructure solutions",
-    category: "infrastructure",
-    price: "$5,000/month",
-    rating: 4.8,
-    tags: ["Cloud", "Infrastructure", "DevOps"],
-    color: "from-orange-500 to-red-500",
-    icon: "☁️",
-  },
+    id: "infra-1"
+    title: "Cloud Infrastructure"
+    description: "Scalable cloud infrastructure solutions"
+    category: "infrastructure"
+    price: "$5,000/month"
+    rating: 4.8
+    tags: ["Cloud", "Infrastructure", "DevOps"]
+    color: "from-orange-500 to-red-500"
+    icon: "☁️"
+  }
 ];// Import our new service data
 import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
 import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
 const allServices = [
-  ...advancedEnterpriseServices2025,
-  ...innovativeMicroSaasExpansion2025,
+  ...advancedEnterpriseServices2025
+  ...innovativeMicroSaasExpansion2025
   ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup.com'
-};
-
+}
 const allServices = [
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices
-
 const categories = [
   {
-    id: 'all',
-    name: 'All Services',
-    icon: <Grid className='w-6 h-6' />,
-    color: 'from-gray-500 to-slate-500',
-    description: 'Complete portfolio of advanced services',    color: 'from-gray-500 to-slate-500',
+    id: 'all'
+    name: 'All Services'
+    icon: <Grid className='w-6 h-6' />
+    color: 'from-gray-500 to-slate-500'
+    description: 'Complete portfolio of advanced services',    color: 'from-gray-500 to-slate-500'
     description: 'Complete portfolio of advanced services'
-  };
+  }
   {
-    id: 'enterprise',
-    name: 'Enterprise Solutions',
-    icon: <Building className="w-6 h-6" />,
-    color: 'from-blue-500 to-purple-500',
+    id: 'enterprise'
+    name: 'Enterprise Solutions'
+    icon: <Building className="w-6 h-6" />
+    color: 'from-blue-500 to-purple-500'
     description: 'Enterprise-grade AI and IT solutions'
-  };
+  }
   {
-    id: 'micro-saas',
-    name: 'Micro SAAS',
-    icon: <Globe className="w-6 h-6" />,
-    color: 'from-green-500 to-emerald-500',
+    id: 'micro-saas'
+    name: 'Micro SAAS'
+    icon: <Globe className="w-6 h-6" />
+    color: 'from-green-500 to-emerald-500'
     description: 'Innovative micro SAAS solutions'
-  };
+  }
   {
-    id: 'infrastructure',
-    name: 'IT Infrastructure',
-    icon: <Shield className="w-6 h-6" />,
-    color: 'from-orange-500 to-red-500',
+    id: 'infrastructure'
+    name: 'IT Infrastructure'
+    icon: <Shield className="w-6 h-6" />
+    color: 'from-orange-500 to-red-500'
     description: 'Cutting-edge infrastructure services'
-  };
+  }
   {
-    id: 'ai-ml',
-    name: 'AI & Machine Learning',
-    icon: <Brain className="w-6 h-6" />,
-    color: 'from-purple-500 to-pink-500',
+    id: 'ai-ml'
+    name: 'AI & Machine Learning'
+    icon: <Brain className="w-6 h-6" />
+    color: 'from-purple-500 to-pink-500'
     description: 'Advanced AI and ML platforms'
-  };
+  }
   {
-    id: 'quantum',
-    name: 'Quantum Computing',
-    icon: <Atom className="w-6 h-6" />,
-    color: 'from-violet-500 to-indigo-500',
-    description: 'Quantum computing solutions',
-  },
+    id: 'quantum'
+    name: 'Quantum Computing'
+    icon: <Atom className="w-6 h-6" />
+    color: 'from-violet-500 to-indigo-500'
+    description: 'Quantum computing solutions'
+  }
   {
-    id: 'enterprise',
-    name: 'Enterprise Solutions',
-    icon: <Building className='w-6 h-6' />,
-    color: 'from-blue-500 to-purple-500',
-    description: 'Enterprise-grade AI and IT solutions',
-  },
+    id: 'enterprise'
+    name: 'Enterprise Solutions'
+    icon: <Building className='w-6 h-6' />
+    color: 'from-blue-500 to-purple-500'
+    description: 'Enterprise-grade AI and IT solutions'
+  }
   {
-    id: 'micro-saas',
-    name: 'Micro SAAS',
-    icon: <Globe className='w-6 h-6' />,
-    color: 'from-green-500 to-emerald-500',
-    description: 'Innovative micro SAAS solutions',
-  },
+    id: 'micro-saas'
+    name: 'Micro SAAS'
+    icon: <Globe className='w-6 h-6' />
+    color: 'from-green-500 to-emerald-500'
+    description: 'Innovative micro SAAS solutions'
+  }
   {
-    id: 'infrastructure',
-    name: 'IT Infrastructure',
-    icon: <Shield className='w-6 h-6' />,
-    color: 'from-orange-500 to-red-500',
-    description: 'Cutting-edge infrastructure services',
-  },
+    id: 'infrastructure'
+    name: 'IT Infrastructure'
+    icon: <Shield className='w-6 h-6' />
+    color: 'from-orange-500 to-red-500'
+    description: 'Cutting-edge infrastructure services'
+  }
   {
-    id: 'ai-ml',
-    name: 'AI & Machine Learning',
-    icon: <Brain className='w-6 h-6' />,
-    color: 'from-purple-500 to-pink-500',
-    description: 'Advanced AI and ML platforms',
-  },
+    id: 'ai-ml'
+    name: 'AI & Machine Learning'
+    icon: <Brain className='w-6 h-6' />
+    color: 'from-purple-500 to-pink-500'
+    description: 'Advanced AI and ML platforms'
+  }
   {
-    id: 'quantum',
-    name: 'Quantum Computing',
-    icon: <Atom className='w-6 h-6' />,
-    color: 'from-violet-500 to-indigo-500',
-    description: 'Quantum computing solutions',
+    id: 'quantum'
+    name: 'Quantum Computing'
+    icon: <Atom className='w-6 h-6' />
+    color: 'from-violet-500 to-indigo-500'
+    description: 'Quantum computing solutions'
   },];
-
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
   return 'Other';};    description: 'Quantum computing solutions'
   }
 ];
-
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
   return 'Other';  return 'Other'
-};
-
+}
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
   return 'Contact for pricing';};  return 'Contact for pricing'
-};
-
+}
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features;
   if (service.keyFeatures) return service.keyFeatures;
   return [];
 };  return []
-};
-
+}
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filteredServices, setFilteredServices] = useState(allServices);
-
   useEffect(() => {
     let filtered = allServices;
-
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         const category = getServiceCategory(service).toLowerCase();
         if (selectedCategory === 'enterprise')
           return (
-            category.includes('enterprise') ||
-            category.includes('legal') ||
+            category.includes('enterprise') |
+            category.includes('legal') |
             category.includes('financial')
           );
         if (selectedCategory === 'micro-saas')
           return (
-            category.includes('marketing') ||
-            category.includes('social') ||
-            category.includes('customer') ||
+            category.includes('marketing') |
+            category.includes('social') |
+            category.includes('customer') |
             category.includes('project')
           );
         if (selectedCategory === 'infrastructure')
           return (
-            category.includes('infrastructure') ||
-            category.includes('network') ||
-            category.includes('data center') ||
+            category.includes('infrastructure') |
+            category.includes('network') |
+            category.includes('data center') |
             category.includes('edge')
           );
         if (selectedCategory === 'ai-ml')
           return (
-            category.includes('ai') ||
-            category.includes('machine learning') ||
-            category.includes('nlp') ||
+            category.includes('ai') |
+            category.includes('machine learning') |
+            category.includes('nlp') |
             category.includes('ml')
           );
         if (selectedCategory === 'quantum')
           return (
-            category.includes('quantum') ||
+            category.includes('quantum') |
             category.includes('quantum-resistant')
           );
         return false;
       });
     }
-
     if (searchTerm) {
       filtered = filtered.filter(
         service =>
-          service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
           service.description
             .toLowerCase()
-            .includes(searchTerm.toLowerCase()) ||
-          service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            .includes(searchTerm.toLowerCase()) |
+          service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) |
           getServiceCategory(service)
             .toLowerCase()
             .includes(searchTerm.toLowerCase())
       );
     }
-
     setFilteredServices(filtered);  }, [selectedCategory, searchTerm]);    }
-
     // Filter by search term
     if (searchTerm) {
       filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+        service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) |
         getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase())
       )
     }
-
     setFilteredServices(filtered)
   }, [selectedCategory, searchTerm]);
-
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -279,24 +261,20 @@ const getServiceFeatures = (service: any) => {
           Popular
         </div>
       )}
-
       <div
         className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}
       >
         <span className='text-4xl'>{service.icon}</span>
       </div>
-
       <div className='p-6'>
         <div className='flex items-start justify-between mb-3'>
           <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-2'>
             {service.name}
           </h3>
         </div>
-
         <p className='text-gray-600 dark:text-gray-300 mb-4 line-clamp-2'>
           {service.tagline}
         </p>
-
         <div className='flex items-center justify-between mb-4'>
           <span className='text-2xl font-bold text-gray-900 dark:text-white'>
             {getServicePricing(service)}
@@ -305,7 +283,6 @@ const getServiceFeatures = (service: any) => {
             {service.trialDays} day trial
           </span>
         </div>
-
         <div className='space-y-3 mb-6'>
           <div className='flex items-center gap-2'>
             <CheckCircle className='w-4 h-4 text-green-500' />
@@ -328,22 +305,18 @@ const getServiceFeatures = (service: any) => {
         </div>          Popular
         </div>
       )}
-      
       <div className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>
         <span className="text-4xl">{service.icon}</span>
       </div>
-      
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
             {service.name}
           </h3>
         </div>
-        
         <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
           {service.tagline}
         </p>
-        
         <div className="flex items-center justify-between mb-4">
           <span className="text-2xl font-bold text-gray-900 dark:text-white">
             {getServicePricing(service)}
@@ -352,7 +325,6 @@ const getServiceFeatures = (service: any) => {
             {service.trialDays} day trial
           </span>
         </div>
-        
         <div className="space-y-3 mb-6">
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-green-500" />
@@ -373,7 +345,6 @@ const getServiceFeatures = (service: any) => {
             </span>
           </div>
         </div>
-
         <div className='mb-6'>
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
             Key Features:
@@ -390,7 +361,7 @@ const getServiceFeatures = (service: any) => {
                 </div>
               ))}
             {getServiceFeatures(service).length > 3 && (
-              <span className='text-sm text-gray-500 dark:text-gray-400'>                +{getServiceFeatures(service).length - 3} more features        
+              <span className='text-sm text-gray-500 dark:text-gray-400'>                +{getServiceFeatures(service).length - 3} more features
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
           <div className="space-y-1">
@@ -406,7 +377,6 @@ const getServiceFeatures = (service: any) => {
             )}
           </div>
         </div>
-
         <div className='mb-6'>
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
             ROI & Benefits:
@@ -415,7 +385,6 @@ const getServiceFeatures = (service: any) => {
             {service.roi}
           </p>
         </div>
-
         <div className='mb-6'>
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
             Market Position:
@@ -424,7 +393,6 @@ const getServiceFeatures = (service: any) => {
             {service.marketPosition}
           </p>
         </div>
-
         <div className='flex items-center justify-between'>
           <a
             href={service.link}
@@ -433,20 +401,17 @@ const getServiceFeatures = (service: any) => {
             Learn More
             <ArrowRight className='w-4 h-4' />
           </a>
-
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'          >            {service.roi}
           </p>
         </div>
-        
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {service.marketPosition}
           </p>
         </div>
-        
         <div className="flex items-center justify-between">
           <a
             href={service.link}
@@ -455,7 +420,6 @@ const getServiceFeatures = (service: any) => {
             Learn More
             <ArrowRight className="w-4 h-4" />
           </a>
-          
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
@@ -465,8 +429,7 @@ const getServiceFeatures = (service: any) => {
         </div>
       </div>
     </motion.div>
-  ),
-
+  )
   const ServiceList = ({ service }: { service: any }) => (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
@@ -483,7 +446,6 @@ const getServiceFeatures = (service: any) => {
           >
             <span className='text-3xl'>{service.icon}</span>
           </div>
-
           <div className='flex-1'>
             <div className='flex items-start justify-between mb-3'>
               <div>
@@ -495,7 +457,6 @@ const getServiceFeatures = (service: any) => {
                   )}
                 </h3>
                 <p className='text-gray-600 dark:text-gray-300 mb-3'>          </div>
-          
           <div className="flex-1">
             <div className="flex items-start justify-between mb-3">
               <div>
@@ -511,7 +472,6 @@ const getServiceFeatures = (service: any) => {
                   {service.tagline}
                 </p>
               </div>
-
               <div className='text-right'>
                 <div className='text-2xl font-bold text-gray-900 dark:text-white'>
                   {getServicePricing(service)}
@@ -522,7 +482,6 @@ const getServiceFeatures = (service: any) => {
             </div>                  {service.tagline}
                 </p>
               </div>
-              
               <div className="text-right">
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">
                   {getServicePricing(service)}
@@ -532,7 +491,6 @@ const getServiceFeatures = (service: any) => {
                 </div>
               </div>
             </div>
-
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mb-4'>
               <div className='flex items-center gap-2'>
                 <CheckCircle className='w-4 h-4 text-green-500' />
@@ -555,7 +513,6 @@ const getServiceFeatures = (service: any) => {
                 </span>
               </div>
             </div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-4'>                  {service.setupTime} setup
                 </span>
               </div>
@@ -572,7 +529,6 @@ const getServiceFeatures = (service: any) => {
                 </span>
               </div>
             </div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-4'>
               <div>
                 <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
@@ -591,7 +547,6 @@ const getServiceFeatures = (service: any) => {
                     ))}
                 </div>
               </div>
-
               <div>
                 <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
                   ROI & Benefits:
@@ -599,7 +554,6 @@ const getServiceFeatures = (service: any) => {
                 <p className='text-sm text-gray-600 dark:text-gray-400 mb-3'>
                   {service.roi}
                 </p>
-
                 <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
                   Market Position:
                 </h4>
@@ -607,7 +561,6 @@ const getServiceFeatures = (service: any) => {
                 </p>
               </div>
             </div>
-
             <div className='flex items-center gap-4'>              <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
                 <div className="space-y-1">
@@ -619,20 +572,17 @@ const getServiceFeatures = (service: any) => {
                   ))}
                 </div>
               </div>
-              
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                   {service.roi}
                 </p>
-                
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   {service.marketPosition}
                 </p>
               </div>
             </div>
-
             <div className='flex items-center gap-4'>
               <a
                 href={service.link}
@@ -641,7 +591,6 @@ const getServiceFeatures = (service: any) => {
                 Learn More
                 <ArrowRight className='w-4 h-4' />
               </a>
-
               <a
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
                 className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'              >              <a
@@ -651,7 +600,6 @@ const getServiceFeatures = (service: any) => {
                 Learn More
                 <ArrowRight className="w-4 h-4" />
               </a>
-              
               <a
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
                 className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
@@ -663,23 +611,21 @@ const getServiceFeatures = (service: any) => {
         </div>
       </div>
     </motion.div>
-  ),
-
+  )
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800'>
       <SEO
         title='2025 Advanced Services Showcase - Zion Tech Group'
         description='Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses.'
         keywords={[
-          'AI services',
-          'micro SAAS',
-          'IT infrastructure',
-          'quantum computing',
-          'enterprise solutions',
-          'Zion Tech Group',
+          'AI services'
+          'micro SAAS'
+          'IT infrastructure'
+          'quantum computing'
+          'enterprise solutions'
+          'Zion Tech Group'
         ]}
       />
-
       {/* Hero Section */}
       <div className='relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700'>
         <div className='absolute inset-0 bg-black opacity-20'></div>
@@ -725,7 +671,6 @@ const getServiceFeatures = (service: any) => {
           </div>
         </div>
       </div>
-
       {/* Contact Information Banner */}
       <div className='bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -792,7 +737,6 @@ const getServiceFeatures = (service: any) => {
           </div>
         </div>
       </div>
-
       {/* Main Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
         {/* Filters and Search */}
@@ -810,7 +754,6 @@ const getServiceFeatures = (service: any) => {
                 />
               </div>
             </div>
-
             <div className='flex items-center gap-4'>
               <div className='flex items-center gap-2'>
                 <button
@@ -824,8 +767,8 @@ const getServiceFeatures = (service: any) => {
                   <Grid className='w-5 h-5' />                </button>                <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
-                    viewMode === 'grid' 
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
+                    viewMode === 'grid'
+                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
                 >
@@ -842,8 +785,8 @@ const getServiceFeatures = (service: any) => {
                   <List className='w-5 h-5' />                </button>
               </div>
             </div>
-          </div>                    viewMode === 'list' 
-                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
+          </div>                    viewMode === 'list'
+                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
                 >
@@ -851,11 +794,10 @@ const getServiceFeatures = (service: any) => {
               </div>
             </div>
           </div>
-
           {/* Category Filters */}
           <div className='mt-6'>
             <div className='flex flex-wrap gap-3'>
-              {categories.map(category => (                <button          
+              {categories.map(category => (                <button
           {/* Category Filters */}
           <div className="mt-6">
             <div className="flex flex-wrap gap-3">
@@ -875,7 +817,6 @@ const getServiceFeatures = (service: any) => {
             </div>
           </div>
         </div>
-
         {/* Results Summary */}
         <div className='mb-8'>
           <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>
@@ -890,7 +831,6 @@ const getServiceFeatures = (service: any) => {
                   {searchTerm && ` • Search: "${searchTerm}"`}
                 </p>
               </div>
-
               <div className='flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400'>
                 <div className='flex items-center gap-2'>
                   <TrendingUp className='w-4 h-4 text-green-500' />
@@ -906,7 +846,6 @@ const getServiceFeatures = (service: any) => {
                   {searchTerm && ` • Search: "${searchTerm}"`}
                 </p>
               </div>
-              
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-green-500" />
@@ -920,7 +859,6 @@ const getServiceFeatures = (service: any) => {
             </div>
           </div>
         </div>
-
         {/* Services Grid/List */}
         <div className='space-y-6'>
           {filteredServices.length === 0 ? (
@@ -965,7 +903,6 @@ const getServiceFeatures = (service: any) => {
             </AnimatePresence>
           )}
         </div>
-
         {/* Call to Action */}
         <div className='mt-16 text-center'>
           <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>
@@ -995,7 +932,7 @@ const getServiceFeatures = (service: any) => {
           </div>              Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Our team of experts is ready to help you implement these cutting-edge solutions. 
+              Our team of experts is ready to help you implement these cutting-edge solutions.
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -1015,7 +952,6 @@ const getServiceFeatures = (service: any) => {
               </a>
             </div>
           </div>
-
           <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
             Get Started Today
           </button>

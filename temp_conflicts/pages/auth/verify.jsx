@@ -1,7 +1,6 @@
 
-import Head from 'next/head',;
-const Verify = () => {;
-  return (;
+import Head from 'next/head';
+const Verify = () => {return (;
     <div>;
       <Head>;
         <title>Verify - Zion Tech Solutions</title>;
@@ -13,5 +12,5 @@ const Verify = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default Verify;

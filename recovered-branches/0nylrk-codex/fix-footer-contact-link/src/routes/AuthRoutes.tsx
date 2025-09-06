@@ -17,34 +17,32 @@ const AuthRoutes = () => {
       <Route path="/signup" element={<Signup />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/update-password" element={<UpdatePassword />} />
-      
       {/* Onboarding Routes */}
-      <Route 
-        path="/onboarding" 
+      <Route
+        path="/onboarding"
         element={
           <ProtectedRoute>
             <Onboarding />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/talent-onboarding" 
+      <Route
+        path="/talent-onboarding"
         element={
           <ProtectedRoute>
             <TalentOnboarding />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/service-onboarding" 
+      <Route
+        path="/service-onboarding"
         element={
           <ProtectedRoute>
             <ServiceOnboarding />
           </ProtectedRoute>
-        } 
+        }
       />
     </Routes>
   )
-};
-
+}
 export default AuthRoutes;

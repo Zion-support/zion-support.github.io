@@ -1,13 +1,12 @@
-import type { GetServerSideProps, NextPage } from 'next',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { BlogPost } from '@/utils/types/blog',;
-import PageShareButtons from '@/components/blog/PageShareButtons',;
-import { listPublishedPosts } from '@/utils/data/blogStore',;
-import BlogCard from '@/components/blog/BlogCard',;
-type Props = { topic: string, posts: BlogPost[] },;
-const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
-  return (;
+import type { GetServerSideProps, NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import { BlogPost } from '@/utils/types/blog';
+import PageShareButtons from '@/components/blog/PageShareButtons';
+import { listPublishedPosts } from '@/utils/data/blogStore';
+import BlogCard from '@/components/blog/BlogCard';
+type Props = { topic: string, posts: BlogPost[] }
+const TopicPage: NextPage<Props> = ({ topic, posts }) => {return (;
     <div>;
       <Head>;
         <title>{topic} - Zion Blog</title>;
@@ -40,10 +39,9 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
       </div>;
     </div>;
   );
-},;
-export const getServerSideProps: GetServerSideProps = async (ctx) => {;
-  const topic = String(ctx.params?.topic || ''),;
-  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic)),;
+}
+export const getServerSideProps: GetServerSideProps = async (ctx) => {const topic = String(ctx.params?.topic |'');
+  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } }
-};
+}
 export default TopicPage;

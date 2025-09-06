@@ -7,15 +7,13 @@ interface Contract {
   date: string;
   isSmartContract: boolean;
 }
-
 interface RecentContractsTableProps {
   contracts: Contract[];
   onViewContract: (contractId: string) => void;
 }
-
 export function RecentContractsTable({
-  contracts,
-  onViewContract,
+  contracts
+  onViewContract
 }: RecentContractsTableProps) {
   return (
     <>

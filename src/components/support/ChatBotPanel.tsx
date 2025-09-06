@@ -12,22 +12,22 @@ import { QuickReplyButton } from "./QuickReplyButton"
 import { Send, Loader2 } from 'lucide-react'import { useTheme } from "@/hooks/useTheme"
 // Define suggested quick replies
 const QUICK_REPLIES = [
-  { id: "hire", text: "How do I hire?" },
-  { id: "match", text: "How do I get matched?" },
-  { id: "billing", text: "Billing help" }],
+  { id: "hire", text: "How do I hire?" }
+  { id: "match", text: "How do I get matched?" }
+  { id: "billing", text: "Billing help" }]
 type Message = {
-  id: string,
-  content: string,
-  sender: "user" | "bot",
+  id: string
+  content: string
+  sender: "user" | "bot"
   timestamp: Date
 }
 export function ChatBotPanel() {
   const [messages, setMessages] = useState<Message[]>([
     {
-      id: "welcome",
-      content: "Hi! How can I help you?",
-      sender: "bot",
-      timestamp: new Date()}]),
+      id: "welcome"
+      content: "Hi! How can I help you?"
+      sender: "bot"
+      timestamp: new Date()}])
   const [inputValue, setInputValue] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [failedAttempts, setFailedAttempts] = useState(0)
@@ -48,17 +48,13 @@ export function ChatBotPanel() {
   }, [])
   const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return
-      timestamp: new Date()},
-    
-        timestamp: new Date()},
-      
-        description: "We're having trouble connecting to our support service."}),
-            
-      id: `bot-escalation-${Date.now()}`,
-      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
-      sender: "bot",
-      timestamp: new Date()},
-
+      timestamp: new Date()}
+        timestamp: new Date()}
+        description: "We're having trouble connecting to our support service."})
+      id: `bot-escalation-${Date.now()}`
+      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?"
+      sender: "bot"
+      timestamp: new Date()}
   const handleQuickReply = (text: string,) => {
     handleSendMessage(text)
   }
@@ -66,4 +62,3 @@ export function ChatBotPanel() {
 }
   )
 }
-;

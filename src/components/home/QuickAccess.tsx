@@ -3,13 +3,13 @@ import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { cn } from '@/lib/utils'
 import {
-  ArrowRight,
-  Search,
-  Users,
-  Briefcase,
-  Settings,
-  MessageSquare,
-  Smartphone,
+  ArrowRight
+  Search
+  Users
+  Briefcase
+  Settings
+  MessageSquare
+  Smartphone
 } from 'lucide-react'
 interface QuickAccessProps {
   className?: string
@@ -18,41 +18,41 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
   const { t } = useTranslation()
   const quickLinks = [
     {
-      title: t('home.tool_ai_matcher'),
-      description: t('home.tool_ai_matcher_desc'),
-      icon: <Search className='h-6 w-6 text-zion-cyan' />,
-      link: '/marketplace',
-    },
+      title: t('home.tool_ai_matcher')
+      description: t('home.tool_ai_matcher_desc')
+      icon: <Search className='h-6 w-6 text-zion-cyan' />
+      link: '/marketplace'
+    }
     {
-      title: t('home.tool_talent'),
-      description: t('home.tool_talent_desc'),
-      icon: <Users className='h-6 w-6 text-zion-purple' />,
-      link: '/talent',
-    },
+      title: t('home.tool_talent')
+      description: t('home.tool_talent_desc')
+      icon: <Users className='h-6 w-6 text-zion-purple' />
+      link: '/talent'
+    }
     {
-      title: t('home.tool_services'),
-      description: t('home.tool_services_desc'),
-      icon: <Briefcase className='h-6 w-6 text-zion-cyan' />,
-      link: '/services',
-    },
+      title: t('home.tool_services')
+      description: t('home.tool_services_desc')
+      icon: <Briefcase className='h-6 w-6 text-zion-cyan' />
+      link: '/services'
+    }
     {
-      title: t('home.tool_equipment'),
-      description: t('home.tool_equipment_desc'),
-      icon: <Settings className='h-6 w-6 text-zion-purple' />,
-      link: '/equipment',
-    },
+      title: t('home.tool_equipment')
+      description: t('home.tool_equipment_desc')
+      icon: <Settings className='h-6 w-6 text-zion-purple' />
+      link: '/equipment'
+    }
     {
-      title: t('nav.community'),
-      description: t('home.tool_chat_desc'),
-      icon: <MessageSquare className='h-6 w-6 text-zion-cyan' />,
-      link: '/community',
-    },
+      title: t('nav.community')
+      description: t('home.tool_chat_desc')
+      icon: <MessageSquare className='h-6 w-6 text-zion-cyan' />
+      link: '/community'
+    }
     {
-      title: t('home.tool_mobile_app', 'Mobile App'),
-      description: t('home.tool_mobile_app_desc', 'Zion on the go'),
-      icon: <Smartphone className='h-6 w-6 text-zion-purple' />,
-      link: '/mobile-launch',
-    },
+      title: t('home.tool_mobile_app', 'Mobile App')
+      description: t('home.tool_mobile_app_desc', 'Zion on the go')
+      icon: <Smartphone className='h-6 w-6 text-zion-purple' />
+      link: '/mobile-launch'
+    }
   ]
   return (
     <section className={cn('py-12 bg-zion-blue-dark', className)} style={style}>
@@ -63,12 +63,11 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
           </h2>
           <p className='text-zion-slate-light text-lg'>
             {t(
-              'home.quick_access_subtitle',
+              'home.quick_access_subtitle'
               'Jump directly to our most popular features'
             )}
           </p>
         </div>
-
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
           {quickLinks.map((link, index) => (
             <Link
@@ -92,13 +91,13 @@ import { motion  } from 'framer-motion'
 export default function Page() {"
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },"
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },"
-    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
+    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1
       transition: {
         duration: 0.5,"
         ease: "easeOut"}}}
   const hoverVariants = {
   hover: {
-      y: -8,      scale: 1.02,
+      y: -8,      scale: 1.02
       transition: {
         duration: 0.3,"  ease: "easeOut"
 }}}
@@ -117,11 +116,11 @@ export default function Page() {"
         {/* Header */}
         <motion.div
           initial = {
-  { opacity: 0,
+  { opacity: 0
   y: 30
 }}
           whileInView = {
-  { opacity: 1,
+  { opacity: 1
   y: 0
 }}
           transition={{ duration: 0.8 }}
@@ -131,7 +130,7 @@ export default function Page() {"
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             transition = {
-  { duration: 0.6,
+  { duration: 0.6
   delay: 0.2
 }}
             viewport={{ once: true }}"
@@ -140,15 +139,15 @@ export default function Page() {"
           </motion.h2>
           <motion.p
             initial = {
-  { opacity: 0,
+  { opacity: 0
   y: 20
 }}
             whileInView = {
-  { opacity: 1,
+  { opacity: 1
   y: 0
 }}
             transition = {
-  { duration: 0.6,
+  { duration: 0.6
   delay: 0.2
 }}"
             className="text-lg text-gray-300 max-w-2xl mx-auto">
@@ -197,15 +196,15 @@ export default function Page() {"
                     <motion.div
                       key={feature}
                       initial = {
-  { opacity: 0,
+  { opacity: 0
   x: -10
 }}
                       whileInView = {
-  { opacity: 1,
+  { opacity: 1
   x: 0
 }}
                       transition = {
-  { duration: 0.4,
+  { duration: 0.4
   delay: 0.1 + idx * 0.1
 }}
                       viewport={{ once: true }}"
@@ -223,15 +222,15 @@ export default function Page() {"
                     <motion.div
                       key={key}
                       initial = {
-  { opacity: 0,
+  { opacity: 0
   scale: 0.8
 }}
                       whileInView = {
-  { opacity: 1,
+  { opacity: 1
   scale: 1
 }}
                       transition = {
-  { duration: 0.4,
+  { duration: 0.4
   delay: 0.2 + idx * 0.1
 }}
                       viewport={{ once: true }}"
@@ -261,5 +260,4 @@ export default function Page() {"
     </section>
   )
 export default QuickAccess }
-
 export default QuickAccess

@@ -3,12 +3,12 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import {
-  Bookmark,
-  BookmarkCheck,
-  ChevronRight,
-  MapPin,
-  Clock,
-  DollarSign,
+  Bookmark
+  BookmarkCheck
+  ChevronRight
+  MapPin
+  Clock
+  DollarSign
 } from 'lucide-react'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 interface BrowseItem {
@@ -66,7 +66,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     </p>
                   </div>
                 </div>
-
                 <button
                   className='h-8 w-8 flex items-center justify-center'
                   onClick={() => toggleSaved(item.id)}                >
@@ -77,7 +76,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   )}
                 </button>
               </div>
-
               <div className='mt-3 flex flex-wrap gap-1'>
                 {item.badges.map((badge, index) => (
                   <Badge
@@ -96,8 +94,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>
                   </div>
                 </div>
-                
-                <button 
+                <button
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item.id)}
                 >
@@ -108,20 +105,17 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   )}
                 </button>
               </div>
-              
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge, index) => (
-                  <Badge 
+                  <Badge
                     key = {index,}
-                    variant="outline" 
+                    variant="outline"
                     className="text-xs font-normal"
                     {badge}
                   </Badge>
                 ))}
               </div>
-
               <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
-
               <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
                 {item.location && (
                   <div className='flex items-center gap-1'>
@@ -129,21 +123,18 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     <span>{item.location}</span>
                   </div>
                 )}
-
                 {item.price && (
                   <div className='flex items-center gap-1'>
                     <DollarSign className='h-3 w-3' />
                     <span>{item.price}</span>
                   </div>
                 )}
-
                 {item.timePosted && (
                   <div className='flex items-center gap-1'>
                     <Clock className='h-3 w-3' />
                     <span>{item.timePosted}</span>
                   </div>
                 )}
-
                 {item.match && (
                   <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>                    {item.match}% match                {item.location && (
                   <div className="flex items-center gap-1">
@@ -151,21 +142,18 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     <span>{item.location}</span>
                   </div>
                 )}
-                
                 {item.price && (
                   <div className="flex items-center gap-1">
                     <DollarSign className="h-3 w-3" />
                     <span>{item.price}</span>
                   </div>
                 )}
-                
                 {item.timePosted && (
                   <div className="flex items-center gap-1">
                     <Clock className="h-3 w-3" />
                     <span>{item.timePosted}</span>
                   </div>
                 )}
-                
                 {item.match && (
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
                     {item.match}% match
@@ -173,7 +161,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 )}
               </div>
             </div>
-
             <div className='border-t border-border p-3 flex justify-end'>
               <Button
                 size='sm'
@@ -193,4 +180,3 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
     </div>
   )
 }
-;

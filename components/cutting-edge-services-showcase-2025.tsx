@@ -2,33 +2,33 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import {
-  Brain,
-  Atom,
-  Shield,
-  Rocket,
-  Star,
-  Award,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Zap,
-  Target,
-  Microscope,
-  Lock,
-  Cloud,
-  BarChart3,
-  Settings,
-  Eye,
-  Code,
-  Palette,
-  Search,
-  Filter,
-  Grid,
-  List,
-  ExternalLink,
-  Phone,
-  Mail,
-  MapPin,;} from 'lucide-react';import { 
+  Brain
+  Atom
+  Shield
+  Rocket
+  Star
+  Award
+  TrendingUp
+  CheckCircle
+  ArrowRight
+  Zap
+  Target
+  Microscope
+  Lock
+  Cloud
+  BarChart3
+  Settings
+  Eye
+  Code
+  Palette
+  Search
+  Filter
+  Grid
+  List
+  ExternalLink
+  Phone
+  Mail
+  MapPin;} from 'lucide-react';import {
   Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
   CheckCircle, ArrowRight, Zap, Target, Microscope;
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
@@ -40,144 +40,136 @@ import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-e
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
 import { Zap, Star } from 'lucide-react';
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
 const heroStats = [
   {
-    label: 'Cutting-Edge Services',
-    value: '25+',
-    icon: <Star className='w-5 h-5' />,
-  },
+    label: 'Cutting-Edge Services'
+    value: '25+'
+    icon: <Star className='w-5 h-5' />
+  }
   {
-    label: 'Innovation Areas',
-    value: '8+',
-    icon: <Brain className='w-5 h-5' />,
-  },
+    label: 'Innovation Areas'
+    value: '8+'
+    icon: <Brain className='w-5 h-5' />
+  }
   {
-    label: 'Market Coverage',
-    value: '$500B+',
-    icon: <TrendingUp className='w-5 h-5' />,
-  },
+    label: 'Market Coverage'
+    value: '$500B+'
+    icon: <TrendingUp className='w-5 h-5' />
+  }
   {
-    label: 'Success Rate',
-    value: '99.9%',
-    icon: <Award className='w-5 h-5' />,
-  },];  { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> },
-  { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },
-  { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },
+    label: 'Success Rate'
+    value: '99.9%'
+    icon: <Award className='w-5 h-5' />
+  },];  { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> }
+  { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> }
+  { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> }
   { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> }
-
 const serviceCategories = [
   {
-    title: 'AI & Consciousness',
+    title: 'AI & Consciousness'
     description:
-      'Revolutionary AI platforms with consciousness and emotional intelligence',    services: cuttingEdgeAIServices2025,
-    icon: Brain,
-    color: 'from-violet-500 to-purple-600',
-    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
-    services: cuttingEdgeAIServices2025,
-    icon: Brain,
-    color: 'from-violet-500 to-purple-600',
-    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',
-    count: cuttingEdgeAIServices2025.length,
-  },
+      'Revolutionary AI platforms with consciousness and emotional intelligence',    services: cuttingEdgeAIServices2025
+    icon: Brain
+    color: 'from-violet-500 to-purple-600'
+    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',    description: 'Revolutionary AI platforms with consciousness and emotional intelligence'
+    services: cuttingEdgeAIServices2025
+    icon: Brain
+    color: 'from-violet-500 to-purple-600'
+    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600'
+    count: cuttingEdgeAIServices2025.length
+  }
   {
-    title: 'Quantum & Emerging Tech',
+    title: 'Quantum & Emerging Tech'
     description:
-      'Breakthrough quantum computing and space technology solutions',    services: cuttingEdgeQuantumServices2025,
-    icon: Atom,
-    color: 'from-indigo-500 to-blue-600',
-    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600',
-    count: cuttingEdgeQuantumServices2025.length,
+      'Breakthrough quantum computing and space technology solutions',    services: cuttingEdgeQuantumServices2025
+    icon: Atom
+    color: 'from-indigo-500 to-blue-600'
+    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600'
+    count: cuttingEdgeQuantumServices2025.length
   },  {    count: cuttingEdgeAIServices2025.length
-  };
+  }
   {
-    title: 'Quantum & Emerging Tech',
-    description: 'Breakthrough quantum computing and space technology solutions',
-    icon: Atom,
-    color: 'from-indigo-500 to-blue-600',
-    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600',
-    count: cuttingEdgeQuantumServices2025.length,
+    title: 'Quantum & Emerging Tech'
+    description: 'Breakthrough quantum computing and space technology solutions'
+    icon: Atom
+    color: 'from-indigo-500 to-blue-600'
+    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600'
+    count: cuttingEdgeQuantumServices2025.length
   },    count: cuttingEdgeQuantumServices2025.length
-  };
+  }
   {
-    title: 'Enterprise IT',
-    description: 'Advanced enterprise infrastructure and security solutions',
-    services: cuttingEdgeEnterpriseITServices2025,
-    icon: Shield,
-    color: 'from-blue-500 to-cyan-600',
-    gradient: 'bg-gradient-to-r from-blue-500 to-cyan-600',
-    count: cuttingEdgeEnterpriseITServices2025.length,
+    title: 'Enterprise IT'
+    description: 'Advanced enterprise infrastructure and security solutions'
+    services: cuttingEdgeEnterpriseITServices2025
+    icon: Shield
+    color: 'from-blue-500 to-cyan-600'
+    gradient: 'bg-gradient-to-r from-blue-500 to-cyan-600'
+    count: cuttingEdgeEnterpriseITServices2025.length
   },  {    count: cuttingEdgeEnterpriseITServices2025.length
-  };
+  }
   {
-    title: 'Micro SAAS',
-    description: 'Innovative business solutions for modern enterprises',
-    services: cuttingEdgeMicroSaasServices2025,
-    icon: Rocket,
-    color: 'from-teal-500 to-emerald-600',
-    gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600',
-    count: cuttingEdgeMicroSaasServices2025.length,
+    title: 'Micro SAAS'
+    description: 'Innovative business solutions for modern enterprises'
+    services: cuttingEdgeMicroSaasServices2025
+    icon: Rocket
+    color: 'from-teal-500 to-emerald-600'
+    gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600'
+    count: cuttingEdgeMicroSaasServices2025.length
   },];    count: cuttingEdgeMicroSaasServices2025.length
   }
 ];
-
 export default function CuttingEdgeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
   const allServices = [
-    ...cuttingEdgeAIServices2025,
-    ...cuttingEdgeQuantumServices2025,
-    ...cuttingEdgeEnterpriseITServices2025,
-    ...cuttingEdgeMicroSaasServices2025,
+    ...cuttingEdgeAIServices2025
+    ...cuttingEdgeQuantumServices2025
+    ...cuttingEdgeEnterpriseITServices2025
+    ...cuttingEdgeMicroSaasServices2025
   ];
-
   const filteredServices = allServices.filter(service => {
     const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
       service.tags.some(tag =>
         tag.toLowerCase().includes(searchTerm.toLowerCase())
       );
     const matchesCategory =
-      selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      selectedCategory === 'all' |service.category === selectedCategory;
+    return matchesSearch && matchesCategory;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
     return matchesSearch && matchesCategory
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
-        staggerChildren: 0.1,
-      },
+        staggerChildren: 0.1
+      }
     },  };        staggerChildren: 0.1
       }
     }
-  };
-
+  }
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 }
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0
+      opacity: 1
       transition: {
-        duration: 0.5,
-      },
+        duration: 0.5
+      }
     },  };        duration: 0.5
       }
     }
-  };
-
+  }
   return (
     <>
       <Head>
@@ -195,7 +187,6 @@ export default function CuttingEdgeServicesShowcase2025() {
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />      </Head>
-
       <Layout>
         {/* Hero Section */}
         <section className='relative overflow-hidden'>
@@ -212,7 +203,6 @@ export default function CuttingEdgeServicesShowcase2025() {
         <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-
       <Layout>
         {/* Hero Section */}
         <section className='relative overflow-hidden'>
@@ -229,7 +219,7 @@ export default function CuttingEdgeServicesShowcase2025() {
               <motion.h1
                 className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'              className="text-center"
             >
-              <motion.h1 
+              <motion.h1
                 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
@@ -239,7 +229,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                   Showcase 2025
                 </span>
               </motion.h1>
-
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -248,8 +237,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                   Showcase 2025
                 </span>
               </motion.h1>
-              
-              <motion.p 
+              <motion.p
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -258,15 +246,13 @@ export default function CuttingEdgeServicesShowcase2025() {
                 industries and defining the future. From AI consciousness to
                 space mining, experience the cutting edge of innovation.
               </motion.p>
-
               {/* Hero Stats */}
               <motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future. 
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future.
                 From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion.p>
-
               {/* Hero Stats */}
-              <motion.div 
+              <motion.div
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -291,10 +277,9 @@ export default function CuttingEdgeServicesShowcase2025() {
                     <div className="text-sm text-white/70">{stat.label}</div>
                 ))}
               </motion.div>
-
               {/* CTA Buttons */}
               <motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
+                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div
                 className="flex flex-col sm:flex-row gap-4 justify-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -323,14 +308,13 @@ export default function CuttingEdgeServicesShowcase2025() {
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filter Section */}
         <section className='py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <motion.div
               className='flex flex-col lg:flex-row gap-6 items-center justify-between'              initial={{ opacity: 0, y: 20 }}        <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
+            <motion.div
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -346,7 +330,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                   onChange={e => setSearchTerm(e.target.value)}
                   className='w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'                />
               </div>
-
               {/* Category Filter */}
               <div className='flex flex-wrap gap-2'>                <button                <input
                   type="text"
@@ -356,7 +339,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                   className="w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
                 />
               </div>
-
               {/* Category Filter */}
               <div className='flex flex-wrap gap-2'>              <div className="flex flex-wrap gap-2">
                 <button
@@ -383,7 +365,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                   </button>
                 ))}
               </div>
-
               {/* View Mode Toggle */}
               <div className='flex items-center gap-2'>                <button              <div className="flex items-center gap-2">
                 <button
@@ -410,7 +391,6 @@ export default function CuttingEdgeServicesShowcase2025() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section
           id='services'
@@ -468,7 +448,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                         </div>
                       </div>
                     </div>
-
                     {/* Tags */}
                     <div className='flex flex-wrap gap-2 mb-4'>
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
@@ -483,13 +462,11 @@ export default function CuttingEdgeServicesShowcase2025() {
                         </span>
                       ))}
                     </div>
-
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>                    </div>
                   </div>
-
                   {/* Service Details */}
                   <div
                     className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
@@ -498,7 +475,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
                   </div>
-
                   {/* Service Details */}
                   <div
                     className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
@@ -520,7 +496,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                             </li>
                           ))}                      </ul>
                     </div>
-
                     {/* Pricing */}
                     <div className='mb-6'>
                       <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>                      <ul className="space-y-2">
@@ -531,7 +506,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                           </li>
                         ))}
                     </div>
-
                     {/* Pricing */}
                     <div className='mb-6'>
                       <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>
@@ -543,7 +517,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                           /{service.pricing.starter.period}
                         </span>                      </div>
                     </div>
-
                     {/* CTA */}
                     <div className='flex items-center justify-between'>                        Starting From
                       </h4>
@@ -552,7 +525,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                         <span className="text-sm font-normal text-white/60">/{service.pricing.starter.period}</span>
                       </div>
                     </div>
-
                     {/* CTA */}
                     <div className='flex items-center justify-between'>
                       <a
@@ -583,13 +555,11 @@ export default function CuttingEdgeServicesShowcase2025() {
                       </a>
                     </div>
                   </div>
-
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
               ))}
             </motion.div>
-
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
@@ -626,7 +596,6 @@ export default function CuttingEdgeServicesShowcase2025() {
             )}
           </div>
         </section>
-
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
@@ -645,7 +614,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                 advantage in the rapidly evolving technology landscape. Let's
                 discuss how we can help you achieve your goals.
               </p>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
                 <a
                   href='/contact'
@@ -661,10 +629,9 @@ export default function CuttingEdgeServicesShowcase2025() {
                   <Phone className='mr-2 w-5 h-5' />                  Call Now                Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-white/80 mb-8 leading-relaxed">
-                Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape. 
+                Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape.
                 Let's discuss how we can help you achieve your goals.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a
                   href="/contact"
@@ -681,7 +648,6 @@ export default function CuttingEdgeServicesShowcase2025() {
                   Call Now
                 </a>
               </div>
-
               {/* Contact Info */}
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
                 <div className='flex flex-col items-center'>
@@ -744,22 +710,19 @@ export default function CuttingEdgeServicesShowcase2025() {
       </Layout>
     </>
 );
-
-  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |const containerVariants = {
   hidden: {
-  opacity: 0 
-};
+  opacity: 0
+}
 visible: {
   opacity: 1, transition: {
-  staggerChildren: 0.1 
-
-};
+  staggerChildren: 0.1
+}
 const itemVariants = {
   hidden: {
-  y: 20, opacity: 0 
-};
+  y: 20, opacity: 0
+}
 visible: {
   y: 0, opacity: 1, transition: {
-  duration: 0.5 
-
+  duration: 0.5
 };}

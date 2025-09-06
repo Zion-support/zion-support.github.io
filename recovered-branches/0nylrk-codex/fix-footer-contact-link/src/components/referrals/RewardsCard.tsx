@@ -1,9 +1,9 @@
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
 } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
@@ -12,7 +12,6 @@ interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean;
 }
-
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   if (isLoading) {
     return (
@@ -34,7 +33,6 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
       </Card>
     );
   }
-
   if (rewards.length === 0) {
     return (
       <Card>
@@ -58,7 +56,6 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
       </Card>
     );
   }
-
   return (
     <Card>
       <CardHeader>

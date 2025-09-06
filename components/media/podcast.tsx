@@ -2,7 +2,6 @@ useEffect ( () => {
   const load = async () => {
   try {
   if (loading) return <div>Loading episodes…</div>;
-
   return (
     <div className='space-y-6'>
       <div className='flex items-center justify-between'>
@@ -36,7 +35,6 @@ useEffect ( () => {
                   </a>
                 )}
                 {ep.audio?.wavUrl && (  if (loading) return <div>Loading episodes…</div>;
-
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -97,4 +95,3 @@ useEffect ( () => {
     </div>
   );
 }
-;

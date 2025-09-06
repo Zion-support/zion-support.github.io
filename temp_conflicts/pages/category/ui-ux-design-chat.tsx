@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const UiUxDesignChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const UiUxDesignChat = () => {return (;
     <div>;
       <Head>;
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const UiUxDesignChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default UiUxDesignChat;

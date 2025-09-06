@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const CloudNativeArchitectureBestPracticesChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const CloudNativeArchitectureBestPracticesChat = () => {return (;
     <div>;
       <Head>;
         <title>CloudNativeArchitectureBestPracticesChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const CloudNativeArchitectureBestPracticesChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default CloudNativeArchitectureBestPracticesChat;

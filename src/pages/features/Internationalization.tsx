@@ -6,15 +6,15 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 export default function Internationalization() {
   const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Internationalization',
+    '@context': 'https://schema.org'
+    '@type': 'WebPage'
+    name: 'Internationalization'
     description:
-      'Use Zion in multiple languages and attract clients worldwide with localized listings.',
+      'Use Zion in multiple languages and attract clients worldwide with localized listings.'
     url: 'https://app.ziontechgroup.com/features/internationalization',  };    "@context": "https://schema.org"
     "@type": "WebPage"
     "name": "Internationalization"
-    "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",
+    "description": "Use Zion in multiple languages and attract clients worldwide with localized listings."
     "url": "https://app.ziontechgroup.com/features/internationalization"
   }
   return (
@@ -123,4 +123,3 @@ export default function Internationalization() {
     </>
   )
 }
-;

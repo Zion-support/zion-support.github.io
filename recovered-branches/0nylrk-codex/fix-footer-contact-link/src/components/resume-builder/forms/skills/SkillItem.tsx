@@ -23,4 +23,4 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
       </Button>
     </Badge>
   );
-};
+}

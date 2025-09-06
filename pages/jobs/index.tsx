@@ -9,22 +9,20 @@ export default function JobsListPage() {
     const t = setTimeout(() => setLoading(false), 500);
     return () => clearTimeout(t);
   }, []);
-
   const jobs = [
     {
-      slug: 'senior-ai-engineer',
-      title: 'Senior AI Engineer',
-      subtitle: 'Remote • Contract',
-      description: 'Build and optimize LLM-powered features in production.',
-    },
+      slug: 'senior-ai-engineer'
+      title: 'Senior AI Engineer'
+      subtitle: 'Remote • Contract'
+      description: 'Build and optimize LLM-powered features in production.'
+    }
     {
-      slug: 'mlops-specialist',
-      title: 'MLOps Specialist',
-      subtitle: 'Remote • Part-time',
-      description: 'Design pipelines for training/inference at scale.',
-    },
+      slug: 'mlops-specialist'
+      title: 'MLOps Specialist'
+      subtitle: 'Remote • Part-time'
+      description: 'Design pipelines for training/inference at scale.'
+    }
   ];
-
   return (
     <div className='space-y-4'>
       <InteractiveSearch placeholder='Search jobs, keywords, or companies...' />

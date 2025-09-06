@@ -8,7 +8,6 @@ const NetworkSecurityChat: NextPage = () => {
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
         <meta name="description" content="NetworkSecurityChat service" />{" "}
       </Head>
-
       <main>
         <h1>NetworkSecurityChat</h1>
         <p>Service details coming soon...</p>
@@ -16,6 +15,5 @@ const NetworkSecurityChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default NetworkSecurityChat;

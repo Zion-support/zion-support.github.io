@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const PerformanceOptimizationChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const PerformanceOptimizationChat = () => {return (;
     <div>;
       <Head>;
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const PerformanceOptimizationChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default PerformanceOptimizationChat;

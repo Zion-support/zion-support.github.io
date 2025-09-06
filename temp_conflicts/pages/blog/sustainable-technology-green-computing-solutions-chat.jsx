@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const SustainableTechnologyGreenComputingSolutionsChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const SustainableTechnologyGreenComputingSolutionsChat = () => {return (;
     <div>;
       <Head>;
         <title>SustainableTechnologyGreenComputingSolutionsChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const SustainableTechnologyGreenComputingSolutionsChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default SustainableTechnologyGreenComputingSolutionsChat;

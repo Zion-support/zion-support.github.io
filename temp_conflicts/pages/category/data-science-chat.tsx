@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const DataScienceChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const DataScienceChat = () => {return (;
     <div>;
       <Head>;
         <title>DataScienceChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const DataScienceChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default DataScienceChat;

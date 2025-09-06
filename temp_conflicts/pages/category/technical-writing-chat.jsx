@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const TechnicalWritingChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const TechnicalWritingChat = () => {return (;
     <div>;
       <Head>;
         <title>TechnicalWritingChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const TechnicalWritingChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default TechnicalWritingChat;

@@ -10,9 +10,9 @@ export function FooterNewsletter(): React.ReactElement {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [emailError, setEmailError] = useState('')
   const { toast } = useToast()
-      // // // // // // // console.error('Newsletter subscription failed:', error) 
+      // // // // // // // console.error('Newsletter subscription failed:', error)
 } finally {
-      setIsSubmitting(false) 
+      setIsSubmitting(false)
       // console.error('Newsletter subscription failed:', error)} finally {
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   const lastSubmit = useRef(0)
@@ -29,25 +29,23 @@ export function FooterNewsletter(): React.ReactElement {
     } else {
       setEmailError('')
     }
-
     setIsSubmitting(true)
     const uniqueToastIdBase = `newsletter-toast-${Date.now()}`; // Generate a base for unique ID
-
     try {
       const res = await fetch('/api/newsletter', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: trimmedEmail }),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ email: trimmedEmail })
       })
       const data = await res.json().catch(() => ({})); // Ensure data is an object even on parse error
       if (res.ok) {
         if (data.status === 'already_subscribed') {
-          toast.success(data.message || "You're already subscribed!", {
-            id: `${uniqueToastIdBase}-already-subscribed`,
+          toast.success(data.message |"You're already subscribed!", {
+            id: `${uniqueToastIdBase}-already-subscribed`
           })
         } else {
           toast.success(
-            data.message || 'Successfully subscribed to newsletter!',
+            data.message |'Successfully subscribed to newsletter!'
             { id: `${uniqueToastIdBase}-success` }
           )
         }
@@ -57,13 +55,13 @@ export function FooterNewsletter(): React.ReactElement {
         logErrorToProduction('Newsletter subscription failed:', { data: data })
         // Use a more specific error message if available from API, otherwise generic
         const errorMessage =
-          data.error || 'Subscription failed. Please try again.'
+          data.error |'Subscription failed. Please try again.'
         toast.error(errorMessage, { id: `${uniqueToastIdBase}-api-error` })
       }
     } catch (err: any) {
       logErrorToProduction('Newsletter subscription error:', { data: err })
       toast.error('Unable to subscribe right now. Please try again later.', {
-        id: `${uniqueToastIdBase}-catch-error`,
+        id: `${uniqueToastIdBase}-catch-error`
       })
     } finally {
       setIsSubmitting(false)
@@ -109,6 +107,6 @@ export function FooterNewsletter(): React.ReactElement {
       </Button>
     </form>
   )
-} 
-} 
+}
+}
 }

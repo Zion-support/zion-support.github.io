@@ -1,99 +1,94 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import { 
-  Bot, Brain, Cpu, Zap, Shield, Globe, 
-  Rocket, Target, TrendingUp, Users, CheckCircle,
-  ArrowRight, Star, Award, Clock, DollarSign,
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {
+  Bot, Brain, Cpu, Zap, Shield, Globe
+  Rocket, Target, TrendingUp, Users, CheckCircle
+  ArrowRight, Star, Award, Clock, DollarSign
   Building2, Gauge, BarChart3, Settings, Workflow
-} from 'lucide-react',
-
+} from 'lucide-react'
 const AutonomousBusinessOperationsPlatform = () => {
   const features = [
     {
-      icon: Bot,
-      title: "AI Autonomous Management",
-      description: "Fully autonomous business operations with intelligent decision-making",
+      icon: Bot
+      title: "AI Autonomous Management"
+      description: "Fully autonomous business operations with intelligent decision-making"
       color: "from-blue-500 to-cyan-500"
-    },
+    }
     {
-      icon: Brain,
-      title: "Cognitive Business Intelligence",
-      description: "Advanced AI that understands and optimizes your business processes",
+      icon: Brain
+      title: "Cognitive Business Intelligence"
+      description: "Advanced AI that understands and optimizes your business processes"
       color: "from-purple-500 to-pink-500"
-    },
+    }
     {
-      icon: Workflow,
-      title: "Automated Workflows",
-      description: "Seamless automation of complex business processes and operations",
+      icon: Workflow
+      title: "Automated Workflows"
+      description: "Seamless automation of complex business processes and operations"
       color: "from-emerald-500 to-teal-500"
-    },
+    }
     {
-      icon: Shield,
-      title: "Intelligent Security",
-      description: "AI-powered security monitoring and threat prevention",
+      icon: Shield
+      title: "Intelligent Security"
+      description: "AI-powered security monitoring and threat prevention"
       color: "from-red-500 to-orange-500"
     }
-  ],
-
+  ]
   const capabilities = [
-    "24/7 autonomous operation",
-    "Real-time decision making",
-    "Predictive analytics",
-    "Process optimization",
-    "Resource management",
-    "Performance monitoring",
-    "Risk assessment",
+    "24/7 autonomous operation"
+    "Real-time decision making"
+    "Predictive analytics"
+    "Process optimization"
+    "Resource management"
+    "Performance monitoring"
+    "Risk assessment"
     "Compliance automation"
-  ],
-
+  ]
   const industries = [
     {
-      title: "Manufacturing",
+      title: "Manufacturing"
       description: "Automated production lines, quality control, and supply chain management"
-    },
+    }
     {
-      title: "Healthcare",
+      title: "Healthcare"
       description: "Patient care automation, medical device management, and administrative tasks"
-    },
+    }
     {
-      title: "Finance",
+      title: "Finance"
       description: "Automated trading, risk management, and compliance monitoring"
-    },
+    }
     {
-      title: "Retail",
+      title: "Retail"
       description: "Inventory management, customer service, and sales optimization"
     }
-  ],
-
+  ]
   const benefits = [
     {
-      icon: TrendingUp,
-      title: "Increased Efficiency",
-      value: "300%",
+      icon: TrendingUp
+      title: "Increased Efficiency"
+      value: "300%"
       description: "Boost in operational efficiency"
-    },
+    }
     {
-      icon: DollarSign,
-      title: "Cost Reduction",
-      value: "40%",
+      icon: DollarSign
+      title: "Cost Reduction"
+      value: "40%"
       description: "Reduction in operational costs"
-    },
+    }
     {
-      icon: Clock,
-      title: "Time Savings",
-      value: "80%",
+      icon: Clock
+      title: "Time Savings"
+      value: "80%"
       description: "Faster decision making"
-    },
+    }
     {
-      icon: Users,
-      title: "Team Productivity",
-      value: "250%",
+      icon: Users
+      title: "Team Productivity"
+      value: "250%"
       description: "Increase in team productivity"
     }
-  ],
-
+  ]
   return (
     <>
       <Head>
@@ -105,7 +100,6 @@ const AutonomousBusinessOperationsPlatform = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/autonomous-business-operations-platform" />
       </Head>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -128,7 +122,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with AI-powered autonomous operations that work 24/7, 
+                Transform your business with AI-powered autonomous operations that work 24/7
                 making intelligent decisions and optimizing every aspect of your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -143,7 +137,6 @@ const AutonomousBusinessOperationsPlatform = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -161,7 +154,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                 Experience the future of business automation with our cutting-edge platform
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <motion.div
@@ -182,7 +174,6 @@ const AutonomousBusinessOperationsPlatform = () => {
             </div>
           </div>
         </section>
-
         {/* Capabilities Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="max-w-7xl mx-auto">
@@ -200,7 +191,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                 Comprehensive automation capabilities that transform your business operations
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {capabilities.map((capability, index) => (
                 <motion.div
@@ -218,7 +208,6 @@ const AutonomousBusinessOperationsPlatform = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -236,7 +225,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                 See the real impact of autonomous operations on your business
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -260,7 +248,6 @@ const AutonomousBusinessOperationsPlatform = () => {
             </div>
           </div>
         </section>
-
         {/* Industries Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="max-w-7xl mx-auto">
@@ -278,7 +265,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                 Transform operations across diverse industries with autonomous automation
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {industries.map((industry, index) => (
                 <motion.div
@@ -296,7 +282,6 @@ const AutonomousBusinessOperationsPlatform = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -327,7 +312,5 @@ const AutonomousBusinessOperationsPlatform = () => {
       </div>
     </>
   )
-},
-
-export default AutonomousBusinessOperationsPlatform,
-;
+}
+export default AutonomousBusinessOperationsPlatform;

@@ -1,10 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
-
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  
   const services = [
     { name: 'AI Development', href: '/services/ai-development' },
     { name: 'Cloud Services', href: '/services/cloud-services' },
@@ -13,32 +11,28 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Web Development', href: '/services/web-development' },
     { name: 'Mobile Development', href: '/services/mobile-development' },
     { name: 'IoT Platforms', href: '/services/iot-platforms' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' }
   ];
-
   const products = [
     { name: 'AI Solutions', href: '/products/ai-solutions' },
     { name: 'Cloud Platforms', href: '/products/cloud-platforms' },
     { name: 'Analytics Tools', href: '/products/analytics-tools' },
-    { name: 'Security Suite', href: '/products/security-suite' },
+    { name: 'Security Suite', href: '/products/security-suite' }
   ];
-
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/about#team' },
     { name: 'Careers', href: '/talent' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact', href: '/contact' }
   ];
-
   // const resources = [
-  //   { name: 'Documentation', href: '/resources/documentation' },
-  //   { name: 'API Reference', href: '/resources/api' },
-  //   { name: 'Support Center', href: '/support' },
-  //   { name: 'Privacy Policy', href: '/legal/privacy' },
-  //   { name: 'Terms of Service', href: '/legal/terms' },
+  //   { name: 'Documentation', href: '/resources/documentation' }
+  //   { name: 'API Reference', href: '/resources/api' }
+  //   { name: 'Support Center', href: '/support' }
+  //   { name: 'Privacy Policy', href: '/legal/privacy' }
+  //   { name: 'Terms of Service', href: '/legal/terms' }
   // ];
-
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -68,7 +62,6 @@ const EnhancedFooter: React.FC = () => {
               </a>
             </div>
           </div>
-
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -83,7 +76,6 @@ const EnhancedFooter: React.FC = () => {
               ))}
             </ul>
           </div>
-
           <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
@@ -98,7 +90,6 @@ const EnhancedFooter: React.FC = () => {
               ))}
             </ul>
           </div>
-
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
@@ -114,7 +105,6 @@ const EnhancedFooter: React.FC = () => {
             </ul>
           </div>
         </div>
-
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
@@ -140,7 +130,6 @@ const EnhancedFooter: React.FC = () => {
             </div>
           </div>
         </div>
-
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
@@ -168,6 +157,5 @@ const EnhancedFooter: React.FC = () => {
       </div>
     </footer>
   );
-};
-
+}
 export default EnhancedFooter;

@@ -24,7 +24,6 @@ export function BillingHeader() {
           <Button variant="outline" size="sm" className="gap-1" asChild>
             <Link href="/dashboard/client/analytics">
               <BarChart3 className="h-4 w-4" />
-
 import React from "react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"

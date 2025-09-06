@@ -5,7 +5,6 @@ import Link from 'next/link';
         </ul>
       </main>
     </div>
-  ),
-};
-
+  )
+}
 export default AutoIndex;

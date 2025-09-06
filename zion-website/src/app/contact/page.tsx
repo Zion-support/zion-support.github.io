@@ -1,65 +1,61 @@
-import { 
-  EnvelopeIcon,
-  PhoneIcon, 
-  MapPinIcon,
-  ClockIcon,
+import {
+  EnvelopeIcon
+  PhoneIcon
+  MapPinIcon
+  ClockIcon
   ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline'
-
 const contactMethods = [
   {
-    name: 'Email',
-    description: 'Get in touch with our team',
-    value: 'contact@ziontechgroup.com',
-    href: 'mailto:contact@ziontechgroup.com',
-    icon: EnvelopeIcon},
+    name: 'Email'
+    description: 'Get in touch with our team'
+    value: 'contact@ziontechgroup.com'
+    href: 'mailto:contact@ziontechgroup.com'
+    icon: EnvelopeIcon}
   {
-    name: 'Phone',
-    description: 'Speak with an expert',
-    value: '+1 (555) 123-4567',
-    href: 'tel:+15551234567',
-    icon: PhoneIcon},
+    name: 'Phone'
+    description: 'Speak with an expert'
+    value: '+1 (555) 123-4567'
+    href: 'tel:+15551234567'
+    icon: PhoneIcon}
   {
-    name: 'Office',
-    description: 'Visit our headquarters',
-    value: '1234 Innovation Drive, Silicon Valley, CA 94025',
-    href: '#',
+    name: 'Office'
+    description: 'Visit our headquarters'
+    value: '1234 Innovation Drive, Silicon Valley, CA 94025'
+    href: '#'
     icon: MapPinIcon}]
-
 const officeLocations = [
   {
-    name: 'Silicon Valley',
-    address: '1234 Innovation Drive, San Jose, CA 94025',
-    phone: '+1 (555) 123-4567',
-    email: 'sv@ziontechgroup.com',
-    hours: 'Mon-Fri: 9:00 AM - 6:00 PM PST'},
+    name: 'Silicon Valley'
+    address: '1234 Innovation Drive, San Jose, CA 94025'
+    phone: '+1 (555) 123-4567'
+    email: 'sv@ziontechgroup.com'
+    hours: 'Mon-Fri: 9:00 AM - 6:00 PM PST'}
   {
-    name: 'London',
-    address: '456 Tech Square, London, UK EC2A 4BX',
-    phone: '+44 20 1234 5678',
-    email: 'london@ziontechgroup.com',
-    hours: 'Mon-Fri: 9:00 AM - 6:00 PM GMT'},
+    name: 'London'
+    address: '456 Tech Square, London, UK EC2A 4BX'
+    phone: '+44 20 1234 5678'
+    email: 'london@ziontechgroup.com'
+    hours: 'Mon-Fri: 9:00 AM - 6:00 PM GMT'}
   {
-    name: 'Tokyo',
-    address: '789 Innovation Tower, Tokyo, Japan 100-0001',
-    phone: '+81 3 1234 5678',
-    email: 'tokyo@ziontechgroup.com',
+    name: 'Tokyo'
+    address: '789 Innovation Tower, Tokyo, Japan 100-0001'
+    phone: '+81 3 1234 5678'
+    email: 'tokyo@ziontechgroup.com'
     hours: 'Mon-Fri: 9:00 AM - 6:00 PM JST'}]
-
 const faqs = [
   {
-    question: 'What industries do you serve?',
-    answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are designed to be adaptable across different sectors.'},
+    question: 'What industries do you serve?'
+    answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are designed to be adaptable across different sectors.'}
   {
-    question: 'How long does implementation take?',
-    answer: 'Implementation timelines vary depending on the complexity of your project. Simple integrations can take 2-4 weeks, while complex enterprise solutions typically take 3-6 months.'},
+    question: 'How long does implementation take?'
+    answer: 'Implementation timelines vary depending on the complexity of your project. Simple integrations can take 2-4 weeks, while complex enterprise solutions typically take 3-6 months.'}
   {
-    question: 'Do you provide ongoing support?',
-    answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'},
+    question: 'Do you provide ongoing support?'
+    answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}
   {
-    question: 'What security measures do you have?',
+    question: 'What security measures do you have?'
     answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
-
 export default function ContactPage() {
   return (
     <div className=&quot;bg-black&quot;>
@@ -74,13 +70,12 @@ export default function ContactPage() {
               </span>
             </h1>
             <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              Ready to transform your business with AI? Let's discuss how our cutting-edge 
+              Ready to transform your business with AI? Let's discuss how our cutting-edge
               technology can accelerate your growth and innovation.
             </p>
           </div>
         </div>
       </div>
-
       {/* Contact methods */}
       <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -100,8 +95,8 @@ export default function ContactPage() {
                 <dd className=&quot;mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300&quot;>
                   <p className=&quot;flex-auto&quot;>{method.description}</p>
                   <p className=&quot;mt-6&quot;>
-                    <a 
-                      href={method.href} 
+                    <a
+                      href={method.href}
                       className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
                     >
                       {method.value} <span aria-hidden=&quot;true&quot;>→</span>
@@ -206,7 +201,6 @@ export default function ContactPage() {
           </form>
         </div>
       </div>
-
       {/* Office locations */}
       <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>

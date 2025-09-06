@@ -11,7 +11,6 @@ const CloudMigrationServicesChat: NextPage = () => {
           content="CloudMigrationServicesChat service"
         />{" "}
       </Head>
-
       <main>
         <h1>CloudMigrationServicesChat</h1>
         <p>Service details coming soon...</p>
@@ -19,6 +18,5 @@ const CloudMigrationServicesChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default CloudMigrationServicesChat;

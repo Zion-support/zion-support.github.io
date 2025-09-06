@@ -1,66 +1,55 @@
-import React, { useState } from 'react',;
-type PersonaConfig = {;
-  voice: 'Visionary' | 'Grounded' | 'Technical',;
-  language: string,;
+import React, { useState } from 'react';
+type PersonaConfig = {voice: 'Visionary' | 'Grounded' | 'Technical';
+  language: string;
   cloneStyleText?: string;
-},;
-export default function StudioHostPage() {;
-  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
-  const [inviteeName, setInviteeName] = useState(''),;
-  const [inviteeBio, setInviteeBio] = useState(''),;
-  const [topic, setTopic] = useState(''),;
-  const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'),;
-  const [generating, setGenerating] = useState(false),;
-  const [episode, setEpisode] = useState<any>(null),;
-  const [synthesizing, setSynthesizing] = useState(false),;
-  const [publishing, setPublishing] = useState(false),;
-  const handleGenerate = async () => {;
-    setGenerating(true),;
+}
+export default function StudioHostPage() {const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' });
+  const [inviteeName, setInviteeName] = useState('');
+  const [inviteeBio, setInviteeBio] = useState('');
+  const [topic, setTopic] = useState('');
+  const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
+  const [generating, setGenerating] = useState(false);
+  const [episode, setEpisode] = useState<any>(null);
+  const [synthesizing, setSynthesizing] = useState(false);
+  const [publishing, setPublishing] = useState(false);
+  const handleGenerate = async () => {setGenerating(true);
     try {;
       const res = await fetch('/api/podcast/generate', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio }, topic, operatorPrompt })}),;
-      const data = await res.json(),;
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio }, topic, operatorPrompt })});
+      const data = await res.json();
       setEpisode(data.episode);
-    } catch (e) {;
-      console.error(e),;
+    } catch (e) {console.error(e);
       alert('Failed to generate episode');
-    } finally {;
-      setGenerating(false);
+    } finally {setGenerating(false);
     }
-  },;
-  const handleSynthesize = async () => {;
-    if (!episode?.id) return,;
-    setSynthesizing(true),;
+  }
+  const handleSynthesize = async () => {if (!episode?.id) return;
+    setSynthesizing(true);
     try {;
       const res = await fetch('/api/podcast/synthesize', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({ episodeId: episode.id, persona })}),;
-      const data = await res.json(),;
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ episodeId: episode.id, persona })});
+      const data = await res.json();
       setEpisode(data.episode);
-    } catch (e) {;
-      console.error(e),;
+    } catch (e) {console.error(e);
       alert('Failed to synthesize audio');
-    } finally {;
-      setSynthesizing(false);
+    } finally {setSynthesizing(false);
     }
-  },;
-  const handlePublishRss = async () => {;
-    if (!episode?.id) return,;
-    setPublishing(true),;
+  }
+  const handlePublishRss = async () => {if (!episode?.id) return;
+    setPublishing(true);
     try {;
-      const res = await fetch('/api/podcast/rss', { method: 'POST' }),;
-      await res.json(),;
+      const res = await fetch('/api/podcast/rss', { method: 'POST' });
+      await res.json();
       alert('RSS feed updated. Platforms will pull on next refresh.');
-    } catch (e) {;
-      console.error(e);
+    } catch (e) {console.error(e);
       alert('Failed to update RSS');
-    } finally {;
-      setPublishing(false);
+    } finally {setPublishing(false);
     }
-  };
+  }
   return (;
     <div className="space-y-8">;
       <h1 className="text-3xl font-bold">Podcast Studio Host</h1>;
@@ -85,7 +74,7 @@ export default function StudioHostPage() {;
           </div>;
           <div>;
             <label className="block text-sm font-medium">Clone Style (optional)</label>;
-            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />;
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText |''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />;
           </div>;
         </div>;
       </section>;
@@ -166,4 +155,3 @@ export default function StudioHostPage() {;
     </div>;
   );
 }
-;

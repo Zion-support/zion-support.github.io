@@ -9,24 +9,23 @@ import { useAdvancedOnboardingStatus } from '@/hooks/useAdvancedOnboardingStatus
 import { useFeatureUsage } from "@/hooks/useFeatureUsage"
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus"
 export default function AIPoweredContent() {
-  useFeatureUsage('ZionGPT'),
+  useFeatureUsage('ZionGPT')
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "AI Content Generation",
-    "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.",
+    "@context": "https://schema.org"
+    "@type": "WebPage"
+    "name": "AI Content Generation"
+    "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility."
     "url": "https://app.ziontechgroup.com/features/ai-content-generation"
-  },
-
+  }
 export default function AIPoweredContent() {
   useFeatureUsage('ZionGPT')
   const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'AI Content Generation',
+    '@context': 'https://schema.org'
+    '@type': 'WebPage'
+    name: 'AI Content Generation'
     description:
-      'Generate SEO-optimized content using ZionGPT to boost your online visibility.',
-    url: 'https://app.ziontechgroup.com/features/ai-content-generation',
+      'Generate SEO-optimized content using ZionGPT to boost your online visibility.'
+    url: 'https://app.ziontechgroup.com/features/ai-content-generation'
   }
   const { markAiExplored } = useAdvancedOnboardingStatus()
   useEffect(() => {
@@ -104,4 +103,3 @@ export default function AIPoweredContent() {
     </>
   )
 }
-;

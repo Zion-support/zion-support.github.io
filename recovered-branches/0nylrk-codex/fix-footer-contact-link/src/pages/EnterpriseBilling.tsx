@@ -9,18 +9,15 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function EnterpriseBilling() {
   const { user } = useAuth();
-  
   // Check if user has billing permissions
-  const hasBillingAccess = user?.role === "enterprise_admin" || 
+  const hasBillingAccess = user?.role === "enterprise_admin" |
                           (user?.permissions && user.permissions.includes('billing_access'));
-  
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />
   }
-
   return (
     <ProtectedRoute>
-      <SEO 
+      <SEO
         title="Enterprise Billing - Zion AI Marketplace"
         description="Manage your subscription, view invoice history, and download billing statements."
       />

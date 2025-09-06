@@ -1,46 +1,40 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import {;
-  Brain, Shield, Zap, Target, Stethoscope,;
-  BarChart3, Cpu, Globe, Users, Award,;
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {Brain, Shield, Zap, Target, Stethoscope;
+  BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin;
-} from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+const contactInfo = {mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup.com';
-},;
+}
 const features = [;
   'AI-powered medical image analysisSymptom assessment algorithmsTreatment recommendation enginePatient history integrationReal-time diagnostic updatesMulti-specialty coverageMobile app integrationHIPAA-compliant platform';
-],;
+];
 const pricingPlans = [;
-  {;
-    name: 'Starter',;
-    price: 299,;
-    period: 'month',;
-    features: ['Basic diagnostic tools3 medical specialtiesStandard reportingStandard support'],;
+  {name: 'Starter';
+    price: 299;
+    period: 'month';
+    features: ['Basic diagnostic tools3 medical specialtiesStandard reportingStandard support'];
     popular: false;
-  },;
-  {;
-    name: 'Professional',;
-    price: 799,;
-    period: 'month',;
-    features: ['Advanced AI diagnosticsAll specialtiesCustom reportingAPI accessPriority support'],;
+  }
+  {name: 'Professional';
+    price: 799;
+    period: 'month';
+    features: ['Advanced AI diagnosticsAll specialtiesCustom reportingAPI accessPriority support'];
     popular: true;
-  },;
-  {;
-    name: 'Enterprise',;
-    price: 1999,;
-    period: 'month',;
-    features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrationsTraining included'],;
+  }
+  {name: 'Enterprise';
+    price: 1999;
+    period: 'month';
+    features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrationsTraining included'];
     popular: false;
   }
 ];
-export default function AIDiagnosticPlatform() {;
-  return (;
+export default function AIDiagnosticPlatform() {return (;
     <Layout>;
       <Head>;
         <title>AI Diagnostic Pro Platform | Zion Tech Group</title>;
@@ -166,8 +160,7 @@ export default function AIDiagnosticPlatform() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border rounded-2xl p-8 ${;
-                  plan.popular;
+                className={`relative bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border rounded-2xl p-8 ${plan.popular;
                     ? 'border-blue-500/50 scale-105';
                     : 'border-blue-500/20';
                 }`}
@@ -179,7 +172,6 @@ export default function AIDiagnosticPlatform() {;
                     </span>;
                   </div>;
                 )}
-;
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>;
                   <div className="text-4xl font-bold text-white mb-2">;

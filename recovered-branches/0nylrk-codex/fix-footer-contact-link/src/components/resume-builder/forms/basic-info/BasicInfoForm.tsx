@@ -12,34 +12,32 @@ import {ContactFields} from "./ContactFields";
 export interface BasicInfoFormProps {
   resumeId?: string;
   initialData?: Partial<BasicInfoFormData>;
-  onSave: (data: BasicInfoFormData) => void,
+  onSave: (data: BasicInfoFormData) => void
   skills?: string[];
   yearsExperience?: number;
   onComplete?: () => void
 }
-
 export function BasicInfoForm({
   resumeId;
-  initialData = {};
+  initialData = {}
   onSave;
   skills = [];
   yearsExperience = 0;
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
-    resolver: zodResolver(basicInfoSchema),
+    resolver: zodResolver(basicInfoSchema)
     defaultValues: {
-      fullName: "",
-      title: "",
-      email: "",
-      phone: "",
-      location: "",
-      website: "",
-      linkedin: "",
-      github: "",
-      hourlyRate: 0,
+      fullName: ""
+      title: ""
+      email: ""
+      phone: ""
+      location: ""
+      website: ""
+      linkedin: ""
+      github: ""
+      hourlyRate: 0
       ...initialData}});
-
   useEffect(() => {
     if (initialData) {
       Object.entries(initialData).forEach(([key, value]) => {
@@ -49,34 +47,30 @@ export function BasicInfoForm({
       })
     }
   }, [initialData, form]);
-
   const handleSubmit = (data: BasicInfoFormData) => {
-    onSave(data),
+    onSave(data)
     if (onComplete) {
       onComplete()
     }
-  };
-
+  }
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
         <Card className="p-6 space-y-6">
           <PersonalInfoFields control={form.control} />
           <ContactFields control={form.control} />
-
           <div className="pt-4 border-t border-gray-200">
             <h3 className="text-lg font-medium mb-4">Rate Information</h3>
             <RateOptimizationSection
               control={form.control}
               setValue={form.setValue}
               skills={skills}
-              yearsExperience={yearsExperience || 0}
+              yearsExperience={yearsExperience |0}
               location={form.getValues("location")}
               rateType="hourly"
             />
           </div>
         </Card>
-
         <div className="flex justify-end">
           <Button type="submit">Save Basic Information</Button>
         </div>
@@ -84,4 +78,3 @@ export function BasicInfoForm({
     </Form>
   )
 }
-;

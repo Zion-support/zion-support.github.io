@@ -1,7 +1,6 @@
 
-import Head from 'next/head',;
-const DigitalTransformationInsights = () => {;
-  return (;
+import Head from 'next/head';
+const DigitalTransformationInsights = () => {return (;
     <div>;
       <Head>;
         <title>DigitalTransformationInsights - Zion Tech Solutions</title>;
@@ -13,5 +12,5 @@ const DigitalTransformationInsights = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default DigitalTransformationInsights;

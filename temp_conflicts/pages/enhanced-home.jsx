@@ -1,7 +1,6 @@
 
-import Head from 'next/head',;
-const EnhancedHome = () => {;
-  return (;
+import Head from 'next/head';
+const EnhancedHome = () => {return (;
     <div>;
       <Head>;
         <title>EnhancedHome - Zion Tech Solutions</title>;
@@ -13,5 +12,5 @@ const EnhancedHome = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default EnhancedHome;

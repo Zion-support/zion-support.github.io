@@ -1,8 +1,7 @@
-import React from 'react',;
-import SEO from '../components/SEO',;
-import { Check, ExternalLink } from 'lucide-react',;
-export default function BrowserAutomationCloudPage() {;
-	const features = [;
+import React from 'react';
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
+export default function BrowserAutomationCloudPage() {const features = [;
 		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API';
 	];
 	return (;
@@ -35,4 +34,3 @@ export default function BrowserAutomationCloudPage() {;
 		</>;
 	);
 }
-;

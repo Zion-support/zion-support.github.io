@@ -8,12 +8,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST")
     return res.status(405).json({ error: "Method not allowed" });
   const {
-    recipientId,
-    body,
-    linkUrl,
-    attachmentBase64,
-    attachmentName,
-    context,
+    recipientId
+    body
+    linkUrl
+    attachmentBase64
+    attachmentName
+    context
   } = req.body as {
     recipientId: string;
     body: string;
@@ -21,17 +21,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     attachmentBase64?: string;
     attachmentName?: string;
     context?: ConversationContext;
-  };
-  if (!recipientId || !body)
+  }
+  if (!recipientId |!body)
     return res.status(400).json({ error: "Missing required fields" });
   const { conversation, message } = sendMessage({
-    senderId: user.id,
-    recipientId,
-    body,
-    linkUrl,
-    attachmentBase64,
-    attachmentName,
-    context,
+    senderId: user.id
+    recipientId
+    body
+    linkUrl
+    attachmentBase64
+    attachmentName
+    context
   });
   res.status(200).json({ conversation, message });
 }

@@ -1,19 +1,18 @@
 import { UseFormReturn } from "react-hook-form";
 import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
 } from "@/components/ui/form";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {
   form: UseFormReturn<ContractFormValues>;
 }
-
 export function AdditionalClausesFields({
-  form,
+  form
 }: AdditionalClausesFieldsProps) {
   return (
     <FormField
@@ -37,11 +36,11 @@ export function AdditionalClausesFields({
                     <Checkbox
                       checked={field.value?.includes("nda")}
                       onCheckedChange={(checked) => {
-                        const currentValues = field.value || [];
+                        const currentValues = field.value |[];
                         return checked
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
-                              currentValues.filter((value) => value !== "nda"),
+                              currentValues.filter((value) => value !== "nda")
                             );
                       }}
                     />
@@ -55,7 +54,6 @@ export function AdditionalClausesFields({
                 </FormItem>
               )}
             />
-
             <FormField
               control={form.control}
               name="additionalClauses"
@@ -65,11 +63,11 @@ export function AdditionalClausesFields({
                     <Checkbox
                       checked={field.value?.includes("ip")}
                       onCheckedChange={(checked) => {
-                        const currentValues = field.value || [];
+                        const currentValues = field.value |[];
                         return checked
                           ? field.onChange([...currentValues, "ip"])
                           : field.onChange(
-                              currentValues.filter((value) => value !== "ip"),
+                              currentValues.filter((value) => value !== "ip")
                             );
                       }}
                     />
@@ -83,7 +81,6 @@ export function AdditionalClausesFields({
                 </FormItem>
               )}
             />
-
             <FormField
               control={form.control}
               name="additionalClauses"
@@ -93,13 +90,13 @@ export function AdditionalClausesFields({
                     <Checkbox
                       checked={field.value?.includes("termination")}
                       onCheckedChange={(checked) => {
-                        const currentValues = field.value || [];
+                        const currentValues = field.value |[];
                         return checked
                           ? field.onChange([...currentValues, "termination"])
                           : field.onChange(
                               currentValues.filter(
-                                (value) => value !== "termination",
-                              ),
+                                (value) => value !== "termination"
+                              )
                             );
                       }}
                     />
@@ -113,7 +110,6 @@ export function AdditionalClausesFields({
                 </FormItem>
               )}
             />
-
             <FormField
               control={form.control}
               name="additionalClauses"
@@ -123,13 +119,13 @@ export function AdditionalClausesFields({
                     <Checkbox
                       checked={field.value?.includes("revisions")}
                       onCheckedChange={(checked) => {
-                        const currentValues = field.value || [];
+                        const currentValues = field.value |[];
                         return checked
                           ? field.onChange([...currentValues, "revisions"])
                           : field.onChange(
                               currentValues.filter(
-                                (value) => value !== "revisions",
-                              ),
+                                (value) => value !== "revisions"
+                              )
                             );
                       }}
                     />

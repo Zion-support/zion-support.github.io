@@ -1,8 +1,7 @@
 
-import Head from 'next/head',;
-import Link from 'next/link',;
-const ApiFirstDevelopmentBuildingScalableSystemsChat = () => {;
-  return (;
+import Head from 'next/head';
+import Link from 'next/link';
+const ApiFirstDevelopmentBuildingScalableSystemsChat = () => {return (;
     <div>;
       <Head>;
         <title>ApiFirstDevelopmentBuildingScalableSystemsChat - Zion Tech Solutions</title>;
@@ -15,5 +14,5 @@ const ApiFirstDevelopmentBuildingScalableSystemsChat = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default ApiFirstDevelopmentBuildingScalableSystemsChat;

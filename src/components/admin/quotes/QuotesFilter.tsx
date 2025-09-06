@@ -3,15 +3,15 @@ import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
 } from '@/components/ui/select'
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
+  Popover
+  PopoverContent
+  PopoverTrigger
 } from '@/components/ui/popover'
 import { Button } from '@/components/ui/button'
 import { Calendar as CalendarComponent } from '@/components/ui/calendar'
@@ -29,14 +29,14 @@ interface QuotesFilterProps {
   setDateRange: (range: DateRange | undefined) => void
   onReset: () => void
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
-  searchQuery,
-  setSearchQuery,
-  statusFilter,
-  setStatusFilter,
-  archiveFilter,
-  setArchiveFilter,
-  dateRange,
-  setDateRange,
+  searchQuery
+  setSearchQuery
+  statusFilter
+  setStatusFilter
+  archiveFilter
+  setArchiveFilter
+  dateRange
+  setDateRange
   onReset,}) => {
   onReset
 },) => {
@@ -51,7 +51,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}            />
           </div>
-
           <div>
             <p className='text-zion-slate-light text-sm mb-2'>Status</p>
             <Select
@@ -70,7 +69,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               </SelectContent>
             </Select>
           </div>
-
           <div>
             <p className='text-zion-slate-light text-sm mb-2'>Archive</p>
             <Select
@@ -86,7 +84,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               </SelectContent>
             </Select>
           </div>
-
           <div>
             <p className='text-zion-slate-light text-sm mb-2'>Date Range</p>
             <Popover>
@@ -132,7 +129,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             </Popover>
           </div>
         </div>
-
         <div className='mt-4 flex justify-end'>
           <Button
             variant='outline'

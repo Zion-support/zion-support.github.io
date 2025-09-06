@@ -15,30 +15,27 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue} from "@/components/ui/select",
-type ResumeStep = "basics" | "experience" | "education" | "skills",
-
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue} from "@/components/ui/select"
+type ResumeStep = "basics" | "experience" | "education" | "skills"
 export function MobileResumeBuilder() {
-  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),
-  
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics")
   const renderStepContent = () => {
     switch (currentStep) {
-      case "basics": return <BasicsStep />,
+      case "basics": return <BasicsStep />
       case "experience":
-        return <ExperienceStep />,
+        return <ExperienceStep />
       case "education":
-        return <EducationStep />,
+        return <EducationStep />
       case "skills":
-        return <SkillsStep />,
+        return <SkillsStep />
       default:
         return <BasicsStep />
     }
-  },
-  
+  }
   return (
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
@@ -71,20 +68,16 @@ export function MobileResumeBuilder() {
           Skills
         </Button>
       </div>
-      
       {renderStepContent()}
-      
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
-      
       <Button variant="default" className="w-full" size="lg">
         Save & Preview
       </Button>
     </div>
   )
 }
-
 function BasicsStep() {
   return (
     <Card>
@@ -111,9 +104,9 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
-          <Textarea 
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
+          <Textarea
+            id="summary"
+            placeholder="Write a brief summary about yourself"
             rows = {4,}
           />
         </div>
@@ -121,15 +114,12 @@ function BasicsStep() {
     </Card>
   )
 }
-
 function ExperienceStep() {
-  const [experiences, setExperiences] = useState([{ id: '1' }]),
-  
+  const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
-    const newId = (experiences.length + 1).toString(),
+    const newId = (experiences.length + 1).toString()
     setExperiences([...experiences, { id: newId }])
-  },
-  
+  }
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
   }
@@ -142,4 +132,3 @@ function ExperienceStep() {
 }
   )
 }
-;

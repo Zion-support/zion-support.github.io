@@ -1,8 +1,7 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { useRouter } from 'next/router',;
-export default function OrderConfirmationPage() {;
-  const router = useRouter();
+import React from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+export default function OrderConfirmationPage() {const router = useRouter();
   const { orderId } = router.query;
   return (;
     <>;
@@ -25,4 +24,3 @@ export default function OrderConfirmationPage() {;
     </>;
   );
 }
-;

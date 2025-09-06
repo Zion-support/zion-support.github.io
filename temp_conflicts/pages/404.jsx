@@ -1,8 +1,7 @@
-import type { NextPage } from 'next',;
+import type { NextPage } from 'next';
 =;
-import Head from 'next/head',;
-const Custom404 = () => {;
-  return (;
+import Head from 'next/head';
+const Custom404 = () => {return (;
     <div>;
       <Head>;
         <title>404 - Zion Tech Solutions</title>;
@@ -14,5 +13,5 @@ const Custom404 = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default Custom404;

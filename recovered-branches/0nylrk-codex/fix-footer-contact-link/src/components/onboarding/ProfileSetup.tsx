@@ -8,27 +8,22 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-
 const profileSchema = z.object({
   displayName: z.string().min(2, "Name must be at least 2 characters");
   bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters");
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")});
-
 type ProfileFormValues = z.infer<typeof profileSchema>;
-
 interface ProfileSetupProps {
-  onComplete: (data: ProfileFormValues) => void,
+  onComplete: (data: ProfileFormValues) => void
   userType: string
 }
-
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
-    resolver: zodResolver(profileSchema),
+    resolver: zodResolver(profileSchema)
     defaultValues: {
-      displayName: "",
-      bio: "",
-      headline: ""}}),
-
+      displayName: ""
+      bio: ""
+      headline: ""}})
   const getTypeLabel = () => {
     switch (userType) {
       case "serviceProvider": return "Service Provider";
@@ -39,8 +34,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       default:
         return "User"
     }
-  };
-
+  }
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -49,7 +43,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           Help others get to know you better
         </p>
       </div>
-      
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
           <FormField
@@ -72,7 +65,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
               </FormItem>
             )}
           />
-          
           <FormField
             control={form.control}
             name="headline"
@@ -97,7 +89,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
               </FormItem>
             )}
           />
-          
           <FormField
             control={form.control}
             name="bio"
@@ -119,7 +110,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
               </FormItem>
             )}
           />
-          
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
@@ -131,4 +121,3 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
     </div>
   )
 }
-;

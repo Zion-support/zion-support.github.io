@@ -1,124 +1,108 @@
-import React, { useState, useEffect } from 'react',;
-import SEO from '../components/SEO',;
-import { motion, AnimatePresence } from 'framer-motion',;
-import {;
-  Search, Grid, List, Star, CheckCircle, ArrowRight, Check,;
-  Brain, Atom, Shield, Building, Globe,;
+import React, { useState, useEffect } from 'react';
+import SEO from '../components/SEO';
+import { motion, AnimatePresence } from 'framer-motion';
+import {Search, Grid, List, Star, CheckCircle, ArrowRight, Check;
+  Brain, Atom, Shield, Building, Globe;
   Users, TrendingUp, Award, Phone, Mail, MapPin;
-} from 'lucide-react',;
+} from 'lucide-react';
 // Import our new service data;
-import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion',;
-import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion',;
-import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure',;
-const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
+import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
+import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
+import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
+const contactInfo = {mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup.com';
-},;
+}
 const allServices = [;
-  ...advancedEnterpriseServices2025,;
-      ...innovativeMicroSaasExpansion2025,;
+  ...advancedEnterpriseServices2025;
+      ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
-],;
+];
 const categories = [;
-  {;
-    id: 'all',;
-    name: 'All Services',;
-    icon: <Grid className="w-6 h-6" />,;
-    color: 'from-gray-500 to-slate-500',;
+  {id: 'all';
+    name: 'All Services';
+    icon: <Grid className="w-6 h-6" />;
+    color: 'from-gray-500 to-slate-500';
     description: 'Complete portfolio of advanced services';
-  },;
-  {;
-    id: 'enterprise',;
-    name: 'Enterprise Solutions',;
-    icon: <Building className="w-6 h-6" />,;
-    color: 'from-blue-500 to-purple-500',;
+  }
+  {id: 'enterprise';
+    name: 'Enterprise Solutions';
+    icon: <Building className="w-6 h-6" />;
+    color: 'from-blue-500 to-purple-500';
     description: 'Enterprise-grade AI and IT solutions';
-  },;
-  {;
-    id: 'micro-saas',;
-    name: 'Micro SAAS',;
-    icon: <Globe className="w-6 h-6" />,;
-    color: 'from-green-500 to-emerald-500',;
+  }
+  {id: 'micro-saas';
+    name: 'Micro SAAS';
+    icon: <Globe className="w-6 h-6" />;
+    color: 'from-green-500 to-emerald-500';
     description: 'Innovative micro SAAS solutions';
-  },;
-  {;
-    id: 'infrastructure',;
-    name: 'IT Infrastructure',;
-    icon: <Shield className="w-6 h-6" />,;
-    color: 'from-orange-500 to-red-500',;
+  }
+  {id: 'infrastructure';
+    name: 'IT Infrastructure';
+    icon: <Shield className="w-6 h-6" />;
+    color: 'from-orange-500 to-red-500';
     description: 'Cutting-edge infrastructure services';
-  },;
-  {;
-    id: 'ai-ml',;
-    name: 'AI & Machine Learning',;
-    icon: <Brain className="w-6 h-6" />,;
-    color: 'from-purple-500 to-pink-500',;
+  }
+  {id: 'ai-ml';
+    name: 'AI & Machine Learning';
+    icon: <Brain className="w-6 h-6" />;
+    color: 'from-purple-500 to-pink-500';
     description: 'Advanced AI and ML platforms';
-  },;
-  {;
-    id: 'quantum',;
-    name: 'Quantum Computing',;
-    icon: <Atom className="w-6 h-6" />,;
-    color: 'from-violet-500 to-indigo-500',;
+  }
+  {id: 'quantum';
+    name: 'Quantum Computing';
+    icon: <Atom className="w-6 h-6" />;
+    color: 'from-violet-500 to-indigo-500';
     description: 'Quantum computing solutions';
   }
-],;
-const getServiceCategory = (service: any) => {;
-  if (service.category) return service.category,;
+];
+const getServiceCategory = (service: any) => {if (service.category) return service.category;
   return 'Other';
-},;
-const getServicePricing = (service: any) => {;
-  if (service.price) return `${service.price}${service.period}`,;
-  if (service.pricing?.starter) return service.pricing.starter,;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,;
+}
+const getServicePricing = (service: any) => {if (service.price) return `${service.price}${service.period}`;
+  if (service.pricing?.starter) return service.pricing.starter;
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
   return 'Contact for pricing';
-},;
-const getServiceFeatures = (service: any) => {;
-  if (service.features) return service.features,;
-  if (service.keyFeatures) return service.keyFeatures,;
+}
+const getServiceFeatures = (service: any) => {if (service.features) return service.features;
+  if (service.keyFeatures) return service.keyFeatures;
   return [];
-},;
-export default function AdvancedServicesShowcase() {;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
-  const [filteredServices, setFilteredServices] = useState(allServices),;
+}
+export default function AdvancedServicesShowcase() {const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [filteredServices, setFilteredServices] = useState(allServices);
   useEffect(() => {;
-    let filtered = allServices,;
+    let filtered = allServices;
     // Filter by category;
     if (selectedCategory !== 'all') {;
       filtered = filtered.filter(service => {;
-        const category = getServiceCategory(service).toLowerCase(),;
-        if (selectedCategory === 'enterprise') return category.includes('enterprise') || category.includes('legal') || category.includes('financial'),;
-        if (selectedCategory === 'micro-saas') return category.includes('marketing') || category.includes('social') || category.includes('customer') || category.includes('project'),;
-        if (selectedCategory === 'infrastructure') return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes('edge'),;
-        if (selectedCategory === 'ai-ml') return category.includes('ai') || category.includes('machine learning') || category.includes('nlp') || category.includes('ml'),;
-        if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes('quantum-resistant'),;
+        const category = getServiceCategory(service).toLowerCase();
+        if (selectedCategory === 'enterprise') return category.includes('enterprise') |category.includes('legal') |category.includes('financial');
+        if (selectedCategory === 'micro-saas') return category.includes('marketing') |category.includes('social') |category.includes('customer') |category.includes('project');
+        if (selectedCategory === 'infrastructure') return category.includes('infrastructure') |category.includes('network') |category.includes('data center') |category.includes('edge');
+        if (selectedCategory === 'ai-ml') return category.includes('ai') |category.includes('machine learning') |category.includes('nlp') |category.includes('ml');
+        if (selectedCategory === 'quantum') return category.includes('quantum') |category.includes('quantum-resistant');
         return false;
       });
     }
-;
     // Filter by search term;
-    if (searchTerm) {;
-      filtered = filtered.filter(service =>;
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-        service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+    if (searchTerm) {filtered = filtered.filter(service =>;
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |;
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |;
+        service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) |;
         getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase());
       );
     }
-;
     setFilteredServices(filtered);
-  }, [selectedCategory, searchTerm]),;
+  }, [selectedCategory, searchTerm]);
   const ServiceCard = ({ service }: { service: any }) => (;
     <motion.div;
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${;
-        service.popular ? 'ring-2 ring-blue-500' : '';
+      className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${service.popular ? 'ring-2 ring-blue-500' : '';
       }`}
     >;
       {service.popular && (;
@@ -127,7 +111,6 @@ export default function AdvancedServicesShowcase() {;
           Popular;
         </div>;
       )}
-;
       <div className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>;
         <span className="text-4xl">{service.icon}</span>;
       </div>;
@@ -219,8 +202,7 @@ export default function AdvancedServicesShowcase() {;
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
-      className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${;
-        service.popular ? 'ring-2 ring-blue-500' : '';
+      className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${service.popular ? 'ring-2 ring-blue-500' : '';
       }`}
     >;
       <div className="p-6">;
@@ -425,8 +407,7 @@ export default function AdvancedServicesShowcase() {;
               <div className="flex items-center gap-2">;
                 <button;
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-lg transition-all duration-300 ${;
-                    viewMode === 'grid';
+                  className={`p-2 rounded-lg transition-all duration-300 ${viewMode === 'grid';
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400';
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
                   }`}
@@ -435,8 +416,7 @@ export default function AdvancedServicesShowcase() {;
                 </button>;
                 <button;
                   onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-lg transition-all duration-300 ${;
-                    viewMode === 'list';
+                  className={`p-2 rounded-lg transition-all duration-300 ${viewMode === 'list';
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400';
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
                   }`}
@@ -453,8 +433,7 @@ export default function AdvancedServicesShowcase() {;
                 <button;
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${;
-                    selectedCategory === category.id;
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${selectedCategory === category.id;
                       ? 'bg-gradient-to-r text-white shadow-lg';
                       : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700';
                   } ${category.color}`}

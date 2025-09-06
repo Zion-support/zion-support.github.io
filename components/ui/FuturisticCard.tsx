@@ -3,8 +3,7 @@ type Props = {
   title: string;
   description: string;
   cta?: React.ReactNode;
-};
-
+}
 export default function FuturisticCard({ title, description, cta }: Props) {
   return (
     <div className="futuristic-card">

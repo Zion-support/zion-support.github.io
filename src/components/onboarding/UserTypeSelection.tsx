@@ -10,28 +10,28 @@ interface UserTypeSelectionProps {
   onSelect: (userType: 'serviceProvider' | 'talent' | 'client') => void
   selectedType: string | null
 export function UserTypeSelection({
-  onSelect,
-  selectedType,
+  onSelect
+  selectedType
 }: UserTypeSelectionProps) {
   const userTypes: UserTypeOption[] = [
     {
-      id: 'serviceProvider',
-      name: 'Service Provider',
-      description: 'I want to offer services on the platform',
-      icon: Briefcase,
-    },
+      id: 'serviceProvider'
+      name: 'Service Provider'
+      description: 'I want to offer services on the platform'
+      icon: Briefcase
+    }
     {
-      id: 'talent',
-      name: 'Talent',
-      description: 'I want to showcase my skills and find opportunities',
-      icon: Star,
-    },
+      id: 'talent'
+      name: 'Talent'
+      description: 'I want to showcase my skills and find opportunities'
+      icon: Star
+    }
     {
-      id: 'client',
-      name: 'Client',
-      description: 'I want to discover and hire talent or services',
-      icon: User,
-    },
+      id: 'client'
+      name: 'Client'
+      description: 'I want to discover and hire talent or services'
+      icon: User
+    }
   ]
   return (
     <div className='space-y-6'>
@@ -41,7 +41,6 @@ export function UserTypeSelection({
           This helps us personalize your experience
         </p>
       </div>
-
       <div className='grid gap-4 md:grid-cols-3'>
         {userTypes.map(type => {
           const Icon = type.icon
@@ -73,4 +72,3 @@ export function UserTypeSelection({
     </div>
   )
 }
-;

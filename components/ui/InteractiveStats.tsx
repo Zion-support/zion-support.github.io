@@ -7,25 +7,24 @@ function useCounter(target: number, durationMs: number) {
       if (start === null) start = ts;
       const progress = Math.min(1, (ts - start) / durationMs);
       setValue(Math.floor(progress * target));
-      if (progress < 1) raf = requestAnimationFrame(step);    let start: number | null = null,
-    let raf: number,
+      if (progress < 1) raf = requestAnimationFrame(step);    let start: number | null = null
+    let raf: number
     const step = (ts: number) => {
-      if (start === null) start = ts,
+      if (start === null) start = ts
       const progress = Math.min(1, (ts - start) / durationMs);
       setValue(Math.floor(progress * target));
       if (progress < 1) raf = requestAnimationFrame(step);
-    };
+    }
     raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf);
   }, [target, durationMs]);
   return value;}
-    };
+    }
     raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf)
   }, [target, durationMs]);
   return value
 }
-
 export default function InteractiveStats() {
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
@@ -42,7 +41,6 @@ export default function InteractiveStats() {
     </div>
   )
 }
-
 function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
   return (
     <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">
@@ -51,9 +49,9 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
     </div>
 );
 function Stat({
-  label,
-  value,
-  suffix = '',
+  label
+  value
+  suffix = ''
 }: {
   label: string;
   value: number;

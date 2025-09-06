@@ -11,7 +11,6 @@ const DataPipelineEngineeringChat: NextPage = () => {
           content="DataPipelineEngineeringChat service"
         />{" "}
       </Head>
-
       <main>
         <h1>DataPipelineEngineeringChat</h1>
         <p>Service details coming soon...</p>
@@ -19,6 +18,5 @@ const DataPipelineEngineeringChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default DataPipelineEngineeringChat;

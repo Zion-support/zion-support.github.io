@@ -1,7 +1,6 @@
 
-import Head from 'next/head',;
-const DataAnalyticsImplementation = () => {;
-  return (;
+import Head from 'next/head';
+const DataAnalyticsImplementation = () => {return (;
     <div>;
       <Head>;
         <title>DataAnalyticsImplementation - Zion Tech Solutions</title>;
@@ -13,5 +12,5 @@ const DataAnalyticsImplementation = () => {;
       </main>;
     </div>;
   );
-},;
+}
 export default DataAnalyticsImplementation;

@@ -5,10 +5,9 @@ interface EmptyFraudStateProps {
   hasFilters: boolean;
   onResetFilters: () => void;
 }
-
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
-  hasFilters,
-  onResetFilters,
+  hasFilters
+  onResetFilters
 }) => {
   return (
     <div className="text-center py-12">
@@ -26,4 +25,4 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       )}
     </div>
   );
-};
+}

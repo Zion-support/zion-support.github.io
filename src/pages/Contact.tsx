@@ -1,28 +1,24 @@
 import React, { useState } from 'react';
-
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    service: '',
+    name: ''
+    email: ''
+    company: ''
+    service: ''
     message: ''
   });
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
-      ...formData,
+      ...formData
       [e.target.name]: e.target.value
     });
-  };
-
+  }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We\'ll get back to you soon.');
-  };
-
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -34,7 +30,6 @@ const Contact: React.FC = () => {
           </p>
         </div>
       </div>
-
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -74,7 +69,6 @@ const Contact: React.FC = () => {
                     />
                   </div>
                 </div>
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -112,7 +106,6 @@ const Contact: React.FC = () => {
                     </select>
                   </div>
                 </div>
-                
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Message *
@@ -128,7 +121,6 @@ const Contact: React.FC = () => {
                     placeholder="Tell us about your project or how we can help you..."
                   />
                 </div>
-                
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
@@ -137,7 +129,6 @@ const Contact: React.FC = () => {
                 </button>
               </form>
             </div>
-
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
@@ -146,7 +137,6 @@ const Contact: React.FC = () => {
                   We're here to help you succeed. Reach out to us through any of the channels below or fill out the form.
                 </p>
               </div>
-
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -160,7 +150,6 @@ const Contact: React.FC = () => {
                     <p className="text-gray-600">support@ziontechgroup.com</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -173,7 +162,6 @@ const Contact: React.FC = () => {
                     <p className="text-gray-600">+1 (555) 987-6543</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -187,7 +175,6 @@ const Contact: React.FC = () => {
                     <p className="text-gray-600">San Francisco, CA 94105</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -201,7 +188,6 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Social Links */}
               <div className="pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Follow us</h3>
@@ -229,6 +215,5 @@ const Contact: React.FC = () => {
       </div>
     </div>
   );
-};
-
+}
 export default Contact;

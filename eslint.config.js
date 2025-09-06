@@ -6,7 +6,6 @@ import tseslint from "@typescript-eslint/eslint-plugin";
 import tsparser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
-
 export default [
   {
     ignores: [
@@ -47,8 +46,8 @@ export default [
       "*.test.tsx",
       "*.spec.js",
       "*.spec.ts",
-      "*.spec.tsx",
-    ],
+      "*.spec.tsx"
+    ]
   },
   js.configs.recommended,
   {
@@ -68,17 +67,17 @@ export default [
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
-        afterAll: "readonly",
+        afterAll: "readonly"
       },
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true
+        }
+      }
     },
     plugins: {
       react,
-      "react-hooks": reactHooks,
+      "react-hooks": reactHooks
     },
     rules: {
       ...react.configs.recommended.rules,
@@ -88,8 +87,8 @@ export default [
       "prefer-const": "error",
       "no-var": "error",
       "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
-    },
+      "react/react-in-jsx-scope": "off"
+    }
   },
   {
     files: ["**/*.{ts,tsx}"],
@@ -108,21 +107,21 @@ export default [
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
-        afterAll: "readonly",
+        afterAll: "readonly"
       },
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true
+        }
+      }
     },
     plugins: {
       "@typescript-eslint": tseslint,
       react,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
-      "jsx-a11y": jsxA11y,
+      "jsx-a11y": jsxA11y
     },
     rules: {
       ...tseslint.configs.recommended.rules,
@@ -131,7 +130,7 @@ export default [
       ...jsxA11y.configs.recommended.rules,
       "react-refresh/only-export-components": [
         "warn",
-        { allowConstantExport: true },
+        { allowConstantExport: true }
       ],
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
@@ -140,20 +139,20 @@ export default [
       "no-unused-vars": "off",
       "no-console": "warn",
       "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
+      "react/react-in-jsx-scope": "off"
     },
     settings: {
       react: {
-        version: "detect",
-      },
-    },
+        version: "detect"
+      }
+    }
   },
   {
     files: [
       "**/*.cjs",
       "**/scripts/**/*.js",
       "**/automation/**/*.js",
-      "**/pm2/**/*.js",
+      "**/pm2/**/*.js"
     ],
     languageOptions: {
       ecmaVersion: 2021,
@@ -168,13 +167,13 @@ export default [
         __dirname: "readonly",
         __filename: "readonly",
         Buffer: "readonly",
-        global: "readonly",
-      },
+        global: "readonly"
+      }
     },
     rules: {
       "no-unused-vars": "warn",
       "no-console": "warn",
-      "no-undef": "error",
-    },
-  },
+      "no-undef": "error"
+    }
+  }
 ];

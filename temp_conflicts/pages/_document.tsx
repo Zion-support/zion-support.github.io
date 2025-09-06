@@ -1,6 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-export default function MyDocument() {;
-  return (;
+export default function MyDocument() {return (;
     <Html lang="en">;
       <Head>;
         <title>Zion Tech Group - Pioneering Autonomous Business Operations</title>;
@@ -27,4 +26,3 @@ export default function MyDocument() {;
     </Html>;
   );
 }
-;

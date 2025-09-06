@@ -7,15 +7,14 @@ interface SidebarProps {
   onChangeVersion: (v: string) => void;
   visibilityFilter: Visibility | 'all';
   onChangeVisibility: (v: Visibility | 'all') => void;
-
 export default function Sidebar({
-  spec,
-  activeEndpointId,
-  onSelectEndpoint,
-  selectedVersion,
-  onChangeVersion,
-  visibilityFilter,
-  onChangeVisibility,
+  spec
+  activeEndpointId
+  onSelectEndpoint
+  selectedVersion
+  onChangeVersion
+  visibilityFilter
+  onChangeVisibility
 }: SidebarProps) {
   return (
     <aside className='w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary'>
@@ -37,7 +36,6 @@ export default function Sidebar({
             <button key={v} onClick={() => onChangeVersion(v)} className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}>{v}</button>
         </div>
       </div>
-
       <div>
         <div className='text-xs text-high-contrast-muted mb-1'>
           Publish Mode
@@ -53,7 +51,6 @@ export default function Sidebar({
           <option value='internal'>Internal</option>
         </select>
       </div>
-
       <nav className='space-y-3'>
         {spec.sections.map(section => (
           <div key={section.id}>
@@ -68,7 +65,6 @@ export default function Sidebar({
                 )
                 .map(e => (                  <li key={e.id}>        </select>
       </div>
-
       <nav className="space-y-3">
         {spec.sections.map((section) => (
           <div key={section.id}>

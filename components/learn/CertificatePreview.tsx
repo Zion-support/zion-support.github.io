@@ -1,8 +1,7 @@
 import React from "react";
-
 export default function CertificatePreview({
-  courseId,
-  userId = "demo-user",
+  courseId
+  userId = "demo-user"
 }: {
   courseId: string;
   userId?: string;

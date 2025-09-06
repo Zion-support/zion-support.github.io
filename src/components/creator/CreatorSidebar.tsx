@@ -1,17 +1,17 @@
 
 import {
-  Bell,
-  FileText,
-  Home,
-  Mail,
-  Search,
-  Settings,
-  Users,
+  Bell
+  FileText
+  Home
+  Mail
+  Search
+  Settings
+  Users
 } from 'lucide-react'; import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarMenuItem,
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenuItem
   // SidebarMenu, // Removed
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
@@ -43,7 +43,6 @@ export function AppSidebar() {
             <span>Notifications</span>
           </SidebarMenuItem>
         </SidebarGroup>
-
         <SidebarGroup title='Content'>
           <SidebarMenuItem href='/publish' icon={<FileText size={16} />}>
             <span>My Content</span>
@@ -52,7 +51,6 @@ export function AppSidebar() {
             <span>Analytics</span>
           </SidebarMenuItem>
         </SidebarGroup>
-
         <SidebarGroup title='Settings'>
           <SidebarMenuItem href='/profile' icon={<Users size={16} />}>
             <span>Profile</span>
@@ -66,7 +64,6 @@ export function AppSidebar() {
             <span>Notifications</span>
           </SidebarMenuItem>
         </SidebarGroup>
-        
         <SidebarGroup title="Content">
           <SidebarMenuItem href="/publish" icon={<FileText size={16} />}>
             <span>My Content</span>
@@ -75,7 +72,6 @@ export function AppSidebar() {
             <span>Analytics</span>
           </SidebarMenuItem>
         </SidebarGroup>
-        
         <SidebarGroup title="Settings">
           <SidebarMenuItem href="/profile" icon={<Users size={16} />}>
             <span>Profile</span>

@@ -1,9 +1,9 @@
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
 } from '@/components/ui/card'
 import { Trophy } from 'lucide-react'
 export interface LeaderboardEntry {
@@ -14,14 +14,12 @@ interface UserLeaderboardProps {
   entries: LeaderboardEntry[]
 }
 export interface LeaderboardEntry {
-  name: string,
+  name: string
   points: number
 }
-
 interface UserLeaderboardProps {
   entries: LeaderboardEntry[]
 }
-
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
   return (
     <Card>

@@ -5,7 +5,7 @@ import { Calendar } from 'lucide-react'
 interface ProfileAvailabilityProps {
   availability: Availability
 export function ProfileAvailability({
-  availability,
+  availability
 }: ProfileAvailabilityProps) {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
     switch (status) {
@@ -33,14 +33,12 @@ export function ProfileAvailability({
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
       <h3 className='text-xl font-bold text-white mb-4'>Availability</h3>
-
       <div className='flex flex-col md:flex-row md:items-center md:gap-6 mb-4'>
         <Badge
           variant='outline'          className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
         >
           {getStatusText(availability.status)}
         </Badge>
-
         {availability.nextAvailable && availability.status !== 'available' && (
           <div className='flex items-center gap-2 text-zion-slate-light'>
             <Calendar className='h-4 w-4' />            <span>Next available: {availability.nextAvailable}</span>
@@ -49,28 +47,24 @@ export function ProfileAvailability({
       </div>
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>
-      
       <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">
-        <Badge 
-          variant="outline" 
+        <Badge
+          variant="outline"
         >
           {getStatusText(availability.status)}
         </Badge>
-
         {availability.nextAvailable && availability.status !== 'available' && (
           <div className='flex items-center gap-2 text-zion-slate-light'>
-            <Calendar className='h-4 w-4' />        
+            <Calendar className='h-4 w-4' />
         {availability.nextAvailable && availability.status !== 'available' && (
           <div className="flex items-center gap-2 text-zion-slate-light">
             <Calendar className="h-4 w-4" />
           </div>
         )}
       </div>
-
       {availability.message && (
         <p className='text-zion-slate mb-4'>{availability.message}</p>
       )}
-
       {availability.availableHours &&
         availability.availableHours.length > 0 && (
           <div className='mt-4'>
@@ -87,7 +81,7 @@ export function ProfileAvailability({
                   <div className='flex items-center gap-1'>
                     <Clock className='h-4 w-4 text-zion-cyan' />
                     <span>{slot.hours}</span>
-                  </div>      
+                  </div>
       {availability.availableHours && availability.availableHours.length > 0 && (
         <div className="mt-4">
           <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>
@@ -113,4 +107,3 @@ export function ProfileAvailability({
     </div>
   )
 }
-;

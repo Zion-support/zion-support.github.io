@@ -3,10 +3,9 @@ import {Referral, ReferralStatus} from "@/types/referrals";
 import {Badge} from "@/components/ui/badge";
 import {formatDate} from "@/utils/referralUtils";
 interface ReferralTableProps {
-  referrals: Referral[],
+  referrals: Referral[]
   isLoading: boolean
 }
-
 export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
   // Helper function to render status badges
   const renderStatusBadge = (status: ReferralStatus) => {
@@ -15,12 +14,11 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
       case "completed":
         return <Badge variant="outline" className="bg-green-50 text-green-800 border-green-200">Completed</Badge>;
       case "expired":
-        return <Badge variant="outline" className="bg-gray-50 text-gray-800 border-gray-200">Expired</Badge>,
+        return <Badge variant="outline" className="bg-gray-50 text-gray-800 border-gray-200">Expired</Badge>
       default:
         return null
     }
-  };
-
+  }
   if (isLoading) {
     return (
       <div className="flex items-center justify-center p-8">
@@ -28,7 +26,6 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
       </div>
     )
   }
-
   if (referrals.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center p-8 text-center">
@@ -39,7 +36,6 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
       </div>
     )
   }
-
   return (
     <Table>
       <TableHeader>
@@ -56,11 +52,11 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         {referrals.map((referral) => (
           <TableRow key={referral.id}>
             <TableCell>{formatDate(referral.created_at)}</TableCell>
-            <TableCell>{referral.email || '-'}</TableCell>
+            <TableCell>{referral.email |'-'}</TableCell>
             <TableCell>{renderStatusBadge(referral.status)}</TableCell>
             <TableCell>
-              {referral.referred_user_type 
-                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1) 
+              {referral.referred_user_type
+                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1)
                 : '-'}
             </TableCell>
             <TableCell>{referral.completed_at ? formatDate(referral.completed_at) : '-'}</TableCell>
@@ -83,4 +79,3 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
     </Table>
   )
 }
-;

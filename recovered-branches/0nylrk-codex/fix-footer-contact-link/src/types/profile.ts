@@ -1,37 +1,33 @@
 
 export interface ProfileSkill {
-  name: string,
+  name: string
   level: number, // 1-5
   endorsements?: number
 }
-
 export interface ProfileProject {
   id: string;
   title: string;
   description: string;
   imageUrl?: string;
   tags?: string[];
-  url?: string,
+  url?: string
   date: string
 }
-
 export interface ProfileExperience {
   id: string;
   role: string;
   company: string;
   description: string;
   startDate: string;
-  endDate?: string,
+  endDate?: string
   current?: boolean
 }
-
 export interface Availability {
   status: 'available' | 'limited' | 'unavailable';
   nextAvailable?: string;
-  message?: string,
+  message?: string
   availableHours?: { day: string, hours: string }[]
 }
-
 export interface ProfileData {
   id: string;
   name: string;
@@ -48,6 +44,6 @@ export interface ProfileData {
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
-  hourlyRate?: number,
+  hourlyRate?: number
   contactEmail?: string
 }

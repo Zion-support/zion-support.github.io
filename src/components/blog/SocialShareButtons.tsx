@@ -12,19 +12,19 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   const shareText = encodeURIComponent(title)
   const shareToTwitter = () => {
     window.open(
-      `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`,
+      `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
     )
   }
   const shareToFacebook = () => {
     window.open(
-      `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
+      `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`
       '_blank'
     )
   }
   const shareToLinkedIn = () => {
     window.open(
-      `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+      `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`
       '_blank'
     )
   }
@@ -37,25 +37,25 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   }
   const buttons = [
     {
-      icon: <Twitter className='h-4 w-4' />,
-      label: 'Twitter',
-      onClick: shareToTwitter,
-    },
+      icon: <Twitter className='h-4 w-4' />
+      label: 'Twitter'
+      onClick: shareToTwitter
+    }
     {
-      icon: <Facebook className='h-4 w-4' />,
-      label: 'Facebook',
-      onClick: shareToFacebook,
-    },
+      icon: <Facebook className='h-4 w-4' />
+      label: 'Facebook'
+      onClick: shareToFacebook
+    }
     {
-      icon: <Linkedin className='h-4 w-4' />,
-      label: 'LinkedIn',
-      onClick: shareToLinkedIn,
-    },
+      icon: <Linkedin className='h-4 w-4' />
+      label: 'LinkedIn'
+      onClick: shareToLinkedIn
+    }
     {
-      icon: <LinkIcon className='h-4 w-4' />,
-      label: 'Copy Link',
-      onClick: copyLink,
-    },
+      icon: <LinkIcon className='h-4 w-4' />
+      label: 'Copy Link'
+      onClick: copyLink
+    }
   ]
   return (
     <div className='mt-12 flex flex-wrap gap-2'>
@@ -74,4 +74,3 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   )
 }
 }
-;

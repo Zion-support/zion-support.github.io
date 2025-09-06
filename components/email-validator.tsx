@@ -1,141 +1,120 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
-import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react',;
-export default function EmailValidatorPage() {;
-  const [emails, setEmails] = useState(''),;
-  const [validationResults, setValidationResults] = useState<any[]>([]),;
-  const [isValidating, setIsValidating] = useState(false),;
-  const [bulkMode, setBulkMode] = useState(false),;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react';
+export default function EmailValidatorPage() {const [emails, setEmails] = useState('');
+  const [validationResults, setValidationResults] = useState<any[]>([]);
+  const [isValidating, setIsValidating] = useState(false);
+  const [bulkMode, setBulkMode] = useState(false);
   const validateEmails = async () => {;
-    if (!emails.trim()) return,;
-    setIsValidating(true),;
-    setValidationResults([]),;
-    const emailList = emails.split('\n').filter(email => email.trim()),;
-    const results = [],;
+    if (!emails.trim()) return;
+    setIsValidating(true);
+    setValidationResults([]);
+    const emailList = emails.split('\n').filter(email => email.trim());
+    const results = [];
     // Simulate email validation with realistic results;
     for (let i = 0, i < emailList.length, i++) {;
-      await new Promise(resolve => setTimeout(resolve, 200)),;
-      const email = emailList[i].trim(),;
-      const result = validateSingleEmail(email),;
+      await new Promise(resolve => setTimeout(resolve, 200));
+      const email = emailList[i].trim();
+      const result = validateSingleEmail(email);
       results.push(result);
     }
-;
-    setValidationResults(results),;
+    setValidationResults(results);
     setIsValidating(false);
-  },;
-  const validateSingleEmail = (email: string) => {;
-    // Basic email regex;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;
+  }
+  const validateSingleEmail = (email: string) => {// Basic email regex;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     // Check for common disposable email domains;
     const disposableDomains = [;
-      'tempmail.orgguerrillamail.commailinator.com10minutemail.com',;
+      'tempmail.orgguerrillamail.commailinator.com10minutemail.com';
       'throwaway.emailtemp-mail.orgsharklasers.comgetairmail.com';
-    ],;
+    ];
     // Check for common typos;
     const commonTypos = {;
-      'gmail.com': ['gmial.comgamil.comgmai.com'],;
-      'yahoo.com': ['yaho.comyahooo.comyhaoo.com'],;
-      'hotmail.com': ['hotmai.comhotmial.comhotmeil.com'],;
+      'gmail.com': ['gmial.comgamil.comgmai.com'];
+      'yahoo.com': ['yaho.comyahooo.comyhaoo.com'];
+      'hotmail.com': ['hotmai.comhotmial.comhotmeil.com'];
       'outlook.com': ['outlok.comoutloook.comoutlok.com'];
-    },;
-    const domain = email.split('@')[1],;
-    const isDisposable = disposableDomains.includes(domain),;
+    }
+    const domain = email.split('@')[1];
+    const isDisposable = disposableDomains.includes(domain);
     const hasTypo = Object.entries(commonTypos).some(([correct, typos]) =>;
       typos.includes(domain);
-    ),;
-    let status = 'valid',;
-    let score = 100,;
-    const issues = [],;
-    if (!emailRegex.test(email)) {;
-      status = 'invalid',;
-      score = 0,;
+    );
+    let status = 'valid';
+    let score = 100;
+    const issues = [];
+    if (!emailRegex.test(email)) {status = 'invalid';
+      score = 0;
       issues.push('Invalid email format');
-    } else if (isDisposable) {;
-      status = 'disposable',;
-      score = 20,;
+    } else if (isDisposable) {status = 'disposable';
+      score = 20;
       issues.push('Disposable email domain');
-    } else if (hasTypo) {;
-      status = 'suspicious',;
-      score = 60,;
+    } else if (hasTypo) {status = 'suspicious';
+      score = 60;
       issues.push('Possible typo in domain');
     }
-;
     // Additional checks;
-    if (email.length > 254) {;
-      status = 'invalid',;
-      score = 0,;
+    if (email.length > 254) {status = 'invalid';
+      score = 0;
       issues.push('Email too long');
     }
-;
-    if (email.split('@')[0].length > 64) {;
-      status = 'invalid',;
-      score = 0,;
+    if (email.split('@')[0].length > 64) {status = 'invalid';
+      score = 0;
       issues.push('Local part too long');
     }
-;
-    return {;
-      email,;
-      status,;
-      score,;
-      issues,;
-      domain,;
-      isDisposable,;
-      hasTypo,;
+    return {email;
+      status;
+      score;
+      issues;
+      domain;
+      isDisposable;
+      hasTypo;
       timestamp: new Date().toLocaleTimeString();
     }
-},
-
+}
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'valid':
-
     }
-  },;
-  const getStatusColor = (status: string) => {;
-    switch (status) {;
+  }
+  const getStatusColor = (status: string) => {switch (status) {;
       case 'valid':;
-        return 'text-green-400',;
+        return 'text-green-400';
       case 'suspicious':;
-        return 'text-yellow-400',;
+        return 'text-yellow-400';
       case 'disposable':;
-        return 'text-orange-400',;
+        return 'text-orange-400';
       case 'invalid':;
-        return 'text-red-400',;
+        return 'text-red-400';
       default:;
         return 'text-gray-400';
     }
-  },;
-  const getScoreColor = (score: number) => {;
-    if (score >= 80) return 'text-green-400',;
-    if (score >= 60) return 'text-yellow-400',;
-    if (score >= 40) return 'text-orange-400',;
+  }
+  const getScoreColor = (score: number) => {if (score >= 80) return 'text-green-400';
+    if (score >= 60) return 'text-yellow-400';
+    if (score >= 40) return 'text-orange-400';
     return 'text-red-400';
-  },;
-  const copyResults = () => {;
-    const resultsText = validationResults.map(result =>;
+  }
+  const copyResults = () => {const resultsText = validationResults.map(result =>;
       `${result.email} - ${result.status.toUpperCase()} (Score: ${result.score})`;
-    ).join('\n'),;
+    ).join('\n');
     navigator.clipboard.writeText(resultsText);
-  },;
-  const clearResults = () => {;
-    setValidationResults([]),;
+  }
+  const clearResults = () => {setValidationResults([]);
     setEmails('');
-  },;
-  const getStats = () => {;
-    if (validationResults.length === 0) return null,;
-    const total = validationResults.length,;
-    const valid = validationResults.filter(r => r.status === 'valid').length,;
-    const invalid = validationResults.filter(r => r.status === 'invalid').length,;
-    const suspicious = validationResults.filter(r => r.status === 'suspicious').length,;
-    const disposable = validationResults.filter(r => r.status === 'disposable').length,;
-    const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total,;
+  }
+  const getStats = () => {if (validationResults.length === 0) return null;
+    const total = validationResults.length;
+    const valid = validationResults.filter(r => r.status === 'valid').length;
+    const invalid = validationResults.filter(r => r.status === 'invalid').length;
+    const suspicious = validationResults.filter(r => r.status === 'suspicious').length;
+    const disposable = validationResults.filter(r => r.status === 'disposable').length;
+    const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total;
     return { total, valid, invalid, suspicious, disposable, avgScore }
-},
-
-  const stats = getStats(),
-
+}
+  const stats = getStats()
   return (
     <>
       <Head>
@@ -144,7 +123,6 @@ export default function EmailValidatorPage() {;
         <meta property=&quot;og:title&quot; content=&quot;Email Validator - Zion Tech Group&quot; />
         <meta property=&quot;og:description&quot; content=&quot;Advanced email validation service to ensure deliverability and prevent typos.&quot; />
       </Head>
-
       {/* Hero Section */}
       <section className=&quot;pt-32 pb-20 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
@@ -158,12 +136,11 @@ export default function EmailValidatorPage() {;
             Email Validator
           </h1>
           <p className=&quot;text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed&quot;>
-            Validate email addresses with our advanced validation service. Check for typos, disposable domains, 
+            Validate email addresses with our advanced validation service. Check for typos, disposable domains
             and ensure maximum deliverability for your email campaigns and user registrations.
           </p>
         </div>
       </section>
-
       {/* Email Validation Tool */}
       <section className=&quot;py-20 bg-gray-900&quot;>
         <div className=&quot;max-w-6xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -175,7 +152,6 @@ export default function EmailValidatorPage() {;
               Our advanced validation engine checks multiple factors to ensure email quality and deliverability.
             </p>
           </div>
-
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
             {/* Input Form */}
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
@@ -194,7 +170,6 @@ export default function EmailValidatorPage() {;
                   />
                 </div>
               </div>
-
               <div className=&quot;space-y-6&quot;>
                 {bulkMode ? (
                   <div>
@@ -204,7 +179,6 @@ export default function EmailValidatorPage() {;
                     <textarea
                       value={emails}
                       onChange={(e) => setEmails(e.target.value)}
-
                     )}
                   </Button>;
                   {validationResults.length > 0 && (;
@@ -217,7 +191,6 @@ variant=&quot;outline&quot;
                     </Button>
                   )}
                 </div>
-
                 <div className=&quot;text-sm text-gray-400&quot;>
                   <p>• Validates email format and syntax</p>
                   <p>• Checks for disposable email domains</p>
@@ -226,7 +199,6 @@ variant=&quot;outline&quot;
                 </div>
               </div>
             </Card>
-
             {/* Validation Results */}
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
               <div className=&quot;flex items-center justify-between mb-6&quot;>
@@ -246,7 +218,6 @@ variant=&quot;outline&quot;
                   </Button>
                 )}
               </div>
-
               {stats && (
                 <div className=&quot;mb-6 p-4 bg-gray-900 rounded-lg border border-gray-700&quot;>
                   <div className=&quot;grid grid-cols-2 gap-4 text-sm&quot;>
@@ -276,8 +247,7 @@ variant=&quot;outline&quot;
                   {validationResults.map((result, index) => (
                     <div
                       key={index}
-                      className={`p-4 rounded-lg border ${;
-                        result.status === 'valid' ? 'border-green-500/30 bg-green-500/10' :;
+                      className={`p-4 rounded-lg border ${result.status === 'valid' ? 'border-green-500/30 bg-green-500/10' :;
                         result.status === 'suspicious' ? 'border-yellow-500/30 bg-yellow-500/10' :;
                         result.status === 'disposable' ? 'border-orange-500/30 bg-orange-500/10' :;
                         'border-red-500/30 bg-red-500/10';
@@ -294,12 +264,10 @@ variant=&quot;outline&quot;
                           Score: {result.score}
 </span>
                       </div>
-                      
                       <div className=&quot;text-sm text-gray-300 mb-2&quot;>
                         <span className=&quot;text-gray-400&quot;>Domain:</span>
                         <span className=&quot;ml-2&quot;>{result.domain}</span>
                       </div>
-
                       {result.issues.length > 0 && (
                         <div className=&quot;text-sm&quot;>
                           <span className=&quot;text-gray-400&quot;>Issues:</span>
@@ -318,7 +286,6 @@ variant=&quot;outline&quot;
                           ⚠️ Disposable email domain detected
                         </div>
                       )}
-
                       {result.hasTypo && (
                         <div className=&quot;mt-2 p-2 bg-yellow-500/20 border border-yellow-500/30 rounded text-sm text-yellow-300&quot;>
                           💡 Possible typo detected in domain
@@ -350,7 +317,6 @@ variant=&quot;outline&quot;
               Comprehensive email validation with real-time checking and intelligent analysis.
             </p>
           </div>
-
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
               <div className=&quot;text-4xl mb-4&quot;>🔍</div>
@@ -359,7 +325,6 @@ variant=&quot;outline&quot;
                 Checks email format, length, and RFC compliance standards for maximum accuracy.
               </p>
             </Card>
-
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
               <div className=&quot;text-4xl mb-4&quot;>🛡️</div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Disposable Detection</h3>
@@ -367,7 +332,6 @@ variant=&quot;outline&quot;
                 Identifies temporary and disposable email addresses to prevent fraud and abuse.
               </p>
             </Card>
-
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
               <div className=&quot;text-4xl mb-4&quot;>💡</div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Typo Detection</h3>
@@ -375,7 +339,6 @@ variant=&quot;outline&quot;
                 Smart algorithms detect common typos in popular email domains like Gmail and Yahoo.
               </p>
             </Card>
-
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
               <div className=&quot;text-4xl mb-4&quot;>📊</div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Deliverability Score</h3>
@@ -383,7 +346,6 @@ variant=&quot;outline&quot;
                 Get a comprehensive score indicating the likelihood of successful email delivery.
               </p>
             </Card>
-
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
               <div className=&quot;text-4xl mb-4&quot;>⚡</div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Bulk Validation</h3>
@@ -391,7 +353,6 @@ variant=&quot;outline&quot;
                 Validate thousands of email addresses simultaneously with our high-performance engine.
               </p>
             </Card>
-
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
               <div className=&quot;text-4xl mb-4&quot;>🌍</div>
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Global Coverage</h3>
@@ -402,7 +363,6 @@ variant=&quot;outline&quot;
           </div>
         </div>
       </section>
-
       {/* Use Cases */}
       <section className=&quot;py-20 bg-gray-900&quot;>
         <div className=&quot;max-w-6xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -414,7 +374,6 @@ variant=&quot;outline&quot;
               From user registration to email marketing, our validation service ensures quality and deliverability.
             </p>
           </div>
-
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
               <div className=&quot;text-4xl mb-4&quot;>👥</div>
@@ -428,7 +387,6 @@ variant=&quot;outline&quot;
                 <li>• Reduce support tickets</li>
               </ul>
             </Card>
-
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
               <div className=&quot;text-4xl mb-4&quot;>📧</div>
               <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Email Marketing</h3>
@@ -441,7 +399,6 @@ variant=&quot;outline&quot;
                 <li>• Reduced bounce rates</li>
               </ul>
             </Card>
-
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
               <div className=&quot;text-4xl mb-4&quot;>🛒</div>
               <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>E-commerce</h3>
@@ -454,7 +411,6 @@ variant=&quot;outline&quot;
                 <li>• Better customer support</li>
               </ul>
             </Card>
-
             <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
               <div className=&quot;text-4xl mb-4&quot;>🏢</div>
               <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Business Applications</h3>
@@ -470,7 +426,5 @@ variant=&quot;outline&quot;
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-
 }

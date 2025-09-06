@@ -13,18 +13,18 @@ export const useNavigate = () => (url: string) => {}
 export const useLocation = () => ({ pathname: '/' })
 export const useParams = () => ({})
 export const useSearchParams = () => [new URLSearchParams(), () => {}] as any; export default {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-  NavLink,
-  Navigate,
-  MemoryRouter,
-  Outlet,
-  useNavigate,
-  useLocation,
-  useParams,
-  useSearchParams,
+  BrowserRouter
+  Routes
+  Route
+  Link
+  NavLink
+  Navigate
+  MemoryRouter
+  Outlet
+  useNavigate
+  useLocation
+  useParams
+  useSearchParams
 }
   BrowserRouter
   Routes

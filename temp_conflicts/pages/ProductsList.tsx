@@ -1,7 +1,6 @@
-import React from 'react',;
+import React from 'react';
 import Head from 'next/head';
-export default function ProductsListPage() {;
-  return (;
+export default function ProductsListPage() {return (;
     <>;
       <Head>;
         <title>Products - Zion Tech Group</title>;
@@ -19,4 +18,3 @@ export default function ProductsListPage() {;
     </>;
   );
 }
-;

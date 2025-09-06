@@ -7,20 +7,18 @@ import { Badge } from "@/components/ui/badge"
 import { ForumReply } from "@/types/community"
 import { cn } from "@/lib/utils"
 interface ReplyCardProps {
-  reply: ForumReply,
+  reply: ForumReply
   onMarkAnswer?: () => void
   canMarkAnswer?: boolean
   className?: string
 }
-
-export const ReplyCard = ({ 
+export const ReplyCard = ({
   reply
-  onMarkAnswer, 
+  onMarkAnswer
   canMarkAnswer = false
   className
 }: ReplyCardProps,) => {
-  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true }),
-
+  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
   return (
     <Card className={cn(
       "transition-shadow"
@@ -54,11 +52,9 @@ export const ReplyCard = ({
           </div>
         </div>
       </CardHeader>
-      
       <CardContent>
         <div>{reply.content}</div>
       </CardContent>
-      
       <CardFooter className="flex justify-between">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" className="px-2">
@@ -70,7 +66,6 @@ export const ReplyCard = ({
             <span>{reply.downvotes}</span>
           </Button>
         </div>
-        
         {canMarkAnswer && !reply.isAnswer && (
           <Button size="sm" variant="outline" onClick={onMarkAnswer} className="text-green-600">
             <CheckCircle className="h-4 w-4 mr-1" />

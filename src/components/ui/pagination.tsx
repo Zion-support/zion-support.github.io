@@ -1,9 +1,7 @@
 import * as React from &quot;react&quot;
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react'
-
 import { cn } from &quot;@/lib/utils&quot;
 import { ButtonProps, buttonVariants } from &quot;@/components/ui/button&quot;
-
 const Pagination = ({ className, ...props }: React.ComponentProps<&quot;nav&quot;>) => (
   <nav
     role=&quot;navigation&quot;
@@ -13,9 +11,8 @@ const Pagination = ({ className, ...props }: React.ComponentProps<&quot;nav&quot
   />
 )
 Pagination.displayName = &quot;Pagination&quot;
-
 const PaginationContent = React.forwardRef<
-  HTMLUListElement,
+  HTMLUListElement
   React.ComponentProps<&quot;ul&quot;>
 >(({ className, ...props }, ref) => (
   <ul
@@ -25,45 +22,40 @@ const PaginationContent = React.forwardRef<
 />
 ))
 PaginationContent.displayName = &quot;PaginationContent&quot;
-
 const PaginationItem = React.forwardRef<
-  HTMLLIElement,
+  HTMLLIElement
   React.ComponentProps<&quot;li&quot;>
 >(({ className, ...props }, ref) => (
   <li ref={ref} className={cn("&quot;, className)} {...props} />
 ))
 PaginationItem.displayName = &quot;PaginationItem&quot;
-
 type PaginationLinkProps = {
   isActive?: boolean
   size?: ButtonProps[&quot;size&quot;]
 } & React.ComponentProps<&quot;a&quot;>
-
 interface PaginationButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number
   isActive?: boolean
 }
-
 const PaginationLink = ({
-  className,
-  isActive,
-  size = &quot;icon&quot;,
+  className
+  isActive
+  size = &quot;icon&quot;
   ...props
 }: PaginationLinkProps) => (
   <a
     aria-current={isActive ? &quot;page" : undefined}
     className={cn(
       buttonVariants({
-        variant: isActive ? "outline&quot; : &quot;ghost&quot;,
-        size}),
+        variant: isActive ? "outline&quot; : &quot;ghost&quot;
+        size})
       className
     )}
     {...props}
   />
 )
 PaginationLink.displayName = &quot;PaginationLink&quot;
-
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
   ({ page, isActive, className, ...props }, ref) => (
     <button
@@ -72,8 +64,8 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
       aria-label={`Page ${page}`}
       aria-current={isActive ? 'page' : undefined}
       className={cn(;
-        buttonVariants({ variant: 'ghost', size: 'icon' }),;
-        isActive && 'bg-green-600 text-white',;
+        buttonVariants({ variant: 'ghost', size: 'icon' });
+        isActive && 'bg-green-600 text-white';
         className;
       )}
       {...props}
@@ -83,9 +75,8 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
   )
 )
 PaginationButton.displayName = 'PaginationButton'
-
 const PaginationPrevious = ({
-  className,
+  className
   ...props
 }: Omit<PaginationLinkProps 'size'>) => (
   <PaginationLink
@@ -99,9 +90,8 @@ const PaginationPrevious = ({
   </PaginationLink>
 )
 PaginationPrevious.displayName = &quot;PaginationPrevious&quot;
-
 const PaginationNext = ({
-  className,
+  className
   ...props
 }: Omit<PaginationLinkProps 'size'>) => (
   <PaginationLink
@@ -115,9 +105,8 @@ const PaginationNext = ({
   </PaginationLink>
 )
 PaginationNext.displayName = &quot;PaginationNext&quot;
-
 const PaginationEllipsis = ({
-  className,
+  className
   ...props
 }: React.ComponentProps<&quot;span">) => (
   <span
@@ -130,14 +119,12 @@ const PaginationEllipsis = ({
   </span>
 )
 PaginationEllipsis.displayName = &quot;PaginationEllipsis"
-
 export {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationButton,
-  PaginationNext,
+  Pagination
+  PaginationContent
+  PaginationEllipsis
+  PaginationItem
+  PaginationLink
+  PaginationButton
+  PaginationNext
   PaginationPrevious}
-;

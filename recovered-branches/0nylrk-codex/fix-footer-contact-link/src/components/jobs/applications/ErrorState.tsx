@@ -2,7 +2,6 @@ import { Card, CardContent } from "@/components/ui/card";
 interface ErrorStateProps {
   error: string;
 }
-
 export function ErrorState({ error }: ErrorStateProps) {
   return (
     <Card className="border-red-200">

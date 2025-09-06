@@ -1,121 +1,104 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
-import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react',;
-export default function JSONFormatterPage() {;
-  const [inputJson, setInputJson] = useState(''),;
-  const [formattedJson, setFormattedJson] = useState(''),;
-  const [isValid, setIsValid] = useState(true),;
-  const [errorMessage, setErrorMessage] = useState(''),;
-  const [indentSize, setIndentSize] = useState(2),;
-  const [compactMode, setCompactMode] = useState(false),;
-  const [showLineNumbers, setShowLineNumbers] = useState(true),;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
+export default function JSONFormatterPage() {const [inputJson, setInputJson] = useState('');
+  const [formattedJson, setFormattedJson] = useState('');
+  const [isValid, setIsValid] = useState(true);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [indentSize, setIndentSize] = useState(2);
+  const [compactMode, setCompactMode] = useState(false);
+  const [showLineNumbers, setShowLineNumbers] = useState(true);
   const formatJSON = () => {;
     if (!inputJson.trim()) {;
-      setFormattedJson(''),;
-      setIsValid(true),;
-      setErrorMessage(''),;
+      setFormattedJson('');
+      setIsValid(true);
+      setErrorMessage('');
       return;
     }
-;
-    try {;
-      const parsed = JSON.parse(inputJson),;
+    try {const parsed = JSON.parse(inputJson);
       const formatted = compactMode;
         ? JSON.stringify(parsed);
-        : JSON.stringify(parsed, null, indentSize),;
-      setFormattedJson(formatted),;
-      setIsValid(true),;
+        : JSON.stringify(parsed, null, indentSize);
+      setFormattedJson(formatted);
+      setIsValid(true);
       setErrorMessage('');
-    } catch (error) {;
-      setIsValid(false),;
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON'),;
+    } catch (error) {setIsValid(false);
+      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
       setFormattedJson('');
     }
-  },;
-  const minifyJSON = () => {;
-    if (!inputJson.trim()) return,;
+  }
+  const minifyJSON = () => {if (!inputJson.trim()) return;
     try {;
-      const parsed = JSON.parse(inputJson),;
-      const minified = JSON.stringify(parsed),;
-      setFormattedJson(minified),;
-      setIsValid(true),;
+      const parsed = JSON.parse(inputJson);
+      const minified = JSON.stringify(parsed);
+      setFormattedJson(minified);
+      setIsValid(true);
       setErrorMessage('');
-    } catch (error) {;
-      setIsValid(false),;
+    } catch (error) {setIsValid(false);
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
     }
-  },;
-  const validateJSON = () => {;
-    if (!inputJson.trim()) {;
-      setIsValid(true),;
-      setErrorMessage(''),;
+  }
+  const validateJSON = () => {if (!inputJson.trim()) {;
+      setIsValid(true);
+      setErrorMessage('');
       return;
     }
-;
-    try {;
-      JSON.parse(inputJson),;
-      setIsValid(true),;
+    try {JSON.parse(inputJson);
+      setIsValid(true);
       setErrorMessage('');
-    } catch (error) {;
-      setIsValid(false),;
+    } catch (error) {setIsValid(false);
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
     }
-  },;
-  const clearAll = () => {;
-    setInputJson(''),;
-    setFormattedJson(''),;
-    setIsValid(true),;
+  }
+  const clearAll = () => {setInputJson('');
+    setFormattedJson('');
+    setIsValid(true);
     setErrorMessage('');
-  },;
-  const copyToClipboard = (text: string) => {;
-    navigator.clipboard.writeText(text);
-  },;
-  const downloadJSON = (content: string, filename: string) => {;
-    const blob = new Blob([content], { type: 'application/json' }),;
-    const url = URL.createObjectURL(blob),;
-    const a = document.createElement('a'),;
-    a.href = url,;
-    a.download = filename,;
-    document.body.appendChild(a),;
-    a.click(),;
-    document.body.removeChild(a),;
+  }
+  const copyToClipboard = (text: string) => {navigator.clipboard.writeText(text);
+  }
+  const downloadJSON = (content: string, filename: string) => {const blob = new Blob([content], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
     URL.revokeObjectURL(url);
-  },;
-  const loadSampleJSON = () => {;
-    const sample = {;
-      "name": "John Doe",;
-      "age": 30,;
-      "email": "john.doe@example.com",;
+  }
+  const loadSampleJSON = () => {const sample = {;
+      "name": "John Doe";
+      "age": 30;
+      "email": "john.doe@example.com";
       "address": {;
-        "street": "123 Main St",;
-        "city": "Anytown",;
-        "state": "CA",;
+        "street": "123 Main St";
+        "city": "Anytown";
+        "state": "CA";
         "zipCode": "12345";
-      },;
+      }
       "phoneNumbers": [;
-        {;
-          "type": "home",;
+        {"type": "home";
           "number": "555-123-4567";
-        },;
-        {;
-          "type": "work",;
+        }
+        {"type": "work";
           "number": "555-987-6543";
         }
-      ],;
-      "interests": ["programming", "reading", "hiking"],;
-      "active": true,;
+      ];
+      "interests": ["programming", "reading", "hiking"];
+      "active": true;
       "lastLogin": "2024-01-15T10:30:00Z";
-    },;
-    setInputJson(JSON.stringify(sample, null, 2)),;
-    setFormattedJson(''),;
-    setIsValid(true),;
+    }
+    setInputJson(JSON.stringify(sample, null, 2));
+    setFormattedJson('');
+    setIsValid(true);
     setErrorMessage('');
-  },;
-  const getLineNumbers = (text: string) => {;
-    const lines = text.split('\n');
+  }
+  const getLineNumbers = (text: string) => {const lines = text.split('\n');
     return lines.map((_, index) => index + 1).join('\n');
-  };
+  }
   return (;
     <>;
       <Head>;
@@ -220,8 +203,7 @@ export default function JSONFormatterPage() {;
                   Input JSON;
                 </h3>;
                 <div className="flex items-center space-x-2">;
-                  <span className={`px-2 py-1 rounded text-xs font-medium ${;
-                    isValid ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400';
+                  <span className={`px-2 py-1 rounded text-xs font-medium ${isValid ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400';
                   }`}>;
                     {isValid ? 'Valid' : 'Invalid'}
                   </span>;
@@ -239,8 +221,7 @@ export default function JSONFormatterPage() {;
                     onChange={(e) => setInputJson(e.target.value)}
                     placeholder="Paste your JSON data here...";
                     rows={15}
-                    className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${;
-                      showLineNumbers ? 'pl-16' : '';
+                    className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${showLineNumbers ? 'pl-16' : '';
                     }`}
                   />;
                 </div>;
@@ -249,7 +230,6 @@ export default function JSONFormatterPage() {;
                     <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
-;
                 <div className="flex space-x-3">;
                   <Button;
                     onClick={formatJSON}
@@ -316,8 +296,7 @@ export default function JSONFormatterPage() {;
                         {getLineNumbers(formattedJson)}
                       </div>;
                     )}
-                    <div className={`p-4 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm overflow-auto max-h-96 ${;
-                      showLineNumbers ? 'pl-16' : '';
+                    <div className={`p-4 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm overflow-auto max-h-96 ${showLineNumbers ? 'pl-16' : '';
                     }`}>;
                       <pre className="whitespace-pre-wrap">{formattedJson}</pre>;
                     </div>;
@@ -330,7 +309,6 @@ export default function JSONFormatterPage() {;
                     </p>;
                   </div>;
                 )}
-;
                 {formattedJson && (;
                   <div className="text-sm text-gray-400">;
                     <p>• Characters: {formattedJson.length}</p>;

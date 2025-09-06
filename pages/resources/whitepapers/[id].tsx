@@ -1,65 +1,62 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { useRouter } from 'next/router',;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 // Mock whitepaper data - in a real app, this would come from an API or database
 const whitepapers = {
   'autonomous-systems-guide': {
-    id: 'autonomous-systems-guide',
-    title: 'The Complete Guide to Autonomous Systems',
-    description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.',
-    category: 'Technology',
-    pages: '45',
-    author: 'Zion Tech Group Research Team',
-    publishDate: 'January 2025',
+    id: 'autonomous-systems-guide'
+    title: 'The Complete Guide to Autonomous Systems'
+    description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.'
+    category: 'Technology'
+    pages: '45'
+    author: 'Zion Tech Group Research Team'
+    publishDate: 'January 2025'
     content: {
-      executiveSummary: 'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.',
+      executiveSummary: 'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.'
       keyTopics: [
         'Understanding Autonomous SystemsImplementation StrategiesBest Practices & Case StudiesFuture Trends & Predictions'
-      ],
+      ]
       targetAudience: 'Technology leaders, engineers, and business professionals interested in implementing autonomous systems.'
     }
-  },
+  }
   'ai-ethics-framework': {
-    id: 'ai-ethics-framework',
-    title: 'AI Ethics Framework for Business',
-    description: 'Establishing ethical guidelines for AI implementation in enterprise environments.',
-    category: 'Ethics',
-    pages: '32',
-    author: 'Zion Tech Group Ethics Committee',
-    publishDate: 'January 2025',
+    id: 'ai-ethics-framework'
+    title: 'AI Ethics Framework for Business'
+    description: 'Establishing ethical guidelines for AI implementation in enterprise environments.'
+    category: 'Ethics'
+    pages: '32'
+    author: 'Zion Tech Group Ethics Committee'
+    publishDate: 'January 2025'
     content: {
-      executiveSummary: 'This framework provides organizations with a structured approach to implementing AI systems ethically and responsibly. Learn how to balance innovation with ethical considerations.',
+      executiveSummary: 'This framework provides organizations with a structured approach to implementing AI systems ethically and responsibly. Learn how to balance innovation with ethical considerations.'
       keyTopics: [
         'Ethical AI PrinciplesImplementation GuidelinesRisk Assessment & MitigationCompliance & Governance'
-      ],
+      ]
       targetAudience: 'Business leaders, compliance officers, and AI practitioners focused on responsible AI development.'
     }
-  },
+  }
   'automation-roi-calculator': {
-    id: 'automation-roi-calculator',
-    title: 'Automation ROI Calculator Guide',
-    description: 'How to calculate and maximize return on investment for automation initiatives.',
-    category: 'Business',
-    pages: '28',
-    author: 'Zion Tech Group Business Analytics Team',
-    publishDate: 'January 2025',
+    id: 'automation-roi-calculator'
+    title: 'Automation ROI Calculator Guide'
+    description: 'How to calculate and maximize return on investment for automation initiatives.'
+    category: 'Business'
+    pages: '28'
+    author: 'Zion Tech Group Business Analytics Team'
+    publishDate: 'January 2025'
     content: {
-      executiveSummary: 'This practical guide helps organizations calculate and maximize ROI for automation initiatives. Learn how to measure success and justify automation investments.',
+      executiveSummary: 'This practical guide helps organizations calculate and maximize ROI for automation initiatives. Learn how to measure success and justify automation investments.'
       keyTopics: [
         'ROI Calculation MethodsCost-Benefit AnalysisSuccess Metrics & KPIsInvestment Justification Strategies'
-      ],
+      ]
       targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
     }
   }
-},
-
+}
 export default function WhitepaperPage() {
-  const router = useRouter(),
-  const { id } = router.query,
-  
-  const whitepaper = whitepapers[id as keyof typeof whitepapers],
-
+  const router = useRouter()
+  const { id } = router.query
+  const whitepaper = whitepapers[id as keyof typeof whitepapers]
   if (!whitepaper) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
@@ -75,7 +72,6 @@ export default function WhitepaperPage() {
       </div>
     )
   }
-
   return (
     <>
       <Head>
@@ -84,7 +80,6 @@ export default function WhitepaperPage() {
         <meta property="og:title" content={whitepaper.title} />
         <meta property="og:description" content={whitepaper.description} />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           {/* Breadcrumb */}
@@ -93,7 +88,6 @@ export default function WhitepaperPage() {
               ← Back to Resources
             </Link>
           </nav>
-
           {/* Header */}
           <header className="text-center mb-16">
             <div className="mb-6">
@@ -115,14 +109,12 @@ export default function WhitepaperPage() {
               <span>{whitepaper.publishDate}</span>
             </div>
           </header>
-
           {/* Whitepaper Content */}
           <div className="max-w-4xl mx-auto">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Executive Summary</h2>
               <p className="text-lg text-white/80">{whitepaper.content.executiveSummary}</p>
             </section>
-
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Key Topics Covered</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -136,12 +128,10 @@ export default function WhitepaperPage() {
                 ))}
               </div>
             </section>
-
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-green-400">Target Audience</h2>
               <p className="text-lg text-white/80">{whitepaper.content.targetAudience}</p>
             </section>
-
             {/* Download Section */}
             <section className="mb-12">
               <div className="bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 rounded-2xl p-8 border border-fuchsia-500/20 text-center">
@@ -157,7 +147,6 @@ export default function WhitepaperPage() {
                 </p>
               </div>
             </section>
-
             {/* Related Whitepapers */}
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>
@@ -166,7 +155,7 @@ export default function WhitepaperPage() {
                   .filter(w => w.id !== whitepaper.id)
                   .slice(0, 2)
                   .map((relatedPaper) => (
-                    <Link 
+                    <Link
                       key={relatedPaper.id}
                       href={`/resources/whitepapers/${relatedPaper.id}`}
                       className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300"
@@ -182,7 +171,6 @@ export default function WhitepaperPage() {
                   ))}
               </div>
             </section>
-
             {/* CTA */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
@@ -205,4 +193,4 @@ export default function WhitepaperPage() {
       </div>
     </>
   )
-};
+}

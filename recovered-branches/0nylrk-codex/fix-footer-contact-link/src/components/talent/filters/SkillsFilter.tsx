@@ -22,7 +22,6 @@ const POPULAR_SKILLS = [
   "DevOps";
   "Security"
 ];
-
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -37,7 +36,6 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-      
       {expanded && (
         <div className="mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
@@ -61,4 +59,3 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
     </div>
   )
 }
-;

@@ -7,26 +7,24 @@ export default function DesignMapPage() {
   const [role, setRole] = useState("Talent");
   const [suggestion, setSuggestion] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-
   async function requestWireframe() {
     if (!screenName) return;
     setIsLoading(true);
     setSuggestion(null);
     try {
       const res = await fetch("/api/figma/wireframe-suggest", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ screenName, role }),
+        method: "POST"
+        headers: { "Content-Type": "application/json" }
+        body: JSON.stringify({ screenName, role })
       });
       const json = await res.json();
-      setSuggestion(json?.suggestion || "No suggestion received");
+      setSuggestion(json?.suggestion |"No suggestion received");
     } catch (e: any) {
-      setSuggestion(e?.message || "Failed to fetch suggestion");
+      setSuggestion(e?.message |"Failed to fetch suggestion");
     } finally {
       setIsLoading(false);
     }
   }
-
   return (
     <>
       <Head>
@@ -62,7 +60,6 @@ export default function DesignMapPage() {
             </a>
           </div>
         </div>
-
         <div className="grid md:grid-cols-2 gap-6">
           <MapColumn
             title="Foundations"
@@ -84,7 +81,6 @@ export default function DesignMapPage() {
             sections={designMap.products.mobile}
           />
         </div>
-
         <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
           <h2 className="font-medium mb-3">Create New Screen</h2>
           <div className="flex flex-col md:flex-row gap-3 items-start md:items-end">
@@ -117,7 +113,7 @@ export default function DesignMapPage() {
             <button
               onClick={requestWireframe}
               className="px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60"
-              disabled={isLoading || !screenName}
+              disabled={isLoading |!screenName}
             >
               {isLoading ? "Generating…" : "GPT Wireframe Suggestion"}
             </button>
@@ -132,10 +128,9 @@ export default function DesignMapPage() {
     </>
   );
 }
-
 function MapColumn({
-  title,
-  sections,
+  title
+  sections
 }: {
   title: string;
   sections: {
@@ -170,4 +165,3 @@ function MapColumn({
     </div>
   );
 }
-

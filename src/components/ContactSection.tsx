@@ -1,11 +1,10 @@
 
-
 export function ContactSection() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""}),
+    name: ""
+    email: ""
+    subject: ""
+    message: ""})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState<{
@@ -23,15 +22,15 @@ export function ContactSection() {
   }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();  const contactInfo = [{
-      icon: Phone,
-      title: "Phone",
-      value: "+1 302 464 0950",
+      icon: Phone
+      title: "Phone"
+      value: "+1 302 464 0950"
       link: "tel:+13024640950"
-},
+}
     {
-      icon: Mail,
-      title: "Email",
-      value: "kleber@ziontechgroup.com",
+      icon: Mail
+      title: "Email"
+      value: "kleber@ziontechgroup.com"
       link: "mailto:kleber@ziontechgroup.com"
 },    {
       icon: MapPin,"
@@ -43,11 +42,11 @@ export function ContactSection() {
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial = {
-  { opacity: 0,
+  { opacity: 0
   y: 20
 }}
           whileInView = {
-  { opacity: 1,
+  { opacity: 1
   y: 0
 }}
           transition={{ duration: 0.8 }}
@@ -66,22 +65,22 @@ export function ContactSection() {
             <motion.div
               key={index}
               initial = {
-  { opacity: 0,
+  { opacity: 0
   y: 20
 }}
               whileInView = {
-  { opacity: 1,
+  { opacity: 1
   y: 0
 }}
               transition = {
-  { duration: 0.6,
+  { duration: 0.6
   delay: index * 0.1
 }}
               viewport={{ once: true }}"
               className="text-center"
     const schema = z.object({
       name: z.string().min(2, "Name is required")
-      email: z.string().email("Enter a valid email"),
+      email: z.string().email("Enter a valid email")
       subject: z.string().min(2, "Subject is required")
       message: z.string().min(10, "Message must be at least 10 characters")})
     const result = schema.safeParse(formData)
@@ -94,34 +93,33 @@ export function ContactSection() {
       }
       setErrors(fieldErrors)
       toast({
-        title: "Form Validation Error",
-        description: result.error.errors[0]?.message || "Please check your form and try again",
-        variant: "destructive"}),
+        title: "Form Validation Error"
+        description: result.error.errors[0]?.message |"Please check your form and try again"
+        variant: "destructive"})
       return
     }
-
     setErrors({})
     setIsSubmitting(true)
     fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+      method: "POST"
+      headers: { "Content-Type": "application/json" }
       body: JSON.stringify(formData)})
       .then(async (res) => {
         setIsSubmitting(false)
         if (!res.ok) {
-          const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
+          const data = await res.json().catch(() => ({}));          throw new Error(data.error |"Failed to send message")
         }
         toast({
-          title: "Message Sent",
-          description: "We've received your message and will get back to you soon."}),
+          title: "Message Sent"
+          description: "We've received your message and will get back to you soon."})
         setSubmitted(true)
         setTimeout(() => setSubmitted(false), 2000)
         setFormData({ name: "", email: "", subject: "", message: "" })
       })
       .catch((err) => {
         setIsSubmitting(false);        toast({
-          title: "Submission Error",
-          description: err.message,
+          title: "Submission Error"
+          description: err.message
           variant: "destructive"})
       })
   }
@@ -264,9 +262,9 @@ description: err.message
 };"
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" > Email </label> <Input) "
 }</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) "
-}</div> <div> <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" > Message </label> <Textarea) 
+}</div> <div> <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" > Message </label> <Textarea)
 }</div> <div> <Button > {'
-  isSubmitting ? 'Sending...' : 'Send Message' 
-}</Button>) 
-}</div> </form> </div> </div> </div> </div> </section>) 
+  isSubmitting ? 'Sending...' : 'Send Message'
+}</Button>)
+}</div> </form> </div> </div> </div> </div> </section>)
 }'"}

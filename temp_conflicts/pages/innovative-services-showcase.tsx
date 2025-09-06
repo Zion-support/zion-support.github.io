@@ -1,41 +1,38 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import {;
-  Brain, Rocket, Dna, Globe, TrendingUp, Shield,;
-  Wifi, Package, Bot, Lock, Car, Building2,;
-  DollarSign, Monitor, Users, FileText, Search, Phone,;
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {Brain, Rocket, Dna, Globe, TrendingUp, Shield;
+  Wifi, Package, Bot, Lock, Car, Building2;
+  DollarSign, Monitor, Users, FileText, Search, Phone;
   Star, CheckCircle, ArrowRight, ExternalLink;
-} from 'lucide-react',;
-import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',;
-import { emergingTechServices } from '../data/emerging-tech-services',;
-import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',;
-export default function InnovativeServicesShowcase() {;
-  const allServices = [...innovativeMicroSaasServices, ...emergingTechServices],;
+} from 'lucide-react';
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+import { emergingTechServices } from '../data/emerging-tech-services';
+import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
+export default function InnovativeServicesShowcase() {const allServices = [...innovativeMicroSaasServices, ...emergingTechServices];
   const categories = [;
-    { name: 'Quantum AI & Neuroscience', icon: Brain, color: 'from-purple-600 to-pink-600' },;
-    { name: 'Space Technology', icon: Rocket, color: 'from-blue-600 to-indigo-600' },;
-    { name: 'Biotech & AI', icon: Dna, color: 'from-green-600 to-emerald-600' },;
-    { name: 'Metaverse & AI', icon: Globe, color: 'from-violet-600 to-purple-600' },;
-    { name: 'Quantum Finance', icon: TrendingUp, color: 'from-yellow-600 to-orange-600' },;
-    { name: 'Quantum Cybersecurity', icon: Shield, color: 'from-red-600 to-pink-600' },;
-    { name: 'Quantum IoT', icon: Wifi, color: 'from-blue-600 to-cyan-600' },;
-    { name: 'Quantum Logistics', icon: Package, color: 'from-green-600 to-blue-600' },;
-    { name: 'Quantum Robotics', icon: Bot, color: 'from-gray-600 to-slate-600' },;
-    { name: 'Autonomous Vehicles', icon: Car, color: 'from-blue-600 to-green-600' },;
-    { name: 'Autonomous Manufacturing', icon: Building2, color: 'from-gray-600 to-blue-600' },;
-    { name: 'AI Sales & Marketing', icon: DollarSign, color: 'from-green-600 to-yellow-600' },;
-    { name: 'AI Content & Media', icon: Monitor, color: 'from-purple-600 to-pink-600' },;
-    { name: 'AI HR & Legal', icon: Users, color: 'from-blue-600 to-indigo-600' },;
-    { name: 'AI Research & Analytics', icon: Search, color: 'from-green-600 to-blue-600' },;
+    { name: 'Quantum AI & Neuroscience', icon: Brain, color: 'from-purple-600 to-pink-600' }
+    { name: 'Space Technology', icon: Rocket, color: 'from-blue-600 to-indigo-600' }
+    { name: 'Biotech & AI', icon: Dna, color: 'from-green-600 to-emerald-600' }
+    { name: 'Metaverse & AI', icon: Globe, color: 'from-violet-600 to-purple-600' }
+    { name: 'Quantum Finance', icon: TrendingUp, color: 'from-yellow-600 to-orange-600' }
+    { name: 'Quantum Cybersecurity', icon: Shield, color: 'from-red-600 to-pink-600' }
+    { name: 'Quantum IoT', icon: Wifi, color: 'from-blue-600 to-cyan-600' }
+    { name: 'Quantum Logistics', icon: Package, color: 'from-green-600 to-blue-600' }
+    { name: 'Quantum Robotics', icon: Bot, color: 'from-gray-600 to-slate-600' }
+    { name: 'Autonomous Vehicles', icon: Car, color: 'from-blue-600 to-green-600' }
+    { name: 'Autonomous Manufacturing', icon: Building2, color: 'from-gray-600 to-blue-600' }
+    { name: 'AI Sales & Marketing', icon: DollarSign, color: 'from-green-600 to-yellow-600' }
+    { name: 'AI Content & Media', icon: Monitor, color: 'from-purple-600 to-pink-600' }
+    { name: 'AI HR & Legal', icon: Users, color: 'from-blue-600 to-indigo-600' }
+    { name: 'AI Research & Analytics', icon: Search, color: 'from-green-600 to-blue-600' }
     { name: 'AI Communication', icon: Phone, color: 'from-blue-600 to-green-600' }
-  ],;
-  const contactInfo = {;
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ];
+  const contactInfo = {mobile: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 1008 Middletown DE 19709';
     website: 'https://ziontechgroup.com';
-  };
+  }
   return (;
     <div className="min-h-screen bg-black text-white relative overflow-hidden">;
       {/* Enhanced Background Effects */}
@@ -156,8 +153,7 @@ export default function InnovativeServicesShowcase() {;
               </p>;
             </motion.div>;
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">;
-              {categories.map((category, index) => {;
-                const Icon = category.icon;
+              {categories.map((category, index) => {const Icon = category.icon;
                 return (;
                   <motion.div;
                     key={category.name}

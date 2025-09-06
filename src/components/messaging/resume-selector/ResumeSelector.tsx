@@ -11,7 +11,6 @@ import { SelectResumeSection } from './SelectResumeSection'
 import { ResumeOption, ResumeSelectorProps } from './types'
 import {logErrorToProduction} from '@/utils/productionLogger'
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
-
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent')
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null)
   const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([])
@@ -32,8 +31,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     }
             return
       }
-  
 }
   )
 }
-;

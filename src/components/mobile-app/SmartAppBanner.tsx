@@ -10,12 +10,11 @@ interface SmartAppBannerProps {
   googlePlayUrl?: string
   delay?: number; // Delay in milliseconds before showing the banner
 }
-
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-  appName = "Zion Marketplace",
-  appIconSrc,
-  appStoreUrl = "/download",
-  googlePlayUrl = "/download",
+  appName = "Zion Marketplace"
+  appIconSrc
+  appStoreUrl = "/download"
+  googlePlayUrl = "/download"
   delay = 1500
 }) => {
   const [isVisible, setIsVisible] = useState(false)
@@ -39,14 +38,13 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     setIsVisible(true)
   }
   // Only render on mobile devices
-  if (!isMobile || !isVisible) {
+  if (!isMobile |!isVisible) {
     return process.env.NODE_ENV === 'development' ? (
       <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
       </div>
     ) : null
   }
-  
   // Detect iOS or Android
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
@@ -60,21 +58,18 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
             <div className="text-zion-cyan font-bold text-lg">Z</div>
           )}
         </div>
-        
         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
-        
         <div className="flex items-center gap-3">
-          <Link 
-            href="/open-app" 
+          <Link
+            href="/open-app"
             className="flex items-center px-4 py-1.5 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium"
           >
             View
             <ArrowRight className="w-3 h-3 ml-1" />
           </Link>
-          
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
             <X className="h-5 w-5" />
           </button>

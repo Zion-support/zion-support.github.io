@@ -11,17 +11,14 @@ export interface JobPostingProps {
   jobId?: string;
   onSuccess?: () => void
 }
-
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const { user } = useAuth();
   const navigate = useNavigate();
-  
   const [startDate, setStartDate] = useState<Date | undefined>(undefined);
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [isRemote, setIsRemote] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null);
-
   const form = useForm<JobSchemaType>({
     resolver: zodResolver(jobSchema);
     defaultValues: {
@@ -40,51 +37,44 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       expiry_date: '';
       is_remote: false;
       category: '';
-      status: '',
-      external_apply_link: ''};
+      status: ''
+      external_apply_link: ''}
     mode: "onChange"});
-
   // Function to create/update jobs that will be implemented by parent component
   const submitJob = async (values: JobSchemaType) => {
     if (!user) {
       toast.error("You must be logged in to post a job");
-      navigate("/login"),
+      navigate("/login")
       return
     }
-
     setIsLoading(true);
-
     try {
       const publishedDate = startDate ? startDate.toString() : '';
       const expiryDate = endDate ? endDate.toString() : '';
-
       const jobData = {
         ...values;
         published_date: publishedDate;
         expiry_date: expiryDate;
-        is_remote: isRemote,
-        user_id: user.id};
-
+        is_remote: isRemote
+        user_id: user.id}
       if (onSuccess) {
         onSuccess()
       }
-      
       return jobData
     } catch (error: any) {
       console.error("Error in job form submission:", error);
-      toast.error(error.message || "Failed to process form");
+      toast.error(error.message |"Failed to process form");
       throw error
     } finally {
       setIsLoading(false)
     }
-  };
-
+  }
   return {
     form;
     isLoading;
     startDate;
     setStartDate;
-    endDate, 
+    endDate
     setEndDate;
     isRemote;
     setIsRemote;
@@ -92,4 +82,4 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
     setInitialValues;
     submitJob
   }
-};
+}

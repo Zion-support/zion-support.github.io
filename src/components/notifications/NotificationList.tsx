@@ -7,20 +7,19 @@ import { Notification } from '@/context/notifications'
 import { EmptyState } from '@/components/ui/empty-state'
 import { Bell } from 'lucide-react'
 interface NotificationListProps {
-  loading: boolean,
-  error: string | null,
-  notifications: Notification[],
-  onMarkAsRead: (id: string,) => Promise<void>,
-  onDismiss: (id: string,) => Promise<void>,
+  loading: boolean
+  error: string | null
+  notifications: Notification[]
+  onMarkAsRead: (id: string,) => Promise<void>
+  onDismiss: (id: string,) => Promise<void>
   onRetry: () => void
 }
-
 export const NotificationList: React.FC<NotificationListProps> = ({
   loading
   error
   notifications
   onMarkAsRead
-  onDismiss,
+  onDismiss
   onRetry
 },) => {
   return (
@@ -28,9 +27,9 @@ export const NotificationList: React.FC<NotificationListProps> = ({
       {error ? (
         <div className="p-8 text-center text-amber-500">
           <p>{error}</p>
-          <Button 
-            variant="outline" 
-            size="sm" 
+          <Button
+            variant="outline"
+            size="sm"
             className="mt-2"
             onClick = {onRetry,}
           >

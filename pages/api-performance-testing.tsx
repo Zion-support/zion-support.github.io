@@ -3,13 +3,12 @@ import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
 export default function ApiPerformanceTestingPage() {
   const features = [
-    'k6/Gatling-compatible test runner',
-    'SLO-aware latency reports',
-    'Regression baselines per endpoint',
-    'CI checks and PR annotations',
-    'Synthetic traffic for staging',
+    'k6/Gatling-compatible test runner'
+    'SLO-aware latency reports'
+    'Regression baselines per endpoint'
+    'CI checks and PR annotations'
+    'Synthetic traffic for staging'
   ];
-
   return (
     <div className='relative isolate'>
       <section className='px-6 lg:px-10 py-16 lg:py-24'>
@@ -23,33 +22,32 @@ export default function ApiPerformanceTestingPage() {
             injectors, and CI/CD integration. Benchmark providers, catch
             performance drift, and ship with confidence.
           </p>
-
           <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {[
               {
-                title: 'Distributed Load',
-                desc: 'Run tests from multiple regions with coordinated ramp-up and soak phases.',
-              },
+                title: 'Distributed Load'
+                desc: 'Run tests from multiple regions with coordinated ramp-up and soak phases.'
+              }
               {
-                title: 'SLO Dashboards',
-                desc: 'Track p50/p95/p99 latency, error budgets, and throughput trends over time.',
-              },
+                title: 'SLO Dashboards'
+                desc: 'Track p50/p95/p99 latency, error budgets, and throughput trends over time.'
+              }
               {
-                title: 'Protocol Coverage',
-                desc: 'HTTP/REST, GraphQL, gRPC, WebSocket, and streaming APIs.',
-              },
+                title: 'Protocol Coverage'
+                desc: 'HTTP/REST, GraphQL, gRPC, WebSocket, and streaming APIs.'
+              }
               {
-                title: 'Regression Gates',
-                desc: 'Fail builds when latency regresses beyond thresholds or budgets are exhausted.',
-              },
+                title: 'Regression Gates'
+                desc: 'Fail builds when latency regresses beyond thresholds or budgets are exhausted.'
+              }
               {
-                title: 'Realistic Traffic',
-                desc: 'Custom scenarios, auth flows, test data seeding, and user think time.',
-              },
+                title: 'Realistic Traffic'
+                desc: 'Custom scenarios, auth flows, test data seeding, and user think time.'
+              }
               {
-                title: 'Reports & Export',
-                desc: 'Beautiful HTML/CSV exports, signed artifacts, and webhook notifications.',
-              },
+                title: 'Reports & Export'
+                desc: 'Beautiful HTML/CSV exports, signed artifacts, and webhook notifications.'
+              }
             ].map(f => (
               <div
                 key={f.title}
@@ -60,7 +58,6 @@ export default function ApiPerformanceTestingPage() {
               </div>
             ))}
           </div>
-
           <div className='mt-14'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
             <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -127,7 +124,6 @@ export default function ApiPerformanceTestingPage() {
               .
             </p>
           </div>
-
 <div className='mt-14 flex flex-wrap items-center gap-4'>
             <Link
               href='/contact'

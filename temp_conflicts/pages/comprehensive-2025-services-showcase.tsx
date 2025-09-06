@@ -1,65 +1,60 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
-import {;
-  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink,;
-  ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom,;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+import {Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink;
+  ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
   Search, Filter, ArrowRight, Award, Target, Cpu, Database;
-} from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services-2025',;
-export default function Comprehensive2025ServicesShowcase() {;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedService, setSelectedService] = useState<string | null>(null),;
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity'),;
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services-2025';
+export default function Comprehensive2025ServicesShowcase() {const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   const categories = [;
-    { id: 'all', name: 'All Services', icon: '🚀', count: enhancedMicroSaasServices.length },;
-    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: enhancedMicroSaasServices.filter(s => s.category === 'AI & Machine Learning').length },;
-    { id: 'Quantum Computing & AI', name: 'Quantum AI', icon: '⚛️', count: enhancedMicroSaasServices.filter(s => s.category === 'Quantum Computing & AI').length },;
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: enhancedMicroSaasServices.filter(s => s.category === 'Cybersecurity').length },;
-    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: enhancedMicroSaasServices.filter(s => s.category === 'Space Technology').length },;
-    { id: 'DevOps & Infrastructure', name: 'DevOps', icon: '⚙️', count: enhancedMicroSaasServices.filter(s => s.category === 'DevOps & Infrastructure').length },;
-    { id: 'Edge Computing', name: 'Edge Computing', icon: '🌐', count: enhancedMicroSaasServices.filter(s => s.category === 'Edge Computing').length },;
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: enhancedMicroSaasServices.filter(s => s.category === 'Healthcare AI').length },;
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: enhancedMicroSaasServices.filter(s => s.category === 'Blockchain & DeFi').length },;
-    { id: 'Legal Technology', name: 'Legal Tech', icon: '⚖️', count: enhancedMicroSaasServices.filter(s => s.category === 'Legal Technology').length },;
-    { id: 'Autonomous Vehicles', name: 'Auto Tech', icon: '🚗', count: enhancedMicroSaasServices.filter(s => s.category === 'Autonomous Vehicles').length },;
-    { id: 'Climate Technology', name: 'Climate Tech', icon: '🌍', count: enhancedMicroSaasServices.filter(s => s.category === 'Climate Technology').length },;
-    { id: 'Education Technology', name: 'EdTech', icon: '🎓', count: enhancedMicroSaasServices.filter(s => s.category === 'Education Technology').length },;
+    { id: 'all', name: 'All Services', icon: '🚀', count: enhancedMicroSaasServices.length }
+    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: enhancedMicroSaasServices.filter(s => s.category === 'AI & Machine Learning').length }
+    { id: 'Quantum Computing & AI', name: 'Quantum AI', icon: '⚛️', count: enhancedMicroSaasServices.filter(s => s.category === 'Quantum Computing & AI').length }
+    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: enhancedMicroSaasServices.filter(s => s.category === 'Cybersecurity').length }
+    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: enhancedMicroSaasServices.filter(s => s.category === 'Space Technology').length }
+    { id: 'DevOps & Infrastructure', name: 'DevOps', icon: '⚙️', count: enhancedMicroSaasServices.filter(s => s.category === 'DevOps & Infrastructure').length }
+    { id: 'Edge Computing', name: 'Edge Computing', icon: '🌐', count: enhancedMicroSaasServices.filter(s => s.category === 'Edge Computing').length }
+    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: enhancedMicroSaasServices.filter(s => s.category === 'Healthcare AI').length }
+    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: enhancedMicroSaasServices.filter(s => s.category === 'Blockchain & DeFi').length }
+    { id: 'Legal Technology', name: 'Legal Tech', icon: '⚖️', count: enhancedMicroSaasServices.filter(s => s.category === 'Legal Technology').length }
+    { id: 'Autonomous Vehicles', name: 'Auto Tech', icon: '🚗', count: enhancedMicroSaasServices.filter(s => s.category === 'Autonomous Vehicles').length }
+    { id: 'Climate Technology', name: 'Climate Tech', icon: '🌍', count: enhancedMicroSaasServices.filter(s => s.category === 'Climate Technology').length }
+    { id: 'Education Technology', name: 'EdTech', icon: '🎓', count: enhancedMicroSaasServices.filter(s => s.category === 'Education Technology').length }
     { id: 'Manufacturing Technology', name: 'Manufacturing', icon: '🏭', count: enhancedMicroSaasServices.filter(s => s.category === 'Manufacturing Technology').length }
-  ],;
+  ];
   const filteredServices = enhancedMicroSaasServices;
     .filter(service =>;
-      (selectedCategory === 'all' || service.category === selectedCategory) &&;
-      (searchTerm === '' ||;
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+      (selectedCategory === 'all' |service.category === selectedCategory) &&;
+      (searchTerm === '' |;
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |;
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |;
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
     );
-    .sort((a, b) => {;
-      switch (sortBy) {;
+    .sort((a, b) => {switch (sortBy) {;
         case 'name':;
-          return a.name.localeCompare(b.name),;
+          return a.name.localeCompare(b.name);
         case 'price':;
-          return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', '')),;
+          return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
         case 'rating':;
-          return b.rating - a.rating,;
+          return b.rating - a.rating;
         case 'popularity':;
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),;
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
         default: return 0;
       }
-    }),;
-  const getCategoryIcon = (category: string) => {;
-    const categoryData = categories.find(cat => cat.id === category),;
-    return categoryData?.icon || '🚀';
-  },;
-  const getAnnualPrice = (monthlyPrice: string) => {;
-    const price = parseFloat(monthlyPrice.replace('$', '')),;
+    });
+  const getCategoryIcon = (category: string) => {const categoryData = categories.find(cat => cat.id === category);
+    return categoryData?.icon |'🚀';
+  }
+  const getAnnualPrice = (monthlyPrice: string) => {const price = parseFloat(monthlyPrice.replace('$', ''));
     const annualPrice = price * 12 * 0.8, // 20% discount for annual;
     return `$${Math.round(annualPrice)}`;
-  },;
+  }
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">;
       <Head>;
@@ -150,8 +145,7 @@ export default function Comprehensive2025ServicesShowcase() {;
               <button;
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${;
-                  selectedCategory === category.id;
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${selectedCategory === category.id;
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg';
                     : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white';
                 }`}
@@ -187,7 +181,6 @@ export default function Comprehensive2025ServicesShowcase() {;
                       </div>;
                     </div>;
                   )}
-;
                   {/* Service Header */}
                   <div className="p-6">;
                     <div className="flex items-start justify-between mb-4">;
@@ -208,8 +201,7 @@ export default function Comprehensive2025ServicesShowcase() {;
                         {[...Array(5)].map((_, i) => (;
                           <Star;
                             key={i}
-                            className={`w-4 h-4 ${;
-                              i < Math.floor(service.rating);
+                            className={`w-4 h-4 ${i < Math.floor(service.rating);
                                 ? 'text-yellow-400 fill-current';
                                 : 'text-white/30';
                             }`}
@@ -270,8 +262,7 @@ export default function Comprehensive2025ServicesShowcase() {;
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
               <p className="text-white/70 mb-6">Try adjusting your search or filter criteria</p>;
               <button;
-                onClick={() => {;
-                  setSearchTerm('');
+                onClick={() => {setSearchTerm('');
                   setSelectedCategory('all');
                 }}
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300";

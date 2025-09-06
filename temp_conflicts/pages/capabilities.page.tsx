@@ -1,9 +1,8 @@
-import EnhancedLayout from '../components/layout/EnhancedLayout',;
+import EnhancedLayout from '../components/layout/EnhancedLayout';
 const CAPABILITIES = [;
   'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity';
 ];
-export default function CapabilitiesPage() {;
-  return (;
+export default function CapabilitiesPage() {return (;
     <EnhancedLayout>;
       <h1 className="text-2xl font-semibold">Capabilities</h1>;
       <div className="mt-6 grid md:grid-cols-4 gap-4 text-sm">;

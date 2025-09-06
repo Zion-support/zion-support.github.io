@@ -5,7 +5,7 @@ import {ChevronLeft, Bell, Settings} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 interface MobileHeaderProps {
-  title: string,
+  title: string
   showBack?: boolean;
   showNotifications?: boolean;
   showSettings?: boolean;
@@ -13,7 +13,6 @@ interface MobileHeaderProps {
   onNotificationsClick?: () => void;
   onSettingsClick?: () => void
 }
-
 export function MobileHeader({
   title;
   showBack = false;
@@ -23,7 +22,6 @@ export function MobileHeader({
   onNotificationsClick;
   onSettingsClick}: MobileHeaderProps) {
   const navigate = useNavigate();
-
   return (
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
@@ -32,10 +30,10 @@ export function MobileHeader({
       <div className="flex items-center justify-between h-14 px-4">
         <div className="flex items-center">
           {showBack && (
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="mr-2" 
+            <Button
+              variant="ghost"
+              size="icon"
+              className="mr-2"
               onClick={() => navigate(-1)}
             >
               <ChevronLeft className="h-5 w-5" />
@@ -48,8 +46,8 @@ export function MobileHeader({
         </div>
         <div className="flex items-center space-x-2">
           {showNotifications && (
-            <Button 
-              variant="ghost" 
+            <Button
+              variant="ghost"
               size="icon"
               onClick={onNotificationsClick}
             >
@@ -58,8 +56,8 @@ export function MobileHeader({
             </Button>
           )}
           {showSettings && (
-            <Button 
-              variant="ghost" 
+            <Button
+              variant="ghost"
               size="icon"
               onClick={onSettingsClick}
             >
@@ -72,4 +70,3 @@ export function MobileHeader({
     </header>
   )
 }
-;
