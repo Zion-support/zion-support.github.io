@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface Jest.configProps {
   // Add props here as needed
-<<<<<<< HEAD
 }
 
 export default function Jest.config({ }: Jest.configProps) {
@@ -13,20 +11,7 @@ export default function Jest.config({ }: Jest.configProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-}
-=======
-}
-=======
-}
-=======
-}}},
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-=======
 };
 export default function Jest.config({ }: Jest.configProps) {;
   return (,
@@ -37,4 +22,3 @@ export default function Jest.config({ }: Jest.configProps) {;
 };
 };
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-226f

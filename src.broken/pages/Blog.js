@@ -112,9 +112,7 @@ export default function Blog() {
               </Select>
             </div>
           </div>
-=======
 import React from 'react';
->>>>>>> origin/chore/fix-build-nav-links:src/pages/Blog.js
 
 export default function Blog() {
     return (
@@ -159,7 +157,5 @@ export default function Blog() {
 <<<<<<< HEAD:src.broken/pages/Blog.js
       </div>
     </>);
-=======
     );
->>>>>>> origin/chore/fix-build-nav-links:src/pages/Blog.js
 }
