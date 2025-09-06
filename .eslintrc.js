@@ -1,8 +1,4 @@
 /* eslint-env node */
-<<<<<<< HEAD
-=======
- 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
 module.exports = {
   env: {
     node: true,
