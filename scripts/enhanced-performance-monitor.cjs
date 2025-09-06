@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     log('info', `Average CPU "usage": ${performanceMetrics.summary.averageCpu}%`);
     log('info', `Peak CPU "usage": ${performanceMetrics.summary.peakCpu}%`);
     log('info', `Average memory "usage": ${performanceMetrics.summary.averageMemory}%`);
@@ -41,12 +40,7 @@
 }
 
 // Run the enhanced performance monitor
-main();
-=======
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-#!/usr/bin/env node;
+main();#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

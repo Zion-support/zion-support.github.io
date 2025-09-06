@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 // Final targeted fixes for remaining syntax errors
 const fixes = [// Fix missing semicolons in import statements
   {
@@ -83,83 +74,15 @@ const fixes = [// Fix missing semicolons in import statements
     "pattern": /<\/div>\s*\)\s*}\s*$/gm,
     "replacement": '    </div>\n  );\n}'
   }
-<<<<<<< HEAD
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-console.log('🔧 Fixing final syntax errors...');
-
-// Fix specific files with known issues
-const filesToFix = [
-    'src/components/SEO.tsx',
-    'src/components/talent/TalentCard.jsx',
-    'src/components/ui/card.tsx',
-    'src/components/ui/textarea.tsx',
-    'src/components/ui/use-toast.ts'
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-];
 
 function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         console.log(`File not found: ${filePath}`);
-        return 0;
-=======
-=======
-        
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-        return;
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+        return 0;        return;
     }
 
     let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
     let fixes = 0;
-
-=======
-    let modified = false;
-    
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true}
-    });
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      
-      return true}
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message)}
-  return false}
-
-function walkDirectory(dir) {
-  let fixedCount = 0;
-  
-  try {
-    const files = fs.readdirSync(dir);
-    
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        fixedCount += walkDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-        if (fixFile(filePath)) {
-          fixedCount++}
-      }
-    }
-  } catch (error) {
-    console.error(`Error reading directory ${dir}:`, error.message)}
-  
-  return fixedCount}
-    let fixes = 0;
-<<<<<<< HEAD
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     // Fix textarea.tsx
     if (filePath.includes('textarea.tsx')) {
         // Fix malformed className
@@ -207,90 +130,15 @@ let totalFixes = 0;
 filesToFix.forEach(file => {
     totalFixes += fixFile(file);
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
-
-
-
-
-
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
 
 if (totalFixes > 0) {
-<<<<<<< HEAD
     console.log('\n✅ Final syntax error fixing completed!');
 } else {
     console.log('\n✨ No syntax errors found to fix.');
-}
-=======
-        
-        return;
-    }
-
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true}
-    });
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      
-      return true}
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message)}
-  return false}
-
-function walkDirectory(dir) {
-  let fixedCount = 0;
-  
-  try {
-    const files = fs.readdirSync(dir);
-    
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        fixedCount += walkDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-        if (fixFile(filePath)) {
-          fixedCount++}
-      }
-    }
-  } catch (error) {
-    console.error(`Error reading directory ${dir}:`, error.message)}
-  
-  return fixedCount}
-    let fixes = 0;
-=======
-
-
-
-
-
-if (totalFixes > 0) {
-    
-} else {
-    
-}
-=======
-=======
-    
-} else {
-    
-}
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-#!/usr/bin/env node;
+}#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
     "pattern"
@@ -304,13 +152,4 @@ const path = require('path')
     "replacement": 'return (\n    <div className="min-h-screen bg-white")
     "replacement"
     "replacement"
-<<<<<<< HEAD
-<<<<<<< HEAD
     "replacement"
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
-    "replacement"
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
-    "replacement"
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52

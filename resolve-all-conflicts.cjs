@@ -16,7 +16,7 @@ function resolveMergeConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
 
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+    if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false;
     }
 
@@ -31,13 +31,13 @@ function resolveMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
 
-      if (line.includes('<<<<<<< HEAD')) {
+      if (line.includes('')) {
         inConflict = true;
         conflictType = 'head';
         continue;
       }
 
-      if (line.includes('=======')) {
+      if (line.includes('')) {
         conflictType = 'separator';
         continue;
       }

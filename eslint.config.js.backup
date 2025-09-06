@@ -1,17 +1,9 @@
 import js from '@eslint/js';
-<<<<<<< HEAD
-<<<<<<< HEAD
       },
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-=======
-
       },
 
       },
 
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 import react from 'eslint-plugin-react';
 
 import globals from 'globals';
@@ -25,22 +17,10 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 
 export default [{
     "ignores": [
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-
-export default [
-  {
-    ignores: [
-<<<<<<< HEAD
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-=======
 
 export default [{
     "ignores": [
 
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       'node_modules/',
       '.next/',
       'out/',
@@ -50,10 +30,7 @@ export default [{
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       '.prettierrc.js',
       '.eslintrc.*',
       '*.min.js',
@@ -180,69 +157,10 @@ export default [{
         exports: 'readonly'
       },
       parserOptions: {
-<<<<<<< HEAD
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-=======
-
-    "files": ['**/*.{js,jsx}'],
-    "languageOptions": {
-      ecmaVersion: 2021,
-      "sourceType": 'module',
-      "globals": {
-        window: 'readonly',
-        "document": 'readonly',
-        "navigator": 'readonly',
-        "localStorage": 'readonly',
-        "sessionStorage": 'readonly',
-        "console": 'readonly',
-        "setTimeout": 'readonly',
-        "setInterval": 'readonly',
-        "clearTimeout": 'readonly',
-        "clearInterval": 'readonly',
-        "requestAnimationFrame": 'readonly',
-        "cancelAnimationFrame": 'readonly',
-        "fetch": 'readonly',
-        "URL": 'readonly',
-        "URLSearchParams": 'readonly',
-        "Blob": 'readonly',
-        "CustomEvent": 'readonly',
-        "Intl": 'readonly',
-        "performance": 'readonly',
-        "caches": 'readonly',
-        "Notification": 'readonly',
-        "ServiceWorker": 'readonly',
-        "ServiceWorkerRegistration": 'readonly',
-        "PushSubscription": 'readonly',
-        "NotificationPermission": 'readonly',
-        "process": 'readonly',
-        "global": 'readonly',
-        "jest": 'readonly',
-        "describe": 'readonly',
-        "it": 'readonly',
-        "test": 'readonly',
-        "expect": 'readonly',
-        "vi": 'readonly',
-        "Deno": 'readonly',
-        "React": 'readonly',
-        "require": 'readonly',
-        "module": 'readonly',
-        "__dirname": 'readonly',
-        "__filename": 'readonly',
-        "exports": 'readonly'
-      },
-      "parserOptions": {
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-        ecmaFeatures: {
           jsx: true
         }
       }
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     "plugins": {
       react,
       'react-hooks': reactHooks
@@ -254,18 +172,6 @@ export default [{
       'react-hooks': reactHooks
     },
     rules: {
-<<<<<<< HEAD
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-=======
-
-    "plugins": {
-      react,
-      'react-hooks': reactHooks
-    },
-    "rules": {
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-      ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'no-unused-vars': 'warn',
@@ -384,8 +290,6 @@ export default [{
         fs: 'readonly',
         CodeQualityChecker: 'readonly'
       }
-<<<<<<< HEAD
-=======
     },
     plugins: {
       '@typescript-eslint': tseslint,
@@ -443,7 +347,6 @@ export default [{
         "fs": 'readonly',
         "CodeQualityChecker": 'readonly'
       }
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     },
     plugins: {
       '@typescript-eslint': typescript,
@@ -720,12 +623,6 @@ export default [{
     }
   },
   {
-<<<<<<< HEAD
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       globals: {
         describe: 'readonly',
@@ -748,18 +645,6 @@ export default [{
 
         screen: 'readonly'
       }
-<<<<<<< HEAD
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-=======
-
-        screen: 'readonly',
-      },
-
-        screen: 'readonly'
-      }
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-    },
     rules: {
       'no-console': 'off',
       'no-unused-vars': 'warn',
@@ -788,8 +673,3 @@ export default [{
     }
   }
 ];
-<<<<<<< HEAD
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

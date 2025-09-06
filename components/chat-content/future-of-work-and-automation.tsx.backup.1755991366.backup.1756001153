@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -19,6 +18,3 @@ const FutureOfWorkAndAutomation: NextPage = () => {
 };
 
 export default FutureOfWorkAndAutomation;
-=======
-export default function ArticlePage() { return <div className="py-8">Future of work and automation</div>; }
->>>>>>> origin/cursor/create-zion-ai-dashboard-interfaces-6fb9

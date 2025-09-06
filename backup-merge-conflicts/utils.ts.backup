@@ -19,10 +19,3 @@ import { type ClassValue,clsx } from 'clsx'; import { twMerge } from 'tailwind-m
 import { type ClassValue,clsx } from 'clsx'; import { twMerge } from 'tailwind-merge'; export function cn(...inputs: ClassValue[]) {; return twMerge(clsx(inputs)),}
 
 import { type ClassValue,clsx } from 'clsx'; import { twMerge } from 'tailwind-merge'; export function cn(...inputs: ClassValue[]) {; return twMerge(clsx(inputs)),}
-<<<<<<< HEAD
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/src/lib/utils.ts
-=======
-
-import { type ClassValue,clsx } from 'clsx'; import { twMerge } from 'tailwind-merge'; export function cn(...inputs: ClassValue[]) {; return twMerge(clsx(inputs)),}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

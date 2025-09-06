@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function EnhancedHome() {
@@ -10,8 +9,3 @@ export default function EnhancedHome() {
     </div>
   );
 }
-=======
-export default function EnhancedHome() {
-  return <div>Enhanced Home</div>;
-}
->>>>>>> origin/cursor/develop-zion-trust-scoring-engine-7911

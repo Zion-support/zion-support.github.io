@@ -1,6 +1,68 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-
+import React, { useEffect, useState } from 'react',;
+import type { NextPage } from 'next',;
+import type { Review } from '../../types/reviews',;
+;
+const ADMIN_KEY = typeof window === 'undefined' ? '' :(localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),;
+;
+const AdminReviewsPage:NextPage = () => {;
+  const [pending, setPending] = useState<Review[]>([]),;
+  const [all, setAll] = useState<Review[]>([]),;
+  const [adminKey, setAdminKey] = useState(''),;
+;
+  async function refresh() {;
+    const res = await fetch('/api/admin/debug/reviews'),;
+    const data = await res.json(),;
+    if (res.ok) {;
+      setAll(data.reviews),;
+      setPending(data.reviews.filter((r:Review) => !r.approved && !r.removed));
+    }
+  }
+;
+  useEffect(() => { refresh(), }, []),;
+;
+  async function moderate(action:'approve' | 'remove', reviewId:string) {;
+    const res = await fetch('/api/reviews/moderate', {;
+      method:'POST',;
+      headers:{;
+        'Content-Type':'application/jsonx-admin-key':adminKey || 'dev-admin-key'},;
+      body:JSON.stringify({ action, reviewId })}),;
+    if (res.ok) refresh(),;
+  }
+;
+  return (;
+    <main className="max-w-5xl mx-auto p-6 space-y-6">;
+      <h1 className="text-2xl font-semibold">Review Moderation</h1>;
+;
+      <div className="enhanced-card">;
+        <label className="block text-sm mb-2">Admin Key</label>;
+        <input className="border p-2 rounded w-full" value={adminKey} onChange={(e) => setAdminKey(e.target.value)} placeholder="Enter admin key" />;
+      </div>;
+;
+      <section className="enhanced-card">;
+        <h2 className="text-xl font-semibold mb-4">Pending Reviews</h2>;
+        <div className="space-y-4">;
+          {pending.map((r) => (;
+            <div key={r.id} className="border rounded p-3">;
+              <div className="text-sm text-gray-600 mb-1">Project:{r.projectId} • To:{r.toRole} {r.toId}</div>;
+              <div className="font-medium">{r.rating}★ — {r.text}</div>;
+              <div className="mt-2 flex gap-2">;
+                <button className="enhanced-button enhanced-button-primary" onClick={() => moderate('approve', r.id)}>Approve</button>;
+                <button className="enhanced-button enhanced-button-secondary" onClick={() => moderate('remove', r.id)}>Remove</button>;
+              </div>;
+            </div>;
+          ))}
+          {!pending.length && <div>No pending reviews.</div>}
+        </div>;
+      </section>;
+;
+      <section className="enhanced-card">;
+        <h2 className="text-xl font-semibold mb-2">All Reviews</h2>;
+        <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>;
+      </section>;
+    </main>;
+  ),;
+},;
+;
 interface Review {
   id: string;
   userId: string;
@@ -101,132 +163,33 @@ const AdminReviewsPage: React.FC = () => {
   };
 
   return (
-    <>
-      <Head>
-        <title>Admin Reviews - Zion Tech Group</title>
-        <meta name="description" content="Manage client reviews and feedback" />
-      </Head>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Client Reviews Management</h1>
-        
-        {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Total Reviews</h3>
-            <p className="text-2xl font-bold">{reviews.length}</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Pending</h3>
-            <p className="text-2xl font-bold text-yellow-600">{pendingReviews.length}</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Approved</h3>
-            <p className="text-2xl font-bold text-green-600">{approvedReviews.length}</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Rejected</h3>
-            <p className="text-2xl font-bold text-red-600">{rejectedReviews.length}</p>
-          </div>
-        </div>
+    <main className=&quot;max-w-5xl mx-auto p-6 space-y-6&quot;>
+      <h1 className=&quot;text-2xl font-semibold&quot;>Review Moderation</h1>
 
-        {/* Filters */}
-        <div className="bg-white rounded-lg shadow p-6 mb-6">
-          <div className="flex gap-4">
-            <button
-              onClick={() => setFilter('all')}
-              className={`px-4 py-2 rounded ${
-                filter === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700'
-              }`}
-            >
-              All Reviews
-            </button>
-            <button
-              onClick={() => setFilter('pending')}
-              className={`px-4 py-2 rounded ${
-                filter === 'pending' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700'
-              }`}
-            >
-              Pending ({pendingReviews.length})
-            </button>
-            <button
-              onClick={() => setFilter('approved')}
-              className={`px-4 py-2 rounded ${
-                filter === 'approved' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700'
-              }`}
-            >
-              Approved ({approvedReviews.length})
-            </button>
-            <button
-              onClick={() => setFilter('rejected')}
-              className={`px-4 py-2 rounded ${
-                filter === 'rejected' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700'
-              }`}
-            >
-              Rejected ({rejectedReviews.length})
-            </button>
-          </div>
-        </div>
+      <div className=&quot;enhanced-card&quot;>
+        <label className=&quot;block text-sm mb-2&quot;>Admin Key</label>
+        <input className=&quot;border p-2 rounded w-full&quot; value={adminKey} onChange={(e) => setAdminKey(e.target.value)} placeholder=&quot;Enter admin key&quot; />
+      </div>
 
-        {/* Reviews List */}
-        {loading ? (
-          <div className="text-center py-8">Loading reviews...</div>
-        ) : filteredReviews.length === 0 ? (
-          <div className="text-center py-8 text-gray-500">
-            No reviews found matching your criteria.
-          </div>
-        ) : (
-          <div className="space-y-4">
-            {filteredReviews.map((review) => (
-              <div key={review.id} className="bg-white rounded-lg shadow p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="font-semibold text-lg">{review.userName}</h3>
-                      <div className="flex items-center">
-                        {renderStars(review.rating)}
-                      </div>
-                      <span className={`px-2 py-1 rounded text-xs font-semibold ${getStatusColor(review.status)}`}>
-                        {review.status}
-                      </span>
-                    </div>
-                    
-                    {review.projectName && (
-                      <p className="text-sm text-gray-600 mb-2">
-                        Project: {review.projectName}
-                      </p>
-                    )}
-                    
-                    <p className="text-gray-700 mb-3">{review.comment}</p>
-                    
-                    <p className="text-xs text-gray-500">
-                      Submitted: {new Date(review.createdAt).toLocaleString()}
-                    </p>
-                  </div>
-                  
-                  {review.status === 'pending' && (
-                    <div className="flex gap-2 ml-4">
-                      <button
-                        onClick={() => handleStatusChange(review.id, 'approved')}
-                        className="px-3 py-1 bg-green-600 text-white rounded text-sm hover:bg-green-700"
-                      >
-                        Approve
-                      </button>
-                      <button
-                        onClick={() => handleStatusChange(review.id, 'rejected')}
-                        className="px-3 py-1 bg-red-600 text-white rounded text-sm hover:bg-red-700"
-                      >
-                        Reject
-                      </button>
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </main>
-    </>
-  );
-};
+      <section className=&quot;enhanced-card&quot;>
+        <h2 className=&quot;text-xl font-semibold mb-4&quot;>Pending Reviews</h2>
+        <div className=&quot;space-y-4&quot;>
+          {pending.map((r) => (
+            <div key={r.id} className=&quot;border rounded p-3&quot;>
+              <div className=&quot;text-sm text-gray-600 mb-1&quot;>Project: {r.projectId} • To: {r.toRole} {r.toId}</div>
+              <div className=&quot;font-medium&quot;>{r.rating}★ — {r.text}</div>
+              <div className=&quot;mt-2 flex gap-2&quot;>
+                <button className=&quot;enhanced-button enhanced-button-primary&quot; onClick={() => moderate('approve', r.id)}>Approve</button>
+                <button className=&quot;enhanced-button enhanced-button-secondary&quot; onClick={() => moderate('remove', r.id)}>Remove</button>              </div>
+            </div>
+          ))}
+          {_!pending.length && <div>No pending reviews.</div>}        </div>
 
-export default AdminReviewsPage;
+      <section className=&quot;enhanced-card&quot;>
+        <h2 className=&quot;text-xl font-semibold mb-2&quot;>All Reviews</h2>
+        <pre className=&quot;text-xs whitespace-pre-wrap&quot;>{JSON.stringify(all, null, 2)}</pre>      </section>
+    </main>
+  )
+},
+
+export default AdminReviewsPage,

@@ -1,41 +1,22 @@
-<<<<<<< HEAD
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-const publicRoutes = [
-  "/",
-  "/about",
-  "/contact",
-  "/services",
-  "/ai-services",
-  "/it-services",
-  "/micro-saas",
-  "/pricing",
-  "/careers",
-  "/case-studies",
-  "/api",
-  "/api-docs",
-  "/faq",
-  "/guides",
-  "/webinars",
-  "/accessibility",
-  "/terms",
-  "/privacy",
-  "/login",
-  "/register"
-];
-
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const response = NextResponse.next();
   
-  // Allow public routes
-  if (publicRoutes.includes(pathname)) {
-    return NextResponse.next();
-  }
+  // Security headers
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   
-  // Add any additional middleware logic here
+  // CSP header
+  response.headers.set(
+    'Content-Security-Policy',
+    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
+  );
   
-  return NextResponse.next();
+  return response;
 }
 
 export const config = {
@@ -43,5 +24,3 @@ export const config = {
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
 };
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

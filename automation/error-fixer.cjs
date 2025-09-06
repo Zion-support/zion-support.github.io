@@ -91,7 +91,7 @@ function fixHomepageStructure() {
     // Fix JSX structure issues
     content = content.replace(/>>>>>>>.*$/gm, '');
     content = content.replace(/<<<<<<<.*$/gm, '');
-    content = content.replace(/=======.*$/gm, '');
+    content = content.replace(/.*$/gm, '');
     
     // Ensure proper closing tags
     const openDivs = (content.match(/<div[^>]*>/g) || []).length;

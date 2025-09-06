@@ -1,7 +1,6 @@
 import React from 'react';
 export function TalentMarketplace() {
   return (
-<<<<<<< HEAD
     <>
       <SEO
         title="Talent Marketplace"
@@ -46,12 +45,5 @@ export function TalentMarketplace() {
           </div>
         </div>
       </main>
-    </>
-=======
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/automation-error-fixes
-  );
+    </>  );
 }

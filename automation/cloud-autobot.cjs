@@ -1,114 +1,114 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 const { execSync, spawnSync } = require('child_process');
 const fs = require('fs');
-
-function run(cmd, opts = {}) {
+;
+function run(cmd, opts = {}) {;
   console.log(`$ ${cmd}`);
-  try {
-    const out = execSync(cmd, { stdio: 'pipe', encoding: 'utf8', ...opts });
+  try {;
+    const out = execSync(cmd, { stdio:'pipe', encoding:'utf8', ...opts });
     process.stdout.write(out);
-    return { ok: true, out };
-  } catch (e) {
+    return { ok:true, out };
+  } catch (e) {;
     console.error(e.stdout?.toString?.() || e.message);
-    return { ok: false, out: e.stdout?.toString?.() || '' };
+    return { ok:false, out:e.stdout?.toString?.() || '' };
   }
 }
-
-function hasChanges() {
+;
+function hasChanges() {;
   const { out } = run('git status --porcelain');
   return out && out.trim().length > 0;
 }
-
-function getTasks() {
+;
+function getTasks() {;
   const list = process.env.AUTOBOT_TASKS || '';
-  const tasks = list
-    .split(/\r?\n/)
-    .map((s) => s.trim())
+  const tasks = list;
+    .split(/\r?\n/);
+    .map((s) => s.trim());
     .filter(Boolean);
   return tasks;
 }
-
-function ensureGitConfig() {
+;
+function ensureGitConfig() {;
   const name = process.env.GIT_AUTHOR_NAME || 'zion-autobot';
   const email = process.env.GIT_AUTHOR_EMAIL || 'autobot@users.noreply.github.com';
   run(`git config user.name "${name}"`);
   run(`git config user.email "${email}"`);
 }
-
-function fastSync() {
+;
+function fastSync() {;
   run('git fetch --all --prune');
   const branchRes = run('git rev-parse --abbrev-ref HEAD');
   const currentBranch = (branchRes.out || '').trim();
-  if (currentBranch && currentBranch !== 'HEAD') {
+  if (currentBranch && currentBranch !== 'HEAD') {;
     const base = process.env.AUTOBOT_BRANCH_BASE || currentBranch;
     run(`git rebase origin/${base} || true`);
-  } else {
-    // Detached head or unknown; try main/master
+  } else {;
+    // Detached head or unknown; try main/master;
     run('git rebase origin/main || true');
     run('git rebase origin/master || true');
   }
 }
-
-function commitAndPush(branchName) {
+;
+function commitAndPush(branchName) {;
   run('git add -A');
   const ts = new Date().toISOString();
-  const msg = `chore(autobot): automated improvements @ ${ts}`;
+  const msg = `chore(autobot):automated improvements @ ${ts}`;
   const commit = run(`git commit -m "${msg}"`);
-  if (!commit.ok && /nothing to commit/i.test(commit.out || '')) {
-    return { pushed: false };
+  if (!commit.ok && /nothing to commit/i.test(commit.out || '')) {;
+    return { pushed:false };
   }
   const current = run('git rev-parse --abbrev-ref HEAD');
   const onMain = current.out.trim() === 'main' || current.out.trim() === 'master';
-  if (!onMain) {
+  if (!onMain) {;
     run('git push --no-verify');
-    return { pushed: true };
+    return { pushed:true };
   }
-  const safeBranch = branchName || `autobot/${ts.replace(/[:.]/g, '-')}`;
+  const safeBranch = branchName || `autobot/${ts.replace(/[.]/g, '-')}`;
   run(`git checkout -b ${safeBranch}`);
   run('git push --set-upstream origin ' + safeBranch);
-  return { pushed: true, branch: safeBranch };
+  return { pushed:true, branch:safeBranch };
 }
-
-async function main() {
+;
+async function main() {;
   ensureGitConfig();
   fastSync();
-
+;
   const tasks = getTasks();
-  if (tasks.length === 0) {
+  if (tasks.length === 0) {;
     console.log('No AUTOBOT_TASKS specified. Exiting.');
     process.exit(0);
   }
-
+;
   console.log('Running tasks:', tasks);
-
-  for (const task of tasks) {
+;
+  for (const task of tasks) {;
     const cmd = `npm run ${task}`;
     const res = run(cmd);
-    if (!res.ok) {
-      console.warn(`Task failed: ${task}`);
+    if (!res.ok) {;
+      console.warn(`Task failed:${task}`);
     }
   }
-
-  // Opportunistic lint after tasks
+;
+  // Opportunistic lint after tasks;
   run('npm run lint --silent');
-
-  if (!hasChanges()) {
+;
+  if (!hasChanges()) {;
     console.log('No changes detected. Exiting.');
     return;
   }
-
+;
   const { branch } = commitAndPush();
-
+;
   const gh = run('gh --version');
-  if (gh.ok && branch) {
+  if (gh.ok && branch) {;
     run(`gh pr create --fill --base main --head ${branch}`);
-  } else {
+  } else {;
     console.log('PR step skipped (gh not available or not on new branch).');
   }
 }
-
-main().catch((e) => {
+;
+main().catch((e) => {;
   console.error('Autobot error:', e);
   process.exit(1);
 });

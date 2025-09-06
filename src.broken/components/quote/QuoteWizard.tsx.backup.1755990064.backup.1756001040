@@ -1,38 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
-export function QuoteWizard() {
-=======
-<<<<<<< HEAD
-import { useState } from 'react';
-import type { WizardStep } from '@/context/RequestQuoteWizard';
-import useSWR from 'swr';
-import { Loader2 } from 'lucide-react';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
-import Skeleton from '@/components/ui/skeleton';
-import { useToast } from '@/hooks/use-toast';
-
-const WIZARD_STEPS = [1, 2, 3];
-
-function StepIndicator({ step }: { step: number }) {
-  const progress = (step / WIZARD_STEPS.length) * 100;
-=======
-import React from 'react';
-export function QuoteWizard() {
->>>>>>> origin/automation-error-fixes
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-  return (
+export function QuoteWizard() {  return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
 
@@ -221,6 +194,3 @@ export function QuoteWizard() {
 
   return null;
 }
-=======
->>>>>>> origin/automation-error-fixes
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3

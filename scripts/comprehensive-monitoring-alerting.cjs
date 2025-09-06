@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     log('info', `CPU "usage": ${monitoringReport.metrics.cpu}%`);
     log('info', `Memory "usage": ${monitoringReport.metrics.memory}%`);
     log('info', `Disk "usage": ${monitoringReport.metrics.disk}%`);
@@ -39,12 +38,7 @@
     process.exit(1)}
 }
 
-main();
-=======
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-#!/usr/bin/env node;
+main();#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

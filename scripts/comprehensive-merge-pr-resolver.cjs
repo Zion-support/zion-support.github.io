@@ -4,13 +4,12 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 
 console.log('🚀 Comprehensive Merge & PR Resolver');
-console.log('====================================');
+console.log('=');
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
-    .replace(/>>>>>>> [a-f0-9]+/g, '');
-}
+    .replace(/}
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {

@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('🔧 Final Syntax Fix');
-console.log('==================');
+console.log('====');
 
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {

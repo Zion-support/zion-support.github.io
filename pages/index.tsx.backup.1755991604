@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Homepage2036 from '../components/Homepage2036';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
@@ -8,12 +7,6 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import MobileOptimizer from '../components/MobileOptimizer';
-=======
-import SEO from '../components/SEO';
-import Homepage2025 from '../components/Homepage2025';
-import Layout from '../components/layout/Layout';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-231c
-
 const HomePage: React.FC = () => {
   const seoConfig = {
     title: "Zion Tech Group - Revolutionary AI, Quantum & Space Technology Solutions 2040",
@@ -26,7 +19,6 @@ const HomePage: React.FC = () => {
 
 export default function Home() {
   return (
-<<<<<<< HEAD
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
@@ -80,16 +72,5 @@ export default function Home() {
  </section>
  
 {/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
-    </div>
-=======
-    <>
-      <SEO />
-      <Layout>
-        <main id="main">
-          <Homepage2025 showInternalNav={false} />
-        </main>
-      </Layout>
-    </>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-231c
-  );
+    </div>  );
 }

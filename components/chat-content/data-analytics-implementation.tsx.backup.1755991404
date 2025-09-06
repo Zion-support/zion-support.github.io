@@ -6,7 +6,6 @@ export default function DataAnalyticsImplementation() {
     </div>
   );
 }
-=======
 export default function DataAnalyticsImplementationPage() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -15,5 +14,4 @@ export default function DataAnalyticsImplementationPage() {
     </div>
   );
 }
-=======
 export default function ChatContent4() { return <div className="py-10 text-white">Content coming soon.</div>; }

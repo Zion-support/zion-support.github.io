@@ -4,7 +4,6 @@ export default function HomePage() {
   const { user, isAuthenticated } = useAuth();
 
   return (
-<<<<<<< HEAD
     <div className="space-y-12">
       {/* Hero Section */}
       <div className="text-center space-y-6 py-12">
@@ -129,26 +128,7 @@ export default function HomePage() {
             className="btn-primary text-lg px-8 py-4"
           >
             Start Building Now
-          </a>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold mb-6">Zion OS</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Launch sovereign AI-powered digital economies with one click. Comprehensive technology solutions for modern businesses.
-          </p>
-          <div className="mt-8">
-            <a href="tel:+13024640950" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors mr-4">
-              Call Now: +1 302 464 0950
-            </a>
-            <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Get Consultation
-            </a>
-          </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f7dd
-        </div>
+          </a>        </div>
       </div>
 
       {/* Contact Info Banner */}

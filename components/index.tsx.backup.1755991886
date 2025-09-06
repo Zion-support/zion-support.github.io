@@ -283,7 +283,6 @@ export default function HomePage() {
                         size="sm"
                         className="text-xs"
                       >
-=======
   const popularServices = getPopularServices().slice(0, 6);
 
   return (

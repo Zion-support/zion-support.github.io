@@ -24,6 +24,7 @@ test.describe('Performance Tests', () => {
         }
       });
     });
+    
     // Check performance score
     if (lighthouse.lhr && lighthouse.lhr.categories) {
       const performanceScore = lighthouse.lhr.categories.performance.score * 100;
@@ -40,8 +41,27 @@ test.describe('Performance Tests', () => {
         consoleMessages.push(msg.text());
       }
     });
+    
     await page.waitForTimeout(2000);
     // Should not have bundle size warnings
     expect(consoleMessages.length).toBe(0);
+  });
+  
+  test('memory usage check', async ({ page }) => {
+    await page.goto('/');
+    const metrics = await page.evaluate(() => {
+      if (performance.memory) {
+        return {
+          usedJSHeapSize: performance.memory.usedJSHeapSize,
+          totalJSHeapSize: performance.memory.totalJSHeapSize,
+          jsHeapSizeLimit: performance.memory.jsHeapSizeLimit
+        };
+      }
+      return null;
+    });
+    
+    if (metrics) {
+      expect(metrics.usedJSHeapSize).toBeLessThan(50 * 1024 * 1024); // 50MB
+    }
   });
 });

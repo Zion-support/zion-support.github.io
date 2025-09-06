@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -113,14 +112,3 @@ const AdminRoutes = () => {
 };
 
 export default AdminRoutes;
-=======
-import React from 'react';
-export function AdminRoutes() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
-  );
-}
->>>>>>> origin/automation-error-fixes

@@ -1,46 +1,3 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-console.log('🔧 Starting merge conflict resolution...');
-
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has merge conflicts
-<<<<<<< HEAD
-=======
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false;
-    }
-    
-    console.log(`📝 Resolving conflicts in: ${filePath}`);
-    
-    // Split by merge conflict markers
-    const lines = content.split('\n');
-    const resolvedLines = [];
-    let inConflict = false;
-    let conflictType = '';
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.includes('<<<<<<< HEAD')) {
-        inConflict = true;
-        conflictType = 'head';
-        continue;
-      }
-      
-      if (line.includes('=======')) {
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
         conflictType = 'incoming';
         continue;
       }
@@ -87,9 +44,7 @@ function findConflictedFiles(dir) {
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-<<<<<<< HEAD
-=======
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             conflictedFiles.push(fullPath);
           }
         } catch (error) {
@@ -137,4 +92,3 @@ try {
   console.error('❌ Error during merge conflict resolution:', error.message);
   process.exit(1);
 }
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52

@@ -40,7 +40,6 @@ import Layout from '../components/layout/Layout';
               <UltraFuturisticBackground2029>
         {/* Ultra Advanced Navigation */}
         <UltraAdvancedNavigationV2 />
-=======
     <>
       <SEO />
       <Layout>

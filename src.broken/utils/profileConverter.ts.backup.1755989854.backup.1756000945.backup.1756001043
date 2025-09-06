@@ -12,7 +12,6 @@ function isTalentProfile(profile: unknown): profile is TalentProfile {
 
 export function convertProfileToTalentProfile(profile: ProfileData | unknown): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
-<<<<<<< HEAD
   
   // If this is already a TalentProfile, just return it
   if (profile.professional_title !== undefined) {
@@ -20,16 +19,10 @@ export function convertProfileToTalentProfile(profile: ProfileData | unknown): T
       ...profile,
       name: profile.name ?? profile.full_name,
       title: profile.title ?? profile.professional_title,
-    } as TalentProfile;
-=======
-  if (isTalentProfile(profile)) {
-    return profile;
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
-  }
+    } as TalentProfile;  }
   // Convert ProfileData to TalentProfile
   const p = profile as ProfileData;
   return {
-<<<<<<< HEAD
     id: profile.id,
     user_id: profile.id,
     full_name: profile.name,
@@ -38,17 +31,7 @@ export function convertProfileToTalentProfile(profile: ProfileData | unknown): T
     title: profile.title,
     bio: profile.bio || '',
     summary: profile.bio?.substring(0, 150),
-    profile_picture_url: profile.avatarUrl,
-=======
-    id: p.id,
-    user_id: p.id,
-    full_name: p.name,
-    professional_title: p.title,
-    bio: p.bio || '',
-    summary: p.bio?.substring(0, 150),
-    profile_picture_url: p.avatarUrl,
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
-    years_experience: 3, // Default value
+    profile_picture_url: profile.avatarUrl,    years_experience: 3, // Default value
     skills: p.skills?.map((skill: { name: string }) => skill.name) || [],
     availability_type: p.availability?.status === 'available' ? 'full_time' :
                       p.availability?.status === 'limited' ? 'part_time' : 'unavailable',

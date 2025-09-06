@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import type { ReactNode } from "react";
 import { useRouter } from 'next/router';
@@ -29,20 +26,6 @@ function useSafePathname() {
   const router = useRouter();
   return router.pathname || (typeof window !== 'undefined' ? window.location.pathname : '');
 }
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-
-import React from "react";
-import { Outlet } from "react-router-dom";
-import { Toaster } from "react-hot-toast";
-import { AppHeader } from "./AppHeader";
-import { Footer } from "@/components/Footer";
-import { ErrorBoundary } from "@/components/ErrorBoundary";
-<<<<<<< HEAD
-=======
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-
 interface AppLayoutProps {
   children?: React.ReactNode; // Kept ReactNode for consistency
   hideFooter?: boolean;
@@ -97,9 +80,6 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
   };
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <div className="flex flex-col min-h-screen bg-background">
       <SkipLink />
       {/* Conditionally render the EmailVerificationBanner */}
@@ -147,22 +127,5 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
       <SupportWidget />
       {!hideFooter && <Footer />}
       <AnalyticsConsentBanner />
-    </div>
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-    <ErrorBoundary>
-      <div className="flex flex-col min-h-screen bg-background">
-        <AppHeader />
-        <main className="flex-grow">
-          {children ?? <Outlet />}
-        </main>
-        {!hideFooter && <Footer />}
-      </div>
-      <Toaster position="top-right" />
-    </ErrorBoundary>
-<<<<<<< HEAD
-=======
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-  );
+    </div>  );
 }

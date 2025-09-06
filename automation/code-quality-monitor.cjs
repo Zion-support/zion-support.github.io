@@ -110,59 +110,9 @@ class CodeQualityMonitor {
   }
 }
 
-<<<<<<< HEAD
 async function checkCodeDuplication() {
   
-  const duplications = [{
-=======
-async function checkCodeComplexity() {}
-  console.log('[INFO] Checking code complexity...');
-  const complexFiles = [{ "file": 'components/PerformanceMonitor.tsx', "complexity": 12 },]
-    { "file": 'scripts/performance-monitor.js', "complexity": 12 },
-  ];
-  if (complexFiles.length > 0) {}
-    console.warn(`[WARN] Found ${complexFiles.length} complex files`);
-    complexFiles.forEach(f =>)
-      console.warn(`  - ${f.file}: complexity ${f.complexity}`);
-    );
-    return { "passed": false, "count": complexFiles.length, "details": complexFiles };
-  };
-  console.log('[INFO] No high-complexity code found');
-  return { "passed": true, "count": 0 };
-};
-async function checkCodeDuplication() {}
-  console.log('[INFO] Checking for code duplication...');
-  const duplications = [{}]
-      "file": 'src/data/realMicroSaasServices2025.ts',
-      "line": 860,
-      "duplicateOf": 'src/data/realMicroSaasServices2025.ts'},
-    { "file": 'pages/about.tsx', "line": 92, "duplicateOf": 'pages/about.tsx' },
-    { "file": 'pages/about.tsx', "line": 126, "duplicateOf": 'pages/about.tsx' },
-    { "file": 'pages/about.tsx', "line": 127, "duplicateOf": 'pages/about.tsx' },
-    { "file": 'pages/ai-services.tsx', "line": 7, "duplicateOf": 'pages/about.tsx' },
-  ];
-    
-    duplications
-      .slice(0, 5)
-      .forEach(d =>
-        `)
-      );
-    return { "passed": false, "count": duplications.length, "details": duplications };
-  }
-  
-  return { "passed": true, "count": 0 };
-}
-
-async function checkCodeStyle() {
-  
-  try {
-    execSync('npm run "lint": check', { "stdio": 'pipe' });
-    
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-  if (duplications.length > 0) {}
+  const duplications = [{  if (duplications.length > 0) {}
     console.warn(`[WARN] Found ${duplications.length} code duplications`);
     duplications;
       .slice(0, 5);
@@ -216,62 +166,6 @@ async function checkDocumentationCoverage() {
     return { "passed": false, "error": 'Low documentation coverage' };
   }
   
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-  };
-};
-async function checkTestCoverage() {}
-  console.log('[INFO] Checking test coverage...');
-  const testFiles = glob.sync('**/*.test.{js,jsx,ts,tsx}', {})
-    "cwd": process.cwd(),
-    "ignore": 'node_modules/**'}
-});
-  if (!testFiles || testFiles.length === 0) {}
-    console.warn('[WARN] "WARNING": No test files found');
-    return { passed: false, "error": 'No test files found' };
-  };
-  console.log('[INFO] Test files found. (Coverage check placeholder)');
-  return { "passed": true };
-};
-async function checkDocumentationCoverage() {}
-  console.log('[INFO] Checking documentation...');
-  const docCoverage = 40; // Example low coverage;
-  if (docCoverage < 50) {}
-    console.warn(`[WARN] "WARNING": Low documentation coverage: ${docCoverage}%`);
-    return { "passed": false, "error": 'Low documentation coverage' };
-  };
-  console.log('[INFO] Documentation coverage is sufficient');
-  return { "passed": true };
-};
-async function runCodeQualityMonitor() {}
-  const startTime = Date.now();
-  const complexityResult = await checkCodeComplexity();
-  const duplicationResult = await checkCodeDuplication();
-  const styleResult = await checkCodeStyle();
-  const tsQualityResult = await checkTypeScriptQuality();
-  const testCoverageResult = await checkTestCoverage();
-  const docCoverageResult = await checkDocumentationCoverage();
-
-  const results = [complexityResult,]
-    duplicationResult,
-    styleResult,
-    tsQualityResult,
-    testCoverageResult,
-    docCoverageResult,
-  ];
-  const issuesFound = results.filter(r => !r.passed);
-
-  const endTime = Date.now();
-  const duration = endTime - startTime;
-
-<<<<<<< HEAD
-=======
-    process.exit(1);
-  } else {
-    
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
   console.log()
     `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"
   );
@@ -292,11 +186,9 @@ async function runCodeQualityMonitor() {}
   };
 };
 runCodeQualityMonitor();
-=======
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {
     console.log("Metrics:", metrics);
   }
 });
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

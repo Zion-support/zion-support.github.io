@@ -227,7 +227,7 @@ display_enhanced_features() {
 # Main execution
 main() {
     echo -e "${PURPLE}🚀 Starting Enhanced Intelligent PM2 System${NC}"
-    echo -e "${PURPLE}============================================${NC}"
+    echo -e "${PURPLE}==${NC}"
     
     # Pre-flight checks
     check_pm2
@@ -249,7 +249,7 @@ main() {
     
     # Display information
     echo -e "\n${PURPLE}📊 System Status${NC}"
-    echo -e "${PURPLE}================${NC}"
+    echo -e "${PURPLE}==${NC}"
     
     display_system_info
     echo ""
@@ -261,7 +261,7 @@ main() {
     
     # Health check
     echo -e "\n${PURPLE}🏥 Health Check${NC}"
-    echo -e "${PURPLE}================${NC}"
+    echo -e "${PURPLE}==${NC}"
     
     if health_check; then
         success "Enhanced Intelligent PM2 System started successfully!"

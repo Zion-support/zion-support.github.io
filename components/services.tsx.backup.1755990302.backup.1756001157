@@ -8,10 +8,7 @@ import {
   Lock, Palette, Cpu, Layers, Globe2, Truck, Zap, ArrowRight, CheckCircle, ShoppingCart
 } from 'lucide-react';
 
-<<<<<<< HEAD:pages/services.tsx
-=======
-<<<<<<< HEAD
-=======
+:pages/services.tsx
 const Services: React.FC = () => {
 // Import our new innovative 2025 services
 import { realInnovativeMicroSaasServices2025 } from '../data/2025-real-innovative-micro-saas-expansion';
@@ -58,7 +55,6 @@ import { ultimate2025AIServicesExpansion } from '../data/2025-ultimate-ai-servic
 
 // Import our new 2025 Q4 innovative services
 import { innovative2025Q4NewServices } from '../data/innovative-2025-q4-new-services';
-
 
 // Import our new innovative 2040 services
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
@@ -324,7 +320,6 @@ const categories = [
   }
 ];
 
->>>>>>> 3c69eec6124bf95995ad8db99e4fcc1addda60da
 const sortOptions = [
   { value: 'name', label: 'Name A-Z' },
   { value: 'price-low', label: 'Price: Low to High' },
@@ -333,7 +328,6 @@ const sortOptions = [
   { value: 'newest', label: 'Newest First' },
   { value: 'rating', label: 'Highest Rated' }
 ];
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906:pages/services.tsx.backup.1755990302
 
 // Import our new innovative 2025 services
 import { realInnovativeMicroSaasServices2025 } from '../data/2025-real-innovative-micro-saas-expansion';
@@ -385,7 +379,6 @@ import { ultimate2025AIServicesExpansion } from '../data/2025-ultimate-ai-servic
 
 // Import our new 2025 Q4 innovative services
 import { innovative2025Q4NewServices } from '../data/innovative-2025-q4-new-services';
-
 
 // Import our new innovative 2040 services
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
@@ -443,8 +436,6 @@ const getServiceDescription = (service: any) => {
   if (service.tagline) return service.tagline;
   return 'No description available';
 };
-
-
 
 export default function Services() {
   const [searchQuery, setSearchQuery] = useState('');

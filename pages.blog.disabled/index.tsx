@@ -11,10 +11,6 @@ export default function Index({ }: IndexProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
-=======
 }

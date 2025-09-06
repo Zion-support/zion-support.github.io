@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState } from "react";
 import { MessageSquare } from 'lucide-react';
@@ -34,11 +33,6 @@ export function ChatAssistantTrigger() {
       return Promise.resolve();
     }
   };
-
-=======
-import React from 'react';
-export function ChatAssistantTrigger() {
->>>>>>> origin/automation-error-fixes
   return (
     <div>
       <h1>Component</h1>
