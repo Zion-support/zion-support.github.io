@@ -1,4 +1,4 @@
-import "@testing-library/jest-dom";
+require("@testing-library/jest-dom");
 
 // Mock Next.js router
 jest.mock("next/router", () => ({
@@ -26,29 +26,18 @@ jest.mock("next/router", () => ({
 
 // Mock Next.js Image component
 jest.mock("next/image", () => {
-  return function MockedImage({ src, alt, ...props }) {
+  return function MockImage({ src, alt, ...props }) {
     return <img src={src} alt={alt} {...props} />;
   };
 });
 
 // Mock Next.js Link component
-<<<<<<< HEAD
 jest.mock("next/link", () => {
-  return function MockedLink({ children, href, ...props }) {
-    return (
-      <a href={href} {...props}>
-        {children}
-      </a>
-    );
+  return function MockLink({ children, href, ...props }) {
+    return <a href={href} {...props}>{children}</a>;
   };
 });
-=======
-jest.mock('next/link', () => ({
-  _esModule: true,
-  default: ({ children, href, ...props }) => {
-    return <a href={href} {...props}>{children}</a>;
-  },
-}));
+
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -57,8 +46,9 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
@@ -83,7 +73,6 @@ global.ResizeObserver = class ResizeObserver {
 
 // Global test setup
 beforeEach(() => {
-  // Reset all mocks before each test
   jest.clearAllMocks();
 });
->>>>>>> cursor/automate-test-improve-and-merge-code-88cd
+

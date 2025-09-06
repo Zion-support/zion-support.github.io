@@ -156,5 +156,5 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
         )}
       />
     </div>
-);
+  );
 };
