@@ -1,33 +1,77 @@
- const seedCompany: CompanyRecord = {
-  id: 'cmp acme', name: 'Acme Corporation', slug: 'acme', logoUrl: '/logo-acme.svg', brandColor: '#4F46E5', plan: {
-  tier: 'business', seatsPurchased: 25, seatsUsed: 3, usageLimits: {
-  monthlyJobPosts: 50, budgetCapUsd: 10000 
+export interface CompanyRecord {
+  id: string;
+  name: string;
+  slug: string;
+  logoUrl?: string;
+  brandColor?: string;
+  plan: {
+    tier: 'starter' | 'business' | 'enterprise';
+    seatsPurchased: number;
+    seatsUsed: number;
+    usageLimits: {
+      monthlyJobPosts: number;
+      budgetCapUsd: number;
+    };
+  };
+  members: Array<{
+    id: string;
+    email: string;
+    name: string;
+    role: 'admin' | 'manager' | 'recruiter';
+  }>;
+  activity: Array<{
+    id: string;
+    timestampIso: string;
+    actorEmail: string;
+    action: string;
+    meta?: Record<string, any>;
+  }>;
+  invoices: Array<{
+    id: string;
+    amount: number;
+    status: 'pending' | 'paid' | 'overdue';
+    dueDate: string;
+  }>;
 }
-};
-members: [ {
-  id: 'mem 1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' 
-};
-{
-  id: 'mem 2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' 
-};
-{
-  id: 'mem 3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' 
-}];
-activity: [ {
-  id: generateId (), timestampIso: new Date () .toISOString (), actorEmail: 'admin@acme.com', action: 'created company' 
-};
-{
-  id: generateId (), timestampIso: new Date () .toISOString (), actorEmail: 'maria@acme.com', action: 'posted job', meta: {
-  jobId: 'job 123' 
+
+function generateId(): string {
+  return Math.random().toString(36).substr(2, 9);
 }
-}];
-invoices: [ members: [];
-activity: [];
-invoices: [] 
-};
-companiesById[id] = record;
-companiesBySlug[slug] = record;
-return record 
-};
-}return changed 
-};
+
+const companiesById: Record<string, CompanyRecord> = {};
+const companiesBySlug: Record<string, CompanyRecord> = {};
+
+export function createCompany(record: Omit<CompanyRecord, 'members' | 'activity' | 'invoices'>): CompanyRecord {
+  const { id, slug } = record;
+  
+  const fullRecord: CompanyRecord = {
+    ...record,
+    members: [],
+    activity: [],
+    invoices: []
+  };
+  
+  companiesById[id] = fullRecord;
+  companiesBySlug[slug] = fullRecord;
+  
+  return fullRecord;
+}
+
+export function getCompanyById(id: string): CompanyRecord | undefined {
+  return companiesById[id];
+}
+
+export function getCompanyBySlug(slug: string): CompanyRecord | undefined {
+  return companiesBySlug[slug];
+}
+
+export function updateCompany(id: string, updates: Partial<CompanyRecord>): CompanyRecord | null {
+  const company = companiesById[id];
+  if (!company) return null;
+  
+  const updated = { ...company, ...updates };
+  companiesById[id] = updated;
+  companiesBySlug[updated.slug] = updated;
+  
+  return updated;
+}
