@@ -1,3 +1,5 @@
+import React from 'react';
+
  export default function StartupToolsPage () {
   const startupTools = [ {
   const filteredTools = selectedCategory === 'All' ? startupTools : startupTools.filter (tool => tool.category === selectedCategory);

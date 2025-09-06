@@ -1,3 +1,5 @@
+import React from 'react';
+
  const SolutionsPage: React.FC = () => {
   const industrySolutions = [ {
   category: 'Healthcare & Life Sciences', solutions: [ {
